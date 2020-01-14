@@ -1,5 +1,5 @@
 lint:
-  stage: lint
+  stage: test
   image: python:3.7
   before_script:
     - apt update -yq
