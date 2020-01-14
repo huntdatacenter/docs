@@ -1,0 +1,24 @@
+lint:
+  stage: test
+  image: python:3.7
+  before_script:
+    - apt update -yq
+    - apt install -y ruby-dev
+    - pip install tox
+  script:
+    - tox -e lint
+
+pages:
+  stage: deploy
+  image: node:12.6.0
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - yarn install
+    - yarn run build
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
