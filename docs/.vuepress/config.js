@@ -10,6 +10,13 @@ module.exports = {
   // https://v1.vuepress.vuejs.org/config/#head
   head: [
     [
+      "link",
+      {
+        rel: "shortcut icon",
+        href: "https://www.ntnu.no/assets/images/favicon.ico"
+      }
+    ],
+    [
       "meta",
       {
         name: "theme-color",
