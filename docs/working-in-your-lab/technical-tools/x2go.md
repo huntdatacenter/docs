@@ -1,16 +1,16 @@
 ---
-title: X2Go (client)
+title: X2Go
 permalink: /working-in-your-lab/technical-tools/x2go
 sidebarDepth: 3
 ---
 
 # X2Go
 
-This guide explain how you can install and configure the X2Go software to get instant and 'passwordless' access to graphical tools in your lab, such as _RStudio_, _Stata_, _SPSS_ and _MatLab_.
+This guide explain how you can install and configure the X2Go software to get instant and 'passwordless' access to graphical tools in your lab, such as **RStudio**, **Stata**, **SPSS** and **MatLab**.
 
 If your lab machine is set up for graphical interface, you are good to go after you have set up your local machine:
 
-- [Set up your local machine](#set-up-your-local-computer)
+- [Set up your local machine](#install-the-x2go-client)
 
 If your lab machine is not set up for graphical access, you will need to install the X2Go server:
 
@@ -55,6 +55,7 @@ Install x2goclient using apt:
 ```bash
 apt install x2goclient
 ```
+
 :::
 
 ## Configure the X2Go client
@@ -119,33 +120,47 @@ Hit `OK` in the lower right corner.
 
 ## Connect to the X2Go server
 
-- Ensure that your HUNT Cloud VPN is running and connected.
+::: tip
+Ensure that your HUNT Cloud VPN is running and connected.
+:::
 
-- Click your newly saved session in X2Go to connect to your lab machine. If this works you should see a terminal pop up on your screen.
+1. Click on your newly saved session in X2Go to connect to your lab machine.
+   If this works you should see a terminal pop up on your screen.
 
-- Type `xclock` in the terminal to test the setup. With a little bit of luck, you should now see a new window popping up with a digital clock.
+2. Type `xclock` in the terminal to test the setup. With a little bit of luck,
+   you should now see a new window popping up with a digital clock.
 
 ## Connect to other software
 
 You may use X2Go to access software with graphical interfaces.
 Such software needs to be installed in your lab machine.
-For example, if you or your lab mates have [installed RStudio](https://gitlab.com/huntgenes/hunt-cloud-community/wikis/r-packages#install-r-studio), you may access this program by updating the `Session type` at the bottom of the `Session tab` from `/usr/bin/xterm/`to `/usr/bin/rstudio` and reconnect.
+For example, if you or your lab mates have [installed RStudio](https://gitlab.com/huntgenes/hunt-cloud-community/wikis/r-packages#install-r-studio),
+you may access this program by updating the `Session type` at the bottom of the `Session tab`
+from `/usr/bin/xterm/` to actual of the software e.g. `/usr/bin/rstudio` and reconnect.
 
 Time to celebrate with coffee!
 
-# Set up your home lab machine
+## Install the X2Go server on your lab machine (IaaS-node)
 
-**This section is for lab coordinators that want to set up their lab home for graphical access.**
+::: warning NOTE
+This section is for lab coordinators that want to set up their lab home for graphical access.
+:::
 
-- Log into your home node and install X2Go server: `sudo apt install x2goserver`
+Log into your home node and install X2Go server
 
-`Please note`: The above command work on lab environments deployed after 2019-01.
-Give us a shout [here](/contact) if you would like to install x2goserver on labs deployed before this date.
-
-# Set up your X2Go lab server (IaaS-node)
+```bash
+sudo apt install x2goserver
+```
 
 ::: tip INFO
-This section is for lab coordinators that want to set up their unmanaged machines for graphical access.
+The above command works on lab environments deployed after 2019-01.
+Give us a shout [here](/contact) if you would like to install x2goserver on labs deployed before this date.
+:::
+
+# Install the X2Go server on your lab machine (IaaS-node)
+
+::: tip INFO
+This section is for lab coordinators that want to set up their unmanaged machines for GUI access.
 :::
 
 Connection to X2Go require the application `x2goserver` to run on your iaas nodes.
@@ -252,46 +267,55 @@ From time to time your X2Go sessions may get stuck, such as when your software i
 
 Setting up XFCE environment and fixes for common issues.
 
-- Minimal setup of XFCE desktop:
+::: details Minimal setup of **XFCE desktop**
+Install xfce packages on the target server:
 
-  ```bash
-  sudo apt-get update -y && sudo apt-get autoremove -y
-  sudo apt-get install -y --no-install-recommends xubuntu-desktop
-  ```
+```bash
+sudo apt-get update -y && sudo apt-get autoremove -y
+sudo apt-get install -y --no-install-recommends xubuntu-desktop
+```
 
-- Tab completion using shell:
+:::
 
-  ```bash
-  sed -i 's|<property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>|<property name="&lt;Super&gt;Tab" type="empty"/>|g' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-  ```
+::: details **TAB completion**
+Fixing TAB completion in shell:
 
-  or using GUI approach when connected to with x2go client.
+```bash
+sed -i 's|<property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>|<property name="&lt;Super&gt;Tab" type="empty"/>|g' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+```
 
-  1. Open the Xfce `Application Menu` > `Settings` > `Window Manager`
-  2. Click on the `Keyboard Tab`
-  3. Clear the Switch window for same application setting
+Fixing TAB completion with GUI approach over x2go client.
 
-- Copy / Paste functionality - patch `~/.Xdefaults` on target server:
+```md
+1. Open the Xfce `Application Menu` > `Settings` > `Window Manager`
+2. Click on the `Keyboard Tab`
+3. Clear the Switch window for same application setting
+```
 
-  _Client is connecting from macOS_
+:::
 
-  ```bash
-  touch ~/.Xdefaults
-  chmod u+x ~/.Xdefaults
-  cat \<\< EOF >> ~/.Xdefaults
-  *VT100.translations: #override \
-                   Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)
-  EOF
-  ```
+::: details **Copy - Paste functionality**
+Client is connecting from **macOS**:
 
-  _Client is connecting from Windows/Linux computer_
+```bash
+touch ~/.Xdefaults
+chmod u+x ~/.Xdefaults
+cat \<\< EOF >> ~/.Xdefaults
+*VT100.translations: #override \
+                 Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)
+EOF
+```
 
-  ```bash
-  touch ~/.Xdefaults
-  chmod u+x ~/.Xdefaults
-  cat \<\< EOF >> ~/.Xdefaults
-  *VT100.Translations: #override \
-                   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \
-                   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
-  EOF
-  ```
+Client is connecting from **Windows/Linux** computer:
+
+```bash
+touch ~/.Xdefaults
+chmod u+x ~/.Xdefaults
+cat \<\< EOF >> ~/.Xdefaults
+*VT100.Translations: #override \
+                 Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \
+                 Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
+EOF
+```
+
+:::
