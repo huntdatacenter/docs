@@ -246,3 +246,51 @@ From time to time your X2Go sessions may get stuck, such as when your software i
 5. Confirm that the process is killed by reapeating Step 2 to verify that the process ID is no longer listed. Repeat the procedure to kill additional processes if needed.
 
 6. Restart X2Go.
+
+### XFCE Environment
+
+Setting up XFCE environment and fixes for common issues.
+
+- Minimal setup of XFCE desktop:
+
+  ```bash
+  sudo apt-get update -y && sudo apt-get autoremove -y
+  sudo apt-get install -y --no-install-recommends xubuntu-desktop
+  ```
+
+- Tab completion using shell:
+
+  ```bash
+  sed -i 's|<property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>|<property name="&lt;Super&gt;Tab" type="empty"/>|g' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+  ```
+
+  or using GUI approach when connected to with x2go client.
+
+  1. Open the Xfce `Application Menu` > `Settings` > `Window Manager`
+  2. Click on the `Keyboard Tab`
+  3. Clear the Switch window for same application setting
+
+- Copy / Paste functionality - patch `~/.Xdefaults` on target server:
+
+  _Client is connecting from macOS_
+
+  ```bash
+  touch ~/.Xdefaults
+  chmod u+x ~/.Xdefaults
+  cat \<\< EOF >> ~/.Xdefaults
+  *VT100.translations: #override \
+                   Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)
+  EOF
+  ```
+
+  _Client is connecting from Windows/Linux computer_
+
+  ```bash
+  touch ~/.Xdefaults
+  chmod u+x ~/.Xdefaults
+  cat \<\< EOF >> ~/.Xdefaults
+  *VT100.Translations: #override \
+                   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \
+                   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
+  EOF
+  ```
