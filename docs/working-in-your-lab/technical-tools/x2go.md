@@ -30,8 +30,7 @@ Thus, if your lab is already set up for such access, you should be fine to acces
 
 Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) on your own local machine.
 
-### OS X/macOS
-
+::: details OS X/macOS
 Run brew to install both xquartz and x2goclient:
 
 ```bash
@@ -40,22 +39,23 @@ brew cask install x2goclient
 ```
 
 Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks.
-
-::: warning NOTE
-OSX 10.15 Catalina: in case of issues with x2goclient you can try [nightly build](https://code.x2go.org/releases/X2GoClient_nightly_macosx/x2goclient-4.1.2.2.git20191230.1893.heuler.OSX_10_13.dmg) version.
 :::
 
-### Windows
+::: warning OS X 10.15 Catalina
+In case of issues with x2goclient you can try [nightly build](https://code.x2go.org/releases/X2GoClient_nightly_macosx/x2goclient-4.1.2.2.git20191230.1893.heuler.OSX_10_13.dmg) version.
+:::
 
+::: details Windows
 Download and run the [X2Go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#ms_windows).
+:::
 
-### Linux (Ubuntu / Debian)
-
+::: Linux (Ubuntu / Debian)
 Install x2goclient using apt:
 
 ```bash
 apt install x2goclient
 ```
+:::
 
 ## Configure the X2Go client
 
