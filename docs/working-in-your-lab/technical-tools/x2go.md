@@ -1,11 +1,12 @@
 ---
+title: X2Go (client)
 permalink: /working-in-your-lab/technical-tools/x2go
 sidebarDepth: 3
 ---
 
 # X2Go
 
-This guide explain how you can install and configure the X2Go software to get instant and 'passwordless' access to graphical tools in your lab, such as RStudio, Stata, SPSS and MatLab.
+This guide explain how you can install and configure the X2Go software to get instant and 'passwordless' access to graphical tools in your lab, such as _RStudio_, _Stata_, _SPSS_ and _MatLab_.
 
 If your lab machine is set up for graphical interface, you are good to go after you have set up your local machine:
 
@@ -16,10 +17,11 @@ If your lab machine is not set up for graphical access, you will need to install
 - [Set up your home lab machine](#set-up-your-home-lab-machine)
 - [Set up your unmanaged lab machine (iaas)](#set-up-your-x2go-lab-server-iaas-node)
 
-## General requirements
+::: tip REQUIREMENTS
 
 - A working connection to your lab machines.
 - A lab machine set up for X2Go connection (X2Go server and your software of choice, see below).
+  :::
 
 We utilize [X2Go](https://wiki.x2go.org/doku.php) to interact with the graphical software on your lab machines.
 Thus, if your lab is already set up for such access, you should be fine to access your tools as soon as you have installed and configured X2Go on your local machine.
@@ -39,7 +41,7 @@ brew cask install x2goclient
 
 Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks.
 
-::: note
+::: warning NOTE
 OSX 10.15 Catalina: in case of issues with x2goclient you can try [nightly build](https://code.x2go.org/releases/X2GoClient_nightly_macosx/x2goclient-4.1.2.2.git20191230.1893.heuler.OSX_10_13.dmg) version.
 :::
 
@@ -59,7 +61,7 @@ apt install x2goclient
 
 Once installed, open X2Go and click `New session` and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
-::: note
+::: tip NOTE
 The default suggestions in red below are for connection to software on your lab's home machine.
 Alternatives for unmanaged iaas machines are noted as separate bullet points.
 :::
@@ -142,18 +144,17 @@ Give us a shout [here](/contact) if you would like to install x2goserver on labs
 
 # Set up your X2Go lab server (IaaS-node)
 
-::: note
+::: tip INFO
 This section is for lab coordinators that want to set up their unmanaged machines for graphical access.
 :::
 
 Connection to X2Go require the application `x2goserver` to run on your iaas nodes.
 You may install this on your unmanaged iaas-nodes as follows:
 
-```md
-# Requirements
+::: tip REQUIREMENTS
 
 - Root access to your lab machine.
-```
+  :::
 
 ## Install the X2Go server
 
@@ -187,7 +188,7 @@ You need to make sure you and your lab mates can log in to the x2go machine pass
   ssh <iaas-node>
   ```
 
-  ::: note
+  ::: warning NOTE
   Give us a shout [here](/contact) if you are unable to make the above step work since a security setting may prohibit this depending on your lab setup.
   :::
 
