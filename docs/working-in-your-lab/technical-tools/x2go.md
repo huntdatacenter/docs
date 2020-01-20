@@ -226,13 +226,7 @@ From time to time your X2Go sessions may get stuck, such as when your software i
 2. Once onboard your lab machine, list X2Go processes running under your user name.
 
    ```bash
-   ps aux | grep x2go | grep <your-username>
-   ```
-
-   For example:
-
-   ```bash
-   ps aux | grep x2go | grep demouser
+   ps aux | grep x2go | grep $(whoami)
    ```
 
    A single line of your output will similar to the output below. This is from a process running the RStudio software. Your output may look different depending on the software your run:
@@ -253,11 +247,13 @@ From time to time your X2Go sessions may get stuck, such as when your software i
    kill <process-id>
    ```
 
-   For example:
+   ::: tip EXAMPLE
 
    ```bash
    kill 22463
    ```
+
+   :::
 
 5. Confirm that the process is killed by reapeating Step 2 to verify that the process ID is no longer listed. Repeat the procedure to kill additional processes if needed.
 
