@@ -130,6 +130,7 @@ For office use `LAN` and `16m-png` should be fine.
 ### In the `Settings` tab
 
 - _Keyboard_: Add your keyboard layout if this differ from `US` settings, e.g. Norwegian keyboard settings may be:
+
   - _Keyboard layout:_ `no`
   - _Keyboard model:_ `pc105/no`
 
