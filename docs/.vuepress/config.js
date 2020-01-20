@@ -123,6 +123,18 @@ module.exports = {
     "@vuepress/plugin-back-to-top",
     "@vuepress/active-header-links",
     [
+      "vuepress-plugin-container",
+      {
+        type: "details",
+        defaultTitle: "DETAILS",
+        before: info =>
+          `<details class="custom-block details">${
+            info ? `<summary>${info}</summary><p>` : "<p>"
+          }\n`,
+        after: "</p></details>"
+      }
+    ],
+    [
       "vuepress-plugin-sitemap",
       {
         hostname: "https://huntdatacenter.gitlab.io/docs/"
