@@ -10,12 +10,12 @@ This guide explain how you can install and configure the X2Go software to get in
 
 If your lab machine is set up for graphical interface, you are good to go after you have set up your local machine:
 
-- [Set up your local machine](#install-the-x2go-client)
+- [Set up your local machine](#install-x2go-client)
 
 If your lab machine is not set up for graphical access, you will need to install the X2Go server:
 
-- [Set up your home lab machine](#set-up-your-home-lab-machine)
-- [Set up your unmanaged lab machine (iaas)](#set-up-your-x2go-lab-server-iaas-node)
+- [Set up your home lab machine](#install-x2go-server-on-your-home-lab-machine-iaas)
+- [Set up your unmanaged lab machine (iaas)](#install-x2go-server-on-unamanaged-lab-machine-iaas)
 
 ::: tip REQUIREMENTS
 
@@ -73,9 +73,11 @@ Alternatives for unmanaged IAAS machines are noted as separate bullet points.
 ::: details Server section
 
 - _Host_: `10.5.5.12`
-  - On iaas machines: You need to type in the IP address for the machine that is set up for X2Go. You will fine the IP by logging into the iaas machine and type `ifconfig | grep 10.5.5.`
+  - On IAAS nodes:
+    You need to type in the IP address for the machine that is set up for X2Go. You will fine the IP by logging into the iaas machine and type `ifconfig | grep 10.5.5.`
 - _Login/username_: `<your-lab-username>`
-  - On iaas machines: The default user name is `ubuntu`. It may be good to confer with your lab coordinator to learn their specific setup for the machine you plan to access.
+  - On IAAS nodes:
+    The default user name is `ubuntu`. It may be good to confer with your lab coordinator to learn their specific setup for the machine you plan to access.
 - _SSH port_: `22`
 - _Use RSA/DSA key for ssh connection_:
 
@@ -87,7 +89,7 @@ Alternatives for unmanaged IAAS machines are noted as separate bullet points.
 
     You will need to save the access keys to your local machine and point to this file: (1) log into your lab `home` machine, (2) print your key with `cat ~/.ssh/id_rsa`, (3) open _Notepad_ on your local machine and copy the text from `-----BEGIN KEY-----` to `-----END KEY-----` (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
 
-  - On iaas machines:
+  - On IAAS nodes:
 
     In addition to the steps above, ensure that you are able to log directly into the machine from your local machine following [this guide](#install-x2go-server-on-unamanaged-lab-machine-iaas).
 
@@ -100,15 +102,15 @@ Alternatives for unmanaged IAAS machines are noted as separate bullet points.
 - _Proxy server type:_ `SSH`
 - _Host:_ `<lab-ip>`
   - For all: This is your lab specific IP that starts with `10.42.130.`. You will find the full address in the software that you use to connect to your lab.
-- _Port:_ 22
-- _Same login as on X2Go Sever:_ Blank
+- _Port:_ `22`
+- _Same login as on X2Go Sever:_ `Leave blank`
 - _Login:_ `<your-lab-username>`
   - For all: This is the user name that you use to connect to your lab.
-- _Same password as on X2Go Server:_ Blank
-- _RSA/DSA key_:
-  - For Mac and Linux: Leave blank.
-  - For Windows: Link to the same file that you established above.
-- _ssh-agent or default ssh key_: `Check`
+- _Same password as on X2Go Server:_ `Leave blank`
+- _RSA/DSA key:_
+  - For Mac and Linux: `Leave blank`
+  - For Windows: `Link to the same file that you established above`
+- _ssh-agent or default ssh key:_ `Check`
   :::
 
 ::: details Session type section
@@ -119,7 +121,11 @@ Alternatives for unmanaged IAAS machines are noted as separate bullet points.
 
 ### In the `Connection` tab
 
-Play with the _Connection speed_ and _Compression_ methods. For office use, `LAN` and `16m-png` should be fine.
+Play with the _Connection speed_ and _Compression_ methods.
+
+::: tip
+For office use `LAN` and `16m-png` should be fine.
+:::
 
 ### In the `Settings` tab
 
@@ -127,7 +133,8 @@ Play with the _Connection speed_ and _Compression_ methods. For office use, `LAN
   - _Keyboard layout:_ `no`
   - _Keyboard model:_ `pc105/no`
 
-Uncheck `Enable sound support` and `Client side printing support`.
+- Uncheck `Enable sound support`
+- Uncheck `Client side printing support`
 
 Hit `OK` in the lower right corner.
 
@@ -152,6 +159,64 @@ you may access this program by updating the `Session type` at the bottom of the 
 from `/usr/bin/xterm/` to actual of the software e.g. `/usr/bin/rstudio` and reconnect.
 
 Time to celebrate with coffee!
+
+## XFCE Environment
+
+Setting up XFCE environment and common settings.
+
+::: details Minimal setup of XFCE desktop
+
+```bash
+sudo apt-get update -y && sudo apt-get autoremove -y
+sudo apt-get install -y --no-install-recommends xubuntu-desktop
+```
+
+:::
+
+::: details TAB completion
+
+- Fixing TAB completion using shell:
+
+  ```bash
+  sed -i 's|name="&lt;Super&gt;Tab" type="string" value="switch_window_key"|name="&lt;Super&gt;Tab" type="empty"|g' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+  ```
+
+- Fixing TAB completion using GUI approach over x2go client.
+
+  ```md
+  1. Open the Xfce `Application Menu` > `Settings` > `Window Manager`
+  2. Click on the `Keyboard Tab`
+  3. Clear the Switch window for same application setting
+  ```
+
+:::
+
+::: details Copy-paste functionality
+
+- Client is connecting **from macOS**
+
+  ```bash
+  touch ~/.Xdefaults
+  chmod u+x ~/.Xdefaults
+  cat \<\< EOF >> ~/.Xdefaults
+  *VT100.translations: #override \
+                   Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)
+  EOF
+  ```
+
+- Client is connecting from **Windows** or **Linux**
+
+  ```bash
+  touch ~/.Xdefaults
+  chmod u+x ~/.Xdefaults
+  cat \<\< EOF >> ~/.Xdefaults
+  *VT100.Translations: #override \
+                   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \
+                   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
+  EOF
+  ```
+
+:::
 
 ## Install X2Go server on your home lab machine (IAAS)
 
@@ -230,8 +295,6 @@ You need to make sure you and your lab mates can log in to the x2go machine pass
 
 ## Troubleshooting
 
-### Stuck X2Go session
-
 ::: details Manually 'killing' a stuck X2Go session
 
 From time to time your X2Go sessions may get stuck, such as when your software inside X2Go consumes all available memory. In such circumstances you may need to manually terminate the stuck X2Go processes using the command line in your lab machine.
@@ -267,61 +330,3 @@ From time to time your X2Go sessions may get stuck, such as when your software i
 
 6. Restart X2Go.
    :::
-
-### XFCE Environment
-
-Setting up XFCE environment and fixes for common issues.
-
-::: details Minimal setup of XFCE desktop
-
-```bash
-sudo apt-get update -y && sudo apt-get autoremove -y
-sudo apt-get install -y --no-install-recommends xubuntu-desktop
-```
-
-:::
-
-::: details TAB completion
-
-- Fixing TAB completion using shell:
-
-  ```bash
-  sed -i 's|name="&lt;Super&gt;Tab" type="string" value="switch_window_key"|name="&lt;Super&gt;Tab" type="empty"|g' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-  ```
-
-- Fixing TAB completion using GUI approach over x2go client.
-
-  ```md
-  1. Open the Xfce `Application Menu` > `Settings` > `Window Manager`
-  2. Click on the `Keyboard Tab`
-  3. Clear the Switch window for same application setting
-  ```
-
-:::
-
-::: details Copy-paste functionality
-
-- Client is connecting **from macOS**
-
-  ```bash
-  touch ~/.Xdefaults
-  chmod u+x ~/.Xdefaults
-  cat \<\< EOF >> ~/.Xdefaults
-  *VT100.translations: #override \
-                   Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)
-  EOF
-  ```
-
-- Client is connecting from **Windows** or **Linux**
-
-  ```bash
-  touch ~/.Xdefaults
-  chmod u+x ~/.Xdefaults
-  cat \<\< EOF >> ~/.Xdefaults
-  *VT100.Translations: #override \
-                   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \
-                   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
-  EOF
-  ```
-
-:::
