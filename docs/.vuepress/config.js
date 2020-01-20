@@ -89,7 +89,6 @@ module.exports = {
                 "working-in-your-lab/technical-tools/gpu",
                 "working-in-your-lab/technical-tools/htop",
                 "working-in-your-lab/technical-tools/mobaxterm",
-                "working-in-your-lab/technical-tools/winscp",
                 "working-in-your-lab/technical-tools/sshfs",
                 "working-in-your-lab/technical-tools/winscp",
                 "working-in-your-lab/technical-tools/x2go"
