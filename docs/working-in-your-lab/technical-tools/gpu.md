@@ -1,6 +1,7 @@
 ---
 title: GPU
 permalink: /working-in-your-lab/technical-tools/gpu
+sidebarDepth: 3
 ---
 
 # GPU on HUNT Cloud

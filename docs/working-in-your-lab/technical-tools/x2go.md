@@ -16,33 +16,57 @@ If your lab machine is not set up for graphical access, you will need to install
 - [Set up your home lab machine](#set-up-your-home-lab-machine)
 - [Set up your unmanaged lab machine (iaas)](#set-up-your-x2go-lab-server-iaas-node)
 
-## Set up your local machine
-
-We utilize [X2Go](https://wiki.x2go.org/doku.php) to interact with the graphical software on your lab machines.
-Thus, if your lab is already set up for such access, you should be fine to access your tools as soon as you have installed and configured X2Go on your local machine.
-
-### General requirements
+## General requirements
 
 - A working connection to your lab machines.
 - A lab machine set up for X2Go connection (X2Go server and your software of choice, see below).
 
-### Install the X2Go client
+We utilize [X2Go](https://wiki.x2go.org/doku.php) to interact with the graphical software on your lab machines.
+Thus, if your lab is already set up for such access, you should be fine to access your tools as soon as you have installed and configured X2Go on your local machine.
 
-- Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) on your own local machine.
-  - **OS X**: Run both `brew cask install xquartz` and `brew cask install x2goclient`. Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks.
-  - **Windows**: Download and run the [X2Go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#ms_windows)
-  - **Linux/Ubuntu**: `apt install x2goclient`
+## Install the X2Go client
 
-### Configure the X2Go client
+Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) on your own local machine.
+
+### OS X/macOS
+
+Run brew to install both xquartz and x2goclient:
+
+```bash
+brew cask install xquartz
+brew cask install x2goclient
+```
+
+Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks.
+
+::: note
+OSX 10.15 Catalina: in case of issues with x2goclient you can try [nightly build](https://code.x2go.org/releases/X2GoClient_nightly_macosx/x2goclient-4.1.2.2.git20191230.1893.heuler.OSX_10_13.dmg) version.
+:::
+
+### Windows
+
+Download and run the [X2Go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#ms_windows).
+
+### Linux (Ubuntu / Debian)
+
+Install x2goclient using apt:
+
+```bash
+apt install x2goclient
+```
+
+## Configure the X2Go client
 
 Once installed, open X2Go and click `New session` and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
-`Please note`: The default suggestions in red below are for connection to software on your lab's home machine.
+::: note
+The default suggestions in red below are for connection to software on your lab's home machine.
 Alternatives for unmanaged iaas machines are noted as separate bullet points.
+:::
 
-#### In the `Session` tab
+### In the `Session` tab
 
-##### Server
+#### Server
 
 - _Host_: `10.5.5.12`
   - On iaas machines: You need to type in the IP address for the machine that is set up for X2Go. You will fine the IP by logging into the iaas machine and type `ifconfig | grep 10.5.5.`
@@ -56,7 +80,7 @@ Alternatives for unmanaged iaas machines are noted as separate bullet points.
 - _Try auto login_: `Check`
 - _Use Proxy server for SSH connection_: `Check`
 
-##### Proxy server
+#### Proxy server
 
 - _Proxy server type:_ `SSH`
 - _Host:_ `<lab-ip>`
@@ -71,16 +95,16 @@ Alternatives for unmanaged iaas machines are noted as separate bullet points.
   - For Windows: Link to the same file that you established above.
 - _ssh-agent or default ssh key_: `Check`
 
-##### Session type
+#### Session type
 
 - Choose `Single application` from the drop down menu
 - Add `/usr/bin/xterm` in the command window
 
-#### In the `Connection` tab
+### In the `Connection` tab
 
 Play with the _Connection speed_ and _Compression_ methods. For office use, `LAN` and `16m-png` should be fine.
 
-#### In the `Settings` tab
+### In the `Settings` tab
 
 _Keyboard_: Add your keyboard layout if this differ from `US` settings, e.g. Norwegian keyboard settings may be
 
@@ -91,7 +115,7 @@ Uncheck _Enable sound support_ and _Client side printing support_
 
 Hit `OK` in the lower right corner.
 
-### Connect to the X2Go server
+## Connect to the X2Go server
 
 - Ensure that your HUNT Cloud VPN is running and connected.
 
@@ -99,7 +123,7 @@ Hit `OK` in the lower right corner.
 
 - Type `xclock` in the terminal to test the setup. With a little bit of luck, you should now see a new window popping up with a digital clock.
 
-### Connect to other software
+## Connect to other software
 
 You may use X2Go to access software with graphical interfaces.
 Such software needs to be installed in your lab machine.
@@ -107,7 +131,7 @@ For example, if you or your lab mates have [installed RStudio](https://gitlab.co
 
 Time to celebrate with coffee!
 
-## Set up your home lab machine
+# Set up your home lab machine
 
 **This section is for lab coordinators that want to set up their lab home for graphical access.**
 
@@ -116,18 +140,22 @@ Time to celebrate with coffee!
 `Please note`: The above command work on lab environments deployed after 2019-01.
 Give us a shout [here](/contact) if you would like to install x2goserver on labs deployed before this date.
 
-## Set up your X2Go lab server (IaaS-node)
+# Set up your X2Go lab server (IaaS-node)
 
-**This section is for lab coordinators that want to set up their unmanaged machines for graphical access.**
+::: note
+This section is for lab coordinators that want to set up their unmanaged machines for graphical access.
+:::
 
 Connection to X2Go require the application `x2goserver` to run on your iaas nodes.
 You may install this on your unmanaged iaas-nodes as follows:
 
-### Requirements
+```md
+# Requirements
 
 - Root access to your lab machine.
+```
 
-### Install the X2Go server
+## Install the X2Go server
 
 Log into your unmanaged lab machine of choice and install the remote desktop software (x2go).
 
@@ -141,15 +169,35 @@ sudo apt install x2goserver -y
 
 You need to make sure you and your lab mates can log in to the x2go machine passwordless using RSA certificates, e.g. by following these steps:
 
-- From your local machine, log into your lab's entry machine: `ssh <labname>-entry`
-- Form your entry machine, copy your machine key to your iaas-machine with the running X2Go server: `ssh-copy-id <name-of-iaas-node>`
-- Confirm the passwordless route to your iaas machine: `ssh <iaas-node>`
+- From your local machine, log into your lab's entry machine:
 
-`Please note`: Give us a shout [here](/contact) if you are unable to make the above step work since a security setting may prohibit this depending on your lab setup.
+  ```bash
+  ssh <labname>-entry
+  ```
 
-### Get the IP for your iaas machine
+- Form your entry machine, copy your machine key to your iaas-machine with the running X2Go server:
 
-- Inside your iaas node, list the IP address for the node with `ifconfig`. The IP address is listed after `inet addr:` and start with 10.5. Note this as you will use this for the X2Go setup on your local machine (steps above).
+  ```bash
+  ssh-copy-id <name-of-iaas-node>
+  ```
+
+- Confirm the passwordless route to your iaas machine:
+
+  ```bash
+  ssh <iaas-node>
+  ```
+
+  ::: note
+  Give us a shout [here](/contact) if you are unable to make the above step work since a security setting may prohibit this depending on your lab setup.
+  :::
+
+- Get the IP for your iaas machine
+
+  Inside your iaas node, list the IP address for the node with `ifconfig`. The IP address is listed after `inet addr:` and start with 10.5. Note this as you will use this for the X2Go setup on your local machine (steps above).
+
+  ```bash
+  hostname -I
+  ```
 
 ## Troubleshooting
 
@@ -161,39 +209,39 @@ From time to time your X2Go sessions may get stuck, such as when your software i
 
 2. Once onboard your lab machine, list X2Go processes running under your user name.
 
-```
-ps aux | grep x2go | grep <your-username>
-```
+   ```bash
+   ps aux | grep x2go | grep <your-username>
+   ```
 
-For example:
+   For example:
 
-```
-ps aux | grep x2go | grep demouser
-```
+   ```bash
+   ps aux | grep x2go | grep demouser
+   ```
 
-A single line of your output will similar to the output below. This is from a process running the RStudio software. Your output may look different depending on the software your run:
+   A single line of your output will similar to the output below. This is from a process running the RStudio software. Your output may look different depending on the software your run:
 
-```
-demouser 22463 0.0 0.0 11300 1796 ? Ss Jul11 0:00 /bin/bash /usr/bin/x2goruncommand 50 22408 demouser-50-1563761927_stRrstudio_dp32 39401 /usr/bin/rstudio nosnd R
-```
+   ```
+   demouser 22463 0.0 0.0 11300 1796 ? Ss Jul11 0:00 /bin/bash /usr/bin/x2goruncommand 50 22408 demouser-50-1563761927_stRrstudio_dp32 39401 /usr/bin/rstudio nosnd R
+   ```
 
 3. Identify the process ID number that you want to terminate. The unique process ID is listes in the second column in the output from Step 2. For example, the process ID for the X2Go session below is `22463` (your number will be different).
 
-```
-demouser 22463 0.0 0.0 11300 1796 ? Ss Jul11 0:00 /bin/bash /usr/bin/x2goruncommand 50 22408 demouser-50-1563761927_stRrstudio_dp32 39401 /usr/bin/rstudio nosnd R
-```
+   ```
+   demouser 22463 0.0 0.0 11300 1796 ? Ss Jul11 0:00 /bin/bash /usr/bin/x2goruncommand 50 22408 demouser-50-1563761927_stRrstudio_dp32 39401 /usr/bin/rstudio nosnd R
+   ```
 
 4. Terminate the session ID that is stuck.
 
-```
-kill <process-id>
-```
+   ```bash
+   kill <process-id>
+   ```
 
-For example:
+   For example:
 
-```
-kill 22463
-```
+   ```bash
+   kill 22463
+   ```
 
 5. Confirm that the process is killed by reapeating Step 2 to verify that the process ID is no longer listed. Repeat the procedure to kill additional processes if needed.
 
