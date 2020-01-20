@@ -26,30 +26,31 @@ If your lab machine is not set up for graphical access, you will need to install
 We utilize [X2Go](https://wiki.x2go.org/doku.php) to interact with the graphical software on your lab machines.
 Thus, if your lab is already set up for such access, you should be fine to access your tools as soon as you have installed and configured X2Go on your local machine.
 
-## Install the X2Go client
+## Install X2Go client
 
 Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) on your own local machine.
 
 ::: details OS X/macOS
-Run brew to install both xquartz and x2goclient:
 
-```bash
-brew cask install xquartz
-brew cask install x2goclient
-```
+- Run brew to install both xquartz and x2goclient:
 
-Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks.
-:::
+  ```bash
+  brew cask install xquartz
+  brew cask install x2goclient
+  ```
 
-::: warning OS X 10.15 Catalina
-In case of issues with x2goclient you can try [nightly build](https://code.x2go.org/releases/X2GoClient_nightly_macosx/x2goclient-4.1.2.2.git20191230.1893.heuler.OSX_10_13.dmg) version.
+- Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks.
+
+  ::: warning OS X 10.15 Catalina
+  In case of issues with x2goclient you can try [nightly build](https://code.x2go.org/releases/X2GoClient_nightly_macosx/x2goclient-4.1.2.2.git20191230.1893.heuler.OSX_10_13.dmg) version.
+
 :::
 
 ::: details Windows
 Download and run the [X2Go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#ms_windows).
 :::
 
-::: Linux (Ubuntu / Debian)
+::: details Linux (Ubuntu / Debian)
 Install x2goclient using apt:
 
 ```bash
@@ -58,18 +59,18 @@ apt install x2goclient
 
 :::
 
-## Configure the X2Go client
+## Configure X2Go client
 
 Once installed, open X2Go and click `New session` and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
 ::: tip NOTE
 The default suggestions in red below are for connection to software on your lab's home machine.
-Alternatives for unmanaged iaas machines are noted as separate bullet points.
+Alternatives for unmanaged IAAS machines are noted as separate bullet points.
 :::
 
 ### In the `Session` tab
 
-#### Server
+::: details Server section
 
 - _Host_: `10.5.5.12`
   - On iaas machines: You need to type in the IP address for the machine that is set up for X2Go. You will fine the IP by logging into the iaas machine and type `ifconfig | grep 10.5.5.`
@@ -77,13 +78,24 @@ Alternatives for unmanaged iaas machines are noted as separate bullet points.
   - On iaas machines: The default user name is `ubuntu`. It may be good to confer with your lab coordinator to learn their specific setup for the machine you plan to access.
 - _SSH port_: `22`
 - _Use RSA/DSA key for ssh connection_:
-  - For Mac and Linux: Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](https://gitlab.com/huntgenes/hunt-cloud-community/wikis/how-to-connect#establish-a-password-less-login)' section in the installation guide.
-  - For Windows: You will need to save the access keys to your local machine and point to this file: (1) log into your lab `home` machine, (2) print your key with `cat ~/.ssh/id_rsa`, (3) open _Notepad_ on your local machine and copy the text from `-----BEGIN KEY-----` to `-----END KEY-----` (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
-  - On iaas machines: In addition to the steps above, ensure that you are able to log directly into the machine from your local machine following [this guide](#ensure-smooth-access).
+
+  - For Mac and Linux:
+
+    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](https://gitlab.com/huntgenes/hunt-cloud-community/wikis/how-to-connect#establish-a-password-less-login)' section in the installation guide.
+
+  - For Windows:
+
+    You will need to save the access keys to your local machine and point to this file: (1) log into your lab `home` machine, (2) print your key with `cat ~/.ssh/id_rsa`, (3) open _Notepad_ on your local machine and copy the text from `-----BEGIN KEY-----` to `-----END KEY-----` (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
+
+  - On iaas machines:
+
+    In addition to the steps above, ensure that you are able to log directly into the machine from your local machine following [this guide](#install-x2go-server-on-unamanaged-lab-machine-iaas).
+
 - _Try auto login_: `Check`
 - _Use Proxy server for SSH connection_: `Check`
+  :::
 
-#### Proxy server
+::: details Proxy server section
 
 - _Proxy server type:_ `SSH`
 - _Host:_ `<lab-ip>`
@@ -97,11 +109,13 @@ Alternatives for unmanaged iaas machines are noted as separate bullet points.
   - For Mac and Linux: Leave blank.
   - For Windows: Link to the same file that you established above.
 - _ssh-agent or default ssh key_: `Check`
+  :::
 
-#### Session type
+::: details Session type section
 
 - Choose `Single application` from the drop down menu
 - Add `/usr/bin/xterm` in the command window
+  :::
 
 ### In the `Connection` tab
 
@@ -109,16 +123,15 @@ Play with the _Connection speed_ and _Compression_ methods. For office use, `LAN
 
 ### In the `Settings` tab
 
-_Keyboard_: Add your keyboard layout if this differ from `US` settings, e.g. Norwegian keyboard settings may be
+- _Keyboard_: Add your keyboard layout if this differ from `US` settings, e.g. Norwegian keyboard settings may be:
+  - _Keyboard layout:_ `no`
+  - _Keyboard model:_ `pc105/no`
 
-- _Keyboard layout:_ `no`
-- _Keyboard model:_ `pc105/no`
-
-Uncheck _Enable sound support_ and _Client side printing support_
+Uncheck `Enable sound support` and `Client side printing support`.
 
 Hit `OK` in the lower right corner.
 
-## Connect to the X2Go server
+## Connect to X2Go server
 
 ::: tip
 Ensure that your HUNT Cloud VPN is running and connected.
@@ -140,7 +153,7 @@ from `/usr/bin/xterm/` to actual of the software e.g. `/usr/bin/rstudio` and rec
 
 Time to celebrate with coffee!
 
-## Install the X2Go server on your lab machine (IaaS-node)
+## Install X2Go server on your home lab machine (IAAS)
 
 ::: warning NOTE
 This section is for lab coordinators that want to set up their lab home for graphical access.
@@ -157,23 +170,22 @@ The above command works on lab environments deployed after 2019-01.
 Give us a shout [here](/contact) if you would like to install x2goserver on labs deployed before this date.
 :::
 
-# Install the X2Go server on your lab machine (IaaS-node)
+## Install X2Go server on unamanaged lab machine (IAAS)
 
-::: tip INFO
+::: warning NOTE
 This section is for lab coordinators that want to set up their unmanaged machines for GUI access.
 :::
-
-Connection to X2Go require the application `x2goserver` to run on your iaas nodes.
-You may install this on your unmanaged iaas-nodes as follows:
 
 ::: tip REQUIREMENTS
 
 - Root access to your lab machine.
-  :::
 
-## Install the X2Go server
+:::
 
-Log into your unmanaged lab machine of choice and install the remote desktop software (x2go).
+Connection to X2Go require the application `x2goserver` to run on your IAAS nodes.
+You may install this on your unmanaged IAAS-nodes as follows:
+
+Log into unmanaged lab machine of your choice and install the remote desktop software:
 
 ```bash
 sudo add-apt-repository ppa:x2go/stable
@@ -181,43 +193,46 @@ sudo apt update
 sudo apt install x2goserver -y
 ```
 
-### Ensure smooth access
+::: details Ensure smooth access
 
 You need to make sure you and your lab mates can log in to the x2go machine passwordless using RSA certificates, e.g. by following these steps:
 
-- From your local machine, log into your lab's entry machine:
+1. From your local machine, log into your lab's entry machine:
 
-  ```bash
-  ssh <labname>-entry
-  ```
+   ```bash
+   ssh <labname>-entry
+   ```
 
-- Form your entry machine, copy your machine key to your iaas-machine with the running X2Go server:
+2. Form your entry machine, copy your machine key to your iaas-machine with the running X2Go server:
 
-  ```bash
-  ssh-copy-id <name-of-iaas-node>
-  ```
+   ```bash
+   ssh-copy-id <name-of-iaas-node>
+   ```
 
-- Confirm the passwordless route to your iaas machine:
+3. Confirm the passwordless route to your iaas machine:
 
-  ```bash
-  ssh <iaas-node>
-  ```
+   ```bash
+   ssh <iaas-node>
+   ```
 
-  ::: warning NOTE
-  Give us a shout [here](/contact) if you are unable to make the above step work since a security setting may prohibit this depending on your lab setup.
-  :::
+   ::: warning NOTE
+   Give us a shout [here](/contact) if you are unable to make the above step work since a security setting may prohibit this depending on your lab setup.
 
-- Get the IP for your iaas machine
+4. Get the IP for your IAAS machine
 
-  Inside your iaas node, list the IP address for the node with `ifconfig`. The IP address is listed after `inet addr:` and start with 10.5. Note this as you will use this for the X2Go setup on your local machine (steps above).
+   Inside your IAAS node, list the IP address for the node with `ifconfig`. The IP address is listed after `inet addr:` and start with 10.5. Note this as you will use this for the X2Go setup on your local machine (steps above).
 
-  ```bash
-  hostname -I
-  ```
+   ```bash
+   hostname -I
+   ```
+
+:::
 
 ## Troubleshooting
 
-### Manually 'killing' a stuck X2Go session
+### Stuck X2Go session
+
+::: details Manually 'killing' a stuck X2Go session
 
 From time to time your X2Go sessions may get stuck, such as when your software inside X2Go consumes all available memory. In such circumstances you may need to manually terminate the stuck X2Go processes using the command line in your lab machine.
 
@@ -245,26 +260,19 @@ From time to time your X2Go sessions may get stuck, such as when your software i
 
    ```bash
    kill <process-id>
+   # e.g.: kill 22463
    ```
-
-   ::: tip EXAMPLE
-
-   ```bash
-   kill 22463
-   ```
-
-   :::
 
 5. Confirm that the process is killed by reapeating Step 2 to verify that the process ID is no longer listed. Repeat the procedure to kill additional processes if needed.
 
 6. Restart X2Go.
+   :::
 
 ### XFCE Environment
 
 Setting up XFCE environment and fixes for common issues.
 
-::: details Minimal setup of **XFCE desktop**
-Install xfce packages on the target server:
+::: details Minimal setup of XFCE desktop
 
 ```bash
 sudo apt-get update -y && sudo apt-get autoremove -y
@@ -273,45 +281,47 @@ sudo apt-get install -y --no-install-recommends xubuntu-desktop
 
 :::
 
-::: details **TAB completion**
-Fixing TAB completion in shell:
+::: details TAB completion
 
-```bash
-sed -i 's|<property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>|<property name="&lt;Super&gt;Tab" type="empty"/>|g' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-```
+- Fixing TAB completion using shell:
 
-Fixing TAB completion with GUI approach over x2go client.
+  ```bash
+  sed -i 's|name="&lt;Super&gt;Tab" type="string" value="switch_window_key"|name="&lt;Super&gt;Tab" type="empty"|g' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+  ```
 
-```md
-1. Open the Xfce `Application Menu` > `Settings` > `Window Manager`
-2. Click on the `Keyboard Tab`
-3. Clear the Switch window for same application setting
-```
+- Fixing TAB completion using GUI approach over x2go client.
+
+  ```md
+  1. Open the Xfce `Application Menu` > `Settings` > `Window Manager`
+  2. Click on the `Keyboard Tab`
+  3. Clear the Switch window for same application setting
+  ```
 
 :::
 
-::: details **Copy - Paste functionality**
-Client is connecting from **macOS**:
+::: details Copy-paste functionality
 
-```bash
-touch ~/.Xdefaults
-chmod u+x ~/.Xdefaults
-cat \<\< EOF >> ~/.Xdefaults
-*VT100.translations: #override \
-                 Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)
-EOF
-```
+- Client is connecting **from macOS**
 
-Client is connecting from **Windows/Linux** computer:
+  ```bash
+  touch ~/.Xdefaults
+  chmod u+x ~/.Xdefaults
+  cat \<\< EOF >> ~/.Xdefaults
+  *VT100.translations: #override \
+                   Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)
+  EOF
+  ```
 
-```bash
-touch ~/.Xdefaults
-chmod u+x ~/.Xdefaults
-cat \<\< EOF >> ~/.Xdefaults
-*VT100.Translations: #override \
-                 Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \
-                 Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
-EOF
-```
+- Client is connecting from **Windows** or **Linux**
+
+  ```bash
+  touch ~/.Xdefaults
+  chmod u+x ~/.Xdefaults
+  cat \<\< EOF >> ~/.Xdefaults
+  *VT100.Translations: #override \
+                   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \
+                   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
+  EOF
+  ```
 
 :::
