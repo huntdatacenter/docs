@@ -17,6 +17,8 @@ Depending on you security model, you may mount selected part of your storage sys
 1. Install [brew](https://brew.sh/)
 2. Install fuse4x: `brew cask install osxfuse`
 3. Install sshfs: `brew install sshfs`
+4. Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
+5. Reboot OS X/macOS
 
 ## Mount your lab storage to your computer
 
