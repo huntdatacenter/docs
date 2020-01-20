@@ -10,15 +10,30 @@ Depending on you security model, you may mount selected part of your storage sys
 
 ## Install software packages on linux (Debian)
 
-1. Install sshfs: `apt install sshfs`
+1. Install sshfs:
+
+   ```bash
+   sudo apt install sshfs
+   ```
 
 ## Install software packages on OS X and macOS
 
-1. Install [brew](https://brew.sh/)
-2. Install fuse4x: `brew cask install osxfuse`
-3. Install sshfs: `brew install sshfs`
-4. Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
-5. Reboot OS X/macOS
+1. Install [Homebrew - brew](https://brew.sh/)
+2. Install fuse4x:
+
+   ```bash
+   brew cask install osxfuse
+   ```
+
+3. Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
+
+4. Install sshfs:
+
+   ```bash
+   brew install sshfs
+   ```
+
+5. Reboot macOS before continuing
 
 ## Mount your lab storage to your computer
 
@@ -42,6 +57,12 @@ Depending on you security model, you may mount selected part of your storage sys
    ```
 
    e.g. `sshfs demolab-entry: demolab -o volname=demolab`
+
+5. You can make an alias in profile/rc config (`~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`) for easier access:
+
+   ```bash
+   echo "alias ${labname}-mount=sshfs ${labname}-entry: ~/${labname}-storage -o follow_symlinks -o volname=${labname}" >> ~/.profile
+   ```
 
 That's it.
 With a little bit of luck you should be able to find your lab folders in "Finder"...
