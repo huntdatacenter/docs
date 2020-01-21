@@ -1,16 +1,11 @@
 ---
+title: Conda
 permalink: /working-in-your-lab/analytical-tools/conda
 ---
 
 # Conda, Anaconda, Miniconda and Bioconda
 
-[Conda](https://conda.io/en/latest/)
-
-[Anaconda](https://docs.anaconda.com/anaconda/)
-
-[Miniconda](https://conda.io/en/latest/miniconda.html)
-
-[Bioconda](https://bioconda.github.io)
+[Conda](https://conda.io/en/latest/) - [Anaconda](https://docs.anaconda.com/anaconda/) - [Miniconda](https://conda.io/en/latest/miniconda.html) - [Bioconda](https://bioconda.github.io)
 
 ## Install Anaconda
 

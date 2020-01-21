@@ -19,22 +19,25 @@ Depending on you security model, you may mount selected part of your storage sys
 
 ## Install software packages on OS X and macOS
 
-1. Install [Homebrew - brew](https://brew.sh/)
-2. Install fuse4x:
+::: tip REQUIREMENT
+[Install Homebrew package manager for macOS: brew](https://brew.sh/)
+:::
+
+1. Install fuse4x:
 
    ```bash
    brew cask install osxfuse
    ```
 
-3. Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
+2. Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
 
-4. Install sshfs:
+3. Install sshfs:
 
    ```bash
    brew install sshfs
    ```
 
-5. Reboot macOS before continuing
+4. Reboot macOS before continuing
 
 ## Mount your lab storage to your computer
 

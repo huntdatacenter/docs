@@ -1,5 +1,6 @@
 ---
-permalink: /working-in-your-lab/analytical-tools/r
+title: R and R-Studio
+permalink: /working-in-your-lab/analytical-tools/r-studio
 sidebarDepth: 3
 ---
 

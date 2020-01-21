@@ -39,6 +39,9 @@ Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2gocl
   brew cask install x2goclient
   ```
 
+  ::: tip REQUIREMENT
+  [Install Homebrew package manager for macOS: brew](https://brew.sh/)
+
 - Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks.
 
   ::: warning OS X 10.15 Catalina
