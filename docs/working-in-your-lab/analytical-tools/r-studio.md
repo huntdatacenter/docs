@@ -11,7 +11,7 @@ sidebarDepth: 3
 We have already installed the latest version on your home node.
 For those of you running unmanaged nodes on our security tier 2 may want to upgrade to the latest version using the code below:
 
-## Ubuntu 16.04
+## Ubuntu
 
 ```bash
 # Install R
@@ -19,9 +19,8 @@ sudo apt install r-base r-base-dev -y
 
 # Add the updated package repository to your sources list:
 # https://cran.r-project.org/bin/linux/ubuntu/
-# Please note that the link below are tailored for Ubuntu 16.04.
 sudo su
-echo "deb https://ftp.acc.umu.se/mirror/CRAN/bin/linux/ubuntu xenial/" >> /etc/apt/sources.list
+echo "deb https://ftp.acc.umu.se/mirror/CRAN/bin/linux/ubuntu $(lsb_release -cs)/" >> /etc/apt/sources.list
 
 # Add keys for the CRAN repository
 gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E084DAB9
@@ -43,7 +42,7 @@ The default version in R is usually a few versions behind the newest software. F
 
 ```bash
 # -- Add the new package repository to your sources list:
-sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu xenial-cran35/'
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran35/'
 
 # -- Update packages
 sudo apt update
@@ -73,13 +72,13 @@ dpkg -l | grep "^ii  r-" > r_packages.txt
 ```bash
 cat <<EOF | sudo tee /etc/apt/preferences.d/pin-r35
 Package: r-*
-Pin: release a=xenial-cran35
+Pin: release a=$(lsb_release -cs)-cran35
 Pin: version 3.5*
 Pin-Priority: 800
 
 Package: r-cran-nlme
-Pin: release a=xenial-cran35
-Pin: version 3.1.139-1xenial0
+Pin: release a=$(lsb_release -cs)-cran35
+Pin: version 3.1.139-1$(lsb_release -cs)0
 Pin-Priority: 800
 EOF
 ```
@@ -129,7 +128,7 @@ Installation on home-nodes require us to run some code.
 
 ### Download the latest software version
 
-Search [www.rstudio.com](https://www.rstudio.com/products/rstudio/download/#download) for the latest version in accordance with your operating system (e.g. Ubuntu 16.04).
+Search [www.rstudio.com](https://www.rstudio.com/products/rstudio/download/#download) for the latest version in accordance with your operating system (e.g. Ubuntu 16.04 xenial).
 The below text is an example code which you may cut and paste into your shell:
 
 ```bash
