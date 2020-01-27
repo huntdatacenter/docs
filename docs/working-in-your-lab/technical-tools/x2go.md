@@ -57,7 +57,7 @@ Download and run the [X2Go client](https://wiki.x2go.org/doku.php/doc:installati
 Install x2goclient using apt:
 
 ```bash
-apt install x2goclient
+sudo apt-get update -y && sudo apt install -y x2goclient
 ```
 
 :::
@@ -68,7 +68,7 @@ Once installed, open X2Go and click `New session` and enter a _Session name_ tha
 
 ::: tip NOTE
 The default suggestions in red below are for connection to software on your lab's home machine.
-Alternatives for unmanaged IAAS machines are noted as separate bullet points.
+Alternatives for unmanaged IAAS machines (for Lab coordinators) are noted as separate bullet points.
 :::
 
 ### In the `Session` tab
@@ -86,7 +86,7 @@ Alternatives for unmanaged IAAS machines are noted as separate bullet points.
 
   - For Mac and Linux:
 
-    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](https://gitlab.com/huntgenes/hunt-cloud-community/wikis/how-to-connect#establish-a-password-less-login)' section in the installation guide.
+    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](https://docs.hdc.ntnu.no/getting-started/how-to-connect/#simplify-your-life)' section in the installation guide.
 
   - For Windows:
 
@@ -130,7 +130,9 @@ Play with the _Connection speed_ and _Compression_ methods.
 For office use `LAN` and `16m-png` should be fine.
 :::
 
-### In the `Settings` tab
+Hit `OK` in the lower right corner.
+
+### In the `Options` / `Settings` menu
 
 - _Keyboard_: Add your keyboard layout if this differ from `US` settings, e.g. Norwegian keyboard settings may be:
 
@@ -139,8 +141,6 @@ For office use `LAN` and `16m-png` should be fine.
 
 - Uncheck `Enable sound support`
 - Uncheck `Client side printing support`
-
-Hit `OK` in the lower right corner.
 
 ## Connect to X2Go server
 
