@@ -11,7 +11,7 @@ However, we know it's frustrating when you don't find the instant fix to your pr
 
 (1) **Improve current content**. Click "Help us improve this page!" at the bottom of each page to suggest changes directly in the page.
 
-(2) **Suggest new content**. [Contact us](/contact) with suggestions for new content and pages that will help your fellow researchers fly.
+(2) **Suggest new content**. Contact us with suggestions for new content and pages that will help your fellow researchers fly.
 
 (3) **Help out on Slack**. Participate in discussions to both help and learn from fellow users in topic related channels.
 
