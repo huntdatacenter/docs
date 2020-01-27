@@ -130,17 +130,12 @@ Play with the _Connection speed_ and _Compression_ methods.
 For office use `LAN` and `16m-png` should be fine.
 :::
 
-Hit `OK` in the lower right corner.
+### In the `Media` tab
 
-### In the `Options` / `Settings` menu
-
-- _Keyboard_: Add your keyboard layout if this differ from `US` settings, e.g. Norwegian keyboard settings may be:
-
-  - _Keyboard layout:_ `no`
-  - _Keyboard model:_ `pc105/no`
-
-- Uncheck `Enable sound support`
 - Uncheck `Client side printing support`
+- Uncheck `Enable sound support`
+
+Hit `OK` in the lower right corner.
 
 ## Connect to X2Go server
 
