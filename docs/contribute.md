@@ -5,16 +5,14 @@ permalink: /contribute
 
 # Contribute
 
-It is frustrating when you don't find an instant fix to your problem at hand! It's impossible to cover them all.
+We are proud of the content of these pages. They have come together as a collaborative contribution from lab users in our cloud community. All pages are carefully crafted so you can step on the shoulders on their expertise and know-hows to elevate your own research!
 
-However, we are proud of the current content of these pages. They have come together as a collaborative contribution from our cloud community. All carefully crafted so you can step on the shoulders on their expertise and know-hows to elevate your own research!
+However, we know it's frustrating when you don't find the instant fix to your problem at hand! So help us carry the torch to new researchers by sharing your tips and tricks:
 
-Help us carry the torch to the next set of researchers in line by sharing your tips and tricks:
+(1) **Improve current content**. Click "Help us improve this page!" at the bottom of each page to suggest changes directly in the page.
 
-(1) **Improve current content**. Click "Help us improve this page!" and suggest changes directly in the page where you have a suggestion for improvement.
+(2) **Suggest new content**. Contact us with suggestions for new content and pages that will help your fellow researchers fly.
 
-(2) **Suggest new content**. Suggest new pages and content that will help your fellow researchers.
-
-(3) **Help out on Slack**. Participate in Slack channels both helping and to learn from other community members. We have topci channels in specific analysis, tools, data management, etc.
+(3) **Help out on Slack**. Participate in discussions to both help and learn from fellow users in topic related channels.
 
 We are stronger together.
