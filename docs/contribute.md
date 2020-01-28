@@ -15,4 +15,4 @@ However, we know it's frustrating when you don't find the instant fix to your pr
 
 (3) **Help out on Slack**. Participate in discussions to both help and learn from fellow users in topic related channels.
 
-We are stronger together.
+Let's become stronger together.
