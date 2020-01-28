@@ -7,15 +7,17 @@ permalink: /working-in-your-lab/analytical-tools/conda
 
 [Conda](https://conda.io/en/latest/) - [Anaconda](https://docs.anaconda.com/anaconda/) - [Miniconda](https://conda.io/en/latest/miniconda.html) - [Bioconda](https://bioconda.github.io)
 
-## Install Anaconda
+## Installation
+
+### Install Anaconda
 
 Follow the [Installing on Linux](https://docs.anaconda.com/anaconda/install/linux/#installation) instructions from Anaconda.
 
-## Set up Bioconda channels
+### Set up Bioconda channels
 
 Follow the [Set up channels](https://bioconda.github.io/user/install.html#set-up-channels) guide from Bioconda.
 
-## Install Your Tools
+### Install Your Tools
 
 Have a field day installing your favourite tools
 
@@ -23,13 +25,13 @@ Have a field day installing your favourite tools
 conda install plink2
 ```
 
-## Do Cool Science
+### Do Cool Science
 
 ```bash
 plink2 <input>
 ```
 
-### Additional resources
+## Additional resources
 
 - [Install R with conda](https://conda.io/docs/user-guide/tasks/use-r-with-conda.html)
 - Update to the [latest R version](https://anaconda.org/conda-forge/r-base)
