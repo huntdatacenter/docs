@@ -32,6 +32,11 @@ Your VPN session will reset after 12 hours. This will cause your connection to b
 
 If your VPN login suddenly stops working, and you are pretty sure your user name and mobile code are both correct, try to sync Google Authenticator's time settings: Start Google authenticator on your phone, tap the tree dots in thecorner (menu button) and go to 'Settings' > 'Time correction for codes' and hit 'Sync now'. Now, try to log in again.
 
+### Deactivated account
+
+Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Contact us](/contact) for an account reactivation.
+
+
 ## SSH
 
 ### Password updates
