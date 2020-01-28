@@ -119,6 +119,8 @@ We do provide the opportunity for a graphical interface via R Studio.
 Researchers may install this on unmanaged machines (iaas-nodes).
 Installation on home-nodes require us to run some code.
 
+::: warning General requirements
+
 ### Dependencies
 
 - R (installed as above)
