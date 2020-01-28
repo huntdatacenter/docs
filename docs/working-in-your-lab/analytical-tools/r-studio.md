@@ -8,8 +8,8 @@ sidebarDepth: 3
 
 [R](https://www.r-project.org/) is a handy language and environment for statistical computing and graphics.
 
-We have already installed the latest version on your home node.
-For those of you running unmanaged nodes on our security tier 2 may want to upgrade to the latest version using the code below:
+We have already installed the latest version on your home machines.
+For those of you running unmanaged machines on our security tier 2 may want to upgrade to the latest version using the code below:
 
 ## Ubuntu
 
@@ -53,13 +53,13 @@ sudo apt autoremove -y
 R
 ```
 
-### Downgrade your R version to a specific version (iaas nodes)
+### Downgrade your R version to a specific version (iaas machines)
 
 Sometimes you may want to pin your R version to a specific release to please specific packages required for your work.
 Below are a guide on how to downgrade and pin your R version to a specific release (just in case your figured our the need _after_ you upgraded R to a new version...).
 The guide is copied from this great [forum post](https://askubuntu.com/questions/1056630/r-3-5-0-not-working-on-ubuntu-18-04/1057231#1057231).
-`Please note`, this require administrator privileges, so the commands will only work on unmanaged iaas-nodes.
-Please give us a shout [here](/contact) if you need a downgrade on your home node, we are happy to assist.
+`Please note`, this require administrator privileges, so the commands will only work on unmanaged iaas-machines.
+Please give us a shout [here](/contact) if you need a downgrade on your home machine, we are happy to assist.
 
 #### Save the R-packages that is already installed in your lab
 
@@ -116,15 +116,19 @@ sudo apt dist-upgrade
 ## Install R Studio
 
 We do provide the opportunity for a graphical interface via R Studio.
-Researchers may install this on unmanaged machines (iaas-nodes).
-Installation on home-nodes require us to run some code.
+Researchers may install this on unmanaged machines.
 
-::: warning General requirements
+::: warning Please note.
+
+Installation on home-machines require us to run some code. The below guide will therefore not work on home-machines.
+
+:::
 
 ### Dependencies
 
 - R (installed as above)
 - A machine prepared for a [graphical interface (X2Go)](X2Go)
+- An iaas-machine or blue-machine with administrator access
 
 `Without these, it will be impossible to get RStudio to work.`
 
