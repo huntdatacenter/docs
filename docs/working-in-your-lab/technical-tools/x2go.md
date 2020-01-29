@@ -86,7 +86,7 @@ Alternatives for unmanaged IAAS machines (for Lab coordinators) are noted as sep
 
   - For Mac and Linux:
 
-    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](https://docs.hdc.ntnu.no/getting-started/how-to-connect/#simplify-your-life)' section in the installation guide.
+    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/getting-started/how-to-connect/#simplify-your-life)' section in the installation guide.
 
   - For Windows:
 
@@ -153,7 +153,7 @@ Ensure that your HUNT Cloud VPN is running and connected.
 
 You may use X2Go to access software with graphical interfaces.
 Such software needs to be installed in your lab machine.
-For example, if you or your lab mates have [installed RStudio](https://gitlab.com/huntgenes/hunt-cloud-community/wikis/r-packages#install-r-studio),
+For example, if you or your lab mates have [installed RStudio](/working-in-your-lab/analytical-tools/r-studio/#install-r-studio),
 you may access this program by updating the `Session type` at the bottom of the `Session tab`
 from `/usr/bin/xterm/` to actual of the software e.g. `/usr/bin/rstudio` and reconnect.
 

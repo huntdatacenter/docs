@@ -119,12 +119,22 @@ We do provide the opportunity for a graphical interface via R Studio.
 Researchers may install this on unmanaged machines (iaas-nodes).
 Installation on home-nodes require us to run some code.
 
-### Dependencies
+::: warning Dependencies
+
+`Without these, it will be impossible to get RStudio to work.`
 
 - R (installed as above)
 - A machine prepared for a [graphical interface (X2Go)](X2Go)
+:::
 
-`Without these, it will be impossible to get RStudio to work.`
+::: tip
+Make sure R-Studio is not already installed if the lab was setup before
+
+```
+which rstudio
+```
+
+:::
 
 ### Download the latest software version
 
@@ -149,9 +159,11 @@ rm rstudio-xenial-1.1.463-amd64.deb;
 
 To automatically start RStudio, revisit your _Session preferences_ in the [X2Go setup](x2go) and update your _Single application command path_ to `/usr/bin/rstudio`and _Create a session icon on the desktop..._.
 
-`Please note`. There is a known bug in 1.1.456 / x2go that will go away if you comment out a line in the x2goagent.options:
+::: tip NOTE
+There is a known bug in x2go `1.1.456` that will go away if you comment out (add # before) a line in the x2goagent.options:
 
 ```bash
 sudo vim /etc/x2go/x2goagent.options
 # X2GO_NXAGENT_DEFAULT_OPTIONS+=" -extension BIG-REQUESTS"
 ```
+:::
