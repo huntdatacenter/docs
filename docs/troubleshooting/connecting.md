@@ -32,6 +32,11 @@ Your VPN session will reset after 12 hours. This will cause your connection to b
 
 If your VPN login suddenly stops working, and you are pretty sure your user name and mobile code are both correct, try to sync Google Authenticator's time settings: Start Google authenticator on your phone, tap the tree dots in thecorner (menu button) and go to 'Settings' > 'Time correction for codes' and hit 'Sync now'. Now, try to log in again.
 
+### Deactivated account
+
+Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Contact us](/contact) for an account reactivation.
+
+
 ## SSH
 
 ### Password updates
@@ -40,9 +45,9 @@ If your VPN login suddenly stops working, and you are pretty sure your user name
 
 ### WARNING: Remote host identification has changed
 
-You might get a warning message the first time you try to connect to a newly built machine inside your lab:
+You might get this warning message the first time you connect to a new machine inside your lab:
 
-```
+```bash
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -58,18 +63,18 @@ Offending ECDSA key in /home/<username>/.ssh/known_hosts:<number>
 ECDSA host key for <machine-name> has changed and you have requested strict checking.
 ```
 
-The reason for this message is that your RSA key has changed when it was rebuilt, and the warning tells you that the discrepancy with the expected key might be the fault of an attacker.
+The warning tells you that such a discrepancy between the expected and observed key might be due to an attack. **You may ignore this message inside your lab.** The reason for the warning is that your RSA key has changed when the machine was rebuilt. 
 
-You can remove this message running the command printed in the warning if you are confident that you try to connect to an internal lab machine (such machine names start with your lab name, for example 'demolab-iaas-someting'):
+You can remove such messages by running the command that are stated at the bottom in the screen message, for example:
 
-```
+```bash
 ssh-keygen -f "/home/<username>/.ssh/known_hosts" -R <machine-name>
 ```
 
-The 'username' and 'machine-name' will be unique to your warning message.
+Your message will be slightly different as the `username` and `machine-name` will be unique to you and your lab.
 
 ::: warning
-If you see this message any other time, please [contact us](/contact) so we can investigate further.
+If you see this message any other time, please [contact us](/contact) for further investigations.
 :::
 
 ## X2Go
