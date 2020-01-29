@@ -13,7 +13,7 @@ The below guide is for multi-user setup in an unmanaged environment (iaas-node).
 
 ## Dependencies
 
-- A machine prepared for [x2go](https://gitlab.com/huntgenes/hunt-cloud-community/wikis/x2go).
+- A machine prepared for [x2go](/working-in-your-lab/technical-tools/x2go/).
 - An unmanaged machines (iaas-node) where you have root access.
 - Access to MATLAB software binaries for linux.
 - Access to a MATLAB license, typically provided by your organization.

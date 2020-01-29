@@ -133,7 +133,6 @@ which rstudio
 
 :::
 
-
 ::: warning Please note
 
 Installation on home-machines requires us to run some code.
@@ -147,7 +146,7 @@ The below guide will therefore not work on home-machines.
 `Without these, it will be impossible to get RStudio to work.`
 
 - R (installed as above)
-- A machine prepared for a [graphical interface (X2Go)](X2Go)
+- A machine prepared for a [graphical interface (X2Go)](/working-in-your-lab/technical-tools/x2go/)
 - An IAAS-machine or BLUE-machine with administrator access
 
 :::
@@ -182,4 +181,5 @@ There is a known bug in x2go `1.1.456` that will go away if you comment out (add
 sudo vim /etc/x2go/x2goagent.options
 # X2GO_NXAGENT_DEFAULT_OPTIONS+=" -extension BIG-REQUESTS"
 ```
+
 :::

@@ -36,7 +36,6 @@ If your VPN login suddenly stops working, and you are pretty sure your user name
 
 Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Contact us](/contact) for an account reactivation.
 
-
 ## SSH
 
 ### Password updates
@@ -63,7 +62,7 @@ Offending ECDSA key in /home/<username>/.ssh/known_hosts:<number>
 ECDSA host key for <machine-name> has changed and you have requested strict checking.
 ```
 
-The warning tells you that such a discrepancy between the expected and observed key might be due to an attack. **You may ignore this message inside your lab.** The reason for the warning is that your RSA key has changed when the machine was rebuilt. 
+The warning tells you that such a discrepancy between the expected and observed key might be due to an attack. **You may ignore this message inside your lab.** The reason for the warning is that your RSA key has changed when the machine was rebuilt.
 
 You can remove such messages by running the command that are stated at the bottom in the screen message, for example:
 
