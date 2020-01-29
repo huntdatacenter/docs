@@ -1,7 +1,7 @@
 ---
 title: R and R-Studio
 permalink: /working-in-your-lab/analytical-tools/r-studio
-sidebarDepth: 3
+sidebarDepth: 2
 ---
 
 # R
@@ -54,7 +54,7 @@ sudo apt autoremove -y
 R
 ```
 
-### Downgrade to a specific R version (iaas machines)
+### Downgrade to a specific R version (IAAS machines)
 
 Sometimes you may want to pin your R version to a specific release to please specific packages required for your work.
 Below are a guide on how to downgrade and pin your R version to a specific release (just in case your figured out the need _after_ you upgraded R to a new version...).
@@ -62,7 +62,7 @@ The guide is copied from this great [forum post](https://askubuntu.com/questions
 
 ::: warning Please note
 
-This setps below will only work on iaas- or blue-machines as they require administrator privileges.
+This setup below will only work on IAAS- or BLUE-machines as they require administrator privileges.
 Contact us if you need to downgrade the R version on your home machine.
 
 :::
