@@ -1,6 +1,7 @@
 ---
+title: MobaXterm
 permalink: /working-in-your-lab/technical-tools/mobaxterm
-sidebarDepth: 3
+sidebarDepth: 1
 ---
 
 # MobaXterm

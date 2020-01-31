@@ -1,4 +1,5 @@
 ---
+title: WinSCP
 permalink: /working-in-your-lab/technical-tools/winscp
 sidebarDepth: 3
 ---

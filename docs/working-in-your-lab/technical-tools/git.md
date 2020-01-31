@@ -1,6 +1,7 @@
 ---
+title: Git
 permalink: /working-in-your-lab/technical-tools/git
-sidebarDepth: 3
+sidebarDepth: 1
 ---
 
 # Git

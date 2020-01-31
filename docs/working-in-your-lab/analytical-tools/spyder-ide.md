@@ -1,7 +1,7 @@
 ---
 title: Spyder IDE
 permalink: /working-in-your-lab/analytical-tools/spyder-ide
-sidebarDepth: 3
+sidebarDepth: 0
 ---
 
 # Spyder

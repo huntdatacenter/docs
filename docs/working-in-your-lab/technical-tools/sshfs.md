@@ -1,6 +1,7 @@
 ---
+title: SSHFS
 permalink: /working-in-your-lab/technical-tools/sshfs
-sidebarDepth: 3
+sidebarDepth: 1
 ---
 
 # SSHFS

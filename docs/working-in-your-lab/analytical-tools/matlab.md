@@ -1,8 +1,10 @@
 ---
+title: Matlab
 permalink: /working-in-your-lab/analytical-tools/matlab
+sidebarDepth: 1
 ---
 
-# MATLAB
+# Matlab
 
 [MATLAB](https://www.mathworks.com/) is a computing environment developed by MatWorks for efficient matrix manipulations and other handy computing tools.
 

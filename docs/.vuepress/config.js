@@ -90,6 +90,7 @@ module.exports = {
                 "working-in-your-lab/technical-tools/htop",
                 "working-in-your-lab/technical-tools/mobaxterm",
                 "working-in-your-lab/technical-tools/sshfs",
+                "working-in-your-lab/technical-tools/terminal-multiplexers",
                 "working-in-your-lab/technical-tools/winscp",
                 "working-in-your-lab/technical-tools/x2go"
               ]
@@ -100,12 +101,14 @@ module.exports = {
               children: [
                 "working-in-your-lab/analytical-tools/",
                 "working-in-your-lab/analytical-tools/conda",
+                "working-in-your-lab/analytical-tools/epacts",
                 "working-in-your-lab/analytical-tools/fsl",
                 "working-in-your-lab/analytical-tools/freesurfer",
                 "working-in-your-lab/analytical-tools/jupyter-lab",
                 "working-in-your-lab/analytical-tools/matlab",
                 "working-in-your-lab/analytical-tools/plink",
                 "working-in-your-lab/analytical-tools/r-studio",
+                "working-in-your-lab/analytical-tools/saige",
                 "working-in-your-lab/analytical-tools/spyder-ide"
               ]
             }
@@ -114,7 +117,11 @@ module.exports = {
         {
           title: "Troubleshooting",
           // collapsable: false,
-          children: ["troubleshooting/", "troubleshooting/connecting"]
+          children: [
+            "troubleshooting/",
+            "troubleshooting/connection",
+            "troubleshooting/performance"
+          ]
         },
         {
           title: "FAQ",

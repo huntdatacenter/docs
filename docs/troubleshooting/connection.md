@@ -1,6 +1,6 @@
 ---
-title: Connecting to your lab
-permalink: /troubleshooting/connecting
+title: Troubleshooting lab connections
+permalink: /troubleshooting/connection
 sidebarDepth: 1
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Conda
 permalink: /working-in-your-lab/analytical-tools/conda
+sidebarDepth: 1
 ---
 
 # Conda, Anaconda, Miniconda and Bioconda

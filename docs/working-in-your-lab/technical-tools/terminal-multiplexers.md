@@ -1,6 +1,7 @@
 ---
+title: Terminal Multiplexers
 permalink: /working-in-your-lab/technical-tools/terminal-multiplexers
-sidebarDepth: 3
+sidebarDepth: 2
 ---
 
 # Terminal Multiplexers
@@ -13,6 +14,11 @@ Thus, it may be good to investment a little bit of time to read up identifying y
 Below are a couple of popular terminal multiplexers that are all preinstalled on your HUNT Cloud machine.
 
 [[toc]]
+
+## tmux
+
+[tmux](https://github.com/tmux/tmux/wiki) is a newer and popular alternative to GNU Screen.
+There are many good online introductions to tmux such as [A Quick and Easy Guide to tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) and the online book [The Tao of tmux](https://leanpub.com/the-tao-of-tmux/read).
 
 ## GNU Screen
 
@@ -88,11 +94,6 @@ exit
 ### Learning more about Screen
 
 If you want to learn more about Screen, including how to use multiple windows and split screens check out the [How to Install and Use Screen on an Ubuntu Cloud Server](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-screen-on-an-ubuntu-cloud-server) tutorial or the comprehensive [Screen User's Manual](https://www.gnu.org/software/screen/manual/).
-
-## tmux
-
-[tmux](https://github.com/tmux/tmux/wiki) is a newer and popular alternative to GNU Screen.
-There are many good online introductions to tmux such as [A Quick and Easy Guide to tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) and the online book [The Tao of tmux](https://leanpub.com/the-tao-of-tmux/read).
 
 ## Byobu
 

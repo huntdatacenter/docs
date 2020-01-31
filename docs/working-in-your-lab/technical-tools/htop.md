@@ -1,6 +1,7 @@
 ---
 title: HTOP
 permalink: /working-in-your-lab/technical-tools/htop
+sidebarDepth: 1
 ---
 
 # HTOP

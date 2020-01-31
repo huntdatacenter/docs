@@ -1,7 +1,7 @@
 ---
 title: Jupyter LAB
 permalink: /working-in-your-lab/analytical-tools/jupyter-lab
-sidebarDepth: 3
+sidebarDepth: 0
 ---
 
 # Jupyter Lab
