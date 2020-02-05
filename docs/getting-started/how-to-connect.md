@@ -316,7 +316,7 @@ PokemonAnalysisAreGreat4Fun
 Do not skip this chapter... We hope that you will log into your lab a lot over the coming months and years, so we need to make sure that you simplify that process to the point where you get instant access to your lab.
 
 ::: details Windows
-We recommend MobaXterm as a free X server that allow you to connect with both SSH and SFTP. Here is a [step wise guide](mobaxterm) on how to establish a password less login directly to your home-machine.
+We recommend MobaXterm as a free X server that allow you to connect with both SSH and SFTP. Here is a [step wise guide](/working-in-your-lab/technical-tools/mobaxterm) on how to establish a password less login directly to your home-machine.
 :::
 
 ::: details Mac and Linux
