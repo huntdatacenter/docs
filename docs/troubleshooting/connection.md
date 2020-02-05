@@ -51,9 +51,9 @@ Inactive accounts are deactivate after about 180 days. This will cause your logi
 
 ## SSH
 
-### Password updates
-
 ### Forgotten passwords
+
+After the initial onboarding, you will need your password to install software using the `sudo apt install <software>` command. If you have forgotten your password, [contact us](/contact) for a reset, and allow for a few days for effectuation. Another alternative is to ask if some of your lab colleagues may install the software for you using their own user account. 
 
 ### WARNING: Remote host identification has changed
 
@@ -91,6 +91,6 @@ If you see this message any other time, please [contact us](/contact) for furthe
 
 ## X2Go
 
-### Password prompts
 
-RSA setup description.
+
+
