@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting performance
+title: Performance
 permalink: /troubleshooting/performance
 sidebarDepth: 1
 ---

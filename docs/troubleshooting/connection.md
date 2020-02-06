@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting lab connections
+title: Lab connections
 permalink: /troubleshooting/connection
 sidebarDepth: 1
 ---

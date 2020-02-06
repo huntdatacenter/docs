@@ -120,7 +120,8 @@ module.exports = {
           children: [
             "troubleshooting/",
             "troubleshooting/connection",
-            "troubleshooting/performance"
+            "troubleshooting/performance",
+            "troubleshooting/labreports"
           ]
         },
         {
