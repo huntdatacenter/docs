@@ -1,7 +1,7 @@
 ---
 title: PLINK
 permalink: /working-in-your-lab/analytical-tools/plink
-sidebarDepth: 0
+sidebarDepth: 1
 ---
 
 # PLINK
