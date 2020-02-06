@@ -12,9 +12,7 @@ Starting from January 2020, we aim to send monthly reports to lab leaders and la
 
 ## Storage
 
-### Discrepancy between observed and reported storage
-
-The reported storage volumes in the report may deviate from the observed storage as you see it inside your lab machines. We know of a few reasons why this may happen which is listed below. You can check your storage as reported on your machines by logging into the machine and type `df -h`.
+The reported storage volumes may deviate from the observed storage as you see it inside your lab machines. We know of a few reasons why this may happen which is listed below. You can check your storage as reported on your machines by logging into the machine and type `df -h`.
 
 ### Discrepancy in reported volume numbers
 
