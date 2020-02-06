@@ -89,8 +89,6 @@ Your message will be slightly different as the `username` and `machine-name` wil
 If you see this message any other time, please [contact us](/contact) for further investigations.
 :::
 
-## X2Go
-
 
 
 
