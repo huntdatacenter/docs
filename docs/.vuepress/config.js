@@ -120,13 +120,21 @@ module.exports = {
           children: [
             "troubleshooting/",
             "troubleshooting/connection",
-            "troubleshooting/performance"
+            "troubleshooting/performance",
+            "troubleshooting/labreports"
           ]
         },
         {
           title: "FAQ",
           // collapsable: false,
-          children: ["faq/", "faq/resources", "faq/users", "faq/software"]
+          children: [
+            "faq/",
+            "faq/users",
+            "faq/storage",
+            "faq/compute",
+            "faq/software",
+            "faq/transfer"
+          ]
         }
       ]
     }
