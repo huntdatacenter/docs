@@ -4,7 +4,7 @@ permalink: faq/users
 sidebarDepth: 1
 ---
 
-# FAQ on users
+# FAQ on lab users
 
 This page lists frequently asked questions related to users and user management in labs.
 
