@@ -127,7 +127,13 @@ module.exports = {
         {
           title: "FAQ",
           // collapsable: false,
-          children: ["faq/", "faq/resources", "faq/users", "faq/software"]
+          children: [
+            "faq/",
+            "faq/users", 
+            "faq/storage", 
+            "faq/compute", 
+            "faq/software"
+          ]
         }
       ]
     }

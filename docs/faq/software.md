@@ -9,7 +9,7 @@ sidebarDepth: 2
 
 Yes, you can install software in your lab environment under our _bring-your-own-software_ policy, for example using the following syntax:
 
-```
+```bash
 sudo apt install <packagename>
 ```
 
