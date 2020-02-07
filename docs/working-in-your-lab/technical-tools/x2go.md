@@ -256,10 +256,8 @@ Connect to your lab machine and run this code:
   ```bash
   touch ~/.Xdefaults
   chmod u+x ~/.Xdefaults
-  cat \<\< EOF >> ~/.Xdefaults
-  *VT100.translations: #override \
-                   Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)
-  EOF
+  echo "*VT100.translations: #override Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)\n" >> ~/.Xdefaults
+  xrdb -merge ~/.Xdefaults
   ```
 
 - Client is connecting from **Windows** or **Linux**
@@ -267,11 +265,9 @@ Connect to your lab machine and run this code:
   ```bash
   touch ~/.Xdefaults
   chmod u+x ~/.Xdefaults
-  cat \<\< EOF >> ~/.Xdefaults
-  *VT100.Translations: #override \
-                   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \
-                   Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
-  EOF
+  echo "*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD)\n" >> ~/.Xdefaults
+  echo "*VT100.Translations: #override Ctrl Shift <Key>C: copy-selection(CLIPBOARD)\n" >> ~/.Xdefaults
+  xrdb -merge ~/.Xdefaults
   ```
 
 :::
