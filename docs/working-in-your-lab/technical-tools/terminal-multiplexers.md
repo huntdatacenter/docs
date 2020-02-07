@@ -96,5 +96,3 @@ There are many good online introductions to tmux such as [A Quick and Easy Guide
 
 [Byobu](https://byobu.org/) is a handy wrapper for both tmux and GNU Screen.
 It includes an enhanced profiles, convenient keybindings, configuration utilities, and toggle-able system status notifications for both the GNU Screen window manager and the more modern Tmux terminal multiplexer, and works on most Linux, BSD, and Mac distributions.
-
-

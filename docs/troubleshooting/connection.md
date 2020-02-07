@@ -8,7 +8,6 @@ sidebarDepth: 1
 
 [[toc]]
 
-
 ## VPN
 
 Your lab connection is encrypted over a virtual private network (VPN) to ensure the confidentiality of the information. We have listed some of the things that may cause you trouble:
@@ -53,7 +52,7 @@ Inactive accounts are deactivate after about 180 days. This will cause your logi
 
 ### Forgotten passwords
 
-After the initial onboarding, you will need your password to install software using the `sudo apt install <software>` command. If you have forgotten your password, [contact us](/contact) for a reset, and allow for a few days for effectuation. Another alternative is to ask if some of your lab colleagues may install the software for you using their own user account. 
+After the initial onboarding, you will need your password to install software using the `sudo apt install <software>` command. If you have forgotten your password, [contact us](/contact) for a reset, and allow for a few days for effectuation. Another alternative is to ask if some of your lab colleagues may install the software for you using their own user account.
 
 ### WARNING: Remote host identification has changed
 
@@ -88,7 +87,3 @@ Your message will be slightly different as the `username` and `machine-name` wil
 ::: warning
 If you see this message any other time, please [contact us](/contact) for further investigations.
 :::
-
-
-
-

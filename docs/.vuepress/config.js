@@ -129,9 +129,9 @@ module.exports = {
           // collapsable: false,
           children: [
             "faq/",
-            "faq/users", 
-            "faq/storage", 
-            "faq/compute", 
+            "faq/users",
+            "faq/storage",
+            "faq/compute",
             "faq/software",
             "faq/transfer"
           ]

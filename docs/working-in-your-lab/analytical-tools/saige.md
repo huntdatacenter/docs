@@ -24,6 +24,7 @@ Administrator privileges (HUNT IAAS or HUNT BLUE machines)
 Fresh coffee and 30 minutes to spare
 
 ## Defining your software directory
+
 Below is an example:
 
 ```
@@ -142,6 +143,7 @@ R CMD INSTALL SAIGE
 ```
 
 ## Set number of threads for openblas
+
 This steps adds a thread restriction on BLAS to avoid multithread
 conflicts with other R packages.
 
@@ -173,6 +175,7 @@ cat SAIGE/extdata/step2_SPAtests.R | sed -n '1!p' > step2_body.tmp
 ```
 
 # Combine
+
 ```
 cat insert_openblas_restriction.tmp \
     step2_body.tmp > step2_SPAtests.R

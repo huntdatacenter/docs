@@ -24,15 +24,10 @@ Storage volumes sizes may show larger sizes in the report than those you observe
 
 ### Discrepancy in reported volume usage
 
-Volumes that are attached to machines that has been running without a restart since December 2019 may report zero usage. These machine may need a restart for all of your volumes to be reported correctly. You can do this yourself by logging into the machine where the storage is attached and execute the `sudo reboot` command. 
+Volumes that are attached to machines that has been running without a restart since December 2019 may report zero usage. These machine may need a restart for all of your volumes to be reported correctly. You can do this yourself by logging into the machine where the storage is attached and execute the `sudo reboot` command.
 
 ::: warning WARNING
 
 Rebooting your lab machine may affect all your lab colleagues. We advice that you discuss this with your lab colleagues and announce restarts so no one looses their valuable work.
 
 :::
-
-
-
-
-

@@ -24,7 +24,6 @@ If you want to connet to an unmanaged machine (iaas or blue) you will need to in
 - A lab machine set up for X2Go connection (home machines are by default set up with X2Go and Rstudio).
   :::
 
-
 ### Install X2Go client
 
 Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) on your own local machine.
@@ -60,8 +59,6 @@ sudo apt-get update -y && sudo apt install -y x2goclient
 ```
 
 :::
-
-
 
 ### Configure the X2Go client for home machines
 
@@ -140,11 +137,7 @@ Hit `OK` in the lower right corner.
 You may use X2Go to access software with graphical interfaces.
 Such software needs to be installed in your lab machine.
 
-For your home machine, [RStudio](/working-in-your-lab/analytical-tools/r-studio/#install-r-studio) should be  installed by default. To access this program, go back to your configuration and update `Session type` at the bottom of the `Session tab` from `/usr/bin/xterm/` to the location of Rstudio (`/usr/bin/rstudio`) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/working-in-your-lab/technical-tools/x2go/#troubleshooting).
-
-
-
-
+For your home machine, [RStudio](/working-in-your-lab/analytical-tools/r-studio/#install-r-studio) should be installed by default. To access this program, go back to your configuration and update `Session type` at the bottom of the `Session tab` from `/usr/bin/xterm/` to the location of Rstudio (`/usr/bin/rstudio`) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/working-in-your-lab/technical-tools/x2go/#troubleshooting).
 
 ### Configure the X2Go client for unmanaged machines
 
@@ -207,16 +200,9 @@ The configuration below will only work on `iaas` or `blue` machines, and not hom
 
 Follow the setups outlines in the `Configure the X2Go client for home machines` for further setup, including `In the connection tab`, `In the media tab`, `connecting to the X2Go server` and `Connect to other software`: [Start here](/working-in-your-lab/technical-tools/x2go/#configure-the-x2go-client-for-home-machines).
 
-
-
-
-
-
-
-
 ## Install a desktop environment
 
-The default X2Go setup connects directly to individual applications. This section describe how you may install a lightweight [XFCE](https://www.xfce.org/)  desktop environment using common settings.
+The default X2Go setup connects directly to individual applications. This section describe how you may install a lightweight [XFCE](https://www.xfce.org/) desktop environment using common settings.
 
 ::: details Minimal setup of XFCE desktop
 
@@ -272,8 +258,6 @@ Connect to your lab machine and run this code:
 
 :::
 
-
-
 ## Install X2Go server on unamanaged lab machine
 
 Connection to X2Go require the application `x2goserver` to run for connections to work.
@@ -289,7 +273,6 @@ This section is for lab coordinators that want to set up their unmanaged iaas an
 
 :::
 
-
 ::: details Install x2goserver
 
 Log into your unmanaged lab machine and install `x2goserver`:
@@ -299,8 +282,8 @@ sudo add-apt-repository ppa:x2go/stable
 sudo apt update
 sudo apt install x2goserver -y
 ```
-:::
 
+:::
 
 ::: details Ensure smooth access
 
@@ -339,13 +322,11 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
 
 ## Troubleshooting
 
-
 ::: details Password prompts during login
 
 X2Go rely either password or certificate to authenticate your connection. If the certificate do not work (or not included), your may be asked to insert your password four times before your application start. If so, try to fetch and save your certificate as described in our [X2Go configuration](/working-in-your-lab/technical-tools/x2go/#configure-the-x2go-client-for-home-machines) under `Use RSA/DSA key for ssh connection`.
 
 :::
-
 
 ::: details Manually 'killing' a stuck X2Go session
 

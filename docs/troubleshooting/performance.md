@@ -56,9 +56,10 @@ Using profiling tools to identify functions that allocate highest amount of
 a resource (time, cpu, mem, etc.) within your code or 3-rd party libraries
 that you are using. Such tools may be also useful in finding memory leaks.
 If you are interested in deep insight following this way we recommend
-to get familiar with [Flame graphs] (http://www.brendangregg.com/flamegraphs.html).
+to get familiar with [Flame graphs](http://www.brendangregg.com/flamegraphs.html).
 
 Examples for python profilers are:
+
 - [py-spy](https://github.com/benfred/py-spy) - top-like sampling profiler (low overhead, non-interuptive, flamegraphs)
-- [scalene](https://github.com/emeryberger/scalene) -  a high-performance CPU and memory profiler for Python.
+- [scalene](https://github.com/emeryberger/scalene) - a high-performance CPU and memory profiler for Python.
 - [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
