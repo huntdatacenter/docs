@@ -220,7 +220,7 @@ The default setup will need some care to run smoothly:
 - Fixing TAB completion using shell: (1) Log into your lab machine and (2) run this code:
 
   ```bash
-  sed -i 's|name="&lt;Super&gt;Tab" type="string" value="switch_window_key"|name="&lt;Super&gt;Tab" type="empty"|g' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+  sed -i 's|name="\&lt\;Super\&gt\;Tab" type="string" value="switch_window_key"|name="\&lt\;Super\&gt\;Tab" type="empty"|g' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
   ```
 
 - Fixing TAB completion using GUI approach over x2go client.
@@ -240,20 +240,40 @@ Connect to your lab machine and run this code:
 - Client is connecting **from macOS**
 
   ```bash
-  touch ~/.Xdefaults
-  chmod u+x ~/.Xdefaults
-  echo "*VT100.translations: #override Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)" >> ~/.Xdefaults
-  xrdb -merge ~/.Xdefaults
+  touch ~/.Xresources
+  chmod u+x ~/.Xresources
+  echo "*VT100.translations: #override Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)" >> ~/.Xresources
+  xrdb -merge ~/.Xresources
   ```
 
 - Client is connecting from **Windows** or **Linux**
 
   ```bash
-  touch ~/.Xdefaults
-  chmod u+x ~/.Xdefaults
-  echo "*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD)" >> ~/.Xdefaults
-  echo "*VT100.Translations: #override Ctrl Shift <Key>C: copy-selection(CLIPBOARD)" >> ~/.Xdefaults
-  xrdb -merge ~/.Xdefaults
+  touch ~/.Xresources
+  chmod u+x ~/.Xresources
+  echo "*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD)" >> ~/.Xresources
+  echo "*VT100.Translations: #override Ctrl Shift <Key>C: copy-selection(CLIPBOARD)" >> ~/.Xresources
+  xrdb -merge ~/.Xresources
+  ```
+
+  ```
+  XTerm.termName: xterm-256color
+  XTerm.ttyModes: erase ^?
+  XTerm*locale: true
+  XTerm*metaSendsEscape: true
+  XTerm*backarrowKey: false
+  XTerm*saveLines: 4096
+  XTerm*scrollBar: false
+  XTerm*scrollBar*width: 8
+  XTerm*geometry: 140x35
+  XTerm*faceName: Ubuntu Mono:size=16:antialias=false
+  XTerm*foreground: white
+  XTerm*background: black
+  XTerm*bellIsUrgent: true
+  *.vt100.translations: #override \n\
+                           Meta <KeyPress> v: insert-selection(PRIMARY, CUT_BUFFER0) \n\
+                           Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+                           Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
   ```
 
 :::
