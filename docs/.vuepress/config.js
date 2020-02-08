@@ -132,7 +132,6 @@ module.exports = {
             "faq/users",
             "faq/storage",
             "faq/compute",
-            "faq/software",
             "faq/transfer"
           ]
         }
