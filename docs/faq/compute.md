@@ -43,3 +43,11 @@ sudo apt install <packagename>
 ### Can we bring our own licenses?
 
 Yes. If you use software that needs paid licenses you may bring your own licenses under our _bring-your-own-license_-policy. Your lab leader is responsible to ensure that licensed software is used in accordance with the license agreement inside the lab environments.
+
+
+## Workflow
+
+
+### How can I keep my jobs running when I disconnect?
+
+You can keep your jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/tutorials/terminal-multiplexers) to get started.

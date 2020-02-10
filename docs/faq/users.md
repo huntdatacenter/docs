@@ -10,37 +10,28 @@ This page lists frequently asked questions related to users and user management 
 
 [[toc]]
 
-## Roles
-
-### What is "lab leader"?
-
-We use the term "lab leader" on the individual that sign our lab agreement, and thus are in charge of a lab environment. This is usually the individual / principal investigator holding the ethical approval for the lab activity.
-
-### What is a "lab coordinator"?
-
-The "lab coordinator" is named in the lab agreement. This individual is delegated authority on behalf of the lab leader to make decisions in the lab, such as authorizing new users and adjust resources.
-
-### What is a "lab user"?
-
-We use the term "lab user" on scientists that hold accounts and uses lab environments.
-
 ## New users
 
-### How can we add new users in our lab?
+### How do we add new users to our lab?
 
-Lab leaders and lab coordinators can identify and authorize new users in their lab environments. New users must co-sign the HUNT Cloud user agreement (acceptable use policy) with the lab leader or lab coordinator. Forward signed agreements [on mail](/contact) for account activation.
+Your lab leader or lab coordinator can add new users to your lab. New users must sign our [user agreements](/assets/hunt-cloud-user-agreement.pdf). Forward the signed agreement ot us on [email](/contact) and start our [onboarding guide](/getting-started).
 
-### How long may a new account activation take?
+### How long does a new account activation take?
 
-Allow for several weeks. We activate new accounts and labs in the start of each week. Depending on the number of requests accounts may therefore be activated the upcoming week or some weeks thereafter. We do recognize that science never sleeps, so [contact us](/contact) for high priority account activations same or next business day when needed.
-
-### Can we add new users outside our own organization?
-
-Yes. Part of the rationale for our services is to keep data close to its donors by bringing in scientists to work with the data. The host organization of the lab leader (data processor) is responsible for the lab user identification and authorization. We are happy to activate accounts for users that lab leader authorizes, both from local, national and global institutions.
+Allow for several weeks at this point. We activate new accounts and labs in the beginning of each week. Depending on the number of requests, accounts may be activated the upcoming week or some weeks thereafter. We do recognize that science never sleeps, so [contact us](/contact) for high priority activations same or next business day when needed.
 
 ### How many users can we add to our lab?
 
 We have no hard limits. When that is said, all users in your lab will have access to all the data in the lab. Thus, we require that you limit users to those that have permissions in place to work with your data. Usually, labs with up to 6-7 people seem to be most effective. We are more than happy to spin off new labs as your team grows.
+
+
+### Can we add users from outside our own organization?
+
+Yes. Part of the rationale for our services is to keep data close to its donors by bringing scientists to the data. The data processor of your data (usually the host organization of the lab leader) is formally responsible for adding new users. We are happy to activate accounts for users that lab leader authorizes, both from local, national and global institutions.
+
+
+
+
 
 ## Current users
 
@@ -65,3 +56,15 @@ who
 ### Can I reactivate my old account?
 
 Yes. We deactivate accounts that have not been used for 180 days for security reasons. You may reactivate such accounts. Reactivation require a new co-signed HUNT Cloud user agreement with your lab leader or lab coordinator that you [forward to us](/contact) on mail for account activation. You will need to reconfigure VPN and SSH to get up and running.
+
+## User roles
+
+The following user roles are defined in our lab agreements: 
+
+- **Lab leader.** This is the individual that has signed the lab agreement for your lab environment. It is usually the principal investigator or other administrative personnel holding the approvals (such as ethical approvals) for your lab activity.
+
+- **Lab coordinator**. The lab leader delegate authority to a lab coordinator to make decisions inside a lab environment, for example to authorize new users and upgrade compute and storage resources.
+
+- **Lab user**. We use the term lab user on all that hold user accounts in your lab environments.
+
+

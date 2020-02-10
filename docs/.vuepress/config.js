@@ -71,8 +71,7 @@ module.exports = {
           // collapsable: false,
           children: [
             "getting-started/",
-            "getting-started/how-to-connect",
-            "getting-started/faq"
+            "getting-started/how-to-connect"
           ]
         },
         {

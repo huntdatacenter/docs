@@ -1,22 +1,32 @@
 ---
 permalink: /getting-started/configure-vpn
-sidebarDepth: 3
+sidebarDepth: 1
 ---
 
-# 2. Configure your VPN
+# Step 2. Configure your VPN
 
-OpenVPN is an open-source application that allows you to connect to the HUNT virtual private network (VPN).
+This step configure a VPN connection between your local machine and your lab to ensure that all transfers to and from your machine is encrypted. 
+
+::: warning Requirements
+
+- Successful verification of Step 1.
+
+:::
+
 
 ## Windows
 
-### Install the client
+We use the open-source application [OpenVPN](https://openvpn.net/) to ensure encrypted communication between your local machine and our HUNT Cloud virtual private network (VPN). 
 
-- [Download and install OpenVPN using the latest Windows Installer here](https://openvpn.net/community-downloads/)
+### Install OpenVPN
+
+- [Download and install OpenVPN using the latest Windows Installer](https://openvpn.net/community-downloads/)
 
 ::: warning
 Installing OpenVPN may require administrative rights on your computer.
 If you don't have administrative rights on your computer, or don't know if you have administrative right on your computer, please see [Installing OpenVPN on Windows without administrative rights](#installing-openvpn-on-windows-without-administrative-rights).
 :::
+
 
 ### Setup the OpenVPN profile
 
@@ -45,6 +55,10 @@ If it does not connect, but displays another `User Authentication` prompt, pleas
 
 Please see [OpenVPN on Windows](openvpn-on-windows) for troubleshooting.
 :::
+
+
+
+
 
 ## OS X and macOS
 
