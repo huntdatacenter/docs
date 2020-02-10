@@ -256,26 +256,6 @@ Connect to your lab machine and run this code:
   xrdb -merge ~/.Xresources
   ```
 
-  ```
-  XTerm.termName: xterm-256color
-  XTerm.ttyModes: erase ^?
-  XTerm*locale: true
-  XTerm*metaSendsEscape: true
-  XTerm*backarrowKey: false
-  XTerm*saveLines: 4096
-  XTerm*scrollBar: false
-  XTerm*scrollBar*width: 8
-  XTerm*geometry: 140x35
-  XTerm*faceName: Ubuntu Mono:size=16:antialias=false
-  XTerm*foreground: white
-  XTerm*background: black
-  XTerm*bellIsUrgent: true
-  *.vt100.translations: #override \n\
-                           Meta <KeyPress> v: insert-selection(PRIMARY, CUT_BUFFER0) \n\
-                           Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
-                           Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
-  ```
-
 :::
 
 ## Install X2Go server on unamanaged lab machine
