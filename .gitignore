@@ -8,6 +8,7 @@ coverage/
 run
 dist
 public
+!docs/.vuepress/public
 .DS_Store
 .nyc_output
 .basement
