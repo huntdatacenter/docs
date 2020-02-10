@@ -1,9 +1,9 @@
 ---
-permalink: /getting-started/how-to-connect
+permalink: /getting-started/configure-vpn
 sidebarDepth: 3
 ---
 
-# 3. Setup OpenVPN Client
+# 2. Configure your VPN
 
 OpenVPN is an open-source application that allows you to connect to the HUNT virtual private network (VPN).
 
