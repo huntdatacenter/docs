@@ -2,7 +2,7 @@
 
 This guide will help you get connected and started on your HUNT Cloud lab.
 
-::: tip 
+::: tip
 
 [Install Signal](/getting-started/how-to-connect/#setup-signal) on your phone and notify us by email as soon as you have sent us the signed user agreement. This allows us to forward your lab keys as soon as they are generated.
 :::
@@ -14,7 +14,7 @@ The initial configuration of access to your lab has four steps:
 3. Configure the SSH connection
 4. Simplify your lab life with handy tools
 
-Allow for two hours to complete this guide when you have collected all your lab keys and configuration files.. 
+Allow for two hours to complete this guide when you have collected all your lab keys and configuration files..
 
 ::: warning General requirements
 
@@ -26,4 +26,3 @@ Allow for two hours to complete this guide when you have collected all your lab 
 - Compressed file from HUNT Cloud downloaded from link sent over email
 
 :::
-

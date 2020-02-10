@@ -3,14 +3,13 @@ permalink: /getting-started/how-to-connect
 sidebarDepth: 3
 ---
 
-
-## 3. Setup OpenVPN Client
+# 3. Setup OpenVPN Client
 
 OpenVPN is an open-source application that allows you to connect to the HUNT virtual private network (VPN).
 
-### Windows
+## Windows
 
-#### Install the client
+### Install the client
 
 - [Download and install OpenVPN using the latest Windows Installer here](https://openvpn.net/community-downloads/)
 
@@ -19,14 +18,14 @@ Installing OpenVPN may require administrative rights on your computer.
 If you don't have administrative rights on your computer, or don't know if you have administrative right on your computer, please see [Installing OpenVPN on Windows without administrative rights](#installing-openvpn-on-windows-without-administrative-rights).
 :::
 
-#### Setup the OpenVPN profile
+### Setup the OpenVPN profile
 
 1. Start the OpenVPN client (if it is not running already)
 2. Right-click on the OpenVPN notification icon on the taskbar
 3. Select `Import file...`
 4. Select the OpenVPN profile named `<username>.ovpn` in the collection of credentials given from HUNT.
 
-#### Connecting to the VPN
+### Connecting to the VPN
 
 1. Right-click on the OpenVPN notification icon on the taskbar
 2. Select _Connect_
@@ -47,15 +46,15 @@ If it does not connect, but displays another `User Authentication` prompt, pleas
 Please see [OpenVPN on Windows](openvpn-on-windows) for troubleshooting.
 :::
 
-### OS X and macOS
+## OS X and macOS
 
-#### Install the client
+### Install the client
 
 The recommended OpenVPN client for OS X and macOS is called Tunnelblick.
 
 - [Download and install the latest **stable release** from here](https://tunnelblick.net/downloads.html)
 
-#### Setup the OpenVPN profile
+### Setup the OpenVPN profile
 
 1. If prompted with the `Welcome to Tunnelblick` prompt, otherwise jump to 2.
    1. Select `I have configuration files`
@@ -70,7 +69,7 @@ The recommended OpenVPN client for OS X and macOS is called Tunnelblick.
    4. Enter your macOS password to allow Tunnelblick to install the OpenVPN configuration
    5. Continue to section [Connecting to the VPN](connecting-to-the-vpn) section below
 
-#### Connecting to the VPN
+### Connecting to the VPN
 
 1. Start Tunnelblick and `Connect`
 2. Enter your user name (same as the OpenVPN profile file name)
@@ -87,9 +86,9 @@ If VPN does not connect, but displays another `Login Required` prompt,
 please try again with a new **`verification code`**
 :::
 
-### Ubuntu Linux
+## Ubuntu Linux
 
-#### Install the client
+### Install the client
 
 Install the `openvpn` and `network-manager-openvpn-gnome` packages from the standard repositories.
 
@@ -97,7 +96,7 @@ Install the `openvpn` and `network-manager-openvpn-gnome` packages from the stan
 sudo apt install openvpn network-manager-openvpn-gnome
 ```
 
-#### Setup the OpenVPN profile
+### Setup the OpenVPN profile
 
 1. Click on the _Network Manager_ icon in the task bar
 2. Select _Edit Connections..._
@@ -114,7 +113,7 @@ sudo apt install openvpn network-manager-openvpn-gnome
 
 The OpenVPN profile should now be setup.
 
-#### Connecting to the VPN
+### Connecting to the VPN
 
 1. Click on the _Network Manager_ icon in the task bar
 2. Select _VPN Connections >_ and the name of your profile
@@ -123,7 +122,7 @@ The OpenVPN profile should now be setup.
 
 If you receive the notification _VPN connection has been successfully established_, then you are good to go.
 
-#### Troubleshooting
+### Troubleshooting
 
 - If the _Authenticate VPN_ prompt pops up again, then please try again with a new **`verification code`**
 - If you receive the notification _VPN Connection Failed_ after 60 seconds, please check the following
@@ -134,7 +133,7 @@ If you receive the notification _VPN connection has been successfully establishe
 - If you are unable to hit _Apply_ after the changes, try to re-enter your _Private Key Password_ with your `VPN passphrase`.
 - If nothing else works, please go the [troubleshooting steps](#4-troubleshooting) and contact us.
 
-### Other Linux distributions
+## Other Linux distributions
 
 There are a few options on how to install OpenVPN clients in other distributions.
 
@@ -143,4 +142,3 @@ There are a few options on how to install OpenVPN clients in other distributions
 - Download the latest source tarball from OpenVPN [here](https://openvpn.net/index.php/open-source/downloads.html) and install.
 
 <!-- Add section for install and setup -->
-
