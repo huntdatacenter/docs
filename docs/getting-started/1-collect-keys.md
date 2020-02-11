@@ -120,9 +120,9 @@ You should now be prompted with a 6 digit **`verification code`** that refreshes
 
 
 
-## 1.4 Verify your setup
+## 1.4 Verify your key collection
 
-If you successfully completed this step, you should now have: 
+A successful completion of this step should have given you: 
 
 - Four (4) keys on your phone stored in Signal
 - Rotating verification in Google Authenticator on your phone
@@ -131,7 +131,7 @@ If you successfully completed this step, you should now have:
 
 ::: tip Time for coffee!
 
-If you completed this step, celebrate your success with some fresh coffee before you head into the [VPN configuration](/getting-started/2-configure-vpn). If you didn't succeed, it's also a good time to grab some fresh coffee and head over to our [troubleshooting](/troubleshooting/connection/) section.
+If you successfully completed this step, celebrate with fresh coffee before you head into the [VPN configuration](/getting-started/2-configure-vpn). If you did not succeed, it's also a good time to grab some coffee before your head over to our main [troubleshooting](/troubleshooting/connection/) section.
 
 :::
 

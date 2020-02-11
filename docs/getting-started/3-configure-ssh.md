@@ -1,18 +1,26 @@
 ---
 permalink: /getting-started/configure-ssh
-sidebarDepth: 2
+sidebarDepth: 1
 ---
 
 
-## 3. Configure your SSH
+# Step 3. Configure your SSH
 
-After the VPN connection is successfully established, you can connect to your lab with SSH.
+This step configure your SSH connection to and from your local machine and your lab.
 
-### Connecting with SSH
+::: warning Requirement
+Successful verification of Step 1 and 2.
+:::
 
-To connect with SSH please see `ssh-config.txt` which contains the necessary information to connect to your lab, such as your username and IP.
+In this step you will configure SSH connections for two (2) machines in your lab. One machine that we call **`entry`** used for security purposes, and one machine called **`home`** were you will do your analysis and store your data.
 
-#### Example contents of `ssh-config.txt`
+## 3.1 Identify required info 
+
+Open the **`ssh-config.txt`** file that you collected in Step 1 in your favourite text editor. 
+
+This file contains the necessary information for your SSH configuration. Take note of your **`lab-name`**, your **`lab-IP`** and your **`username`**.
+
+**Example contents of `ssh-config.txt`**
 
 ```bash
 Host <your-lab-name>-entry
@@ -20,12 +28,50 @@ Host <your-lab-name>-entry
     User <your-username>
 ```
 
-1. Start your favorite terminal program which supports SSH. For Windows users we strongly recommend to set up this initial set using the Putty executable ([putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), 64-bit version).
-2. Type `ssh <your-username>@<your-lab-IP>`
+
+
+
+
+## 3.2 Configure you entry machine
+
+
+1. Start your favorite terminal program which supports SSH. 
+
+::: warning Windows
+
+We strongly recommend that you complete this initial setup using the **`Putty`** executable that you download from this specific link: [putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (the putty.exe 64-bit version).
+:::
+
+2. Type **`ssh <your-username>@<your-lab-IP>`**
 3. You should then be prompted to enter a password `<your-username>@<your-lab-IP>'s password:`
 4. Enter your `SSH temporary key` sent to you from HUNT over Signal _two_ times.
 5. Enter your new `passphrase` (see below for a how to). Retype for verification. You will be kicked off the entry server by completion.
+
+::: tip Designing your own passphrase
+
+We prefer that you give a `passphrase` instead of a password. A passphrase is a series of words that creates a phrase. It should be:
+
+- long enough to be hard to guess
+- not a famous quotation from the literature (but could be pretty close)
+- hard to guess by intuition (even by someone who knows you well)
+- easy to remember
+
+Oh, and, it should be unique to this site only (not to mention at least
+_12 characters_ long and include both _lower_ and _upper_ cases).
+
+Making a good passphrase is great fun and good security hygiene. Here is one to get you going:
+
+```bash
+AnalysingPokemon4Funinthemorning
+```
+
+:::
+
+
 6. Login again to your entry server, `ssh <your-username>@<your-lab-IP>`, with your newly generated passphrase.
+
+## 3.3 Configure your home machine
+
 7. When on your entry server, connect to your home server by typing `ssh home`.
 8. Similar to step 3, you will be prompted to retype your `SSH temporary key` sent to you from HUNT over Signal and to repeat your new passphrase two times (it is fine to use the same passphrase as on your entry node). You will be kicked back to your entry server by completion.
 9. Log into your home server using `ssh home` using your new passphrase.
@@ -57,26 +103,9 @@ testuser1@test-lab-home:~$
 
 :::
 
-### Designing your own passphrase
 
-We prefer that you give a `passphrase` instead of a password. A passphrase is a series of words that create a phrase.
-It should be:
 
-- long enough to be hard to guess
-- not a famous quotation from the literature (but could be pretty close)
-- hard to guess by intuition (even by someone who knows you well)
-- easy to remember
-
-Oh, and, it should be unique to this site only (not to mention at least
-12 characters long and include both lower and upper cases).
-Making a good passphrase is great fun and good security hygiene.
-Here is one to get you going:
-
-```bash
-PokemonAnalysisAreGreat4Fun
-```
-
-### Simplify your life
+## 3.4 Simplify your life
 
 Do not skip this chapter... We hope that you will log into your lab a lot over the coming months and years, so we need to make sure that you simplify that process to the point where you get instant access to your lab.
 
