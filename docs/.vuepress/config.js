@@ -119,7 +119,6 @@ module.exports = {
           children: [
             "troubleshooting/",
             "troubleshooting/connection",
-            "troubleshooting/performance",
             "troubleshooting/labreports"
           ]
         },
