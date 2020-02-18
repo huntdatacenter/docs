@@ -4,7 +4,7 @@ module.exports = {
   // https://v1.vuepress.vuejs.org/config/#description
   description: "HUNT Cloud Documentation",
   // https://v1.vuepress.vuejs.org/config/#dest
-  dest: "public",
+  dest: "dist",
   // https://v1.vuepress.vuejs.org/config/#base
   base: "/",
   // https://v1.vuepress.vuejs.org/config/#head
@@ -48,8 +48,7 @@ module.exports = {
     editLinkText: "Help us improve this page!",
     lastUpdated: true,
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
-    nav: [
-      {
+    nav: [{
         text: "Home",
         link: "/"
       },
@@ -60,8 +59,7 @@ module.exports = {
     ],
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
     sidebar: {
-      "/": [
-        {
+      "/": [{
           title: "Home",
           collapsable: false,
           children: ["", "about", "contribute", "contact"]
