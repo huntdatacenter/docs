@@ -4,7 +4,7 @@ module.exports = {
   // https://v1.vuepress.vuejs.org/config/#description
   description: "HUNT Cloud Documentation",
   // https://v1.vuepress.vuejs.org/config/#dest
-  dest: "dist",
+  dest: "public",
   // https://v1.vuepress.vuejs.org/config/#base
   base: "/",
   // https://v1.vuepress.vuejs.org/config/#head
