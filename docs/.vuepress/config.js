@@ -6,7 +6,7 @@ module.exports = {
   // https://v1.vuepress.vuejs.org/config/#dest
   dest: "public",
   // https://v1.vuepress.vuejs.org/config/#base
-  base: "/docs/",
+  base: "/",
   // https://v1.vuepress.vuejs.org/config/#head
   head: [
     [
