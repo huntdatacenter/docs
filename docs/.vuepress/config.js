@@ -41,7 +41,7 @@ module.exports = {
   // https://v1.vuepress.vuejs.org/theme/default-theme-config.html
   themeConfig: {
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#git-repo-and-edit-links
-    repo: "https://gitlab.com/huntdatacenter/docs",
+    repo: "https://github.com/huntdatacenter/docs",
     repoLabel: "Contribute!",
     docsDir: "docs",
     editLinks: true,
@@ -153,7 +153,7 @@ module.exports = {
     [
       "vuepress-plugin-sitemap",
       {
-        hostname: "https://huntdatacenter.gitlab.io/docs/"
+        hostname: "https://huntdatacenter.github.io/docs/"
       }
     ]
   ]
