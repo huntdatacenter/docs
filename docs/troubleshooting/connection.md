@@ -1,5 +1,5 @@
 ---
-title: Lab connections
+title: Connection
 permalink: /troubleshooting/connection
 sidebarDepth: 1
 ---
@@ -52,7 +52,7 @@ Inactive accounts are deactivate after about 180 days. This will cause your logi
 
 ### Connection timeout
 
-The most common causes of `Connection timed out` responses are: (1) that your VPN connection is not working as intended ([troubleshoot VPN](/troubleshooting/connection/#vpn)), (2) that you typed a wrong SSH password three (3) times in a row causing a 15 minute ban on further logins to your lab. If your VPN is working correctly, aim for a 15 minute coffee break before your retry. [Contact us](/contact) for further troubleshooting if you are still unable to connect. 
+The most common causes of `Connection timed out` responses are: (1) that your VPN connection is not working as intended ([troubleshoot VPN](/troubleshooting/connection/#vpn)), (2) that you typed a wrong SSH password three (3) times in a row causing a 15 minute ban on further logins to your lab. If your VPN is working correctly, aim for a 15 minute coffee break before your retry. [Contact us](/contact) for further troubleshooting if you are still unable to connect.
 
 ### Forgotten passwords
 
@@ -65,7 +65,6 @@ Your SSH connection is transferred inside your VPN connection. You will therefor
 ### Unresponsive machine (OOM Killer)
 
 Your lab machines may become unresponsive. You will notice this as a lost connection. A typical reason for this is that one or more a processes inside your machine consumed all the memory, initiating a [Out Of Memory Killer](https://www.memset.com/docs/additional-information/oom-killer/) (OOM Killer). You will be unable to log onto your lab if an OOM Killer is triggered on your `home` machine. You will be able to log into your lab, although unable to log into the affected `iaas` or `blue` machines, if an OOM Killer is triggered on other machines in your lab. Your data will not be affected of OOM Killers. [Contact us](/contact) us for a machine restart.
-
 
 ### WARNING: Remote host identification has changed
 

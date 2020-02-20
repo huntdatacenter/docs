@@ -18,6 +18,8 @@ basement_dist
 # vim
 *.swp
 
+*.swo
+
 # Archives
 *.7z
 *.jar

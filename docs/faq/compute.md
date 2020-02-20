@@ -10,26 +10,23 @@ This page list frequently asked questions realted to compuation and analysis in 
 
 [[toc]]
 
-
-
 ## Resources
 
-### How can I upgrade my compute resources? 
+### How can I upgrade my compute resources?
 
 Your [lab leader](/faq/users/#user-roles) and lab coordinator approves upgrades. This includes both upgrades in cpu and memory of individual machines, and supplement of new machines in accordance with our [machine types](https://www.ntnu.edu/mh/huntcloud/cloud-services/hunt-compute). Forward upgrade requests to us on [email](/contact).
 
 ### Is my process hitting memory issues?
 
-See below for descriptions on how to monitor your memory consumption using the `htop` and `time` commands. 
+See below for descriptions on how to monitor your memory consumption using the `htop` and `time` commands.
 
+### How can I monitor my resource consumption?
 
-### How can I monitor my resource consumption? 
+You have several options:
 
-You have several options: 
+(1) A quick way is to use [HTOP](https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/htop/) for interatctive monitoring of cpu and memory inside individual machines.
 
-(1) A quick way is to use [HTOP](https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/htop/) for interatctive monitoring of cpu and memory inside individual machines. 
-
-(2) The [time](http://man7.org/linux/man-pages/man1/time.1.html) command is a quick way to determine the duration of execution of a particular command. For example add `/usr/bin/time -v` before your command to get going: 
+(2) The [time](http://man7.org/linux/man-pages/man1/time.1.html) command is a quick way to determine the duration of execution of a particular command. For example add `/usr/bin/time -v` before your command to get going:
 
 :::details /usr/bin/time examples
 
@@ -46,7 +43,7 @@ You have several options:
 
 [Read more time command example](https://www.cyberciti.biz/faq/unix-linux-time-command-examples-usage-syntax/)
 
-When yoru command or script finishes, `time` writes a message to standard error giving timing statistics about your program run, for example: 
+When yoru command or script finishes, `time` writes a message to standard error giving timing statistics about your program run, for example:
 
 ```
         Command being timed: "ls /"
@@ -78,7 +75,7 @@ When yoru command or script finishes, `time` writes a message to standard error 
 
 (3) Use your monthly "Lab report" sent to your lab leader and lab coordinator for tracking of longer term resource consumptions inside your lab.
 
-### How can I profile my resource consumption? 
+### How can I profile my resource consumption?
 
 For longer workflows your resource consumption may differ for each step in your code. Profiling tools may help to identify consumption for each part, such as time, cpu, mem, etc., both within your code and any third party libraries that you may utilize.
 
@@ -94,25 +91,15 @@ Examples of python profilers:
 
 :::
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Software
 
 ### Can I bring my own software?
 
-Yes. You can install your own software in your lab environment under our _bring-your-own-software_ policy, for example, with the following syntax:
+Yes. You can install your own software in your lab environment under our _bring-your-own-software_ policy.
+
+### How do I install my own software?
+
+A quick way to install software packages is to use the built in [apt package tool](https://itsfoss.com/apt-get-linux-guide/) in Ubuntu:
 
 ```bash
 sudo apt install <packagename>
@@ -122,9 +109,7 @@ sudo apt install <packagename>
 
 Yes. If you use software that needs paid licenses you need to bring your own licenses under our _bring-your-own-license_-policy. Your lab leader is responsible to ensure that licensed software is used in accordance with the license agreement inside the lab environments.
 
-
 ## Workflow
-
 
 ### How can I keep my jobs running when I disconnect?
 
@@ -149,4 +134,3 @@ Blue machines are identical to iaas machine with one exceptions: they are deploy
 ### What is an "entry" machine?
 
 You will meet the "entry" machine when you configure your account during your initial onboarding. Hopefully, you will not meet this machine type again. The machine type is introduced for security purposes allowing us to quickly install security updates and do machine restarts without affecting your analyis in the other lab machines.
-

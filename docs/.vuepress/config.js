@@ -48,7 +48,8 @@ module.exports = {
     editLinkText: "Help us improve this page!",
     lastUpdated: true,
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
-    nav: [{
+    nav: [
+      {
         text: "Home",
         link: "/"
       },
@@ -59,7 +60,8 @@ module.exports = {
     ],
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
     sidebar: {
-      "/": [{
+      "/": [
+        {
           title: "Home",
           collapsable: false,
           children: ["", "about", "contribute", "contact"]
@@ -67,10 +69,7 @@ module.exports = {
         {
           title: "Getting started",
           // collapsable: false,
-          children: [
-            "getting-started/",
-            "getting-started/how-to-connect"
-          ]
+          children: ["getting-started/", "getting-started/how-to-connect"]
         },
         {
           title: "Working in your lab",
@@ -117,6 +116,7 @@ module.exports = {
           children: [
             "troubleshooting/",
             "troubleshooting/connection",
+            "troubleshooting/compute",
             "troubleshooting/labreports"
           ]
         },

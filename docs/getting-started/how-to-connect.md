@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 **Without these, it is impossible to access your lab environment.**
 
-- Signed user agreement ([blank template](https://www.ntnu.edu/documents/1282184702/1283475046/hcc-user-agreement-web.pdf/7dbfd0ac-9f02-4165-8862-a480becb88ad?version=1.1))
+- Signed user agreement ([blank template](/assets/hunt-cloud-user-agreement.pdf)) forwarded to us over [email](/contact) for account activation.
 - Computer connected to the Internet
 - Smartphone to receive system keys from HUNT Cloud
 - Compressed file from HUNT Cloud downloaded from link sent over email
