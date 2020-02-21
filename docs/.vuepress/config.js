@@ -153,7 +153,7 @@ module.exports = {
     [
       "vuepress-plugin-sitemap",
       {
-        hostname: "https://huntdatacenter.github.io/docs/"
+        hostname: "https://docs.hdc.ntnu.no"
       }
     ]
   ]
