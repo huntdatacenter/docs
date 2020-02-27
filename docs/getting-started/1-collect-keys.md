@@ -40,9 +40,13 @@ Signal is a private messenger app for your phone that provide a secret communica
 
 ### Notify us
 
-[Contact us](/contact) on email as soon as you have installed Signal. This allows us to quickly forward your lab keys when they are ready. Example email: 
+::: tip
+[Contact us](/contact) on email as soon as you have installed Signal. This allows us to quickly forward your lab keys when they are ready. 
+:::
 
-> Hi all, I have installed Signal and are looking forward to recieve my keys.
+Example email: 
+
+> Hi all, I have installed Signal and are looking forward to receive my keys.
 
 ### Key transfer
 
