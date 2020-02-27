@@ -14,7 +14,7 @@ Your lab connection is encrypted over a virtual private network (VPN) to ensure 
 
 ### Access whitelist
 
-We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. Please look up your IP address ([ip4.me](http://ip4.me)) and [forward to us](/contact) if you think this is the case. We are happy to open for new connections.
+We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. Please look up your IP address ([ip4.me](http://ip4.me)) and [forward your IP to us](/contact) if you think this is the case. We are happy to open for new connections.
 
 ### Administrator rights
 
