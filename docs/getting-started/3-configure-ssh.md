@@ -155,7 +155,7 @@ Welcome to YOUR-LABNAME.
 For the record, if you shouldn't be here - please
 leave and report the incident to cloud@hunt.ntnu.no.
 
-Last login: Mon Jul  2 17:40:16 2018 from 10.8.0.6
+Last login: Mon Jul  2 17:40:16 2018 from 10.10.10.10
 your-username@your-labname-`entry`:~$ 
 
 :::
