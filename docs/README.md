@@ -6,6 +6,6 @@ title: Welcome
 
 HUNT Cloud is a scientific computing service located at [NTNU](https://www.ntnu.edu/) in Norway.
 
-These pages contains official user documentation for our cloud services. The content is aimed at active users.
+These pages contains official user documentation on our cloud services. The content is aimed at active users.
 
-Visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services.
+Read our [eBook](/assets/ebook-hunt-cloud-services.pdf) and visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services.
