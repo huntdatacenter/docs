@@ -12,13 +12,13 @@ This page lists frequently asked questions related to users and user management 
 
 ## New users
 
-### How do we add new users to our lab?
+### How do we add new users?
 
 Your lab leader or lab coordinator can add new users to your lab.
 New users must sign our [user agreements](/assets/hunt-cloud-user-agreement.pdf).
 Forward the signed agreement to us on [email](/contact) and start our [onboarding guide](/getting-started).
 
-### How long does a new account activation take?
+### How long does an account activation take?
 
 Allow for several weeks at this point.
 We activate new accounts and labs in the beginning of each week.
