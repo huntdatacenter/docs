@@ -35,7 +35,7 @@ Click on the link below if you do not hold administrative rights on your local m
 
   ::: details Installing OpenVPN without administrative rights
 
-You can check if you have administrative rights on your local machine by running **`net localgroup "Administrators"`** in a [command prompt](https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/) and seeing if your username is listed.
+You can check if you have administrative rights on your local machine by running **`net localgroup "Administrators"`** in a [command prompt](https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/) and see if your username is listed.
 
 **Request assistance from your local IT personnel if you do not hold administrative rights on your local machine and request that they:**
 
