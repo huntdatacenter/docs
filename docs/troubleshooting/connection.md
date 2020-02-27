@@ -12,6 +12,10 @@ sidebarDepth: 1
 
 Your lab connection is encrypted over a virtual private network (VPN) to ensure the confidentiality of the information. We have listed some of the things that may cause you trouble:
 
+### Access whitelist
+
+We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. Please look up your IP address ([ip4.me](http://ip4.me)) and [forward to us](/contact) if you think this is the case. We are happy to open for new connections.
+
 ### Administrator rights
 
 Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/getting-started/troubleshooting/#openvpn).
@@ -19,10 +23,6 @@ Windows users needs administrator rights on their local computer to successfully
 ### Local firewalls
 
 Our VPN service communicate with your local machine on a specific port that needs to be allowed in your local firewall: UDP protocol on Port 1194 to and from IP 129.241.176.121. Blocked network connections will typically give a "The VPN failed because the connection attempt timed out"-error. Please contact your local IT department for assistance if you think this may be the case. Feel free to [include us](/contact) in the communication if you need assistance.
-
-### IP whitelist
-
-We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. Please look up your IP address ([ip4.me](http://ip4.me)) and [forward to us](/contact) if you think this is the case. We are happy to open for new connections.
 
 ### Lost VPN passphrase
 
