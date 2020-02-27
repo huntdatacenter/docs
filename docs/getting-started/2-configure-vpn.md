@@ -5,11 +5,11 @@ sidebarDepth: 1
 
 # Step 2. Configure your VPN
 
-This step configure a VPN connection between your local machine and your lab to ensure that all transfers to and from your machine is encrypted. 
+This step configure an encrypted connection between your local machine and your lab. The specific steps are dependent on the operating system on your local machine.
 
 ::: warning Requirement
 
-Successful verification of Step 1.
+Successful [verification](/getting-started/collect-your-keys/#_1-4-verify-your-key-collection) of Step 1.
 
 :::
 
@@ -29,22 +29,21 @@ We use the open-source application [OpenVPN](https://openvpn.net/) to ensure enc
 Click on the link above, scroll down to the file named **`openvpn-install-<version-number>-i602-win10.exe`** (Windows 10 users), download the file and follow the on-screen installation instructions. 
 
   ::: warning
-  Installing OpenVPN require administrative rights on your local machine. If you don't have administrative rights on your local machine, or don't know if you have administrative rights on your local machine, click on the link below. 
+  **You will need administrative rights on your local machine to successfully install OpenVPN.** 
 
+Click on the link below if you do not hold administrative rights on your local machine, or don't know if you have such rights. 
 
   ::: details Installing OpenVPN without administrative rights
 
-You can check if you have administrative rights on your local machine by running **`net localgroup "Administrators"`** in a command prompt and seeing if your username is listed.
+You can check if you have administrative rights on your local machine by running **`net localgroup "Administrators"`** in a [command prompt](https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/) and seeing if your username is listed.
 
-If you **do not** hold administrative rights on your local machine you may request assistance from your local IT personnel and request that they: 
+**Request assistance from your local IT personnel if you do not hold administrative rights on your local machine and request that they:**
 
-(1) grant you administrative rights on your local machine so you can install OpenVPN yourself, or 
+(1) assist you in the OpenVPN installation, or
 
-(2) assist in installing OpenVPN for you. 
+(2) grant you administrative rights on your local machine so you can install OpenVPN yourself.
 
-We have outlined the steps they need to perform below which you can attach to your request.
-
-**Instructions for local IT personnel**
+For simplicity, we have outlined the steps they need to perform below which you can attach to your request.
 
 ```
 1. Install the OpenVPN client on the computer for my user:
@@ -67,7 +66,7 @@ We have outlined the steps they need to perform below which you can attach to yo
 
 We use Tunnelblick to ensure encrypted communication between your local machine and us.
 
-[Download and install the latest **stable release** from this page](https://tunnelblick.net/downloads.html)
+[Download and install the latest **'stable release'** from this page](https://tunnelblick.net/downloads.html)
 
 :::
 
@@ -114,14 +113,14 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 
 ::: details OS X and macOS
 
-**2.2.1 If you do get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
+**2.2.1 If you 'do' get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
   1. Select **`I have configuration files`**.
   2. In the **`Welcome to Tunnelblick`** prompt, select **`I have configuration files`**.
   3. When prompted for which type of configuration you have, select **`OpenVPN Configurations`**.
   4. Select the OpenVPN profile named. **`<username>.ovpn`** in the collection of credentials given from HUNT.
   5. Continue with the **`Connecting to the VPN section`** below.
 
-**2.2.2 If you do not get prompted with the `Welcome to Tunnelblick` message, follow these steps:** 
+**2.2.2 If you 'do not' get prompted with the `Welcome to Tunnelblick` message, follow these steps:** 
    1. Find the OpenVPN profile named **`<username>.ovpn`** that you collected in Step 1.
    2. Right-click the file OpenVPN profile named **`<username>.ovpn`**.
    3. Select **`Open With -> Tunnelblick`**.
@@ -247,7 +246,7 @@ If you received the notification _VPN connection has been successfully establish
 
 ::: tip Next step
 
-If you successfully completed this step, head over to Step 3 to [Configure your SSH](/getting-started/2-configure-vpn) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+If you successfully completed this step, head over to Step 3 to [Configure your SSH](/getting-started/3-configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 
@@ -258,30 +257,29 @@ If you successfully completed this step, head over to Step 3 to [Configure your 
 
 Below are a few immediate things to try if your connection did not succeed:
 
-**Authenticate VPN**
+### Authenticate VPN
 
 If the _Authenticate VPN_ prompt pops up again, then try to log in again with a new **`verification code`**.
 
-**VPN connection failed**
+### VPN connection failed
 
 If you received the notification _VPN Connection Failed_ after 60 seconds, please check the following
 
 - Verify that you have an active internet connection.
 - Verify that the _Private Key Password_ is correct.
 
-**Restricted internet access**
+### Restricted internet access
 
 If you cannot access the rest of the internet while connected to the VPN, then please check the following:
 
 - Verify the [Setup the VPN](2-2-setup-the-vpn-profile) steps above.
 
-**Unable to apply changes**
+### Unable to apply changes
 
 If you are unable to click _Apply_ after your changes, try to re-enter your _Private Key Password_ using your **`VPN passphrase`** that you collected in Step 1.
 
 ::: tip
-If nothing works, please head over to our main [troubleshooting](/troubleshooting/connection/#vpn) section for more options.
-
+If nothing works, please head over to our main [troubleshooting](/troubleshooting/connection/#vpn) section for more information on how to troubleshoot connections.
 :::
 
 

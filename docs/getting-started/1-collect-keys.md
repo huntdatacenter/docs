@@ -9,7 +9,7 @@ This step ensures that you have the correct keys and configuration files before 
 
 ::: warning Requirements
 
-- Signed user agreement ([blank template](/assets/hunt-cloud-user-agreement.pdf)) forwarded to us over [email](/contact) for account activation.
+- Signed [user agreement](/assets/hunt-cloud-user-agreement.pdf) forwarded to us on [email](/contact) for account activation.
 - Private phone to receive your lab keys.
 - Organizational email to receive your lab configuration files.
 
@@ -17,7 +17,7 @@ This step ensures that you have the correct keys and configuration files before 
 
 :::
 
-We register your account for activation when we recieve your signed [user agreement](/assets/hunt-cloud-user-agrement.pdf).
+We will register your account for activation as soon as we receive your signed user agreement.
 
 ::: tip Time estimate
 
@@ -57,18 +57,16 @@ A successful transfer to your phone should include four (4) keys:
 - **`VPN passphrase`** - your passphrase for unlocking your OpenVPN certificate.
 - **`SSH temporary key`** - your temporary passphrase when logging in to your lab with SSH for the first time.
 
-**Without these, it will be impossible to complete step 1.**
-
 :::
 
 
 
 ## 1.2 Secrets on your email
 
-We will communicate your VPN certificate and SSH configuration over your organizational email. You will recieve a link to an encrypted file archive (7z-file).
+We will communicate your VPN certificate and SSH configuration over your organizational email. You will receive a link to an encrypted file archive (7z-file).
 
 - Click on the link in the email to download the file and save this on your local machine.
-- Unpack (extract) the file with your favourite file archiver software that recognize the 7z format (see below).
+- Unpack (extract) the file with your favorite file archiver software that recognize the 7z format (see below).
 - Use the key named **`ZIP file key`** from your Signal transfer to decrypt the archive.
 
 ::: tip Decryption guides
@@ -85,7 +83,6 @@ A successful extraction on your local machine should include two (2) files:
 - **`<your-username>.ovpn`** - your personal VPN certificate to be used in step 2.
 - **`ssh-config.txt`** - your SSH configuration to be used in step 3.
 
-**Without these, it will be impossible to complete step 2 and 3.**
 :::
 
 
@@ -114,7 +111,7 @@ Search for `Google Authenticator` in the iOS or Android app stores, or use the l
 
 ::: warning Expect this one-time verification
 
-You should now be prompted with a 6 digit **`verification code`** that refreshes ever 30 seconds.
+A 6 digit **`verification code`** that refreshes ever 30 seconds in the Google Authenticator app on your phone.
 
 :::
 
@@ -122,17 +119,33 @@ You should now be prompted with a 6 digit **`verification code`** that refreshes
 
 ## 1.4 Verify your key collection
 
-A successful completion of this step should have given you: 
+A successful completion of this step should give you: 
 
 - Four (4) keys on your phone stored in Signal
-- Rotating verification in Google Authenticator on your phone
 - Two (2) files stored on your local machine
+- Rotating verification codes on your phone
 
+Without these, it will be impossible to complete the remaining steps.
 
 ::: tip Time for coffee!
 
-If you successfully completed this step, celebrate with fresh coffee before you head into the [VPN configuration](/getting-started/2-configure-vpn). If you did not succeed, it's also a good time to grab some coffee before your head over to our main [troubleshooting](/troubleshooting/connection/) section.
+If you successfully completed this step, celebrate with fresh coffee and head our to the [VPN configuration](/getting-started/2-configure-vpn). If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 
 
+::: details Immediate troubleshooting
+
+### Signal
+
+**I am unable to install or run Signal on my phone.** Steps to resolve issues with Signal may vary by phone model and OS. Signal has a handy [troubleshooting guide ](https://support.signal.org/hc/en-us/articles/360007318711-Troubleshooting-Notifications) as a starting point. [Contact us](/contact) if this do not resolve your issue.
+
+### 7z file
+
+**I am unable to unpack the 7z-file forwarded on email.** If the [decryption links](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
+
+See our main [troubleshooting](/troubleshooting/connection/) section for more information. Please [contact us](/contact) if you encounter issues that we have not yet documented.
+
+
+
+:::

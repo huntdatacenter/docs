@@ -69,7 +69,11 @@ module.exports = {
         {
           title: "Getting started",
           // collapsable: false,
-          children: ["getting-started/", "getting-started/how-to-connect"]
+          children: ["getting-started/",
+                     "getting-started/1-collect-keys.md",
+                     "getting-started/2-configure-vpn.md",
+                     "getting-started/3-configure-ssh.md"
+          ]
         },
         {
           title: "Working in your lab",
@@ -158,3 +162,4 @@ module.exports = {
     ]
   ]
 };
+
