@@ -42,7 +42,7 @@ We are happy to hear that! You will need a new Google authenticator code from us
 
 ### No phone
 
-Unfortunately, you do need a phone to connect to your lab. You will use this both for your two-step verification code each time you log in and in our user identification process.
+Unfortunately, you do need a phone to connect to your lab. You will use this both for your two-step verification each time you access your lab, and we use your phone registration as part of our user identification process.
 
 ### Deactivated account
 
