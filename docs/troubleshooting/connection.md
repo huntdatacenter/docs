@@ -1,7 +1,7 @@
 ---
 title: Connection
 permalink: /troubleshooting/connection
-sidebarDepth: 1
+sidebarDepth: 2
 ---
 
 # Troubleshooting lab connections
@@ -47,6 +47,10 @@ Unfortunately, you do need a phone to connect to your lab. You will use this bot
 ### Deactivated account
 
 Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Contact us](/contact) for an account reactivation.
+
+### Update VPN certificate
+
+You will need to remove your old VPN certificate and passwords before you install a new one. On Windows, (1) right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select **`remove passwords`**, and (2) open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here: **`C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>`**. Now, right click on the OpenVPN icon once more and "import from file" from the [Connect to the VPN](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) section of our Getting guide.
 
 ## SSH
 

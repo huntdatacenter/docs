@@ -268,12 +268,6 @@ If you received the notification _VPN Connection Failed_ after 60 seconds, pleas
 - Verify that you have an active internet connection.
 - Verify that the _Private Key Password_ is correct.
 
-### Restricted internet access
-
-If you cannot access the rest of the internet while connected to the VPN, then please check the following:
-
-- Verify the [Setup the VPN](2-2-setup-the-vpn-profile) steps above.
-
 ### Unable to apply changes
 
 If you are unable to click _Apply_ after your changes, try to re-enter your _Private Key Password_ using your **`VPN passphrase`** that you collected in Step 1.
