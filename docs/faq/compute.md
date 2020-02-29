@@ -6,7 +6,7 @@ sidebarDepth: 1
 
 # FAQ on lab compute
 
-This page list frequently asked questions realted to compuation and analysis in labs.
+This page list frequently asked questions related to computation and analysis in labs.
 
 [[toc]]
 
@@ -24,7 +24,7 @@ See below for descriptions on how to monitor your memory consumption using the `
 
 You have several options:
 
-(1) A quick way is to use [HTOP](https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/htop/) for interatctive monitoring of cpu and memory inside individual machines.
+(1) A quick way is to use [HTOP](https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/htop/) for interactive monitoring of cpu and memory inside individual machines.
 
 (2) The [time](http://man7.org/linux/man-pages/man1/time.1.html) command is a quick way to determine the duration of execution of a particular command. For example add `/usr/bin/time -v` before your command to get going:
 
@@ -43,7 +43,7 @@ You have several options:
 
 [Read more time command example](https://www.cyberciti.biz/faq/unix-linux-time-command-examples-usage-syntax/)
 
-When yoru command or script finishes, `time` writes a message to standard error giving timing statistics about your program run, for example:
+When your command or script finishes, `time` writes a message to standard error giving timing statistics about your program run, for example:
 
 ```
         Command being timed: "ls /"
@@ -125,7 +125,7 @@ This is a managed machine type. All labs have one "home" machine that is pre-con
 
 ### What is an "iaas" machine?
 
-In addition to the home machine, lab leaders and lab coordinators may request new "iaas" machines to be deployed in your lab. This is an unmanage machine type. You do get full administrator privileges (root access). We expect you to configure and maintain these machines yourself. We normally deploy these machines with a vanilla Ubuntu 18.04 operating system. Iaas machines are deployed for a minimum of 30 days.
+In addition to the home machine, lab leaders and lab coordinators may request new "iaas" machines to be deployed in your lab. This is an unmanaged machine type. You do get full administrator privileges (root access). We expect you to configure and maintain these machines yourself. We normally deploy these machines with a vanilla Ubuntu 18.04 operating system. Iaas machines are deployed for a minimum of 30 days.
 
 ### What is a "blue" machine?
 
