@@ -14,11 +14,11 @@ This page list frequently asked questions related to data transfers and network 
 
 ### Can I transfer data directly to remote parties? 
 
-Yes, we do allow direct data transfers to parties outside HUNT Cloud. Your lab leader may request openings for such transfers. See the [Network openings](/faq/transfer/#network-opening) section below for information on how to open for outbound data transfers.
+Yes, we do allow direct data transfers to parties outside HUNT Cloud. Your lab leader may request openings for such transfers. See the [Network openings](/faq/transfer/#network-opening-request) section below for information on how to open for outbound data transfers.
 
 ### Why is my lab closed for remote transfers? 
 
-All labs are closed for outbound data traffic at the time of deployment. Your lab leader may request openings for such transfers. See the [Network openings](/faq/transfer/#network-opening) section below for information on how to open for outbound data transfers.
+All labs are closed for outbound data traffic at the time of deployment. Your lab leader may request openings for such transfers. See the [Network openings](/faq/transfer/#network-opening-request) section below for information on how to open for outbound data transfers.
 
 ### Can remote parties upload data to my lab? 
 
