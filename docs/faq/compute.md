@@ -1,7 +1,7 @@
 ---
 title: Compute
 permalink: faq/compute
-sidebarDepth: 1
+sidebarDepth: 2
 ---
 
 # FAQ on lab compute
@@ -93,21 +93,26 @@ Examples of python profilers:
 
 ## Software
 
-### Can I bring my own software?
+### Can I bring my own software and licenses?
 
-Yes. You can install your own software in your lab environment under our _bring-your-own-software_ policy.
+Yes. You can install your own software in your lab environment under a _bring-your-own-software_ and _bring-your-own-license_ policy. Your lab leader is responsible to ensure that licensed software is used in accordance with the license agreement inside the lab environments. [Contact us](/contact) for installation of licensed software on your home-machine.
 
 ### How do I install my own software?
 
-A quick way to install software packages is to use the built in [apt package tool](https://itsfoss.com/apt-get-linux-guide/) in Ubuntu:
+A quick way to install open-source software packages is to use the built in [apt package tool](https://itsfoss.com/apt-get-linux-guide/) in Ubuntu:
 
 ```bash
 sudo apt install <packagename>
 ```
 
-### Can I bring my own licenses?
+### Can I run MatLab, Stata, SPSS and RStudio? 
 
-Yes. If you use software that needs paid licenses you need to bring your own licenses under our _bring-your-own-license_-policy. Your lab leader is responsible to ensure that licensed software is used in accordance with the license agreement inside the lab environments.
+Yes. You can run commonly used analytical tools, such MatLab, Stata, SPSS and Rstudio directly from your lab. You will need to bring a license from your host institution if you are affiliated outside of NTNU. Graphical user interfaces are accessed through the X2Go-software. [Contact us](/contact) for installations on home-machines.
+
+### Can I run Windows software? 
+
+Most likely. Many commonly used software in scientific computing can be run from your lab, such as MatLab, Stata, and SPSS, including many special tools for image analysis and genetic analysis. However, we do run Linux as the operating systems in your lab. Some Windows tools will therefor be unavailable. We do provide Windows systems in those rare cases when this is the only option to run mission critical applications. [Contact us](/contact) if you think you do need Windows tools to get your science to fly.
+
 
 ## Workflow
 
