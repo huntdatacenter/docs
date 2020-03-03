@@ -1,7 +1,7 @@
 ---
 title: Transfer
 permalink: faq/transfer
-sidebarDepth: 2
+sidebarDepth: 1
 ---
 
 # FAQ on data transfers

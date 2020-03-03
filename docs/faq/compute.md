@@ -1,7 +1,7 @@
 ---
 title: Compute
 permalink: faq/compute
-sidebarDepth: 2
+sidebarDepth: 1
 ---
 
 # FAQ on lab compute

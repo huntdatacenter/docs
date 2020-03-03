@@ -1,7 +1,7 @@
 ---
 title: Storage
 permalink: faq/storage
-sidebarDepth: 2
+sidebarDepth: 1
 ---
 
 # FAQ on lab storage

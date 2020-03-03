@@ -22,7 +22,7 @@ Understanding what constitutes a security incident that may lead to a data breac
 
 ### What should I report?
 
-If you are in doubt - [report the incident](/contact)! Please do also report all incidents with a an **`unintended and undesirable consequence`** of an action or behaviour in your lab, including those that may or have led to loss or interruption of data or services. We will guide you on which information it's good to include.
+If you are in doubt - [report the incident](/contact)! We will guide you on which information it's good to include. Please do also report all incidents with a an **`unintended and undesirable consequence`** of an action or behaviour in your lab, including those that may or have led to loss or interruption of data or services. We use this information to prioritize our maintenance and development work.
 
 ### Can I be punished for reporting?
 
