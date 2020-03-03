@@ -20,7 +20,7 @@ Your lab leader or lab coordinator can add new users to your lab. New users must
 
 Allow for several weeks at this point. We activate new accounts and labs in the beginning of each week. Depending on the number of requests, accounts may be activated the upcoming week or some weeks thereafter. We do recognize that science never sleeps, so [contact us](/contact) for high priority activations same or next business day when needed.
 
-### How many users can we add to our lab?
+### How many users can we add to a lab?
 
 We have no hard limits. When that is said, all users in your lab will have access to all the data in the lab. Thus, we require that you limit users to those that have permissions in place to work with your data. Usually, labs with up to 6-7 people seem to be most effective. We are more than happy to spin off new labs as your team grows.
 
