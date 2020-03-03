@@ -1,6 +1,0 @@
-rules "~MD013", # MD013 - Line length
-      "~MD024", # MD025 - Multiple headers with the same content
-      "~MD025", # MD025 - Multiple top level headers in the same document
-      "~MD026", # MD026 - Trailing punctuation in header
-      "~MD029", # MD029 - Ordered list item prefix
-      "~MD040"  # MD040 - Fenced code blocks should have a language specified
