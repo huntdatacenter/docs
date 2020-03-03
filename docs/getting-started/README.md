@@ -16,7 +16,6 @@ The following steps will help you to invest time in your lab setup so you can en
 
 ::: warning Time estimate
 
-After you have collected your lab keys in step 1, allow for **two hours** to complete the remaing onboarding steps.
+After you have collected your lab keys in step 1, allow for **two hours** to complete the remaining onboarding steps.
 
 :::
-
