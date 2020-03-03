@@ -1,6 +1,6 @@
-# HUNT Data Center Pages
+# HUNT Cloud Documentation
 
-This repository holds HUNT Data Center Pages.
+This repository holds HUNT Cloud Documentation source.
 
 ## Development
 
