@@ -104,7 +104,7 @@ Most likely. Many commonly used software in scientific computing can be run from
 
 ### How can I keep my jobs running when I disconnect?
 
-You can keep your jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/tutorials/terminal-multiplexers) to get started.
+You can keep your jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/working-in-your-lab/technical-tools/terminal-multiplexers/) to get started.
 
 ### How can I profile the resources needed in my workflow?
 
