@@ -12,17 +12,17 @@ This page list frequently asked questions related to computation and analysis in
 
 ## Resources
 
-### How can I upgrade my compute resources?
+### Can I upgrade my compute resources?
 
-Your [lab leader](/faq/users/#user-roles) and lab coordinator approves upgrades. This includes both upgrades in cpu and memory of individual machines, and supplement of new machines in accordance with our [machine types](https://www.ntnu.edu/mh/huntcloud/cloud-services/hunt-compute). Forward upgrade requests to us on [email](/contact).
+Yes, you can. Your [lab leader](/faq/users/#user-roles) and lab coordinator approves upgrades both for cpu and memory of individual machines, and supplement of new machines in accordance with our [machine types](https://www.ntnu.edu/mh/huntcloud/cloud-services/hunt-compute). Forward upgrade requests to us on [email](/contact) with your lab leader and lab coordinator on cc.
 
 ### Is my process hitting memory issues?
 
 See below for descriptions on how to monitor your memory consumption using the `htop` and `time` commands.
 
-### How can I monitor my resource consumption?
+### Can I monitor my resource consumption?
 
-You have several options:
+Yes. You have several options:
 
 (1) A quick way is to use [HTOP](https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/htop/) for interactive monitoring of cpu and memory inside individual machines.
 
@@ -75,21 +75,7 @@ When your command or script finishes, `time` writes a message to standard error 
 
 (3) Use your monthly "Lab report" sent to your lab leader and lab coordinator for tracking of longer term resource consumptions inside your lab.
 
-### How can I profile my resource consumption?
 
-For longer workflows your resource consumption may differ for each step in your code. Profiling tools may help to identify consumption for each part, such as time, cpu, mem, etc., both within your code and any third party libraries that you may utilize.
-
-::: details See example of profiling tools
-
-For those interested in a deep dive into profiling, we recommend to get familiar with [Flame graphs](http://www.brendangregg.com/flamegraphs.html).
-
-Examples of python profilers:
-
-- [py-spy](https://github.com/benfred/py-spy) - top-like sampling profiler (low overhead, non-interuptive, flamegraphs)
-- [scalene](https://github.com/emeryberger/scalene) - a high-performance CPU and memory profiler for Python.
-- [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
-
-:::
 
 ## Software
 
@@ -119,6 +105,25 @@ Most likely. Many commonly used software in scientific computing can be run from
 ### How can I keep my jobs running when I disconnect?
 
 You can keep your jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/tutorials/terminal-multiplexers) to get started.
+
+### How can I profile the resources needed in my workflow?
+
+For longer workflows your resource consumption may differ for each step in your code. Profiling tools may help to identify consumption for each part, such as time, cpu, mem, etc., both within your code and any third party libraries that you may utilize.
+
+::: details See example of profiling tools
+
+For those interested in a deep dive into profiling, we recommend to get familiar with [Flame graphs](http://www.brendangregg.com/flamegraphs.html).
+
+Examples of python profilers:
+
+- [py-spy](https://github.com/benfred/py-spy) - top-like sampling profiler (low overhead, non-interuptive, flamegraphs)
+- [scalene](https://github.com/emeryberger/scalene) - a high-performance CPU and memory profiler for Python.
+- [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
+
+:::
+
+
+
 
 ## Machine types
 
