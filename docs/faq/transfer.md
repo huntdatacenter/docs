@@ -34,7 +34,7 @@ All Kistas will automatically be destroyed after 30 days. Thus, Kistas are short
 
 ### Do I need to encrypt the data in a Kista? 
 
-No. It is our responsibility to ensure the correct receiver of your data and the confidentiality of your data inside the Kista. We do also log the transfers, and such logs may be made available to your data controller on request.
+No, we don't think so. It is our responsibility to ensure the correct receiver of your data and the confidentiality of your data inside the Kista. We do also log the transfers, and such logs may be made available to your data controller on request.
 
 
 
