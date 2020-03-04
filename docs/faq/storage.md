@@ -17,7 +17,7 @@ This page list frequently asked questions related to lab storage.
 Log into your `home` machine in your lab with your favourite terminal and type: `df -h | grep -E '(^Filesystem|/dev/vd)'`. This will give you an overview of the storage resources (volumes) that are allocated to your lab machine. Example output that list attached volumes: 
 
 ```bash
--home:~$ df -h | grep 'mnt\|Size\|home'
+$ df -h | grep 'mnt\|Size\|home'
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/vda1       9.7G  7.2G  2.6G  74% /
 /dev/vdb1        99G   60M   94G   1% /home
