@@ -14,7 +14,7 @@ This page list frequently asked questions related to lab storage.
 
 ### What storage does my lab have?
 
-You will find the following storage volumes on your lab [`home`](faq/compute/#what-is-a-home-machine) machine:
+You will find the following storage volumes on your lab [home](compute/#what-is-a-home-machine) machine:
 
 | **Name** | **Location** | **Recommended use** | **Recovery** |
 | - | - | - | - | 
@@ -26,11 +26,11 @@ You will find the following storage volumes on your lab [`home`](faq/compute/#wh
 
 - Initial volumes sizes will be decided by lab owners and can be expanded at a later stage.
 - Data are duplicated within the same site to protect against data loss in the case of single equipment failure.
-- Additional [`iaas`](faq/compute/#what-is-an-iaas-machine) machines have `scratch` volumes without data recovery.
+- Additional [iaas](compute/#what-is-an-iaas-machine) machines have `scratch` volumes without data recovery.
 
 ### How can I see my lab storage? 
 
-Log into your [`home`](faq/compute/#what-is-a-home-machine) machine in your lab with your favourite terminal and type: `df -h | grep -E '(^Filesystem|/dev/vd)'`. This will give you an overview of the storage resources (volumes) that are allocated to your lab machine. Example output that list attached volumes: 
+Log into your [home](compute/#what-is-a-home-machine) machine in your lab with your favourite terminal and type: `df -h | grep -E '(^Filesystem|/dev/vd)'`. This will give you an overview of the storage resources (volumes) that are allocated to your lab machine. Example output that list attached volumes: 
 
 ```bash
 $ df -h | grep 'mnt\|Size\|home'
