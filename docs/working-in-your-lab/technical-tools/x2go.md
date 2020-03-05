@@ -301,14 +301,14 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
    ssh-copy-id <name-of-iaas-node>
    ```
 
+   ::: warning NOTE
+   [Contact us](/contact) if you are unable to make the above step work since a security setting may prohibit this depending on your lab setup.
+
 3. Confirm the passwordless route to your iaas machine:
 
    ```bash
    ssh <iaas-node>
    ```
-
-   ::: warning NOTE
-   [Contact us](/contact) if you are unable to make the above step work since a security setting may prohibit this depending on your lab setup.
 
 4. Get the IP for your IAAS machine
 
