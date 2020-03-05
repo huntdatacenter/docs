@@ -65,7 +65,7 @@ sudo apt-get update -y && sudo apt install -y x2goclient
 Once installed, open X2Go and click `New session` and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
 ::: warning NOTE
-The configuration below will work on `home` machines, and not unmanaged iaas and blue machines.
+The configuration below will work on [home](/faq/compute/#machine-types) machines. This configuration will -not- work on unmanaged [iaas and blue](/faq/compute/#machine-types) machines.
 :::
 
 #### In the `Session` tab
