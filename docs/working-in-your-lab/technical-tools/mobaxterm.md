@@ -15,7 +15,7 @@ If these steps don't work as intended, it will be hard (although not impossible)
 
 ## How to install
 
-- Download the `Home edition (installer edition)` of MobaXterm: [https://mobaxterm.mobatek.net/download.html]()
+- Download the `Home edition (installer edition)` of [https://mobaxterm.mobatek.net/download.html](MobaXterm):
 - Unzip the file and install the software
 
 ## Configure
