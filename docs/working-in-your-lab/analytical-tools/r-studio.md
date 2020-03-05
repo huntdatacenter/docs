@@ -39,7 +39,7 @@ R
 
 ### Upgrade to latest R version
 
-The default version in R is usually a few versions behind the newest software. Follow the code below if you need the newest version.
+The default version in Ubuntu is usually a few versions behind the newest R version available. Follow the code below if you need the newest version.
 
 ```bash
 # -- Add the new package repository to your sources list:
