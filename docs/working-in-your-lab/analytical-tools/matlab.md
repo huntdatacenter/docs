@@ -1,38 +1,38 @@
 ---
 title: Matlab
-permalink: /working-in-your-lab/analytical-tools/matlab
+permalink: /working-in-your-lab/analytical-tools/Matlab
 sidebarDepth: 1
 ---
 
 # Matlab
 
-[MATLAB](https://www.mathworks.com/) is a computing environment developed by MatWorks for efficient matrix manipulations and other handy computing tools.
+[Matlab](https://www.mathworks.com/) is a computing environment developed by MatWorks for efficient matrix manipulations and other handy computing tools.
 
-We do provide the opportunity for MATLAB installations on managed and unmanaged machines.
-Installation on home-nodes require us to run some code.
+::: tip
 
-The below guide is for multi-user setup in an unmanaged environment (iaas-node).
-
-::: warning Dependencies
-
-`Without these, it will be impossible to get MATLAB to work in your lab.`
-
-- A machine prepared for [x2go](/working-in-your-lab/technical-tools/x2go/).
-- An unmanaged machines (IAAS or BLUE machine) where you have root access.
-- Access to MATLAB software binaries for linux.
-- Access to a MATLAB license, typically provided by your organization.
+These steps guide the installation of Matlab on unmanaged [iaas or blue](/faq/compute/#machine-types) machines. [Contact us](/contat) for installations on your [home machine](/faq/compute/#machine-types).
 
 :::
 
-## Download MATLAB to your lab
 
-1. Download the MATLAB software on your local computer (client).
+::: warning Dependencies
 
-   For NTNU users, log into [NTNU's software repository for matlab](https://software.ntnu.no/ntnu/matlab),
+- An unmanaged iaas or blue machine where you have root access.
+- Installation of [X2Go server](/working-in-your-lab/technical-tools/x2go/) on this machine.
+- Access to Matlab software binaries for Linux from your organizaton.
+- Access to a Matlab license for the users in your lab.
+
+:::
+
+## Download
+
+1. Download the Matlab software on your local computer (client).
+
+   For NTNU users, log into [NTNU's software repository for Matlab](https://software.ntnu.no/ntnu/Matlab),
    choose your desired version in the top right corner and download on your local computer.
    We recommend that you skip the latest version and choose a slightly older version to ensure a reliable installation.
 
-2. Transfer MATLAB to your preferred folder in your lab machine, for example /mnt/work/software/matlab/)
+2. Transfer Matlab to your preferred folder in your lab machine, for example /mnt/work/software/Matlab/)
 3. Unpack the zip file in your folder.
 
    Install software:
@@ -44,15 +44,15 @@ The below guide is for multi-user setup in an unmanaged environment (iaas-node).
    Unzip:
 
    ```bash
-   unzip <matlabfile.zip>
+   unzip <Matlabfile.zip>
    ```
 
-4. Make all files in folder executables: `chmod -R 777 <matlab-folder>`. This is a primitive fix so you are able to run the files within subfolders as required by MATLAB.
+4. Make all files in folder executables: `chmod -R 777 <Matlab-folder>`. This is a primitive fix so you are able to run the files within subfolders as required by Matlab.
 
-## Add a license file
+## Activate license
 
 ::: tip
-For NTNU users, the exact content of this files is described in [NTNU's repository for matlab](https://software.ntnu.no/ntnu/matlab).
+For NTNU users, the exact content of this files is described in [NTNU's repository for Matlab](https://software.ntnu.no/ntnu/Matlab).
 :::
 
 - Create a file named `license.dat` with your license information. The content of this file is dependent on your organizations license. The example below will need you to replace `<license-server-address>`, `<key1>` and `<key2>` with an url-address and strings provided by your host institutions license page.:
@@ -69,9 +69,9 @@ Make sure you add a new/empty line after "USE_SERVER".
 
 ## Install
 
-The below steps require the code to be run in `xterm` started from X2GO on the machine holding the MATLAB files downloaded in the above steps.
+The below steps require the code to be run in `xterm` started from X2GO on the machine holding the Matlab files downloaded in the above steps.
 
-1. Go to your matlab folder and run the installer:
+1. Go to your Matlab folder and run the installer:
 
    ```
    sudo ./install
@@ -83,26 +83,25 @@ The below steps require the code to be run in `xterm` started from X2GO on the m
 5. When the installer ask for your product activation, choose the `non internet` option and provide the location of the `license.dat` file previously generated.
 6. If successful, your should see a "product activation message".
 
-## Run MATLAB
+## Run
 
-- If you prefer MATLAB's graphical interface, run `matlab` in your terminal (`xterm`) started in X2GO.
-- If you're fine with command lines, run `matlab` directly in your shell.
+- If you prefer Matlab's graphical interface, run `Matlab` in your terminal (`xterm`) started in X2GO.
+- If you're fine with command lines, run `Matlab` directly in your shell.
 
-With a little bit of luck, it's now time to celebrate with fresh coffee running your favourite test code on the fresh MATLAB. If not, here's some of our known issues:
+With a little bit of luck, it's now time to celebrate with fresh coffee running your favourite test code on the fresh Matlab. If not, here's some of our known issues:
 
-## Known issues
+## Troubleshooting
 
-### Why can't MATLAB find the packages I choose to install?
+### Why can't Matlab find the packages I choose to install?
 
-Some of the latest MATLAB versions compiled by some universities miss some packages.
-Try to download and install a slightly older version.
+One known issue is that sometimes the latest Matlab version compiled by some universities do miss some packages. Try to install a slightly older version. [Contact us](/contact) for assistance if this do not work.
 
 ### Can I install the code without sudo?
 
-Not in a straight forward way.
-We recommend that you install on a unmanaged node where you have root.
+No, not in an easy way. Thus, either we have to install on `home` machines, or your can install these yourself on unmanaged iaas and blue machines where you get root. [Contact us](/contact) if you need Matlab on your home machine.
 
 ### My product activation do not seem to work?
 
-We need to open for traffic from your lab to your organization's license server.
-Give us a shout [here](/contact).
+We need to open for traffic from your lab to your organization's license server. [Contact us](/contact) for network openings.
+
+
