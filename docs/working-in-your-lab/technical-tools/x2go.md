@@ -1,7 +1,7 @@
 ---
 title: X2Go
 permalink: /working-in-your-lab/technical-tools/x2go
-sidebarDepth: 3
+sidebarDepth: 1
 ---
 
 # X2Go
