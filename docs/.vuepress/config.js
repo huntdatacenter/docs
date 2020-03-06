@@ -90,6 +90,7 @@ module.exports = {
               // collapsable: false,
               children: [
                 "working-in-your-lab/technical-tools/",
+                "working-in-your-lab/technical-tools/7z",
                 "working-in-your-lab/technical-tools/git",
                 "working-in-your-lab/technical-tools/gpu",
                 "working-in-your-lab/technical-tools/htop",
