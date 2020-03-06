@@ -38,4 +38,8 @@
   background-color: #fdd9b5
 } */
 
-
+/* Render code blocks better with line breaks. See https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break */
+code {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
