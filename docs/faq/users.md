@@ -32,7 +32,7 @@ Yes. Part of the rationale for our services is to keep data close to its donors 
 
 ### Can I connect from several local machines? 
 
-Yes. We allow you to configure several local machines to connect to your lab, such as your laptop and desktop machines. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/getting-started/configure-vpn/) in our Getting started guide. Please note that conditions from your own organization or conditions from the data controller providing data access may restrict connections from personal computers. Contact your lab owner for more information.
+Yes. We allow you to configure several local machines to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/getting-started/configure-vpn/) in our Getting started guide to get going. Please note that conditions from your own organization or conditions from the data controller providing data access may restrict connections from personal computers. Contact your lab owner for more information.
 
 ### Can I do multiple connections at the same time?
 
