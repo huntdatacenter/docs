@@ -16,6 +16,12 @@ Your lab connection is encrypted over a virtual private network (VPN) to ensure 
 
 We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. Please look up your IP address ([ip4.me](http://ip4.me)) and [forward your IP to us](/contact) if you think this is the case. We are happy to open for new connections.
 
+::: tip For NTNU users
+
+You can access your lab over the Ciso Anyconnect VPN from NTNU worldwide: (1) Connect the NTNU VPN using this exact address: **`vpn.ntnu.no/HUNT`**, (2) connect the HUNT Cloud VPN, and (3) connect to your lab.
+
+:::
+
 ### Administrator rights
 
 Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/getting-started/troubleshooting/#openvpn).
