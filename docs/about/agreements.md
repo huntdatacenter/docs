@@ -13,12 +13,16 @@ This page describes some the agreement structure that is in place for your lab. 
 
 ## User agreement
 
-Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator: [HUNT Cloud User Agreement](/assets/hunt-cloud-user-agreement.pdf)
+[HUNT Cloud User Agreement](/assets/hunt-cloud-user-agreement.pdf) (pdf)
+
+Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator. Read more about how to add new users in our [FAQ user section](/faq/users/).
 
 
 ## Network opening form
 
-Your lab leader can request network openings through our network opening form. We use this form to document outbound traffic from your lab: [HUNT Cloud Network Opening Form](/assets/hunt-cloud-network-opening-form.pdf).
+[HUNT Cloud Network Opening Form](/assets/hunt-cloud-network-opening-form.pdf) (pdf)
+
+Your lab leader can request network openings through our network opening form. We use this form to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/transfer/).
 
 
 ::: details Clarification of the form fields
