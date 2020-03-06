@@ -5,7 +5,7 @@ sidebarDepth: 1
 
 # Agreements
 
-This page describes some the agreement structure that is in place for your lab. Contact your lab leader for more details.
+This page list agreements that may be relevant for you as a lab user. Contact your lab leader for more details on other agreement types.
 
 [[toc]]
 
