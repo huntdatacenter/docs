@@ -1,7 +1,7 @@
 ---
 title: Connection
 permalink: /troubleshooting/connection
-sidebarDepth: 2
+sidebarDepth: 1
 ---
 
 # Troubleshooting lab connections
