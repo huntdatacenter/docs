@@ -17,12 +17,17 @@ This page describes some the agreement structure that is in place for your lab. 
 
 Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator. Read more about how to add new users in our [FAQ user section](/faq/users/).
 
+## Kista order form
+
+[HUNT Cloud Kista Order Form](/assets/hunt-cloud-kista-order-form.pdf) (pdf)
+
+Uploader lab leaders and lab coordinators can order Kistas for data transfers between two labs in HUNT Cloud. We use this form to document internal traffic from your lab. Read more about Kistas in our [FAQ transfer section](/faq/transfer/).
 
 ## Network opening form
 
 [HUNT Cloud Network Opening Form](/assets/hunt-cloud-network-opening-form.pdf) (pdf)
 
-Your lab leader can request network openings through our network opening form. We use this form to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/transfer/).
+Your lab leader can request external network openings through our network opening form. We use this form to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/transfer/).
 
 
 ::: details Clarification of the form fields

@@ -20,13 +20,25 @@ Yes. You can make your data reachable for other labs through our HUNT Kista serv
 
 Kista is our service for data transfers between labs in a simple and secure manner. You upload data to a dedicated environment (Kista, chest in english) where a dedicated individual in the receiving lab can download your data. We take the responsibility to ensure that data gets downloaded by the correct user and lab.
 
-### How does a Kista work? 
-
-Kistas are short-lived dedicated sftp-servers with named uploaders and downloaders from specific lab environments inside HUNT Cloud. We will give you specific instructions on how to upload and download data.
-
 ### How do I order a Kista? 
 
-Lab leaders and Lab coordinators may request Kistas on email. You need to specify your lab name, the user that will upload data inside your lab, the name of the receiving lab, the name of the lab user that will download the data to the receiving lab, and the size of the Kista in gigabytes or terabytes. Allow for up to a week in deployment (usually a few days). 
+Lab leader or Lab coordinator in the uploader lab (the lab that want to share data with another lab) can use our [kista order form](/about/agreements/#kista-order-form) to order a Kista between two labs. Allow for up to a week in deployment (usually a few days). 
+
+### How does a Kista work? 
+
+Kistas are short-lived dedicated sftp-servers with named uploaders and downloaders from specific lab environments inside HUNT Cloud. We will notify the you when your Kista is deployed with information on how to upload and download data (see below). 
+
+### How can I access my Kista? 
+
+You will find instructions on how to upload or download data in your lab's home machine when your Kista is deployed: 
+
+```bash
+# -- see available Kistas
+ls /opt/hunt-cloud/kista/
+
+# -- see instructions for a demokista
+less /opt/hunt-cloud/kista/kista-<name>.txt 
+```
 
 ### How long can I keep a Kista? 
 
@@ -55,6 +67,11 @@ Your lab leader can request network openings through our [network opening form](
 ### Why is my lab closed for remote transfers? 
 
 All labs are closed for outbound data traffic at the time of deployment. Your lab leader may request openings for such transfers. See the [Network openings](/faq/transfer/#how-do-i-request-a-network-opening) section below for information on how to open for outbound data transfers.
+
+### Do I need to encrypt data for external transfers? 
+
+Yes, we think so. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data. We recommend that your encrypt your data with the the [7z software](/working-in-your-lab/technical-tools/7z/#install-the-software) and transfer the key in a separate channel than your data.
+
 
 ### Can remote parties upload data to my lab? 
 

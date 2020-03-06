@@ -131,7 +131,7 @@ You will meet four principal machine types in your lab. You may choose to deploy
 
 ### What is a "home" machine?
 
-This is a managed machine type. All labs have one "home" machine that is pre-configured with user accounts, mounted storage and some analytical software. Users may download their own software using the `apt` package manager and reboot their machine when needed. Further configurations has to be guided by us. Home machines run Ubuntu 16.04 operating systems.
+This is a managed machine type. All labs have one "home" machine that is pre-configured with user accounts, [attached storage](/faq/storage/#resources) and some analytical software. Users may download their own software using the **`apt`** package manager and reboot their machine when needed. Further configurations has to be guided by us. Home machines run Ubuntu 16.04 operating systems.
 
 ### What is an "iaas" machine?
 
@@ -144,3 +144,7 @@ Blue machines are identical to iaas machine with one exceptions: they are deploy
 ### What is an "entry" machine?
 
 You will meet the "entry" machine when you configure your account during your initial onboarding. Hopefully, you will not meet this machine type again. The machine type is introduced for security purposes allowing us to quickly install security updates and do machine restarts without affecting your analyis in the other lab machines.
+
+### What is your "local" machine? 
+
+We use this term for the machine that you use to connect to your lab, such as your laptop and your desktop.
