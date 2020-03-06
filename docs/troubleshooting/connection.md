@@ -24,7 +24,7 @@ You can access your lab over the Ciso Anyconnect VPN from NTNU worldwide: (1) Co
 
 ### Administrator rights
 
-Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/getting-started/troubleshooting/#openvpn).
+Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/getting-started/configure-vpn/#_2-1-install-the-vpn-software).
 
 ### Local firewalls
 
