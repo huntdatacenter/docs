@@ -14,7 +14,7 @@ This page lists frequently asked questions related to users and user management 
 
 ### How do we add new users?
 
-Your lab leader or lab coordinator can add new users to your lab. New users must sign our [user agreements](/assets/hunt-cloud-user-agreement.pdf). Forward the signed agreement to us on [email](/contact) and start our [onboarding guide](/getting-started).
+Your lab leader or lab coordinator can add new users to your lab. New users must sign our [user agreements](/about/agreements/#user-agreement). Forward the signed agreement to us on [email](/contact) and start our [onboarding guide](/getting-started).
 
 ### How long does an account activation take?
 
@@ -64,12 +64,14 @@ who
 
 Yes. We deactivate accounts that have not been used for 180 days for security reasons. You may reactivate such accounts. Reactivation require a new co-signed HUNT Cloud user agreement with your lab leader or lab coordinator that you [forward to us](/contact) on mail for account activation. You will need to reconfigure VPN and SSH to get up and running.
 
-## User roles
 
-The following user roles are defined in our lab agreements: 
+## Roles
+
+Here is an explanation of some role names that we refer to in our documentation and agreements: 
 
 - **Lab leader.** This is the individual that has signed the lab agreement for your lab environment. It is usually the principal investigator or other administrative personnel holding the approvals (such as ethical approvals) for your lab activity.
 
 - **Lab coordinator**. The lab leader delegate authority to a lab coordinator to make decisions inside a lab environment, for example to authorize new users and upgrade compute and storage resources.
 
 - **Lab user**. We use the term lab user on all that hold user accounts in your lab environments.
+
