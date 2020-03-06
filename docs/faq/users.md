@@ -40,7 +40,7 @@ No. For security reasons we only accept one connection from one user at the time
 
 ### Can I connect from my private machine? 
 
-Probably not. Teleworking conditions from your own organization and/or conditions from your data controller providing your data access usually restrict connections from personal computers. Contact your lab owner for more information on the conditions in your lab.
+Maybe. Teleworking conditions from your own organization and/or conditions from your data controller may restrict connections from personal computers. Contact your lab owner for more information on the specific conditions in your lab.
 
 ### How can I see the other users in my lab?
 
