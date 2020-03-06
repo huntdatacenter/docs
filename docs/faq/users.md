@@ -32,11 +32,15 @@ Yes. Part of the rationale for our services is to keep data close to its donors 
 
 ### Can I connect from several local machines? 
 
-Yes. We allow you to configure several local machines to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/getting-started/configure-vpn/) in our Getting started guide to get going. Please note that conditions from your own organization or conditions from the data controller providing data access may restrict connections from personal computers. Contact your lab owner for more information.
+Yes. We allow you to configure several local machines to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/getting-started/configure-vpn/) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to [contact us](/contact) for a new certificate.
 
 ### Can I do multiple connections at the same time?
 
-No. For security purpoes, we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local machine. Check our [terminal multiplexer](/working-in-your-lab/technical-tools/terminal-multiplexers/) guide for how to instantly get back to your work when your connect from multiple local machines. 
+No. For security reasons we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local machine. Check our [terminal multiplexer](/working-in-your-lab/technical-tools/terminal-multiplexers/) guide for how to instantly get back to your work when your connect from multiple local machines. 
+
+### Can I connect from my private machine? 
+
+Probably not. Teleworking conditions from your own organization and/or conditions from your data controller providing your data access usually restrict connections from personal computers. Contact your lab owner for more information on the conditions in your lab.
 
 ### How can I see the other users in my lab?
 
