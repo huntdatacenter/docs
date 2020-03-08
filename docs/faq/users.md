@@ -72,6 +72,10 @@ who
 
 ## Deactivated users
 
+### How long can I keep my account? 
+
+We will deactivate your account if it is not access during a 180 days period without further notice. This is due to security concerns.
+
 ### Can I reactivate my old account?
 
 Yes. We deactivate accounts that have not been used for 180 days for security reasons. You may reactivate such accounts. Reactivation require a new co-signed HUNT Cloud user agreement with your lab leader or lab coordinator that you [forward to us](/contact) on mail for account activation. You will need to reconfigure VPN and SSH to get up and running.
