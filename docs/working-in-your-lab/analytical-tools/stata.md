@@ -14,6 +14,7 @@ sidebarDepth: 1
 
 :::
 
+
 ## Installation on home machines
 
 [Contact us](/contact) for assistance on installations on your [home machine](/faq/compute/#machine-types) and discussions on licenses types tailored for your lab work. 
