@@ -17,9 +17,9 @@ This page list agreements that may be relevant for you as a lab user. Contact yo
 
 Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator. Read more about how to add new users in our [FAQ user section](/faq/users/).
 
-## Kista order form
+## Kista transfer form
 
-[HUNT Cloud Kista Order Form](/assets/hunt-cloud-kista-order-form.pdf) (pdf)
+[HUNT Cloud Kista Transfer Form](/assets/hunt-cloud-kista-transfer-form.pdf) (pdf)
 
 Uploader lab leaders and lab coordinators can order Kistas for data transfers between two labs in HUNT Cloud. We use this form to document internal traffic from your lab. Read more about Kistas in our [FAQ transfer section](/faq/transfer/).
 

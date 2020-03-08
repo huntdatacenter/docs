@@ -22,7 +22,7 @@ Kista is our service for data transfers between labs in a simple and secure mann
 
 ### How do I order a Kista? 
 
-Lab leader or Lab coordinator in the uploader lab (the lab that want to share data with another lab) can use our [kista order form](/about/agreements/#kista-order-form) to order a Kista between two labs. Allow for up to a week in deployment (usually a few days). 
+You lab leader or lab coordinator can order Kistas to initiate transfers to other labs through our [kista transfer form](/about/agreements/#kista-transfer-form). Allow for up to a week in deployment (usually a few days). 
 
 ### How does a Kista work? 
 
