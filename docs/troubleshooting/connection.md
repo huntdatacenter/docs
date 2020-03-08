@@ -50,6 +50,10 @@ We are happy to hear that! You will need a new Google authenticator code from us
 
 Unfortunately, you do need a phone to connect to your lab. You will use this both for your two-step verification each time you access your lab, and we use your phone registration as part of our user identification process.
 
+### Signal is unavailable on my phone
+
+We are aware that Signal may be unavailable on some phone types by default. Steps to resolve this will vary by phone model and OS. Try this handy [troubleshooting guide](https://support.signal.org/hc/en-us/articles/360007318711-Troubleshooting-Notifications) on the official Signal pages as a starting point. [Contact us](/contact) if this do not resolve your issue.
+
 ### Deactivated account
 
 Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Contact us](/contact) for an account reactivation.
