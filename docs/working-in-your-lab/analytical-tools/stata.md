@@ -18,6 +18,8 @@ sidebarDepth: 1
 
 [Contact us](/contact) for assistance on installations on your [home machine](/faq/compute/#machine-types) and discussions on licenses types tailored for your lab work. 
 
+## Running Stata over X2Go
+
 After our installation, you can access Stata over [X2Go](/working-in-your-lab/technical-tools/x2go/) with this **`Single application`** address in the X2Go configuration (or similar provided by us): 
 
 ```bash
