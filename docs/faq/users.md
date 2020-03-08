@@ -38,7 +38,7 @@ Yes. You can get access to more than one lab. We encourage lab leaders to separa
 
 We will ship SSH configuration and keys after you have sent us your signed agreement. Allow for weeks in account activation at this stage. When you get your keys, head to [Step 3. Configure your SSH](/getting-started/configure-ssh/) in our onboarding guide to get started.
 
-### Can I transfer and merge data from my various labs? 
+### Can I transfer and merge data between my labs? 
 
 Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. One way to document such transfers between your labs are to use our [kista request form](/about/agreements/).
 
