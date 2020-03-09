@@ -64,7 +64,7 @@ module.exports = {
         {
           title: "Home",
           collapsable: false,
-          children: ["", "contribute", "contact"]
+          children: ["", "system-status", "contribute", "contact"]
         },
         {
           title: "About",
