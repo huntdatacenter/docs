@@ -40,7 +40,7 @@ Your VPN session will reset after 12 hours. This will cause your connection to b
 
 ### Wrong password
 
-If your VPN login suddenly stops working, and you are pretty sure your user name and mobile code are both correct, try to sync Google Authenticator's time settings: Start Google authenticator on your phone, tap the tree dots in the corner (menu button) and go to `Settings` > `Time correction for codes` and hit `Sync now`. Now, try to log in again. If this do not work, [contact us](/contact) for further investigation.
+If your VPN login suddenly stops working, and you are pretty sure your user name and mobile code are both correct, try to sync Google Authenticator's time settings: Start Google authenticator on your phone, tap the tree dots in the corner (menu button) and go to **`Settings`** > **`Time correction for codes`** and hit **`Sync now`**. Now, try to log in again. If this do not work, [contact us](/contact) for further investigation.
 
 ### New phone
 
@@ -70,11 +70,11 @@ You will need to remove your old VPN certificate and passwords before you instal
 
 ### Connection timeout
 
-The most common causes of `Connection timed out` responses are: (1) that your VPN connection is not working as intended ([troubleshoot VPN](/troubleshooting/connection/#vpn)), (2) that you typed a wrong SSH password three (3) times in a row causing a 15 minute ban on further logins to your lab. If your VPN is working correctly, aim for a 15 minute coffee break before your retry. [Contact us](/contact) for further troubleshooting if you are still unable to connect.
+The most common causes of **`Connection timed out`** responses are: (1) that your VPN connection is not working as intended ([troubleshoot VPN](/troubleshooting/connection/#vpn)), (2) that you typed a wrong SSH password three (3) times in a row causing a 15 minute ban on further logins to your lab. If your VPN is working correctly, aim for a 15 minute coffee break before your retry. [Contact us](/contact) for further troubleshooting if you are still unable to connect.
 
 ### Forgotten passwords
 
-After the initial onboarding, you will need your password to install software using the `sudo apt install <software>` command. If you have forgotten your password, [contact us](/contact) for a reset, and allow for a few days for effectuation. Another alternative is to ask if some of your lab colleagues may install the software for you using their own user account.
+After the initial onboarding, you will need your password to install software using the **`sudo apt install <software>`** command. If you have forgotten your password, [contact us](/contact) for a reset, and allow for a few days for effectuation. Another alternative is to ask if some of your lab colleagues may install the software for you using their own user account.
 
 ### Broken connection
 
@@ -82,7 +82,7 @@ Your SSH connection is transferred inside your VPN connection. You will therefor
 
 ### Unresponsive machine (OOM Killer)
 
-Your lab machines may become unresponsive. You will notice this as a lost connection. A typical reason for this is that one or more a processes inside your machine consumed all the memory, initiating a [Out Of Memory Killer](https://www.memset.com/docs/additional-information/oom-killer/) (OOM Killer). You will be unable to log onto your lab if an OOM Killer is triggered on your `home` machine. You will be able to log into your lab, although unable to log into the affected `iaas` or `blue` machines, if an OOM Killer is triggered on other machines in your lab. Your data will not be affected of OOM Killers. [Contact us](/contact) us for a machine restart.
+Your lab machines may become unresponsive. You will notice this as a lost connection. A typical reason for this is that one or more a processes inside your machine consumed all the memory, initiating a [Out Of Memory Killer](https://www.memset.com/docs/additional-information/oom-killer/) (OOM Killer). You will be unable to log onto your lab if an OOM Killer is triggered on your **`home`** machine. You will be able to log into your lab, although unable to log into the affected **`iaas`** or **`blue`** machines, if an OOM Killer is triggered on other machines in your lab. Your data will not be affected of OOM Killers. [Contact us](/contact) us for a machine restart.
 
 ### WARNING: Remote host identification has changed
 
@@ -112,7 +112,7 @@ You can remove such messages by running the command that are stated at the botto
 ssh-keygen -f "/home/<username>/.ssh/known_hosts" -R <machine-name>
 ```
 
-Your message will be slightly different as the `username` and `machine-name` will be unique to you and your lab.
+Your message will be slightly different as the **`username`** and **`machine-name`** will be unique to you and your lab.
 
 ::: warning
 If you see this message any other time, please [contact us](/contact) for further investigations.
