@@ -14,7 +14,7 @@ If you are connecting to the home machine in your lab, you are good to go after 
 
 If you want to connet to an unmanaged machine (iaas or blue) you will need to install the X2Go server before you connect:
 
-- [Set up your unmanaged lab machine (iaas)](#install-x2go-server-on-unamanaged-lab-machine-iaas)
+- [Set up your unmanaged lab machine (iaas)](#install-x2go-server-on-unmanaged-lab-machine-iaas)
 
 ## Set up your local machine
 
@@ -168,7 +168,7 @@ The configuration below will only work on `iaas` or `blue` machines, and not hom
 
   - On IAAS nodes:
 
-    In addition to the steps above, ensure that you are able to log directly into the machine from your local machine following [this guide](#install-x2go-server-on-unamanaged-lab-machine-iaas).
+    In addition to the steps above, ensure that you are able to log directly into the machine from your local machine following [this guide](#install-x2go-server-on-unmanaged-lab-machine-iaas).
 
 - _Try auto login_: `Check`
 - _Use Proxy server for SSH connection_: `Check`
@@ -258,7 +258,7 @@ Connect to your lab machine and run this code:
 
 :::
 
-## Install X2Go server on unamanaged lab machine
+## Install X2Go server on unmanaged lab machine
 
 Connection to X2Go require the application `x2goserver` to run for connections to work.
 You may install this on iaas and blue machines as follows:
