@@ -6,12 +6,10 @@ sidebarDepth: 1
 
 # Step 3. Configure your SSH
 
-This step configure your SSH connection to and from your local machine and your lab. 
-
-You will first configure a machine used for security purposes that we call **`entry`**, and then one machine that we call **`home`** were you will do your scientific computing.
+These steps will configure your SSH connection to and from your local machine and your lab. You will first configure a machine used for security purposes that we call **`entry`**, and then one machine that we call **`home`** were you will do your scientific computing.
 
 ::: warning Requirement
-Successful [verification](/getting-started/configure-vpn/#_2-4-verify-your-vpn-connection) of Step 2.
+- A running VPN connection (successful implementation of [Step 2](/getting-started/configure-vpn/#_2-4-verify-your-vpn-connection)).
 :::
 
 
@@ -173,7 +171,7 @@ your-username@your-labname-`entry`:~$
 
 1. When logged into your entry machine (see expected result above), connect to your home server by typing **`ssh home`** in your terminal window.
 
-2. Similar to above, you will be prompted to type your **`SSH temporary key`** _two times_.
+2. You will be prompted to type your **`SSH temporary key`** _one time_.
 
 3. Similar to above, you will be asked for a new password. Type your **`passphrase`** _two times_.
 
