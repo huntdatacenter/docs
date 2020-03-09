@@ -68,6 +68,9 @@ echo "
 umask 002" >> ~/.profile; source ~/.profile
 ```
 
+
+
+
 ## Archiving
 
 ### How do I zip and unzip files in my lab? 
