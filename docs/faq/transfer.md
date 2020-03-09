@@ -4,9 +4,9 @@ permalink: faq/transfer
 sidebarDepth: 1
 ---
 
-# FAQ on data transfers
+# FAQ on data transfer
 
-This page list frequently asked questions related to data transfers and network openings in labs.
+This page list frequently asked questions related to data transfer and network openings in labs.
 
 [[toc]]
 
