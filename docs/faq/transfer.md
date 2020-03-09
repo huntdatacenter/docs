@@ -42,7 +42,11 @@ less /opt/hunt-cloud/kista/kista-<name>.txt
 
 ### How long can I keep a Kista? 
 
-All Kistas will automatically be destroyed after 30 days. Thus, Kistas are short-lived temporary transfer services. Do NOT use Kistas as a storage area for your data as they will be destroyed without further notice.
+All Kistas will automatically be destroyed after 30 days. Thus, Kistas are short-lived temporary transfer services. Kistas must therefore only hold duplicate copies of your data and must never hold your only data copy. 
+
+::: danger
+Do NOT use Kistas as the primary storage area for your data as all Kistas will be destroyed without further notice 30 days after deployment.
+:::
 
 ### Do I need to encrypt the data in a Kista? 
 

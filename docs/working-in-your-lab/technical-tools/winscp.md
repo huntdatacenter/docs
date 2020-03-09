@@ -10,7 +10,7 @@ sidebarDepth: 3
 
 [[toc]]
 
-::: warning Requierment
+::: warning Requirement
 Windows operating system.
 :::
 
@@ -20,7 +20,7 @@ Download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and insta
 
 ## Connection tunnelling
 
-In order to reach an (s)ftp destination behind another server, we can use [SSH tunnelling](https://winscp.net/eng/docs/tunneling).
+In order to reach an (s)ftp destination behind another server, we can use [SSH tunneling](https://winscp.net/eng/docs/tunneling).
 
 In the session we fill up the host name of a destination server where the sFTP actually is.
 
