@@ -28,7 +28,7 @@ You lab leader or lab coordinator can order Kistas to initiate transfers to othe
 
 Kistas are short-lived dedicated sftp-servers with named uploaders and downloaders from specific lab environments inside HUNT Cloud. We will notify the you when your Kista is deployed with information on how to upload and download data (see below). 
 
-### How can I access my Kista? 
+### How do I access my Kista? 
 
 You will find instructions on how to upload or download data in your lab's home machine when your Kista is deployed: 
 
@@ -47,6 +47,10 @@ All Kistas will automatically be destroyed after 30 days. Thus, Kistas are short
 ::: danger
 Do NOT use Kistas as the primary storage area for your data as all Kistas will be destroyed without further notice 30 days after deployment.
 :::
+
+### Can I both upload and download data in my Kista? 
+
+No. The lab user that initiate the transfer (uploader) can only write data to a Kista, and the lab user that are to receive the data (download) can only read data from a Kista. This means that you will need to order two independent Kistas if you plan to transfer data both ways. This control is included for security reasons.
 
 ### Do I need to encrypt the data in a Kista? 
 
@@ -78,7 +82,7 @@ Your remote party will need to open for incoming traffic from your lab in HUNT C
 
 ### Do I need to encrypt data for external transfers? 
 
-Yes, we think so, at least for personal information. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data. Read our [7z software](/working-in-your-lab/technical-tools/7z/#install-the-software) for how encrypt and compress files for large transfers. [Contact us](/contact) if you wonder if your your data needs to be encrypted as we are more than happy to help with evaluations.
+Most likely. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data on the receiving end. Read our [7z guide](/working-in-your-lab/technical-tools/7z/#install-the-software) on how encrypt and compress files for large transfers. [Contact us](/contact) if you wonder if your your data needs to be encrypted or not. We are more than happy to help with evaluations.
 
 ### Can remote parties upload data to my lab? 
 
