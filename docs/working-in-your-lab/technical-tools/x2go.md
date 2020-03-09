@@ -280,7 +280,7 @@ Log into your unmanaged lab machine and install `x2goserver`:
 ```bash
 sudo add-apt-repository ppa:x2go/stable
 sudo apt update
-sudo apt install x2goserver -y
+sudo apt install x2goserver libnss3 -y
 ```
 
 :::
