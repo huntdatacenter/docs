@@ -72,16 +72,13 @@ Your lab leader can request network openings through our [network opening form](
 
 All labs are closed for outbound data traffic at the time of deployment. Your lab leader may request openings for such transfers. See the [Network openings](/faq/transfer/#how-do-i-request-a-network-opening) section below for information on how to open for outbound data transfers.
 
-<<<<<<< HEAD
 ### Which network openings do my external party need to initiate? 
 
 Your remote party will need to open for incoming traffic from your lab in HUNT Cloud (**`IP 129.241.176.121`**, registered under NTNU). They will need to open for traffic on **`TCP port 22`** if you plan to use SSH-tools such as **`rsync`**. [Contact us](/contact) if you plan to transfer data over other ports.
-=======
+
 ### Do I need to encrypt data for external transfers? 
 
 Yes, we think so. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data. We recommend that your encrypt your data with the the [7z software](/working-in-your-lab/technical-tools/7z/#install-the-software) and transfer the key in a separate channel than your data.
-
->>>>>>> cea5d6138e7a7f5473c0822912a7e53125c3386f
 
 ### Can remote parties upload data to my lab? 
 
