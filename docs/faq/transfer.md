@@ -58,7 +58,7 @@ All labs are closed for outbound data traffic at the time of deployment. Your la
 
 ### Which network openings do my external party need to initiate? 
 
-Your remote party will need to open for incoming traffic from your lab in HUNT Cloud (**`IP 129.241.176.121`**, registered under NTNU). They will need to open for traffic on **`TCP port 22`** if you plan to use SSH-tools such as **`rsync`**. [Contact us](/contact) if you plan to transfer data over alternative ports.
+Your remote party will need to open for incoming traffic from your lab in HUNT Cloud (**`IP 129.241.176.121`**, registered under NTNU). They will need to open for traffic on **`TCP port 22`** if you plan to use SSH-tools such as **`rsync`**. [Contact us](/contact) if you plan to transfer data over other ports.
 
 ### Can remote parties upload data to my lab? 
 
