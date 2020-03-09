@@ -85,8 +85,15 @@ The below steps require the code to be run in `xterm` started from X2GO on the m
 
 ## Run
 
-- If you prefer Matlab's graphical interface, run `Matlab` in your terminal (`xterm`) started in X2GO.
 - If you're fine with command lines, run `Matlab` directly in your shell.
+- If you prefer Matlab's graphical interface, run `Matlab` in your terminal (`xterm`) started in X2GO.
+  ```
+  /usr/bin/xterm -e matlab
+  ```
+  or with full path e.g.:
+  ```
+  /usr/bin/xterm -e /mnt/work/software/matlab2019b/bin/matlab
+  ```
 
 With a little bit of luck, it's now time to celebrate with fresh coffee running your favourite test code on the fresh Matlab. If not, here's some of our known issues:
 
@@ -104,4 +111,12 @@ No, not in an easy way. Thus, either we have to install on `home` machines, or y
 
 We need to open for traffic from your lab to your organization's license server. [Contact us](/contact) for network openings.
 
+### Why is live editor not working?
 
+If Matlab complains that Live editor is unable to run in the current system configuration it is important to check if libnss3 is installed.
+
+```
+dpkg -s libnss3
+# If not installed run
+sudo apt install libnss3
+```
