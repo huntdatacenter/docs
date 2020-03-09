@@ -78,7 +78,7 @@ Your remote party will need to open for incoming traffic from your lab in HUNT C
 
 ### Do I need to encrypt data for external transfers? 
 
-Yes, we think so. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data. We recommend that your encrypt your data with the the [7z software](/working-in-your-lab/technical-tools/7z/#install-the-software) and transfer the key in a separate channel than your data.
+Yes, we think so, at least for personal information. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data. Read our [7z software](/working-in-your-lab/technical-tools/7z/#install-the-software) for how encrypt and compress files for large transfers. [Contact us](/contact) if you wonder if your your data needs to be encrypted as we are more than happy to help with evaluations.
 
 ### Can remote parties upload data to my lab? 
 
