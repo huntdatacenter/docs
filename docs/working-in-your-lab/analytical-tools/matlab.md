@@ -110,3 +110,13 @@ No, not in an easy way. Thus, either we have to install on `home` machines, or y
 ### My product activation do not seem to work?
 
 We need to open for traffic from your lab to your organization's license server. [Contact us](/contact) for network openings.
+
+### Why is live editor not working?
+
+If Matlab complains that Live editor is unable to run in the current system configuration it is important to check if libnss3 is installed.
+
+```
+dpkg -s libnss3
+# If not installed run
+sudo apt install libnss3
+```
