@@ -8,9 +8,10 @@ sidebarDepth: 1
 
 [[toc]]
 
+
 ## Software installation
 
-### Apt - permission denied
+### Permission denied
 
 You will need to use the **`sudo`** command when you [install software](/faq/compute/#software) with the **`sudo apt install <package>`** command. If forgotten, apt will return an error message like this:
 
@@ -20,6 +21,15 @@ E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission d
 
 Rerun your command with sudo. [Contact us](/contact) if this doesn't solve your issue.
 
-### Stata - icons appear as question marks
+## Third-party software
 
-There is a [known issue](https://www.statalist.org/forums/filedata/fetch?id=1351289&d=1469795531&type=full) in Stata for Linux that may render icons as question marks. We have implemented work arounds that should mitigate this issues for installations that we support. [Contact us](/contact) if you experience this so we can have a look and update your configuration.
+### Matlab 
+
+See our [Matlab troubleshooting section](/working-in-your-lab/analytical-tools/Matlab/#activate-license).
+
+### Stata
+
+See our [Stata troubleshooting section](/working-in-your-lab/analytical-tools/stata/#troubleshooting).
+
+
+

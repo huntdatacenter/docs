@@ -14,15 +14,11 @@ This page lists frequently asked questions related to security management in lab
 
 ### What is a security incident? 
 
-For practical purposes, something that may lead to a data breach or a violation of our [use policy](/assets/hunt-cloud-user-agreement.pdf). 
-
-::: details Our formal security incident definition
-Understanding what constitutes a security incident that may lead to a data breach can be technically challenging, and available definitions used by different actors overlap only in part. Formally, we lean on the ISO-27005:2008 definition of a security incident: **"A single or a series of unwanted information security events that have a significant probability of compromising business operations and threatening information security."** Thus, A security incident is a broad term that includes many different kinds of events. A data breach is a type of security incident, however, not all security incidents may lead to breaches of sensitive data. As a take home message, [report the incident](/contact) if you are in doubt.
-:::
+For practical purposes, something that may lead to a data breach, data loss or a violation of our [user agreement](/about/agreements/). [Contact us](/contact) for formal definitions.
 
 ### What should I report?
 
-If you are in doubt - [report the incident](/contact)! We will guide you on which information it's good to include. Please do also report all incidents with a an **`unintended and undesirable consequence`** of an action or behaviour in your lab, including those that may or have led to loss or interruption of data or services. We use this information to prioritize our maintenance and development work.
+[Report the event](/contact) if your are in doubt! We will guide you on which information it's good to include. Also, report all incidents with a an **`unintended and undesirable consequence`** in your lab. We use these information to prioritize our maintenance and development work.
 
 ### Can I be punished for reporting?
 
@@ -33,4 +29,20 @@ We encourage incident reporting, and do not punish such activity. However, it is
 Yes. We recommend that your use a lawyer as your intermediate if you wish to remain anonymous.
 
 
+## Data classification
 
+### How is data classified in HUNT Cloud?
+
+| **Classification** | **Description** | **Examples** | 
+| - | - | - 
+| Sensitive | Research data that can indirectly identify research participants. | Individual level data such as phenotype data and genotype data. | 
+| Internal |  Research data that can *not* identify research participants. | Summary statistics, figures, computer code, non-human data, encrypted sensitive data. |
+
+Storage volumes are classified as sensitive by default. Volumes may be declassified to internal in agreement with the respective data controllers and lab owners.
+
+Volumes classified as internal may be mounted directly to individual lab users' machines under the following conditions: 
+
+- the lab owner, the lab's host institution and data controller(s) allow such a set-up.
+- the lab owner take the direct responsibility to ensure that volumes classified as internal do not hold sensitive data.
+
+Please note that **`direct identifiable research data`**, such as names of research participants, personal identification numbers, phone numbers, address information, etc., must be stored outside our system.

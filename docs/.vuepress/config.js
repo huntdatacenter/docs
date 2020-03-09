@@ -90,6 +90,7 @@ module.exports = {
               // collapsable: false,
               children: [
                 "working-in-your-lab/technical-tools/",
+                "working-in-your-lab/technical-tools/7z",
                 "working-in-your-lab/technical-tools/git",
                 "working-in-your-lab/technical-tools/gpu",
                 "working-in-your-lab/technical-tools/htop",
@@ -114,7 +115,8 @@ module.exports = {
                 "working-in-your-lab/analytical-tools/plink",
                 "working-in-your-lab/analytical-tools/r-studio",
                 "working-in-your-lab/analytical-tools/saige",
-                "working-in-your-lab/analytical-tools/spyder-ide"
+                "working-in-your-lab/analytical-tools/spyder-ide",
+                "working-in-your-lab/analytical-tools/stata"
               ]
             }
           ]

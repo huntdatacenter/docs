@@ -97,14 +97,14 @@ Yes. You can run commonly used analytical tools, such MatLab, Stata, SPSS and Rs
 
 ### Can I run Windows software? 
 
-Most likely. Many commonly used software in scientific computing can be run from your lab, such as MatLab, Stata, and SPSS, including many special tools for image analysis and genetic analysis. However, we do run Linux as the operating systems in your lab. Some Windows tools will therefor be unavailable. We do provide Windows systems in those rare cases when this is the only option to run mission critical applications. [Contact us](/contact) if you think you do need Windows tools to get your science to fly.
+Most likely. Many commonly used software in scientific computing can be run from your lab, such as MatLab, Stata, and SPSS, including many special tools for image analysis and genetic analysis. However, we do run Linux as the operating systems in your lab. Some Windows tools will therefore be unavailable. We do provide Windows systems in those rare cases when this is the only option to run mission critical applications. [Contact us](/contact) if you think you do need Windows tools to get your science to fly.
 
 
 ## Workflow
 
 ### How can I keep my jobs running when I disconnect?
 
-You can keep your jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/working-in-your-lab/technical-tools/terminal-multiplexers/) to get started.
+Yes. You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/working-in-your-lab/technical-tools/terminal-multiplexers/) to get started. Your jobs over [X2Go](/working-in-your-lab/technical-tools/x2go/#set-up-your-local-machine), such as Rstudio and Stata, should be kept alive between your logins by default.
 
 ### How can I profile the resources needed in my workflow?
 
@@ -131,7 +131,7 @@ You will meet four principal machine types in your lab. You may choose to deploy
 
 ### What is a "home" machine?
 
-This is a managed machine type. All labs have one "home" machine that is pre-configured with user accounts, mounted storage and some analytical software. Users may download their own software using the `apt` package manager and reboot their machine when needed. Further configurations has to be guided by us. Home machines run Ubuntu 16.04 operating systems.
+This is a managed machine type. All labs have one "home" machine that is pre-configured with user accounts, [attached storage](/faq/storage/#resources) and some analytical software. Users may download their own software using the **`apt`** package manager and reboot their machine when needed. Further configurations has to be guided by us. Home machines run Ubuntu 16.04 operating systems.
 
 ### What is an "iaas" machine?
 
@@ -144,3 +144,7 @@ Blue machines are identical to iaas machine with one exceptions: they are deploy
 ### What is an "entry" machine?
 
 You will meet the "entry" machine when you configure your account during your initial onboarding. Hopefully, you will not meet this machine type again. The machine type is introduced for security purposes allowing us to quickly install security updates and do machine restarts without affecting your analyis in the other lab machines.
+
+### What is your "local" machine? 
+
+We use this term for the machine that you use to connect to your lab, such as your laptop and your desktop.

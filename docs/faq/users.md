@@ -30,6 +30,18 @@ Yes. Part of the rationale for our services is to keep data close to its donors 
 
 ## Current users
 
+### Can I get access to several labs? 
+
+Yes. You can get access to more than one lab. We encourage lab leaders to separate data in labs and bring top expertise into their lab to do analysis there. Contact your new lab leader to arrange for a signed [user agreement](/about/agreements/) and send this to us on [email](/contact) for account activation.
+
+### How do I get started with my second lab? 
+
+We will ship SSH configuration and keys after you have sent us your signed agreement. Allow for weeks in account activation at this stage. When you get your keys, head to [Step 3. Configure your SSH](/getting-started/configure-ssh/) in our onboarding guide to get started.
+
+### Can I transfer and merge data between my labs? 
+
+Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. One way to document such transfers between your labs are to use our [kista request form](/about/agreements/).
+
 ### Can I connect from several local machines? 
 
 Yes. We allow you to configure several local machines to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/getting-started/configure-vpn/) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to [contact us](/contact) for a new certificate.
@@ -60,9 +72,13 @@ who
 
 ## Deactivated users
 
+### How long can I keep my account? 
+
+You can keep your account as long as you are actively working in your lab. We deactivate accounts that have not been used for 180 days for security reasons.
+
 ### Can I reactivate my old account?
 
-Yes. We deactivate accounts that have not been used for 180 days for security reasons. You may reactivate such accounts. Reactivation require a new co-signed HUNT Cloud user agreement with your lab leader or lab coordinator that you [forward to us](/contact) on mail for account activation. You will need to reconfigure VPN and SSH to get up and running.
+Yes. Reactivation require a new co-signed HUNT Cloud user agreement with your lab leader or lab coordinator that you [forward to us](/contact) on mail for account activation. You will need to reconfigure VPN and SSH to get up and running.
 
 
 ## Roles
