@@ -56,6 +56,10 @@ Your lab leader can request network openings through our [network opening form](
 
 All labs are closed for outbound data traffic at the time of deployment. Your lab leader may request openings for such transfers. See the [Network openings](/faq/transfer/#how-do-i-request-a-network-opening) section below for information on how to open for outbound data transfers.
 
+### Which network openings do my external party need to initiate? 
+
+Your remote party will need to open for incoming traffic from your lab in HUNT Cloud (**`IP 129.241.176.121`**, registered under NTNU). They will need to open for traffic on **`TCP port 22`** if you plan to use SSH-tools such as **`rsync`**. [Contact us](/contact) if you plan to transfer data over alternative ports.
+
 ### Can remote parties upload data to my lab? 
 
 Unfortunately, remote parties can not at this stage upload data directly to your lab. However, we do have several options for such transfers, so please [contact us](/contact-us) for possible solutions.
