@@ -177,7 +177,7 @@ your-username@your-labname-`entry`:~$
 
 4. Similar to above, you will be kicked out of your home machine and back to your entry machine by completion. 
 
-5. Similar to above, verify a successful passphrase update by logging into your home machine typing **`ssh home`** once more. Type your **`passphrase`** when asked for password. 
+5. Similar to above, verify a successful passphrase update by logging into your home machine typing **`ssh home`** once more.
 
 6 With a tiny bit of luck, you should now be logged into your lab!
 
