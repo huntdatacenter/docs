@@ -8,5 +8,5 @@ permalink: /system-status
 Operational.
 :::
 
-We monitor HUNT Cloud. An update will be posted here if there are any service or performance interruption.
+We monitor HUNT Cloud. Updates will be posted here if there are any service or performance interruption.
 
