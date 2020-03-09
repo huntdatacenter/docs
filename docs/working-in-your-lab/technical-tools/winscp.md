@@ -11,7 +11,8 @@ sidebarDepth: 3
 [[toc]]
 
 ::: warning Requirement
-Windows operating system.
+- Windows operating system.
+- A [working connection](/getting-started/) to your lab.
 :::
 
 ## Download and install
