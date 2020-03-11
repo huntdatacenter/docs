@@ -148,3 +148,22 @@ You will meet the "entry" machine when you configure your account during your in
 ### What is your "local" machine? 
 
 We use this term for the machine that you use to connect to your lab, such as your laptop and your desktop.
+
+## Iaas machines
+
+### Where is my data?
+
+This is an unmanaged machine type. Your data is located on your home machine and you need to manage transfer of the data you need over to the iaas machine yourself. Tools like **`sshfs`** and **`rsync`** will be handy when managing data transfers.
+
+### Where should I store my data on the IAAS machine?
+
+We will mount a storage volume under **`/home`** with the size specified in the request for the iaas machine. You are free to create the directory structure that fits your needs under **`/home`**.
+
+### My scripts require data storage outside of /home
+
+When you have to store larger chunks of data outside of **`/home`** bind mounts is a handy tool. With a bind mount you can create whatever path you need on the file system and map it back to a suitable location under **`/home`**.
+
+```bash
+sudo mkdir -p /path/outside/home
+sudo mount --bind /home/directory/stucture /path/outside/home
+```
