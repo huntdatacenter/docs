@@ -78,7 +78,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 3. Type **`<your-username>@<your-lab-IP>`** in the "_Host Name (or IP address)_" field and click "_Open_".
 
-4. Enter your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password.
+4. Enter your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password. You will not see anything on the screen when you type your password.
 
 5. Type the same **`SSH temporary key`** _one more time_ when asked. 
 
