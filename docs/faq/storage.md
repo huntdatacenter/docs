@@ -120,6 +120,12 @@ mkdir workflow
 
 No. You will have to transfer your results back to your **`/mnt/archive`** and **`/mnt/work`** folders on your **`home`** machine for nightly backups provided by us. Alternatively, your can install your own solution of choice for data duplication.
 
+### What happens to my data when iaas and blue machines are destroyed? 
+
+::: danger
+
+All data on iaas and blue machines will be lost when we destroy your machine and reclaim the resources for reuse. There is no way to recreate your data once the machine is destroyed. It is your responsibility to ensure that you transfer the data that your care about back to your home machine.
+:::
 
 ### My scripts require data storage outside of the /home folder
 
