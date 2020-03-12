@@ -40,7 +40,7 @@ Your VPN session will reset after 12 hours. This will cause your connection to b
 
 ### No internet connection while connected to VPN
 
-If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check the final steps of [Setup the VPN profile](getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
+If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check the final steps of [Setup the VPN profile](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
 
 ### Wrong password
 
