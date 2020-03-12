@@ -38,6 +38,10 @@ Your VPN passphrase is stored on your local computer and used to decrypt your VP
 
 Your VPN session will reset after 12 hours. This will cause your connection to break. For examples, connections left running over night will not work the next morning. You will need to turn off your VPN and then initiate a new connection to get back into your lab.
 
+### No internet connection while connected to VPN
+
+If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check the final steps of [Setup the VPN profile](getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
+
 ### Wrong password
 
 If your VPN login suddenly stops working, and you are pretty sure your user name and mobile code are both correct, try to sync Google Authenticator's time settings: Start Google authenticator on your phone, tap the tree dots in the corner (menu button) and go to **`Settings`** > **`Time correction for codes`** and hit **`Sync now`**. Now, try to log in again. If this do not work, [contact us](/contact) for further investigation.
