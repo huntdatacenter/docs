@@ -77,9 +77,15 @@ We recommend using the 7z software to compress and decompress files and folders.
 
 
 
+
+
+
+
+
+
 ## Iaas and blue storage
 
-This section list commonly asked questions for our unmanaged [iaas and blue machine types](/faq/compute/#machine-types) that you maintain yourself.
+This section list commonly asked questions for storage our unmanaged [iaas and blue machine types](/faq/compute/#machine-types) that you maintain yourself.
 
 ### Where is my data?
 
