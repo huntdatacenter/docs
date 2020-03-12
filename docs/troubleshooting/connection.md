@@ -34,13 +34,28 @@ Our VPN service communicate with your local machine on a specific port that need
 
 Your VPN passphrase is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate if this happens. [Contact us](/contact) on mail for such a request and allow a few days in shipping.
 
-### Broken connection
+### Broken VPN connection
 
 Your VPN session will reset after 12 hours. This will cause your connection to break. For examples, connections left running over night will not work the next morning. You will need to turn off your VPN and then initiate a new connection to get back into your lab.
+
+### Broken internet connection
+
+You may experience that your connection to other part of internet gets blocked if you are connecting to your organizational CISO Anyconnect VPN before your connect to the HUNT Cloud. If this happens, check the box **`Use this connection only for resources on its network`** in CISCO Anyconnect. [Contact us](/contact) for alternative solutions if this do not work.
 
 ### Wrong password
 
 If your VPN login suddenly stops working, and you are pretty sure your user name and mobile code are both correct, try to sync Google Authenticator's time settings: Start Google authenticator on your phone, tap the tree dots in the corner (menu button) and go to **`Settings`** > **`Time correction for codes`** and hit **`Sync now`**. Now, try to log in again. If this do not work, [contact us](/contact) for further investigation.
+
+
+### Deactivated account
+
+Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Contact us](/contact) for an account reactivation.
+
+### VPN certificate update 
+
+You will need to remove your old VPN certificate and passwords before you install a new one. On Windows, (1) right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select **`remove passwords`**, and (2) open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here: **`C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>`**. Now, right click on the OpenVPN icon once more and "import from file" from the [Connect to the VPN](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) section of our Getting guide.
+
+## Phone
 
 ### New phone
 
@@ -56,15 +71,7 @@ You will need to connect your phone to the internet to install Signal, Google au
 
 ### Signal is unavailable for my phone
 
-We are aware that Signal may be unavailable on some phone types by default. Steps to resolve this will vary by phone model and OS. Try this handy [troubleshooting guide](https://support.signal.org/hc/en-us/articles/360007318711-Troubleshooting-Notifications) on the official Signal pages as a starting point. [Contact us](/contact) if this do not resolve your issue.
-
-### Deactivated account
-
-Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Contact us](/contact) for an account reactivation.
-
-### Update VPN certificate
-
-You will need to remove your old VPN certificate and passwords before you install a new one. On Windows, (1) right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select **`remove passwords`**, and (2) open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here: **`C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>`**. Now, right click on the OpenVPN icon once more and "import from file" from the [Connect to the VPN](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) section of our Getting guide.
+We are aware that Signal may be unavailable on some phones. Steps to resolve this will vary by phone model and OS. Start with this [troubleshooting guide](https://support.signal.org/hc/en-us/articles/360007318711-Troubleshooting-Notifications) on the official Signal pages as a starting point. [Contact us](/contact) if this do not resolve your issue.
 
 ## SSH
 
