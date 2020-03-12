@@ -89,7 +89,7 @@ This section list commonly asked questions for storage our unmanaged [iaas and b
 
 ### Where is my data?
 
-Your data is located on your [home](/faq/compute/#machine-types) machine. You will need to transfer data to your iaas and blue machine for analysis and your will need to transfer your results back home afterwards.
+Your data is located on your [home](/faq/compute/#machine-types) machine. You will need to (1) transfer data to your iaas and blue machine for analysis, and (2) transfer your your results back to your home machine for long term preservation afterwards.
 
 ### What storage do I get on iaas and blue machines? 
 
