@@ -40,7 +40,7 @@ Your VPN session will reset after 12 hours. This will cause your connection to b
 
 ### Broken internet connection
 
-You may experience that your connection to other part of internet gets blocked if you are connecting to your organizational CISO Anyconnect VPN before your connect to the HUNT Cloud. If this happens, check the box **`Use this connection only for resources on its network`** in CISCO Anyconnect. [Contact us](/contact) for alternative solutions if this do not work.
+You may experience that your connection to other part of internet gets blocked if you are connecting to your organizational CISO Anyconnect VPN before your connect to HUNT Cloud. If this happens, check the box **`Use this connection only for resources on its network`** in CISCO Anyconnect. [Contact us](/contact) for alternative solutions if this do not work.
 
 ### Wrong password
 
