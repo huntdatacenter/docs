@@ -38,15 +38,9 @@ Your VPN passphrase is stored on your local computer and used to decrypt your VP
 
 Your VPN session will reset after 12 hours. This will cause your connection to break. For examples, connections left running over night will not work the next morning. You will need to turn off your VPN and then initiate a new connection to get back into your lab.
 
-<<<<<<< HEAD
 ### Broken internet connection
 
 You may experience that your connection to other part of internet gets blocked if you are connecting to your organizational CISO Anyconnect VPN before your connect to HUNT Cloud. If this happens, check the box **`Use this connection only for resources on its network`** in CISCO Anyconnect. [Contact us](/contact) for alternative solutions if this do not work.
-=======
-### No internet connection while connected to VPN
-
-If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check the final steps of [Setup the VPN profile](getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
->>>>>>> 87792bbed1f5b5ad79c8d8d95c2e1898de51f78a
 
 ### Wrong password
 
