@@ -118,7 +118,7 @@ mkdir workflow
 
 ### Do iaas and blue machines have backup? 
 
-No. You will have to transfer your results back to your **`/mnt/archive`** and **`/mnt/work`** folders on your **`home`** machine for nightly backups provided by us. Alternatively, your can install your own solution of choice for data duplication.
+No. Your iaas and blue machines have **`no backup`** installed. You will need to transfer your results back to your **`/mnt/archive`** and **`/mnt/work`** folders on your **`home`** machine for backup provided by us. Alternatively, your can install your own solution of choice for data duplication.
 
 ### What happens to my data when iaas and blue machines are destroyed? 
 
