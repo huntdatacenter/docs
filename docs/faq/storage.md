@@ -69,13 +69,65 @@ umask 002" >> ~/.profile; source ~/.profile
 ```
 
 
-
-
-## Archiving
+## General archiving
 
 ### How do I zip and unzip files in my lab? 
 
 We recommend using the 7z software to compress and decompress files and folders. Read our [7z guide](/working-in-your-lab/technical-tools/7z/) to get going.
 
 
+
+## Iaas and blue storage
+
+This section list commonly asked questions for our unmanaged [iaas and blue machine types](/faq/compute/#machine-types) that you maintain yourself.
+
+### Where is my data?
+
+Your data is located on your [home](/faq/compute/#machine-types) machine. You will need to transfer data to your iaas and blue machine for analysis and your will need to transfer your results back home afterwards.
+
+### What storage do I get on iaas and blue machines? 
+
+Default iaas and blue machines comes with a 1TB empty volume attached to your **`/home`** folder. That is the same folder as you log into with the default user (**`/home/ubuntu`**). You can request other storage sizes according to your need.
+
+
+### How can I transfer data to my iaas and blue machines?
+
+We recommend **`rsync`** for data transfers between your home machine and iaas and blue machines. This will sync up your data and only transfer files that has changed since your last transfer.
+
+```bash
+# -- Principal example from your home machine:
+rsync -avhP ubuntu@<iaas-macine-name>:<iaas-folder> <home-folder>
+
+# -- Practical example from your home machine: 
+rsync -avhP ubuntu@demolab-blue-sarga:~/results/ /mnt/scratch/results/
+``` 
+
+### Where should I store my data on iaas and blue machines? 
+
+You are free to create the directory structure that fits your needs under the **`/home`** folder in your iaas and blue machines. For example, under the default login folder (**`/mnt/ubuntu/`**): 
+
+```bash
+mkdir workflow
+```
+
+### Do iaas and blue machines have backup? 
+
+No. You will have to transfer your results back to your **`/mnt/archive`** and **`/mnt/work`** folders on your **`home`** machine for nightly backups provided by us. Alternatively, your can install your own solution of choice for data duplication.
+
+
+### My scripts require data storage outside of the /home folder
+
+When you need to store larger chunks of data outside of your **`/home`** folder, **`bind mounts`** is a handy tool. With a bind mount you can create whatever path you need on the file system and map it back to a suitable location under your **`/home`** folder. Such trick might be handy if you want to transfer the exact same scripts from your **`home`** machine (not to be confused with the **`/home`** folder on your iaas and blue machines, sorry...) to your new iaas and blue machines:
+
+```bash
+# -- Principal example: 
+sudo mkdir -p /path/outside/home
+sudo mount --bind /home/directory/stucture /path/outside/home
+
+# -- Working example:
+sudo mkdir -p /home/ubuntu/workflow
+sudo mkdir -p /mnt/work/workflow
+sudo mount --bind /home/ubuntu/workflow /mnt/work/workflow
+ls /mnt/work/workflow
+```
 
