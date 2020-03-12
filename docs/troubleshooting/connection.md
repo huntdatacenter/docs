@@ -38,9 +38,9 @@ Your VPN passphrase is stored on your local computer and used to decrypt your VP
 
 Your VPN session will reset after 12 hours. This will cause your connection to break. For examples, connections left running over night will not work the next morning. You will need to turn off your VPN and then initiate a new connection to get back into your lab.
 
-### No internet connection while connected to VPN
+### No internet while connected to VPN
 
-If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check the final steps of [Setup the VPN profile](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
+If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check that you selected the **`Use this connection only for resources on its network`** in the final steps of [Setup the VPN profile](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
 
 ### Wrong password
 
@@ -51,7 +51,7 @@ If your VPN login suddenly stops working, and you are pretty sure your user name
 
 Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Contact us](/contact) for an account reactivation.
 
-### VPN certificate update 
+### New VPN certificate 
 
 You will need to remove your old VPN certificate and passwords before you install a new one. On Windows, (1) right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select **`remove passwords`**, and (2) open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here: **`C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>`**. Now, right click on the OpenVPN icon once more and "import from file" from the [Connect to the VPN](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) section of our Getting guide.
 
