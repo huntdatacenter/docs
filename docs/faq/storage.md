@@ -124,7 +124,7 @@ No. You will have to transfer your results back to your **`/mnt/archive`** and *
 
 ::: danger
 
-All data on iaas and blue machines will be lost when we destroy your machine to free up resources for reuse. There is no way to recreate your data once the machine is destroyed. It is your responsibility to ensure that you transfer the data that your care about back to your home machine.
+All data on iaas and blue machines will be lost when we destroy your machine to free up resources for reuse. There is no way to recreate your data once a machine is destroyed. It is your sole responsibility to ensure that you transfer the data that your care about from your iaas and blue machines back to your home machine for long term preservation.
 :::
 
 ### My scripts require data storage outside of the /home folder
