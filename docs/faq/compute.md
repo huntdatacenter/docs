@@ -155,7 +155,7 @@ We use this term for the machine that you use to connect to your lab, such as yo
 
 This is an unmanaged machine type. Your data is located on your home machine and you need to manage transfer of the data you need over to the iaas machine yourself. Tools like **`sshfs`** and **`rsync`** will be handy when managing data transfers.
 
-### Where should I store my data on the IAAS machine?
+### Where should I store my data on the iaas machine?
 
 We will mount a storage volume under **`/home`** with the size specified in the request for the iaas machine. You are free to create the directory structure that fits your needs under **`/home`**.
 
