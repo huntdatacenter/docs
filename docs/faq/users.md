@@ -30,6 +30,10 @@ Yes. Part of the rationale for our services is to keep data close to its donors 
 
 ## Current users
 
+### Can you remind me how I get into my lab? 
+
+Sure. If you have not logged in for a while, here's a quick recap of the steps: (1) Start the HUNT VPN (OpenVPN or Tunnelblick) and use your rotating code from Goolge Authenticator on your phone as key. (2) Log in to your lab, either using SSH (Mac/Linux) or  Mobaxterm (Windows), or X2Go if you would like to access graphical software such as RStudio, Stata etc.
+
 ### Can I get access to several labs? 
 
 Yes. You can get access to more than one lab. We encourage lab leaders to separate data in labs and bring top expertise into their lab to do analysis there. Contact your new lab leader to arrange for a signed [user agreement](/about/agreements/) and send this to us on [email](/contact) for account activation.
