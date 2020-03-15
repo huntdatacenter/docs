@@ -36,7 +36,7 @@ Sure. If you haven't logged in for a while, here's a quick recap of the steps: (
 
 ### Can I connect and work from home? 
 
-Yes. We allow connections both from organizations and private network. However, be aware that teleworking conditions from your own organization and/or conditions from your data controller may restrict connections outside your office space and from personal computers. Contact your lab owner for more information on the specific conditions in your lab.
+Yes. We allow connections both from organizations and private network. However, be aware that teleworking conditions from your own organization and/or conditions from your data controller may restrict connections outside your office space and from [private machines](/faq/users/#can-i-connect-from-my-private-machine). Contact your lab owner for more information on the specific conditions in your lab.
 
 ### Can I get access to several labs? 
 
