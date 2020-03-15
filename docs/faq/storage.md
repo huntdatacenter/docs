@@ -174,7 +174,7 @@ Yes. Lab leaders can [contact us](/contact) and request that we deactivate resto
 
 Yes. You can check for yourself that your restore is working as intended: 
 
-1. start by controlling that the restore folders hold duplicate copies for 30 days. You should expect to see 30 subfolders with daily time stamps within each **`.restore`** folder: 
+1. Start by controlling that your restore folders do exist, and if so hold duplicate copies from the last 30 days. You should expect to see 30 subfolders with daily time stamps within each **`.restore`** folder: 
 
 ```bash
 ls /mnt/work/.restore/
