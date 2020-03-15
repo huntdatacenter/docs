@@ -32,7 +32,7 @@ Yes. Part of the rationale for our services is to keep data close to its donors 
 
 ### Can you remind me how I get into my lab? 
 
-Sure. If you have not logged in for a while, here's a quick recap of the steps: (1) Start the HUNT VPN (OpenVPN or Tunnelblick) and use your rotating code from Goolge Authenticator on your phone as key. (2) Log in to your lab, either using SSH (Mac/Linux) or  Mobaxterm (Windows), or X2Go if you would like to access graphical software such as RStudio, Stata etc. Head over to out [troubleshooting section](/troubleshooting/) if your are unable to log in.
+Sure. If you haven't logged in for a while, here's a quick recap of how to get into your lab: (1) Start the HUNT VPN (OpenVPN or Tunnelblick), and use the verification code from Goolge Authenticator on your phone as key. (2) Log in to your lab using SSH (OS X, macOS and Linux), MobaXterm (Windows), or X2Go (both) if you would like to access graphical software such as RStudio and Stata. Head over to our [troubleshooting section](/troubleshooting/) if this does not work.
 
 ### Can I get access to several labs? 
 
