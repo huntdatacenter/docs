@@ -158,7 +158,7 @@ group
 
 You should be able to delete restore files if **`restore`** is among the listed groups. Contact your lab leader if you are not listed and you think that you need such authorization. You lab leader can [contact us](/contact) and request that you gets added to this group.
 
-### Do restore consume volume space? 
+### Do restore consume storage space? 
 
 Yes. Your restore folders are stored inside your  **`/mnt/work`** and **`/mnt/archive`** volumes. This will consume storage space in these volumes as a regular folder. Typically, restore will take one duplicate copy of your data and then incremental changes over the 30 day period. You should therefore plan your volume sizes for at least twice the amount of data that you plan to store.
 
