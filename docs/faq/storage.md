@@ -94,7 +94,7 @@ umask 002" >> ~/.profile; source ~/.profile
 
 ### Do I have 'backup' in my lab? 
 
-Yes and no. We have activated restore functionality for two folders in your home machine by default, **`/mnt/work`** and **`/mnt/archive`**. No other volumes on your home machine, nor your iaas and blue machines have restore activated by deployment. The restore is intended to help with accidental overwrites and accidental deletion of files in your lab.
+Yes and no. We have activated restore functionality for two folders in your home machine by default, **`/mnt/work`** and **`/mnt/archive`**. No other volumes on your home machine, nor your iaas and blue machines have restore activated by deployment. 
 
 ::: warning 
 
@@ -104,7 +104,7 @@ Restore is activated for two volumes in your lab: **`/mnt/work`** and **`/mnt/ar
 
 ### How does restore work? 
 
-We take nightly copies of data that has changed during the day for the **`/mnt/work`** and **`/mnt/archive`** volumes. When needed, this allows you to revert to previous versions of your files from the period that your restore copies are preserved.
+The restore is intended to protection your data against accidental overwrites and accidental deletion of files in your lab. Therefore, we do nightly copies of data that has changed during the day from your **`/mnt/work`** and **`/mnt/archive`** volumes. This allows you to revert to previous versions of your files from the period that your restore copies are preserved. 
 
 ### How long do you keep the restore copies?
 
