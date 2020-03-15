@@ -94,7 +94,7 @@ umask 002" >> ~/.profile; source ~/.profile
 
 ### Do I have 'backup' in my lab? 
 
-Yes and no. We have activated restore functionality two folders in your home machine by default, **`/mnt/work`** and **`/mnt/archive`**. No other volumes on your home machine, nor your iaas and blue machines have restore activated by deployment.
+Yes and no. We have activated restore functionality for two folders in your home machine by default, **`/mnt/work`** and **`/mnt/archive`**. No other volumes on your home machine, nor your iaas and blue machines have restore activated by deployment. The restore is intended to help with accidental overwrites and accidental deletion of files in your lab.
 
 ::: warning 
 
