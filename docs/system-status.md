@@ -4,8 +4,8 @@ permalink: /system-status
 
 # System status
 
-::: danger All labs:
-Connection to labs lost due to blocked internal network services. We are actively working to resolve this. 10:30 2020-03-16.
+::: Warning Lab access:
+Connection to labs partly recovered. We expect remaining labs to be online within the next 30 minutes. 11:00 2020-03-16. Next update 11.30.
 :::
 
 [Link to running status updates](https://docs.google.com/document/d/1_LfsbgSTa08R8C8LNc4T8lpaxu5cdc2Oq80IXtO6P4A/edit?usp=sharing)
