@@ -4,7 +4,7 @@ permalink: /system-status
 
 # System status
 
-::: Warning Lab access:
+::: warning Lab access:
 Connection to labs should be recovered. Please conact us if you still have troubles connecting. 11:00 2020-03-16. Next update 11.30.
 :::
 
