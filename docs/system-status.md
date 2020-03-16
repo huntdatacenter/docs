@@ -4,7 +4,7 @@ permalink: /system-status
 
 # System status
 
-::: note All services:
+::: tip All services:
 Operational.
 :::
 
