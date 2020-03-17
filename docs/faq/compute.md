@@ -123,6 +123,19 @@ Examples of python profilers:
 :::
 
 
+## Maintenance 
+
+### Can I restart our lab machines? 
+
+Yes. You can restart your home, iaas and blue machines by running the **`reboot`** command: 
+
+```bash
+sudo reboot
+```
+
+::: warning
+Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/faq/users/#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
+:::
 
 
 ## Machine types
