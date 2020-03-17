@@ -48,7 +48,7 @@ Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2gocl
 :::
 
 ::: details Windows
-Download and run the [X2Go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#ms_windows) clicking `Download X2Go for MS Windows™ and install.` and then selecting the `exe-file`.
+Download and run the [X2Go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#ms_windows) clicking **`Download X2Go for MS Windows™ and install.`** and then selecting the **`exe-file`**.
 :::
 
 ::: details Linux (Ubuntu / Debian)
@@ -62,7 +62,7 @@ sudo apt-get update -y && sudo apt install -y x2goclient
 
 ### Configure the X2Go client for home machines
 
-Once installed, open X2Go and click `New session` and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
+Once installed, open X2Go and click **`New session`** and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
 ::: warning NOTE
 The configuration below will work on [home](/faq/compute/#machine-types) machines. This configuration will -not- work on unmanaged [iaas and blue](/faq/compute/#machine-types) machines.
@@ -72,9 +72,9 @@ The configuration below will work on [home](/faq/compute/#machine-types) machine
 
 ::: details Server section
 
-- _Host_: `10.5.5.12`
-- _Login/username_: `<your-lab-username>`
-- _SSH port_: `22`
+- _Host_: **`10.5.5.12`**
+- _Login/username_: **`<your-lab-username>`**
+- _SSH port_: **`22`**
 - _Use RSA/DSA key for ssh connection_:
 
   - For Mac and Linux:
@@ -83,44 +83,47 @@ The configuration below will work on [home](/faq/compute/#machine-types) machine
 
   - For Windows:
 
-    You will need to save the access key to your local machine and point to this file: (1) log into your lab `home` machine, (2) print your key with `cat ~/.ssh/id_rsa`, (3) open _Notepad_ on your local machine and copy the text from `-----BEGIN KEY-----` to `-----END KEY-----` (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
+    You will need to save the access key to your local machine and point to this file: (1) log into your lab **`home`** machine, (2) print your key with **`cat ~/.ssh/id_rsa`**, (3) open _Notepad_ on your local machine and copy the text from **`-----BEGIN KEY-----`** to **`-----END KEY-----`** (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
 
-- _Try auto login_: `Check`
-- _Use Proxy server for SSH connection_: `Check`
+    ::: warning NOTE
+    This file is a key to your lab. Store the key somewhere in the **`C:`** drive on your local machine.
+
+- _Try auto login_: **`Check`**
+- _Use Proxy server for SSH connection_: **`Check`**
   :::
 
 ::: details Proxy server section
 
-- _Proxy server type:_ `SSH`
-- _Host:_ `<lab-ip>`
-  - For all: This is your lab specific IP that starts with `10.42.130.`. You will find the full address in the software that you use to connect to your lab.
-- _Port:_ `22`
-- _Same login as on X2Go Sever:_ `Leave blank`
-- _Login:_ `<your-lab-username>`
+- _Proxy server type:_ **`SSH`**
+- _Host:_ **`<lab-ip>`**
+  - For all: This is your lab specific IP that starts with **`10.42.130.`**. You will find the full address in the software that you use to connect to your lab.
+- _Port:_ **`22`**
+- _Same login as on X2Go Sever:_ **`Leave blank`**
+- _Login:_ **`<your-lab-username>`**
   - For all: This is the user name that you use to connect to your lab.
-- _Same password as on X2Go Server:_ `Leave blank`
+- _Same password as on X2Go Server:_ **`Leave blank`**
 - _RSA/DSA key:_
-  - For Mac and Linux: `Leave blank`
-  - For Windows: `Link to the same file that you established above`
-- _ssh-agent or default ssh key:_ `Check`
+  - For Mac and Linux: **`Leave blank`**
+  - For Windows: **`Link to the same file that you established above`**
+- _ssh-agent or default ssh key:_ **`Check`**
   :::
 
 ::: details Session type section
 
-- Choose `Single application` from the drop down menu
-- Add `/usr/bin/xterm` in the command window
+- Choose **`Single application`** from the drop down menu
+- Add **`/usr/bin/xterm`** in the command window
   :::
 
 #### In the `Connection` tab
 
-Play with the _Connection speed_ and _Compression_ methods. For office use `LAN` and `16m-png` should be fine.
+Play with the _Connection speed_ and _Compression_ methods. For office use **`LAN`** and **`16m-png`** should be fine.
 
 #### In the `Media` tab
 
-- Uncheck `Client side printing support`
-- Uncheck `Enable sound support`
+- Uncheck **`Client side printing support`**
+- Uncheck **`Enable sound support`**
 
-Hit `OK` in the lower right corner.
+Hit **`OK`** in the lower right corner.
 
 #### Connect to X2Go server
 
@@ -129,7 +132,7 @@ Hit `OK` in the lower right corner.
 2. Click on your newly saved session in X2Go to connect to your lab machine.
    If this works you should see a terminal pop up on your screen.
 
-3. Type `xclock` in the terminal to test the setup. With a little bit of luck,
+3. Type **`xclock`** in the terminal to test the setup. With a little bit of luck,
    you should now see a new window popping up with a digital clock.
 
 #### Connect to other software
@@ -137,25 +140,25 @@ Hit `OK` in the lower right corner.
 You may use X2Go to access software with graphical interfaces.
 Such software needs to be installed in your lab machine.
 
-For your home machine, [RStudio](/working-in-your-lab/analytical-tools/r-studio/#install-r-studio) should be installed by default. To access this program, go back to your configuration and update `Session type` at the bottom of the `Session tab` from `/usr/bin/xterm/` to the location of Rstudio (`/usr/bin/rstudio`) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/working-in-your-lab/technical-tools/x2go/#troubleshooting).
+For your home machine, [RStudio](/working-in-your-lab/analytical-tools/r-studio/#install-r-studio) should be installed by default. To access this program, go back to your configuration and update **`Session type`** at the bottom of the **`Session tab`** from **`/usr/bin/xterm/`** to the location of Rstudio (**`/usr/bin/rstudio`**) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/working-in-your-lab/technical-tools/x2go/#troubleshooting).
 
 ### Configure the X2Go client for unmanaged machines
 
-Once installed, open X2Go and click `New session` and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
+Once installed, open X2Go and click **`New session`** and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
 ::: warning NOTE
-The configuration below will only work on `iaas` or `blue` machines, and not home machines. This setup require that someone in your lab already have installed X2Go server and your software of choice on the particular machine you will be connecting to.
+The configuration below will only work on **`iaas`** or **`blue`** machines, and not home machines. This setup require that someone in your lab already have installed X2Go server and your software of choice on the particular machine you will be connecting to.
 :::
 
 #### In the `Session` tab
 
 ::: details Server section
 
-- _Host_: `10.5.5.<something>`
-  - You need to type in the IP address for the machine that is set up for X2Go. You will fine the IP by logging into the iaas machine on ssh and type `ifconfig | grep 10.5.5.`
-- _Login/username_: `<iaas-machine-username>`
-  - The default user name of iaas and blue machines is `ubuntu`. It may be good to confer with your lab coordinator to learn their specific setup for the machine you plan to access.
-- _SSH port_: `22`
+- _Host_: **`10.5.5.<something>`**
+  - You need to type in the IP address for the machine that is set up for X2Go. You will fine the IP by logging into the iaas machine on ssh and type **`ifconfig | grep 10.5.5.`**
+- _Login/username_: **`<iaas-machine-username>`**
+  - The default user name of iaas and blue machines is **`ubuntu`**. It may be good to confer with your lab coordinator to learn their specific setup for the machine you plan to access.
+- _SSH port_: **`22`**
 - _Use RSA/DSA key for ssh connection_:
 
   - For Mac and Linux:
@@ -164,41 +167,41 @@ The configuration below will only work on `iaas` or `blue` machines, and not hom
 
   - For Windows:
 
-    You will need to save the access keys to your local machine and point to this file: (1) log into your lab `home` machine, (2) print your key with `cat ~/.ssh/id_rsa`, (3) open _Notepad_ on your local machine and copy the text from `-----BEGIN KEY-----` to `-----END KEY-----` (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
+    You will need to save the access keys to your local machine and point to this file: (1) log into your lab **`home`** machine, (2) print your key with **`cat ~/.ssh/id_rsa`**, (3) open _Notepad_ on your local machine and copy the text from **`-----BEGIN KEY-----`** to **`-----END KEY-----`** (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
 
   - On IAAS nodes:
 
     In addition to the steps above, ensure that you are able to log directly into the machine from your local machine following [this guide](#install-x2go-server-on-unmanaged-lab-machine-iaas).
 
-- _Try auto login_: `Check`
-- _Use Proxy server for SSH connection_: `Check`
+- _Try auto login_: **`Check`**
+- _Use Proxy server for SSH connection_: **`Check`**
   :::
 
 ::: details Proxy server section
 
-- _Proxy server type:_ `SSH`
-- _Host:_ `<lab-ip>`
-  - This is your lab specific IP that starts with `10.42.130.`. You will find the full address in the software that you use to connect to your lab.
-- _Port:_ `22`
-- _Same login as on X2Go Sever:_ `Leave blank`
-- _Login:_ `<your-lab-username>`
+- _Proxy server type:_ **`SSH`**
+- _Host:_ **`<lab-ip>`**
+  - This is your lab specific IP that starts with **`10.42.130.`**. You will find the full address in the software that you use to connect to your lab.
+- _Port:_ **`22`**
+- _Same login as on X2Go Sever:_ **`Leave blank`**
+- _Login:_ **`<your-lab-username>`**
   - This is the user name that you use to connect to your lab.
-- _Same password as on X2Go Server:_ `Leave blank`
+- _Same password as on X2Go Server:_ **`Leave blank`**
 - _RSA/DSA key:_
-  - For Mac and Linux: `Leave blank`
-  - For Windows: `Link to the same file that you established above`
-- _ssh-agent or default ssh key:_ `Check`
+  - For Mac and Linux: **`Leave blank`**
+  - For Windows: **`Link to the same file that you established above`**
+- _ssh-agent or default ssh key:_ **`Check`**
   :::
 
 ::: details Session type section
 
-- Choose `Single application` from the drop down menu
-- Add `/usr/bin/xterm` in the command window
+- Choose **`Single application`** from the drop down menu
+- Add **`/usr/bin/xterm`** in the command window
   :::
 
 #### Remaining configuration
 
-Follow the setups outlines in the `Configure the X2Go client for home machines` for further setup, including `In the connection tab`, `In the media tab`, `connecting to the X2Go server` and `Connect to other software`: [Start here](/working-in-your-lab/technical-tools/x2go/#configure-the-x2go-client-for-home-machines).
+Follow the setups outlines in the **`Configure the X2Go client for home machines`** for further setup, including **`In the connection tab`**, **`In the media tab`**, **`connecting to the X2Go server`** and **`Connect to other software`**: [Start here](/working-in-your-lab/technical-tools/x2go/#configure-the-x2go-client-for-home-machines).
 
 ## Install a desktop environment
 
@@ -226,8 +229,8 @@ The default setup will need some care to run smoothly:
 - Fixing TAB completion using GUI approach over x2go client.
 
   ```md
-  1. Open the Xfce `Application Menu` > `Settings` > `Window Manager`
-  2. Click on the `Keyboard Tab`
+  1. Open the Xfce **`Application Menu`** > **`Settings`** > **`Window Manager`**
+  2. Click on the **`Keyboard Tab`**
   3. Clear the Switch window for same application setting
   ```
 
@@ -260,7 +263,7 @@ Connect to your lab machine and run this code:
 
 ## Install X2Go server on unmanaged lab machine
 
-Connection to X2Go require the application `x2goserver` to run for connections to work.
+Connection to X2Go require the application **`x2goserver`** to run for connections to work.
 You may install this on iaas and blue machines as follows:
 
 ::: warning NOTE
@@ -275,7 +278,7 @@ This section is for lab coordinators that want to set up their unmanaged iaas an
 
 ::: details Install x2goserver
 
-Log into your unmanaged lab machine and install `x2goserver`:
+Log into your unmanaged lab machine and install **`x2goserver`**:
 
 ```bash
 sudo add-apt-repository ppa:x2go/stable
@@ -312,7 +315,7 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
 
 4. Get the IP for your IAAS machine
 
-   Inside your IAAS node, list the IP address for the node with `ifconfig`. The IP address is listed after `inet addr:` and start with 10.5. Note this as you will use this for the X2Go setup on your local machine (steps above).
+   Inside your IAAS node, list the IP address for the node with **`ifconfig`**. The IP address is listed after **`inet addr:`** and start with 10.5. Note this as you will use this for the X2Go setup on your local machine (steps above).
 
    ```bash
    hostname -I
@@ -324,7 +327,7 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
 
 ::: details Password prompts during login
 
-X2Go rely either password or certificate to authenticate your connection. If the certificate do not work (or not included), your may be asked to insert your password four times before your application start. If so, try to fetch and save your certificate as described in our [X2Go configuration](/working-in-your-lab/technical-tools/x2go/#configure-the-x2go-client-for-home-machines) under `Use RSA/DSA key for ssh connection`.
+X2Go rely either password or certificate to authenticate your connection. If the certificate do not work (or not included), your may be asked to insert your password four times before your application start. If so, try to fetch and save your certificate as described in our [X2Go configuration](/working-in-your-lab/technical-tools/x2go/#configure-the-x2go-client-for-home-machines) under **`Use RSA/DSA key for ssh connection`**.
 
 :::
 
@@ -346,7 +349,7 @@ From time to time your X2Go sessions may get stuck, such as when your software i
    demouser 22463 0.0 0.0 11300 1796 ? Ss Jul11 0:00 /bin/bash /usr/bin/x2goruncommand 50 22408 demouser-50-1563761927_stRrstudio_dp32 39401 /usr/bin/rstudio nosnd R
    ```
 
-3. Identify the process ID number that you want to terminate. The unique process ID is listes in the second column in the output from Step 2. For example, the process ID for the X2Go session below is `22463` (your number will be different).
+3. Identify the process ID number that you want to terminate. The unique process ID is listes in the second column in the output from Step 2. For example, the process ID for the X2Go session below is **`22463`** (your number will be different).
 
    ```
    demouser 22463 0.0 0.0 11300 1796 ? Ss Jul11 0:00 /bin/bash /usr/bin/x2goruncommand 50 22408 demouser-50-1563761927_stRrstudio_dp32 39401 /usr/bin/rstudio nosnd R
