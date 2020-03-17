@@ -150,10 +150,10 @@ We are responsible to ensure that the technical side of your restore work for th
 
 ### Can I delete restore folders? 
 
-Labs users assigned to the **`restore`** group can edit and delete files inside your restore folders. You can see if you are attached to this group by running the **`group`** command: 
+Labs users assigned to the **`restore`** group can edit and delete files inside your restore folders. You can see if you are attached to this group by running the **`groups`** command: 
 
 ```bash
-group
+groups
 ```
 
 You should be able to delete restore files if **`restore`** is among the listed groups. Contact your lab leader if you are not listed and you think that you need such authorization. You lab leader can [contact us](/contact) and request that you gets added to this group.
