@@ -233,12 +233,13 @@ We recommend **`rsync`** for data transfers between your home machine and iaas a
 # -- Principal example
 rsync <options> <source> <destination>
 
-# -- Principal example from your home machine
-rsync -avhP ubuntu@<iaas-macine-name>:<iaas-folder> <home-folder>
+# -- Principal example from your home machine to your iaas machine
+rsync -avhP <home-folder> ubuntu@<iaas-macine-name>:<iaas-folder> 
 
-# -- Practical example from your home machine:
-rsync -avhP ubuntu@demolab-blue-sarga:~/results/ /mnt/scratch/results/
+# -- Practical example from your home machine to your iaas machine:
+rsync -avhP /mnt/scratch/data/ ubuntu@demolab-blue-sarga:~/data/ 
 ``` 
+
 
 ### Where should I store my data on iaas and blue machines? 
 
