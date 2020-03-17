@@ -127,7 +127,7 @@ Examples of python profilers:
 
 ### Can I restart our lab machines? 
 
-Yes. You can restart your home, iaas and blue machines by running the **`reboot`** command: 
+Yes. You can restart your home, iaas and blue machines by running the **`reboot`** command. We have enabled this command so that you can schedule restarts in according with computational workflows.
 
 ```bash
 sudo reboot
