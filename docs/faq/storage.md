@@ -230,10 +230,13 @@ Your data is located on your [home](/faq/compute/#machine-types) machine. You wi
 We recommend **`rsync`** for data transfers between your home machine and iaas and blue machines. This will sync up your data and only transfer files that has changed since your last transfer.
 
 ```bash
-# -- Principal example from your home machine:
+# -- Principal example
+rsync <options> <source> <destination>
+
+# -- Principal example from your home machine
 rsync -avhP ubuntu@<iaas-macine-name>:<iaas-folder> <home-folder>
 
-# -- Practical example from your home machine: 
+# -- Practical example from your home machine:
 rsync -avhP ubuntu@demolab-blue-sarga:~/results/ /mnt/scratch/results/
 ``` 
 
@@ -242,7 +245,7 @@ rsync -avhP ubuntu@demolab-blue-sarga:~/results/ /mnt/scratch/results/
 You are free to create the directory structure that fits your needs under the **`/home`** folder in your iaas and blue machines. For example, under the default login folder (**`/mnt/ubuntu/`**): 
 
 ```bash
-mkdir workflow
+mkdir data
 ```
 
 ### Do iaas and blue machines have backup? 
