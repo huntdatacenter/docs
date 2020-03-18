@@ -85,7 +85,7 @@ After the initial onboarding, you will need your password to install software us
 
 ### Broken connection
 
-Your SSH connection is transferred inside your VPN connection. You will therefore experience a sudden drop in your SSH connection if your VPN connection break, for example due to our [12 hour timeout](/troubleshooting/connection/#vpn), a [broken internet connection](/troubleshooting/connection/#vpn) etc. You will also experience a broken connection if your lab machine becomes unresponsive, for example due to an out of memory killer or other related issues (see below).
+Your SSH connection is transferred inside your VPN connection. You will therefore experience a sudden drop in your SSH connection if your VPN connection break, for example due to our [12 hour timeout](/troubleshooting/connection/#vpn), a [broken internet connection](/troubleshooting/connection/#broken-vpn-connection) etc. You will also experience a broken connection if your lab machine becomes unresponsive, for example due to an [out of memory killer](/troubleshooting/connection/#unresponsive-machine-oom-killer) or other related issues (see below), and when your internet connection temporarily drops. For such cases, see our [terminal multiplexer guide](/working-in-your-lab/technical-tools/terminal-multiplexers/) on how to keep your environment stable during broken connections.
 
 ### Unresponsive machine (OOM Killer)
 
