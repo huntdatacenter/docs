@@ -139,7 +139,7 @@ Please be aware that restarts will affect all of your lab colleagues working on 
 
 ### Can I update our operating system on home? 
 
-No. Your home machine is configured for reliability. We have therefore choosen to run long term support versions of your operating systems here. Your home machine will therefore typically run one version behind the latest release. [Contact us](/contact) for deployment of iaas and blue machines if you need newer versions of your operating systems.
+No. Your home machine is configured for reliability. We have therefore chosen to run long term support versions of your operating systems here. Your home machine will therefore typically run one version behind the latest release. We understand that your workflow sometimes require newer versions. Therefore, [contact us](/contact) for deployment of iaas and blue machines that comes with the latest LTS Ubuntu release as default.
 
 ### Can I get a machine with the latest Ubuntu release? 
 
