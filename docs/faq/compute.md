@@ -145,6 +145,9 @@ No. Your home machine is configured for reliability. We have therefore chosen to
 
 Yes. Both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](http://localhost:8080/faq/compute/#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other linux operating systems.
 
+### When do you plan to upgrade our home operating system? 
+
+We will typically plan to upgrade operating systems every two years in accordance with on home machines when a new long term support 
 
 ## Machine types
 
