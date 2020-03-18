@@ -137,6 +137,14 @@ sudo reboot
 Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/faq/users/#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
 :::
 
+### Can I update our operating system on home? 
+
+No. Your home machine is configured for reliability. We have therefore choosen to run long term support versions of your operating systems here. Your home machine will therefore typically run one version behind the latest release. [Contact us](/contact) for deployment of iaas and blue machines if you need newer versions of your operating systems.
+
+### Can I get a machine with the latest Ubuntu release? 
+
+Yes. Both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](http://localhost:8080/faq/compute/#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other linux operating systems.
+
 
 ## Machine types
 
