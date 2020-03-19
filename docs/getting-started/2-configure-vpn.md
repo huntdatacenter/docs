@@ -103,7 +103,7 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 ::: details Windows
 
 1. Start the OpenVPN client (if it is not running already)
-2. Right-click on the OpenVPN notification icon on the taskbar
+2. Right-click on the OpenVPN [notification icon](https://pchelp.ricmedia.com/wp-content/uploads/connect-vpn-using-openvpn-on-windows/openvpn-gui-taskbar-icon.png) on the taskbar
 3. Select **`Import file...`**
 4. Select the OpenVPN profile file named **`<username>.ovpn`** that you collected in Step 1.
 
