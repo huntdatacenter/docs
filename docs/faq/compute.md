@@ -91,11 +91,11 @@ A quick way to install open-source software packages is to use the built in [apt
 sudo apt install <packagename>
 ```
 
-### Can I run MatLab, Stata, SPSS and RStudio? 
+### Can I run MatLab, Stata, SPSS and RStudio?
 
 Yes. You can run commonly used analytical tools, such MatLab, Stata, SPSS and Rstudio directly from your lab. You will need to bring a license from your host institution if you are affiliated outside of NTNU. Graphical user interfaces are accessed through the X2Go-software. [Contact us](/contact) for installations on home-machines.
 
-### Can I run Windows software? 
+### Can I run Windows software?
 
 Most likely. Many commonly used software in scientific computing can be run from your lab, such as MatLab, Stata, and SPSS, including many special tools for image analysis and genetic analysis. However, we do run Linux as the operating systems in your lab. Some Windows tools will therefore be unavailable. We do provide Windows systems in those rare cases when this is the only option to run mission critical applications. [Contact us](/contact) if you think you do need Windows tools to get your science to fly.
 
@@ -120,12 +120,16 @@ Examples of python profilers:
 - [scalene](https://github.com/emeryberger/scalene) - a high-performance CPU and memory profiler for Python.
 - [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
 
+Examples of R profilers:
+
+- [profvis](https://rstudio.github.io/profvis/) - Interactive visualizations for profiling R Code.
+
 :::
 
 
-## Maintenance 
+## Maintenance
 
-### Can I restart our lab machines? 
+### Can I restart our lab machines?
 
 Yes. You can restart your home, iaas and blue machines by running the **`reboot`** command. We have enabled this command so that you can schedule restarts in according with computational workflows.
 
@@ -137,17 +141,17 @@ sudo reboot
 Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/faq/users/#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
 :::
 
-### Can I update our operating system on home? 
+### Can I update our operating system on home?
 
 No. Your home machine is configured for reliability. We have therefore chosen to run long term support versions of your operating systems here. Your home machine will therefore typically run one version behind the latest release. We understand that your workflow sometimes require newer versions. Therefore, [contact us](/contact) for deployment of iaas and blue machines that comes with the latest LTS Ubuntu release as default.
 
-### Can I get a machine with the latest Ubuntu release? 
+### Can I get a machine with the latest Ubuntu release?
 
 Yes. Both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](http://localhost:8080/faq/compute/#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other linux operating systems.
 
-### When do you plan to upgrade our home operating system? 
+### When do you plan to upgrade our home operating system?
 
-We will typically plan to upgrade operating systems every two years in accordance with on home machines when a new long term support 
+We will typically plan to upgrade operating systems every two years in accordance with on home machines when a new long term support
 
 ## Machine types
 
@@ -169,8 +173,6 @@ Blue machines are identical to iaas machine with one exceptions: they are deploy
 
 You will meet the "entry" machine when you configure your account during your initial onboarding. Hopefully, you will not meet this machine type again. The machine type is introduced for security purposes allowing us to quickly install security updates and do machine restarts without affecting your analyis in the other lab machines.
 
-### What is your "local" machine? 
+### What is your "local" machine?
 
 We use this term for the machine that you use to connect to your lab, such as your laptop and your desktop.
-
-
