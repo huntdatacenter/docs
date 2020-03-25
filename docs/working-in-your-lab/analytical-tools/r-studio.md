@@ -158,16 +158,16 @@ The below text is an example code which you may cut and paste into your shell:
 
 ```bash
 # download the package
-wget https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb;
+wget https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb -O /tmp/rstudio.deb
 
-# install a handy package installer
-sudo apt install gdebi-core;
+# install essential dependencies
+sudo apt update && sudo apt install -y libnss3 libasound2
 
-# install rstudio with dependencies
-(echo "y") | sudo gdebi rstudio-xenial-1.1.463-amd64.deb;
+# install rstudio
+sudo apt install /tmp/rstudio.deb
 
 # clean up files
-rm rstudio-xenial-1.1.463-amd64.deb;
+rm /tmp/rstudio.deb
 ```
 
 ### Configure X2Go
