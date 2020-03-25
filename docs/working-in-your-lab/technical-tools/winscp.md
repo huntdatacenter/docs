@@ -1,12 +1,12 @@
 ---
 title: WinSCP
 permalink: /working-in-your-lab/technical-tools/winscp
-sidebarDepth: 3
+sidebarDepth: 1
 ---
 
 # WinSCP
 
-[WinSCP](https://winscp.net/) is an open source SFTP, FTP, WebDAV, S3 client and SCP client for Windows. It is mainly used for file transfer between a local compute and a remote server.
+[WinSCP](https://winscp.net/) is an open source data transfer client for Windows that work with commonly used transfer protocols including SFTP, S3 and SCP. If your host organization allows, you can use WinSCP for file transfers and synchronization of folders between your local machine and your lab machines.
 
 [[toc]]
 
@@ -15,35 +15,54 @@ sidebarDepth: 3
 - A [working connection](/getting-started/) to your lab.
 :::
 
-## Download and install
+## Install
 
 Download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and install the software. This may required administrator privileges.
 
-## Connection tunnelling
+## Configure
 
-In order to reach an (s)ftp destination behind another server, we can use [SSH tunneling](https://winscp.net/eng/docs/tunneling).
+::: tip 
+This section configures WinSCP to connect your local machine to your [home machine](/faq/compute/#machine-types). Additional configurations will be needed for connections to iaas and blue machines.
+:::
 
-In the session we fill up the host name of a destination server where the sFTP actually is.
+You will see the **`Login`** screen when you start WinSCP for the first time. 
 
 ![SSH Tunnel - Step 1](./images/tunnel_1.png "SSH Tunnel - Step 1")
 
-Then in advanced settings as shown in the picture we follow with defining SSH Tunnel.
+In this **`Session tab`** insert: 
+
+- File protocol: **`SFTP`**
+- Host name: **`10.5.5.12`**
+- Protocol: **`22`**
+- User name: **`<your-username>`**
+- Password: **`<your-ssh-password>`**
+
+Click **`Advanced`** and select **`Tunnel`**: 
 
 ![SSH Tunnel - Step 2](./images/tunnel_2.png "SSH Tunnel - Step 2")
 
-Under the `Connection > Tunnel` option we enable `Connect through SSH tunnel` and fill up the host name of SSH entry server. We can use the username and provide password later when connecting, if we do not want to keep it saved.
+In the **`Tunnel tab`** insert: 
 
-![SSH Tunnel - Step 3](./images/tunnel_2.png "SSH Tunnel - Step 3")
+- Connect through SSH tunnel: **`Check`**
+- Host name: **`<your-lab-IP>`** (usually starts with 10.42.130-something)
+- Protocol: **`22`**
+- User name: **`<your-username>`**
+- Password: **`<your-ssh-password>`**
 
-Once we confirmed the advanced settings we get back to previous windows and when we hit login WinSCP will first connect to SSH entry server to open a tunnel and then our destination server.
+Click **`Ok`** when completed.
 
-![SSH Tunnel - Step 4](./images/tunnel_4.png "SSH Tunnel - Step 4")
+Once you have confirmed the advanced settings you will get back to previous window. Hit **`Login`**.
 
-## Synchronization
+![SSH Tunnel - Step 4](./images/tunnel_3.png "SSH Tunnel - Step 4")
 
-[Synchronization](https://winscp.net/eng/docs/task_synchronize) is an additional feature that provides advanced copying. In cases when only a subset of updated files or only a new files have to be copied a lot of time can be saved compared to normal copy in WinSCP, which transfers all of the files.
+With a little bit of luck, you should be able to see the files in your lab on the right side of your screen.
 
-When selected the folder to be synchronized this option can be found in `Commands` menu as `Synchronize...` (Ctrl+S).
+
+## Synchronize
+
+[Synchronization](https://winscp.net/eng/docs/task_synchronize) is an additional feature that provides advanced copying. For example, when only a subset of updated files or only a new files have to be copied a lot of time can be saved compared to normal copy in WinSCP, which transfers all of the files every time your transfer a folder.
+
+When selected the folder to be synchronized this option can be found in **`Commands`** menu as **`Synchronize...`** (Ctrl+S).
 
 ![Synchronization - Step 1](./images/sync_1.png "Synchronization - Step 1")
 
@@ -51,10 +70,16 @@ Synchronization allows multiple adjustments such as synchronization towards targ
 
 ![Synchronization - Step 2](./images/sync_2.png "Synchronization - Step 2")
 
-When confirmed a comparison is done by WinSCP, where one choose from the files to be synchronized and confirm.
+::: warning Be careful!
+Selecting **`Both`** or **`Local`** targets will download data from your lab to your local machine. It is your responsibility to only use this configuration for folders in your lab that contains non-sensitive data that you can keep on your local machine.
+:::
+
+When confirmed, a file comparison is done by WinSCP, where one can choose files to be synchronized. Click **`Ok`** to confirm.
 
 ![Synchronization - Step 3](./images/sync_3.png "Synchronization - Step 3")
 
-When synchronization is completed we get a confirmation status.
+You will get a confirmation status when your synchronization is completed.
 
 ![Synchronization - Step 4](./images/sync_4.png "Synchronization - Step 4")
+
+
