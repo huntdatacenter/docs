@@ -171,7 +171,7 @@ This is a managed machine type. All labs have one "home" machine that is pre-con
 
 ### What is an "iaas" machine?
 
-In addition to the home machine, lab leaders and lab coordinators may request new "iaas" (infrastructure as a service) machines to be deployed in your lab. This is an unmanaged machine type where you as a lab user get full administrator privileges (root access). We expect you to configure and maintain these machines yourself. We normally deploy these machines with a vanilla Ubuntu 18.04 operating system. Iaas machines are deployed for a minimum of 30 days.
+In addition to the home machine, lab leaders and lab coordinators may request new "iaas" (infrastructure as a service) machines to be deployed in your lab. This is an unmanaged machine type where you as a lab user get full administrator privileges (root access). We expect you to configure and maintain these machines yourself. We usually deploy these machines with vanilla Ubuntu 18.04 operating system, 1TB of storage and the machine size of your choice. Iaas machines are deployed for a minimum of 30 days.
 
 ### What is a "blue" machine?
 
