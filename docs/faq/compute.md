@@ -99,6 +99,14 @@ Yes. You can run commonly used analytical tools, such MatLab, Stata, SPSS and Rs
 
 Most likely. Many commonly used software in scientific computing can be run from your lab, such as MatLab, Stata, and SPSS, including many special tools for image analysis and genetic analysis. However, we do run Linux as the operating systems in your lab. Some Windows tools will therefore be unavailable. We do provide Windows systems in those rare cases when this is the only option to run mission critical applications. [Contact us](/contact) if you think you do need Windows tools to get your science to fly.
 
+### Can I run Docker images? 
+
+Yes. You can run [Docker images](https://www.docker.com/) on both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](/faq/compute/#what-is-a-blue-machine) machines. Docker images can not be run from home machines due to security reasons.
+
+### Can I run Singularity containers? 
+
+Yes, you can run your Singularity containers on both home, iaas and blue machines.
+
 
 ## Workflow
 
@@ -147,7 +155,7 @@ No. Your home machine is configured for reliability. We have therefore chosen to
 
 ### Can I get a machine with the latest Ubuntu release?
 
-Yes. Both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](http://localhost:8080/faq/compute/#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other linux operating systems.
+Yes. Both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](/faq/compute/#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other linux operating systems.
 
 ### When do you plan to upgrade our home operating system?
 
