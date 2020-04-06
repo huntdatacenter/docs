@@ -43,7 +43,7 @@ The default version in Ubuntu is usually a few versions behind the newest R vers
 
 ```bash
 # -- Add the new package repository to your sources list:
-sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran35/'
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran35/"
 
 # -- Update packages
 sudo apt update
