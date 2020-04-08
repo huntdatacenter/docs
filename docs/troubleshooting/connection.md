@@ -32,7 +32,7 @@ Our VPN service communicate with your local machine on a specific port that need
 
 ### Lost or missing VPN passphrase
 
-Your VPN passphrase is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate if this happens. [Contact us](/contact) on mail for such a request and allow a few days in shipping.
+Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile)  if this happens. [Contact us](/contact) on mail for such a request and allow a few days in shipping. 
 
 ### Broken VPN connection
 
