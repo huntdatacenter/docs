@@ -30,7 +30,7 @@ Windows users needs administrator rights on their local computer to successfully
 
 Our VPN service communicate with your local machine on a specific port that needs to be allowed in your local firewall: UDP protocol on Port 1194 to and from IP 129.241.176.121. Blocked network connections will typically give a "The VPN failed because the connection attempt timed out"-error. Please contact your local IT department for assistance if you think this may be the case. Feel free to [include us](/contact) in the communication if you need assistance.
 
-### Lost VPN passphrase
+### Lost or missing VPN passphrase
 
 Your VPN passphrase is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate if this happens. [Contact us](/contact) on mail for such a request and allow a few days in shipping.
 
