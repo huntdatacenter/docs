@@ -64,10 +64,10 @@ module.exports = {
         {
           title: "Home",
           collapsable: false,
-          children: ["", 
-                     "system-status", 
+          children: ["",
+                     "system-status",
                      "news",
-                     "contribute",  
+                     "contribute",
                      "contact"
           ]
         },
@@ -111,6 +111,7 @@ module.exports = {
               // collapsable: false,
               children: [
                 "working-in-your-lab/analytical-tools/",
+                "working-in-your-lab/analytical-tools/bluebox",
                 "working-in-your-lab/analytical-tools/conda",
                 "working-in-your-lab/analytical-tools/epacts",
                 "working-in-your-lab/analytical-tools/fsl",
@@ -175,4 +176,3 @@ module.exports = {
     ]
   ]
 };
-
