@@ -6,7 +6,7 @@ sidebarDepth: 1
 
 # BlueBox
 
-BlueBox helps to move into distributed compute with your research workload.
+[BlueBox](https://github.com/huntdatacenter/BlueBox) helps to move into distributed compute with your research workload.
 It simplifies installation of dependency packages on multiple servers.
 Handling data, code and results is still as easy as with single machine.
 
