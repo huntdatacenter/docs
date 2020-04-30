@@ -10,7 +10,7 @@ sidebarDepth: 1
 It simplifies installation of dependency packages on multiple servers.
 Handling data, code and results is still as easy as with single machine.
 
-## Setup your home first (master)
+## Setup your home (master)
 
 Install dependencies on your home server:
 
@@ -18,7 +18,7 @@ Install dependencies on your home server:
 which tox || sudo apt install tox
 ```
 
-Get this repository:
+Get the repository:
 ```
 git clone https://github.com/huntdatacenter/bluebox.git && cd bluebox
 ```
