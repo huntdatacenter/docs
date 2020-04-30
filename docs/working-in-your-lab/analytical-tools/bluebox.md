@@ -34,3 +34,7 @@ ubuntu@192.168.150.11
 ubuntu@192.168.150.12
 ubuntu@192.168.150.13
 ```
+
+## Guide
+
+[BlueBox Guide](https://github.com/huntdatacenter/BlueBox/blob/master/docs/guide.md)
