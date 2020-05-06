@@ -128,8 +128,10 @@ module.exports = {
               title: "Transfer tools",
               // collapsable: false,
               children: [
-                "working-in-your-lab/technical-tools/",
-                "working-in-your-lab/technical-tools/winscp"
+                "working-in-your-lab/transfer-tools/",
+                "working-in-your-lab/transfer-tools/kista",
+                "working-in-your-lab/transfer-tools/external-kista",
+                "working-in-your-lab/transfer-tools/winscp"
               ]
             }
           ]
