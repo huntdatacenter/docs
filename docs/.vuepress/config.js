@@ -102,7 +102,6 @@ module.exports = {
                 "working-in-your-lab/technical-tools/mobaxterm",
                 "working-in-your-lab/technical-tools/sshfs",
                 "working-in-your-lab/technical-tools/terminal-multiplexers",
-                "working-in-your-lab/technical-tools/winscp",
                 "working-in-your-lab/technical-tools/x2go"
               ]
             },
@@ -123,6 +122,14 @@ module.exports = {
                 "working-in-your-lab/analytical-tools/saige",
                 "working-in-your-lab/analytical-tools/spyder-ide",
                 "working-in-your-lab/analytical-tools/stata"
+              ]
+            },
+            {
+              title: "Transfer tools",
+              // collapsable: false,
+              children: [
+                "working-in-your-lab/technical-tools/",
+                "working-in-your-lab/technical-tools/winscp"
               ]
             }
           ]
