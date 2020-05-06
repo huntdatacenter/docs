@@ -1,6 +1,6 @@
 ---
 title: WinSCP
-permalink: /working-in-your-lab/technical-tools/winscp
+permalink: /working-in-your-lab/transfer-tools/winscp
 sidebarDepth: 1
 ---
 
@@ -21,15 +21,15 @@ Download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and insta
 
 ## Configure
 
-::: tip 
+::: tip
 This section configures WinSCP to connect your local machine to your [home machine](/faq/compute/#machine-types). Additional configurations will be needed for connections to iaas and blue machines.
 :::
 
-You will see the **`Login`** screen when you start WinSCP for the first time. 
+You will see the **`Login`** screen when you start WinSCP for the first time.
 
 ![SSH Tunnel - Step 1](./images/tunnel_1.png "SSH Tunnel - Step 1")
 
-In this **`Session tab`** insert: 
+In this **`Session tab`** insert:
 
 - File protocol: **`SFTP`**
 - Host name: **`10.5.5.12`**
@@ -37,11 +37,11 @@ In this **`Session tab`** insert:
 - User name: **`<your-username>`**
 - Password: **`<your-ssh-password>`**
 
-Click **`Advanced`** and select **`Tunnel`**: 
+Click **`Advanced`** and select **`Tunnel`**:
 
 ![SSH Tunnel - Step 2](./images/tunnel_2.png "SSH Tunnel - Step 2")
 
-In the **`Tunnel tab`** insert: 
+In the **`Tunnel tab`** insert:
 
 - Connect through SSH tunnel: **`Check`**
 - Host name: **`<your-lab-IP>`** (usually starts with 10.42.130-something)
@@ -81,5 +81,3 @@ When confirmed, a file comparison is done by WinSCP, where one can choose files 
 You will get a confirmation status when your synchronization is completed.
 
 ![Synchronization - Step 4](./images/sync_4.png "Synchronization - Step 4")
-
-
