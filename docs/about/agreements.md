@@ -9,8 +9,6 @@ This page list agreements that may be relevant for you as a lab user. Contact yo
 
 [[toc]]
 
-
-
 ## User agreement
 
 [HUNT Cloud User Agreement](/assets/hunt-cloud-user-agreement.pdf) (pdf)
