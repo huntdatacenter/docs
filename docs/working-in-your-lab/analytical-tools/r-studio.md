@@ -173,6 +173,11 @@ sudo apt install /tmp/rstudio.deb
 rm /tmp/rstudio.deb
 ```
 
+::: warning Latest version
+If you plan to install latest version remember to use `--disable-gpu` parameter when running R-Studio
+or setup environment variable as mentioned in [Troubleshooting RStudio Rendering Errors](https://support.rstudio.com/hc/en-us/articles/360017886674-Troubleshooting-RStudio-Rendering-Errors).
+:::
+
 ### Configure X2Go
 
 To automatically start RStudio, revisit your _Session preferences_ in the [X2Go setup](x2go) and update your _Single application command path_ to `/usr/bin/rstudio`and _Create a session icon on the desktop..._.
