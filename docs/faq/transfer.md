@@ -96,7 +96,7 @@ Most likely. However, this is decided by the data controller. Feel free to [cont
 
 
 
-## External transfers (network opening)
+## External transfers (others)
 
 ### Can I transfer data directly to parties outside HUNT Cloud? 
 Yes and no. Direct transfers are blocked. However, your lab leader can allow network openings for data exports outside HUNT Cloud (see below).
