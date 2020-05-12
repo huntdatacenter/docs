@@ -174,7 +174,7 @@ rm /tmp/rstudio.deb
 ```
 
 ::: warning Latest version
-If you plan to install latest version remember to use `--disable-gpu` parameter when running R-Studio
+If you plan to install latest version (>=1.2.0) remember to use `--disable-gpu` parameter when running R-Studio
 or setup environment variable as mentioned in [Troubleshooting RStudio Rendering Errors](https://support.rstudio.com/hc/en-us/articles/360017886674-Troubleshooting-RStudio-Rendering-Errors).
 :::
 
