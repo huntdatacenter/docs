@@ -48,8 +48,7 @@ module.exports = {
     editLinkText: "Help us improve this page!",
     lastUpdated: true,
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
-    nav: [
-      {
+    nav: [{
         text: "Home",
         link: "/"
       },
@@ -60,36 +59,41 @@ module.exports = {
     ],
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
     sidebar: {
-      "/": [
-        {
+      "/": [{
           title: "Home",
           collapsable: false,
           children: ["",
-                     "system-status",
-                     "news",
-                     "contribute",
-                     "contact"
+            "system-status",
+            "news",
+            "contribute",
+            "contact"
           ]
         },
         {
           title: "About",
           // collapsable: false,
-          children: ["about/", "about/agreements"]
+          children: [
+            "about/",
+            "about/agreements"
+          ]
         },
         {
           title: "Getting started",
           // collapsable: false,
-          children: ["getting-started/",
-                     "getting-started/1-collect-keys.md",
-                     "getting-started/2-configure-vpn.md",
-                     "getting-started/3-configure-ssh.md"
+          children: [
+            "getting-started/",
+            "getting-started/1-collect-keys.md",
+            "getting-started/2-configure-vpn.md",
+            "getting-started/3-configure-ssh.md"
           ]
         },
         {
           title: "Data transfer",
           // collapsable: false,
-          children: ["data-transfer/",
-                     "data-transfer/internal-kista.md"
+          children: [
+            "data-transfer/",
+            "data-transfer/internal-kista.md",
+            "data-transfer/external-kista.md"
           ]
         },
         {
@@ -136,8 +140,6 @@ module.exports = {
               // collapsable: false,
               children: [
                 "working-in-your-lab/transfer-tools/",
-                "working-in-your-lab/transfer-tools/external-kista",
-                "working-in-your-lab/transfer-tools/kista",
                 "working-in-your-lab/transfer-tools/winscp"
               ]
             }
