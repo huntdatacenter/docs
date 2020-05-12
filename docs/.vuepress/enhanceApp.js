@@ -8,8 +8,9 @@ export default ({ router }) => {
       // console.log(to.path);
       // console.log(to);
       if (to.path.startsWith('/assets/') && to.path.endsWith(".pdf")) {
-        console.log("https://assets.hdc.ntnu.no" + to.path);
+        // console.log("https://assets.hdc.ntnu.no" + to.path);
         window.location.href = "https://assets.hdc.ntnu.no" + to.path;
+        next();
       } else {
         next();
       }
