@@ -86,6 +86,13 @@ module.exports = {
           ]
         },
         {
+          title: "Data transfer",
+          // collapsable: false,
+          children: ["data-transfer/",
+                     "data-transfer/internal-kista.md"
+          ]
+        },
+        {
           title: "Working in your lab",
           // collapsable: false,
           children: [
