@@ -11,13 +11,13 @@ This page list agreements that may be relevant for you as a lab user. Contact yo
 
 ## User agreement
 
-[HUNT Cloud User Agreement](/assets/hunt-cloud-user-agreement.pdf) (pdf)
+[HUNT Cloud User Agreement](https://assets.hdc.ntnu.no/assets/hunt-cloud-user-agreement.pdf) (pdf)
 
 Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator. Read more about how to add new users in our [FAQ user section](/faq/users/).
 
 ## Internal kista transfer form
 
-[HUNT Cloud - Internal Kista Transfer Form](/assets/hunt-cloud-internal-kista-transfer-form.pdf) (pdf)
+[HUNT Cloud - Internal Kista Transfer Form](https://assets.hdc.ntnu.no/assets/hunt-cloud-internal-kista-transfer-form.pdf) (pdf)
 
 Lab leaders and lab coordinators from labs that will upload data can order Kistas for data transfers between two labs in HUNT Cloud. We use this form to document internal traffic from your lab. Read more about Internal kistas in our [FAQ transfer section](/faq/transfer/).
 
@@ -29,7 +29,7 @@ Lab leaders can request external kistas where collaborators outside HUNT Cloud c
 
 ## Network opening form
 
-[HUNT Cloud Network Opening Form](/assets/hunt-cloud-network-opening-form.pdf) (pdf)
+[HUNT Cloud Network Opening Form](https://assets.hdc.ntnu.no/assets/hunt-cloud-network-opening-form.pdf) (pdf)
 
 Your lab leader can request external network openings through our network opening form. We use this form to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/transfer/).
 
