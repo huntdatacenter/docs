@@ -6,7 +6,7 @@ sidebarDepth: 1
 
 # Internal kista
 
-Internal kista is our service for controlled data transfers between labs inside HUNT Cloud. In short, internal kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers dedicated to a specific data transfer between two lab environments.
+Internal kista provide a simple and controlled way to transfer data between two labs inside HUNT Cloud. In short, internal kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers dedicated to one data transfer between two lab environments.
 
 ::: tip Note
 This page describes the practical aspects of kista transfers. Head over to our [Transfer section](/faq/transfer/) in the FAQ for more information on the service itself.
@@ -15,7 +15,7 @@ This page describes the practical aspects of kista transfers. Head over to our [
 
 [[toc]]
 
-## Order a kistas
+## Order
 
 Internal kistas are ordered by the uploader Lab leader or Lab coordinator using the [Internal kista transfer form](/about/agreements/#internal-kista-transfer-form). Forward the form [to us](/contact) for deployment.
 
@@ -24,12 +24,15 @@ The form defines two roles that we will use in this document:
 - **Uploader**. This is a lab user in the Lab that orders the Kista whom will upload the data. 
 - **Downloader**. This is a lab user in the lab that will download the data.
 
-## Account information
+## Connect
 
-We will forward SFPT account information to the home machines in both the uploader and downloader lab when the kista is deployed. This information can be accessed in your home machine under the **`/opt/hunt-cloud/kista/`** folder:
+We wil notify you when your kista is deployed. You can then collect your account information directly from your home machine:
+
+1. Log into your home machine
+2. Collect your account information from the **`/opt/hunt-cloud/kista/`** folder: 
 
 ```bash
-# -- List of Kista account informations
+# -- List kista account information files
 ls /opt/hunt-cloud/kista/
 
 # -- Principle example to see account information
@@ -39,7 +42,7 @@ less /opt/hunt-cloud/kista/*<number>*
 less /opt/hunt-cloud/kista/*5623*
 ```
 
-The account information will look something similar to this: 
+The account information will look similar to this: 
 
 ```bash
 ### SFTP account information
@@ -49,14 +52,11 @@ Port: 22
 Username: <username>-upload
 ```
 
-*Note. The information above is for illustration. Your account information will contain different Server and Username information.*
+*Note. The information above is for illustration and will not work for your connection. Your account information will contain different Server and Username information.*
 
-## Connect
+Next, connect to your kista using the SFTP protocol. This may seem unfamiliar at first, however its simple to use once you get going: 
 
-You will connect to kistas over the SFTP protocol. This may seem a bit unfamiliar the first time. Keep the faith, we bet it will be simple to use when you get going.
-
-1. Log into your the home machine in your lab. 
-2. Connect to the kista over SFTP using the account information above. 
+3. From your home machine, connect to the kista over SFTP using your account information collected above. 
 
 ```bash
 # -- Principal example
@@ -66,7 +66,7 @@ sftp <usernam>-upload@10.42.132.<number>
 sftp demouser-upload@10.42.132.118
 ```
 
-When successfully connected, you should see the following on your terminal: 
+When successfully connected, you should see the following message in your terminal: 
 
 ```
 Connected to 10.42.132.<number>.
@@ -162,14 +162,4 @@ You can resume a download with this command:
 reget /mnt/cargo/example-file1.txt
 ```
 
-
-## Other commands
-
-Most SFTP commands will work in the internal kistas, for examples: 
-
-```bash
-# -- List files in a local directory
-#    from where you are connecting: 
-lls -lah /mnt/cargo
-```
 
