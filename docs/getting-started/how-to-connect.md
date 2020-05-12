@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 **Without these, it is impossible to access your lab environment.**
 
-- Signed user agreement ([blank template](/assets/hunt-cloud-user-agreement.pdf)) forwarded to us over [email](/contact) for account activation.
+- Signed user agreement ([blank template](https://assets.hdc.ntnu.no/assets/hunt-cloud-user-agreement.pdf)) forwarded to us over [email](/contact) for account activation.
 - Computer connected to the Internet
 - Smartphone to receive system keys from HUNT Cloud
 - Compressed file from HUNT Cloud downloaded from link sent over email

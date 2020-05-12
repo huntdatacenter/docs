@@ -9,7 +9,7 @@ This step ensures that you have the correct keys and configuration files before 
 
 ::: warning Requirements
 
-- Signed [user agreement](/assets/hunt-cloud-user-agreement.pdf) forwarded to us on [email](/contact) for account activation.
+- Signed [user agreement](https://assets.hdc.ntnu.no/assets/hunt-cloud-user-agreement.pdf) forwarded to us on [email](/contact) for account activation.
 - Private phone to receive your lab keys.
 - Organizational email to receive your lab configuration files.
 
@@ -29,7 +29,7 @@ Allow for a few weeks to pass from you send us your agreement and until we forwa
 
 ## 1.1 Secrets to your phone
 
-We will communicate your system keys over the Signal mobile app. 
+We will communicate your system keys over the Signal mobile app.
 
 ### Install Signal
 
@@ -41,10 +41,10 @@ Signal is a private messenger app for your phone that provide a secret communica
 ### Notify us
 
 ::: tip
-[Contact us](/contact) on email as soon as you have installed Signal. This allows us to quickly forward your lab keys when they are ready. 
+[Contact us](/contact) on email as soon as you have installed Signal. This allows us to quickly forward your lab keys when they are ready.
 :::
 
-Example email: 
+Example email:
 
 > Hi all, I have installed Signal and are looking forward to receive my keys.
 
@@ -54,7 +54,7 @@ When your account is set up on our side, we will forward your lab keys over Sign
 
 ::: warning Expect these keys on your phone
 
-A successful transfer to your phone should include four (4) keys: 
+A successful transfer to your phone should include four (4) keys:
 
 - **`ZIP file key`** - your key for unlocking the archive file sent on email.
 - **`Google Authenticator key`** - your key for generating Google Authenticator verification codes.
@@ -77,11 +77,11 @@ We will communicate your VPN certificate and SSH configuration over your organiz
 
 Click on these links for installation guidance if your current software don't recognize the 7z-format: [windows](https://www.google.no/search?q=unpack+7z+windows), [mac](https://www.google.no/search?q=unpack+7z+mac), [linux](https://www.google.no/search?q=unpack+7z+linux).
 
-::: 
+:::
 
 ::: warning Expect these files on your local machine
 
-A successful extraction on your local machine should include two (2) files: 
+A successful extraction on your local machine should include two (2) files:
 
 
 - **`<your-username>.ovpn`** - your personal VPN certificate to be used in step 2.
@@ -123,7 +123,7 @@ A 6 digit **`verification code`** that refreshes ever 30 seconds in the Google A
 
 ## 1.4 Verify your key collection
 
-A successful completion of this step should give you: 
+A successful completion of this step should give you:
 
 - Four (4) keys on your phone stored in Signal
 - Two (2) files stored on your local machine
