@@ -73,7 +73,7 @@ Connected to 10.42.132.<number>.
 sftp>
 ```
 
-## Upload data
+## Upload
 
 ::: tip 
 This section is aimed at the lab user that will **upload** data to the kista. See below if you plan to download data to your lab.
@@ -117,7 +117,7 @@ reput /mnt/cargo/example-file1.txt
 
 
 
-## Download data
+## Download
 
 ::: tip 
 This section is aimed at the lab user that will **download** data from the kista.
