@@ -1,4 +1,5 @@
 ---
+title: Agreement
 permalink: /about/agreements
 sidebarDepth: 1
 ---

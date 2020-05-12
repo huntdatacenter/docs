@@ -1,6 +1,6 @@
 ---
 title: SSHFS
-permalink: /working-in-your-lab/technical-tools/sshfs
+permalink: /working-in-your-lab/transfer-tools/sshfs
 sidebarDepth: 1
 ---
 

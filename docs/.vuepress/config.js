@@ -64,7 +64,6 @@ module.exports = {
           collapsable: false,
           children: ["",
             "system-status",
-            "news",
             "contribute",
             "contact"
           ]
@@ -74,6 +73,7 @@ module.exports = {
           // collapsable: false,
           children: [
             "about/",
+            "about/news",
             "about/agreements"
           ]
         },
@@ -88,15 +88,6 @@ module.exports = {
           ]
         },
         {
-          title: "Data transfer",
-          // collapsable: false,
-          children: [
-            "data-transfer/",
-            "data-transfer/internal-kista.md",
-            "data-transfer/external-kista.md"
-          ]
-        },
-        {
           title: "Working in your lab",
           // collapsable: false,
           children: [
@@ -106,12 +97,10 @@ module.exports = {
               // collapsable: false,
               children: [
                 "working-in-your-lab/technical-tools/",
-                "working-in-your-lab/technical-tools/7z",
                 "working-in-your-lab/technical-tools/git",
                 "working-in-your-lab/technical-tools/gpu",
                 "working-in-your-lab/technical-tools/htop",
                 "working-in-your-lab/technical-tools/mobaxterm",
-                "working-in-your-lab/technical-tools/sshfs",
                 "working-in-your-lab/technical-tools/terminal-multiplexers",
                 "working-in-your-lab/technical-tools/x2go"
               ]
@@ -140,9 +129,20 @@ module.exports = {
               // collapsable: false,
               children: [
                 "working-in-your-lab/transfer-tools/",
+                "working-in-your-lab/transfer-tools/7z",
+                "working-in-your-lab/transfer-tools/sshfs",
                 "working-in-your-lab/transfer-tools/winscp"
               ]
             }
+          ]
+        },
+        {
+          title: "Data transfer",
+          // collapsable: false,
+          children: [
+            "data-transfer/",
+            "data-transfer/internal-kista.md",
+            "data-transfer/external-kista.md"
           ]
         },
         {

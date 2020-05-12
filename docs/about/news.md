@@ -1,6 +1,6 @@
 ---
 title: News
-permalink: /news
+permalink: /about/news
 sidebarDepth: 0
 ---
 
