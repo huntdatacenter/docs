@@ -6,7 +6,7 @@ sidebarDepth: 1
 
 # Internal kista
 
-Internal kista provide a simple and controlled way to transfer data between two labs inside HUNT Cloud. In short, internal kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers dedicated to one data transfer between two lab environments.
+Internal kistas provide labs with a simple and controlled way to transfer data between two labs inside HUNT Cloud. In short, internal kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers dedicated to one data transfer between two lab environments.
 
 ::: tip Note
 This page describes the practical aspects of kista transfers. Head over to our [Transfer section](/faq/transfer/) in the FAQ for more information on the service itself.
@@ -21,8 +21,8 @@ Internal kistas are ordered by the uploader Lab leader or Lab coordinator using 
 
 The form defines two roles that we will use in this document: 
 
-- **Uploader**. This is a lab user in the Lab that orders the Kista whom will upload the data. 
-- **Downloader**. This is a lab user in the lab that will download the data.
+- **Uploader**. This is the lab user in the Lab that has ordered the Kista and that will provide (upload) data. 
+- **Downloader**. This the lab user in the lab that will receive (download) data.
 
 ## Connect
 
