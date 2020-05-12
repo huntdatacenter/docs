@@ -4,11 +4,8 @@ export default ({ router }) => {
     // `to` and `from` are both route objects
     // this.name = to.params.name
     try {
-      // console.log("https://assets.hdc.ntnu.no" + to.path);
-      // console.log(to.path);
-      // console.log(to);
       if (to.path.startsWith('/assets/') && to.path.endsWith(".pdf")) {
-        // console.log("https://assets.hdc.ntnu.no" + to.path);
+        // NOTE Redirect PDF assets if not found - fails to redirect existing
         window.location.href = "https://assets.hdc.ntnu.no" + to.path;
         next();
       } else {
