@@ -76,7 +76,7 @@ sftp>
 ## Upload
 
 ::: tip 
-This section is aimed at the lab user that will **upload** data to the kista. See below if you plan to download data to your lab.
+This section is aimed at the lab user that will **upload** data to a kista. See the [download section](#download) if you plan to download data to your lab.
 :::
 
 1. Once inside your kista, move to the **`upload`** folder.
@@ -120,7 +120,7 @@ reput /mnt/cargo/example-file1.txt
 ## Download
 
 ::: tip 
-This section is aimed at the lab user that will **download** data from the kista.
+This section is aimed at the lab user that will **download** data from a kista.
 :::
 
 1. Once inside your kista, move to the **`upload`** folder.
