@@ -7,34 +7,39 @@ sidebarDepth: 2
 # External kista
 
 External kistas support labs with a simple and secure way to transport data in or out of their lab in HUNT Cloud and to or from an external user located outside HUNT Cloud.
-In short, external kistas are short-lived and hardened SFTP servers that are dedicated to one specific data transaction of data transport.
+In short, external kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers that are dedicated to one specific data transaction of data transport.
 
 ## For external users
 
-### Technical requirements
+::: tip 
+This section aims to give a technical description on how external users outside HUNT Cloud can connect and transfer data to our hosted SFTP service (external kista). See our [transfer section](/faq/transfer/) in the FAQ for more information on the service itself.
+:::
 
-The following requirements are necessary in order for external users to connect and transfer data to our hosted SFTP service called external kista:
+As an external user outside HUNT Cloud, you will need to meet three technical requirements to import data to a dedicated external kista. 
 
 - [SSH key pair](#ssh-key)
 - [SFTP client](#sftp-client)
 - [Network connection to HUNT Cloud](#network-connection-to-hunt-cloud)
 
-### SSH key pair
+### 1. SSH key pair
 
-The external kistas use SSH public key authentication in order to authenticate users instead of passwords.
-This means that the external user must create a SSH key pair and forward the public key so we can authenticate it when external users connect.
+You will use a SSH public key to authentication and access your kista (instead of passwords). Before we can deploy the kista, you must therefore provide us with a public key from a SSH key pair. This section describe how to do this. 
 
-We recommend creating a separate SSH key pair for each kista agreement and we accept the following public key types:
+#### Key types 
+
+We accept the following public key types:
 
 - **`RSA`**
 - **`ECDSA`**
 - **`Ed25519`**
 
-In case external users do not have their own procedures for creating SSH key pairs, we recommend using the guide below:
+#### Generate a SSH key pair
+
+We recommend that you create a dedicated SSH key pair for each kista transfer. Click on the section below for a step wise guide on how to generate a new key pair in Windows that you can use for your kista access.
 
 ::: details How to generate a RSA SSH key pair on Windows with WinSCP
 
-[WinSCP](https://winscp.net/) is an open source data transfer client for Windows that we recommend for SFTP transfers. Download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and install the software.
+[WinSCP](https://winscp.net/) is an open source data transfer client for Windows that we recommend for SFTP transfers. Download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and install the software. Follow these steps to generate a RSA SSH key pair: 
 
 1. In **`WinSCP`**:
    - Click **`New Session`**
@@ -52,7 +57,7 @@ In case external users do not have their own procedures for creating SSH key pai
    - Enter **`ekista`** in **`Key comment`**
    - Enter a passphrase in **`Key passphrase`**
    - Enter the same passphrase in **`Confirm passphrase`**
-   - N.B. This passphrase must be entered when using the SSH key so please make sure to remember it or store it in a suitable password manager.
+   - Note. You will use this passphrase when you use the SSH key during the kista connection, so please make sure to remember it or store it in a suitable password manager.
    - Click **`Save private key`**
 
 ![winscp_sshkey_3](./images/winscp_sshkey_3.png "winscp_sshkey_3")
@@ -80,19 +85,23 @@ You should now have a SSH key pair consisting of the following files:
 
 - The private key **`ekista.ppk`**
 - The public key **`ekista.pub`**
+
+7. Forward the public key named **`ekista.pub`** to us on email ([Contact information](/contact)). The public key is used for encryption only and can be sent in clear text.
+
   :::
 
-### SFTP client
+### 2. SFTP client
 
-The external kistas are SFTP servers and therefore require an SFTP client in order to connect and transfer data.
+You will need a SFTP client to connect and transfer data to the external kista. In addition you will need the external kista account information to be able to connect. This will be forwarded by HUNT Cloud on the time of deployment.
 
-After an external kista is deployed, we will send the necessary transfer information such as:
-
+::: warning Requirements
+You will need your external kista account information forwarded by HUNT Cloud to complete this step. This information includes: 
 - **`Host name`**
 - **`Port number`**
 - **`User name`**
+:::
 
-In case external users do not have a SFTP client, we recommend using the guide below:
+Below is a guide on how to connect using the WinSCP SFTP client on Windows. 
 
 ::: details How to connect to an external kista on Windows with WinSCP
 
@@ -103,8 +112,8 @@ In case external users do not have a SFTP client, we recommend using the guide b
 
 2. In the **`Login`** window:
    - Enter **`ekista.hdc.ntnu.no`** as **`Host name`**
-   - Enter the port number from the transfer info as **`Port number`**
-   - Enter the user name from the transfer info as **`User name`**
+   - Enter the port number from the transfer info as **`Port number`** (the number in the example will not work).
+   - Enter the user name from the transfer info as **`User name`** (the name in the example will not work).
    - Click **`Advanced`**
 
 ![ekista_7](./images/ekista_2.png "ekista_7")
@@ -123,7 +132,7 @@ In case external users do not have a SFTP client, we recommend using the guide b
 ![ekista_9](./images/ekista_4.png "ekista_9")
 
 5. In the **`Save session as site`** window:
-   - Choose a **`Site name`** if required
+   - Choose a **`Site name`** if required, combining the **`User name`** and **`Host name`** (the site name given in the example will not work).
    - Click **`OK`**
 
 ![ekista_10](./images/ekista_5.png "ekista_10")
@@ -145,7 +154,7 @@ In case external users do not have a SFTP client, we recommend using the guide b
 ![ekista_13](./images/ekista_8.png "ekista_13")
 
 9. In the **`Key passphrase`** window:
-   - Enter the passphrase for the private key **`ekista.ppk`**. If you followed the previous guide, then this should be the passphrase that was set during the generation of the SSH key pair.
+   - Enter the passphrase for your private key. If you followed the previous guide, this should be the **`ekista.ppk`** key and passphrase that you set during the generation in the [SSH key pair](#ssh-key) section above.
    - Click **`OK`**
 
 ![ekista_13](./images/ekista_9.png "ekista_13")
@@ -158,9 +167,9 @@ In case external users do not have a SFTP client, we recommend using the guide b
 ![ekista_13](./images/ekista_10.png "ekista_13")
 :::
 
-### Network connection to HUNT Cloud
+### 3. Network traffic
 
-External users might require firewall exemptions in order to communicate with external kistas in HUNT Cloud as it is outside their network.
+Successful access to external kistas might require firewall exemptions set by your host organization as traffic will go in and out of your organizational network and to and from HUNT Cloud.
 
 Please use the following network details to ensure that it is possible to connect to external kistas:
 
@@ -169,7 +178,8 @@ Please use the following network details to ensure that it is possible to connec
 - **`Protocol: TCP`**
 
 ::: tip Specific port number
-We will send the specific port number in the transfer information after deployment of an external kista
+You will connect to a specific port number to access the external kista for an individual data transfer. We will send this number in your transfer information after deployment.
 :::
+
 
 Please [contact us](/contact) if you require more details or if it is impossible to open for this port range.
