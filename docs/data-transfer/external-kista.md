@@ -11,7 +11,7 @@ External kistas support labs with a simple and secure way to transport data from
 
 ## For external users
 
-::: tip 
+::: tip Note
 This section aims to give a technical description on how external users outside HUNT Cloud can connect and transfer data to our hosted SFTP service (external kista). See our [transfer section](/faq/transfer/) in the FAQ for more information on the service itself.
 :::
 
@@ -23,7 +23,7 @@ As an external user outside HUNT Cloud, you will need to meet three technical re
 
 ### SSH key pair
 
-You will use a SSH public key to authentication and access your kista (instead of passwords). Before we can deploy the kista, you must therefore provide us with a public key from a SSH key pair. This section describe how to do this. 
+You will use a SSH public key to authenticate and access your kista (instead of passwords). Before we can deploy the kista, you must therefore provide us with a public key from a SSH key pair. This section describes how to do this. 
 
 #### Key types 
 
@@ -92,10 +92,10 @@ You should now have a SSH key pair consisting of the following files:
 
 ### SFTP client
 
-You will need a SFTP client to connect and transfer data to the external kista. In addition you will need the external kista account information to be able to connect. This will be forwarded by HUNT Cloud on the time of deployment.
+You will need a SFTP client to connect and transfer data to the external kista. In addition you will need the external kista transfer information to be able to connect. This will be forwarded by HUNT Cloud on the time of deployment.
 
 ::: warning Requirements
-You will need your external kista account information forwarded by HUNT Cloud to complete this step. This information includes: 
+You will need your external kista transfer information forwarded by HUNT Cloud to complete this step. This information includes: 
 - **`Host name`**
 - **`Port number`**
 - **`User name`**
@@ -112,8 +112,8 @@ Below is a guide on how to connect using the WinSCP SFTP client on Windows.
 
 2. In the **`Login`** window:
    - Enter **`ekista.hdc.ntnu.no`** as **`Host name`**
-   - Enter the port number from the transfer info as **`Port number`** (the number in the example will not work).
-   - Enter the user name from the transfer info as **`User name`** (the name in the example will not work).
+   - Enter the port number from the transfer information as **`Port number`** (the number in the example will not work).
+   - Enter the user name from the transfer information as **`User name`** (the name in the example will not work).
    - Click **`Advanced`**
 
 ![ekista_7](./images/ekista_2.png "ekista_7")
@@ -143,7 +143,7 @@ Below is a guide on how to connect using the WinSCP SFTP client on Windows.
 ![ekista_11](./images/ekista_6.png "ekista_11")
 
 7. In the **`Warning`** window:
-   - Compare and verify that the appropriate **`SHA-256 key fingerprint`** from the transfer info matches
+   - Compare and verify that the appropriate **`SHA-256 key fingerprint`** from the transfer information matches
    - Click **`Yes`**
 
 ![ekista_12](./images/ekista_7.png "ekista_12")
