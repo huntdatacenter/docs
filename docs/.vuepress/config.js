@@ -164,6 +164,8 @@ module.exports = {
             "faq/storage",
             "faq/compute",
             "faq/transfer",
+            "faq/internal-transfer",
+            "faq/external-transfer",
             "faq/security"
           ]
         }
