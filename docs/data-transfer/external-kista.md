@@ -17,9 +17,9 @@ This section aims to give a technical description on how external users outside 
 
 As an external user outside HUNT Cloud, you will need to meet three technical requirements to import data to a dedicated external kista. 
 
-- [SSH key pair](#ssh-key)
+- [SSH key pair](#ssh-key-pair)
 - [SFTP client](#sftp-client)
-- [Network connection to HUNT Cloud](#network-connection-to-hunt-cloud)
+- [Network connection to HUNT Cloud](#network-traffic)
 
 ### SSH key pair
 
