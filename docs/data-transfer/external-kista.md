@@ -143,6 +143,7 @@ Below is a guide on how to connect using the WinSCP SFTP client on Windows.
 ![ekista_11](./images/ekista_6.png "ekista_11")
 
 7. In the **`Warning`** window:
+   - Compare and verify that the appropriate **`SHA-256 key fingerprint`** from the transfer info matches
    - Click **`Yes`**
 
 ![ekista_12](./images/ekista_7.png "ekista_12")
