@@ -59,7 +59,7 @@ No, we don't think so. It is our responsibility to ensure the correct receiver o
 ## External transfers (kistas)
 
 ### Can parties outside HUNT Cloud upload data to my lab? 
-Yes. Remote parties can upload data directly to your lab utilizing the external kista service.
+Yes. Remote parties can upload data to your lab utilizing the external kista service.
 
 ### What is an external kista? 
 External kista is our service for controlled data transfers between your lab and an external user outside HUNT Cloud. The transfer take place on a time-limited SFTP server that is dedicated for your specific data transaction. 
