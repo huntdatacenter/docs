@@ -91,6 +91,10 @@ A quick way to install open-source software packages is to use the built in [apt
 sudo apt install <packagename>
 ```
 
+### Where can I install my software? 
+
+On you home machine, we recommend that you install software that you download in a folder that is reachable for all of your fellow lab users, such as **`/mnt/works/software`**. Software installations that uses **`apt`** (see above) will automatically install in the correct folders. 
+
 ### Can I run MatLab, Stata, SPSS and RStudio?
 
 Yes. You can run commonly used analytical tools, such MatLab, Stata, SPSS and Rstudio directly from your lab. You will need to bring a license from your host institution if you are affiliated outside of NTNU. Graphical user interfaces are accessed through the X2Go-software. [Contact us](/contact) for installations on home-machines.
