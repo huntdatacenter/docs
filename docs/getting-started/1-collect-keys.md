@@ -144,12 +144,16 @@ If you successfully completed this step, celebrate with fresh coffee and head ov
 
 **I am unable to install or run Signal on my phone.** Steps to resolve issues with Signal may vary by phone model and OS. Signal has a handy [troubleshooting guide ](https://support.signal.org/hc/en-us/articles/360007318711-Troubleshooting-Notifications) as a starting point. [Contact us](/contact) if this do not resolve your issue.
 
-### 7z file
+### 7z file for Mac
+
+**The ZIP password do not seem to work?** The default zip software may give you an error message when unpacking the 7z-format locked with a passphrase. Try to download and unpack with the 7z appliction in the [decryption links](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email). [Contact us](/contact) if this does not work.
+
+### 7z file for Windows
 
 **I am unable to unpack the 7z-file forwarded on email.** If the [decryption links](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
 
+### More information
+
 See our main [troubleshooting](/troubleshooting/connection/) section for more information. Please [contact us](/contact) if you encounter issues that we have not yet documented.
-
-
 
 :::
