@@ -64,6 +64,23 @@ Host gitlab.com
 
 See GitLab's [article](https://about.gitlab.com/2016/02/18/gitlab-dot-com-now-supports-an-alternate-git-plus-ssh-port/) for more details.
 
+### How to access Bitbucket
+
+Add the following lines to your SSH configuration file `~/.ssh/config` on your `home` machine on HUNT Cloud:
+
+::: tip
+If the SSH configuration file `~/.ssh/config` does not exist, you have to create it.
+:::
+
+```ini
+Host bitbucket.org
+  Hostname altssh.bitbucket.org
+  User git
+  Port 443
+```
+
+See [Atlassian troubleshooting guide](https://confluence.atlassian.com/bitbucket/troubleshoot-ssh-issues-271943403.html#TroubleshootSSHissues-Ifport22isblocked) for more details.
+
 ## Set up
 
 ### Generate a new SSH key for the connection
