@@ -32,22 +32,22 @@ These steps guide the installation of Matlab on unmanaged [iaas or blue](/faq/co
    choose your desired version in the top right corner and download on your local computer.
    We recommend that you skip the latest version and choose a slightly older version to ensure a reliable installation.
 
-2. Transfer Matlab to your preferred folder in your lab machine, for example /mnt/work/software/Matlab/)
+2. Transfer Matlab to your preferred folder in your lab machine (for example `/mnt/scratch/matlab/`)
 3. Unpack the zip file in your folder.
 
-   Install software:
+   Install dependencies:
 
    ```bash
-   sudo apt install unzip
+   sudo apt install unzip libnss3
    ```
 
-   Unzip:
+   Unzip Matlab installer:
 
    ```bash
-   unzip <Matlabfile.zip>
+   unzip <matlabfile.zip>
    ```
 
-4. Make all files in folder executables: `chmod -R 777 <Matlab-folder>`. This is a primitive fix so you are able to run the files within subfolders as required by Matlab.
+4. Make all files in folder executables: `chmod -R 777 <matlab-folder>` (e.g. /mnt/scratch/matlab/). This is a primitive fix so you are able to run the files within subfolders as required by Matlab.
 
 ## Activate license
 
@@ -71,17 +71,22 @@ Make sure you add a new/empty line after "USE_SERVER".
 
 The below steps require the code to be run in `xterm` started from X2GO on the machine holding the Matlab files downloaded in the above steps.
 
-1. Go to your Matlab folder and run the installer:
+1. Prepare target directory:
+   ```
+   mkdir /mnt/work/software/matlab2019b
+   ```
+
+2. Go to your Matlab installation folder (e.g. /mnt/scratch/matlab/) and run the installer:
 
    ```
-   sudo ./install
+   bash ./install
    ```
 
-2. During the install choose: `Use a File Installation Key`
-3. Choose `I have the File Installation Key for my license` and enter the key (these are found on you software repository)
-4. Follow the installer and choose the packages you want.
-5. When the installer ask for your product activation, choose the `non internet` option and provide the location of the `license.dat` file previously generated.
-6. If successful, your should see a "product activation message".
+3. During the installation choose: `Use a File Installation Key`
+4. Choose `I have the File Installation Key for my license` and enter the key (these are found on you software repository)
+5. Follow the installer and choose the packages you want.
+6. When the installer asks for your product activation, choose the `non internet` option and provide the location of the `license.dat` file previously generated.
+7. If successful, your should see `product activation message`.
 
 ## Run
 
