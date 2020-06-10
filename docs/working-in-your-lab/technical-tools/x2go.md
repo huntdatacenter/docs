@@ -39,6 +39,7 @@ Use [brew](https://brew.sh/) (a handy package manager for macOS) to install both
 
   ::: warning XQuartz
   If this is your first time installing XQuartz, you **must** logout and log back in or restart your Mac for it to work.
+  :::
 
 Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks of the X2Go client.
 
