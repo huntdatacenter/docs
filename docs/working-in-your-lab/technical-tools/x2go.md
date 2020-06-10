@@ -366,3 +366,11 @@ From time to time your X2Go sessions may get stuck, such as when your software i
 
 6. Restart X2Go.
    :::
+
+::: details XQuartz in Mac
+
+If XQuartz is used as X11 Server on OS X, X2Go Client has to be informed. Click on the screw-wrench in the upper left bar in order to open the settings window. If not indicated yet, select XQuartz for the X11 application and supply the right version.
+
+![XQuartz](./images/mac-osx-xquartz.png "XQuartz - Mac OS X")
+
+:::
