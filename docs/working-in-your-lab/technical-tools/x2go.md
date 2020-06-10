@@ -30,17 +30,17 @@ Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2gocl
 
 ::: details OS X/macOS
 
-- Run brew to install both xquartz and x2goclient:
+Use [brew](https://brew.sh/) (a handy package manager for macOS) to install both XQuartz (required for X2Go) and the X2Go client:
 
   ```bash
   brew cask install xquartz
   brew cask install x2goclient
   ```
 
-  ::: tip REQUIREMENT
-  [Install Homebrew package manager for macOS: brew](https://brew.sh/)
+  ::: warning XQuartz
+  If this is your first time installing XQuartz, you **must** logout and log back in or restart your Mac for it to work.
 
-- Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks.
+Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks of the X2Go client.
 
   ::: warning OS X 10.15 Catalina
   In case of issues with x2goclient you can try [nightly build](https://code.x2go.org/releases/X2GoClient_nightly_macosx/x2goclient-4.1.2.2.git20191230.1893.heuler.OSX_10_13.dmg) version.
