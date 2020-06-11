@@ -3,6 +3,7 @@ title: News
 category: HUNT Cloud
 permalink: /news
 sidebarDepth: 0
+description: Monthly highlights from our activities.
 ---
 
 # News

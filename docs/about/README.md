@@ -1,4 +1,5 @@
 ---
+title: Introduction
 category: HUNT Cloud
 permalink: /about/
 ---

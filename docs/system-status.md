@@ -1,5 +1,8 @@
 ---
+title: System status
+category: HUNT Cloud
 permalink: /system-status
+description: Updates will be posted here if there is any service or performance interruption.
 ---
 
 # System status
@@ -8,5 +11,4 @@ permalink: /system-status
 Operational.
 :::
 
-We monitor HUNT Cloud. Updates will be posted here if there are any service or performance interruption.
-
+We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.

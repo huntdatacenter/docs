@@ -1,6 +1,8 @@
 ---
 title: Welcome
+category: HUNT Cloud
 readingTime: null
+description: HUNT Cloud is a scientific computing service located at NTNU in Norway. These pages contains official user documentation on our cloud services. Their content is aimed at lab users.
 ---
 
 # Welcome to the HUNT Cloud Documentation
