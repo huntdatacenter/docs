@@ -189,6 +189,16 @@ module.exports = {
       }
     ],
     [
+      "seo",
+      {
+        siteTitle: (_, $site) => $site.title,
+        title: $page => $page.title,
+        description: $page => $page.frontmatter.description,
+        type: $page => ['getting-started', 'working-in-your-lab', 'data-transfer'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
+        url: (_, $site, path) => ($site.themeConfig.domain || 'https://docs.hdc.ntnu.no') + path
+      }
+    ],
+    [
       "vuepress-plugin-sitemap",
       {
         hostname: "https://docs.hdc.ntnu.no"

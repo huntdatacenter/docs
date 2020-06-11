@@ -20,6 +20,7 @@
     "vuepress-plugin-sitemap": "^2.1.2"
   },
   "dependencies": {
-    "vuepress-plugin-container": "^2.1.2"
+    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-plugin-seo": "^0.1.3"
   }
 }
