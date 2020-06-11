@@ -65,6 +65,7 @@ module.exports = {
           children: ["",
             "system-status",
             "contribute",
+            "news",
             "contact"
           ]
         },
@@ -73,7 +74,6 @@ module.exports = {
           // collapsable: false,
           children: [
             "about/",
-            "about/news",
             "about/agreements"
           ]
         },
