@@ -1,5 +1,6 @@
 ---
 title: SSHFS
+category: Transfer tools
 permalink: /working-in-your-lab/transfer-tools/sshfs
 sidebarDepth: 1
 ---

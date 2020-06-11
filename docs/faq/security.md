@@ -1,5 +1,6 @@
 ---
 title: Security
+category: FAQ
 permalink: faq/security
 sidebarDepth: 1
 ---
@@ -12,7 +13,7 @@ This page lists frequently asked questions related to security management in lab
 
 ## Incident reporting
 
-### What is a security incident? 
+### What is a security incident?
 
 For practical purposes, something that may lead to a data breach, data loss or a violation of our [user agreement](/about/agreements/). [Contact us](/contact) for formal definitions.
 
@@ -33,14 +34,14 @@ Yes. We recommend that your use a lawyer as your intermediate if you wish to rem
 
 ### How is data classified in HUNT Cloud?
 
-| **Classification** | **Description** | **Examples** | 
-| - | - | - 
-| Sensitive | Research data that can indirectly identify research participants. | Individual level data such as phenotype data and genotype data. | 
+| **Classification** | **Description** | **Examples** |
+| - | - | -
+| Sensitive | Research data that can indirectly identify research participants. | Individual level data such as phenotype data and genotype data. |
 | Internal |  Research data that can *not* identify research participants. | Summary statistics, figures, computer code, non-human data, encrypted sensitive data. |
 
 Storage volumes are classified as sensitive by default. Volumes may be declassified to internal in agreement with the respective data controllers and lab owners.
 
-Volumes classified as internal may be mounted directly to individual lab users' machines under the following conditions: 
+Volumes classified as internal may be mounted directly to individual lab users' machines under the following conditions:
 
 - the lab owner, the lab's host institution and data controller(s) allow such a set-up.
 - the lab owner take the direct responsibility to ensure that volumes classified as internal do not hold sensitive data.

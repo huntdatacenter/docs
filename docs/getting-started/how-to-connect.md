@@ -1,4 +1,6 @@
 ---
+title: How to connect
+category: Getting started
 permalink: /getting-started/how-to-connect
 sidebarDepth: 3
 ---

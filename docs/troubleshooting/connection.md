@@ -1,5 +1,6 @@
 ---
 title: Connection
+category: Troubleshooting
 permalink: /troubleshooting/connection
 sidebarDepth: 1
 ---
@@ -32,7 +33,7 @@ Our VPN service communicate with your local machine on a specific port that need
 
 ### Lost or missing VPN passphrase
 
-Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile)  if this happens. [Contact us](/contact) on mail for such a request and allow a few days in shipping. 
+Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile)  if this happens. [Contact us](/contact) on mail for such a request and allow a few days in shipping.
 
 ### Broken VPN connection
 
@@ -51,7 +52,7 @@ If your VPN login suddenly stops working, and you are pretty sure your user name
 
 Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Send us](/contact) a new [user agreement](/about/agreements/#user-agreement) if you need your account reactivated.
 
-### New VPN certificate 
+### New VPN certificate
 
 You will need to remove your old VPN certificate and passwords before you install a new one. On Windows, (1) right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select **`remove passwords`**, and (2) open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here: **`C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>`**. Now, right click on the OpenVPN icon once more and "import from file" from the [Connect to the VPN](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) section of our Getting started guide.
 
@@ -124,6 +125,3 @@ Your message will be slightly different as the **`username`** and **`machine-nam
 ::: warning
 If you see this message any other time, please [contact us](/contact) for further investigations.
 :::
-
-
-

@@ -1,5 +1,6 @@
 ---
 title: EPACTS
+category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/epacts
 sidebarDepth: 0
 ---

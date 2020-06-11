@@ -1,5 +1,6 @@
 ---
 title: GPU
+category: Technical tools
 permalink: /working-in-your-lab/technical-tools/gpu
 sidebarDepth: 1
 ---

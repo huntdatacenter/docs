@@ -1,5 +1,6 @@
 ---
 title: Conda
+category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/conda
 sidebarDepth: 1
 ---

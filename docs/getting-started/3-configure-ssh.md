@@ -1,4 +1,6 @@
 ---
+title: SSH configuration
+category: Getting started
 permalink: /getting-started/configure-ssh
 sidebarDepth: 1
 ---
@@ -14,9 +16,9 @@ These steps will configure your SSH connection to and from your local machine an
 
 
 
-## 3.1 Identify required info 
+## 3.1 Identify required info
 
-Open the **`ssh-config.txt`** file that you collected in Step 1 using your favourite text editor. 
+Open the **`ssh-config.txt`** file that you collected in Step 1 using your favourite text editor.
 
 This file contains the necessary information for your SSH configuration. Take note of your **`lab-name`**, your **`lab-IP`** and your **`username`**.
 
@@ -58,7 +60,7 @@ AnalysingPokemon4FunInTheMorning
 
 ::: warning Expected outcome
 
-A unique **`passphrase`** of minimum 12 characters containing both lower and upper cases. 
+A unique **`passphrase`** of minimum 12 characters containing both lower and upper cases.
 
 :::
 
@@ -70,7 +72,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 ## 3.3 Configure entry
 
-::: details Windows 
+::: details Windows
 
 1. Download and save the **`Putty`** SSH client from [this link](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe).
 
@@ -80,7 +82,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 4. Enter your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password. You will not see anything on the screen when you type your password.
 
-5. Type the same **`SSH temporary key`** _one more time_ when asked. 
+5. Type the same **`SSH temporary key`** _one more time_ when asked.
 
 6. Enter your new **`passphrase`** from above.
 
@@ -94,7 +96,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 ::: details OS X and macOS
 
-1. Start **`Terminal`** (Command + Space, type "Terminal"). 
+1. Start **`Terminal`** (Command + Space, type "Terminal").
 
 2. Type **`ssh <your-username>@<your-lab-IP>`**
 
@@ -114,7 +116,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 ::: details Ubuntu Linux
 
-1. Start **`Gnome Terminal`** (Ctrl + Alt + T). 
+1. Start **`Gnome Terminal`** (Ctrl + Alt + T).
 
 2. Type **`ssh <your-username>@<your-lab-IP>`**
 
@@ -154,7 +156,7 @@ For the record, if you shouldn't be here - please
 leave and report the incident to cloud@hunt.ntnu.no.
 
 Last login: Mon Jul  2 17:40:16 2018 from 10.10.10.10
-your-username@your-labname-`entry`:~$ 
+your-username@your-labname-`entry`:~$
 
 :::
 
@@ -175,7 +177,7 @@ your-username@your-labname-`entry`:~$
 
 3. Similar to above, you will be asked for a new password. Type your **`passphrase`** _two times_.
 
-4. Similar to above, you will be kicked out of your home machine and back to your entry machine by completion. 
+4. Similar to above, you will be kicked out of your home machine and back to your entry machine by completion.
 
 5. Similar to above, verify a successful passphrase update by logging into your home machine typing **`ssh home`** once more.
 
@@ -232,7 +234,7 @@ We hope that you will log into your lab a lot over the coming months and years, 
 
 ::: details Windows
 
-1. [Configure MobaXterm](/working-in-your-lab/technical-tools/mobaxterm) for simple and "password less" access directly to your home machine, as well as click-based file transfers between your local machine and your home machine. 
+1. [Configure MobaXterm](/working-in-your-lab/technical-tools/mobaxterm) for simple and "password less" access directly to your home machine, as well as click-based file transfers between your local machine and your home machine.
 
 2. [Configure X2Go](/working-in-your-lab/technical-tools/x2go/#set-up-your-local-machine) for "password less" one-click access to graphical software in your lab, such as RStudio.
 
@@ -241,9 +243,9 @@ We hope that you will log into your lab a lot over the coming months and years, 
 
 ::: details OS X, MacOS and Ubuntu Linux
 
-When completed, the steps below should allow you to log "password less" directly into your home machine by typing: 
+When completed, the steps below should allow you to log "password less" directly into your home machine by typing:
 
-```bash 
+```bash
 ssh your-lab-name
 ```
 
@@ -255,7 +257,7 @@ This will allow you to log directly into your lab without the need to remember y
 
 2. On your local machine, add the content from the **`ssh-config.txt`** to the file named **`config`** in the hidden ssh-folder in your home directory (**`~/.ssh/config`**) using your favorite file editor. You may need to generate this file if it is your first ssh-configuration.
 
-3. Test your new setup by typing **`ssh <your-lab-name>-entry`** in your terminal. For example: 
+3. Test your new setup by typing **`ssh <your-lab-name>-entry`** in your terminal. For example:
 
 ```
 ssh demolab-entry
@@ -268,7 +270,7 @@ You should now be prompted your passphrase and then be logged into your entry-ma
 
 This will allow you to log directly into your lab without the need to remember your passphrase.
 
-> If you already have a RSA certificate on your local computer that you would like to use, start from step 3. 
+> If you already have a RSA certificate on your local computer that you would like to use, start from step 3.
 
 1. In your local computer, open a terminal.
 2. Generate a new RSA certificate by typing **`ssh-keygen`**. Hint enter _three times_. When this finishes:
@@ -283,7 +285,7 @@ Simple and secure, you should now be able to directly enter your home node with 
 ssh <your-lab-name>
 ```
 
-for example, 
+for example,
 
 ```bash
 ssh demolab

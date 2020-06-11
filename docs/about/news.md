@@ -1,5 +1,6 @@
 ---
 title: News
+category: HUNT Cloud
 permalink: /about/news
 sidebarDepth: 0
 ---

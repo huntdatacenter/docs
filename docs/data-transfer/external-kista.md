@@ -1,7 +1,9 @@
 ---
 title: External kista
+category: Data transfer
 permalink: /data-transfer/external-kista
 sidebarDepth: 2
+description: External kistas support labs with a simple and secure way to transport data from an external user located outside HUNT Cloud and into their lab in HUNT Cloud.
 ---
 
 # External kista
@@ -15,7 +17,7 @@ External kistas support labs with a simple and secure way to transport data from
 This section aims to give a technical description on how external users outside HUNT Cloud can connect and transfer data to our hosted SFTP service (external kista). See our [transfer section](/faq/transfer/) in the FAQ for more information on the service itself.
 :::
 
-As an external user outside HUNT Cloud, you will need to meet three technical requirements to import data to a dedicated external kista. 
+As an external user outside HUNT Cloud, you will need to meet three technical requirements to import data to a dedicated external kista.
 
 - [SSH key pair](#ssh-key-pair)
 - [SFTP client](#sftp-client)
@@ -23,9 +25,9 @@ As an external user outside HUNT Cloud, you will need to meet three technical re
 
 ### SSH key pair
 
-You will use a SSH public key to authenticate and access your kista (instead of passwords). Before we can deploy the kista, you must therefore provide us with a public key from a SSH key pair. This section describes how to do this. 
+You will use a SSH public key to authenticate and access your kista (instead of passwords). Before we can deploy the kista, you must therefore provide us with a public key from a SSH key pair. This section describes how to do this.
 
-#### Key types 
+#### Key types
 
 We accept the following public key types:
 
@@ -39,7 +41,7 @@ We recommend that you create a dedicated SSH key pair for each kista transfer. C
 
 ::: details How to generate a RSA SSH key pair on Windows with WinSCP
 
-[WinSCP](https://winscp.net/) is an open source data transfer client for Windows that we recommend for SFTP transfers. Download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and install the software. Follow these steps to generate a RSA SSH key pair: 
+[WinSCP](https://winscp.net/) is an open source data transfer client for Windows that we recommend for SFTP transfers. Download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and install the software. Follow these steps to generate a RSA SSH key pair:
 
 1. In **`WinSCP`**:
    - Click **`New Session`**
@@ -95,13 +97,13 @@ You should now have a SSH key pair consisting of the following files:
 You will need a SFTP client to connect and transfer data to the external kista. In addition you will need the external kista transfer information to be able to connect. This will be forwarded by HUNT Cloud on the time of deployment.
 
 ::: warning Requirements
-You will need your external kista transfer information forwarded by HUNT Cloud to complete this step. This information includes: 
+You will need your external kista transfer information forwarded by HUNT Cloud to complete this step. This information includes:
 - **`Host name`**
 - **`Port number`**
 - **`User name`**
 :::
 
-Below is a guide on how to connect using the WinSCP SFTP client on Windows. 
+Below is a guide on how to connect using the WinSCP SFTP client on Windows.
 
 ::: details How to connect to an external kista on Windows with WinSCP
 
@@ -187,5 +189,3 @@ Please [contact us](/contact) if you require more details or run into trouble.
 ## For internal users
 
 Lab users in HUNT Cloud that will download data from an external kista can follow the steps in our [download guide](/data-transfer/internal-kista/#download) for internal kistas.
-
-

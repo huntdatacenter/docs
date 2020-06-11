@@ -1,5 +1,6 @@
 ---
 title: Storage
+category: FAQ
 permalink: faq/storage
 sidebarDepth: 1
 ---

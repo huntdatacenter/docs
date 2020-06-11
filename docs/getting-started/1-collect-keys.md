@@ -1,4 +1,6 @@
 ---
+title: Collect your keys
+category: Getting started
 permalink: /getting-started/collect-your-keys
 sidebarDepth: 1
 ---

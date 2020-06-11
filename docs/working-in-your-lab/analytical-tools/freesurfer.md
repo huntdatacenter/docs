@@ -1,5 +1,6 @@
 ---
 title: Freesurfer
+category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/freesurfer
 sidebarDepth: 1
 ---

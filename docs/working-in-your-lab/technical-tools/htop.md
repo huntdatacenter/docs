@@ -1,5 +1,6 @@
 ---
 title: HTOP
+category: Technical tools
 permalink: /working-in-your-lab/technical-tools/htop
 sidebarDepth: 1
 ---

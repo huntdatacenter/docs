@@ -1,5 +1,6 @@
 ---
 title: PLINK
+category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/plink
 sidebarDepth: 1
 ---

@@ -1,5 +1,6 @@
 ---
 title: Matlab
+category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/Matlab
 sidebarDepth: 1
 ---

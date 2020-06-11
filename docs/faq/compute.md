@@ -1,7 +1,9 @@
 ---
 title: Compute
+category: FAQ
 permalink: faq/compute
 sidebarDepth: 1
+description: Frequently asked questions related to computation and analysis in labs.
 ---
 
 # FAQ on lab compute
@@ -91,9 +93,9 @@ A quick way to install open-source software packages is to use the built in [apt
 sudo apt install <packagename>
 ```
 
-### Where can I install my software? 
+### Where can I install my software?
 
-On you home machine, we recommend that you install software that you download in a folder that is reachable for all of your fellow lab users, such as **`/mnt/works/software`**. Software installations that uses **`apt`** (see above) will automatically install in the correct folders. 
+On you home machine, we recommend that you install software that you download in a folder that is reachable for all of your fellow lab users, such as **`/mnt/works/software`**. Software installations that uses **`apt`** (see above) will automatically install in the correct folders.
 
 ### Can I run MatLab, Stata, SPSS and RStudio?
 
@@ -103,11 +105,11 @@ Yes. You can run commonly used analytical tools, such MatLab, Stata, SPSS and Rs
 
 Most likely. Many commonly used software in scientific computing can be run from your lab, such as MatLab, Stata, and SPSS, including many special tools for image analysis and genetic analysis. However, we do run Linux as the operating systems in your lab. Some Windows tools will therefore be unavailable. We do provide Windows systems in those rare cases when this is the only option to run mission critical applications. [Contact us](/contact) if you think you do need Windows tools to get your science to fly.
 
-### Can I run Docker images? 
+### Can I run Docker images?
 
 Yes. You can run [Docker images](https://www.docker.com/) on both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](/faq/compute/#what-is-a-blue-machine) machines. Docker images can not be run from home machines due to security reasons.
 
-### Can I run Singularity containers? 
+### Can I run Singularity containers?
 
 Yes, you can run your Singularity containers on both home, iaas and blue machines.
 

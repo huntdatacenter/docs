@@ -1,5 +1,6 @@
 ---
 title: Performance
+category: Troubleshooting
 permalink: /troubleshooting/performance
 sidebarDepth: 1
 ---
@@ -19,4 +20,3 @@ sidebarDepth: 1
 ## Transfer
 
 ### Slow data transfers
-

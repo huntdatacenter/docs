@@ -177,8 +177,7 @@ module.exports = {
     "@vuepress/plugin-back-to-top",
     "@vuepress/active-header-links",
     [
-      "vuepress-plugin-container",
-      {
+      "vuepress-plugin-container", {
         type: "details",
         defaultTitle: "DETAILS",
         before: info =>
@@ -189,19 +188,36 @@ module.exports = {
       }
     ],
     [
-      "seo",
-      {
-        siteTitle: (_, $site) => $site.title,
-        title: $page => $page.title,
-        description: $page => $page.frontmatter.description,
-        type: $page => ['getting-started', 'working-in-your-lab', 'data-transfer'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
-        url: (_, $site, path) => ($site.themeConfig.domain || 'https://docs.hdc.ntnu.no') + path
+      "vuepress-plugin-sitemap", {
+        hostname: "https://docs.hdc.ntnu.no"
       }
     ],
     [
-      "vuepress-plugin-sitemap",
-      {
-        hostname: "https://docs.hdc.ntnu.no"
+      "vuepress-plugin-reading-time", {
+        excludes: ['/about', '/system-status', '/contribute', '/contact', '/faq']
+      }
+    ],
+    [
+      "seo", {
+        siteTitle: (_, $site) => $site.title,
+        title: $page => $page.frontmatter.category ? ($page.frontmatter.category + ': ' + $page.title) : $page.title,
+        description: $page => $page.frontmatter.description,
+        type: $page => ['getting-started', 'working-in-your-lab', 'data-transfer'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
+        url: (_, $site, path) => ($site.themeConfig.domain || 'https://docs.hdc.ntnu.no') + path,
+        customMeta: (add, context) => {
+          const {
+            $site, // Site configs provided by Vuepress
+            $page, // Page configs provided by Vuepress
+
+            // All the computed options from above:
+            siteTitle, title, description, type, url,
+          } = context
+
+          add('twitter:label1', 'Updates')
+          add('twitter:data1', '<https://docs.hdc.ntnu.no/about/news/|Cloud news>')
+          add('twitter:label2', $page.readingTime ? 'Reading time' : null)
+          add('twitter:data2', $page.readingTime ? $page.readingTime.text + ' 🕑' : null)
+        },
       }
     ]
   ]

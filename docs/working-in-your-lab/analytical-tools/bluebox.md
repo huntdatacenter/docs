@@ -1,14 +1,16 @@
 ---
 title: BlueBox
+category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/bluebox
 sidebarDepth: 1
+description: BlueBox is a tool for distributed analysis across a fleet of cloud machines inside your lab.
 ---
 
 # BlueBox
 
-[BlueBox](https://github.com/huntdatacenter/BlueBox) is a tool that we have developed to help you distribute your analysis across a fleet of cloud machines inside your lab. In short, BlueBox aid with the installation of software packages and handling of data, code and results across many machines. 
+[BlueBox](https://github.com/huntdatacenter/BlueBox) is a tool that we have developed to help you distribute your analysis across a fleet of cloud machines inside your lab. In short, BlueBox aids with the installation of software packages and handling of data, code and results across many machines.
 
-Visit our [BlueBox Guide](https://github.com/huntdatacenter/BlueBox/blob/master/docs/guide.md) on Github for the full documentation. Below is an outline of the steps to get you started. 
+Visit our [BlueBox Guide](https://github.com/huntdatacenter/BlueBox/blob/master/docs/guide.md) on Github for the full documentation. Below is an outline of the steps to get you started.
 
 ::: warning Requirements
 The installation of BlueBox requires access to iaas and blue machines in your lab. [Contact us](/contact) for activation if you would like to give it a try.
@@ -43,17 +45,17 @@ ubuntu@demolab-blue-maiar
 ubuntu@demolab-blue-zaran
 ```
 
-2. Test your setup 
+2. Test your setup
 
-When using BlueBox for the firs time (or when you are adding new machines) run this code to set up machine keys: 
+When using BlueBox for the firs time (or when you are adding new machines) run this code to set up machine keys:
 
 ```bash
 make setup
 ```
 
-Now that your machines are activated, head over to our [BlueBox Guide](https://github.com/huntdatacenter/BlueBox/blob/master/docs/guide.md) on Github to complete the full configuration to set up your software dependencies, push your code and data and run your code in parallel. 
+Now that your machines are activated, head over to our [BlueBox Guide](https://github.com/huntdatacenter/BlueBox/blob/master/docs/guide.md) on Github to complete the full configuration to set up your software dependencies, push your code and data and run your code in parallel.
 
-::: tip 
+::: tip
 
 [Concat us](/contact) us for a helping hand to get up and running. This is early days for your setup and documentation. We appreciate questions and feedback so we can improve BlueBox and make it as simple as possible for you to distribute analysis across machines.
 

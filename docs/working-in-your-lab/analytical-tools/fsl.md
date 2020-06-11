@@ -1,5 +1,6 @@
 ---
 title: FSL
+category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/fsl
 sidebarDepth: 1
 ---
