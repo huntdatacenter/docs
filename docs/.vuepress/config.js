@@ -118,6 +118,7 @@ module.exports = {
                 "working-in-your-lab/analytical-tools/jupyter-lab",
                 "working-in-your-lab/analytical-tools/matlab",
                 "working-in-your-lab/analytical-tools/plink",
+                "working-in-your-lab/analytical-tools/pycharm",
                 "working-in-your-lab/analytical-tools/r-studio",
                 "working-in-your-lab/analytical-tools/saige",
                 "working-in-your-lab/analytical-tools/spyder-ide",
