@@ -1,5 +1,6 @@
 ---
-title: Agreement
+title: Agreements
+category: HUNT Cloud
 permalink: /about/agreements
 sidebarDepth: 1
 ---

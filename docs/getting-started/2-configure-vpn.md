@@ -1,4 +1,6 @@
 ---
+title: VPN configuration
+category: Getting started
 permalink: /getting-started/configure-vpn
 sidebarDepth: 1
 ---
@@ -22,16 +24,16 @@ Successful [verification](/getting-started/collect-your-keys/#_1-4-verify-your-k
 
 ::: details Windows
 
-We use the open-source application [OpenVPN](https://openvpn.net/) to ensure encrypted communication between your local machine and us. 
+We use the open-source application [OpenVPN](https://openvpn.net/) to ensure encrypted communication between your local machine and us.
 
 [Download and install OpenVPN using the latest Windows Installer](https://openvpn.net/community-downloads/)
 
-Click on the link above, scroll down to the file named **`openvpn-install-<version-number>-i602-win10.exe`** (Windows 10 users), download the file and follow the on-screen installation instructions. 
+Click on the link above, scroll down to the file named **`openvpn-install-<version-number>-i602-win10.exe`** (Windows 10 users), download the file and follow the on-screen installation instructions.
 
   ::: warning
-  **You will need administrative rights on your local machine to successfully install OpenVPN.** 
+  **You will need administrative rights on your local machine to successfully install OpenVPN.**
 
-Click on the link below if you do not hold administrative rights on your local machine, or don't know if you have such rights. 
+Click on the link below if you do not hold administrative rights on your local machine, or don't know if you have such rights.
 
   ::: details Installing OpenVPN without administrative rights
 
@@ -48,7 +50,7 @@ For simplicity, we have outlined the steps they need to perform below which you 
 ```
 1. Install the OpenVPN client on the computer for my user:
     Download and install using the Windows installer from https://openvpn.net/index.php/open-source/downloads.html
-     
+
 2. Create an OpenVPN Administrators group on my computer:
     net localgroup /add "OpenVPN Administrators"
 
@@ -120,7 +122,7 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
   4. Select the OpenVPN profile named. **`<username>.ovpn`** in the collection of credentials given from HUNT.
   5. Continue with the **`Connecting to the VPN section`** below.
 
-**2.2.2 If you 'do not' get prompted with the `Welcome to Tunnelblick` message, follow these steps:** 
+**2.2.2 If you 'do not' get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
    1. Find the OpenVPN profile named **`<username>.ovpn`** that you collected in Step 1.
    2. Right-click the file OpenVPN profile named **`<username>.ovpn`**.
    3. Select **`Open With -> Tunnelblick`**.
@@ -166,7 +168,7 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
     ::: tip
     Save this passphrase.
 
-Your authentication will fail when you complete your passphrase above. This is expected since your verification code timed out while you typed your passphrase. 
+Your authentication will fail when you complete your passphrase above. This is expected since your verification code timed out while you typed your passphrase.
 
 6. Now try again to connect with a fresh **`verfication code`** from Google Authenticator.
 
@@ -192,7 +194,7 @@ You should now be connected to the VPN.
     ::: tip
     Save this passphrase.
 
-Your authentication will fail when you complete your passphrase above. This is expected since your verification code timed out while you typed your passphrase. 
+Your authentication will fail when you complete your passphrase above. This is expected since your verification code timed out while you typed your passphrase.
 
 6. Now try again to connect with a fresh **`verfication code`** from Google Authenticator.
 
@@ -275,5 +277,3 @@ If you are unable to click _Apply_ after your changes, try to re-enter your _Pri
 ::: tip
 If nothing works, please head over to our main [troubleshooting](/troubleshooting/connection/#vpn) section for more information on how to troubleshoot connections.
 :::
-
-

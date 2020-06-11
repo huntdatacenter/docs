@@ -1,5 +1,6 @@
 ---
 title: Jupyter LAB
+category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/jupyter-lab
 sidebarDepth: 0
 ---

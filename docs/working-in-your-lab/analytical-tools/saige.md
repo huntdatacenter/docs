@@ -1,5 +1,6 @@
 ---
 title: Saige
+category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/saige
 sidebarDepth: 1
 ---

@@ -1,5 +1,6 @@
 ---
 title: MobaXterm
+category: Technical tools
 permalink: /working-in-your-lab/technical-tools/mobaxterm
 sidebarDepth: 1
 ---

@@ -1,5 +1,6 @@
 ---
 title: Spyder IDE
+category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/spyder-ide
 sidebarDepth: 0
 ---

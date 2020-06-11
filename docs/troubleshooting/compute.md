@@ -1,5 +1,6 @@
 ---
 title: Compute
+subtitle: Troubleshooting
 permalink: /troubleshooting/compute
 sidebarDepth: 1
 ---

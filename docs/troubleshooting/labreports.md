@@ -1,5 +1,6 @@
 ---
 title: Lab reports
+category: Troubleshooting
 permalink: /troubleshooting/labreports
 sidebarDepth: 1
 ---

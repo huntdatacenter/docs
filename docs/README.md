@@ -1,5 +1,6 @@
 ---
 title: Welcome
+readingTime: null
 ---
 
 # Welcome to the HUNT Cloud Documentation
