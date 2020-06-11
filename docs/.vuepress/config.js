@@ -218,7 +218,7 @@ module.exports = {
           add('twitter:label1', $page.readingTime ? 'Reading time' : null)
           add('twitter:data1', $page.readingTime ? '🕑 ' + $page.readingTime.text : null)
           add('twitter:label2', 'Latest updates')
-          add('twitter:data2', 'https://docs.hdc.ntnu.no/about/news/')
+          add('twitter:data2', 'https://docs.hdc.ntnu.no/news/')
         },
       }
     ]

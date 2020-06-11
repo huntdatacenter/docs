@@ -1,7 +1,7 @@
 ---
 title: News
 category: HUNT Cloud
-permalink: /about/news
+permalink: /news
 sidebarDepth: 0
 ---
 
