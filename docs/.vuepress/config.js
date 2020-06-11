@@ -199,7 +199,7 @@ module.exports = {
     ],
     [
       "seo", {
-        siteTitle: (_, $site) => $site.title,
+        // siteTitle: (_, $site) => $site.title,
         title: $page => $page.frontmatter.category ? ($page.frontmatter.category + ': ' + $page.title) : $page.title,
         description: $page => $page.frontmatter.description,
         twitterCard: _ => 'summary',
@@ -211,7 +211,8 @@ module.exports = {
             $page, // Page configs provided by Vuepress
 
             // All the computed options from above:
-            siteTitle, title, description, type, url,
+            // siteTitle,
+            title, description, type, url,
           } = context
 
           add('twitter:label1', $page.readingTime ? 'Reading time' : null)
