@@ -12,7 +12,7 @@ Pycharm is an IDE for Python developers.
 
 ::: warning Requirements
 
-administrative privileges
+Administrator privileges
 :::
 
 
