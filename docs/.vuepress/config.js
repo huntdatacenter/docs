@@ -204,7 +204,9 @@ module.exports = {
         title: $page => $page.frontmatter.category ? ($page.frontmatter.category + ': ' + $page.title) : $page.title,
         description: $page => $page.frontmatter.description,
         twitterCard: _ => 'summary',
-        type: $page => ['getting-started', 'working-in-your-lab', 'data-transfer'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
+        type: $page => [
+          'getting-started', 'working-in-your-lab', 'data-transfer'
+        ].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
         url: (_, $site, path) => ($site.themeConfig.domain || 'https://docs.hdc.ntnu.no') + path,
         customMeta: (add, context) => {
           const {
@@ -216,10 +218,10 @@ module.exports = {
             title, description, type, url,
           } = context
 
-          add('twitter:label1', $page.readingTime ? 'Reading time' : null)
-          add('twitter:data1', $page.readingTime ? '🕑 ' + $page.readingTime.text : null)
-          add('twitter:label2', 'Latest updates')
-          add('twitter:data2', 'https://docs.hdc.ntnu.no/news/')
+          add('twitter:label1', ($page.readingTime && type === 'article') ? 'Reading time' : null)
+          add('twitter:data1', ($page.readingTime && type === 'article') ? '🕑 ' + $page.readingTime.text : null)
+          add('twitter:label2', type === 'article' ? 'Latest updates' : null)
+          add('twitter:data2', type === 'article' ? 'https://docs.hdc.ntnu.no/news/' : null)
         },
       }
     ]
