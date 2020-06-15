@@ -3,6 +3,7 @@ title: Conda
 category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/conda
 sidebarDepth: 1
+description: Installation guide for Conda, including installation of R packages using Conda.
 ---
 
 # Conda, Anaconda, Miniconda and Bioconda

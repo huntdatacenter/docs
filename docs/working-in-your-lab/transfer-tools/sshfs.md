@@ -3,6 +3,7 @@ title: SSHFS
 category: Transfer tools
 permalink: /working-in-your-lab/transfer-tools/sshfs
 sidebarDepth: 1
+description: Installation and usage guide for sshfs.
 ---
 
 # SSHFS

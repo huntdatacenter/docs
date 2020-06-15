@@ -3,6 +3,7 @@ title: Freesurfer
 category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/freesurfer
 sidebarDepth: 1
+description: Installation guide for Freesurfer.
 ---
 
 # Freesurfer

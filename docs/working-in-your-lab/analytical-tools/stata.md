@@ -3,6 +3,7 @@ title: Stata
 category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/stata
 sidebarDepth: 1
+description: Installation guide for Stata.
 ---
 
 # Stata

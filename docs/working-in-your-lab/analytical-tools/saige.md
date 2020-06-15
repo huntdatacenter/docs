@@ -3,6 +3,7 @@ title: Saige
 category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/saige
 sidebarDepth: 1
+description: Installation guide for Saige
 ---
 
 # Saige package for R on an IAAS machine

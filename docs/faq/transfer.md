@@ -3,11 +3,12 @@ title: Transfer
 category: FAQ
 permalink: faq/transfer
 sidebarDepth: 1
+description: This page lists frequently asked questions related to data transfer and network openings in labs.
 ---
 
 # FAQ on data transfer
 
-This page list frequently asked questions related to data transfer and network openings in labs.
+This page lists frequently asked questions related to data transfer and network openings in labs.
 
 [[toc]]
 

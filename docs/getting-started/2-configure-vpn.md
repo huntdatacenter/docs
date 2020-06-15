@@ -3,6 +3,7 @@ title: VPN configuration
 category: Getting started
 permalink: /getting-started/configure-vpn
 sidebarDepth: 1
+description: Guide on VPN installation and configuration. Make sure you have successfully collected your keys before proceeding with this guide.
 ---
 
 # Step 2. Configure your VPN

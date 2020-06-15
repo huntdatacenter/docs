@@ -3,6 +3,7 @@ title: GPU
 category: Technical tools
 permalink: /working-in-your-lab/technical-tools/gpu
 sidebarDepth: 1
+description:  We offer GPU optimized machine types in our IaaS tier allowing you to run the workloads of your choice via PCI passthrough.
 ---
 
 # GPU on HUNT Cloud

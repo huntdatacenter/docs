@@ -3,11 +3,12 @@ title: Internal Transfer
 category: FAQ
 permalink: faq/internal-transfer
 sidebarDepth: 1
+description: This page lists frequently asked questions related to internal transfers and network openings in labs.
 ---
 
 # FAQ on internal data transfer
 
-This page list frequently asked questions related to data transfer and network openings in labs.
+This page lists frequently asked questions related to internal transfers and network openings in labs.
 
 [[toc]]
 

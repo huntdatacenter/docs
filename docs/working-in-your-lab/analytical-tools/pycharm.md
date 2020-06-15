@@ -3,7 +3,7 @@ title: PyCharm
 category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/pycharm
 sidebarDepth: 2
-description: Guide on installation of PyCharm on unmanaged machine.
+description: Installation guide for PyCharm (unmanaged machine).
 ---
 
 # PyCharm

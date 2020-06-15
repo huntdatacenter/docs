@@ -3,6 +3,7 @@ title: SSH configuration
 category: Getting started
 permalink: /getting-started/configure-ssh
 sidebarDepth: 1
+description: Guide on SSH configuration, requires a working VPN connection.
 ---
 
 

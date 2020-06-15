@@ -3,11 +3,12 @@ title: Storage
 category: FAQ
 permalink: faq/storage
 sidebarDepth: 1
+description: This page lists frequently asked questions related to lab storage.
 ---
 
 # FAQ on lab storage
 
-This page list frequently asked questions related to lab storage.
+This page lists frequently asked questions related to lab storage.
 
 [[toc]]
 

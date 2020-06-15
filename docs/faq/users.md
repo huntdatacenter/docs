@@ -3,6 +3,7 @@ title: Users
 category: FAQ
 permalink: faq/users
 sidebarDepth: 1
+description: This page lists frequently asked questions related to users and user management in labs.
 ---
 
 # FAQ on lab users

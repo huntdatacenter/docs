@@ -8,7 +8,7 @@ description: Frequently asked questions related to computation and analysis in l
 
 # FAQ on lab compute
 
-This page list frequently asked questions related to computation and analysis in labs.
+This page lists frequently asked questions related to computation and analysis in labs.
 
 [[toc]]
 

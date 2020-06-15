@@ -3,11 +3,12 @@ title: External Transfer
 category: FAQ
 permalink: faq/external-transfer
 sidebarDepth: 1
+description: This page lists frequently asked questions related to external transfers in labs.
 ---
 
 # FAQ on external data transfer
 
-This page list frequently asked questions related to data transfer and network openings in labs.
+This page lists frequently asked questions related to external transfers in labs.
 
 [[toc]]
 

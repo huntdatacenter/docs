@@ -3,6 +3,7 @@ title: X2Go
 category: Technical tools
 permalink: /working-in-your-lab/technical-tools/x2go
 sidebarDepth: 1
+description: Usage guide for X2go.
 ---
 
 # X2Go

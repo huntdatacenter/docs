@@ -3,6 +3,7 @@ title: How to connect
 category: Getting started
 permalink: /getting-started/how-to-connect
 sidebarDepth: 3
+description: How to connect to your lab once you have your keys, VPN and SSH in place.
 ---
 
 # Connecting to your lab

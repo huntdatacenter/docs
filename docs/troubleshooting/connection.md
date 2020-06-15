@@ -3,6 +3,7 @@ title: Connection
 category: Troubleshooting
 permalink: /troubleshooting/connection
 sidebarDepth: 1
+description: Your lab connection is encrypted over a virtual private network (VPN) to ensure the confidentiality of the information. We have listed some of the solutions in case you meet any troubles connecting.
 ---
 
 # Troubleshooting lab connections

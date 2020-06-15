@@ -1,8 +1,9 @@
 ---
 title: Compute
-subtitle: Troubleshooting
+category: Troubleshooting
 permalink: /troubleshooting/compute
 sidebarDepth: 1
+description: Troubleshooting installation, third-party software, and setup.
 ---
 
 # Troubleshooting machine issues

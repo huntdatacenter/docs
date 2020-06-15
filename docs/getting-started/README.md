@@ -1,6 +1,7 @@
 ---
 title: Introduction
 category: Getting started
+description: This guide will help you to connect and get started on your HUNT Cloud lab.
 ---
 
 # Introduction

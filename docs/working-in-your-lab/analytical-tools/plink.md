@@ -3,6 +3,7 @@ title: PLINK
 category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/plink
 sidebarDepth: 1
+description: Installation guide for Plink.
 ---
 
 # PLINK

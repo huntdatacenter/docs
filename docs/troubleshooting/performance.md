@@ -3,6 +3,7 @@ title: Performance
 category: Troubleshooting
 permalink: /troubleshooting/performance
 sidebarDepth: 1
+description: Troubleshooting performance issues related to your analysis.
 ---
 
 # Troubleshooting performance

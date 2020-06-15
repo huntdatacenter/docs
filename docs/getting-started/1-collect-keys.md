@@ -3,6 +3,7 @@ title: Collect your keys
 category: Getting started
 permalink: /getting-started/collect-your-keys
 sidebarDepth: 1
+description: Guide on how to request and receive your keys. Note requirements before proceeding with the guide.
 ---
 
 # Step 1. Collect your keys

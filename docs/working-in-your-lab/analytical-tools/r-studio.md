@@ -3,6 +3,7 @@ title: R and R-Studio
 category: Analytical tools
 permalink: /working-in-your-lab/analytical-tools/r-studio
 sidebarDepth: 2
+description: Installation guide for R and R-Studio
 ---
 
 # R
