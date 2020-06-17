@@ -7,8 +7,14 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: danger  Network down:
-We lost internet connection 18:04 due to [scheduled maintenance by NTNU IT](https://varsel.it.ntnu.no/post/740/). We expect the network connection to be reestablished over the next hours. Next announcement at 21:00 or when connectivity resume.
+::: warning  Network connection
+
+HUNT Cloud lost network connectivity from 18 to 22 CET 2020-06-17 during a [scheduled maintenance window](https://varsel.it.ntnu.no/post/740/) by NTNU IT. The incident was unexpected. We will review the incident to ensure that we minimize the risk for similar events in the future.
 :::
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
+
+
+
+
+
