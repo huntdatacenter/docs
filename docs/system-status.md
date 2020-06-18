@@ -7,7 +7,7 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: note All systems
+::: tip All systems
 Operational.
 :::
 
