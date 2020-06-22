@@ -10,6 +10,7 @@ description: Monthly highlights from our activities.
 
 Here are a few monthly highlights from our activities.
 
+- [Monthly news for May 2020](https://assets.hdc.ntnu.no/assets/news/hunt-cloud-monthly-news-2020-05.pdf) (pdf)
 - [Monthly news for April 2020](https://assets.hdc.ntnu.no/assets/news/hunt-cloud-monthly-news-2020-04.pdf) (pdf)
 - [Monthly news for March 2020](https://assets.hdc.ntnu.no/assets/news/hunt-cloud-monthly-news-2020-03.pdf) (pdf)
 - [Monthly news for February 2020](https://assets.hdc.ntnu.no/assets/news/hunt-cloud-monthly-news-2020-02.pdf) (pdf)
