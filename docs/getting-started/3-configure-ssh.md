@@ -81,13 +81,13 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 3. Type **`<your-username>@<your-lab-IP>`** in the "_Host Name (or IP address)_" field and click "_Open_".
 
-4. Enter your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password. You will not see anything on the screen when you type your password.
+4. Enter your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password and hit enter. You will not see anything on the screen when you type your password.
 
-5. Type the same **`SSH temporary key`** _one more time_ when asked.
+5. Type the same **`SSH temporary key`** _one more time_ when asked and hit enter.
 
-6. Enter your new **`passphrase`** from above.
+6. Enter your new **`passphrase`** from above and hit enter.
 
-7. Retype your **`passphrase`** for verification. You will now be kicked out of the entry machine connection.
+7. Retype your **`passphrase`** for verification and hit enter. You will now be kicked out of the entry machine connection.
 
 8. Repeat Step 2 and 3 to verify your passphrase update. Type your **`passphrase`** when asked for a password. You should now be logged into your entry machine.
 
