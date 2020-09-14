@@ -32,7 +32,8 @@ These steps guide the installation of Matlab on unmanaged [iaas or blue](/faq/co
 
    For NTNU users, log into [NTNU's software repository for Matlab](https://software.ntnu.no/ntnu/Matlab),
    choose your desired version in the top right corner and download on your local computer.
-   We recommend that you skip the latest version and choose a slightly older version to ensure a reliable installation.
+   We recommend that you skip the latest version (alpha) and choose one of the stable versions
+   (e.g. 2019b) to ensure a reliable installation.
 
 2. Transfer Matlab to your preferred folder in your lab machine (for example `/mnt/scratch/matlab/`)
 3. Unpack the zip file in your folder.
@@ -49,7 +50,8 @@ These steps guide the installation of Matlab on unmanaged [iaas or blue](/faq/co
    unzip <matlabfile.zip>
    ```
 
-4. Make all files in folder executables: `chmod -R 777 <matlab-folder>` (e.g. /mnt/scratch/matlab/). This is a primitive fix so you are able to run the files within subfolders as required by Matlab.
+4. Make all files in folder executables: `chmod -R 777 <matlab-folder>` (e.g. /mnt/scratch/matlab/).
+   This is a simple fix for you to be able to run the files within subfolders as required by Matlab.
 
 ## Activate license
 
@@ -75,12 +77,15 @@ The below steps require the code to be run in `xterm` started from X2GO on the m
 
 1. Prepare target directory:
    ```
-   mkdir /mnt/work/software/matlab2019b
+   mkdir -p /mnt/work/software/matlab2019b
+   mkdir -p /mnt/scratch/tmp
    ```
 
 2. Go to your Matlab installation folder (e.g. /mnt/scratch/matlab/) and run the installer:
 
    ```
+   export TMP=/mnt/scratch/tmp
+   export TEMP_DIR=/mnt/scratch/tmp
    bash ./install
    ```
 
@@ -126,4 +131,15 @@ If Matlab complains that Live editor is unable to run in the current system conf
 dpkg -s libnss3
 # If not installed run
 sudo apt install libnss3
+```
+
+### Why is my Matlab installation stuck?
+
+If the installation was progressing and then stuck at some point it is important to check
+disk space `df -h`. In some cases `/tmp` directory may get filled up. We usually recommend
+setting alternative tmp before running install:
+```
+mkdir -p /mnt/scratch/tmp
+export TMP=/mnt/scratch/tmp
+export TEMP_DIR=/mnt/scratch/tmp
 ```
