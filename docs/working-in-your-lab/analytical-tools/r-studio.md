@@ -182,7 +182,7 @@ or setup environment variable as mentioned in [Troubleshooting RStudio Rendering
 
 ### Configure X2Go
 
-To automatically start RStudio, revisit your _Session preferences_ in the [X2Go setup](x2go) and update your _Single application command path_ to `/usr/bin/rstudio`and _Create a session icon on the desktop..._.
+To automatically start RStudio, revisit your _Session preferences_ in the [X2Go setup](/working-in-your-lab/technical-tools/x2go/) and update your _Single application command path_ to `/usr/bin/rstudio`and _Create a session icon on the desktop..._.
 
 ::: tip NOTE
 There is a known bug in x2go `1.1.456` that will go away if you comment out (add # before) a line in the x2goagent.options:
