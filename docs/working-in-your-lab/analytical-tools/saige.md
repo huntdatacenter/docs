@@ -21,9 +21,9 @@ The below guide is based on packages listed in the Dockerfile example in Github.
 
 ## Requirements
 
-Ubuntu operating system (current installation is tested on 18.04)
-Administrator privileges (HUNT IAAS or HUNT BLUE machines)
-Fresh coffee and 30 minutes to spare
+- Ubuntu operating system (current installation is tested on 18.04).
+- Administrator privileges (HUNT IAAS or HUNT BLUE machines).
+- Fresh coffee and 30 minutes to spare.
 
 ## Defining your software directory
 
