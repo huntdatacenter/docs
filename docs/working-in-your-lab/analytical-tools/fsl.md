@@ -15,7 +15,18 @@ Among others, FSL offers implementations of standard GLM analysis,
 white matter tractography, tissue segmentation, affine and non-linear
 co-registration, and independent component analysis [(Source: Neurodebian)](http://neuro.debian.net/pkgs/fsl-complete.html).
 
-## Installation
+## Installation using Conda
+
+Simple way for those who manage their dependencies with
+[Conda](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/conda/)
+is to install [FSLpy package](https://anaconda.org/conda-forge/fslpy) into their
+environment using this command:
+
+```
+conda install -c conda-forge fslpy
+```
+
+## Installation using flsinstaller
 
 Our tutorial only briefly summarises the installation, therefore we recommend to read up
 in official [FSL installation](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/Linux).
@@ -26,11 +37,10 @@ Python 2
 
 ```bash
 git clone https://gist.github.com/cffe4e955249bdde6985d4232a618ab8.git ~/fslinstaller
-sudo mkdir -p /mnt/work/software/FSL
-sudo mkdir -p /mnt/scratch/tmp
-sudo chown ubuntu:ubuntu /mnt/scratch/tmp/
+mkdir -p /mnt/work/software/FSL
+mkdir -p /mnt/scratch/tmp
 export TMP=/mnt/scratch/tmp/
-cd /mnt/work/software/FSL && sudo TMP=$TMP python ~/fslinstaller/fslinstaller.py
+cd /mnt/work/software/FSL && python ~/fslinstaller/fslinstaller.py
 rm -rf ~/fslinstaller
 ```
 

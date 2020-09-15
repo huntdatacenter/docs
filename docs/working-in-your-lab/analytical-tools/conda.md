@@ -12,13 +12,30 @@ description: Installation guide for Conda, including installation of R packages 
 
 ## Installation
 
-### Install Anaconda
+### Install Conda
 
-Follow the [Installing on Linux](https://docs.anaconda.com/anaconda/install/linux/#installation) instructions from Anaconda.
+Follow the [Installing on Linux](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html)
+instructions to install [Miniconda](https://docs.conda.io/en/latest/miniconda.html#linux-installers).
 
-### Set up Bioconda channels
+To get more out of conda we recommend reading
+[Conda - Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+guide.
+
+### Set up Bioconda and other channels
 
 Follow the [Set up channels](https://bioconda.github.io/user/install.html#set-up-channels) guide from Bioconda.
+
+```
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels anaconda
+conda config --add channels conda-forge
+```
+
+Depending on your aims you might also consider adding [R channel](https://anaconda.org/r/).
+```
+conda config --add channels r
+```
 
 ### Install Your Tools
 
