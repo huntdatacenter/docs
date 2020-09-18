@@ -27,7 +27,7 @@ Rerun your command with sudo. [Contact us](/contact) if this doesn't solve your 
 
 ### Matlab
 
-See our [Matlab troubleshooting section](/working-in-your-lab/analytical-tools/Matlab/#activate-license).
+See our [Matlab troubleshooting section](/working-in-your-lab/analytical-tools/Matlab/#activate-license)..
 
 ### Stata
 
