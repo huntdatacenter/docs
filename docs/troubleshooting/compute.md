@@ -23,6 +23,25 @@ E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission d
 
 Rerun your command with sudo. [Contact us](/contact) if this doesn't solve your issue.
 
+## Full system disk
+
+### Set new tmp folder path
+
+Depending on you workflow, the **`/tmp`** folder on the system disk may fill up. In such circumstances, we do recommend that you point your temporary files to a larger directory on your **`scratch`** volume.
+
+```
+# Make a new tmp folder
+mkdir -p /mnt/scratch/tmp
+
+# Add the new tmp folder path
+echo 'export TMP=/mnt/scratch/tmp' >> .bashrc
+
+# Activate the new path
+source .bashrc
+```
+
+
+
 ## Third-party software
 
 ### Matlab
