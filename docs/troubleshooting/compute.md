@@ -23,23 +23,6 @@ E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission d
 
 Rerun your command with sudo. [Contact us](/contact) if this doesn't solve your issue.
 
-## Full system disk
-
-### Set new tmp folder path
-
-Depending on you workflow, the **`/tmp`** folder on the system disk may fill up. In such circumstances, we do recommend that you point your temporary files to a larger directory on your **`scratch`** volume.
-
-```
-# Make a new tmp folder
-mkdir -p /mnt/scratch/tmp
-
-# Add the new tmp folder path
-echo 'export TMP=/mnt/scratch/tmp' >> .bashrc
-
-# Activate the new path
-source .bashrc
-```
-
 
 
 ## Third-party software
@@ -95,3 +78,28 @@ LC_NUMERIC="en_US.UTF-8"
 LC_TIME="en_US.UTF-8"
 LC_ALL="en_US.UTF-8"
 ```
+
+## Full system disk
+
+[Click here](/faq/storage/#how-can-i-see-the-sizes-of-my-lab-volumes) to see the size and use of your lab volumes. Your system disk is full if **`/dev/vda1`** states 100 percent use:
+
+```
+Filesystem   Size Used Avail Use% Mounted on
+/dev/vda1    9.7G 9.7G   0 100% /
+```
+
+### Set new tmp folder path
+
+One cause of full system disk could be that large files are written to **`/tmp`**. If so, we recommend that you point your temporary files to the **`/mnt/scratch`** volume.
+
+```bash
+# Add a folder scratch
+mkdir -p /mnt/scratch/tmp
+
+# Add a new tmp folder path
+echo 'export TMP=/mnt/scratch/tmp' >> .bashrc
+
+# Activate the new path
+source .bashrc
+```
+

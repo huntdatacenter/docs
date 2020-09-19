@@ -193,3 +193,12 @@ sudo vim /etc/x2go/x2goagent.options
 ```
 
 :::
+
+## Troubleshooting
+
+### I cannot create R_TempDir
+
+If your system disk is full, R will not be able to store temporary files used for computation. You may see the error message **`Fatal error: cannot create 'R_TempDir'`**. Click here to verfiy if the disk disk is full, and this guide to change your temp folder to a larger volume. 
+
+
+
