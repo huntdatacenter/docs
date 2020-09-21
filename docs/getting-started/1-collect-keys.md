@@ -149,7 +149,7 @@ If you successfully completed this step, celebrate with fresh coffee and head ov
 
 ### 7z file for Mac
 
-**The ZIP password do not seem to work?** The default zip software may give you an error message when unpacking the 7z-format locked with a passphrase. Try to download and unpack with the 7z appliction in the [decryption links](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email). [Contact us](/contact) if this does not work.
+**The ZIP password do not seem to work?** The default zip software can give you an error message when unpacking the 7z-format locked with a passphrase. Try to download and unpack with the 7z appliction in the [decryption links](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email). [Contact us](/contact) if this does not work.
 
 ### 7z file for Windows
 
