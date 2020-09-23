@@ -198,7 +198,29 @@ sudo vim /etc/x2go/x2goagent.options
 
 ### I cannot create R_TempDir
 
-If your system disk is full, R will not be able to store temporary files used for computation. You may see the error message **`Fatal error: cannot create 'R_TempDir'`**. Click here to verfiy if the disk disk is full, and this guide to change your temp folder to a larger volume. 
+If your system disk is full, R will not be able to store temporary files used for computation. You may see the error message **`Fatal error: cannot create 'R_TempDir'`**. Click here to verify if the disk disk is full, and this guide to change your temp folder to a larger volume.
 
+### Installation of devtools
 
+You may need to install some more dependencies to get `install.packages("devtools")` going:
 
+```
+sudo apt update
+sudo apt install libcurl4-openssl-dev libssh2-1-dev libssl-dev libxml2-dev
+```
+
+### PredictABEL, matplotlib, viridis, or plyr fails to import
+
+If running `library(PredictABEL)` in rstudio server fails with:
+```
+Error: package or namespace load failed for 'PredictABEL':
+ .onLoad failed in loadNamespace() for 'tcltk', details:
+  call: fun(libname, pkgname)
+  error: (converted from warning) couldn't connect to display ":0"
+```
+
+You need to install these packages related to tcl and tk:
+```
+sudo apt update
+sudo apt install tcl tcl8.6 tk tk-table tk8.6
+```
