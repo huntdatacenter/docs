@@ -8,7 +8,7 @@ description: This page list information and questions about the Ting weeks.
 
 # Ting weeks
 
-We aim to arrange our "ting weeks" three times a year. A "ting" is a meeting where we come together and discuss the best path forward to elevate data-driven science.
+A "Ting week" the time of the year where we come together and discuss the best path forward elevating data-driven science. We aim to arrange our ting weeks three times a year, in the fall, winter and spring.
 
 [[toc]]
 
@@ -16,8 +16,7 @@ We aim to arrange our "ting weeks" three times a year. A "ting" is a meeting whe
 
 ### Ting week #1 (2020-10)
 
-Theme: Sustainability  
-Where: Digital
+Location: Digital
 
 - **Lab forum**: Tuesday 13 October 2020 - 2 to 4 p.m. CET
 - **Coordinator forum**: Wednesday 14 October 2020 - 9 to 11 a.m. CET
@@ -25,8 +24,7 @@ Where: Digital
 
 ### Ting week #2 (2021-02)
 
-Theme: TBA  
-Where: Digital
+Location: Digital
 
 - **Lab forum**: Tuesday 16 February 2021 -  2 to 4 p.m. CET
 - **Coordinator forum**: Wednesday 17 February 2021 - 9 to 11 a.m. CET
@@ -36,15 +34,26 @@ Where: Digital
 
 ### Lab forum
 
-This is our ting that discuss the technological direction for HUNT Cloud. All lab users are invited.
+All lab users are invited.
+
+This is the Ting where we come together and discuss technological direction for HUNT Cloud. 
+
+The meeting is scheduled for two hours. The first hour will be structured with information, feedback and discussions on new developments, while the last hour will give room for an unstructured question and answer section for as long as you have questions coming.
 
 ### Coordinator forum
 
-This ting zoom in on research management and research coordination within HUNT Cloud. Research coordinators from controllers, and labs are invited.
+Research coordinators from controllers and labs are invited.
+
+This Ting zoom in on research management and research coordination within HUNT Cloud. 
+
+The meeting is scheduled for two hours. The first hour will be structured with information, feedback and discussions on management related topics, while the last hour will give room for an unstructured question and answer section for as long as you have questions coming.
+
 
 ### Lagtun
 
-This is our top level ting that discuss strategic direction for HUNT Cloud. Data controllers and major contributors are invited.
+Data controllers and major contributors are invited.
+
+This is our top level Ting that discuss strategic direction for HUNT Cloud. 
 
 
 
