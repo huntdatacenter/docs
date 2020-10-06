@@ -49,6 +49,14 @@ The ting is scheduled for two hours. The first part will be structured with info
 
 We aim to hold ting weeks three times a year, in the fall around the autumn holidays, in the winter around the winter holidays and in the spring around the national holiday i Norway.
 
+### Ting week #1 (2020-10)
+
+Location: Digital
+
+- **Lab forum**: Tuesday 13 October 2020 - 2 to 4 p.m. CET
+- **Coordinator forum**: Wednesday 14 October 2020 - 9 to 11 a.m. CET
+- **Lagtun**: Thursday 15 October 2020 - 9 to 11 a.m. CET
+
 ### Ting week #2 (2021-02)
 
 Location: Digital
@@ -57,13 +65,6 @@ Location: Digital
 - **Coordinator forum**: Wednesday 17 February 2021 - 9 to 11 a.m. CET
 - **Lagtun**: Thursday 18 February 2021 - 9 to 11 a.m. CET
 
-### Ting week #1 (2020-10)
-
-Location: Digital
-
-- **Lab forum**: Tuesday 13 October 2020 - 2 to 4 p.m. CET
-- **Coordinator forum**: Wednesday 14 October 2020 - 9 to 11 a.m. CET
-- **Lagtun**: Thursday 15 October 2020 - 9 to 11 a.m. CET
 
 ## FAQ
 
