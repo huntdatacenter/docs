@@ -8,9 +8,9 @@ description: This page list information and questions about the Ting weeks.
 
 # Ting weeks
 
-These are the times of the year were we come together for information, feedback and discussions on how to develop HUNT Cloud so you best can elevate your data-driven science. 
+We come together three times a year for information, feedback and discussions on how to develop HUNT Cloud so you best can elevate your data-driven science. 
 
-We arrange a set of "tings" for different parts of our community spread out over a week. We call these weeks "ting weeks". We aim to hold ting weeks three times a year, in the fall, winter and spring.
+We arrange a set of "tings" for different parts of our community. The meetings are spread out over a week. We call these weeks "ting weeks".
 
 [[toc]]
 
