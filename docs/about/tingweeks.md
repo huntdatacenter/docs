@@ -3,7 +3,7 @@ title: Ting weeks
 category: HUNT Cloud
 permalink: /about/tingweeks
 sidebarDepth: 1
-description: This page list information and questions about the Ting weeks.
+description: This page list information and questions about our ting weeks.
 ---
 
 # Ting weeks
