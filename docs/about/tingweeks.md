@@ -82,7 +82,7 @@ We will meet in Zoom utilizing the NTNU subscription. Links will be forwarded in
 
 ### What does the word Lagtun mean? 
 
-We know, we know. Lagtun is hard to pronounce in english. However, in Norwegian it is a word with several meanings that we think capture the soul of our top level ting. First, **`Lag`** means "law" In Old Norse. This meaning is included in the last part of the name of our region, Trøndelag, which means the law of the Trønders. In addition, "lag" means "team" in modern Norwegian, reflecting the collaborative nature of the ting. The second part, **`tun`** is also an Old Norse word for a fenced in area, usually around a collection of farm houses, much like your fenced in lab machines. Also, the old tings were located on fenced in tuns for which the the Vikings had to leave all weapons by the fence before they entered the ting.
+We know, we know. Lagtun is hard to pronounce in english. However, in Norwegian it is a word with several meanings that we think capture the soul of our top level ting. First, **`Lag`** means "law" In Old Norse. This meaning is included in the last part of the name of our region, Trøndelag, which means the law of the Trønders. In addition, "lag" means "team" in modern Norwegian, reflecting the collaborative nature of the ting. The second part, **`tun`** is also an Old Norse word for a fenced in area, usually around a collection of farm houses, much like your fenced in lab machines. Also relevant, the old tings were held on fenced in tuns for which the the Vikings had to leave all weapons by the fence before they entered the ting.
 
 
 
