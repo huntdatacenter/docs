@@ -16,7 +16,7 @@ We arrange a set of "tings" for different parts of our community. The meetings a
 
 ## Tings
 
-We define our tings as "[appointed time](https://en.wikipedia.org/wiki/Thing_(assembly)#Etymology)" where various members of the HUNT Cloud community meet to discuss how to best optimize for value extractions from raw materials and technologies within the community. The inspiration is drawn from the Old Norse ting structures such as [Frostating](https://en.wikipedia.org/wiki/Frostating) in Trøndelag.
+We define our tings as "[appointed time](https://en.wikipedia.org/wiki/Thing_(assembly)#Etymology)" where various members of the HUNT Cloud community come together to discuss how to best optimize for value extractions from raw materials and technologies within the community. The inspiration is drawn from the Old Norse ting structures such as [Frostating](https://en.wikipedia.org/wiki/Frostating) in Trøndelag.
 
 We aim to establish a layered ting structure with discussions that should be meaningful for those that participate.
 
