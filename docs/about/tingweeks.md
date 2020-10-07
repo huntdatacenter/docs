@@ -53,16 +53,16 @@ We aim to hold ting weeks three times a year, in the fall around the autumn holi
 
 Location: Digital
 
-- **Lab forum**: Tuesday 13 October 2020 - 2 to 4 p.m. CET
-- **Coordinator forum**: Wednesday 14 October 2020 - 9 to 11 a.m. CET
+- **Lab ting**: Tuesday 13 October 2020 - 2 to 4 p.m. CET
+- **Coordinator ting**: Wednesday 14 October 2020 - 9 to 11 a.m. CET
 - **Lagtun**: Thursday 15 October 2020 - 9 to 11 a.m. CET
 
 ### Ting week #2 (2021-02)
 
 Location: Digital
 
-- **Lab forum**: Tuesday 16 February 2021 -  2 to 4 p.m. CET
-- **Coordinator forum**: Wednesday 17 February 2021 - 9 to 11 a.m. CET
+- **Lab ting**: Tuesday 16 February 2021 -  2 to 4 p.m. CET
+- **Coordinator ting**: Wednesday 17 February 2021 - 9 to 11 a.m. CET
 - **Lagtun**: Thursday 18 February 2021 - 9 to 11 a.m. CET
 
 
