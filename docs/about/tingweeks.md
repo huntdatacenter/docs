@@ -55,7 +55,7 @@ Location: Digital
 
 - **Lab ting**: Tuesday 13 October 2020 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-labting-agenda.pdf))
 - **Coordinator ting**: Wednesday 14 October 2020 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-coordinatorting-agenda.pdf))
-- **Lagtun**: Thursday 15 October 2020 - 9 to 11 a.m. CET
+- **Lagtun**: Thursday 15 October 2020 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-lagtun-agenda.pdf))
 
 ### Ting week #2 (2021-02)
 
