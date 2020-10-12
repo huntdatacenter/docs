@@ -57,7 +57,7 @@ Now that your machines are activated, head over to our [BlueBox Guide](https://g
 
 ::: tip
 
-[Concat us](/contact) us for a helping hand to get up and running. This is early days for your setup and documentation. We appreciate questions and feedback so we can improve BlueBox and make it as simple as possible for you to distribute analysis across machines.
+[Contact us](/contact) us for a helping hand to get up and running. This is early days for your setup and documentation. We appreciate questions and feedback so we can improve BlueBox and make it as simple as possible for you to distribute analysis across machines.
 
 :::
 

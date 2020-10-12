@@ -59,13 +59,20 @@ Most likely. However, this is decided by the data controller. Feel free to [cont
 Yes and no. Direct transfers are blocked. However, your lab leader can allow network openings for data exports outside HUNT Cloud (see below).
 
 ### Can I have permanent openings to machines outside my lab?
-Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be approved by your service owner and the traffic needs to be initiated from inside your lab.
+Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be approved by your service owner, documented in our [network opening form](/about/agreements/#network-opening-form), and the traffic needs to be initiated from inside your lab.
 
 ### How do I request a network opening?
 Lab leaders can request network openings through our [network opening form](/about/agreements/#network-opening-form). We use this form to document outbound traffic from your lab.
 
 ### Which network openings do the machine outside HUNT Cloud need to approve?
 Your remote party will need to open for incoming traffic from your lab in HUNT Cloud: **`IP 129.241.176.121`**. The IP is registered under NTNU. They will need to open for traffic on **`TCP port 22`** if you plan to use SSH-tools such as **`rsync`**.
+
+### How do I transfer data to and from TSD at UiO? 
+Services for senstivie data ([TSD](https://www.uio.no/english/services/it/research/sensitive-data/)) at the University of Oslo has developed a handy [API client](https://github.com/unioslo/tsd-api-client) that can be utilized for direct data transfers to and from your lab. The setup requires that you hold user accounts for both TSD and HUNT Cloud. Depending on your lab configuration, you may have to [contact us](/contact) for a network opening.
+
+::: details More information
+For transfers from TSD to HUNT Cloud: On TSD, put your data in the **`export`** folder on **`durable`**. Then, log into your HUNT Cloud lab and download the data via the API as described in their [guide](https://github.com/unioslo/tsd-api-client).
+:::
 
 ### Do I need to encrypt data for external transfers?
 Most likely. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data on the receiving end. Read our [7z guide](/working-in-your-lab/transfer-tools/7z/#install-the-software) on how encrypt and compress files for large transfers. [Contact us](/contact) if you wonder if your your data needs to be encrypted or not. We are more than happy to help with evaluations.
