@@ -131,6 +131,7 @@ module.exports = {
               children: [
                 "working-in-your-lab/transfer-tools/",
                 "working-in-your-lab/transfer-tools/7z",
+                "working-in-your-lab/transfer-tools/rsync",
                 "working-in-your-lab/transfer-tools/sshfs",
                 "working-in-your-lab/transfer-tools/winscp"
               ]
