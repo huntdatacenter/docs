@@ -30,7 +30,7 @@ The ting is scheduled for two hours. The first part will be structured by the HU
 
 ### Coordinator ting
 
-Research coordinators from data controllers, data spaces and individual labs are invited.
+The ting is open to all lab users, although the content is tailored for data space and lab coordinators.
 
 This ting will focus on optimization of research management and research coordination within your data spaces and labs. This may include topics such as agreement structures, user management, resource management, lab portfolio management etc.
 
@@ -42,7 +42,7 @@ Data controllers and major contributors are invited.
 
 This is our top level ting where we meet to the overall strategic direction for HUNT Cloud and data-driven science.
 
-The ting is scheduled for two hours. The first part will be structured with information, feedback and discussions on scheduled topics. The last part will give room for an unstructured question and answer section.
+The ting is scheduled for two hours.
 
 
 ## Dates
@@ -51,19 +51,18 @@ We aim to hold ting weeks three times a year, in the fall around the autumn holi
 
 ### Ting week #1 (2020-10)
 
-Location: Digital
+[Ting report #1](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-report.pdf)
 
 - **Lab ting**: Tuesday 13 October 2020 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-labting-agenda.pdf))
 - **Coordinator ting**: Wednesday 14 October 2020 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-coordinatorting-agenda.pdf))
 - **Lagtun**: Thursday 15 October 2020 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-lagtun-agenda.pdf))
 
+
 ### Ting week #2 (2021-02)
 
-Location: Digital
-
 - **Lab ting**: Tuesday 16 February 2021 -  2 to 4 p.m. CET
-- **Coordinator ting**: Wednesday 17 February 2021 - 9 to 11 a.m. CET
-- **Lagtun**: Thursday 18 February 2021 - 9 to 11 a.m. CET
+- **Coordinator ting**: Wednesday 17 February 2021 - 10 to 12 a.m. CET
+- **Lagtun**: Thursday 18 February 2021 - 10 to 12 a.m. CET
 
 
 ## FAQ
@@ -76,9 +75,17 @@ No. Our tings are not the same as a general assembly (generalforsamling) with bi
 
 Both the lab ting and coordinator ting are open for all HUNT Cloud users that find the topics meaningful for their work. Invitations and digital meeting links are forwarded on both lab channels and in the community channel in Slack. At this stage, invitations to Lagtun are forwarded on emails to named individuals only.
 
-### Where is the digital meeting? 
+### Where is the tings? 
 
 We will meet in Zoom utilizing the NTNU subscription. Links will be forwarded in Slack for the lab ting and coordinator ting, and on email for Lagtun.
+
+### What is the Ting report?
+
+The intent of the Ting report is to give you the opportunity to read up on what we are doing at HUNT Cloud, as well as a little bit on why we do it. The goal is that we can meet at the tings and have informed discussion on how to best progress on our common quest to elevate data for a better world!
+
+### Where are the minutes? 
+
+Our tings have public agenda and internal minutes. Minutes gets distributed directly to the relevant community groups.
 
 ### What does the word Lagtun mean? 
 
