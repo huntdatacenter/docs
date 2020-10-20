@@ -49,7 +49,7 @@ Most likely. However, this is decided by the data controller. Feel free to [cont
 [Contact us](/contact) for additional information on the external kista service aimed at security, privacy and compliance officers.
 
 ### How do I order a Kista for transfers from HEMIT? 
-[HEMIT](https://hemit.no/) is the Central Norway Regional Health Authority's IT department that coordinate transports from our regional hospitals such as St Olavs Hospital, Helse Nord-Trøndelag and Helse More og Romsdal. Transfers with external kistas are pre-approved by HEMIT for transfers to HUNT Cloud. Hospital departments can order transfers at **`HEMIT-torget`**. Place a free-text order for an "External kista to HUNT Cloud", include information from our [external kista import agreement](/about/agreements/#user-agreement), and state if you need help from HEMIT to install the required SFTP application on your local hospital machine.
+[HEMIT](https://hemit.no/) is the Central Norway Regional Health Authority's IT department that coordinate transports from our regional hospitals such as St Olavs Hospital, Helse Nord-Trøndelag and Helse More og Romsdal. Transfers with external kistas are pre-approved by HEMIT for transfers from health trusts that hold data processor agreements with HUNT Cloud. Hospital departments can order transfers at **`HEMIT-torget`**. Place a free-text order for an "External kista to HUNT Cloud", include information from our [external kista import agreement](/about/agreements/#user-agreement), and state if you need help from HEMIT to install the required SFTP application on your local hospital machine.
 
 
 ## Direct external transfers
