@@ -24,7 +24,7 @@ BluBox is installed on your home machines where it orchestrate the communication
 1. Install dependencies on your home machine:
 
 ```bash
-which tox || sudo apt install tox
+which tox || sudo apt install tox sshpass
 ```
 
 2. Download the BlueBox code:
