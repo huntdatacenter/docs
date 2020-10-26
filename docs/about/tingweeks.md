@@ -61,8 +61,8 @@ We aim to hold ting weeks three times a year, in the fall around the autumn holi
 ### Ting week #2 (2021-02)
 
 - **Lab ting**: Tuesday 16 February 2021 -  2 to 4 p.m. CET
-- **Coordinator ting**: Wednesday 17 February 2021 - 10 to 12 a.m. CET
-- **Lagtun**: Thursday 18 February 2021 - 10 to 12 a.m. CET
+- **Coordinator ting**: Wednesday 17 February 2021 - 9 to 11 a.m. CET
+- **Lagtun**: Thursday 18 February 2021 - 9 to 11 a.m. CET
 
 
 ## FAQ
