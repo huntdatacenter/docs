@@ -43,7 +43,10 @@ See our [external kista transfer guide](/data-transfer/external-kista/#for-exter
 No. For compliance reasons, external kistas are for one way transfers only. You will need to order two independent external kistas if you plan to transfer data both ways.
 
 ### Do the Importer need to encrypt the data?
-Most likely. However, this is decided by the data controller. Feel free to [contact us](/contact), we are more than happy to help with evaluations on encryption.
+Most likely. However, this is decided by the data controller. Feel free to [contact us](/contact) as we are more than happy to help with evaluations on encryption.
+
+### Is external kistas secure enough for my data?
+Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/about/certificates/). However, the decision of whether you can use this service is decided by your data controller.
 
 ### Where can I get additional security information on the external kistas?
 [Contact us](/contact) for additional information on the external kista service aimed at security, privacy and compliance officers.
