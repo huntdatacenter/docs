@@ -8,7 +8,7 @@ description: This page list compliance certificates for HUNT Cloud.
 
 # Certificates
 
-This page list third-party verified certificates. For each certificate, an independent auditor examines our management, infrastructure, services and operations.
+This page list our third-party verified certificates. For each certificate, an independent auditor examines our management, infrastructure, services and operations.
 
 [[toc]]
 
