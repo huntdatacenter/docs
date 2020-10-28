@@ -73,7 +73,8 @@ module.exports = {
           // collapsable: false,
           children: [
             "about/",
-            "about/agreements", 
+            "about/agreements",
+            "about/certificates", 
             "about/tingweeks",
           ]
         },
