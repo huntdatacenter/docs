@@ -32,6 +32,27 @@ Kistas are short-lived SFTP servers dedicated to your specific data transaction.
 ### How do I access my internal kista?
 See our [internal kista transfer guide](/data-transfer/internal-kista/) for instruction on how to access and upload or download data in internal kista.
 
+### What is the size and utilization of my internal kista? 
+You can check the size and utilization if you log in to your kista and run the following commands: 
+
+```bash
+# -- Log into your kista
+sftp <username>@<ip>
+
+# -- Enter your upload directory
+cd upload
+
+# -- Look up the size
+df -h
+```
+
+Below is an example of the output for a 1tb kista (984GB) with 110GB uploaded data.
+
+```
+    Size     Used    Avail   (root)    %Capacity
+   984GB    110GB    825GB    875GB          11%
+```
+
 ### How long can I keep an internal kista?
 Internal kistas are a temporary transfer service which will automatically be destroyed after 30 days unless explicitly stated in writing. You must therefore always upload duplicate copies of your data.
 
