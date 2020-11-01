@@ -7,11 +7,17 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
+::: danger Lab access
+**2020-11-01 20:43** - We seem to have lost one physical machine with that hosted lab machines which is now unavailable. We are investigating. Next update expected 22:00.
+:::
+
+
+<!--
+
 ::: tip All systems
 Operational.
 :::
 
-<!--
 
 # Colors
 
