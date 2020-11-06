@@ -41,7 +41,7 @@ plink1.9
 ```
 
 You can also install PLINK 1.9 with Bioconda.
-See our [Anaconda and Bioconda](anaconda-and-bioconda) tutorial for more details.
+See our [Anaconda and Bioconda](conda) tutorial for more details.
 
 ## How to install PLINK 2
 

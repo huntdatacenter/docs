@@ -20,10 +20,12 @@ The method has the following properties:
 - For binary traits it supports Firth logistic regression and an SPA test
 - It supports the BGEN, PLINK bed/bim/fam and PLINK2 pgen/pvar/psam genetic data formats
 
-## Requirements
+::: warning Requirements
 
-- Conda (miniconda)
+- Conda (miniconda), see our [Conda tutorial](conda) for more details.
 - Conda channels: bioconda, conda-forge
+
+:::
 
 ## Installation
 
