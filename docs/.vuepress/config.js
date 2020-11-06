@@ -74,7 +74,7 @@ module.exports = {
           children: [
             "about/",
             "about/agreements",
-            "about/certificates", 
+            "about/certificates",
             "about/tingweeks",
           ]
         },
@@ -121,6 +121,7 @@ module.exports = {
                 "working-in-your-lab/analytical-tools/plink",
                 "working-in-your-lab/analytical-tools/pycharm",
                 "working-in-your-lab/analytical-tools/r-studio",
+                "working-in-your-lab/analytical-tools/regenie",
                 "working-in-your-lab/analytical-tools/saige",
                 "working-in-your-lab/analytical-tools/spyder-ide",
                 "working-in-your-lab/analytical-tools/stata"
