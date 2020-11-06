@@ -33,7 +33,9 @@ The method has the following properties:
 conda install -c bioconda regenie
 ```
 
-## GWAS Guide
+## Genome-wide association analysis
 
 We recommend [Regenie documentation](https://rgcgithub.github.io/regenie/options/) to read up on gwas analysis
-using Regenie.
+using Regenie. For more details we recommend having a look on the official paper
+[Computationally efficient whole genome regression for quantitative and binary traits](https://www.biorxiv.org/content/10.1101/2020.06.19.162354v2.abstract),
+where Regenie was first introduced.
