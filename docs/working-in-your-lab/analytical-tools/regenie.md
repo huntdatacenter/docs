@@ -30,3 +30,8 @@ The method has the following properties:
 ```
 conda install -c bioconda regenie
 ```
+
+## GWAS Guide
+
+We recommend [Regenie documentation](https://rgcgithub.github.io/regenie/options/) to read up on gwas analysis
+using Regenie.
