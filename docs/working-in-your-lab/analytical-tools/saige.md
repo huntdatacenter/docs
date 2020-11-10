@@ -17,7 +17,7 @@ in large cohorts and biobanks (N > 400,000).
 
 ::: warning Requirements
 
-- Conda (miniconda), see our [Conda tutorial](conda) for more details.
+- Conda (miniconda), see our [Conda tutorial](/working-in-your-lab/analytical-tools/conda/) for more details.
 - Conda channels: conda-forge, bioconda
 
 :::
