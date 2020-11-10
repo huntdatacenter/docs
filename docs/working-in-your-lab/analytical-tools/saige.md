@@ -6,26 +6,35 @@ sidebarDepth: 1
 description: Installation guide for Saige
 ---
 
-# Saige package for R on an IAAS machine
-
-This page describes installation of the [SAIGE R package](https://github.com/weizhouUMICH/SAIGE)
-on a clean IAAS or BLUE machine in HUNT Cloud.
-
-## Introduction
+# Saige package for R
 
 [SAIGE is an R package](https://github.com/weizhouUMICH/SAIGE) with Scalable and
 Accurate Implementation of Generalized mixed model (Chen, H. et al. 2016).
 It accounts for sample relatedness and is feasible for genetic association tests
 in large cohorts and biobanks (N > 400,000).
-The below guide is based on packages listed in the Dockerfile example in Github.
 
-## Requirements
+## Install using conda
+
+To install the latest version of saige in your conda environment use:
+
+```
+conda install -c bioconda r-saige
+```
+
+## Install the hard way
+
+The below guide is based on packages listed in the Dockerfile example in Github. It describes installation
+of the [SAIGE R package](https://github.com/weizhouUMICH/SAIGE) on a clean IAAS or BLUE machine in HUNT Cloud.
+
+::: warning Requirements
 
 - Ubuntu operating system (current installation is tested on 18.04).
 - Administrator privileges (HUNT IAAS or HUNT BLUE machines).
 - Fresh coffee and 30 minutes to spare.
 
-## Defining your software directory
+:::
+
+### Defining your software directory
 
 Below is an example:
 
@@ -40,7 +49,7 @@ mkdir -p $software_dir
 cd $software_dir
 ```
 
-## Install required APT packages
+### Install required APT packages
 
 ```
 sudo apt update -y && sudo apt-get install -y \
@@ -66,7 +75,7 @@ sudo apt update -y && sudo apt-get install -y \
     openjdk-8-jdk
 ```
 
-## Defining your Java version
+### Defining your Java version
 
 Run the code below and manually choose java-8in the provided list and hit 'ENTER'.
 
@@ -75,13 +84,13 @@ Run the code below and manually choose java-8in the provided list and hit 'ENTER
 sudo update-alternatives --config java
 ```
 
-## Installing required python packages
+### Installing required python packages
 
 ```
 pip3 install cget;
 ```
 
-## Installing a specific R version
+### Installing a specific R version
 
 The current SAIGE version requires a specific R-version (3.5.1). The below snippets compile this specific version.
 
@@ -123,7 +132,7 @@ cd $software_dir
 sudo rm -rf $software_dir/R-${r_version}
 ```
 
-## Installing SAIGE
+### Installing SAIGE
 
 ```
 cd $software_dir
@@ -144,7 +153,7 @@ Rscript SAIGE/extdata/install_packages.R
 R CMD INSTALL SAIGE
 ```
 
-## Set number of threads for openblas
+### Set number of threads for openblas
 
 This steps adds a thread restriction on BLAS to avoid multithread
 conflicts with other R packages.
@@ -176,7 +185,7 @@ Then, add to file:
 cat SAIGE/extdata/step2_SPAtests.R | sed -n '1!p' > step2_body.tmp
 ```
 
-# Combine
+### Combine
 
 ```
 cat insert_openblas_restriction.tmp \
@@ -201,7 +210,7 @@ sudo mv SAIGE/extdata/createSparseGRM.R /usr/local/bin/
 sudo chmod a+x /usr/local/bin/*.R
 ```
 
-## Cleanup
+### Cleanup
 
 ```
 rm -rf master.zip
@@ -211,7 +220,7 @@ rm step2_body.tmp
 rm step2_SPAtests.R
 ```
 
-## Testing SAIGE
+### Testing SAIGE
 
 ```
 step1_fitNULLGLMM.R
