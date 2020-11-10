@@ -8,10 +8,10 @@ description: Installation guide for Saige
 
 # Saige package for R
 
-[SAIGE is an R package](https://github.com/weizhouUMICH/SAIGE) with Scalable and
-Accurate Implementation of Generalized mixed model (Chen, H. et al. 2016).
+[SAIGE is an R package](https://github.com/weizhouUMICH/SAIGE) with scalable and
+accurate implementation of generalized mixed model (Chen, H. et al. 2016).
 It accounts for sample relatedness and is feasible for genetic association tests
-in large cohorts and biobanks (N > 400,000).
+in large cohorts and biobanks.
 
 ## Install using conda
 
