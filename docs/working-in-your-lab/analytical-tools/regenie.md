@@ -23,7 +23,7 @@ The method has the following properties:
 ::: warning Requirements
 
 - Conda (miniconda), see our [Conda tutorial](conda) for more details.
-- Conda channels: bioconda, conda-forge
+- Conda channels: conda-forge, bioconda
 
 :::
 

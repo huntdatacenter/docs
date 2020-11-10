@@ -15,10 +15,32 @@ in large cohorts and biobanks (N > 400,000).
 
 ## Install using conda
 
-To install the latest version of saige in your conda environment use:
+::: warning Requirements
+
+- Conda (miniconda), see our [Conda tutorial](conda) for more details.
+- Conda channels: conda-forge, bioconda
+
+:::
+
+To install the latest version of SAIGE in your conda environment use:
 
 ```
-conda install -c bioconda r-saige
+conda install -c conda-forge -c bioconda r-saige
+```
+
+After installation you should be able to import SAIGE library in R and run SAIGE scripts:
+
+```
+step1_fitNULLGLMM.R --help
+
+step2_SPAtests.R --help
+
+createSparseGRM.R --help
+```
+
+If you need to run your scripts with older version of R, you can use `3.5.1` and `3.6.1`:
+```
+conda install -c conda-forge -c bioconda "r-base=3.6.1" r-saige
 ```
 
 ## Install the hard way
