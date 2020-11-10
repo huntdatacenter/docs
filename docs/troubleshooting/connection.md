@@ -20,7 +20,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 ::: tip For NTNU users
 
-You can access your lab over the Ciso Anyconnect VPN from NTNU worldwide: (1) Connect the NTNU VPN using this exact address: **`vpn.ntnu.no/HUNT`**, (2) connect the HUNT Cloud VPN, and (3) connect to your lab.
+You can access your lab over the Cisco Anyconnect VPN from NTNU worldwide on Windows and Linux: (1) Connect the NTNU VPN using this exact address: **`vpn.ntnu.no/HUNT`**, (2) connect the HUNT Cloud VPN, and (3) connect to your lab.
 
 :::
 
@@ -39,6 +39,10 @@ Your **`VPN passphrase`** is stored on your local computer and used to decrypt y
 ### Broken VPN connection
 
 Your VPN session will reset after 12 hours. This will cause your connection to break. For examples, connections left running over night will not work the next morning. You will need to turn off your VPN and then initiate a new connection to get back into your lab.
+
+### Conflict with existing VPN
+
+Already running VPN services on your local machine may cause conflicts when connecting to our HUNT Cloud VPN. Try to disconnect the already running VPN service and reconnect to the HUNT Cloud VPN. NTNU users on Windows and Linux operating systems may connect to both NTNU VPN and the HUNT Cloud VPN using a [tailored NTNU VPN address](/troubleshooting/connection/#access-whitelist).
 
 ### No internet while connected to VPN
 
