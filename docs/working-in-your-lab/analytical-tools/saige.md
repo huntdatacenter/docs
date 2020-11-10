@@ -25,7 +25,7 @@ in large cohorts and biobanks (N > 400,000).
 To install the latest version of SAIGE in your conda environment use:
 
 ```
-conda install -c conda-forge -c bioconda r-saige
+conda install -c bioconda r-saige
 ```
 
 After installation you should be able to import SAIGE library in R and run SAIGE scripts:
