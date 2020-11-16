@@ -27,8 +27,16 @@ The method has the following properties:
 
 :::
 
+You will need bioconda and conda-forge channels. If you have not set channels yet
+make sure to add them in this order:
+```
+conda config --add channels bioconda
+conda config --add channels conda-forge
+```
+
 ## Installation
 
+Install regenie into your environment:
 ```
 conda install -c bioconda regenie
 ```

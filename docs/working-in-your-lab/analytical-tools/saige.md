@@ -8,8 +8,8 @@ description: Installation guide for Saige
 
 # Saige package for R
 
-[SAIGE is an R package](https://github.com/weizhouUMICH/SAIGE) with scalable and
-accurate implementation of generalized mixed model (Chen, H. et al. 2016).
+[SAIGE is an R package](https://github.com/weizhouUMICH/SAIGE) with Scalable and
+Accurate Implementation of Generalized mixed model (Chen, H. et al. 2016).
 It accounts for sample relatedness and is feasible for genetic association tests
 in large cohorts and biobanks.
 
@@ -28,19 +28,24 @@ for whole genome regression modelling of large GWAS.
 
 :::
 
-To install the latest version of SAIGE in your conda environment use:
-
+You will need bioconda and conda-forge channels. If you have not set channels yet
+make sure to add them in this order:
 ```
-conda install -c bioconda r-saige
+conda config --add channels bioconda
+conda config --add channels conda-forge
+```
+
+To create a new environment and install the latest version of SAIGE use:
+```
+conda create -n saige -c bioconda r-saige=0.42.1
+conda activate saige
 ```
 
 After installation you should be able to import SAIGE library in R and run SAIGE scripts:
 
 ```
 step1_fitNULLGLMM.R --help
-
 step2_SPAtests.R --help
-
 createSparseGRM.R --help
 ```
 
