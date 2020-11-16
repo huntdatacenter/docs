@@ -11,7 +11,7 @@ description: Internal kistas provide labs with a simple and controlled way to tr
 Internal kistas provide labs with a simple and controlled way to transfer data between two labs inside HUNT Cloud. In short, internal kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers dedicated to one data transaction between two labs.
 
 ::: tip Note
-This page describes the practical aspects of kista transfers. Head over to our [Transfer section](/faq/transfer/) in the FAQ for more information on the service itself.
+This page describes the practical aspects of kista transfers. Head over to our [internal transfer](/faq/internal-transfer/) section in the FAQ for more information on the service itself.
 :::
 
 

@@ -22,19 +22,19 @@ Your lab leader and lab coordinator can add new users to your lab through our us
 
 [HUNT Cloud - Internal Kista Transfer Form](https://assets.hdc.ntnu.no/assets/hunt-cloud-internal-kista-transfer-form.pdf) (pdf)
 
-Lab leaders and lab coordinators from labs that will upload data can order Kistas for data transfers between two labs in HUNT Cloud. We use this form to document internal traffic from your lab. Read more about Internal kistas in our [FAQ transfer section](/faq/transfer/).
+Lab leaders and lab coordinators from labs that will upload data can order Kistas for data transfers between two labs in HUNT Cloud. We use this form to document internal traffic from your lab. Read more about Internal kistas in our [FAQ transfer section](/faq/internal-transfer/).
 
 ## External kista import agreement
 
 [HUNT Cloud - Exteral Kista Import Agreement](https://assets.hdc.ntnu.no/assets/hunt-cloud-external-kista-import-agreement.pdf) (pdf)
 
-Lab leaders can request external kistas where collaborators outside HUNT Cloud can import data. This agreement is signed both by the Lab leader and the Importer that will do the data import. Read more about External kistas in our [FAQ transfer section](/faq/transfer/).
+Lab leaders can request external kistas where collaborators outside HUNT Cloud can import data. This agreement is signed both by the Lab leader and the Importer that will do the data import. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
 
 ## Network opening form
 
 [HUNT Cloud Network Opening Form](https://assets.hdc.ntnu.no/assets/hunt-cloud-network-opening-form.pdf) (pdf)
 
-Your lab leader can request external network openings through our network opening form. We use this form to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/transfer/).
+Your lab leader can request external network openings through our network opening form. We use this form to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/external-transfer/).
 
 
 ::: details Clarification of the form fields
