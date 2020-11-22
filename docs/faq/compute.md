@@ -84,7 +84,7 @@ When your command or script finishes, `time` writes a message to standard error 
 
 In your home machine, type **`ssh `** and hit the **`Tab`** button twice. This will give you a list of the available iaas and blue machines in your lab. The default user will be **`ubuntu`** and the default password will be **`ubuntu`**. 
 
-```
+```bash
 ssh ubuntu@<machine-name>
 ```
 
@@ -105,7 +105,7 @@ ssh-copy-id ubuntu@demolab-blue-sagal
 ssh-add
 
 # -- Test login
-ssh ubuntu@machine-name
+ssh ubuntu@<machine-name>
 ```
 
 
