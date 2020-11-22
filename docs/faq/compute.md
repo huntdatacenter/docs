@@ -78,6 +78,36 @@ When your command or script finishes, `time` writes a message to standard error 
 (3) Use your monthly "Lab report" sent to your lab leader and lab coordinator for tracking of longer term resource consumptions inside your lab.
 
 
+## Access
+
+### How can I access our iaas and blue machines? 
+
+In your home machine, type **`ssh `** and hit the **`Tab`** button twice. This will give you a list of the available iaas and blue machines in your lab. The default user will be **`ubuntu`** and the default password will be **`ubuntu`**. 
+
+```
+ssh ubuntu@<machine-name>
+```
+
+### How can I make the login 'passwordless'? 
+
+You can add your keys to the iaas and blue machines or 'passwordless' logins. In your home machine:
+
+```bash
+# -- Add keys
+
+# principal example
+ssh-copy-id ubuntu@<machine-name>
+
+# practical example
+ssh-copy-id ubuntu@demolab-blue-sagal
+
+# -- Add certificate to ssh-agent
+ssh-add
+
+# -- Test login
+ssh ubuntu@machine-name
+```
+
 
 ## Software
 
