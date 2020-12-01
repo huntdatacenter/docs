@@ -28,5 +28,5 @@ conda config --add channels conda-forge
 Install singularity in conda base:
 
 ```
-conda install -n base -c conda-forge singularity
+conda install -n base -c conda-forge "singularity>=3.0.0"
 ```
