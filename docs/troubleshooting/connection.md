@@ -24,13 +24,20 @@ You can access your lab over the Cisco Anyconnect VPN from NTNU worldwide on Win
 
 :::
 
+### Cannot connect due to local firewalls
+
+Some organizations and companies have local firewalls which prohibit your computer from connecting to the HUNT Cloud VPN. Blocked network connections will typically give an error such as `The VPN failed because the connection attempt timed out`. Please contact your local IT department for assistance with the network requirements below if you think this may be the case. Feel free to [include us](/contact) in the communication if you need assistance.
+
+##### Network requirements for HUNT Cloud
+```
+IP: 129.241.176.121
+Port: 1194
+Protocol: UDP
+```
+
 ### Administrator rights
 
 Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/getting-started/configure-vpn/#_2-1-install-the-vpn-software).
-
-### Local firewalls
-
-Our VPN service communicate with your local machine on a specific port that needs to be allowed in your local firewall: UDP protocol on Port 1194 to and from IP 129.241.176.121. Blocked network connections will typically give a "The VPN failed because the connection attempt timed out"-error. Please contact your local IT department for assistance if you think this may be the case. Feel free to [include us](/contact) in the communication if you need assistance.
 
 ### Lost or missing VPN passphrase
 
