@@ -76,7 +76,7 @@ You will need to remove your old VPN certificate and passwords before you instal
 
 ### New phone
 
-We are happy to hear that! You will need a new Google authenticator code from us to connect your VPN again. [Contact us](/contact) on mail with a request for a new code and allow a few days for shipping. Follow this [guide](/getting-started/how-to-connect/#_2-setup-google-authenticator) for installation.
+You will need a new Google authenticator code from us to connect your VPN again. [Contact us](/contact) on mail with a request for a new code and allow a few days for shipping. Follow this [guide](/getting-started/how-to-connect/#_2-setup-google-authenticator) for installation.
 
 ### No phone
 
