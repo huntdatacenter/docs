@@ -7,9 +7,10 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: tip All systems
-Operational.
+::: warning One physical machine
+**2020-12-08 12:42** - One physical machine went offline. Lab machines that are located on this machine are currently unavailable. We are working on the migration and rebooting of these labs to restore their service. 
 :::
+
 
 <!--
 
