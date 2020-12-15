@@ -24,9 +24,13 @@ If these steps don't work as intended, it will be hard (although not impossible)
 
 - Open MobaXterm
 - Select a new session and click on the `SSH` image on the `Session settings`.
-- Under `Basic SSH settings`, add `10.5.5.12` under `Remote host`and type your username on the same line under `Specify username`.
-- Under `Network settings`, check `Connect through SSH gateway (jump host)` and add your labs IP-address to the `Gateway SSH server` and your user name to the `User` field (the 10.42.-address from the ssh-config).
-- Click OK and then try to connect.
+- In **Basic SSH settings**, add `10.5.5.12` as `Remote host` and type your username into `Specify username` field. Under **Advanced SSH settings** uncheck `X11-forwarding` if not used. Select ssh (private) key file if you already have one.
+  ![Step 1](./images/mobaxterm_step1.png "MobaXterm - Step 1")
+- Under `Network settings`, click on `Connect through SSH gateway (jump host)`
+  ![Step 2](./images/mobaxterm_step2.png "MobaXterm - Step 2")
+- Add your labs IP-address to the `Gateway SSH server` and your user name to the `User` field (the 10.42.-address from the ssh-config). Select ssh (private) key file if you already have one. Click OK to confirm SSH jump host.
+  ![Step 3](./images/mobaxterm_step3.png "MobaXterm - Step 3")
+- Click OK to confirm Session settings and then try to connect.
 
 ## Connect
 
