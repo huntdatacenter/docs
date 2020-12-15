@@ -1,12 +1,12 @@
 ---
-title: HTOP
+title: Htop
 category: Technical tools
 permalink: /working-in-your-lab/technical-tools/htop
 sidebarDepth: 1
 description: Usage guide for Htop.
 ---
 
-# HTOP
+# Htop
 
 Htop is an interactive processes viewer for Linux systems.
 It is practically a top-like tool, but it displays information

@@ -11,13 +11,6 @@ description: Updates will be posted here if there is any service or performance 
 Operational.
 :::
 
-::: warning One physical machine
-**2020-12-08 12:42** - One physical machine went offline. Lab machines that are located on this machine are currently unavailable. We are working on the migration and rebooting of these labs to restore their service. New update 13:30.
-
-**2020-12-08 13:30** - Lab machines were migrated and rebooted, all are operational now.
-:::
-
-
 <!--
 
 ::: tip All systems
@@ -30,7 +23,6 @@ Operational.
 - Green = operational.
 - Yellow = reduced performance.
 - Red = some or all services are inaccessible.
-
 
 # Example statement
 
@@ -51,15 +43,19 @@ Reduced performance reported. We are investigating. Next update expected 14:30.
 3. State next expected info update, such as
    - Next update expected (e.g. 30 min after statement)
 
-# Color examples
+# Color example: GREEN
 
 ::: tip All systems
 Operational
 :::
 
+# Color example: ORANGE
+
 ::: warning All systems
 **2020-00-00 22:46** - Reduced performance reported. We are investigating. Next update expected 23:30.
 :::
+
+# Color example: RED
 
 ::: danger Lab access
 **2020-00-00 22:46** - Some labs are inaccsessible. We are investigating. Next update expected 23:30.
