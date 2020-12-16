@@ -174,6 +174,15 @@ You should be able to delete restore files if **`restore`** is among the listed 
 
 Yes. Your restore folders are stored inside your  **`/mnt/work`** and **`/mnt/archive`** volumes. This will consume storage space in these volumes as a regular folder. Typically, restore will take one duplicate copy of your data and then incremental changes over the 30 day period. You should therefore plan your volume sizes for at least twice the amount of data that you plan to store.
 
+### What is the size of our restore folders? 
+
+You can see the consumption of your default restore folders with the following command: 
+
+```bash
+du -sh /mnt/work/.restore/*
+du -sh /mnt/archive/.restore/*
+```
+
 ### Why is my restore folders filling my volumes?
 
 We take nightly copies of data that has changed over the last day. Thus, folders with data that change on a daily basis will continuously grow your restore. For example, if you store temporary files from your analysis in work or archive. One good way to avoid this is to use your **`/mnt/scratch`** volume for such temporary files.
@@ -193,12 +202,7 @@ ls /mnt/work/.restore/
 ls /mnt/archive/.restore/
 ```
 
-2. Check the size of your daily restore folders. You should expect the earliest date to hold most of your date (largest storage size) and the others to show sizes according to your data changes. Depending on your volume sizes, these commands may take up to many minutes.
-
-```bash
-du -sh /mnt/work/.restore/*
-du -sh /mnt/archive/.restore/*
-```
+2. Check the size of your daily restore folders (see above). You should expect the earliest date to hold most of your date (largest storage size) and the others to show sizes according to your data changes. Depending on your volume sizes, these commands may take up to many minutes.
 
 3. Manually inspect the content of individual folders inside your daily restores using **`cd <folder>`**.
 
