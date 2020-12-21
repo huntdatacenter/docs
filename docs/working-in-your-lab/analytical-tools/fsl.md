@@ -16,12 +16,13 @@ white matter tractography, tissue segmentation, affine and non-linear
 co-registration, and independent component analysis [(Source: Neurodebian)](http://neuro.debian.net/pkgs/fsl-complete.html).
 
 ::: tip
-FSL supports [HTCondor](https://research.cs.wisc.edu/htcondor/) to speed up analysis by running the tasks in parallel.
+Use [HTCondor](https://neuro.debian.net/blog/2012/2012-03-09_parallelize_fsl_with_condor.html)
+with FSL to speed up analysis by running the tasks in parallel.
 :::
 
 ::: tip
-[Bedpostx](https://users.fmrib.ox.ac.uk/~moisesf/Bedpostx_GPU/Installation.html)
-also supports [GPU](/working-in-your-lab/technical-tools/gpu/), which speeds up analysis on large dataset.
+[Bedpostx](https://users.fmrib.ox.ac.uk/~moisesf/Bedpostx_GPU/Installation.html) also supports
+[GPU](/working-in-your-lab/technical-tools/gpu/), which provides significantly faster results on large datasets.
 :::
 
 ## Installation using Conda
