@@ -27,11 +27,28 @@ description: Installation and usage guide for Rsync.
 brew install rsync
 ```
 
-## Usage
+## Transfer from you local machine
 
 [RSync](https://linux.die.net/man/1/rsync) provides many parameters described in their documentation.
-We provide only simple example to start with when transferring files from your computer to remote machine (server):
+We provide only simple example to start with when transferring files from your local machine to your lab machine:
 
 ```
-rsync -avuz path/to/directory username@example.com:/target/path/
+# -- Principal example
+rsync -avuz path/to/your/local/directory <labname>:/mount/cargo/
+
+# -- Practical example
+rsync -avuz path/to/your/local/directory demolab:/mount/cargo/
 ```
+
+## Transfer from home machine to blue machine
+
+```
+# -- Principal example
+rsync -avuz /mnt/work/my/folder ubuntu@<machinename>:/home/ubuntu/
+
+# -- Practical example
+rsync -avuz path/to/your/local/directory demolab-blue-thea:/home/ubuntu/
+```
+
+
+
