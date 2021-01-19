@@ -33,28 +33,28 @@ brew install rsync
 
 Here are a few simple examples to get you started. 
 
-## Transfer from you local machine
+### Transfer from you local machine
 
 This is an example of data transfers from your local machine to your lab.
 
-```
+```bash
 # -- Principal example
-rsync -avuz path/to/your/local/directory <labname>:/mount/cargo/
+rsync -avuz path/to/your/local/directory <username>@<labname>:/mount/cargo/
 
 # -- Practical example
-rsync -avuz path/to/your/local/directory demolab:/mount/cargo/
+rsync -avuz path/to/your/local/directory demouser@demolab:/mount/cargo/
 ```
 
-## Transfer from home machine to blue machine
+### Transfer from home machine to blue machine
 
-This is an example of data transfer from your home machine a iaas or blue machine inside the same lab.
+This is an example of data transfer from your home machine to a iaas or blue machine inside the same lab.
 
-```
+```bash
 # -- Principal example
 rsync -avuz /mnt/work/my/folder ubuntu@<machinename>:/home/ubuntu/
 
 # -- Practical example
-rsync -avuz path/to/your/local/directory demolab-blue-thea:/home/ubuntu/
+rsync -avuz path/to/your/local/directory ubuntu@demolab-blue-thea:/home/ubuntu/
 ```
 
 ## More information
