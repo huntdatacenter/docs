@@ -83,7 +83,8 @@ module.exports = {
           // collapsable: false,
           children: [
             "for-coordinators/",
-            "for-coordinators/agreements-overview"
+            "for-coordinators/agreements-overview",
+            "for-coordinators/services-overview"
           ]
         },
         {

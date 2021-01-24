@@ -3,7 +3,7 @@ title: Agreements overview
 category: HUNT Cloud
 permalink: /for-coordinators/agreements
 sidebarDepth: 1
-description: This page aim to give an overview of agreements for coordinators.
+description: This page gives an overview of HUNT Cloud agreements aimed at coordinators.
 ---
 
 # Agreements overview
