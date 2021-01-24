@@ -75,7 +75,15 @@ module.exports = {
             "about/",
             "about/agreements",
             "about/certificates",
-            "about/tingweeks",
+            "about/tingweeks"
+          ]
+        },
+        {
+          title: "For coordinators",
+          // collapsable: false,
+          children: [
+            "for-coordinators/",
+            "for-coordinators/agreements-overview"
           ]
         },
         {
