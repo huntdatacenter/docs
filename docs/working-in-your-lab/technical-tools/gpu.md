@@ -12,11 +12,11 @@ We offer GPU machine types in our IaaS tier allowing you to run the AI/ML worklo
 
 ## GPU specification
 
-- Manufacturer: NVIDIA
-- Model: Tesla P100
-- Architecture: Pascal
-- Memory: 16GB CoWoS HBM2 with ECC
-- Interface: PCIe 3.0
+| Manufacturer | Model | Architecture | Memory | Interface |
+|--------------|-------|--------------|--------|-----------|
+| NVIDIA | Tesla P100 | Pascal | 16GB HBM2 | PCIe Gen3 |
+| NVIDIA | Tesla V100 | Volta | 32GB HBM2 | PCIe Gen3 |
+| NVIDIA | Tesla V100S | Volta | 32GB HBM2 | PCIe Gen3 |
 
 ## Software
 
