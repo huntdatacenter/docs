@@ -77,16 +77,14 @@ The below steps require the code to be run in `xterm` started from X2GO on the m
 
 1. Prepare target directory:
    ```
-   mkdir -p /mnt/work/software/matlab2019b
+   mkdir -p /mnt/work/software/matlab_r2019b
    mkdir -p /mnt/scratch/tmp
    ```
 
-2. Go to your Matlab installation folder (e.g. /mnt/scratch/matlab/) and run the installer:
+2. Go to your Matlab installation folder (e.g. /mnt/scratch/software/matlab_r2019b) and run the installer:
 
    ```
-   export TMP=/mnt/scratch/tmp
-   export TEMP_DIR=/mnt/scratch/tmp
-   bash ./install
+   bash ./install -downloadFolder /mnt/scratch/software/matlab_r2019b -tmpdir /mnt/scratch/tmp -destinationFolder /mnt/work/software/matlab_r2019b
    ```
 
 3. During the installation choose: `Use a File Installation Key`
