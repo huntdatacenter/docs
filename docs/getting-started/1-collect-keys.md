@@ -80,6 +80,8 @@ We will communicate your VPN certificate and SSH configuration over your organiz
 
 Click on these links for installation guidance if your current software don't recognize the 7z-format: [windows](https://www.google.no/search?q=unpack+7z+windows), [mac](https://www.google.no/search?q=unpack+7z+mac), [linux](https://www.google.no/search?q=unpack+7z+linux).
 
+OS X and macOS: The default archive utility for 7z files will not recognize the passphrase. You will need to install 7z-compatible software from the link above.
+
 :::
 
 ::: warning Expect these files on your local machine
