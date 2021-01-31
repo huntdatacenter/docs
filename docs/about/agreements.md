@@ -14,7 +14,7 @@ This page list agreements that may be relevant for you as a lab user. Contact yo
 
 ## User agreement
 
-[HUNT Cloud User Agreement](https://assets.hdc.ntnu.no/assets/hunt-cloud-user-agreement.pdf) (pdf)
+[HUNT Cloud User Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf) (pdf)
 
 Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator. Read more about how to add new users in our [FAQ user section](/faq/users/).
 
@@ -28,11 +28,17 @@ Lab leaders and lab coordinators from labs that will upload data can order inter
 
 [HUNT Cloud - Exteral Kista Import Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-import-order.pdf) (pdf)
 
-Lab leaders can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from your lab. This agreement is signed both by the Lab leader and the uploader outside HUNT Cloud that will do the data import. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
+Lab leaders can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from your lab. This agreement is signed both by the Lab leader and the uploader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
+
+## External kista export order
+
+[HUNT Cloud - Exteral Kista Export Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-export-order.pdf) (pdf)
+
+Lab leaders can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. This agreement is signed both by the Lab leader and the downloader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
 
 ## Network opening form
 
-[HUNT Cloud Network Opening Form](https://assets.hdc.ntnu.no/assets/hunt-cloud-network-opening-form.pdf) (pdf)
+[HUNT Cloud Network Opening Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-network-opening-form.pdf) (pdf)
 
 Your lab leader can request external network openings through our network opening form. We use this form to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/external-transfer/).
 
