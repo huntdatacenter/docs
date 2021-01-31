@@ -20,9 +20,9 @@ Your lab leader and lab coordinator can add new users to your lab through our us
 
 ## Internal kista order
 
-[HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/hunt-cloud-internal-kista-transfer-form.pdf) (pdf)
+[HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf) (pdf)
 
-Lab leaders and lab coordinators from labs that will upload data can order Kistas for data transfers between two labs in HUNT Cloud. We use this form to document internal traffic from your lab. Read more about Internal kistas in our [FAQ transfer section](/faq/internal-transfer/).
+Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab. Read more about Internal kistas in our [FAQ transfer section](/faq/internal-transfer/).
 
 ## External kista import order
 
