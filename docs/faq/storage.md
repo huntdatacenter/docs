@@ -20,11 +20,11 @@ You will find the following storage volumes inside your [home](compute/#what-is-
 
 | **Name** | **Location** | **Recommended use** | **Recovery** |
 | - | - | - | - |
-| home | **`/home/`** | Private space for lab users. | None. |
-| work | **`/mnt/work/`** | Workspace for all lab users. | Nightly snapshots.* |
-| scratch | **`/mnt/scratch/`** | Temporary files to keep costs down. |  None |
-| archive | **`/mnt/archive/`** | Long term archiving at reduced cost. | Nightly snapshots.* |
-| cargo | **`/mnt/cargo/`** | Import and export of data. | None |
+| home | **`/home/`** | Private space for lab users | None |
+| work | **`/mnt/work/`** | Workspace for all lab users | Nightly snapshots* |
+| scratch | **`/mnt/scratch/`** | Temporary files |  None |
+| archive | **`/mnt/archive/`** | Long term archiving | Nightly snapshots* |
+| cargo | **`/mnt/cargo/`** | Import and export of data | None |
 
 (*) The nightly snapshot for file changes are intended to protect against accidental deletion and accidental overwrites.
 
