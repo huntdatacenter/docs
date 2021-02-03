@@ -39,20 +39,25 @@ sudo apt autoremove
 R
 ```
 
-### Upgrade to latest R version
+### Upgrade to latest R version (4.0)
 
 The default version in Ubuntu is usually a few versions behind the newest R version available. Follow the code below if you need the newest version.
 
+::: warning Please note
+The code below do a dist-upgrade that updates versions for all packages on your machine. If you (or others in your lab) run version dependent code, this step may break your environments.
+:::
+
+
 ```bash
 # -- Add the new package repository to your sources list:
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran35/"
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 
 # Add keys for the r-project repository
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 
 # -- Update packages
 sudo apt update
-sudo apt upgrade -y
+sudo apt dist-upgrade -y
 sudo apt autoremove -y
 
 # -- Start R
