@@ -14,7 +14,46 @@ For those of you running unmanaged machines on our security tier 2 may want to u
 
 [[toc]]
 
-## Adjust R version
+## Install R
+
+### Install using Conda
+
+We recommend using [Conda](/working-in-your-lab/analytical-tools/conda/) to install R packages. Conda gives you better flexibility when choosing versions, which will not affect other researchers in your lab.
+
+::: tip
+We have very easy guide on how to get [Saige](/working-in-your-lab/analytical-tools/saige/) running in Conda environment.
+:::
+
+If you have a conda setup based on the guide above you will need some additional channels to install the packages.
+You will need [bioconda](https://anaconda.org/bioconda) and [conda-forge](https://anaconda.org/conda-forge) channels.
+If you have not set channels yet make sure to add them in the same order,
+but feel free to skip bioconda if you do not see a need for it:
+
+```
+conda config --add channels bioconda
+conda config --add channels conda-forge
+```
+
+To install R (>=4.0.3) you have to install r-base package. In the example below we create an environment where r-base is being installed as default with devtools:
+
+```
+conda create --name renv --channel conda-forge  "r-base>=4.0.3" r-devtools
+```
+
+To be able to work with R that you just installed you have to activate your conda environment:
+
+```
+conda activate renv
+R
+```
+
+Additional R packages can be found in channels or installed using R devtools. R packages in [bioconda](https://anaconda.org/bioconda) and [conda-forge](https://anaconda.org/conda-forge) channels have `r-` prefix in their names. Here is an example how to install matrix R package into renv environment:
+
+```
+conda install -n renv r-matrix
+```
+
+### Install using system packages
 
 ```bash
 # Install R
