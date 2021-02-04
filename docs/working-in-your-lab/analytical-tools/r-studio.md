@@ -61,13 +61,11 @@ sudo apt install r-base r-base-dev -y
 
 # Add the updated package repository to your sources list:
 # https://cran.r-project.org/bin/linux/ubuntu/
-sudo su
-echo "deb https://ftp.acc.umu.se/mirror/CRAN/bin/linux/ubuntu $(lsb_release -cs)/" >> /etc/apt/sources.list
+echo "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran35/" | sudo tee "/etc/apt/sources.list.d/$(lsb_release -cs)-cran35.list"
 
 # Add keys for the CRAN repository
 gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E084DAB9
 gpg -a --export E084DAB9 | sudo apt-key add -
-exit
 
 # Update packages
 sudo apt update
@@ -90,14 +88,16 @@ We recommend installing new R version using [Conda](/working-in-your-lab/analyti
 
 ```bash
 # -- Add the new package repository to your sources list:
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+echo "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/" | sudo tee "/etc/apt/sources.list.d/$(lsb_release -cs)-cran40.list"
 
 # Add keys for the r-project repository
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E084DAB9
+gpg -a --export E084DAB9 | sudo apt-key add -
 
 # -- Update packages
 sudo apt update
 sudo apt dist-upgrade -y
+sudo apt install r-base
 sudo apt autoremove -y
 
 # -- Start R
