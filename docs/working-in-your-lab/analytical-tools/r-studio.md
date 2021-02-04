@@ -83,7 +83,8 @@ R
 The default version in Ubuntu is usually a few versions behind the newest R version available. Follow the code below if you need the newest version.
 
 ::: warning Please note
-The code below do a dist-upgrade that updates versions for all packages on your machine. If you (or others in your lab) run version dependent code, this step may break your environments.
+Running dist-upgrade affects versions of all packages on your machine. This may break your or others environments.
+We recommend installing new R version using [Conda](/working-in-your-lab/analytical-tools/r-studio/#install-using-conda) instead.
 :::
 
 
