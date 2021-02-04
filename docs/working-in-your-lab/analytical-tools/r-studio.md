@@ -243,7 +243,7 @@ sudo vim /etc/x2go/x2goagent.options
 
 ### I cannot create R_TempDir
 
-If your system disk is full, R will not be able to store temporary files used for computation. You may see the error message **`Fatal error: cannot create 'R_TempDir'`**. Click here to verify if the disk disk is full, and this guide to change your temp folder to a larger volume.
+If your system disk is full, R will not be able to store temporary files used for computation. You may see the error message **`Fatal error: cannot create 'R_TempDir'`**. [Click here](/faq/storage/#how-can-i-see-the-sizes-of-my-lab-volumes) to verify if the disk disk is full, and this guide to change your temp folder to a larger volume.
 
 ### Installation of devtools
 
@@ -253,6 +253,10 @@ You may need to install some more dependencies to get `install.packages("devtool
 sudo apt update
 sudo apt install libcurl4-openssl-dev libssh2-1-dev libssl-dev libxml2-dev
 ```
+
+### RStudio do not recognize the latest R-version
+
+Since R versions can be installed side-by-side on a system, you may need to select which version of R you would like RStudio to use. Click the [Chaning R versions for RStudio desktop](https://support.rstudio.com/hc/en-us/articles/200486138-Changing-R-versions-for-RStudio-desktop) on the RStudio support pages for more information.
 
 ### PredictABEL, matplotlib, viridis, or plyr fails to import
 
