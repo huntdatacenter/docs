@@ -28,7 +28,6 @@ Follow the [Set up channels](https://bioconda.github.io/user/install.html#set-up
 ```
 conda config --add channels defaults
 conda config --add channels bioconda
-conda config --add channels anaconda
 conda config --add channels conda-forge
 ```
 
