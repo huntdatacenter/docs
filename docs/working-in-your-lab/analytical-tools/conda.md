@@ -21,19 +21,16 @@ To get more out of conda we recommend reading
 [Conda - Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 guide.
 
-### Set up Bioconda and other channels
+### Set up Bioconda and conda-forge channels
 
+To find packages in Conda you need to configure relevant channels.
 Follow the [Set up channels](https://bioconda.github.io/user/install.html#set-up-channels) guide from Bioconda.
+We recommend starting with [bioconda](https://anaconda.org/bioconda) and [conda-forge](https://anaconda.org/conda-forge). Quick way to make sure your channels are added correctly is to (re)add them in this order:
 
 ```
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
-```
-
-Depending on your aims you might also consider adding [R channel](https://anaconda.org/r/).
-```
-conda config --add channels r
 ```
 
 ### Install Your Tools
@@ -43,6 +40,10 @@ Have a field day installing your favourite tools
 ```bash
 conda install plink2
 ```
+
+::: tip
+We have very easy guide on how to get [Saige](/working-in-your-lab/analytical-tools/saige/) running in Conda environment.
+:::
 
 ### Do Cool Science
 
