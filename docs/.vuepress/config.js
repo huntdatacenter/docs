@@ -65,8 +65,7 @@ module.exports = {
           children: ["",
             "system-status",
             "contribute",
-            "contact",
-            "ting-weeks"
+            "contact"
           ]
         },
         {
@@ -74,19 +73,32 @@ module.exports = {
           // collapsable: false,
           children: [
             "about/",
-            "about/agreements",
+            "about/ting-weeks",
             "about/certificates"
           ]
         },
         {
-          title: "For coordinators",
+          title: "Coordination",
           // collapsable: false,
           children: [
-            "for-coordinators/",
-            "for-coordinators/agreements-overview",
-            "for-coordinators/services-overview"
-          ]
-        },
+            "coordination/", 
+            {
+              title: "Agreements", 
+              // collapsable: false,
+              children: [
+                "coordination/agreements/download",
+                "coordination/agreements/overview"
+              ]
+            },
+            {
+              title: "Services", 
+              // collapsable: false,
+              children: [
+                "coordination/services/specifications"
+              ]
+             }
+           ]
+         },
         {
           title: "Getting started",
           // collapsable: false,
@@ -151,12 +163,12 @@ module.exports = {
           ]
         },
         {
-          title: "Data transfer",
+          title: "Data transfers",
           // collapsable: false,
           children: [
-            "data-transfer/",
-            "data-transfer/internal-kista.md",
-            "data-transfer/external-kista.md"
+            "data-transfers/",
+            "data-transfers/internal-kista.md",
+            "data-transfers/external-kista.md"
           ]
         },
         {

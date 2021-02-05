@@ -1,7 +1,7 @@
 ---
 title: External kista
-category: Data transfer
-permalink: /data-transfer/external-kista
+category: Data transfers
+permalink: /data-transfers/external-kista
 sidebarDepth: 2
 description: External kistas support labs with a simple and secure way to transport data from an external user located outside HUNT Cloud and into their lab in HUNT Cloud.
 ---
@@ -188,4 +188,4 @@ Please [contact us](/contact) if you require more details or run into trouble.
 
 ## For internal users
 
-Lab users in HUNT Cloud that will download data from an external kista can follow the steps in our [download guide](/data-transfer/internal-kista/#download) for internal kistas.
+Lab users in HUNT Cloud that will download data from an external kista can follow the steps in our [download guide](/data-transfers/internal-kista/#download) for internal kistas.

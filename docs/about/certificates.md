@@ -26,5 +26,5 @@ Our compliance with the international standard in quality management «ISO 9001�
 
 Our compliance with the international standard in information security management «[ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)» is certified by Nemko, Norway, in accordance with our Statement of Applicability (SoA).
 
-The certification include controls from «[ISO 27017](https://www.iso.org/standard/43757.html)» that covers security for cloud services, and compliance with controls from «[ISO 27018](https://www.iso.org/standard/76559.html)» that covers protection of personal identifiable information in public clouds.
+The certification do also include controls from «[ISO 27017](https://www.iso.org/standard/43757.html)» that covers security for cloud services, and «[ISO 27018](https://www.iso.org/standard/76559.html)» that covers protection of personal identifiable information in public clouds.
 

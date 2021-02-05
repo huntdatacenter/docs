@@ -1,12 +1,12 @@
 ---
-title: Agreements overview
+title: Overview
 category: HUNT Cloud
-permalink: /for-coordinators/agreements
+permalink: /coordination/agreements/overview
 sidebarDepth: 1
-description: This page gives an overview of HUNT Cloud agreements aimed at coordinators.
+description: This page gives an overview of administrative agreements in HUNT Cloud.
 ---
 
-# Agreements overview
+# Overview of administrative agreements
 
 We know, it can be difficult to keep up with the piles of papers that might be required to make your science fly. As much as we would like, we can not make them disappear. 
 

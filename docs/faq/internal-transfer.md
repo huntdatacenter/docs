@@ -21,7 +21,7 @@ Yes and no. Direct transfers between labs are blocked. However, you can transfer
 Internal kista is our service for simple and secure data transfers between two labs. One lab make data available (uploader) to another lab that can download the data (downloader). The transfer take place on SFTP servers dedicated to the specific data transaction.
 
 ### How do I order an internal kista?
-Lab leader or lab coordinator in the lab that will make data available (uploader lab) can request internal kistas through our [Internal kista transfer form](/about/agreements/#internal-kista-transfer-form).
+Lab leader or lab coordinator in the lab that will make data available (uploader lab) can request internal kistas through our [Internal kista transfer order](/coordination/agreements/download/#internal-kista-transfer-order).
 
 ### How long does it take to get access to an internal kista?
 Allow for up to a week in deployment time after you send ut the signed transfer form. Although usually the deployment will be available within days. We will notify both the upload and downloader lab with account information.
@@ -30,7 +30,7 @@ Allow for up to a week in deployment time after you send ut the signed transfer 
 Kistas are short-lived SFTP servers dedicated to your specific data transaction. Access is restricted to named uploaders and downloaders from specific labs. We take the responsibility to ensure that data gets downloaded by the correct user and lab.
 
 ### How do I access my internal kista?
-See our [internal kista transfer guide](/data-transfer/internal-kista/) for instruction on how to access and upload or download data in internal kista.
+See our [internal kista transfer guide](/data-transfers/internal-kista/) for instruction on how to access and upload or download data in internal kista.
 
 ### What is the size and utilization of my internal kista? 
 You can check the size and utilization if you log in to your kista and run the following commands: 

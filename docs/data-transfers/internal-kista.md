@@ -1,7 +1,7 @@
 ---
 title: Internal kista
-category: Data transfer
-permalink: /data-transfer/internal-kista
+category: Data transfers
+permalink: /data-transfers/internal-kista
 sidebarDepth: 1
 description: Internal kistas provide labs with a simple and controlled way to transfer data between two labs inside HUNT Cloud.
 ---
@@ -19,9 +19,9 @@ This page describes the practical aspects of kista transfers. Head over to our [
 
 ## Order
 
-Internal kistas are ordered by the uploader Lab leader or Lab coordinator using the [Internal kista transfer form](/about/agreements/#internal-kista-transfer-form). Forward the form [to us](/contact) for deployment.
+Internal kistas are ordered by the uploader Lab leader or Lab coordinator using the [Internal kista transfer order](/coordination/agreements/download/#internal-kista-transfer-form). Forward the order [to us](/contact) for deployment.
 
-The form defines two roles that we will use in this document:
+The kista order defines two roles that we will use in this document:
 
 - **Uploader**. This is the lab user in the Lab that has ordered the Kista and that will provide (upload) data.
 - **Downloader**. This the lab user in the lab that will receive (download) data.
