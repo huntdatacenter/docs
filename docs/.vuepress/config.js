@@ -65,7 +65,8 @@ module.exports = {
           children: ["",
             "system-status",
             "contribute",
-            "contact"
+            "contact",
+            "ting-weeks"
           ]
         },
         {
@@ -74,8 +75,7 @@ module.exports = {
           children: [
             "about/",
             "about/agreements",
-            "about/certificates",
-            "about/tingweeks"
+            "about/certificates"
           ]
         },
         {
