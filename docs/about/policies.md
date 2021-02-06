@@ -1,7 +1,7 @@
 ---
 title: Policies
 category: HUNT Cloud
-permalink: /about/policies
+permalink: /policies
 sidebarDepth: 1
 description: This page list policies for HUNT Cloud.
 ---

@@ -1,7 +1,7 @@
 ---
 title: Certificates
 category: HUNT Cloud
-permalink: /about/certificates
+permalink: /certificates
 sidebarDepth: 1
 description: This page list compliance certificates for HUNT Cloud.
 ---
