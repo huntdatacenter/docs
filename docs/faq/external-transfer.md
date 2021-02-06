@@ -22,7 +22,7 @@ Yes. Remote parties can upload data to your lab utilizing the external kista ser
 External kista is our service for controlled data transfers between your lab and an external user outside HUNT Cloud. The transfer take place on a time-limited SFTP server that is dedicated for your specific data transaction.
 
 ### How do I order an external kista?
-Lab leaders can request an external kista for data import through our [External kista import order](/coordination/agreements/download/#external-kista-import-agreement). You will need to fill in the form in collaboration with the party outside HUNT Cloud that will import data to your external kista. Forward the complete form to us for deployment.
+Lab leaders can request an external kista for data import through our [External kista import order](/agreements/download/#external-kista-import-agreement). You will need to fill in the form in collaboration with the party outside HUNT Cloud that will import data to your external kista. Forward the complete form to us for deployment.
 
 ### How quickly can I get access to an external kista?
 You should order your kista a few weeks before you need the transfer. The data importer outside HUNT Cloud may need to order firewall openings from his organization, the importer will need to generate a SSH key pair, and configure his/her local machine to connect with your external kista.
@@ -52,7 +52,7 @@ Most likely. The service allows you to be compliant with common acts and regulat
 [Contact us](/contact) for additional information on the external kista service aimed at security, privacy and compliance officers.
 
 ### How do I order a Kista for transfers from HEMIT? 
-[HEMIT](https://hemit.no/) is the Central Norway Regional Health Authority's IT department that coordinate transports from our regional hospitals such as St Olavs Hospital, Helse Nord-Trøndelag and Helse More og Romsdal. Transfers with external kistas are pre-approved by HEMIT for transfers from health trusts that hold data processor agreements with HUNT Cloud. Hospital departments can order transfers at **`HEMIT-torget`**. Place a free-text order for an "External kista to HUNT Cloud", include information from our [external kista import order](/coordination/agreements/download/), and state if you need help from HEMIT to install the required SFTP application on your local hospital machine.
+[HEMIT](https://hemit.no/) is the Central Norway Regional Health Authority's IT department that coordinate transports from our regional hospitals such as St Olavs Hospital, Helse Nord-Trøndelag and Helse More og Romsdal. Transfers with external kistas are pre-approved by HEMIT for transfers from health trusts that hold data processor agreements with HUNT Cloud. Hospital departments can order transfers at **`HEMIT-torget`**. Place a free-text order for an "External kista to HUNT Cloud", include information from our [external kista import order](/agreements/download/), and state if you need help from HEMIT to install the required SFTP application on your local hospital machine.
 
 
 ## Direct external transfers
@@ -61,10 +61,10 @@ Most likely. The service allows you to be compliant with common acts and regulat
 Yes and no. Direct transfers via SSH are blocked. However, your lab leader can allow network openings for data exports outside HUNT Cloud (see below).
 
 ### Can I have permanent openings to machines outside my lab?
-Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be approved by your service owner, documented in our [network opening form](/coordination/agreements/download/#network-opening-form), and the traffic needs to be initiated from inside your lab.
+Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be approved by your service owner, documented in our [network opening form](/agreements/download/#network-opening-form), and the traffic needs to be initiated from inside your lab.
 
 ### How do I request a network opening?
-Lab leaders can request network openings through our [network opening form](/coordination/agreements/download/#network-opening-form). We use this form to document outbound traffic from your lab.
+Lab leaders can request network openings through our [network opening form](/agreements/download/#network-opening-form). We use this form to document outbound traffic from your lab.
 
 ### Which network openings do the machine outside HUNT Cloud need to approve?
 Your remote party will need to open for incoming traffic from your lab in HUNT Cloud: **`IP 129.241.176.121`**. The IP is registered under NTNU. They will need to open for traffic on **`TCP port 22`** if you plan to use SSH-tools such as **`rsync`**.

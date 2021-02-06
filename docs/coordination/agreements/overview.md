@@ -1,7 +1,7 @@
 ---
 title: Overview
 category: HUNT Cloud
-permalink: /coordination/agreements/overview
+permalink: /agreements/overview
 sidebarDepth: 1
 description: This page gives an overview of administrative agreements in HUNT Cloud.
 ---
@@ -11,10 +11,6 @@ description: This page gives an overview of administrative agreements in HUNT Cl
 We know, it can be difficult to keep up with the piles of papers that might be required to make your science fly. As much as we would like, we can not make them disappear. 
 
 However, we can help you with a structured overview of the various agreements that you will need in order to fully utilize the powers of HUNT Cloud.
-
-::: warning Agreement templates
-This page is aimed at research coordinators. [Click here](/about/agreements) to download agreement templates aimed at lab leaders.
-:::
 
 [[toc]]
 
