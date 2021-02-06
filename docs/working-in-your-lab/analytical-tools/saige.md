@@ -30,14 +30,16 @@ for whole genome regression modelling of large GWAS.
 
 You will need bioconda and conda-forge channels. If you have not set channels yet
 make sure to add them in this order:
+
 ```
 conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
 To create a new environment and install the latest version of SAIGE use:
+
 ```
-conda create -n saige -c bioconda r-saige=0.42.1
+conda create -n saige -c bioconda r-saige=0.43.0
 conda activate saige
 ```
 
@@ -50,6 +52,7 @@ createSparseGRM.R --help
 ```
 
 If you need to run your scripts with older version of R, you can use `3.5.1` and `3.6.1`:
+
 ```
 conda install -c conda-forge -c bioconda "r-base=3.6.1" r-saige
 ```
