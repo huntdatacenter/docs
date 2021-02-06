@@ -74,6 +74,7 @@ module.exports = {
           children: [
             "about/",
             "about/ting-weeks",
+            "about/policies",
             "about/certificates"
           ]
         },
