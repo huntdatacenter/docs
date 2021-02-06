@@ -15,7 +15,7 @@ description: This page list information and questions about our ting weeks.
 - **Lagtun**: Thursday 18 February 2021 - 9 to 11 a.m. CET
 ::: 
 
-**We appoint time three times a year to gather for information, feedback and discussions on how to develop HUNT Cloud to better elevate your science.**
+**We appoint time three times a year to meet for information, feedback and discussions on how to develop HUNT Cloud to better elevate your science.**
 
 We call this gatherings Tings. We arrange a structured set of Tings for different parts of the HUNT Cloud community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
 
