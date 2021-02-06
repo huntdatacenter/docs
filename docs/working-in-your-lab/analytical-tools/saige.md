@@ -39,7 +39,7 @@ conda config --add channels conda-forge
 To create a new environment and install the latest version of SAIGE use:
 
 ```
-conda create -n saige -c bioconda r-saige
+conda create -n saige -c bioconda r-saige=0.43.0
 conda activate saige
 ```
 
