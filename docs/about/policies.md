@@ -10,7 +10,7 @@ description: This page list policies for HUNT Cloud.
 
 ## Security management policy
 
-This document state our overall information security management policy. It is from this policy that we build our security framework.
+This document state our overall information security management policy. We build our security framework from this policy.
 
 [HUNT Cloud Information Security Management Policy](https://assets.hdc.ntnu.no/assets/policies/hunt-cloud-isms-policy.pdf)(pdf)
 
