@@ -10,8 +10,6 @@ description: This page list compliance certificates for HUNT Cloud.
 
 This page list our third-party verified certificates. For each certificate, an independent auditor examines our management, infrastructure, services and operations.
 
-[[toc]]
-
 ## ISO 9001
 
 [ISO 9001:2015 Certificate](https://assets.hdc.ntnu.no/assets/certificates/iso9001.pdf) (pdf)
