@@ -8,7 +8,9 @@ description: We are proud of the content on these pages. They have come together
 
 # Contribute
 
-We are proud of the content on these pages. They have come together as a collaborative contribution from lab users in our cloud community. However, they are by no means perfect. We know it's frustrating when you don't find the instant fix to your problem at hand! We are therefore grateful if you would like to help new lab users on their way by sharing your hard earned tips and tricks.
+We are proud of the content on these pages. They have come together as a collaborative contribution from lab users in our cloud community. However, they are by no means perfect. 
+
+We know it's frustrating when you don't find the instant fix to your problem at hand! We are therefore grateful if you would like to help new lab users on their way by sharing your hard earned tips and tricks.
 
 Here are a couple of ways you can help out:
 
