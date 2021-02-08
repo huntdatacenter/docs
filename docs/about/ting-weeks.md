@@ -8,24 +8,32 @@ description: This page list information and questions about our ting weeks.
 
 # Ting weeks
 
-::: tip Ting week #2 - February 2021
+**We appoint time three times a year to meet for information, feedback and discussions on how to develop HUNT Cloud to better elevate your science.**
+
+We call this gatherings Tings. We arrange a structured set of Tings for different parts of the HUNT Cloud community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
+
+
+::: tip Next: Ting week #2
 - **Lab ting**: Tuesday 16 February 2021 -  2 to 4 p.m. CET
 - **Coordinator ting**: Wednesday 17 February 2021 - 9 to 11 a.m. CET
 - **Enterprise ting**: Wednesday 17 February 2021 - 1 to 3 p.m. CET
 - **Lagtun**: Thursday 18 February 2021 - 9 to 11 a.m. CET
 ::: 
 
-**We appoint time three times a year to gather for information, feedback and discussions on how to develop HUNT Cloud to better elevate your science.**
-
-We call this gatherings Tings. We arrange a structured set of Tings for different parts of the HUNT Cloud community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
-
-The inspiration is drawn from the Old Norse [ting](https://en.wikipedia.org/wiki/Thing_(assembly)#Etymology) structures such as [Frostating](https://en.wikipedia.org/wiki/Frostating) here in Trøndelag. 
-
-
-
 
 
 [[toc]]
+
+
+## Ting reports
+
+The intent of our ting reports is to give you the opportunity to read up on what we are doing at HUNT Cloud, as well as a little bit on why we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
+
+- [Ting report #1 (2020-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-report.pdf)
+
+
+
+
 
 ## The Tings
 
@@ -33,7 +41,7 @@ HUNT Cloud has established the following Tings:
 
 ### Lagtun
 
-This is our top level ting where we meet data controllers and data space leaders to discuss the overall strategic direction for HUNT Cloud and data-driven science in general.
+Lagtun is the ting where we meet data controllers and data space leaders to discuss the overall strategic direction for HUNT Cloud and data-driven science in general.
 
 We have appointed two hours to Lagtun. The first hour is structured, and the last hour is reserved for unstructured questions and discussions.
 
@@ -60,12 +68,6 @@ We have appointed two hours to the Enterprise ting. The first hour is structured
 
 
 
-
-## Ting reports
-
-The intent of our Ting reports is to give you the opportunity to read up on what we are doing at HUNT Cloud, as well as a little bit on why we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
-
-- [Ting report #1 (2020-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-report.pdf)
 
 
 
@@ -105,6 +107,10 @@ We appoint time for three ting weeks per year, in the fall around the autumn hol
 
 
 ## FAQ
+
+### Why Tings? 
+
+The inspiration to appoint time at regular intervals in a layered structure is drawn from the Old Norse [ting](https://en.wikipedia.org/wiki/Thing_(assembly)#Etymology) structures such as [Frostating](https://en.wikipedia.org/wiki/Frostating) here in Trøndelag.
 
 ### Is this an assembly? 
 

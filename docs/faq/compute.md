@@ -16,7 +16,7 @@ This page lists frequently asked questions related to computation and analysis i
 
 ### Can I upgrade my compute resources?
 
-Yes, you can. Your [lab leader](/faq/users/#user-roles) and lab coordinator approves upgrades both for cpu and memory of individual machines, and supplement of new machines in accordance with our [machine types](https://www.ntnu.edu/mh/huntcloud/cloud-services/hunt-compute). Forward upgrade requests to us on [email](/contact) with your lab leader and lab coordinator on cc.
+Yes, you can. Your [lab leader](/faq/users/#user-roles) and lab coordinator approves upgrades both for cpu and memory of individual machines, and supplement of new machines in accordance with our [machine types](/machine-types). Forward upgrade requests to us on [email](/contact) with your lab leader and lab coordinator on cc.
 
 ### Is my process hitting memory issues?
 
@@ -26,7 +26,7 @@ See below for descriptions on how to monitor your memory consumption using the `
 
 Yes. You have several options:
 
-(1) A quick way is to use [HTOP](https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/htop/) for interactive monitoring of cpu and memory inside individual machines.
+(1) A quick way is to use [HTOP](/working-in-your-lab/technical-tools/htop/) for interactive monitoring of cpu and memory inside individual machines.
 
 (2) The [time](http://man7.org/linux/man-pages/man1/time.1.html) command is a quick way to determine the duration of execution of a particular command. For example add `/usr/bin/time -v` before your command to get going:
 
@@ -199,7 +199,7 @@ We will typically plan to upgrade operating systems every two years in accordanc
 
 ## Machine types
 
-You will meet four principal machine types in your lab. You may choose to deploy home, iaas and blue machines in [various sizes](https://www.ntnu.edu/mh/huntcloud/cloud-services/hunt-compute).
+You will meet four principal machine types in your lab. You may choose to deploy home, iaas and blue machines in [various sizes](/machine-types).
 
 ### What is a "home" machine?
 

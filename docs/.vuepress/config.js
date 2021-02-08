@@ -74,6 +74,7 @@ module.exports = {
           children: [
             "about/",
             "about/ting-weeks",
+            "about/policies",
             "about/certificates"
           ]
         },
@@ -94,7 +95,8 @@ module.exports = {
               title: "Services",
               // collapsable: false,
               children: [
-                "coordination/services/specifications"
+                "coordination/services/specifications",
+                "coordination/services/machine-types"
               ]
              }
            ]

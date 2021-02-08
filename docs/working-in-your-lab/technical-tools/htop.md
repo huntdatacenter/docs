@@ -18,16 +18,14 @@ or follow straight technical explanations in
 
 ## Linux
 
-```
-sudo apt-get update -y && sudo apt-get install -y htop
-```
-
-## MacOS
-
-::: tip REQUIREMENT
-[Install Homebrew package manager for macOS: brew](https://brew.sh/)
-:::
+Install `htop` with the following:
 
 ```
-brew install htop
+sudo apt install htop
+```
+
+Then to start `htop`, simply run:
+
+```
+htop
 ```

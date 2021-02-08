@@ -16,7 +16,7 @@ This page lists frequently asked questions related to security management in lab
 
 ### What is a security incident?
 
-For practical purposes, something that may lead to a data breach, data loss or a violation of our [user agreement](/agreements/download/). [Contact us](/contact) for formal definitions.
+For practical purposes, something that may lead to a data breach, data loss or a violation of our [user agreement](/download-agreements). [Contact us](/contact) for formal definitions.
 
 ### What should I report?
 
