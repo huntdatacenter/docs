@@ -1,7 +1,7 @@
 ---
-title: Download
+title: Download agreements
 category: HUNT Cloud
-permalink: /agreements/download
+permalink: /download-agreements
 sidebarDepth: 1
 description: This page list agreements that may be relevant for you as a lab user. Contact your lab leader for more details on other agreement types.
 ---
