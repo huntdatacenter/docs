@@ -62,7 +62,7 @@ If your VPN login suddenly stops working, and you are pretty sure your user name
 
 ### Deactivated account
 
-Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Send us](/contact) a new [user agreement](/agreements/download/#user-agreement) if you need your account reactivated.
+Inactive accounts are deactivate after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. [Send us](/contact) a new [user agreement](/download-agreements/#user-agreement) if you need your account reactivated.
 
 ### New local machine
 

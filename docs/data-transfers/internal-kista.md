@@ -19,7 +19,7 @@ This page describes the practical aspects of kista transfers. Head over to our [
 
 ## Order
 
-Internal kistas are ordered by the uploader Lab leader or Lab coordinator using the [Internal kista transfer order](/agreements/download/#internal-kista-transfer-form). Forward the order [to us](/contact) for deployment.
+Internal kistas are ordered by the uploader Lab leader or Lab coordinator using the [Internal kista transfer order](/download-agreements/#internal-kista-transfer-form). Forward the order [to us](/contact) for deployment.
 
 The kista order defines two roles that we will use in this document:
 
