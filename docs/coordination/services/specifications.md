@@ -1,7 +1,7 @@
 ---
-title: Specifications
+title: Services specifications
 category: HUNT Cloud
-permalink: /services/specifications
+permalink: /services-specifications
 sidebarDepth: 1
 description: This page gives an overview of HUNT Cloud services specifications.
 ---

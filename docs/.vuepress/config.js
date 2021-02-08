@@ -95,7 +95,8 @@ module.exports = {
               title: "Services", 
               // collapsable: false,
               children: [
-                "coordination/services/specifications"
+                "coordination/services/specifications",
+                "coordination/services/machine-types"
               ]
              }
            ]
