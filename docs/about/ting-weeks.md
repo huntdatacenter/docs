@@ -13,7 +13,7 @@ description: This page list information and questions about our ting weeks.
 We call this gatherings Tings. We arrange a structured set of Tings for different parts of the HUNT Cloud community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
 
 
-::: tip Next: Ting week #2
+::: tip Ting week #2
 - **Lab ting**: Tuesday 16 February 2021 -  2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-labting-agenda.pdf))
 - **Coordinator ting**: Wednesday 17 February 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-coordinatorting-agenda.pdf))
 - **Enterprise ting**: Wednesday 17 February 2021 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-enterpriseting-agenda.pdf))
