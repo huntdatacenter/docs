@@ -89,7 +89,7 @@ We appoint time for three ting weeks per year, in the fall around the autumn hol
 
 - **Lab ting**: Tuesday 16 February 2021 -  2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-labting-agenda.pdf))
 - **Coordinator ting**: Wednesday 17 February 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-coordinatorting-agenda.pdf))
-- **Enterprise ting**: Wednesday 17 February 2021 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-enterprise-ting-agenda.pdf))
+- **Enterprise ting**: Wednesday 17 February 2021 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-enterpriseting-agenda.pdf))
 - **Lagtun**: Thursday 18 February 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-lagtun-agenda.pdf))
 
 ### Ting week #1 (2020-10)
