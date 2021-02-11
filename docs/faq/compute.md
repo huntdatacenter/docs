@@ -123,6 +123,8 @@ A quick way to install open-source software packages is to use the built in [apt
 sudo apt install <packagename>
 ```
 
+Using package could affect other users, therefore we recommend taking an extra step and setup [Conda](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/conda/). Conda is a great package manager that provides a lot of packages in easy way.
+
 ### Where can I install my software?
 
 On you home machine, we recommend that you install software that you download in a folder that is reachable for all of your fellow lab users, such as **`/mnt/works/software`**. Software installations that uses **`apt`** (see above) will automatically install in the correct folders.

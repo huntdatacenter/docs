@@ -82,9 +82,9 @@ module.exports = {
           title: "Coordination",
           // collapsable: false,
           children: [
-            "coordination/", 
+            "coordination/",
             {
-              title: "Agreements", 
+              title: "Agreements",
               // collapsable: false,
               children: [
                 "coordination/agreements/download",
@@ -92,7 +92,7 @@ module.exports = {
               ]
             },
             {
-              title: "Services", 
+              title: "Services",
               // collapsable: false,
               children: [
                 "coordination/services/specifications",
@@ -127,6 +127,7 @@ module.exports = {
                 "working-in-your-lab/technical-tools/mobaxterm",
                 "working-in-your-lab/technical-tools/singularity",
                 "working-in-your-lab/technical-tools/terminal-multiplexers",
+                "working-in-your-lab/technical-tools/vnc",
                 "working-in-your-lab/technical-tools/x2go"
               ]
             },
