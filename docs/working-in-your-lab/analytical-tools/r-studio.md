@@ -64,8 +64,8 @@ sudo apt install r-base r-base-dev -y
 echo "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran35/" | sudo tee "/etc/apt/sources.list.d/$(lsb_release -cs)-cran35.list"
 
 # Add keys for the CRAN repository
-gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E084DAB9
-gpg -a --export E084DAB9 | sudo apt-key add -
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
 
 # Update packages
 sudo apt update
@@ -91,8 +91,8 @@ We recommend installing new R version using [Conda](/working-in-your-lab/analyti
 echo "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/" | sudo tee "/etc/apt/sources.list.d/$(lsb_release -cs)-cran40.list"
 
 # Add keys for the r-project repository
-gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E084DAB9
-gpg -a --export E084DAB9 | sudo apt-key add -
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
 
 # -- Update packages
 sudo apt update
