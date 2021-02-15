@@ -41,7 +41,7 @@ HUNT Cloud has established the following Tings:
 
 ### Lagtun
 
-Lagtun is the ting where we meet data controllers and data space leaders to discuss the overall strategic direction for HUNT Cloud and data-driven science in general.
+Lagtun is the ting where we meet data controllers and data space leaders to discuss the overall strategic direction for data-driven science in general and the adaptation of HUNT Cloud.
 
 We have appointed two hours to Lagtun. The first hour is structured, and the last hour is reserved for unstructured questions and discussions.
 
