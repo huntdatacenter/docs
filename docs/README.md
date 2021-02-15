@@ -12,3 +12,15 @@ HUNT Cloud is a scientific computing service located at [NTNU](https://www.ntnu.
 These pages contains official user documentation on our cloud services. The content is aimed at lab users.
 
 Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf) and visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services.
+
+::: tip Ting week #2 
+
+- **Lab ting**: Tuesday 16 February 2021 -  2 to 4 p.m. CET
+- **Coordinator ting**: Wednesday 17 February 2021 - 9 to 11 a.m. CET
+- **Enterprise ting**: Wednesday 17 February 2021 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 18 February 2021 - 9 to 11 a.m. CET
+
+[Click here to read more about this week's tings    ](/tingweeks)
+
+::: 
+
