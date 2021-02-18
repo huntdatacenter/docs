@@ -90,7 +90,7 @@ Yes. HUNT Cloud is a collaborative computing platform where mutually trusted peo
 
 ### Can anyone access my home folder?
 
-Yes. Other lab users will not be able do access data in your home folder. However, please be aware that the data in your lab is under the control of your data controller. This includes data that you upload and generate, also data in your private home folder. This is stated in our [user agreement](/download-agreements/#user-agreement). You data controller or lab leader may request us to transfer data from your home folder into other folders that are accessible for other lab users, for example if you leave your lab. We will not expose your system keys during such moves.
+Yes. Other lab users will not be able do access data in your home folder. However, please be aware that the data in your lab is under the control of your data controller. This includes data that you upload and generate, also data in your private home folder. This is stated in our [user agreement](/agreements/downloads/#user-agreement). You data controller or lab leader may request us to transfer data from your home folder into other folders that are accessible for other lab users, for example if you leave your lab. We will not expose your system keys during such moves.
 
 ### How can other lab users edit my files by default?
 

@@ -16,7 +16,7 @@ This page lists frequently asked questions related to users and user management 
 
 ### How do we add new users?
 
-Your lab leader or lab coordinator can add new users to your lab. New users must sign our [user agreements](/download-agreements/#user-agreement). Forward the signed agreement to us on [email](/contact) and start our [onboarding guide](/getting-started).
+Your lab leader or lab coordinator can add new users to your lab. New users must sign our [user agreements](/agreements/downloads/#user-agreement). Forward the signed agreement to us on [email](/contact) and start our [onboarding guide](/getting-started).
 
 ### How long does an account activation take?
 
@@ -42,7 +42,7 @@ Yes. We allow connections both from organizations and private network. However, 
 
 ### Can I get access to several labs?
 
-Yes. You can get access to more than one lab. We encourage lab leaders to separate data in labs and bring top expertise into their lab to do analysis there. Contact your new lab leader to arrange for a signed [user agreement](/download-agreements) and send this to us on [email](/contact) for account activation.
+Yes. You can get access to more than one lab. We encourage lab leaders to separate data in labs and bring top expertise into their lab to do analysis there. Contact your new lab leader to arrange for a signed [user agreement](/agreements/downloads) and send this to us on [email](/contact) for account activation.
 
 ### How do I get started with my second lab?
 
@@ -50,7 +50,7 @@ We will ship SSH configuration and keys after you have sent us your signed agree
 
 ### Can I transfer and merge data between my labs?
 
-Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. One way to document such transfers between your labs are to use our [internal kista order](/download-agreements).
+Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. One way to document such transfers between your labs are to use our [internal kista order](/agreements/downloads).
 
 ### Can I connect from several local machines?
 

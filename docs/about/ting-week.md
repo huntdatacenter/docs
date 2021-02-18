@@ -1,12 +1,12 @@
 ---
-title: Ting weeks
+title: Ting week
 category: HUNT Cloud
-permalink: /tingweeks
+permalink: /tingweek
 sidebarDepth: 1
 description: This page list information and questions about our ting weeks.
 ---
 
-# Ting weeks
+# Ting week
 
 **We appoint time three times a year to meet for information, feedback and discussions on how to develop HUNT Cloud to better elevate your science.**
 

@@ -73,7 +73,7 @@ module.exports = {
           // collapsable: false,
           children: [
             "about/",
-            "about/ting-weeks",
+            "about/ting-week",
             "about/policies",
             "about/certificates"
           ]
@@ -87,7 +87,7 @@ module.exports = {
               title: "Agreements",
               // collapsable: false,
               children: [
-                "coordination/agreements/download",
+                "coordination/agreements/downloads",
                 "coordination/agreements/overview"
               ]
             },

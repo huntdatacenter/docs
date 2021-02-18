@@ -1,5 +1,5 @@
 ---
-title: Agreement overview
+title: Overview
 category: HUNT Cloud
 permalink: /agreements/overview
 sidebarDepth: 1
@@ -154,25 +154,25 @@ Sometimes your host organization prefers their own data processing agreement tem
 
 ## Data space agreements
 
-The data space is the overarching service for where a data space leader manage one to many labs in HUNT Cloud. 
+A **`data space`** is our overarching service where a research leader manage one to many labs in HUNT Cloud. 
 
-The data space agreement regulates resources that are attached to the labs attached to the data space. 
+The data space agreement regulates how cloud resources are controlled and billed across these labs.
 
-The aim of this agreement is to ensure predictable services from where you can build reliable research activities.
+The aim of this agreement is to ensure predictable services from where you can elevate your science.
 
-### Data space content
+### Regulations
 
 The data space agreement includes specification of the cloud services made available, use of these services, support and service levels and general agreement terms. The data space agreement do also specify services cost, metering and billing.
 
-### Data space parties
+The agreements include seven attachments: services specifications, service levels, price list, list of attached labs, lab agreement templates, user agreement templates and a contact list.
 
-The data space agreement are signed by the data controller (see above) and the data space leader. This is typically a research group or center leader that is authorized by the data controller to manage the financial cost of the consumed services. 
+### Signatories
 
-### Data space form fields
+The data space agreement are signed by the data space leader (normally the principal investigator of a research center or research group), the data controller, and the individual accepting the financial risk on behalf of the institution (if this differ from the data controller) and us.
+
+### Form fields
 
 [HUNT Cloud Data Space Agreement Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-space-form.txt)(txt)
 
-We use information from the text file above to render the final data processor agreement. Please download the form, update the information and [forward to us](/contact) for activation. The content of individual fields are clarified below.
-
-
+We use information from the text file above to render new data space agreements. To get going, download the form, update the information, and [forward to us](/contact) for rendering.
 
