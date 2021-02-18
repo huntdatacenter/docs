@@ -53,6 +53,24 @@ Additional R packages can be found in channels or installed using R devtools. R 
 conda install -n renv r-matrix
 ```
 
+#### Running multiple version of R
+
+To run multiple R versions, e.g. system packages and also conda environments it may be necessary
+to setup custom `~/.Rprofile` config. You can use example below as an inspiration for setting
+your .Rprofile config to link each R version to library paths:
+
+```
+version <- paste0(R.Version()$major,".",R.Version()$minor)
+
+if (version == "3.5.1") {
+    .libPaths(c("/mnt/work/R_packages/R-3.5.1","/mnt/work/R_packages/x86_64-pc-linux-gnu-library/3.5"))
+} else if (version == "3.6.3") {
+    .libPaths(c("/mnt/work/miniconda3/envs/saige/lib/R/library","/mnt/work/miniconda3/envs/saige/lib","/mnt/work/miniconda3/x86_64-conda_cos6-linux-gnu/sysroot/lib") )
+} else {
+    .libPaths(c("/mnt/work/miniconda3/envs/saige4/lib/R/library","/mnt/work/miniconda3/envs/saige4/lib","/mnt/work/miniconda3/x86_64-conda_cos6-linux-gnu/sysroot/lib") )
+}
+```
+
 ### Install using system packages
 
 ```bash
