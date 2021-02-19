@@ -14,26 +14,34 @@ However, we can help you with a structured overview of the various agreements th
 
 [[toc]]
 
+
+
+
+
 ## Overview
 
-We have organized our agreements in four layers that all needs to be in place to utilize our services:
+Our agreements are organized in four layers:
 
-1. the **data processor agreement** that regulates ownership and data protection at the organizational level;
-2. the **data space agreement** that regulates the cloud services at the research group level; 
-3. the **lab agreement** that regulates processing in individual collaborations and projects within a research group; and 
-4. the **user agreement** that states the acceptable use policies for all users that will access your labs.
+1. the **data processor agreement** on the organizational level regulates ownership and protection of data;
+2. the **data space agreement** on the research center level regulates control and adjustments of cloud services consumption;
+3. the **lab agreement** at the individual collaborations and projects regulates and control individual cloud researchers within data space;
+4. the **user agreement** regulates the acceptable use policies for users that gets access individual labs.
 
-The agreements are organized in a tree structure: one organization or department (data processor agreement) can attach several research centers or research groups (data space agreements), that each can attach several research projects (lab agreements), which again can attach several individual researchers (user agreements). 
+One organization or department (data processor agreement) can attach several research centers or research groups (data space agreements), that each can attach several research projects (lab agreements), which again can attach several individual researchers (user agreements). 
+
 
 Let's dig in.
 
 
 
+
+
+
 ## Data processor agreements
 
-The data processor agreement is the mother ship of our agreement hierarchy. We have placed this agreement on top since it regulates an important asset of your research: your organization's trustworthiness towards your research participants. 
+The data processor agreement is the mother ship of our agreement hierarchy. We have placed this agreement on top since it regulates an important asset of your research: your organization's trustworthiness towards your research participants. This is often named privacy and information security aspects.
 
-It is from this agreement that all further arrangements between us are controlled. The other agreements are therefore incorporated into the data processor agreement as attachments. 
+It is from this agreement that all further arrangements between us are controlled. The other agreements are therefore formally incorporated into the data processor agreement as attachments. 
 
 
 

@@ -13,21 +13,26 @@ description: This page list information and questions about our ting weeks.
 We call this gatherings Tings. We arrange a structured set of Tings for different parts of the HUNT Cloud community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
 
 
-::: tip Ting week #2
-- **Lab ting**: Tuesday 16 February 2021 -  2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-labting-agenda.pdf))
-- **Coordinator ting**: Wednesday 17 February 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-coordinatorting-agenda.pdf))
-- **Enterprise ting**: Wednesday 17 February 2021 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-enterpriseting-agenda.pdf))
-- **Lagtun**: Thursday 18 February 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-lagtun-agenda.pdf))
+::: tip Next up: Ting week #3
+- **Lab ting**: Tuesday 25 May 2021 -  2 to 4 p.m. CET
+- **Coordinator ting**: Wednesday 26 May 2021 - 9 to 11 a.m. CET
+- **Enterprise ting**: Wednesday 26 May 2021 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 27 May 2021 - 9 to 11 a.m. CET
 ::: 
-
-
 
 [[toc]]
 
 
-## Ting reports
 
-The intent of our ting reports is to give you the opportunity to read up on what we are doing at HUNT Cloud, as well as a little bit on why we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
+
+
+
+
+
+
+## Reports
+
+The intent of our ting reports is to give you the opportunity to read up on what we are doing at HUNT Cloud, and a little bit on why we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
 
 - [Ting report #2 (2021-02)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-report.pdf)
 - [Ting report #1 (2020-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-report.pdf)
@@ -36,7 +41,12 @@ The intent of our ting reports is to give you the opportunity to read up on what
 
 
 
-## The Tings
+
+
+
+
+
+## Tings
 
 HUNT Cloud has established the following Tings:
 
@@ -74,10 +84,17 @@ We have appointed two hours to the Enterprise ting. The first hour is structured
 
 
 
-## Ting week dates
+## Dates
 
 We appoint time for three ting weeks per year, in the fall around the autumn holidays, in the winter around the winter holidays and in the spring after the national holiday i Norway.
 
+
+### Ting week #4 (2021-10)
+
+- **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET
+- **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET
+- **Enterprise ting**: Wednesday 20 October 2021 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 20 October 2021 - 9 to 11 a.m. CET
 
 ### Ting week #3 (2021-05)
 
@@ -98,6 +115,9 @@ We appoint time for three ting weeks per year, in the fall around the autumn hol
 - **Lab ting**: Tuesday 13 October 2020 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-labting-agenda.pdf))
 - **Coordinator ting**: Wednesday 14 October 2020 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-coordinatorting-agenda.pdf))
 - **Lagtun**: Thursday 15 October 2020 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-lagtun-agenda.pdf))
+
+
+
 
 
 
