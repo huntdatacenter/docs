@@ -1,5 +1,5 @@
 ---
-title: Services specifications
+title: Specifications
 category: HUNT Cloud
 permalink: /services-specifications
 sidebarDepth: 1
