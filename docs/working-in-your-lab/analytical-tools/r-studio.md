@@ -29,27 +29,27 @@ You will need [bioconda](https://anaconda.org/bioconda) and [conda-forge](https:
 If you have not set channels yet make sure to add them in the same order,
 but feel free to skip bioconda if you do not see a need for it:
 
-```
+```bash
 conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
 To install R (>=4.0.3) you have to install r-base package. In the example below we create an environment where r-base is being installed as default with devtools:
 
-```
+```bash
 conda create --name renv --channel conda-forge  "r-base>=4.0.3" r-devtools
 ```
 
 To be able to work with R that you just installed you have to activate your conda environment:
 
-```
+```bash
 conda activate renv
 R
 ```
 
 Additional R packages can be found in channels or installed using R devtools. R packages in [bioconda](https://anaconda.org/bioconda) and [conda-forge](https://anaconda.org/conda-forge) channels have `r-` prefix in their names. Here is an example how to install matrix R package into renv environment:
 
-```
+```bash
 conda install -n renv r-matrix
 ```
 
@@ -59,7 +59,7 @@ To run multiple R versions, e.g. system packages and also conda environments it 
 to setup custom `~/.Rprofile` config. You can use example below as an inspiration for setting
 your .Rprofile config to link each R version to library paths:
 
-```
+```bash
 version <- paste0(R.Version()$major,".",R.Version()$minor)
 
 if (version == "3.5.1") {
@@ -195,7 +195,7 @@ Researchers may install this on unmanaged machines.
 ::: tip
 Make sure R-Studio is not already installed, if the lab was setup before command will return path.
 
-```
+```bash
 which rstudio
 ```
 
@@ -267,7 +267,7 @@ If your system disk is full, R will not be able to store temporary files used fo
 
 You may need to install some more dependencies to get `install.packages("devtools")` going:
 
-```
+```bash
 sudo apt update
 sudo apt install libcurl4-openssl-dev libssh2-1-dev libssl-dev libxml2-dev
 ```
@@ -279,7 +279,7 @@ Since R versions can be installed side-by-side on a system, you may need to sele
 ### PredictABEL, matplotlib, viridis, or plyr fails to import
 
 If running `library(PredictABEL)` in rstudio server fails with:
-```
+```bash
 Error: package or namespace load failed for 'PredictABEL':
  .onLoad failed in loadNamespace() for 'tcltk', details:
   call: fun(libname, pkgname)
@@ -287,7 +287,7 @@ Error: package or namespace load failed for 'PredictABEL':
 ```
 
 You need to install these packages related to tcl and tk:
-```
+```bash
 sudo apt update
 sudo apt install tcl tcl8.6 tk tk-table tk8.6
 ```
