@@ -21,6 +21,12 @@ To get more out of conda we recommend reading
 [Conda - Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 guide.
 
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
 ### Set up Bioconda and conda-forge channels
 
 To find packages in Conda you need to configure relevant channels.
