@@ -70,6 +70,12 @@ Once installed, open X2Go and click **`New session`** and enter a _Session name_
 The configuration below will work on [home](/faq/compute/#machine-types) machines. This configuration will -not- work on unmanaged [iaas and blue](/faq/compute/#machine-types) machines.
 :::
 
+::: details Create session
+
+  ![X2GO introduction](./images/x2go_intro.png "X2GO introduction")
+
+:::
+
 #### In the `Session` tab
 
 ::: details Server section
@@ -150,6 +156,12 @@ Once installed, open X2Go and click **`New session`** and enter a _Session name_
 
 ::: warning NOTE
 The configuration below will only work on **`iaas`** or **`blue`** machines, and not home machines. This setup require that someone in your lab already have installed X2Go server and your software of choice on the particular machine you will be connecting to.
+:::
+
+::: details Create session
+
+  ![X2GO introduction](./images/x2go_intro.png "X2GO introduction")
+
 :::
 
 #### In the `Session` tab
