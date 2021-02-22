@@ -12,6 +12,8 @@ We know, it can be difficult to keep up with the piles of papers that might be r
 
 However, we can help you with a structured overview of the various agreements that you will need in order to fully utilize the powers of HUNT Cloud.
 
+The below text is intended for research coordinators in HUNT Cloud.
+
 [[toc]]
 
 
@@ -68,7 +70,7 @@ We use information from the text file above to render the final data processor a
 
 ::: details Clarification of the form fields
 
-The following form fiels are including in the "HUNT Cloud Data Processor Agreement Form" version 3.5.
+The following form fields are including in the "HUNT Cloud Data Processor Agreement Form" version 3.5.
 
 **Data controller**
 
@@ -130,7 +132,7 @@ This is our internal tag (short cut) for your organization. This is added by us 
 
 **Send us the text file for activation**
 
-Download and update the text file with your information and [forward to us](/contact) for the final agreement rendering.
+Download and update the text file with your information and [forward to us](/contact) for agreement rendering.
 
 :::
 
@@ -160,13 +162,24 @@ Sometimes your host organization prefers their own data processing agreement tem
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Data space agreements
 
 A **`data space`** is our overarching service where a research leader manage one to many labs in HUNT Cloud. 
 
-The data space agreement regulates how cloud resources are controlled and billed across these labs.
-
-The aim of this agreement is to ensure predictable services from where you can elevate your science.
+The data space agreement regulates how cloud resources are controlled and billed across these labs. The aim of this agreement is to ensure predictable services from where you can elevate your science.
 
 ### Regulations
 
@@ -182,5 +195,57 @@ The data space agreement are signed by the data space leader (normally the princ
 
 [HUNT Cloud Data Space Agreement Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-space-form.txt)(txt)
 
-We use information from the text file above to render new data space agreements. To get going, download the form, update the information, and [forward to us](/contact) for rendering.
+We use information from the text file above to render new data space agreements. Download the file and update the fields with your information. Then, [forward to us](/contact) for agreement rendering.
+
+::: details Clarification of the form fields
+
+The following form fields are including in the "HUNT Cloud Data Space Agreement Form" version 2.0.
+
+**Data space name**
+
+This is the short name or abbreviation for your data space. We use this name in day to day communication.
+
+**Center or group name**
+
+This is the full name of your research center or research group that will establish the data space. This organizational unit will also be the billing point for the consumed services.
+
+**Data processor name**
+
+This is the name of the organization that holds the data processor agreement or "enighetsavtale" with HUNT Cloud for which your data space will be linked. [Contact us](/contact) if you are uncertain if your host organization holds such an agreement or under which agreement your data space should be linked.
+
+**Data space leader**
+
+This individual is authorized by the data controller to lead the data space. The role include a responsibility authorize new labs under the data space, authorizing data transfers out of the data space, and to pay for resources consumed by the labs attached to the data space.
+
+**Administrative coordinator**
+
+This individual is authorized by the data controller to place individual Cloud Service Orders for resource adjustments and to onboard new labs on behalf of your Data space leader. The administrative coordinator is also our point of contact for discussions on running agreement updates and compliance reporting.
+
+**Data coordinator**
+
+This individual is our contact point for data coordination for labs attached to your data space. This includes communication on data transfers, backups and other data related issues.
+
+**Technical coordinator**
+
+This individual is our contact point for technical configuration for labs attached to your data space. This includes configuration and adaptation of analytical tools, including distributed computing and graphical interfaces. 
+
+**Knowledge coordinator**
+
+This individual is our contact point for knowledge transfers across labs attached to your data space. This includes transfers of knowhow related to onboardings, configurations, data flow etc. This individual is also our contact for discussion on knowledge transfer and such documentation.
+
+**Billing information**
+
+For data spaces affiliated outside NTNU: This is the name of the individual that is our contact for billing. For data spaces within NTNU: This is your k.sted and p.number.
+
+**Signatory official**
+
+This individual is legally entitled to accept the financial side of the Cloud Service Orders on behalf of the Client institution. This individual might differ from the data controller that holds the responsibility for privacy and security of your data.
+
+
+**Send us the text file for activation**
+
+Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
+
+
+:::
 
