@@ -128,6 +128,8 @@ Play with the _Connection speed_ and _Compression_ methods. For office use **`LA
 
 #### In the `Media` tab
 
+![X2GO media](./images/x2go_media.png "X2GO media")
+
 - Uncheck **`Client side printing support`**
 - Uncheck **`Enable sound support`**
 
