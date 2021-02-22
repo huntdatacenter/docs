@@ -12,7 +12,7 @@ This step ensures that you have the correct keys and configuration files before 
 
 ::: warning Requirements
 
-- Signed [user agreement](https://assets.hdc.ntnu.no/assets/hunt-cloud-user-agreement.pdf) forwarded to us on [email](/contact) for account activation.
+- Signed [user agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf) forwarded to us on [email](/contact) for account activation.
 - Private phone to receive your lab keys.
 - Organizational email to receive your lab configuration files.
 
