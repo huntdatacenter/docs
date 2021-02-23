@@ -24,7 +24,7 @@ Internal kista is our service for simple and secure data transfers between two l
 Lab leader or lab coordinator in the lab that will make data available (uploader lab) can request internal kistas through our [Internal kista transfer order](/agreements/downloads/#internal-kista-transfer-order).
 
 ### How long does it take to get access to an internal kista?
-Allow for up to a week in deployment time after you send ut the signed transfer form. Although usually the deployment will be available within days. We will notify both the upload and downloader lab with account information.
+Allow for up to a week in deployment time after you send us the signed transfer order. Although usually the deployment will be available within days. We will notify both the upload and downloader lab with account information.
 
 ### How does an internal kista work?
 Kistas are short-lived SFTP servers dedicated to your specific data transaction. Access is restricted to named uploaders and downloaders from specific labs. We take the responsibility to ensure that data gets downloaded by the correct user and lab.
