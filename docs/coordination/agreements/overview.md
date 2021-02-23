@@ -26,8 +26,8 @@ Our agreements are organized in four layers:
 
 1. the **data processor agreement** on the organizational level regulates ownership and protection of data;
 2. the **data space agreement** on the research center level regulates control and adjustments of cloud services consumption;
-3. the **lab agreement** at the individual collaborations and projects regulates and control individual cloud researchers within data space;
-4. the **user agreement** regulates the acceptable use policies for users that gets access individual labs.
+3. the **lab agreement** regulates data processing within individual collaborations under a data space;
+4. the **user agreement** regulates the acceptable use policies for users that gets access to individual labs.
 
 One organization or department (data processor agreement) can attach several research centers or research groups (data space agreements), that each can attach several research projects (lab agreements), which again can attach several individual researchers (user agreements). 
 
