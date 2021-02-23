@@ -47,4 +47,8 @@ Volumes classified as internal may be mounted directly to individual lab users' 
 - the lab owner, the lab's host institution and data controller(s) allow such a set-up.
 - the lab owner take the direct responsibility to ensure that volumes classified as internal do not hold sensitive data.
 
-Please note that **`direct identifiable research data`**, such as names of research participants, personal identification numbers, phone numbers, address information, etc., must be stored outside our system unless specifically approved in dedicated amendments to your agreements.
+### Can I store direct identifiable health information in my lab?
+
+Not by default. Direct identifiable research data such as names of research participants, personal identification numbers, phone numbers, address information, etc., must be stored outside our system unless specifically approved in dedicated amendments to the data processor agreement that we hold with your host organization.
+
+
