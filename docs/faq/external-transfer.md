@@ -16,31 +16,31 @@ This page lists frequently asked questions related to external transfers in labs
 ## External Kista
 
 ### Can parties outside HUNT Cloud upload data to my lab?
-Yes. Remote parties can upload data to your lab utilizing the external kista service.
+Yes. Parties outside HUNT Cloud can upload data to your lab utilizing the external kista import service. You can also make data available for parties outside HUNT Cloud via the external kista export service.
 
 ### What is an external kista?
 External kista is our service for controlled data transfers between your lab and an external user outside HUNT Cloud. The transfer take place on a time-limited SFTP server that is dedicated for your specific data transaction.
 
 ### How do I order an external kista?
-Lab leaders can request an external kista for data import through our [External kista import order](/agreements/downloads/#external-kista-import-order). You will need to fill in the form in collaboration with the party outside HUNT Cloud that will import data to your external kista. Forward the complete form to us for deployment.
+Lab leaders can request an external kista for data import through our [External kista import order](/agreements/downloads/#external-kista-import-order) and [External kista export order](/agreements/downloads/#external-kista-export-order). You will need to fill in the form in collaboration with the party outside HUNT Cloud that will import or export data to/from your external kista. Forward the complete form to us for deployment.
 
 ### How quickly can I get access to an external kista?
 You should order your kista a few weeks before you need the transfer. The data importer outside HUNT Cloud may need to order firewall openings from his organization, the importer will need to generate a SSH key pair, and configure his/her local machine to connect with your external kista.
 
-### What is an 'importer'?
-We have defined the Importer as the user outside HUNT Cloud that will import (upload) data to your external kista.
+### What is an 'uploader' and 'downloader'?
+We have defined the Uploader as the user outside HUNT Cloud that will import (upload) data to your external kista. We have defined the Downloader as the user outside HUNT Cloud that will export (download) data from your external kista.
 
 ### How do I know the transfer size?
-You may need to communicate with the Importer if you do not know the size of your transfer. We need this information to allocate storage to your kista.
+You may need to communicate with the Uploader if you do not know the size of your transfer. We need this information to allocate storage to your kista.
 
-### How do I know the importer IP?
-You need to communicate with the Importer to get the IPv4 address for the machine they will use to connect to your external kista. We use this information to restrict access to your external kista for other machines.
+### How do I know the IP of the external party?
+You need to communicate with the external party to get the IPv4 address for the machine they will use to connect to your external kista. We use this information to restrict access to your external kista for other machines.
 
 ### How do I access my external kista?
-See our [external kista transfer guide](/data-transfers/external-kista/#for-external-users) for instruction on how to access and upload or download data in internal kista.
+See our [external kista transfer guide](/data-transfers/external-kista/#for-external-users) for instruction on how to access and upload or download data for an internal kista.
 
 ### Can I import and export data in the same external kista?
-No. For compliance reasons, external kistas are for one way transfers only. You will need to order two independent external kistas if you plan to transfer data both ways.
+No. For compliance reasons, kistas are for one way transfers only. You will need to order two individual kistas if you plan to transfer data both ways.
 
 ### Do the Importer need to encrypt the data?
 Most likely. However, this is decided by the data controller. Feel free to [contact us](/contact) as we are more than happy to help with evaluations on encryption.
