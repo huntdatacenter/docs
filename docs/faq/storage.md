@@ -218,7 +218,7 @@ Celebrate the success if you are able to successfully export a file, or [contact
 
 ### How do I zip and unzip files in my lab?
 
-We recommend using the 7z software to compress and decompress files and folders. Read our [7z guide](/working-in-your-lab/technical-tools/7z/) to get going.
+We recommend using the 7z software to compress and decompress files and folders. Read our [7z guide](/working-in-your-lab/transfer-tools/7z/) to get going.
 
 
 
