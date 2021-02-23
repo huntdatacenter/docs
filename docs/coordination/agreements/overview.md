@@ -47,13 +47,13 @@ It is from this agreement that all further arrangements between us are controlle
 
 
 
-### Processor content
+### Content
 
 In brief, this agreement defines that your organization owns the data that you upload and generate in HUNT Cloud. It also defines which privacy and security controls that are in place to protect your data. 
 
 The data processor agreement allows your research to be compliant with the Data Protection Directive from EU (GDPR) and relevant Norwegian laws and regulations, including partly compliance with the Norwegian «*Norm for informasjonssikkerhet*».
 
-### Processor parties
+### Parties
 
 The data processor agreement is formally agreed between your host organization that control your data (data controller), and our host institution that process the data on your behalf (data processor). 
 
@@ -62,7 +62,7 @@ Your signatory will be the individual that is authorize to control your data on 
 Our signatory will be the head of our department. 
 
 
-### Processor form fields
+### Form fields
 
 [HUNT Cloud Data Processor Agreement Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-processor-form.txt)(txt)
 
@@ -136,7 +136,7 @@ Download and update the text file with your information and [forward to us](/con
 
 :::
 
-### Enighetsavtale within NTNU
+### "Enighetsavtale" within NTNU
 
 Data processor agreements are agreed between enterprises. We have therefore developed a separate "enighetsavtale" template for departments within NTNU (since we both are part of the same enterprise). 
 
@@ -154,7 +154,7 @@ To illustrate, this may be the case where you provide analytical expertise to a 
 
 ### Use your own processing template
 
-Sometimes your host organization prefers their own data processing agreement template. This is fine with us as long as the template is compliant with requirements set forth in GDPR, other relevant laws, and that we are able to comply with your organization's security requirements. Please note that such templates will need involvement from NTNU's legal team. [Contact us](/contact) for time estimates.
+Sometimes your host organization prefers their own data processing agreement template. This is fine with us as long as the template is compliant with requirements set forth in GDPR, other relevant laws, ISO 27001, and that we are able to comply with your organization's security requirements. Please note that such templates will need involvement from NTNU's legal team. [Contact us](/contact) for time estimates.
 
 
 
@@ -181,13 +181,13 @@ A **`data space`** is our overarching service where a research leader manage one
 
 The data space agreement regulates how cloud resources are controlled and billed across these labs. The aim of this agreement is to ensure predictable services from where you can elevate your science.
 
-### Regulations
+### Content
 
-The data space agreement includes specification of the cloud services made available, use of these services, support and service levels and general agreement terms. The data space agreement do also specify services cost, metering and billing.
+The data space agreement specifies services made available, the use of these services, as well as support and service levels and general agreement terms for these services. The agreement do also specify services cost, metering and billing.
 
 The agreements include seven attachments: services specifications, service levels, price list, list of attached labs, lab agreement templates, user agreement templates and a contact list.
 
-### Signatories
+### Parties
 
 The data space agreement are signed by the data space leader (normally the principal investigator of a research center or research group), the data controller, and the individual accepting the financial risk on behalf of the institution (if this differ from the data controller) and us.
 
