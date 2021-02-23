@@ -22,7 +22,7 @@ Your lab leader and lab coordinator can add new users to your lab through our us
 
 [HUNT Cloud Lab Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-agreement.pdf) (pdf)
 
-Your data space leader or administrative data space coordinator can use this agreements to add new labs under a data space. The agreement is co-signed by both the data space leader and the new lab leader.
+Your data space leader or administrative data space coordinator can use this agreement to add new labs under a data space. The agreement is co-signed by both the data space leader and the new lab leader.
 
 ## Internal kista order
 
