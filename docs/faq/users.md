@@ -70,6 +70,19 @@ Maybe. We do allow such connections, however teleworking conditions from your ow
 
 ## Current users
 
+### How do I change my machine password? 
+
+You can change your SSH password with the **`passwd`** command. You will be asked to type your current password, and your future password two times. You will need to run the command on both your entry and home machine for a full update. [Contact us](/contact) if you don't remember your passwords and need a reset.
+
+```bash
+passwd
+```
+
+### I don't remember my password, now what? 
+
+After the initial setup, you do need to remember your SSH password when you install software. Since you will not use your password for other activities after the initial onboarding it may be hard to remember. [Contact us](/contact) if you need a password reset.
+
+
 ### How can I see the other users in my lab?
 
 Lab leaders and lab coordinators will get forwarded lists of their users at fixed intervals for review. Lab users can log into their home machine and look up users accounts with this command:
