@@ -29,7 +29,7 @@ Depending on you security model, you may mount selected part of your storage sys
 1. Install fuse4x:
 
    ```bash
-   brew cask install osxfuse
+   brew install --cask osxfuse
    ```
 
 2. Allow developer in `System Preferences` -> `Security & Privacy` -> `General`

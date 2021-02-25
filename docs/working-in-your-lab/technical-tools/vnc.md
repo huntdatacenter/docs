@@ -68,7 +68,7 @@ sudo apt install tigervnc-viewer
 ### Mac OS X
 
 ```
-brew cask install tigervnc-viewer
+brew install --cask tigervnc-viewer
 ```
 
 ### Windows or other

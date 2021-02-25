@@ -35,8 +35,8 @@ Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2gocl
 - Use [brew](https://brew.sh/) (a handy package manager for macOS) to install both XQuartz (required for X2Go) and the X2Go client:
 
   ```bash
-  brew cask install xquartz
-  brew cask install x2goclient
+  brew install --cask xquartz
+  brew install --cask x2goclient
   ```
 
   ::: warning XQuartz
