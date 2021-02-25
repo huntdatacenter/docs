@@ -26,10 +26,10 @@ Depending on you security model, you may mount selected part of your storage sys
 [Install Homebrew package manager for macOS: brew](https://brew.sh/)
 :::
 
-1. Install fuse4x:
+1. Install macfuse:
 
    ```bash
-   brew install --cask osxfuse
+   brew install --cask macfuse
    ```
 
 2. Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
