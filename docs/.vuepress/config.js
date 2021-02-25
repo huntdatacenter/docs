@@ -72,10 +72,10 @@ module.exports = {
           title: "About",
           // collapsable: false,
           children: [
-            "about/",
             "about/ting-week",
             "about/policies",
-            "about/certificates"
+            "about/certificates",
+            "about/journey"
           ]
         },
         {

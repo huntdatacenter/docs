@@ -18,6 +18,12 @@ This page list agreements that may be relevant for lab users and lab coordinator
 
 Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator. Read more about how to add new users in our [FAQ user section](/faq/users/).
 
+## Lab agreement
+
+[HUNT Cloud Lab Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-agreement.pdf) (pdf)
+
+Your data space leader or administrative data space coordinator can use this agreement to add new labs under a data space. The agreement is co-signed by both the data space leader and the new lab leader.
+
 ## Internal kista order
 
 [HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf) (pdf)
@@ -36,16 +42,16 @@ Lab leaders can request external kistas where collaborators outside HUNT Cloud c
 
 Lab leaders can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. This agreement is signed both by the Lab leader and the downloader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
 
-## Network opening form
+## Network opening order
 
-[HUNT Cloud Network Opening Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-network-opening-form.pdf) (pdf)
+[HUNT Cloud Network Opening Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-network-opening-order.pdf) (pdf)
 
-Your lab leader can request external network openings through our network opening form. We use this form to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/external-transfer/).
+Your lab leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/external-transfer/).
 
 
 ::: details Clarification of the form fields
 
-The below bullet points clarify the field information needed to complete our network opening form.
+The below bullet points clarify the field information needed to complete our network opening order.
 
 - **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
 
@@ -73,7 +79,7 @@ your-username@`your-labname`-home~$
 
 - **Personal data**: State **`YES`** if you expect the transfer to include personal data as defined by GDPR in [Article 4 (1)](https://www.privacy-regulation.eu/en/article-4-definitions-GDPR.htm), and state **`NO`** if you don't. We recommend that you encrypt personal data during transfers.
 
-- **Place/date**: State the place where your lab leader signed the form and the date when the form was signed.
+- **Place/date**: State the place where your lab leader signed the odrder and the date when the order was signed.
 
 - **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
 

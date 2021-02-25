@@ -197,7 +197,7 @@ Yes. Both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](/faq/compute/
 
 ### When do you plan to upgrade our home operating system?
 
-We will typically plan to upgrade operating systems every two years in accordance with on home machines when a new long term support
+We will typically upgrade operating systems every two years when a new long term support version is introduced.
 
 ## Machine types
 

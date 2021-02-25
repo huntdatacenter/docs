@@ -20,7 +20,7 @@ Our compliance with the international standard in quality management «ISO 9001�
 
 [ISO 27001:2013 Certificate](https://assets.hdc.ntnu.no/assets/certificates/iso27001.pdf) (pdf)
 
-Our compliance with the international standard in information security management «[ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)» is certified by Nemko, Norway, in accordance with our Statement of Applicability (SoA).
+Our compliance with the international standard in information security management «[ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)» is certified in accordance with our Statement of Applicability (SoA) by Kiwa, Norway. 
 
 [ISO 27001:2013 Statement of Applicability](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-soa-iso27001.pdf) (pdf)
 
