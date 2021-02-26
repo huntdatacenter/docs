@@ -274,7 +274,7 @@ This will allow you to log directly into your lab without the need to remember y
 > If you already have a RSA certificate on your local computer that you would like to use, start from step 3.
 
 1. In your local computer, open a terminal.
-2. Generate a new RSA certificate by typing **`ssh-keygen -t ed25519`**. Hint enter _three times_. When this finishes:
+2. Generate a new RSA certificate by typing **`ssh-keygen -t rsa -b 4096`**. Hint enter _three times_. When this finishes:
 3. Type **`ssh-copy-id <your-lab-name>-entry`** to add your new certificate to your entry machine. Enter your **`passphrase`** when prompted for a password.
 4. Enter **`ssh-add`** to add the certificate to the ssh-agent. If you don't have a running ssh-agent you may see an error message. In such a case, first enter **`eval "$(ssh-agent -s)"`** and next enter **`ssh-add`**.
 
