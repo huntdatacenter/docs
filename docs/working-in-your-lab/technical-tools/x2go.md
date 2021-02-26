@@ -232,6 +232,8 @@ sudo apt-get install -y --no-install-recommends xubuntu-desktop
 
 :::
 
+## Tips for configuration
+
 The default setup will need some care to run smoothly:
 
 ::: details TAB completion
