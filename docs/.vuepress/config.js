@@ -194,7 +194,8 @@ module.exports = {
             "faq/compute",
             "faq/internal-transfer",
             "faq/external-transfer",
-            "faq/security"
+            "faq/security",
+            "faq/upgrade-of-operating-system.md"
           ]
         }
       ]
