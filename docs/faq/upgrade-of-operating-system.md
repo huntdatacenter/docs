@@ -10,13 +10,11 @@ description: This page lists frequently asked questions related to OS upgrades.
 
 We will from time to time upgrade operating systems on entry and home machines. This page lists frequently asked questions related to such upgrades.
 
-
-
 [[toc]]
 
-## Why is this necessary? 
+## Why is this necessary?
 
-To provide you with a reliable lab environment, we do need to update the Ubuntu operating systems on your entry and home machines. We aim to do this about every two years. 
+To provide you with a reliable lab environment, we do need to update the Ubuntu operating systems on your entry and home machines. We aim to do this about every two years.
 
 ## What is the target version?
 
@@ -26,9 +24,11 @@ The upgraded Ubuntu version will be 18.04 LTS (Bionic). For those that are inter
 
 We expect the upgrade to take up to 2 hours including restart.
 
-## Will I be notified? 
+## Will I be notified?
 
 Yes, we will reach out to lab users to schedule the upgrades.
+We know that some of you are running analyses that need to finish,
+and we will try to adjust for that.
 
 ## Will it affect my tools?
 
@@ -54,8 +54,6 @@ No changes expected.
 
 No changes expected.
 
-## What if I need the old version? 
+## What if I need the old version?
 
 Some of your tools may relay on old package version. Reach out if you are dependent on packages from the old operating system version so we can discuss different options to keep your science going.
-
-
