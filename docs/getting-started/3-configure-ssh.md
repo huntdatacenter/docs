@@ -219,19 +219,9 @@ your-username@your-labname-`home`:~$
 
 
 
-## 3.5 Simplify your life
+## 3.5 Final steps
 
-::: warning
-
-**Do not skip this section...**
-
-:::
-
-
-We hope that you will log into your lab a lot over the coming months and years, so please invest some time to make sure you simplify that process as much as possible!
-
-
-
+We hope that you will log into your lab a lot over the coming months and years. To avoid unnecessary frustration, you need to finalize your installation through the following steps:
 
 ::: details Windows
 
