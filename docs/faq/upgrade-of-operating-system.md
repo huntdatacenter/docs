@@ -1,38 +1,48 @@
 ---
-title: Upgrade of Operating System
+title: Operating system upgrades
 category: FAQ
 permalink: faq/os-upgrade
 sidebarDepth: 1
-description: This page lists frequently asked questions related to OS upgrades.
+description: This page lists frequently asked questions related to operating system upgrades.
 ---
 
-# Upgrade of Operating System
+# Operating system upgrades
 
-We will from time to time upgrade operating systems on entry and home machines. This page lists frequently asked questions related to such upgrades.
-
-
+This page lists frequently asked questions related to operating system upgrades.
 
 [[toc]]
 
 ## Why is this necessary? 
 
-To provide you with a reliable lab environment, we do need to update the Ubuntu operating systems on your entry and home machines. We aim to do this about every two years. 
+We need to upgrade operating systems on your entry and home machines every other year or so to ensure that your lab runs reliably. OS upgrades are required for continuous security updates and to maintain a basic set of applications in your lab.
 
-## What is the target version?
+## What is the current target version?
 
-The upgraded Ubuntu version will be 18.04 LTS (Bionic). For those that are interested to get this version as soon as possible, feel free to reach out here in the thread or in your lab channel so we can prioritize your lab.
+This cycle, we will upgrade Ubuntu operating systems from version 16.04 to version 18.04 LTS (Bionic). 
+
+## Why not upgrade to the latest version?
+
+For reliability, we aim to run one OS version below the latest release long term release from Ubuntu. That said, we do recognize the need to utilize newer OS versions to keep your science flying. These are available on IAAS og Blue machines.
+
+## When will you do the upgrade? 
+
+We aim to upgrade all labs before the end of April 2021. For those that are interested to get 18.04 as soon as possible, feel free to [contact us](/contact) so we can prioritize your lab.
 
 ## How long will the upgrade take?
 
-We expect the upgrade to take up to 2 hours including restart.
+We expect the upgrade to take up to two hours including a restart.
+
+## Will my running jobs be affected? 
+
+Yes. We need to restart your home machines and all running jobs on this machine will be stopped during the upgrade. Jobs running on IAAS and Blue machines will not be affected.
 
 ## Will I be notified? 
 
-Yes, we will reach out to lab users to schedule the upgrades.
+Yes. We will reach out to your lab to schedule the upgrade.
 
-## Will it affect my tools?
+## Will the upgrade affect my tools?
 
-Maybe. Below we describe expected changes in packages with potential effects.
+Maybe. Below is a description of expected changes in packages that may cause potential effects on your workflows.
 
 ### Python
 
@@ -40,7 +50,7 @@ System python version will change from 3.5 to 3.6. You may need to reinstall som
 
 ### R / Rstudio
 
-R version can slightly change, although the main version still remains the same. This should minimize any risk of affecting your scripts. Be aware that the operating system upgrade also upgrade system packages that your R-packages may relay on.
+R version can slightly change, although the main version will remain the same. This should minimize any risk of affecting your scripts. Be aware that the operating system upgrade also upgrade system packages that your R-packages may relay on.
 
 ### Conda
 
@@ -54,8 +64,8 @@ No changes expected.
 
 No changes expected.
 
-## What if I need the old version? 
+## What if I relay on the old OS version? 
 
-Some of your tools may relay on old package version. Reach out if you are dependent on packages from the old operating system version so we can discuss different options to keep your science going.
+We recognize that some tools are bound to older package versions. [Contact us](/contact) if you are dependent on packages from the old operating system version so we can discuss different options to keep your science going.
 
 

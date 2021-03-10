@@ -1,5 +1,5 @@
 ---
-title: External Transfer
+title: External transfer
 category: FAQ
 permalink: faq/external-transfer
 sidebarDepth: 1

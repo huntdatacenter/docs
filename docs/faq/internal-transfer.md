@@ -1,5 +1,5 @@
 ---
-title: Internal Transfer
+title: Internal transfer
 category: FAQ
 permalink: faq/internal-transfer
 sidebarDepth: 1
