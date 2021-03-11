@@ -50,7 +50,7 @@ System python version will change from 3.5 to 3.6. You may need to reinstall som
 
 ### R / Rstudio
 
-R version can slightly change, although the main version will remain the same. This should minimize any risk of affecting your scripts. Be aware that the operating system upgrade also upgrade system packages that your R-packages may relay on.
+R version can slightly change, although the main version will remain the same. This should minimize any risk of affecting your scripts. Be aware that the operating system upgrade also upgrade system packages that your R-packages may depend on.
 
 ### Conda
 
@@ -64,6 +64,7 @@ No changes expected.
 
 No changes expected.
 
-## What if I relay on the old OS version?
+## What if I remain on the old OS version?
 
+You will loose possibility to install packages. Many tools like Python are progressing and your setup will not be supported anymore.
 We recognize that some tools are bound to older package versions. [Contact us](/contact) if you are dependent on packages from the old operating system version so we can discuss different options to keep your science going.
