@@ -12,19 +12,19 @@ This page lists frequently asked questions related to operating system upgrades.
 
 [[toc]]
 
-## Why is this necessary? 
+## Why is this necessary?
 
 We need to upgrade operating systems on your entry and home machines every other year or so to ensure that your lab runs reliably. OS upgrades are required for continuous security updates and to maintain a basic set of applications in your lab.
 
 ## What is the current target version?
 
-This cycle, we will upgrade Ubuntu operating systems from version 16.04 to version 18.04 LTS (Bionic). 
+This cycle, we will upgrade Ubuntu operating systems from version 16.04 to version 18.04 LTS (Bionic).
 
 ## Why not upgrade to the latest version?
 
 For reliability, we aim to run one OS version below the latest release long term release from Ubuntu. That said, we do recognize the need to utilize newer OS versions to keep your science flying. These are available on IAAS og Blue machines.
 
-## When will you do the upgrade? 
+## When will you do the upgrade?
 
 We aim to upgrade all labs before the end of April 2021. For those that are interested to get 18.04 as soon as possible, feel free to [contact us](/contact) so we can prioritize your lab.
 
@@ -32,11 +32,11 @@ We aim to upgrade all labs before the end of April 2021. For those that are inte
 
 We expect the upgrade to take up to two hours including a restart.
 
-## Will my running jobs be affected? 
+## Will my running jobs be affected?
 
 Yes. We need to restart your home machines and all running jobs on this machine will be stopped during the upgrade. Jobs running on IAAS and Blue machines will not be affected.
 
-## Will I be notified? 
+## Will I be notified?
 
 Yes. We will reach out to your lab to schedule the upgrade.
 
@@ -64,8 +64,6 @@ No changes expected.
 
 No changes expected.
 
-## What if I relay on the old OS version? 
+## What if I relay on the old OS version?
 
 We recognize that some tools are bound to older package versions. [Contact us](/contact) if you are dependent on packages from the old operating system version so we can discuss different options to keep your science going.
-
-
