@@ -138,7 +138,7 @@ Without these, it will be impossible to complete the remaining steps.
 
 ::: tip Time for coffee!
 
-If you successfully completed this step, celebrate with fresh coffee and head over to the [VPN configuration](/getting-started/2-configure-vpn). If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+If you successfully completed this step, celebrate with fresh coffee and head over to the [VPN configuration](/getting-started/configure-vpn). If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 
