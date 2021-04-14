@@ -8,7 +8,7 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 ::: danger Lab access
-**2021-04-14 18:35** One physical machine is down and labs located on the machine will be inaccessible. We are investigating. Next update expected 19:00.
+**2021-04-14 19:00** One physical machine hosting labs went offline with memory erros 18:20. Affected labs are notified. Please contact us on email if you need your lab up tonight. We aim to migrate lab machines to alternative hosts. Next update 2021-04-15 09:00.
 :::
 
 
