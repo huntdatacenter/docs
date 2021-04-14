@@ -7,10 +7,13 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: danger Lab access
-**2021-04-14 19:00** One physical machine hosting labs went offline with memory erros 18:20. Affected labs are notified. Please contact us on email if you need your lab up tonight. We aim to migrate lab machines to alternative hosts. Next update 2021-04-15 09:00.
+::: tip All systems
+Operational.
 :::
 
+**2021-04-14 20:00 CET.** All labs are now online after migration to a new physical machine. Processes that was running at the time of the shutoff will need to be restarted.
+
+**2021-04-14 19:00 CET.** One physical machine hosting labs went offline with memory erros 18:20. Affected labs are notified. Please contact us on email if you need your lab up tonight. We aim to migrate lab machines to alternative hosts. Next update 2021-04-15 09:00.
 
 
 <!--
