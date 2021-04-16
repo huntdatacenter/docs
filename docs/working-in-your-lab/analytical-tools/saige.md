@@ -39,7 +39,7 @@ conda config --add channels conda-forge
 To create a new environment and install the latest version of SAIGE use:
 
 ```
-conda create -n saige -c bioconda r-saige=0.43.0
+conda create -n saige -c bioconda r-saige=0.44.2
 conda activate saige
 ```
 
@@ -51,10 +51,10 @@ step2_SPAtests.R --help
 createSparseGRM.R --help
 ```
 
-If you need to run your scripts with older version of R, you can use `3.5.1` and `3.6.1`:
+If you need to run your scripts with older version of R, you can use `3.6.3`:
 
 ```
-conda install -c conda-forge -c bioconda "r-base=3.6.1" r-saige
+conda install -c conda-forge -c bioconda "r-base=3.6.3" r-saige
 ```
 
 ## Install the hard way
