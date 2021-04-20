@@ -30,11 +30,10 @@ If these steps don't work as intended, it will be hard (although not impossible)
   ![Step 2](./images/mobaxterm_step2.png "MobaXterm - Step 2")
 - Add your labs IP-address to the `Gateway SSH server` and your user name to the `User` field (the 10.42.-address from the ssh-config). Select ssh (private) key file if you already have one. Click OK to confirm SSH jump host.
   ![Step 3](./images/mobaxterm_step3.png "MobaXterm - Step 3")
-- Name your lab session.
+- In **Bookmark settings**, Name your lab session. Click OK to confirm Session settings.
   ![Step 4](./images/mobaxterm_step4.png "MobaXterm - Step 4")
-- Click OK to confirm Session settings and then try to connect.
-  ![Step 5](./images/mobaxterm_step5.png "MobaXterm - Step 5")
 - Connect to your session.
+  ![Step 5](./images/mobaxterm_step5.png "MobaXterm - Step 5")
 
 ## Connect
 
