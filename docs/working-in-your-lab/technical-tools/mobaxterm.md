@@ -32,11 +32,11 @@ If these steps don't work as intended, it will be hard (although not impossible)
   ![Step 3](./images/mobaxterm_step3.png "MobaXterm - Step 3")
 - In **Bookmark settings**, Name your lab session. Click OK to confirm Session settings.
   ![Step 4](./images/mobaxterm_step4.png "MobaXterm - Step 4")
-- Connect to your session.
-  ![Step 5](./images/mobaxterm_step5.png "MobaXterm - Step 5")
 
 ## Connect
 
-- You will now be asked twice to type in your SSH password that you made during the lab installation.
+Connect to your session. You will now be asked twice to type in your SSH password that you made during the lab installation.
+
+![Connect](./images/mobaxterm_step5.png "MobaXterm - Connect")
 
 With a little bit of luck, you should now be able to connect directly from your client computer to your home node in your lab.
