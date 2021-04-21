@@ -47,27 +47,27 @@ conda activate renv
 R
 ```
 
-Additional R packages can be found in channels or installed using R devtools. R packages in [bioconda](https://anaconda.org/bioconda) and [conda-forge](https://anaconda.org/conda-forge) channels have `r-` prefix in their names. Here is an example how to install matrix R package into renv environment:
+Additional R packages can be found in channels or installed using R devtools. We highly recommend to use R packages from Conda channels [bioconda](https://anaconda.org/bioconda) and [conda-forge](https://anaconda.org/conda-forge). Conda packages usually have `r-` prefix in their names. Here is an example how to install matrix R package into renv environment:
 
 ```bash
 conda install -n renv r-matrix
 ```
 
+If you still decide to install cran packages when using conda, then you should minimize the issues encounted by specifying the library path. For example to install png package:
+```bash
+install.packages("png", paste(Sys.getenv("CONDA_PREFIX"), "/lib/R/library", sep=""))
+```
+
 #### Running multiple version of R
 
-To run multiple R versions, e.g. system packages and also conda environments it may be necessary
+To run multiple R versions with conda environments it may be necessary
 to setup custom `~/.Rprofile` config. You can use example below as an inspiration for setting
-your .Rprofile config to link each R version to library paths:
+your .Rprofile config to link each R version to library paths within environment:
 
 ```bash
-version <- paste0(R.Version()$major,".",R.Version()$minor)
-
-if (version == "3.5.1") {
-    .libPaths(c("/mnt/work/R_packages/R-3.5.1","/mnt/work/R_packages/x86_64-pc-linux-gnu-library/3.5"))
-} else if (version == "3.6.3") {
-    .libPaths(c("/mnt/work/miniconda3/envs/saige/lib/R/library","/mnt/work/miniconda3/envs/saige/lib","/mnt/work/miniconda3/x86_64-conda_cos6-linux-gnu/sysroot/lib") )
-} else {
-    .libPaths(c("/mnt/work/miniconda3/envs/saige4/lib/R/library","/mnt/work/miniconda3/envs/saige4/lib","/mnt/work/miniconda3/x86_64-conda_cos6-linux-gnu/sysroot/lib") )
+condaenv <- Sys.getenv("CONDA_PREFIX")
+if (condaenv != "") {
+  .libPaths(c(paste(Sys.getenv("CONDA_PREFIX"), "/lib/R/library", sep="")))
 }
 ```
 

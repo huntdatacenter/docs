@@ -65,10 +65,12 @@ plink2 <input>
 
 ```bash
 # install
-conda install r-essentials
-conda update r-essentials
-conda install -c conda-forge r-base
+conda create -n renv -c conda-forge r-base r-essentials
+conda activate renv
+
+# install package in shell
+R CMD INSTALL --library="${CONDA_PREFIX}/lib/R/library" .
 
 # install cran packages within r
-install.packages("png", "~/anaconda3/lib/R/library")
+install.packages("png", paste(Sys.getenv("CONDA_PREFIX"), "/lib/R/library", sep=""))
 ```
