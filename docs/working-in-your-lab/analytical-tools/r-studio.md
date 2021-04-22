@@ -55,7 +55,7 @@ conda install -n renv r-matrix
 
 If you still decide to install cran packages when using conda, then you should minimize the issues encounted by specifying the library path. For example to install png package:
 ```bash
-install.packages("png", paste(Sys.getenv("CONDA_PREFIX"), "/lib/R/library", sep=""))
+install.packages("png", paste0(Sys.getenv("CONDA_PREFIX"), "/lib/R/library"))
 ```
 
 #### Running multiple version of R
@@ -67,7 +67,7 @@ your .Rprofile config to link each R version to library paths within environment
 ```bash
 condaenv <- Sys.getenv("CONDA_PREFIX")
 if (condaenv != "") {
-  .libPaths(c(paste(Sys.getenv("CONDA_PREFIX"), "/lib/R/library", sep="")))
+  .libPaths(c(paste0(Sys.getenv("CONDA_PREFIX"), "/lib/R/library")))
 }
 ```
 
