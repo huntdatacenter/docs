@@ -40,3 +40,34 @@ Connect to your session. You will now be asked twice to type in your SSH passwor
 ![Connect](./images/mobaxterm_step5.png "MobaXterm - Connect")
 
 With a little bit of luck, you should now be able to connect directly from your client computer to your home node in your lab.
+
+
+## Generating SSH Key
+
+In case you have not used SSH keys before and you need to generate one, on Windows you can do so in MobaXterm using Local terminal:
+
+![Main View - Local terminal](./images/mobaxterm_main-local_terminal.png)
+
+Clicking on Local terminal opens MobaXterm command line:
+
+![Local terminal](./images/mobaxterm_local_terminal.png)
+
+Follow these commands to setup your ssh keys:
+
+```bash
+mkdir -p .ssh
+touch .ssh/config
+ssh-keygen -b 4096 -t rsa -f /home/mobaxterm/.ssh/id_rsa -q -N ""
+```
+
+## Setting ssh-config
+
+To setup ssh config to be used in local terminal of MobaXterm use:
+
+```
+cat <<-EOF > /home/mobaxterm/.ssh/config
+
+Paste your config here
+
+EOF
+```
