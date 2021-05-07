@@ -126,6 +126,7 @@ module.exports = {
                 "working-in-your-lab/technical-tools/htop",
                 "working-in-your-lab/technical-tools/mobaxterm",
                 "working-in-your-lab/technical-tools/singularity",
+                "working-in-your-lab/technical-tools/ssl",
                 "working-in-your-lab/technical-tools/terminal-multiplexers",
                 "working-in-your-lab/technical-tools/vnc",
                 "working-in-your-lab/technical-tools/x2go"
