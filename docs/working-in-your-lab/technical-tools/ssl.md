@@ -29,3 +29,5 @@ description: Installation guide for Client certificates
 5. Your certificate is imported and you can hit finish:
 
    ![5_cert_p12.png](./images/5_cert_p12.png)
+
+6. Quit your browser and restart it again for the certificate to get recognized.
