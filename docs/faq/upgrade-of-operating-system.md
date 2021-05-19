@@ -1,7 +1,7 @@
 ---
 title: Operating system upgrades
 category: FAQ
-permalink: faq/os-upgrade
+permalink: /faq/os-upgrade
 sidebarDepth: 1
 description: This page lists frequently asked questions related to operating system upgrades.
 ---

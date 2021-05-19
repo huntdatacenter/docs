@@ -1,7 +1,7 @@
 ---
 title: External transfer
 category: FAQ
-permalink: faq/external-transfer
+permalink: /faq/external-transfer
 sidebarDepth: 1
 description: This page lists frequently asked questions related to external transfers in labs.
 ---
@@ -51,7 +51,7 @@ Most likely. The service allows you to be compliant with common acts and regulat
 ### Where can I get additional security information on the external kistas?
 [Contact us](/contact) for additional information on the external kista service aimed at security, privacy and compliance officers.
 
-### How do I order a Kista for transfers from HEMIT? 
+### How do I order a Kista for transfers from HEMIT?
 [HEMIT](https://hemit.no/) is the Central Norway Regional Health Authority's IT department that coordinate transports from our regional hospitals such as St Olavs Hospital, Helse Nord-Trøndelag and Helse More og Romsdal. Transfers with external kistas are pre-approved by HEMIT for transfers from health trusts that hold data processor agreements with HUNT Cloud. Hospital departments can order transfers at **`HEMIT-torget`**. Place a free-text order for an "External kista to HUNT Cloud", include information from our [external kista import order](/agreements/downloads), and state if you need help from HEMIT to install the required SFTP application on your local hospital machine.
 
 
@@ -69,7 +69,7 @@ Lab leaders can request network openings through our [network opening order](/ag
 ### Which network openings do the machine outside HUNT Cloud need to approve?
 Your remote party will need to open for incoming traffic from your lab in HUNT Cloud: **`IP 129.241.176.121`**. The IP is registered under NTNU. They will need to open for traffic on **`TCP port 22`** if you plan to use SSH-tools such as **`rsync`**.
 
-### How do I transfer data to and from TSD at UiO? 
+### How do I transfer data to and from TSD at UiO?
 Services for senstivie data ([TSD](https://www.uio.no/english/services/it/research/sensitive-data/)) at the University of Oslo has developed a handy [API client](https://github.com/unioslo/tsd-api-client) that can be utilized for direct data transfers to and from your lab. The setup requires that you hold user accounts for both TSD and HUNT Cloud. Depending on your lab configuration, you may have to [contact us](/contact) for a network opening.
 
 ::: details More information

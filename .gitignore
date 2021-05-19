@@ -9,6 +9,8 @@ run
 dist
 public
 !docs/.vuepress/public
+docs/.vuepress/.cache/
+docs/.vuepress/.temp/
 .DS_Store
 .nyc_output
 .basement

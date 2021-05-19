@@ -1,7 +1,7 @@
 ---
 title: Users
 category: FAQ
-permalink: faq/users
+permalink: /faq/users
 sidebarDepth: 1
 description: This page lists frequently asked questions related to users and user management in labs.
 ---
@@ -70,7 +70,7 @@ Maybe. We do allow such connections, however teleworking conditions from your ow
 
 ## Current users
 
-### How do I change my machine password? 
+### How do I change my machine password?
 
 You can change your SSH password with the **`passwd`** command. You will be asked to type your current password, and your future password two times. You will need to run the command on both your entry and home machine for a full update. [Contact us](/contact) if you don't remember your passwords and need a reset.
 
@@ -78,7 +78,7 @@ You can change your SSH password with the **`passwd`** command. You will be aske
 passwd
 ```
 
-### I don't remember my password, now what? 
+### I don't remember my password, now what?
 
 After the initial setup, you do need to remember your SSH password when you install software. Since you will not use your password for other activities after the initial onboarding it may be hard to remember. [Contact us](/contact) if you need a password reset.
 

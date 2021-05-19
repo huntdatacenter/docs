@@ -1,7 +1,7 @@
 ---
 title: Security
 category: FAQ
-permalink: faq/security
+permalink: /faq/security
 sidebarDepth: 1
 description: This page lists frequently asked questions related to security management in labs.
 ---
@@ -50,5 +50,3 @@ Volumes classified as internal may be mounted directly to individual lab users' 
 ### Can I store direct identifiable health information in my lab?
 
 Not by default. Direct identifiable research data such as names of research participants, personal identification numbers, phone numbers, address information, etc., must be stored outside our system unless specifically approved in dedicated amendments to the data processor agreement that we hold with your host organization.
-
-

@@ -48,7 +48,7 @@ module.exports = {
     editLinkText: "Help us improve this page!",
     lastUpdated: true,
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
-    nav: [{
+    navbar: [{
         text: "Home",
         link: "/"
       },
@@ -59,164 +59,150 @@ module.exports = {
     ],
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
     sidebar: {
-      "/": [{
-          title: "Home",
-          collapsable: false,
-          children: ["",
-            "system-status",
-            "contribute",
-            "contact"
+      "/": [
+        "/README.md",
+        "/system-status.md",
+        "/contribute.md",
+        "/contact.md",
+        {
+          text: "About",
+          isGroup: true,
+          children: [
+            "/about/ting-week.md",
+            "/about/policies.md",
+            "/about/certificates.md",
+            "/about/journey.md"
           ]
         },
         {
-          title: "About",
-          // collapsable: false,
+          text: "Coordination",
+          isGroup: true,
           children: [
-            "about/ting-week",
-            "about/policies",
-            "about/certificates",
-            "about/journey"
-          ]
-        },
-        {
-          title: "Coordination",
-          // collapsable: false,
-          children: [
-            "coordination/",
+            "/coordination/",
             {
-              title: "Agreements",
-              // collapsable: false,
+              text: "Agreements",
+              isGroup: true,
               children: [
-                "coordination/agreements/downloads",
-                "coordination/agreements/overview"
+                "/coordination/agreements/downloads.md",
+                "/coordination/agreements/overview.md"
               ]
             },
             {
-              title: "Services",
-              // collapsable: false,
+              text: "Services",
+              isGroup: true,
               children: [
-                "coordination/services/machine-types",
-                "coordination/services/specifications"
-              ]
-             }
-           ]
-         },
-        {
-          title: "Getting started",
-          // collapsable: false,
-          children: [
-            "getting-started/",
-            "getting-started/1-collect-keys.md",
-            "getting-started/2-configure-vpn.md",
-            "getting-started/3-configure-ssh.md"
-          ]
-        },
-        {
-          title: "Working in your lab",
-          // collapsable: false,
-          children: [
-            "working-in-your-lab/",
-            {
-              title: "Technical tools",
-              // collapsable: false,
-              children: [
-                "working-in-your-lab/technical-tools/",
-                "working-in-your-lab/technical-tools/git",
-                "working-in-your-lab/technical-tools/gpu",
-                "working-in-your-lab/technical-tools/htop",
-                "working-in-your-lab/technical-tools/mobaxterm",
-                "working-in-your-lab/technical-tools/singularity",
-                "working-in-your-lab/technical-tools/ssl",
-                "working-in-your-lab/technical-tools/terminal-multiplexers",
-                "working-in-your-lab/technical-tools/vnc",
-                "working-in-your-lab/technical-tools/x2go"
-              ]
-            },
-            {
-              title: "Analytical tools",
-              // collapsable: false,
-              children: [
-                "working-in-your-lab/analytical-tools/",
-                "working-in-your-lab/analytical-tools/bluebox",
-                "working-in-your-lab/analytical-tools/conda",
-                "working-in-your-lab/analytical-tools/epacts",
-                "working-in-your-lab/analytical-tools/fsl",
-                "working-in-your-lab/analytical-tools/freesurfer",
-                "working-in-your-lab/analytical-tools/jupyter-lab",
-                "working-in-your-lab/analytical-tools/matlab",
-                "working-in-your-lab/analytical-tools/plink",
-                "working-in-your-lab/analytical-tools/pycharm",
-                "working-in-your-lab/analytical-tools/r-studio",
-                "working-in-your-lab/analytical-tools/regenie",
-                "working-in-your-lab/analytical-tools/saige",
-                "working-in-your-lab/analytical-tools/spyder-ide",
-                "working-in-your-lab/analytical-tools/stata"
-              ]
-            },
-            {
-              title: "Transfer tools",
-              // collapsable: false,
-              children: [
-                "working-in-your-lab/transfer-tools/",
-                "working-in-your-lab/transfer-tools/7z",
-                "working-in-your-lab/transfer-tools/rsync",
-                "working-in-your-lab/transfer-tools/sshfs",
-                "working-in-your-lab/transfer-tools/winscp"
+                "/coordination/services/machine-types.md",
+                "/coordination/services/specifications.md"
               ]
             }
           ]
         },
         {
-          title: "Data transfers",
-          // collapsable: false,
+          text: "Getting started",
+          isGroup: true,
           children: [
-            "data-transfers/",
-            "data-transfers/internal-kista.md",
-            "data-transfers/external-kista.md"
+            "/getting-started/",
+            "/getting-started/1-collect-keys.md",
+            "/getting-started/2-configure-vpn.md",
+            "/getting-started/3-configure-ssh.md"
           ]
         },
         {
-          title: "Troubleshooting",
-          // collapsable: false,
+          text: "Working in your lab",
+          isGroup: true,
           children: [
-            "troubleshooting/",
-            "troubleshooting/connection",
-            "troubleshooting/compute",
-            "troubleshooting/labreports"
+            "/working-in-your-lab/",
+            {
+              text: "Technical tools",
+              isGroup: true,
+              children: [
+                "/working-in-your-lab/technical-tools/",
+                "/working-in-your-lab/technical-tools/git.md",
+                "/working-in-your-lab/technical-tools/gpu.md",
+                "/working-in-your-lab/technical-tools/htop.md",
+                "/working-in-your-lab/technical-tools/mobaxterm.md",
+                "/working-in-your-lab/technical-tools/singularity.md",
+                "/working-in-your-lab/technical-tools/ssl.md",
+                "/working-in-your-lab/technical-tools/terminal-multiplexers.md",
+                "/working-in-your-lab/technical-tools/vnc.md",
+                "/working-in-your-lab/technical-tools/x2go.md"
+              ]
+            },
+            {
+              text: "Analytical tools",
+              isGroup: true,
+              children: [
+                "/working-in-your-lab/analytical-tools/",
+                "/working-in-your-lab/analytical-tools/bluebox.md",
+                "/working-in-your-lab/analytical-tools/conda.md",
+                "/working-in-your-lab/analytical-tools/epacts.md",
+                "/working-in-your-lab/analytical-tools/fsl.md",
+                "/working-in-your-lab/analytical-tools/freesurfer.md",
+                "/working-in-your-lab/analytical-tools/jupyter-lab.md",
+                "/working-in-your-lab/analytical-tools/matlab.md",
+                "/working-in-your-lab/analytical-tools/plink.md",
+                "/working-in-your-lab/analytical-tools/pycharm.md",
+                "/working-in-your-lab/analytical-tools/r-studio.md",
+                "/working-in-your-lab/analytical-tools/regenie.md",
+                "/working-in-your-lab/analytical-tools/saige.md",
+                "/working-in-your-lab/analytical-tools/spyder-ide.md",
+                "/working-in-your-lab/analytical-tools/stata.md"
+              ]
+            },
+            {
+              text: "Transfer tools",
+              isGroup: true,
+              children: [
+                "/working-in-your-lab/transfer-tools/",
+                "/working-in-your-lab/transfer-tools/7z.md",
+                "/working-in-your-lab/transfer-tools/rsync.md",
+                "/working-in-your-lab/transfer-tools/sshfs.md",
+                "/working-in-your-lab/transfer-tools/winscp.md"
+              ]
+            }
           ]
         },
         {
-          title: "FAQ",
-          // collapsable: false,
+          text: "Data transfers",
+          isGroup: true,
           children: [
-            "faq/",
-            "faq/users",
-            "faq/storage",
-            "faq/compute",
-            "faq/internal-transfer",
-            "faq/external-transfer",
-            "faq/security",
-            "faq/upgrade-of-operating-system.md"
+            "/data-transfers/",
+            "/data-transfers/internal-kista.md",
+            "/data-transfers/external-kista.md"
+          ]
+        },
+        {
+          text: "Troubleshooting",
+          isGroup: true,
+          children: [
+            "/troubleshooting/",
+            "/troubleshooting/connection.md",
+            "/troubleshooting/compute.md",
+            "/troubleshooting/labreports.md"
+          ]
+        },
+        {
+          text: "FAQ",
+          isGroup: true,
+          children: [
+            "/faq/",
+            "/faq/users.md",
+            "/faq/storage.md",
+            "/faq/compute.md",
+            "/faq/internal-transfer.md",
+            "/faq/external-transfer.md",
+            "/faq/security.md",
+            "/faq/upgrade-of-operating-system.md"
           ]
         }
       ]
-    }
+    },
+    sidebarDepth: 0
   },
   // https://v1.vuepress.vuejs.org/plugin/
   plugins: [
     "@vuepress/plugin-back-to-top",
     "@vuepress/active-header-links",
-    [
-      "vuepress-plugin-container", {
-        type: "details",
-        defaultTitle: "DETAILS",
-        before: info =>
-          `<details class="custom-block details">${
-            info ? `<summary>${info}</summary><p>` : "<p>"
-          }\n`,
-        after: "</p></details>"
-      }
-    ],
     [
       "vuepress-plugin-sitemap", {
         hostname: "https://docs.hdc.ntnu.no"
