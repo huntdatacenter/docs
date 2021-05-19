@@ -64,8 +64,7 @@ module.exports = {
           collapsable: false,
           text: "Home",
           isGroup: true,
-          children: [
-            "/README.md",
+          children: ["/",
             "/system-status.md",
             "/contribute.md",
             "/contact.md",
