@@ -1,7 +1,7 @@
 ---
 title: Internal transfer
 category: FAQ
-permalink: faq/internal-transfer
+permalink: /faq/internal-transfer
 sidebarDepth: 1
 description: This page lists frequently asked questions related to internal transfers and network openings in labs.
 ---
@@ -32,8 +32,8 @@ Kistas are short-lived SFTP servers dedicated to your specific data transaction.
 ### How do I access my internal kista?
 See our [internal kista transfer guide](/data-transfers/internal-kista/) for instruction on how to access and upload or download data in internal kista.
 
-### What is the size and utilization of my internal kista? 
-You can check the size and utilization if you log in to your kista and run the following commands: 
+### What is the size and utilization of my internal kista?
+You can check the size and utilization if you log in to your kista and run the following commands:
 
 ```bash
 # -- Log into your kista

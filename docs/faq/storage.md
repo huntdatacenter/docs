@@ -1,7 +1,7 @@
 ---
 title: Storage
 category: FAQ
-permalink: faq/storage
+permalink: /faq/storage
 sidebarDepth: 1
 description: This page lists frequently asked questions related to lab storage.
 ---
@@ -174,9 +174,9 @@ You should be able to delete restore files if **`restore`** is among the listed 
 
 Yes. Your restore folders are stored inside your  **`/mnt/work`** and **`/mnt/archive`** volumes. This will consume storage space in these volumes as a regular folder. Typically, restore will take one duplicate copy of your data and then incremental changes over the 30 day period. You should therefore plan your volume sizes for at least twice the amount of data that you plan to store.
 
-### What is the size of our restore folders? 
+### What is the size of our restore folders?
 
-You can see the consumption of your default restore folders with the following command: 
+You can see the consumption of your default restore folders with the following command:
 
 ```bash
 du -sh /mnt/work/.restore/*
