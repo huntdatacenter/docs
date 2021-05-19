@@ -48,7 +48,17 @@ module.exports = {
     editLinkText: "Help us improve this page!",
     lastUpdated: true,
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
+    // TODO remove nav key in vuepress 2
     nav: [{
+        text: "Home",
+        link: "/"
+      },
+      {
+        text: "Getting started",
+        link: "/getting-started/"
+      }
+    ],
+    navbar: [{
         text: "Home",
         link: "/"
       },
