@@ -1,3 +1,5 @@
+const { path } = require('@vuepress/utils')
+
 module.exports = {
   // https://v1.vuepress.vuejs.org/config/#title
   title: "HUNT Cloud Documentation",
@@ -199,6 +201,7 @@ module.exports = {
     },
     sidebarDepth: 0
   },
+  clientAppEnhanceFiles: path.resolve(__dirname, './enhanceApp.js'),
   // https://v1.vuepress.vuejs.org/plugin/
   plugins: [
     "@vuepress/plugin-back-to-top",
