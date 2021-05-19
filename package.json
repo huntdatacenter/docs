@@ -14,7 +14,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@vue/component-compiler-utils": "^3.2.0",
     "@vuepress/plugin-back-to-top": "^2.0.0-beta.14",
     "@vuepress/plugin-medium-zoom": "^2.0.0-beta.14",
     "@vuepress/theme-default": "2.0.0-beta.14",
@@ -28,9 +27,7 @@
     "vuepress-plugin-sitemap": "^2.3.1",
     "webpack": "^5.0.0"
   },
-  "dependencies": {
-    "@vuepress/plugin-container": "^2.0.0-beta.14"
-  },
+  "dependencies": {},
   "resolutions": {
     "autoprefixer": "^10.0.0"
   }
