@@ -73,7 +73,6 @@ module.exports = {
         },
         {
           title: "About",
-          // collapsable: false,
           text: "About",
           isGroup: true,
           children: [
@@ -85,14 +84,12 @@ module.exports = {
         },
         {
           title: "Coordination",
-          // collapsable: false,
           text: "Coordination",
           isGroup: true,
           children: [
             "/coordination/",
             {
               title: "Agreements",
-              // collapsable: false,
               text: "Agreements",
               isGroup: true,
               children: [
@@ -102,7 +99,6 @@ module.exports = {
             },
             {
               title: "Services",
-              // collapsable: false,
               text: "Services",
               isGroup: true,
               children: [
@@ -114,7 +110,6 @@ module.exports = {
          },
         {
           title: "Getting started",
-          // collapsable: false,
           text: "Getting started",
           isGroup: true,
           children: [
@@ -126,14 +121,12 @@ module.exports = {
         },
         {
           title: "Working in your lab",
-          // collapsable: false,
           text: "Working in your lab",
           isGroup: true,
           children: [
             "/working-in-your-lab/",
             {
               title: "Technical tools",
-              // collapsable: false,
               text: "Technical tools",
               isGroup: true,
               children: [
@@ -151,7 +144,6 @@ module.exports = {
             },
             {
               title: "Analytical tools",
-              // collapsable: false,
               text: "Analytical tools",
               isGroup: true,
               children: [
@@ -174,7 +166,6 @@ module.exports = {
             },
             {
               title: "Transfer tools",
-              // collapsable: false,
               text: "Transfer tools",
               isGroup: true,
               children: [
@@ -189,7 +180,6 @@ module.exports = {
         },
         {
           title: "Data transfers",
-          // collapsable: false,
           text: "Data transfers",
           isGroup: true,
           children: [
@@ -200,7 +190,6 @@ module.exports = {
         },
         {
           title: "Troubleshooting",
-          // collapsable: false,
           text: "Troubleshooting",
           isGroup: true,
           children: [
@@ -212,7 +201,6 @@ module.exports = {
         },
         {
           title: "FAQ",
-          // collapsable: false,
           text: "FAQ",
           isGroup: true,
           children: [
