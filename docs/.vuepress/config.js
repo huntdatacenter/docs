@@ -222,17 +222,6 @@ module.exports = {
     "@vuepress/plugin-back-to-top",
     "@vuepress/active-header-links",
     [
-      "@vuepress/plugin-container", {
-        type: "details",
-        defaultTitle: "DETAILS",
-        renderBefore: info =>
-          `<details class="custom-block details">${
-            info ? `<summary>${info}</summary><p>` : "<p>"
-          }\n`,
-        renderAfter: "</p></details>"
-      }
-    ],
-    [
       "vuepress-plugin-sitemap", {
         hostname: "https://docs.hdc.ntnu.no"
       }
