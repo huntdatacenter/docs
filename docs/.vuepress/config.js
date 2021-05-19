@@ -48,7 +48,6 @@ module.exports = {
     editLinkText: "Help us improve this page!",
     lastUpdated: true,
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
-    // TODO fix navbar items
     navbar: [{
         text: "Home",
         link: "/"
