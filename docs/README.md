@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title: Home
 category: HUNT Cloud
 readingTime: null
 description: HUNT Cloud is a scientific computing service located at NTNU in Norway. These pages contains official user documentation on our cloud services. Their content is aimed at lab users.
@@ -20,5 +20,4 @@ Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf
 - **Lagtun**: Thursday 27 May 2021 - 9 to 11 a.m. CET
 
 [Click here to learn more](/tingweek/).
-::: 
-
+:::
