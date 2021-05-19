@@ -60,8 +60,6 @@ module.exports = {
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
     sidebar: {
       "/": [{
-          title: "Home",
-          collapsable: false,
           text: "Home",
           isGroup: true,
           children: [
@@ -72,7 +70,6 @@ module.exports = {
           ]
         },
         {
-          title: "About",
           text: "About",
           isGroup: true,
           children: [
@@ -83,13 +80,11 @@ module.exports = {
           ]
         },
         {
-          title: "Coordination",
           text: "Coordination",
           isGroup: true,
           children: [
             "/coordination/",
             {
-              title: "Agreements",
               text: "Agreements",
               isGroup: true,
               children: [
@@ -98,7 +93,6 @@ module.exports = {
               ]
             },
             {
-              title: "Services",
               text: "Services",
               isGroup: true,
               children: [
@@ -109,7 +103,6 @@ module.exports = {
            ]
          },
         {
-          title: "Getting started",
           text: "Getting started",
           isGroup: true,
           children: [
@@ -120,13 +113,11 @@ module.exports = {
           ]
         },
         {
-          title: "Working in your lab",
           text: "Working in your lab",
           isGroup: true,
           children: [
             "/working-in-your-lab/",
             {
-              title: "Technical tools",
               text: "Technical tools",
               isGroup: true,
               children: [
@@ -143,7 +134,6 @@ module.exports = {
               ]
             },
             {
-              title: "Analytical tools",
               text: "Analytical tools",
               isGroup: true,
               children: [
@@ -165,7 +155,6 @@ module.exports = {
               ]
             },
             {
-              title: "Transfer tools",
               text: "Transfer tools",
               isGroup: true,
               children: [
@@ -179,7 +168,6 @@ module.exports = {
           ]
         },
         {
-          title: "Data transfers",
           text: "Data transfers",
           isGroup: true,
           children: [
@@ -189,7 +177,6 @@ module.exports = {
           ]
         },
         {
-          title: "Troubleshooting",
           text: "Troubleshooting",
           isGroup: true,
           children: [
@@ -200,7 +187,6 @@ module.exports = {
           ]
         },
         {
-          title: "FAQ",
           text: "FAQ",
           isGroup: true,
           children: [
