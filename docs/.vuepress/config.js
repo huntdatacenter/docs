@@ -48,7 +48,8 @@ module.exports = {
     editLinkText: "Help us improve this page!",
     lastUpdated: true,
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
-    nav: [{
+    // TODO fix navbar items
+    navbar: [{
         text: "Home",
         link: "/"
       },
@@ -59,16 +60,11 @@ module.exports = {
     ],
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
     sidebar: {
-      "/": [{
-          text: "Home",
-          isGroup: true,
-          children: [
-            "/README.md",
-            "/system-status.md",
-            "/contribute.md",
-            "/contact.md",
-          ]
-        },
+      "/": [
+        "/README.md",
+        "/system-status.md",
+        "/contribute.md",
+        "/contact.md",
         {
           text: "About",
           isGroup: true,
@@ -99,9 +95,9 @@ module.exports = {
                 "/coordination/services/machine-types.md",
                 "/coordination/services/specifications.md"
               ]
-             }
-           ]
-         },
+            }
+          ]
+        },
         {
           text: "Getting started",
           isGroup: true,
@@ -201,7 +197,8 @@ module.exports = {
           ]
         }
       ]
-    }
+    },
+    sidebarDepth: 0
   },
   // https://v1.vuepress.vuejs.org/plugin/
   plugins: [
