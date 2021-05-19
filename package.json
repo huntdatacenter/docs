@@ -27,5 +27,8 @@
   "dependencies": {
     "ssri": "^8.0.1",
     "vuepress-plugin-container": "^2.1.5"
+  },
+  "resolutions": {
+    "postcss": "^7.0.35"
   }
 }
