@@ -10,7 +10,7 @@ description: This page gives an overview of HUNT Cloud services specifications.
 
 HUNT Cloud delivers services for management, storage, computation and transfer of data within a compliant security framework.
 
-This is our official services specifications that is attached to our data space agreements:
+This is our official services specifications that is attached to our cloud services agreements:
 
 [HUNT Cloud Services Specifications](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-services-specifications.pdf)(pdf)
 
