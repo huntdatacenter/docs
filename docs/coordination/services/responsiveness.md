@@ -16,7 +16,7 @@ This page lists expected responsiveness from request to delivery of selected ser
 [Contact us](/contact) for immediate response if you expect ongoing data loss or unauthorized data exfiltration.
 :::
 
-Just for the record, we are a small team with tasks split among several members. Expect our responsiveness to decrease during high demand periods, employee leaves and holidays.
+Just for the record, we are a small team with tasks distributed among our members. Expect our responsiveness to decrease during holidays, high demand periods etc.
 
 ## Response times
 
