@@ -8,7 +8,7 @@ description: This page list agreements that may be relevant for you as a lab use
 
 # Download agreements
 
-This page list agreements that may be relevant for lab users and lab coordinators. Contact your lab leader for more details on other agreement types.
+This page list agreements that may be relevant for lab users, lab coordinators and data space coordinators. Contact your data space leader or lab leader for more details on other agreement types.
 
 [[toc]]
 
@@ -23,6 +23,12 @@ Your lab leader and lab coordinator can add new users to your lab through our us
 [HUNT Cloud Lab Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-agreement.pdf) (pdf)
 
 Your data space leader or administrative data space coordinator can use this agreement to add new labs under a data space. The agreement is co-signed by both the data space leader and the new lab leader.
+
+## Data space agreement
+
+[HUNT Cloud Data Space Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-agreement.pdf) (pdf)
+
+Your services center leader or serices center administratorcan use this agreement to add new data spaces to their service center where labs can be attached. The agreement is co-signed by both the services center leader and data space leader. 
 
 ## Internal kista order
 
