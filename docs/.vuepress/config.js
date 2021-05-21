@@ -113,7 +113,7 @@ module.exports = {
               children: [
                 "/coordination/services/machine-types.md",
                 "/coordination/services/specifications.md",
-		"/coordination/services/responsiveness.md"
+                "/coordination/services/responsiveness.md"
               ]
              }
            ]
