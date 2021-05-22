@@ -8,7 +8,7 @@ description: This page gives an overview of administrative agreements in HUNT Cl
 
 # Overview of agreements
 
-This page contains a structured overview of the necessary agreements to fully utilize our cloud services to make your science fly. This page is intended for coordinators. 
+This page contains a structured overview of the necessary agreements to fully utilize our cloud services to make your science fly. The information is intended for coordinators. 
 
 [[toc]]
 
