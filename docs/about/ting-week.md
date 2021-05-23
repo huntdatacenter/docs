@@ -14,10 +14,11 @@ We call this gatherings Tings. We arrange a structured set of Tings for differen
 
 
 ::: tip Next up: Ting week #3
-- **Lab ting**: Tuesday 25 May 2021 -  2 to 4 p.m. CET
-- **Coordinator ting**: Wednesday 26 May 2021 - 9 to 11 a.m. CET
-- **Enterprise ting**: Wednesday 26 May 2021 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 27 May 2021 - 9 to 11 a.m. CET
+- **Lab ting**: Tuesday 25 May 2021 -  2 to 4 p.m. CET  ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-labting-agenda.pdf))
+- **Coordinator ting**: Wednesday 26 May 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-coordinatorting-agenda.pdf))
+- **Enterprise ting**: Wednesday 26 May 2021 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-enterpriseting-agenda.pdf))
+- **Lagtun**: Thursday 27 May 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-lagtun-agenda.pdf))
+
 ::: 
 
 [[toc]]
@@ -98,10 +99,10 @@ We appoint time for three ting weeks per year, in the fall around the autumn hol
 
 ### Ting week #3 (2021-05)
 
-- **Lab ting**: Tuesday 25 May 2021 -  2 to 4 p.m. CET
-- **Coordinator ting**: Wednesday 26 May 2021 - 9 to 11 a.m. CET
-- **Enterprise ting**: Wednesday 26 May 2021 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 27 May 2021 - 9 to 11 a.m. CET
+- **Lab ting**: Tuesday 25 May 2021 -  2 to 4 p.m. CET  ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-labting-agenda.pdf))
+- **Coordinator ting**: Wednesday 26 May 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-coordinatorting-agenda.pdf))
+- **Enterprise ting**: Wednesday 26 May 2021 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-enterpriseting-agenda.pdf))
+- **Lagtun**: Thursday 27 May 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-lagtun-agenda.pdf))
 
 ### Ting week #2 (2021-02)
 
