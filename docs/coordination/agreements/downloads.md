@@ -30,6 +30,12 @@ Your data space leader or administrative data space coordinator can use this agr
 
 Your services center leader or serices center administratorcan use this agreement to add new data spaces to their service center where labs can be attached. The agreement is co-signed by both the services center leader and data space leader. 
 
+## Billing information form
+
+[HUNT Cloud Billing Information](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-billing-information.pdf) (pdf)
+
+This form specifcy billing points for consumption of cloud resources. The form is attached to a data space agreement. A billing point may be set for the entire data space or specified for individual labs.
+
 ## Internal kista order
 
 [HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf) (pdf)

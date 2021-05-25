@@ -102,8 +102,8 @@ module.exports = {
               text: "Agreements",
               isGroup: true,
               children: [
-                "/coordination/agreements/downloads.md",
-                "/coordination/agreements/overview.md"
+                "/coordination/agreements/overview.md",
+                "/coordination/agreements/downloads.md"
               ]
             },
             {

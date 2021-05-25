@@ -152,6 +152,9 @@ Your host organization may prefer to use their own data processing agreement tem
 
 
 
+
+
+
 ## Services agreements
 
 The services agreement regulates how cloud resources are controlled and billed across data spaces and labs. 
@@ -249,75 +252,43 @@ Download and update the text file with your information and [forward it to us](/
 
 ## Data space agreements
 
-A **`data space`** is our overarching service where a research leader manage one to many labs in HUNT Cloud. 
-
-The data space agreement regulates how cloud resources are controlled and billed across these labs. The aim of this agreement is to ensure predictable services from where you can elevate your science.
+The intention of a **data space** is to allow a portfolio of labs to be managed, measured and reported to the same organizational or research unit.
 
 ### Content
 
-The data space agreement specifies services made available, the use of these services, as well as support and service levels and general agreement terms for these services. The agreement do also specify services cost, metering and billing.
-
-The agreements include seven attachments: services specifications, service levels, price list, list of attached labs, lab agreement templates, user agreement templates and a contact list.
+The data space agreement specifies the name of the data space, under which services center the agreement is attached, and names and contact information for a set of unified roles across all labs in the data space: data space leader, administrative coordinator, data coordinator, technical coordinator and knowledge coordinator. The aim is to clarify responsibilities and simplify knowledge transfers and feedback between the data space and us, and between labs under the same data space.
 
 ### Parties
 
-The data space agreement are signed by the data space leader (normally the principal investigator of a research center or research group), the data controller, and the individual accepting the financial risk on behalf of the institution (if this differ from the data controller) and us.
-
-### Form fields
-
-[HUNT Cloud Data Space Agreement Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-space-form.txt)(txt)
-
-We use information from the text file above to render new data space agreements. Download the file and update the fields with your information. Then, [forward to us](/contact) for agreement rendering.
-
-::: details Clarification of the form fields
-
-The following form fields are including in the "HUNT Cloud Data Space Agreement Form" version 2.0.
-
-**Data space name**
-
-This is the short name or abbreviation for your data space. We use this name in day to day communication.
-
-**Center or group name**
-
-This is the full name of your research center or research group that will establish the data space. This organizational unit will also be the billing point for the consumed services.
-
-**Data processor name**
-
-This is the name of the organization that holds the data processor agreement or "enighetsavtale" with HUNT Cloud for which your data space will be linked. [Contact us](/contact) if you are uncertain if your host organization holds such an agreement or under which agreement your data space should be linked.
-
-**Data space leader**
-
-This individual is authorized by the data controller to lead the data space. The role include a responsibility authorize new labs under the data space, authorizing data transfers out of the data space, and to pay for resources consumed by the labs attached to the data space.
-
-**Administrative coordinator**
-
-This individual is authorized by the data controller to place individual Cloud Service Orders for resource adjustments and to onboard new labs on behalf of your Data space leader. The administrative coordinator is also our point of contact for discussions on running agreement updates and compliance reporting.
-
-**Data coordinator**
-
-This individual is our contact point for data coordination for labs attached to your data space. This includes communication on data transfers, backups and other data related issues.
-
-**Technical coordinator**
-
-This individual is our contact point for technical configuration for labs attached to your data space. This includes configuration and adaptation of analytical tools, including distributed computing and graphical interfaces. 
-
-**Knowledge coordinator**
-
-This individual is our contact point for knowledge transfers across labs attached to your data space. This includes transfers of knowhow related to onboardings, configurations, data flow etc. This individual is also our contact for discussion on knowledge transfer and such documentation.
-
-**Billing information**
-
-For data spaces affiliated outside NTNU: This is the name of the individual that is our contact for billing. For data spaces within NTNU: This is your k.sted and p.number.
-
-**Signatory official**
-
-This individual is legally entitled to accept the financial side of the Cloud Service Orders on behalf of the Client institution. This individual might differ from the data controller that holds the responsibility for privacy and security of your data.
+The data space agreement is signed by the services center leader and the data space leader.
 
 
-**Send us the text file for activation**
-
-Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
 
 
-:::
+
+
+
+
+## Lab agreements
+
+The lab agreement is used to establish one digital laboratory where data is processed.
+
+### Content
+
+The lab agreement specifies the name of the lab, under which data space the lab is attached, names and contact information for the lab leader and the lab coordinator. The lab coordinator is authorized by the lab leader to approve certain tasks, such as allocate or upgrade resources and order internal kistas. 
+
+The agreement do also list common GDPR related fields that includes the purpose of the processing in the lab. We use this information to provide an overview to data spaces and data controllers for processes under their control.
+
+### Parties
+
+The lab agreement agreement is signed by the data space leader and the lab leader.
+
+
+
+
+
+
+## User agreements
+
+The user agreement authorizes access for individual researchers to one specified lab. The agreement clarify the acceptable use policy for HUNT Cloud and responsibilities associated with lab access. The agreement is signed by the lab leader and the lab user. 
 
