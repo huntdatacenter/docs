@@ -111,8 +111,8 @@ module.exports = {
               text: "Services",
               isGroup: true,
               children: [
-                "/coordination/services/machine-types.md",
                 "/coordination/services/specifications.md",
+                "/coordination/services/machine-types.md",
                 "/coordination/services/responsiveness.md"
               ]
              }
