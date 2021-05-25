@@ -35,6 +35,7 @@ We call this gatherings Tings. We arrange a structured set of Tings for differen
 
 The intent of the ting report is to give you the opportunity to read up on **`what`** we are doing at HUNT Cloud, and a little bit on **`why`** we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
 
+- [Ting report #3 (2021-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-report.pdf)
 - [Ting report #2 (2021-02)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-report.pdf)
 - [Ting report #1 (2020-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-report.pdf)
 
