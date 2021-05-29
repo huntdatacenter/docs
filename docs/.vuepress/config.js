@@ -49,6 +49,8 @@ module.exports = {
     editLinks: true,
     editLinkText: "Help us improve this page!",
     lastUpdated: true,
+    // test if possible to switch to light
+    prefersTheme: 'light',
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
     navbar: [{
         text: "Home",
