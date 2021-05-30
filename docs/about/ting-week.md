@@ -13,12 +13,11 @@ description: This page list information and questions about our ting weeks.
 We call this gatherings Tings. We arrange a structured set of Tings for different parts of the HUNT Cloud community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
 
 
-::: tip Next up: Ting week #3
-- **Lab ting**: Tuesday 25 May 2021 -  2 to 4 p.m. CET  ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-labting-agenda.pdf))
-- **Coordinator ting**: Wednesday 26 May 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-coordinatorting-agenda.pdf))
-- **Enterprise ting**: Wednesday 26 May 2021 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-enterpriseting-agenda.pdf))
-- **Lagtun**: Thursday 27 May 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-lagtun-agenda.pdf))
-
+::: tip Next up: Ting week #4
+- **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET
+- **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET
+- **Enterprise ting**: Wednesday 20 October 2021 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 20 October 2021 - 9 to 11 a.m. CET
 ::: 
 
 [[toc]]
