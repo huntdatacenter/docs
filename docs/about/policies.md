@@ -8,9 +8,11 @@ description: This page list policies for HUNT Cloud.
 
 # Policies
 
+This page list policies that we have put in place to protect data that you upload or generate in HUNT Cloud.
+
 ## Security and privacy management policy
 
-This document state our overall information security and privacy management policy. We build our security framework from this policy.
+This document state our overarching information security and privacy management policy. We build our security and privacy framework from this policy.
 
 [HUNT Cloud Security And Privacy Management Policy](https://assets.hdc.ntnu.no/assets/policies/hunt-cloud-security-and-privacy-management-policy.pdf)(pdf)
 
