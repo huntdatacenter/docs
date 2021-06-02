@@ -16,10 +16,10 @@ This document state our overall information security management policy. We build
 
 
 
-## Security policies
+## Security and privacy policies
 
-This document outlines our individual information security policies. Collectively, these policies provides the framework that we use to protect technologies and data in HUNT Cloud. 
+This document outlines our individual information security and privacy policies. Collectively, these policies provides the framework that we use to protect technologies and data in HUNT Cloud. 
 
-[HUNT Cloud Security Policies](https://assets.hdc.ntnu.no/assets/policies/hunt-cloud-security-policies.pdf)(pdf)
+[HUNT Cloud Security And Privacy Policies](https://assets.hdc.ntnu.no/assets/policies/hunt-cloud-security-and-privacy-policies.pdf)(pdf)
 
 
