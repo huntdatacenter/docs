@@ -156,7 +156,7 @@ Steps to resolve issues with Signal may vary by phone model and OS. Signal has a
 
 #### OS X and macOS: The ZIP password do not seem to work?
 
-The default zip software may give you an error message when unpacking the 7z-format locked with a passphrase. Try to download and unpack with the 7z appliction in the [decryption links](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email). [Contact us](/contact) if this does not work.
+The default zip software may give you an error message when unpacking the 7z-format locked with a passphrase. Try to download and unpack with the 7z application in the [decryption links](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email). [Contact us](/contact) if this does not work.
 
 #### Windows: I am unable to unpack the 7z-file forwarded on email.
 
