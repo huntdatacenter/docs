@@ -263,7 +263,8 @@ Connect to your lab machine and run this code:
   ```bash
   touch ~/.Xresources
   chmod u+x ~/.Xresources
-  echo "*VT100.translations: #override Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)" >> ~/.Xresources
+  echo -e "*VT100.translations: #override Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0) \n" >> ~/.Xresources
+  cp ~/.Xresources ~/.Xdefaults
   xrdb -merge ~/.Xresources
   ```
 
@@ -272,8 +273,9 @@ Connect to your lab machine and run this code:
   ```bash
   touch ~/.Xresources
   chmod u+x ~/.Xresources
-  echo "*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD)" >> ~/.Xresources
-  echo "*VT100.Translations: #override Ctrl Shift <Key>C: copy-selection(CLIPBOARD)" >> ~/.Xresources
+  echo -e "*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n" >> ~/.Xresources
+  echo -e "*VT100.Translations: #override Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n" >> ~/.Xresources
+  cp ~/.Xresources ~/.Xdefaults
   xrdb -merge ~/.Xresources
   ```
 
