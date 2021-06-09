@@ -351,6 +351,13 @@ X2Go rely either password or certificate to authenticate your connection. If the
 
 :::
 
+::: details Keys do not release
+
+Key-buffer not receiving a key release action after a keypress is a known bug of X2GO. There does not seem to be any clear solution to this. It is possible to disable key repeating, which will cause intended key repeating to stop working (e.g. holding arrows). We recommend to check connection settings and to make sure that the best network connection available is used.
+If this is causing too many problems, alternatives to X2GO like [MobaXterm](/working-in-your-lab/technical-tools/mobaxterm/) can be considered.
+
+:::
+
 ::: details Manually 'killing' a stuck X2Go session
 
 From time to time your X2Go sessions may get stuck, such as when your software inside X2Go consumes all available memory. In such circumstances you may need to manually terminate the stuck X2Go processes using the command line in your lab machine.
