@@ -145,6 +145,7 @@ module.exports = {
                 "/working-in-your-lab/technical-tools/gpu.md",
                 "/working-in-your-lab/technical-tools/htop.md",
                 "/working-in-your-lab/technical-tools/mobaxterm.md",
+                "/working-in-your-lab/technical-tools/ncdu.md",
                 "/working-in-your-lab/technical-tools/singularity.md",
                 "/working-in-your-lab/technical-tools/ssl.md",
                 "/working-in-your-lab/technical-tools/terminal-multiplexers.md",

@@ -59,7 +59,7 @@ When your account is set up on our side, we will forward your lab keys over Sign
 
 A successful transfer to your phone should include four (4) keys:
 
-- **`ZIP file key`** - your key for unlocking the archive file sent on email.
+- **`ZIP file key`** - your key for unlocking the [7-zip archive](https://docs.hdc.ntnu.no/working-in-your-lab/transfer-tools/7z/) file sent on email.
 - **`Google Authenticator key`** - your key for generating Google Authenticator verification codes.
 - **`VPN passphrase`** - your passphrase for unlocking your OpenVPN certificate.
 - **`SSH temporary key`** - your temporary passphrase when logging in to your lab with SSH for the first time.
@@ -73,14 +73,14 @@ A successful transfer to your phone should include four (4) keys:
 We will communicate your VPN certificate and SSH configuration over your organizational email. You will receive a link to an encrypted file archive (7z-file).
 
 - Click on the link in the email to download the file and save this on your local machine.
-- Unpack (extract) the file with your favorite file archiver software that recognize the 7z format (see below).
-- Use the key named **`ZIP file key`** from your Signal transfer to decrypt the archive.
+- Unpack (extract) the file with your favorite file archiver software that recognize the [7z format](https://docs.hdc.ntnu.no/working-in-your-lab/transfer-tools/7z/) (see below).
+- Use the key named **`ZIP file key`** from your Signal transfer to decrypt the 7-zip archive.
 
 ::: tip Decryption guides
 
-Click on these links for installation guidance if your current software don't recognize the 7z-format: [windows](https://www.google.no/search?q=unpack+7z+windows), [mac](https://www.google.no/search?q=unpack+7z+mac), [linux](https://www.google.no/search?q=unpack+7z+linux).
+Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](https://docs.hdc.ntnu.no/working-in-your-lab/transfer-tools/7z/#windows), [mac](https://docs.hdc.ntnu.no/working-in-your-lab/transfer-tools/7z/#mac-os-x), [linux](https://www.google.no/search?q=unpack+7z+linux).
 
-OS X and macOS: The default archive utility for 7z files will not recognize the passphrase. You will need to install 7z-compatible software from the link above.
+OS X and macOS: The default archive utility will not recognize the passphrase of 7z files. You will need to install 7z-compatible software from the link above.
 
 :::
 
@@ -143,22 +143,25 @@ If you successfully completed this step, celebrate with fresh coffee and head ov
 :::
 
 
-::: details Immediate troubleshooting
+## Immediate troubleshooting
+
 
 ### Signal
 
-**I am unable to install or run Signal on my phone.** Steps to resolve issues with Signal may vary by phone model and OS. Signal has a handy [troubleshooting guide ](https://support.signal.org/hc/en-us/articles/360007318711-Troubleshooting-Notifications) as a starting point. [Contact us](/contact) if this do not resolve your issue.
+#### I am unable to install or run Signal on my phone.
 
-### 7z file for Mac
+Steps to resolve issues with Signal may vary by phone model and OS. Signal has a handy [troubleshooting guide ](https://support.signal.org/hc/en-us/articles/360007318711-Troubleshooting-Notifications) as a starting point. [Contact us](/contact) if this do not resolve your issue.
 
-**The ZIP password do not seem to work?** The default zip software may give you an error message when unpacking the 7z-format locked with a passphrase. Try to download and unpack with the 7z appliction in the [decryption links](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email). [Contact us](/contact) if this does not work.
+### 7z file
 
-### 7z file for Windows
+#### OS X and macOS: The ZIP password do not seem to work?
 
-**I am unable to unpack the 7z-file forwarded on email.** If the [decryption links](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
+The default archive utility may give you an error message when unpacking the [7z-format](https://docs.hdc.ntnu.no/working-in-your-lab/transfer-tools/7z/) locked with a passphrase. Try to download and unpack with the 7z application in the [decryption guides](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email). [Contact us](/contact) if this does not work.
+
+#### Windows: I am unable to unpack the 7z-file forwarded on email.
+
+If the [decryption guides](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
 
 ### More information
 
 See our main [troubleshooting](/troubleshooting/connection/) section for more information. Please [contact us](/contact) if you encounter issues that we have not yet documented.
-
-:::

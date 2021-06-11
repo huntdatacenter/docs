@@ -44,6 +44,10 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/vdf1        99G   60M   94G   1% /mnt/cargo
 ```
 
+### How can I find out what is taking the most space on volume?
+
+We recommend using [ncdu](/working-in-your-lab/technical-tools/ncdu/) to get better overview of how the space on a specific volume is used. You can find more details in our [ncdu installation guide](/working-in-your-lab/technical-tools/ncdu/).
+
 ### How can I move my tmp out of the root?
 
 Log into your machine in the lab with your favourite terminal and type:
@@ -117,6 +121,12 @@ Restore is activated for two volumes in your lab: **`/mnt/work`** and **`/mnt/ar
 ### How does restore work?
 
 The restore is intended to protection your data against accidental overwrites and accidental deletion of files in your lab. Therefore, we do nightly copies of data that has changed during the day from your **`/mnt/work`** and **`/mnt/archive`** volumes. This allows you to revert to previous versions of your files from the period that your restore copies are preserved.
+
+::: danger
+
+Your data are stored in one (1) physical location. This means that your restore do -not- protect against accidents that destroy this location. Keep at least one copy of your data outside HUNT Cloud, or use our tape service to keep encrypted offsite tapes, to ensure improved geographical distribution for data that need such protection.
+
+:::
 
 ### How long do you keep my restore copies?
 

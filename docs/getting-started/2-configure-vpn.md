@@ -29,7 +29,7 @@ We use the open-source application [OpenVPN](https://openvpn.net/) to ensure enc
 
 [Download and install OpenVPN using the latest Windows Installer](https://openvpn.net/community-downloads/)
 
-Click on the link above, scroll down to the file named **`openvpn-install-<version-number>-i602-win10.exe`** (Windows 10 users), download the file and follow the on-screen installation instructions.
+Click on the link above, scroll down to the file named **`OpenVPN-<version-number>-i601-amd64.msi`** (Windows 10 users), download the file and follow the on-screen installation instructions.
 
   ::: warning
   **You will need administrative rights on your local machine to successfully install OpenVPN.**
