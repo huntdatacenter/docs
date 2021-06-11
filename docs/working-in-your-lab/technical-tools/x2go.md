@@ -263,7 +263,8 @@ Connect to your lab machine and run this code:
   ```bash
   touch ~/.Xresources
   chmod u+x ~/.Xresources
-  echo "*VT100.translations: #override Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0)" >> ~/.Xresources
+  echo -e "*VT100.translations: #override Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0) \n" >> ~/.Xresources
+  cp ~/.Xresources ~/.Xdefaults
   xrdb -merge ~/.Xresources
   ```
 
@@ -272,8 +273,9 @@ Connect to your lab machine and run this code:
   ```bash
   touch ~/.Xresources
   chmod u+x ~/.Xresources
-  echo "*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD)" >> ~/.Xresources
-  echo "*VT100.Translations: #override Ctrl Shift <Key>C: copy-selection(CLIPBOARD)" >> ~/.Xresources
+  echo -e "*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n" >> ~/.Xresources
+  echo -e "*VT100.Translations: #override Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n" >> ~/.Xresources
+  cp ~/.Xresources ~/.Xdefaults
   xrdb -merge ~/.Xresources
   ```
 
@@ -346,6 +348,13 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
 ::: details Password prompts during login
 
 X2Go rely either password or certificate to authenticate your connection. If the certificate do not work (or not included), your may be asked to insert your password four times before your application start. If so, try to fetch and save your certificate as described in our [X2Go configuration](/working-in-your-lab/technical-tools/x2go/#configure-the-x2go-client-for-home-machines) under **`Use RSA/DSA key for ssh connection`**.
+
+:::
+
+::: details Keys do not release
+
+Key-buffer not receiving a key release action after a keypress is a known bug of X2GO. There does not seem to be any clear solution to this. It is possible to disable key repeating, which will cause intended key repeating to stop working (e.g. holding arrows). We recommend to check connection settings and to make sure that the best network connection available is used.
+If this is causing too many problems, alternatives to X2GO like [MobaXterm](/working-in-your-lab/technical-tools/mobaxterm/) can be considered.
 
 :::
 
