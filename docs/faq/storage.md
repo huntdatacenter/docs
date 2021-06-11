@@ -118,6 +118,12 @@ Restore is activated for two volumes in your lab: **`/mnt/work`** and **`/mnt/ar
 
 The restore is intended to protection your data against accidental overwrites and accidental deletion of files in your lab. Therefore, we do nightly copies of data that has changed during the day from your **`/mnt/work`** and **`/mnt/archive`** volumes. This allows you to revert to previous versions of your files from the period that your restore copies are preserved.
 
+::: danger
+
+Your data are stored in one (1) physical location. This means that your restore do -not- protect against accidents that destroy this location. Keep at least one copy of your data outside HUNT Cloud, or use our tape service to keep encrypted offsite tapes, to ensure improved geographical distribution for data that need such protection.
+
+:::
+
 ### How long do you keep my restore copies?
 
 We keep restore files for thirty (30) days by default. This means that you can revert to daily versions of your files in your **`/mnt/work`** and **`/mnt/archive`** volumes as they existed on an individual day over this period.
