@@ -123,11 +123,9 @@ When you have added the information to the text file, forward the text file to u
 
 :::
 
-### "Enighetsavtale" within NTNU
+### MoU within NTNU
 
-Data processor agreements are agreed between enterprises. We have therefore developed a separate "enighetsavtale" for departments within NTNU (since we both are part of the same enterprise). 
-
-The "enighetsavtale" clarifies the same rights and protections as our regular processor agreement with one exception: Disputes will be resolved with binding effect by NTNU's management with our Rector as the last instance.
+Data processor agreements are agreed between enterprises. This means that we cannot sign data processor agreements between NTNU departments. To allow for documented security measures, we have therefore developed a Memorandum of understanding (MoU) for such bindings. We call these "enighetsavtale". The document clarifies the same rights and protections as our regular processor agreement with one exception: Disputes will be resolved with binding effect by NTNU's management with our Rector as the last instance.
 
 ### Data subprocessor agreement
 
@@ -137,13 +135,11 @@ To illustrate, this may be the case if you provide analytical expertise to a pro
 
 In such circumstances your data provider may be the "data controller" and you may be the "data processor". If so, HUNT Cloud may be the "data subprocessor" (data underbehandler). We have dedicated agreement templates for such setups that gets defined under "Agreement type" in the agreement form fields (see above). 
 
-
-
 [Contact us](/contact) if you wonder which of the two agreement types that fits your processing needs.
 
 ### Private processing templates
 
-Your host organization may prefer to use their own data processing agreement template. This is fine with us as long as the template is compliant with requirements set forth in GDPR, other relevant laws, ISO 27001, and that we are able to comply with your organization's security requirements. Please note that such templates will need involvement from legal teams from your organization and NTNU. [Contact us](/contact) for time estimates of such arrangements.
+Your host organization may prefer to use their own data processing agreement template. This is fine with us as long as the template is compliant with requirements set forth in GDPR, other relevant laws, ISO 27001 and 27701, and that we are able to comply with your organization's security requirements. Please note that such templates will need involvement from legal teams from your organization and NTNU. [Contact us](/contact) for time estimates of such arrangements.
 
 
 
@@ -234,62 +230,11 @@ Download and update the text file with your information and [forward it to us](/
 
 ## Data space agreements
 
-The intention of the **data space** is to simplify management of several labs under one scientific center or research group. The structure allow for roles, controls and reporting to be unified across lab portfolios.
-
-
-### Content
+The intention of the data space is to simplify management of several labs under one scientific center or research group. The structure allow for roles, controls and reporting to be unified across a lab portfolio.
 
 The agreement specifies a data space that is attached to a services center. The data space list roles and define access to cloud resources that is unified across all labs that are attached to the data space. The aim is to simplify responsibilities, communication and reporting across many labs.
 
-### Parties
-
-The data space agreement is signed by the services center leader and the data space leader.
-
-### Form fields
-
-::: details Clarification of the form fields
-
-The following form fields are including in the "HUNT Cloud Data Space Agreement" version 1.0.
-
-
-**Services center**
-
-Attach your new data space to the following established services center: 
-
-- *Name*. This is the full or short name of your services center. 
-- *Leader*. This is the full name of your services center leader. 
-
-**Data space name**
-
-- *Short name*. This is the short name or abbreviation for your data space. We use this name in day to day communication.
-- *Full name*. This is the full name of your data space. 
-
-**Data space leader**
-
-This individual is authorized by the services center to lead the data space. The role include a responsibility authorize new labs under the data space, authorizing data transfers out of the data space, and to pay for resources consumed by the labs attached to the data space.
-
-**Administrative coordinator**
-
-This individual is authorized by the data controller to place individual Cloud Service Orders for resource adjustments and to onboard new labs on behalf of your Data space leader. The administrative coordinator is also our point of contact for discussions on running agreement updates and compliance reporting.
-
-**Data coordinator**
-
-This individual is our contact point for data coordination for labs attached to your data space. This includes communication on data transfers, backups and other data related issues.
-
-**Technical coordinator**
-
-This individual is our contact point for technical configuration for labs attached to your data space. This includes configuration and adaptation of analytical tools, including distributed computing and graphical interfaces. 
-
-**Knowledge coordinator**
-
-This individual is our contact point for knowledge transfers across labs attached to your data space. This includes transfers of know-how related to onboardings, configurations, data flow etc. This individual is also our contact for discussion on knowledge transfer and such documentation.
-
-**Send us the text file for activation**
-
-Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
-
-
-:::
+The data space agreement is co-signed by the services center leader and the data space leader.
 
 
 
@@ -301,57 +246,11 @@ Download and update the text file with your information and [forward it to us](/
 
 The lab agreement is used to establish one digital laboratory where data is processed.
 
-### Content
-
 The lab agreement specifies the name of the lab, under which data space the lab is attached, names and contact information for the lab leader and the lab coordinator. The lab coordinator is authorized by the lab leader to approve certain tasks, such as allocate or upgrade resources and order internal kistas. 
 
 The agreement do also list common GDPR related fields that includes the purpose of the processing in the lab. We use this information to provide an overview to data spaces and data controllers for processes under their control.
 
-### Parties
-
 The lab agreement agreement is signed by the data space leader and the lab leader.
-
-### Form fields
-
-::: details Clarification of the form fields
-
-The following form fields are including in the "HUNT Cloud Lab Agreement" version 3.4.
-
-
-**Data space**
-
-- *Name*. This is the full or short name of the data space for which this lab will be attached. 
-- *Leader*. This is the full name of your data space leader. 
-
-**Lab name**
-
-- *Short name*. This is the short name or abbreviation for your lab. We will use this name in day to day communication.
-- *Full name*. This is the full name of your new lab. 
-
-**Lab leader**
-
-This individual is authorized by the data space leader to lead the lab. The role include a responsibility to authorize access for new lab users to the lab, to place Cloud Service Orders for resource adjustments, and to authorize data transfers to other labs in the same data space.
-
-**Lab coordinator**
-
-This individual is authorized by the data space leader to place individual Cloud Service Orders for resource adjustments. The administrative coordinator is also our point of contact for discussions on running agreement updates and resource reporting.
-
-**Lawful processing**
-
-We use this to document activities in the lab, for example in reporting to your data controller, services center and data space leaders. 
-
-- *Ethical approval*. If applicable, specify relevant ethical approvals that governs your processing. 
-- *Privacy justification*. If applicable, specify the legal ground for the processing under GDPR, such as Article 6 or 9. 
-- *Purpose of the processing*. If applicable, specify the purpose of the processing such as research, health service, innovation etc 
-- *Categories of data subjects*. If applicable, specify the broad categories of data subjects such as research participants, patients etc. 
-- *Personal data content*. If applicable, specify the personal data content included in the processing such as "self reported health information, genomics information, medical images, information from medical records" etc.
-
-**Send us the text file for activation**
-
-Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
-
-
-:::
 
 
 
@@ -365,39 +264,7 @@ The user agreement authorizes access for individual researchers to one specified
 
 ## Billing information form
 
-Billing information for your data space is specify in the "HUNT Cloud Billing Information" form.
-
-### Form fields
-
-::: details Clarification of the form fields
-
-The following form fields are including in the "HUNT Cloud Billing Information" version 1.0.
-
-**Data space**
-
-Specify the data space where this billing information is attached. 
-
-**Lab name**
-
-Data spaces on the BLUE subscription may specify individual labs as billing point. Leave blank for other subscription levels.
-
-**Billing contact**
-
-This is the individual that will coordinate the payment on your side. The individual is expected to coordinate this with our financial officer. 
-
-**Account information**
-
-For NTNU affiliated data spaces, specify "k.sted" and "project number". The information is optional for data spaces affiliated outside NTNU and may be used for referencing on invoices.
-
-**Billing address**
-
-For organizations outside NTNU: specify the billing address where invoices are to be sent.
-
-**Pilot period** 
-
-New labs may for testing purposes by entitled to a pilot period before the lab is metered is accordance with the services specifications. If applicable, this is included in dialogue with representatives from HUNT Cloud. 
-
-:::
+Billing information for your data space and/or individual labs is specify in the HUNT Cloud Billing Information form.
 
 
 

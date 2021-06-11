@@ -24,11 +24,96 @@ Your lab leader and lab coordinator can add new users to your lab through our us
 
 Your data space leader or administrative data space coordinator can use this agreement to add new labs under a data space. The agreement is co-signed by both the data space leader and the new lab leader.
 
+::: details Clarification of the form fields
+
+The following form fields are including in the "HUNT Cloud Lab Agreement" version 3.4.
+
+
+**Data space**
+
+- *Name*. This is the full or short name of the data space for which this lab will be attached. 
+- *Leader*. This is the full name of your data space leader. 
+
+**Lab name**
+
+- *Short name*. This is the short name or abbreviation for your lab. We will use this name in day to day communication.
+- *Full name*. This is the full name of your new lab. 
+
+**Lab leader**
+
+This individual is authorized by the data space leader to lead the lab. The role include a responsibility to authorize access for new lab users to the lab, to place Cloud Service Orders for resource adjustments, and to authorize data transfers to other labs in the same data space.
+
+**Lab coordinator**
+
+This individual is authorized by the data space leader to place individual Cloud Service Orders for resource adjustments. The administrative coordinator is also our point of contact for discussions on running agreement updates and resource reporting.
+
+**Lawful processing**
+
+We use this to document activities in the lab, for example in reporting to your data controller, services center and data space leaders. 
+
+- *Ethical approval*. If applicable, specify relevant ethical approvals that governs your processing. 
+- *Privacy justification*. If applicable, specify the legal ground for the processing under GDPR, such as Article 6 or 9. 
+- *Purpose of the processing*. If applicable, specify the purpose of the processing such as research, health service, innovation etc 
+- *Categories of data subjects*. If applicable, specify the broad categories of data subjects such as research participants, patients etc. 
+- *Personal data content*. If applicable, specify the personal data content included in the processing such as "self reported health information, genomics information, medical images, information from medical records" etc.
+
+**Send us the text file for activation**
+
+Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
+
+:::
+
+
 ## Data space agreement
 
 [HUNT Cloud Data Space Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-space-agreement.pdf) (pdf)
 
 Your services center leader or serices center administratorcan use this agreement to add new data spaces to their service center where labs can be attached. The agreement is co-signed by both the services center leader and data space leader. 
+
+::: details Clarification of the form fields
+
+The following form fields are including in the "HUNT Cloud Data Space Agreement" version 1.0.
+
+
+**Services center**
+
+Attach your new data space to the following established services center: 
+
+- *Name*. This is the full or short name of your services center. 
+- *Leader*. This is the full name of your services center leader. 
+
+**Data space name**
+
+- *Short name*. This is the short name or abbreviation for your data space. We use this name in day to day communication.
+- *Full name*. This is the full name of your data space. 
+
+**Data space leader**
+
+This individual is authorized by the services center to lead the data space. The role include a responsibility authorize new labs under the data space, authorizing data transfers out of the data space, and to pay for resources consumed by the labs attached to the data space.
+
+**Administrative coordinator**
+
+This individual is authorized by the data controller to place individual Cloud Service Orders for resource adjustments and to onboard new labs on behalf of your Data space leader. The administrative coordinator is also our point of contact for discussions on running agreement updates and compliance reporting.
+
+**Data coordinator**
+
+This individual is our contact point for data coordination for labs attached to your data space. This includes communication on data transfers, backups and other data related issues.
+
+**Technical coordinator**
+
+This individual is our contact point for technical configuration for labs attached to your data space. This includes configuration and adaptation of analytical tools, including distributed computing and graphical interfaces. 
+
+**Knowledge coordinator**
+
+This individual is our contact point for knowledge transfers across labs attached to your data space. This includes transfers of know-how related to onboardings, configurations, data flow etc. This individual is also our contact for discussion on knowledge transfer and such documentation.
+
+**Send us the text file for activation**
+
+Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
+
+:::
+
+
 
 ## Billing information form
 
@@ -36,11 +121,84 @@ Your services center leader or serices center administratorcan use this agreemen
 
 This form specifcy billing points for consumption of cloud resources. The form is attached to a data space agreement. A billing point may be set for the entire data space or specified for individual labs.
 
+::: details Clarification of the form fields
+
+The following form fields are including in the "HUNT Cloud Billing Information" version 1.0.
+
+**Data space**
+
+Specify the data space where this billing information is attached. 
+
+**Lab name**
+
+Data spaces on the BLUE subscription may specify individual labs as billing point. Leave blank for other subscription levels.
+
+**Billing contact**
+
+This is the individual that will coordinate the payment on your side. The individual is expected to coordinate this with our financial officer. 
+
+**Account information**
+
+For NTNU affiliated data spaces, specify "k.sted" and "project number". The information is optional for data spaces affiliated outside NTNU and may be used for referencing on invoices.
+
+**Billing address**
+
+For organizations outside NTNU: specify the billing address where invoices are to be sent.
+
+**Pilot period** 
+
+New labs may for testing purposes by entitled to a pilot period before the lab is metered is accordance with the services specifications. If applicable, this is included in dialogue with representatives from HUNT Cloud. 
+
+:::
+
+
+
 ## Internal kista order
 
 [HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf) (pdf)
 
 Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab. Read more about Internal kistas in our [FAQ transfer section](/faq/internal-transfer/).
+
+::: details Clarification of the form fields
+
+The below bullet points clarify the field information needed to complete our internal kista import order (v.1.6).
+
+**Uploader Lab**
+
+- **Uploader Lab:** This is the name of your lab. You may find the name when you log into your lab:
+
+```bash
+Welcome to `LAB NAME`.
+
+For the record, if you shouldn't be here - please
+leave and report the incident to cloud@hunt.ntnu.no.
+
+Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
+your-username@`your-labname`-home~$
+```
+
+- **Lab leader / Lab coordinator:** This is the name of the individual that will authorize the kista deployment by signing this order. The individual needs to be registered as a Lab leader or Lab coordinator in the Lab agreement for your lab.
+
+- **Uploader:** This is the name of the lab user that will copy date from your lab and to the internal kista.
+
+- **Data size**: This is the size in gigabytes of the storage area in the kista. You can for example use [NCDU](/working-in-your-lab/technical-tools/ncdu/) to estimate the size of your data.
+
+- **Kista duration**: Specify the number of days that you need the kista. Default is 30 days, maxium is 90 days.
+
+**Downloader Lab**
+
+- **Uploader Lab:** This is the name of the lab that will download the data that you upload. If you are uncertain about the lab name, contact their lab coordinator or downlaoder. We need a correct Lab name to proceed your order. 
+
+- **Lab leader / Lab coordinator:** This is the name of the lab leader or lab coordintor in the downloader lab. 
+
+- **Dwonloader:** This is the name of the lab user that will copy date from your kista and into the downloader lab.
+
+- **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
+
+- **Lab leader**: This is the field for the signature of the lab leader or lab coordinator for your lab (the uploader lab). 
+
+:::
+
 
 
 ## External kista import order
