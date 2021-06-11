@@ -12,14 +12,26 @@ description: Usage guide for Ncdu.
 
 ## Linux
 
-Install `ncdu` with the following:
+Install `ncdu` using the following command:
 
 ```
 sudo apt install ncdu
 ```
 
-Then to start `ncdu`, simply run:
+## Usage
+
+To start `ncdu`, simply run in the directory that you want to analyze:
 
 ```
 ncdu
+```
+
+To analyze root volume (/) you can use ncdu with `-x` parameter. This helps to exclude other volumes mounted in the system, which are not taking space on root volume:
+```
+ncdu -x /
+```
+
+If you want to analyze disk usage on other volume you can use this example:
+```
+ncdu -x /mnt/archive
 ```

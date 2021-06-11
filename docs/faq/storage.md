@@ -44,6 +44,10 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/vdf1        99G   60M   94G   1% /mnt/cargo
 ```
 
+### How can I find out what is taking the most space on volume?
+
+We recommend using [ncdu](/working-in-your-lab/technical-tools/ncdu/) to get better overview of how the space on a specific volume is used. You can find more details in our [ncdu installation guide](/working-in-your-lab/technical-tools/ncdu/).
+
 ### How can I move my tmp out of the root?
 
 Log into your machine in the lab with your favourite terminal and type:
