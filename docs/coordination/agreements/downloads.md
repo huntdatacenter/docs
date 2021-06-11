@@ -42,17 +42,110 @@ This form specifcy billing points for consumption of cloud resources. The form i
 
 Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab. Read more about Internal kistas in our [FAQ transfer section](/faq/internal-transfer/).
 
+
 ## External kista import order
 
 [HUNT Cloud - External Kista Import Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-import-order.pdf) (pdf)
 
 Lab leaders can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from your lab. This agreement is signed both by the Lab leader and the uploader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
 
+::: details Clarification of the form fields
+
+The below bullet points clarify the field information needed to complete our external kista import order.
+
+- **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
+
+```bash
+Welcome to `LAB NAME`.
+
+For the record, if you shouldn't be here - please
+leave and report the incident to cloud@hunt.ntnu.no.
+
+Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
+your-username@`your-labname`-home~$
+```
+
+- **Lab leader:** This is the name of the individual that is the contracting party of your lab agreement with HUNT Cloud, typically your principal investigator or center leader.
+
+- **Lab user:** This is the name of the individual in your lab that your authorize to download the data from the kista and into your lab storage.
+
+- **Uploader name:** This is the name of the individual that is authorized to do the technical transfer fraom the external party and into the external kista (uploader). We use this to communicate configuration information, and we expect the public key to be sent from this address.
+
+- **Uploader email:** This is organizational email that we use to communicate with the uploader. List their organizational email as we use this for part of the identification process.
+
+- **Uploader IP:** This is the IP address for the machine that will connect to the external kista. We use this for access whitelisting of the address.
+
+- **Coordinator:** This is the name of the individual from the external party that will coordinate the transfer if this differ from the individual doing the technical upload (uploader). We use this for communication of issues related to data, agreements etc.
+
+- **Institution:** This is the institution of the external party that is responsible for the transfer. 
+
+- **Country:** This is the country where the uploader institution is located.
+
+- **Data size**: This is the size in gigabytes of the storage area in the external kistas. Contact the uploader coordinator if you do not know this number.
+
+- **Kista duration**: Specify the number of days that the kista will be online. External kistas are indendent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
+
+- **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
+
+- **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
+
+- **Place/date**: State the place where your uploader signed the order and the date when the order was signed. 
+
+- **Uploader**: This is the field for the signature of your external uploader. For compliance purpuses, we need the uploader to accept our use policy of the service before we grant access into our systems.
+
+:::
+
 ## External kista export order
 
 [HUNT Cloud - External Kista Export Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-export-order.pdf) (pdf)
 
 Lab leaders can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. This agreement is signed both by the Lab leader and the downloader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
+
+::: details Clarification of the form fields
+
+The below bullet points clarify the field information needed to complete our external kista export order.
+
+- **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
+
+```bash
+Welcome to `LAB NAME`.
+
+For the record, if you shouldn't be here - please
+leave and report the incident to cloud@hunt.ntnu.no.
+
+Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
+your-username@`your-labname`-home~$
+```
+
+- **Lab leader:** This is the name of the individual that is the contracting party of your lab agreement with HUNT Cloud, typically your principal investigator or center leader.
+
+- **Lab user:** This is the name of the individual in your lab that your authorize to download the data from the kista and into your lab storage.
+
+- **Downloader name:** This is the name of the individual that is authorized to do the technical transfer from your external kista to the external party (downloader). 
+
+- **Downloader email:** This is organizational email that we use to communicate with the downloader. List their organizational email as we use this for part of the identification process. We use this to communicate configuration information, and we expect the public key to be sent from this address. 
+
+- **Downloader IP:** This is the IP address for the external machine that will connect to the external kista. We use this for access whitelisting.
+
+- **Coordinator:** This is the name of the individual from the external party that will coordinate the transfer if this differ from the individual doing the technical upload (uploader). We use this for communication of issues related to data, agreements etc.
+
+- **Institution:** This is the institution of the external party that is responsible for the transfer. 
+
+- **Country:** This is the country where the uploader institution is located.
+
+- **Data size**: This is the size in gigabytes of the storage area in the external kistas.
+
+- **Kista duration**: Specify the number of days that the kista will be online. External kistas are indendent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
+
+- **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
+
+- **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
+
+- **Place/date**: State the place where your downloader signed the order and the date when the order was signed. 
+
+- **Uploader**: This is the field for the signature of your external downloader. For compliance purpuses, we need the downloader to accept our use policy of the service before we grant access into our systems.
+
+:::
 
 ## Network opening order
 
@@ -91,7 +184,7 @@ your-username@`your-labname`-home~$
 
 - **Personal data**: State **`YES`** if you expect the transfer to include personal data as defined by GDPR in [Article 4 (1)](https://www.privacy-regulation.eu/en/article-4-definitions-GDPR.htm), and state **`NO`** if you don't. We recommend that you encrypt personal data during transfers.
 
-- **Place/date**: State the place where your lab leader signed the odrder and the date when the order was signed.
+- **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
 
 - **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
 
