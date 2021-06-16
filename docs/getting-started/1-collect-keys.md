@@ -34,22 +34,24 @@ Allow for a few weeks to pass from you send us your agreement and until we forwa
 
 We will communicate your system keys over the Signal mobile app.
 
-### Install Signal
+### Install and activate Signal
 
 Signal is a private messenger app for your phone that provide a secret communication channel. Search for **`Signal`** in the iOS or Android app stores, or use the links below to install.
 
 - [Download and install for **iOS** here](https://itunes.apple.com/us/app/signal-private-messenger/id874139669?mt=8)
 - [Download and install for **Android** here](https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=en)
 
+After installation of Signal open the app and follow the steps to activate Signal on the phone.
+
 ### Notify us
 
 ::: tip
-[Contact us](/contact) on email as soon as you have installed Signal. This allows us to quickly forward your lab keys when they are ready.
+[Contact us](/contact) on email as soon as you have activated Signal. This allows us to quickly forward your lab keys when they are ready.
 :::
 
 Example email:
 
-> Hi all, I have installed Signal and are looking forward to receive my keys.
+> Hi all, I have installed and activated Signal and are looking forward to receive my keys.
 
 ### Key transfer
 
