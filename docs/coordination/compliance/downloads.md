@@ -1,5 +1,5 @@
 ---
-title: Downloads
+title: Agreement downloads
 category: HUNT Cloud
 permalink: /agreements/downloads
 sidebarDepth: 1

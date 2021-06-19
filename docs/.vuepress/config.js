@@ -98,12 +98,13 @@ module.exports = {
           children: [
             "/coordination/",
             {
-              title: "Agreements",
-              text: "Agreements",
+              title: "Compliance",
+              text: "Compliance",
               isGroup: true,
               children: [
-                "/coordination/agreements/overview.md",
-                "/coordination/agreements/downloads.md"
+                "/coordination/compliance/overview.md",
+                "/coordination/compliance/downloads.md",
+                "/coordination/compliance/risks.md"
               ]
             },
             {
