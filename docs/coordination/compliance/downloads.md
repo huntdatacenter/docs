@@ -18,11 +18,11 @@ This page list agreements that may be relevant for lab users, lab coordinators a
 
 Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator. Read more about how to add new users in our [FAQ user section](/faq/users/).
 
-## Lab agreement
+## Lab Order
 
-[HUNT Cloud Lab Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-agreement.pdf) (pdf)
+[HUNT Cloud Lab Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-order.pdf) (pdf)
 
-Your data space leader or administrative data space coordinator can use this agreement to add new labs under a data space. The agreement is co-signed by both the data space leader and the new lab leader.
+Your data space leader or administrative data space coordinator can use this order to attach new labs under a data space. The order is co-signed by both the data space leader and the new lab leader.
 
 ::: details Clarification of the form fields
 
@@ -64,11 +64,11 @@ Download and update the text file with your information and [forward it to us](/
 :::
 
 
-## Data space agreement
+## Data space order
 
-[HUNT Cloud Data Space Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-space-agreement.pdf) (pdf)
+[HUNT Cloud Data Space Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-space-order.pdf) (pdf)
 
-Your services center leader or serices center administratorcan use this agreement to add new data spaces to their service center where labs can be attached. The agreement is co-signed by both the services center leader and data space leader. 
+Your services center leader or serices center administratorcan use this order to attach new data spaces to their service center. The order is co-signed by both the services center leader and data space leader. 
 
 ::: details Clarification of the form fields
 
