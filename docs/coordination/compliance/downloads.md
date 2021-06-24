@@ -18,7 +18,7 @@ This page list agreements that may be relevant for lab users, lab coordinators a
 
 Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator. Read more about how to add new users in our [FAQ user section](/faq/users/).
 
-## Lab Order
+## Lab order
 
 [HUNT Cloud Lab Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-order.pdf) (pdf)
 
