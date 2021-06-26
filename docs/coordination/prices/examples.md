@@ -1,349 +1,165 @@
 ---
-title: Examples
+title: Price examples
 category: HUNT Cloud
 permalink: /prices/examples
 sidebarDepth: 1
-description: This page list agreements that may be relevant for you as a lab user. Contact your lab leader for more details on other agreement types.
+description: This page list examples of cloud prices for common use cases.
 ---
 
-# Download agreements
+# Price examples
 
-This page list agreements that may be relevant for lab users, lab coordinators and data space coordinators. Contact your data space leader or lab leader for more details on other agreement types.
+We know, digging into the deep details of flexible cloud prices may be demanding. To ease on the process, we have compiled a few use cases that may give you a direction of your costs. [Contact us](/contact) for assistance in price calculations and price optimization.
 
 [[toc]]
 
-## User agreement
+All prices are listed as VAT exclusive NOK from the [Price List v3.0](/prices/pricelist/).
 
-[HUNT Cloud User Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf) (pdf)
+## Lab configurations for...
 
-Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator. Read more about how to add new users in our [FAQ user section](/faq/users/).
+Let's start with a few examples of crude prices in labs configured for some common uses cases. Depending on your data space subscription and cost optimization techniques, the listed prices may be reduced. [Contact us](/contact) for assistance in price calculations. 
 
-## Lab order
+### ... epidemiology
 
-[HUNT Cloud Lab Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-order.pdf) (pdf)
+This is a project that needs a lab to store and analyse structured data, such as registry data, health studies or your own study data. The configuration should give sufficient resources for storage and computational power for software such as RStudio or Stata for 2-3 scientist. 
 
-Your data space leader or administrative data space coordinator can use this order to attach new labs under a data space. The order is co-signed by both the data space leader and the new lab leader.
+| Service | Unit | Type | Cost/unit | Units | Total cost |
+| ---- | ---- | ---- | ---- | ---- | ---- | 
+| Data space | WHITE | 1 year | 0 | 1 | 0 |
+| Lab | | 1 year | 5785 | 1 | 5785 |
+| Compute | default.b2 | 1 year | 4646 | 1 | 4646 |
+| Store | 1 terabyte | 1 year | 2331 | 1 | 2331 |
+| **PER YEAR** |  | | |  | **12762** | 
 
-::: details Clarification of the form fields
+### ... genomics
 
-The following form fields are including in the "HUNT Cloud Lab Agreement" version 3.4.
+Next up is a typical lab for storage and analysis of genomics data. This configuration is aimed at research groups that conduct data-driven experiments on a day-to-day basis. 
 
+| Service | Unit | Type | Cost/unit | Units | Total cost |
+| ---- | ---- | ---- | ---- | ---- | ---- | 
+| Data space | WHITE | 1 year | 0 | 1 | 0 |
+| Lab | | 1 year | 5785 | 1 | 5785 |
+| Compute | default.b5 | 1 year | 30976 | 1 | 30976 |
+| Store | 10 terabytes | 1 year | 2331 | 10 | 23310 |
+| **PER YEAR** |  | | |  | **59071** | 
 
-**Data space**
+### ... machine learning
 
-- *Name*. This is the full or short name of the data space for which this lab will be attached. 
-- *Leader*. This is the full name of your data space leader. 
+This configuration exemplifies a lab for machine learning with a small home machine for data handling with 10 terabyte of storage, and one extra analytical machine for GPU analysis with 5 terabytes of storage.
 
-**Lab name**
+| Service | Unit | Type | Cost/unit | Units | Total cost |
+| ---- | ---- | ---- | ---- | ---- | ---- | 
+| Data space | WHITE | 1 year | 0 | 1 | 0 |
+| Lab | | 1 year | 5785 | 1 | 5785 |
+| Compute | default.b2 | 1 year | 4646 | 1 | 2904 |
+| Compute | default.d3 | 1 year | 21239 | 1 | 21239 | 
+| Compute | NVIDIA V100 | 1 year | 28592 | 1 | 28592 |
+| Store | First 10 TB | 1 year | 2331 | 10 | 23310 |
+| Store | Next 5 TB | 1 year | 1665 | 5 | 8325 | 
+| **PER YEAR** |  | | |  | **90155** | 
 
-- *Short name*. This is the short name or abbreviation for your lab. We will use this name in day to day communication.
-- *Full name*. This is the full name of your new lab. 
 
-**Lab leader**
 
-This individual is authorized by the data space leader to lead the lab. The role include a responsibility to authorize access for new lab users to the lab, to place Cloud Service Orders for resource adjustments, and to authorize data transfers to other labs in the same data space.
+### ... data archives
 
-**Lab coordinator**
+This configuration exemplifies a large data archive, for example a biobank or other data controllers that store data for reuse. The activity inside the lab is aimed at quality control when data arrives, typically for a few months per year. The configuration exemplifies a data archive that totals 150 TB with intensive quality control activities for 3 months of the year.
 
-This individual is authorized by the data space leader to place individual Cloud Service Orders for resource adjustments. The administrative coordinator is also our point of contact for discussions on running agreement updates and resource reporting.
+| Service | Unit | Type | Cost/unit | Units | Total cost |
+| ---- | ---- | ---- | ---- | ---- | ---- | 
+| Data space | WHITE | 1 year | 0 | 1 | 0 |
+| Lab | | 1 year | 5785 | 1 | 5785 |
+| Compute | default.b2 | 1 year | 4646 | 1 | 2904 |
+| Compute | default.b5 | Days | 112.02 | 90 | 10082 | 
+| Store | First 10 TB | 1 year | 2331 | 10 | 23310 |
+| Store | Next 90 TB | 1 year | 1665 | 90 | 149850 | 
+| Store | Over 100 TB | 1 year | 1266 | 50 | 63300 | 
+| **PER YEAR** |  | | |  | **256231** | 
 
-**Lawful processing**
+The mean terabyte price for the 150 TB allocated storage ends at 1576.4.
 
-We use this to document activities in the lab, for example in reporting to your data controller, services center and data space leaders. 
 
-- *Ethical approval*. If applicable, specify relevant ethical approvals that governs your processing. 
-- *Privacy justification*. If applicable, specify the legal ground for the processing under GDPR, such as Article 6 or 9. 
-- *Purpose of the processing*. If applicable, specify the purpose of the processing such as research, health service, innovation etc 
-- *Categories of data subjects*. If applicable, specify the broad categories of data subjects such as research participants, patients etc. 
-- *Personal data content*. If applicable, specify the personal data content included in the processing such as "self reported health information, genomics information, medical images, information from medical records" etc.
 
-**Send us the text file for activation**
 
-Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
 
-:::
 
 
-## Data space order
 
-[HUNT Cloud Data Space Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-space-order.pdf) (pdf)
 
-Your services center leader or serices center administratorcan use this order to attach new data spaces to their service center. The order is co-signed by both the services center leader and data space leader. 
 
-::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Data Space Agreement" version 1.0.
 
 
-**Services center**
+## Data space configurations for...
 
-Attach your new data space to the following established services center: 
+Here are a few examples of prices when we combine labs into data spaces. [Contact us](/contact) for assistance for more detailed price calculations for your research group and/or center.
 
-- *Name*. This is the full or short name of your services center. 
-- *Leader*. This is the full name of your services center leader. 
+### ... epidemiolgy center
 
-**Data space name**
+This example is for a portfolio of 5 labs where one is dedicated as a storage archive, one as the internal day-to-day work area, and three additional labs that are dedicated to external collaborations. The combined storage is 5 terabytes across the five labs.
 
-- *Short name*. This is the short name or abbreviation for your data space. We use this name in day to day communication.
-- *Full name*. This is the full name of your data space. 
+| Service | Unit | Type | Cost/unit | Units | Total cost |
+| ---- | ---- | ---- | ---- | ---- | ---- | 
+| Data space | ORANGE | 1 year | 8495 | 1 | 8495 |
+| Lab | | 1 year | 5785 | 5 | 28925 |
+| Compute | COMMITMENT default.b1 | 1 year | 2904 | 1 | 2904 |
+| Compute | COMMITMENT default.b2 | 1 year | 4646 | 3 | 13938 |
+| Compute | COMMITMENT default.b3 | 1 year | 7744 | 1 | 7744 | 
+| Store | First 10 TB | 1 year | 2331 | 5 | 11655 |
+| **PER YEAR** |  | | |  | **73661** | 
 
-**Data space leader**
+Since the combined storage do not get above 10 TB this for the volume discount, the mean lab price will be 1699 moreper lab than if the center were running with the same labs on the WHITE data space subscription level. One potential opportunity with lab bundling reaching the ORANGE data space subscription level is the Lagtun invite for the data space leader. This gives the center the opportunity to participate in the development of services and prices. It also allows for combined reporting and management across the labs.
 
-This individual is authorized by the services center to lead the data space. The role include a responsibility authorize new labs under the data space, authorizing data transfers out of the data space, and to pay for resources consumed by the labs attached to the data space.
 
-**Administrative coordinator**
+### ... genomics center
 
-This individual is authorized by the data controller to place individual Cloud Service Orders for resource adjustments and to onboard new labs on behalf of your Data space leader. The administrative coordinator is also our point of contact for discussions on running agreement updates and compliance reporting.
+This example is for a portfolio of 5 labs where one is dedicated as a storage archive, one as the internal day-to-day work area, and three additional labs that are dedicated to external collaborations with intense activity only parts of the year. The combined storage is 50 terabytes across the five labs.
 
-**Data coordinator**
+| Service | Unit | Type | Cost/unit | Units | Total cost |
+| ---- | ---- | ---- | ---- | ---- | ---- | 
+| Data space | BLUE | 1 year | 35397 | 1 | 35397 |
+| Lab | | 1 year | 5785 | 5 | 28925 |
+| Compute | COMMITMENT default.b1 | 1 year | 2904 | 1 | 2904 |
+| Compute | COMMITMENT default.b5 | 1 year | 30976 | 1 | 30976 |
+| Compute | COMMITMENT default.b2 | 1 year | 4646 | 3 | 13938 |
+| Compute | BLUE default.c5 | Days | 46.96 | 90 | 4227 | 
+| Compute | BLUE default.b4 | Days | 13.37 | 30 | 401 | 
+| Compute | ON-DEMAND default.c5 | Days | 177.09 | 90 | 15938 | 
+| Store | First 10 TB | 1 year | 2331 | 10 | 23310 |
+| Store | Next 90 TB | 1 year | 1665 | 40 | 66600 | 
+| **PER YEAR** |  | | |  | **222616** | 
 
-This individual is our contact point for data coordination for labs attached to your data space. This includes communication on data transfers, backups and other data related issues.
 
-**Technical coordinator**
 
-This individual is our contact point for technical configuration for labs attached to your data space. This includes configuration and adaptation of analytical tools, including distributed computing and graphical interfaces. 
 
-**Knowledge coordinator**
+### ... machine learning center
 
-This individual is our contact point for knowledge transfers across labs attached to your data space. This includes transfers of know-how related to onboardings, configurations, data flow etc. This individual is also our contact for discussion on knowledge transfer and such documentation.
+This example is for a portfolio of 5 labs where one is dedicated as a storage archive, one as the internal day-to-day work area for the group with 2 fixed GPU cards, and three additional labs that are dedicated to external collaborations with intense activity only parts of the year. The combined storage is 30 terabytes across the five labs.
 
-**Send us the text file for activation**
+| Service | Unit | Type | Cost/unit | Units | Total cost |
+| ---- | ---- | ---- | ---- | ---- | ---- | 
+| Data space | ORANGE | 1 year | 8495 | 1 | 8495 |
+| Lab | | 1 year | 5785 | 5 | 28925 |
+| Compute | COMMITMENT default.b1 | 1 year | 2904 | 1 | 2904 |
+| Compute | COMMITMENT default.b2 | 1 year | 4646 | 4 | 18584 |
+| Compute | COMMITMENT default.d3 | 1 year | 21239 | 2 | 42478 | 
+| Compute | COMMITMENT NVIDIA V100 | 1 year | 28592 | 2 | 57184 |
+| Compute | ON-DEMAND default.d3 | Days | 76.81 | 60 | 4609 | 
+| Compute | ON-DEMAND NVIDIA V100 | Days | 117.50 | 60 | 7050 |
+| Compute | ON-DEMAND default.d3 | Days | 76.81 | 90 | 6913 | 
+| Compute | ON-DEMAND NVIDIA V100 | Days | 117.50 | 90 | 10575 |
+| Compute | ON-DEMAND default.d3 | Days | 76.81 | 90 | 6913 | 
+| Compute | ON-DEMAND NVIDIA V100S | Days | 136.3 | 60 | 8178 |
+| Compute | ON-DEMAND default.d3 | Days | 76.81 | 60 | 4609 | 
+| Store | First 10 TB | 1 year | 2331 | 10 | 23310 |
+| Store | Next 90 TB | 1 year | 1665 | 20 | 33300 | 
+| **PER YEAR** |  | | |  | **264027** | 
 
-Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
 
-:::
 
 
 
-## Billing information form
 
-[HUNT Cloud Billing Information](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-billing-information.pdf) (pdf)
 
-This form specifcy billing points for consumption of cloud resources. The form is attached to a data space agreement. A billing point may be set for the entire data space or specified for individual labs.
 
-::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Billing Information" version 1.0.
 
-**Data space**
 
-Specify the data space where this billing information is attached. 
-
-**Lab name**
-
-Data spaces on the BLUE subscription may specify individual labs as billing point. Leave blank for other subscription levels.
-
-**Billing contact**
-
-This is the individual that will coordinate the payment on your side. The individual is expected to coordinate this with our financial officer. 
-
-**Account information**
-
-For NTNU affiliated data spaces, specify "k.sted" and "project number". The information is optional for data spaces affiliated outside NTNU and may be used for referencing on invoices.
-
-**Billing address**
-
-For organizations outside NTNU: specify the billing address where invoices are to be sent.
-
-**Pilot period** 
-
-New labs may for testing purposes by entitled to a pilot period before the lab is metered is accordance with the services specifications. If applicable, this is included in dialogue with representatives from HUNT Cloud. 
-
-:::
-
-
-
-## Internal kista order
-
-[HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf) (pdf)
-
-Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab. Read more about Internal kistas in our [FAQ transfer section](/faq/internal-transfer/).
-
-::: details Clarification of the form fields
-
-The below bullet points clarify the field information needed to complete our internal kista import order (v.1.6).
-
-**Uploader Lab**
-
-- **Uploader Lab:** This is the name of your lab. You may find the name when you log into your lab:
-
-```bash
-Welcome to `LAB NAME`.
-
-For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
-
-Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
-your-username@`your-labname`-home~$
-```
-
-- **Lab leader / Lab coordinator:** This is the name of the individual that will authorize the kista deployment by signing this order. The individual needs to be registered as a Lab leader or Lab coordinator in the Lab agreement for your lab.
-
-- **Uploader:** This is the name of the lab user that will copy date from your lab and to the internal kista.
-
-- **Data size**: This is the size in gigabytes of the storage area in the kista. You can for example use [NCDU](/working-in-your-lab/technical-tools/ncdu/) to estimate the size of your data.
-
-- **Kista duration**: Specify the number of days that you need the kista. Default is 30 days, maxium is 90 days.
-
-**Downloader Lab**
-
-- **Uploader Lab:** This is the name of the lab that will download the data that you upload. If you are uncertain about the lab name, contact their lab coordinator or downlaoder. We need a correct Lab name to proceed your order. 
-
-- **Lab leader / Lab coordinator:** This is the name of the lab leader or lab coordintor in the downloader lab. 
-
-- **Dwonloader:** This is the name of the lab user that will copy date from your kista and into the downloader lab.
-
-- **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
-
-- **Lab leader**: This is the field for the signature of the lab leader or lab coordinator for your lab (the uploader lab). 
-
-:::
-
-
-
-## External kista import order
-
-[HUNT Cloud - External Kista Import Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-import-order.pdf) (pdf)
-
-Lab leaders can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from your lab. This agreement is signed both by the Lab leader and the uploader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
-
-::: details Clarification of the form fields
-
-The below bullet points clarify the field information needed to complete our external kista import order.
-
-- **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
-
-```bash
-Welcome to `LAB NAME`.
-
-For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
-
-Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
-your-username@`your-labname`-home~$
-```
-
-- **Lab leader:** This is the name of the individual that is the contracting party of your lab agreement with HUNT Cloud, typically your principal investigator or center leader.
-
-- **Lab user:** This is the name of the individual in your lab that your authorize to download the data from the kista and into your lab storage.
-
-- **Uploader name:** This is the name of the individual that is authorized to do the technical transfer fraom the external party and into the external kista (uploader). We use this to communicate configuration information, and we expect the public key to be sent from this address.
-
-- **Uploader email:** This is organizational email that we use to communicate with the uploader. List their organizational email as we use this for part of the identification process.
-
-- **Uploader IP:** This is the IP address for the machine that will connect to the external kista. We use this for access whitelisting of the address.
-
-- **Coordinator:** This is the name of the individual from the external party that will coordinate the transfer if this differ from the individual doing the technical upload (uploader). We use this for communication of issues related to data, agreements etc.
-
-- **Institution:** This is the institution of the external party that is responsible for the transfer. 
-
-- **Country:** This is the country where the uploader institution is located.
-
-- **Data size**: This is the size in gigabytes of the storage area in the external kistas. Contact the uploader coordinator if you do not know this number.
-
-- **Kista duration**: Specify the number of days that the kista will be online. External kistas are indendent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
-
-- **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
-
-- **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
-
-- **Place/date**: State the place where your uploader signed the order and the date when the order was signed. 
-
-- **Uploader**: This is the field for the signature of your external uploader. For compliance purpuses, we need the uploader to accept our use policy of the service before we grant access into our systems.
-
-:::
-
-## External kista export order
-
-[HUNT Cloud - External Kista Export Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-export-order.pdf) (pdf)
-
-Lab leaders can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. This agreement is signed both by the Lab leader and the downloader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
-
-::: details Clarification of the form fields
-
-The below bullet points clarify the field information needed to complete our external kista export order.
-
-- **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
-
-```bash
-Welcome to `LAB NAME`.
-
-For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
-
-Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
-your-username@`your-labname`-home~$
-```
-
-- **Lab leader:** This is the name of the individual that is the contracting party of your lab agreement with HUNT Cloud, typically your principal investigator or center leader.
-
-- **Lab user:** This is the name of the individual in your lab that your authorize to download the data from the kista and into your lab storage.
-
-- **Downloader name:** This is the name of the individual that is authorized to do the technical transfer from your external kista to the external party (downloader). 
-
-- **Downloader email:** This is organizational email that we use to communicate with the downloader. List their organizational email as we use this for part of the identification process. We use this to communicate configuration information, and we expect the public key to be sent from this address. 
-
-- **Downloader IP:** This is the IP address for the external machine that will connect to the external kista. We use this for access whitelisting.
-
-- **Coordinator:** This is the name of the individual from the external party that will coordinate the transfer if this differ from the individual doing the technical upload (uploader). We use this for communication of issues related to data, agreements etc.
-
-- **Institution:** This is the institution of the external party that is responsible for the transfer. 
-
-- **Country:** This is the country where the uploader institution is located.
-
-- **Data size**: This is the size in gigabytes of the storage area in the external kistas.
-
-- **Kista duration**: Specify the number of days that the kista will be online. External kistas are indendent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
-
-- **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
-
-- **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
-
-- **Place/date**: State the place where your downloader signed the order and the date when the order was signed. 
-
-- **Uploader**: This is the field for the signature of your external downloader. For compliance purpuses, we need the downloader to accept our use policy of the service before we grant access into our systems.
-
-:::
-
-## Network opening order
-
-[HUNT Cloud Network Opening Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-network-opening-order.pdf) (pdf)
-
-Your lab leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/external-transfer/).
-
-
-::: details Clarification of the form fields
-
-The below bullet points clarify the field information needed to complete our network opening order.
-
-- **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
-
-```bash
-Welcome to `LAB NAME`.
-
-For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
-
-Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
-your-username@`your-labname`-home~$
-```
-
-- **Lab leader:** This is the name of the individual that is the contracting party of your lab agreement with HUNT Cloud, typically your principal investigator or center leader.
-
-- **Remote party**: This is the institution that your will transfer data to and from. We use this information to sanity check your network address. Do also specify the country where the machine reside. We use this information for reporting to your data controller.
-
-- **Network**: This is the public IP address for the remote machine in a [IPv4](https://en.wikipedia.org/wiki/IPv4)-format which is defined as four set of numbers separated by dots. Contact your remote party for this information. If the machine is located outside NTNU, the network address can **not** start with **`10.`**, **`192.`** or **`172.`** since these are internal addresses that are unreachable outside your institution.
-
-- **Port number**: This is the [network port](https://en.wikipedia.org/wiki/Port_(computer_networking)) that needs to be opened for communication to occur. The port number is specific for the protocol of the transfer. For example, port 22 is commonly used for regular SSH-transfers. Contact your remote party for this information.
-
-- **Duration**: Specify the date of the expected termination date of the opening. Alternatively, state **`Permanent`** if you want the network opening to exist for the lifetime of your lab.
-
-- **Purpose**: This is the general purpose for the transfer that we report to data controllers. For example, raw data transfer, result transfers, software transfers, etc.
-
-- **Personal data**: State **`YES`** if you expect the transfer to include personal data as defined by GDPR in [Article 4 (1)](https://www.privacy-regulation.eu/en/article-4-definitions-GDPR.htm), and state **`NO`** if you don't. We recommend that you encrypt personal data during transfers.
-
-- **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
-
-- **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
-
-:::

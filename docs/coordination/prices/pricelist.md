@@ -15,7 +15,7 @@ This page list the prices for our cloud services.
 
 This is our current price list: 
 
-[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-2-9.pdf) (pdf)
+[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-0.pdf) (pdf)
 
 The price list is incorporated as an appendix to our cloud services agreement.Costs are metered and billed in accordanced with our [services specifications](/services/specifications).
 
@@ -25,7 +25,7 @@ The price list will be updated from time to time, for example based on discussio
 
 | **Version** | **Announced** | **Effective** |
 | - | - | - |
-| [HUNT Cloud Price List v2.9](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-2-9.pdf) (pdf) | 2021-07-01 | 2021-10-01 |
+| [HUNT Cloud Price List v3.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-0.pdf) (pdf) | 2021-07-01 | 2021-10-01 |
 
 
 

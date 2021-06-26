@@ -1,59 +1,82 @@
 ---
-title: Agreement overview
+title: Agreements
 category: HUNT Cloud
 permalink: /agreements/overview
 sidebarDepth: 1
 description: This page gives an overview of administrative agreements in HUNT Cloud.
 ---
 
-# Overview of agreements
+# Agreements
 
-This page contains a structured overview of the necessary agreements to fully utilize our cloud services to make your science fly. The information is intended for coordinators. 
+This page contains a structured overview of the agreements that are required to make your science fly in HUNT Cloud. The information is intended for coordinators. 
 
 [[toc]]
 
-## Agreement hierarchy
 
-Our agreements are organized in the following hierarchy: 
+## Overview
 
-1. The **Data processor agreement** regulates data ownership and data protection. This is the core agreement for where all other agreements are incorporated as amendments.
-2. The **Services agreement** is attached to one data processor agreement and regulates the cloud services specifications and conditions for resource consumption, cost and billing.
-3. The **Data space agreement** is attached to one services agreement and defines one central space where research leaders coordinates one to many labs.
-4. The **Lab agreement** is attached to one data space agreement and defines one digital environment that combines access to cloud resources for individual data processing.
-5. The **User agreement** is attached to one lab agreement and authorizes one individual (lab user) access to one individual lab. 
+Our activities are organized in the following agreement hierarchy: 
 
-We know, this is complex. Although it might seem complicated at the first glance, we think that the hierarchy provides a solid framework for flexibility. All to ensure your researchers freedom to explore.
+![Unit hierarchy](./images/agreement-hierarchy.png "HUNT Cloud unit hierarchy")
+
+1. The **Data controller** is your organizational unit that control your data ownership and data protection inside our services, in short the data processing. The *Data processor agreement* control these activities and is therefore placed on top of our agreement hierarchy. All other arrangements between us are incorporated into this agreement as amendments.
+2. The **Services center** is your organizational unit that control the cloud services that you consume. The *Services agreement* details our services specifications and conditions for resource consumption, cost and billing. One or many services centers can be attached to a data processor agreement. 
+3. The **Data space** is your research unit that manages scientific activities across one to many labs. The *Data space order* specify cross-lab coordinators and the subscription level that defines services availability. One or many data spaces can be attached to one services center.
+4. The **Lab** is your digital laboratory where your get access to cloud resources for storage, computation and transport of data. The *Lab order* specify a lab leader and lab coordinator that can allocate resources and authorize users inside their lab. One or many labs can be attached to one data space.
+5. The **Lab user** is a scientist that can access data and cloud services in one lab. The *Lab user agreement* specify the acceptable use policy for our services. One or many lab users can be attached to one lab. One lab user can be attached to more than one lab, each such authorization requires a unique lab user agreement.
+
+We will need all five agreement levels in place before you can access a new lab environment. We know, this is a lot of papers and a complex structure. On the bright side, although complicated at the first glance, the already prepared structure provides you with a solid framework for flexibility. And the more of the agreement levels that are already in place, the simpler and quicker you can get a compliant lab up and running. [Contact us](contact) to get started. 
 
 
 
-## Data processor agreements
 
-The data processor agreement is on top of our agreement hierarchy because it regulates one of the most important asset in digital science: your organization's trustworthiness towards research participants (data protection and data privacy).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Data processor agreement
+
+The data processor agreement is on top of our agreement hierarchy because it regulates one of the most important asset in digital science: your trustworthiness towards your research participants (data protection and data privacy).
 
 The remaining agreements on this page are therefore formally incorporated into the data processor agreement as attachments. 
 
+### About
 
-
-### Content
-
-In short, the data processor agreement defines that your organization owns the data that you upload and generate in HUNT Cloud. And it specify the required privacy and security controls that are to be in place to protect your data. 
+In short, the data processor agreement defines that your organization owns the data that you upload and generate in HUNT Cloud. And it specifies privacy and security controls that are to be in place to protect your data. 
 
 The data processor agreement allows your research to be compliant with the Data Protection Directive from EU (GDPR) and relevant Norwegian laws and regulations, including partly compliance with the Norwegian «*Norm for informasjonssikkerhet*».
-
-### Parties
 
 The data processor agreement is formally agreed between your host organization that control your data (data controller), and our host institution that process the data on your behalf (data processor). 
 
 Your signatory will be the individual that is authorize to control your data on behalf of your organization. This may range from top management via head of departments to individuals in various organizational units.
 
-Our signatory will be the head of our department: Department of Public Health and Nursing at the Faculty of Medicine and Health Sciences, NTNU. 
+Our signatory will be the head of our department: [Department of Public Health and Nursing](https://www.ntnu.no/ism/ledelse) at the Faculty of Medicine and Health Sciences, NTNU. 
+
+### Getting started
+
+We need to ensure that we have an active data processor agreement with your host organization or department (for NTNU) before we can process your data space and lab orders. 
+
+We already have many such agreements in place for speedy processing. So if you know your organization holds an active data processor agreement with us, let's skip to the [services agreement](/agreements/overview/#services-agreement).
+
+[Contact us](/contact) if you don't know if your organization holds an active data processor agreement, or to get started on a new agreement. For new agreements that can be based on our templates, it will bootstrap the process if help out completing the required information below.
 
 
-### Form fields
+### Required information
 
 [HUNT Cloud Data Processor Agreement Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-processor-form.txt)(txt)
 
-We use information from the text file above to render the final data processor agreement. Please download the form, update the information and [forward to us](/contact) for rendering. See below for details on each form field.
+We use information from the text file above to render the final data processor agreement. Please download the form, update the information and [send us](/contact) the text file for agreement rendering. Click the "Clarification of the form fields" below for more information on each field.
 
 ::: details Clarification of the form fields
 
@@ -105,7 +128,7 @@ This section defines the dispute clause. Specify "Public" if your organization i
 
 **Purpose of processing**
 
-This information is aimed at the overall processing purpose of the information under your data spaces and labs. This is addition to the information on the processing in individual labs that are collected in our lab agreements.
+This information is aimed at the overall processing purpose of the information under your data spaces and labs. This is addition to the information on the processing in individual labs that are collected in our lab orders.
 
 - *purpose.pro:* This defines the overall purpose of the planned data processing, such as research, health services, innovation etc. For NTNU, state "Research" for normal cases.
 - *purpose.cat:* This defines the broad categories of data subjects of the processing. This may for example be research participants, patients etc. NTNU controllers, "Research participants" is the most common category.
@@ -123,7 +146,7 @@ When you have added the information to the text file, forward the text file to u
 
 :::
 
-### MoU within NTNU
+### Agreements within NTNU
 
 Data processor agreements are agreed between enterprises. This means that we cannot sign data processor agreements between NTNU departments. To allow for documented security measures, we have therefore developed a Memorandum of understanding (MoU) for such bindings. We call these "enighetsavtale". The document clarifies the same rights and protections as our regular processor agreement with one exception: Disputes will be resolved with binding effect by NTNU's management with our Rector as the last instance.
 
@@ -133,17 +156,15 @@ Sometimes you may be processing data on behalf of others. This is the case when 
 
 To illustrate, this may be the case if you provide analytical expertise to a project that is controlled/managed by another organization, and you want to transfer their data to your lab to take advantage of your established tools and resources.
 
-In such circumstances your data provider may be the "data controller" and you may be the "data processor". If so, HUNT Cloud may be the "data subprocessor" (data underbehandler). We have dedicated agreement templates for such setups that gets defined under "Agreement type" in the agreement form fields (see above). 
+In such circumstances your data provider may be the "data controller" and you may be the "data processor". If so, HUNT Cloud may be the "data subprocessor" (data underbehandler). We have dedicated agreement templates for such setups that gets defined under "Agreement type" in the agreement form fields (see required information above). 
 
 [Contact us](/contact) if you wonder which of the two agreement types that fits your processing needs.
 
-### Private processing templates
+### Custom processing templates
 
-Your host organization may prefer to use their own data processing agreement template. This is fine with us as long as the template is compliant with requirements set forth in GDPR, other relevant laws, ISO 27001 and 27701, and that we are able to comply with your organization's security requirements. Please note that such templates will need involvement from legal teams from your organization and NTNU. [Contact us](/contact) for time estimates of such arrangements.
+Your host organization may prefer to use their own data processing agreement template. This is fine with us as long as the template is compliant with requirements set forth in GDPR, other relevant laws, ISO 27001 and 27701, and that we are able to comply with your organization's security requirements. 
 
-
-
-
+Note that such templates will need involvement from legal teams from both sides. [Contact us](/contact) for time estimates of such arrangements.
 
 
 
@@ -151,30 +172,50 @@ Your host organization may prefer to use their own data processing agreement tem
 
 
 
-## Services agreements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Services agreement
 
 The services agreement regulates how cloud resources are controlled and billed across data spaces and labs. 
 
 The aim of this agreement is to establish a unified way to control services and resources, and to simplify the establishments of data spaces and labs attached to the this agreement.
 
-### Content
+### About
 
-The services agreement regulates conditions for the use of the cloud services services, as well as specifications of services, support responsiveness and service levels. The agreement do also specify cost, metering and billing of services as well as the following attachments:
+The services agreement regulates conditions related to the use of our cloud services. This includes specifications of the services, support responsiveness and service levels. The agreement do also specify cost, metering and billing.The following attachments are included to the agreement: 
 
 - services specifications
 - service levels
 - price list
 - list of attached data spaces and labs
-- data space agreement template
-- lab agreement template
+- data space order template
+- lab order template
 - user agreement template
 - contact list
 
-### Parties
-
 The services agreement is signed by the data controller, the services center leader, and us. The signatory level depends on your organization. Services agreement may be signed on the same level as data processor agreements, data spaces or somewhere in between.
 
-### Form fields
+### Getting started
+
+We need to ensure that we have an active service center agreement to attach your data space and lab orders.
+
+We already have many such agreements in place for speedy processing. If you know your organization holds an active service center agreement with us, let's jump to the [data space order](agreements/overview/#data-space-order).
+
+[Contact us](/contact) if you don't know if your organization or research center holds an active services agreement, or to get started on a new agreement. For new agreements it will bootstrap the process if your help us with the required information below.
+
+### Required information 
 
 [HUNT Cloud Services Agreement Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-services-agreement-form.txt)(txt)
 
@@ -228,13 +269,27 @@ Download and update the text file with your information and [forward it to us](/
 
 
 
-## Data space agreements
+## Data space order
 
 The intention of the data space is to simplify management of several labs under one scientific center or research group. The structure allow for roles, controls and reporting to be unified across a lab portfolio.
 
+### About
+
 The agreement specifies a data space that is attached to a services center. The data space list roles and define access to cloud resources that is unified across all labs that are attached to the data space. The aim is to simplify responsibilities, communication and reporting across many labs.
 
-The data space agreement is co-signed by the services center leader and the data space leader.
+The data space order is co-signed by the services center leader and the data space leader.
+
+### Billing account
+
+Each data space needs to specify at least one billing account where services gets billed. Depending on your data space subscription, you can establish several accounts (BLUE subscription layer). [Click here](/agreements/downloads/#data-space-order) to download the form. 
+
+### Getting started
+
+We need to ensure that we have an active services center agreement with your host organization or department (for NTNU) before we can process your data space order.
+
+When the services agreement are in place, it's quite simple to order a data space: (1) Download the [data space order](/agreements/downloads/#data-space-order) and the [billing account form](/agreements/downloads/#data-space-order), (2) fill in the fields (descriptions on the download page), (3) and send the order and account form [to us](/contact) for the data space activation.
+
+[Contact us](/contact) for a chat before you start the process so we can learn about your science and together think up how cloud services may best make your science fly. 
 
 
 
@@ -242,29 +297,42 @@ The data space agreement is co-signed by the services center leader and the data
 
 
 
-## Lab agreements
+## Lab order
 
-The lab agreement is used to establish one digital laboratory where data is processed.
+The lab order is used to establish a digital laboratory where you can store and analyze data.
 
-The lab agreement specifies the name of the lab, under which data space the lab is attached, names and contact information for the lab leader and the lab coordinator. The lab coordinator is authorized by the lab leader to approve certain tasks, such as allocate or upgrade resources and order internal kistas. 
+### About
 
-The agreement do also list common GDPR related fields that includes the purpose of the processing in the lab. We use this information to provide an overview to data spaces and data controllers for processes under their control.
+The lab order specifies the name of the lab, under which data space the lab is attached, names and contact information for the lab leader and the lab coordinator. 
 
-The lab agreement agreement is signed by the data space leader and the lab leader.
+The lab coordinator is authorized by the lab leader to approve certain tasks, such as allocate or upgrade resources and order internal kistas. 
+
+The agreement do includes GDPR related fields such as purpose of the processing in your lab. We use this information to provide an overview to data spaces and data controllers for processes under their control.
+
+The lab order agreement is signed by the data space leader and the lab leader (third-party verification).
+
+### Getting started
+
+We need to ensure that we have an active data space order with your research group or research center before we can process your lab order.
+
+When the data space order are in place, it's quite simple to order a lab: (1) Download the [lab order](/agreements/downloads/#lab-order) and the [user agreement](/agreements/downloads/#data-space-order) template, (2) fill in the fields (descriptions on the download page), (3) and send the lab order and user agreements [to us](/contact) for the data space activation. 
+
+[Contact us](/contact) for a chat before you start the process so we can learn about your science and together discuss how to best onboard your scientists and adjust and tune your storage and compute resources to best make your science fly.
 
 
 
 
 
-## User agreements
+## User agreement
 
-The user agreement authorizes access for individual researchers to one specified lab. The agreement clarify the acceptable use policy for HUNT Cloud and responsibilities associated with lab access. The agreement is signed by the lab leader and the lab user. 
+The user agreement authorizes access for individual researchers to one specified lab. 
 
+### About 
 
+The agreement clarify the acceptable use policy for HUNT Cloud and responsibilities associated with lab access. The agreement is signed by the lab leader and the lab user (third-party verification). 
 
-## Billing information form
+### Getting started
 
-Billing information for your data space and/or individual labs is specify in the HUNT Cloud Billing Information form.
-
+When you have an active lab, it's quite simple to add more users: (1) Download the [user agreement](/agreements/downloads/#data-space-order), (2) fill in the fields (descriptions on the download page), (3) and send the agreement [to us](/contact) for the user activation. 
 
 

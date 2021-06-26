@@ -7,32 +7,34 @@ description: This page contains information on the new services model in HUNT Cl
 
 # New services model
 
-**We are introducing the new services model 1 July 2021. This will introduce several changes for lab leaders and lab coordinators.**
+**We are introducing the new services model 1 July 2021. This will introduce several changes for lab leaders and lab coordinators. This includes new agreements and the new price list.**
 
 ::: warning Important dates 
 
-* All labs are encouraged to convert to the new services model as soon as possible. [Contact us](/contact) to start the process.
 * New labs will be required to follow the new model from 1 July 2021.
-* Existing labs will need to convert from 1 October 2021 to upgrade or change resources or services.
-* Existing labs will be required to convert by 1 January 2022 to continue their services.
+* Existing labs will need to upgrade from 1 October 2021 to upgrade or change resources or services.
+* Existing labs will be required to upgrade by 1 January 2022 to continue their services.
+* All labs are encouraged to upgrade to the new services model as soon as possible. [Contact us](/contact) to start the process.
 
 :::
+
 
 [[toc]]
 
 
+## New changes
 
 The following changes was introduced 1 July 2021:
 
-## Lab agreement update
+### Lab agreement update
 
-We have updated the lab agreeement ([lab order](/agreements/downloads/#lab-order)) do include information on "lawful processing" (ethical approavals, privacy justifaction etc). We do this to help your host organization assembling lists of processing in our services. The update will require all new and existing labs to convert to the new version.
+We have updated the lab agreement (now named [lab order](/agreements/downloads/#lab-order)) do include information on "lawful processing" (ethical approvals, privacy justification etc). We do this to help your host with lists of their processing in our services. All labs will need to upgrade to the new version.
 
 **Practical aspects:** All new will be required to use the new lab order from 1 July 2021. Existing labs needs to sign the new lab order from 1 October 2021 to upgrade or change resources, or at the latest by 1 January 2022 to continue their services.
 
 **Dependencies:** New lab orders are dependent on a signed services agreement and an active data space. [Contact us](/contact) to start this process.
 
-## Data space as a new unit
+### Data space as a new unit
 
 Data space is now introduced as a new subscription service. We do this to ease the management of one to many labs. The data space subscription defines service availability for labs. Activation of a data space will require an active services agreement (see below) and a new [data space order](/agreements/downloads/#data-space-order). 
 
@@ -40,7 +42,7 @@ Data space is now introduced as a new subscription service. We do this to ease t
 
 **Dependencies:** New data spaces are dependent on a signed services agreements. [Contact us](/contact) to start this process.
 
-## Services center as a new unit
+### Services center as a new unit
 
 [Services centers](/agreements/overview/#services-agreements) is now introduced as the new agreement unit that control services specifications and prices. We do this to separate financial aspects of the cloud services (services centers) from the scientific management (data spaces). Services centers are defined in our new services agreement where services specifications and prices are incorporated as appendixes.
 
@@ -48,12 +50,12 @@ Data space is now introduced as a new subscription service. We do this to ease t
 
 **Dependencies:** New services agreements are dependent on a signed data processor agreement (or enighetsavtale for NTNU departments). [Contact us](/contact) to start this process.
 
-## Services specifications update
+### Services specifications update
 
 We have updated the [services specifications](/services/specifications) with information on meter, cost, and billing of our services. The updates will be effective from 1 July 2021. The document is attached to the services agreement. 
 
 
-## New price list
+### New price list
 
 We are announcing the new [price list](prices/price-list) 1 July 2021. We do this to increase the sustainability and predictability of our services. [Click here](/prices/introduction) for and introduction to the price model.
 
@@ -63,7 +65,7 @@ The price list will be effective from 1 October 2021. Costs are metered and bill
 
 **Dependencies:** The new price list is dependent on signed services agreement, data space orders and lab orders. [Contact us](/contact) to start this process.
 
-## Billing account as a new form
+### Billing account as a new form
 
 We have introduced a new form with billing account information ([billing account form](/agreements/downloads/#billing-account-form)). The form is attached to a data space and may, depending on the data space subscription level, define the entire data space or individual labs as billing points.
 
@@ -71,8 +73,37 @@ We have introduced a new form with billing account information ([billing account
 
 **Dependencies:** Registration of a billing account is dependent of an active data space.
 
-## Expected adjustment
+### Expected adjustment
 
 We expect to adjust the services model based on input from the [next ting week](/tingweek/#dates) (Ting week #4).
 
 
+
+
+
+## Getting started
+
+### Agreement upgrades
+
+::: tip Checklist for a successful upgrade
+
+* A data processor agreement or "enighetsavtaler" is in place between my department / host institution and HUNT Cloud.
+* The new services agreement is in place between my department / host institution and HUNT Cloud.
+* The new data space order is signed for my research groups or research center. 
+* The new lab order is signed by my lab leader that includes the purpose of my processing.
+
+:::
+
+[Click here](agreements/overview/) to read more about our new agreement structure. [Contact us](/contact) us to get going with the new services agreement and to check status on the data processor agreement for your host institution.
+
+### Price estimates
+
+We know the new price list and the various options can difficult to get around. To get going you may want to read our [services specification](/services/specifications) before you head to the [price list](/prices/pricelist). 
+
+We have included a few [price examples](/prices/examples/) for common uses cases and a [frequently asked questions](/prices/faq) to guide you on your way. 
+
+For existing labs, [contact us](/contact) for specific cost estimates for your environment. And for new labs, [contact us](/contact) us for assistance on price estimates for your projects. 
+
+### More information 
+
+[Contact us](/contact) if you are wondering how to approach the new services and price models and/or if you need more information.
