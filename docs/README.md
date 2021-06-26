@@ -13,13 +13,8 @@ These pages contains official user documentation on our cloud services. The cont
 
 Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf) and visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services. See our latest [Ting report](/tingweek/#reports) for a detailed status update.
 
-::: tip Next up: Ting week #4
-- **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET
-- **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET
-- **Enterprise ting**: Wednesday 20 October 2021 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 20 October 2021 - 9 to 11 a.m. CET
+::: tip New services model
 
-[Ting report #3 (2021-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-report.pdf)
+We are introducing the new services model from 1 July 2021. [Click here](/services/new-services-model) to read about the changes and how these may affect your lab.
 
-::: 
-
+:::

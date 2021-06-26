@@ -1,7 +1,7 @@
 ---
 title: Machine types
 category: HUNT Cloud
-permalink: /machine-types
+permalink: /services/machine-types
 sidebarDepth: 1
 description: This page list default machine types in HUNT Cloud.
 ---

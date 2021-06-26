@@ -16,7 +16,7 @@ This page lists frequently asked questions related to computation and analysis i
 
 ### Can I upgrade my compute resources?
 
-Yes, you can. Your [lab leader](/faq/users/#user-roles) and lab coordinator approves upgrades both for cpu and memory of individual machines, and supplement of new machines in accordance with our [machine types](/machine-types). Forward upgrade requests to us on [email](/contact) with your lab leader and lab coordinator on cc.
+Yes, you can. Your [lab leader](/faq/users/#user-roles) and lab coordinator approves upgrades both for cpu and memory of individual machines, and supplement of new machines in accordance with our [machine types](/services/machine-types). Forward upgrade requests to us on [email](/contact) with your lab leader and lab coordinator on cc.
 
 ### Is my process hitting memory issues?
 
@@ -201,7 +201,7 @@ We will typically upgrade operating systems every two years when a new long term
 
 ## Machine types
 
-You will meet four principal machine types in your lab. You may choose to deploy home, iaas and blue machines in [various sizes](/machine-types).
+You will meet four principal machine types in your lab. You may choose to deploy home, iaas and blue machines in [various sizes](/services/machine-types).
 
 ### What is a "home" machine?
 

@@ -1,7 +1,7 @@
 ---
-title: Agreement downloads
+title: Examples
 category: HUNT Cloud
-permalink: /agreements/downloads
+permalink: /prices/examples
 sidebarDepth: 1
 description: This page list agreements that may be relevant for you as a lab user. Contact your lab leader for more details on other agreement types.
 ---
@@ -115,11 +115,11 @@ Download and update the text file with your information and [forward it to us](/
 
 
 
-## Billing account form
+## Billing information form
 
-[HUNT Cloud Billing Account Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-billing-information.pdf) (pdf)
+[HUNT Cloud Billing Information](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-billing-information.pdf) (pdf)
 
-This form defined a billing acount for consumption of cloud resources. The form is attached to a data space agreement. A billing point may be set for the entire data space or specified for individual labs.
+This form specifcy billing points for consumption of cloud resources. The form is attached to a data space agreement. A billing point may be set for the entire data space or specified for individual labs.
 
 ::: details Clarification of the form fields
 
