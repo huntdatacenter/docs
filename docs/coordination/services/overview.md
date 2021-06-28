@@ -14,14 +14,16 @@ This page gives a brief overview of our cloud services. See the [Services specif
 
 ## Subscriptions
 
-Our subscriptions forms the frame where you attach resources for computation, storage and transportation.
+Our subscriptions forms the frame where you attach resources for computation, storage and transportation. See [Services specifications](/services/specifications) for detailed information.
+
 
 ### Data space
 
-This is the subscription that establishes a management account (data space) in HUNT Cloud where individual labs are attached and their resources managed, controlled and billed. See the [Services specifications](/services/specifications) for detailed information.
+This is the subscription that establishes a management account (data space) in HUNT Cloud where individual labs are attached and their resources managed, controlled and billed. We have established three subscription levels that differs in the individual service availability, resource prioritixation, ting membership and costs for individual resources: 
 
 | Subscription levels: | WHITE | ORANGE | BLUE |
 | ---- | ---- | ---- | ---- | 
+| Subscription type | Basic | Standard | Premium | 
 | Maximum attached labs | 2 | 10 | 20 |
 | Maximum commitment length | 3 YEARS | 3 YEARS | 1 YEAR |
 | Deploy COMMITMENT machines | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
@@ -38,7 +40,7 @@ This is the subscription that establishes a management account (data space) in H
 | Multiple billing accounts | ![no](./images/no-30.png "no") | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
 | Lab ting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Coordinator ting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Lagtun invites | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
+| Lagtun invites | ![no](./images/no-30.png "no") | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
 
 *) Restore against accidental deletion is activate for work and archive volumes on home machines.
 

@@ -15,6 +15,6 @@ Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf
 
 ::: tip New services model
 
-We are introducing the new services model from 1 July 2021. [Click here](/services/new-services-model) to read about the changes and how these may affect your lab.
+We are introducing the new services model from 1 July 2021. [Click here](/services/new-services-model) to read about the changes and how these will affect your lab.
 
 :::

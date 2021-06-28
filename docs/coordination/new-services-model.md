@@ -7,7 +7,101 @@ description: This page contains information on the new services model in HUNT Cl
 
 # New services model
 
-**We are introducing the new services model 1 July 2021. This will introduce several changes for lab leaders and lab coordinators. This includes new agreements and the new price list.**
+**We are introducing our new services model from 1 July 2021. This will introduce several changes for lab leaders and lab coordinators.**
+
+::: tip Summary
+
+* The service model introduces a new way to control and manage labs via "Services centers" and "Data spaces". This setup do also include a new way to price services in labs.  
+
+* Our intention is to simplify access to labs and data spaces as soon as a service center is established, and to ensure predictable prices that allow for both access to reliable resources and sustainable services.  
+ 
+* We will kindly ask all labs to sign a new set of agreements as soon as possible, and to help us organize your activities into data spaces and services center. This needs to be completed before January 2022.  
+
+* New labs will be required to use the new agreements from July 2021. Existing labs needs to upgrade from October to adjust resources, and all labs needs to upgrade before January 2022 to continue their services.  
+
+[Click here](/services/new-services-model/#getting-started) to get started with the upgrades.
+
+:::
+
+
+[[toc]]
+
+## About
+
+Scientists deserve elegant and predictable services to elevate their quest towards data for a better world! And they deserve solutions that brings people together for friendly and fruitful collaborations.
+
+As our cloud community has been rapidly growing in both size and complexity, we saw a possibility to rethink our services model to keep up with the much appreciated growth. We are humble to now present our results.
+
+We have put a lot of thinking and our best efforts into these changes with a clear intention to simplify access to great scientific services. 
+
+The result is a new way to organize and manage digital laboratories (data spaces), a split of financial aspects from scientific activities (services centers), and a new price list that aims to mirror the need for flexibility in rapidly changing collaborations and scientific environments. 
+
+
+### New organization 
+
+We have introduced two new management units: 
+
+- **data spaces**
+- **services centers** 
+
+**Data space** is a new unit where you attached and manage one to many labs for simplified cross-lab scientific coordination, reporting and resource management. The intention is to simplify and unify management of lab portfolios. For example, this allows you to attach new labs to your data space via simple [lab orders](/agreements/downloads/#lab-order).
+
+**Services center** is a new unit that regulate how cloud resources are controlled, priced and billed across attached data spaces and attached labs. These centers signs the [services agreement](/agreements/overview/#services-agreement). Data spaces are attached to a services center via simple data space orders.
+ 
+![Unit hierarchy](./services/images/hunt-cloudservice-units-overview.png "HUNT Cloud unit hierarchy")
+
+To illustrate, if a department is registered as a services center, research centers and research groups may deploy their own data spaces via a simple [data space orders](/agreements/downloads/#data-space-order), and their scientists may deploy their own labs via a simple [lab orders](/agreements/downloads/#lab-order). 
+
+### New subscriptions 
+
+We 
+
+**WHITE**
+
+**ORANGE**
+
+**BLUE**
+
+
+
+### New pricing 
+
+Flexibility, long-term, on-demand. Pay per day. 
+
+
+
+
+
+
+
+
+## Getting started
+
+### Upgrade agreements
+
+::: tip Checklist for a successful upgrade
+
+* A data processor agreement or "enighetsavtaler" is in place between my department / host institution and HUNT Cloud.
+* The new services agreement is in place between my department / host institution and HUNT Cloud.
+* The new data space order is signed for my research groups or research center. 
+* The new lab order is signed by my lab leader that includes the purpose of my processing.
+
+:::
+
+[Click here](agreements/overview/) to read more about our new agreement structure. [Contact us](/contact) us to get going with the new services agreement and to check status on the data processor agreement for your host institution.
+
+### Estimate cost
+
+We know the new price list and the various options can difficult to get around. To get going you may want to read our [services specification](/services/specifications) before you head to the [price list](/prices/pricelist). 
+
+We have included a few [price examples](/prices/examples/) for common uses cases and a [frequently asked questions](/prices/faq) to guide you on your way. 
+
+For existing labs, [contact us](/contact) for specific cost estimates for your environment. And for new labs, [contact us](/contact) us for assistance on price estimates for your projects. 
+
+### More information 
+
+[Contact us](/contact) if you are wondering how to approach the new services and price models and/or if you need more information.
+
 
 ::: warning Important dates 
 
@@ -19,10 +113,26 @@ description: This page contains information on the new services model in HUNT Cl
 :::
 
 
-[[toc]]
 
 
-## New changes
+Well aware of the law of conservation of complexity ([Tesler's law](https://en.wikipedia.org/wiki/Law_of_conservation_of_complexity)), there is an inherent amount of complexity with scientific cloud services for sensitive data that we cannot remove or hide. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Detailed list of changes
 
 The following changes was introduced 1 July 2021:
 
@@ -80,30 +190,3 @@ We expect to adjust the services model based on input from the [next ting week](
 
 
 
-
-## Getting started
-
-### Agreement upgrades
-
-::: tip Checklist for a successful upgrade
-
-* A data processor agreement or "enighetsavtaler" is in place between my department / host institution and HUNT Cloud.
-* The new services agreement is in place between my department / host institution and HUNT Cloud.
-* The new data space order is signed for my research groups or research center. 
-* The new lab order is signed by my lab leader that includes the purpose of my processing.
-
-:::
-
-[Click here](agreements/overview/) to read more about our new agreement structure. [Contact us](/contact) us to get going with the new services agreement and to check status on the data processor agreement for your host institution.
-
-### Price estimates
-
-We know the new price list and the various options can difficult to get around. To get going you may want to read our [services specification](/services/specifications) before you head to the [price list](/prices/pricelist). 
-
-We have included a few [price examples](/prices/examples/) for common uses cases and a [frequently asked questions](/prices/faq) to guide you on your way. 
-
-For existing labs, [contact us](/contact) for specific cost estimates for your environment. And for new labs, [contact us](/contact) us for assistance on price estimates for your projects. 
-
-### More information 
-
-[Contact us](/contact) if you are wondering how to approach the new services and price models and/or if you need more information.
