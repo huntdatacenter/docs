@@ -27,6 +27,8 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
+After installation is done, log out and log in again to be able to use your conda setup.
+
 ### Set up Bioconda and conda-forge channels
 
 To find packages in Conda you need to configure relevant channels.
