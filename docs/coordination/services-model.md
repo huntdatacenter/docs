@@ -7,7 +7,7 @@ description: This page contains information on the services model in HUNT Cloud.
 
 # New services model
 
-**The new services model in HUNT Cloud was introduced 1 July 2021. The aim is to simplify your path to complex cloud powers. The result is a new way to manage digital laboratories. The upgrade introduces changes for all users.**
+**The new services model in HUNT Cloud was introduced 1st July, 2021. The aim is to simplify your path to complex cloud powers. The result is a new way to manage digital laboratories. The upgrade introduces changes for all users.**
 
 ::: tip Summary
 
