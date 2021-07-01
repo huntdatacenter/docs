@@ -80,7 +80,7 @@ One intention with data spaces is to simplify coordination and knowledge transfe
 
 ![Coordinator roles](./services/images/hunt-cloud-data-space-roles.png "HUNT Cloud data space coordinator roles")
 
-* The **compliance coordinator** is our point of contact for issues related to agreements inside the data space. The compliance coordinator can place lab orders and acts as deputy for other contacts when needed, including for the data space leader.
+* The **compliance coordinator** is our point of contact for issues related to agreements and compliance evaluations such as DPIA and ethical approvals inside the data space. The compliance coordinator can place lab orders and acts as deputy for other contacts when needed, including for the data space leader.
 
 * The **data coordinator** is the new point of contact for issues related to data inside the data space, including transfers, archiving, backups and similar for labs under the data space.
 
