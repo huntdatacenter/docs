@@ -215,7 +215,7 @@ We will encourage all labs to migrate over to the new agreement model as soon as
 
 ## Getting started
 
-Well aware of [Tesler's law](https://en.wikipedia.org/wiki/Law_of_conservation_of_complexity) we know that this may feel complex. [Contact us](/contact) if you plan to bundle your labs into a data space so we can guide you in the process. 
+Well aware of [Tesler's law](https://en.wikipedia.org/wiki/Law_of_conservation_of_complexity) we know that this may feel complex. [Contact us](/contact) when you plan to bundle your labs into a data space so we can guide you in the process. 
 
 
 ### Upgrade agreements
