@@ -164,7 +164,13 @@ Three notes on the transition to new price model:
 
 We expect prices and services specifications to be adjusted three times per year based on discussions in our [ting weeks](/tingweek/).
 
-### Timeline
+
+### Continuous development
+
+For the record, making a new model for how to organize digital laboratories and digital science is hard. We have given this our best shot in a direction that we think will elevate the scientific impact of our community. However, this is by no means perfect. The current model must be seen as work in progress under our continuous development principle. We have already allocated time in our next [ting week](/tingweek/) so we together can think up how to further improve the model and such advance our common quest to elevate data for a better world! 
+
+
+## Timeline
 
 We will encourage all labs to migrate over to the new agreement model as soon as possible. All use will need to use the new services model from January 1, 2022, to continue your service. Under the "rule of no surprises", we will phase in the new model with the following key dates: 
 
@@ -186,10 +192,6 @@ We will encourage all labs to migrate over to the new agreement model as soon as
 * Lab labs needs to be migrated to the new agreement model to continue their services.
 
 
-
-### Continuous development
-
-For the record, making a new model for how to organize digital laboratories and digital science is hard. We have given this our best shot in a direction that we think will elevate the scientific impact of our community. However, this is by no means perfect. The current model must be seen as work in progress under our continuous development principle. We have already allocated time in our next [ting week](/tingweek/) so we together can think up how to further improve the model and such advance our common quest to elevate data for a better world! 
 
 
 
