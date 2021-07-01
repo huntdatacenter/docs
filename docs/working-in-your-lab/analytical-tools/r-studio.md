@@ -99,7 +99,7 @@ R
 The default version in Ubuntu is usually a few versions behind the newest R version available. Follow the code below if you need the newest version.
 
 ::: warning Please note
-Running dist-upgrade affects versions of all packages on your machine. This may break your or others environments.
+Running upgrade affects versions of all packages on your machine. This may break your or others environments.
 We recommend installing new R version using [Conda](/working-in-your-lab/analytical-tools/r-studio/#install-using-conda) instead.
 :::
 
@@ -114,7 +114,7 @@ gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
 
 # -- Update packages
 sudo apt update
-sudo apt dist-upgrade -y
+sudo apt upgrade
 sudo apt install r-base
 sudo apt autoremove -y
 
@@ -184,7 +184,8 @@ Remove your pin-file if you want to revert to the newest version.
 
 ```bash
 sudo rm /etc/apt/preferences.d/pin-r35
-sudo apt dist-upgrade
+sudo apt update
+sudo apt upgrade
 ```
 
 ## Install R Studio
