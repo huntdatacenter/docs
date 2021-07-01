@@ -97,7 +97,7 @@ module.exports = {
           isGroup: true,
           children: [
             "/coordination/",
-            "/coordination/new-services-model.md",
+            "/coordination/services-model.md",
             {
               title: "Compliance",
               text: "Compliance",
@@ -125,9 +125,7 @@ module.exports = {
               isGroup: true,
               children: [
 		"/coordination/prices/",
-                "/coordination/prices/pricelist.md",
-                "/coordination/prices/examples.md",
-                "/coordination/prices/faq.md"
+                "/coordination/prices/pricelist.md"
               ]
              }
            ]

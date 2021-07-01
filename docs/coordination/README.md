@@ -11,6 +11,8 @@ This page contains information aimed at science coordinators in HUNT Cloud, both
 
 ::: tip New services model
 
-We are introducing the new services model in 2021. [Click here](/coordination/new-services-model) to read how these changes may affect your lab.
+The new services model was introduced 1 July 2021. The intention is to simplify access to predictable services. All labs wil be affected. 
 
-::: 
+[Click here to learn more](/services/services-model) 
+
+:::
