@@ -222,7 +222,7 @@ The below guide will therefore not work on home-machines.
 
 ### Download the latest software version
 
-Search [www.rstudio.com](https://www.rstudio.com/products/rstudio/download/#download) for the latest version in accordance with your operating system (e.g. Ubuntu 16.04 xenial).
+Search [www.rstudio.com](https://www.rstudio.com/products/rstudio/download/#download) for the latest version in accordance with your operating system (e.g. Ubuntu 18.04 Bionic).
 The below text is an example code which you may cut and paste into your shell:
 
 ```bash
