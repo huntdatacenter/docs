@@ -11,13 +11,13 @@ description: This page contains information on the services model in HUNT Cloud.
 
 ::: tip Summary
 
-* The service model introduces a new way to control and manage labs via "Services centers" and "Data spaces". This setup do also include a new way to price services in labs.  
+* The service model introduces a new way to control and manage labs via "Services centers" and "Data spaces". This setup also includes a new way to price services in labs.  
 
 * Our intention is to simplify access to labs and data spaces as soon as a service center is established, and to ensure predictable prices that allow for both access to flexible resources and sustainable services.  
  
-* We will kindly ask all labs to sign a new set of agreements as soon as possible, and to help us organize your activities into data spaces and services center. This needs to be completed before January 2022.  
+* We will kindly ask all labs to sign a new set of agreements as soon as possible, and to help us organize your activities into data spaces and services centers. This needs to be completed before January 2022.  
 
-* New labs will be required to use the new agreements from July 2021. Existing labs needs to upgrade from October to adjust resources, and all labs needs to upgrade before January 2022 to continue their services.  
+* New labs will be required to use the new agreements from July 2021. Existing labs need to upgrade from October to adjust resources, and all labs need to upgrade before January 2022 to continue their services.  
 
 [Click here to get started](/services/services-model/#getting-started)
 
@@ -40,7 +40,7 @@ Table of contents:
 
 ## About
 
-Scientists deserve elegant and predictable services on their quest to change the world to the better! And they deserve solutions that brings people together for fun and impactful collaborations.
+Scientists deserve elegant and predictable services on their quest to change the world for the better! And they deserve solutions that bring people together for fun and impactful collaborations.
 
 As our cloud community has been rapidly growing in both size and complexity, we saw a possibility to rethink our services model to keep up with the much appreciated growth. We are humble to now present the results.
 
@@ -51,7 +51,7 @@ The result is an upgraded services model that includes a new way to organize and
 
 ### New management model
 
-We are introducing two new management units: Services centers and Data spaces. The intention of the new organization is to: (1) simplify onboarding of new labs, (2) simplify management of many labs under one research groups, and (3) separate contractual services aspects from scientific activities. 
+We are introducing two new management units: Services centers and Data spaces. The intention of the new organization is to: (1) simplify onboarding of new labs, (2) simplify management of many labs under one research group, and (3) separate contractual services aspects from scientific activities. 
  
 ![Unit hierarchy](./services/images/hunt-cloud-service-units-overview.png "HUNT Cloud unit hierarchy")
 
@@ -59,7 +59,7 @@ We are introducing two new management units: Services centers and Data spaces. T
 
 **Data space** is a new cloud unit that is intended for the research center and research group level to simplify management of one to many labs, including cross-lab coordination, reporting and billing. Data spaces are now attached to a services center via a simple [data space order](/agreements/downloads/#data-space-order).
 
-**Lab** is still the same thing where your can collaborate, store and analyze your inside a project. No changes, except that the registration of new labs are simplified into a quick to complete [lab order](/agreements/downloads/#lab-order).
+**Lab** is still the same thing: you collaborate, store and analyze your data inside a project. No changes, except that the registration of new labs are simplified into a quick to complete [lab order](/agreements/downloads/#lab-order).
 
 To summarize, the separation of scientific aspects (data spaces and labs) from contractual complexity (data controller and services centers) allow for a simplified and quick way to boot up your data space and add new labs into your portfolio. The practical aspect is that we will need new agreements with all labs, and new agreements with data spaces and services centers. 
 
@@ -103,17 +103,17 @@ A second goal of this setup is to enhance exchanges of scientific coordination e
 
 ### New services model
 
-We are introducing a new [services specifications](/services/specifications/) with the intention to increase the predictability and to tune expectations of available services. The document is attached to the services agreement and includes the following service categories:
+We are introducing new [services specifications](/services/specifications/) with the intention to increase the predictability and to tune expectations of available services. The document is attached to the services agreement and includes the following service categories:
 
 ![HUNT Cloud services](./services/images/hunt-cloud-services.png "HUNT Cloud services")
 
-The services specifications includes three new [data space subscription levels](/services/overview/#data-space) named by colors. These differ in their individual service availability, resource prioritization, costs for individual resources etc. In short, 
+The services specifications include three new [data space subscription levels](/services/overview/#data-space) named by colors. These differ in their individual service availability, resource prioritization, costs for individual resources etc. In short, 
 
 ![Data space subscription levels](./services/images/hunt-cloud-data-space-subscriptions.png "HUNT Cloud data space subscription levels")
 
 * The **WHITE** data space subscription is intended to help small research groups into scientific cloud computing.
 
-* The **ORANGE** data space subscription is intended to help medium sized research groups and small center manage their portfolio of labs and benefit from volume discounts of storage.
+* The **ORANGE** data space subscription is intended to help medium sized research groups and small centers manage their portfolio of labs and benefit from volume discounts of storage.
 
 * The **BLUE** data space subscription is intended to help large research groups and centers benefit from unified portfolio management, volume discounts on storage, cost-effective access to community resources (BLUE machines) and participation in our continuous development.
 
@@ -126,21 +126,21 @@ The services specifications includes three new [data space subscription levels](
 
 ### New price model
 
-Our passion is to elevate data for a better world. To do so, we have chosen to spend our time helping scientists with digital tools on their quest. Money is a means towards this goal, not an end. We are part of public university that run these services with zero profit. 
+Our passion is to elevate data for a better world. To do so, we have chosen to spend our time helping scientists with digital tools on their quest. Money is a means towards this goal, not an end. We are part of a public university that runs these services with zero profit. 
 
 In that context, we have been thinking hard about how to best establish a model that takes into account the diverse needs of our community members. 
 
 ![Price bindings](./services/images/hunt-cloud-prices-bindings.png "HUNT Cloud price bindings")
 
-Our solution is a model that try to balance the need for financial financial predictability with scientific flexibility with three different prices: commitment prices, on-demand prices and BLUE prices. 
+Our solution is a model that tries to balance the need for financial financial predictability with scientific flexibility with three different prices: commitment prices, on-demand prices and BLUE prices. 
 
 * **COMMITMENT** prices allow you to prepaid for services for one or three years. The intention is to allow for stability and predictable prices on services that you rely on.
 
-* **ON-DEMAND** prices allow you the to allocated resource that you pay for on a "per day" basis. The intention is to allow for flexibility in accordance with shifting needs in your research project.
+* **ON-DEMAND** prices allow you to allocate resources that you pay for on a "per day" basis. The intention is to allow for flexibility in accordance with shifting needs in your research project.
 
 * **BLUE** prices are reduced prices available on the BLUE data space subscription level. The intention is to allow for utilization of "common pool resources" and allow for low-cost flexibility.
 
-For storage, we have a **VOLUME DISCOUNT** that are automatically calculated from all allocated terabytes across all labs attached to one data space. The intention is to encourage large data collections in your lab portfolio.
+For storage, we have a **VOLUME DISCOUNT** that is automatically calculated from all allocated terabytes across all labs attached to one data space. The intention is to encourage large data collections in your lab portfolio.
 
 ![Price elements](./services/images/hunt-cloud-prices-elements.png "HUNT Cloud price elements")
 
@@ -167,18 +167,18 @@ We expect prices and services specifications to be adjusted three times per year
 
 ### Continuous development
 
-For the record, making a new model for how to organize digital laboratories and digital science is hard. We have given this our best shot in a direction that we think will elevate the scientific impact of our community. However, this is by no means perfect. The current model must be seen as work in progress under our continuous development principle. We have already allocated time in our next [ting week](/tingweek/) so we together can think up how to further improve the model and such advance our common quest to elevate data for a better world! 
+For the record, making a new model for how to organize digital laboratories and digital science is hard. We have given this our best shot in a direction that we think will elevate the scientific impact of our community. However, this is by no means perfect. The current model must be seen as work in progress under our continuous development principle. We have already allocated time in our next [ting week](/tingweek/) so we together can think up how to further improve the model and advance our common quest to elevate data for a better world! 
 
 
 ## Timeline
 
-We will encourage all labs to migrate over to the new agreement model as soon as possible. All use will need to use the new services model from January 1, 2022, to continue your service. Under the "rule of no surprises", we will phase in the new model with the following key dates: 
+We will encourage all labs to migrate over to the new agreement model as soon as possible. All users will need to use the new services model from January 1, 2022, to continue your service. Under the "rule of no surprises", we will phase in the new model with the following key dates: 
 
 ![Month](./services/images/hunt-cloud-date-july-2021.png "Month")
 
 * New services model announced.
 * Onboardings of new organizations will from this date use the new agreement model. Prices for new organizations will be metered and billed from 1 October 2021.
-* Current services and resources in existing labs per July 1 will be given a pilot period until 1 January 2022 before the new price are metered and billed. 
+* Current services and resources in existing labs per July 1 will be given a pilot period until 1 January 2022 before the new prices are metered and billed. 
 * New services and resource adjustments in existing labs after July 1 will be metered and billed from 1 October 2022.
 
 ![Month](./services/images/hunt-cloud-date-october-2021.png "Month")
@@ -224,13 +224,13 @@ You will need to migrate to the new agreement model, at the latest by 1 January 
 
 Here are a list of the agreements that we need to update and the upgrade process: 
 
-* **1. Check your data processor agreement status**: Depending on the agreement age, the new agreement model may require updates to the data processor agreement (before 2020). [Contact us](/contact) for a check the agreement status for your organization. 
+* **1. Check your data processor agreement status**: Depending on the agreement age, the new agreement model may require updates to the data processor agreement (before 2020). [Contact us](/contact) to check the agreement status for your organization. 
 
 * **2. New services agreement**: Identify your desired services center level (typically departments), download the [cloud services agreement form](/agreements/overview/#required-information-2), add information to the text file and [return to us](/contact) for agreement rendering. The rendered agreement will need co-signature from your data controller and services center leader.
 
 * **3. New data space order**: Download the new [data space order](/agreements/downloads/#data-space-order), complete the fields and [return to us](/contact) for registration. The new lab order requires co-signature from the services center leader. 
 
-* **4. New lab order**: Download the new [lab order](/agreements/downloads/#lab-order) with purpose of processing, complete the fields and [return to us](/contact) for registration. The new lab order requires co-signature from the data space leader. 
+* **4. New lab order**: Download the new [lab order](/agreements/downloads/#lab-order) with the purpose of processing, complete the fields and [return to us](/contact) for registration. The new lab order requires co-signature from the data space leader. 
 
 
 
