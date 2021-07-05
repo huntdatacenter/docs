@@ -45,3 +45,19 @@ code {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+
+/* set logo width on widescreen mode of phones */
+@media (max-width: $MQMobile) {
+  .logo {
+    height: auto;
+    width: 80%;
+  }
+}
+
+/* set logo width on phones */
+@media (max-width: $MQMobileNarrow) {
+  .logo {
+    height: auto;
+    width: 70%;
+  }
+}
