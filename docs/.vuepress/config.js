@@ -1,6 +1,7 @@
 module.exports = {
   // https://v1.vuepress.vuejs.org/config/#title
-  title: "HUNT Cloud Documentation",
+  // disabled when using logo
+  title: null,
   // https://v1.vuepress.vuejs.org/config/#description
   description: "HUNT Cloud Documentation",
   // https://v1.vuepress.vuejs.org/config/#dest
@@ -47,6 +48,8 @@ module.exports = {
     editLinks: true,
     editLinkText: "Help us improve this page!",
     lastUpdated: true,
+    // https://vuepress.vuejs.org/theme/default-theme-config.html#navbar-logo
+    logo: "/img/hunt-cloud-logo.svg",
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
     // TODO remove nav key in vuepress 2
     nav: [{
@@ -113,7 +116,7 @@ module.exports = {
               text: "Services",
               isGroup: true,
               children: [
-		"/coordination/services/overview.md",      
+                "/coordination/services/overview.md",
                 "/coordination/services/specifications.md",
                 "/coordination/services/machine-types.md",
                 "/coordination/services/responsiveness.md"
@@ -124,7 +127,7 @@ module.exports = {
               text: "Prices",
               isGroup: true,
               children: [
-		"/coordination/prices/",
+                "/coordination/prices/",
                 "/coordination/prices/pricelist.md"
               ]
              }
