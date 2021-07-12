@@ -17,7 +17,7 @@ This page gives you an introduction to our prices. You total cost will include a
 
 ### Background 
 
-Our passion is to inspire scientists to elevate data for a better world. To do so, we have chosen to spend our time helping digital tools for your quest. Money is a means towards this goal - not an end. We are part of a public university that runs these services with zero profit. 
+Our passion is to inspire scientists to elevate data for a better world. To do so, we have chosen to spend our time enabling your with digital tools for your quest. Money is a means towards this goal - not an end. We are part of a public university that runs these services with zero profit. 
 
 ### Overview
 
