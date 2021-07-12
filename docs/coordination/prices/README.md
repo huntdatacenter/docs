@@ -8,30 +8,50 @@ description: This page gives an introduction to the pricing of services in HUNT 
 
 # Introduction to pricing
 
-This page gives an introduction to the pricing of services in HUNT Cloud. The information should be read together with the [services specifications](/services/specifications) that details the services that are included in the price list. And the [price list](/prices/pricelist) that details the prices of individual service units. 
+This page gives you an introduction to our prices. You total cost will include a combination of fixed subscription costs and flexible costs for attached individual services such as storage and computation.
 
 [[toc]]
 
+## Context
 
-## Overview
 
-The cost consist of a combination of fixed subscription costs and running costs for the resources your attached to your labs.
+### Background 
 
-The fees across all labs inside one data space are summarized and billed to the data spaces' billing accounts. 
+Our passion is to inspire scientists to elevate data for a better world. To do so, we have chosen to spend our time helping digital tools for your quest. Money is a means towards this goal - not an end. We are part of a public university that runs these services with zero profit. 
+
+### Overview
+
+Your total cost will include a combination of fixed subscription costs and running costs for the resources your attached to your labs. The fees across all labs inside one data space are summarized and billed to the data spaces' billing accounts. 
+
+### Supporting documents
+
+The information should be read together with the [services specifications](/services/specifications) that details the services that are included in the price list. And the [price list](/prices/pricelist) that details the prices of individual service units.
+
+
 
 ## Subscriptions
 
-Data spaces and labs are deployed as subscription services that are prices for one year or three years. You will need an active data space subscription to add a lab subscription. And you need and active lab subscription to allocate individual services inside a lab.
+Data spaces and labs are deployed as subscription services that are prices for one year or three years. 
+
+### Data space
+
+You will need an active data space subscription to add a lab subscription. 
 
 | Commitment length: | 1 YEAR | 3 YEAR |
 | ---- | ---- | ---- |
 | WHITE data space | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | ORANGE data space | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | BLUE data space* | ![yes](./images/yes-30.png "yes") | ![no](./images/no-30.png "no") |
-| Lab | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 
 *) The BLUE data space subscription level was introduced 1 July 2021. The subscription level includes access to highly affordable BLUE machines. We are awaiting longer commitments until we have improved user data for long term price calculations.
 
+### Lab
+
+And you need and active lab subscription to allocate individual services inside a lab.
+
+| Commitment length: | 1 YEAR | 3 YEAR |
+| ---- | ---- | ---- |
+| Lab | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 
 
 ## Individual services
