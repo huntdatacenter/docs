@@ -74,6 +74,8 @@ GPU accelerators may be added to the COMMITMENT and ON-DEMAND machine types. The
 
 The total number of terabytes are summarized across all labs attached to one data space (billing account). We use this combined storage allocation to calculate the price tiers. The effect is that your terabyte price drops as your data grows. Storage may be consumed as prepaid one or three years COMMITMENT storage, or as a daily pay-as-you-go cost for ON-DEMAND storage. Prepaid and on-demand storage may be combined within data spaces and labs. Free quota or pilot period storage are not included in the terabytes used in the calculations.
 
+## Others
+
 ### Metering
 
 The metering sections in the [services specifications](/services/specifications) specify how individual service units in the price lists are are measured (metered).
