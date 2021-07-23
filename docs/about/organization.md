@@ -25,5 +25,5 @@ The Director of HUNT Cloud, [Oddgeir Lingaas Holmen](https://www.ntnu.edu/employ
 
 ## Affiliation
 
-HUNT Cloud is part of [HUNT Research Centre](https://www.ntnu.edu/hunt) which is affiliated to the [Department of Public Health and Nursing](https://www.ntnu.edu/ism) (ISM) at the [Faculty of Medicine and Health Sciences](https://www.ntnu.edu/mh) (MH) at the [Norwegian University of Science and Technology](https://www.ntnu.edu) (NTNU), Trondheim, Norway.
+HUNT Cloud is operated by [HUNT Research Centre](https://www.ntnu.edu/hunt) which is part of the [Department of Public Health and Nursing](https://www.ntnu.edu/ism) (ISM) at the [Faculty of Medicine and Health Sciences](https://www.ntnu.edu/mh) (MH) at the [Norwegian University of Science and Technology](https://www.ntnu.edu) (NTNU), Trondheim, Norway.
 
