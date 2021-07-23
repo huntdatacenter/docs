@@ -90,7 +90,8 @@ module.exports = {
           children: [
             "/about/ting-week.md",
             "/about/policies.md",
-            "/about/certificates.md"
+            "/about/certificates.md",
+            "/about/organization.md"
           ]
         },
         {
