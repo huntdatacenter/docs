@@ -90,8 +90,7 @@ module.exports = {
           children: [
             "/about/ting-week.md",
             "/about/policies.md",
-            "/about/certificates.md",
-            "/about/journey.md"
+            "/about/certificates.md"
           ]
         },
         {
@@ -99,7 +98,6 @@ module.exports = {
           text: "Coordination",
           isGroup: true,
           children: [
-            "/coordination/",
             "/coordination/services-model.md",
             {
               title: "Compliance",
