@@ -76,7 +76,7 @@ To summarize, the separation of scientific aspects (data spaces and labs) from c
 
 ### New coordinator roles
 
-One intention with data spaces is to simplify coordination and knowledge transfers between labs under the same research group or center. Based on discussions from our last two coordinator tings we are now introducing cross-lab coordinators for the following areas: 
+One intention with data spaces is to simplify coordination and knowledge transfers between labs under the same research group or center. Based on discussions from our last two coordinator tings we are now introducing [cross-lab coordinators](/coordinator/roles) for the following areas: 
 
 ![Coordinator roles](./services/images/hunt-cloud-data-space-roles.png "HUNT Cloud data space coordinator roles")
 
@@ -84,12 +84,11 @@ One intention with data spaces is to simplify coordination and knowledge transfe
 
 * The **data coordinator** is the new point of contact for issues related to data inside the data space, including transfers, archiving, backups and similar for labs under the data space.
 
-* The **services coordinator** is the new point of contact for issues related to cloud services and analytical tools, including configurations, adjustments and maintenance for labs under the data space.
+* The **technical coordinator** is the new point of contact for issues related to technical aspects for cloud services and analytical tools, including configurations, adjustments and maintenance for labs under the data space.
 
 * The **knowledge coordinator** is the new point of contact for knowledge transfers between lab users across labs under the data space, including know-hows related to user onboardings, common tasks, practical analytical setups, documentation etc.
 
 A second goal of this setup is to enhance exchanges of scientific coordination expertise between data spaces within similar roles. We are already looking forward to [Ting week #4](/tingweek/) in October!
-
 
 
 
