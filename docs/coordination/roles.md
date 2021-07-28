@@ -13,7 +13,7 @@ description: This page contains information on the coordinator roles in HUNT Clo
 
 Our main intention with the roles is to unify activities and simplify knowledge transfers across labs under the same data space. 
 
-We also aim to use the roles to simplify knowledge transfers between coordinators within our community, and to structure feedback on our future development in the [coordinator tings](/tingweek/). And last, we want to use the experience to advocate for the importance of scientific coordinators in high-impact data-driven science.
+Our goal is also to use the roles to ease knowledge transfers between coordinators within our community, to structure feedback on our [administrative development](/tingweek/#coordinator-ting), and to use the experience to jointly champion the importance of well functioning scientific coordination in high-impact data-driven science.
 
 
 ### Compliance coordinator
