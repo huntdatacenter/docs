@@ -100,13 +100,14 @@ module.exports = {
           isGroup: true,
           children: [
             "/coordination/services-model.md",
+            "/coordination/roles.md",
             {
               title: "Compliance",
               text: "Compliance",
               isGroup: true,
               children: [
                 "/coordination/compliance/overview.md",
-                "/coordination/compliance/downloads.md",
+		"/coordination/compliance/downloads.md",
                 "/coordination/compliance/risks.md"
               ]
             },
