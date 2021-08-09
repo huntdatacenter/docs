@@ -7,15 +7,15 @@ description: This page contains information on the coordinator roles in HUNT Clo
 
 # Coordinator roles
 
-**High impact science needs smooth and seamless coordination to fly. Scientific coordinators are the personnel that make this magic dust. We have established several coordinator  roles to help with this work.**
+**High impact science needs smooth and seamless coordination. Scientific coordinators are the personnel that make this magic dust. We have defined coordinator roles to help this important work fly.**
 
 [[toc]]
 
 Our main intention with the roles is to unify activities and simplify knowledge transfers across labs under the same data space. 
 
-Our goal is also to use the roles to ease knowledge transfers between coordinators within our community, to structure feedback on our administrative development in the [coordinator tings](/tingweek/#coordinator-ting), and to use the experience to jointly champion the importance of well functioning scientific coordination in high-impact data-driven science.
+In addition, we intend to use the roles to ease knowledge transfers between coordinators within our community, to structure feedback on our administrative development in the [coordinator tings](/tingweek/#coordinator-ting), and to use the experience to jointly champion the importance of well functioning scientific coordination in high-impact data-driven science.
 
-Names are linked to roles in [data space orders](/agreements/overview/#data-space-order) and [lab orders](/agreements/overview/#lab-order).
+Individuals are formally attached to their roles in the [data space orders](/agreements/overview/#data-space-order) and [lab orders](/agreements/overview/#lab-order).
 
 ### Compliance coordinator
 

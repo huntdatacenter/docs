@@ -40,7 +40,7 @@ Table of contents:
 
 ## About
 
-Scientists deserve elegant and predictable services on their quest to change the world for the better! And they deserve solutions that bring people together for fun and impactful collaborations.
+Scientists deserve elegant and predictable services on their quest to change the world for the better! And they deserve solutions that bring people together for fun and significant collaborations.
 
 As our cloud community has been rapidly growing in both size and complexity, we saw a possibility to rethink our services model to keep up with the much appreciated growth. We are humble to now present the results.
 
@@ -59,7 +59,7 @@ We are introducing two new management units: Services centers and Data spaces. T
 
 **Data space** is a new cloud unit that is intended for the research center and research group level to simplify management of one to many labs, including cross-lab coordination, reporting and billing. Data spaces are now attached to a services center via a simple [data space order](/agreements/downloads/#data-space-order).
 
-**Lab** is still the same thing: you collaborate, store and analyze your data inside a project. No changes, except that the registration of new labs are simplified into a quick to complete [lab order](/agreements/downloads/#lab-order).
+**Lab** is still the same place where you can explore and discover together with your team: you collaborate, store and analyze your data inside a digital laboratory. No changes, except that the registration of new labs are simplified into a quick to complete [lab order](/agreements/downloads/#lab-order).
 
 To summarize, the separation of scientific aspects (data spaces and labs) from contractual complexity (data controller and services centers) allow for a simplified and quick way to boot up your data space and add new labs into your portfolio. The practical aspect is that we will need new agreements with all labs, and new agreements with data spaces and services centers. 
 
@@ -125,7 +125,7 @@ The services specifications include three new [data space subscription levels](/
 
 ### New price model
 
-Our passion is to elevate data for a better world. To do so, we have chosen to spend our time helping scientists with digital tools on their quest. Money is a means towards this goal, not an end. We are part of a public university that runs these services with zero profit. 
+Our purpose is to elevate data for a better world. To do so, we have chosen to spend our time helping scientists with digital tools on their quest. Money is a means towards this goal, not an end. We are part of a public university that runs these services with zero profit. 
 
 In that context, we have been thinking hard about how to best establish a model that takes into account the diverse needs of our community members. 
 
@@ -166,7 +166,7 @@ We expect prices and services specifications to be adjusted three times per year
 
 ### Continuous development
 
-For the record, making a new model for how to organize digital laboratories and digital science is hard. We have given this our best shot in a direction that we think will elevate the scientific impact of our community. However, this is by no means perfect. The current model must be seen as work in progress under our continuous development principle. We have already allocated time in our next [ting week](/tingweek/) so we together can think up how to further improve the model and advance our common quest to elevate data for a better world! 
+For the record, making a new model for how to organize digital laboratories and digital science is hard. We have given this our best shot in a direction that we think will elevate the scientific significance of our community. However, this is by no means perfect. The current model must be seen as work in progress under our continuous development principle. We have already allocated time in our next [ting week](/tingweek/) so we together can think up how to further improve the model and advance our common quest to elevate data for a better world! 
 
 
 ## Timeline

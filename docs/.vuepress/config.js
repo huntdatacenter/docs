@@ -91,6 +91,7 @@ module.exports = {
             "/about/ting-week.md",
             "/about/policies.md",
             "/about/certificates.md",
+            "/about/activities.md",
             "/about/organization.md"
           ]
         },
