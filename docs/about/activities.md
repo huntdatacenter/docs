@@ -15,7 +15,7 @@ This page contains information on some of the backstage activities that we do in
 In short, we aim to blend humanities, technologies, data and administrative ideas into our day-to-day activities. 
 
 
-::: tip Job openings
+::: tip Openings
 
 From time to time, we have job openings for longer or shorter commitments. [Contact us](/contact) if you find one or more of these activities interesting and would like to join us on the endeavor of enabling data for a better world.
 
