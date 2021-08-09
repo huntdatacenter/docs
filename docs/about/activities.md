@@ -10,17 +10,14 @@ description: This page gives an overview of the administrative activities that m
 **There are few blue-prints and how-to guides on the activities that are needed to develop digital laboratories. This makes for a fun quest filled with challenges.**
 
 
-This page contains information on the behind-the-scene activities that we do in HUNT Cloud that collectively provide your cloud experiences. When that is said, we don't build HUNT Cloud for our selves, we build it for our scientists. Jump over to our [services overview](/services/overview/) to see how these activities transform to services for our cloud community.
+This page contains information on some of the backstage activities that we do in HUNT Cloud to provide your cloud experiences. Jump over to our [services overview](/services/overview/) to see the front stage activities that is seen by our cloud community.
 
-**Humanities + technologies**
+In short, we aim to blend humanities, technologies, data and administrative ideas into our day-to-day activities. 
 
-Beside the obvious focus on technologies at scale in scientific computing on sensitive data, we think that today's main challenges are located within the [humanities](https://en.wikipedia.org/wiki/Humanities), such as philosophy, anthropology, education, law and politics. 
-
-We aim to reflect this by blending humanities, technologies, data and administrative in our day-to-day activities. 
 
 ::: tip Job openings
 
-[Contact us](/contact) if you find one or more of these activities interesting and would like to join us on the challenging endeavor of enabling data for a better world. From time to time, we have job openings for longer or shorter commitments. 
+From time to time, we have job openings for longer or shorter commitments. [Contact us](/contact) if you find one or more of these activities interesting and would like to join us on the endeavor of enabling data for a better world.
 
 :::
 
@@ -30,24 +27,22 @@ We aim to reflect this by blending humanities, technologies, data and administra
 
 ## Humanities
 
-Since we think today's main challenges in scientific computing are located within the humanities, let's start with some of the tings we invest time on.
+Beside the obvious focus on technologies at scale in scientific computing on sensitive data, we think that today's main challenges are located within the humanities, such as philosophy, anthropology, education, law and politics. So, let's start with some of such that we invest time on.
 
 ### Language
 
-Language shapes the way we understand ourselves, each other and the scientific world around us. Many of the words we use in science today has evolved to describe our activities. 
+Language shapes the way we understand ourselves, each other and the scientific world around us. Many of the words we use in science has been crafted to describe activities and equipment we today take for granted. 
 
-To illustrate, the word [laboratory](https://www.etymonline.com/word/laboratory) was introduced in the 17th century as a place to do philosophical experiments (this was before the word [science](https://www.etymonline.com/word/science) was used for such activities and most experiments happened in kitchens or basements, [Leviathan and the Air-Pump](https://en.wikipedia.org/wiki/Leviathan_and_the_Air-Pump) provides an exciting and highly recommended compilation of this development). 
+To illustrate, the word [laboratory](https://www.etymonline.com/word/laboratory) was introduced in the 17th century as a place to do "philosophical experiments" (this was before the word [science](https://www.etymonline.com/word/science) was used for such activities and most experiments happened in kitchens or basements. [Leviathan and the Air-Pump](https://en.wikipedia.org/wiki/Leviathan_and_the_Air-Pump) provides an exciting and highly recommended compilation of this development). 
 
-In the same way, we invest time developing the vocabulary, terms and definitions that we use to reason and describe our activities and objects in the (relatively new) field of data-driven science.
+In the same way, we invest time developing the vocabulary, terms and definitions that we use to reason and describe our activities and objects in data-driven science.
 
 
 ### Writing
 
-As we know, scientific writing is a specialized field where mastery may elevate your articles to new heights. Similarly, communicating valuable information about novel scientific instruments such as HUNT Cloud carefully crafted narratives and writing styles. 
+Scientific writing is a specialized field where mastery may elevate your articles to new heights. Similarly, communication about scientific instruments such as HUNT Cloud needs carefully crafted narratives and writing styles . 
 
-For example, how can we best improve our instructions for the [getting started](/getting-started/) pages to smooth the sometime large and complex steps that guards the gates to exciting discoveries?
-
-We invest time thinking about how to give, receive and exchange ideas and information about our works to various groups. This activity includes distinct writing styles for instructions, reflections and persuasions that may influence writings of such documents as user documentation (these web pages), usage reports, ethical applications, memos with ideas and opinions, risk communications for security and privacy, legal agreements, grants, presentations, operational procedures etc. 
+We invest time thinking about how to give, receive and exchange ideas and information about our works to various groups. This activity includes distinct writing styles for instructions, reflections and persuasions that may influence documents such as our user documentation (these web pages), reports, ethical applications, memos with ideas and opinions, risk communications for security and privacy, legal agreements, grants, presentations, operational procedures etc. 
 
 As an introduction to value based writing, we recommend the Lawrence McEnerney's lecture "[The Craft of Writing Effectively](https://www.youtube.com/watch?v=vtIzMaLkCaM&t=1473s)" from University of Chicago.
 
@@ -55,9 +50,9 @@ As an introduction to value based writing, we recommend the Lawrence McEnerney's
 
 The Norwegian writer Henrik Ibsen is often paraphrased with the quote "[A picture is worth a thousands words](https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words)" (Brand, 1865). We have the most admiration for those that master this clarity, from [Darwin](https://www.google.com/search?q=darwin+tree+sketch&tbm=isch&sclient=img) to [Disney](https://www.google.com/search?q=disneyland+early+sketch&tbm=isch&sclient=img). 
 
-We invest time thinking about and simplifying ideas and dreams into sketches that we use for communication, reflection and dialogue. 
+We invest time imagining and simplifying ideas and dreams into sketches that we use for communication, reflection and dialogue. 
 
-For example, we use conceptual sketches such as "[to the moon and back](https://assets.hdc.ntnu.no/assets/concepts/hunt-cloud-sketch-5757-to-the-moon-and-back-science.png)" to guide discussions on various aspects of supportive systems that is needed for successful data journeys, and ["complex data journeys"](https://assets.hdc.ntnu.no/assets/concepts/hunt-cloud-sketch-5767-complex-data-journeys.png) to guide discussions on scientific communities as value networks rather than value chains.
+To illustrate, we use conceptual sketches such as "[to the moon and back](https://assets.hdc.ntnu.no/assets/concepts/hunt-cloud-sketch-5757-to-the-moon-and-back-science.png)" to guide discussions on various back stage activities that needs to be in place for successful data journeys, and ["complex data journeys"](https://assets.hdc.ntnu.no/assets/concepts/hunt-cloud-sketch-5767-complex-data-journeys.png) to visualize our view of scientific communities as "[value networks](https://www.google.com/search?q=value+network)" rather than traditional value chains.
 
 
 ### Ethics
@@ -68,7 +63,7 @@ The branches of [medical ethics](https://en.wikipedia.org/wiki/Medical_ethics) a
 
 We do also rely on applied ethics such as the "[principle of proportionality](http://www.bioethics.net/2020/04/the-principle-of-proportionality-an-ethical-approach-to-resource-allocation-during-the-covid-19-pandemic/#:~:text=The%20principle%20of%20proportionality%20states,to%20the%20possible%20lives%20saved.)" in our implementation of security and privacy controls to balance the freedom to experiment with the need for control. And we rely on normative ethics, such as Plato's second book of the [Republic](https://en.wikipedia.org/wiki/Republic_(Plato)) that inspires our core values (wisdom, fairness, courage and moderation) that we promote as leading stars towards trustworthy services. 
 
-We support scientific coordinators in their writing of ethical research applications and teach courses in big data ethics. We are exploring activities in non-medical ethics, such as AI and surveillance. 
+We support scientific coordinators in their writing of ethical research applications and teach courses in big data ethics, and we are exploring activities in non-medical ethics, such as AI and surveillance. 
 
 Our ethical activities happens in close collaboration with the [Research Group for Medical Ethics (REMET)](https://www.ntnu.edu/ism/ethics) at NTNU.
 
@@ -76,24 +71,19 @@ Our ethical activities happens in close collaboration with the [Research Group f
 
 Sensitive data is governed by many laws that we need to take into account when we develop and maintain our services, ranging from country specific health laws to cross-country regulations (GDPR). Thus, we follow legal developments closely and enjoy reading recitals and legislative history, such as [The right to privacy](https://www.jstor.org/stable/1321160?seq=1#metadata_info_tab_contents) by Warren and Brandeis. 
 
-We develop and maintain our own portfolio of agreement templates that regulates both data processing, services and transfers in our cloud services. And we manages our inventory of signed agreements. 
+We develop and maintain our own portfolio of agreement templates that regulates both data processing, services and transfers in our cloud services. And we manages our inventory of signed agreements. These activities includes coordination with legal teams from our data controllers, and evaluations of compliance for agreements between external parties and our scientists, for example data export agreements from health studies. 
 
-These activities includes coordination with legal teams from our data controllers, and evaluations of compliance for agreements between external parties and our scientists, for example data export agreements from health studies. 
 We do spend time thinking about ways to simplify and smooth contractual work, including licenses on sensitive scientific data. And we participate in consultations on new laws and regulations on data-driven topics.
 
 Our legal activities happens in close collaboration with the legal team at NTNU. 
 
 ### History
 
-To study history is to study change. 
-
-Scientific computing change quickly, and history helps us understand such changes and how the scientific world we live in came to be. We invest time studying the development of science, technology and governance of common resources. 
+To study history is to study change. Scientific computing change quickly, and history helps us understand such changes and how the scientific world we live in came to be. We invest time studying and revisiting the development of science, technology and governance of common resources. 
 
 Tapping into such past human experiences both on the global, national and local level is a valuable source for both inspiration and identity. We try to utilize such insight when we develop our cloud experience. 
 
-For example, the concept of digital laboratories (labs) was evolved after studies of how physical laboratories came to be in the 17th century when scientific experiments lacked dedicated spaces (not far off from the digital experiments on sensitive data when we started out). The "[History of the beginnings of the laboratory in early modern world](https://brewminate.com/history-of-the-beginnings-of-the-laboratory-in-the-early-modern-world/)" by Henning Schmidgen is a good write-up on the topic. 
-
-And the collection of individual labs in intellectual units (data spaces) is inspired by the 19th century institutionalization of thematic activities, such as the [The Physiological Laboratory at Leipzig](https://www.nature.com/articles/003142a0) described in Nature in 1870 and the [NTNU Hydro Power Laboratory](https://norwegianscitechnews.com/2017/11/one-hundred-years-of-producing-energy-from-water/) from 1917 ([blueprint](https://uhs.vm.ntnu.no/items/1930)). 
+For example, the concept of digital laboratories (labs) was evolved after studies of how physical laboratories came to be in the 17th century when scientific experiments lacked dedicated spaces (not far off from the digital experiments on sensitive data when we started out). The "[History of the beginnings of the laboratory in early modern world](https://brewminate.com/history-of-the-beginnings-of-the-laboratory-in-the-early-modern-world/)" by Henning Schmidgen is a good write-up on the topic. Also relevant, the collection of individual labs in intellectual units (data spaces) was inspired by the 19th century institutionalization of thematic activities, such as the [The Physiological Laboratory at Leipzig](https://www.nature.com/articles/003142a0) described in Nature in 1870 and the [NTNU Hydro Power Laboratory](https://norwegianscitechnews.com/2017/11/one-hundred-years-of-producing-energy-from-water/) from 1917 ([blueprint](https://uhs.vm.ntnu.no/items/1930)). 
 
 ### Anthropology
 
@@ -108,13 +98,13 @@ Our cloud community (society) are made up of individuals from many backgrounds a
 
 A core mission of our activities is to bring the excitement of data-driven science to new generations of scientists, and to elevate the expertise of data-driven activities inside our community. 
 
-Therefore, we invest time on how to best acquire, preserve, develop and transfer knowledge of data-driven science and their scientific instruments. For example, the introduction of differentiated [coordinator roles](/coordinator/roles/) in data spaces is a result of this activity.
+Therefore, we invest time on how to best acquire, preserve, develop and transfer knowledge of data-driven science and their scientific instruments. 
 
-This activity includes knowledge transfers to new community members, the optimization of knowledge transfers between existing community members, and the acquisition of new expertise among members as their experience and responsibilities grow. This includes both for lab users, coordinators and scientific leaders, as well as internal knowledge management in our team. 
+This activity also includes knowledge transfers to new community members, between existing community members, and the acquisition of new expertise as the journey of our community members as their experience and responsibilities grow. This does include different approaches to lab users, coordinators and scientific leaders, as well as internal knowledge management in our team. 
 
 [KM essentials](https://www.youtube.com/watch?v=sVtMC3GkMr0) by Lead Lauren and Cindy Hubert gives a video introduction to the core challenges, and [Knowledge management at NASA](https://nscpolteksby.ac.id/ebook/files/Ebook/Business%20Administration/Knowledge%20Management%20in%20The%20Public%20Sector%20a%20Blueprint%20for%20Innovation%20in%20Government%20(2007)/11%20-%20Knowledge%20Management%20at%20NASA.pdf) give a history view of their challenges in an environment we admire. 
 
-We do also invest time on traditional teaching on master and PhD levels that includes lectures in big data ethics, value in data, big data biobanking, digital lab management, introduction to information security, and scientific publication and dissemination. We do also contribute public presentations on similar subjects.
+We do also invest time on popular presentations and traditional teaching on master and PhD levels that includes lectures in big data ethics, value in data, big data biobanking, digital lab management, introduction to information security, and scientific publication and dissemination. We do also contribute public presentations on similar subjects.
 
 
 
