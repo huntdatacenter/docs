@@ -11,6 +11,7 @@ description: This page gives an overview of the administrative activities that m
 
 
 This page contains information on the behind-the-scene activities that we do in HUNT Cloud that collectively provide your cloud experiences. When that is said, we don't build HUNT Cloud for our selves, we build it for our scientists. Jump over to our [services overview](/services/overview/) to see how these activities transform to services for our cloud community.
+
 **Humanities + technologies**
 
 Beside the obvious focus on technologies at scale in scientific computing on sensitive data, we think that today's main challenges are located within the [humanities](https://en.wikipedia.org/wiki/Humanities), such as philosophy, anthropology, education, law and politics. 
@@ -158,55 +159,7 @@ Our financial work do also include modeling and reporting, accounting strategies
 
 ### User experience
 
-Our users are our guest. 
-
-We want guest that have fun and the freedom to explore and discover. 
-
-Smile on a scientists face. 
-
-Great experiences that enables both the freedom to explore and to grow. 
-
-
-Give room to explore and grow. 
-
-
-We work hard so to provide great experiences to our users. 
-
-Happy scientists get more data activated for a better world.
-
-meaningful, usable, educational
-
-Our [user experience](https://en.wikipedia.org/wiki/Customer_experience) 
-
-under administrative task since this activities in particular is dovetailed with activities within humanities, data and technology.
-
-Provide great experiences... 
-
-Rely on an understand of our users, from various backgrounds and scientific fields. 
-
-all touchpoints within our user journeys. 
-
-From student, via master, PhD and post doctor, to scientific leader. 
-From limited analysis to gloabal big scientific. 
- 
-
-We invest time in investigating how our services provide value and fulfill scientific needs. 
-
-This includes user-friendliness and performance
-
-
-
-Consider to move under "administrative" since a mix of everything similar to goveranance... 
-
-At the end of a long list... the activity to that brings all together... Development of 
-
-Foresight and new trends. Capture before needed and 
-
-invest time on foresight and trends. Ideally, start to develop for future needs to at hand when needed. 
-
-Also closely linked to the others, policies or funding may define boundaries for what's possible. 
-
-
+Coming.
 
 
 
@@ -221,19 +174,7 @@ Also closely linked to the others, policies or funding may define boundaries for
 
 ## Data
 
-Data is our energy source.
-
-Link to gem stones and energy liquid in fantasy, and water energy in real life etc. in the metaphors. It is not gold as a resource, although it's something that can produce knowledge from which we thrive.
-
-
-
-Big science
-
-At scale... large archives... transfers... deliveries (exports) and analytics. 
-
-Storage and archiving of data. Including tape storage.
-Journeys.
-
+Coming.
  
 ### Transfer
 
@@ -260,90 +201,32 @@ Journeys.
 ## Technology
 
 
-
-
-
-
-Writing our own software. 
-
-- user experience and analytics, including internal system analytics. 
-- technology, full-cycle hardware and software management for our cloud services
-- knowledge management; user engagement 
-- foresight, nationally and internationally
-- compliance, internal and external audit programs. 
-- data security and user support - overarching for all activities. 
-
-Software development
-
-We use open source software for both our cloud orchestration, distributed storage and a range of supporting services. In addition, we develop and maintain our own software for the following functions: 
-
-Documetation and monitoring of cloud resource consumption in labs. This data The data is used as the basis for billing of lab consumption and in our resource reports. The data do
-also allow for advice on resource adjustments to data data space leaders and labs.
-
-
-This is our user and contract management software tailored for our data space and lab structure.
-The software user information, including activation and deactivation of user access. The software
-holds the potential to integrate with our cloud orchestration infrastructure for improved workflows
-and compliance reporting.
-
-This is our open-source software for distributed computing across fleets of cloud machines.
-The software is deployed inside labs where data has outgrown individual machine sizes while the complexity of code rewrites are kept to a minimum. BlueBox allows us to utilize smaller machines types
-that activates surplus resources more effectively.
-
-
-This is our software for data transfers, both between two labs inside HUNT Cloud (internal
-kistas) and between labs and external parties outside HUNT Cloud (external kistas). The software
-allows users to transfer data in accordance with strict security measures, such as «Helsenormen»
-
-This is our software for duplication of high value data to encrypted tapes for long-term
-preservation. The software ensures compliance and documentation of data and encryption keys.
-
-We do currently maintain packages in public repositories to simplify the installation of software used
-for large-scale genomics analysis: 3 packages in Biocoda that we control (R-Saige, Regenie, Savvy), and 3
-packages under publicly reviewed control in Conda-Forge (bgenix, r-metaskat, shrinkwrap).
+Coming.
 
 ### Compute 
 
-OpenStack. This has been our cloud computing orchestration platform since 2013. The open-source
-project is managed by the non-profit OpenStack Foundation
+Coming.
 
 ### Storage 
 
-Ceph. This has been our software storage platform since 2013. The open-source project is managed by
-Red Hat, North Carolina, US.
+Coming.
 
 ### Network
 
-Text.
+Coming.
 
 ### Applications
 
-MaaS and Juju. We have utilized MaaS for server provisioning and JuJu for application orchestration
-since 2016. Both open-source projects are managed by Canonical, London, UK
+Coming.
 
 
 ### Support
 
-Technical support.
+Coming.
 
 ### Equipment 
 
-We holds equipment in two locations in Trondheim Norway, full lice-cycle management. Include from procurement.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Coming.
 
 
 
