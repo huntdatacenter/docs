@@ -44,7 +44,7 @@ Scientific writing is a specialized field where mastery may elevate your article
 
 We invest time thinking about how to give, receive and exchange ideas and information about our works to various groups. This activity includes distinct writing styles for instructions, reflections and persuasions that may influence documents such as our user documentation (these web pages), reports, ethical applications, memos with ideas and opinions, risk communications for security and privacy, legal agreements, grants, presentations, operational procedures etc. 
 
-As an introduction to value based writing, we recommend the Lawrence McEnerney's lecture "[The Craft of Writing Effectively](https://www.youtube.com/watch?v=vtIzMaLkCaM&t=1473s)" from University of Chicago.
+As an introduction to value based writing, we recommend Lawrence McEnerney's lecture "[The Craft of Writing Effectively](https://www.youtube.com/watch?v=vtIzMaLkCaM&t=1473s)" from the University of Chicago.
 
 ### Drawing
 
@@ -89,7 +89,7 @@ For example, the concept of digital laboratories (labs) was evolved after studie
 
 Although the scientific study of humanity ([anthropology](https://en.wikipedia.org/wiki/Anthropology)) is more than a stretch for our activities, and a [debated](https://www.anthroencyclopedia.com/entry/science) topic on scientific activities in general, we believe that a holistic knowledge of human behavior, culture and societies is key to great scientific support systems. 
 
-An early example of this is [Beamtimes and Lifetimes](https://en.wikipedia.org/wiki/Beamtimes_and_Lifetimes) by Sharon Traweek studying the field of particle physics in Japan and USA. Her work describes among others the transition from a student into a full scientific community member. We invest time investigating how this translates to digital sciences and laboratories.
+An early example of this is [Beamtimes and Lifetimes](https://en.wikipedia.org/wiki/Beamtimes_and_Lifetimes) by Sharon Traweek studying the field of particle physics in Japan and USA. Her work describes among others the transition from a student into a full scientific community member. We invest time investigating the sociology of scientific knowledge and how this translates to digital sciences and laboratories.
 
 Our cloud community are made up of individuals from many backgrounds and countries that represent distinct and complex scientific cultures. We think it is important to invest time to develop improved understanding and sound knowledge of such nuances and differences, including participant observation, and use this knowledge to guide adaptation and development of digital sciences. 
 
