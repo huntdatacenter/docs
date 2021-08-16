@@ -8,62 +8,83 @@ description: This page list options for coordinators of risk management guidance
 
 # Risk management
 
-This page contains information for data controllers and compliance coordinators in data spaces on risk management assistance. 
+This page contains information to assist data controllers, compliance coordinators and lab coordinators on their quest to document and assess security and privacy risks for related to your scientific work. 
 
 [[toc]]
 
 
-::: warning Responsibilities
+## Responsibilities
 
-For the record, it is our responsibility to provide you with information so you can identify and make informed decisions about information security and privacy risks related to our services. Your data controller is responsible for the acceptance of residuals risks that you identify related to our services.
+It is our responsibility to provide information so you can identify and make informed decisions about security and privacy risks related to your use of our services. 
 
-:::
+It is your responsibility to assess, document and evaluate this information in your own scientific context, typically in form of a privacy or security assessment (see below). 
+
+It is also your responsibility to inform your "risk owner" about any "residual risk" that you may identify and get appropriate acceptance for such risks.
+
+::: tip Residual risk acceptance
+
+It is impossible to eliminate all risks. Thus, there will often be some kind of unwanted risk left after the security and privacy controls are evaluated. We call this "*residual risk*". Such residual risk may need to be mitigated or accepted. We call the individual that have the authority to accept such residual risks "*risk owner"*.
+
+::: 
 
 
-## Data Protection Impact Assessment (DPIA)
+## Assessments
 
-The individual processing in labs do often require Data Protection Impact Assessments (DPIA) for GDPR compliance prior to the initiation of scientific activities.
+### Data Protection Impact Assessment (DPIA)
 
-We are happy to assist compliance coordinators in data spaces with text related to our services. Feel free to [send us](/contact) written text of specific sections for review. 
+The data processing in your labs may require a Data Protection Impact Assessments (DPIA) prior to the initiation of scientific activities (GDPR Article 35).
 
-## Risk assessment reports (RAR)
+See the [resources](/coordination/riskmanagement/#resources) to get going, and [contact us](/contact) for review of written text. We are happy to assist compliance coordinators with this work. 
 
-Your organization may request risk assessments of your activities when it comes to information security ("ROS-analyse" in Norwegian). 
+### Risk assessment reports (RAR)
 
-We are happy to assist data controllers and compliance coordinators in data spaces with information so you can identify residual risks associated with our systems and services.
+Your organization may request risk assessments of your activities when it comes to information security and/or privacy ("ROS-analyse" in Norwegian). 
 
-We are also happy to comment on your written risk assessments. Risk evaluation and acceptance of residual risks are the responsibility of your data controller.
+We are happy to assist data controllers and compliance coordinators in data spaces in this work so you best can identify residual risks associated with your scientific work in your data space and labs.
 
-[Contact us](/contact) for information and review of text that you have written. 
+Note that your data controller is responsible for the acceptance of residuals risks that you identify related to our services.
+
 
 ## Audits
 
-Data controllers are welcome to audit our systems and services. [Contact us](/contact) for such arrangements.
+Data controllers are welcome to check that our systems and services are implemented and operated as specified (audits). 
+
+Compliance coordinators are welcome to participate in our internal audits for educational purposes. [Contact us](/contact) for such arrangements. 
+
+Certificates from our third-party audits are available for downloads on our [certificates](/certificates/) page.
+
+
+## Resources
+
+We have made a selection of our security and privacy information public to support your risk management work:
+
+- [Security and privacy policies](/policies). These are the documents that we build our security and privacy framework on. "Security and privacy policies" provides a list of individual security controls that are implemented in HUNT Cloud.
+- [Statement of applicability](/certificates/) (SoA). This document state the implementation status of our security and privacy controls specified in our policy documents. 
+- [ISO certificates](/certificates/). These documents provides third-party evaluations of the compliance with our Statement of applicability.
+- [Ting report](/tingweek/#reports). Our ting reports includes updated information of our overarching risks as we see them under the "Risk factors" chapter and a summary of our laws and regulations and our audit programs under the "External and internal controls" chapter. 
+- [Services specifications](/services/specifications/). This document specify responsibilities and clarifies security measures for individual services. The document is an appendix to your [services agreement](agreements/overview/#services-agreement) which is incorporated under our [data controller agreement](/agreements/overview/#data-processor-agreement).
+
+[Contact us](/contact) if you need additional information for your risk evaluation.
 
 ## FAQ
 
-### Do you have standardized text that I can use? 
-
-It is important that you make your own clarifications of the information that is required for your specific assessment. Depending on your assessment type we may have tailored text in stock.
-
 ### Do you participate in risk assessment meetings? 
 
-For efficiency, we do prefer to guide you toward relevant documentation and comment on text that you have written.
+Yes. We prioritize risk assessment meetings with data controllers to assist in their risk assessments. For quick responses, we prefer to guide compliance coordinators and lab coordinators towards relevant information and comment on text that you have written. [Contact us](/contact) for such arrangements.
+
+### Do you have standardized text that I can use? 
+
+You need to make your own assessment of the information that is required for your scientific work. Thus, we do not provide generic text for such use. When that is said, dependent on your assessment type we may have tailored text in stock.
 
 ### Do you allow third-party audits? 
 
-Yes, data controllers may hire external companies to conduct audits of our systems and services to ensure that our security and privacy are in compliance with their requirements. 
+Yes, as a data controller your may hire external companies to conduct audits of our systems and services on your behalf. 
 
-### Do you allow technical security tests of your services? 
-Yes, we do. However, you will need to approve such testing in writing prior to initiation. [Contact us](/contact) for such arrangements.
+### Do you allow technical security tests? 
 
-### How do I know if a risk is acceptable? 
+Yes. You will need our approval in writing of such tests prior to initiation. [Contact us](/contact) for such arrangements and agreement templates.
 
-It is impossible to eliminate all risks. There will often be some kind of unwanted risk left after our security controls are implemented. We call this "*residual risk*". Such risks needs to be accepted by you "*risk owner"*. This is often one representative from your data controller, although you need to contact your data space leader for clarification of responsibilities and delegated authority within your institution. 
 
- 
-
- 
 
 
 
