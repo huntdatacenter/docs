@@ -8,7 +8,7 @@ description: This page list options for coordinators of risk management guidance
 
 # Risk management
 
-This page contains information to assist data controllers, compliance coordinators and lab coordinators on their quest to document, assess and evaluate security and privacy risks for scientific work in HUNT Cloud. 
+This page contains information to assist data controllers, compliance coordinators and lab coordinators on their quest to document, assess and evaluate security and privacy risks for their scientific work in HUNT Cloud. 
 
 [[toc]]
 
