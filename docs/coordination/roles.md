@@ -7,7 +7,7 @@ description: This page contains information on the coordinator roles in HUNT Clo
 
 # Coordinator roles
 
-**Your quest for high impact discoveries needs smooth and seamless coordination to fly. Scientific coordinators are the individuals that make such magic dusts.**
+**Your quest for high impact discoveries needs smooth and seamless coordination to fly. Scientific coordinators are the individuals that produce this magic dust.**
 
 [[toc]]
 
