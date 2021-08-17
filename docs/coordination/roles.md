@@ -11,7 +11,7 @@ description: This page contains information on the coordinator roles in HUNT Clo
 
 [[toc]]
 
-We have defined a few important coordinator roles within key responsibility areas. Our primary goal is to simplify knowledge transfers between labs within your data space. 
+We have defined a few important coordinator roles within key responsibility areas. Our primary goal is to simplify knowledge transfers for these areas between the labs in your data space. 
 
 In addition, the roles are established to ease knowledge transfers between coordinators within our cloud community, to structure feedback on our administrative development (such as in our [coordinator ting](/tingweek/#coordinator-ting)), and to use the experience to jointly define and champion the identity and importance of scientific coordination in high-impact data-driven science.
 
