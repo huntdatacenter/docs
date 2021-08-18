@@ -294,7 +294,7 @@ sudo apt update
 sudo apt install tcl tcl8.6 tk tk-table tk8.6
 ```
 
-### RStudio becomes unresponsive when I run my code
+### RStudio or R becomes unresponsive when I run my code
 
 It might be good to check the resource consumption on your lab machine. The response may be reduced if you or your lab mates consume all memory and/or CPU. A quick way to do this is via [HTOP and time](https://docs.hdc.ntnu.no/faq/compute/#can-i-monitor-my-resource-consumption). 
 
