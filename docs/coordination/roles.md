@@ -7,39 +7,41 @@ description: This page contains information on the coordinator roles in HUNT Clo
 
 # Coordinator roles
 
-**Your quest for high impact discoveries needs smooth and seamless coordination to fly. Scientific coordinators are the individuals that produce this magic dust.**
+**Each data space appoints scientific coordinators to the following key responsibility areas: compliance, data, technology, knowledge and finance. These individuals are the point of contact for lab users in the data space and us when it comes to administrative issues and improvements.**
+
 
 [[toc]]
 
-We have defined a few important coordinator roles within key responsibility areas. Our primary goal is to simplify knowledge transfers for these areas between the labs in your data space. 
+The goals for the development of these roles are to simplify knowledge transfers for key areas between labs within one data space, to bridge knowledge transfers between scientific coordinators across data spaces, to structure feedback on our administrative activities, and to jointly develop and identity and champion the importance of scientific coordinators in high-impact data-driven science.
 
-In addition, the roles are established to ease knowledge transfers between coordinators within our cloud community, to structure feedback on our administrative development (such as in our [coordinator ting](/tingweek/#coordinator-ting)), and to use the experience to jointly define and champion the identity and importance of scientific coordination in high-impact data-driven science.
-
-Individuals are given to their respective roles in your [data space orders](/agreements/overview/#data-space-order) and [lab orders](/agreements/overview/#lab-order).
+Your scientific coordinators are named in your [data space order](/agreements/overview/#data-space-order). All coordinators are invited to the [coordinator ting](/tingweek/#coordinator-ting).
 
 ### Compliance coordinator
 
-The compliance coordinator is the point of contact for issues related agreements and compliance evaluations. This includes coordination of 
+The compliance coordinator orchestrate  issues related to agreements, and security and privacy evaluations. In addition, this individual acts as deputy for other contacts when needed, including the data space leader.
 
-* agreements related to the data space, including data space agreements and appendixes, lab orders, external kistas forms, and discussions on general contractual aspects within the data space. 
-* compliance evaluations related to the data space, including ethical approvals for the research, privacy assessment (DPIA) and security assessments (RAR/ROS). 
+The activities includes agreements related to the data space, including as the data space agreement, individual lab orders, external kista forms, as well as dialogue on contractual development and other improvements. 
 
-The compliance coordinator act as deputy for other contacts when needed, including for the data space leader.
+The activities also includes coordination of compliance evaluations such as ethical approvals, privacy assessment (DPIA) and security assessments (RAR/ROS)  for scientific acitivities in the labs under your data space.
+
 
 ### Data coordinator
 
-The data coordinator is the point of contact for issues related to data handling for labs inside the data space. This includes coordination of data transfers, archiving and backup practices and similar under the data space. 
+The data coordinator is the point of contact for issues related to data handling for labs inside the data space. This includes coordination and dialogue on  topics such as transfers, quality assurance, archiving and preservation of data. 
 
 ### Technical coordinator
 
-The technical coordinator is the point of contact for issues related to the technical aspects of our cloud services and analytical tools across labs. This includes coordination of configurations, adjustments and maintenance for labs under the data space.
+The technical coordinator is the point of contact for issues related to the cloud services, such as storage and compute resources and analytical tools and software. This includes coordination and dialogue on topics such as configurations, adjustments, maintenance for labs under the data space, as well as development and piloting of new tools.
 
 ### Knowledge coordinator
 
-The knowledge coordinator is the point of contact for knowledge transfers between lab users across labs under the data space, including know-hows related to user onboardings, common tasks, practical analytical setups, documentation etc.
+The knowledge coordinator is the point of contact for the spread of knowledge and expertise between lab users within the individual labs in your data space on topcis related to onboardings, common configurations, practical analytics, data space routines etc. This also include dialogues with us and other knowledge coordinators on user experience within your labs, user documentation and other educational topics.
+
+### Financial coordinator
+
+The financial coordinator is the point of contact related to financial aspects of the cloud services. This includes dialogues on subscriptions and current and predicted resource consumption within labs, including services such as compute and storage, as well as dialogue on related to quotes and invoices for planned and consumed activities for labs in the data space. 
 
 ### Lab coordinator
 
-Individual labs has one lab coordinator in addition to the lab leader that is the point of contact both for us and the data space coordinators for practical issues related to the lab. The coordinator act as deputy for the lab leader when needed and is authorized to request and adjust cloud resources on behalf of the Lab leader.
-
+Each lab to appoint their own lab coordinator in addition to the data space wide roles above. The lab coordinator support the lab leader in activities related to the lab across all areas above, and may be the used as the point of contact for both us and the data space coordinators. The lab coordinator also act as deputy for the lab leader when needed and the individual is authorized to request and adjust resources in the lab.
 

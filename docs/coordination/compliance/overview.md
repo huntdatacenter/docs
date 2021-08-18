@@ -17,7 +17,7 @@ This page contains a structured overview of the agreements that are required to 
 
 Our activities are organized in the following agreement hierarchy: 
 
-![Unit hierarchy](./images/agreement-hierarchy.png "HUNT Cloud unit hierarchy")
+![Unit hierarchy](../services/images/hunt-cloud-service-units-overview.png "HUNT Cloud unit hierarchy")
 
 1. The **Data controller** is your organizational unit that control your data ownership and data protection inside our services, in short the data processing. The *Data processor agreement* control these activities and is therefore placed on top of our agreement hierarchy. All other arrangements between us are incorporated into this agreement as amendments.
 2. The **Services center** is your organizational unit that control the cloud services that you consume. The *Services agreement* details our services specifications and conditions for resource consumption, cost and billing. One or many services centers can be attached to a data processor agreement. 

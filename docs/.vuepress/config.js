@@ -100,6 +100,7 @@ module.exports = {
           text: "Coordination",
           isGroup: true,
           children: [
+	    "/coordination/",
             "/coordination/services-model.md",
             "/coordination/roles.md",
             {
