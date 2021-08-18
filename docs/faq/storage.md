@@ -62,6 +62,12 @@ mkdir -p $TMPDIR
 
 The intention behind HUNT Cloud is to establish collaborative lab environments where people become stronger together by sharing data, code, results and knowledge. We have therefore kept the private **`home`** volume to a minimum to encourage lab users to move their activities into collaborative volumes such as work, archive and scratch. [Contact us](/contact) for volumes expansion of these volumes if you are in need of space.
 
+::: danger WARNING
+
+There is -no- restore (backup) on your home-folder. All data in **`home`** may be lost in case of unexpected events. We strongly recommend that you keep the scientific data that your care about on the **`work`** or **`archive`** folders. [Click here](/faq/storage/#restore) to read more about restore. 
+
+:::
+
 ### Can I expand my volume sizes?
 
 Yes. We are more than happy to expand your volumes as your data collections grows. You can expand volumes on both and iaas machines in TB steps. You should plan for 30 minutes downtime of your lab during this procedure, including a machine restart. [Contact us](/contact) to schedule a volume expansion.
