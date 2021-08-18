@@ -18,7 +18,7 @@ This page lists frequently asked questions related to lab storage.
 
 You will find the following storage volumes inside your [home](compute/#what-is-a-home-machine) machine in your lab:
 
-| **Name** | **Location** | **Recommended use** | **Recovery** |
+| **Name** | **Location** | **Recommended use** | **Restore** |
 | - | - | - | - |
 | home | **`/home/`** | Private space for lab users | None |
 | work | **`/mnt/work/`** | Workspace for all lab users | Nightly snapshots* |
