@@ -280,6 +280,7 @@ Since R versions can be installed side-by-side on a system, you may need to sele
 ### PredictABEL, matplotlib, viridis, or plyr fails to import
 
 If running `library(PredictABEL)` in rstudio server fails with:
+
 ```bash
 Error: package or namespace load failed for 'PredictABEL':
  .onLoad failed in loadNamespace() for 'tcltk', details:
@@ -292,3 +293,11 @@ You need to install these packages related to tcl and tk:
 sudo apt update
 sudo apt install tcl tcl8.6 tk tk-table tk8.6
 ```
+
+### RStudio becomes unresponsive when I run my code
+
+It might be good to check the resource consumption on your lab machine. The response may be reduced if you or your lab mates consume all memory and/or CPU. A quick way to do this is via [HTOP and time](https://docs.hdc.ntnu.no/faq/compute/#can-i-monitor-my-resource-consumption). 
+
+For example, if you use all your memory you might need to reduce your table sizes or upgrade your machine size. If your lab mates consume all your resources you may want to ask them to spare some for you.
+
+
