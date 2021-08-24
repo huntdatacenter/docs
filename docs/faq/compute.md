@@ -199,7 +199,7 @@ You have **[sudo](https://en.wikipedia.org/wiki/Sudo)** rights in home machines 
 
 ### Can I get additional adminsitrator privileges?
 
-Not on home machines since we are responsible for data and user accounts. When that is said, you get full administrator privileges on other machine types in your lab ([iaas and blue](faq/compute/#machine-types)). [Contact us](/contact) if you would like try one of these.
+We fully understand that you might need to tune your lab. Thus, you get full administrator privileges on other machine types than home in your lab ([iaas and blue](faq/compute/#machine-types)). [Contact us](/contact) if you would like try one of these. Privileges on home machines are restricted to allow us to be responsible for data and user management.
 
 ### Can I update our operating system on home?
 
