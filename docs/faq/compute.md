@@ -123,7 +123,13 @@ A quick way to install open-source software packages is to use the built in [apt
 sudo apt install <packagename>
 ```
 
-Using package could affect other users, therefore we recommend taking an extra step and setup [Conda](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/conda/). Conda is a great package manager that provides a lot of packages in easy way.
+::: warning WARNING
+
+Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/conda/). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.
+ 
+:::
+
+
 
 ### Where can I install my software?
 
@@ -186,6 +192,14 @@ sudo reboot
 ::: warning
 Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/faq/users/#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
 :::
+
+### What privileges does my account have? 
+
+You have **[sudo](https://en.wikipedia.org/wiki/Sudo)** rights in home machines for application installation (apt) and machine restart (reboot). You have full administrator privileges on other machine types in your lab ([iaas and blue](faq/compute/#machine-types)).
+
+### Can I get additional adminsitrator privileges?
+
+Not on home machines since we are responsible for data and user accounts. When that is said, you get full administrator privileges on other machine types in your lab ([iaas and blue](faq/compute/#machine-types)). [Contact us](/contact) if you would like try one of these.
 
 ### Can I update our operating system on home?
 
