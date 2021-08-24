@@ -3,117 +3,124 @@ title: Price examples
 category: HUNT Cloud
 permalink: /prices/examples
 sidebarDepth: 1
-description: This page list examples of cloud prices for common use cases.
+description: This page list examples of yearly cost for selected use cases in HUNT Cloud.
 ---
 
 # Price examples
 
-We know, digging into the deep details of flexible cloud prices may be demanding. To ease on the process, we have compiled a few use cases that may give you a direction of your costs. [Contact us](/contact) for assistance in price calculations and price optimization.
+**We know, the complexity of flexible cloud prices is demanding. Bare with us, because the flexibility opens opportunities.** 
+
+We have made a few examples below to guide you on a direction, although do not hesitate to [contact us](/contact) for assistance in your price estimations.
 
 [[toc]]
 
-All prices are listed as VAT exclusive NOK from the [Price List v3.0](/prices/pricelist/).
+All prices in the examples are listed as VAT exclusive NOK from the [price list](/prices/pricelist/). The prices are for guidance only and may contain errors and outdated information.
 
-## Lab configurations for...
+## Individual labs
 
-Let's start with a few examples of crude prices in labs configured for some common uses cases. Depending on your data space subscription and cost optimization techniques, the listed prices may be reduced. [Contact us](/contact) for assistance in price calculations. 
+Let's start with a few examples of crude prices for individual labs configured for common experiments. Depending on your data space subscription and cost optimization techniques, the listed prices may be reduced. 
 
-### ... epidemiology
+### Epidemiology
 
-This is a project that needs a lab to store and analyse structured data, such as registry data, health studies or your own study data. The configuration should give sufficient resources for storage and computational power for software such as RStudio or Stata for 2-3 scientist. 
+Let's assume you need a lab to store and work with structured data, such as health registries and health study data using software such as RStudio or Stata in a small team. 
 
-| Service | Unit | Type | Cost/unit | Units | Total cost |
+| Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
 | Data space | WHITE | 1 year | 0 | 1 | 0 |
 | Lab | | 1 year | 5785 | 1 | 5785 |
 | Compute | default.b2 | 1 year | 4646 | 1 | 4646 |
 | Store | 1 terabyte | 1 year | 2331 | 1 | 2331 |
-| **PER YEAR** |  | | |  | **12762** | 
+| **PER YEAR** |  | | |  | **12762** |
 
-### ... genomics
+The above example gives you a free data space subscription, the lab subscription, one machine sufficient for regular epidemiology, the minimum storage allocation and the ability to bring software licenses for your analytical tools from your host organization into your lab. The compute cost may be slightly reduced if a smaller machine type is sufficient (default.b1).
 
-Next up is a typical lab for storage and analysis of genomics data. This configuration is aimed at research groups that conduct data-driven experiments on a day-to-day basis. 
+### Genomics
 
-| Service | Unit | Type | Cost/unit | Units | Total cost |
+Next up is a typical lab for genomics analysis. Let's assume you need a lab to storage and analyze genomics data from several sources for your team. 
+
+| Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
 | Data space | WHITE | 1 year | 0 | 1 | 0 |
 | Lab | | 1 year | 5785 | 1 | 5785 |
 | Compute | default.b5 | 1 year | 30976 | 1 | 30976 |
 | Store | 10 terabytes | 1 year | 2331 | 10 | 23310 |
-| **PER YEAR** |  | | |  | **59071** | 
+| **PER YEAR** |  | | |  | **60071** |
 
-### ... machine learning
+The above example gives you a free data space and one lab, a machine with computational power for many analysis, and storage capacity to both experiment and archive larger data sets. The cost may be reduced by for example reducing the compute size in day-to-day activities and then upgrade to larger on-demand machines in analysis intensive periods. 
 
-This configuration exemplifies a lab for machine learning with a small home machine for data handling with 10 terabyte of storage, and one extra analytical machine for GPU analysis with 5 terabytes of storage.
+### Machine learning
 
-| Service | Unit | Type | Cost/unit | Units | Total cost |
+Let's increase the complexity slightly. This example is for a machine learning lab with mixed activities that require data storage, computational power and graphical accelerators. The example list one home machine, one machine with GPU and a total of 15TB storage.
+
+| Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
 | Data space | WHITE | 1 year | 0 | 1 | 0 |
 | Lab | | 1 year | 5785 | 1 | 5785 |
-| Compute | default.b2 | 1 year | 4646 | 1 | 2904 |
+| Compute | default.b2 | 1 year | 4646 | 1 | 4646 |
 | Compute | default.d3 | 1 year | 21239 | 1 | 21239 | 
 | Compute | NVIDIA V100 | 1 year | 28592 | 1 | 28592 |
 | Store | First 10 TB | 1 year | 2331 | 10 | 23310 |
 | Store | Next 5 TB | 1 year | 1665 | 5 | 8325 | 
-| **PER YEAR** |  | | |  | **90155** | 
+| **PER YEAR** |  | | |  | **91897** | 
+As the others examples, this includes a free data space and one lab. The compute resources are split in two machines: a smaller home machine (default.b2) for data handling and day-to-day activities, and a larger machine (default.d3) that has attached one enterprise GPU card. You need to extra machine to obtain administrator privileges. The 15 TB total storage in the lab is priced in the first two storage tiers with a reduced priced for the TB's above 10 TB. The mean storage price in the example is 2109.
+
+ 
 
 
 
-### ... data archives
 
-This configuration exemplifies a large data archive, for example a biobank or other data controllers that store data for reuse. The activity inside the lab is aimed at quality control when data arrives, typically for a few months per year. The configuration exemplifies a data archive that totals 150 TB with intensive quality control activities for 3 months of the year.
+### Data archives
 
-| Service | Unit | Type | Cost/unit | Units | Total cost |
+This configuration exemplifies a large data archive, such as a biobank or image archive that manages data for reuse. The activity inside the lab would typically be data import, intensive quality control at the time of data arrivals, compression and other preservation activities and data exports. The configuration exemplifies a data archive holding a total of 150 TB with intensified quality control a total of 90 days of the year.
+
+
+| Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
 | Data space | WHITE | 1 year | 0 | 1 | 0 |
 | Lab | | 1 year | 5785 | 1 | 5785 |
-| Compute | default.b2 | 1 year | 4646 | 1 | 2904 |
+| Compute | default.b2 | 1 year | 4646 | 1 | 4646 |
 | Compute | default.b5 | Days | 112.02 | 90 | 10082 | 
 | Store | First 10 TB | 1 year | 2331 | 10 | 23310 |
 | Store | Next 90 TB | 1 year | 1665 | 90 | 149850 | 
 | Store | Over 100 TB | 1 year | 1266 | 50 | 63300 | 
-| **PER YEAR** |  | | |  | **256231** | 
+| **PER YEAR** |  | | |  | **256973** | 
 
-The mean terabyte price for the 150 TB allocated storage ends at 1576.4.
-
-
+The above examples gives you one free data space and one lab with a home machine intended for data archiving and transfers. On-demand compute resources is consumed for a total of 90 days. The storage price is calculated across all storage tiers in the the price list ending at a mean price of 1576 per TB. The total cost may be reduced by for example tailored preservation strategies utilizing tapes for duplicate copies.
 
 
 
 
 
 
+## Lab portfolios
 
+The following examples are aimed at larger scientific centers and organizational unites that organize several labs in their data space. 
 
+### Epidemiology center
 
+This example is for a data space consisting of 5 labs: one is dedicated to the internal day-to-day work of the center's core team, one lab is dedicated to data storage with restricted access, and three labs are dedicated to different external collaborations in three different research projects. 
 
-
-## Data space configurations for...
-
-Here are a few examples of prices when we combine labs into data spaces. [Contact us](/contact) for assistance for more detailed price calculations for your research group and/or center.
-
-### ... epidemiolgy center
-
-This example is for a portfolio of 5 labs where one is dedicated as a storage archive, one as the internal day-to-day work area, and three additional labs that are dedicated to external collaborations. The combined storage is 5 terabytes across the five labs.
-
-| Service | Unit | Type | Cost/unit | Units | Total cost |
+| Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
 | Data space | ORANGE | 1 year | 8495 | 1 | 8495 |
 | Lab | | 1 year | 5785 | 5 | 28925 |
+| Compute | COMMITMENT default.b3 | 1 year | 7744 | 1 | 7744 | 
 | Compute | COMMITMENT default.b1 | 1 year | 2904 | 1 | 2904 |
 | Compute | COMMITMENT default.b2 | 1 year | 4646 | 3 | 13938 |
-| Compute | COMMITMENT default.b3 | 1 year | 7744 | 1 | 7744 | 
 | Store | First 10 TB | 1 year | 2331 | 5 | 11655 |
 | **PER YEAR** |  | | |  | **73661** | 
+This examples gives you a ORANGE data space and five lab subscriptions. The day-to-day lab has a slightly larger machine than the external labs. The storage lab holds the smallest machine type. Each lab has attached 1 TB of storage with a total consumption of 5 TB for the data space. 
 
-Since the combined storage do not get above 10 TB this for the volume discount, the mean lab price will be 1699 moreper lab than if the center were running with the same labs on the WHITE data space subscription level. One potential opportunity with lab bundling reaching the ORANGE data space subscription level is the Lagtun invite for the data space leader. This gives the center the opportunity to participate in the development of services and prices. It also allows for combined reporting and management across the labs.
+Since the combined storage do not get above 10 TB to invoke the volume discount, the mean lab price will be slightly more expensive due to the ORANGE subscription cost compared to initial epidemiology example on the free subscription level (14732 vs 12762 = 1970 more per year).
+
+The advantage of bundling labs into a joint center portfolio can be to access custom machine types, free external data exports and simplified reporting and management.
 
 
-### ... genomics center
+### Genomics center
 
-This example is for a portfolio of 5 labs where one is dedicated as a storage archive, one as the internal day-to-day work area, and three additional labs that are dedicated to external collaborations with intense activity only parts of the year. The combined storage is 50 terabytes across the five labs.
+The next example is for a center with five labs: one for internal day-to-day work area, one for restricted storage and three labs are dedicated to external collaborations with intense activity in parts of the year. The combined storage is 50 TB.
 
-| Service | Unit | Type | Cost/unit | Units | Total cost |
+| Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
 | Data space | BLUE | 1 year | 35397 | 1 | 35397 |
 | Lab | | 1 year | 5785 | 5 | 28925 |
@@ -127,14 +134,13 @@ This example is for a portfolio of 5 labs where one is dedicated as a storage ar
 | Store | Next 90 TB | 1 year | 1665 | 40 | 66600 | 
 | **PER YEAR** |  | | |  | **222616** | 
 
+The example gives you a BLUE data space and five labs. The day-to-day lab has a machine type to handle most analysis, the storage lab the smallest machine type for data handling, and the collaborative labs small machines that are upgraded for intensive analytical periods. Two such machines utilizes BLUE machines with highly reduced price. The 50 TB total storage is divided across the two first price tiers with a mean cost of 1798 per TB.
 
+### Machine learning center
 
+The last example is for a portfolio of five labs tailored for machine learning: one is dedicated to the internal day-to-day work of the center's core team, one lab is dedicated to data storage with restricted access, and three labs that are dedicated to collaborations with external teams. The total storage is 30 TB.
 
-### ... machine learning center
-
-This example is for a portfolio of 5 labs where one is dedicated as a storage archive, one as the internal day-to-day work area for the group with 2 fixed GPU cards, and three additional labs that are dedicated to external collaborations with intense activity only parts of the year. The combined storage is 30 terabytes across the five labs.
-
-| Service | Unit | Type | Cost/unit | Units | Total cost |
+| Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
 | Data space | ORANGE | 1 year | 8495 | 1 | 8495 |
 | Lab | | 1 year | 5785 | 5 | 28925 |
@@ -153,13 +159,6 @@ This example is for a portfolio of 5 labs where one is dedicated as a storage ar
 | Store | Next 90 TB | 1 year | 1665 | 20 | 33300 | 
 | **PER YEAR** |  | | |  | **264027** | 
 
-
-
-
-
-
-
-
-
+This data space is on the ORANGE subscription with five labs. The home machines is a combination of smaller machine types: default.b1 (storage) and default.b2 (others). The labs rely on additional machines for its GPU activity. The day-to-day lab include one additional permanent machine (default.d3) with one GPU card, while the labs aimed for external collaborations deploy on-demand machines with GPUs for various periods of the year. The 30 TB storage is split on the two first storage tiers with a mean cost of  1887 per TB.
 
 

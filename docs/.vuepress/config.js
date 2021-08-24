@@ -130,7 +130,8 @@ module.exports = {
               isGroup: true,
               children: [
                 "/coordination/prices/",
-                "/coordination/prices/pricelist.md"
+                "/coordination/prices/pricelist.md",
+		"/coordination/prices/examples.md"
               ]
              }
            ]
