@@ -18,6 +18,11 @@ This page lists frequently asked questions related to computation and analysis i
 
 Yes, you can. Your [lab leader](/faq/users/#user-roles) and lab coordinator approves upgrades both for cpu and memory of individual machines, and supplement of new machines in accordance with our [machine types](/services/machine-types). Forward upgrade requests to us on [email](/contact) with your lab leader and lab coordinator on cc.
 
+
+### Can I have custom machine types?
+
+Yes, you can. Don't find what you are looking for among our default [machine types](/services/machine-types)? Labs in a data space on the [blue subscription](/services/overview/#subscriptions) level can request machines types with tailored memory and cpu resources. [Contact us](/contact) to get started.
+
 ### Is my process hitting memory issues?
 
 See below for descriptions on how to monitor your memory consumption using the `htop` and `time` commands.

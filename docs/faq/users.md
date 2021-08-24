@@ -157,8 +157,16 @@ Sure. If you haven't logged in for a while, here's a quick recap of the steps: (
 
 Here is an explanation of some role names that we refer to in our documentation and agreements:
 
-- **Lab leader.** This is the individual that has signed the lab agreement for your lab environment. It is usually the principal investigator or other administrative personnel holding the approvals (such as ethical approvals) for your lab activity.
+###  Lab leader
 
-- **Lab coordinator**. The lab leader delegate authority to a lab coordinator to make decisions inside a lab environment, for example to authorize new users and upgrade compute and storage resources.
+This is the individual that has signed the lab order for your lab. It is usually the principal investigator or other individuals holding approvals or that coordinate the scientific activity in your lab. The lab leader can adjust resources, manage users in the lab and order kistas.
 
-- **Lab user**. We use the term lab user on all that hold user accounts in your lab environments.
+### Lab coordinator
+
+This is the individual that is authorized by the lab leader to authorize new users and upgrade compute and storage resources.
+
+### Lab user
+
+We use the term lab user on all that hold user accounts in a lab. All lab users in a lab holds the same technical privileges.
+
+
