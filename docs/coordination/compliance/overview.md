@@ -1,5 +1,5 @@
 ---
-title: Agreements
+title: Agreements overview
 category: HUNT Cloud
 permalink: /agreements/overview
 sidebarDepth: 1
