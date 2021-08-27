@@ -60,6 +60,11 @@ touch .ssh/config
 ssh-keygen -b 4096 -t rsa -f /home/mobaxterm/.ssh/id_rsa -q -N ""
 ```
 
+Once the keys are set up you can check them with ssh-add command:
+```bash
+ssh-add
+```
+
 ## Setting ssh-config
 
 To setup ssh config to be used in local terminal of MobaXterm use:
@@ -70,4 +75,12 @@ cat <<-EOF > /home/mobaxterm/.ssh/config
 Paste your config here
 
 EOF
+```
+
+## Uploading the new key
+
+To be able to use the key it needs to be uploaded with:
+
+```
+ssh-copy-id <your-lab-name>-entry
 ```
