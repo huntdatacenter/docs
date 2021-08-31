@@ -20,7 +20,7 @@ Your lab leader or lab coordinator can add new users to your lab. New users must
 
 ### How long does an account activation take?
 
-Allow for several weeks at this point. We activate new accounts and labs in the beginning of each week. Depending on the number of requests, accounts may be activated the upcoming week or some weeks thereafter. We do recognize that science never sleeps, so [contact us](/contact) for high priority activations same or next business day when needed.
+See our [responsiveness](/responsiveness/) section for updated times on expected user onboardings. We activate new accounts and labs in the beginning of each week. Depending on the number of requests, accounts may be activated the upcoming week or some weeks thereafter. We do recognize that science never sleeps, so [contact us](/contact) for high priority activations same or next business day when needed.
 
 ### How many users can we add to a lab?
 
@@ -137,6 +137,10 @@ Maybe, however not by default. You will need an explicit approval from your lab 
 ### How long can I keep my account?
 
 You can keep your account as long as you are actively working in your lab. We deactivate accounts that have not been used for 180 days for security reasons.
+
+### Will I loose my data if I get deactivated? 
+
+No, not as long as your lab is active. We will deactivate your account, although we do not delete your data as long as the lab is active. Please note that your lab leader has the same ability to delete, change or share data the lab under their control regardless if you your account is active or deactived. 
 
 ### Can I reactivate my old account?
 
