@@ -30,17 +30,17 @@ If an agreement is already in place, jump to the services agreement section. If 
 
 #### 2. Which agreement type do we need?
 
-- *[Data processor agreements](/agreements/overview/#data-processor-agreement)*: This is the "normal" type that control situations where you and your organization controls the data and defines the purpose of the processing.
+(2.1) [Data processor agreements](/agreements/overview/#data-processor-agreement): This is the "normal" type that regulates situations where you and your organization controls the data and defines the purpose of the processing.
 
-- *[Data sub-processor agreements](/agreements/overview/#data-subprocessor-agreement)*: This is when the purpose of the processing is decided by an organization that is not your own, for example contract research. The organization that control the data may add requirements for privacy and security measures that we will need to incorporate in the sub-processor agreement. 
+(2.2.) [Data sub-processor agreements](/agreements/overview/#data-subprocessor-agreement): This is when the purpose of the processing is decided by an organization that is not your own, for example contract research. The organization that control the data may add requirements for privacy and security measures that we will need to incorporate in the sub-processor agreement. 
 
 [Contact us](/contact) us if you are unsure on the agreement type needed, approaches for joint-controller scenarios. 
 
 #### 3. Which other agreement types outside HUNT Cloud may by required?
 
-- *Do you plan to use data from external data providers?* If you take on responsibility as the data controller, such data is often regulated in data export agreements that adds requirements for information security measure. [Contact us](/contact) us for compliance evaluations if you are unsure if specified requirements are covered in our agreements or services.
+*Do you plan to use data from external data providers?* If you take on responsibility as the data controller, such data is often regulated in data export agreements that adds requirements for information security measure. [Contact us](/contact) us for compliance evaluations if you are unsure if specified requirements are covered in our agreements or services.
 
-- *Do you plan to onboard users from external organizations?* We encourage lab users from different organizations to meet and collaborate in labs. Access for individuals outside your organization may require data processor agreements between your host organization and the organizations of your external collaborators. Contact your local privacy officer for advice.
+*Do you plan to onboard users from external organizations?* We encourage lab users from different organizations to meet and collaborate in labs. Access for individuals outside your organization may require data processor agreements between your host organization and the organizations of your external collaborators. Contact your local privacy officer for advice.
 
 #### 4. Who should sign the data processor agreement? 
 
