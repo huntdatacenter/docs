@@ -1,19 +1,29 @@
 ---
-title: Agreements overview
+title: Overview
 category: HUNT Cloud
 permalink: /agreements/overview
 sidebarDepth: 1
 description: This page gives an overview of administrative agreements in HUNT Cloud.
 ---
 
-# Agreements
+# Administrative agreements
 
-This page contains a structured overview of the agreements that are required to make your science fly in HUNT Cloud. The information is intended for coordinators. 
+**This page holds an overview of the administrative agreements that are key to make science fly in HUNT Cloud.** 
+
+We believe a solid framework of documented responsibilities is a success factor to enable simple and secure environments for your scientists. As a coordinator this means that you will balance a backstage agreement framework that is somewhat complex. Bear with us, once up and running it will provide you with quite some powers.
+
+::: tip Get going
+
+Head over to our [get going](/agreements/get-going) page for a step-wise guide on how to start your agreement quest.
+
+:::
 
 [[toc]]
 
 
+
 ## Overview
+
 
 Our activities are organized in the following agreement hierarchy: 
 

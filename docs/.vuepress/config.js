@@ -104,13 +104,13 @@ module.exports = {
             "/coordination/services-model.md",
             "/coordination/roles.md",
             {
-              title: "Compliance",
-              text: "Compliance",
+              title: "Agreements",
+              text: "Agreements",
               isGroup: true,
               children: [
-                "/coordination/compliance/overview.md",
-		"/coordination/compliance/downloads.md",
-                "/coordination/compliance/risks.md"
+                "/coordination/agreements/overview.md",
+                "/coordination/agreements/downloads.md",
+		"/coordination/agreements/get-going.md"
               ]
             },
             {
@@ -133,9 +133,10 @@ module.exports = {
                 "/coordination/prices/pricelist.md",
 		"/coordination/prices/examples.md"
               ]
-             }
+             },
+                "/coordination/risk/"
            ]
-         },
+        },
         {
           title: "Getting started",
           text: "Getting started",

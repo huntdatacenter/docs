@@ -1,5 +1,5 @@
 ---
-title: Services model
+title: New services model
 category: HUNT Cloud
 permalink: /services/services-model
 description: This page contains information on the services model in HUNT Cloud.

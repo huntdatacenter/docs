@@ -17,7 +17,7 @@ We call this gatherings Tings. We arrange a structured set of Tings for differen
 - **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET
 - **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET
 - **Enterprise ting**: Wednesday 20 October 2021 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 20 October 2021 - 9 to 11 a.m. CET
+- **Lagtun**: Thursday 21 October 2021 - 9 to 11 a.m. CET
 ::: 
 
 [[toc]]
@@ -95,7 +95,7 @@ We appoint time for three ting weeks per year, in the fall around the autumn hol
 - **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET
 - **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET
 - **Enterprise ting**: Wednesday 20 October 2021 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 20 October 2021 - 9 to 11 a.m. CET
+- **Lagtun**: Thursday 21 October 2021 - 9 to 11 a.m. CET
 
 ### Ting week #3 (2021-05)
 
