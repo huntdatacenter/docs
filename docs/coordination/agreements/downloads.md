@@ -72,8 +72,7 @@ Your services center leader or serices center administratorcan use this order to
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Data Space Agreement" version 1.0.
-
+The following form fields are including in the "HUNT Cloud Data Space Agreement" version 1.7.
 
 **Services center**
 
@@ -106,6 +105,10 @@ This individual is our contact point for technical configuration for labs attach
 **Knowledge coordinator**
 
 This individual is our contact point for knowledge transfers across labs attached to your data space. This includes transfers of know-how related to onboardings, configurations, data flow etc. This individual is also our contact for discussion on knowledge transfer and such documentation.
+
+**Financial coordinator**
+
+The following individual is the point of contact for financial discussions, including issues related to reporting, invoice profiles, know-hows related to the prices model, dialogue on continous development of the finacial model and prices etc. Note that this is a different roles that our invoice contact which is our point of contact for technicalities for the invoice handling.
 
 **Send us the text file for activation**
 
