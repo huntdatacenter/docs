@@ -22,7 +22,7 @@ Head over to our [agreement overview](/agreements/overview) to learn more about 
 
 First things first, a [data processor agreement](/agreements/overview/#data-processor-agreement) needs to be signed before we can move forward with other agreement types. Good to know, there is no cost associated with the establishment of a data processor agreement.
 
-#### 1. Is there already in place a processor agreement between my organization and HUNT Cloud?
+#### 1. Is there already a processor agreement in place between my organization and HUNT Cloud?
 
 Ask inside your organization or [contact us](/contact) if you are unsure. Depending on your organization, data processor agreements may be signed on various organizational levels. For example, your Department will be the internal data controller at NTNU. 
 
