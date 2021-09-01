@@ -206,7 +206,7 @@ The lab leader in each lab is responsible for the identification and verificatio
 
 ::: tip
 
-We recommend that you onboard 1-3 lab users as a start including your technical coordinator that can work with us to ensure that data and tools is as expected before you invite your remaining users to your lab.
+We recommend that you onboard no more than three lab users as a start, including your technical data space coordinator, so we can ensure that both data and tools are in place as you like before the full team enters your lab.
 
 :::
 
