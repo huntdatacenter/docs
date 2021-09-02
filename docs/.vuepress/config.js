@@ -241,7 +241,8 @@ module.exports = {
             "/faq/internal-transfer.md",
             "/faq/external-transfer.md",
             "/faq/security.md",
-            "/faq/upgrade-of-operating-system.md"
+            "/faq/agreements.md",
+            "/faq/os-upgrade.md"
           ]
         }
       ]

@@ -12,10 +12,9 @@ description: This page gives an overview of administrative agreements in HUNT Cl
 
 We believe a solid framework of documented responsibilities is a success factor to enable simple and secure environments for your scientists. As a coordinator this means that you will balance a backstage agreement framework that is somewhat complex. Bear with us, once up and running it will provide you with quite some powers.
 
-::: tip Get going
+::: tip TIP
 
-Head over to our [get going](/agreements/get-going) page for a step-wise guide on how to start your agreement quest.
-
+Head over to our [get going](/agreements/get-going) page for a step-wise guide on how to start your agreement quest, and the [faq](/faq/agreements/) section for frequently asked agreement questions.
 :::
 
 [[toc]]

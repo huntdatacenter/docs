@@ -14,7 +14,7 @@ description: This page helps you to get going with administrative agreements in 
 
 ::: tip
 
-Head over to our [agreement overview](/agreements/overview) to learn more about individual agreements mentioned below.
+Head over to our [agreement overview](/agreements/overview) to learn more about individual agreements mentioned below, and the [faq](/faq/agreements/) section for frequently asked agreement questions.
 
 :::
 
@@ -32,13 +32,13 @@ If an agreement is already in place, jump to the services agreement section. If 
 
 (2.1) [Data processor agreements](/agreements/overview/#data-processor-agreement): This is the "normal" type that regulates situations where you and your organization controls the data and defines the purpose of the processing.
 
-(2.2.) [Data sub-processor agreements](/agreements/overview/#data-subprocessor-agreement): This is when the purpose of the processing is decided by an organization that is not your own, for example contract research. The organization that control the data may add requirements for privacy and security measures that we will need to incorporate in the sub-processor agreement. 
+(2.2.) [Data sub-processor agreements](/agreements/overview/#data-subprocessor-agreement): This is when the purpose of the processing is decided by an organization that is not your own, for example contract research. The organization that controls the data may add requirements for privacy and security measures that we will need to incorporate in the sub-processor agreement. 
 
 [Contact us](/contact) us if you are unsure on the agreement type needed, approaches for joint-controller scenarios. 
 
-#### 3. Which other agreement types outside HUNT Cloud may by required?
+#### 3. Which other agreement types outside HUNT Cloud may be required?
 
-*Do you plan to use data from external data providers?* If you take on responsibility as the data controller, such data is often regulated in data export agreements that adds requirements for information security measure. [Contact us](/contact) us for compliance evaluations if you are unsure if specified requirements are covered in our agreements or services.
+*Do you plan to use data from external data providers?* If you take on responsibility as the data controller, such transfers is often regulated in data export agreements or licenses that includes requirements for information security. [Contact us](/contact) us for compliance evaluations if you are unsure if specified requirements are covered in our agreements or services.
 
 *Do you plan to onboard users from external organizations?* We encourage lab users from different organizations to meet and collaborate in labs. Access for individuals outside your organization may require data processor agreements between your host organization and the organizations of your external collaborators. Contact your local privacy officer for advice.
 
@@ -71,9 +71,9 @@ We need a few bits of information to prepare our agreement template:
 
 #### 7. Sign the agreement
 
-We will send you the final agreement version on email as a PDF-file after we receive the required information. Now the final agreement needs to be signed to become active. 
+We will send you the final agreement version by email as a PDF-file after we receive the required information. Now the final agreement needs to be signed to become active. 
 
-- Coordinate signing with the signatory official in your organization and return to us on email. 
+- Coordinate signing with the signatory official in your organization and return to us by email. 
 - We will add our countersignature and send you the active agreement for archiving. 
 
 Your data processor agreement is now signed, sealed and delivered. This is a good time for a humble celebration with fresh coffee before you continue with the services agreement. 
@@ -109,9 +109,9 @@ We need a few bits of information to prepare your agreement:
 
 #### 3. Sign the services agreement
 
-We will send you the services final agreement on email as a PDF-file after we receive the required information:
+We will send you the services final agreement by email as a PDF-file after we receive the required information:
 
-- Coordinate signing with the signatory official in your organization and return to us on email. 
+- Coordinate signing with the signatory official in your organization and return to us by email. 
 - We will add our countersignature and send you the active agreement for archiving. 
 
 Your data services agreement is signed, sealed and delivered. You have now paved the way for scientists to manage the remaining agreement levels. Celebrate with more coffee and proudly pass the torch to your scientific leaders to get going with their data spaces orders.
@@ -128,7 +128,7 @@ Data spaces have a yearly subscription cost. So, before we get going with an ord
 
 You will find information on our services and digital science on these pages. Please [contact us](/contact) to supplement your assessment. We enjoy learning about scientific activities, and truly enjoy dialogues about short and long-term ways cloud services may elevate your science. We are also happy to provide references relevant for your scientific field, demonstrate potential tools, estimate cost etc. 
 
-If your reflections conclude that we might be a good fit (YAY!), jump to the next sections. If you decide otherwise, we will be happy to see you in the future and we will appreciate if you could spare a minute [sending us](/contact) your thoughts about what we can improve to fit your scientific vision. 
+If your reflections conclude that we might be a good fit (YAY!), jump to the next sections. If you decide otherwise, we will be happy to see you in the future and we will appreciate it if you could spare a minute [sending us](/contact) your thoughts about what we can improve to fit your scientific vision. 
 
 #### 2. Decide your data space subscription level
 
@@ -138,7 +138,7 @@ You have the option to choose three different data space subscription levels. Ou
 
 Together we can do so much. High-trust and high-paced science needs smooth and seamless coordination to fly. Thus, in the next step you will be asked to list a team of coordinators for five key areas: compliance, data, technical, knowledge and training. 
 
-You and your coordinator team will be the main point of contacts for both your scientists in your labs and us. [Click here](/coordinator/roles/) to learn about the different roles and spend a few minutes reflecting on whom in your current team that might fit the roles before you move to the next section.
+You and your coordinator team will be the main point of contacts for both your scientists in your labs and us. [Click here](/coordinator/roles/) to learn about the different roles and spend a few minutes reflecting on those in your current team that might fit the roles before you move to the next section.
 
 #### 4. Send us your data space order
 

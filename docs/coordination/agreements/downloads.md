@@ -8,7 +8,7 @@ description: This page list agreements that may be relevant for you as a lab use
 
 # Download agreements
 
-This page list agreements that may be relevant for lab users, lab coordinators and data space coordinators. Contact your data space leader or lab leader for more details on other agreement types.
+This page list agreements that may be relevant for lab users, lab coordinators and data space coordinators. Contact your data space leader or service center administrator for more details on other agreement types.
 
 [[toc]]
 

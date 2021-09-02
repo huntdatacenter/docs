@@ -98,8 +98,9 @@ Log into the machine in question, for example `home`, and write `who` in the com
 ```bash
 who
 ```
+### I have moved to a new institution, now what? 
 
-
+I will need to send us an updated user agreement when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
 
 
 
