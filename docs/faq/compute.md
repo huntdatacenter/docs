@@ -218,6 +218,68 @@ Yes. Both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](/faq/compute/
 
 We will typically upgrade operating systems every two years when a new long term support version is introduced.
 
+
+## Operating system upgrades
+
+This section lists frequently asked questions related to operating system upgrades on entry and home machines that is performed every other year.
+
+### Why is this necessary?
+
+We need to upgrade operating systems on your entry and home machines every other year or so to ensure that your lab runs reliably. OS upgrades are required for continuous security updates and to maintain a basic set of applications in your lab.
+
+### What is the current target version?
+
+Entry and home machines runs on Ubuntu 18.04. The next cycle will upgrade Ubuntu operating systems from version 18.04 to version 20.04 LTS.
+
+### Why not upgrade to the latest version?
+
+For reliability, we aim to run one OS version below the latest Ubuntu long term release. That said, we do recognize the need to utilize newer OS versions to keep your science flying. These are available on IAAS og Blue machines.
+
+### When will you do the upgrade?
+
+We expect the next upgrade cycle to begin in Q1 2022.
+
+### How long will the upgrade take?
+
+We expect the upgrade to take up to two hours including one restart for each lab.
+
+### Will my running jobs be affected?
+
+Yes. We need to restart your home machines and all running jobs on this machine will be stopped during upgrades. Jobs running on IAAS and Blue machines will not be affected.
+
+### Will I be notified?
+
+Yes. We will reach out to your lab to schedule the upgrade.
+
+### Will the upgrade affect my tools?
+
+Maybe. Below is a description of expected changes in packages that may cause potential effects on your workflows.
+
+#### Python
+
+System python version may change. We will specify such changes on these pages prior to each cycle. You may need to reinstall some of your Pip packages.
+
+#### R / Rstudio
+
+R version can change slightly, although the main version will remain the same. This should minimize any risk of affecting your scripts. Be aware that the operating system upgrade also upgrade system packages that your R-packages may depend on.
+
+#### Conda
+
+No changes expected. Those who use Conda to run Python, R, or other tools should not see any changes.
+
+#### Matlab
+
+No changes expected.
+
+#### Stata
+
+No changes expected.
+
+### What if I remain on the old OS version?
+
+You will loose possibility to install packages. Many tools like Python are progressing and your setup will not be supported anymore. We recognize that some tools are bound to older package versions. [Contact us](/contact) if you are dependent on packages from the old operating system version so we can discuss different options to keep your science going.
+
+
 ## Machine types
 
 You will meet four principal machine types in your lab. You may choose to deploy home, iaas and blue machines in [various sizes](/services/machine-types).

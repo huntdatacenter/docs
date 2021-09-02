@@ -1,7 +1,7 @@
 ---
 title: Risk management
 category: HUNT Cloud
-permalink: /compliance/riskmanagement
+permalink: /riskmanagement
 sidebarDepth: 1
 description: This page list risk management resources for HUNT Cloud.
 ---

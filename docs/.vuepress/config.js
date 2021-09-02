@@ -134,7 +134,14 @@ module.exports = {
 		"/coordination/prices/examples.md"
               ]
              },
+            {
+              title: "Risk",
+              text: "Risk",
+              isGroup: true,
+              children: [
                 "/coordination/risk/"
+              ]
+             },
            ]
         },
         {
@@ -241,8 +248,7 @@ module.exports = {
             "/faq/internal-transfer.md",
             "/faq/external-transfer.md",
             "/faq/security.md",
-            "/faq/agreements.md",
-            "/faq/os-upgrade.md"
+            "/faq/agreements.md"
           ]
         }
       ]

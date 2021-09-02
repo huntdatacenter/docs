@@ -1,5 +1,5 @@
 ---
-title: Coordinator roles
+title: Roles
 category: HUNT Cloud
 permalink: /coordinator/roles
 description: This page contains information on the coordinator roles in HUNT Cloud.
