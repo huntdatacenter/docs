@@ -46,7 +46,7 @@ Our aim is to update all agreements every two year or when major updates are int
 
 ### How do I update agreements for the new services model? 
 
-Due to our new [services model](/services/services-model/), all labs needs to move to the new agreement structure before 1 January 2022. Updated agreements needs to be in place from 1 October 2021 to adjust resource allocations in labs. Skip to the chase: forward the (1) [processor agreement information](/agreements/get-going/#_6-forward-required-processor-agreement-information-to-hunt-cloud) and (2) [services agreement information](/agreements/get-going/#_2-forward-required-services-agreement-information-to-hunt-cloud) to us on email to get going. Read the full step-wise guide on our [get going](/agreements/get-going/) page.
+Due to our new [services model](/services/services-model/), all labs needs to move to the new agreement structure before 1 January 2022. Updated agreements needs to be in place from 1 October 2021 to adjust resource allocations in labs. Skip to the chase: forward the (1) [processor agreement information](/agreements/get-going/#_6-forward-required-processor-agreement-information-to-hunt-cloud) and (2) [services agreement information](/agreements/get-going/#_2-forward-required-services-agreement-information-to-hunt-cloud) to us [on email](/contact) to get going. Read the full step-wise guide on our [get going](/agreements/get-going/) page.
 
 
 ## Changes
