@@ -53,7 +53,7 @@ Due to our new [services model](/services/services-model/), all labs needs to mo
 
 ### Can I propose changes to your your agreements? 
 
-Yes, we are happy for suggestions on how to further develop and improve our agreement inventory.  Today's versions have evolved through dialogue and reviews with scientists and legal teams from many of our user organizations. Incorporated improvements will be made available to our entire cloud community as updated agreement versions.
+Yes, we are happy for suggestions on how to further develop and improve our agreements.  Today's versions have evolved through dialogue and reviews with scientists and legal teams from many of our user organizations. Incorporated improvements will be made available to our entire cloud community as updated agreement versions.
 
 
 
