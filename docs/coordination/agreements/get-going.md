@@ -3,7 +3,7 @@ title: Get going
 category: HUNT Cloud
 permalink: /agreements/get-going
 sidebarDepth: 1
-description: This page help you to get going with administrative agreements in HUNT Cloud.
+description: This page helps you to get going with administrative agreements in HUNT Cloud.
 ---
 
 # Get going
