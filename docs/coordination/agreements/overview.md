@@ -89,7 +89,7 @@ We use information from the text file above to render the final data processor a
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Data Processor Agreement Form" version 3.6.
+The following form fields are including in the "HUNT Cloud Data Processor Agreement Form" version 3.7.
 
 **Data controller**
 
@@ -98,10 +98,6 @@ The following form fields are including in the "HUNT Cloud Data Processor Agreem
 - *controller.institution:* This is your main institutional name. For NTNU controllers, this is NTNU. 
 - *controller.enterprise.no:* This is your enterprise number. For NTNU controllers, leave blank. 
 - *controller.part.of.ntnu:* State "yes" if you are part of NTNU and "no" if you are not. NTNU agreements differ slightly in their wording and holds a different dispute resolution clause.
-
-**Agreement date**
-
-This is the approximate start date of the agreement. We use this for re-negotiations of the agreement which is expected every two years. For the record, the agreement starts formally when it is signed by both parties.
 
 **Signatory official** 
 
@@ -121,11 +117,11 @@ This is the name of the individual that will coordinate privacy aspects of the d
 
 **Information security officer**
 
-This is the name of the individual that will coordinate information security aspects of the data processor agreement. There is an expectation of direct communication for evaluation of major system changes and audit results. For NTNU, this may be security officers at your faculty or *Seksjon for digital sikkerhet* at NTNU IT.
+This is the name of the individual that will coordinate information security aspects of the data processor agreement. There is an expectation of direct communication for evaluation of major system changes and audit results. For NTNU, leave this blank as we will include the Security Officer at NTNU.
 
 **Security incident response**
 
-This is the emergency response contact during suspected or confirmed data loss or data breach. Emergency numbers are expected to respond around the clock. For NTNU, leave blank as this is NTNU SOC.
+This is the emergency response contact during suspected or confirmed data loss or data breach. Emergency numbers are expected to respond around the clock. For NTNU, leave this field blank as we will include NTNU's Security Operations Center (SOC).
 
 **Agreement type**
 
@@ -145,9 +141,10 @@ This information is aimed at the overall processing purpose of the information u
 
 *Kategorier av personopplysning vil kunne omfatte helseopplysninger, genetiske opplysninger og biometriske opplysninger jf. Personvernforordningen artikkel 9 (1) som selvrapporterte helseopplysninger, undersøkelsesdata, bildedata og uttrekk fra journalopplysninger.*
 
-**Agreement tag**
+**Administrative fields**
 
-This is our internal tag (indentifier) for your organization. Leave blank as this is included by us prior to agreement rendering.
+-  *Agreement date:* Leave this field blank. This is the approximate start date of the agreement. We use this to track re-negotiations every two years. For the record, the agreement starts formally when it is signed by both parties.
+- *Agreement tag:* Leave this field blank. This is our internal tag (identifier) for your organization.
 
 **Send us the text file for activation**
 
