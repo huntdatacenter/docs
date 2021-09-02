@@ -229,11 +229,11 @@ We use information from the text file above to render new services agreements. D
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Services Agreement Form" version 1.1.
+The following form fields are including in the "HUNT Cloud Services Agreement Form" version 1.2.
 
 **Services center short name**
 
-This is the short name or abbreviation for your services center. We use this name in day to day communication.
+This is the short name or abbreviation for your services center. We use this name in day to day communication. Leave blank if you prefer us to compose a tag from your center name.
 
 **Services center organization**
 
@@ -245,11 +245,11 @@ This is the name of the organization that holds the data processor agreement (or
 
 **Services center leader**
 
-This individual is authorized by the data controller to lead the services center. The role include a responsibility to authorize new data spaces under the services center, and for the overall responsibility to pay for resources consumed by the labs attached to the data space.
+This individual is authorized by the data controller to lead the services center. The role include a responsibility to authorize new data spaces under the services center, and the overarching responsibility to ensure that data spaces pay for the resources they consume.
 
 **Administrative coordinator**
 
-This is the name of the individual that will coordinate administrative aspects of the services center agreement. The individual will act as the deputy contact for other contacts if needed, including the ability to authorize new data spaces under the services center. 
+This is the name of the individual that will coordinate administrative aspects of the services center agreement, such as updates to this agreeement. The individual will act as the deputy contact for other contacts if needed, including the ability to authorize new data spaces under the services center. 
 
 **Signatory official**
 
