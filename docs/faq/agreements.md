@@ -24,11 +24,11 @@ Head over to our [agreement overview](/agreements/overview/) more information on
 
 Welcome onboard! Your starting point depends on your organization and role. We have provided a step-wise guide on how to [get going](/agreements/get-going/) so you can read up on your section of choice. [Contact us](/contact) is you are unsure where to start. 
 
-### Do I need all those agreement layers? 
+### Do I need all of the agreement layers? 
 
 Yes. All labs needs to be run under a complete [agreement layer](/agreements/overview/#overview) so we can ensure compliance with relevant laws, regulations and certificates.
 
-### Why do you need all those agreement layers? 
+### Why do you need all of the agreement layers? 
 
 We know this may be a mouthful if you need access to one lab only. However, our goal is to provide prosperous environments for scientists from a wide range of institutions. Our [agreement structure](/agreements/overview/#overview) has therefore evolved to adopt to the variation within our user's organizations. Once you [get going](/agreements/get-going/) you might find the flexibility useful on your scientific adventures.
 
@@ -51,9 +51,9 @@ Due to our new [services model](/services/services-model/), all labs needs to mo
 
 ## Changes
 
-### Can I propose changes to your your agreements? 
+### Can I propose changes to your agreements? 
 
-Yes, we are happy for suggestions on how to further develop and improve our agreements.  Today's versions have evolved through dialogue and reviews with scientists and legal teams from many of our user organizations. Incorporated improvements will be made available to our entire cloud community as updated agreement versions.
+Yes, we are happy for suggestions on how to further develop and improve our agreements.  Today's versions have evolved through dialogues and reviews with both scientists and legal teams from many of our user's organizations. Incorporated improvements will be made available to our entire cloud community as updated agreement versions.
 
 
 
