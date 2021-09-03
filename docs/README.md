@@ -15,7 +15,7 @@ Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf
 
 ::: danger NOTE
 
-All labs needs to migrate to the new services model by 1 October 2021 to adjust resources and add new services, and before 1 January 2022 to continue their services.
+All labs needs to migrate to the new services model by 1 October 2021 to adjust resources and add new services, and before 1 January 2022 to continue your services.
 
 [Click here to learn more](/services/services-model) 
 
