@@ -219,19 +219,13 @@ Well aware of [Tesler's law](https://en.wikipedia.org/wiki/Law_of_conservation_o
 
 ### Upgrade agreements
 
-You will need to migrate to the new agreement model, at the latest by 1 January 2021, and from 1 October 2021 to continue to adjust services and resources. Thus, it might be good to get going right away. 
+You will need to migrate to the new agreement model, at the latest by 1 January 2021, and from 1 October 2021 to adjust services and resources. Thus, it might be good to get going right away. 
 
-Here are a list of the agreements that we need to update and the upgrade process: 
+::: tip TIP
 
-* **1. Check your data processor agreement status**: Depending on the agreement age, the new agreement model may require updates to the data processor agreement (before 2020). [Contact us](/contact) to check the agreement status for your organization. 
+Head over to our [get going](/agreements/get-going) section for a step-wise guide on how to start the upgrades.
 
-* **2. New services agreement**: Identify your desired services center level (typically departments), download the [cloud services agreement form](/agreements/overview/#required-information-2), add information to the text file and [return to us](/contact) for agreement rendering. The rendered agreement will need co-signature from your data controller and services center leader.
-
-* **3. New data space order**: Download the new [data space order](/agreements/downloads/#data-space-order), complete the fields and [return to us](/contact) for registration. The new lab order requires co-signature from the services center leader. 
-
-* **4. New lab order**: Download the new [lab order](/agreements/downloads/#lab-order) with the purpose of processing, complete the fields and [return to us](/contact) for registration. The new lab order requires co-signature from the data space leader. 
-
-
+:::
 
 
 
