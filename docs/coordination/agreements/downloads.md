@@ -118,39 +118,65 @@ Download and update the text file with your information and [forward it to us](/
 
 
 
-## Billing account form
+## Invoice profile
 
-[HUNT Cloud Billing Account Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-billing-information.pdf) (pdf)
+[HUNT Cloud Invoice Profile](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-invoice-profile.pdf) (pdf)
 
-This form defined a billing acount for consumption of cloud resources. The form is attached to a data space agreement. A billing point may be set for the entire data space or specified for individual labs.
+This form defined the invoice profile for your cloud services fees. One invoice profile needs to be attached to your data space agreement. Data spaces on the BLUE subscription level may attach profiles for individual labs.
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Billing Information" version 1.0.
+The following form fields are including in the "HUNT Cloud Invoice Profile" version 1.5.
 
 **Data space**
 
-Specify the data space where this billing information is attached. 
+Specify the data space where you would like to attache the invoice porfile.
 
 **Lab name**
 
-Data spaces on the BLUE subscription may specify individual labs as billing point. Leave blank for other subscription levels.
+Data spaces on the BLUE subscription may specify labs as individual invoice profiles. Add DATA SPACE or leave blank for other subscription levels.
 
-**Billing contact**
+**Invoice contact**
 
-This is the individual that will coordinate the payment on your side. The individual is expected to coordinate this with our financial officer. 
+This individual is our point of contact for practical aspects related to the billing.
+
+**Invoice address (outside NTNU)**
+
+For organizations outside NTNU: specify the address where invoices are to be sent.
 
 **Account information**
 
 For NTNU affiliated data spaces, specify "k.sted" and "project number". The information is optional for data spaces affiliated outside NTNU and may be used for referencing on invoices.
 
-**Billing address**
-
-For organizations outside NTNU: specify the billing address where invoices are to be sent.
-
 **Pilot period** 
 
 New labs may for testing purposes by entitled to a pilot period before the lab is metered is accordance with the services specifications. If applicable, this is included in dialogue with representatives from HUNT Cloud. 
+
+- *Services*: Specify one or more services indvluded in the pilot period.
+- *End of pilot period*: Specify the date from where the specified servies are metered in accordance with the services specifications.
+
+**Free quote**
+
+If certain cloud services are to be provided without charce (free quote). If applicable, this is included in dialogue with representatives from HUNT Cloud. 
+
+- *Free quota*: Specify the quota that is provided without charge.
+- *End of quota period*: Specify the date from where the free quota period will end and the services will be metered in accordance with the Services Sepecification.
+
+**Spending limit**
+
+A monetary spending limit may be specified for the invoice profile. 
+
+- *Limit*: If applicable, specify a maximum spending limit in NOK that can be consumed over the spending period (see below). 
+- *Type*: For the soft and hard limit type, notifications will be sent to the Invoice Contact and Data Space Leader at consumption of approximately 50%, 90% and 100%. For the hard limit type, services will be temporarily deactivated if consumption exceeds the limit.
+- *Period*: This is the period in days for which the limit is applied. The default is per ninety days.
+
+**Signatures**
+
+Invoice profiles are signed by data space leaders. Co-signature from HUNT Cloud is required to effectuate i Pilot period and/or Free quota.
+
+**Activation**
+
+[Send us](/contact) your signed copy on email for activation. 
 
 :::
 
