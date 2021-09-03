@@ -13,9 +13,9 @@ These pages contains official user documentation on our services. The content is
 
 Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf) and visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services, and see our [Ting reports](/tingweek/#reports) for detailed updates on our activities.
 
-::: tip New services model
+::: danger NOTE
 
-The new services model was introduced 1 July 2021. The intention is to simplify access to predictable services. All labs wil be affected. 
+All labs needs to migrate to the new services model by 1 October 2021 to adjust resources and add new services, and before 1 January 2022 to continue their services.
 
 [Click here to learn more](/services/services-model) 
 
