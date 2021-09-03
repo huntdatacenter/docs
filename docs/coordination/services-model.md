@@ -19,7 +19,7 @@ description: This page contains information on the services model in HUNT Cloud.
 
 * New labs will be required to use the new agreements from July 2021. Existing labs need to upgrade from October to adjust resources, and all labs need to upgrade before January 2022 to continue their services.  
 
-[Click here to get started](/services/services-model/#getting-started)
+[Click here to get going](/services/services-model/#get-going)
 
 :::
 
@@ -212,7 +212,7 @@ We will encourage all labs to migrate over to the new agreement model as soon as
 
 
 
-## Getting started
+## Get going
 
 Well aware of [Tesler's law](https://en.wikipedia.org/wiki/Law_of_conservation_of_complexity) we know that this may feel complex. [Contact us](/contact) when you plan to bundle your labs into a data space so we can guide you in the process. 
 
