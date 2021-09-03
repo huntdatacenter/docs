@@ -43,6 +43,7 @@ If the SSH configuration file `~/.ssh/config` does not exist, you have to create
 Host github.com
   Hostname ssh.github.com
   Port 443
+  IdentityFile ~/.ssh/git
 ```
 
 See GitHub's [Using SSH over the HTTPS port](https://help.github.com/en/articles/using-ssh-over-the-https-port) article for more details
