@@ -18,9 +18,12 @@ Head over to our [agreement overview](/agreements/overview) to learn more about 
 
 :::
 
+
+
+
 ## Data processor agreement
 
-First things first, a [data processor agreement](/agreements/overview/#data-processor-agreement) needs to be signed before we can move forward with other agreement types. Good to know, there is no cost associated with the establishment of a data processor agreement.
+First things first, we need to get the [data processor agreement](/agreements/overview/#data-processor-agreement) in place before we are able to move the other agreement types forward. Good to know, there is no cost associated with the establishment of a data processor agreement, and we have solid templates available to for a quick process.
 
 #### 1. Is there already a processor agreement in place between my organization and HUNT Cloud?
 
@@ -48,14 +51,14 @@ This is the individual that is authorized to control data on behalf of your orga
 
 ::: tip NTNU
 
-At NTNU we prefer to sign our internal "[enighetsavtaler](/agreements/overview/#agreements-within-ntnu)" with Head of Departments.
+For NTNU, the internal "[enighetsavtaler](/agreements/overview/#agreements-within-ntnu)" is agreed with Departments with Head of Departments as signatory.
 
 :::
 
 
 #### 5. Can we use HUNT Cloud's data processor templates?
 
-We have [agreement templates](/agreements/overview/#data-processor-agreement) that is used by many organizations. These agreements comply with requirements in GDPR, ISO 27001 and Norwegian health laws. Using our templates is a quick way to ensure compliance with most requirements. [Contact us](/contact) for a copy that you or your privacy officer can assess.
+We have agreement templates that is accepted by many organizations. These agreements comply with requirements in GDPR, ISO 27001 and Norwegian health laws. Utilizing these templates are a quick way to ensure compliance with most requirements. [Contact us](/contact) for a copy that you and your your privacy officer can assess.
 
 If our templates can be used, jump to the next section. 
 
@@ -68,6 +71,13 @@ We need a few bits of information to prepare our agreement template:
 - Download the "[HUNT Cloud Data Processor Agreement Form](/agreements/overview/#required-information)" on your local machine (right click on the link and select "Save Link As...")
 - Open the text file in Notepad, Word or a similar application and supply the required information. Field descriptions are included in the "Clarification of the form fields" under the link above. 
 - Save the text file on your local machine and attach the file to an email that you [forward to us](/contact).
+
+::: tip NTNU
+
+For NTNU, Signatory official is your Head of Department, Scientific contact person your Deputy Head of Department for Research, and Administrative contact the department adviser that manages your privacy agreements. 
+
+:::
+
 
 #### 7. Sign the agreement
 
@@ -95,7 +105,8 @@ However, the services center is formally responsible for cost accumulated among 
 
 ::: tip NTNU
 
-At NTNU we prefer to locate service centers at the department level.
+For NTNU, Services centers are located at the Department level with Deputy Head of Department for Research as the center leader.
+#
 
 :::
 
@@ -106,6 +117,12 @@ We need a few bits of information to prepare your agreement:
 - Download the "[HUNT Cloud Services Agreement Form](/agreements/overview/#required-information-2)" on your local machine (right click on the link and select "Save Link As...")
 - Open the text file in Notepad, Word or a similar application and supply the required information. Field descriptions are included in the "Clarification of the form fields" under the link above. 
 - Save the text file on your local machine and attach the file to an email that you [forward to us](/contact).
+
+::: tip NTNU
+
+For NTNU, the Services center leader is your Deputy Head of Department for Research, and we recommend your scientific adviser as the Administrative coordinator. Signatory official is your Head of Department.
+
+:::
 
 #### 3. Sign the services agreement
 

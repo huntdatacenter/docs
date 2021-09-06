@@ -66,19 +66,25 @@ In short, the data processor agreement defines that your organization owns the d
 
 The data processor agreement allows your research to be compliant with the Data Protection Directive from EU (GDPR) and relevant Norwegian laws and regulations, including partly compliance with the Norwegian «*Norm for informasjonssikkerhet*».
 
+### Signatories
+
 The data processor agreement is formally agreed between your host organization that control your data (data controller), and our host institution that process the data on your behalf (data processor). 
 
 Your signatory will be the individual that is authorize to control your data on behalf of your organization. This may range from top management via head of departments to individuals in various organizational units.
 
-Our signatory will be the head of our department: [Department of Public Health and Nursing](https://www.ntnu.no/ism/ledelse) at the Faculty of Medicine and Health Sciences, NTNU. 
+::: tip
+
+For NTNU, we recommend Head of Departments as signatories on our internal data processor agreements (see 'enighetsavtale' below).
+
+:::
+
+
+
+Our signatory will be the Head of Department at our department, the [Department of Public Health and Nursing](https://www.ntnu.no/ism/ledelse) at the Faculty of Medicine and Health Sciences, NTNU. 
 
 ### Getting started
 
-We need to ensure that we have an active data processor agreement with your host organization or department (for NTNU) before we can process your data space and lab orders. 
-
-We already have many such agreements in place for speedy processing. So if you know your organization holds an active data processor agreement with us, let's skip to the [services agreement](/agreements/overview/#services-agreement).
-
-[Contact us](/contact) if you don't know if your organization holds an active data processor agreement, or to get started on a new agreement. For new agreements that can be based on our templates, it will bootstrap the process if help out completing the required information below.
+We need to ensure that we have an active data processor agreement with your host organization or department (for NTNU) before we can process your data space and lab orders. Head over to the [get going](/agreements/get-going/#data-processor-agreement) section for a step-by-step guide on how to start.
 
 
 ### Required information
@@ -154,7 +160,11 @@ When you have added the information to the text file, forward the text file to u
 
 ### Agreements within NTNU
 
-Data processor agreements are agreed between enterprises. This means that we cannot sign data processor agreements between NTNU departments. To allow for documented security measures, we have therefore developed a Memorandum of understanding (MoU) for such bindings. We call these "enighetsavtale". The document clarifies the same rights and protections as our regular processor agreement with one exception: Disputes will be resolved with binding effect by NTNU's management with our Rector as the last instance.
+Data processor agreements are agreed between enterprises. This means that we cannot sign data processor agreements between NTNU departments. 
+
+To allow for documented security measures, we have therefore developed a Memorandum of understanding (MoU) for internal data processing that we call "enighetsavtale". We sign these at the Department level. 
+
+The document clarifies the same rights and protections as our regular processor agreement with one exception: Disputes will be resolved with binding effect by NTNU's management with our Rector as the last instance.
 
 ### Data subprocessor agreement
 
@@ -211,7 +221,15 @@ The services agreement regulates conditions related to the use of our cloud serv
 - user agreement template
 - contact list
 
-The services agreement is signed by the data controller, the services center leader, and us. The signatory level depends on your organization. Services agreement may be signed on the same level as data processor agreements, data spaces or somewhere in between.
+### Signatories
+
+The services agreement is signed by the services center leader, your data controller and us. The signatory level depends on your organization. Services agreement may be signed on the same level as data processor agreements, data spaces or somewhere in between.
+
+::: tip NTNU
+
+For NTNU, services agreements are signed at the Department level with Deputy Head of Department for Research as Center leader.
+
+:::
 
 ### Getting started
 
