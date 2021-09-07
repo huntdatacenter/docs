@@ -157,13 +157,14 @@ Our financial work also includes modeling and reporting, accounting strategies a
 
 ### Transport
 
-### Assurance
+### Quality assurance
 
 ### Preservation
 
 ### Delivery
 
 ### Analytics
+
 
 
 
@@ -190,5 +191,16 @@ Our financial work also includes modeling and reporting, accounting strategies a
 ### Support
 
 ### Equipment 
+
+
+
+
+[team](https://assets.hdc.ntnu.no/assets/team.png)
+
+[team](https://assets.hdc.ntnu.no/assets/idea-to-knowledge.png)
+
+[activities](https://assets.hdc.ntnu.no/assets/activities.jpg)
+
+
 
 
