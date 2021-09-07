@@ -32,11 +32,11 @@ It is impossible to eliminate all risks. Thus, there will often be some kind of 
 
 ### Data Protection Impact Assessment (DPIA)
 
-The data processing in your labs may require a Data Protection Impact Assessments (DPIA) prior to the initiation of scientific activities (GDPR Article 35). See the [resources](/coordination/riskmanagement/#resources) to get going, and [contact us](/contact) for review of written text. We are happy to assist compliance coordinators with this work. 
+The data processing in your labs may require a Data Protection Impact Assessments (DPIA) prior to the initiation of scientific activities (GDPR Article 35). See the [resources](/riskmanagement/#resources) to get going, and [contact us](/contact) for review of written text. We are happy to assist compliance coordinators with this work. 
 
 ### Risk assessment reports (RAR)
 
-Your organization may request risk assessments of your activities when it comes to information security and/or privacy ("ROS-analyse" in Norwegian). We are happy to assist with information and explanations of our system and configurations. See the [resources](/coordination/riskmanagement/#resources) for our initial information, and [contact us](/contact) if you need additional clarifications. 
+Your organization may request risk assessments of your activities when it comes to information security and/or privacy ("ROS-analyse" in Norwegian). We are happy to assist with information and explanations of our system and configurations. See the [resources](/riskmanagement/#resources) for our initial information, and [contact us](/contact) if you need additional clarifications. 
 
 ## Audits
 
