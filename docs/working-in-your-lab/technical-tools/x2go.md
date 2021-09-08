@@ -407,3 +407,14 @@ If XQuartz is used as X11 Server on OS X, X2Go Client has to be informed. Click 
 Since version 47 Firefox became slow when using x11 rendering. Current versions should still allow setting xrender. Open new tab and write `about:config` as a url in your firefox browser, then search for `gfx.xrender.enabled` and set it to `true`. Restart your Firefox browser.
 
 :::
+
+::: details Shared folders
+
+X2Go requires sshfs to be installed in the lab in order to use Shared folders feature.
+
+```
+sudo apt update
+sudo apt install -y sshfs
+```
+
+:::
