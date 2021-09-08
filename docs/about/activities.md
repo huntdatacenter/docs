@@ -52,7 +52,7 @@ The Norwegian writer Henrik Ibsen is often paraphrased with the quote "[A pictur
 
 We invest time imagining and simplifying ideas and dreams into sketches that we use for communication, reflection and dialogue. 
 
-To illustrate, we use conceptual sketches such as "[to the moon and back](https://assets.hdc.ntnu.no/assets/concepts/hunt-cloud-sketch-5757-to-the-moon-and-back-science.png)" to guide discussions on various back stage activities that needs to be in place for successful data journeys, and ["complex data journeys"](https://assets.hdc.ntnu.no/assets/concepts/hunt-cloud-sketch-5767-complex-data-journeys.png) to visualize our view of scientific communities as "[value networks](https://www.google.com/search?q=value+network)" rather than traditional value chains.
+To illustrate, we use conceptual sketches such as "[to the moon and back](https://assets.hdc.ntnu.no/assets/perspectives/hunt-cloud-sketch-5757-to-the-moon-and-back-science.png)" to guide discussions on various back stage activities that needs to be in place for successful data journeys, and ["complex data journeys"](https://assets.hdc.ntnu.no/assets/perspectives/hunt-cloud-sketch-5767-complex-data-journeys.png) to visualize our view of scientific communities as "[value networks](https://www.google.com/search?q=value+network)" rather than traditional value chains.
 
 
 ### Ethics
@@ -195,11 +195,7 @@ Our financial work also includes modeling and reporting, accounting strategies a
 
 
 
-[team](https://assets.hdc.ntnu.no/assets/team.png)
-
-[team](https://assets.hdc.ntnu.no/assets/idea-to-knowledge.png)
-
-[activities](https://assets.hdc.ntnu.no/assets/activities.jpg)
+[activities](https://assets.hdc.ntnu.no/assets/perspectives/activities.jpg)
 
 
 
