@@ -249,7 +249,7 @@ If you received the notification _VPN connection has been successfully establish
 
 ::: tip Next step
 
-If you successfully completed this step, head over to Step 3 to [Configure your SSH](/getting-started/3-configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+If you successfully completed this step, head over to Step 3 to [Configure your SSH](/getting-started/configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 
