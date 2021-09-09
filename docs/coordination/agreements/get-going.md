@@ -145,17 +145,17 @@ Data spaces have a yearly subscription cost. So, before we get going with an ord
 
 You will find information on our services and digital science on these pages. Please [contact us](/contact) to supplement your assessment. We enjoy learning about scientific activities, and truly enjoy dialogues about short and long-term ways cloud services may elevate your science. We are also happy to provide references relevant for your scientific field, demonstrate potential tools, estimate cost etc. 
 
-If your reflections conclude that we might be a good fit (YAY!), jump to the next sections. If you decide otherwise, we will be happy to see you in the future and we will appreciate it if you could spare a minute [sending us](/contact) your thoughts about what we can improve to fit your scientific vision. 
+If your reflections conclude that we might be a good fit (YAY!) jump to the next sections. If you decide otherwise, we will appreciate it if you could spare a minute [sending us](/contact) your thoughts for future improvements about what we can improve to fit your scientific vision. 
 
-#### 2. Decide your data space subscription level
+#### 2. Identify your coordinator team
+
+Together we can do so much. High-trust and high-paced science needs smooth and seamless coordination to fly. Thus, this is the step to list your team of coordinators for five key areas: compliance, data, technical, knowledge and training. 
+
+You and your coordinator team will be the main point of contacts for both your scientists in your labs and us. [Click here](/coordinator/roles/) to read a bit more about the different roles before you reflect on who will make up your coordinator team.
+
+#### 3. Decide your data space subscription level
 
 You have the option to choose three different data space subscription levels. Our [services overview](/services/overview/#data-space) provides a summary of different features, the [services specifications](/services/specifications/) holds the detailed description, and the [price list](/prices/pricelist/) specify the yearly cost. [Contact us](/contact) if you are unsure which data space subscription level that may provide the best fit for your science.
-
-#### 3. Identify your coordinator team
-
-Together we can do so much. High-trust and high-paced science needs smooth and seamless coordination to fly. Thus, in the next step you will be asked to list a team of coordinators for five key areas: compliance, data, technical, knowledge and training. 
-
-You and your coordinator team will be the main point of contacts for both your scientists in your labs and us. [Click here](/coordinator/roles/) to learn about the different roles and spend a few minutes reflecting on those in your current team that might fit the roles before you move to the next section.
 
 #### 4. Send us your data space order
 
