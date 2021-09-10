@@ -39,7 +39,7 @@ We accept the following public key types:
 
 We recommend that you create a dedicated SSH key pair for each kista transfer. Click on the section below for a step wise guide on how to generate a new key pair in Windows that you can use for your kista access.
 
-f::: details How to generate a RSA SSH key pair on Windows with WinSCP
+::: details How to generate a RSA SSH key pair on Windows with WinSCP
 
 [WinSCP](https://winscp.net/) is an open source data transfer client for Windows that we recommend for SFTP transfers. Download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and install the software. Follow these steps to generate a RSA SSH key pair:
 
