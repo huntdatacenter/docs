@@ -12,8 +12,8 @@ description: Usage guide for VNC.
 
 Install TurboVNC on your lab machine:
 ```
-wget https://netix.dl.sourceforge.net/project/turbovnc/2.2.5/turbovnc_2.2.5_amd64.deb
-sudo apt install ./turbovnc_2.2.5_amd64.deb
+wget https://netix.dl.sourceforge.net/project/turbovnc/2.2.6/turbovnc_2.2.6_amd64.deb
+sudo apt install ./turbovnc_2.2.6_amd64.deb
 ```
 
 Make sure you have a desktop environment setup:
