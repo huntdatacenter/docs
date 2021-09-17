@@ -2,15 +2,25 @@
 title: Client certificate
 category: Technical tools
 permalink: /working-in-your-lab/technical-tools/client-certificate
-sidebarDepth: 0
+sidebarDepth: 1
 description: Installation guide for Client certificates
 ---
 
-## Client certificate
+# Client certificate
 
 Client certificate is used for user authentication in web applications.
 
-### Installation of client certificate on Windows
+## Installation on OS X and macOS
+
+1. Open the system profile config (.mobileconfig) attached in archive.
+
+2. Confirm the installation of profile.
+
+3. Enter the passphrase that you received on signal and then confirm.
+
+4. Quit your browser and restart it again for the certificate to get recognized.
+
+## Installation on Windows
 
 1. Open the p12 certificate. Make sure the store location is set to Current User and click next:
 
@@ -34,17 +44,7 @@ Client certificate is used for user authentication in web applications.
 
 6. Quit your browser and restart it again for the certificate to get recognized.
 
-### Installation of client certificate on macOS
-
-1. Open the system profile config (.mobileconfig) attached in archive.
-
-2. Confirm the installation of profile.
-
-3. Enter the passphrase that you received on signal and then confirm.
-
-4. Quit your browser and restart it again for the certificate to get recognized.
-
-### Installation of client certificate on Firefox (Ubuntu)
+## Installation on Firefox (Ubuntu)
 
 1. Open Firefox. Click Edit > Preferences.
 
@@ -66,4 +66,5 @@ Client certificate is used for user authentication in web applications.
 
    ![p12_firefox_5.png](./images/p12_firefox_5.png)
 
-6. The certificate is now installed and can be used for network or secure web site client authentication.
+6. The certificate is now installed and can be used for network or secure web site client authentication
+   after the restart of Firefox.
