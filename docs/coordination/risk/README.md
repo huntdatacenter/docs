@@ -40,11 +40,15 @@ Your organization may request risk assessments of your activities when it comes 
 
 ## Audits
 
-Data controllers are welcome to check that our systems and services are implemented and operated as stated (audits), both with on-screen and physical sessions.
+We encourage data controllers to check that our systems and services are implemented and operated as stated. Both on-screen and physical audits can be arranged.
 
-Compliance coordinators in data spaces are also more than welcome to participate in our regular internal audit sessions for educational purposes. 
+Compliance coordinators in data spaces are welcome to participate in our regular internal audit sessions for educational purposes. 
 
 We are audited by an independent auditor as part of our ISO certificates yearly for each certificate. The certificates from these audits are available on our [certificates](/certificates/) page.
+
+## Framework
+
+We build our risk management on the guidelines from [ISO 31000 - Risk management](https://www.iso.org/iso-31000-risk-management.html) and [ISO 27005 - Information security risk management](https://www.iso.org/standard/75281.html). 
 
 ## Resources
 
@@ -60,19 +64,19 @@ Here is a list of our public security and privacy information that may support y
 
 ## FAQ
 
-### Do you participate in risk assessment meetings? 
+#### Do you participate in risk assessment meetings? 
 
 Yes. We prioritize risk assessment meetings with data controllers to assist with information and clarifications. For  DPIAs and RARs in data spaces and labs, we will be able to respond quicker if we can comment on written drafts.
 
-### Do you have standardized text that I can use? 
+#### Do you have standardized text that I can use? 
 
 No. You will need to make your own assessment of risks that you find relevant in your specific scientific context. When that is said, we are happy to share and discuss potential scenarios, threats and assessments.
 
-### Do you allow third-party audits? 
+#### Do you allow third-party audits? 
 
 Yes. You may hire external companies to conduct audits of our systems and services on your behalf. 
 
-### Do you allow technical security tests? 
+#### Do you allow technical security tests? 
 
 Yes. You will need written approval of such testing *prior* to initiation. [Contact us](/contact) for arrangements and agreements.
 
