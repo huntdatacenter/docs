@@ -82,3 +82,59 @@ If not, don't hesitate to contact us [here](/contact) so we can improve this gui
   ```bash
   sudo umount ~/${labname}-storage
   ```
+
+## Troubleshooting
+
+::: details Installation on macOS 11 (Big Sur)
+
+Brew packages above are deprecated and if you are on new version or could not install old way download
+macFUSE and SSHFS from [osxfuse.github.io](https://osxfuse.github.io/).
+
+1. Download and open macFUSE:
+
+    ![macFUSE-1-dmg.png](./images/macFUSE-1-dmg.png)
+
+2. Start installation and confirm that you trust the developer:
+
+    ![macFUSE-2-Install-guide.png](./images/macFUSE-2-Install-guide.png)
+
+3. Read the info, then continue:
+
+    ![macFUSE-3-Install.png](./images/macFUSE-3-Install.png)
+
+4. Approve if you want the installation to continue:
+
+    ![macFUSE-4-Install.png](./images/macFUSE-4-Install.png)
+
+5. Switch to Security and privacy in System Preferences:
+
+    ![macFUSE-5-Security-and-Privacy-open.png](./images/macFUSE-5-Security-and-Privacy-open.png)
+
+6. Confirm if you want to allow software from this developer to be used in the system,
+   allowing this is necessary for sshfs to work:
+
+    ![macFUSE-5-Security-and-Privacy-allow.png](./images/macFUSE-5-Security-and-Privacy-allow.png)
+
+7. Restart the system immediately if you plan to install sshfs:
+
+    ![macFUSE-6-Install-restart.png](./images/macFUSE-6-Install-restart.png)
+
+After restarting the system, when necessary drivers are loaded, you can continue installing sshfs.
+
+1. Download and open sshfs:
+
+    ![sshfs-1-install.png](./images/sshfs-1-install.png)
+
+2. Confirm if you agree with license agreement:
+
+    ![sshfs-2-install-agree.png](./images/sshfs-2-install-agree.png)
+
+3. Approve if you want the installation to continue:
+
+    ![sshfs-3-install-approve.png](./images/sshfs-3-install-approve.png)
+
+4. Finish:
+
+    ![sshfs-4-install-finish.png](./images/sshfs-4-install-finish.png)
+
+:::
