@@ -187,6 +187,8 @@ You should now be connected to the VPN.
 2. Enter your user name (same as the OpenVPN profile file name)
 3. Enter the **`verification code`** from Google Authenticator as your password
 
+    ![tunnelblick-login](./images/tunnelblick-login.png)
+
     ::: warning
     Make sure that the _Save password_ checkbox is **`unchecked`**.
 
