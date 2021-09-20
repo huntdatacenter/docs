@@ -58,7 +58,7 @@ Most likely. The service allows you to be compliant with common acts and regulat
 ## Direct external transfers
 
 ### Can I transfer data directly with parties outside HUNT Cloud?
-Yes and no. Direct transfers via SSH are blocked. However, your lab leader can allow network openings for data exports outside HUNT Cloud (see below).
+Yes and no. Direct transfers via SSH are blocked. However, your lab leader can allow network openings for data transactions outside HUNT Cloud (see below). Note that this is restricted to traffic that are initiated from inside your lab.
 
 ### Can I have permanent openings to machines outside my lab?
 Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be approved by your service owner, documented in our [network opening order](/agreements/downloads/#network-opening-order), and the traffic needs to be initiated from inside your lab.
