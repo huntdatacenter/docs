@@ -145,7 +145,7 @@ No, not as long as your lab is active. We will deactivate your account, although
 
 ### Can I reactivate my old account?
 
-Yes. Reactivation require a new co-signed HUNT Cloud user agreement with your lab leader or lab coordinator that you [forward to us](/contact) on mail for account activation. You will need to reconfigure VPN and SSH to get up and running.
+Yes. Reactivation require a new co-signed [user agreement](/agreements/downloads/#user-agreement) that you [forward to us](/contact) on mail for account activation. You will need to reconfigure VPN and SSH to get up and running.
 
 
 
