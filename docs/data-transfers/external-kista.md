@@ -88,9 +88,12 @@ You should now have a SSH key pair consisting of the following files:
 - The private key **`ekista.ppk`**
 - The public key **`ekista.pub`**
 
-7. Forward the public key named **`ekista.pub`** to us on email ([Contact information](/contact)). The public key is used for encryption only and can be sent in clear text.
-
   :::
+
+#### Send public SSH key to HUNT Cloud
+
+After generating the SSH key pair, please send the public key to us on ([email](/contact)). The public key is used for encryption only and can be sent in clear text.
+
 
 ### SFTP client
 
