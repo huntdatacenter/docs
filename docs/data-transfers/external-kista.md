@@ -17,7 +17,7 @@ External kistas support labs with a simple and secure way to transport data from
 This section aims to give a technical description on how external users outside HUNT Cloud can connect and transfer data to our hosted SFTP service (external kista). See our [external transfer](/faq/external-transfer/) section in the FAQ for more information on the service itself.
 :::
 
-As an external user outside HUNT Cloud, you will need to meet three technical requirements to import data to a dedicated external kista.
+As an external user outside HUNT Cloud, you will need to meet the following technical requirements to transfer data to/from a dedicated external kista.
 
 - [SSH key pair](#ssh-key-pair)
 - [SFTP client](#sftp-client)
