@@ -46,7 +46,7 @@ Client certificate is used for user authentication in web applications.
 
 ## Installation on Firefox (Ubuntu)
 
-1. Open Firefox. Click Edit > Preferences.
+1. Open Firefox. Click `Edit` > `Preferences` or open url `about:preferences#privacy`.
 
    ![p12_firefox_1.png](./images/p12_firefox_1.png)
 
