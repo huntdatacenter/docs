@@ -42,11 +42,12 @@ If the SSH configuration file `~/.ssh/config` does not exist, you have to create
 ```ini
 Host github.com
   Hostname ssh.github.com
+  User git
   Port 443
   IdentityFile ~/.ssh/git
 ```
 
-See GitHub's [Using SSH over the HTTPS port](https://help.github.com/en/articles/using-ssh-over-the-https-port) article for more details
+See [GitHub's documentation](https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port) for more details.
 
 ### How to access GitLab
 
@@ -65,7 +66,7 @@ Host gitlab.com
   IdentityFile ~/.ssh/git
 ```
 
-See GitLab's [article](https://about.gitlab.com/2016/02/18/gitlab-dot-com-now-supports-an-alternate-git-plus-ssh-port/) for more details.
+See [GitLab's documentation](https://docs.gitlab.com/ee/user/gitlab_com/#alternative-ssh-port) for more details.
 
 ### How to access Bitbucket
 
@@ -80,9 +81,10 @@ Host bitbucket.org
   Hostname altssh.bitbucket.org
   User git
   Port 443
+  IdentityFile ~/.ssh/git
 ```
 
-See [Atlassian troubleshooting guide](https://confluence.atlassian.com/bitbucket/troubleshoot-ssh-issues-271943403.html#TroubleshootSSHissues-Ifport22isblocked) for more details.
+See [Atlassian's documentation](https://support.atlassian.com/bitbucket-cloud/docs/troubleshoot-ssh-issues/#If-port-22-is-blocked) for more details.
 
 ## Set up
 
