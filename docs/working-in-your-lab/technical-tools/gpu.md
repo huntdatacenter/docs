@@ -10,13 +10,7 @@ description: We offer GPU machine types in our IaaS tier allowing you to run the
 
 We offer GPU machine types in our IaaS tier allowing you to run the AI/ML workloads of your choice.
 
-## GPU specification
-
-| Manufacturer | Model | Architecture | Memory | Interface |
-|--------------|-------|--------------|--------|-----------|
-| NVIDIA | Tesla P100 | Pascal | 16GB HBM2 | PCIe Gen3 |
-| NVIDIA | Tesla V100 | Volta | 32GB HBM2 | PCIe Gen3 |
-| NVIDIA | Tesla V100S | Volta | 32GB HBM2 | PCIe Gen3 |
+See [GPU specification](/services/machine-types/#gpu-accelerator-machine-types) for more details on the specific GPU models we offer.
 
 ## Software
 
@@ -35,7 +29,7 @@ Run the following command to call the NVIDIA System Management Interface (`nvidi
 nvidia-smi
 ```
 
-If you wish to use a specific version of CUDA, you can either install it manually or use the NVIDIA Container Toolkit to run a container of your choosing. Here is an example for CUDA version `11.0`: 
+If you wish to use a specific version of CUDA, you can either install it manually or use the NVIDIA Container Toolkit to run a container of your choosing. Here is an example for CUDA version `11.0`:
 
 ```bash
 sudo docker run --rm --runtime=nvidia nvidia/cuda:11.0-base nvidia-smi
@@ -43,5 +37,6 @@ sudo docker run --rm --runtime=nvidia nvidia/cuda:11.0-base nvidia-smi
 
 ## More info
 
-* [NVIDIA Container Toolkit documentation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/overview.html) for more details on how to easily use and run containers.
-* [NVIDIA GPU Cloud catalog](https://ngc.nvidia.com/catalog/containers/nvidia:cuda) for an overview of CUDA containers from NVIDIA.
+- [NVIDIA Drivers overview](https://docs.nvidia.com/datacenter/tesla/drivers/index.html) for an overview of drivers for NVIDIA GPUs.
+- [NVIDIA Container Toolkit documentation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/overview.html) for more details on how to easily use and run containers.
+- [NVIDIA GPU Cloud catalog](https://ngc.nvidia.com/catalog/containers/nvidia:cuda) for an overview of CUDA containers from NVIDIA.
