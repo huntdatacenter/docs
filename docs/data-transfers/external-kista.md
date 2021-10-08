@@ -3,13 +3,13 @@ title: External kista
 category: Data transfers
 permalink: /data-transfers/external-kista
 sidebarDepth: 2
-description: External kistas support labs with a simple and secure way to transport data from an external user located outside HUNT Cloud and into their lab in HUNT Cloud.
+description: External kistas support labs with a simple and secure way to transfer data from an external user located outside HUNT Cloud and into a lab in HUNT Cloud.
 ---
 
 # External kista
 
-External kistas support labs with a simple and secure way to transport data from an external user located outside HUNT Cloud and into their lab in HUNT Cloud. In short, external kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers that are dedicated to one specific data transaction of data transport.
-
+External kistas support labs with a simple and secure way to transfer data from an external user located outside HUNT Cloud and into a lab in HUNT Cloud.
+In short, external kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers dedicated to transferring data.
 
 ## For external users
 
@@ -17,11 +17,32 @@ External kistas support labs with a simple and secure way to transport data from
 This section aims to give a technical description on how external users outside HUNT Cloud can connect and transfer data to our hosted SFTP service (external kista). See our [external transfer](/faq/external-transfer/) section in the FAQ for more information on the service itself.
 :::
 
-As an external user outside HUNT Cloud, you will need to meet the following technical requirements to transfer data to/from a dedicated external kista.
+As an external user outside HUNT Cloud, you will need to meet the following technical requirements to transfer data to/from a external kista.
 
+- [Computer with network connection to HUNT Cloud](#computer-with-network-connection-to-hunt-cloud)
 - [SSH key pair](#ssh-key-pair)
 - [SFTP client](#sftp-client)
-- [Network connection to HUNT Cloud](#network-traffic)
+
+Please [contact us](/contact) if you require more details or run into trouble.
+
+### Computer with network connection to HUNT Cloud
+
+You will need a computer with access to the data if you are sending data.
+
+All major operating systems such as Windows, MacOS and Linux have SFTP clients and are supported.
+
+Your host organization might need to open it's network firewall in order for your computer to connect and transfer to the external kistas in HUNT Cloud.
+Below are the network details necessary to add such a firewall opening:
+
+#### Network details
+
+- **`External kista IP address: 129.241.176.121`**
+- **`Port range: 2000-2128`**
+- **`Protocol: TCP`**
+
+::: tip Specific port number
+A specific port number will be selected and we will send this number in the transfer information when the external kista has been setup.
+:::
 
 ### SSH key pair
 
@@ -90,9 +111,10 @@ You should now have a SSH key pair consisting of the following files:
 
   :::
 
-#### Send public SSH key to HUNT Cloud
+#### Share public SSH key with HUNT Cloud
 
-After generating the SSH key pair, please send the public key to us on ([email](/contact)). The public key is used for encryption only and can be sent in clear text.
+After generating the SSH key pair, please share the public key with us via [email](/contact).
+The public key is safe to share and can be sent in clear text.
 
 
 ### SFTP client
@@ -172,22 +194,6 @@ Below is a guide on how to connect using the WinSCP SFTP client on Windows.
 
 ![ekista_13](./images/ekista_10.png "ekista_13")
 :::
-
-### Network traffic
-
-Successful access to external kistas might require firewall exemptions set by your host organization as traffic will go in and out of your organizational network and to and from HUNT Cloud.
-
-Please use the following network details to ensure that it is possible to connect to external kistas:
-
-- **`IP: 129.241.176.121`**
-- **`Port range: 2000-2128`**
-- **`Protocol: TCP`**
-
-::: tip Specific port number
-You will connect to a specific port number to access the external kista for an individual data transfer. We will send this number in your transfer information after deployment.
-:::
-
-Please [contact us](/contact) if you require more details or run into trouble.
 
 ## For internal users
 
