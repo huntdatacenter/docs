@@ -14,7 +14,8 @@ In short, external kistas are short-lived and hardened [SFTP](https://en.wikiped
 ## For external users
 
 ::: tip Note
-This section aims to give a technical description on how external users outside HUNT Cloud can connect and transfer data to our hosted SFTP service (external kista). See our [external transfer](/faq/external-transfer/) section in the FAQ for more information on the service itself.
+This section aims to give a technical description on how external users outside HUNT Cloud can connect and transfer data to our hosted SFTP service called external kista.
+See the [external kista FAQ](/faq/external-transfer/#external-kista) for more information on the service itself and how to request one.
 :::
 
 As an external user outside HUNT Cloud, you will need to meet the following technical requirements to transfer data to/from a external kista.
