@@ -1,21 +1,21 @@
 ---
-title: New services model
+title: Services model
 category: HUNT Cloud
 permalink: /services/services-model
 description: This page contains information on the services model in HUNT Cloud.
 ---
 
-# New services model
+# Services model
 
-**The new services model in HUNT Cloud was introduced 1st July, 2021. The aim is to simplify your path to complex cloud powers. The result is a new way to manage digital laboratories. The upgrade introduces changes for all users.**
+**The new services model in HUNT Cloud was introduced 1st July, 2021. The aim has been to simplify your path to complex cloud powers. The result is a new way to manage digital laboratories.**
 
 ::: tip Summary
 
 * The service model introduces a new way to control and manage labs via "Services centers" and "Data spaces". This setup also includes a new way to price services in labs.  
 
-* Our intention is to simplify access to labs and data spaces as soon as a service center is established, and to ensure predictable prices that allow for both access to flexible resources and sustainable services.  
+* Our intention is to simplify access to labs and data spaces for scientists, and to ensure predictable prices that balances your need for flexible resources and sustainable services.  
  
-* We will kindly ask all labs to sign a new set of agreements as soon as possible, and to help us organize your activities into data spaces and services centers. This needs to be completed before January 2022.  
+* We kindly ask all labs to sign a new set of agreements as soon as possible, and to help us organize your activities in data spaces and services centers. This needs to be completed before January 2022.  
 
 * New labs will be required to use the new agreements from July 2021. Existing labs need to upgrade from October to adjust resources, and all labs need to upgrade before January 2022 to continue their services.  
 
@@ -42,11 +42,11 @@ Table of contents:
 
 Scientists deserve elegant and predictable services on their quest to change the world for the better! And they deserve solutions that bring people together for fun and significant collaborations.
 
-As our cloud community has been rapidly growing in both size and complexity, we saw a possibility to rethink our services model to keep up with the much appreciated growth. We are humble to now present the results.
+As our cloud community has been rapidly growing in both size and complexity, we saw a possibility to rethink our services model to keep up with the much appreciated growth. Here we humbly present the results.
 
-We have put a lot of thinking and our best efforts into these changes with a clear intention to simplify access to great scientific services. We are thankful for all the in-depth discussions and feedback from the community.
+We have put a lot of thinking into these changes with a clear intention to simplify access to great scientific services. We are thankful for all the in-depth discussions and feedback from the community on the way.
 
-The result is an upgraded services model that includes a new way to organize and manage digital laboratories (data spaces), a way to separate complex contractual aspects from scientific activities (services centers), and a new way to price scientific cloud services that we hope will give you both flexible access to resources and services that is sustainable over time. 
+The result is an upgraded services model that includes a new way to organize and manage digital laboratories (data spaces), a way to separate organizational aspects from scientific activities (services centers), and a new way to price scientific cloud services that we hope will give you both flexible access to resources and services that is sustainable over time. 
 
 
 ### New management model
@@ -157,7 +157,7 @@ Three notes on the transition to new price model:
 
 * Services and resources that are allocated to established labs per 1 July 2021 will be given a pilot period until 1 January 2021 before the new prices will be metered and billed (see timeline below).
 
-* New services or adjustments made after 1 July 2021 will be metered and billed from 1 October 2021 in accordance with the new model. 
+* New services or adjustments made after 1 October 2021 will be metered and billed in accordance with the new model. 
 
 * Prepayments made between 1 January 2020 and 1 July 2021 will be forwarded as Free Quota for the remaining of their project period.
 
@@ -166,7 +166,9 @@ We expect prices and services specifications to be adjusted three times per year
 
 ### Continuous development
 
-For the record, making a new model for how to organize digital laboratories and digital science is hard. We have given this our best shot in a direction that we think will elevate the scientific significance of our community. However, this is by no means perfect. The current model must be seen as work in progress under our continuous development principle. We have already allocated time in our next [ting week](/tingweek/) so we together can think up how to further improve the model and advance our common quest to elevate data for a better world! 
+For the record, making a new model for how to organize digital laboratories and digital science is hard. We have given this our best shot in a direction that we think will elevate the scientific significance of our community. However, this is by no means perfect. 
+
+The current model must be seen as work in progress under our continuous development principle. We have already allocated time in our next [ting week](/tingweek/) so we together can think up how to further improve the model and advance our common quest to elevate data for a better world! 
 
 
 ## Timeline
@@ -183,12 +185,12 @@ We will encourage all labs to migrate over to the new agreement model as soon as
 ![Month](./services/images/hunt-cloud-date-october-2021.png "Month")
 
 * Existing labs will need to migrate to the new agreement model for services adjustments and inclusion of new services.
-* Services and resource adjustments in labs made after July 1 will be metered and billed.
+* New services will be metered and billed in accordance with the new services model.
 
 ![Month](./services/images/hunt-cloud-date-january-2022.png "Month")
 
-* Services will be metered and billed in accordance with the new services model. 
-* Lab labs needs to be migrated to the new agreement model to continue their services.
+* All data spaces and labs will be metered and billed in accordance with the new services model. 
+* All data spaces and labs needs to migrate to the new agreement model to continue their services.
 
 
 
@@ -219,7 +221,7 @@ Well aware of [Tesler's law](https://en.wikipedia.org/wiki/Law_of_conservation_o
 
 ### Upgrade agreements
 
-You will need to migrate to the new agreement model, at the latest by 1 January 2021, and from 1 October 2021 to adjust services and resources. Thus, it might be good to get going right away. 
+You will need to migrate to the new agreement model at the latest by 1 January 2022. Thus, it might be good to get going right away. 
 
 ::: tip TIP
 

@@ -14,8 +14,6 @@ These pages contains official user documentation on our services. The content is
 Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf) and visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services, and see our [Ting reports](/tingweek/#reports) for detailed updates on our activities.
 
 
-
-
 ::: tip Next ting week
 - **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET
 - **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET
@@ -27,7 +25,7 @@ Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf
 
 
 ::: danger NOTE
-All labs needs to migrate to the new services model by 1 October 2021 to adjust resources and add new services, and before 1 January 2022 to continue your services.
+All labs are now required to have upgraded to new agreements to adjust resources. All need to upgrade before 1 January 2022. 
 
 [Click here to learn more](/services/services-model) 
 :::

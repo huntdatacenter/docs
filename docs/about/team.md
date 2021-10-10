@@ -8,12 +8,12 @@ description: This page gives an overview of the team that passionatiely develop 
 # Team
 
 
-**Your HUNT Cloud experiences are created, shaped and molded by a small team of scientific instrument makers located at NTNU, Norway.**
+**Your HUNT Cloud experiences are shaped and molded by a small team of scientific instrument makers located at NTNU, Norway.**
 
 
 ![HUNT Cloud](./images/hunt-cloud-team.png)
 
-Our team consist of six full time employees with a mixed background of medicine, biology, management systems, signal processing and computer science ([link to image](https://assets.hdc.ntnu.no/assets/hunt-cloud-team.png)). We collaborate closely on most activities, although for clarity, here is a short description of our core responsibility areas.
+Our team consist of six full time employees with a background from medicine, biology, management systems, signal processing and computer science ([link to image](https://assets.hdc.ntnu.no/assets/hunt-cloud-team.png)). We collaborate closely on most of our [activities](/about/activities), although for clarity, here is a short description of our core responsibility areas.
 
 ### Qussay Ghazeia
 

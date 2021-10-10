@@ -11,7 +11,6 @@ description: Updates will be posted here if there is any service or performance 
 Operational.
 :::
 
-**2021-08-19 15:06** - High load of incomming traffic is reported to cause lag in lab connections. We are reconfiguring traffic to reduce impact.
 
 <!--
 
