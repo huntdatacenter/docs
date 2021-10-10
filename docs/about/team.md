@@ -1,7 +1,7 @@
 ---
-title: People
+title: Team
 category: HUNT Cloud
-permalink: /people
+permalink: /team
 description: This page gives an overview of the team that passionatiely develop HUNT Cloud.
 ---
 
