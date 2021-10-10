@@ -25,7 +25,7 @@ The Director of HUNT Cloud, [Oddgeir Lingaas Holmen](https://www.ntnu.edu/employ
 
 ### Development
 
-The continous development of HUNT Cloud is a collaboration between our cloud community and our [cloud team](https://assets.hdc.ntnu.no/assets/hunt-cloud-team.png). Among others, we allocate time three times per year in [ting weeks](/tingweek) for structured discussions on how to best develop our services.
+The continous development of HUNT Cloud is a collaboration between our cloud community and our [cloud team](/about/team). Among others, we allocate time three times per year in [ting weeks](/tingweek) for structured discussions on how to best develop the experience.
 
 ### Affiliation
 
