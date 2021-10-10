@@ -92,6 +92,7 @@ module.exports = {
             "/about/policies.md",
             "/about/certificates.md",
             "/about/activities.md",
+            "/about/people.md",
             "/about/organization.md"
           ]
         },
