@@ -5,7 +5,7 @@ permalink: /team
 description: This page gives an overview of the team that passionatiely develop HUNT Cloud.
 ---
 
-# People
+# Team
 
 
 **Your HUNT Cloud experiences are created, shaped and molded by a small team of scientific instrument makers located at NTNU, Norway.**
