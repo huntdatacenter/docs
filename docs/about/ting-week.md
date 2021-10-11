@@ -8,9 +8,9 @@ description: This page list information and questions about our ting weeks.
 
 # Ting week
 
-**We appoint time three times per year to meet for information, feedback and discussions on how to develop HUNT Cloud to better elevate your science.**
+**We appoint time three times per year to meet for information, feedback and discussions on how to develop HUNT Cloud to better elevate your science. We call this gatherings Tings.** 
 
-We call this gatherings Tings. We arrange a structured set of Tings for different parts of the HUNT Cloud community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
+We arrange a layered set of Tings for various parts of our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
 
 
 ::: tip Next up: Ting week #4
@@ -32,7 +32,9 @@ We call this gatherings Tings. We arrange a structured set of Tings for differen
 
 ## Reports
 
-The intent of the ting report is to give you the opportunity to read up on **`what`** we are doing at HUNT Cloud, and a little bit on **`why`** we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
+The intent of the Ting report is to give you the opportunity to read up on **`what`** we are doing at HUNT Cloud, and a little bit on **`why`** we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
+
+The reports include a letter with reflections from the last Ting period as well as chapters with business description, risk factors, description of properties, and external and internal controls. 
 
 - [Ting report #3 (2021-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-report.pdf)
 - [Ting report #2 (2021-02)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-report.pdf)
@@ -45,35 +47,27 @@ The intent of the ting report is to give you the opportunity to read up on **`wh
 
 
 
-
-
 ## Tings
 
-We have established the following layered Ting structure:
+We have established the following layered Ting structure for the various parts of our community. We have appointed two hours for all Tings. The first hour is structured, and the last hour is reserved for unstructured discussion.
+
 
 ### Lagtun
 
-Lagtun is the ting where we meet data controllers and data space leaders to discuss the overall strategic direction for data-driven science in general and the adaptation of HUNT Cloud.
+Lagtun is the Ting where we meet data controllers and data space leaders from the BLUE subscription layer to discuss the overall strategic direction for data-driven science in general and the tactical adaptation of those strategies in HUNT Cloud.
 
-We have appointed two hours to Lagtun. The first hour is structured, and the last hour is reserved for unstructured questions and discussions.
 
 ### Lab ting
 
-This is our "allting" where we invite all lab users for information and feedback on our lab services, such as storage, compute, transfers, software, documentation, communication etc.
-
-We have appointed two hours to the Lab ting. The first hour is structured, and the last hour is reserved for an unstructured question and answer section.
+This is our **`allting`** where all lab users meet for information, feedback and discussion on our lab services, such as storage, compute, transfers, software, documentation, communication etc.
 
 ### Coordinator ting
 
-This ting gather coordinators from data controllers, data spaces and labs. We discuss ways to optimize research management and research coordination, including agreement structures, user management, resource management, lab portfolio management, reporting etc.
-
-We have appointed two hours to the Coordinator ting. The first hour is structured, and the last hour is reserved for an unstructured discussion.
+This Ting gather coordinators from services centers, data spaces and labs. The discussons focuses on scientific coordination, including agreements and compliance, user and resource management, knowledge transfers, data management and financial aspects of the services etc.
 
 ### Enterprise ting
 
-The Enterprise ting is introduced for Ting week #2 (2021-02). We aim to gather controllers and lab users from small and medium private enterprises to discuss how to best elevate private data-driven activities and innovations.
-
-We have appointed two hours to the Enterprise ting. The first hour is structured, and the last hour is reserved for an unstructured discussion.
+The Enterprise ting intend to gather data controllers and lab users from small and medium private enterprises (SMEs) to discuss how to best elevate private data-driven activities and innovations.
 
 
 
@@ -81,11 +75,22 @@ We have appointed two hours to the Enterprise ting. The first hour is structured
 
 
 
+## Invitations 
+
+Invitations to the Tings are derived from registered roles in contractual agreements with HUNT Cloud:
+
+- **`Lab ting`**: Lab users with a signed user agreement and active VPN connection. 
+- **`Coordinator ting`**: Individuals listed as "coordinators" in data controller, data space or lab agreements. 
+- **`Enterprise ting`**: Users and coordinators registered or associated with private enterprises. 
+- **`Lagtun`**: Signatory officials and scientific contacts on data controller agreements and data space leaders on the BLUE data space subscription layer.
 
 
 
 
-## Dates
+
+
+
+## Dates and agendas
 
 We appoint time for three ting weeks per year, in the fall around the autumn holidays, in the winter around the winter holidays and in the spring after the national holiday i Norway.
 
@@ -144,15 +149,6 @@ The inspiration to appoint time to meet at regular intervals in a layered struct
 ### Is this an assembly? 
 
 No. Our tings are not the same as a general assembly (generalforsamling) with binding decisions. As of today, our tings are to be seen as a gathering of people that both champion and dream up ideas on how to best utilize data for a better world. HUNT Cloud is owned by NTNU which has the full financial and compliance responsibilities for our services.
-
-### Who is invited? 
-
-Ting memberships are derived from registered roles in active contractual agreements with HUNT Cloud:
-
-- **`Lab ting`**: Lab users with a signed user agreement and active VPN connection. 
-- **`Coordinator ting`**: Individuals listed as "coordinators" in data controller, data space or lab agreements. 
-- **`Enterprise ting`**: Users and coordinators registered or associated with private enterprises. 
-- **`Lagtun`**: Signatory officials and scientific contacts on data controller agreements and data space leaders defined in data space agreements.
 
 ### How do I get invited? 
 
