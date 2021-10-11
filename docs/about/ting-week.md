@@ -14,10 +14,10 @@ We call this gatherings Tings. We arrange a structured set of Tings for differen
 
 
 ::: tip Next up: Ting week #4
-- **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET
-- **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET
-- **Enterprise ting**: Wednesday 20 October 2021 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 21 October 2021 - 9 to 11 a.m. CET
+- **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-labting-agenda.pdf))
+- **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-coordinatorting-agenda.pdf))
+- **Enterprise ting**: Wednesday 20 October 2021 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-enterpriseting-agenda.pdf))
+- **Lagtun**: Thursday 21 October 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-lagtun-agenda.pdf))
 ::: 
 
 [[toc]]
@@ -49,7 +49,7 @@ The intent of the ting report is to give you the opportunity to read up on **`wh
 
 ## Tings
 
-HUNT Cloud has established the following Tings:
+We have established the following layered Ting structure:
 
 ### Lagtun
 
@@ -90,12 +90,19 @@ We have appointed two hours to the Enterprise ting. The first hour is structured
 We appoint time for three ting weeks per year, in the fall around the autumn holidays, in the winter around the winter holidays and in the spring after the national holiday i Norway.
 
 
+### Ting week #5 (2022-02)
+
+- **Lab ting**: Tuesday 15 February 2022 - 2 to 4 p.m. CET
+- **Coordinator ting**: Wednesday 16 February 2022 - 9 to 11 a.m. CET
+- **Enterprise ting**: Wednesday 16 February 2022 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 17 February 2022 - 9 to 11 a.m. CET
+
 ### Ting week #4 (2021-10)
 
-- **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET
-- **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET
-- **Enterprise ting**: Wednesday 20 October 2021 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 21 October 2021 - 9 to 11 a.m. CET
+- **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-labting-agenda.pdf))
+- **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-coordinatorting-agenda.pdf))
+- **Enterprise ting**: Wednesday 20 October 2021 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-enterpriseting-agenda.pdf))
+- **Lagtun**: Thursday 21 October 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-lagtun-agenda.pdf))
 
 ### Ting week #3 (2021-05)
 
