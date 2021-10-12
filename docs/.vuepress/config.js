@@ -163,6 +163,16 @@ module.exports = {
           children: [
             "/working-in-your-lab/",
             {
+              title: "HUNT Lab",
+              text: "HUNT Lab",
+              isGroup: true,
+              children: [
+                "/working-in-your-lab/hunt-lab/",
+                "/working-in-your-lab/hunt-lab/installation.md",
+                "/working-in-your-lab/hunt-lab/faq.md",
+              ]
+            },
+            {
               title: "Technical tools",
               text: "Technical tools",
               isGroup: true,
