@@ -8,7 +8,7 @@ description: Installation guide for Client certificates
 
 # Client certificate
 
-You will need to install a client certificate in your browser to access your lab from a browser.
+You will need to install a certificate to access your lab from a browser.
 [[toc]]
 
 ## Installation on OS X and macOS
