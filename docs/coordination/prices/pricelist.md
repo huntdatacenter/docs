@@ -50,15 +50,24 @@ The price list will be updated from time to time.
 
 **Minor updates**. Major updates do -not- affect prices and/or available services. Minor updates are specified by increasing decimals (v2.1, v2.2, v2.3, etc). Minor updates follow the effective date of major updates and take precedence of previous versions when they are published on this page.
 
-## Previous versions
+## Archive
 
 | **Version** | **Announced** | **Effective** |
 | - | - | - |
 | [HUNT Cloud Price List v3.1](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-1.pdf) (pdf) | 2021-10-12 | 2021-10-12 |
 | [HUNT Cloud Price List v3.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-0.pdf) (pdf) | 2021-07-01 | 2021-10-01 |
 
+## Changes
 
+**v3.1** (minor)
 
+- GPU type in GPU table updated to machine readable names.
+- Document information with revision numbers included in PDF.
+- Machine readable version available on this page.
+
+**v3.0** (major)
+
+- First version published under the new services model.
 
 
 
