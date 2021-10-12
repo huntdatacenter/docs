@@ -19,7 +19,7 @@ Our team consist of six full time employees with a background from medicine, bio
 
 Qussay is our Compliance officer. He is responsible for our audit programs that checks compliance with the ISO certifications. Qussay is also responsible for our contract management. Thus, you will meet Qussay when you register your agreements and when you visit for partner audits. 
 
-### Matus Kosut
+### Matúš Košút
 
 Matus is heading our user experience efforts. This includes the direction, prototyping and development of new services. Matus do also lead the development of user documention and our internal analytics. You will meet Matus both in dicussions on pilot services and during advanced support. 
  
