@@ -22,7 +22,7 @@ This is our current price list:
 The price list is incorporated as an appendix to our cloud services agreement.Costs are metered and billed in accordanced with our [services specifications](/services/specifications).
 
 
-**Machine readable version**. This list include machine readable CSVs of the current price list. The PDF version above hold precendence if discrepancies occur.
+**Machine readable version**. This list includes machine readable CSVs of the current price list. The PDF version above holds precedence if discrepancies occur.
 
 | **Service** | **Table** | **File** | 
 | - | - | - |
