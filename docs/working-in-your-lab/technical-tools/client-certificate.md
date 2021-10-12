@@ -8,7 +8,8 @@ description: Installation guide for Client certificates
 
 # Client certificate
 
-Client certificate is used for user authentication in web applications.
+You will need to install a client certificate in your browser to access your lab from a browser.
+[[toc]]
 
 ## Installation on OS X and macOS
 
@@ -44,7 +45,7 @@ Client certificate is used for user authentication in web applications.
 
 6. Quit your browser and restart it again for the certificate to get recognized.
 
-## Installation on Firefox (Ubuntu)
+## Installation on Linux (Firefox)
 
 1. Open Firefox. Click `Edit` > `Preferences` or open url `about:preferences#privacy`.
 
