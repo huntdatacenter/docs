@@ -7,7 +7,10 @@ export default ({ router }) => {
         // NOTE Redirect PDF assets if not found - fails to redirect existing
         window.location.href = "https://assets.hdc.ntnu.no" + to.path;
         next();
-      } else if (to.path.startsWith("/tingweeks/")) {
+      } else if (
+        to.path.startsWith("/tingweeks/") ||
+        to.path === "/tingweeks"
+      ) {
         // NOTE Redirect PDF assets if not found - fails to redirect existing
         window.location.href = "https://docs.hdc.ntnu.no/tingweek/";
         next();
