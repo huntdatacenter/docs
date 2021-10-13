@@ -7,10 +7,14 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: warning All systems
-**2021-10-13 12:20** - One physical machines hosting lab machine is reporting errors. We are investigating. Affected labs are notified. New update expected 14:30. 
+::: tip All systems
+Operational.
 :::
 
+**2021-10-13 13:04** - Affected labs are migrated to new physical machines.
+
+**2021-10-13 12:20** - One physical lab host is reporting errors. We are investigating. Affected labs are notified.
+ 
 
 <!--
 
