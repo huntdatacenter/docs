@@ -8,9 +8,9 @@ description: This page list information and questions about our ting weeks.
 
 # Ting week
 
-**We appoint time three times per year to meet for information, feedback and discussions on how to develop the services in HUNT Cloud to better elevate science. We call this gatherings Tings.** 
+**We appoint time three times per year to meet for information, feedback and discussions on how to develop the services in HUNT Cloud to better elevate science. We call these gatherings Tings.** 
 
-We arrange a layered set of Tings for distinct parts of our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
+We arrange a layered set of Tings for distinct groups in our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
 
 
 ::: tip Next up: Ting week #4
@@ -108,9 +108,6 @@ Invitations to the Tings are derived from registered roles in contractual agreem
 
 
 ## Dates and agendas
-
-We appoint time for three ting weeks per year, in the fall around the autumn holidays, in the winter around the winter holidays and in the spring after the national holiday i Norway.
-
 
 #### Ting week #5 (2022-02)
 
