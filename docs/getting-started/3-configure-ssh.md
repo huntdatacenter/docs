@@ -225,9 +225,9 @@ We hope that you will log into your lab a lot over the coming months and years. 
 
 ::: details Windows
 
-1. [Configure MobaXterm](/working-in-your-lab/technical-tools/mobaxterm) for simple and "password less" access directly to your home machine, as well as click-based file transfers between your local machine and your home machine.
+1. [Configure MobaXterm](/hunt-lab/technical-tools/mobaxterm) for simple and "password less" access directly to your home machine, as well as click-based file transfers between your local machine and your home machine.
 
-2. [Configure X2Go](/working-in-your-lab/technical-tools/x2go/#set-up-your-local-machine) for "password less" one-click access to graphical software in your lab, such as RStudio.
+2. [Configure X2Go](/hunt-lab/technical-tools/x2go/#set-up-your-local-machine) for "password less" one-click access to graphical software in your lab, such as RStudio.
 
 :::
 

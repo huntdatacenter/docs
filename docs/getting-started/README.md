@@ -1,12 +1,12 @@
 ---
 title: Getting started
 category: Getting started
-description: This guide will help you to connect and get started on your HUNT Cloud lab.
+description: This guide will help you to connect and get started on your HUNT Lab.
 ---
 
 # Introduction
 
-This guide will help you to connect and get started on your HUNT Cloud lab.
+This guide will help you to connect and get started on your HUNT Lab.
 
 ::: tip
 

@@ -1,7 +1,7 @@
 ---
 title: Matlab
 category: Analytical tools
-permalink: /working-in-your-lab/analytical-tools/Matlab
+permalink: /hunt-lab/analytical-tools/Matlab
 sidebarDepth: 1
 description: Installation guide for Matlab.
 ---
@@ -20,7 +20,7 @@ These steps guide the installation of Matlab on unmanaged [iaas or blue](/faq/co
 ::: warning Dependencies
 
 - An unmanaged iaas or blue machine where you have root access.
-- Installation of [X2Go server](/working-in-your-lab/technical-tools/x2go/) on this machine.
+- Installation of [X2Go server](/hunt-lab/technical-tools/x2go/) on this machine.
 - Access to Matlab software binaries for Linux from your organizaton.
 - Access to a Matlab license for the users in your lab.
 

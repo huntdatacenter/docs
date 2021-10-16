@@ -46,7 +46,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 ### How can I find out what is taking the most space on volume?
 
-We recommend using [ncdu](/working-in-your-lab/technical-tools/ncdu/) to get better overview of how the space on a specific volume is used. You can find more details in our [ncdu installation guide](/working-in-your-lab/technical-tools/ncdu/).
+We recommend using [ncdu](/hunt-lab/technical-tools/ncdu/) to get better overview of how the space on a specific volume is used. You can find more details in our [ncdu installation guide](/hunt-lab/technical-tools/ncdu/).
 
 ### How can I move my tmp out of the root?
 
@@ -234,7 +234,7 @@ Celebrate the success if you are able to successfully export a file, or [contact
 
 ### How do I zip and unzip files in my lab?
 
-We recommend using the 7z software to compress and decompress files and folders. Read our [7z guide](/working-in-your-lab/transfer-tools/7z/) to get going.
+We recommend using the 7z software to compress and decompress files and folders. Read our [7z guide](/hunt-lab/transfer-tools/7z/) to get going.
 
 
 

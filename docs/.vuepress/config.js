@@ -161,15 +161,14 @@ module.exports = {
           text: "Working in your lab",
           isGroup: true,
           children: [
-            "/working-in-your-lab/",
             {
-              title: "HUNT Lab",
-              text: "HUNT Lab",
+              title: "Workbench",
+              text: "Workbench",
               isGroup: true,
               children: [
-                "/working-in-your-lab/hunt-lab/",
-                "/working-in-your-lab/hunt-lab/installation.md",
-                "/working-in-your-lab/hunt-lab/faq.md",
+                "/working-in-your-lab/workbench/",
+                "/working-in-your-lab/workbench/installation.md",
+                "/working-in-your-lab/workbench/faq.md",
               ]
             },
             {
