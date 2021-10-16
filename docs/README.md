@@ -25,7 +25,7 @@ Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf
 
 
 ::: danger NOTE
-All labs are now required to have upgraded to new agreements to adjust resources. All need to upgrade before 1 January 2022. 
+All labs are now required to upgrade to new agreement structure to adjust resources and at the latest by 1 January 2022. 
 
 [Click here to learn more](/services/services-model) 
 :::

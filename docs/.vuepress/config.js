@@ -88,7 +88,7 @@ module.exports = {
           text: "About",
           isGroup: true,
           children: [
-            "/about/ting-week.md",
+            "/about/tingweek.md",
             "/about/policies.md",
             "/about/certificates.md",
             "/about/team.md",
