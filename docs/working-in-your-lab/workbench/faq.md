@@ -1,9 +1,9 @@
 ---
 title: FAQ
-category: HUNT Lab
+category: Workbench
 permalink: /working-in-your-lab/workbench/faq
 sidebarDepth: 1
-description: Frequently asked questions for HUNT Lab.
+description: Frequently asked questions about the workbench in HUNT Lab.
 ---
 
 # Frequently asked questions
