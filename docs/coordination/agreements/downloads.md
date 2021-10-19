@@ -210,7 +210,7 @@ your-username@`your-labname`-home~$
 
 - **Uploader:** This is the name of the lab user that will copy date from your lab and to the internal kista.
 
-- **Data size**: This is the size in gigabytes of the storage area in the kista. You can for example use [NCDU](/hunt-lab/technical-tools/ncdu/) to estimate the size of your data.
+- **Data size**: This is the size in gigabytes of the storage area in the kista. You can for example use [NCDU](/working-in-your-lab/technical-tools/ncdu/) to estimate the size of your data.
 
 - **Kista duration**: Specify the number of days that you need the kista. Default is 30 days, maxium is 90 days.
 

@@ -1,7 +1,7 @@
 ---
 title: Git
 category: Technical tools
-permalink: /hunt-lab/technical-tools/git
+permalink: /working-in-your-lab/technical-tools/git
 sidebarDepth: 1
 description: Usage guide for Git.
 ---

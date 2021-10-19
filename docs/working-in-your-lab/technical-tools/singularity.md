@@ -1,7 +1,7 @@
 ---
 title: Singularity
 category: Technical tools
-permalink: /hunt-lab/technical-tools/singularity
+permalink: /working-in-your-lab/technical-tools/singularity
 sidebarDepth: 0
 description: Installation guide for Singularity
 ---
@@ -14,7 +14,7 @@ Singularity provides application containers for Linux, which are also compatible
 
 ::: warning Requirements
 
-- Conda (miniconda), see our [Conda tutorial](/hunt-lab/analytical-tools/conda/) for more details.
+- Conda (miniconda), see our [Conda tutorial](/working-in-your-lab/analytical-tools/conda/) for more details.
 - Conda channels: conda-forge, bioconda
 
 :::

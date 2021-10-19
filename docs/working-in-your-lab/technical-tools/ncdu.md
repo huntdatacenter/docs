@@ -1,7 +1,7 @@
 ---
 title: NCDU
 category: Technical tools
-permalink: /hunt-lab/technical-tools/ncdu
+permalink: /working-in-your-lab/technical-tools/ncdu
 sidebarDepth: 1
 description: Usage guide for NCDU.
 ---

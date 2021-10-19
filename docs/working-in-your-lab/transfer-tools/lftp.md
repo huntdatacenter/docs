@@ -1,7 +1,7 @@
 ---
 title: Lftp
 category: Transfer tools
-permalink: /hunt-lab/transfer-tools/lftp
+permalink: /working-in-your-lab/transfer-tools/lftp
 sidebarDepth: 1
 description: Installation and usage guide for lftp.
 ---

@@ -1,7 +1,7 @@
 ---
 title: Conda
 category: Analytical tools
-permalink: /hunt-lab/analytical-tools/conda
+permalink: /working-in-your-lab/analytical-tools/conda
 sidebarDepth: 1
 description: Installation guide for Conda, including installation of R packages using Conda.
 ---
@@ -50,7 +50,7 @@ conda install plink2
 ```
 
 ::: tip
-We have very easy guide on how to get [Saige](/hunt-lab/analytical-tools/saige/) running in Conda environment.
+We have very easy guide on how to get [Saige](/working-in-your-lab/analytical-tools/saige/) running in Conda environment.
 :::
 
 ### Do Cool Science

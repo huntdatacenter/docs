@@ -1,7 +1,7 @@
 ---
 title: Saige
 category: Analytical tools
-permalink: /hunt-lab/analytical-tools/saige
+permalink: /working-in-your-lab/analytical-tools/saige
 sidebarDepth: 1
 description: Installation guide for Saige
 ---
@@ -15,7 +15,7 @@ in large cohorts and biobanks.
 
 ::: tip
 If you are interested in using Saige, you should definitely give a try to
-[Regenie](/hunt-lab/analytical-tools/regenie/), a strong C++ tool
+[Regenie](/working-in-your-lab/analytical-tools/regenie/), a strong C++ tool
 for whole genome regression modelling of large GWAS.
 :::
 
@@ -23,7 +23,7 @@ for whole genome regression modelling of large GWAS.
 
 ::: warning Requirements
 
-- Conda (miniconda), see our [Conda tutorial](/hunt-lab/analytical-tools/conda/) for more details.
+- Conda (miniconda), see our [Conda tutorial](/working-in-your-lab/analytical-tools/conda/) for more details.
 - Conda channels: conda-forge, bioconda
 
 :::

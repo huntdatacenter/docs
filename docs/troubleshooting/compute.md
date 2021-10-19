@@ -29,11 +29,11 @@ Rerun your command with sudo. [Contact us](/contact) if this doesn't solve your 
 
 ### Matlab
 
-See our [Matlab troubleshooting section](/hunt-lab/analytical-tools/Matlab/#activate-license)..
+See our [Matlab troubleshooting section](/working-in-your-lab/analytical-tools/Matlab/#activate-license)..
 
 ### Stata
 
-See our [Stata troubleshooting section](/hunt-lab/analytical-tools/stata/#troubleshooting).
+See our [Stata troubleshooting section](/working-in-your-lab/analytical-tools/stata/#troubleshooting).
 
 ## Setting locales failed
 

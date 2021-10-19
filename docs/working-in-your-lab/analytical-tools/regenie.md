@@ -1,7 +1,7 @@
 ---
 title: Regenie
 category: Analytical tools
-permalink: /hunt-lab/analytical-tools/regenie
+permalink: /working-in-your-lab/analytical-tools/regenie
 sidebarDepth: 1
 description: Installation guide for Regenie
 ---
@@ -22,7 +22,7 @@ The method has the following properties:
 
 ::: warning Requirements
 
-- Conda (miniconda), see our [Conda tutorial](/hunt-lab/analytical-tools/conda/) for more details.
+- Conda (miniconda), see our [Conda tutorial](/working-in-your-lab/analytical-tools/conda/) for more details.
 - Conda channels: conda-forge, bioconda
 
 :::

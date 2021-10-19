@@ -1,7 +1,7 @@
 ---
 title: GPU
 category: Technical tools
-permalink: /hunt-lab/technical-tools/gpu
+permalink: /working-in-your-lab/technical-tools/gpu
 sidebarDepth: 1
 description: We offer GPU machine types in our IaaS tier allowing you to run the AI/ML workloads of your choice.
 ---

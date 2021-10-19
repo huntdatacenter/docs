@@ -1,7 +1,7 @@
 ---
 title: Stata
 category: Analytical tools
-permalink: /hunt-lab/analytical-tools/stata
+permalink: /working-in-your-lab/analytical-tools/stata
 sidebarDepth: 1
 description: Installation guide for Stata.
 ---
@@ -27,7 +27,7 @@ All NTNU employees are covered by the NTNU license which allow for quick install
 
 ## Running Stata over X2Go
 
-After our installation, you can access Stata over [X2Go](/hunt-lab/technical-tools/x2go/) with this **`Single application`** address in the X2Go configuration (or similar provided by us):
+After our installation, you can access Stata over [X2Go](/working-in-your-lab/technical-tools/x2go/) with this **`Single application`** address in the X2Go configuration (or similar provided by us):
 
 ```bash
 /mnt/work/software/stata16/xstata-mp

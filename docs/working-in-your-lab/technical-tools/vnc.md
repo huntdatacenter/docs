@@ -1,7 +1,7 @@
 ---
 title: VNC
 category: Technical tools
-permalink: /hunt-lab/technical-tools/vnc
+permalink: /working-in-your-lab/technical-tools/vnc
 sidebarDepth: 1
 description: Usage guide for VNC.
 ---

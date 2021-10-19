@@ -1,7 +1,7 @@
 ---
 title: BlueBox
 category: Analytical tools
-permalink: /hunt-lab/analytical-tools/bluebox
+permalink: /working-in-your-lab/analytical-tools/bluebox
 sidebarDepth: 1
 description: BlueBox is a tool for distributed analysis across a fleet of cloud machines inside your lab.
 ---

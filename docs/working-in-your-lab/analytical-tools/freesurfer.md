@@ -1,7 +1,7 @@
 ---
 title: Freesurfer
 category: Analytical tools
-permalink: /hunt-lab/analytical-tools/freesurfer
+permalink: /working-in-your-lab/analytical-tools/freesurfer
 sidebarDepth: 1
 description: Installation guide for Freesurfer.
 ---

@@ -1,7 +1,7 @@
 ---
 title: Spyder IDE
 category: Analytical tools
-permalink: /hunt-lab/analytical-tools/spyder-ide
+permalink: /working-in-your-lab/analytical-tools/spyder-ide
 sidebarDepth: 0
 description: Installation guide for Spyder-IDE.
 ---

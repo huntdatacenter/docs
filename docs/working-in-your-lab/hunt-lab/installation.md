@@ -1,9 +1,9 @@
 ---
 title: Installation
-category: Workbench
-permalink: /hunt-lab/workbench/installation
+category: HUNT Lab
+permalink: /hunt-lab/installation
 sidebarDepth: 1
-description: Installation guide for the workbench in HUNT Lab.
+description: Installation guide for HUNT Lab.
 ---
 
 # Installation 

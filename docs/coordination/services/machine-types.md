@@ -58,7 +58,7 @@ All the above machine types may be deployed with _1_ or _2_ of the following GPU
 | NVIDIA       | Tesla V100  | Volta        | 32GB HBM2 | PCIe Gen3  |
 | NVIDIA       | Tesla V100S | Volta        | 32GB HBM2 | PCIe Gen3  |
 
-See the [GPU on HUNT Cloud](/hunt-lab/technical-tools/gpu/) documentation for more information.
+See the [GPU on HUNT Cloud](/working-in-your-lab/technical-tools/gpu/) documentation for more information.
 
 ## Custom machine types
 
