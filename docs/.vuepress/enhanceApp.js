@@ -14,9 +14,6 @@ export default ({ router }) => {
         // NOTE Correct wrong link
         window.location.href = "https://docs.hdc.ntnu.no/tingweek/";
         next();
-      } else if (to.path.startsWith("/working-in-your-lab/")) {
-        window.location.href = "https://docs.hdc.ntnu.no" + to.path.replace("/working-in-your-lab/", "/hunt-lab/").replace("//", "/");
-        next();
       } else {
         next();
       }
