@@ -149,6 +149,6 @@ https://demolab.lab.hdc.ntnu.no
 
 ## Immediate troubleshooting
 
-#### I don't remeber my password
+#### I don't remember my password
 
 Don't worry. [Contact us](/contact) on email for a password reset.
