@@ -3,7 +3,7 @@ title: Installation
 category: Workbench
 permalink: /working-in-your-lab/workbench/installation
 sidebarDepth: 1
-description: Installation guide for the workbench in HUNT Lab.
+description: Installation guide for the Workbench in HUNT Lab.
 ---
 
 # Installation
@@ -125,7 +125,7 @@ The certificate is now installed and can be used for network or secure web site 
 
 :::
 
-## 1.3 Open your new workbench
+## 1.3 Open your new Workbench
 
 1. Open the your web browser (Firefox is required for Linux).
 
