@@ -112,6 +112,8 @@ The certificate is now installed and can be used for network or secure web site 
 
 We are sending hosts file record on email. You will need to make sure that your hosts file contains this line.
 
+<!-- TODO windows/mac/linux guides -->
+
 ## 3. Open your new Workbench
 
 1. Open the your web browser (Firefox is required for Linux).
