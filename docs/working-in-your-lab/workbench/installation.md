@@ -69,7 +69,11 @@ Currently available to NTNU users only.
 
 2. Confirm the installation of profile.
 
+   ![macos-profiles-continue.png](./images/macos-profiles-continue.png)
+
 3. Enter the passphrase that you received on signal and then confirm.
+
+   ![macos-profiles-credentials.png](./images/macos-profiles-credentials.png)
 
 4. Quit your browser and restart it again for the certificate to get recognized.
 
