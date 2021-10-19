@@ -129,11 +129,20 @@ Example of hosts file record:
 
   3. In the search results, **right-click** Notepad and select Run as administrator.
 
-  4. From Notepad, open the following file:
+     ![notepad-administrator.png](./images/notepad-administrator.png)
 
-  ```
-  c:\Windows\System32\Drivers\etc\hosts
-  ```
+     ![notepad-admin-confirm.png](./images/notepad-admin-confirm.png)
+
+  4. From Notepad, open the following file: `C:\Windows\System32\Drivers\etc\hosts`.
+
+     Start by selecting `File` > `Open`.
+
+     ![notepad-open-file.png](./images/notepad-open-file.png)
+
+     Find the directory, and then change `Text documents` to view `All files`.
+     When hosts file appears in the list select it and click Open:
+
+     ![notepad-open-hosts-steps.png](./images/notepad-open-hosts-steps.png)
 
   5. Add the line that you received from us on email.
 
