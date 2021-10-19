@@ -1,14 +1,14 @@
 ---
 title: Installation
 category: HUNT Lab
-permalink: /hunt-lab/installation
+permalink: /working-in-your-lab/workbench/installation
 sidebarDepth: 1
 description: Installation guide for HUNT Lab.
 ---
 
-# Installation 
+# Installation
 
-This guide will help you to connect with your your lab over your web browser. 
+This guide will help you to connect with your your lab over your web browser.
 
 ::: warning Requirements
 
@@ -20,25 +20,31 @@ The new connection requires a certificate on your local machine to ensure encryp
 
 ::: tip Time estimate
 
-Allow for **30 mintues** to complete this installation and some time to play around in your new environment.
+Allow for **30 minutes** to complete this installation and some time to play around in your new environment.
 
 :::
 
-## 1.1 Collect keys
+## 1.1 Collect certificate
 
-[Contact us](/contact) to request keys for your new web access if your are an existing lab user. New users will receieve keys for browser access as part of their regular onboarding. Example email: 
+[Contact us](/contact) to request certificate for your new web access if your are an existing lab user. New users will receive certificate for browser access as part of their regular onboarding. Example email:
 
-> Hi team, I would like to try my new web access and are looking forward to receive my keys. 
+> Hi team, I would like to try my new web access and are looking forward to receive my certificate.
 
-Similar to your initial onboarding, we will communicate your keys over Signal  and a link to your certificate over your organizational email.
+::: warning
 
-You should expect an image with your **`TLS key`** on your phone and one (1) compressed file over email: 
+Currently available to NTNU users only.
+
+:::
+
+Similar to your initial onboarding, we will communicate your certificate over Signal  and a link to your certificate over your organizational email.
+
+You should expect an image with your **`TLS certificate`** on your phone and one (1) compressed file over email:
 
 ::: warning Expect these files on your local machine
 
-A successful opening of the 7z-file file should include two (2) files: 
+A successful opening of the 7z-file file should include two (2) files:
 
-- **`<labname>-<your-username>.p12`** - your TLS certificate. 
+- **`<labname>-<your-username>.p12`** - your TLS certificate.
 - **`<labname>-<your-username>.mobileconfig`** - your OS X and MacOS configuration file.
 
 :::
@@ -89,9 +95,9 @@ A successful opening of the 7z-file file should include two (2) files:
 
 ::: details Ubuntu Linux
 
-1. Open Firefox on your local machine. 
+1. Open Firefox on your local machine.
 
-You can install Firefox on your local machine with the following code: `apt install firefox`. 
+You can install Firefox on your local machine with the following code: `apt install firefox`.
 
 2. Open url `about:preferences#privacy` or click `Edit` > `Preferences`.
 
@@ -113,7 +119,7 @@ You can install Firefox on your local machine with the following code: `apt inst
 
    ![p12_firefox_5.png](./images/p12_firefox_5.png)
 
-7. Restart Firefox. 
+7. Restart Firefox.
 
 The certificate is now installed and can be used for network or secure web site client authentication after the restart of Firefox.
 
@@ -121,7 +127,7 @@ The certificate is now installed and can be used for network or secure web site 
 
 ## 1.3 Open your new workbench
 
-1. Open the your web browser (Firefox is required for Linux). 
+1. Open the your web browser (Firefox is required for Linux).
 
 2. Type in the URL address to your lab in your browser.
 
@@ -133,7 +139,7 @@ https://<labname>.lab.hdc.ntnu.no
 https://demolab.lab.hdc.ntnu.no
 ```
 
-3. Sign in with your HUNT Cloud lab username and lab password. This is the password that you made on your first login. 
+3. Sign in with your HUNT Cloud lab username and lab password. This is the password that you made on your first login.
 
 4. With a little bit of luck you should now see your new workbench. Click around and play in your new world.
 
@@ -145,5 +151,4 @@ https://demolab.lab.hdc.ntnu.no
 
 #### I don't remeber my password
 
-Don't worry. [Contact us](/contact) on email for a password reset. 
-
+Don't worry. [Contact us](/contact) on email for a password reset.
