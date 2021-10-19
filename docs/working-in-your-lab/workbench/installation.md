@@ -136,7 +136,7 @@ We are sending hosts file record on email. You will need to make sure that your 
 
 ::: details OS X and macOS
 
-  Edit `/etc/hosts` file in your preferred text editor.
+  Edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
 
   Example with vim:
 
@@ -148,7 +148,7 @@ We are sending hosts file record on email. You will need to make sure that your 
 
 ::: details Ubuntu Linux
 
-  Edit `/etc/hosts` file in your preferred text editor.
+  Edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
 
   Example with vim:
 
