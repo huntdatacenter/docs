@@ -3,7 +3,7 @@ title: Installation
 category: HUNT Lab
 permalink: /working-in-your-lab/workbench/installation
 sidebarDepth: 1
-description: Installation guide for HUNT Lab.
+description: Installation guide for the workbench in HUNT Lab.
 ---
 
 # Installation
