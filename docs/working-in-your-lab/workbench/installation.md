@@ -114,6 +114,50 @@ We are sending hosts file record on email. You will need to make sure that your 
 
 <!-- TODO windows/mac/linux guides -->
 
+::: details Windows
+
+  1. Press the Windows key.
+
+  2. Type `Notepad` in the search field.
+
+  3. In the search results, **right-click** Notepad and select Run as administrator.
+
+  4. From Notepad, open the following file:
+
+  ```
+  c:\Windows\System32\Drivers\etc\hosts
+  ```
+
+  5. Add the line that you received from us on email.
+
+  6. Select `File` > `Save` to save your changes.
+
+:::
+
+::: details OS X and macOS
+
+  Edit `/etc/hosts` file in your preferred text editor.
+
+  Example with vim:
+
+  ```
+  sudo vim /etc/hosts
+  ```
+
+:::
+
+::: details Ubuntu Linux
+
+  Edit `/etc/hosts` file in your preferred text editor.
+
+  Example with vim:
+
+  ```
+  sudo vim /etc/hosts
+  ```
+
+:::
+
 ## 3. Open your new Workbench
 
 1. Open the your web browser (Firefox is required for Linux).
