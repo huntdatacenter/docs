@@ -14,7 +14,7 @@ These pages contains official user documentation on our services. The content is
 Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf) and visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services, and see our [Ting reports](/tingweek/#reports) for detailed updates on our activities.
 
 
-::: danger NOTE
+::: warning NOTE
 All labs must update to the new agreement framework before 1 January 2022 to remain active. Upgrades are required from 1 October 2022 to adjust resources. 
 
 [Click here to learn more](/services/services-model) 
