@@ -93,7 +93,7 @@ module.exports = {
             "/about/certificates.md",
             "/about/team.md",
             "/about/activities.md",
-            "/about/organization.md"
+            "/about/organization.md",
           ]
         },
         {
@@ -101,7 +101,7 @@ module.exports = {
           text: "Coordination",
           isGroup: true,
           children: [
-	    "/coordination/",
+            "/coordination/",
             "/coordination/services-model.md",
             "/coordination/roles.md",
             {
@@ -111,7 +111,7 @@ module.exports = {
               children: [
                 "/coordination/agreements/overview.md",
                 "/coordination/agreements/downloads.md",
-		"/coordination/agreements/get-going.md"
+                "/coordination/agreements/get-going.md",
               ]
             },
             {
@@ -122,7 +122,7 @@ module.exports = {
                 "/coordination/services/overview.md",
                 "/coordination/services/specifications.md",
                 "/coordination/services/machine-types.md",
-                "/coordination/services/responsiveness.md"
+                "/coordination/services/responsiveness.md",
               ]
              },
             {
@@ -132,7 +132,7 @@ module.exports = {
               children: [
                 "/coordination/prices/",
                 "/coordination/prices/pricelist.md",
-		"/coordination/prices/examples.md"
+                "/coordination/prices/examples.md",
               ]
              },
             {
@@ -209,7 +209,7 @@ module.exports = {
                 "/working-in-your-lab/analytical-tools/regenie.md",
                 "/working-in-your-lab/analytical-tools/saige.md",
                 "/working-in-your-lab/analytical-tools/spyder-ide.md",
-                "/working-in-your-lab/analytical-tools/stata.md"
+                "/working-in-your-lab/analytical-tools/stata.md",
               ]
             },
             {
@@ -221,7 +221,7 @@ module.exports = {
                 "/working-in-your-lab/transfer-tools/7z.md",
                 "/working-in-your-lab/transfer-tools/rsync.md",
                 "/working-in-your-lab/transfer-tools/sshfs.md",
-                "/working-in-your-lab/transfer-tools/winscp.md"
+                "/working-in-your-lab/transfer-tools/winscp.md",
               ]
             }
           ]
@@ -233,7 +233,7 @@ module.exports = {
           children: [
             "/data-transfers/",
             "/data-transfers/internal-kista.md",
-            "/data-transfers/external-kista.md"
+            "/data-transfers/external-kista.md",
           ]
         },
         {
@@ -244,7 +244,7 @@ module.exports = {
             "/troubleshooting/",
             "/troubleshooting/connection.md",
             "/troubleshooting/compute.md",
-            "/troubleshooting/labreports.md"
+            "/troubleshooting/labreports.md",
           ]
         },
         {
@@ -259,7 +259,7 @@ module.exports = {
             "/faq/internal-transfer.md",
             "/faq/external-transfer.md",
             "/faq/security.md",
-            "/faq/agreements.md"
+            "/faq/agreements.md",
           ]
         }
       ]
