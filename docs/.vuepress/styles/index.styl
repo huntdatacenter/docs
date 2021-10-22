@@ -30,6 +30,20 @@
   outline: none;
   cursor: pointer;
 }
+.customiframe {
+  position: absolute;
+  overflow: hidden;
+  overflow-y: hidden;
+  height: 110%;
+  width: 100%;
+  width: 860px;
+  top: 150px;
+  left: 0px;
+  right: 0px;
+  bottom: 50px;
+  margin: 0 auto;
+  padding-left: 320px;
+}
 /*
 .custom-block.tip {
   border-color: #2e7578;
@@ -47,10 +61,20 @@ code {
 }
 
 /* set logo width on widescreen mode of phones */
+@media (max-width: $MQNarrow) {
+  .customiframe {
+    padding-left: 270px !important;
+    padding-right: 20px !important;
+  }
+}
 @media (max-width: $MQMobile) {
   .logo {
     height: auto;
     width: 80%;
+  }
+  .customiframe {
+    padding-left: 270px !important;
+    padding-right: 20px !important;
   }
 }
 
@@ -59,5 +83,20 @@ code {
   .logo {
     height: auto;
     width: 70%;
+  }
+  .customiframe {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 719px) {
+  .logo {
+    height: auto;
+    width: 70%;
+  }
+  .customiframe {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
