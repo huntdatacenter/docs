@@ -51,6 +51,12 @@ Your VPN session will reset after 12 hours. This will cause your connection to b
 
 Already running VPN services on your local machine may cause conflicts when connecting to our HUNT Cloud VPN. Try to disconnect the already running VPN service and reconnect to the HUNT Cloud VPN. NTNU users on Windows and Linux operating systems may connect to both NTNU VPN and the HUNT Cloud VPN using a [tailored NTNU VPN address](/troubleshooting/connection/#access-whitelist).
 
+::: tip For UiB users
+
+You cannot access your lab over the default Cisco Anyconnect VPN from UiB. In order to connect to your lab with the UiB VPN activated, use split tunneling as described [here](https://hjelp.uib.no/tas/public/ssp/content/search?q=KI%200881). Using the split tuneling will allow you to benefit from UiB services, e.g. access your mail, while connected to your lab. However, this will *not* allow worldwide access to your lab.
+
+:::
+
 ### No internet while connected to VPN
 
 If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check that you selected the **`Use this connection only for resources on its network`** in the final steps of [Setup the VPN profile](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
