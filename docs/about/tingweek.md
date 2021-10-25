@@ -13,23 +13,7 @@ description: This page list information and questions about our ting weeks.
 We arrange a layered set of Tings for distinct groups in our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
 
 
-::: tip This week: Ting week #4
-- **Lab ting**: Tuesday 19 October 2021 -  2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-labting-agenda.pdf))
-- **Coordinator ting**: Wednesday 20 October 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-coordinatorting-agenda.pdf))
-- **Enterprise ting**: Wednesday 20 October 2021 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-enterpriseting-agenda.pdf))
-- **Lagtun**: Thursday 21 October 2021 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-lagtun-agenda.pdf))
-
-[Read the Ting report](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-report.pdf)
-
-::: 
-
 [[toc]]
-
-
-
-
-
-
 
 
 
