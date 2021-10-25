@@ -90,7 +90,7 @@ module.exports = {
           children: [
             "/about/team.md",
             "/about/activities.md",
-            "/about/affiliation.md"
+            "/about/affiliation.md",
           ]
         },
         {
@@ -101,7 +101,7 @@ module.exports = {
             "/governance/responsibilities.md",
             "/governance/policies.md",
             "/governance/certificates.md",
-            "/governance/tingweek.md"
+            "/governance/tingweek.md",
           ]
         },
         {
@@ -161,7 +161,7 @@ module.exports = {
             "/getting-started/",
             "/getting-started/1-collect-keys.md",
             "/getting-started/2-configure-vpn.md",
-            "/getting-started/3-configure-ssh.md"
+            "/getting-started/3-configure-ssh.md",
           ]
         },
         {
