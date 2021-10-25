@@ -269,7 +269,6 @@ module.exports = {
             "/faq/internal-transfer.md",
             "/faq/external-transfer.md",
             "/faq/security.md",
-            "/faq/agreements.md",
           ]
         }
       ]
