@@ -1,7 +1,7 @@
 ---
 title: Responsibilities
 category: HUNT Cloud
-permalink: /governance/responsibilities
+permalink: /responsibilities
 description: This page gives an overview of the responsibilities for HUNT Cloud.
 ---
 
@@ -9,13 +9,13 @@ description: This page gives an overview of the responsibilities for HUNT Cloud.
 
 ### Ownership
 
-HUNT Cloud is owned by the [Norwegian University of Science and Technology](https://www.ntnu.edu) (NTNU), Trondheim, Norway. 
+HUNT Cloud is owned by the [Norwegian University of Science and Technology (NTNU)](https://www.ntnu.edu), Trondheim, Norway. Enterprise number 974 767 880.
 
 ### Governance
 
-The Director of HUNT Research Centre, [Marit Næss](https://www.ntnu.edu/employees/marit.nass), holds the direct responsiblity for the governance of HUNT Cloud, including finance and compliance.
+The Director of HUNT Research Centre, [Marit Næss](https://www.ntnu.edu/employees/marit.nass), holds the direct responsiblity for the governance of HUNT Cloud, including financial aspects and compliance.
 
-Lagtun holds an indirect responsibility for the governance of scientific development. HUNT Cloud report status to Lagtun, and member representatives express recommendations directly to the Director of HUNT Research Centre in the form of Lagtun resolutions.
+[Lagtun](/tingweek/#lagtun) holds an indirect responsibility for the scientific development of HUNT Cloud as member representatives express recommendations for the scientific governance directly to the Director of HUNT Research Centre in the form of resolutions.
 
 ### Operations
  
@@ -23,6 +23,4 @@ The Director of HUNT Cloud, [Oddgeir Lingaas Holmen](https://www.ntnu.edu/employ
 
 ### Development
 
-The continous development of HUNT Cloud is a collaborative effort betwen our cloud community members and the HUNT Cloud team. Among others, we allocate time three times per year in Ting weeks for structured dialogue on how to best develop the scientific experiences.
-
-#
+The continous development of HUNT Cloud is a collaborative effort betwen our cloud community members and the HUNT Cloud team. 

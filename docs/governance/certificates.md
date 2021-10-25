@@ -8,7 +8,9 @@ description: This page list compliance certificates for HUNT Cloud.
 
 # Certificates
 
-This page list our third-party verified certificates. For each certificate, an independent auditor examines our management, infrastructure, services and operations.
+**HUNT Cloud comply with two international managemenet systems, one for quality management (ISO 9001) and one for information security (ISO 27001).** 
+
+This page list our third-party verified certificates for these systems. For each certificate, an independent auditor examines our governance, management, infrastructure, services and operations.
 
 ## ISO 9001
 

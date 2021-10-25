@@ -8,7 +8,9 @@ description: This page list policies for HUNT Cloud.
 
 # Policies
 
-This page list policies that we have put in place to protect data that you upload or generate in HUNT Cloud.
+**The following security and privacy policies governs activities in HUNT Cloud.** 
+
+These policies are establish to ensure compliance with international standards for privacy and security, laws, regulations and legal requirements set forth in data processor agreements.
 
 ## Security and privacy management policy
 
