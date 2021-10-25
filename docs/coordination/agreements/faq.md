@@ -1,0 +1,69 @@
+---
+title: FAQ
+category: HUNT Cloud
+permalink: /agreements/faq
+sidebarDepth: 1
+description: Frequently asked questions related to agreements in HUNT Cloud.
+---
+
+# FAQ on agreements
+
+This page lists frequently asked questions related to administrative agreements in HUNT Cloud.
+
+[[toc]]
+
+::: tip More information
+
+Head over to our [agreement overview](/agreements/overview/) more information on individual agreements, and our [get going](/agreements/get-going/) page for a step-wise guide.
+
+::: 
+
+## General questions
+
+### Where do I start? 
+
+Welcome onboard! Your starting point depends on your organization and role. We have provided a step-wise guide on how to [get going](/agreements/get-going/) so you can jump directly into your section of choice. [Contact us](/contact) if you don't know where to start. 
+
+### Do I need all of the agreement layers? 
+
+Yes. All labs needs to be run under a complete [agreement layer](/agreements/overview/#overview) so we can ensure compliance with relevant laws, regulations and certificates. We know, this is complex. Although on the bright side, it allows for a solid base to organize and grow your scientific activities.
+
+### Why do you need all these agreement layers? 
+
+Our [agreement structure](/agreements/overview/#overview) has evolved over time to enable high variability in activities among many member organizations. We know, this is a mouthful if you need access to one lab only. However, once you [get going](/agreements/get-going/) with the terminology and structure we hope you will enjoy the flexibility. The layered structure is utilized both for governance, reporting, incentives and to comply with laws and regulations.
+
+## Management
+
+### Do you archive our agreements? 
+
+Yes. We keep copies of signed agreements for your environments. As a Data controller, Service center leader, Data space leader or Lab leader you may request copies of agreements under your tree structure to supplement your compliance work. 
+
+### Do you keep a record of our processing purposes? 
+
+Probably. We do keep records of broad processing purposed for each data controller. In addition, we do provide the possibility for Labs to submit individual processing purposes for processing in each Lab.
+
+## Changes and negotiations
+
+### Can I propose changes to your agreements? 
+
+Yes! We appreciate proposals on how to develop and improve our agreements. The templates we utilize today have evolved through dialogues and feedback from both scientists and lawyers from our member organizations. Note that we see such changes as cooperative improvements. Thus, adopted improvements will be made available to all member organizations in the cloud community.
+
+### Can I negotiate changes to my agreements? 
+
+Maybe. We do allow elevation of security and privacy controls tailored for individual organizations or jurisdictions. We do not engage in bilateral bargaining with individual organizations for access to special resources, benefits or prices. We operate in a multilateral landscape where members from many organizations come together to advance digital explorations. Changes and improvements are seen as cooperative improvements and will be made available to all member organizations when adopted.
+
+
+## Updates
+
+### How can I update contact persons? 
+
+**Data processor and services agreements**: Forward your new contact information on email. We will use this information to update the appendix and return on email. **Data spaces and Labs**: Fill in and forward a new data space or lab order with the updated information.
+
+### How often do I need to update our running agreements? 
+
+Approximately two (2) years. Our aim is to update agreements on a two year cycle or when major updates or improvements are introduced. We will contact you when it's time for to update. The two year update cycle includes all agreements.
+
+### How do I update agreements for the new services model? 
+
+Due to our new [services model](/services/services-model/), all labs needs to update to the new agreement structure by 1 January 2022, and from 1 October 2021 to adjust resources in your lab. Read the step-by-step guide on our [get going](/agreements/get-going/) page and jump into the section that suits your situation. [Contact us](/contact) is you are unsure how to approach the upgrades. 
+

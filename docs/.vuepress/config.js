@@ -120,6 +120,7 @@ module.exports = {
                 "/coordination/agreements/overview.md",
                 "/coordination/agreements/downloads.md",
                 "/coordination/agreements/get-going.md",
+                "/coordination/agreements/faq.md",
               ]
             },
             {
