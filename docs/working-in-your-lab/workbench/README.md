@@ -12,7 +12,7 @@ description: Guides to your Workbench setup.
 
 The workbench is web-based and build around the feel of Jupyter notebooks with access to application such as RStudio, R, Python and Conda. We have also included support for Matlab and Stata for those than bring their own license.
 
-  ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
+![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
 ## Request access
 
