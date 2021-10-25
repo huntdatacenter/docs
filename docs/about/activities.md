@@ -195,8 +195,3 @@ Our financial work also includes modeling and reporting, accounting strategies a
 
 
 
-[activities](https://assets.hdc.ntnu.no/assets/perspectives/activities.jpg)
-
-
-
-
