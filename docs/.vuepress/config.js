@@ -88,12 +88,20 @@ module.exports = {
           text: "About",
           isGroup: true,
           children: [
-            "/about/tingweek.md",
-            "/about/policies.md",
-            "/about/certificates.md",
             "/about/team.md",
             "/about/activities.md",
-            "/about/organization.md",
+            "/about/affiliation.md"
+          ]
+        },
+        {
+          title: "Governance",
+          text: "Governance",
+          isGroup: true,
+          children: [
+            "/governance/responsibilities.md",
+            "/governance/policies.md",
+            "/governance/certificates.md",
+            "/governance/tingweek.md"
           ]
         },
         {

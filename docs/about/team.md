@@ -8,7 +8,7 @@ description: This page gives an overview of the team that passionatiely develop 
 # Team
 
 
-**Your HUNT Cloud experiences are shaped and molded by a small team of scientific instrument makers located at NTNU, Norway.**
+**Your experiences in HUNT Cloud are shaped and molded by a small team of scientific instrument makers located at NTNU, Norway.**
 
 
 ![HUNT Cloud](./images/hunt-cloud-team.png)
@@ -21,7 +21,7 @@ Qussay is our Compliance officer. He is responsible for our audit programs that 
 
 ### Matúš Košút
 
-Matus is heading our user experience efforts. This includes the direction, prototyping and development of new services. Matus do also lead the development of user documention and our internal analytics. You will meet Matus both in dicussions on pilot services and during advanced support. 
+Matúš is heading our user experience efforts. This includes the direction, prototyping and development of new services. Matúš do also lead the development of user documention and our internal analytics. You will meet Matúš both in dicussions on pilot services and during advanced support. 
  
 ### Sandor Zeestraten 
 

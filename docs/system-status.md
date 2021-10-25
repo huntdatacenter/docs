@@ -11,10 +11,6 @@ description: Updates will be posted here if there is any service or performance 
 Operational.
 :::
 
-**2021-10-13 13:04** - Affected labs are migrated to new physical machines.
-
-**2021-10-13 12:20** - One physical lab host is reporting errors. We are investigating. Affected labs are notified.
- 
 
 <!--
 
