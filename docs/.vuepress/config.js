@@ -140,6 +140,7 @@ module.exports = {
               children: [
                 "/coordination/prices/",
                 "/coordination/prices/pricelist.md",
+                "/coordination/prices/calculator.md",
                 "/coordination/prices/examples.md",
               ]
              },

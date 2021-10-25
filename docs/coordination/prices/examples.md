@@ -10,11 +10,11 @@ description: This page list examples of yearly cost for selected use cases in HU
 
 **We know, the complexity of flexible cloud prices is demanding. Bare with us, because the flexibility opens opportunities.** 
 
-We have made a few examples below to guide you on a direction, although do not hesitate to [contact us](/contact) for assistance in your price estimations.
+Below are a few examples to guide you on a pricing direction. Head over to our [pricing calculator](/prices/calculator) to estimate the cost for your specific scientific environment, and to not hesitate to [contact us](/contact) for assistance in your estimations.
 
 [[toc]]
 
-All prices in the examples are listed as VAT exclusive NOK from the [price list](/prices/pricelist/). The prices are for guidance only and may contain errors and outdated information.
+For the record, all prices in the examples are listed as VAT exclusive NOK from the [price list](/prices/pricelist/). The prices are provided for guidance and may contain both errors and outdated information.
 
 ## Individual labs
 

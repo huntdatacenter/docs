@@ -8,30 +8,17 @@ description: Installation guide for the Workbench in HUNT Lab.
 
 # Installation
 
-This guide will help you to connect with your your lab over your web browser.
+**This guide will help you to connect with your lab workbench over a web browser.**
 
 ::: warning Requirements
 
-- Working VPN and SSH as configured in the [Getting started](/getting-started/) guide.
-
+- Working VPN and SSH as configured in our [Getting started](/getting-started/) guide.
+- Key and certificate as described in the key transfer section of our [workbench introduction](/working-in-your-lab/workbench/) page.
 :::
-
-The new connection requires a certificate on your local machine to ensure encrypted and trustworthy communication.
 
 ::: tip Time estimate
-
 Allow for **30 minutes** to complete this installation and some time to play around in your new environment.
-
 :::
-
-[Contact us](/contact) to request certificate for your new web access if your are an existing lab user. New users will receive certificate for browser access as part of their regular onboarding.
-
-::: warning
-
-Currently available to NTNU users only.
-
-:::
-
 
 ## 1. Install certificates
 

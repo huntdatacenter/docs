@@ -8,12 +8,15 @@ description: This page gives an introduction to the pricing of services in HUNT 
 
 # Introduction to pricing
 
-This page gives you an introduction to our prices. You total cost will include a combination of fixed subscription costs and flexible costs for attached individual services such as storage and computation.
+This page gives you an introduction to our prices. Your total cost will include a combination of fixed subscription costs and flexible costs for attached individual services such as storage and computation.
 
 [[toc]]
 
-## Context
+::: tip Pricing calculator
+Head over to our [pricing calculator](/prices/calculator) to estimate the cost for your scientific environments.
+::: 
 
+## Context
 
 ### Background 
 

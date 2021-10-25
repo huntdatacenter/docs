@@ -6,19 +6,33 @@ description: Guides to your Workbench setup.
 
 # Workbench
 
-[Contact us](/contact) to request certificate for your new web access if your are an existing lab user. New users will receive certificate for browser access as part of their regular onboarding. Example email:
+**The intention with the workbench is to give you a simple and secure place to work with your data and tools together with your team.** 
 
-> Hi team, I would like to try my new web access and are looking forward to receive my certificate.
+## About 
 
-::: warning
+The workbench is web-based and build around the feel of Jupyter notebooks with access to application such as RStudio, R, Python and Conda. We have also included support for Matlab and Stata for those than bring their own license.
 
-Currently available to NTNU users only.
+  ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
+## Request access
+
+::: warning Approvals
+The workbench is currently onlye available to NTNU users and lab users from data controllers that have approved the service.
 :::
 
-Similar to your initial onboarding, we will communicate your certificate over Signal  and a link to your certificate over your organizational email.
+**Existing users**. [Contact us](/contact) to request keys and the certificate for your new workbench: 
 
-You should expect an image with your **`TLS certificate`** on your phone and one (1) compressed file over email:
+> Hi team, I would like to try my new workbench and are looking forward to receive my certificate.
+
+**New users**. You will receive keys and certificate as part of your regular onboarding.
+
+## Key transfer
+
+Similar to your initial onboarding, we will send you a link to your certificate over your organizational email and your keys over Signal.
+
+On your phone you should expect an image with your certificate key from phone number 91001893. This number is registered on NTNU. The text should include your **`TLS certificate`**.
+
+On email you should expect a link to one (1) compressed file:
 
 ::: warning Expect these files on your local machine
 
@@ -29,4 +43,4 @@ A successful opening of the 7z-file file should include two (2) files:
 
 :::
 
-If you have successfully received your certificate, continue with [installation](/working-in-your-lab/workbench/installation/).
+When have successfully received your certificate, head over to our [workbench installation](/working-in-your-lab/workbench/installation/) page to finalize your access.

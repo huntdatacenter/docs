@@ -1,12 +1,13 @@
 ---
 title: Price calculator
 category: HUNT Cloud
-permalink: /prices/pricecalculator
+permalink: /prices/calculator
 sidebarDepth: 1
 editLink: false
-description: HUNT Cloud price calculator.
+description: HUNT Cloud pricing calculator.
 ---
 
-# Price calculator
+# Pricing calculator
 
 <iframe class="customiframe" src="https://huntdatacenter.gitlab.io/calculator/" title="Quote Calculator" frameBorder="0"></iframe>
+
