@@ -2,7 +2,7 @@
 title: Vision
 category: HUNT Cloud
 permalink: /vision
-description: This page gives state the overall vision for HUNT Cloud.
+description: Our vision at HUNT Cloud is «Data for a better world».
 ---
 
 # Vision
