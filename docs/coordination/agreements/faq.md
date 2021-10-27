@@ -42,6 +42,12 @@ Yes. We keep copies of signed agreements for your environments. As a Data contro
 
 Probably. We do keep records of broad processing purposed for each data controller. In addition, we do provide the possibility for Labs to submit individual processing purposes for processing in each Lab.
 
+## Roles
+
+### Can I list the same individual on all data space roles? 
+
+Yes. We use the [roles](/coordinator/roles/) in the data space orders for targeted communication for the specific responsibility areas. Thus, they can be assigned to one or several individual. 
+
 ## Changes and negotiations
 
 ### Can I propose changes to your agreements? 
