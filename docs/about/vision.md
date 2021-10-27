@@ -11,9 +11,6 @@ description: Our vision at HUNT Cloud is «Data for a better world».
 
 **Data is the most fundamental resource of of knowledge.**
 
-*«We vision a world where we come together to share data, tools and expertise on a common quest to generate and elevate knowledge for a better world.»*
-
-Data utilization is thus central to the fulfillment of NTNU's vision [«Knowledge for a better world»](https://www.ntnu.edu/vision-values-social-mission-key-challenges-and-main-objectives). 
-
+*«We vision a world where we come together to share data, tools and expertise on a common quest to generate and elevate [knowledge for a better world](https://www.ntnu.edu/vision-values-social-mission-key-challenges-and-main-objectives)»*
 
 
