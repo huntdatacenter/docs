@@ -144,7 +144,7 @@ Your data services agreement is signed, sealed and delivered. You have now paved
 
 ## Data space orders
 
-These are the orders that incorporates individual [data space](/agreements/overview/#data-space-order) under a services agreement. Data spaces orders are managed by scientific leaders.
+These are the orders that incorporates individual [data spaces](/agreements/overview/#data-space-order) under a services agreement. Data spaces orders are managed by scientific leaders.
 
 #### 1. Decide if your scientific vision fits our services
 
