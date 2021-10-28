@@ -135,6 +135,13 @@ Your data services agreement is signed, sealed and delivered. You have now paved
 
 
 
+
+
+
+
+
+
+
 ## Data space orders
 
 These are the orders that incorporates individual [data space](/agreements/overview/#data-space-order) under a services agreement. Data spaces orders are managed by scientific leaders.
@@ -153,11 +160,15 @@ High-trust and high-paced science needs smooth and seamless coordination to fly.
 
 [Click here](/coordinator/roles/) to read more about the different roles. You and your team will be the main points of contacts for both your scientists in your labs and us. 
 
-#### 3. Decide your data space subscription level
+#### 3. Brand your data space
+
+Invest some time to identify a short and powerful name for your data space. We will use this name in communication with your team and when we communicate with your department and faculty. Name recognition may also help strengthen your scientific brand when you communicate with colleagues, collaborators and other interested parties.
+
+#### 4. Decide your data space subscription level
 
 You have the option to choose three different data space subscription levels. Our [services overview](/services/overview/#data-space) provides a summary of different features, the [services specifications](/services/specifications/) holds the detailed description, and the [price list](/prices/pricelist/) specify the yearly cost. [Contact us](/contact) if you are unsure which data space subscription level that may provide the best fit for your science.
 
-#### 4. Send us your data space order
+#### 5. Send us your data space order
 
 - Download the "[Data space order](/agreements/downloads/#data-space-order)" on your local machine (right click on the link and select "Save Link As...")
 - Open the PDF on your local machine and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. 
