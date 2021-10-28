@@ -126,49 +126,62 @@ This form defined the invoice profile for your cloud services fees. One invoice 
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Invoice Profile" version 1.5.
+The following form fields are including in the "HUNT Cloud Invoice Profile" version 1.7.
 
 **Data space**
 
-Specify the data space where you would like to attache the invoice porfile.
+- *NAME*: Specify the data space where you would like to attache the invoice profile.
+- *LEADER*: Specify the full name of the data space leader that is responsible for the payment.
 
-**Lab name**
+**Invoice unit**
 
-Data spaces on the BLUE subscription may specify labs as individual invoice profiles. Add DATA SPACE or leave blank for other subscription levels.
+Add DATA SPACE or leave blank if the profile is for your data space. Data spaces on the BLUE subscription have the option to specify labs as individual invoice profiles. If so, add a lab name that is already registered under your data space.
 
 **Invoice contact**
 
-This individual is our point of contact for practical aspects related to the billing.
+This individual is our point of contact for practical aspects related to the billing, typical an employee at your organizational level.
 
 **Invoice address (outside NTNU)**
 
-For organizations outside NTNU: specify the address where invoices are to be sent.
+For organizations outside NTNU, specify the address where invoices are to be sent.
 
-**Account information**
+**Account information (inside NTNU)**
 
-For NTNU affiliated data spaces, specify "k.sted" and "project number". The information is optional for data spaces affiliated outside NTNU and may be used for referencing on invoices.
+Specify "K.STED" and "PROJECT NUMBER" for your data space. These fields are mandatory for NTNU data spaces.
+
+**Account information (outside NTNU)**
+
+- *PEPPOL BIS*: This is the international identification number for your organization. [Click the link](https://directory.peppol.eu/public/locale-en_US/menuitem-search) to find your id. 
+- *REFERENCE NUMBER*: This is your order number with HUNT Cloud that ensures that the invoice is reaching you inside your organization. The format varies between organizations.
+
 
 **Pilot period** 
 
 New labs may for testing purposes by entitled to a pilot period before the lab is metered is accordance with the services specifications. If applicable, this is included in dialogue with representatives from HUNT Cloud. 
 
-- *Services*: Specify one or more services indvluded in the pilot period.
-- *End of pilot period*: Specify the date from where the specified servies are metered in accordance with the services specifications.
+- *SERVICES*: Specify one or more services indvluded in the pilot period.
+- *END OF PILOT PERIOD*: Specify the date from where the specified servies are metered in accordance with the services specifications.
 
 **Free quote**
 
 If certain cloud services are to be provided without charce (free quote). If applicable, this is included in dialogue with representatives from HUNT Cloud. 
 
-- *Free quota*: Specify the quota that is provided without charge.
-- *End of quota period*: Specify the date from where the free quota period will end and the services will be metered in accordance with the Services Sepecification.
+- *FREE QUOTA*: Specify the quota that is provided without charge.
+- *END OF FREE QUOTA*: Specify the date from where the free quota period will end and the services will be metered in accordance with the Services Sepecification.
+
+**Advanced payment**
+
+You may make an advance payment to your invoice profile. The payment is applied to the accrued costs. If the payment is larger than the amount currently owed, it will reduce the next automatic charge. For clarification, a positive account balance due to advance payments will not be refunded at the end of services.
+
+- *AMOUNT*: This is the optional amount in NOK that will be payed at the initiation of the invoice porfile. 
 
 **Spending limit**
 
 A monetary spending limit may be specified for the invoice profile. 
 
-- *Limit*: If applicable, specify a maximum spending limit in NOK that can be consumed over the spending period (see below). 
-- *Type*: For the soft and hard limit type, notifications will be sent to the Invoice Contact and Data Space Leader at consumption of approximately 50%, 90% and 100%. For the hard limit type, services will be temporarily deactivated if consumption exceeds the limit.
-- *Period*: This is the period in days for which the limit is applied. The default is per ninety days.
+- *LIMIT*: If applicable, specify a maximum spending limit in NOK that can be consumed over the spending period (see below). 
+- *TYPE*: For the soft and hard limit type, notifications will be sent to the Invoice Contact and Data Space Leader at consumption of approximately 50%, 90% and 100%. For the hard limit type, services will be temporarily deactivated if consumption exceeds the limit.
+- *PERIOD*: This is the period in days for which the limit is applied. The default is per ninety days.
 
 **Signatures**
 
