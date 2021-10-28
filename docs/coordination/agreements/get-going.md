@@ -141,17 +141,17 @@ These are the orders that incorporates individual [data space](/agreements/overv
 
 #### 1. Decide if your scientific vision fits our services
 
-Data spaces have a yearly subscription cost. So, before we get going with an order, let's first think about if your scientific adventures may prosper and provide great experiences for your scientists in our environment. 
+Data spaces have a yearly subscription cost. So, before you get going with an order you might want to be sure your scientific adventures can prosper and provide great experiences for your scientists. You will find on overview of our services [here](/services/overview/). 
 
-You will find information on our services and digital science on these pages. Please [contact us](/contact) to supplement your assessment. We enjoy learning about scientific activities, and truly enjoy dialogues about short and long-term ways cloud services may elevate your science. We are also happy to provide references relevant for your scientific field, demonstrate potential tools, estimate cost etc. 
+Please [contact us](/contact) to supplement your assessment if you like. We truly enjoy learning about scientific activities, and enjoy dialogues about short and long-term strategies to elevate science. We are also happy to provide references relevant for your scientific field, demonstrate potential tools, estimate cost etc. 
 
-If your reflections conclude that we might be a good fit (YAY!) jump to the next sections. If you decide otherwise, we will appreciate it if you could spare a minute [sending us](/contact) your thoughts for future improvements about what we can improve to fit your scientific vision. 
+If your reflections conclude that we might be a good fit, jump to the next sections to identify your coordinator team. If you decide otherwise, we will appreciate it if spare us a minute [sending us](/contact) your thoughts for future improvements on how we may fit your scientific vision. 
 
 #### 2. Identify your coordinator team
 
-Together we can do so much. High-trust and high-paced science needs smooth and seamless coordination to fly. Thus, this is the step to list your team of coordinators for five key areas: compliance, data, technical, knowledge and training. 
+High-trust and high-paced science needs smooth and seamless coordination to fly. Therefore, this is the step to list your team of coordinators for five key areas: compliance, data, technical, knowledge and finance. 
 
-You and your coordinator team will be the main point of contacts for both your scientists in your labs and us. [Click here](/coordinator/roles/) to read a bit more about the different roles before you reflect on who will make up your coordinator team.
+[Click here](/coordinator/roles/) to read more about the different roles. You and your team will be the main points of contacts for both your scientists in your labs and us. 
 
 #### 3. Decide your data space subscription level
 
@@ -160,9 +160,9 @@ You have the option to choose three different data space subscription levels. Ou
 #### 4. Send us your data space order
 
 - Download the "[Data space order](/agreements/downloads/#data-space-order)" on your local machine (right click on the link and select "Save Link As...")
-- Open the PDF on your local machine and either (i) print and complete the fields by hand or (i) open in an PDF-editor and complete the fields digitally. 
-- Add your own signature and forward the document to your services center contact for co-signature. The services center contact is the services center leader or administrative coordinator defined in the services agreement. [Contact us](/contact) if you need help to identify the role in your organization.
-- Attach the signed PDF-file in an email and [forward to us](/contact).
+- Open the PDF on your local machine and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. 
+- Add your own signature and forward the document to your services center leader for co-signature. [Contact us](/contact) if you need help to identify the service center leader for your organization.
+- Attach the signed PDF-file to an email and [forward to us](/contact).
 
 Your data space order is now signed, sealed and delivered. You are now ready to add the very first lab in your data space.
 
