@@ -180,6 +180,7 @@ module.exports = {
               children: [
                 "/working-in-your-lab/workbench/",
                 "/working-in-your-lab/workbench/installation.md",
+                "/working-in-your-lab/workbench/principles.md",
                 "/working-in-your-lab/workbench/faq.md",
               ]
             },
