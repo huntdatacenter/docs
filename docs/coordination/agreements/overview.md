@@ -14,7 +14,7 @@ We believe a solid framework of documented responsibilities is a success factor 
 
 ::: tip TIP
 
-Head over to our [get going](/agreements/get-going) page for a step-wise guide on how to start your agreement quest, and the [faq](/faq/agreements/) section for frequently asked agreement questions.
+Head over to our [get going](/agreements/get-going) page for a step-wise guide on how to start your agreement quest, and the [FAQ](/agreements/faq/) section for frequently asked agreement questions.
 :::
 
 [[toc]]

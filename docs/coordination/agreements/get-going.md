@@ -8,13 +8,13 @@ description: This page helps you to get going with administrative agreements in 
 
 # Get going
 
-**Here's a guide on how to approach administrative agreements in HUNT Cloud.**
+**This is a step-by-step guide on how to get going with your agreements in HUNT Cloud. The guide is intended for compliance coordinators that handles practical aspects of the agreements  on behalf of their organizations and/or scientific groups.**
 
 [[toc]]
 
 ::: tip
 
-Head over to our [agreement overview](/agreements/overview) to learn more about individual agreements mentioned below, and the [faq](/faq/agreements/) section for frequently asked agreement questions.
+Head over to our [agreement overview](/agreements/overview) to learn more about individual agreements mentioned below, and the [FAQ](/agreements/faq/) section for frequently asked agreement questions.
 
 :::
 

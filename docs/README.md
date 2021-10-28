@@ -17,6 +17,6 @@ Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf
 ::: warning NOTE
 All labs must update to new agreements from 1 October 2021 to adjust resources, and by 1 January 2022 to remain active.
 
-[Click here to learn more](/services/services-model) 
+[Click here to get going](/agreements/get-going/) 
 :::
 

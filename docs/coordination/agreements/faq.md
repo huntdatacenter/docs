@@ -8,13 +8,13 @@ description: Frequently asked questions related to agreements in HUNT Cloud.
 
 # FAQ on agreements
 
-This page lists frequently asked questions related to administrative agreements in HUNT Cloud.
+**This page lists frequently asked questions related to administrative agreements in HUNT Cloud.**
 
 [[toc]]
 
-::: tip More information
+::: tip
 
-Head over to our [agreement overview](/agreements/overview/) more information on individual agreements, and our [get going](/agreements/get-going/) page for a step-wise guide.
+This section prosper on questions. [Contact us](/contact) with your burning topics so we can grow this page together.
 
 ::: 
 
@@ -22,7 +22,7 @@ Head over to our [agreement overview](/agreements/overview/) more information on
 
 ### Where do I start? 
 
-Welcome onboard! Your starting point depends on your organization and role. We have provided a step-wise guide on how to [get going](/agreements/get-going/) so you can jump directly into your section of choice. [Contact us](/contact) if you don't know where to start. 
+Welcome onboard! Your starting point depends on your organization and role. We have provided a step-wise guide on how to [get going](/agreements/get-going/) so you can jump directly into your section of choice. In short, you need to ensure that the data controller agreement is signed, sealed and delivered before you can sign a services center agreement and so forth. [Contact us](/contact) if you don't know where to start. 
 
 ### Do I need all of the agreement layers? 
 
@@ -42,7 +42,11 @@ Yes. We keep copies of signed agreements for your environments. As a Data contro
 
 Probably. We do keep records of broad processing purposed for each data controller. In addition, we do provide the possibility for Labs to submit individual processing purposes for processing in each Lab.
 
-## Roles
+## Data space agreement
+
+### Who is my Service center leader?
+
+Data space agreements require that you list your Service center leader. The placement of this role will vary among organizations. At NTNU your Service center leader is typically the head of research at your department. [Contact us](/contact) for a quit clarification if you are unsure who to ask in your organization.
 
 ### Can I list the same individual on all data space roles? 
 
