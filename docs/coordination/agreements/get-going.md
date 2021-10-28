@@ -168,16 +168,26 @@ Invest some time to identify a short and powerful name for your data space. We w
 
 You have the option to choose three different data space subscription levels. Our [services overview](/services/overview/#data-space) provides a summary of different features, the [services specifications](/services/specifications/) holds the detailed description, and the [price list](/prices/pricelist/) specify the yearly cost. [Contact us](/contact) if you are unsure which data space subscription level that may provide the best fit for your science.
 
-#### 5. Send us your data space order
+#### 5. Download and complete the data space order
 
 - Download the "[Data space order](/agreements/downloads/#data-space-order)" on your local machine (right click on the link and select "Save Link As...")
-- Open the PDF on your local machine and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. 
-- Add your own signature and forward the document to your services center leader for co-signature. [Contact us](/contact) if you need help to identify the service center leader for your organization.
-- Attach the signed PDF-file to an email and [forward to us](/contact).
+- Open the PDF on your local machine and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. The "Clarification of the form fields" includes a field by field descriptions of the order.
+- Add your own signature, save the PDF and forward the document to your services center leader for co-signature. [Contact us](/contact) if you need help to identify the service center leader for your organization.
 
-Your data space order is now signed, sealed and delivered. You are now ready to add the very first lab in your data space.
+#### 6. Download and complete the invoice profile
 
+- Download the "[Invoice profile](/agreements/downloads/#invoice-profile)" on your local machine (right click on the link and select "Save Link As...")
+- Open the PDF on your local machine and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. The "Clarification of the form fields" includes a field by field descriptions of the profile.
+- Add your own signature, save the PDF. 
 
+#### 7. Send us your data space order and invoice profile
+
+Send us your data space order and invoice profile [on email](/contact).
+
+- (1) Attach the PDF-file of the data space order that includes both your and your service center leaders signature.
+- (2) Attach the PDF-file of the signed Invoice profile.
+
+Your data space order is now signed, sealed and delivered. You are ready to add the very first lab to your data space.
 
 
 
