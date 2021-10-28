@@ -6,9 +6,9 @@ description: Guides to your Workbench setup.
 
 # Workbench
 
-**The intention with the workbench is to give you a simple and secure place to work with your data and tools together with your team.** 
+**The intention with the workbench is to give you a simple and secure place to work with your data and tools together with your team.**
 
-## About 
+## About
 
 The workbench is web-based and build around the feel of Jupyter notebooks with access to application such as RStudio, R, Python and Conda. We have also included support for Matlab and Stata for those than bring their own license.
 
@@ -17,10 +17,10 @@ The workbench is web-based and build around the feel of Jupyter notebooks with a
 ## Request access
 
 ::: warning Approvals
-The workbench is currently onlye available to NTNU users and lab users from data controllers that have approved the service.
+The workbench is currently only available to NTNU users and lab users from data controllers that have approved the service.
 :::
 
-**Existing users**. [Contact us](/contact) to request keys and the certificate for your new workbench: 
+**Existing users**. [Contact us](/contact) to request keys and the certificate for your new workbench:
 
 > Hi team, I would like to try my new workbench and are looking forward to receive my certificate.
 

@@ -14,6 +14,7 @@ description: Installation guide for the Workbench in HUNT Lab.
 
 - Working VPN and SSH as configured in our [Getting started](/getting-started/) guide.
 - Key and certificate as described in the key transfer section of our [workbench introduction](/working-in-your-lab/workbench/) page.
+
 :::
 
 ::: tip Time estimate
@@ -21,7 +22,6 @@ Allow for **30 minutes** to complete this installation and some time to play aro
 :::
 
 ## 1. Install certificates
-
 
 ::: details Windows
 
@@ -41,14 +41,26 @@ Allow for **30 minutes** to complete this installation and some time to play aro
 
    ![4_cert_p12.png](./images/4_cert_p12.png)
 
-5. Your certificate is imported and you can hit finish:
+5. Your client certificate is imported and you can hit finish:
 
    ![5_cert_p12.png](./images/5_cert_p12.png)
 
-6. Quit your browser and restart it again for the certificate to get recognized.
+6. Wizard will require additional confirmation for installation certification authority HCTS CA 1
+   (HUNT Cloud Trust Services). This is required to safely access your Workbench. Before clicking
+   yes you should confirm that you see this thumbprint (fingerprint):
+   `ADD9DFEC C998BE44 AC2F254E 75E5EB98 D91879A6`
+
+   ![6_confirmCAcertificate.png](./images/6_confirmCAcertificate.png)
+
+7. Same step is required for your Lab CA, where your Lab name should appear:
+
+   ![7_confirmLabCAcertificate.png](./images/7_confirmLabCAcertificate.png)
+
+8) Quit your browser and restart it again for the certificate to get recognized.
+
+   ![8_import_success.png](./images/8_import_success.png)
 
 :::
-
 
 ::: details OS X and macOS
 
@@ -65,7 +77,6 @@ Allow for **30 minutes** to complete this installation and some time to play aro
 4. Quit your browser and restart it again for the certificate to get recognized.
 
 :::
-
 
 ::: details Ubuntu Linux
 
@@ -104,60 +115,61 @@ The certificate is now installed and can be used for network or secure web site 
 We are sending hosts file record on email. You will need to make sure that your hosts file contains this line.
 
 Example of hosts file record:
+
 ```
 10.42.130.X <lab_name>.lab.hdc.ntnu.no
 ```
 
 ::: details Windows
 
-  1. Press the Windows key.
+1. Press the Windows key.
 
-  2. Type `Notepad` in the search field.
+2. Type `Notepad` in the search field.
 
-  3. In the search results, **right-click** Notepad and select Run as administrator.
+3. In the search results, **right-click** Notepad and select Run as administrator.
 
-     ![notepad-administrator.png](./images/notepad-administrator.png)
+   ![notepad-administrator.png](./images/notepad-administrator.png)
 
-     ![notepad-admin-confirm.png](./images/notepad-admin-confirm.png)
+   ![notepad-admin-confirm.png](./images/notepad-admin-confirm.png)
 
-  4. From Notepad, open the following file: `C:\Windows\System32\Drivers\etc\hosts`.
+4. From Notepad, open the following file: `C:\Windows\System32\Drivers\etc\hosts`.
 
-     Start by selecting `File` > `Open`.
+   Start by selecting `File` > `Open`.
 
-     ![notepad-open-file.png](./images/notepad-open-file.png)
+   ![notepad-open-file.png](./images/notepad-open-file.png)
 
-     Find the directory, and then change `Text documents` to view `All files`.
-     When hosts file appears in the list select it and click Open:
+   Find the directory, and then change `Text documents` to view `All files`.
+   When hosts file appears in the list select it and click Open:
 
-     ![notepad-open-hosts-steps.png](./images/notepad-open-hosts-steps.png)
+   ![notepad-open-hosts-steps.png](./images/notepad-open-hosts-steps.png)
 
-  5. Add the line that you received from us on email.
+5. Add the line that you received from us on email.
 
-  6. Select `File` > `Save` to save your changes.
+6. Select `File` > `Save` to save your changes.
 
 :::
 
 ::: details OS X and macOS
 
-  Edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
+Edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
 
-  Example with vim:
+Example with vim:
 
-  ```
-  sudo vim /etc/hosts
-  ```
+```
+sudo vim /etc/hosts
+```
 
 :::
 
 ::: details Ubuntu Linux
 
-  Edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
+Edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
 
-  Example with vim:
+Example with vim:
 
-  ```
-  sudo vim /etc/hosts
-  ```
+```
+sudo vim /etc/hosts
+```
 
 :::
 
@@ -179,9 +191,7 @@ https://demolab.lab.hdc.ntnu.no
 
 4. With a little bit of luck you should now see your new workbench. Click around and play in your new world.
 
-  ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
-
-
+![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
 ## Immediate troubleshooting
 
