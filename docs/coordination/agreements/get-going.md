@@ -141,7 +141,7 @@ These are the orders that incorporates individual [data space](/agreements/overv
 
 #### 1. Decide if your scientific vision fits our services
 
-Data spaces have a yearly subscription cost. So, before you get going with an order you might want to be sure your scientific adventures can prosper and provide great experiences for your scientists. You will find on overview of our services [here](/services/overview/). 
+Data spaces have a yearly subscription cost. So, before you get going with an order you might want to be sure your scientific adventures can prosper and that we may provide great experiences for your scientists. You will find on overview of our services [here](/services/overview/). 
 
 Please [contact us](/contact) to supplement your assessment if you like. We truly enjoy learning about scientific activities, and enjoy dialogues about short and long-term strategies to elevate science. We are also happy to provide references relevant for your scientific field, demonstrate potential tools, estimate cost etc. 
 
