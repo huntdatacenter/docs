@@ -6,22 +6,21 @@ sidebarDepth: 1
 description: Principles of Workbench use.
 ---
 
-# Principles
+# Workbench principles
 
-Workbench aims to improve your day to day work experience with Python, MATLAB, and R code.
-To achieve that we included MATLAB and RStudio development environments as you know them from before,
-and also Jupyter Notebooks with various kernels.
+**Workbench aims to improve your day to day work experience with Python, R code, and MATLAB.**
+
+To achieve that we have included MATLAB and RStudio development environments as you know them from before, and added Jupyter Notebooks with various kernels.
 
 <!-- see main page for licensing -->
 
-## Safe place to experiment
+## A safe place to experiment
 
-We are spawning your Workbench in an isolated container on your home machine. There you can easily experiment
-and if something breaks, you can stop the ephemeral container and start new one in control panel.
+We are spawning your Workbench in an isolated container on your home machine. This allows you to experiment, and if something breaks you can always stop the ephemeral container and start a new one in your control panel.
 
 ![wb_control_panel.png](./images/wb_control_panel.png)
 
-You should be able to access all the paths that you would expect on your home node. Workbench is preconfigured with access to data in lab volumes and your home directory. You will also get a Workbench directory:
+You should be able to access all the paths that you would expect on your home machine. The workbench is preconfigured with access to data in lab volumes and your home directory, and you have a dedicated Workbench directory on your work volume:
 
 ```
 /mnt/work/workbench/<username>
@@ -29,12 +28,11 @@ You should be able to access all the paths that you would expect on your home no
 
 ## Reproducibility
 
-Not everything should be ephemeral and therefore you should still store data in volumes mounted from home node.
-Workbench is designed for smooth work on your code as your prepare your analysis.
+The workbench is designed with a smooth experience when your work on your code in mind. Thus, not everything should be ephemeral and you should still store data in volumes mounted from your home machine.
 
-It setup comes with Conda package manager which is configured to store packages on work volume.
-You will find Conda very helpful when it comes to Python and R packages. Conda can help you take control over your dependencies, and to avoid unwanted surprises over time, you can start with their guide to
-[Manage environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+The workbench comes with the Conda package manager which is configured to store packages on your work volume.
+
+You hope that you will find Conda very helpful when it comes to Python and R packages. Conda is a great way to help you take control over your dependencies, and to avoid unwanted surprises over time. To get going, head over to this great Conda guide on how to [manage environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 ## Flexibility
 
@@ -42,4 +40,4 @@ All your Jupyter Notebooks and code will be stored on work volume, where it can 
 colleagues. Work volume is ideal place if you want your things to be backed up.
 You can use this setup to your advantage, but you will also be able to override this at your own risk.
 
-You will get a set of default Conda environments for Python (py38) and R (r-base). You can use those in your Jupyter notebooks. It is easy to expand on them or create your own using the Terminal tool.
+You will get a set of default Conda environments for Python (py38) and R (r-base) that you can use in your Jupyter notebooks. From there, it's easy to expand on them or create your own using the Terminal tool.

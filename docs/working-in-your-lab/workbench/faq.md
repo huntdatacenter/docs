@@ -6,17 +6,22 @@ sidebarDepth: 1
 description: Frequently asked questions about the Workbench in HUNT Lab.
 ---
 
-# Frequently asked questions
+# FAQ on the workbench
 
-This page will contain frequently asked questions on your Workbench in your HUNT Lab.
+**This page contain frequently asked questions on your workbench in your lab. Help us expand this section by sending us your questions and burning topics.**
 
-## How to start Notebook with Conda environment?
+
+[[toc]]
+
+## Conda
+
+### How can I start a Notebook with a Conda environment?
 
 Here is an example of Notebooks that are connected to Conda environments.
 
 ![wb_notebook_envs.png](./images/wb_notebook_envs.png)
 
-## How to change Conda environment in Notebook?
+### How do I change the Conda environment for my Notebook?
 
 You can also change Conda environment of your Jupyter Notebook later, by switching the kernel:
 
