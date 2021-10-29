@@ -8,12 +8,12 @@ description: Installation guide for the Workbench in HUNT Lab.
 
 # Installation
 
-**This guide will help you to connect with your lab workbench over a web browser.**
+**This guide will help you to connect with your lab Workbench over a web browser.**
 
 ::: warning Requirements
 
 - Working VPN and SSH as configured in our [Getting started](/getting-started/) guide.
-- Key and certificate as described in the key transfer section of our [workbench introduction](/working-in-your-lab/workbench/) page.
+- Key and certificate as described in the key transfer section of our [Workbench introduction](/working-in-your-lab/workbench/) page.
 
 :::
 
@@ -189,7 +189,7 @@ https://demolab.lab.hdc.ntnu.no
 
 3. Sign in with your HUNT Cloud lab username and lab password. This is the password that you made on your first login.
 
-4. With a little bit of luck you should now see your new workbench. Click around and play in your new world.
+4. With a little bit of luck you should now see your new Workbench. Click around and play in your new world.
 
 ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
