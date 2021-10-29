@@ -40,7 +40,7 @@ This is the subscription that establishes a management account (data space) in H
 | Multiple billing accounts | ![no](./images/no-30.png "no") | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
 | Lab ting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Coordinator ting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Lagtun invites | ![no](./images/no-30.png "no") | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
+| Lagtun membership | ![no](./images/no-30.png "no") | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
 
 *) Restore against accidental deletion is activate for work and archive volumes on home machines.
 
