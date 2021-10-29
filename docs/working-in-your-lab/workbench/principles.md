@@ -32,7 +32,8 @@ The workbench is designed with a smooth experience when your work on your code i
 
 The workbench comes with the Conda package manager which is configured to store packages on your work volume.
 
-You hope that you will find Conda very helpful when it comes to Python and R packages. Conda is a great way to help you take control over your dependencies, and to avoid unwanted surprises over time. To get going, head over to this great Conda guide on how to [manage environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+You will find Conda very helpful when it comes to Python and R packages. Conda is a great way to help you take control over your dependencies, and to avoid unwanted surprises over time. We recommend you to start with their guide to
+-[Manage environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 ## Flexibility
 
