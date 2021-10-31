@@ -103,6 +103,8 @@ module.exports = {
             "/governance/policies.md",
             "/governance/certificates.md",
             "/governance/tingweek.md",
+            "/governance/lagtun.md",
+            "/governance/resolutions.md",
           ]
         },
         {
