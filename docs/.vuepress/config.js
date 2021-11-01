@@ -99,6 +99,7 @@ module.exports = {
           text: "Governance",
           isGroup: true,
           children: [
+            "/governance/",
             "/governance/responsibilities.md",
             "/governance/policies.md",
             "/governance/certificates.md",

@@ -72,7 +72,11 @@ The resolutions are therefore expressed as recommendations for consideration to 
 
 We aim to reach consensus for the resolutions in Lagtun. This means that all members agree to recommend the resolution without taking a vote.
 
-When we adopt resolutions by consensus, we have to be concerned about the viewpoint of everyone. This means that we have to engage in multilateral dialogues and negotiations, and different points of view needs be taken into consideration. We feel that such a process is inclusive. 
+When we adopt resolutions by a vote, we only need to get a simple majority to agree on the text. In principle we only need to care about and understand the perspectives of the majority, not the minority that disagree. Such a process holds the risk of being divisive.
+
+However, when we adopt resolutions by consensus, we have to be concerned about the viewpoint of everyone. This means that we have to engage in multilateral dialogues and negotiations, and different points of view needs be taken into consideration. Such a process is inclusive. 
+
+We feel that inclusive processes are particularly important in  multilateral environments such as HUNT Cloud. 
 
 ### Voting
 
