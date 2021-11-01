@@ -7,7 +7,7 @@ description: This page gives an overview of resolutions that govern the scientif
 
 # Resolutions
 
-**This page list individual resolutions from Lagtun that governs the scientific development of HUNT Cloud.**
+**This page list individual resolutions from [Lagtun](/tingweek/lagtun/) that governs the scientific development of HUNT Cloud.**
 
 
 #### [Increase conditions for international collaborations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=8)
