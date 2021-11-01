@@ -19,7 +19,7 @@ We arrange a layered set of Tings for distinct groups in our community. The meet
 
 ## Reports
 
-The intent of the Ting report is to give you the opportunity to read up on **`what`** we are doing at HUNT Cloud, and a little bit on **`why`** we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
+The intent of the Ting report is to give you the opportunity to read up on **what** we are doing at HUNT Cloud, and a little bit on **why** we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
 
 The reports include a letter with reflections from the last Ting period as well as chapters with business description, risk factors, description of properties, and external and internal controls. 
 
@@ -50,7 +50,20 @@ This is the Ting where we appoint time to meet with the community that are affil
 
 ### Lagtun
 
-Lagtun is the Ting where we appint time for cross-organizational discussions among **data controllers, service centers and large data spaces** in the community. This Ting gives direct advice on our strategic and tactial development to the HUNT Cloud management.
+Lagtun is the Ting where we appoint time for cross-organizational discussions among **data controllers, service centers and large data spaces** in the community. This Ting gives direct advice on our strategic and tactical development to the HUNT Cloud management. [Read more](/tingweek/lagtun/).
+
+
+
+## Memberships
+
+Memberships to the Tings are derived from the following registered roles in contractual agreements with HUNT Cloud:
+
+| Ting | Invitations |
+| - | - | 
+| **Lab ting** | All active lab users. |
+| **Coordinator ting** | All coordinators in active labs and data spaces. |
+| **Enterprise ting** | All active users registered or associated with a private enterprise. |
+| **Lagtun** | Data controllers, service centers and data spaces on the BLUE subscription level ([read more](/tingweek/lagtun/#membership)). |
 
 
 
@@ -63,35 +76,6 @@ Ting weeks are scheduled over one week in the winter, spring and autumn: (i) The
 ![Ting schedule days](./images/tingweek-schedule-days.png)
 
 Individual Tings are scheduled over the week on the same time slots. The current scheule is as follows: Lab tings are held on Tuesdays 2-4 pm CET, Coordinator tings on Wednesdays 9-11 am CET, Enterprise tings on Wednesdays 1-3 pm CET and Lagtun on Thursdays 9-11 am CET.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Invitations 
-
-Invitations to the Tings are derived from registered roles in contractual agreements with HUNT Cloud:
-
-| Ting | Invitations |
-| - | - | 
-| **Lab ting** | All active lab users. |
-| **Coordinator ting** | All coordinators in active labs and data spaces. |
-| **Enterprise ting** | All active users registered or associated with a private enterprise. |
-| **Lagtun** | Data controllers, service centers and data spaces on the BLUE subscription level. |
-
-
-
-
-
 
 
 
@@ -136,12 +120,6 @@ Invitations to the Tings are derived from registered roles in contractual agreem
 
 
 
-
-
-
-
-
-
 ## FAQ
 
 #### Why Tings? 
@@ -163,18 +141,5 @@ We will meet digitally at Zoom utilizing the NTNU subscription. Links will be fo
 #### Where are the minutes? 
 
 Our tings have public agendas and internal minutes. We write up a summary after the week that gets distributed directly to the invited parties. The summary contains statements from all tings.
-
-#### What does the word Lagtun mean? 
-
-We know, we know. Lagtun is hard to pronounce in english. However, in Norwegian it is a word with several meanings that we think capture the soul of our top level ting. 
-
-First, **`Lag`** means "law" In Old Norse. This meaning is included in the last part of the name of our region, Trøndelag, which means the law of the Trønders. In addition, "lag" means "team" in modern Norwegian, reflecting the collaborative nature of the ting. 
-
-The second part, **`tun`** is also an Old Norse word for a fenced in area, usually around a collection of farm houses, much like your fenced in lab machines. Also relevant, the old tings were held on fenced in tuns for which the the Vikings had to leave all weapons by the fence before they entered the ting.
-
-
-
-
-
 
 
