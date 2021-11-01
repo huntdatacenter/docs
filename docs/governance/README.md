@@ -2,7 +2,7 @@
 title: Introduction
 category: HUNT Cloud
 permalink: /governance/
-description: This page gives an overview of the governance activities for HUNT Cloud. 
+description: This page gives an overview of the governance and decision making processes in HUNT Cloud. 
 ---
 
 # Governance
