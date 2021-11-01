@@ -53,7 +53,7 @@ Already running VPN services on your local machine may cause conflicts when conn
 
 ::: tip For UiB users
 
-You cannot access your lab over the default Cisco Anyconnect VPN from UiB. In order to connect to your lab with the UiB VPN activated, use split tunneling as described [here](https://hjelp.uib.no/tas/public/ssp/content/search?q=KI%200881). Using the split tuneling will allow you to benefit from UiB services, e.g. access your mail, while connected to your lab. However, this will *not* allow worldwide access to your lab.
+You cannot access your HUNT Cloud lab while using the default Cisco Anyconnect VPN from UiB. In order to connect to your lab with the UiB VPN activated, use split tunneling as described [here](https://hjelp.uib.no/tas/public/ssp/content/search?q=KI%200881). Using the split tunneling will allow you to access UiB services, e.g. mail, while connected to your lab.
 
 :::
 
