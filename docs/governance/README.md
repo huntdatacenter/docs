@@ -11,7 +11,7 @@ description: This page gives an overview of the governance activities for HUNT C
 
 This section contains information on the governance and decision making processes that provide such an environment in HUNT Cloud.
 
-In short, the scientific development of environments in HUNT Cloud is governed by our multilateral Tings, while the privacy and security of data values is governed directly by us.
+In short, our scientific development is governed by our multilateral Tings, while the privacy and security policies of data values is governed directly by us in symphony with instructions from our data controllers.
 
 #### Security and privacy
 
