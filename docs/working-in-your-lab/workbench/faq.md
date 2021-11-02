@@ -27,7 +27,7 @@ Jupyter Notebooks and code are stored in the shared volume:
 /mnt/work/workbench
 ```
 
-## Conda
+## Reproducibility
 
 ### How can I start a Notebook with a Conda environment?
 
