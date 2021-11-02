@@ -17,14 +17,24 @@ The Workbench is web-based and build around the feel of Jupyter notebooks with a
 ## Request access
 
 ::: warning Approvals
-The Workbench is currently only available to NTNU users and lab users from data controllers that have approved the service.
+Workbench is currently only available to NTNU users and lab users from data controllers that have approved the service.
 :::
 
-**Existing users**. [Contact us](/contact) to request keys and the certificate for your new Workbench:
+**Existing users**: [Contact us](/contact) to request keys and the certificate. Example email:
 
-> Hi team, I would like to try my new Workbench and are looking forward to receive my certificate.
+> Hi team,
+>
+> I would like to try Workbench in `labname` and are looking forward to receive my certificate.
 
-**New users**. You will receive keys and certificate as part of your regular onboarding.
+**New users**: You will receive keys and the certificate as part of your regular onboarding.
+
+::: tip Requirement
+
+Install Signal app on your phone so that we can quickly forward the keys when they are ready.
+
+- [Download and install for **iOS** here](https://itunes.apple.com/us/app/signal-private-messenger/id874139669?mt=8)
+- [Download and install for **Android** here](https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=en)
+:::
 
 ## Key transfer
 

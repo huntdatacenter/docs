@@ -15,6 +15,31 @@ description: Frequently asked questions about the Workbench in HUNT Lab.
 
 ## Conda
 
+### Where is my code stored?
+
+Jupyter Notebooks and code are stored in the shared volume:
+
+```
+/mnt/work/workbench
+```
+
+### Where do I find my data?
+
+Workbench uses same storages volumes as your home machine. You can also access your home directory.
+You should be able to access the same paths as on home node.
+
+### How can I scrape my server and start from scratch?
+
+Select control panel in top right corner:
+
+![wb_topbar_cp.png](./images/wb_topbar_cp.png)
+
+Then in the control panel hit stop server:
+
+![wb_cp_stopserver.png](./images/wb_cp_stopserver.png)
+
+You can either start the new instance by hitting the button or by logging in again.
+
 ### How can I start a Notebook with a Conda environment?
 
 Here is an example of Notebooks that are connected to Conda environments.
@@ -30,3 +55,23 @@ You can also change Conda environment of your Jupyter Notebook later, by switchi
 You will be able to select default environments including MATLAB kernel and custom environments which contain either `ipykernel` (Python) or `r-irkernel` (R 4.0):
 
 ![wb_notebook_conda_env.png](./images/wb_notebook_conda_env.png)
+
+### How can I create my own Conda environment for Jupyter?
+
+Creating Conda environment with Python and IPython kernel:
+```
+conda create -n <name> 'python==3.8' 'ipykernel'
+```
+
+Creating Conda environment with R and R-IRkernel kernel:
+```
+conda create -n <name> r-base>=4.0,<4.1' 'r-irkernel' 'r-devtools'
+```
+
+### How to report issues with MATLAB?
+
+Try to collect the error logs from Status information window.
+Additionally you could also help by taking a screenshot of error logs in browser console.
+Usually you can open the console with a shortcut: `CTRL + SHIFT + J` (MacOS: `CMD + Option + J`), but this can vary between browsers.
+
+Share these logs with us on slack, or feel free to [contact us on email](https://docs.hdc.ntnu.no/contact/).
