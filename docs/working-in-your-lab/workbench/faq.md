@@ -13,7 +13,13 @@ description: Frequently asked questions about the Workbench in HUNT Lab.
 
 [[toc]]
 
-## Conda
+
+## Storage
+
+### Where do I find my data?
+
+Workbench uses same storages volumes as your home machine. You can also access your home directory.
+You should be able to access the same paths as on home node.
 
 ### Where is my code stored?
 
@@ -23,10 +29,9 @@ Jupyter Notebooks and code are stored in the shared volume:
 /mnt/work/workbench
 ```
 
-### Where do I find my data?
 
-Workbench uses same storages volumes as your home machine. You can also access your home directory.
-You should be able to access the same paths as on home node.
+
+## Management
 
 ### How can I scrape my server and start from scratch?
 
@@ -39,6 +44,11 @@ Then in the control panel hit stop server:
 ![wb_cp_stopserver.png](./images/wb_cp_stopserver.png)
 
 You can either start the new instance by hitting the button or by logging in again.
+
+
+
+
+## Conda
 
 ### How can I start a Notebook with a Conda environment?
 
@@ -68,10 +78,11 @@ Creating Conda environment with R and R-IRkernel kernel:
 conda create -n <name> r-base>=4.0,<4.1' 'r-irkernel' 'r-devtools'
 ```
 
-### How to report issues with MATLAB?
+
+## MATLAB
+
+### How do I report issues with MATLAB?
 
 Try to collect the error logs from Status information window.
 Additionally you could also help by taking a screenshot of error logs in browser console.
-Usually you can open the console with a shortcut: `CTRL + SHIFT + J` (MacOS: `CMD + Option + J`), but this can vary between browsers.
-
-Share these logs with us on slack, or feel free to [contact us on email](https://docs.hdc.ntnu.no/contact/).
+Usually you can open the console with a shortcut: `CTRL + SHIFT + J` (MacOS: `CMD + Option + J`), but this can vary between browsers. Share these logs with us on slack, or feel free to [contact us on email](https://docs.hdc.ntnu.no/contact/).
