@@ -126,7 +126,7 @@ This form defined the invoice profile for your cloud services fees. One invoice 
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Invoice Profile" version 1.7.
+The following form fields are including in the "HUNT Cloud Invoice Profile" version 1.8.
 
 **Data space**
 
@@ -149,7 +149,7 @@ For organizations outside NTNU, specify the address where invoices are to be sen
 
 Specify "K.STED" and "PROJECT NUMBER" for your data space. These fields are mandatory for NTNU data spaces.
 
-**Account information (outside NTNU)**
+**Billing information (outside NTNU)**
 
 - *PEPPOL BIS*: This is the international identification number for your organization. [Click the link](https://directory.peppol.eu/public/locale-en_US/menuitem-search) to find your id. 
 - *REFERENCE NUMBER*: This is your order number with HUNT Cloud that ensures that the invoice is reaching you inside your organization. The format varies between organizations.
