@@ -10,7 +10,7 @@ description: Guides to your Workbench setup.
 
 ## About
 
-The Workbench is web-based and build around the feel of Jupyter notebooks with access to application such as RStudio, R, Python and Conda. We have also included support for Matlab and Stata for those than bring their own license.
+The Workbench is web-based and build around the feel of Jupyter notebooks with access to application such as _RStudio_, _R_, _Python_ and _Conda_. We have also included support for _MATLAB_ and _Stata_ for those than bring their own license.
 
 ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
@@ -20,17 +20,20 @@ The Workbench is web-based and build around the feel of Jupyter notebooks with a
 Workbench is currently only available to NTNU users and lab users from data controllers that have approved the service.
 :::
 
-**Existing users**: [Contact us](/contact) to request keys and the certificate. Example email:
+**Existing users**: [Contact us](/contact) to request keys and the certificate. You can use the example below:
 
 > Hi team,
 >
 > I would like to try Workbench in `labname` and are looking forward to receive my certificate.
 
+In any case let us know which tools interest you the most.
+This will help us recognize and further develop the parts that are important to you.
+
 **New users**: You will receive keys and the certificate as part of your regular onboarding.
 
 ::: tip Requirement
 
-Install Signal app on your phone so that we can quickly forward the keys when they are ready.
+Install **Signal app** on your phone so that we can quickly forward the keys when they are ready.
 
 - [Download and install for **iOS** here](https://itunes.apple.com/us/app/signal-private-messenger/id874139669?mt=8)
 - [Download and install for **Android** here](https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=en)
