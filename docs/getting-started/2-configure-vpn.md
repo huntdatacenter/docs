@@ -25,7 +25,7 @@ Successful [verification](/getting-started/collect-your-keys/#_1-4-verify-your-k
 
 ::: details Windows
 
-We use the open-source application [OpenVPN](https://openvpn.net/) to ensure encrypted communication between your local machine and us.
+We use the open-source application `OpenVPN` to ensure encrypted communication between your local machine and us.
 
 [Download and install OpenVPN using the latest Windows Installer](https://openvpn.net/community-downloads/)
 
