@@ -10,9 +10,7 @@ description: Frequently asked questions about the Workbench in HUNT Lab.
 
 **This page contain frequently asked questions on your Workbench in your lab. Help us expand this section by sending us your questions and burning topics.**
 
-
 [[toc]]
-
 
 ## Storage
 
@@ -29,26 +27,7 @@ Jupyter Notebooks and code are stored in the shared volume:
 /mnt/work/workbench
 ```
 
-
-
-## Management
-
-### How can I scrape my server and start from scratch?
-
-Select control panel in top right corner:
-
-![wb_topbar_cp.png](./images/wb_topbar_cp.png)
-
-Then in the control panel hit stop server:
-
-![wb_cp_stopserver.png](./images/wb_cp_stopserver.png)
-
-You can either start the new instance by hitting the button or by logging in again.
-
-
-
-
-## Conda
+## Reproducibility
 
 ### How can I start a Notebook with a Conda environment?
 
@@ -69,15 +48,30 @@ You will be able to select default environments including MATLAB kernel and cust
 ### How can I create my own Conda environment for Jupyter?
 
 Creating Conda environment with Python and IPython kernel:
+
 ```
 conda create -n <name> 'python==3.8' 'ipykernel'
 ```
 
 Creating Conda environment with R and R-IRkernel kernel:
+
 ```
 conda create -n <name> r-base>=4.0,<4.1' 'r-irkernel' 'r-devtools'
 ```
 
+## Management
+
+### How can I scrape my server and start from scratch?
+
+Select control panel in top right corner:
+
+![wb_topbar_cp.png](./images/wb_topbar_cp.png)
+
+Then in the control panel hit stop server:
+
+![wb_cp_stopserver.png](./images/wb_cp_stopserver.png)
+
+You can either start the new instance by hitting the button or by logging in again.
 
 ## MATLAB
 
