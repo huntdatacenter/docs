@@ -154,7 +154,9 @@ module.exports = {
               text: "Risk",
               isGroup: true,
               children: [
-                "/coordination/risk/"
+                "/coordination/risk/",
+                "/coordination/risk/resources.md",
+                "/coordination/risk/faq.md",
               ]
              },
            ]
