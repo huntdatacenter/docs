@@ -27,6 +27,9 @@ It is impossible to eliminate all risks. There will therefore  always be some ki
 
 Residual risks needs to be reduced or accepted. We call the individual that have the authority to accept such residual risks on behalf of your data and/or organization "risk owner".
 
+## Risk resources
+
+See the [resources](/riskmanagement/resources) section for link to our public security and privacy resources that may support your risk assessment. 
 
 ## Data Protection Impact Assessment (DPIA)
 
@@ -48,4 +51,7 @@ We are audited by an independent auditor as part of our ISO certificates yearly 
 
 We build our risk management on the guidelines from [ISO 31000 - Risk management](https://www.iso.org/iso-31000-risk-management.html) and [ISO 27005 - Information security risk management](https://www.iso.org/standard/75281.html). 
 
+## FAQ
+
+See the [FAQ on risk management](/riskmanagement/faq) page for a collection of frequently asked questions on the risk management for scientific activities and organizational evaluations of HUNT Cloud. 
 
