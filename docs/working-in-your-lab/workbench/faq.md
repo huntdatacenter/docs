@@ -73,6 +73,11 @@ Then in the control panel hit stop server:
 
 You can either start the new instance by hitting the button or by logging in again.
 
+### Can I install Jupyter extensions?
+
+Currently this is not allowed and Jupyter extension manager is disabled. Feel free to reach out to us on Slack
+and we can discuss adding useful extensions into your Workbench.
+
 ## MATLAB
 
 ### How do I report issues with MATLAB?
