@@ -11,7 +11,7 @@ This page list individual resolutions from Lagtun that governs the scientific de
 
 ::: tip
 
-Read more about the [resolutions from Lagtun](/tingweek/lagtun/#resolutions).
+Read more about [Lagtun](/tingweek/lagtun/) and the use of [resolutions](/tingweek/lagtun/#resolutions).
 
 :::
 

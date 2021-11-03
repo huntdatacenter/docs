@@ -23,11 +23,6 @@ We source the cooperative problem solving and joint strategic thinking among our
 
 Lagtun is the body that govern our scientific development. The body meets to give recommendations on our scientific development directly to the Director of HUNT Research Centre. 
 
-Recommendations through resolution was introduced in Lagtun #4 (2021-10). 
-
-
-
-
 
 ## Attendance
 
@@ -55,7 +50,7 @@ Employees from HUNT Cloud participate as observers.
 
 ## Resolutions
 
-Lagtun gives recommendations on our development in the form of resolutions. 
+Lagtun gives recommendations on our development in the form of resolutions. The format was introduced in Lagtun #4 (2021-10) with the intention to allow for an inclusive decision making process and multilateral cooperation. 
 
 ::: tip
 
