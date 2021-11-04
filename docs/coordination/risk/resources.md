@@ -38,7 +38,7 @@ We report overall risks as we see them three time per year in our Ting report un
 
 ### [Services specifications](/services/specifications/)
 
-This document specify responsibilities and relevant security measures for individual services. The document is formally incorporated as an appendix to your services agreement.
+This document specify responsibilities and relevant security measures for individual services. The document is formally incorporated as an appendix to the services center agreement.
 
 ### More information
 
