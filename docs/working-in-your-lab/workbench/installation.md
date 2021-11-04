@@ -183,7 +183,7 @@ The certificate is now installed and can be used for network or secure web site 
 
 ::: tip
 
-Make sure you are connected to the VPN before accessing workbench.
+Make sure you are connected to the VPN before accessing the workbench.
 :::
 
 1. Open the your web browser (Firefox is required for Linux).
@@ -200,7 +200,7 @@ https://demolab.lab.hdc.ntnu.no
 
 3. Sign in with your HUNT Cloud lab username and lab password. This is the password that you made on your first login.
 
-4. With a little bit of luck you should now see your new Workbench. Click around and play in your new world.
+4. With a little bit of luck you should now see your new Workbench. Click around and explore your new world.
 
 ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
