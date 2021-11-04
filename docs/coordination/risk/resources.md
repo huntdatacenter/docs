@@ -14,7 +14,7 @@ description: This page list risk management resources for HUNT Cloud.
 
 ::: tip Risk roles
 
-Oddgeir Lingaas Holmen holds the role as *Chief information officer* at HUNT Cloud. He is responsible for the implementation of the Security and privacy policies, including our risk management. Qussay Ghazeia holds the role as *Compliance officer* at HUNT Cloud, and he is responsible our internal audit program and coordination of external partner audits.
+Oddgeir Lingaas Holmen holds the role as *Chief information officer* at HUNT Cloud. The role is responsible for the implementation of the Security and privacy policies, including our risk management. Qussay Ghazeia holds the role as *Compliance officer* at HUNT Cloud. The role is responsible for the internal audit program and coordination of external audits.
 
 :::
 
