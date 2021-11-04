@@ -21,96 +21,8 @@ description: Installation guide for the Workbench in HUNT Lab.
 Allow for **30 minutes** to complete this installation and some time to play around in your new environment.
 :::
 
-## 1. Install certificates
 
-::: details Windows
-
-1. Open the p12 certificate. Make sure the store location is set to Current User and click next:
-
-   ![1_cert_p12.png](./images/1_cert_p12.png)
-
-2. Continue clicking on next
-
-   ![2_cert_p12.png](./images/2_cert_p12.png)
-
-3. Fill in the passphrase that you received on signal, and make sure only the same option is checked exactly as in the image. Then click next:
-
-   ![3_cert_p12.png](./images/3_cert_p12.png)
-
-4. Keep the first option to Automatically select the certificate store based on the type of certificate. Click next:
-
-   ![4_cert_p12.png](./images/4_cert_p12.png)
-
-5. Your client certificate is imported and you can hit finish:
-
-   ![5_cert_p12.png](./images/5_cert_p12.png)
-
-6. Wizard will require additional confirmation for installation certification authority HCTS CA 1
-   (HUNT Cloud Trust Services). This is required to safely access your Workbench. Before clicking
-   yes you should confirm that you see this thumbprint (fingerprint):
-   `ADD9DFEC C998BE44 AC2F254E 75E5EB98 D91879A6`
-
-   ![6_confirmCAcertificate.png](./images/6_confirmCAcertificate.png)
-
-7. Same step is required for your Lab CA, where your Lab name should appear:
-
-   ![7_confirmLabCAcertificate.png](./images/7_confirmLabCAcertificate.png)
-
-8) Quit your browser and restart it again for the certificate to get recognized.
-
-   ![8_import_success.png](./images/8_import_success.png)
-
-:::
-
-::: details OS X and macOS
-
-1. Open the system profile config (.mobileconfig) attached in archive.
-
-2. Confirm the installation of profile.
-
-   ![macos-profiles-continue.png](./images/macos-profiles-continue.png)
-
-3. Enter the passphrase that you received on signal and then confirm.
-
-   ![macos-profiles-credentials.png](./images/macos-profiles-credentials.png)
-
-4. Quit your browser and restart it again for the certificate to get recognized.
-
-:::
-
-::: details Ubuntu Linux
-
-1. Open Firefox on your local machine.
-
-You can install Firefox on your local machine with the following code: `apt install firefox`.
-
-2. Open url `about:preferences#privacy` or click `Edit` > `Preferences`.
-
-   ![p12_firefox_1.png](./images/p12_firefox_1.png)
-
-3. Click Options > Advanced > Encryption. Click View Certificates.
-
-   ![p12_firefox_2.png](./images/p12_firefox_2.png)
-
-4. Select the Your Certificates tab. Click Import.
-
-   ![p12_firefox_3.png](./images/p12_firefox_3.png)
-
-5. Browse for and select your PFX file. Enter the password.
-
-   ![p12_firefox_4.png](./images/p12_firefox_4.png)
-
-6. Click OK.
-
-   ![p12_firefox_5.png](./images/p12_firefox_5.png)
-
-7. Restart Firefox.
-
-The certificate is now installed and can be used for network or secure web site client authentication after the restart of Firefox.
-
-:::
-
-## 2. Edit hosts file
+## 1. Edit hosts file
 
 We are sending hosts file record on email. You will need to make sure that your hosts file contains this line.
 
@@ -173,7 +85,106 @@ sudo vim /etc/hosts
 
 :::
 
+
+## 2. Install certificates
+
+::: details Windows
+
+1. Open the p12 certificate. Make sure the store location is set to Current User and click next:
+
+   ![1_cert_p12.png](./images/1_cert_p12.png)
+
+2. Continue clicking on next
+
+   ![2_cert_p12.png](./images/2_cert_p12.png)
+
+3. Fill in the passphrase that you received on signal, and make sure only the same option is checked exactly as in the image. Then click next:
+
+   ![3_cert_p12.png](./images/3_cert_p12.png)
+
+4. Keep the first option to Automatically select the certificate store based on the type of certificate. Click next:
+
+   ![4_cert_p12.png](./images/4_cert_p12.png)
+
+5. Your client certificate is imported and you can hit finish:
+
+   ![5_cert_p12.png](./images/5_cert_p12.png)
+
+6. Wizard will require additional confirmation for installation certification authority HCTS CA 1
+   (HUNT Cloud Trust Services). This is required to safely access your Workbench. Before clicking
+   yes you should confirm that you see this thumbprint (fingerprint):
+   `ADD9DFEC C998BE44 AC2F254E 75E5EB98 D91879A6`
+
+   ![6_confirmCAcertificate.png](./images/6_confirmCAcertificate.png)
+
+7. Same step is required for your Lab CA, where your Lab name should appear:
+
+   ![7_confirmLabCAcertificate.png](./images/7_confirmLabCAcertificate.png)
+
+8) Quit your browser and restart it again for the certificate to get recognized.
+
+   ![8_import_success.png](./images/8_import_success.png)
+
+:::
+
+::: details OS X and macOS
+
+1. Open the system profile config (.mobileconfig) attached in archive.
+
+2. Confirm the installation of profile.
+
+   ![macos-profiles-continue.png](./images/macos-profiles-continue.png)
+
+3. Enter the passphrase that you received on signal and then confirm.
+
+   ![macos-profiles-credentials.png](./images/macos-profiles-credentials.png)
+
+4. Quit your browser and restart it again for the certificate to get recognized.
+
+5. When opening the Workbench for the first time you will be asked for macOS password,
+   allowing the browser to access the your client certificate stored in Keychain.
+   After filling in the password you can confirm by clicking on `Always allow`.
+
+:::
+
+::: details Ubuntu Linux
+
+1. Open Firefox on your local machine.
+
+You can install Firefox on your local machine with the following code: `apt install firefox`.
+
+2. Open url `about:preferences#privacy` or click `Edit` > `Preferences`.
+
+   ![p12_firefox_1.png](./images/p12_firefox_1.png)
+
+3. Click Options > Advanced > Encryption. Click View Certificates.
+
+   ![p12_firefox_2.png](./images/p12_firefox_2.png)
+
+4. Select the Your Certificates tab. Click Import.
+
+   ![p12_firefox_3.png](./images/p12_firefox_3.png)
+
+5. Browse for and select your PFX file. Enter the password.
+
+   ![p12_firefox_4.png](./images/p12_firefox_4.png)
+
+6. Click OK.
+
+   ![p12_firefox_5.png](./images/p12_firefox_5.png)
+
+7. Restart Firefox.
+
+The certificate is now installed and can be used for network or secure web site client authentication after the restart of Firefox.
+
+:::
+
 ## 3. Open your new Workbench
+
+::: tip
+
+Make sure you are connected to the VPN before accessing workbench.
+:::
 
 1. Open the your web browser (Firefox is required for Linux).
 
