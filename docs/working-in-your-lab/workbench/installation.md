@@ -24,9 +24,9 @@ Allow for **30 minutes** to complete this installation and some time to play aro
 
 ## 1. Edit hosts file
 
-We are sending hosts file record on email. You will need to make sure that your hosts file contains this line.
+We are sending hosts record in onboarding email. You will need to make sure that your hosts file contains this line.
 
-Example of hosts file record:
+Example of hosts record:
 
 ```
 10.42.130.X <lab_name>.lab.hdc.ntnu.no
@@ -183,7 +183,7 @@ The certificate is now installed and can be used for network or secure web site 
 
 ::: tip
 
-Make sure you are connected to the VPN before accessing the workbench.
+Make sure you are connected to the VPN before accessing the Workbench.
 :::
 
 1. Open the your web browser (Firefox is required for Linux).
