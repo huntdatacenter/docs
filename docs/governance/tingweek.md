@@ -63,8 +63,7 @@ Memberships to the Tings are derived from the following registered roles in cont
 | **Lab ting** | All active lab users. |
 | **Coordinator ting** | All coordinators in active labs and data spaces. |
 | **Enterprise ting** | All active users registered or associated with a private enterprise. |
-| **Lagtun** | Data controllers, service centers and data spaces on the BLUE subscription level ([read more](/tingweek/lagtun/#membership)). |
-
+| **Lagtun** | Data controllers, service centers and data spaces on the BLUE subscription level ([read more](/tingweek/lagtun/#representatives)). |
 
 
 ## Schedule 
