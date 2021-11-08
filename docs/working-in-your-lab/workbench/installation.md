@@ -213,7 +213,8 @@ Don't worry. [Contact us](/contact) on email for a password reset.
 
 ::: details Firefox - Did Not Connect
 
-Firefox may require setting our CA certificate manually:
+Firefox may require manually importing HUNT Cloud Certificate Authority to consider it trusted.
+If you see Error code: `SEC_ERROR_UNKNOWN_ISSUER` when accessing Workbench follow these steps:
 1. Download our public CA certificate: [https://pki.hdc.ntnu.no/hctsca1.crt](https://pki.hdc.ntnu.no/hctsca1.crt)
 2. Open Firefox url: `about:preferences#privacy`
 3. Scroll down to section `Certificates` and click on `View Certificates`:
