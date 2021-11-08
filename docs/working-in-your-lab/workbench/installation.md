@@ -206,6 +206,20 @@ https://demolab.lab.hdc.ntnu.no
 
 ## Immediate troubleshooting
 
-#### I don't remember my password
+::: details I don't remember my password
 
 Don't worry. [Contact us](/contact) on email for a password reset.
+:::
+
+::: details Firefox - Did Not Connect
+
+Firefox may require setting our CA certificate manually:
+1. Download our public CA certificate: [https://pki.hdc.ntnu.no/hctsca1.crt](https://pki.hdc.ntnu.no/hctsca1.crt)
+2. Open Firefox url: `about:preferences#privacy`
+3. Scroll down to section `Certificates` and click on `View Certificates`:
+   ![mac-firefox-certificates.png](./images/mac-firefox-certificates.png)
+4. Switch to tab `Authorities` and click on `Import`:
+   ![mac-firefox-import-cert.png](./images/mac-firefox-import-cert.png)
+5. Select `hctsca1.crt` and check option `Trust this CA to identify websites`:
+   ![mac-firefox-trust-ca.png](./images/mac-firefox-trust-ca.png)
+:::
