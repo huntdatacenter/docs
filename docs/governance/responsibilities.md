@@ -15,13 +15,13 @@ The Head of Department at the Department of Public Health and Nursing at the Fac
 
 ### Governance
 
-The Director of HUNT Research Centre, [Marit Næss](https://www.ntnu.edu/employees/marit.nass), holds the direct responsiblity for the governance of HUNT Cloud, including financial aspects and compliance.
+The Head of HUNT Research Centre, [Marit Næss](https://www.ntnu.edu/employees/marit.nass), holds the direct responsiblity for the governance of HUNT Cloud, including financial aspects and compliance.
 
-[Lagtun](/tingweek/#lagtun) holds an indirect responsibility for the scientific development of HUNT Cloud as member representatives express recommendations for the scientific governance directly to the Director of HUNT Research Centre in the form of resolutions.
+[Lagtun](/tingweek/#lagtun) holds an indirect responsibility for the scientific development of HUNT Cloud as member representatives express recommendations for the scientific governance directly to the Head of HUNT Research Centre in the form of resolutions.
 
 ### Operations
  
-The Director of HUNT Cloud, [Oddgeir Lingaas Holmen](https://www.ntnu.edu/employees/oddgeir.lingaas.holmen), holds the direct responsibility for our day-to-day operations, including management of information security and privacy.
+The Head of HUNT Cloud, [Oddgeir Lingaas Holmen](https://www.ntnu.edu/employees/oddgeir.lingaas.holmen), holds the direct responsibility for our day-to-day operations, including management of information security and privacy.
 
 ### Development
 

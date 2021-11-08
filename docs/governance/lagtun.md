@@ -21,7 +21,7 @@ High impact science needs continuous developments in data, tools, expertise and 
 
 We source the cooperative problem solving and joint strategic thinking among our members to ensure continuous movement of our activities. 
 
-Lagtun is the body that govern our scientific development. The body meets to give recommendations on our scientific development directly to the Director of HUNT Research Centre. 
+Lagtun is the body that govern our scientific development. The body meets to give recommendations on our scientific development directly to the Head of HUNT Research Centre. 
 
 
 ## Attendance
@@ -59,9 +59,9 @@ Lagtun gives recommendations on our development in the form of resolutions. The 
 
 ### Consideration
 
-HUNT Research Centre and NTNU are legally responsible for our activities, including aspects related to privacy, security and finance. Changes to our activities needs to be approved by the Director of HUNT Research Centre. 
+HUNT Research Centre and NTNU are legally responsible for our activities, including aspects related to privacy, security and finance. Changes to our activities needs to be approved by the Head of HUNT Research Centre. 
 
-The resolutions are therefore expressed as recommendations for consideration to the Director of HUNT Research Centre who may: (i) adopt the resolution, meaning that HUNT Cloud will incorporate the recommendations directly; or (ii) take the resolution into consideration, meaning that we need more time to investigation options before decisions on the topic can be made.
+The resolutions are therefore expressed as recommendations for consideration to the Head of HUNT Research Centre who may: (i) adopt the resolution, meaning that HUNT Cloud will incorporate the recommendations directly; or (ii) take the resolution into consideration, meaning that we need more time to investigation options before decisions on the topic can be made.
 
 ### Consensus
 
