@@ -81,6 +81,14 @@ Individual Tings are scheduled over the week on the same time slots. The current
 
 ## Dates and agendas
 
+#### Ting week #6 (2022-05)
+
+- **Lab ting**: Tuesday 31 May 2022 - 2 to 4 p.m. CET
+- **Coordinator ting**: Wednesday 1 June 2022 - 9 to 11 a.m. CET
+- **Enterprise ting**: Wednesday 1 June 2022 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 2 June 2022 - 9 to 11 a.m. CET
+
+
 #### Ting week #5 (2022-02)
 
 - **Lab ting**: Tuesday 15 February 2022 - 2 to 4 p.m. CET
