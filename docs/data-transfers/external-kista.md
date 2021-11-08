@@ -47,7 +47,7 @@ A specific port number will be selected and we will send this number in the tran
 
 ### SSH key pair
 
-You will use a SSH public key to authenticate and access your kista (instead of passwords). Before we can deploy the kista, you must therefore provide us with a public key from a SSH key pair. This section describes how to do this.
+You will use a **SSH public key** to authenticate and access your kista (instead of passwords). Before we can deploy the kista, you must therefore provide us with a **public key** from a SSH key pair. This section describes how to do this.
 
 #### Key types
 
@@ -114,7 +114,7 @@ You should now have a SSH key pair consisting of the following files:
 
 #### Share public SSH key with HUNT Cloud
 
-After generating the SSH key pair, please share the public key with us via [email](/contact).
+After generating the SSH key pair, please share the **public key** (not the private one) with us via [email](/contact).
 The public key is safe to share and can be sent in clear text.
 
 
