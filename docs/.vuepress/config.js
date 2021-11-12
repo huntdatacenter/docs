@@ -115,7 +115,6 @@ module.exports = {
           children: [
             "/coordination/",
             "/coordination/services-model.md",
-            "/coordination/roles.md",
             {
               title: "Agreements",
               text: "Agreements",
@@ -147,6 +146,7 @@ module.exports = {
                 "/coordination/prices/pricelist.md",
                 "/coordination/prices/calculator.md",
                 "/coordination/prices/examples.md",
+                "/coordination/prices/faq.md",
               ]
              },
             {
@@ -159,6 +159,8 @@ module.exports = {
                 "/coordination/risk/faq.md",
               ]
              },
+            "/coordination/roles.md",
+            "/coordination/faq.md",
            ]
         },
         {
