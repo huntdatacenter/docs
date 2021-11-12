@@ -56,7 +56,7 @@ conda create -n <name> 'python==3.8' 'ipykernel'
 Creating Conda environment with R and R-IRkernel kernel:
 
 ```
-conda create -n <name> r-base>=4.0,<4.1' 'r-irkernel' 'r-devtools'
+conda create -n <name> 'r-base>=4.0,<4.1' 'r-irkernel' 'r-devtools'
 ```
 
 ## Management
