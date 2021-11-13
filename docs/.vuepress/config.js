@@ -159,6 +159,14 @@ module.exports = {
                 "/coordination/risk/faq.md",
               ]
              },
+            {
+              title: "Data",
+              text: "Data",
+              isGroup: true,
+              children: [
+                "/coordination/data/",
+              ]
+             },
             "/coordination/roles.md",
             "/coordination/faq.md",
            ]
