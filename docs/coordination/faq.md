@@ -81,7 +81,9 @@ Head over to our dedicated [FAQ on prices](/prices/faq/).
 
 
 
+## Data coordination
 
+Head over to our dedicated [FAQ on data](/data/faq/).
 
 
 
