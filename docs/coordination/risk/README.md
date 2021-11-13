@@ -12,6 +12,11 @@ description: This page list risk management resources for HUNT Cloud.
 
 [[toc]]
 
+::: tip
+
+See our [FAQ on risk management](/riskmanagement/faq) for a collection of frequently asked questions on risk management in your data space. 
+
+:::
 
 ## Responsibilities
 
@@ -43,15 +48,16 @@ Your organization may request risk assessments of your activities when it comes 
 
 We encourage our data controllers to control that our environments are implemented and operated as we state in our policies. Both on-screen and physical audits can be arranged.
 
-Compliance coordinators in data spaces are welcome to participate in our regular internal audit sessions for educational purposes. 
-
 We are audited by an independent auditor as part of our ISO certificates yearly for each certificate. The certificates from these audits are available on our [certificates](/certificates/) page.
+
+::: tip Join an internal audit session
+
+Data controllers are welcome to participate in our regular internal audit sessions for educational purposes. [Read more.](/riskmanagement/faq/#can-we-join-an-internal-audit-session)
+
+:::
 
 ## Framework
 
 We build our risk management on the guidelines from [ISO 31000 - Risk management](https://www.iso.org/iso-31000-risk-management.html) and [ISO 27005 - Information security risk management](https://www.iso.org/standard/75281.html). 
 
-## FAQ
-
-See the [FAQ on risk management](/riskmanagement/faq) page for a collection of frequently asked questions on the risk management for scientific activities and organizational evaluations of HUNT Cloud. 
 

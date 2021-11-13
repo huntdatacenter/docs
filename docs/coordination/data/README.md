@@ -1,7 +1,7 @@
 ---
 title: Introduction
 category: HUNT Cloud
-permalink: /data/introduction
+permalink: /datamanagement/introduction
 sidebarDepth: 1
 description: This page gives an introduction to data coordination in HUNT Cloud.
 ---

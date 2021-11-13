@@ -165,6 +165,7 @@ module.exports = {
               isGroup: true,
               children: [
                 "/coordination/data/",
+                "/coordination/data/faq.md",
               ]
              },
             "/coordination/roles.md",
