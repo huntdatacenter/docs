@@ -1,7 +1,7 @@
 ---
 title: FAQ
 category: HUNT Cloud
-permalink: /datamanagement/faq
+permalink: /data/faq
 sidebarDepth: 1
 description: This page list data management FAQ for HUNT Cloud.
 ---
