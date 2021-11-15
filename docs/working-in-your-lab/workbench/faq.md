@@ -80,8 +80,13 @@ and we can discuss adding useful extensions into your Workbench.
 
 ## MATLAB
 
+### Are there any limitations to MATLAB in Workbench?
+
+Yes, some limitations may apply.
+See official documentation: https://se.mathworks.com/products/matlab-online/limitations.html
+
 ### How do I report issues with MATLAB?
 
-Try to collect the error logs from Status information window.
+Try to note down times when the issues occurred and collect the error logs from Status information window.
 Additionally you could also help by taking a screenshot of error logs in browser console.
 Usually you can open the console with a shortcut: `CTRL + SHIFT + J` (MacOS: `CMD + Option + J`), but this can vary between browsers. Share these logs with us on slack, or feel free to [contact us on email](https://docs.hdc.ntnu.no/contact/).
