@@ -9,5 +9,4 @@ description: HUNT Cloud price calculator.
 
 # Price calculator
 
-<iframe class="customiframe" src="https://huntdatacenter.gitlab.io/calculator/" title="Price calculator" frameBorder="0"></iframe>
-
+<iframe class="customiframe" src="https://huntcloud.pages.hdc.ntnu.no/calculator/" title="Price calculator" frameBorder="0"></iframe>
