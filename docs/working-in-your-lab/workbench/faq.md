@@ -82,8 +82,7 @@ and we can discuss adding useful extensions into your Workbench.
 
 ### Are there any limitations to MATLAB in Workbench?
 
-Yes, some limitations may apply.
-See official documentation: https://se.mathworks.com/products/matlab-online/limitations.html
+Yes, some limitations may apply. Read more in the [official documentation](https://se.mathworks.com/products/matlab-online/limitations.html).
 
 ### How do I report issues with MATLAB?
 
@@ -91,12 +90,14 @@ Try to note down times when the issues occurred and collect the error logs from 
 Additionally you could also help by taking a screenshot of error logs in browser console.
 Usually you can open the console with a shortcut: `CTRL + SHIFT + J` (MacOS: `CMD + Option + J`), but this can vary between browsers. Share these logs with us on slack, or feel free to [contact us on email](https://docs.hdc.ntnu.no/contact/).
 
-### How to increase number of parallel workers?
+### How can I increase the number of parallel workers?
 
-If you already have Parallel Computing Toolbox and cannot set higher number parallel workers in the pool select Parallel menu and click on Create and Manage Clusters:
+If you already have "Parallel Computing Toolbox" and cannot set the higher number parallel workers in the pool, Select "Parallel" menu and click on "Create and Manage Clusters":
 
 ![MATLAB-manage-clusters.png](./images/MATLAB-manage-clusters.png)
 
-Then hit Edit and update the NumWorkers value (usually number of CPUs):
+Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 
 ![MATLAB-numWorkers.png](./images/MATLAB-numWorkers.png)
+
+
