@@ -25,7 +25,7 @@ Head over to our [Lab FAQ](/faq/) for questions related to scientific activities
 
 This section contains FAQ from compliance coordinators.
 
-### Lab portfolio management
+### Lab management
 
 #### How do I add a new lab to my existing data space? 
 
@@ -39,10 +39,13 @@ As sciences grows inside your individual labs you may see the need to move part 
 - evaluate if you need to deactive some users in your original lab after the move, and if so send us a list of users you want to deactivate on [email](/contact).
 - consider how you will transfer data into your new lab, for example by ordering an [internal kista](/agreements/downloads/#external-kista-import-order) from your original to your new lab.
 
-#### How do I move a lab over to another data space? 
+#### How do I move a lab to another data space? 
 
 We may transfer the ownership of a lab under your data space to another data space both inside or outside your organization. [Contact us](/contact) for such moves. We will need a lab transfer order that is co-signed by the you and affected parties.
 
+#### How do I delete a lab? 
+
+Labs are deleted on request of the Data space leaders and deletion requests are co-signed by Lab leaders. [Contact us](/contact) for such Lab Deletion Orders when you need to remove one of your labs. Keep in mind that all data and machines will be irrevocably destroyed in this process.
 
 
 ### Contract management
