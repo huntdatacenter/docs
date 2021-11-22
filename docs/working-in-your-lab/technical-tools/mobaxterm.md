@@ -12,7 +12,7 @@ MobaXterm is a software package that simplifies connecting to your lab on HUNT C
 
 ## Prerequisites
 
-A working SSH connection to both entry and home as described in the [How To Connect To Your Lab](/getting-started/how-to-connect) guide.
+A working SSH connection to both entry and home as described in the [How To Connect To Your Lab](/getting-started/) guide.
 If these steps don't work as intended, it will be hard (although not impossible) to get MobaXterm to work smoothly.
 
 ## How to install

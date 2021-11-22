@@ -87,7 +87,7 @@ The configuration below will work on [home](/faq/compute/#machine-types) machine
 
   - For Mac and Linux:
 
-    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/getting-started/how-to-connect/#simplify-your-life)' section in the installation guide.
+    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/getting-started/configure-ssh/#_3-5-final-steps)' section in the installation guide.
 
   - For Windows:
 
@@ -179,7 +179,7 @@ The configuration below will only work on **`iaas`** or **`blue`** machines, and
 
   - For Mac and Linux:
 
-    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/getting-started/how-to-connect/#simplify-your-life)' section in the installation guide.
+    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/getting-started/configure-ssh/#_3-5-final-steps)' section in the installation guide.
 
   - For Windows:
 

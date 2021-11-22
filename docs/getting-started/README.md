@@ -10,7 +10,7 @@ This guide will help you to connect and get started on your HUNT Cloud lab.
 
 ::: tip
 
-[Install Signal](/getting-started/how-to-connect/#setup-signal) on your phone and [contact us](/contact) by email as soon as you have sent us your signed [user agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf). This allows us to quickly forward you the lab keys when they are ready.
+[Install Signal](/getting-started/collect-your-keys/#_1-1-secrets-to-your-phone) on your phone and [contact us](/contact) by email as soon as you have sent us your signed [user agreement](/agreements/downloads/#user-agreement). This allows us to quickly forward you the lab keys when they are ready.
 :::
 
 The following steps will help you to invest time in your lab setup so you can enjoy simple and secure access for all your future connections:
