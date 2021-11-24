@@ -153,7 +153,7 @@ Yes. Reactivation require a new co-signed [user agreement](/agreements/downloads
 
 ### Remind me, how do I connect to my lab?
 
-Sure. If you haven't logged in for a while, here's a quick recap of the steps: (1) Start the HUNT VPN (OpenVPN or Tunnelblick), and use the verification code from Goolge Authenticator on your phone as key. (2) Log in to your lab using SSH (OS X, macOS and Linux), MobaXterm (Windows), or X2Go (both) for graphical software. Head over to our [troubleshooting](/troubleshooting/connection) section for further investigations if this does not work.
+Sure. If you haven't logged in for a while, here's a quick recap of the steps: (1) Start the HUNT VPN (OpenVPN or Tunnelblick), and use the verification code from Google Authenticator on your phone as key. (2) Log in to your lab using SSH (OS X, macOS and Linux), MobaXterm (Windows), or X2Go (both) for graphical software. Head over to our [troubleshooting](/troubleshooting/connection) section for further investigations if this does not work.
 
 
 
