@@ -146,13 +146,13 @@ Your data services agreement is signed, sealed and delivered. You have now paved
 
 These are the orders that incorporates individual [data spaces](/agreements/overview/#data-space-order) under a services agreement. Data spaces orders are managed by scientific leaders.
 
-#### 1. Decide if your scientific vision fits our services
+#### 1. Decide if your scientific vision fits our environment
 
-Data spaces have a yearly subscription cost. So, before you get going with an order you might want to be sure your scientific adventures can prosper and that we may provide great experiences for your scientists. You will find on overview of our services [here](/services/overview/). 
+Data spaces have a yearly subscription cost. So, before you get going you might want to be sure your scientific explorations can provide great experiences for your scientific team. 
 
-Please [contact us](/contact) to supplement your assessment if you like. We truly enjoy learning about scientific activities, and enjoy dialogues about short and long-term strategies to elevate science. We are also happy to provide references relevant for your scientific field, demonstrate potential tools, estimate cost etc. 
+You will find more information on our new services model [here](/services/services-model/#about), and feel free to [contact us](/contact) for dialogues if you like help with your assessment. We truly enjoy learning about scientific activities, and enjoy dialogues about short and long-term strategies to elevate science. We are also happy to provide references relevant for your scientific field, demonstrate potential tools, estimate cost etc. 
 
-If your reflections conclude that we might be a good fit, jump to the next sections to identify your coordinator team. If you decide otherwise, we will appreciate it if spare us a minute [sending us](/contact) your thoughts for future improvements on how we may fit your scientific vision. 
+If you think our environment might be a good fit, jump to the next sections to identify your coordinator team. If you decide otherwise, we will appreciate it if spare us a minute [sending us](/contact) your thoughts for future improvements on how we may fit your scientific vision. 
 
 #### 2. Identify your coordinator team
 
