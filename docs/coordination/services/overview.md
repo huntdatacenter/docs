@@ -53,7 +53,7 @@ This is the subscription that establishes a management account (data space) in H
 This is the subscription that gives to access to one digital laboratory where you add resources for computation and storage. One to many labs can be organized under one data space. The availability of certain resources are defined by the subscription level of the data space for which the lab is attached (see above). See the [Services specifications](/services/specifications) for detailed information.
 
 | Subscription level: | LAB |
-| ---- | --- |
+| ---- | ---- |
 | Commitment length | 1 or 3 YEARS |
 
 ## Individual services
