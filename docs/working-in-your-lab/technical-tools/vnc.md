@@ -26,7 +26,7 @@ sudo apt-get install -y --no-install-recommends xubuntu-desktop
 
 Start the session on your server with the command below and note the number of session N (e.g. `:1`):
 ```
-/opt/TurboVNC/bin/vncserver -geometry 1280x900 -nohttpd -SecurityTypes None -localhost
+/opt/TurboVNC/bin/vncserver -geometry 1280x900 -nohttpd -SecurityTypes None -localhost -disconnect
 ```
 
 If you have one or more existing sessions running and you want to list them, you can use `-list` parameter:
