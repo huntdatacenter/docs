@@ -11,7 +11,7 @@ This section lists frequently asked questions related to the organization of sci
 
 ::: tip
 
-This page is intended for data space coordinators. Head over to our [Lab FAQ](/faq/) for questions related to scientific activities and practical issues inside a lab. 
+This page is intended for data space coordinators. Head over to our [Lab FAQ](/faq/) for questions related to scientific activities inside labs. 
 
 :::
 
