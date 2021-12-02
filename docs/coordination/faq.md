@@ -47,7 +47,7 @@ This depends on the agreement status for your organization. We require a new set
 
 Could be. Data processor agreements and services agreements are signed on the organizational level. These are already in place for many organizations. However, if they are not in place, you will need to get them signed before you send us your data space and lab order. If they are in place, jump right into the "Data space" section in our [get going](/agreements/get-going/) guide to send us your data space order, invoice profile and lab orders. [Contact us](/contact) if you are unsure of the agreement status for your organization. 
 
-### How do we know the agreement status of my lab? 
+### How do we know the agreement status of our lab? 
 
 For December, we plan to notify lab leaders, lab coordinators and all lab users in labs with missing agreements on email as follows: (i) We will communicate the agreement status the first days in December; (ii) We will send a warning for closure in mid December; (iii) We will notify all labs that gets deactivated in January.
 
