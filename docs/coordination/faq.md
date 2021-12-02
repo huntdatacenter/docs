@@ -75,9 +75,9 @@ There is no direct cost for organizations that sign Data processor agreements an
 
 Worry not. You may reduce resources in your lab until 1 April 2022 without cost. See [Resolution 4](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=3) for details, and feel free to [contact us](/contact) for dialogue on potential resource and cost optimization. 
 
-### How can we terminate our lab? 
+### Can we terminate our lab? 
 
-[Contact us](/contact) if you plan to terminate your lab so we can send you a termination order. When the signed order is registered, we will restore access to your lab users to prepare your data evacuation. Data will be available for evacuation until 1. April (90 days) and then destroyed (ref. [Resolution 5(e)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4)).
+Yes. [Contact us](/contact) for a termination order. When the signed order is registered, we will restore access to your lab so you can prepare your data evacuation. Data will be available for evacuation until 1. April (90 days) and then destroyed (ref. [Resolution 5(e)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4)).
 
 
 
