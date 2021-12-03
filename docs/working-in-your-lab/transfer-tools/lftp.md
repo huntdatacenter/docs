@@ -44,3 +44,13 @@ brew install lftp
 
 We recommend reading [lftp manuals](https://linux.die.net/man/1/lftp), which provides
 extensive overview of features.
+
+### Connecting to Kista
+
+To connect to your kista you will need to prepend the alias with `sftp://`, example:
+
+```bash
+lftp sftp://kista
+```
+
+We recommend to use `mirror` command, which works similar to rsync.
