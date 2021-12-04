@@ -26,7 +26,7 @@ Your data space leader or administrative data space coordinator can use this ord
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Lab Agreement" version 3.4.
+The following form fields are included in the "HUNT Cloud Lab Agreement" version 3.4.
 
 
 **Data space**
@@ -389,3 +389,29 @@ your-username@`your-labname`-home~$
 - **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
 
 :::
+
+
+
+## Lab deletion order
+
+[HUNT Cloud Lab Deletion Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-deletion-order.pdf) (pdf)
+
+Your data space leader can request irrevocable destruction (deletion) of labs under their data space. We use the deletion order that is co-signed by the data space leader and lab leader do document such requests.
+
+::: details Clarification of the form fields
+
+The following form fields are included in the "HUNT Cloud Lab Deletion Order" version 1.1.
+
+**Data space**
+
+- *Name*. This is the short name for the data space where the lab is attached.
+- *Leader*. This is the full name of the data space leader. 
+
+**Lab**
+
+- *Name*. This is the short name for the lab that is authorized for deletion.
+- *Leader*. This is the full name of the lab leader. 
+
+:::
+
+

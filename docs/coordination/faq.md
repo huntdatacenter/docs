@@ -116,7 +116,11 @@ We may transfer the ownership of a lab under your data space to another data spa
 
 #### How can we delete a lab? 
 
-Labs are deleted on request of the Data space leaders and deletion requests are co-signed by Lab leaders. [Contact us](/contact) for such Lab Deletion Orders when you need to remove one of your labs. Keep in mind that all data and machines will be irrevocably destroyed in this process.
+Lab deletions are authorized by Data space leaders and documented in a [lab deletion order](/agreements/downloads/#lab-deletion-order) that is co-signed by the affected lab leader. All data and machines in the lab will be irrevocably destroyed in this process, and neither data nor machines can be recreated.
+
+
+
+
 
 
 ### Contract management
