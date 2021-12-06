@@ -18,17 +18,34 @@ Help us expand this page. [Contact us](/contact) with your burning topics.
 
 :::
 
+
+
+
 ## Data space subscriptions
+
+### Who decide which subscription level we can utilize? 
+
+You. The decision to choose a WHITE, ORANGE or BLUE subscription level is fully up to you and your data space leader. Head over to the [services overview](/services/overview/#data-space) to see the differences between them. 
 
 ### Why is the BLUE subscription only one year? 
 
 While both the WHITE and ORANGE subscriptions can be reserved for three years, we have kept the BLUE subscription to one year only. The reason behind this is lack of experience in pricing the additional features that are available on this level. As soon as our accuracy increase, we aim to make longer reservations available.
+
+
+
+
+
 
 ## Compute
 
 ### Are entry machines metered? 
 
 No. Entry machines are the machines we use to control the user management and security updates in individual labs. These are mandatory and the cost is included in lab subscription fees. You should -not- include the cost for these machines in your [price calculator](/prices/calculator/) estimates.
+
+### Can we upsize a commitment machine with on-demand resources? 
+
+Yes, that's the aim. We acknowledge that you may have a need for increased computational resources in periods of the year, and that one convenient setup would be to upsize your home machine for such compute efforts. Our aim is to allow such upgrades. 
+
 
 
 ## Storage
@@ -37,9 +54,13 @@ No. Entry machines are the machines we use to control the user management and se
 
 In short, each lab pay the mean terabyte price for your data space. This price to automatically incorporate your data space volume discount. For details, see the meter, cost and billing section under the Store chapter in the [services specification](/services/specifications/) and the Store section in the [price list](/prices/pricelist/), or test for yourself in the [price calculator](/prices/calculator/). 
 
-### Why can we not allocate less than one terabyte per machine? 
+### Why is one terabyte the minimum storage allocation? 
 
-In short, we aim to link usage to the overall system capacity to ensure a consistent storage performance. One of these controls is to ensure that the total number of spinning disks in the system scale with use. The 1 terabyte allocation thus evening out your input/output operations per second across more disks.
+In short, we try ensure a consistent storage performance by linking usage to the overall system capacity. One of these controls is to ensure that the total number of spinning disks scale with the need for increased input/output operations of actual use. The one terabyte minimum allocation helps us to achieve this.
+
+
+
+
 
 ## Billing 
 
