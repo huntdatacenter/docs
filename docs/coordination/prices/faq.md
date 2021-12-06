@@ -18,6 +18,12 @@ Help us expand this page. [Contact us](/contact) with your burning topics.
 
 :::
 
+## Data space subscriptions
+
+### Why is the BLUE subscription only one year? 
+
+While both the WHITE and ORANGE subscriptions can be reserved for three years, we have kept the BLUE subscription to one year only. The reason behind this is lack of experience in pricing the additional features that are available on this level. As soon as our accuracy increase, we aim to make longer reservations available.
+
 ## Compute
 
 ### Are entry machines metered? 

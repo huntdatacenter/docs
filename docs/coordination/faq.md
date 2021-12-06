@@ -96,6 +96,7 @@ Yes. [Contact us](/contact) for a termination order. When the signed order is re
 
 This section contains FAQ from compliance coordinators.
 
+
 ### Lab management
 
 #### How can we add a new lab to our existing data space? 
@@ -116,7 +117,7 @@ We may transfer the ownership of a lab under your data space to another data spa
 
 #### How can we delete a lab? 
 
-Lab deletions are authorized by Data space leaders and documented in a [lab deletion order](/agreements/downloads/#lab-deletion-order) that is co-signed by the affected lab leader. All data and machines in the lab will be irrevocably destroyed in this process, and neither data nor machines can be recreated.
+Lab deletions are authorized by Data space leaders and documented in a [lab deletion order](/agreements/downloads/#lab-deletion-order) that is co-signed by both the data space leader and respective lab leader. All data and machines in the lab will be irrevocably destroyed in this process, and neither data nor machines can be recreated. 
 
 
 
