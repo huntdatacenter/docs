@@ -37,6 +37,9 @@ No. Entry machines are the machines we use to control the user management and se
 
 In short, each lab pay the mean terabyte price for your data space. This price to automatically incorporate your data space volume discount. For details, see the meter, cost and billing section under the Store chapter in the [services specification](/services/specifications/) and the Store section in the [price list](/prices/pricelist/), or test for yourself in the [price calculator](/prices/calculator/). 
 
+### Why can we not allocate less than one terabyte per machine? 
+
+In short, we aim to link usage to the overall system capacity to ensure a consistent storage performance. One of these controls is to ensure that the total number of spinning disks in the system scale with use. The 1 terabyte allocation thus evening out your input/output operations per second across more disks.
 
 ## Billing 
 
