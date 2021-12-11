@@ -48,6 +48,21 @@ Probably. We do keep records of broad processing purposed for each data controll
 
 Data space agreements require that you list your Service center leader. The placement of this role will vary among organizations. At NTNU your Service center leader is typically the head of research at your department. [Contact us](/contact) for a quit clarification if you are unsure who to ask in your organization.
 
+::: details Name and roles within NTNU
+
+Service centers inside NTNU are registered at the department levels. The naming and signatory are as follows: 
+
+*services center name*
+
+- Principle example: "ntnu-department-abbreviation"
+- Working example: ntnu-ism
+
+*services center signatory*
+
+- Deputy Head of Department - Research ("Nestleder for forskning")
+
+:::
+
 ### Can I list the same individual on all data space roles? 
 
 Yes. We use the [roles](/coordinator/roles/) in the data space orders for targeted communication for the specific responsibility areas. Thus, they can be assigned to one or several individual. 

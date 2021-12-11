@@ -47,7 +47,11 @@ This depends on the agreement status for your organization. We require a new set
 
 Could be. Data processor agreements and services agreements are signed on the organizational level. These are already in place for many organizations. However, if they are not in place, you will need to get them signed before you send us your data space and lab order. If they are in place, jump right into the "Data space" section in our [get going](/agreements/get-going/) guide to send us your data space order, invoice profile and lab orders. [Contact us](/contact) if you are unsure of the agreement status for your organization. 
 
-### How do we know the agreement status of our lab? 
+### Do we need to resign all our user agreements? 
+
+No. User agreements linked to your existing lab will follow our regular two year resigning schedule and will not be affected by the 1. January re-signings. New labs or labs organized under new name-spaces will (as before) need new user agreements. 
+
+### How do we know the agreement status of our labs? 
 
 For December, we plan to notify lab leaders, lab coordinators and all lab users in labs with missing agreements on email as follows: (i) We will communicate the agreement status the first days in December; (ii) We will send a warning for closure in mid December; (iii) We will notify all labs that gets deactivated in January.
 
@@ -59,11 +63,11 @@ No. We aim to register agreements up until 31. December. However, please note th
 
 In short, labs that lack attachment to a data space will be temporarily deactivated until agreements are in place or a termination notification is registered. Lab users will not be able to access the lab in this period. See [Resolution 5](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4) from the last Lagtun for further details (R5/LT4/T4/21).
 
-### How will our lab be affected during a deactivation? 
+### How will labs be affected during a deactivation? 
 
 In the case where access to your lab is temporarily deactivated, your access to this lab will be temporarily deactivated. Your data and your tooling will -not- be affected. All your lab machines will be running and your data will be available for analysis as soon as you submit signed agreements, and for evacuation when you submit a termination notification. See [Resolution 5](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4) from the last Lagtun for further details (R5/LT4/T4/21).
 
-### If deactivated, when can we expect our lab to be reactivated? 
+### If deactivated, when can we expect our labs to be reactivated? 
 
 We will reactivate access to labs that submit new agreements after 1. January on a running basis starting from Monday 3rd January.
 
@@ -77,12 +81,7 @@ Worry not. You may reduce resources in your lab until 1 April 2022 without cost.
 
 ### Can we terminate our lab? 
 
-Yes. [Contact us](/contact) for a termination order. When the signed order is registered, we will restore access to your lab so you can prepare your data evacuation. Data will be available for evacuation until 1. April (90 days) and then destroyed (ref. [Resolution 5(e)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4)).
-
-
-
-
-
+Yes, labs that can be terminated (deleted). We recommend that you [contact us](/contact) for a dialogue before you terminate labs to tune expectations. Related to the 1. January deadline, labs can be terminated in two ways: (1) Labs that don't intend to resign agreements will automatically be terminated 1. January. Data will be made available for evacuation until 1. April (90 days) before the lab is deleted (ref. [Resolution 5(e)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4)). (2) Labs where you send us a signed [lab deletion order](/agreements/downloads/#lab-deletion-order) will be deleted as soon as practically possible. 
 
 
 
@@ -115,7 +114,19 @@ As science grows inside your individual labs you may see the need to move part o
 
 We may transfer the ownership of a lab under your data space to another data space both inside or outside your organization. [Contact us](/contact) for such moves. We will need a lab transfer order that is co-signed by you and affected parties.
 
-#### How can we delete a lab? 
+#### Can we rename an existing lab? 
+
+No at the moment. You can not rename an existing lab. However, you can register a new lab under your preferred name and migrate your data and activities over to this new name space.
+
+#### Must our lab name be linked to a research project? 
+
+No. You are free to choose your lab name independent of your scientific activities.
+
+#### Can I choose a lab name that is similar to an already established lab? 
+
+No. We would like our lab name spaces to be unique. This is both to help your lab branding and to ease our internal communication. Thus, we may from time to time ask you to think up a new name when you file your lab order if we already have another lab registered under the exact same name.
+
+#### How can we delete one of our labs? 
 
 Lab deletions are authorized by Data space leaders and documented in a [lab deletion order](/agreements/downloads/#lab-deletion-order) that is co-signed by both the data space leader and respective lab leader. All data and machines in the lab will be irrevocably destroyed in this process, and neither data nor machines can be recreated. 
 
