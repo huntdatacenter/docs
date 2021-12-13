@@ -7,7 +7,7 @@ description: This page contains common questions on scientific coordination in H
 
 # Coordinator FAQ
 
-This section lists frequently asked questions related to the organization of scientific activities across one to several labs inside your data space. 
+**This section lists common questions related to the scientific coordination in your data space and across your labs.**
 
 ::: tip
 
@@ -25,11 +25,11 @@ This page is intended for data space coordinators. Head over to our [Lab FAQ](/f
 
 ## Agreement requirements from 1. january 2022
 
-This section contains information on the agreement updates that are required from 1. january 2022.
+**This section contains common questions related to the agreement updates will be required from 1. January 2022.**
 
-::: tip
+::: danger Get going on the agreements
 
-Please [contact us](/contact) with your questions and concerns. We will prioritize these requests in December to the best of our effort.
+Head over to our [get going](/agreements/get-going) page for a step-wise guide on how to complete your agreement quest before 1. January 2022. [Contact us](/contact) if we can help you to get you going.
 
 :::
 
@@ -41,15 +41,18 @@ To ensure equal and transparent conditions for services and pricing under the ne
 
 ### Which agreements do we need to sign? 
 
-This depends on the agreement status for your organization. We require a new set of data processor agreements and new services center agreements with your organizations. When these are signed, you will need to send us your data space order and your lab order. Head over to our [get going](/agreements/get-going/) guide for a step-wise guide on each agreement type. 
+That is dependent on the agreement status for your organization. If your department already has signed new data processor and service agreements, then all you need to do is to send us (1) a new data space order, (2) new lab order(s) and (3) a new invoice profile. Head over to our [get going](/agreements/get-going/) guide for a step-wise guide on each agreement type. 
 
-### Do we need to sign all agreement layers? 
+If your organization needs new data processor agreements and services agreement, head over to our [get going](/agreements/get-going/) guide for a step-wise guide on each agreement type. [Contact us](/contact) if you do not know the agreement status of your organization. 
 
-Could be. Data processor agreements and services agreements are signed on the organizational level. These are already in place for many organizations. However, if they are not in place, you will need to get them signed before you send us your data space and lab order. If they are in place, jump right into the "Data space" section in our [get going](/agreements/get-going/) guide to send us your data space order, invoice profile and lab orders. [Contact us](/contact) if you are unsure of the agreement status for your organization. 
 
-### Do we need to resign all our user agreements? 
+### Do we need to sign all four agreement layers? 
 
-No. User agreements linked to your existing lab will follow our regular two year resigning schedule and will not be affected by the 1. January re-signings. New labs or labs organized under new name-spaces will (as before) need new user agreements. 
+Could be. Data processor agreements and services agreements are already in place for many departments. If so, jump right into the "Data space" section in our [get going](/agreements/get-going/) guide to send us your data space order, invoice profile and lab orders. [Contact us](/contact) if you are unsure of the agreement status for your organization. 
+
+### Do we need to sign new user agreements? 
+
+No. User agreements linked to your existing lab will follow our regular two year resigning schedule and will not be affected by the 1. January update. New labs or labs organized under new name-spaces will need new user agreements. 
 
 ### How do we know the agreement status of our labs? 
 
@@ -65,7 +68,7 @@ In short, labs that lack attachment to a data space will be temporarily deactiva
 
 ### How will labs be affected during a deactivation? 
 
-In the case where access to your lab is temporarily deactivated, your access to this lab will be temporarily deactivated. Your data and your tooling will -not- be affected. All your lab machines will be running and your data will be available for analysis as soon as you submit signed agreements, and for evacuation when you submit a termination notification. See [Resolution 5](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4) from the last Lagtun for further details (R5/LT4/T4/21).
+Access to deactivated labs will be temporarily closed 1 January. However, your data and your tooling will -not- be affected. All your lab machines will be running and your data will be available for analysis after you submit updated agreements, and your data will be available for evacuation in the case you submit a termination notification. See [Resolution 5](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4) from the last Lagtun for further details (R5/LT4/T4/21).
 
 ### If deactivated, when can we expect our labs to be reactivated? 
 
@@ -79,9 +82,13 @@ There is no direct cost for organizations that sign Data processor agreements an
 
 Worry not. You may reduce resources in your lab until 1 April 2022 without cost. See [Resolution 4](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=3) for details, and feel free to [contact us](/contact) for dialogue on potential resource and cost optimization. 
 
+### Remind us, when was the 1. January deadline announced? 
+
+The new service agreement and required agreement updates was first discussed during Ting #3 in May 2021 and announced on email and these pages 1. July 2021. The requirements was further discussed during Ting #4 in October 2021 and clarified in [Resolution 5](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4) (R5/LT4/T4/21) from Lagtun. A warning on missing agreements was sent to all lab users in affected labs on email in the beginning of December.
+
 ### Can we terminate our lab? 
 
-Yes, labs that can be terminated (deleted). We recommend that you [contact us](/contact) for a dialogue before you terminate labs to tune expectations. Related to the 1. January deadline, labs can be terminated in two ways: (1) Labs that don't intend to resign agreements will automatically be terminated 1. January. Data will be made available for evacuation until 1. April (90 days) before the lab is deleted (ref. [Resolution 5(e)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4)). (2) Labs where you send us a signed [lab deletion order](/agreements/downloads/#lab-deletion-order) will be deleted as soon as practically possible. 
+Yes, labs can be terminated (deleted). We recommend that you [contact us](/contact) for a dialogue before you terminate labs to tune expectations. Related to the 1. January deadline, labs can be terminated in two ways: (1) Labs that don't intend to resign agreements will automatically be terminated 1. January. Data will be made available for evacuation until 1. April (90 days) before the lab is deleted (ref. [Resolution 5(e)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4)). (2) Labs where you send us a signed [lab deletion order](/agreements/downloads/#lab-deletion-order) will be deleted as soon as practically possible. 
 
 
 
