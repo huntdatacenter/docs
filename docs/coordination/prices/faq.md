@@ -48,6 +48,10 @@ Yes, that's the aim. We acknowledge that you may have a need for increased compu
 
 
 
+
+
+
+
 ## Storage
 
 ### Which terabyte price will each lab pay for their storage? 
@@ -62,7 +66,14 @@ In short, we try ensure a consistent storage performance by linking usage to the
 
 
 
+
+
+
 ## Billing 
+
+### Can we file several invoice profiles for our data space? 
+
+Data spaces on the WHITE and ORANGE subscription level are billed on the same invoice profile. Data spaces on the BLUE subscription level can file one to many  [invoice profiles](/agreements/downloads/#invoice-profile) for individual billing of labs.
 
 ### When will you bill for the services that we consume? 
 

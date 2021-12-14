@@ -42,6 +42,17 @@ Yes. We keep copies of signed agreements for your environments. As a Data contro
 
 Probably. We do keep records of broad processing purposed for each data controller. In addition, we do provide the possibility for Labs to submit individual processing purposes for processing in each Lab.
 
+
+
+## Data processor agreement
+
+### Can we use our own DPA template? 
+
+Yes. Your host organization may prefer to use their own data processing agreement (DPA) template. This is fine with us as long as the template is compliant with requirements set forth in GDPR and a set of security requirements that we are able to comply with. Note that this may need involvement from legal teams on both sides. [Contact us](/contact) for time estimates of such arrangements. 
+
+
+
+
 ## Data space agreement
 
 ### Who is my Service center leader?
@@ -67,6 +78,12 @@ Service centers inside NTNU are registered at the department levels. The naming 
 
 Yes. We use the [roles](/coordinator/roles/) in the data space orders for targeted communication for the specific responsibility areas. Thus, they can be assigned to one or several individual. 
 
+### Can I leave the coordinator roles empty? 
+
+We use the roles to communicate information throughout the year. Thus, to allow such role specific communication to reach all data spaces, we will include the data space leader in any roles that are left blank on the data space agreement. 
+
+
+
 ## Changes and negotiations
 
 ### Can I propose changes to your agreements? 
@@ -86,7 +103,7 @@ Maybe. We do allow elevation of security and privacy controls tailored for indiv
 
 ### How often do I need to update our running agreements? 
 
-Approximately two (2) years. Our aim is to update agreements on a two year cycle or when major updates or improvements are introduced. We will contact you when it's time for to update. The two year update cycle includes all agreements.
+Approximately every two years. Our aim is to update agreements on a two year cycle or when major updates or improvements are introduced. We will contact you when it's time for to update. The two year update cycle includes all agreements.
 
 ### How do I update agreements for the new services model? 
 
