@@ -86,13 +86,13 @@ Worry not. You may reduce resources in your lab until 1 April 2022 without cost.
 
 The new service agreement and required agreement updates was first discussed during Ting #3 in May 2021 and announced on email and these pages 1. July 2021. The requirements was further discussed during Ting #4 in October 2021 and clarified in [Resolution 5](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4) (R5/LT4/T4/21) from Lagtun. A warning on missing agreements was sent to all lab users in affected labs on email in the beginning of December.
 
-### Can we terminate our lab? 
+### How do we terminate our lab? 
 
 Yes, labs can be terminated (deleted). We recommend that you [contact us](/contact) for a dialogue before you terminate labs to tune expectations. Related to the 1. January deadline, labs can be terminated in two ways: (1) Labs that don't intend to resign agreements will automatically be terminated 1. January. Data will be made available for evacuation until 1. April (90 days) before the lab is deleted (ref. [Resolution 5(e)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4)). (2) Labs where you send us a signed [lab deletion order](/agreements/downloads/#lab-deletion-order) will be deleted as soon as practically possible. 
 
+### How do we evacuate data from our lab before lab deletion? 
 
-
-
+Lab deletion will irrevocably destroy all data in your lab. For a gracefully shut down we recommend that you first (1) [notify us on email](/contact) that you plan to delete your lab, next (2) order an [external export kista](/agreements/downloads/#external-kista-export-order) for data evacuation to your new location, and then (3) send us a signed [lab deletion order](/agreements/downloads/#lab-deletion-order) when you data is confirmed migrated to your new location. We will delete your lab as soon as possible after we receive the deletion order and return an written confirmation that your lab data is deleted in our systems.
 
 
 
