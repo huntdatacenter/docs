@@ -58,6 +58,7 @@ Username: <username>-<role>
 
 *Note. The information above is for illustration and will not work for your connection. Your account information will contain different information for the "Server" and "Username".*
 
+Less is a command that allows you to read the content of a file. We suggest you copy the information from this file to your favourite text editor to keep it available while performing the next steps. To close the file, press q.
 Next, connect to your kista using the SFTP protocol. This may seem unfamiliar at first, however its simple to use once you get going:
 
 3. From your home machine, connect to the kista over SFTP using your account information collected above.
