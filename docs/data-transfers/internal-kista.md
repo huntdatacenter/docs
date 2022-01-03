@@ -30,23 +30,23 @@ We wil notify the lab user that registered as the uploader when the kista is dep
 
 ## Connect
 
-You can collect your kista information directly from your home machine both as a uploader and downloader:
+You can view the kista transfer information directly from your home machine both as a uploader and downloader:
 
 1. Log into your home machine
-2. Collect your account information from the **`/opt/hunt-cloud/kista/`** folder:
+2. View the kista transfer information in the **`/opt/hunt-cloud/kista/`** folder:
 
 ```bash
-# -- List kista account information files
+# -- List kista transfer information files
 ls /opt/hunt-cloud/kista/
 
-# -- Principle example to see account information
-less /opt/hunt-cloud/kista/*<number>*
+# -- Principle example to see transfer information
+cat /opt/hunt-cloud/kista/*<number>*
 
-# -- Practical example to see account information
-less /opt/hunt-cloud/kista/*5623*
+# -- Practical example to see transfer information
+cat /opt/hunt-cloud/kista/*5623*
 ```
 
-The account information will look similar to this:
+The transfer information will look similar to this:
 
 ```bash
 ### SFTP account information
@@ -60,7 +60,7 @@ Username: <username>-<role>
 
 Next, connect to your kista using the SFTP protocol. This may seem unfamiliar at first, however its simple to use once you get going:
 
-3. From your home machine, connect to the kista over SFTP using your account information collected above.
+3. From your home machine, connect to the kista over SFTP using the transfer information collected above.
 
 ```bash
 # -- Principal example
