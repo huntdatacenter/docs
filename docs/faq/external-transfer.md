@@ -80,7 +80,14 @@ Yes. We do allow two-way data transactions between your lab and machines outside
 Lab leaders can request network openings through our [network opening order](/agreements/downloads/#network-opening-order). We use this order to document outbound traffic from your lab.
 
 ### Which network openings do the machine outside HUNT Cloud need to approve?
-Your remote party will need to open for incoming traffic from your lab in HUNT Cloud: **`IP 129.241.176.121`**. The IP is registered under NTNU. They will need to open for traffic on **`TCP port 22`** if you plan to use SSH-tools such as **`rsync`**.
+Your remote party will need to open for incoming traffic from your lab in HUNT Cloud (see network details below).
+They will need to open for traffic on **`port 22`** if you plan to use SSH tools such as **`rsync`**.
+
+#### Network details
+
+- **`HUNT Cloud IP address: 129.241.176.121`**
+- **`Port: 22`**
+- **`Protocol: TCP`**
 
 ### How do I transfer data to and from TSD at UiO?
 Services for senstivie data ([TSD](https://www.uio.no/english/services/it/research/sensitive-data/)) at the University of Oslo has developed a handy [API client](https://github.com/unioslo/tsd-api-client) that can be utilized for direct data transfers to and from your lab. The setup requires that you hold user accounts for both TSD and HUNT Cloud. Depending on your lab configuration, you may have to [contact us](/contact) for a network opening.
