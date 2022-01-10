@@ -44,6 +44,13 @@ With a little bit of luck, you should now be able to connect directly from your 
 
 ## Generating SSH Key
 
+::: warning Requirements
+
+Make sure Putty is installed in order to use ssh-agent.
+If you just installed it, start Putty at least once, before starting MobaXterm again.
+
+:::
+
 In case you have not used SSH keys before and you need to generate one, on Windows you can do so in MobaXterm using Local terminal:
 
 ![Main View - Local terminal](./images/mobaxterm_main-local_terminal.png)
@@ -60,7 +67,12 @@ touch .ssh/config
 ssh-keygen -b 4096 -t rsa -f /home/mobaxterm/.ssh/id_rsa -q -N ""
 ```
 
-Once the keys are set up you can check them with ssh-add command:
+Once the keys are set up you can start the ssh-agent:
+```bash
+eval $(ssh-agent)
+```
+
+Then check you ssh keys with ssh-add command:
 ```bash
 ssh-add
 ```
