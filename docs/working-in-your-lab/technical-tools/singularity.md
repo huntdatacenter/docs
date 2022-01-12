@@ -8,7 +8,7 @@ description: Installation guide for Singularity
 
 # Singularity
 
-Singularity provides application containers for Linux, which are also compatible with docker.
+[Singularity](https://sylabs.io/guides/latest/user-guide/index.html) provides application containers for Linux, which are also compatible with docker.
 
 ## Install using conda
 
