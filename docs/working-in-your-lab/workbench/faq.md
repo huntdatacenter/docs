@@ -100,4 +100,25 @@ Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 
 ![MATLAB-numWorkers.png](./images/MATLAB-numWorkers.png)
 
+## RStudio
 
+Rstudio is configured to use packages installed in conda environment named: `r-base`.
+Default version of R currently available in Rstudio is ` R 4.0`.
+
+We recommend to use conda if you plan to install additional R packages.
+
+Example installation of [dplyr package](https://anaconda.org/conda-forge/r-dplyr):
+
+```bash
+conda install -n r-base -c conda-forge r-dplyr
+```
+
+You can run this command in [Workbench Terminal](/working-in-your-lab/workbench/faq/#terminal).
+
+## Terminal
+
+You can find the workbench terminal in main view of applications under the section: Other.
+
+![other_apps_terminal.png](./images/other_apps_terminal.png)
+
+Terminal can be used to manage conda packages, monitor resources (htop), or to handle other tasks.
