@@ -102,7 +102,7 @@ Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 
 ## RStudio
 
-Rstudio is configured to use packages installed in conda environment named: `r-base`.
+Rstudio is configured to use packages installed in [Conda](/working-in-your-lab/analytical-tools/conda/) environment named: `r-base`.
 Default version of R currently available in Rstudio is ` R 4.0`.
 
 We recommend to use conda if you plan to install additional R packages.
@@ -121,4 +121,4 @@ You can find the workbench terminal in main view of applications under the secti
 
 ![other_apps_terminal.png](./images/other_apps_terminal.png)
 
-Terminal can be used to manage conda packages, monitor resources (htop), or to handle other tasks.
+Terminal can be used to manage [Conda packages](/working-in-your-lab/analytical-tools/conda/), monitor resources (htop), or to handle other tasks.
