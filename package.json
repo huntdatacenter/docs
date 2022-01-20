@@ -20,16 +20,15 @@
     "@vuepress/theme-default": "^1.8.2",
     "chalk": "^5.0.0",
     "commander": "^8.3.0",
+    "css-what": "^6.0.1",
+    "dns-packet": "^5.2.2",
     "esm": "^3.0.0",
+    "postcss": "^8.2.13",
     "vuepress": "^1.8.2",
     "vuepress-plugin-reading-time": "^0.1.1",
     "vuepress-plugin-seo": "^0.1.4"
   },
-  "dependencies": {
-    "css-what": "^6.0.1",
-    "dns-packet": "^5.2.2",
-    "postcss": "^8.2.13"
-  },
+  "dependencies": {},
   "resolutions": {
     "set-value": "^4.0.1",
     "postcss": "^7.0.35",
