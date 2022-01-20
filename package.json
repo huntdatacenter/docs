@@ -14,6 +14,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@mr-hope/vuepress-plugin-sitemap": "^1.25.0",
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "@vuepress/theme-default": "^1.8.2",
@@ -22,8 +23,7 @@
     "esm": "^3.0.0",
     "vuepress": "^1.8.2",
     "vuepress-plugin-reading-time": "^0.1.1",
-    "vuepress-plugin-seo": "^0.1.4",
-    "vuepress-plugin-sitemap": "^2.3.1"
+    "vuepress-plugin-seo": "^0.1.4"
   },
   "dependencies": {
     "css-what": "^6.0.1",

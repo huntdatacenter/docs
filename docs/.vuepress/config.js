@@ -298,7 +298,7 @@ module.exports = {
     "@vuepress/plugin-back-to-top",
     "@vuepress/active-header-links",
     [
-      "vuepress-plugin-sitemap", {
+      "@mr-hope/sitemap", {
         hostname: "https://docs.hdc.ntnu.no"
       }
     ],
