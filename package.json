@@ -35,6 +35,7 @@
     "postcss": "^7.0.35",
     "nth-check": "^2.0.1",
     "ansi-regex": "^5.0.1",
+    "markdown-it": "^12.3.2",
     "ws": "^6.2.2",
     "dns-packet": "^5.2.2",
     "css-what": "^5.0.1",
