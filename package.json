@@ -28,7 +28,7 @@
   "dependencies": {
     "css-what": "^5.0.1",
     "dns-packet": "^5.2.2",
-    "postcss": "^7.0.35"
+    "postcss": "^8.2.13"
   },
   "resolutions": {
     "set-value": "^4.0.1",
