@@ -26,7 +26,7 @@
     "vuepress-plugin-sitemap": "^2.3.1"
   },
   "dependencies": {
-    "css-what": "^5.0.1",
+    "css-what": "^6.0.1",
     "dns-packet": "^5.2.2",
     "postcss": "^8.2.13"
   },
@@ -38,10 +38,10 @@
     "markdown-it": "^12.3.2",
     "node-forge": "^1.0.0",
     "highlight.js": "^10.4.1",
-    "ws": "^6.2.2",
+    "ws": "^8.4.2",
     "dns-packet": "^5.2.2",
-    "css-what": "^5.0.1",
+    "css-what": "^6.0.1",
     "uuid": "^7",
-    "glob-parent": "^5.1.2"
+    "glob-parent": "^6.0.2"
   }
 }
