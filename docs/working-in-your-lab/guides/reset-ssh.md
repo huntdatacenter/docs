@@ -9,7 +9,7 @@ description: Guide on SSH passphrase reset.
 # SSH passphrase reset
 
 If you already [contacted us](/contact/) and received your temporary passphrase follow the steps below
-to design your new passphrase and update it on both entry and home nodes.
+to design your new passphrase and update it on both entry and home machines.
 
 ::: warning Requirement
 
