@@ -252,6 +252,15 @@ module.exports = {
                 "/working-in-your-lab/transfer-tools/sshfs.md",
                 "/working-in-your-lab/transfer-tools/winscp.md",
               ]
+            },
+            {
+              title: "Guides",
+              text: "Guides",
+              isGroup: true,
+              children: [
+                "/working-in-your-lab/guides/",
+                "/working-in-your-lab/guides/reset-ssh.md",
+              ],
             }
           ]
         },
