@@ -7,9 +7,11 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: tip All systems
-Operational.
+
+::: warning All systems
+**2022-02-06 17:00** - A subset of lab machines and storage volumes are in read-only. Machines needs to be manually activated. We will start from Monday morning. Contact us for priority if you need to get going.
 :::
+
 
 
 <!--
