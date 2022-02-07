@@ -3,65 +3,51 @@ title: Lagtun
 category: HUNT Cloud
 permalink: /tingweek/lagtun
 sidebarDepth: 1
-description: This page list information and questions about our ting weeks.
+description: Lagtun is the body that appoints time for the scientific governance of HUNT Cloud.
 ---
 
 # Lagtun
 
-**Lagtun is the body that appoints time for the scientific governance of HUNT Cloud. Representatives from data controllers, services centers and large data spaces meet each Ting week to give recommendations on our scientific development.**
+**Lagtun is the body that appoints time for the scientific governance of HUNT Cloud. Representatives from data controllers, services centers and data spaces on the blue subscription layer meet each Ting week to give recommendations on our scientific development.**
 
 [[toc]]
 
-
-
-
 ## About
 
-High impact science needs continuous developments in data, tools, expertise and environments to prosper. 
+**High impact science needs continuous developments in data, tools, expertise and environments to prosper. Lagtun is the body that governs these developments in HUNT Cloud.** 
 
-We source the cooperative problem solving and joint strategic thinking among our members to ensure continuous movement of our activities. 
-
-Lagtun is the body that govern our scientific development. The body meets to give recommendations on our scientific development directly to the Head of HUNT Research Centre. 
-
+Utilizing cooperative problem solving and joint strategic thinking among our members, Lagtun meets each Ting week to give recommendations directly to the Head of HUNT Research Centre. 
 
 ## Attendance
 
-Lagtun meets digitally. Invitations are forwarded on email to the following representatives and observers:
+::: tip Representatives
 
-### Representatives
+The following Lagtun membership tickets are issued to contracting parties from public and non-profit organizations as follows:
 
-The following Lagtun membership tickets are issued to contracting parties from public and non-profit organizations:
+* ONE TICKET per Data controller with at least one active data space.
+* ONE TICKET per Service center with at least one active data space. 
+* ONE TICKET per Data space on the BLUE subscription level.
 
-* One ticket per Data controller with at least one active data space.
-* One ticket per Service center with at least one active data space. 
-* One ticket per Data space on the BLUE subscription level.
+:::
 
-The membership criteria was clarified in [R6/LT/T4/21](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=5).
-
-### Observers
-
-Employees from HUNT Cloud participate as observers.
-
-
-
-
+The membership criteria was clarified in [R6/LT/T4/21](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=5). Employees from HUNT Cloud participate as observers.
 
 
 
 ## Resolutions
 
-Lagtun gives recommendations on our development in the form of resolutions. The format was introduced in Lagtun #4 (2021-10) with the intention to allow for an inclusive decision making process and multilateral cooperation. 
+**Lagtun gives recommendations on the development of HUTN Cloud in the form of resolutions. The is introduced with the intention to allow for an inclusive decision making process and multilateral cooperation.** 
 
 ::: tip
 
-[Click here to read the resolutions >>](/tingweek/resolutions) 
+[Click here for Lagtun resolutions >>](/tingweek/resolutions) 
 :::
 
 ### Consideration
 
-HUNT Research Centre and NTNU are legally responsible for our activities, including aspects related to privacy, security and finance. Changes to our activities needs to be approved by the Head of HUNT Research Centre. 
+For clarity, NTNU and HUNT Research Centre are legally responsible for the activities at HUNT Cloud, including aspects related to privacy, security and finance.
 
-The resolutions are therefore expressed as recommendations for consideration to the Head of HUNT Research Centre who may: (i) adopt the resolution, meaning that HUNT Cloud will incorporate the recommendations directly; or (ii) take the resolution into consideration, meaning that we need more time to investigation options before decisions on the topic can be made.
+Lagtun resolutions are therefore formally expressed as recommendations for consideration to the Head of HUNT Research Centre at NTNU that may: (i) adopt the resolution, meaning that HUNT Cloud will incorporate the recommendations directly; or (ii) take the resolution into consideration, meaning that we need more time to investigation options before decisions can be made.
 
 ### Consensus
 
@@ -71,7 +57,11 @@ When we adopt resolutions by a vote, we only need to get a simple majority to ag
 
 However, when we adopt resolutions by consensus, we have to be concerned about the viewpoint of everyone. This means that we have to engage in multilateral dialogues and negotiations, and different points of view needs be taken into consideration. Such a process is inclusive. 
 
+::: tip Inclusiveness
+
 We feel that inclusive processes are particularly important in  multilateral environments such as HUNT Cloud. 
+
+:::
 
 ### Voting
 
@@ -83,22 +73,32 @@ Resolutions consist of two parts: (i) the introductory sentence that states the 
 
 ### Referencing
 
-Resolutions are numbered as follows: item on the agenda, Lagtun meeting number, Ting week number and year. To illustrate, resolution **`R6/LT4/T4/21`** means that this was the resolution from item 6 on the agenda in the fourth Lagtun during the fourth Ting week held in 2021. 
+Resolutions are numbered as follows: item on the agenda, Lagtun meeting number, Ting week number and year. 
 
-Operational clauses inside a resolution are numbered with the item number and letters in alphabetical order. For example, **`6(a)`** means that this is the first operational clause of item 6 in this Lagtun.
+To illustrate, resolution **`R6/LT4/T4/21`** means that this was the resolution from item 6 on the agenda in the fourth Lagtun during the fourth Ting week held in 2021. 
 
-
-
-
+Operational clauses inside a resolution are numbered with the item number and letters in alphabetical order. For example, **`6(a)`** means that this is the first operational clause of resolution 6 in the given Lagtun.
 
 
 
 
 
 
+## Meeting information 
 
+### Invitations
 
-## Agenda
+Invitations are forwarded on email to ticket holders whom may attend themselves or send deputies.
+
+### Schedule 
+
+Lagtun is scheduled on Thursdays between 9-11 am CET during the Ting weeks. Click here to see [upcoming dates](/tingweek/#dates-and-agendas).
+
+### Location
+
+Lagtun meets digitally utilizing NTNU's zoom subscription. 
+
+### Agenda
 
 After each Tingweek, we start to identify and allocate new topics for consideration on the next Lagtun. Items are typically identified through dialogues among community members and our cloud team.
 
@@ -106,33 +106,29 @@ All users are welcome to propose agenda items for the next meeting through their
 
 Items will be floated to members of Lagtun, and one or more resolutions will be added on the topic based on discussions and negotiations. A draft resolution will be tabled in the agenda. 
 
-The aim is to float items to member representatives **30 days** before the meeting with the possibility to adjust and propose new resolutions, and to table the draft resolutions with introduction and operational clauses at the latest **10 days** before the meeting.
+The aim is to float items to member representatives one month before the meeting with the possibility to adjust and propose new resolutions, and to table the draft resolutions with introduction and operational clauses at the latest one week before the meeting.
 
 
-
-
-
-
-
-
-## Schedule
-
-Lagtun is scheduled on Thursdays between 9-11 am CET during the Ting weeks. Click here to see [upcoming dates](/tingweek/#dates-and-agendas).
-
-
-
-
-
-
-
-## Records
+### Records
 
 We document meeting records in addition to the public resolutions. These includes backgrounds, draft resolutions, dialogues and discussions, the final resolutions and considerations. Advises given during meetings are recorded as "recommendations". The records are distributed to all active HUNT Cloud users. 
 
 
+## FAQ
 
+### I can not participate
 
-## Name
+If you are a ticket holder you may choose to attend your self or forward the meeting link to a deputy that represent your organization.
+
+### I have not received my invitation 
+
+We forward invitations on email addresses that are registered in your Data controller agreement, Services center agreement and Data space agreement. [Contact us](/contact) if you have not received your ticket.
+
+### I can only participate for one hour
+
+Perfectly fine fine with us. If you are interested in the resolutions, we recommend that you prioritize the first hour (9-10 am) where we aim to complete most of the structured agenda. If you are interested in unstructured discussion, then we recommend that you prioritize the last hour (10-11 am) where we aim to spend some to most of the time on such unstructured discussions.
+
+### About the Lagtun name
 
 We know, Lagtun is difficult to pronounce in english. However, in Norwegian it is a word with several meanings that we think capture the soul of this Ting. 
 

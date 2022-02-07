@@ -2,12 +2,12 @@
 title: Resolutions
 category: HUNT Cloud
 permalink: /tingweek/resolutions
-description: This page gives an overview of resolutions that govern the scientific development of HUNT Cloud.
+description: This page list Lagtun resolutions that govern the scientific development of HUNT Cloud.
 ---
 
 # Resolutions
 
-This page list individual resolutions from Lagtun that governs the scientific development of HUNT Cloud.
+**This page list individual resolutions from Lagtun that governs the scientific development of HUNT Cloud.**
 
 ::: tip
 
@@ -17,7 +17,6 @@ Read more about [Lagtun](/tingweek/lagtun/) and the use of [resolutions](/tingwe
 
 
 #### [Increase conditions for international collaborations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=8)
-
 
 - TOPIC: Agreements
 - ID: R10/LT4/T4/21
