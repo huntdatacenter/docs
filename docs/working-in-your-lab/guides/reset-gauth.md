@@ -1,7 +1,7 @@
 ---
 title: Google Authenticator reset
 category: Guides
-permalink: /working-in-your-lab/guides/google-authenticator-reset
+permalink: /guides/google-authenticator-reset
 sidebarDepth: 1
 description: Guide on Google Authenticator key reset.
 ---

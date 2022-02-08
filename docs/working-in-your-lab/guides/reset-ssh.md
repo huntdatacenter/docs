@@ -1,7 +1,7 @@
 ---
 title: SSH passphrase reset
 category: Guides
-permalink: /working-in-your-lab/guides/configure-ssh
+permalink: /guides/configure-ssh
 sidebarDepth: 1
 description: Guide on SSH passphrase reset.
 ---
