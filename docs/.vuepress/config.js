@@ -259,6 +259,7 @@ module.exports = {
               isGroup: true,
               children: [
                 "/working-in-your-lab/guides/",
+                "/working-in-your-lab/guides/reset-gauth.md",
                 "/working-in-your-lab/guides/reset-ssh.md",
               ],
             }
