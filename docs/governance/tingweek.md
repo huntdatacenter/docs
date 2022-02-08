@@ -46,15 +46,15 @@ We have implemented a layered Ting structure to elevate voices and collective kn
 
 ### Lab ting
 
-This is our allting that focuses on the user experience in our **lab service**. All users are invited for information, feedback and discussions on all aspects of existing, planned and future services.
+This is our allting that focuses on **user experience inside labs**, and communication between lab users and with us. All active lab users, lab leaders and lab coordinators are invited for information, feedback and discussions on all aspects of existing, planned and future services.
 
 ### Coordinator ting
 
-This is the Ting where we appoint time to discuss scientific coordination as a premise to make science fly. The discussions including topics related to users experinces for our **data space service**, such as compliance, data management, technical coordination, knowledge management and financial aspedts.
+This is the Ting where we appoint time to discuss scientific coordination as a premise to make science fly. The discussions are focused on **cross-lab coordination in data spaces**, including coordination of compliance, data, technologies, knowledge and financial aspects.
 
 ### Enterprise ting
 
-This is the Ting where we appoint time to meet with the community that are affiliated with **private institutions**. We have a special focus on issues that is relevant for small and medium sized enterprises (SMEs) and larger contract research non-profit institutions.
+This is the Ting where we appoint time to meet with users from or affiliated with **private institutions**. We have a special focus on issues that is relevant for small and medium sized enterprises (SMEs) and larger contract research non-profit institutions.
 
 ### Lagtun
 
