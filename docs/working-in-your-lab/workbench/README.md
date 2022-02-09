@@ -6,7 +6,7 @@ description: Guides to your Workbench setup.
 
 # Workbench
 
-**The intention with the Workbench is to give you a simple and secure place to work with your data and tools together with your team.**
+**The intention with the Workbench is to give you a simple and secure place to explore your data and tools together with your team.**
 
 ## About
 
