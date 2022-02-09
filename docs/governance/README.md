@@ -17,7 +17,7 @@ Our scientific development is governed by multilateral Tings, while the privacy 
 
 :::
 
-#### Security and privacy
+#### Privacy and security
 
 - [Responsibilities](/responsibilities/). An overview of the responsibilities for our governance.
 - [Policies](/policies/). The security and privacy policies that govern the protection of data values in HUNT Cloud.
