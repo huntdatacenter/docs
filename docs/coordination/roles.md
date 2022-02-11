@@ -14,7 +14,7 @@ description: This page contains information on the coordinator roles in HUNT Clo
 
 The goals for the development of these roles are to simplify knowledge transfers for key areas between labs within one data space, to bridge knowledge transfers between scientific coordinators across data spaces, to structure feedback on our administrative activities, and to jointly develop and identity and champion the importance of scientific coordinators in high-impact data-driven science.
 
-Your scientific coordinators are named in your [data space order](/agreements/overview/#data-space-order). All coordinators are invited to the [coordinator ting](/tingweek/#coordinator-ting).
+Your scientific coordinators are named in your [data space order](/agreements/overview/#data-space-order). All coordinators are invited to the [data space ting](/tingweek/#data-space-ting).
 
 ### Compliance coordinator
 

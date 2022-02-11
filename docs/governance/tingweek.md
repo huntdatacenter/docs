@@ -15,7 +15,7 @@ We arrange a layered set of Tings for distinct groups in our community. The meet
 ::: tip Next
 
 - **Lab ting**: Tuesday 15 February 2022 - 2 to 4 p.m. CET
-- **Coordinator ting**: Wednesday 16 February 2022 - 9 to 11 a.m. CET
+- **Data space ting**: Wednesday 16 February 2022 - 9 to 11 a.m. CET
 - **Enterprise ting**: Wednesday 16 February 2022 - 1 to 3 p.m. CET
 - **Lagtun**: Thursday 17 February 2022 - 9 to 11 a.m. CET
 
@@ -46,11 +46,11 @@ We have implemented a layered Ting structure to elevate voices and collective kn
 
 ### Lab ting
 
-This is our allting that focuses on **user experience inside labs**, and communication between lab users and with us. All active lab users, lab leaders and lab coordinators are invited for information, feedback and discussions on all aspects of existing, planned and future services.
+This is our allting were we focuses on the **user experience inside labs**, and communication between lab users and with us. All active lab users, lab leaders and lab coordinators are invited for information, feedback and discussions on all aspects of existing, planned and future services.
 
-### Coordinator ting
+### Data space ting
 
-This is the Ting where we appoint time to discuss scientific coordination as a premise to make science fly. The discussions are focused on **cross-lab coordination in data spaces**, including coordination of compliance, data, technologies, knowledge and financial aspects.
+This is the Ting where we appoint time to evolve scientific organization and **cross-lab coordination in data spaces**, including coordination of compliance, data, technologies, knowledge and financial aspects. The original Coordinator ting changed name to Data space ting in Ting week #5 to reflect contractual roles in the new services model. 
 
 ### Enterprise ting
 
@@ -69,7 +69,7 @@ Memberships to the Tings are derived from the following registered roles in cont
 | Ting | Invitations |
 | - | - | 
 | **Lab ting** | All active lab users. |
-| **Coordinator ting** | All coordinators in active labs and data spaces. |
+| **Data space ting** | All coordinators in data spaces. |
 | **Enterprise ting** | All active users registered or associated with a private enterprise. |
 | **Lagtun** | Data controllers, service centers and data spaces on the BLUE subscription level ([read more](/tingweek/lagtun/#representatives)). |
 
@@ -82,7 +82,7 @@ Ting weeks are scheduled over one week in the winter, spring and autumn: (i) The
 
 ![Ting schedule days](./images/tingweek-schedule-days.png)
 
-Individual Tings are scheduled over the week on the same time slots. The current scheule is as follows: Lab tings are held on Tuesdays 2-4 pm CET, Coordinator tings on Wednesdays 9-11 am CET, Enterprise tings on Wednesdays 1-3 pm CET and Lagtun on Thursdays 9-11 am CET.
+Individual Tings are scheduled over the week on the same time slots. The current scheule is as follows: Lab tings are held on Tuesdays 2-4 pm CET, Data space tings on Wednesdays 9-11 am CET, Enterprise tings on Wednesdays 1-3 pm CET and Lagtun on Thursdays 9-11 am CET.
 
 
 
@@ -91,7 +91,7 @@ Individual Tings are scheduled over the week on the same time slots. The current
 #### Ting week #6 (2022-05)
 
 - **Lab ting**: Tuesday 31 May 2022 - 2 to 4 p.m. CET
-- **Coordinator ting**: Wednesday 1 June 2022 - 9 to 11 a.m. CET
+- **Data space ting**: Wednesday 1 June 2022 - 9 to 11 a.m. CET
 - **Enterprise ting**: Wednesday 1 June 2022 - 1 to 3 p.m. CET
 - **Lagtun**: Thursday 2 June 2022 - 9 to 11 a.m. CET
 
@@ -99,7 +99,7 @@ Individual Tings are scheduled over the week on the same time slots. The current
 #### Ting week #5 (2022-02)
 
 - **Lab ting**: Tuesday 15 February 2022 - 2 to 4 p.m. CET
-- **Coordinator ting**: Wednesday 16 February 2022 - 9 to 11 a.m. CET
+- **Data space ting**: Wednesday 16 February 2022 - 9 to 11 a.m. CET
 - **Enterprise ting**: Wednesday 16 February 2022 - 1 to 3 p.m. CET
 - **Lagtun**: Thursday 17 February 2022 - 9 to 11 a.m. CET
 
