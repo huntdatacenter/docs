@@ -26,7 +26,7 @@ wget -O /mnt/work/software/freesurfer7.tar.gz 'https://surfer.nmr.mgh.harvard.ed
 Then, create a directory and unpack the archive:
 ```
 mkdir -p /mnt/work/software/freesurfer
-tar -C /mnt/work/software/freesurfer -xzvf /mnt/work/software/freesurfer7.tar.gz
+tar -C /mnt/work/software/ -xzvf /mnt/work/software/freesurfer7.tar.gz
 ```
 
 ## Configuration
