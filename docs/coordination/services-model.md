@@ -11,19 +11,9 @@ description: This page contains information on the services model in HUNT Cloud.
 
 ::: tip Summary
 
-* The service model introduces a new way to control and manage labs via "Services centers" and "Data spaces". This setup also includes a new way to price services in labs.  
-
-* Our intention is to simplify access to labs and data spaces for scientists, and to ensure predictable prices that balances your need for flexible resources and sustainable services.  
+* The service model introduces a new way to control and manage labs via "Services centers" and "Data spaces". This setup also includes a new way to price services in labs.
  
-* We kindly ask all labs to sign a new set of agreements as soon as possible, and to help us organize your activities in data spaces and services centers. This needs to be completed before January 2022.  
-
-* New labs will be required to use the new agreements from July 2021. Existing labs need to upgrade from October to adjust resources, and all labs need to upgrade before January 2022 to continue their services.  
-
-[Click here to get going](/services/services-model/#get-going)
-
 :::
-
-Table of contents:
 
 [[toc]]
 
@@ -173,72 +163,9 @@ The current model must be seen as work in progress under our continuous developm
 
 ## Timeline
 
-We will encourage all labs to migrate over to the new agreement model as soon as possible. All users will need to use the new services model from January 1, 2022, to continue your service. Under the "rule of no surprises", we will phase in the new model with the following key dates: 
+The new services model was announced 1 July 2021 and introduction to new users from 1 October 2021. Existing users converted at 1 January 2022.
 
-![Month](./services/images/hunt-cloud-date-july-2021.png "Month")
+## Contact us
 
-* New services model announced.
-* Onboardings of new organizations will from this date use the new agreement model. Prices for new organizations will be metered and billed from 1 October 2021.
-* Current services and resources in existing labs per July 1 will be given a pilot period until 1 January 2022 before the new prices are metered and billed. 
-* New services and resource adjustments in existing labs after July 1 will be metered and billed from 1 October 2022.
-
-![Month](./services/images/hunt-cloud-date-october-2021.png "Month")
-
-* Existing labs will need to migrate to the new agreement model for services adjustments and inclusion of new services.
-* New services will be metered and billed in accordance with the new services model.
-
-![Month](./services/images/hunt-cloud-date-january-2022.png "Month")
-
-* All data spaces and labs will be metered and billed in accordance with the new services model. 
-* All data spaces and labs needs to migrate to the new agreement model to continue their services.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Get going
-
-Well aware of [Tesler's law](https://en.wikipedia.org/wiki/Law_of_conservation_of_complexity) we know that this may feel complex. [Contact us](/contact) when you plan to bundle your labs into a data space so we can guide you in the process. 
-
-
-### Upgrade agreements
-
-You will need to migrate to the new agreement model at the latest by 1 January 2022. Thus, it might be good to get going right away. 
-
-::: tip TIP
-
-Head over to our [get going](/agreements/get-going) section for a step-wise guide on how to start the upgrades.
-
-:::
-
-
-
-### Estimate cost
-
-The prices are depending on several aspects, including data space subscription level, use of commitment and on-demand machines, your combined storage volume etc. [Contact us](/contact) for price estimates on your current lab activities and a discussion on how to optimize your resources to the new price list.
-
-
-
-### Contact us
-
-[Contact us](/contact) for questions and discussions related to the new services model. We will prioritize screen time for data spaces navigating the new model, and we aim to collect questions into a FAQ. 
-
+Well aware of [Tesler's law](https://en.wikipedia.org/wiki/Law_of_conservation_of_complexity) we know that this may feel complex. [Contact us](/contact) for questions and discussions related to the new services model so we can guide you on your journey of exploring data for a better world.
 

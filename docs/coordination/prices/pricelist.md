@@ -12,6 +12,12 @@ This page list the prices for our cloud services.
 
 [[toc]]
 
+::: tip Pricing calculator
+
+Head over to our [pricing calculator](/prices/calculator) to estimate the cost for your scientific environments.
+
+:::
+
 
 ## Current 
 
