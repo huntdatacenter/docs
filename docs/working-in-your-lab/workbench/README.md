@@ -16,31 +16,19 @@ The Workbench is web-based and build around the feel of Jupyter notebooks with a
 
 ## Request access
 
-::: warning Approvals
-Workbench is currently only available to NTNU users and lab users from data controllers that have approved the service.
-:::
-
-**Existing users**: [Contact us](/contact) to request keys and the certificate. You can use the example below:
-
-> Hi team,
->
-> I would like to try Workbench in `labname` and are looking forward to receive my certificate.
+Click on the blue button and send us an email with a request for Workbench access.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=%7Blabname%7D%20-%20workbench%20-%20%7Busername%7D&body=Hi%20team%2C%0A%0AI%20would%20like%20to%20try%20Workbench%20in%20%7Blabname%7D%20and%20are%20looking%20forward%20to%20receive%20my%20certificate.%20These%20are%20the%20tools%20I%20plan%20to%20use%3A%20%28Rstudio/Jupyter/Python/MATLAB/Stata%29" class="nav-link external action-button">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=%7Blabname%7D%20-%20workbench%20-%20%7Busername%7D&body=Hi%20team%2C%0A%0AI%20would%20like%20to%20try%20the%20Workbench%20in%20%7Blabname%7D%20and%20are%20looking%20forward%20to%20receive%20my%20certificate.%20These%20are%20the%20tools%20I%20plan%20to%20use%3A%20%28Rstudio/Jupyter/Python/MATLAB/Stata%29" class="nav-link external action-button">
     Request Workbench
   </a>
 </p></div></div>
 
-In any case let us know which tools interest you the most.
-This will help us recognize and further develop the parts that are important to you.
 
-**New users**: You will receive keys and the certificate as part of your regular onboarding.
+::: tip Next step
 
-::: tip Requirement
-
-Install **Signal app** on your phone so that we can quickly forward the keys when they are ready.
+After you have sent us the Workbench request, ensure that you have installed the **Signal app** on your phone so that we can quickly forward the keys when they are ready.
 
 - [Download and install for **iOS** here](https://itunes.apple.com/us/app/signal-private-messenger/id874139669?mt=8)
 - [Download and install for **Android** here](https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=en)
