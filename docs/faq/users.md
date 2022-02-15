@@ -98,6 +98,20 @@ Log into the machine in question, for example `home`, and write `who` in the com
 ```bash
 who
 ```
+
+### How can I see which groups I belong to? 
+
+Log into the machine in question, for example `home`, and write `groups` in the command line. This list your group affiliations on the machine. Expect to see your username and labname as groups on your `home` machine. You will also see `restore` as your group if your are responsible for your lab's restore activities.
+
+```bash 
+# -- list your groups
+groups
+
+# -- example output (principal)
+<username> <labname>
+```
+
+
 ### I have moved to a new institution, now what? 
 
 I will need to send us an updated user agreement when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
