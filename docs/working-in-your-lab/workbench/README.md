@@ -20,7 +20,7 @@ Click on the blue button and send us an email with a request for Workbench acces
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=%7Blabname%7D%20-%20workbench%20-%20%7Busername%7D&body=Hi%20team%2C%0A%0AI%20would%20like%20to%20try%20the%20Workbench%20in%20%7Blabname%7D%20and%20are%20looking%20forward%20to%20receive%20my%20certificate.%20These%20are%20the%20tools%20I%20plan%20to%20use%3A%20%28Rstudio/Jupyter/Python/MATLAB/Stata%29" class="nav-link external action-button">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=%7Blabname%7D%20-%20workbench%20-%20%7Busername%7D&body=Hi%20team%2C%0A%0AI%20would%20like%20to%20try%20Workbench%20in%20%7Blabname%7D%20and%20are%20looking%20forward%20to%20receive%20my%20certificate.%20These%20are%20the%20tools%20I%20plan%20to%20use%3A%20%28Rstudio/Jupyter/Python/MATLAB/Stata%29" class="nav-link external action-button">
     Request Workbench
   </a>
 </p></div></div>
