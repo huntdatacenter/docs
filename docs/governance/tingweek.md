@@ -98,10 +98,10 @@ Individual Tings are scheduled over the week on the same time slots. The current
 
 #### Ting week #5 (2022-02)
 
-- **Lab ting**: Tuesday 15 February 2022 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 16 February 2022 - 9 to 11 a.m. CET
-- **Enterprise ting**: Wednesday 16 February 2022 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 17 February 2022 - 9 to 11 a.m. CET
+- **Lab ting**: Tuesday 15 February 2022 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-labting-agenda.pdf))
+- **Data space ting**: Wednesday 16 February 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-dataspaceting-agenda.pdf))
+- **Enterprise ting**: Wednesday 16 February 2022 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-enterpriseting-agenda.pdf))
+- **Lagtun**: Thursday 17 February 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-lagtun-agenda.pdf))
 
 #### Ting week #4 (2021-10)
 
