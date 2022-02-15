@@ -14,7 +14,7 @@ description: HUNT Cloud uses the following subcontractors.
 
 This is our current subcontrators:
 
-[HUNT Cloud Subcontractors](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-subcontractors.pdf)(pdf)
+[HUNT Cloud Subcontractors](https://assets.hdc.ntnu.no/assets/governance/hunt-cloud-subcontractors.pdf)(pdf)
 
 This subcontractor document is incorporated as an appendix to our data processor agreements.
 
