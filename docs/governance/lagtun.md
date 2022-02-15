@@ -8,7 +8,7 @@ description: Lagtun is the body that appoints time for the scientific governance
 
 # Lagtun
 
-**Lagtun is the body that appoints time for the scientific governance of HUNT Cloud. Representatives from data controllers, services centers and data spaces on the blue subscription layer meet each Ting week to give recommendations on our scientific development.**
+**Lagtun is the body that appoints time for the scientific governance of HUNT Cloud.** 
 
 [[toc]]
 
@@ -16,7 +16,10 @@ description: Lagtun is the body that appoints time for the scientific governance
 
 **High impact science needs continuous developments in data, tools, expertise and environments to prosper. Lagtun is the body that governs these developments in HUNT Cloud.** 
 
-Utilizing cooperative problem solving and joint strategic thinking among our members, Lagtun meets each Ting week to give recommendations directly to the Head of HUNT Research Centre. 
+Utilizing cooperative problem solving and joint strategic thinking among our members, representatives from data controllers, services centers and data spaces on the blue subscription layer meet each Ting week to give recommendations on our scientific development to the Head of HUNT Research Centre. 
+
+
+
 
 ## Attendance
 

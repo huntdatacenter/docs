@@ -100,12 +100,13 @@ module.exports = {
           isGroup: true,
           children: [
             "/governance/",
-            "/governance/responsibilities.md",
-            "/governance/policies.md",
-            "/governance/certificates.md",
             "/governance/tingweek.md",
             "/governance/lagtun.md",
             "/governance/resolutions.md",
+            "/governance/policies.md",
+            "/governance/certificates.md",
+            "/governance/subcontractors.md",
+            "/governance/responsibilities.md",
           ]
         },
         {
