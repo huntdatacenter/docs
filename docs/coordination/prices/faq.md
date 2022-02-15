@@ -46,9 +46,9 @@ No. Entry machines are the machines we use to control the user management and se
 
 Yes, that's the aim. We acknowledge that you may have a need for increased computational resources in periods of the year, and that one convenient setup would be to upsize your home machine for such compute efforts. Our aim is to allow such upgrades. 
 
-### How does we ensure that on-demand machines are deactivated when not needed? 
+### How do we ensure that on-demand machines are deactivated when not needed? 
 
-On-demand resources runs until a deactivation notice from the a lab user. [Contact us](/contact) for such deactivation. The meter stops the day we are notified.
+On-demand resources runs until a deactivation notice from the a lab user. To save cost, [contact us](/contact) for deactivation when the machine is no longer needed. The meter stops the day we get the notification.
 
 
 
