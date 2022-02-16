@@ -15,12 +15,12 @@ MobaXterm is a software package that simplifies connecting to your lab on HUNT C
 A working SSH connection to both entry and home as described in the [How To Connect To Your Lab](/getting-started/) guide.
 If these steps don't work as intended, it will be hard (although not impossible) to get MobaXterm to work smoothly.
 
-## How to install
+## 1. How to install
 
 - Download the `Home edition (installer edition)` from [mobaxterm.mobatek.net](https://mobaxterm.mobatek.net/download.html):
 - Unzip the file and install the software
 
-## Configure
+## 2. Configure
 
 - Open MobaXterm
 - Select a new session and click on the `SSH` image on the `Session settings`.
@@ -33,7 +33,7 @@ If these steps don't work as intended, it will be hard (although not impossible)
 - In **Bookmark settings**, Name your lab session. Click OK to confirm Session settings.
   ![Step 4](./images/mobaxterm_step4.png "MobaXterm - Step 4")
 
-## Connect
+## 3. Connect
 
 Connect to your session. You will now be asked twice to type in your SSH password that you made during the lab installation.
 
@@ -42,7 +42,7 @@ Connect to your session. You will now be asked twice to type in your SSH passwor
 With a little bit of luck, you should now be able to connect directly from your client computer to your home node in your lab.
 
 
-## Generating SSH Key
+## 4. Generating SSH Key
 
 ::: warning Requirements
 
@@ -55,11 +55,11 @@ In case you have not used SSH keys before and you need to generate one, on Windo
 
 ![Main View - Local terminal](./images/mobaxterm_main-local_terminal.png)
 
-Clicking on Local terminal opens MobaXterm command line:
+4.1 Clicking on Local terminal opens MobaXterm command line:
 
 ![Local terminal](./images/mobaxterm_local_terminal.png)
 
-Follow these commands to setup your ssh keys:
+4.2 Follow these commands to setup your ssh keys:
 
 ```bash
 mkdir -p .ssh
@@ -67,17 +67,19 @@ touch .ssh/config
 ssh-keygen -b 4096 -t rsa -f /home/mobaxterm/.ssh/id_rsa -q -N ""
 ```
 
-Once the keys are set up you can start the ssh-agent:
+4.3 Once the keys are set up you can start the ssh-agent:
+
 ```bash
 eval $(ssh-agent)
 ```
 
-Then check you ssh keys with ssh-add command:
+4.4 Then check you ssh keys with ssh-add command:
+
 ```bash
 ssh-add
 ```
 
-## Setting ssh-config
+## 5. Setting ssh-config
 
 To setup ssh config to be used in local terminal of MobaXterm use:
 
@@ -89,10 +91,11 @@ Paste your config here
 EOF
 ```
 
-## Uploading the new key
+## 6. Uploading the new key
 
 To be able to use the key it needs to be uploaded with:
 
 ```
 ssh-copy-id <your-lab-name>-entry
 ```
+

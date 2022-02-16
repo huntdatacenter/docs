@@ -14,22 +14,39 @@ description: Frequently asked questions about the Workbench in HUNT Lab.
 
 ## Storage
 
-### Where do I find my data?
+### Where is my data?
 
-Workbench uses same storages volumes as your home machine. You can also access your home directory.
-You should be able to access the same paths as on home node.
+Workbench uses the same storages volumes as your home machine. This means that you can access all lab data, including your home directory, using the same paths in your scripts, for example: 
+
+```bash
+/mnt/archive/<my-data-folder>
+```
 
 ### Where is my code stored?
 
-Jupyter Notebooks and code are stored in the shared volume:
+Jupyter Notebooks and code are stored in the shared `work` volume on your home machine:
 
-```
+```bash
 /mnt/work/workbench
 ```
 
 ## Reproducibility
 
-### How can I start a Notebook with a Conda environment?
+### Can I create my own Conda environment for Jupyter?
+
+Yes. Here's an example on how you create a Conda environments with Python and IPython kernel:
+
+```
+conda create -n <name> 'python==3.8' 'ipykernel'
+```
+
+And here's an example on how you create a Conda environment with R and R-IRkernel kernel:
+
+```
+conda create -n <name> 'r-base>=4.0,<4.1' 'r-irkernel' 'r-devtools'
+```
+
+### How can I start a Notebook with my new Conda environment?
 
 Here is an example of Notebooks that are connected to Conda environments.
 
@@ -45,19 +62,6 @@ You will be able to select default environments including MATLAB kernel and cust
 
 ![wb_notebook_conda_env.png](./images/wb_notebook_conda_env.png)
 
-### How can I create my own Conda environment for Jupyter?
-
-Creating Conda environment with Python and IPython kernel:
-
-```
-conda create -n <name> 'python==3.8' 'ipykernel'
-```
-
-Creating Conda environment with R and R-IRkernel kernel:
-
-```
-conda create -n <name> 'r-base>=4.0,<4.1' 'r-irkernel' 'r-devtools'
-```
 
 ## Management
 
@@ -75,14 +79,13 @@ You can either start the new instance by hitting the button or by logging in aga
 
 ### Can I install Jupyter extensions?
 
-Currently this is not allowed and Jupyter extension manager is disabled. Feel free to reach out to us on Slack
-and we can discuss adding useful extensions into your Workbench.
+No. Due to security reasons, this is currently not allowed and the Jupyter extension manager is disabled. Feel free to reach out to us on Slack so we can discuss adding useful extensions into your Workbench.
 
 ## MATLAB
 
 ### Are there any limitations to MATLAB in Workbench?
 
-Yes, some limitations may apply. Read more in the [official documentation](https://se.mathworks.com/products/matlab-online/limitations.html).
+Yes, some limitations may apply. Read more in the [official documentation](https://se.mathworks.com/products/matlab-online/limitations.html) from MathWorks.
 
 ### How do I report issues with MATLAB?
 
@@ -102,18 +105,19 @@ Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 
 ## RStudio
 
-Rstudio is configured to use packages installed in [Conda](/working-in-your-lab/analytical-tools/conda/) environment named: `r-base`.
-Default version of R currently available in Rstudio is ` R 4.0`.
+### Which R version is available in RStudio? 
 
-We recommend to use conda if you plan to install additional R packages.
+The current Workbench version of R is `R 4.0`.
 
-Example installation of [dplyr package](https://anaconda.org/conda-forge/r-dplyr):
+### How do I install my own R packages? 
+
+We recommend that you use [Conda](/working-in-your-lab/analytical-tools/conda/) to install R packages. In addition to the independce of system packages, Conde also helps on the code control and reproducibility.
+
+Rstudio is configured to use packages installed in the  environment named: `r-base`. You can add packages during the conda setup. For example, you can install the [dplyr package](https://anaconda.org/conda-forge/r-dplyr) by running the following code snippet in your in [Workbench Terminal](/working-in-your-lab/workbench/faq/#terminal):
 
 ```bash
 conda install -n r-base -c conda-forge r-dplyr
 ```
-
-You can run this command in [Workbench Terminal](/working-in-your-lab/workbench/faq/#terminal).
 
 ## Terminal
 
@@ -122,3 +126,7 @@ You can find the workbench terminal in main view of applications under the secti
 ![other_apps_terminal.png](./images/other_apps_terminal.png)
 
 Terminal can be used to manage [Conda packages](/working-in-your-lab/analytical-tools/conda/), monitor resources (htop), or to handle other tasks.
+
+
+
+
