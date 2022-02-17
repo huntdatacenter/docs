@@ -263,7 +263,16 @@ module.exports = {
                 "/working-in-your-lab/guides/reset-gauth.md",
                 "/working-in-your-lab/guides/reset-ssh.md",
               ],
+            },
+            {
+              title: "Service desk",
+              text: "Service desk",
+              isGroup: true,
+              children: [
+                "/working-in-your-lab/service-desk/",
+              ],
             }
+
           ]
         },
         {
