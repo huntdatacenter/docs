@@ -27,4 +27,9 @@ Click on the blue button and send us an email with your Workbench access order.
   </a>
 </p></div></div>
 
+* **Who can order:** All active lab users.
+* **Expected response time:** Expect your keys within days.
+* **Cost:** No additional cost as the Workbench is included in your lab subscription.
+
+
 
