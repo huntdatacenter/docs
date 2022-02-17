@@ -111,12 +111,24 @@ The current Workbench version of R is `R 4.0`.
 
 ### How do I install my own R packages? 
 
-We recommend that you use [Conda](/working-in-your-lab/analytical-tools/conda/) to install R packages. In addition to the independce of system packages, Conde also helps on the code control and reproducibility.
-
-Rstudio is configured to use packages installed in the  environment named: `r-base`. You can add packages during the conda setup. For example, you can install the [dplyr package](https://anaconda.org/conda-forge/r-dplyr) by running the following code snippet in your in [Workbench Terminal](/working-in-your-lab/workbench/faq/#terminal):
+If you want to install your own packages, we recoomend to use [Conda](/working-in-your-lab/analytical-tools/conda/) for reliability as `install.packages()` inside R will be unreliable. To install a package, run the following code in your [Workbench Terminal](/working-in-your-lab/workbench/faq/#terminal):
 
 ```bash
+# -- Principal example
+conda install -n r-base -c conda-forge r-'<package-name>' r-'<another-package-name>'
+
+# -- Practical example*
 conda install -n r-base -c conda-forge r-dplyr
+```
+
+RStudio is configured to use packages installed in the environment named `r-base` as shown above. For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr). When the installation is complete, open R in your Workbench and load your new package: 
+
+```bash 
+# -- Principal example
+library(<package-name>)
+
+# -- Practical example
+library(dplyr)
 ```
 
 ## Terminal
