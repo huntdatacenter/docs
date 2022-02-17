@@ -12,12 +12,12 @@ description: This page list information and questions about our ting weeks.
 
 We arrange a layered set of Tings for distinct groups in our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
 
-::: tip Next
+::: tip Next up: Ting week #6
 
-- **Lab ting**: Tuesday 15 February 2022 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 16 February 2022 - 9 to 11 a.m. CET
-- **Enterprise ting**: Wednesday 16 February 2022 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 17 February 2022 - 9 to 11 a.m. CET
+- **Lab ting**: Tuesday 31 May 2022 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 1 June 2022 - 9 to 11 a.m. CET
+- **Enterprise ting**: Wednesday 1 June 2022 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 2 June 2022 - 9 to 11 a.m. CET
 
 :::
 
