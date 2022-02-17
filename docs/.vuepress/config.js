@@ -259,20 +259,9 @@ module.exports = {
               text: "Guides",
               isGroup: true,
               children: [
-                "/working-in-your-lab/guides/",
-                "/working-in-your-lab/guides/reset-gauth.md",
-                "/working-in-your-lab/guides/reset-ssh.md",
+                "/working-in-your-lab/guides/"
               ],
             },
-            {
-              title: "Service desk",
-              text: "Service desk",
-              isGroup: true,
-              children: [
-                "/working-in-your-lab/service-desk/",
-              ],
-            }
-
           ]
         },
         {
@@ -283,6 +272,23 @@ module.exports = {
             "/data-transfers/",
             "/data-transfers/internal-kista.md",
             "/data-transfers/external-kista.md",
+          ]
+        },
+        {
+          title: "Service desk",
+          text: "Service desk",
+          isGroup: true,
+          children: [
+            "/service-desk/",
+          {
+            title: "Access guides",
+            text: "Access guides",
+            isGroup: true,
+            children: [
+              "/service-desk/access-guides/reset-gauth.md",
+              "/service-desk/access-guides/reset-ssh.md",
+            ]
+          },
           ]
         },
         {
