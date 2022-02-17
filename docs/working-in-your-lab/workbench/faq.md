@@ -8,7 +8,7 @@ description: Frequently asked questions about the Workbench in HUNT Lab.
 
 # FAQ on the Workbench
 
-**This page contain frequently asked questions on your Workbench in your lab. Help us expand this section by sending us your questions and burning topics.**
+**This page contain frequently asked questions on the Workbench service. Help us expand this section by sending us your questions and burning topics.**
 
 [[toc]]
 
