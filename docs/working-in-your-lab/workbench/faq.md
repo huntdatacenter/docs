@@ -111,7 +111,7 @@ The current Workbench version of R is `R 4.0`.
 
 ### How do I install my own R packages? 
 
-If you want to install your own packages, we recoomend to use [Conda](/working-in-your-lab/analytical-tools/conda/) for reliability as `install.packages()` inside R will be unreliable. To install a package, run the following code in your [Workbench Terminal](/working-in-your-lab/workbench/faq/#terminal):
+If you want to install your own packages, we recommend to use [Conda](/working-in-your-lab/analytical-tools/conda/) for reliability as `install.packages()` inside R will be unreliable. To install a package, run the following code in your [Workbench Terminal](/working-in-your-lab/workbench/faq/#terminal):
 
 ```bash
 # -- Principal example
