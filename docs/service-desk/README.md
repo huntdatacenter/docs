@@ -54,7 +54,7 @@ Click the button below to order access for a new user to your lab.
 
 ## Internal kista
 
-[Internal kistas](/data-transfers/internal-kista/#order) are the best way to transfer data between two labs in HUNT Cloud.
+[Internal kistas](/data-transfers/internal-kista/#order) is the best way to transfer data between two labs in HUNT Cloud.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
