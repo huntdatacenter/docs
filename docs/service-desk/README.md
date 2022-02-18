@@ -77,7 +77,7 @@ We allow connection from known IP addresses only. Networks outside Norway need t
 
 ### Storage volume expansion
 
-You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We recommend that you add new volumes if you need more.
+You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
