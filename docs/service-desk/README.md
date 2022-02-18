@@ -12,11 +12,13 @@ description: HUNT Cloud service desk orders.
 
 ::: tip
 
-Send us a regular [email](/contact) with your request if you can't find what you are looking for on the page below.
+Send us a regular [email](/contact) with your request if you can't find what you are looking for on the this page.
 
 :::
 
-## New lab user
+## Lab
+
+### New lab user
 
 Click the button below to order access for a new user to your lab.
 
@@ -35,7 +37,7 @@ Click the button below to order access for a new user to your lab.
 * **Cost:** Included in your lab subscription.
 
 
-## Workbench access
+### Workbench access
 
 [Workbench](/working-in-your-lab/workbench/) is the go to place for simple and secure data explorations with your team.
 
@@ -52,9 +54,52 @@ Click the button below to order access for a new user to your lab.
 * **Next step:** [Prepare your key transfer](/working-in-your-lab/workbench/#key-transfer).
 * **Cost:** Included in your lab subscription.
 
-## Internal kista
 
-[Internal kistas](/data-transfers/internal-kista/#order) is the best way to transfer data between two labs in HUNT Cloud.
+### VPN access list
+
+We allow connection from known IP addresses only. Networks outside Norway need to be included on our VPN access list.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20access%20opening%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20VPN%20access%20opening%20for%20the%20following%20IP%20address%3A%20%0A%0A%7BIP4-address%7D.%0A%0AI%20am%20looking%20forward%20to%20be%20notified%20on%20email%20when%20the%20opening%20is%20implemented.%0A%0ABest%2C
+" class="nav-link external action-button">
+    Request VPN access opening
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Required information**: [Your IP4 address](http://ip4.me).
+* **Expected response time:** One day.
+* **Expected delivery:** Opening communicated on email.
+
+
+## Store
+
+### Storage volume expansion
+
+You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We recommend that you add new volumes if you need more.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Storage%20volume%20expansion%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20storage%20volume%20expansion%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Amachine%20name%20%3D%20%7Bmachine%20name%7D%0Avolume%20name%20%3D%20%7Bvolume%20name%7D%0Acurrent%20size%20%3D%20%7Bnumber%20of%20terabytes%7D%0Anew%20size%20%3D%20%7Bnumber%20of%20terabytes%7D%0A%0AI%20am%20aware%20that%20the%20expansion%20will%20require%20a%20machine%20restart.%0A%0ALet%20us%20touch%20base%20in%20our%20Slack%20lab%20channel%20to%20schedule%20a%20time%20for%20the%20restart%20that%20fits%20our%20scientific%20activities.%0A%0ABest%2C" class="nav-link external action-button">
+    Request storage volume expansion
+  </a>
+</p></div></div>
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: labname, machine name, volume name and intended size.
+* **Expected response time:** One week. The volume expansion will need a machine restart that needs to be scheduled.
+* **Expected delivery:** Increased storage capacity.
+* **Cost:** New storage is included in your total storage plan.
+
+
+
+
+## Transport
+
+### Internal kista
+
+[Internal kista](/data-transfers/internal-kista/) is the best way to transfer data between two labs in HUNT Cloud.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
@@ -66,7 +111,42 @@ Click the button below to order access for a new user to your lab.
 * **Who can order:** Lab leaders or lab coordinators from the uploader lab.
 * **Required attachment**: [A signed internal kista order](https://docs.hdc.ntnu.no/agreements/downloads/#internal-kista-order).
 * **Expected response time:** Days.
-* **Expected delivery:** Kista access information posted in your Slack lab channel.
+* **Expected delivery:** Access information posted in your Slack lab channel.
+* **Cost:** Included in your lab subscription.
+
+### External import kista
+
+The [external import kista](/faq/external-transfer/#faq-on-external-data-transfer) allows external parties outside HUNT Cloud to transfer data directly to a lab inside HUNT Cloud in a compliant manner.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=External%20import%20kista%20order%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20external%20import%20kista%20for%20%7Blabname%7D.%0A%0AI%20have%20attached%20two%20files%3A%20%281%29%20the%20signed%20external%20import%20kista%20order%2C%20and%20%282%29%20the%20public%20SSH%20key%20from%20the%20external%20uploader.%0A%0AWe%20are%20looking%20forward%20to%20receive%20access%20information%20en%20email.%0A%0ABest%2C" class="nav-link external action-button">
+    Request an external import kista
+  </a>
+</p></div></div>
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required attachments**: (1) [A signed external kista import order](/agreements/downloads/#external-kista-import-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external uploader.
+* **Expected response time:** Days.
+* **Expected delivery:** Kista access information sent to the lab user that will import the data.
+* **Cost:** Included in your lab subscription.
+
+
+### External export kista
+
+The [external export kista](/faq/external-transfer/#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=External%20export%20kista%20order%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20external%20export%20kista%20for%20%7Blabname%7D.%0A%0AI%20have%20attached%20two%20files%3A%20%281%29%20the%20signed%20external%20eport%20kista%20order%2C%20and%20%282%29%20the%20public%20SSH%20key%20from%20the%20external%20uploader.%0A%0AWe%20are%20looking%20forward%20to%20receive%20access%20information%20en%20email.%0A%0ABest%2C" class="nav-link external action-button">
+    Request an external export kista
+  </a>
+</p></div></div>
+
+* **Who can order:** Data space leaders or Data space compliance coordinators.
+* **Required attachments**: (1) [A signed external kista export order](/agreements/downloads/#external-kista-export-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external uploader.
+* **Expected response time:** Days.
+* **Expected delivery:** Access information sent to the lab user that will make data available for export.
 * **Cost:** Included in your lab subscription.
 
 
