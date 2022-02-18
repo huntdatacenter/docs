@@ -6,7 +6,7 @@ description: HUNT Cloud service desk orders.
 
 # Service desk orders
 
-**This is a pilot page. The aim is to list pre-defined service orders that may help us speed up the delivery time on our side. To place an order, click the blue bottons and send us pre-filled email template.**
+**This is a pilot page. Our aim is to list pre-defined service orders to speed up delivery times. To place an order, click the blue botton and send us a pre-filled email.**
 
 [[toc]]
 
@@ -75,7 +75,7 @@ We allow connection from known IP addresses only. Networks outside Norway need t
 
 ## Store
 
-### Storage volume expansion
+### Volume expansion
 
 You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand.
 
@@ -92,8 +92,11 @@ You may expand the existing storage volumes inside your lab up to a maximum of 2
 * **Expected delivery:** Increased storage capacity.
 * **Cost:** New storage is included in your total storage plan.
 
+::: details Identify the required information
 
+TBA.
 
+:::
 
 ## Transport
 
