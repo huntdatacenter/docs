@@ -4,9 +4,9 @@ category: Service desk
 description: HUNT Cloud service desk orders.
 ---
 
-# Service desk
+# Service desk orders
 
-**This is a pilot page. The aim of this service desk page is to list pre-defined service orders to speed up the delivery time. To place an order, click the blue bottons and send us pre-filled email template.**
+**This is a pilot page. The aim is to list pre-defined service orders that may help us speed up the delivery time on our side. To place an order, click the blue bottons and send us pre-filled email template.**
 
 [[toc]]
 
@@ -31,8 +31,8 @@ Click the button below to order access for a new user to your lab.
 * **Required attachment**: [A signed user agreement](https://docs.hdc.ntnu.no/agreements/downloads/#user-agreement).
 * **Expected response time:** One week.
 * **Expected delivery:** Lab keys and VPN certificate.
-* **Cost:** Included in your lab subscription.
 * **Next step:** [Prepare your key transfer](/getting-started/).
+* **Cost:** Included in your lab subscription.
 
 
 ## Workbench access
@@ -49,6 +49,24 @@ Click the button below to order access for a new user to your lab.
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
 * **Expected delivery:** Workbench access key and certificate.
-* **Cost:** Included in your lab subscription.
 * **Next step:** [Prepare your key transfer](/working-in-your-lab/workbench/#key-transfer).
+* **Cost:** Included in your lab subscription.
+
+## Internal kista
+
+[Internal kistas](/data-transfers/internal-kista/#order) are the best way to transfer data between two labs in HUNT Cloud.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Internal%20kista%20order%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20internal%20kista%20from%20%7Blabname%7D%20to%20%7Blabname%7D.%0A%0AI%20have%20attached%20the%20signed%20internal%20kista%20order.%0A%0AWe%20are%20looking%20forward%20to%20receive%20access%20information%20in%20our%20Slack%20lab%20channel.%0A%0ABest%2C" class="nav-link external action-button">
+    Request an internal kista
+  </a>
+</p></div></div>
+
+* **Who can order:** Lab leaders or lab coordinators from the uploader lab.
+* **Required attachment**: [A signed internal kista order](https://docs.hdc.ntnu.no/agreements/downloads/#internal-kista-order).
+* **Expected response time:** Days.
+* **Expected delivery:** Kista access information posted in your Slack lab channel.
+* **Cost:** Included in your lab subscription.
+
 
