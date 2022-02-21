@@ -8,19 +8,168 @@ description: Usage guide for MobaXterm.
 
 # MobaXterm
 
-MobaXterm is a software package that simplifies connecting to your lab on HUNT Cloud from your local Windows computer.
+MobaXterm is a software package that simplifies connecting to your lab on HUNT Cloud over SSH from your local Windows computer or laptop.
 
-## Prerequisites
+
+::: warning Requirements
 
 A working SSH connection to both entry and home as described in the [How To Connect To Your Lab](/getting-started/) guide.
-If these steps don't work as intended, it will be hard (although not impossible) to get MobaXterm to work smoothly.
+Otherwise it will be difficult to get MobaXterm to work.
+
+Make sure Putty is installed as shown in the guide above, before you use MobaXterm.
+
+:::
 
 ## 1. How to install
+
+::: tip
+Lab users from NTNU can install MobaXterm using software center.
+:::
 
 - Download the `Home edition (installer edition)` from [mobaxterm.mobatek.net](https://mobaxterm.mobatek.net/download.html):
 - Unzip the file and install the software
 
-## 2. Configure
+## 2. Configure Mobagent
+
+2.1 Start MobaXterm and open Settings:
+
+![mobaxterm_settings](./images/mobaxterm_settings.png)
+
+2.2 Choose SSH tab and make sure that option `Use internal SSH agent "Mobagent"` is checked. Then click OK to save the settings.
+
+![mobaxterm_allow_mobagent](./images/mobaxterm_allow_mobagent.png)
+
+<!--
+2.3 After clicking on button `Show keys currently loaded in MobAgent` you might be asked to start MobAgent.
+Confirm by clicking Yes:
+
+![mobaxterm_start_mobagent](./images/mobaxterm_start_mobagent.png)
+
+2.4 If you already have any ssh key you could see them in the list. If not we will make them later in step 3.
+You can click on Close button.
+
+![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_keys.png) -->
+
+
+2.3 If you are asked to confirm restart of MobaXterm click `Yes` to confirm.
+
+![mobaxterm_restart_settings](./images/mobaxterm_restart_settings.png)
+
+
+## 3. Generating SSH Key
+
+In case you have not used SSH keys before and you need to generate one, on Windows you can do so in MobaXterm using Local terminal
+
+### 3.1 Open Local terminal
+
+Clicking on Local terminal button opens MobaXterm command line:
+
+![Main View - Local terminal](./images/mobaxterm_main-local_terminal.png)
+
+### 3.2 Generate SSH key in local terminal
+
+If you opened local terminal, you should see similar window:
+
+![Local terminal](./images/mobaxterm_local_terminal.png)
+
+Check if you already have ssh keys from before:
+
+```bash
+cat "${USERPROFILE}/.ssh/id_rsa.pub"
+```
+
+If previous command printed error message or there was no output it means that you probably have not created your ssh key yet.
+Follow these commands to create your ssh keys:
+
+```bash
+mkdir -p "${USERPROFILE}/.ssh"
+```
+
+```bash
+ssh-keygen -b 4096 -t rsa -f "${USERPROFILE}/.ssh/id_rsa" -q -N ""
+```
+
+### 3.3 Uploading new SSH key
+
+To be able to use the key it needs to be uploaded with `ssh-copy-id`.
+You will be asked to type in your SSH password that you made during the lab installation.
+
+```bash
+ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" username@entry-IP
+```
+
+Remember to replace `username` with your username, and `entry-IP` with IP address of your lab that
+is included in your `ssh-config.txt` file (format: `10.42.X.Y`). Example: `joe-tester@10.42.X.Y`.
+
+If you get asked to save the password, refuse by clicking on `No` to make sure that MobaXterm
+will authenticate with SSH keys instead of passwords.
+
+### 3.4 Add SSH key into Mobagent
+
+Make sure that SSH key is added into Mobagent:
+
+![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_add_key.png)
+
+## 4. Connect
+
+We usually ship preconfigured Moba file with credentials.
+If you have not opened it, you can open it now and MobaXterm will pick up your lab session.
+
+![Connect](./images/mobaxterm_step5.png)
+
+With a little bit of luck, you should now be able to connect directly from your client computer to your home node in your lab.
+
+
+## Troubleshooting
+
+
+::: details Check SSH keys in session configuration
+
+- Right click on the session that you want to edit and choose option `Edit session`.
+  ![mobaxterm_edit-session](./images/mobaxterm_edit-session.png)
+- Assure `SSH` option under the `Session settings` is selected.
+- In **Advanced SSH settings** make sure that private key option is checked. Then select the path to SSH key file (`id_rsa`).
+  ![Step 1](./images/mobaxterm_step1.png)
+- Under `Network settings`, click on `Connect through SSH gateway (jump host)`
+  ![Step 2](./images/mobaxterm_step2.png)
+- Check `Use SSH key` option and select the path to SSH key file (`id_rsa`).
+  ![Step 3](./images/mobaxterm_step3.png)
+- Confirm session settings by clicking `OK`.
+
+
+:::
+
+::: details Agent refused operation
+
+If you see the error message saying: `Agent refused operation` you need to install Putty.
+
+![agent-refused-operation](./images/mobaxterm_ssh-agent-refused-operation.png)
+
+Once Putty is installed, make sure that MobaXterm is closed and started Pageant. Pageant is part of Putty installation.
+
+![putty_pageant](./images/putty_pageant.png)
+
+Once Pageant is running, you can start MobaXterm.
+
+:::
+
+::: details Configure custom SSH config
+
+This part might be needed if you plan to use SSH tunnel. It is not part of recommended workflow.
+
+To setup ssh config to be used in local terminal of MobaXterm use:
+
+```
+cat <<-EOF > /home/mobaxterm/.ssh/config
+
+Paste content of your ssh-config.txt here
+
+EOF
+```
+
+:::
+
+::: details Configure custom session
 
 - Open MobaXterm
 - Select a new session and click on the `SSH` image on the `Session settings`.
@@ -33,69 +182,4 @@ If these steps don't work as intended, it will be hard (although not impossible)
 - In **Bookmark settings**, Name your lab session. Click OK to confirm Session settings.
   ![Step 4](./images/mobaxterm_step4.png "MobaXterm - Step 4")
 
-## 3. Connect
-
-Connect to your session. You will now be asked twice to type in your SSH password that you made during the lab installation.
-
-![Connect](./images/mobaxterm_step5.png "MobaXterm - Connect")
-
-With a little bit of luck, you should now be able to connect directly from your client computer to your home node in your lab.
-
-
-## 4. Generating SSH Key
-
-::: warning Requirements
-
-Make sure Putty is installed in order to use ssh-agent.
-If you just installed it, start Putty at least once, before starting MobaXterm again.
-
 :::
-
-In case you have not used SSH keys before and you need to generate one, on Windows you can do so in MobaXterm using Local terminal:
-
-![Main View - Local terminal](./images/mobaxterm_main-local_terminal.png)
-
-4.1 Clicking on Local terminal opens MobaXterm command line:
-
-![Local terminal](./images/mobaxterm_local_terminal.png)
-
-4.2 Follow these commands to setup your ssh keys:
-
-```bash
-mkdir -p .ssh
-touch .ssh/config
-ssh-keygen -b 4096 -t rsa -f /home/mobaxterm/.ssh/id_rsa -q -N ""
-```
-
-4.3 Once the keys are set up you can start the ssh-agent:
-
-```bash
-eval $(ssh-agent)
-```
-
-4.4 Then check you ssh keys with ssh-add command:
-
-```bash
-ssh-add
-```
-
-## 5. Setting ssh-config
-
-To setup ssh config to be used in local terminal of MobaXterm use:
-
-```
-cat <<-EOF > /home/mobaxterm/.ssh/config
-
-Paste your config here
-
-EOF
-```
-
-## 6. Uploading the new key
-
-To be able to use the key it needs to be uploaded with:
-
-```
-ssh-copy-id <your-lab-name>-entry
-```
-
