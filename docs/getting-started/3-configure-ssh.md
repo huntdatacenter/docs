@@ -225,9 +225,11 @@ We hope that you will log into your lab a lot over the coming months and years. 
 
 ::: details Windows
 
-1. [Configure MobaXterm](/working-in-your-lab/technical-tools/mobaxterm) for simple and "password less" access directly to your home machine, as well as click-based file transfers between your local machine and your home machine.
+1. [Request Workbench](/working-in-your-lab/workbench/) for smooth access to Jupyter Notebooks, Python, RStudio, R, or MATLAB.
 
-2. [Configure X2Go](/working-in-your-lab/technical-tools/x2go/#set-up-your-local-machine) for "password less" one-click access to graphical software in your lab, such as RStudio.
+2. [Configure MobaXterm](/working-in-your-lab/technical-tools/mobaxterm) for "password less" SSH access directly to your home machine, as well as click-based file transfers between your local machine and your home machine.
+
+3. [Configure X2Go](/working-in-your-lab/technical-tools/x2go/) for "password less" one-click access to graphical software in your lab, such as SPSS or Stata.
 
 :::
 
@@ -250,7 +252,7 @@ This will allow you to log directly into your lab without the need to remember y
 
 3. Test your new setup by typing **`ssh <your-lab-name>-entry`** in your terminal. For example:
 
-```
+```bash
 ssh demolab-entry
 ```
 
@@ -268,7 +270,7 @@ This will allow you to log directly into your lab without the need to remember y
 3. Type **`ssh-copy-id <your-lab-name>-entry`** to add your new certificate to your entry machine. Enter your **`passphrase`** when prompted for a password.
 4. Enter **`ssh-add`** to add the certificate to the ssh-agent. If you don't have a running ssh-agent you may see an error message. In such a case, first enter **`eval "$(ssh-agent -s)"`** and next enter **`ssh-add`**.
 
-::: warning Expected result
+### Expected result
 
 Simple and secure, you should now be able to directly enter your home node with this command:
 
@@ -282,10 +284,15 @@ for example,
 ssh demolab
 ```
 
-Voilà!
+**Voilà!**
 
+
+::: tip Workbench
+
+[Request Workbench](/working-in-your-lab/workbench/) for smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, or MATLAB.
 
 :::
+
 
 ::: tip
 Time for coffee!
