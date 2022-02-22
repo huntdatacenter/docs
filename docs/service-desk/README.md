@@ -156,7 +156,7 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 
 ### Network opening
 
-[Network opening orders](/faq/external-transfer/#direct-external-transfers) allows data transfers directly to and from parties outside HUNT Cloud when such openings are approved by data space leaders.
+[Network opening orders](/faq/external-transfer/#direct-external-transfers) allows data transfers directly to and from parties outside HUNT Cloud.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
