@@ -351,14 +351,19 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud Network Opening Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-network-opening-order.pdf) (pdf)
 
-Your lab leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/external-transfer/).
+Your data space leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/external-transfer/).
 
 
 ::: details Clarification of the form fields
 
-The below bullet points clarify the field information needed to complete our network opening order.
+The following form fields are included in the "HUNT Cloud Network Opening Order" version 1.8.
 
-- **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
+- **Data space name:** This is the name of the data space where your lab is attached. You may find the name by asking your data space coordinators.
+
+- **Data space leader:** This is the name of the individual that is the contracting party of your data space order with HUNT Cloud.
+
+- **Lab name:** This is the name of the lab where you want the opening to be implemented. You may identify the name in your shell login:
+
 
 ```bash
 Welcome to `LAB NAME`.
@@ -372,7 +377,9 @@ your-username@`your-labname`-home~$
 
 - **Lab leader:** This is the name of the individual that is the contracting party of your lab agreement with HUNT Cloud, typically your principal investigator or center leader.
 
-- **Remote party**: This is the institution that your will transfer data to and from. We use this information to sanity check your network address. Do also specify the country where the machine reside. We use this information for reporting to your data controller.
+- **Organization**: This is the external institution outside your lab that your will transfer data to and from. We use this information to sanity check your network address. 
+
+- **Country**: This is the country where the external machine reside. We use this information for reporting to your data controller.
 
 - **Network**: This is the public IP address for the remote machine in a [IPv4](https://en.wikipedia.org/wiki/IPv4)-format which is defined as four set of numbers separated by dots. Contact your remote party for this information. If the machine is located outside NTNU, the network address can **not** start with **`10.`**, **`192.`** or **`172.`** since these are internal addresses that are unreachable outside your institution.
 
@@ -386,7 +393,7 @@ your-username@`your-labname`-home~$
 
 - **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
 
-- **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
+- **Data space leader**: This is the field for the signature of your data space leader or your data space compliance officer.
 
 :::
 

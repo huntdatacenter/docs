@@ -71,17 +71,20 @@ However, the decision of whether you can use this service is decided by your dat
 ## Direct external transfers
 
 ### Can I transfer data directly with parties outside HUNT Cloud?
-Yes and no. Direct transfers via SSH are blocked. However, your lab leader can allow network openings for data transactions outside HUNT Cloud (see below). Note that this is restricted to traffic that are initiated from inside your lab.
+Yes and no. Direct transfers via SSH are blocked. However, your data space leader can allow network openings for data transactions outside HUNT Cloud (see below). Note that this is restricted to traffic that are initiated from inside your lab.
 
 ### Can I have permanent openings to machines outside my lab?
-Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be approved by your service owner, documented in our [network opening order](/agreements/downloads/#network-opening-order), and the traffic needs to be initiated from inside your lab.
+Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be authorized by your data space leader, documented in our [network opening order](/agreements/downloads/#network-opening-order), and the traffic needs to be initiated from inside your lab.
 
 ### How do I request a network opening?
-Lab leaders can request network openings through our [network opening order](/agreements/downloads/#network-opening-order). We use this order to document outbound traffic from your lab.
+Data space leaders and data space compliance coordinators can request network openings through our [network opening order](/agreements/downloads/#network-opening-order). We use this order to document outbound traffic from your lab.
+
+### Why do I need authorization from my data space leader? 
+
+Network openings allow lab users to initiate data transactions outside your data space and outside HUNT Cloud. For transparecy, data space leaders are asked to authorize transfers when data moves outside your data space. They are also asked to confirm that your lab holds necessary approvals for the requested transfer.
 
 ### Which network openings do the machine outside HUNT Cloud need to approve?
-Your remote party will need to open for incoming traffic from your lab in HUNT Cloud (see network details below).
-They will need to open for traffic on **`port 22`** if you plan to use SSH tools such as **`rsync`**.
+Your remote party will need to open for incoming traffic from your lab in HUNT Cloud (see network details below). They will need to open for traffic on **`port 22`** if you plan to use SSH tools such as **`rsync`**.
 
 #### Network details
 

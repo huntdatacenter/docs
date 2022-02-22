@@ -114,7 +114,7 @@ TBA.
 * **Who can order:** Lab leaders or lab coordinators from the uploader lab.
 * **Required attachment**: [A signed internal kista order](https://docs.hdc.ntnu.no/agreements/downloads/#internal-kista-order).
 * **Expected response time:** Days.
-* **Expected delivery:** Access information posted in your Slack lab channel.
+* **Expected delivery:** Access information communicated in your Slack lab channel.
 * **Cost:** Included in your lab subscription.
 
 ### External import kista
@@ -152,4 +152,23 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 * **Expected delivery:** Access information sent to the lab user that will make data available for export.
 * **Cost:** Included in your lab subscription.
 
+
+
+### Network opening
+
+[Network opening orders](/faq/external-transfer/#direct-external-transfers) allows data transfers directly to and from parties outside HUNT Cloud when such openings are approved by data space leaders.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Network%20opening%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20network%20opening.%20%0A%0AI%20have%20attached%20a%20signed%20network%20opening%20order%20with%20further%20information.%0A%0AWe%20are%20looking%20forward%20to%20receive%20confirmation%20of%20the%20opening%20in%20our%20Slack%20lab%20channel.%0A%0ABest%2C" class="nav-link external action-button">
+    Request a network opening
+  </a>
+</p></div></div>
+
+* **Who can order:** Data space leaders or Data space compliance coordinators.
+* **Required information**: IPv4 address and port for the external party.
+* **Required attachments**: [A signed network opening order](/agreements/downloads/#network-opening-order).
+* **Expected response time:** Days.
+* **Expected delivery:** Network opening communicated in your Slack lab channel.
+* **Cost:** Included in your lab subscription.
 
