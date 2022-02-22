@@ -166,7 +166,7 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 </p></div></div>
 
 * **Who can order:** Data space leaders or Data space compliance coordinators.
-* **Required information**: IPv4 address and port for the external party.
+* **Required information**: IPv4 address and port number for the external party.
 * **Required attachments**: [A signed network opening order](/agreements/downloads/#network-opening-order).
 * **Expected response time:** Days.
 * **Expected delivery:** Network opening communicated in your Slack lab channel.
