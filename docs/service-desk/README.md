@@ -98,6 +98,33 @@ TBA.
 
 :::
 
+
+
+### New volume
+
+You may add new volumes to your lab machines. We will need separate orders for each individual volume you plan to add.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20storage%20volume%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20storage%20volume%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Amachine%20name%20%3D%20%7Bmachine%20name%7D%0Avolume%20name%20%3D%20%7Bvolume%20name%7D%0Asize%20%3D%20%7Bnumber%20of%20terabytes%7D%0A%0AI%20am%20aware%20that%20the%20expansion%20will%20require%20a%20machine%20restart.%20So%2C%20let%20us%20touch%20base%20in%20our%20Slack%20lab%20channel%20to%20schedule%20a%20time%20for%20the%20restart%20that%20fits%20our%20scientific%20activities.%0A%0ABest%2C" class="nav-link external action-button">
+    Request a new storage volume
+  </a>
+</p></div></div>
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: labname, machine name, volume name and total size in terabytes.
+* **Expected response time:** One week. Additions of new volumes will need a machine restart that needs to be scheduled.
+* **Expected delivery:** New storage volume attached (mounted) to your lab machine.
+* **Cost:** New storage is included in your total storage plan.
+
+::: details Identify the required information
+
+TBA.
+
+:::
+
+
+
 ## Transport
 
 ### Internal kista
