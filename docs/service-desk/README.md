@@ -16,7 +16,53 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 :::
 
-## Lab
+
+
+## System access
+
+### VPN access list
+
+We allow connection from known IP addresses only. Networks outside Norway need to be included on our VPN access list.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20access%20opening%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20VPN%20access%20opening%20for%20the%20following%20IP%20address%3A%20%0A%0A%7BIP4-address%7D.%0A%0AI%20am%20looking%20forward%20to%20be%20notified%20on%20email%20when%20the%20opening%20is%20implemented.%0A%0ABest%2C
+" class="nav-link external action-button">
+    Request VPN access opening
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Required information**: [Your IP4 address](http://ip4.me).
+* **Expected response time:** One day.
+* **Expected delivery:** Opening communicated on email.
+
+
+### Google authenticator key reset  
+
+You will need to reset the [Google Authenticator key](/guides/google-authenticator-reset/) that you need to access the HUNT Cloud VPN, for example when you change your phone.
+
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Google%20authenticator%20key%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20Google%20authenticator%20key%20for%20my%20VPN%20access.%20%0A%0AAlternative%201%3A%20%0A%0AI%20have%20an%20active%20Signal%20account%20on%20the%20same%20phone%20number%20that%20is%20registered%20in%20my%20user%20account%20and%20are%20looking%20forward%20to%20receive%20my%20new%20key%20on%20my%20phone.%0A%0AAlternative%202%3A%20%0A%0APlease%20note%20that%20I%20have%20a%20new%20phone%20number%20%28%2B00-0000000%29.%20I%20have%20activated%20Signal%20on%20this%20number%20and%20are%20looking%20forward%20to%20receive%20my%20new%20key%20on%20the%20app.%0A%0ABest%2C" class="nav-link external action-button">
+    Request Google authenticator key reset
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** New key on Signal.
+* **Requirement:** Active Signal app on your phone.
+* **Next step:** [Guide on the key reset](/guides/google-authenticator-reset/).
+* **Cost:** Included in your lab subscription.
+
+
+
+
+
+
+## Lab access
 
 ### New lab user
 
@@ -36,7 +82,6 @@ Click the button below to order access for a new user to your lab.
 * **Next step:** [Prepare your key transfer](/getting-started/).
 * **Cost:** Included in your lab subscription.
 
-
 ### Workbench access
 
 [Workbench](/working-in-your-lab/workbench/) is the go to place for simple and secure data explorations with your team.
@@ -51,26 +96,29 @@ Click the button below to order access for a new user to your lab.
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
 * **Expected delivery:** Workbench access key and certificate.
+* **Requirement:** Active Signal app on phone.
 * **Next step:** [Prepare your key transfer](/working-in-your-lab/workbench/#key-transfer).
 * **Cost:** Included in your lab subscription.
 
 
-### VPN access list
+### SSH passphrase reset  
 
-We allow connection from known IP addresses only. Networks outside Norway need to be included on our VPN access list.
+Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to access your workbench and install software on your home machine.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20access%20opening%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20VPN%20access%20opening%20for%20the%20following%20IP%20address%3A%20%0A%0A%7BIP4-address%7D.%0A%0AI%20am%20looking%20forward%20to%20be%20notified%20on%20email%20when%20the%20opening%20is%20implemented.%0A%0ABest%2C
-" class="nav-link external action-button">
-    Request VPN access opening
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=SSH%20passphrase%20reset%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20passphrase%20reset%20for%20my%20user%20%7Busername%7D%20%40%20%7Blabname%7D.%0A%0AI%20have%20activated%20Signal%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20temporary%20key%20here.%0A%0ABest%2C" class="nav-link external action-button">
+    Request SSH passphrase reset
   </a>
 </p></div></div>
 
 * **Who can order:** All active lab users.
-* **Required information**: [Your IP4 address](http://ip4.me).
-* **Expected response time:** One day.
-* **Expected delivery:** Opening communicated on email.
+* **Expected response time:** Days.
+* **Expected delivery:** Temporary passphrase on Signal.
+* **Requirement:** Active Signal app on your phone.
+* **Next step:** [Guide on the passphrase reset](/guides/configure-ssh/).
+* **Cost:** Included in your lab subscription.
+
 
 
 ## Store
