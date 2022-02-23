@@ -12,7 +12,7 @@ description: HUNT Cloud service desk orders.
 
 ::: tip
 
-Send us a regular [email](/contact) with your request if you can't find what you are looking for on the this page.
+(1) Send your order from your organizational email address. (2) Send us a regular [email](/contact) with your request if you can't find what you are looking for on the this page.
 
 :::
 
@@ -140,6 +140,64 @@ Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to acce
 * **Requirement:** Active Signal app on your phone.
 * **Next step:** [Guide on the passphrase reset](/guides/configure-ssh/).
 * **Cost:** Included in your lab subscription.
+
+
+
+## Compute
+
+### Update machine size
+
+Increase or decrease the size of one of your existing lab machines to a new [machine type](/services/machine-types/). 
+
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Update%20machine%20size%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20machine%20update%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Amachine%20name%20%3D%20%7Bmachine%20name%7D%20%20%0Acurrent%20machine%20type%20%3D%20%7Bdefault.b1%7D%20%20%0Anew%20machine%20type%20%3D%20%7Bdefault.b1%7D%20%20%0A%0AI%20am%20aware%20that%20the%20update%20will%20require%20a%20machine%20restart.%0A%0ALet%20us%20touch%20base%20in%20our%20Slack%20lab%20channel%20to%20schedule%20a%20time%20for%20the%20restart%20that%20fits%20our%20scientific%20activities.%0A%0ABest%2C" class="nav-link external action-button">
+    Request a machine size update
+  </a>
+</p></div></div>
+
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Expected response time:** Days.
+* **Expected delivery:** Lab machine with updated size.
+* **Requirement:** The procedure require a machine restart that needs to be scheduled with your lab users.
+* **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
+
+
+### New machine
+
+Add a [new machine](/services/machine-types/) to your lab. 
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20machine%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20machine%20in%20our%20lab%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Amachine%20type%20%3D%20%7Bdefault.b2%7D%20%20%0Astorage%20size%20%3D%20%7B1%20terabyte%28s%29%7D%20%20%0Anumber%20of%20machines%20%3D%20%7B1%7D%0Asubscription%20%3D%20%7BCommitment%20/%20On-demand%20/%20Blue%7D%0A%0ALet%20us%20touch%20base%20in%20our%20Slack%20lab%20channel%20to%20schedule%20a%20time%20for%20the%20restart%20that%20fits%20our%20scientific%20activities.%0A%0ABest%2C" class="nav-link external action-button">
+    Request a new lab machine
+  </a>
+</p></div></div>
+
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Expected response time:** Days.
+* **Expected delivery:** New lab machine accessible from your home machine.
+* **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
