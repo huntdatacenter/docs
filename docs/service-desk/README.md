@@ -94,7 +94,39 @@ You may expand the existing storage volumes inside your lab up to a maximum of 2
 
 ::: details Identify the required information
 
-TBA.
+You may identify labname, machine name and volume name from your resource reports. Alternatively, you may log into your lab machine using SSH and fetch the information manually:
+
+
+```bash
+Welcome to `LAB NAME`.
+
+For the record, if you shouldn't be here - please
+leave and report the incident to cloud@hunt.ntnu.no.
+
+Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
+your-username@`your-labname`-home~$
+```
+
+If you plan to expand volumes of machines other than `home`, log into your machine of choice to identify the exact name: 
+
+```bash
+# -- Example
+`labname`-iaas-helya-gpu1
+```
+
+You can identify the volume name while you are logged into the machine: 
+
+```bash
+# -- Command
+df -h | grep -E '(^Filesystem|/mnt/)'
+
+# -- Output example
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vdc1       197G   61M  187G   1% /mnt/work
+/dev/vdd1       493G   71M  467G   1% /mnt/archive
+/dev/vde1       197G   60M  187G   1% /mnt/scratch
+/dev/vdf1        99G   60M   94G   1% /mnt/cargo
+```
 
 :::
 
@@ -119,7 +151,40 @@ You may add new volumes to your lab machines. We will need separate orders for e
 
 ::: details Identify the required information
 
-TBA.
+You may identify labname and machine name from your resource reports. Alternatively, you may log into your lab machine using SSH and fetch the information manually:
+
+```bash
+Welcome to `LAB NAME`.
+
+For the record, if you shouldn't be here - please
+leave and report the incident to cloud@hunt.ntnu.no.
+
+Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
+your-username@`your-labname`-home~$
+```
+
+If you plan to add a volume on a machine other than `home`, log into your machine of choice to identify the exact name: 
+
+```bash
+# -- Example
+`labname`-iaas-helya-gpu1
+```
+
+List the current volumes on the machine, and suggest a unique name for your new volume that is not already attached to your lab: 
+
+```bash
+# -- Command
+df -h | grep -E '(^Filesystem|/mnt/)'
+
+# -- Output example
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vdc1       197G   61M  187G   1% /mnt/work
+/dev/vdd1       493G   71M  467G   1% /mnt/archive
+/dev/vde1       197G   60M  187G   1% /mnt/scratch
+/dev/vdf1        99G   60M   94G   1% /mnt/cargo
+```
+
+
 
 :::
 
