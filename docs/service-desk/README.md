@@ -37,6 +37,25 @@ We allow connection from known IP addresses only. Networks outside Norway need t
 * **Expected response time:** One day.
 * **Expected delivery:** Opening communicated on email.
 
+### VPN certificate reset  
+
+You may need to reset your VPN certificate when you get a new local machine or if you need a new VPN passphrase.
+
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20certificate%20reset%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20reset%20my%20VPN%20certificate.%20%0A%0AI%20have%20an%20active%20Signal%20account%20on%20my%20phone%2C%20and%20are%20looking%20forward%20to%20receive%20my%20new%20VPN%20passphrase%20on%20the%20phone%20and%20a%20link%20to%20the%20new%20VPN%20certificate%20on%20my%20organizational%20email.%0A%0AI%20am%20aware%20that%20my%20lab%20access%20will%20be%20paused%20from%20the%20new%20certificate%20is%20issued%20and%20until%20I%20have%20installed%20the%20new%20certificate%20on%20my%20local%20machine.%0A%0ABest%2C" class="nav-link external action-button">
+    Request VPN certificate reset
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** VPN passphrase on Signal, link to VPN certificate on email.
+* **Requirement:** Active Signal app on your phone.
+* **Cost:** Included in your lab subscription.
+
+
 
 ### Google authenticator key reset  
 
@@ -56,6 +75,9 @@ You will need to reset the [Google Authenticator key](/guides/google-authenticat
 * **Requirement:** Active Signal app on your phone.
 * **Next step:** [Guide on the key reset](/guides/google-authenticator-reset/).
 * **Cost:** Included in your lab subscription.
+
+
+
 
 
 
