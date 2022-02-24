@@ -38,4 +38,3 @@ A successful opening of the 7z-file file should include two (2) files:
 
 When have successfully received your certificate, head over to our [workbench installation page](/working-in-your-lab/workbench/installation/) to finalize your setup.
 
-

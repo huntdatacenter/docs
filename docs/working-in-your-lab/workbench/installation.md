@@ -6,7 +6,7 @@ sidebarDepth: 1
 description: Installation guide for the workbench in HUNT Lab.
 ---
 
-# Installation
+# Workbench installation
 
 **This guide will help you to connect with your lab workbench over a web browser.**
 
@@ -206,14 +206,20 @@ https://demolab.lab.hdc.ntnu.no
 
 ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
+
+
 ## Immediate troubleshooting
 
-::: details I don't remember my password
 
+### I don't remember my password
+
+::: details Read more
 Don't worry. [Contact us](/contact) on email for a password reset.
 :::
 
-::: details Firefox - Did Not Connect
+### Firefox - Did Not Connect
+
+::: details Read more
 
 Firefox may require manually importing HUNT Cloud Certificate Authority to consider it trusted.
 If you see Error code: `SEC_ERROR_UNKNOWN_ISSUER` when accessing workbench follow these steps:

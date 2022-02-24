@@ -106,7 +106,7 @@ Click the button below to order access for a new user to your lab.
 
 ### Workbench access
 
-[Workbench](/working-in-your-lab/workbench/) is the go to place for simple and secure data explorations with your team.
+[Workbench](/working-in-your-lab/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, or MATLAB.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
