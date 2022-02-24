@@ -287,6 +287,7 @@ module.exports = {
             children: [
               "/service-desk/access-guides/reset-gauth.md",
               "/service-desk/access-guides/reset-ssh.md",
+              "/service-desk/access-guides/workbench-keys.md",
             ]
           },
           ]
