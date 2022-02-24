@@ -1,6 +1,6 @@
 ---
 title: FAQ
-category: Workbench
+category: Workbenc
 permalink: /working-in-your-lab/workbench/faq
 sidebarDepth: 1
 description: Frequently asked questions about the Workbench in HUNT Lab.
@@ -8,9 +8,22 @@ description: Frequently asked questions about the Workbench in HUNT Lab.
 
 # FAQ on the Workbench
 
-**This page contain frequently asked questions on the Workbench service. Help us expand this section by sending us your questions and burning topics.**
+**This page contain frequently asked questions on the workbench service. Help us expand this section by sending us your questions and burning topics.**
+
+::: tip Troubleshooting
+
+If something is not working as your expect, head to our troubleshooting section at the end of the page.
+
+:::
 
 [[toc]]
+
+::: tip
+
+Help us expand this section by [sending us questions and ideas](/contact) for new content.
+
+:::
+
 
 ## Storage
 
@@ -40,10 +53,10 @@ Yes. Here's an example on how you create a Conda environments with Python and IP
 conda create -n <name> 'python==3.8' 'ipykernel'
 ```
 
-And here's an example on how you create a Conda environment with R and R-IRkernel kernel:
+And here's an example on how you create a Conda environment with R and R-IRkernel kernel and commonly used pacakges:
 
 ```
-conda create -n <name> 'r-base>=4.0,<4.1' 'r-irkernel' 'r-devtools'
+conda create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
 ```
 
 ### How can I start a Notebook with my new Conda environment?
@@ -62,16 +75,24 @@ You will be able to select default environments including MATLAB kernel and cust
 
 ![wb_notebook_conda_env.png](./images/wb_notebook_conda_env.png)
 
+### How can I install apt packages? 
+
+We recommend that you install apt packages in your Conda environments since these will be installed on disk and such be persistent during restarts (regular apt commands run in terminal will be removed during your next restart). Search [anaconda](https://anaconda.org/) to identify your package name and get going with your installation.
+
+
+
 
 ## Management
 
-### How can I scrape my server and start from scratch?
+### How can I restart my workbench environment and start from scratch?
 
-Select control panel in top right corner:
+Sometimes you might want to start over with a fresh environment: 
+
+(1) Select control panel in top right corner:
 
 ![wb_topbar_cp.png](./images/wb_topbar_cp.png)
 
-Then in the control panel hit stop server:
+(2) Then in the control panel hit stop server:
 
 ![wb_cp_stopserver.png](./images/wb_cp_stopserver.png)
 
@@ -79,11 +100,14 @@ You can either start the new instance by hitting the button or by logging in aga
 
 ### Can I install Jupyter extensions?
 
-No. Due to security reasons, this is currently not allowed and the Jupyter extension manager is disabled. Feel free to reach out to us on Slack so we can discuss adding useful extensions into your Workbench.
+No. Due to security reasons, this is currently not allowed and the Jupyter extension manager is disabled. Feel free to reach out to us on Slack so we can discuss adding useful extensions into your workbench.
+
+
+
 
 ## MATLAB
 
-### Are there any limitations to MATLAB in Workbench?
+### Are there any limitations to the workbench MATLA?
 
 Yes, some limitations may apply. Read more in the [official documentation](https://se.mathworks.com/products/matlab-online/limitations.html) from MathWorks.
 
@@ -107,11 +131,11 @@ Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 
 ### Which R version is available in RStudio? 
 
-The current Workbench version of R is `R 4.0`.
+The current workbench version of R is `R 4.0`.
 
 ### How do I install my own R packages? 
 
-If you want to install your own packages, we recommend to use [Conda](/working-in-your-lab/analytical-tools/conda/) for reliability as `install.packages()` inside R will be unreliable. To install a package, run the following code in your [Workbench Terminal](/working-in-your-lab/workbench/faq/#terminal):
+If you want to install your own packages, we recommend to use [Conda](/working-in-your-lab/analytical-tools/conda/) for reliability as `install.packages()` inside R will be unreliable. To install a package, run the following code in your [workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
 
 ```bash
 # -- Principal example
@@ -121,7 +145,7 @@ conda install -n r-base -c conda-forge r-'<package-name>' r-'<another-package-na
 conda install -n r-base -c conda-forge r-dplyr
 ```
 
-RStudio is configured to use packages installed in the environment named `r-base` as shown above. For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr). When the installation is complete, open R in your Workbench and load your new package: 
+RStudio is configured to use packages installed in the environment named `r-base` as shown above. For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr). When the installation is complete, open R in your workbench and load your new package: 
 
 ```bash 
 # -- Principal example
@@ -131,14 +155,28 @@ library(<package-name>)
 library(dplyr)
 ```
 
+### How do I reset my user state in RStudio? 
+
+When you [restart your workbench from scratch](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch), your RStudio user state might still be preserved. [Click here](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server) to read the RStudio support pages about how you can manually remove your user state.
+
+
 ## Terminal
 
-You can find the workbench terminal in main view of applications under the section: Other.
+### Can I use the terminal from my workbench?  
+
+Yes. You can find the workbench terminal in main view of applications under the section: Other.
 
 ![other_apps_terminal.png](./images/other_apps_terminal.png)
 
-Terminal can be used to manage [Conda packages](/working-in-your-lab/analytical-tools/conda/), monitor resources (htop), or to handle other tasks.
+### When do I need to use the terminal? 
+
+Terminal can be handy when it comes to manage [Conda packages](/working-in-your-lab/analytical-tools/conda/), monitor resources (htop), or to handle other tasks.
 
 
+## Troubleshooting
+
+### I am unable to log in to my workbench applications? 
+
+If you were previously able to access your workbench applications, for example RStudio, and then the access suddenly stopped, one quick approach to get things back up could be to restart your workbench environment. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch) to learn how to restart. [Contact us](/contact) if you need further assitance.
 
 
