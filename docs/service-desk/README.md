@@ -16,6 +16,94 @@ description: HUNT Cloud service desk orders.
 
 :::
 
+## Lab management
+
+
+### New lab
+
+Click the button below to order a new lab under an existing data space.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20lab%20-%20%7Bdata%20space%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20lab%20under%20our%20data%20space.%0A%0AI%20have%20attached%20a%20signed%20lab%20agreement%20to%20this%20email.%20%0A%0AWe%20will%20forward%20individual%20user%20agreements%20for%20our%20initial%20lab%20users%20so%20you%20can%20get%20going%20with%20the%20lab%20onboarding.%20%0A%0AI%20am%20looking%20forward%20to%20an%20email%20verification%20when%20the%20lab%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
+    Request a new lab
+  </a>
+</p></div></div>
+
+* **Who can order:** Data space leaders and data space compliance coordinators.
+* **Required attachment**: [A signed lab order](agreements/downloads/#lab-order), lab users in separate orders (see above).
+* **Expected response time:** One week.
+* **Cost:** One lab subscription as specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
+
+
+### New lab user
+
+Click the button below to order access for a new user to your lab.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20labuser%20-%20%7Bname%20of%20new%20user%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20access%20for%20a%20new%20lab%20user.%0A%0AI%20have%20attached%20a%20signed%20user%20agreement%20to%20this%20email%2C%20and%20asked%20our%20new%20colleague%20to%20install%20and%20activate%20the%20Signal%20app%20for%20the%20key%20transfer.%20%0A%0AWe%20are%20looking%20forward%20to%20start%20the%20onboarding%20process.%0A%0ABest%2C" class="nav-link external action-button">
+    Request lab access for a new user
+  </a>
+</p></div></div>
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required attachment**: [A signed user agreement](/agreements/downloads/#user-agreement).
+* **Expected response time:** One week.
+* **Expected delivery:** Lab keys and VPN certificate.
+* **Next step:** [Prepare your key transfer](/getting-started/).
+* **Cost:** Included in your lab subscription.
+
+
+
+
+
+
+
+## Lab user access
+
+### Workbench access
+
+[Workbench](/working-in-your-lab/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, or MATLAB.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Workbench%20order%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20try%20Workbench%20in%20%7Blabname%7D.%0A%0AI%20have%20install%20and%20activated%20the%20Signal%20app%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20key%20and%20certificate.%20%0A%0AThese%20are%20the%20tools%20I%20plan%20to%20use%3A%20%28Rstudio/Jupyter/Python/MATLAB/Stata%29.%0A%0ABest%2C" class="nav-link external action-button">
+    Request workbench access
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** Workbench access key and certificate.
+* **Requirement:** Active Signal app on phone.
+* **Next step:** [Prepare your key transfer](/guides/workbench-key-transfer/).
+* **Cost:** Included in your lab subscription.
+
+
+### SSH passphrase reset  
+
+Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to access your workbench and install software on your home machine.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=SSH%20passphrase%20reset%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20passphrase%20reset%20for%20my%20user%20%7Busername%7D%20%40%20%7Blabname%7D.%0A%0AI%20have%20activated%20Signal%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20temporary%20key%20here.%0A%0ABest%2C" class="nav-link external action-button">
+    Request SSH passphrase reset
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** Temporary passphrase on Signal.
+* **Requirement:** Active Signal app on your phone.
+* **Next step:** [Guide on the passphrase reset](/guides/configure-ssh/).
+* **Cost:** Included in your lab subscription.
+
+
+
+
+
+
 
 
 ## System access
@@ -84,62 +172,9 @@ You will need to reset the [Google Authenticator key](/guides/google-authenticat
 
 
 
-## Lab access
-
-### New lab user
-
-Click the button below to order access for a new user to your lab.
-
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20labuser%20-%20%7Bname%20of%20new%20user%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20access%20for%20a%20new%20lab%20user.%0A%0AI%20have%20attached%20a%20signed%20user%20agreement%20to%20this%20email%2C%20and%20asked%20our%20new%20colleague%20to%20install%20and%20activate%20the%20Signal%20app%20for%20the%20key%20transfer.%20%0A%0AWe%20are%20looking%20forward%20to%20start%20the%20onboarding%20process.%0A%0ABest%2C" class="nav-link external action-button">
-    Request lab access for a new user
-  </a>
-</p></div></div>
-
-* **Who can order:** Lab leaders and lab coordinators.
-* **Required attachment**: [A signed user agreement](https://docs.hdc.ntnu.no/agreements/downloads/#user-agreement).
-* **Expected response time:** One week.
-* **Expected delivery:** Lab keys and VPN certificate.
-* **Next step:** [Prepare your key transfer](/getting-started/).
-* **Cost:** Included in your lab subscription.
-
-### Workbench access
-
-[Workbench](/working-in-your-lab/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, or MATLAB.
-
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Workbench%20order%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20try%20Workbench%20in%20%7Blabname%7D.%0A%0AI%20have%20install%20and%20activated%20the%20Signal%20app%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20key%20and%20certificate.%20%0A%0AThese%20are%20the%20tools%20I%20plan%20to%20use%3A%20%28Rstudio/Jupyter/Python/MATLAB/Stata%29.%0A%0ABest%2C" class="nav-link external action-button">
-    Request workbench access
-  </a>
-</p></div></div>
-
-* **Who can order:** All active lab users.
-* **Expected response time:** Days.
-* **Expected delivery:** Workbench access key and certificate.
-* **Requirement:** Active Signal app on phone.
-* **Next step:** [Prepare your key transfer](/guides/workbench-key-transfer/).
-* **Cost:** Included in your lab subscription.
 
 
-### SSH passphrase reset  
 
-Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to access your workbench and install software on your home machine.
-
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=SSH%20passphrase%20reset%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20passphrase%20reset%20for%20my%20user%20%7Busername%7D%20%40%20%7Blabname%7D.%0A%0AI%20have%20activated%20Signal%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20temporary%20key%20here.%0A%0ABest%2C" class="nav-link external action-button">
-    Request SSH passphrase reset
-  </a>
-</p></div></div>
-
-* **Who can order:** All active lab users.
-* **Expected response time:** Days.
-* **Expected delivery:** Temporary passphrase on Signal.
-* **Requirement:** Active Signal app on your phone.
-* **Next step:** [Guide on the passphrase reset](/guides/configure-ssh/).
-* **Cost:** Included in your lab subscription.
 
 
 
@@ -332,7 +367,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 </p></div></div>
 
 * **Who can order:** Lab leaders or lab coordinators from the uploader lab.
-* **Required attachment**: [A signed internal kista order](https://docs.hdc.ntnu.no/agreements/downloads/#internal-kista-order).
+* **Required attachment**: [A signed internal kista order](/agreements/downloads/#internal-kista-order).
 * **Expected response time:** Days.
 * **Expected delivery:** Access information communicated in your Slack lab channel.
 * **Cost:** Included in your lab subscription.
