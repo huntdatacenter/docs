@@ -25,7 +25,7 @@ Click the button below to order a new lab under an existing data space.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20lab%20-%20%7Bdata%20space%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20lab%20under%20our%20data%20space.%0A%0AI%20have%20attached%20a%20signed%20lab%20agreement%20to%20this%20email.%20%0A%0AWe%20will%20forward%20individual%20user%20agreements%20for%20our%20initial%20lab%20users%20so%20you%20can%20get%20going%20with%20the%20lab%20onboarding.%20%0A%0AI%20am%20looking%20forward%20to%20an%20email%20verification%20when%20the%20lab%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20lab%20-%20%7Bnew%20labname%7D%20%40%20%7Bdata%20space%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20lab%20under%20our%20data%20space.%0A%0AI%20have%20attached%20a%20signed%20lab%20agreement%20to%20this%20email.%20%0A%0AWe%20will%20forward%20individual%20user%20agreements%20for%20our%20initial%20lab%20users%20so%20you%20can%20get%20going%20with%20the%20lab%20onboarding.%20%0A%0AI%20am%20looking%20forward%20to%20an%20email%20verification%20when%20the%20lab%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
     Request a new lab
   </a>
 </p></div></div>
