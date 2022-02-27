@@ -10,7 +10,6 @@ description: Usage guide for MobaXterm.
 
 MobaXterm is a software package that simplifies connecting to your lab on HUNT Cloud over SSH from your local Windows computer or laptop.
 
-
 ::: warning Requirements
 
 A working SSH connection to both entry and home as described in the [How To Connect To Your Lab](/getting-started/) guide.
@@ -50,11 +49,9 @@ You can click on Close button.
 
 ![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_keys.png) -->
 
-
 2.3 If you are asked to confirm restart of MobaXterm click `Yes` to confirm.
 
 ![mobaxterm_restart_settings](./images/mobaxterm_restart_settings.png)
-
 
 ## 3. Generating SSH Key
 
@@ -72,18 +69,21 @@ If you opened local terminal, you should see similar window:
 
 ![Local terminal](./images/mobaxterm_local_terminal.png)
 
-Check if you already have ssh keys from before:
+Check if you already have ssh keys from before by running this command:
 
 ```bash
 cat "${USERPROFILE}/.ssh/id_rsa.pub"
 ```
 
-If previous command printed error message or there was no output it means that you probably have not created your ssh key yet.
-Follow these commands to create your ssh keys:
+If previous command printed error message (No such file or directory) or there was no output it means that you probably have not created your ssh key yet and you can continue with the next steps.
+
+Before creating SSH key we make sure that your .ssh directory exists:
 
 ```bash
 mkdir -p "${USERPROFILE}/.ssh"
 ```
+
+Now we can create SSH key:
 
 ```bash
 ssh-keygen -b 4096 -t rsa -f "${USERPROFILE}/.ssh/id_rsa" -q -N ""
@@ -106,7 +106,7 @@ will authenticate with SSH keys instead of passwords.
 
 ### 3.4 Add SSH key into Mobagent
 
-Make sure that SSH key is added into Mobagent:
+Check the list of Mobagent SSH keys and make sure that SSH key (`id_rsa` file) is included. If MobaXterm included the new key automatically, you can continue to the next step:
 
 ![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_add_key.png)
 
@@ -119,9 +119,7 @@ If you have not opened it, you can open it now and MobaXterm will pick up your l
 
 With a little bit of luck, you should now be able to connect directly from your client computer to your home node in your lab.
 
-
 ## Troubleshooting
-
 
 ::: details Check SSH keys in session configuration
 
@@ -135,7 +133,6 @@ With a little bit of luck, you should now be able to connect directly from your 
 - Check `Use SSH key` option and select the path to SSH key file (`id_rsa`).
   ![Step 3](./images/mobaxterm_step3.png)
 - Confirm session settings by clicking `OK`.
-
 
 :::
 
