@@ -3,22 +3,22 @@ title: Installation
 category: Workbench
 permalink: /working-in-your-lab/workbench/installation
 sidebarDepth: 1
-description: Installation guide for the workbench in HUNT Lab.
+description: Installation guide for Workbench in HUNT Lab.
 ---
 
 # Workbench installation
 
-**This guide will help you to connect with your lab workbench over a web browser.**
+**This guide will help you to connect with your lab Workbench over a web browser.**
 
 ::: warning Requirements
 
 - Working VPN and SSH as configured in our [Getting started](/getting-started/) guide.
-- Key and certificate as described in the key transfer section of our [workbench key transfer](/guides/workbench-key-transfer/) page.
+- Certificate as described in the [Workbench certificate transfer](/guides/workbench-key-transfer/).
 
 :::
 
 ::: tip Time estimate
-Allow for **30 minutes** to complete this installation and some time to play around in your new environment.
+Allow for **30 minutes** to complete this installation and some playtime in your new environment.
 :::
 
 
@@ -113,7 +113,7 @@ sudo vim /etc/hosts
    ![5_cert_p12.png](./images/5_cert_p12.png)
 
 6. Wizard will require additional confirmation for installation certification authority HCTS CA 1
-   (HUNT Cloud Trust Services). This is required to safely access your workbench. Before clicking
+   (HUNT Cloud Trust Services). This is required to safely access Workbench in your lab. Before clicking
    yes you should confirm that you see this thumbprint (fingerprint):
    `ADD9DFEC C998BE44 AC2F254E 75E5EB98 D91879A6`
 
@@ -143,8 +143,8 @@ sudo vim /etc/hosts
 
 4. Quit your browser and restart it again for the certificate to get recognized.
 
-5. When opening the workbench for the first time you will be asked for macOS password,
-   allowing the browser to access the your client certificate stored in Keychain.
+5. When opening Workbench for the first time you will be asked for macOS password,
+   allowing the browser to access your client certificate stored in Keychain.
    After filling in the password you can confirm by clicking on `Always allow`.
 
 :::
@@ -181,14 +181,14 @@ The certificate is now installed and can be used for network or secure web site 
 
 :::
 
-## 3. Open your new workbench
+## 3. Open your new Workbench
 
 ::: tip
 
-Make sure you are connected to the VPN before accessing the workbench.
+Make sure you are connected to the VPN before accessing Workbench.
 :::
 
-1. Open the your web browser (Firefox is required for Linux).
+1. Open your web browser (Firefox is required for Linux).
 
 2. Type in the URL address to your lab in your browser.
 
@@ -202,7 +202,7 @@ https://demolab.lab.hdc.ntnu.no
 
 3. Sign in with your HUNT Cloud lab username and lab password. This is the password that you made on your first login.
 
-4. With a little bit of luck you should now see your new workbench. Click around and explore your new world.
+4. With a little bit of luck you should now see your new Workbench. Click around and explore your new world.
 
 ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
@@ -222,7 +222,7 @@ Don't worry. [Contact us](/contact) on email for a password reset.
 ::: details Read more
 
 Firefox may require manually importing HUNT Cloud Certificate Authority to consider it trusted.
-If you see Error code: `SEC_ERROR_UNKNOWN_ISSUER` when accessing workbench follow these steps:
+If you see Error code: `SEC_ERROR_UNKNOWN_ISSUER` when accessing Workbench follow these steps:
 1. Download our public CA certificate: [https://pki.hdc.ntnu.no/hctsca1.crt](https://pki.hdc.ntnu.no/hctsca1.crt)
 2. Open Firefox url: `about:preferences#privacy`
 3. Scroll down to section `Certificates` and click on `View Certificates`:
