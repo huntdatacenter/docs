@@ -53,7 +53,7 @@ Yes. Here's an example on how you create a Conda environments with Python and IP
 conda create -n <name> 'python==3.8' 'ipykernel'
 ```
 
-And here's an example on how you create a Conda environment with R and R-IRkernel kernel and commonly used pacakges:
+And here's an example on how you create a Conda environment with R and R-IRkernel kernel and commonly used packages:
 
 ```
 conda create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
@@ -185,7 +185,7 @@ Terminal can be handy when it comes to managing [Conda packages](/working-in-you
 
 ### I am unable to log in to my Workbench applications?
 
-If you were previously able to access your applications in Workbench, for example RStudio, and then the access suddenly stopped, one quick approach to get things back up could be to restart your Workbench environment. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch) to learn how to restart. [Contact us](/contact) if you need further assitance.
+If you were previously able to access your applications in Workbench, for example RStudio, and then the access suddenly stopped, one quick approach to get things back up could be to restart your Workbench environment. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch) to learn how to restart. [Contact us](/contact) if you need further assistance.
 
 ### Has my certificates expired?
 
