@@ -6,11 +6,11 @@ description: Guides to your Workbench setup.
 
 # Workbench
 
-**The intention with the Workbench is to give you a simple and secure place to explore your data and tools together with your team.**
+**Workbench provides you with a simple and secure place to explore your data and tools together with your team.**
 
 ## About
 
-The Workbench is web-based and build around the feel of Jupyter notebooks with access to application such as _RStudio_, _R_, _Python_ and _Conda_. We have also included support for _MATLAB_ and _Stata_ for those than bring their own license.
+Workbench is web-based lab designed for interactive computing and built around Jupyter, with access to applications such as _Jupyter Notebook_, _Python_, _RStudio_, _R_ and _Conda_. We have also included support for _MATLAB_ and _Stata_ for those that bring their own license.
 
 ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
@@ -18,6 +18,4 @@ The Workbench is web-based and build around the feel of Jupyter notebooks with a
 
 ::: tip Service desk
 
-Head over to the service desk and click the blue button to [request your workbench access](/service-desk/#workbench-access).
-
-
+Head over to the service desk and click the blue button to [request your Workbench access](/service-desk/#workbench-access).
