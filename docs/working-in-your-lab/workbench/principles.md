@@ -10,7 +10,7 @@ description: Principles of Workbench use.
 
 **Workbench aims to improve your day to day work experience with Python, R code, and MATLAB.**
 
-To achieve that we have included MATLAB and RStudio development environments as you know them from before, and added Jupyter Notebooks with various kernels.
+To achieve that, we have built Workbench using Jupyter, open source solution designed for interactive computing across all programming languages. We have included MATLAB and RStudio development environments as you know them from before.
 
 <!-- see main page for licensing -->
 
@@ -20,7 +20,7 @@ We are spawning your Workbench in an isolated container on your home machine. Th
 
 ![wb_control_panel.png](./images/wb_control_panel.png)
 
-You should be able to access all the paths that you would expect on your home machine. The Workbench is preconfigured with access to data in lab volumes and your home directory, and you have a dedicated Workbench directory on your work volume:
+You should be able to access all the paths that you would expect on your home machine. Workbench is preconfigured with access to data in lab volumes and your home directory, and you have a dedicated Workbench directory on your work volume:
 
 ```
 /mnt/work/workbench/<username>
@@ -28,9 +28,9 @@ You should be able to access all the paths that you would expect on your home ma
 
 ## Reproducibility
 
-The Workbench is designed with a smooth experience when you work on your code. Thus, not everything should be ephemeral and you should still store data in volumes mounted from your home machine.
+Workbench is designed with a smooth experience when you work on your code. Thus, not everything should be ephemeral and you should still store data in volumes mounted from your home machine.
 
-The Workbench comes with the Conda package manager which is configured to store packages on your work volume.
+Workbench comes with the Conda package manager which is configured to store packages on your work volume.
 
 You will find Conda very helpful when it comes to Python and R packages. Conda is a great way to help you take control over your dependencies, and to avoid unwanted surprises over time. We recommend you to start with their guide to
 -[Manage environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
