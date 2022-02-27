@@ -182,7 +182,7 @@ You will need to reset the [Google Authenticator key](/guides/google-authenticat
 
 ### Update machine size
 
-Increase or decrease the size of one of your existing lab machines to a new [machine type](/services/machine-types/). 
+Increase or decrease the size of one of your existing lab machines to a new [machine type](/services/machine-types/).
 
 
 <div class="home" style="padding: 0px;"><div class="hero">
@@ -202,7 +202,7 @@ Increase or decrease the size of one of your existing lab machines to a new [mac
 
 ### New machine
 
-Add a [new machine](/services/machine-types/) to your lab. 
+Add a [new machine](/services/machine-types/) to your lab.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
@@ -270,14 +270,14 @@ Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
 ```
 
-If you plan to expand volumes of machines other than `home`, log into your machine of choice to identify the exact name: 
+If you plan to expand volumes of machines other than `home`, log into your machine of choice to identify the exact name:
 
 ```bash
 # -- Example
 `labname`-iaas-helya-gpu1
 ```
 
-You can identify the volume name while you are logged into the machine: 
+You can identify the volume name while you are logged into the machine:
 
 ```bash
 # -- Command
@@ -326,14 +326,14 @@ Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
 ```
 
-If you plan to add a volume on a machine other than `home`, log into your machine of choice to identify the exact name: 
+If you plan to add a volume on a machine other than `home`, log into your machine of choice to identify the exact name:
 
 ```bash
 # -- Example
 `labname`-iaas-helya-gpu1
 ```
 
-List the current volumes on the machine, and suggest a unique name for your new volume that is not already attached to your lab: 
+List the current volumes on the machine, and suggest a unique name for your new volume that is not already attached to your lab:
 
 ```bash
 # -- Command
@@ -353,7 +353,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 
 
-## Transport
+## Data transfers
 
 ### Internal kista
 
@@ -426,4 +426,3 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 * **Expected response time:** Days.
 * **Expected delivery:** Network opening communicated in your Slack lab channel.
 * **Cost:** Included in your lab subscription.
-
