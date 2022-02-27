@@ -1,14 +1,14 @@
 ---
 title: FAQ
-category: Workbenc
+category: Workbench
 permalink: /working-in-your-lab/workbench/faq
 sidebarDepth: 1
-description: Frequently asked questions about the Workbench in HUNT Lab.
+description: Frequently asked questions about Workbench in HUNT Lab.
 ---
 
-# FAQ on the Workbench
+# Workbench FAQ
 
-**This page contain frequently asked questions on the workbench service. Help us expand this section by sending us your questions and burning topics.**
+**This page contain frequently asked questions about Workbench. Help us expand this section by sending us your questions and burning topics.**
 
 ::: tip Troubleshooting
 
@@ -29,7 +29,7 @@ Help us expand this section by [sending us questions and ideas](/contact) for ne
 
 ### Where is my data?
 
-Workbench uses the same storages volumes as your home machine. This means that you can access all lab data, including your home directory, using the same paths in your scripts, for example: 
+Workbench uses the same storages volumes as your home machine. This means that you can access all lab data, including your home directory, using the same paths in your scripts, for example:
 
 ```bash
 /mnt/archive/<my-data-folder>
@@ -75,7 +75,7 @@ You will be able to select default environments including MATLAB kernel and cust
 
 ![wb_notebook_conda_env.png](./images/wb_notebook_conda_env.png)
 
-### How can I install apt packages? 
+### How can I install apt packages?
 
 We recommend that you install apt packages in your Conda environments since these will be installed on disk and such be persistent during restarts (regular apt commands run in terminal will be removed during your next restart). Search [anaconda](https://anaconda.org/) to identify your package name and get going with your installation.
 
@@ -84,9 +84,9 @@ We recommend that you install apt packages in your Conda environments since thes
 
 ## Management
 
-### How can I restart my workbench environment and start from scratch?
+### How can I restart my Workbench environment and start from scratch?
 
-Sometimes you might want to start over with a fresh environment: 
+Sometimes you might want to start over with a fresh environment:
 
 (1) Select control panel in top right corner:
 
@@ -100,16 +100,16 @@ You can either start the new instance by hitting the button or by logging in aga
 
 ### Can I install Jupyter extensions?
 
-No. Due to security reasons, this is currently not allowed and the Jupyter extension manager is disabled. Feel free to reach out to us on Slack so we can discuss adding useful extensions into your workbench.
+No. Due to security reasons, this is currently not allowed and the Jupyter extension manager is disabled. Feel free to reach out to us on Slack so we can discuss adding useful extensions into your Workbench.
 
 
 
 
 ## MATLAB
 
-### Are there any limitations to the workbench MATLA?
+### Are there any limitations to MATLAB in Workbench?
 
-Yes, some limitations may apply. Read more in the [official documentation](https://se.mathworks.com/products/matlab-online/limitations.html) from MathWorks.
+Yes, some limitations to web-based version of MATLAB may apply. Read more in the [official documentation](https://se.mathworks.com/products/matlab-online/limitations.html) from MathWorks.
 
 ### How do I report issues with MATLAB?
 
@@ -129,13 +129,21 @@ Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 
 ## RStudio
 
-### Which R version is available in RStudio? 
+### Which R version is available in RStudio?
 
-The current workbench version of R is `R 4.0`.
+RStudio is configured to use packages installed in the environment named `r-base`.
+You can find your R version using [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
+```bash
+conda list -n r-base | grep r-base
+```
 
-### How do I install my own R packages? 
+### Which R packages are preinstalled?
 
-If you want to install your own packages, we recommend to use [Conda](/working-in-your-lab/analytical-tools/conda/) for reliability as `install.packages()` inside R will be unreliable. To install a package, run the following code in your [workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
+Currently we setup `r-base` environment with these conda packages: `r-base`, `r-irkernel`, `r-devtools`, `r-remotes`, `r-dplyr`, `r-tidyverse`, `r-haven`. If you have older setup and missing some of these packages you can follow the answer below to install them.
+
+### How do I install additional R packages?
+
+If you want to install your own packages, we recommend to use [Conda](/working-in-your-lab/analytical-tools/conda/) where possible. You can defer to alternative methods such as `install.packages()` when the package is not available in Conda. To install a package, run the following code in your [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
 
 ```bash
 # -- Principal example
@@ -145,9 +153,9 @@ conda install -n r-base -c conda-forge r-'<package-name>' r-'<another-package-na
 conda install -n r-base -c conda-forge r-dplyr
 ```
 
-RStudio is configured to use packages installed in the environment named `r-base` as shown above. For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr). When the installation is complete, open R in your workbench and load your new package: 
+For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr). When the installation is complete, open R in your Workbench and load your new package:
 
-```bash 
+```bash
 # -- Principal example
 library(<package-name>)
 
@@ -155,28 +163,30 @@ library(<package-name>)
 library(dplyr)
 ```
 
-### How do I reset my user state in RStudio? 
+### How do I reset my user state in RStudio?
 
-When you [restart your workbench from scratch](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch), your RStudio user state might still be preserved. [Click here](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server) to read the RStudio support pages about how you can manually remove your user state.
+When you [restart your Workbench from scratch](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch), your RStudio user state might still be preserved. To achieve complete reset read the RStudio support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server).
 
 
 ## Terminal
 
-### Can I use the terminal from my workbench?  
+### Can I use a terminal from my Workbench?  
 
-Yes. You can find the workbench terminal in main view of applications under the section: Other.
+Yes. You can find Workbench Terminal in main view of applications under the section: Other.
 
 ![other_apps_terminal.png](./images/other_apps_terminal.png)
 
-### When do I need to use the terminal? 
+### When do I need to use a terminal?
 
-Terminal can be handy when it comes to manage [Conda packages](/working-in-your-lab/analytical-tools/conda/), monitor resources (htop), or to handle other tasks.
+Terminal can be handy when it comes to managing [Conda packages](/working-in-your-lab/analytical-tools/conda/), monitoring resources (`htop`), or handling other tasks.
 
 
 ## Troubleshooting
 
-### I am unable to log in to my workbench applications? 
+### I am unable to log in to my Workbench applications?
 
-If you were previously able to access your workbench applications, for example RStudio, and then the access suddenly stopped, one quick approach to get things back up could be to restart your workbench environment. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch) to learn how to restart. [Contact us](/contact) if you need further assitance.
+If you were previously able to access your applications in Workbench, for example RStudio, and then the access suddenly stopped, one quick approach to get things back up could be to restart your Workbench environment. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch) to learn how to restart. [Contact us](/contact) if you need further assitance.
 
+### Has my certificates expired?
 
+If you were previously able to access Workbench and now your browser reports expired certificates do not hesitate to [contact us](/contact), we can usually reissue new Workbench certificates pretty quickly.
