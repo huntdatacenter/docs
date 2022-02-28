@@ -77,7 +77,7 @@ Click the button below to order access for a new user to your lab.
 * **Expected response time:** Days.
 * **Expected delivery:** Workbench access key and certificate.
 * **Requirement:** Active Signal app on phone.
-* **Next step:** [Prepare your key transfer](/guides/workbench-key-transfer/).
+* **Next step:** [Prepare your key transfer](/guides/workbench-request/).
 * **Cost:** Included in your lab subscription.
 
 
