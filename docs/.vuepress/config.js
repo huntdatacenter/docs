@@ -280,6 +280,10 @@ module.exports = {
           isGroup: true,
           children: [
             "/service-desk/",
+            "/service-desk/user-orders.md",
+            "/service-desk/lab-orders.md",
+            "/service-desk/data-space-orders.md",
+            "/service-desk/service-center-orders.md",
           {
             title: "Access guides",
             text: "Access guides",

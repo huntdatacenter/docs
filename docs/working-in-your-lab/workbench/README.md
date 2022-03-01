@@ -18,4 +18,4 @@ Workbench is web-based lab designed for interactive computing and built around J
 
 ::: tip Service desk
 
-Head over to the service desk and click the blue button to [request your Workbench access](/service-desk/#workbench-access).
+Head over to the service desk and click the blue button to [request your Workbench access](/service-desk/user-orders#workbench-access).

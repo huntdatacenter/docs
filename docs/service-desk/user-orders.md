@@ -1,0 +1,149 @@
+---
+title: Lab user orders
+category: Service desk
+description: HUNT Cloud service desk orders for lab users.
+sidebarDepth: 2
+---
+
+# Service desk orders for lab users
+
+**This page list predefined service orders for active users in one or more labs. To place an order, click the blue botton and send us a pre-filled email with required information.**
+
+[[toc]]
+
+::: tip
+
+(1) Send your order from your organizational email that was registered in your user agreement. (2) Send us a regular [email](/contact) with your request if you can't find what you are looking for on the this page.
+
+:::
+
+
+
+
+## Lab access
+
+::: warning New users
+
+The service orders below are aimed at active lab users. Lab access for new users are ordered by lab leaders or lab coordinators from our [lab orders page](/service-desk/lab-orders) using the [new lab user](/service-desk/lab-orders#new-lab-user) button. 
+
+:::
+
+### Workbench access
+
+[Workbench](/working-in-your-lab/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, or MATLAB.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Workbench%20order%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20try%20Workbench%20in%20%7Blabname%7D.%0A%0AI%20have%20install%20and%20activated%20the%20Signal%20app%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20key%20and%20certificate.%20%0A%0AThese%20are%20the%20tools%20I%20plan%20to%20use%3A%20%28Rstudio/Jupyter/Python/MATLAB/Stata%29.%0A%0ABest%2C" class="nav-link external action-button">
+    Request workbench access
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** Workbench access key and certificate.
+* **Requirement:** Active Signal app on phone.
+* **Next step:** [Prepare your key transfer](/guides/workbench-request/).
+* **Cost:** Included in your lab subscription.
+
+
+### SSH passphrase reset  
+
+Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to access your workbench and install software on your home machine.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=SSH%20passphrase%20reset%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20passphrase%20reset%20for%20my%20user%20%7Busername%7D%20%40%20%7Blabname%7D.%0A%0AI%20have%20activated%20Signal%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20temporary%20key%20here.%0A%0ABest%2C" class="nav-link external action-button">
+    Request SSH passphrase reset
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** Temporary passphrase on Signal.
+* **Requirement:** Active Signal app on your phone.
+* **Next step:** [Guide on the passphrase reset](/guides/configure-ssh/).
+* **Cost:** Included in your lab subscription.
+
+### Deactivate lab access
+
+Head over to the [lab orders page](/service-desk/lab-orders#deactivate-lab-user) to deactivate your lab access.
+
+
+
+
+
+
+
+
+## System access
+
+### VPN access list
+
+We allow connection from known IP addresses only outside Norway. Access from networks outside Norway needs to be requested included in our VPN access list.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20access%20opening%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20VPN%20access%20opening%20for%20the%20following%20IP%20address%3A%20%0A%0A%7BIP4-address%7D.%0A%0AI%20am%20looking%20forward%20to%20be%20notified%20on%20email%20when%20the%20opening%20is%20implemented.%0A%0ABest%2C
+" class="nav-link external action-button">
+    Request VPN access opening
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Required information**: [Your IP4 address](http://ip4.me).
+* **Expected response time:** One day.
+* **Expected delivery:** Opening communicated on email.
+
+### VPN certificate reset  
+
+You may need to reset your VPN certificate when you get a new local machine or if you need a new VPN passphrase.
+
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20certificate%20reset%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20reset%20my%20VPN%20certificate.%20%0A%0AI%20have%20an%20active%20Signal%20account%20on%20my%20phone%2C%20and%20are%20looking%20forward%20to%20receive%20my%20new%20VPN%20passphrase%20on%20the%20phone%20and%20a%20link%20to%20the%20new%20VPN%20certificate%20on%20my%20organizational%20email.%0A%0AI%20am%20aware%20that%20my%20lab%20access%20will%20be%20paused%20from%20the%20new%20certificate%20is%20issued%20and%20until%20I%20have%20installed%20the%20new%20certificate%20on%20my%20local%20machine.%0A%0ABest%2C" class="nav-link external action-button">
+    Request VPN certificate reset
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** VPN passphrase on Signal, link to VPN certificate on email.
+* **Requirement:** Active Signal app on your phone.
+* **Cost:** Included in your lab subscription.
+
+
+
+### Google authenticator key reset  
+
+You will need to reset the [Google Authenticator key](/guides/google-authenticator-reset/) that you need to access the HUNT Cloud VPN, for example when you change your phone.
+
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Google%20authenticator%20key%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20Google%20authenticator%20key%20for%20my%20VPN%20access.%20%0A%0AAlternative%201%3A%20%0A%0AI%20have%20an%20active%20Signal%20account%20on%20the%20same%20phone%20number%20that%20is%20registered%20in%20my%20user%20account%20and%20are%20looking%20forward%20to%20receive%20my%20new%20key%20on%20my%20phone.%0A%0AAlternative%202%3A%20%0A%0APlease%20note%20that%20I%20have%20a%20new%20phone%20number%20%28%2B00-0000000%29.%20I%20have%20activated%20Signal%20on%20this%20number%20and%20are%20looking%20forward%20to%20receive%20my%20new%20key%20on%20the%20app.%0A%0ABest%2C" class="nav-link external action-button">
+    Request Google authenticator key reset
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** New key on Signal.
+* **Requirement:** Active Signal app on your phone.
+* **Next step:** [Guide on the key reset](/guides/google-authenticator-reset/).
+* **Cost:** Included in your lab subscription.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
