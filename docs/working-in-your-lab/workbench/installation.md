@@ -145,7 +145,7 @@ sudo vim /etc/hosts
 
 5. When opening Workbench for the first time you will be asked for macOS password,
    allowing the browser to access your client certificate stored in Keychain.
-   After filling in the password you can confirm by clicking on `Always allow`.
+   After filling in the password you can confirm by clicking on `Always allow` / `Tillat alltid`.
 
    ![macos_chrome.png](./images/macos_chrome.png)
 
