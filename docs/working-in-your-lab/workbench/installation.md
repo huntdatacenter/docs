@@ -147,6 +147,8 @@ sudo vim /etc/hosts
    allowing the browser to access your client certificate stored in Keychain.
    After filling in the password you can confirm by clicking on `Always allow`.
 
+   ![macos_chrome.png](./images/macos_chrome.png)
+
 :::
 
 ::: details Ubuntu Linux
