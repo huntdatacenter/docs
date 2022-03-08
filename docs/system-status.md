@@ -8,9 +8,11 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 
-::: danger System access
-**2022-03-08 09:36** - Issues connecting to the VPN service reported. We are investigating. New status 11:00.
+::: tip All systems
+Operational.
 :::
+
+**2022-03-08 11:44** - Lost connection to VPN from 09:36-11:18 due to large data imports. Services are restored and we will work on traffic shaping avoiding this in the future.
 
 **2022-02-06 17:00 - Lab machines with reduced functionality.** A subset of lab machines have storage volumes in read-only. These machines needs to be restarted. We will start on restarts from Monday morning. Contact us for priority.
 
