@@ -8,8 +8,8 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 
-::: tip All systems
-Operational.
+::: warning All systems
+**2022-03-08 09:36** - Issues connecting to VPN reported. We are investigating. New status 10:30.
 :::
 
 **2022-02-06 17:00 - Lab machines with reduced functionality.** A subset of lab machines have storage volumes in read-only. These machines needs to be restarted. We will start on restarts from Monday morning. Contact us for priority.
