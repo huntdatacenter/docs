@@ -61,7 +61,7 @@ Operational
 # Color example: RED
 
 ::: danger Lab access
-**2020-00-00 22:46** - Some labs are inaccsessible. We are investigating. Next update expected 23:30.
+**2020-00-00 22:46** - Some or all labs are inaccsessible. We are investigating. Next update expected 23:30.
 :::
 
 ::: danger All systems

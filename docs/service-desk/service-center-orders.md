@@ -1,5 +1,5 @@
 ---
-title: Service center orders
+title: Service centers
 category: Service desk
 description: HUNT Cloud service desk orders for service centers.
 sidebarDepth: 2

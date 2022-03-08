@@ -1,5 +1,5 @@
 ---
-title: Lab orders
+title: Labs
 category: Service desk
 description: HUNT Cloud service desk orders for labs.
 sidebarDepth: 2

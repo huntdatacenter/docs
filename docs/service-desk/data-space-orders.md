@@ -1,5 +1,5 @@
 ---
-title: Data space orders
+title: Data spaces
 category: Service desk
 description: HUNT Cloud service desk orders for data spaces.
 sidebarDepth: 2
