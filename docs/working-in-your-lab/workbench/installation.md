@@ -157,7 +157,7 @@ sudo vim /etc/hosts
 
 You can install Firefox on your local machine with the following code: `apt install firefox`.
 
-2. Open url `about:preferences#privacy` or click `Edit` > `Preferences`.
+2. Open url `about:preferences#privacy` and search for "Certificates" or click `Edit` > `Preferences`.
 
    ![p12_firefox_1.png](./images/p12_firefox_1.png)
 
@@ -169,7 +169,7 @@ You can install Firefox on your local machine with the following code: `apt inst
 
    ![p12_firefox_3.png](./images/p12_firefox_3.png)
 
-5. Browse for and select your PFX file. Enter the password.
+5. Browse for and select your **`.p12`** file and enter the **`TLS passphrase`** that you got on Signal.
 
    ![p12_firefox_4.png](./images/p12_firefox_4.png)
 
@@ -202,9 +202,16 @@ https://<labname>.lab.hdc.ntnu.no
 https://demolab.lab.hdc.ntnu.no
 ```
 
+Click "OK" is you get a "User Identification Request" for your new certificate and ensure that the "Remember this decision" is checked.  The certificate are to be issued by: 
+
+```
+Organizatoin: "HUNT Cloud"
+Issued Under: "HUNT Cloud Trust Services"
+```
+
 3. Sign in with your HUNT Cloud lab username and lab password. This is the password that you made on your first login.
 
-4. With a little bit of luck you should now see your new Workbench. Click around and explore your new world.
+4. With a little bit of luck you should now see your new Workbench. Click around and explore your new world!
 
 ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
