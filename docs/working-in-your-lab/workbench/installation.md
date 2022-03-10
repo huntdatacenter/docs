@@ -254,6 +254,6 @@ If you are a fast clicker and get to an app before it's initialized in the backg
 
 ::: details Read more
 
-Access to MATLAB requires that your lab holds required licenses. If you click on the MATLAB icon without a full installation you will get a red error box stating that "matlab executable not found in PATH". Contact your lab coordinator to discuss licensing options and for them to place a MATLAB order for your lab.
+Access to MATLAB requires the application to be installed in your lab. For now, if you click on the MATLAB icon and the application is missing you will meet a red error box stating that "matlab executable not found in PATH". Contact your lab coordinator to investigate your licensing options and [contact us](/contact) us with your installation order.
 
 :::
