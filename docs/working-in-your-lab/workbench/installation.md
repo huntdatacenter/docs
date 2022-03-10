@@ -241,3 +241,19 @@ If you see Error code: `SEC_ERROR_UNKNOWN_ISSUER` when accessing Workbench follo
 5. Select `hctsca1.crt` and check option `Trust this CA to identify websites`:
    ![mac-firefox-trust-ca.png](./images/mac-firefox-trust-ca.png)
 :::
+
+### 500 : Internal Server Error
+
+::: details Read more
+
+If you are a fast clicker and get to an app before it's initialized in the background you might get the "500 : Internal Server Error"-message with the subtext "Could not start rstudio in time". Reload the page (Ctrl/Command+R), and hopefully things will be sorted. [Contact us](/contact) if the message persist.
+
+:::
+
+### Error - 'matlab' executable not found in PATH
+
+::: details Read more
+
+Access to MATLAB requires that your lab holds required licenses. If you click on the MATLAB icon without a full installation you will get a red error box stating that "matlab executable not found in PATH". Contact your lab coordinator to discuss licensing options and for them to place a MATLAB order for your lab.
+
+:::
