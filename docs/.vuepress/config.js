@@ -190,6 +190,7 @@ module.exports = {
           isGroup: true,
           children: [
             "/working-in-your-lab/",
+            "/working-in-your-lab/community.md",
             {
               title: "Workbench",
               text: "Workbench",
