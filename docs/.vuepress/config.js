@@ -260,7 +260,7 @@ module.exports = {
               text: "Guides",
               isGroup: true,
               children: [
-                "/working-in-your-lab/guides/"
+                "/working-in-your-lab/guides/workbench-stata.md"
               ],
             },
           ]
