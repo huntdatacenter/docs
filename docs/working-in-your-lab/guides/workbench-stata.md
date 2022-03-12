@@ -3,7 +3,7 @@ title: Stata guide
 category: Guides
 permalink: /guides/stata
 sidebarDepth: 1
-description: Guide to get going with Stata on your workbench.
+description: Guide to get going with Stata in your HUNT Cloud workbench.
 ---
 
 # Stata guide
