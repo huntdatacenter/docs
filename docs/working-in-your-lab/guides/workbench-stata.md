@@ -24,11 +24,11 @@ First, open your workbench and click on the Stata icon. This opens a new workben
 
 ![Open Stata](./images/stata_notebook.png)
 
-Look at the bottom of your screen to verify that Stata is loaded (`conda-sta`) and that your notebook is in an `Idle` state, meaning that it's ready to process your Stata commands.
+Look at the bottom of your screen to verify that Stata is loaded (`conda-stata`) and that your notebook is in an `Idle` state, meaning that it's ready to process your Stata commands.
 
 ![Notebook status](./images/stata_idle.png)
  
-::: details Notebook states
+::: details More on notebook states
 
 * **Idle**. This means that your kernel is loaded and that your notebook is ready to process your commands.
 
@@ -43,27 +43,30 @@ Look at the bottom of your screen to verify that Stata is loaded (`conda-sta`) a
 
 ## Load data
 
-Now that your new notebook is open, let's try to import data. Click on the first cell in your notebook and write the regular data import command from Stata.
+Now that your new notebook is open, let's try to import data. Click on the first cell in your notebook and add the Stata command.
 
 ```python
 // load example data
 sysuse auto
 ```
 
-Your command should looks similar to this then included in the notebook:
+Your command should look similar to this when included in the notebook:
 
 ![Load data](./images/stata_load_data_example.png)
 
-Then click on the cell and hit `shift+enter` on your keyboard or click the `play-button` at the top of your notebook to run the code. This will load the standard Stata `auto` dataset and acknowledge witht the text `(1978 Automobile Data)` which means that the command was completed successfully.
+Now click on the cell and hit `shift+enter` on your keyboard, or click the `play-button` at the top of your notebook, to run the code. This will load the standard Stata `auto` dataset and acknowledge witht the text `(1978 Automobile Data)` which means that the command was completed successfully.
 
 ![Load data acknowledgement](./images/stata_load_data_example_ack.png)
 
 ::: details Load data from your lab
 
-Load data from your lab machine with the following command. 
+You may load data that's stored in your lab with the following command: 
 
-```
-// -- principal example
+```python
+// principal example
+sysuse "/mnt/archive/<folder>/<file>.dta"
+
+// practical example 
 sysuse "/mnt/archive/data/test.dta"
 ```
 
@@ -73,20 +76,20 @@ Note that you need to add the path to your own data in the example above to make
 
 ## Describe data
 
-The `auto` data set is now available in your notebook for further investigation, for example by the `describe` and `summarize` commands. 
+The `auto` data set is now available in your notebook for further investigation. Let's run a few examples to get us going. 
 
-First, let's cut and paste the following text and hit `shift+enter` to run the command: 
+First, let's cut and paste the following text and hit `shift+enter` to describe your data variables: 
 
 ```python
 // describe your variables
 describe
 ```
 
-This should return a description of your data: 
+This should return a description of data variables: 
 
 ![Stata describe](./images/stata_describe.png)
 
-Then, let's try the `summarize` command: 
+Then, let's try the `summarize` command to describe your data: 
 
 ```python
 // summarize your data
@@ -100,14 +103,14 @@ This should return a summary of your data:
 
 ## View graphs
 
-It's similar with the Stata graph functions. You run them in a cell, and the output gets visualized in your notebook. To illustrate, let's test with a few plots from UCLA's [introduction to Stata plotting](https://stats.oarc.ucla.edu/stata/modules/graph8/intro/introduction-to-graphs-in-stata/): 
+The Stata graph functions are similar, you run them in a cell and view the output in your notebook. To illustrate, let's test with a few plots from UCLA's great [introduction to Stata plotting](https://stats.oarc.ucla.edu/stata/modules/graph8/intro/introduction-to-graphs-in-stata/): 
 
 ```python
 // make a scatter plot
 scatter price mpg
 ```
 
-This should print the plot on your screen: 
+This should print a scatter plot on your screen: 
 
 ![Stata scatter](./images/stata_scatter.png)
 
@@ -117,13 +120,13 @@ This should print the plot on your screen:
 
 :::
 
-Here are a few more you can explore: 
+Next, let's do a histogram: 
 
 ```python
 // make a histogram
 histogram mpg
 ```
-And before we head to the next section, a slighlty more advanced:
+And before we head to the next section, a slighlty more advanced graph example:
 
 ```python
 // Twoway linear prediction plots with CIs
@@ -134,26 +137,26 @@ You output should look similar to this:
 
 ![Stata twoway](./images/stata_twoway.png)
 
-The generation of this plot uses a tiny bit more compute resources than the previous once, so depending on your home machine type, the notebook state at the botton of your notebook may shift from `Idle` to `Busy` in a few seconds while the graph is printed.
+The generation of this plot uses a tiny bit more compute resources than the previous once, so depending on your home machine type, the notebook state at the botton of your notebook may shift from `Idle` to `Busy` in a few seconds while the graph is printed. Your notebook may be unresponsive as long as the state is `Busy`.
 
 ## Save graphs
 
-You can also save your graphs in your lab with the `export` command: 
+You may save your graphs on your lab home machine with the `export` command: 
 
 ```pyhon
 // save your latest graph
 graph export mygraph.svg
 ```
 
-The above command will save the latest graph that you viewed in your notebook in your workbench folder (red arrow). 
+The above command will save the latest graph that you viewed in your notebook in your workbench folder (red arrow on the new file). 
 
 ![Stata graph save 1](./images/stata_graph_export1.png)
 
-Click on the file to view the graph in your workbench, or click on the `download` icon to export the graph to your local machine. 
+Click on the file to view the graph in your workbench, or click on the `download` icon (red arrow) to export the graph to your local machine. 
 
 ![Stata graph save 2](./images/stata_graph_export2.png)
 
-You can also save your graphs directly to other folders in your lab machine to they are instantly accessible for your lab colleagues:
+You may also save your graphs in other folders on your lab machine to make them accessible for your lab colleagues:
 
 ```python
 // Principal example of code that saves your 
@@ -168,7 +171,7 @@ graph export /mnt/work/graphs/mygraph.svg
 
 ## Run analysis
 
-We will not dive into data analytics in this guide since there are so many nice guides out there (such as these from [UCLA Advanced Research Computing](https://stats.oarc.ucla.edu/?s=stata)). Although, let's do to quick examples for fun: 
+We will not dive into data analytics in this guide since there are so many other great guides out there, for example the once from [UCLA Advanced Research Computing](https://stats.oarc.ucla.edu/?s=stata)). Although, let's do two quick examples for fun: 
 
 ```python
 // get mean value from a variable
@@ -197,7 +200,7 @@ It's great to see that you followed the guide all the way to the end. Time to ce
 
 :::
 
-If you miss something in this guide, please [contact us](/contact) so we together can improve the content for the next scientists in line.
+If you miss something, please [contact us](/contact) so we can improve the content for the next scientists in line.
 
 
 
