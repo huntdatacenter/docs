@@ -192,13 +192,25 @@ regress price mpg weight
 ![Stata mean](./images/stata_multiple_linear_regression.png)
 
 
+## Next steps
+
 ::: tip Time for coffee!
 
 It's great to see that you followed the guide all the way to the end. Time to celebrate with a cup of fresh coffee before your start your exploration into your new workbench Stata world!
 
 :::
 
-If you miss something, please [contact us](/contact) so we can improve the content for the next scientists in line.
+#### More examples
+
+If you want to learn more about the stata kernel, head over to Kayle Barron's [Example stata_kernel Jupyter notebook](https://nbviewer.org/github/kylebarron/stata_kernel/blob/master/examples/Example.ipynb). The notebook includes more examples, including the `magics` commands that gives you special powers. Cut and paste the text from the cells into your current stata_kernel workbench notebook to get going. 
+
+#### Community discussions
+
+Head over to our Slack **`#community-stata`** channel to chat with other Stata workbench users from our [cloud community](/community) or ask questions directly to us.
+
+#### Help us improve this page
+
+If you miss something, please [contact us](/contact) so we can improve this Stata guide content for the next scientists in line.
 
 
 
