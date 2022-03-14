@@ -44,7 +44,7 @@ The service orders below are aimed at active lab users. Lab access for new users
 * **Expected delivery:** Workbench access key and certificate.
 * **Requirement:** Active Signal app on phone.
 * **Next step:** [Prepare your key transfer](/guides/workbench-request/).
-* **Cost:** Included in your lab subscription.
+* **Cost:** Included in the lab subscription.
 
 
 ### SSH passphrase reset  
@@ -63,7 +63,7 @@ Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to acce
 * **Expected delivery:** Temporary passphrase on Signal.
 * **Requirement:** Active Signal app on your phone.
 * **Next step:** [Guide on the passphrase reset](/guides/configure-ssh/).
-* **Cost:** Included in your lab subscription.
+* **Cost:** Included in the lab subscription.
 
 ### Deactivate lab access
 
@@ -94,6 +94,8 @@ We allow connection from known IP addresses only outside Norway. Access from net
 * **Required information**: [Your IP4 address](http://ip4.me).
 * **Expected response time:** One day.
 * **Expected delivery:** Opening communicated on email.
+* **Cost:** Included in the lab subscription.
+
 
 ### VPN certificate reset  
 
@@ -111,14 +113,13 @@ You may need to reset your VPN certificate when you get a new local machine or i
 * **Expected response time:** Days.
 * **Expected delivery:** VPN passphrase on Signal, link to VPN certificate on email.
 * **Requirement:** Active Signal app on your phone.
-* **Cost:** Included in your lab subscription.
+* **Cost:** Included in the lab subscription.
 
 
 
 ### Google authenticator key reset  
 
 You will need to reset the [Google Authenticator key](/guides/google-authenticator-reset/) that you need to access the HUNT Cloud VPN, for example when you change your phone.
-
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
@@ -132,16 +133,27 @@ You will need to reset the [Google Authenticator key](/guides/google-authenticat
 * **Expected delivery:** New key on Signal.
 * **Requirement:** Active Signal app on your phone.
 * **Next step:** [Guide on the key reset](/guides/google-authenticator-reset/).
-* **Cost:** Included in your lab subscription.
+* **Cost:** Included in the lab subscription.
 
+## Applications
 
+### MobaXterm configuration file
 
+You may simplify your MobaXterm configuration using a predefined file with credentials and configuration during setup.
 
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=MobaXterm%20file%20-%20%7Busername%7D%40%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20MobXterm%20configuration%20file.%20%0A%0AI%20am%20looking%20forward%20to%20receive%20my%20file%20over%20email%2C%20and%20then%20head%20over%20to%20the%20docs%20to%20get%20going%20on%20the%20configuration%3A%20%0A%0Ahttps%3A//docs.hdc.ntnu.no/working-in-your-lab/technical-tools/mobaxterm/%0A%0ABest%2C" class="nav-link external action-button">
+    Request MobaXterm configuration file
+  </a>
+</p></div></div>
 
-
-
-
-
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** File as email attachment.
+* **Requirement:** Active SSH connection.
+* **Next step:** [MobaXterm configuration guide](/working-in-your-lab/technical-tools/mobaxterm/).
+* **Cost:** Included in the lab subscription.
 
 
 

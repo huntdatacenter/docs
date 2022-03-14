@@ -8,21 +8,26 @@ description: Usage guide for MobaXterm.
 
 # MobaXterm
 
-MobaXterm is a software package that simplifies connecting to your lab on HUNT Cloud over SSH from your local Windows computer or laptop.
+**[MobaXterm](https://mobaxterm.mobatek.net/) is an application that simplifies SSH connections to your lab from your local Windows machine.**
+
+[[toc]]
 
 ::: warning Requirements
 
-A working SSH connection to both entry and home as described in the [How To Connect To Your Lab](/getting-started/) guide.
-Otherwise it will be difficult to get MobaXterm to work.
+(1) A working SSH connection to both entry and home as described in the [How To Connect To Your Lab](/getting-started/) guide.
 
-Make sure Putty is installed as shown in the guide above, before you use MobaXterm.
+(2) The Moba file with credentials and configuration will be handy to ease the installation. [Contact us](/contact) for a new file if you need one.
+
+Without these it will be hard to ensure a smooth MobaXterm configuration.
+
+<!-- Make sure Putty is installed as shown in the guide above, before you use MobaXterm. -->
 
 :::
 
 ## 1. How to install
 
 ::: tip
-Lab users from NTNU can install MobaXterm using software center.
+Lab users from NTNU can install MobaXterm using the software center.
 :::
 
 - Download the `Home edition (installer edition)` from [mobaxterm.mobatek.net](https://mobaxterm.mobatek.net/download.html):
@@ -119,9 +124,17 @@ If you have not opened it, you can open it now and MobaXterm will pick up your l
 
 With a little bit of luck, you should now be able to connect directly from your client computer to your home node in your lab.
 
+::: tip Request a new Moba file
+
+[Contact us](/contact) for a new Moba file with credentials and configuration if you need one.
+
+:::
+
 ## Troubleshooting
 
-::: details Check SSH keys in session configuration
+#### Check SSH keys in session configuration
+
+::: details More information
 
 - Right click on the session that you want to edit and choose option `Edit session`.
   ![mobaxterm_edit-session](./images/mobaxterm_edit-session.png)
@@ -136,7 +149,9 @@ With a little bit of luck, you should now be able to connect directly from your 
 
 :::
 
-::: details Agent refused operation
+#### Agent refused operation
+
+::: details More information
 
 If you see the error message saying: `Agent refused operation` you need to install Putty.
 
@@ -150,7 +165,9 @@ Once Pageant is running, you can start MobaXterm.
 
 :::
 
-::: details Configure custom SSH config
+#### Configure custom SSH config
+
+::: details More information
 
 This part might be needed if you plan to use SSH tunnel. It is not part of recommended workflow.
 
@@ -166,7 +183,10 @@ EOF
 
 :::
 
-::: details Configure custom session
+
+#### Configure custom session
+
+::: details More information
 
 - Open MobaXterm
 - Select a new session and click on the `SSH` image on the `Session settings`.

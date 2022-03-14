@@ -60,6 +60,27 @@ See the "Lab" section in our [Services specifications](/services/specifications/
 
 
 
+
+
+### Delete lab
+
+Click the button below to order a lab deletion of an active lab under your data space.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Lab%20deletion%20order%20-%20%7Blabname%7D%40%7Bdata%20space%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20the%20following%20lab%20under%20our%20data%20space%20to%20be%20deleted%3A%0A%0Alab%3D%7Blabname%7D%0A%0AI%20have%20attached%20a%20signed%20lab%20deletion%20order%20to%20this%20email%20confirming%20the%20request.%20%0A%0AWe%20have%20already%20exported%20the%20data%20that%20we%20need%20from%20the%20lab.%20%0A%0AI%20am%20aware%20that%20all%20data%20in%20the%20lab%20will%20be%20irrevocably%20destroyed%20and%20can%20not%20be%20recreated%20once%20this%20order%20is%20completed.%0A%0AI%20am%20looking%20forward%20to%20receive%20a%20written%20notification%20on%20email%20confirming%20that%20the%20lab%20and%20all%20attached%20data%20is%20deleted.%0A%0ABest%2C" class="nav-link external action-button">
+    Request a lab deletion
+  </a>
+</p></div></div>
+
+* **Who can order:** Data space leaders and Lab leaders in collaboration.
+* **Required attachment**: [A signed lab deletion order](/agreements/downloads/#lab-deletion-order).
+* **Expected response time:** Weeks.
+* **Cost:** Included in your lab subscription.
+
+
+
+
 ## Transport
 
 ::: tip Internal transfers and import
@@ -83,7 +104,7 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 * **Required attachments**: (1) [A signed external kista export order](/agreements/downloads/#external-kista-export-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external uploader.
 * **Expected response time:** Days.
 * **Expected delivery:** Access information sent to the lab user that will make data available for export.
-* **Cost:** Included in your lab subscription.
+* **Cost:** Included in your data space subscription.
 
 
 
@@ -104,5 +125,5 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 * **Required attachments**: [A signed network opening order](/agreements/downloads/#network-opening-order).
 * **Expected response time:** Days.
 * **Expected delivery:** Network opening communicated in your Slack lab channel.
-* **Cost:** Included in your lab subscription.
+* **Cost:** Included in your data space subscription.
 
