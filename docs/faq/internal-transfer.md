@@ -15,7 +15,7 @@ This page lists frequently asked questions related to internal transfers and net
 ## Internal Kista
 
 ### Can I transfer data directly to other labs?
-Yes and no. Direct transfers between labs are blocked. However, you can transfer data to other labs using our internal kista service.
+Yes and no. Direct transfers between labs are blocked by default. However, you can transfer data to other labs using our internal kista service.
 
 ### What is an internal kista?
 Internal kista is our service for simple and secure data transfers between two labs. One lab make data available (uploader) to another lab that can download the data (downloader). The transfer take place on SFTP servers dedicated to the specific data transaction.
@@ -24,10 +24,14 @@ Internal kista is our service for simple and secure data transfers between two l
 Lab leader or lab coordinator in the lab that will make data available (uploader lab) can request internal kistas through our [Internal kista transfer order](/agreements/downloads/#internal-kista-transfer-order).
 
 ### How long does it take to get access to an internal kista?
-Allow for up to a week in deployment time after you send us the signed transfer order. Although usually the deployment will be available within days. We will notify both the upload and downloader lab with account information.
+Allow for a days in deployment time after you send us the signed transfer order. We will notify the upload with connection information on Slack.
 
 ### How does an internal kista work?
 Kistas are short-lived SFTP servers dedicated to your specific data transaction. Access is restricted to named uploaders and downloaders from specific labs. We take the responsibility to ensure that data gets downloaded by the correct user and lab.
+
+### Can I specify several uploaders and/or downloaders?
+
+Yes. You may specify up to three uploaders and/or downloaders per kista in your kista order.
 
 ### How do I access my internal kista?
 See our [internal kista transfer guide](/data-transfers/internal-kista/) for instruction on how to access and upload or download data in internal kista.
@@ -54,7 +58,7 @@ Below is an example of the output for a 1tb kista (984GB) with 110GB uploaded da
 ```
 
 ### How long can I keep an internal kista?
-Internal kistas are a temporary transfer service which will automatically be destroyed after 30 days unless explicitly stated in writing. You must therefore always upload duplicate copies of your data.
+Internal kistas are a temporary transfer service which will automatically be destroyed after 30 days unless explicitly stated in writing in the kista order. You must therefore always upload duplicate copies of your data.
 
 ::: danger
 Do NOT use Kistas as the primary storage area for your data as all Kistas will be destroyed without further notice 30 days after deployment.
@@ -71,4 +75,4 @@ Only upload duplicate copies of your data to internal kistas.
 No. Internal kistas allows one way data transactions. This means that the downloader can not upload data. You will need to order two independent internal kistas if you plan to transfer data both ways. This control is included for security reasons.
 
 ### Do I need to encrypt my data before internal kista transfers?
-No, we don't think so. It is our responsibility to ensure the correct receiver of your data and the confidentiality of your data inside internal kistas. All transfers occur in encrypted transfer channels. We log transfers, and such logs may be made available to your data controller on request.
+We don't think so. It is our responsibility to ensure the correct receiver of your data and the confidentiality of your data inside internal kistas. All transfers occur in encrypted transfer channels. We log transfers, and such logs may be made available to your data controller on request.
