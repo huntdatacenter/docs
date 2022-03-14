@@ -76,9 +76,14 @@ Click the button below to order a lab deletion of an active lab under your data 
 * **Who can order:** Data space leaders and Lab leaders in collaboration.
 * **Required attachment**: [A signed lab deletion order](/agreements/downloads/#lab-deletion-order).
 * **Expected response time:** Weeks.
+* **Expected delivery:** Countersignature from HUNT Cloud on your lab deletion order confirming that lab data, including online and offline duplicate copies, are deleted.
 * **Cost:** Included in your lab subscription.
 
+::: danger
 
+Once your lab data is deleted it can not be recreated. You must ensure that you have exported all data that you intend to preserve from the lab -before- you order the lab deletion. [Contact us](/contact) if you need guidance with this work.
+
+:::
 
 
 ## Transport
