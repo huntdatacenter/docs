@@ -52,13 +52,13 @@ We have default machine series optimized for computation with 2GB, 4GB or 8GB fo
 
 All the above machine types may be deployed with _1_ or _2_ of the following GPU accelerators if available:
 
-| Manufacturer | Model       | Architecture | Memory    | Interface  |
+| **Type** | **Model** | **Architecture** | **Memory** | **Interface**  |
 | ------------ | ----------- | ------------ | --------- | ---------- |
-| NVIDIA       | Tesla P100  | Pascal       | 16GB HBM2 | PCIe Gen3  |
-| NVIDIA       | Tesla V100  | Volta        | 32GB HBM2 | PCIe Gen3  |
-| NVIDIA       | Tesla V100S | Volta        | 32GB HBM2 | PCIe Gen3  |
+| nvidia.p100 | Tesla P100  | Pascal       | 16GB HBM2 | PCIe Gen3  |
+| nvidia.v100 | Tesla V100  | Volta        | 32GB HBM2 | PCIe Gen3  |
+| nvidia.v100s | Tesla V100S | Volta        | 32GB HBM2 | PCIe Gen3  |
 
-See the [GPU on HUNT Cloud](/working-in-your-lab/technical-tools/gpu/) documentation for more information.
+Manufacturer = NVIDIA. See the [GPU on HUNT Cloud](/working-in-your-lab/technical-tools/gpu/) documentation for more information.
 
 ## Custom machine types
 

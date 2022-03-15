@@ -106,13 +106,13 @@ Increase or decrease the computational power of one of your existing lab machine
 * **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
 
 
-### New machine
+### New CPU machine
 
-Add a [new machine](/services/machine-types/) to your lab.
+Add a [new machine](/services/machine-types/) to your lab. A CPU machine is the default lab machine with CPU and memory aimed at data analysis.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20machine%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20machine%20in%20our%20lab%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Amachine%20type%20%3D%20%7Bdefault.b2%7D%20%20%0Astorage%20size%20%3D%20%7B1%20terabyte%28s%29%7D%20%20%0Anumber%20of%20machines%20%3D%20%7B1%7D%0Asubscription%20%3D%20%7BCommitment%20/%20On-demand%20/%20Blue%7D%0A%0ALet%20us%20touch%20base%20in%20our%20Slack%20lab%20channel%20to%20schedule%20a%20time%20for%20the%20restart%20that%20fits%20our%20scientific%20activities.%0A%0ABest%2C" class="nav-link external action-button">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20CPU%20machine%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20CPU%20machine%20in%20our%20lab%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Amachine%20type%20%3D%20%7Bdefault.b2%7D%20%20%0Astorage%20size%20%3D%20%7B1%20terabyte%28s%29%7D%20%20%0Asubscription%20%3D%20%7BCommitment%20/%20On-demand%20/%20Blue%7D%0A%0AI%20am%20looking%20forward%20to%20receive%20access%20information%20in%20our%20Slack%20lab%20channel%20when%20the%20machine%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
     Request a new lab machine
   </a>
 </p></div></div>
@@ -126,7 +126,40 @@ Add a [new machine](/services/machine-types/) to your lab.
 
 
 
+### New GPU machine
 
+Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) to your lab.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20GPU%20machine%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20GPU%20machine%20in%20our%20lab%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Agpu%20type%20%3D%20%7Bnvidia.p100%7D%0Amachine%20type%20%3D%20%7Bdefault.b2%7D%20%20%0Astorage%20size%20%3D%20%7B1%20terabyte%28s%29%7D%20%20%0Asubscription%20%3D%20%7BCommitment%20/%20On-demand%20/%20Blue%7D%0A%0AI%20am%20looking%20forward%20to%20receive%20access%20information%20in%20our%20Slack%20lab%20channel%20when%20the%20machine%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
+    Request a new GPU machine
+  </a>
+</p></div></div>
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Expected response time:** Days (subject to availability).
+* **Expected delivery:** New lab machine with GPU accelerator accessible from your home machine.
+* **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
+
+
+
+
+### Fleet of blue machines
+
+Add a fleet of blue machines to distribute analysis for large scale analysis, for example by utilizing tools such as our [BlueBox](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/bluebox/).
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Fleet%20of%20blue%20machine%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20fleet%20of%20the%20following%20blue%20machines%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Anumber%20of%20machines%20%3D%20%7B10%7D%0Amachine%20type%20%3D%20%7Bdefault.c2%7D%20%20%0Astorage%20size%20per%20machine%20%3D%20%7B1%20terabyte%28s%29%7D%20%20%0A%0AI%20am%20looking%20forward%20to%20receive%20access%20information%20in%20our%20Slack%20lab%20channel%20when%20the%20fleet%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
+    Request a fleet of blue machines
+  </a>
+</p></div></div>
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Expected response time:** Days (subject to availability).
+* **Expected delivery:** Multiple blue machines accessible from your home machine.
+* **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
 
 
 
