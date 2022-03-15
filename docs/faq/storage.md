@@ -53,7 +53,7 @@ We recommend using [ncdu](/working-in-your-lab/technical-tools/ncdu/) to get bet
 Log into your machine in the lab with your favourite terminal and type:
 
 ```
-echo "export TMPDIR=/home/$(whoami)/.tmp" > ~/.profile
+echo "export TMPDIR=/home/scratch/tmp" >> ~/.profile
 source ~/.profile
 mkdir -p $TMPDIR
 ```
@@ -64,7 +64,7 @@ The intention behind HUNT Cloud is to establish collaborative lab environments w
 
 ::: danger WARNING
 
-There is -no- restore (backup) on your home-folder. All data in **`home`** may be lost in case of unexpected events. We strongly recommend that you keep the scientific data that your care about on the **`work`** or **`archive`** folders. [Click here](/faq/storage/#restore) to read more about restore. 
+There is -no- restore (backup) on your home-folder. All data in **`home`** may be lost in case of unexpected events. We strongly recommend that you keep the scientific data that your care about on the **`work`** or **`archive`** folders. [Click here](/faq/storage/#restore) to read more about restore.
 
 :::
 
