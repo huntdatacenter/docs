@@ -22,7 +22,7 @@ This section prosper on questions. [Contact us](/contact) with your burning topi
 
 ### Where do I start? 
 
-Welcome onboard! Your starting point depends on your organization and role. We have provided a step-wise guide on how to [get going](/agreements/get-going/) so you can jump directly into your section of choice. In short, you need to ensure that the data controller agreement is signed, sealed and delivered before you can sign a services center agreement and so forth. [Contact us](/contact) if you don't know where to start. 
+Welcome onboard! Your starting point depends on your organization and role. We have provided a step-wise guide on how to [get going](/coordination/get-going/) so you can jump directly into your section of choice. In short, you need to ensure that the data controller agreement is signed, sealed and delivered before you can sign a services center agreement and so forth. [Contact us](/contact) if you don't know where to start. 
 
 ### Do I need all of the agreement layers? 
 
@@ -37,6 +37,10 @@ Our [agreement structure](/agreements/overview/#overview) has evolved over time 
 ### Do you archive our agreements? 
 
 Yes. We keep copies of signed agreements for your environments. As a Data controller, Service center leader, Data space leader or Lab leader you may request copies of agreements under your tree structure to supplement your compliance work. 
+
+### Can I request a copy of our agreements? 
+
+Yes. We are happy to provide copies on your request. You may request a copy of the agreement under your control. Data controllers may request all agreements attached to their service centers, data spaces and labs. Data spaces may request agreements attached to their labs and so forth.
 
 ### Do you keep a record of our processing purposes? 
 
