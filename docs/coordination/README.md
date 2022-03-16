@@ -12,7 +12,7 @@ description: This page contains information in administrative issues aimed at co
 This section contains information on administrative issues aimed at scientific coordinators in HUNT Cloud. 
 
 ::: tip Get going
-Head over to our [get going](/agreements/get-going/) guide to read how to start on the agreements for your new data space and labs.
+Head over to our [get going](/coordination/get-going/) guide to read how to start on the agreements for your data space and labs.
 :::
 
 

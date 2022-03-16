@@ -14,7 +14,7 @@ We believe a solid framework of documented responsibilities is a success factor 
 
 ::: tip TIP
 
-Head over to our [get going](/agreements/get-going) page for a step-wise guide on how to start your agreement quest, and the [FAQ](/agreements/faq/) section for frequently asked agreement questions.
+Head over to our [get going](/coordination/get-going) page for a step-wise guide on how to start your agreement quest, and the [FAQ](/agreements/faq/) section for frequently asked agreement questions.
 :::
 
 [[toc]]
@@ -84,7 +84,7 @@ Our signatory will be the Head of Department at our department, the [Department 
 
 ### Getting started
 
-We need to ensure that we have an active data processor agreement with your host organization or department (for NTNU) before we can process your data space and lab orders. Head over to the [get going](/agreements/get-going/#data-processor-agreement) section for a step-by-step guide on how to start.
+We need to ensure that we have an active data processor agreement with your host organization or department (for NTNU) before we can process your data space and lab orders. Head over to the [get going](/coordination/get-going/data-processor) section for a step-by-step guide on how to start.
 
 
 ### Required information

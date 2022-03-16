@@ -30,7 +30,7 @@ Yes. All labs needs to be run under a complete [agreement layer](/agreements/ove
 
 ### Why do you need all these agreement layers? 
 
-Our [agreement structure](/agreements/overview/#overview) has evolved over time to enable high variability in activities among many member organizations. We know, this is a mouthful if you need access to one lab only. However, once you [get going](/agreements/get-going/) with the terminology and structure we hope you will enjoy the flexibility. The layered structure is utilized both for governance, reporting, incentives and to comply with laws and regulations.
+Our [agreement structure](/agreements/overview/#overview) has evolved over time to enable high variability in activities among many member organizations. We know, this is a mouthful if you need access to one lab only. However, once you [get going](/coordination/get-going/) with the terminology and structure we hope you will enjoy the flexibility. The layered structure is utilized both for governance, reporting, incentives and to comply with laws and regulations.
 
 ## Management
 
@@ -111,5 +111,5 @@ Approximately every two years. Our aim is to update agreements on a two year cyc
 
 ### How do I update agreements for the new services model? 
 
-Due to our new [services model](/services/services-model/), all labs needs to update to the new agreement structure by 1 January 2022, and from 1 October 2021 to adjust resources in your lab. Read the step-by-step guide on our [get going](/agreements/get-going/) page and jump into the section that suits your situation. [Contact us](/contact) is you are unsure how to approach the upgrades. 
+Due to our new [services model](/services/services-model/), all labs needs to update to the new agreement structure by 1 January 2022, and from 1 October 2021 to adjust resources in your lab. Read the step-by-step guide on our [get going](/coordination/get-going/) page and jump into the section that suits your situation. [Contact us](/contact) is you are unsure how to approach the upgrades. 
 
