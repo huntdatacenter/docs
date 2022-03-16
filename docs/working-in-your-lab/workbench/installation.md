@@ -63,15 +63,25 @@ Example of hosts record:
 
 :::
 
+
+
+
 ::: details OS X and macOS
 
-Edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
+On your local machine, edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
 
-Example with vim:
+Example with vim: 
 
 ```
 sudo vim /etc/hosts
 ```
+
+Example with text editor: 
+
+```
+EDITOR='open -Wne' sudo -e /etc/hosts
+```
+
 
 :::
 
@@ -79,10 +89,16 @@ sudo vim /etc/hosts
 
 Edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
 
-Example with vim:
+Example with vim
 
 ```
 sudo vim /etc/hosts
+```
+
+Example with gedit
+
+```
+sudo gedit /etc/hosts
 ```
 
 :::
@@ -100,7 +116,7 @@ sudo vim /etc/hosts
 
    ![2_cert_p12.png](./images/2_cert_p12.png)
 
-3. Fill in the passphrase that you received on signal, and make sure only the same option is checked exactly as in the image. Then click next:
+3. Fill in the **`TLS passphrase`** that you received on signal, and make sure only the same option is checked exactly as in the image. Then click next:
 
    ![3_cert_p12.png](./images/3_cert_p12.png)
 
