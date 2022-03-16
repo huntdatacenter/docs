@@ -250,6 +250,14 @@ This will allow you to log directly into your lab without the need to remember y
 
 2. On your local machine, add the content from the **`ssh-config.txt`** to the file named **`config`** in the hidden ssh-folder in your home directory (**`~/.ssh/config`**) using your favorite file editor. You may need to generate this file if it is your first ssh-configuration.
 
+```bash
+# -- Open editor in OS X and macOS
+EDITOR='open -Wne' -e ~/.ssh/config
+
+# -- Open editor in Linux Ubuntu
+gedit ~/.ssh/config
+```
+
 3. Test your new setup by typing **`ssh <your-lab-name>-entry`** in your terminal. For example:
 
 ```bash
