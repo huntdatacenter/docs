@@ -84,7 +84,7 @@ We recommend that you install apt packages in your Conda environments since thes
 
 ## Management
 
-### How can I restart my Workbench environment and start from scratch?
+### How can I restart my Workbench environment?
 
 Sometimes you might want to start over with a fresh environment:
 
@@ -131,8 +131,15 @@ Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 
 ### Which R version is available in RStudio?
 
-RStudio is configured to use packages installed in the environment named `r-base`.
+RStudio is configured to use packages installed in the conda environment named `r-base`.
 You can find your R version using [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
+
+1. Open your workbench terminal.
+
+![workbench_terminal.png](./images/workbench_terminal.png)
+
+2. List the packages in your r-base conda environment.
+
 ```bash
 conda list -n r-base | grep r-base
 ```
@@ -173,7 +180,7 @@ library(dplyr)
 
 ### How do I reset my user state in RStudio?
 
-When you [restart your Workbench from scratch](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch), your RStudio user state might still be preserved. To achieve complete reset read the RStudio support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server).
+When you [restart your Workbench](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment), your RStudio user state might still be preserved. To achieve complete reset read the RStudio support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server).
 
 
 ## Terminal
