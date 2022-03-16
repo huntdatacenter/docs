@@ -117,13 +117,24 @@ module.exports = {
             "/coordination/",
             "/coordination/services-model.md",
             {
+              title: "Get going",
+              text: "Get going",
+              isGroup: true,
+              children: [
+                "/coordination/get-going/",
+                "/coordination/get-going/data-controller.md",
+                "/coordination/get-going/service-center.md",
+                "/coordination/get-going/data-space.md",
+                "/coordination/get-going/lab.md",
+              ]
+            },
+            {
               title: "Agreements",
               text: "Agreements",
               isGroup: true,
               children: [
                 "/coordination/agreements/overview.md",
                 "/coordination/agreements/downloads.md",
-                "/coordination/agreements/get-going.md",
                 "/coordination/agreements/faq.md",
               ]
             },
