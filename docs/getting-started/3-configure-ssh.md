@@ -252,7 +252,7 @@ This will allow you to log directly into your lab without the need to remember y
 
 ```bash
 # -- Open editor in OS X and macOS
-EDITOR='open -Wne' -e ~/.ssh/config
+open -Wne ~/.ssh/config
 
 # -- Open editor in Linux Ubuntu
 gedit ~/.ssh/config
