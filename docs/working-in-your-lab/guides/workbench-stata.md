@@ -64,10 +64,10 @@ You may load data that's stored in your lab with the following command:
 
 ```python
 // principal example
-sysuse "/mnt/archive/<folder>/<file>.dta"
+use "/mnt/archive/<folder>/<file>.dta"
 
 // practical example 
-sysuse "/mnt/archive/data/test.dta"
+use "/mnt/archive/data/test.dta"
 ```
 
 Note that you need to add the path to your own data in the example above to make it work. 
