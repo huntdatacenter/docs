@@ -34,8 +34,8 @@ Click the button below to order a new lab under your existing data space.
 
 * **Who can order:** Data space leaders and data space compliance coordinators in active data spaces.
 * **Required attachment**: [A signed lab order](/agreements/downloads/#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
-* **Expected response time:** One week.
-* **Next step**: [Add the first lab users](/service-desk/lab-orders.html#add-a-new-lab-user) in new lab. 
+* **Expected delivery time:** One week.
+* **Next step**: [Add your first lab users](/service-desk/lab-orders.html#add-a-new-lab-user). 
 * **Cost:** One lab subscription as specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
 
 ::: details More on the required resource specifications
