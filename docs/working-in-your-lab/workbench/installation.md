@@ -70,24 +70,31 @@ Example of hosts record:
 
 On your local machine, edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
 
-Example with vim: 
-
-```
-sudo vim /etc/hosts
-```
-
 Example with text editor: 
 
 ```
 EDITOR='open -Wne' sudo -e /etc/hosts
 ```
 
+Example with vim: 
+
+```
+sudo vim /etc/hosts
+```
+
+
 
 :::
 
 ::: details Ubuntu Linux
 
-Edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
+On your local machine, edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
+
+Example with gedit
+
+```
+sudo gedit /etc/hosts
+```
 
 Example with vim
 
@@ -95,11 +102,6 @@ Example with vim
 sudo vim /etc/hosts
 ```
 
-Example with gedit
-
-```
-sudo gedit /etc/hosts
-```
 
 :::
 
@@ -169,31 +171,15 @@ sudo gedit /etc/hosts
 
 ::: details Ubuntu Linux
 
-1. Open Firefox on your local machine.
+We recommend that you use the Google Chrome browser for predictability. [Click here](https://duckduckgo.com/?q=google+chrome+ubuntu+install+howto) for guides on how to install Chrome on your local machine.
 
-You can install Firefox on your local machine with the following code: `apt install firefox`.
+1. Open Chrome on your local machine.
 
-2. Open url `about:preferences#privacy` and search for "Certificates" or click `Edit` > `Preferences`.
+2. Open url `chrome://settings/certificates` and click the `Import` button on the right side of the screen.
 
-   ![p12_firefox_1.png](./images/p12_firefox_1.png)
+3. Browse and select your `.p12` file on your local machine and enter the `TLS passphrase` that you got on Signal.
 
-3. Click Options > Advanced > Encryption. Click View Certificates.
-
-   ![p12_firefox_2.png](./images/p12_firefox_2.png)
-
-4. Select the Your Certificates tab. Click Import.
-
-   ![p12_firefox_3.png](./images/p12_firefox_3.png)
-
-5. Browse for and select your **`.p12`** file and enter the **`TLS passphrase`** that you got on Signal.
-
-   ![p12_firefox_4.png](./images/p12_firefox_4.png)
-
-6. Click OK.
-
-   ![p12_firefox_5.png](./images/p12_firefox_5.png)
-
-7. Restart Firefox.
+4. Restart Chrome.
 
 The certificate is now installed and can be used for network or secure web site client authentication after the restart of Firefox.
 
@@ -206,7 +192,7 @@ The certificate is now installed and can be used for network or secure web site 
 Make sure you are connected to the VPN before accessing Workbench.
 :::
 
-1. Open your web browser (Firefox is required for Linux).
+1. Open your web browser (we recommend Google Chrome).
 
 2. Type in the URL address to your lab in your browser.
 
@@ -218,7 +204,7 @@ https://<labname>.lab.hdc.ntnu.no
 https://demolab.lab.hdc.ntnu.no
 ```
 
-Click "OK" is you get a "User Identification Request" for your new certificate and ensure that the "Remember this decision" is checked.  The certificate are to be issued by: 
+Click `OK` if you get a `User Identification Request` for your new certificate and ensure that the `Remember this decision` is checked.  The certificate are to be issued by: 
 
 ```
 Organizatoin: "HUNT Cloud"
@@ -229,8 +215,8 @@ Issued Under: "HUNT Cloud Trust Services"
 
 4. With a little bit of luck you should now see your new Workbench. Click around and explore your new world!
 
-![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
+![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
 
 ## Immediate troubleshooting
@@ -258,11 +244,19 @@ If you see Error code: `SEC_ERROR_UNKNOWN_ISSUER` when accessing Workbench follo
    ![mac-firefox-trust-ca.png](./images/mac-firefox-trust-ca.png)
 :::
 
-### 500 : Internal Server Error
+### 500 Internal Server Error
 
 ::: details Read more
 
 If you are a fast clicker and get to an app before it's initialized in the background you might get the "500 : Internal Server Error"-message with the subtext "Could not start rstudio in time". Reload the page (Ctrl/Command+R), and hopefully things will be sorted. [Contact us](/contact) if the message persist.
+
+:::
+
+### 502 Bad gateway
+
+::: details Read more
+
+Something is wrong with your certificate configuration or the server in your lab [Contact us](/contact) us for further investigation.
 
 :::
 

@@ -18,6 +18,12 @@ Stata in your workbench runs in a Jupyter notebook. This means that you can writ
 
 On the technical side, Stata runs on your lab home machine and conntect with your workbench via [stata_kernel](https://kylebarron.dev/stata_kernel/) developed by Kyle Barron.
 
+::: tip Recommended browser
+
+We recommend that you open your workbench in the **`Google Chrome`** browser for this guide to ensure predictable results. 
+
+:::
+
 ### Open a Stata notebook
 
 To get going, open your workbench and click on the Stata icon. This opens a new workbench that runs the `stata_kernel`.
