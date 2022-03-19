@@ -8,7 +8,7 @@ description: This page holds information on communication within the HUNT Cloud 
 
 # Cloud community
 
-**All lab users and lab coordiantors are invited to participate in our online cloud community. The intention is to enable scientists on all levels with a place to say hello to each other, ask for help when needed, and provide help to others when they can.** 
+**All lab users and lab coordinators are invited to participate in our online cloud community. The intention is to enable scientists on all levels with a place to say hello to each other, ask for help when needed, and provide help to others when they can.** 
 
 [[toc]]
 
@@ -18,11 +18,11 @@ We use [Slack](https://slack.com/) as our digital café. Conceptually, we see th
 
 ### Invitations
 
-All lab users and lab coordinators are invited to Slack as part of their onboarding process. [Contact us](/contact) if you are an active lab users or lab coordinator and need a new invitation.
+All lab users and lab coordinators are invited to Slack as part of their onboarding. [Contact us](/contact) if you are an active lab users or lab coordinator and need a new invitation.
 
 ### Tables
 
-All labs gets their own private table (lab channel) where all lab users for that particular lab are invited. Here you can meet and discuss both scientific and technical topcis, help each other out with issues and reach us at the HUNT Cloud for both questions and banter.
+All labs gets their own private table (lab channel) where all lab users for that particular lab are invited. Here you can meet and discuss both scientific and technical topics, help each other out with issues and reach us at the HUNT Cloud for both questions and banter.
 
 We have also reserved a set of community tables where you can meet users from other lab and discuss specific topics that is relevant for you. These channels are dynamic, and topics will vary over time with what's feels relevant within the community. 
 
@@ -34,22 +34,22 @@ Missing a topic that's relevant for you? Do not worry. We are happy to add new t
 
 #### Join a community table
 
-Click in the search bar at the top of your Slack page and type **`community`** to see a list of all community tables. Click on any topic that you think might be relevant for your to join the channel. 
+Click in the search bar at the top of your Slack page and type **`community`** to see a list of all community tables. Click on any topic that you think might be relevant for you and join the channel. 
 
 ![slack_search.png](./images/slack_search.png)
 
-#### Leave a communiyt table
+#### Leave a community table
 
 To leave a table, click on the channel topic at the top of the Slack page (for example `#community-random`) and click the "Leave channel" button.
 
 ### Tone of voice
 
-We are truly proud of the warm and welcoming tone that our scientists brings to the cloud community. Needless to say when we meet from a wide range of scientific fields and heterogenous backgrounds, all dialogue are to happen with **care and respect**.
+We are truly proud of the warm and welcoming tone that our scientists brings to the cloud community. Needless to say when we meet from a wide range of scientific fields and heterogeneous backgrounds, all dialogue are to happen with **care and respect**.
 
 
 ### Communication options
 
-Slack holds the option of three main ways to communitate. You are free to utilize them all: (1) **text chat** at all tables, (2) **video calls** at your lab table (click on the member button in the upper right corner and choose "Start a Call"), and (3) **voice chat** and screen share at your lab table (click on the ear phone icon in the lower left part of your screen to start a "Huddle").
+Slack holds the option of three main ways to communicate. You are free to utilize them all: (1) **text chat** at all tables, (2) **video calls** at your lab table (click on the member button in the upper right corner and choose "Start a Call"), and (3) **voice chat** and screen share at your lab table (click on the ear phone icon in the lower left part of your screen to start a "Huddle").
 
 
 ### Compliance
@@ -79,7 +79,7 @@ Café table reserved for epidemiology dialogues.
 
 ### #community-genomics
 
-Café table reserved for all kinds of genomics topcis.
+Café table reserved for all kinds of genomics topics.
 
 
 
@@ -105,11 +105,11 @@ Café table reserved for GPU dialogues.
 
 ### #community-rstudio
 
-Cafe table for R and Rstudio dialogues.
+Café table for R and Rstudio dialogues.
 
 ### #community-stata
 
-Cafe table for R and Stata dialogues.
+Café table for R and Stata dialogues.
 
 
 
