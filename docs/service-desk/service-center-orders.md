@@ -1,6 +1,7 @@
 ---
 title: Service centers
 category: Service desk
+permalink: /service-desk/service-center-orders
 description: HUNT Cloud service desk orders for service centers.
 sidebarDepth: 2
 ---
@@ -23,7 +24,7 @@ sidebarDepth: 2
 
 ### New data space
 
-Click the button below to order a new data space under your existing service center. 
+Click the button below to order a new data space under your existing service center.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
@@ -38,4 +39,3 @@ Click the button below to order a new data space under your existing service cen
 * **Expected delivery time:** Days.
 * **Next step:** [Order the first lab in your data space](/service-desk/data-space-orders.html#new-lab)
 * **Cost:** There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
-

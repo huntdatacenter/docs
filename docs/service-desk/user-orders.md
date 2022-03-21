@@ -1,6 +1,7 @@
 ---
 title: Lab users
 category: Service desk
+permalink: /service-desk/lab-orders
 description: HUNT Cloud service desk orders for lab users.
 sidebarDepth: 2
 ---
@@ -24,7 +25,7 @@ sidebarDepth: 2
 
 ::: warning New users
 
-The service orders below are aimed at active lab users. Lab access for new users are ordered by lab leaders or lab coordinators from our [lab orders page](/service-desk/lab-orders) using the [new lab user](/service-desk/lab-orders#new-lab-user) button. 
+The service orders below are aimed at active lab users. Lab access for new users are ordered by lab leaders or lab coordinators from our [lab orders page](/service-desk/lab-orders) using the [new lab user](/service-desk/lab-orders#new-lab-user) button.
 
 :::
 
@@ -154,8 +155,3 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 * **Requirement:** Active SSH connection.
 * **Next step:** [MobaXterm configuration guide](/working-in-your-lab/technical-tools/mobaxterm/).
 * **Cost:** Included in the lab subscription.
-
-
-
-
-

@@ -1,6 +1,7 @@
 ---
 title: Labs
 category: Service desk
+permalink: /service-desk/lab-orders
 description: HUNT Cloud service desk orders for labs.
 sidebarDepth: 2
 ---
@@ -330,6 +331,3 @@ The [external import kista](/faq/external-transfer/#faq-on-external-data-transfe
 * **Expected response time:** Days.
 * **Expected delivery:** Kista access information sent to the lab user that will import the data.
 * **Cost:** Included in your lab subscription.
-
-
-

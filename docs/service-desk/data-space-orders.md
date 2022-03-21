@@ -1,6 +1,7 @@
 ---
 title: Data spaces
 category: Service desk
+permalink: /service-desk/data-space-orders
 description: HUNT Cloud service desk orders for data spaces.
 sidebarDepth: 2
 ---
@@ -35,12 +36,12 @@ Click the button below to order a new lab under your existing data space.
 * **Who can order:** Data space leaders and data space compliance coordinators in active data spaces.
 * **Required attachment**: [A signed lab order](/agreements/downloads/#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
 * **Expected delivery time:** One week.
-* **Next step**: [Add your first lab users](/service-desk/lab-orders.html#add-a-new-lab-user). 
+* **Next step**: [Add your first lab users](/service-desk/lab-orders.html#add-a-new-lab-user).
 * **Cost:** One lab subscription as specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
 
 ::: details More on the required resource specifications
 
-Your lab comes with one (1) machine with computational resources and attached storage by default. We call this your **`home`**-machine. 
+Your lab comes with one (1) machine with computational resources and attached storage by default. We call this your **`home`**-machine.
 
 **Machine type**
 
@@ -52,18 +53,18 @@ Your lab comes with three (3) storage volumes attached to your home machine. We 
 
 *Volume types*
 
-i) the **`archive`** volume is tailored for data storage, such as your raw data and results; 
+i) the **`archive`** volume is tailored for data storage, such as your raw data and results;
 ii) the **`work`** volume is tailored for your data in your day-to-day activities that your want to preserve, such as code files; and iii) the **`scratch`** volume is tailored for temporary analytical files, such typically generated in intermediate steps of your analysis. Note that the **`scratch`** volume do -not- include our restore service (backup).
 
 *Volume sizes*
 
-The minimum storage allocation of the three volumes is 1000 Gigabytes (1 Terabyte). We have suggested a default allocation that you may update if you like: 
+The minimum storage allocation of the three volumes is 1000 Gigabytes (1 Terabyte). We have suggested a default allocation that you may update if you like:
 
 ARCHIVE = 400  
 WORK = 300  
 SCRACH = 300  
 
-The above numbers are in Gigabytes (1000 Gigabytes = 1 Terabyte). To illustrate, if you want your archive volume to be 2 Terabyte, specify **`ARHICVE = 2000`** in your order. 
+The above numbers are in Gigabytes (1000 Gigabytes = 1 Terabyte). To illustrate, if you want your archive volume to be 2 Terabyte, specify **`ARHICVE = 2000`** in your order.
 
 **More information**
 
@@ -144,4 +145,3 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 * **Expected response time:** Days.
 * **Expected delivery:** Network opening communicated in your Slack lab channel.
 * **Cost:** Included in your data space subscription.
-
