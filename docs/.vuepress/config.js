@@ -284,7 +284,7 @@ module.exports = {
             "/data-transfers/",
             "/data-transfers/internal-kista.md",
             "/data-transfers/external-kista.md",
-          ]
+          ],
         },
         {
           title: "Service desk",
@@ -296,16 +296,16 @@ module.exports = {
             "/service-desk/lab-orders.md",
             "/service-desk/data-space-orders.md",
             "/service-desk/service-center-orders.md",
-          {
-            title: "Access guides",
-            text: "Access guides",
-            isGroup: true,
-            children: [
-              "/service-desk/access-guides/reset-gauth.md",
-              "/service-desk/access-guides/reset-ssh.md",
-              "/service-desk/access-guides/workbench-request.md",
-            ]
-          },
+            {
+              title: "Access guides",
+              text: "Access guides",
+              isGroup: true,
+              children: [
+                "/service-desk/access-guides/reset-gauth.md",
+                "/service-desk/access-guides/reset-ssh.md",
+                "/service-desk/access-guides/workbench-request.md",
+              ],
+            },
           ]
         },
         {
@@ -317,7 +317,7 @@ module.exports = {
             "/troubleshooting/connection.md",
             "/troubleshooting/compute.md",
             "/troubleshooting/labreports.md",
-          ]
+          ],
         },
         {
           title: "FAQ",

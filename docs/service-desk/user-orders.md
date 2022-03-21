@@ -1,7 +1,7 @@
 ---
 title: Lab users
 category: Service desk
-permalink: /service-desk/lab-orders
+permalink: /service-desk/user-orders
 description: HUNT Cloud service desk orders for lab users.
 sidebarDepth: 2
 ---
