@@ -12,7 +12,7 @@ description: Guide on Google Authenticator key reset.
 
 ::: tip New or lost phone?
 
-Send us an [email](/contact) requesting a new Google Authenticator key. 
+Send us an [email](/contact) requesting a new Google Authenticator key.
 
 :::
 
@@ -22,7 +22,7 @@ New Google Authenticator key sent over Signal from HUNT Cloud.
 
 ### Install Google Authenticator
 
-Search for **`Google Authenticator`** in the Android or iOS app stores, or use the links below. 
+Search for **`Google Authenticator`** in the Android or iOS app stores, or use the links below.
 
 * [Download and install for iOS here](https://apps.apple.com/us/app/google-authenticator/id388497605)
 * [Download and install for Android here](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)
@@ -46,4 +46,3 @@ A 6 digit **`verification code`** that refreshes ever 30 seconds in the Google A
 ### Connect to your lab
 
 Verify a successful setup by connecting your VPN and access your lab. [Contact us](/contact) if you are unable to connect after the key reset.
-
