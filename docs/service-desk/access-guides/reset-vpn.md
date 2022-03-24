@@ -71,7 +71,7 @@ Follow the [Verify your VPN connection](http://localhost:8080/getting-started/co
 
 ### Troubleshooting
 
-[Contact us](/contact) in your Slack lab table if you experience trouble with installation and suggestions on how to improve this guide.
+[Contact us](/contact) in your Slack lab table if you experience trouble with installation and suggestions on how to improve this guide..
 
 
 
