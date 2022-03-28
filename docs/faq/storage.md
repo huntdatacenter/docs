@@ -53,9 +53,9 @@ We recommend using [ncdu](/working-in-your-lab/technical-tools/ncdu/) to get bet
 Log into your machine in the lab with your favourite terminal and type:
 
 ```
-echo "export TMPDIR=/home/scratch/tmp" >> ~/.profile
-source ~/.profile
 mkdir -p $TMPDIR
+echo "export TMPDIR=/mnt/scratch/tmp" >> ~/.profile
+source ~/.profile
 ```
 
 ### Why is home only 100G?
