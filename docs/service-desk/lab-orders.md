@@ -190,15 +190,18 @@ You may expand the existing storage volumes inside your lab up to a maximum of 2
 </p></div></div>
 
 * **Who can order:** Lab leaders and lab coordinators.
-* **Required information**: labname, machine name, volume name and intended size.
+* **Required information**: lab name, machine name, volume name and intended size.
 * **Expected response time:** One week. The volume expansion will need a machine restart that needs to be scheduled.
 * **Expected delivery:** Increased storage capacity.
 * **Cost:** New storage is included in your total storage plan.
 
 ::: details Identify the required information
 
-You may identify labname, machine name and volume name from your resource reports. Alternatively, you may log into your lab machine using SSH and fetch the information manually:
+You may identify lab name, machine name and volume name from your resource reports. Alternatively, you may log into your lab machine using SSH and fetch the information manually
 
+**Lab and machine name**
+
+You will find the lab and machine name for you home machine when you log into your home machine.
 
 ```bash
 Welcome to `LAB NAME`.
@@ -210,14 +213,29 @@ Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
 ```
 
-If you plan to expand volumes of machines other than `home`, log into your machine of choice to identify the exact name:
+Example from above: 
 
 ```bash
-# -- Example
-`labname`-iaas-helya-gpu1
+# -- Machine name
+your-labname-home
+
+# -- Lab name (remove -home)
+your-labname
 ```
 
-You can identify the volume name while you are logged into the machine:
+
+If you plan to expand volumes of machines other than `home`, log into your machine of choice to identify the exact machine name:
+
+```bash
+# -- Machine name
+your-labname-iaas-helya-gpu1
+```
+
+.
+ 
+**Volume name and current size**
+
+You can identify the volume name while you are logged into the machine where you need to expand the storage:
 
 ```bash
 # -- Command
@@ -230,6 +248,8 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/vde1       197G   60M  187G   1% /mnt/scratch
 /dev/vdf1        99G   60M   94G   1% /mnt/cargo
 ```
+
+The above example shows for example that `/mnt/archive` has a current `Size` of 493 gigabytes shown (500 gigabytes allocated).
 
 :::
 
@@ -247,14 +267,18 @@ You may add new volumes to your lab machines. We will need separate orders for e
 </p></div></div>
 
 * **Who can order:** Lab leaders and lab coordinators.
-* **Required information**: labname, machine name, volume name and total size in terabytes.
+* **Required information**: lab name, machine name, volume name and total size in terabytes.
 * **Expected response time:** One week. Additions of new volumes will need a machine restart that needs to be scheduled.
 * **Expected delivery:** New storage volume attached (mounted) to your lab machine.
 * **Cost:** New storage is included in your total storage plan.
 
 ::: details Identify the required information
 
-You may identify labname and machine name from your resource reports. Alternatively, you may log into your lab machine using SSH and fetch the information manually:
+You may identify lab name, machine name and volume name from your resource reports. Alternatively, you may log into your lab machine using SSH and fetch the information manually
+
+**Lab and machine name**
+
+You will find the lab and machine name for you home machine when you log into your home machine.
 
 ```bash
 Welcome to `LAB NAME`.
@@ -266,14 +290,29 @@ Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
 ```
 
-If you plan to add a volume on a machine other than `home`, log into your machine of choice to identify the exact name:
+Example from above: 
 
 ```bash
-# -- Example
-`labname`-iaas-helya-gpu1
+# -- Machine name
+your-labname-home
+
+# -- Lab name (remove -home)
+your-labname
 ```
 
-List the current volumes on the machine, and suggest a unique name for your new volume that is not already attached to your lab:
+
+If you plan to expand volumes of machines other than `home`, log into your machine of choice to identify the exact machine name:
+
+```bash
+# -- Machine name
+your-labname-iaas-helya-gpu1
+```
+
+.
+ 
+**Volume name and current size**
+
+You can identify your current volume names while you are logged into the machine where you need to expand the storage. For example on your home machine:
 
 ```bash
 # -- Command
@@ -286,6 +325,8 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/vde1       197G   60M  187G   1% /mnt/scratch
 /dev/vdf1        99G   60M   94G   1% /mnt/cargo
 ```
+
+You may use this information to plan your new storage names and sizes. We typically recommend to go by type of storage and numbers as usage tends to change over time, such as `archive2`, `work2` etc.
 :::
 
 
