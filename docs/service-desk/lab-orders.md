@@ -191,7 +191,7 @@ You may expand the existing storage volumes inside your lab up to a maximum of 2
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required information**: lab name, machine name, volume name and intended size.
-* **Expected response time:** One week. The volume expansion will need a machine restart that needs to be scheduled.
+* **Expected response time:** One week. The volume expansion requires a machine restart that needs to be scheduled 9-11am on a workday.
 * **Expected delivery:** Increased storage capacity.
 * **Cost:** New storage is included in your total storage plan.
 
@@ -268,7 +268,7 @@ You may add new volumes to your lab machines. We will need separate orders for e
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required information**: lab name, machine name, volume name and total size in terabytes.
-* **Expected response time:** One week. Additions of new volumes will need a machine restart that needs to be scheduled.
+* **Expected response time:** One week. The volume expansion requires a machine restart that needs to be scheduled 9-11 am CET on a workday.
 * **Expected delivery:** New storage volume attached (mounted) to your lab machine.
 * **Cost:** New storage is included in your total storage plan.
 
