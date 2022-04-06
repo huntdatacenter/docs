@@ -9,10 +9,9 @@ description: This page gives an access to artistic concepts of data driven scien
 
 **Ingress.**
 
-::: tip Use
+::: tip License
 
-Description.
-
+The artwork on this page is made available by HUNT Cloud / NTNU under the [CC BY­-NC-­ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) Creative Commons license.
 :::
 
 [[toc]]
@@ -21,3 +20,5 @@ Description.
 ## Image title
 
 Text.
+
+
