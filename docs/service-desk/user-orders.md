@@ -87,7 +87,7 @@ We allow connection from known IP addresses only outside Norway. Access from net
 <p class="action">
   <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20access%20opening%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20VPN%20access%20opening%20for%20the%20following%20IP%20address%3A%20%0A%0A%7BIP4-address%7D.%0A%0AI%20am%20looking%20forward%20to%20be%20notified%20on%20email%20when%20the%20opening%20is%20implemented.%0A%0ABest%2C
 " class="nav-link external action-button">
-    Request VPN access opening
+    Request VPN access list opening
   </a>
 </p></div></div>
 
