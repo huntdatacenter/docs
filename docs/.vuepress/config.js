@@ -211,6 +211,7 @@ module.exports = {
                 "/working-in-your-lab/workbench/installation.md",
                 "/working-in-your-lab/workbench/principles.md",
                 "/working-in-your-lab/workbench/faq.md",
+                "/working-in-your-lab/workbench/troubleshooting.md",
               ]
             },
             {
