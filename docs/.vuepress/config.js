@@ -317,7 +317,7 @@ module.exports = {
           children: [
             "/troubleshooting/",
             "/troubleshooting/connection.md",
-            "/troubleshooting/compute.md",
+            "/troubleshooting/lab-activities.md",
             "/troubleshooting/labreports.md",
           ],
         },
