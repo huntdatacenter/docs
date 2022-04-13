@@ -9,34 +9,13 @@ description: This page contains common questions on scientific coordination in H
 
 **This section lists common questions related to the scientific coordination in your data space and across your labs.**
 
+[[toc]]
+
 ::: tip
 
 This page is intended for data space coordinators. Head over to our [Lab FAQ](/faq/) for questions related to scientific activities inside labs. 
 
 :::
-
-[[toc]]
-
-## FAQ on the new services model from 1. Januar 2022
-
-### What if we would like to reduce our resources to reduce cost? 
-
-Worry not. You may reduce resources in your lab until 1 April 2022 without cost. See [Resolution 4](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=3) for details, and feel free to [contact us](/contact) for dialogue on potential resource and cost optimization. 
-
-### Remind us, when was the deadlines announced? 
-
-The new service agreement and required agreement updates was first discussed during Ting #3 in May 2021 and announced on email and these pages 1. July 2021. The requirements was further discussed during Ting #4 in October 2021 and clarified in [Resolution 5](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4) (R5/LT4/T4/21) from Lagtun. A warning on missing agreements was sent to all lab users in affected labs on email in the beginning of December.
-
-### How do we terminate our lab? 
-
-Yes, labs can be deleted (terminated) to avoid cost. Head over to our [service desk](/service-desk/data-space-orders.html) to request a deletion. Related to the 1. January deadline, labs can be terminated in two ways: (1) Labs that don't intend to resign agreements will automatically be terminated 1. January. Data will be made available for evacuation until 1. April (90 days) before the lab is deleted (ref. [Resolution 5(e)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=4)). (2) Labs where you send us a signed [lab deletion order](/agreements/downloads/#lab-deletion-order) will be deleted as soon as practically possible. 
-
-### How do we evacuate data from our lab before lab deletion? 
-
-Lab deletion will irrevocably destroy all data in your lab. For a gracefully shut down we recommend that you first (1) [notify us on email](/contact) that you plan to delete your lab, next (2) order an [external export kista](/agreements/downloads/#external-kista-export-order) for data evacuation to your new location, and then (3) send us a signed [lab deletion order](/agreements/downloads/#lab-deletion-order) when you data is confirmed migrated to your new location. We will delete your lab as soon as possible after we receive the deletion order and return an written confirmation that your lab data is deleted in our systems.
-
-
-
 
 
 ## Compliance coordination
@@ -62,7 +41,7 @@ As science grows inside your individual labs you may see the need to move part o
 
 #### How can we move a lab to a different data space? 
 
-We may transfer the ownership of a lab under your data space to another data space both inside or outside your organization. [Contact us](/contact) for such moves. We will need a lab transfer order that is co-signed by you and affected parties.
+We may transfer the ownership of a lab under your data space to another data space both inside or outside your organization. [Contact us](/contact) on email for such moves. We will need a lab transfer order that is co-signed by all affected parties.
 
 #### Can we rename an existing lab? 
 

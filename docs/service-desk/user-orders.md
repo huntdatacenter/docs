@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # Service desk orders for lab users
 
-**This page list predefined service orders for active users in one or more labs. To place an order, click the blue botton and send us a pre-filled email with required information.**
+**This page list predefined service orders for active users in one or more labs. To place an order, click the blue button and send us a pre-filled email with required information.**
 
 [[toc]]
 

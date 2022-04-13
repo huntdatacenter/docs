@@ -14,7 +14,7 @@ description: Frequently asked questions related to agreements in HUNT Cloud.
 
 ::: tip
 
-This section prosper on questions. [Contact us](/contact) with your burning topics so we can grow this page together.
+This section prosper on questions. [Contact us](/contact) with your wonders and burning topics so we can expand this page together.
 
 ::: 
 
@@ -22,7 +22,7 @@ This section prosper on questions. [Contact us](/contact) with your burning topi
 
 ### Where do I start? 
 
-Welcome onboard! Your starting point depends on your organization and role. We have provided a step-wise guide on how to [get going](/coordination/get-going/) so you can jump directly into your section of choice. In short, you need to ensure that the data controller agreement is signed, sealed and delivered before you can sign a services center agreement and so forth. [Contact us](/contact) if you don't know where to start. 
+Welcome onboard! Your starting point depends on your role and organization. We have provided a step-wise guide on how to [get going](/coordination/get-going/) so you can jump directly into your section of choice. In short, you need to ensure that the data controller agreement is signed, sealed and delivered before you can sign a services center agreement and so forth. [Contact us](/contact) if you don't know where to start. 
 
 ### Do I need all of the agreement layers? 
 
@@ -103,13 +103,9 @@ Maybe. We do allow elevation of security and privacy controls tailored for indiv
 
 ### How can I update contact persons? 
 
-**Data processor and services agreements**: Forward your new contact information on email. We will use this information to update the appendix and return on email. **Data spaces and Labs**: Fill in and forward a new data space or lab order with the updated information.
+**Data processor and services agreements**: Forward your new contact information on email. We will use this information to update the appendix and return on email. **Data spaces**: Update your coordinator roles via our [service desk](/service-desk/data-space-orders/#update-data-space-coordinator-roles). Fill in and forward a new data space order for updates of data space leaders. **Labs**: Fill in and forward a [new lab order](/service-desk/data-space-orders/#new-lab) to update the lab leader and lab coordinator roles. 
 
 ### How often do I need to update our running agreements? 
 
 Approximately every two years. Our aim is to update agreements on a two year cycle or when major updates or improvements are introduced. We will contact you when it's time for to update. The two year update cycle includes all agreements.
-
-### How do I update agreements for the new services model? 
-
-Due to our new [services model](/services/services-model/), all labs needs to update to the new agreement structure by 1 January 2022, and from 1 October 2021 to adjust resources in your lab. Read the step-by-step guide on our [get going](/coordination/get-going/) page and jump into the section that suits your situation. [Contact us](/contact) is you are unsure how to approach the upgrades. 
 

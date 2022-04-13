@@ -297,6 +297,7 @@ module.exports = {
             "/service-desk/lab-orders.md",
             "/service-desk/data-space-orders.md",
             "/service-desk/service-center-orders.md",
+            "/service-desk/data-controller-orders.md",
             {
               title: "Access guides",
               text: "Access guides",

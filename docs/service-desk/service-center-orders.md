@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # Service desk orders for service centers
 
-**This page list predefined service orders for service center management. To place an order, click the blue botton and send us a prefilled email.**
+**This page list predefined service orders for service centers. To place an order, click the blue button and send us a prefilled email.**
 
 [[toc]]
 

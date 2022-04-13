@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # Service desk orders for data spaces
 
-**This page list predefined service orders for data space management. To place an order, click the blue botton and send us a prefilled email.**
+**This page list predefined service orders for data space management. To place an order, click the blue button and send us a prefilled email.**
 
 [[toc]]
 
@@ -110,7 +110,7 @@ Data transfers inside HUNT Cloud and external data imports can be ordered from o
 
 ### External export kista
 
-The [external export kista](/faq/external-transfer/#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner.
+The [external export kista](/faq/external-transfer/#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner. Note that [external import kista](/service-desk/lab-orders/#external-import-kista) can be ordere in the lab section of our service desk.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
@@ -125,7 +125,9 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 * **Expected delivery:** Access information sent to the lab user that will make data available for export.
 * **Cost:** Included in your data space subscription.
 
-
+::: warning External dependency
+Note that time to successful transfer depend on access to SFTP software and potential firewall adjustments for the external-party that will upload data.
+:::
 
 
 ### Network opening
@@ -145,3 +147,24 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 * **Expected response time:** Days.
 * **Expected delivery:** Network opening communicated in your Slack lab channel.
 * **Cost:** Included in your data space subscription.
+
+
+## Data space mangement
+
+### Update data space coordinator roles
+
+Click the button below to update your data space coordinator roles under your existing data space.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Update%20coordianator%20roles%20-%20%7Bdataspace%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20update%20the%20following%20coordinator%20role%28s%29%20in%20our%20data%20space%3A%0A%0A%2A%20Role%3A%20%7BCompliance/Data/Technical/Knowledge/Financial%7D%20coordinator%20%20%0A%2A%20Name%3A%20%20%0A%2A%20Department%3A%20%20%0A%2A%20Faculty%3A%20%20%0A%2A%20Institution%3A%20%20%0A%2A%20Phone%3A%20%20%0A%0AI%20am%20looking%20forward%20to%20receive%20an%20email%20acknowledging%20that%20you%20have%20updated%20our%20coordinator%20roles.%0A%0ABest%2C" class="nav-link external action-button">
+    Request update of data space role(s)
+  </a>
+</p></div></div>
+
+* **Who can order:** Data space leaders in active data spaces.
+* **Required attachment**: None.
+* **Expected delivery time:** One week.
+* **Cost:**  Included in your data space subscription.
+
+

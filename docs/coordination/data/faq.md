@@ -15,7 +15,7 @@ description: This page list data management FAQ for HUNT Cloud.
 
 ::: tip
 
-This section prosper on questions. [Contact us](/contact) with your burning topics so we can grow the page together.
+This section prosper on questions. [Contact us](/contact) with burning topics so we can grow the page together.
 
 ::: 
 

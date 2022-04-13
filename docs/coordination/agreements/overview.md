@@ -8,12 +8,11 @@ description: This page gives an overview of administrative agreements in HUNT Cl
 
 # Administrative agreements
 
-**This page holds an overview of the administrative agreements that are key to make science fly in HUNT Cloud.** 
+**This page holds an overview of the administrative agreements that are keys to make science fly in HUNT Cloud.** 
 
-We believe a solid framework of documented responsibilities is a success factor to enable simple and secure environments for your scientists. As a coordinator this means that you will balance a backstage agreement framework that is somewhat complex. Bear with us, once up and running it will provide you with quite some powers.
+We believe a solid framework of documented responsibilities is a success factor to enable simple and secure environments for your scientists. Although simple for scientists, as a coordinator you will balance a backstage agreement framework that is somewhat complex. Bear with us, once up and running it will provide you with quite some powers.
 
-::: tip TIP
-
+::: tip Get going
 Head over to our [get going](/coordination/get-going) page for a step-wise guide on how to start your agreement quest, and the [FAQ](/agreements/faq/) section for frequently asked agreement questions.
 :::
 
@@ -34,7 +33,11 @@ Our activities are organized in the following agreement hierarchy:
 4. The **Lab** is your digital laboratory where your get access to cloud resources for storage, computation and transport of data. The *Lab order* specify a lab leader and lab coordinator that can allocate resources and authorize users inside their lab. One or many labs can be attached to one data space.
 5. The **Lab user** is a scientist that can access data and cloud services in one lab. The *Lab user agreement* specify the acceptable use policy for our services. One or many lab users can be attached to one lab. One lab user can be attached to more than one lab, each such authorization requires a unique lab user agreement.
 
-We will need all five agreement levels in place before you can access a new lab environment. We know, this is a lot of papers and a complex structure. On the bright side, although complicated at the first glance, the already prepared structure provides you with a solid framework for flexibility. And the more of the agreement levels that are already in place, the simpler and quicker you can get a compliant lab up and running. [Contact us](contact) to get started. 
+We will need all agreement levels in place before to activate your new lab environment. 
+
+We know, this is lots of papers. On the bright side, although complex at the first glance, the prepared structure provides a solid framework for flexibility. 
+
+And keep in mind, the more layers already in place, the simpler it is to get compliant labs up and running. 
 
 
 
@@ -91,7 +94,7 @@ We need to ensure that we have an active data processor agreement with your host
 
 [HUNT Cloud Data Processor Agreement Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-processor-form.txt)(txt)
 
-We use information from the text file above to render the final data processor agreement. Please download the form, update the information and [send us](/contact) the text file for agreement rendering. Click the "Clarification of the form fields" below for more information on each field.
+We use information from the text file above to render the final data processor agreement. Please download the form, update the information and send us the text file for agreement rendering in the data processor section of our [service desk](/service-desk/data-controller-orders/#new-data-processor-agreement). Click the "Clarification of the form fields" below for more information on each field.
 
 ::: details Clarification of the form fields
 
@@ -154,7 +157,7 @@ This information is aimed at the overall processing purpose of the information u
 
 **Send us the text file for activation**
 
-When you have added the information to the text file, forward the text file to us on [email](/contact) for agreement rendering.
+When you have added the information to the text file, forward the text file to us on in the data controller section of our [service desk](/service-desk/data-controller-orders/#new-data-processor-agreement).
 
 :::
 
@@ -243,7 +246,9 @@ We already have many such agreements in place for speedy processing. If you know
 
 [HUNT Cloud Services Agreement Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-services-agreement-form.txt)(txt)
 
-We use information from the text file above to render new services agreements. Download the file, update the fields with your information, and forward the text file to us on [email](/contact) for agreement rendering.
+Please download the form, update the information and send us the text file for agreement rendering in the data processor section of our [service desk](/service-desk/data-controller-orders/#add-a-service-center). Click the "Clarification of the form fields" below for more information on each field.
+
+
 
 ::: details Clarification of the form fields
 
@@ -275,7 +280,7 @@ This individual is legally entitled to accept the financial side of the Cloud Se
 
 **Send us the text file for activation**
 
-Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
+When you have added the information to the text file, forward the text file to us on in the data controller section of our [service desk](/service-desk/data-controller-orders/#add-a-service-center).
 
 :::
 
@@ -303,18 +308,15 @@ The agreement specifies a data space that is attached to a services center. The 
 
 The data space order is co-signed by the services center leader and the data space leader.
 
-### Billing account
+### Invoice profile
 
-Each data space needs to specify at least one billing account where services gets billed. Depending on your data space subscription, you can establish several accounts (BLUE subscription layer). [Click here](/agreements/downloads/#data-space-order) to download the form. 
+Each data space needs to specify at least one invoice porfile where services gets billed. Depending on your data space subscription, you can establish several profiles (BLUE subscription layer). [Click here](/agreements/downloads/#data-space-order) to download the form. 
 
 ### Getting started
 
 We need to ensure that we have an active services center agreement with your host organization or department (for NTNU) before we can process your data space order.
 
-When the services agreement are in place, it's quite simple to order a data space: (1) Download the [data space order](/agreements/downloads/#data-space-order) and the [billing account form](/agreements/downloads/#data-space-order), (2) fill in the fields (descriptions on the download page), (3) and send the order and account form [to us](/contact) for the data space activation.
-
-[Contact us](/contact) for a chat before you start the process so we can learn about your science and together think up how cloud services may best make your science fly. 
-
+When the services agreement are in place, it's quite simple to order a data space: (1) Download the [data space order](/agreements/downloads/#data-space-order) and the [invoice profile](/agreements/downloads/#invoice-profile), (2) fill in the fields (descriptions on the download page), (3) and send the order and invoice profile to us via the service center section in our [service desk](/service-desk/service-center-orders/#new-data-space).
 
 
 
@@ -339,7 +341,7 @@ The lab order agreement is signed by the data space leader and the lab leader (t
 
 We need to ensure that we have an active data space order with your research group or research center before we can process your lab order.
 
-When the data space order are in place, it's quite simple to order a lab: (1) Download the [lab order](/agreements/downloads/#lab-order) and the [user agreement](/agreements/downloads/#data-space-order) template, (2) fill in the fields (descriptions on the download page), (3) and send the lab order and user agreements [to us](/contact) for the data space activation. 
+When the data space order are in place, it's quite simple to order a lab: (1) Download the [lab order](/agreements/downloads/#lab-order), (2) fill in the fields (descriptions on the download page), (3) and send us the lab order in the data space section of our [service desk](/service-desk/data-space-orders/#new-lab). 
 
 [Contact us](/contact) for a chat before you start the process so we can learn about your science and together discuss how to best onboard your scientists and adjust and tune your storage and compute resources to best make your science fly.
 
@@ -357,6 +359,14 @@ The agreement clarify the acceptable use policy for HUNT Cloud and responsibilit
 
 ### Getting started
 
-When you have an active lab, it's quite simple to add more users: (1) Download the [user agreement](/agreements/downloads/#data-space-order), (2) fill in the fields (descriptions on the download page), (3) and send the agreement [to us](/contact) for the user activation. 
+When you have ordered a lab, it's quite simple to add users: (1) Download the [user agreement](/agreements/downloads/#data-space-order), (2) fill in the fields (descriptions on the download page), (3) and send the agreements to us via the lab section in our [service desk](/service-desk/lab-orders/#add-a-new-lab-user) for user activations. 
+
+
+
+
+
+
+
+
 
 

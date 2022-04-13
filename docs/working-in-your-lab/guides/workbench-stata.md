@@ -166,7 +166,7 @@ You output should look similar to this:
 
 ![Stata twoway](./images/stata_twoway.png)
 
-The generation of this plot uses a tiny bit more compute resources than the previous once, so depending on your home machine type, the notebook state at the botton of your notebook may shift from `Idle` to `Busy` in a few seconds while the graph is printed. Your notebook may be unresponsive as long as the state is `Busy`.
+The generation of this plot uses a tiny bit more compute resources than the previous once, so depending on your home machine type, the notebook state at the bottom of your notebook may shift from `Idle` to `Busy` in a few seconds while the graph is printed. Your notebook may be unresponsive as long as the state is `Busy`.
 
 ### Save graphs
 

@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # Service desk orders for labs
 
-**This page list predefined service orders for activities within one lab. To place an order, click the blue botton and send us a prefilled email.**
+**This page list predefined service orders for activities within one lab. To place an order, click the blue button and send us a prefilled email.**
 
 [[toc]]
 
@@ -372,3 +372,7 @@ The [external import kista](/faq/external-transfer/#faq-on-external-data-transfe
 * **Expected response time:** Days.
 * **Expected delivery:** Kista access information sent to the lab user that will import the data.
 * **Cost:** Included in your lab subscription.
+
+::: warning External dependency
+Note that time to successful transfer depend on access to SFTP software and potential firewall adjustments for the external-party that will download data.
+:::
