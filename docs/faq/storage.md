@@ -59,7 +59,7 @@ mkdir -p $TMPDIR
 
 ### Why is home only 100G?
 
-The intention behind HUNT Cloud is to establish collaborative lab environments where people become stronger together by sharing data, code, results and knowledge. We have therefore kept the private **`home`** volume to a minimum to encourage lab users to move their activities into collaborative volumes such as work, archive and scratch. [Contact us](/contact) for volumes expansion of these volumes if you are in need of space.
+The intention behind HUNT Cloud is to establish collaborative lab environments where people become stronger together by sharing data, code, results and knowledge. We have therefore kept the private **`home`** volume to a minimum to encourage lab users to move their activities into collaborative volumes such as work, archive and scratch. Order a volume expansion in our [service desk](/service-desk/lab-orders/#expand-existing-volume) of these volumes if you are in need of space.
 
 ::: danger WARNING
 
@@ -69,11 +69,11 @@ There is -no- restore (backup) on your home-folder. All data in **`home`** may b
 
 ### Can I expand my volume sizes?
 
-Yes. We are more than happy to expand your volumes as your data collections grows. You can expand volumes on both and iaas machines in TB steps. You should plan for 30 minutes downtime of your lab during this procedure, including a machine restart. [Contact us](/contact) to schedule a volume expansion.
+Yes. We are more than happy to expand your volumes as your data collections grows. You can expand volumes on both and iaas machines in TB steps. You should plan for a machine restart and a two hour maintenance window where the lab is unavailable during this procedure. Order your volume expansion in our [service desk](/service-desk/lab-orders/#expand-existing-volume).
 
 ### What is the upper size of a volume?
 
-We aim to keep individual volumes below 25TB if possible. The soft limit is set for practical purposes when it comes to volume handling on our side. It is also set to help distribute large collections across several logical units in the unlikely case of volume destructions.
+We aim to keep individual volumes below 20TB if possible. The soft limit is set for practical purposes when it comes to volume handling on our side. It is also set to help distribute large collections across several logical units in the unlikely case of volume destructions.
 
 ### Why is my volume size less that I claimed?
 
@@ -85,9 +85,7 @@ One (1) terabyte of claimed storage is defined as 2^40 bytes. Computers allocate
 
 ### Can I add additional volumes to my lab?
 
-Yes. Nothing is better than seeing your data growing. We are therefore more than happy to include additional volumes to your lab if this is needed to make your science fly. For example, if your data collections reach more that 25TB. You should plan for 30 minutes downtime of your lab during this procedure, including a machine restart. [Contact us](/contact) to schedule volume inclusions to your lab.
-
-
+Yes. Nothing is better than seeing your data grow. We are therefore more than happy to include additional volumes to your lab if this is needed to make your science fly. For example, if your data collections reach more that 20TB. Order your [new volume](/service-desk/lab-orders/#new-volume) in our service desk.
 
 
 

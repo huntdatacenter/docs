@@ -14,14 +14,14 @@ This page lists frequently asked questions related to computation and analysis i
 
 ## Resources
 
-### Can I upgrade my compute resources?
+### Can I update my compute resources?
 
-Yes, you can. Your [lab leader](/faq/users/#user-roles) and lab coordinator approves upgrades both for cpu and memory of individual machines, and supplement of new machines in accordance with our [machine types](/services/machine-types). Forward upgrade requests to us on [email](/contact) with your lab leader and lab coordinator on cc.
+Yes. Your lab leader and lab coordinator can order machine updates] and order new lab machines in our [service desk](/service-desk/lab-orders/#compute) in accordance with our default [machine types](/services/machine-types).
 
 
 ### Can I have custom machine types?
 
-Yes, you can. Don't find what you are looking for among our default [machine types](/services/machine-types)? Labs in a data space on the [blue subscription](/services/overview/#subscriptions) level can request machines types with tailored memory and cpu resources. [Contact us](/contact) to get started.
+Yes. Don't find what you are looking for among our default [machine types](/services/machine-types)? Labs in a data space on the [blue subscription](/services/overview/#subscriptions) level can request machines types with tailored memory and cpu resources. [Contact us](/contact) on email to get started.
 
 ### Is my process hitting memory issues?
 
@@ -140,9 +140,9 @@ Be aware that installation of new packages with apt may affect the workflow of y
 
 On you home machine, we recommend that you install software that you download in a folder that is reachable for all of your fellow lab users, such as **`/mnt/works/software`**. Software installations that uses **`apt`** (see above) will automatically install in the correct folders.
 
-### Can I run MatLab, Stata, SPSS and RStudio?
+### Can I run MATLAB, Stata, SPSS and RStudio?
 
-Yes. You can run commonly used analytical tools, such MatLab, Stata, SPSS and Rstudio directly from your lab. You will need to bring a license from your host institution if you are affiliated outside of NTNU. Graphical user interfaces are accessed through the X2Go-software. [Contact us](/contact) for installations on home-machines.
+Yes. You can run commonly used analytical tools, such MATLAB, Stata, SPSS and Rstudio directly from your lab. You will need to bring a license from your host institution if you are affiliated outside of NTNU. Graphical user interfaces are accessed through the X2Go-software. [Contact us](/contact) for installations on home-machines.
 
 ### Can I run Windows software?
 
@@ -155,7 +155,7 @@ Yes. You can run [Docker images](https://www.docker.com/) on both [iaas](/faq/co
 ### Can I run Singularity containers?
 
 Yes, you can run your Singularity containers on both home, iaas and blue machines. Follow our quick
-[Singularity installation guide](/working-in-your-lab/technical-tools/singularity/).
+[Singularity installation guide](/working-in-your-lab/technical-tools/singularity/). For simplicity, we strongly recommend to install singularity via Conda. 
 
 ## Workflow
 
@@ -200,7 +200,7 @@ Please be aware that restarts will affect all of your lab colleagues working on 
 
 ### What privileges does my account have? 
 
-You have **[sudo](https://en.wikipedia.org/wiki/Sudo)** rights in home machines for application installation (apt) and machine restart (reboot). You have full administrator privileges on other machine types in your lab ([iaas and blue](faq/compute/#machine-types)).
+You have [sudo](https://en.wikipedia.org/wiki/Sudo) rights in home machines for application installation (apt) and machine restart (reboot). You have full administrator privileges on other machine types in your lab ([iaas and blue](faq/compute/#machine-types)).
 
 ### Can I get additional adminsitrator privileges?
 

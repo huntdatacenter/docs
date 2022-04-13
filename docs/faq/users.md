@@ -16,11 +16,11 @@ This page lists frequently asked questions related to users and user management 
 
 ### How do we add new users?
 
-Your lab leader or lab coordinator can add new users to your lab. New users must sign our [user agreements](/agreements/downloads/#user-agreement). Forward the signed agreement to us on [email](/contact) and start our [onboarding guide](/getting-started).
+Lab leaders and lab coordinators may order access for new lab users in our [servie desk](/service-desk/lab-orders/#add-a-new-lab-user). New users must sign the user agreements. Next, head over to our [onboarding guide](/getting-started) to prepare your key shipment.
 
 ### How long does an account activation take?
 
-See our [responsiveness](/responsiveness/) section for updated times on expected user onboardings. We activate new accounts and labs in the beginning of each week. Depending on the number of requests, accounts may be activated the upcoming week or some weeks thereafter. We do recognize that science never sleeps, so [contact us](/contact) for high priority activations same or next business day when needed.
+Allow for one week. However, we do recognize that science never sleeps, so [contact us](/contact) for high priority activations same or next business day when strictly needed.
 
 ### How many users can we add to a lab?
 
@@ -70,9 +70,9 @@ Maybe. We do allow such connections, however teleworking conditions from your ow
 
 ## Current users
 
-### How do I change my machine password?
+### How do I change my machine passphrase?
 
-You can change your SSH password with the **`passwd`** command. You will be asked to type your current password, and your future password two times. You will need to run the command on both your entry and home machine for a full update. [Contact us](/contact) if you don't remember your passwords and need a reset.
+You can change your SSH passphrase with the **`passwd`** command. You will be asked to type your current password, and your future password two times. You will need to run the command on both your entry and home machine for a full update. Order a SSH passphrase reset in our [service desk](/service-desk/user-orders/#ssh-passphrase-reset) if you don't remember your passwords and need a reset.
 
 ```bash
 passwd
@@ -80,7 +80,7 @@ passwd
 
 ### I don't remember my password, now what?
 
-After the initial setup, you do need to remember your SSH password when you install software. Since you will not use your password for other activities after the initial onboarding it may be hard to remember. [Contact us](/contact) if you need a password reset.
+Worry not. Order a SSH passphrase reset in our [service desk](/service-desk/user-orders/#ssh-passphrase-reset). After the initial setup, you do need to remember your SSH password when you install software and access your workbench. Since you will not use your password for other activities after the initial onboarding it may be hard to remember. 
 
 
 ### How can I see the other users in my lab?
@@ -114,7 +114,7 @@ groups
 
 ### I have moved to a new institution, now what? 
 
-I will need to send us an updated user agreement when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
+I will need to send us a [new user agreement](/service-desk/lab-orders/#add-a-new-lab-user) when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
 
 
 
@@ -126,15 +126,15 @@ I will need to send us an updated user agreement when you move to a new institut
 
 ### Can I get access to several labs?
 
-Yes. You can access more than one lab. We encourage lab leaders to separate data in labs and bring top expertise into their lab to do analysis there. Contact your new lab leader to arrange for a signed [user agreement](/agreements/downloads) and send this to us on [email](/contact) for account activation.
+Yes. You can access more than one lab. We encourage data spaces to separate data in labs and bring top expertise into their lab to do analysis there. You will need to send us one user agreement for each lab your want to acces. Lab leaders and lab coordinators may order your access in our [service desk](/service-desk/lab-orders/#add-a-new-lab-user).
 
 ### How do I get started with my second lab?
 
-We will ship SSH configuration and keys after you have sent us your signed agreement. Allow for weeks in account activation at this stage. When you get your keys, head to [Step 3. Configure your SSH](/getting-started/configure-ssh/) in our onboarding guide to get started.
+We will ship SSH configuration and keys after your lab leader or lab coordinator have order your lab access in the [service desk](/service-desk/lab-orders/#add-a-new-lab-user). When you get your keys, head to [Step 3. Configure your SSH](/getting-started/configure-ssh/) in our onboarding guide to get started.
 
 ### Can I transfer and merge data between my labs?
 
-Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. One way to document such transfers between your labs are to use our [internal kista order](/agreements/downloads).
+Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. When this is in place, order an [internal kista](/service-desk/lab-orders/#internal-kista) for compliant transfers between your labs.
 
 
 
@@ -159,7 +159,7 @@ No, not as long as your lab is active. We will deactivate your account, although
 
 ### Can I reactivate my old account?
 
-Yes. Reactivation require a new co-signed [user agreement](/agreements/downloads/#user-agreement) that you [forward to us](/contact) on mail for account activation. You will need to reconfigure VPN and SSH to get up and running.
+Yes. Lab leaders and lab coordintors can order reactivations in our [service desk](/service-desk/lab-orders/#reactivate-lab-user). Reactivation require a new [user agreement](/agreements/downloads/#user-agreement). You will need to reconfigure VPN and SSH to get up and running.
 
 
 

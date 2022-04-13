@@ -114,6 +114,7 @@ You may need to reset your VPN certificate when you get a new local machine or i
 * **Expected response time:** Days.
 * **Expected delivery:** VPN passphrase on Signal, link to VPN certificate on email.
 * **Requirement:** Active Signal app on your phone.
+* **Next step:** [Guide on the VPN reset](/guides/vpn-certificate-reset/).
 * **Cost:** Included in the lab subscription.
 
 

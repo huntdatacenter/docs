@@ -63,11 +63,11 @@ Follow the [Setup the VPN profile](/getting-started/configure-vpn/#_2-2-setup-th
 
 ### Connect to the VPN
 
-Follow the [Connect to the VPN](http://localhost:8080/getting-started/configure-vpn/#_2-3-connect-to-the-vpn) section of our "Getting started guide". 
+Follow the [Connect to the VPN](/getting-started/configure-vpn/#_2-3-connect-to-the-vpn) section of our "Getting started guide". 
 
 ### Verify your VPN connection
 
-Follow the [Verify your VPN connection](http://localhost:8080/getting-started/configure-vpn/#_2-4-verify-your-vpn-connection) section to verify a successful VPN connection as your will not be able to log into your lab until the VPN is working.
+Follow the [Verify your VPN connection](/getting-started/configure-vpn/#_2-4-verify-your-vpn-connection) section to verify a successful VPN connection as your will not be able to log into your lab until the VPN is working.
 
 ### Troubleshooting
 
