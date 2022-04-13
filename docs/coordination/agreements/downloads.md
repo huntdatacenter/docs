@@ -8,9 +8,15 @@ description: This page list agreements that may be relevant for you as a lab use
 
 # Download agreements
 
-This page list agreements that may be relevant for lab users, lab coordinators and data space coordinators. Contact your data space leader or service center administrator for more details on other agreement types.
+**This page list agreements that may be relevant for lab users, lab coordinators and data space coordinators. Contact your data space leader or service center administrator for more details on other agreement types.**
 
 [[toc]]
+
+::: tip Service desk
+
+Head over to our [service desk](/service-desk/) to place orders using the agreements listed on this page. 
+
+:::
 
 ## User agreement
 
@@ -57,9 +63,9 @@ We use this to document activities in the lab, for example in reporting to your 
 - *Categories of data subjects*. If applicable, specify the broad categories of data subjects such as research participants, patients etc. 
 - *Personal data content*. If applicable, specify the personal data content included in the processing such as "self reported health information, genomics information, medical images, information from medical records" etc.
 
-**Send us the text file for activation**
+**Request a lab**
 
-Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
+Send us your signed agreement utilizing the blue button in the data space section of our [service desk](/service-desk/data-space-orders/#new-lab).
 
 :::
 
@@ -110,9 +116,9 @@ This individual is our contact point for knowledge transfers across labs attache
 
 The following individual is the point of contact for financial discussions, including issues related to reporting, invoice profiles, know-hows related to the prices model, dialogue on continous development of the finacial model and prices etc. Note that this is a different roles that our invoice contact which is our point of contact for technicalities for the invoice handling.
 
-**Send us the text file for activation**
+**Request a data space**
 
-Download and update the text file with your information and [forward it to us](/contact) for agreement rendering.
+Send us your signed agreement utilizing the blue button in the service center section of our [service desk](/service-desk/service-center-orders/#new-data-space).
 
 :::
 
@@ -189,7 +195,7 @@ Invoice profiles are signed by data space leaders. Co-signature from HUNT Cloud 
 
 **Activation**
 
-[Send us](/contact) your signed copy on email for activation. 
+Send us your signed invoice profile together with your data space order utilizing the blue button in the service center section of our [service desk](/service-desk/service-center-orders/#new-data-space).
 
 :::
 

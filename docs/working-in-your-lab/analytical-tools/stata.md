@@ -10,12 +10,17 @@ description: Installation guide for Stata.
 
 [Stata](https://www.stata.com/) is a ananlytical software developed by StataCorp tailored towards epidemiological analysis.
 
+[[toc]]
+
 ::: warning Requirement
 
 - Access to a Stata license for the users in your lab.
 
 :::
 
+## Installation in your workbench
+
+You may request Stata in your workbench as a Jupyter notebook. This means that you can write known Stata commands and that you can view plots on your screen. See our [Stata guide](/guides/stata/) for more details and request Stata access to the workbench in our [service desk](/service-desk/user-orders/#workbench-access).
 
 ## Installation on home machines
 
