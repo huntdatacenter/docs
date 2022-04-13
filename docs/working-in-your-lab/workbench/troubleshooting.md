@@ -35,11 +35,11 @@ If you were previously able to access Workbench and now your browser reports exp
 
 An unresponsive or slow workbench may be caused by several things. Here's a small checklist to narrow down potential causes: 
 
-* Use the Google Chrome as your browser as other browsers don't support all features and might cause potential silent failures.
+* Use Google Chrome as your browser. Other browsers don't support all features and might cause potential silent failures.
 
-* Restart your workbench environment to start fresh in the case something got hung up. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment) to se how.
+* Restart your workbench environment to start fresh in the case something got hung up. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment) to see how.
 
-* Check the resource consumption on your lab `home` machine to ensure that your have free memory and cpu resources for your tasks, for example by logging into yoru home machine and run [htop](/working-in-your-lab/technical-tools/htop/). Consider to upgrade your home machine size in the [service desk](/service-desk/lab-orders/#update-machine-size) if memory or cpu is full or near-full.
+* Check the resource consumption of your `home`-machine to ensure that you have availble free memory and cpu resources, for example by logging into your lab `home`-machine and run [htop](/working-in-your-lab/technical-tools/htop/). Consider to upgrade your machine size in the [service desk](/service-desk/lab-orders/#update-machine-size) if your are low on free resources.
 
 [Contact us](/contact) if none of these works for further investigation. 
 
