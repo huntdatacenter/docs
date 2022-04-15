@@ -8,18 +8,23 @@ description: Internal kistas provide labs with a simple and controlled way to tr
 
 # Internal kista
 
-Internal kistas provide labs with a simple and controlled way to transfer data between two labs inside HUNT Cloud. In short, internal kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers dedicated to one data transaction between two labs.
+**Internal kistas provide labs with a simple and controlled way to transfer data between two labs inside HUNT Cloud.**
+
+[[toc]]
+
+In short, internal kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers dedicated to one data transaction between two labs.
 
 ::: tip Note
 This page describes the practical aspects of kista transfers. Head over to our [internal transfer](/faq/internal-transfer/) section in the FAQ for more information on the service itself.
 :::
 
 
-[[toc]]
 
 ## Order
 
-Internal kistas are ordered by the uploader Lab leader or Lab coordinator using the [Internal kista transfer order](/agreements/downloads/#internal-kista-order). Forward the order [to us](/contact) for deployment.
+Lab leaders and lab coordinators can order internal kistas in our [service desk](/service-desk/lab-orders/#internal-kista). 
+
+## Roles 
 
 The kista order defines two roles that we will use in this document:
 
@@ -127,7 +132,8 @@ reput /mnt/cargo/example-file1.txt
 ## Download
 
 ::: tip
-This section is aimed at the lab user that will **download** data from a kista.
+This section is aimed at the lab user that will **download** data from a kista. See the [upload section](#upload) if you plan to download data to your lab.
+
 :::
 
 1. Once inside your kista, move to the **`upload`** folder.
@@ -181,6 +187,8 @@ You might see this warning message when you log into a kista that has been rebui
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ```
 
+::: details Solution
+
 [Click here](/troubleshooting/connection/#warning-remote-host-identification-has-changed) to see the full message and explanation in our main troubleshooting section. You may ignore this message if you connect to a kista inside your lab. 
 
 You can remove the message and proceed with the login by running the command that is stated at the end of the screen message similar to:
@@ -188,4 +196,4 @@ You can remove the message and proceed with the login by running the command tha
 ```bash
 ssh-keygen -f "/home/<username>/.ssh/known_hosts" -R "10.42.<number>.<number>"
 ```
-
+:::
