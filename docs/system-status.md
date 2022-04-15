@@ -12,10 +12,6 @@ description: Updates will be posted here if there is any service or performance 
 Operational.
 :::
 
-**2022-03-08 11:44** - Lost connection to VPN from 09:36-11:18 due to large data imports. Services are restored and we will work on traffic shaping avoiding this in the future.
-
-**2022-02-06 17:00 - Lab machines with reduced functionality.** A subset of lab machines have storage volumes in read-only. These machines needs to be restarted. We will start on restarts from Monday morning. Contact us for priority.
-
 
 <!--
 
