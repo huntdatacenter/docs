@@ -31,7 +31,7 @@ The service orders below are aimed at active lab users. Lab access for new users
 
 ### Workbench access
 
-[Workbench](/working-in-your-lab/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, or MATLAB.
+[Workbench](/working-in-your-lab/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
@@ -43,7 +43,7 @@ The service orders below are aimed at active lab users. Lab access for new users
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
 * **Expected delivery:** Workbench access key and certificate.
-* **Requirement:** Active Signal app on phone.
+* **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.
 * **Next step:** [Prepare your key transfer](/guides/workbench-request/).
 * **Cost:** Included in the lab subscription.
 
