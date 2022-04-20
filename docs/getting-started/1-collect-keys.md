@@ -24,7 +24,7 @@ We will register your account for activation as soon as we receive your signed u
 
 ::: tip Time estimate
 
-Allow for a few weeks to pass from you send us your agreement and until we forward your keys ([read more](/faq/users/#how-long-does-a-new-account-activation-take)).
+Allow for a week to pass from you send us your agreement and until we forward your keys ([read more](/faq/users/#how-long-does-a-new-account-activation-take)).
 
 :::
 
