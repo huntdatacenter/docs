@@ -131,7 +131,7 @@ sudo apt install <packagename>
 ::: warning WARNING
 
 Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/conda/). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.
- 
+
 :::
 
 
@@ -148,14 +148,20 @@ Yes. You can run commonly used analytical tools, such MATLAB, Stata, SPSS and Rs
 
 Most likely. Many commonly used software in scientific computing can be run from your lab, such as MatLab, Stata, and SPSS, including many special tools for image analysis and genetic analysis. However, we do run Linux as the operating systems in your lab. Some Windows tools will therefore be unavailable. We do provide Windows systems in those rare cases when this is the only option to run mission critical applications. [Contact us](/contact) if you think you do need Windows tools to get your science to fly.
 
-### Can I run Docker images?
+### Can I run Docker containers?
 
 Yes. You can run [Docker images](https://www.docker.com/) on both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](/faq/compute/#what-is-a-blue-machine) machines. Docker images can not be run from home machines due to security reasons.
+
+::: tip
+
+If you need to run docker images on home machine try using Singularity instead. Read more in our [Singularity installation guide](https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/singularity/).
+
+:::
 
 ### Can I run Singularity containers?
 
 Yes, you can run your Singularity containers on both home, iaas and blue machines. Follow our quick
-[Singularity installation guide](/working-in-your-lab/technical-tools/singularity/). For simplicity, we strongly recommend to install singularity via Conda. 
+[Singularity installation guide](/working-in-your-lab/technical-tools/singularity/). For simplicity, we strongly recommend to install singularity via Conda.
 
 ## Workflow
 
@@ -198,7 +204,7 @@ sudo reboot
 Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/faq/users/#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
 :::
 
-### What privileges does my account have? 
+### What privileges does my account have?
 
 You have [sudo](https://en.wikipedia.org/wiki/Sudo) rights in home machines for application installation (apt) and machine restart (reboot). You have full administrator privileges on other machine types in your lab ([iaas and blue](faq/compute/#machine-types)).
 
