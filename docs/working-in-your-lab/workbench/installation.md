@@ -70,13 +70,13 @@ Example of hosts record:
 
 On your local machine, edit `/etc/hosts` file in your preferred text editor, and add the line that you received from us on email.
 
-Example with text editor: 
+Example with text editor:
 
 ```
 EDITOR='open -Wne' sudo -e /etc/hosts
 ```
 
-Example with vim: 
+Example with vim:
 
 ```
 sudo vim /etc/hosts
@@ -131,8 +131,11 @@ sudo vim /etc/hosts
    ![5_cert_p12.png](./images/5_cert_p12.png)
 
 6. Wizard will require additional confirmation for installation certification authority HCTS CA 1
-   (HUNT Cloud Trust Services). This is required to safely access Workbench in your lab. Before clicking
-   yes you should confirm that you see this thumbprint (fingerprint):
+   (HUNT Cloud Trust Services).
+   HUNT Cloud certificate is required to safely access Workbench in your lab.
+   If you see LAB instead of `HCTS CA 1` skip to step 7.
+   Usually you are asked to confirm only when setting up Workbench for the first time.
+   Before clicking yes you should confirm that you see this thumbprint (fingerprint):
    `ADD9DFEC C998BE44 AC2F254E 75E5EB98 D91879A6`
 
    ![6_confirmCAcertificate.png](./images/6_confirmCAcertificate.png)
@@ -204,7 +207,7 @@ https://<labname>.lab.hdc.ntnu.no
 https://demolab.lab.hdc.ntnu.no
 ```
 
-Click `OK` if you get a `User Identification Request` for your new certificate and ensure that the `Remember this decision` is checked.  The certificate are to be issued by: 
+Click `OK` if you get a `User Identification Request` for your new certificate and ensure that the `Remember this decision` is checked. The certificate are to be issued by:
 
 ```
 Organizatoin: "HUNT Cloud"
