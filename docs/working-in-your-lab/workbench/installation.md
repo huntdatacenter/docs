@@ -247,14 +247,6 @@ If you see Error code: `SEC_ERROR_UNKNOWN_ISSUER` when accessing Workbench follo
    ![mac-firefox-trust-ca.png](./images/mac-firefox-trust-ca.png)
 :::
 
-### 500 Internal Server Error
-
-::: details Read more
-
-If you are a fast clicker and get to an app before it's initialized in the background you might get the "500 : Internal Server Error"-message with the subtext "Could not start rstudio in time". Reload the page (Ctrl/Command+R), and hopefully things will be sorted. [Contact us](/contact) if the message persist.
-
-:::
-
 ### 502 Bad gateway
 
 ::: details Read more
