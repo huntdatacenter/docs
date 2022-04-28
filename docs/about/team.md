@@ -10,9 +10,9 @@ description: This page gives an overview of the team that passionatiely develop 
 
 **Your experiences in HUNT Cloud are shaped and molded by a small team of scientific instrument makers located at NTNU, Norway.**
 
-![HUNT Cloud](./images/hunt-cloud-team.png)
+<!-- ![HUNT Cloud](./images/hunt-cloud-team.png) -->
 
-Our team consist of six full time employees with a background from medicine, biology, management systems, signal processing and computer science ([link to image](https://assets.hdc.ntnu.no/assets/hunt-cloud-team.png)). We collaborate closely on most of our [activities](/about/activities), although for clarity, here is a short description of our core responsibility areas.
+Our team consist of five full time employees with a background from medicine, biology, management systems, signal processing and computer science. We collaborate closely on most of our [activities](/about/activities), although for clarity, here is a short description of our core responsibility areas.
 
 ### Qussay Ghazeia
 
@@ -22,17 +22,21 @@ Qussay is our Compliance officer. He is responsible for our audit programs that 
 
 Matúš is heading our user experience efforts. This includes the direction, prototyping and development of new services. Matúš do also lead the development of user documention and our internal analytics. You will meet Matúš both in dicussions on pilot services and during advanced support. 
  
+<!-- 
+ 
 ### Sandor Zeestraten 
 
 Sandor is leading our technical operations. This includes the orchestration of our data centers, storage, compute and transport systems. Sandor is also responsible for operational code such as lab and user deployments. You may meet Sandor when you upgrade your resources and order external kistas.
 
+-->
+
 ### Signe Åsberg
 
-Signe is developing our humanities and enterprise activities. This includes dialogue with scientists and other interested parties on a range of topics, especially those related to data value, digital development and scientific growth strategies.
+Signe is developing our humanities and enterprise activities. This includes dialogue with scientists and other interested parties on a range of topics, especially those related to data value, digital development and scientific growth strategies. You may also meet Signe at our involvements in national and international initiatives. 
 
 ### Tom-Erik Røberg
 
-Tom-Erik is leading our technology strategies. This includes the translation of high-level missions to technical tooling and deelopments, as well as our harmonization with national and international initiatives. You may meet Tom-Erik in all levels of technological activities and discussions. 
+Tom-Erik is leading our technology strategies and technical operations. This includes activities from translation of high-level missions to technical tooling and deelopments to data center orchestration. You may meet Tom-Erik in all levels of technological activities and discussions. 
 
 ### Oddgeir Lingaas Holmen
 
