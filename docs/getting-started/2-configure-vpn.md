@@ -31,6 +31,9 @@ We use the open-source application `OpenVPN` to ensure encrypted communication b
 
 Click on the link above, scroll down to the file named **`OpenVPN-<version-number>-i601-amd64.msi`** (Windows 10 users), download the file and follow the on-screen installation instructions.
 
+    Windows users from NTNU can install OpenVPN community edition
+    using NTNU Software Center even without administrative rights.
+
   ::: warning
   **You will need administrative rights on your local machine to successfully install OpenVPN.**
 
