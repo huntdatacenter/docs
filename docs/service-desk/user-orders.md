@@ -63,7 +63,7 @@ If you have existing Workbench setup and your certificate has expired request ne
 * **Expected response time:** Days.
 * **Expected delivery:** Workbench certificate.
 * **Requirement:** (1) Active Signal app on phone.
-* **Next step:** [Guide on Workbench reissue](/guides/workbench-request/).
+* **Next step:** [Guide on Workbench reissue](/guides/workbench-reissue-certificate/).
 * **Cost:** Included in the lab subscription.
 
 
