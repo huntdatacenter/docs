@@ -1,12 +1,12 @@
 ---
-title: Workbench renew certificate
+title: Workbench reissue certificate
 category: Guides
-permalink: /guides/workbench-renew-certificate
+permalink: /guides/workbench-reissue-certificate
 sidebarDepth: 1
 description: Guide on installation of new certificate for Workbench.
 ---
 
-# Workbench renew certificate
+# Workbench reissue certificate
 
 If you already requested reissue of your expired certificate in [Service desk: Workbench access](/service-desk/user-orders/#workbench-access) and received your new certificate follow the steps below
 to configure it.

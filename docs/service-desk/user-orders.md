@@ -36,7 +36,7 @@ The service orders below are aimed at active lab users. Lab access for new users
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
   <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Workbench%20order%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20try%20Workbench%20in%20%7Blabname%7D.%0A%0AI%20have%20install%20and%20activated%20the%20Signal%20app%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20key%20and%20certificate.%20%0A%0AThese%20are%20the%20tools%20I%20plan%20to%20use%3A%20%28Rstudio/Jupyter/Python/MATLAB/Stata%29.%0A%0ABest%2C" class="nav-link external action-button">
-    Request workbench access
+    Request Workbench access
   </a>
 </p></div></div>
 
@@ -45,6 +45,25 @@ The service orders below are aimed at active lab users. Lab access for new users
 * **Expected delivery:** Workbench access key and certificate.
 * **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.
 * **Next step:** [Prepare your key transfer](/guides/workbench-request/).
+* **Cost:** Included in the lab subscription.
+
+
+### Workbench reissue
+
+If you have existing Workbench setup and your certificate has expired request new one.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Workbench%20reissue%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20reissue%20of%20Workbench%20certificate%20for%20lab%3A%20%7Blabname%7D.%0A%0AI%20have%20installed%20and%20activated%20the%20Signal%20app%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20certificate.%20%0A%0ABest%2C" class="nav-link external action-button">
+    Request Workbench reissue
+  </a>
+</p></div></div>
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** Workbench certificate.
+* **Requirement:** (1) Active Signal app on phone.
+* **Next step:** [Guide on Workbench reissue](/guides/workbench-request/).
 * **Cost:** Included in the lab subscription.
 
 
