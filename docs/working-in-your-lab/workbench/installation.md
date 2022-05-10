@@ -144,7 +144,7 @@ sudo vim /etc/hosts
 
    ![7_confirmLabCAcertificate.png](./images/7_confirmLabCAcertificate.png)
 
-8) Quit your browser and restart it again for the certificate to get recognized.
+8. Quit your browser and restart it again for the certificate to get recognized.
 
    ![8_import_success.png](./images/8_import_success.png)
 
@@ -174,9 +174,9 @@ sudo vim /etc/hosts
 
 ::: details Ubuntu Linux
 
-We recommend that you use the Google Chrome browser for predictability. [Click here](https://duckduckgo.com/?q=google+chrome+ubuntu+install+howto) for guides on how to install Chrome on your local machine.
+We recommend that you use the [Google Chrome browser](https://www.google.com/chrome/) for predictability.
 
-1. Open Chrome on your local machine.
+1. Open Google Chrome on your local machine.
 
 2. Open url `chrome://settings/certificates` and click the `Import` button on the right side of the screen.
 
@@ -184,7 +184,7 @@ We recommend that you use the Google Chrome browser for predictability. [Click h
 
 4. Restart Chrome.
 
-The certificate is now installed and can be used for network or secure web site client authentication after the restart of Firefox.
+After the restart of Google Chrome the certificate is ready for network or secure web site client authentication.
 
 :::
 
@@ -195,7 +195,7 @@ The certificate is now installed and can be used for network or secure web site 
 Make sure you are connected to the VPN before accessing Workbench.
 :::
 
-1. Open your web browser (we recommend Google Chrome).
+1. Open your web browser (we recommend [Google Chrome browser](https://www.google.com/chrome/)).
 
 2. Type in the URL address to your lab in your browser.
 

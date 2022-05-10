@@ -306,6 +306,7 @@ module.exports = {
                 "/service-desk/access-guides/reset-gauth.md",
                 "/service-desk/access-guides/reset-ssh.md",
                 "/service-desk/access-guides/reset-vpn.md",
+                "/service-desk/access-guides/workbench-reissue.md",
                 "/service-desk/access-guides/workbench-request.md",
               ],
             },
