@@ -21,9 +21,9 @@ See our [workbench FAQ](/working-in-your-lab/workbench/faq/) for general questio
 
 ## Access
 
-### I am unable to log in to my Workbench applications?
+### I am unable to access my Workbench applications?
 
-If you were previously able to access your applications in Workbench, for example RStudio, and then the access suddenly stopped, one quick approach to get things back up could be to restart your Workbench environment. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch) to learn how to restart. [Contact us](/contact) if you need further assistance.
+If you were previously able to access your applications in Workbench (e.g. RStudio), and then the application suddenly stopped working, one quick approach is to try restarting your Workbench environment. Follow the guide to [restart Workbench environment](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). [Contact us](/contact) if you need further assistance.
 
 ### Has my client certificate expired?
 
