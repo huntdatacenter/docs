@@ -27,7 +27,7 @@ If you were previously able to access your applications in Workbench, for exampl
 
 ### Has my client certificate expired?
 
-If you were previously able to access Workbench and now your browser reports 403 Forbidden error do not hesitate to [contact us](/contact), we can usually reissue new Workbench certificates pretty quickly.
+If you were previously able to access Workbench and now your browser reports 403 Forbidden error do not hesitate to [contact us](/service-desk/user-orders/#workbench-reissue), we can usually reissue new Workbench certificates pretty quickly.
 
 ![expired_certificate.png](./images/expired_certificate.png)
 
