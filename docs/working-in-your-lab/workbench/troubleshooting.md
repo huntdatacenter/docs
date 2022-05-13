@@ -25,9 +25,16 @@ See our [workbench FAQ](/working-in-your-lab/workbench/faq/) for general questio
 
 If you were previously able to access your applications in Workbench, for example RStudio, and then the access suddenly stopped, one quick approach to get things back up could be to restart your Workbench environment. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch) to learn how to restart. [Contact us](/contact) if you need further assistance.
 
-### Has my certificate expired?
+### Has my client certificate expired?
 
-If you were previously able to access Workbench and now your browser reports expired certificates do not hesitate to [contact us](/contact), we can usually reissue new Workbench certificates pretty quickly.
+If you were previously able to access Workbench and now your browser reports 403 Forbidden error do not hesitate to [contact us](/contact), we can usually reissue new Workbench certificates pretty quickly.
+
+![expired_certificate.png](./images/expired_certificate.png)
+
+### Has my lab certificate expired?
+
+If you were previously able to access Workbench and now your browser reports expired/unsafe certificates do not hesitate to [contact us](/contact), we can usually update lab certificates pretty quickly.
+
 
 ## Applications
 
