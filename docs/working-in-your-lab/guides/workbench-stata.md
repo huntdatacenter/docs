@@ -172,7 +172,7 @@ The generation of this plot uses a tiny bit more compute resources than the prev
 
 You may save your graphs on your lab home machine with the `export` command: 
 
-```pyhon
+```python
 // save your latest graph
 graph export mygraph.svg
 ```
