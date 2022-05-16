@@ -33,12 +33,18 @@ The service orders below are aimed at active lab users. Lab access for new users
 
 [Workbench](/working-in-your-lab/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Workbench%20order%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20try%20Workbench%20in%20%7Blabname%7D.%0A%0AI%20have%20install%20and%20activated%20the%20Signal%20app%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20key%20and%20certificate.%20%0A%0AThese%20are%20the%20tools%20I%20plan%20to%20use%3A%20%28Rstudio/Jupyter/Python/MATLAB/Stata%29.%0A%0ABest%2C" class="nav-link external action-button">
-    Request Workbench access
-  </a>
-</p></div></div>
+<ServiceDesk subjectTemplate="Workbench order - {username} @ {labname}" bodyTemplate="Hi HUNT Cloud team,
+
+I would like to try Workbench in {labname}.
+
+I have install and activated the Signal app on my phone and are looking forward to receive my key and certificate.
+
+These are the tools I plan to use: {tools}.
+
+—
+Kind regards,
+{full_name}
+" title="Request Workbench access"/>
 
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
