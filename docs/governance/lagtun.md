@@ -8,18 +8,11 @@ description: Lagtun is the body that appoints time for the scientific governance
 
 # Lagtun
 
-**Lagtun is the body that appoints time for the scientific governance of HUNT Cloud.** 
+**High impact science needs continuous developments in data, tools, expertise and environments to prosper. Lagtun is the body that appoints time to govern the scientific developments in HUNT Cloud.** 
+
+Utilizing cooperative problem solving and joint strategic thinking among representatives from our data controllers, services centers and data spaces on the blue subscription layer, Lagtun meet each Ting week to give recommendations on our scientific development. 
 
 [[toc]]
-
-## About
-
-**High impact science needs continuous developments in data, tools, expertise and environments to prosper. Lagtun is the body that governs these developments in HUNT Cloud.** 
-
-Utilizing cooperative problem solving and joint strategic thinking among our members, representatives from data controllers, services centers and data spaces on the blue subscription layer meet each Ting week to give recommendations on our scientific development to the Head of HUNT Research Centre. 
-
-
-
 
 ## Attendance
 
@@ -33,13 +26,13 @@ The following Lagtun membership tickets are issued to contracting parties from p
 
 :::
 
-The membership criteria was clarified in [R6/LT/T4/21](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=5). Employees from HUNT Cloud participate as observers.
+The membership criteria was clarified in [R6/LT/T4/21](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=5). The ting is lead by the Head of HUNT Cloud, and HUNT Cloud team members participate as observers.
 
 
 
 ## Resolutions
 
-**Lagtun gives recommendations on the development of HUTN Cloud in the form of resolutions. The is introduced with the intention to allow for an inclusive decision making process and multilateral cooperation.** 
+**Lagtun gives recommendations on the development of HUNT Cloud in the form of resolutions. The is introduced with the intention to allow for an inclusive decision making process and multilateral cooperation.** 
 
 ::: tip
 
@@ -91,7 +84,7 @@ Operational clauses inside a resolution are numbered with the item number and le
 
 ### Invitations
 
-Invitations are forwarded on email to ticket holders whom may attend themselves or send deputies.
+Invitations are forwarded on email to ticket holders whom may attend themselves or send deputies. Ticket holders may also [contact us](/contact) for direct calendar bookings for their representatives.
 
 ### Schedule 
 
@@ -127,6 +120,10 @@ If you are a ticket holder you may choose to attend your self or forward the mee
 
 We forward invitations on email addresses that are registered in your Data controller agreement, Services center agreement and Data space agreement. [Contact us](/contact) if you have not received your ticket.
 
+### Can I get the invitation as a calendar booking
+
+Yes. [Contact us](/contact) if you would like to receive the Lagtun invitation as a calendar booking.
+
 ### I can only participate for one hour
 
 Perfectly fine fine with us. If you are interested in the resolutions, we recommend that you prioritize the first hour (9-10 am) where we aim to complete most of the structured agenda. If you are interested in unstructured discussion, then we recommend that you prioritize the last hour (10-11 am) where we aim to spend some to most of the time on such unstructured discussions.
@@ -138,5 +135,11 @@ We know, Lagtun is difficult to pronounce in english. However, in Norwegian it i
 First, **Lag** means "law" In Old Norse. This meaning is included in the last part of the name of our region, Trøndelag, which means the law of the Trønders. In addition, "lag" means "team" in modern Norwegian, reflecting the collaborative nature of the ting. 
 
 The second part, **tun** is also an Old Norse word for a fenced in area, usually around a collection of farm houses, much like your fenced in lab machines. Also relevant, the old tings were held on fenced in tuns for which the the Vikings had to leave all weapons by the fence before they entered the ting.
+
+::: tip Ting week FAQs
+
+[Click here](/tingweek/#faq) to read frequently asked questions about the Ting weeks.
+
+:::
 
 
