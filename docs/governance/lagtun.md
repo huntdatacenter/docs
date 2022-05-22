@@ -8,7 +8,7 @@ description: Lagtun is the body that appoints time for the scientific governance
 
 # Lagtun
 
-**High impact science needs continuous developments in data, tools, expertise and environments to prosper. Lagtun is the body that appoints time to govern the scientific developments in HUNT Cloud.** 
+**High impact science needs continuous evolution of data, tools, expertise and environments to prosper. Lagtun is the body that appoints time to govern the scientific developments in HUNT Cloud.** 
 
 Utilizing cooperative problem solving and joint strategic thinking among representatives from our data controllers, services centers and data spaces on the blue subscription layer, Lagtun meet each Ting week to give recommendations on our scientific development. 
 
@@ -16,9 +16,11 @@ Utilizing cooperative problem solving and joint strategic thinking among represe
 
 ## Attendance
 
-::: tip Representatives
+### Memberships
 
-The following Lagtun membership tickets are issued to contracting parties from public and non-profit organizations as follows:
+The following Lagtun membership tickets are issued to contracting parties from public and non-profit organizations:
+
+::: tip Tickets
 
 * ONE TICKET per Data controller with at least one active data space.
 * ONE TICKET per Service center with at least one active data space. 
@@ -26,9 +28,17 @@ The following Lagtun membership tickets are issued to contracting parties from p
 
 :::
 
-The membership criteria was clarified in [R6/LT/T4/21](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=5). The ting is lead by the Head of HUNT Cloud, and HUNT Cloud team members participate as observers.
+The membership criteria was clarified in [R6/LT4/T4/21](https://docs.hdc.ntnu.no/tingweek/resolutions/#clarification-of-lagtun-membership). Lagtun is chaired by the Head of HUNT Cloud. HUNT Cloud employees participate as observers.
 
+### Invitations
 
+Invitations are forwarded on email to leaders and administrators for data processors, services centers and data spaces on the BLUE subscription level (invitation recipients). Invitation recipients may attend themselves or forward their invitation to a representative of their choice. 
+
+::: tip Direct calendar bookings
+Invitation recipients may [contact us](/contact) for direct calendar bookings for themselves or their chosen representative for future Lagtuns.
+:::
+
+The invitation criteria was clarified in [R2/LT5/T5/22](https://docs.hdc.ntnu.no/tingweek/resolutions/#clarification-of-ting-week-invitations).
 
 ## Resolutions
 
@@ -36,14 +46,14 @@ The membership criteria was clarified in [R6/LT/T4/21](https://assets.hdc.ntnu.n
 
 ::: tip
 
-[Click here for Lagtun resolutions >>](/tingweek/resolutions) 
+[Click here to read our Lagtun resolutions >>](/tingweek/resolutions) 
 :::
 
 ### Consideration
 
 For clarity, NTNU and HUNT Research Centre are legally responsible for the activities at HUNT Cloud, including aspects related to privacy, security and finance.
 
-Lagtun resolutions are therefore formally expressed as recommendations for consideration to the Head of HUNT Research Centre at NTNU that may: (i) adopt the resolution, meaning that HUNT Cloud will incorporate the recommendations directly; or (ii) take the resolution into consideration, meaning that we need more time to investigation options before decisions can be made.
+Lagtun resolutions are therefore formally expressed as recommendations for consideration to the Head of HUNT Cloud at NTNU that may: (i) adopt the resolution, meaning that HUNT Cloud will incorporate the recommendations directly; or (ii) take the resolution into consideration, meaning that we need more time to investigation options before decisions can be made.
 
 ### Consensus
 
@@ -82,17 +92,13 @@ Operational clauses inside a resolution are numbered with the item number and le
 
 ## Meeting information 
 
-### Invitations
-
-Invitations are forwarded on email to ticket holders whom may attend themselves or send deputies. Ticket holders may also [contact us](/contact) for direct calendar bookings for their representatives.
-
 ### Schedule 
 
 Lagtun is scheduled on Thursdays between 9-11 am CET during the Ting weeks. Click here to see [upcoming dates](/tingweek/#dates-and-agendas).
 
 ### Location
 
-Lagtun meets digitally utilizing NTNU's zoom subscription. 
+Lagtun meets digitally utilizing NTNU's Zoom subscription. 
 
 ### Agenda
 
@@ -107,30 +113,30 @@ The aim is to float items to member representatives one month before the meeting
 
 ### Records
 
-We document meeting records in addition to the public resolutions. These includes backgrounds, draft resolutions, dialogues and discussions, the final resolutions and considerations. Advises given during meetings are recorded as "recommendations". The records are distributed to all active HUNT Cloud users. 
+We aim to document meeting records in addition to the public resolutions. These includes backgrounds, draft resolutions, dialogues and discussions, the final resolutions and considerations. Advises given during meetings are recorded as "recommendations". The records are distributed to all active HUNT Cloud users. 
 
 
 ## FAQ
 
 ### I can not participate
 
-If you are a ticket holder you may choose to attend your self or forward the meeting link to a deputy that represent your organization.
+If you are a ticket holder you may choose to attend your self or forward the invitation to a representative of your choice.
 
 ### I have not received my invitation 
 
-We forward invitations on email addresses that are registered in your Data controller agreement, Services center agreement and Data space agreement. [Contact us](/contact) if you have not received your ticket.
+We forward invitations on email addresses that are registered in your Data controller agreement, Services center agreement and Data space agreement. [Contact us](/contact) if you expect to be an invitation recipient and have not received your ticket.
 
 ### Can I get the invitation as a calendar booking
 
-Yes. [Contact us](/contact) if you would like to receive the Lagtun invitation as a calendar booking.
+Yes. [Contact us](/contact) if you would like to receive your Lagtun invitation as a calendar booking.
 
 ### I can only participate for one hour
 
-Perfectly fine fine with us. If you are interested in the resolutions, we recommend that you prioritize the first hour (9-10 am) where we aim to complete most of the structured agenda. If you are interested in unstructured discussion, then we recommend that you prioritize the last hour (10-11 am) where we aim to spend some to most of the time on such unstructured discussions.
+Perfectly fine fine with us. If you are interested in the resolutions, we recommend that you prioritize the first hour (9-10 am) where we aim to complete most of the structured agenda. If you are interested in unstructured discussion, then we recommend that you prioritize the last hour (10-11 am).
 
 ### About the Lagtun name
 
-We know, Lagtun is difficult to pronounce in english. However, in Norwegian it is a word with several meanings that we think capture the soul of this Ting. 
+We know, Lagtun is difficult to pronounce in English. However, in Norwegian it is a word with several meanings that we think capture the soul of this Ting. 
 
 First, **Lag** means "law" In Old Norse. This meaning is included in the last part of the name of our region, Trøndelag, which means the law of the Trønders. In addition, "lag" means "team" in modern Norwegian, reflecting the collaborative nature of the ting. 
 
