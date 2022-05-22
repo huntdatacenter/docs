@@ -15,6 +15,26 @@ Read more about [Lagtun](/tingweek/lagtun/) and the use of [resolutions](/tingwe
 
 :::
 
+#### [Explore options for a data compliance archive](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=6)
+
+- TOPIC: Data
+- ID: R7/LT5/T5/22
+
+#### [Clarification of resource consumption reporting intervals](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=5)
+
+- TOPIC: Reporting
+- ID: R5/LT5/T5/22
+
+#### [Establishing a Ting dedicated to data privacy, security and ethics](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=4)
+
+- TOPIC: Governance
+- ID: R4/LT5/T5/22
+
+#### [Clarify Ting week invitations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=3)
+
+- TOPIC: Governance
+- ID: R2/LT5/T5/22
+
 
 #### [Increase conditions for international collaborations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=8)
 
