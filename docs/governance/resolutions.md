@@ -30,7 +30,7 @@ Read more about [Lagtun](/tingweek/lagtun/) and the use of [resolutions](/tingwe
 - TOPIC: Governance
 - ID: R4/LT5/T5/22
 
-#### [Clarify Ting week invitations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=3)
+#### [Clarification of Ting week invitations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=3)
 
 - TOPIC: Governance
 - ID: R2/LT5/T5/22
