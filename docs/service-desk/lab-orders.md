@@ -133,7 +133,7 @@ Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) 
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20GPU%20machine%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20GPU%20machine%20in%20our%20lab%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Agpu%20type%20%3D%20%7Bnvidia.p100%7D%0Amachine%20type%20%3D%20%7Bdefault.b2%7D%20%20%0Astorage%20size%20%3D%20%7B1%20terabyte%28s%29%7D%20%20%0Asubscription%20%3D%20%7BCommitment%20/%20On-demand%20/%20Blue%7D%0A%0AI%20am%20looking%20forward%20to%20receive%20access%20information%20in%20our%20Slack%20lab%20channel%20when%20the%20machine%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20GPU%20machine%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20GPU%20machine%20in%20our%20lab%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Agpu%20type%20%3D%20%7Bnvidia.p100%7D%0Amachine%20type%20%3D%20%7Bdefault.c2%7D%20%20%0Astorage%20size%20%3D%20%7B1%20terabyte%28s%29%7D%20%20%0Asubscription%20%3D%20%7BCommitment%20/%20On-demand%20/%20Blue%7D%0A%0AI%20am%20looking%20forward%20to%20receive%20access%20information%20in%20our%20Slack%20lab%20channel%20when%20the%20machine%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
     Request a new GPU machine
   </a>
 </p></div></div>
@@ -213,7 +213,7 @@ Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
 ```
 
-Example from above: 
+Example from above:
 
 ```bash
 # -- Machine name
@@ -232,7 +232,7 @@ your-labname-iaas-helya-gpu1
 ```
 
 .
- 
+
 **Volume name and current size**
 
 You can identify the volume name while you are logged into the machine where you need to expand the storage:
@@ -290,7 +290,7 @@ Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
 ```
 
-Example from above: 
+Example from above:
 
 ```bash
 # -- Machine name
@@ -308,8 +308,7 @@ If you plan to expand volumes of machines other than `home`, log into your machi
 your-labname-iaas-helya-gpu1
 ```
 
-.
- 
+
 **Volume name and current size**
 
 You can identify your current volume names while you are logged into the machine where you need to expand the storage. For example on your home machine:
