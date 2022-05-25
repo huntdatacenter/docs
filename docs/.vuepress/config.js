@@ -347,6 +347,13 @@ module.exports = {
       ]
     }
   },
+  chainWebpack: (config) => {
+    config.module.rule("images").use("url-loader").options({
+      limit: 10000,
+      esModule: false,
+      name: `assets/img/[name].[hash:8].[ext]`,
+    });
+  },
   // https://v1.vuepress.vuejs.org/plugin/
   plugins: [
     "@vuepress/plugin-back-to-top",
