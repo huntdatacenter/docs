@@ -33,7 +33,9 @@ The service orders below are aimed at active lab users. Lab access for new users
 
 [Workbench](/working-in-your-lab/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
 
-<ServiceDesk subjectTemplate="Workbench order - {username} @ {labname}" bodyTemplate="Hi HUNT Cloud team,
+<ServiceDesk title="Request Workbench access" :template='{
+  subject: "Workbench order - {username} @ {labname}",
+  body: `Hi HUNT Cloud team,
 
 I would like to try Workbench in {labname}.
 
@@ -41,10 +43,27 @@ I have install and activated the Signal app on my phone and are looking forward 
 
 These are the tools I plan to use: {tools}.
 
-—
-Kind regards,
-{full_name}
-" title="Request Workbench access"/>
+—  
+Kind regards,  
+
+`,
+}' :fields='[
+  { label: "Username", key: "username", field: "textfield" },
+  { label: "Lab name", key: "labname", field: "textfield" },
+  {
+    label: "Tools",
+    key: "tools",
+    field: "selector",
+    options: [
+      "Rstudio",
+      "Jupyter",
+      "Python",
+      {text: "MATLAB (need license)", value: "MATLAB"},
+      {text: "Stata (need license)", value: "Stata"}
+    ],
+    default: ["Rstudio", "Jupyter", "Python"],
+  },
+]' />
 
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.

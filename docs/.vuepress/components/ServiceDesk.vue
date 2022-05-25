@@ -52,10 +52,9 @@ export default {
   },
   props: {
     id: { type: String, default: "applet" },
-    href: { type: String, default: null },
     title: { type: String, default: null },
-    subjectTemplate: { type: String, default: null },
-    bodyTemplate: { type: String, default: null },
+    fields: { type: Array, default: null },
+    template: { type: Object, default: null },
     recipient: {
       type: String,
       default: "cloud.support+hunt-cloud-request@hunt.ntnu.no",
@@ -63,18 +62,8 @@ export default {
   },
   data() {
     return {
-      fields: [
-        { label: "Name", key: "full_name", field: "textfield" },
-        { label: "Username", key: "username", field: "textfield" },
-        { label: "Lab name", key: "labname", field: "textfield" },
-        {
-          label: "Tools",
-          key: "tools",
-          field: "selector",
-          options: ["Rstudio", "Jupyter", "Python", "MATLAB", "Stata"],
-          default: ["Rstudio", "Jupyter", "Python"],
-        },
-      ],
+      subjectTemplate: null,
+      bodyTemplate: null,
       form: {},
       message: {
         subject: null,
@@ -108,6 +97,9 @@ export default {
   },
   mounted() {},
   created() {
+    // console.log(this.template)
+    this.subjectTemplate = this.template ? this.template.subject : null
+    this.bodyTemplate = this.template ? this.template.body : null
     for (const item of this.fields) {
       if (item && item.field === "selector" && item.default) {
         this.form[item.key] = item.default;
