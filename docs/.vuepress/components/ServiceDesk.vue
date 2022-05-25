@@ -151,7 +151,7 @@ export default {
 </script>
 
 <template>
-  <div class="vuewidget vuewrapper">
+  <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
       <v-dialog
         v-model="dialog"
