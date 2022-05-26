@@ -45,7 +45,7 @@ Yes. We allow connections both from organizations and private network. However, 
 
 ### Can I connect from several local machines?
 
-Yes. We allow you to configure several local machines to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/getting-started/configure-vpn/) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to [contact us](/contact) for a new certificate.
+Yes. We allow you to configure several local machines to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/getting-started/configure-vpn/) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to order av [VPN certificate reset](/service-desk/user-orders/#vpn-certificate-reset) in the service desk to get going.
 
 ### Can I do multiple connections at the same time?
 
