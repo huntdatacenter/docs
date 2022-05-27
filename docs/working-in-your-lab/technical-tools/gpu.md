@@ -47,7 +47,7 @@ docker run --rm -d --runtime=nvidia -v ${HOME}:${HOME} --workdir ${HOME} -e HOME
 docker ps
 ```
 
-This starts an instance of GPU-Jupyter with the tag `v1.4_cuda-11.2_ubuntu-20.04` at http://localhost:8888 (port 8888). The default password is `gpu-jupyter`.
+This starts an instance of GPU-Jupyter with the tag `v1.4_cuda-11.2_ubuntu-20.04` at `http://localhost:8888` (port _8888_). The default password is `gpu-jupyter`.
 
 More details about docker image can also be found on [docker hub](https://hub.docker.com/r/cschranz/gpu-jupyter).
 
