@@ -1,4 +1,24 @@
-export default ({ router }) => {
+import Vuetify from "vuetify/lib";
+import "./sass/index.scss";
+
+export default ({
+  Vue, // the version of Vue being used in the VuePress app
+  options, // the options for the root Vue instance
+  router, // the router instance for the app
+  siteData, // site metadata
+}) => {
+  Vue.use(Vuetify);
+
+  // Material icons: https://fonts.google.com/icons
+  const opts = {
+    theme: { dark: false },
+    // theme: { disable: true, dark: false },
+    icons: {
+      iconfont: "md",
+    },
+  };
+  options.vuetify = new Vuetify(opts);
+
   router.beforeEach(async (to, from, next) => {
     // `to` and `from` are both route objects
     // this.name = to.params.name
