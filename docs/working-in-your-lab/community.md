@@ -14,7 +14,7 @@ description: This page holds information on communication within the HUNT Cloud 
 
 [[toc]]
 
-## Digital café (Slack)
+## Slack as Digital café
 
 We use [Slack](https://slack.com/) as our digital café. Conceptually, we see the various Slack channels as our digital café tables where we meet at different tables to discuss specific topics in an informal and relaxed atmosphere.
 
