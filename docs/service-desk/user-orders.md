@@ -39,7 +39,7 @@ The service orders below are aimed at active lab users. Lab access for new users
 
 I would like to try Workbench in {labname}.
 
-I have install and activated the Signal app on my phone and are looking forward to receive my key and certificate.
+I have installed and activated the Signal app on my phone and are looking forward to receive my key and certificate.
 
 These are the tools I plan to use: {tools}.
 
