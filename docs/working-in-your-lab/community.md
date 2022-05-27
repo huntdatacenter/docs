@@ -3,7 +3,9 @@ title: Community
 category: Communication
 permalink: /community
 sidebarDepth: 1
-description: This page holds information on communication within the HUNT Cloud community on Slack.
+tags:
+  - slack
+description: This page holds information on communication within the HUNT Cloud community.
 ---
 
 # Cloud community
@@ -12,7 +14,7 @@ description: This page holds information on communication within the HUNT Cloud 
 
 [[toc]]
 
-## Slack as Digital café
+## Digital café
 
 We use [Slack](https://slack.com/) as our digital café. Conceptually, we see the various Slack channels as our digital café tables where we meet at different tables to discuss specific topics in an informal and relaxed atmosphere.
 
