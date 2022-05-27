@@ -48,8 +48,8 @@ Kind regards,
 
 `,
 }' :fields='[
-  { label: "Username", key: "username", field: "textfield" },
-  { label: "Lab name", key: "labname", field: "textfield" },
+  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   {
     label: "Tools",
     key: "tools",

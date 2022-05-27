@@ -64,7 +64,7 @@ export default {
     return {
       subjectTemplate: null,
       bodyTemplate: null,
-      form: {},
+      formData: {},
       message: {
         subject: null,
         body: null,
@@ -83,7 +83,9 @@ export default {
       return this.bodyTemplate ? this.wrap(this.bodyTemplate) : null;
     },
     formFilled() {
-      return this.fields.every((item) => (this.form[item.key] ? true : false));
+      return this.fields.every((item) =>
+        this.formData[item.key] ? true : false
+      );
     },
     encodedSubject() {
       return this.subjectTemplate ? this.encode(this.subjectTemplate) : null;
@@ -98,11 +100,11 @@ export default {
   mounted() {},
   created() {
     // console.log(this.template)
-    this.subjectTemplate = this.template ? this.template.subject : null
-    this.bodyTemplate = this.template ? this.template.body : null
+    this.subjectTemplate = this.template ? this.template.subject : null;
+    this.bodyTemplate = this.template ? this.template.body : null;
     for (const item of this.fields) {
       if (item && item.field === "selector" && item.default) {
-        this.form[item.key] = item.default;
+        this.formData[item.key] = item.default;
       }
     }
   },
@@ -112,6 +114,9 @@ export default {
       this.sendClicked = true;
       this.panel = 2;
       this.dialog = false;
+    },
+    submit() {
+      this.panel = 1;
     },
     review() {
       this.finalizeClicked = true;
@@ -127,7 +132,7 @@ export default {
     },
     wrap(template) {
       let text = template;
-      for (const [key, value] of Object.entries(this.form)) {
+      for (const [key, value] of Object.entries(this.formData)) {
         if (value) {
           if (Array.isArray(value)) {
             text = text.replaceAll(`{${key}}`, value.join(", "));
@@ -186,44 +191,52 @@ export default {
                   </template>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
-                  <v-row justify="center">
-                    <v-col v-for="item in fields" cols="8" :key="item.key">
-                      <v-text-field
-                        v-if="item.field === 'textfield'"
-                        v-model.trim="form[item.key]"
-                        autocomplete="ignore-field"
-                        :label="item.label"
-                        placeholder=""
-                        persistent-placeholder
-                        outlined
-                        hide-details
-                        @focus="$event.target.select()"
-                      ></v-text-field>
-                      <v-select
-                        v-else-if="item.field === 'selector'"
-                        :items="item.options"
-                        v-model="form[item.key]"
-                        :label="item.label"
-                        placeholder=""
-                        persistent-placeholder
-                        chips
-                        multiple
-                        outlined
-                      ></v-select>
-                    </v-col>
-                  </v-row>
-                  <v-row justify="center">
-                    <v-col cols="6">
-                      <v-btn
-                        color="success"
-                        block
-                        :disabled="!formFilled"
-                        @click="panel = 1"
-                      >
-                        Continue
-                      </v-btn>
-                    </v-col>
-                  </v-row>
+                  <form ref="form" @submit.prevent="submit">
+                    <v-row justify="center">
+                      <v-col v-for="item in fields" cols="8" :key="item.key">
+                        <v-text-field
+                          v-if="item.field === 'textfield'"
+                          v-model.trim="formData[item.key]"
+                          autocomplete="ignore-field"
+                          :label="item.label"
+                          :pattern="item.pattern ? item.pattern : null"
+                          :title="item.hint ? item.hint : null"
+                          :hint="item.hint ? item.hint : null"
+                          :persistent-hint="item.hint && formData[item.key] ? true : false"
+                          placeholder=""
+                          persistent-placeholder
+                          outlined
+                          dense
+                          :hide-details="formData[item.key] ? false : 'auto'"
+                          @focus="$event.target.select()"
+                        ></v-text-field>
+                        <v-select
+                          v-else-if="item.field === 'selector'"
+                          :items="item.options"
+                          v-model="formData[item.key]"
+                          :label="item.label"
+                          placeholder=""
+                          persistent-placeholder
+                          chips
+                          multiple
+                          outlined
+                          hide-details
+                        ></v-select>
+                      </v-col>
+                    </v-row>
+                    <v-row justify="center">
+                      <v-col cols="6">
+                        <v-btn
+                          color="success"
+                          block
+                          type="submit"
+                          :disabled="!formFilled"
+                        >
+                          Continue
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                  </form>
                 </v-expansion-panel-content>
               </v-expansion-panel>
               <v-expansion-panel :disabled="!formFilled">
