@@ -173,6 +173,10 @@ library(<package-name>)
 library(dplyr)
 ```
 
+### Can others use packages I have installed?
+
+Not directly. The r-packages you install in your Workbench are usually not shared. The separation prevent others from breaking your packages, for example during upgrades. However, you may utilize the powers of Conda to export the definition of your environments so others can use the very same packages that you use. Learn how to manage environments on [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+
 ### How do I reset my user state in RStudio?
 
 When you [restart your Workbench](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment), your RStudio user state might still be preserved. To achieve complete reset read the RStudio support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server).
