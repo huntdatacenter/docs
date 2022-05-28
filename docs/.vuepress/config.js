@@ -1,3 +1,5 @@
+const prefixer = require('postcss-prefix-selector');
+
 module.exports = {
   // https://v1.vuepress.vuejs.org/config/#title
   // disabled when using logo
@@ -16,6 +18,13 @@ module.exports = {
         rel: "shortcut icon",
         href: "https://www.ntnu.no/assets/images/favicon.ico"
       }
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons",
+      },
     ],
     [
       "meta",
@@ -339,6 +348,45 @@ module.exports = {
         }
       ]
     }
+  },
+  chainWebpack: (config) => {
+    config.module.rule("images").use("url-loader").options({
+      limit: 10000,
+      esModule: false,
+      name: `assets/img/[name].[hash:8].[ext]`,
+    });
+    // Patch for Vuetify CSS conflict: https://github.com/vuetifyjs/vuetify/issues/8530#issuecomment-680942337
+    const sassRule = config.module.rule('sass');
+    const sassNormalRule = sassRule.oneOfs.get('normal');
+    // creating a new rule
+    const vuetifyRule = sassRule.oneOf('vuetify').test(/[\\/]vuetify[\\/]src[\\/]/);
+    // taking all uses from the normal rule and adding them to the new rule
+    Object.keys(sassNormalRule.uses.entries()).forEach((key) => {
+        vuetifyRule.uses.set(key, sassNormalRule.uses.get(key));
+    });
+    // moving rule "vuetify" before "normal"
+    sassRule.oneOfs.delete('normal');
+    sassRule.oneOfs.set('normal', sassNormalRule);
+    // adding prefixer to the "vuetify" rule
+    vuetifyRule.use('vuetify').loader(require.resolve('postcss-loader')).tap((options = {}) => {
+        options.sourceMap = process.env.NODE_ENV !== 'production';
+        options.plugins = [
+            prefixer({
+                prefix: '[data-vuetify]',
+                transform(prefix, selector, prefixedSelector) {
+                    let result = prefixedSelector;
+                    if (selector.startsWith('html') || selector.startsWith('body')) {
+                        result = prefix + selector.substring(4);
+                    }
+                    return result;
+                },
+            }),
+        ];
+        return options;
+    });
+    // moving sass-loader to the end
+    vuetifyRule.uses.delete('sass-loader');
+    vuetifyRule.uses.set('sass-loader', sassNormalRule.uses.get('sass-loader'));
   },
   // https://v1.vuepress.vuejs.org/plugin/
   plugins: [
