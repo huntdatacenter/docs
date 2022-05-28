@@ -29,7 +29,7 @@ Signe is our account manager. Her responsibilities includes the follow-up of str
 
 ### Tom-Erik Røberg
 
-Tom-Erik is leading our technology strategies and technical operations. This includes activities from translation of high-level missions to technical tooling and deelopments to data center orchestration. You may meet Tom-Erik in all levels of technological activities and discussions. 
+Tom-Erik is leading our technology strategies and technical operations. This includes activities from translation of high-level missions to technical tooling and deelopments to principles for data center orchestration. You may meet Tom-Erik in all levels of technological activities and strategic discussions. 
 
 ### Oddgeir Lingaas Holmen
 
