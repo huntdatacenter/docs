@@ -18,7 +18,7 @@ To get you started, the GPU machines come pre-installed with the software below.
 
 - Ubuntu 20.04 LTS
 - Docker
-- NVIDIA 470 drivers or later (from the [`graphics-drivers` repository](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa?field.series_filter=bionic))
+- NVIDIA 470 drivers or later (from the [`graphics-drivers` repository](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa?field.series_filter=focal))
 - NVIDIA Container Toolkit (also known as `nvidia-docker`)
 
 ## How to use
