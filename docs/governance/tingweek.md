@@ -8,14 +8,14 @@ description: This page list information and questions about our ting weeks.
 
 # Ting week
 
-**We appoint time three times per year to meet for information, feedback and discussions on how to develop the services in HUNT Cloud to better elevate science. We call these gatherings Tings.** 
+**We appoint time three times per year to meet for information, feedback and discussions on how to develop the services in HUNT Cloud to better elevate science. We call these gatherings Tings.**
 
 We arrange a layered set of Tings for distinct groups in our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
 
 ::: tip Next up: Ting week #6
 
 - **Lab ting**: Tuesday 31 May 2022 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-labting-agenda.pdf))
-- **Data space ting**: Wednesday 1 June 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-dataspaceting-agenda.pdf))
+- **Data space ting**: Wednesday 1 June 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-data-space-ting-agenda.pdf))
 - **Enterprise ting**: Wednesday 1 June 2022 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-enterpriseting-agenda.pdf))
 - **Lagtun**: Thursday 2 June 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-lagtun-agenda.pdf))
 
@@ -29,7 +29,7 @@ We arrange a layered set of Tings for distinct groups in our community. The meet
 
 The intent of the Ting report is to give you the opportunity to read up on **what** we are doing at HUNT Cloud, and a little bit on **why** we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
 
-The reports include a letter with reflections from the last Ting period as well as chapters with business description, risk factors, description of properties, and external and internal controls. 
+The reports include a letter with reflections from the last Ting period as well as chapters with business description, risk factors, description of properties, and external and internal controls.
 
 - [Ting report #4 (2021-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-report.pdf)
 - [Ting report #3 (2021-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-report.pdf)
@@ -50,7 +50,7 @@ This is our allting were we focuses on the **user experience inside labs**, and 
 
 ### Data space ting
 
-This is the Ting where we appoint time to evolve scientific organization and **cross-lab coordination in data spaces**, including coordination of compliance, data, technologies, knowledge and financial aspects. The original Coordinator ting changed name to Data space ting in Ting week #5 to reflect contractual roles in the new services model. 
+This is the Ting where we appoint time to evolve scientific organization and **cross-lab coordination in data spaces**, including coordination of compliance, data, technologies, knowledge and financial aspects. The original Coordinator ting changed name to Data space ting in Ting week #5 to reflect contractual roles in the new services model.
 
 ### Enterprise ting
 
@@ -67,18 +67,18 @@ Lagtun is the Ting where we appoint time for cross-organizational discussions am
 Memberships to the Tings are derived from the following registered roles in contractual agreements with HUNT Cloud:
 
 | Ting | Invitations |
-| - | - | 
+| - | - |
 | **Lab ting** | All active lab users. |
 | **Data space ting** | All coordinators in data spaces. |
 | **Enterprise ting** | All active users registered or associated with a private enterprise. |
 | **Lagtun** | Data controllers, service centers and data spaces on the BLUE subscription level ([read more](/tingweek/lagtun/#representatives)). |
 
 
-## Schedule 
+## Schedule
 
 ![Ting schedule year](./images/tingweek-schedule-year.png)
 
-Ting weeks are scheduled over one week in the winter, spring and autumn: (i) The winter Ting is usually scheduled mid February; (ii) The spring Ting in late May or early June; and (iii ) the autumn Ting in the second half of October. 
+Ting weeks are scheduled over one week in the winter, spring and autumn: (i) The winter Ting is usually scheduled mid February; (ii) The spring Ting in late May or early June; and (iii ) the autumn Ting in the second half of October.
 
 ![Ting schedule days](./images/tingweek-schedule-days.png)
 
@@ -137,24 +137,22 @@ Individual Tings are scheduled over the week on the same time slots. The current
 
 ## FAQ
 
-#### Why Tings? 
+#### Why Tings?
 
 The inspiration to appoint time to meet at regular intervals in a layered structure is drawn from the Old Norse [ting](https://en.wikipedia.org/wiki/Thing_(assembly)#Etymology) structures such as [Frostating](https://en.wikipedia.org/wiki/Frostating) here in Trøndelag. The intention is to ensure regular discussions on how we together best can elevate data for a better world, including feedback on how to best adapt and evolve the scientific toolbox of HUNT Cloud to better support your scientific journey.
 
-#### Is this an assembly? 
+#### Is this an assembly?
 
 No. Our tings are not the same as a general assembly (generalforsamling) with binding decisions. As of today, our tings are to be seen as a gathering of people that both champion and dream up ideas on how to best utilize data for a better world. HUNT Cloud is owned by NTNU which has the full financial and compliance responsibilities for our services.
 
-#### How do I get invited? 
+#### How do I get invited?
 
 Ting invitations, agenda and digital meeting links are forwarded on email a few weeks before the Ting week. Dates will also be announced on these pages and on Slack.
 
-#### Where do we meet? 
+#### Where do we meet?
 
 We will meet digitally at Zoom utilizing the NTNU subscription. Links will be forwarded on email and on Slack for the lab ting.
 
-#### Where are the minutes? 
+#### Where are the minutes?
 
 Our tings have public agendas and internal minutes. We write up a summary after the week that gets distributed directly to the invited parties. The summary contains statements from all tings.
-
-
