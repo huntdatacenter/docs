@@ -40,14 +40,14 @@ sudo docker run --rm --runtime=nvidia nvidia/cuda:11.0-base nvidia-smi
 If you want to use Jupyterlab on GPU machine we recommend [iot-salzburg/gpu-jupyter](https://github.com/iot-salzburg/gpu-jupyter) docker image. This project uses the NVIDIA CUDA image as the base image and installs their toolstack on top of it to enable GPU calculations in the Jupyter notebooks. Python packages Tensorflow and Pytorch are preinstalled to match the Cuda version (GPU drivers).
 
 ```bash
-docker pull cschranz/gpu-jupyter:v1.4_cuda-11.2_ubuntu-20.04
+docker pull cschranz/gpu-jupyter:v1.4_cuda-11.2_ubuntu-20.04_slim
 
-docker run --rm -d --runtime=nvidia -v ${HOME}:${HOME} --workdir ${HOME} -e HOME=${HOME} -e GRANT_SUDO=yes -e JUPYTER_ENABLE_LAB=yes -p 8888:8888 --user root --name gpu-jupyter cschranz/gpu-jupyter:v1.4_cuda-11.2_ubuntu-20.04
+docker run --rm -d --runtime=nvidia -v ${HOME}:${HOME} --workdir ${HOME} -e HOME=${HOME} -e GRANT_SUDO=yes -e JUPYTER_ENABLE_LAB=yes -p 8888:8888 --user root --name gpu-jupyter cschranz/gpu-jupyter:v1.4_cuda-11.2_ubuntu-20.04_slim
 
 docker ps
 ```
 
-This starts an instance of GPU-Jupyter with the tag `v1.4_cuda-11.2_ubuntu-20.04` at `http://localhost:8888` (port _8888_). The default password is `gpu-jupyter`.
+This starts an instance of GPU-Jupyter with the tag `v1.4_cuda-11.2_ubuntu-20.04_slim` at `http://localhost:8888` (port _8888_). The default password is `gpu-jupyter`.
 
 More details about docker image can also be found on [docker hub](https://hub.docker.com/r/cschranz/gpu-jupyter).
 
