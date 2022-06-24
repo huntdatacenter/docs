@@ -32,7 +32,9 @@ Your Workbench certificate is time limited. You will meet the **`403 Forbidden`*
 
 ### Has my lab certificate expired?
 
-If you were previously able to access Workbench and now your browser reports expired/unsafe certificates do not hesitate to [contact us](/contact), we can usually update lab certificates pretty quickly.
+If you were previously able to access Workbench and now your browser reports expired/unsafe certificates do not hesitate to contact us on [email](/contact) or Slack, we can usually update lab certificates pretty quickly.
+
+![expired_server_cert.png](./images/expired_server_cert.png)
 
 ## RStudio
 
