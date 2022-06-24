@@ -12,14 +12,6 @@ description: This page list information and questions about our ting weeks.
 
 We arrange a layered set of Tings for distinct groups in our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
 
-::: tip Next up: Ting week #6
-
-- **Lab ting**: Tuesday 31 May 2022 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-labting-agenda.pdf))
-- **Data space ting**: Wednesday 1 June 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-dataspaceting-agenda.pdf))
-- **Enterprise ting**: Wednesday 1 June 2022 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-enterpriseting-agenda.pdf))
-- **Lagtun**: Thursday 2 June 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-lagtun-agenda.pdf))
-
-:::
 
 [[toc]]
 
@@ -87,6 +79,13 @@ Individual Tings are scheduled over the week on the same time slots. The current
 
 
 ## Dates and agendas
+
+#### Ting week #7 (2022-10)
+
+- **Lab ting**
+- **Data space ting**
+- **Data controller ting**
+- **Lagtun**
 
 #### Ting week #6 (2022-05)
 
