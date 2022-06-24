@@ -257,7 +257,7 @@ Lab leaders can request external kistas where collaborators outside HUNT Cloud c
 
 ::: details Clarification of the form fields
 
-The below bullet points clarify the field information needed to complete our external kista import order.
+The below bullet points clarify the field information needed to complete our external kista import order (v1.9).
 
 - **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
 
@@ -288,6 +288,8 @@ your-username@`your-labname`-home~$
 - **Country:** This is the country where the uploader institution is located.
 
 - **Data size**: This is the size in gigabytes of the storage area in the external kistas. Contact the uploader coordinator if you do not know this number.
+
+- **Data sensitivity**: Specify if the data in the transfer includes indirect or direct identifiable information. Indirect identifiable information is typical for research data where names, addresses, unique identification numbers (fødselsnummer) are substituted with project specific individual identifiers (løpenummer). Direct identifiable information is information such as names, unique ids etc. that may directly identify the research participant. We ask this since import of direct identifiable information may require special security controls in your lab and/or agreement adjustments.
 
 - **Kista duration**: Specify the number of days that the kista will be online. External kistas are indendent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
 
