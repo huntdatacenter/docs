@@ -102,10 +102,33 @@ Once your lab data is deleted it can not be recreated. You must ensure that you 
 
 ## Transport
 
+Data transfers in and out of HUNT Cloud needs authorization from Data space leaders or Data space compliance coordinators.
+
 ::: tip Internal transfers and import
 
-Data transfers inside HUNT Cloud and external data imports can be ordered from our [lab orders page](/service-desk/lab-orders).
+Data transfers between labs inside HUNT Cloud can be requested from our [lab page](/service-desk/lab-orders).
 
+:::
+
+### External import kista
+
+The [external import kista](/faq/external-transfer/#faq-on-external-data-transfer) allows external parties outside HUNT Cloud to transfer data directly to a lab inside HUNT Cloud in a compliant manner.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=External%20import%20kista%20order%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20external%20import%20kista%20for%20%7Blabname%7D.%0A%0AI%20have%20attached%20two%20files%3A%20%281%29%20the%20signed%20external%20import%20kista%20order%2C%20and%20%282%29%20the%20public%20SSH%20key%20from%20the%20external%20uploader.%0A%0AWe%20are%20looking%20forward%20to%20receive%20access%20information%20en%20email.%0A%0ABest%2C" class="nav-link external action-button">
+    Request an external import kista
+  </a>
+</p></div></div>
+
+* **Who can order:** Data space leaders or Data space compliance coordinators.
+* **Required attachments**: (1) [A signed external kista import order](/agreements/downloads/#external-kista-import-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external uploader.
+* **Expected response time:** Days.
+* **Expected delivery:** Kista access information sent to the lab user that will import the data.
+* **Cost:** Included in your data space subscription.
+
+::: warning External dependency
+Note that time to successful transfer depend on access to SFTP software and potential firewall adjustments for the external-party that will download data.
 :::
 
 ### External export kista
@@ -120,7 +143,7 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 </p></div></div>
 
 * **Who can order:** Data space leaders or Data space compliance coordinators.
-* **Required attachments**: (1) [A signed external kista export order](/agreements/downloads/#external-kista-export-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external uploader.
+* **Required attachments**: (1) [A signed external kista export order](/agreements/downloads/#external-kista-export-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external downloader.
 * **Expected response time:** Days.
 * **Expected delivery:** Access information sent to the lab user that will make data available for export.
 * **Cost:** Included in your data space subscription.
@@ -162,9 +185,9 @@ Click the button below to update your data space coordinator roles under your ex
   </a>
 </p></div></div>
 
-* **Who can order:** Data space leaders in active data spaces.
+* **Who can order:** Data space leaders or Data space compliance coordinators in active data spaces.
 * **Required attachment**: None.
-* **Expected delivery time:** One week.
+* **Expected delivery time:** Days.
 * **Cost:**  Included in your data space subscription.
 
 

@@ -355,23 +355,4 @@ Head over to the [data space orders](/service-desk/data-space-orders) to request
 * **Expected delivery:** Access information communicated in your Slack lab channel.
 * **Cost:** Included in your lab subscription.
 
-### External import kista
 
-The [external import kista](/faq/external-transfer/#faq-on-external-data-transfer) allows external parties outside HUNT Cloud to transfer data directly to a lab inside HUNT Cloud in a compliant manner.
-
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=External%20import%20kista%20order%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20external%20import%20kista%20for%20%7Blabname%7D.%0A%0AI%20have%20attached%20two%20files%3A%20%281%29%20the%20signed%20external%20import%20kista%20order%2C%20and%20%282%29%20the%20public%20SSH%20key%20from%20the%20external%20uploader.%0A%0AWe%20are%20looking%20forward%20to%20receive%20access%20information%20en%20email.%0A%0ABest%2C" class="nav-link external action-button">
-    Request an external import kista
-  </a>
-</p></div></div>
-
-* **Who can order:** Lab leaders and lab coordinators.
-* **Required attachments**: (1) [A signed external kista import order](/agreements/downloads/#external-kista-import-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external uploader.
-* **Expected response time:** Days.
-* **Expected delivery:** Kista access information sent to the lab user that will import the data.
-* **Cost:** Included in your lab subscription.
-
-::: warning External dependency
-Note that time to successful transfer depend on access to SFTP software and potential firewall adjustments for the external-party that will download data.
-:::
