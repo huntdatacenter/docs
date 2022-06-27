@@ -253,11 +253,15 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud - External Kista Import Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-import-order.pdf) (pdf)
 
-Lab leaders can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from your lab. This agreement is signed both by the Lab leader and the uploader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
+Data space leaders and Data space compliance coordinators can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from a lab. The order is co-signed by the uploader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
 
 ::: details Clarification of the form fields
 
-The below bullet points clarify the field information needed to complete our external kista import order (v1.9).
+The below bullet points clarify the field information needed to complete our external kista import order (v2.0).
+
+- **Data space name:** This is the short name of you data space that request the transfer.
+
+- **Data space leader:** This is the name of the data space leader.
 
 - **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
 
@@ -295,7 +299,7 @@ your-username@`your-labname`-home~$
 
 - **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
 
-- **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
+- **Data space leader**: This is the field for the signature of your lab leader. Data space compliance officers may sign this field as well.
 
 - **Place/date**: State the place where your uploader signed the order and the date when the order was signed. 
 
@@ -307,11 +311,15 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud - External Kista Export Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-export-order.pdf) (pdf)
 
-Lab leaders can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. This agreement is signed both by the Lab leader and the downloader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
+Data space leaders and Data space compliance officers can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. The order is co-signed by downloader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
 
 ::: details Clarification of the form fields
 
-The below bullet points clarify the field information needed to complete our external kista export order.
+The below bullet points clarify the field information needed to complete our external kista export order (v1.3).
+
+- **Data space name:** This is the short name of you data space that request the transfer.
+
+- **Data space leader:** This is the name of the data space leader.
 
 - **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
 
@@ -343,11 +351,13 @@ your-username@`your-labname`-home~$
 
 - **Data size**: This is the size in gigabytes of the storage area in the external kistas.
 
+- **Data sensitivity**: Specify if the data in the transfer includes indirect or direct identifiable information. Indirect identifiable information is typical for research data where names, addresses, unique identification numbers (fødselsnummer) are substituted with project specific individual identifiers (løpenummer). Direct identifiable information is information such as names, unique ids etc. that may directly identify the research participant. We ask this since export of direct identifiable information may require special security controls.
+
 - **Kista duration**: Specify the number of days that the kista will be online. External kistas are indendent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
 
 - **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
 
-- **Lab leader**: This is the field for the signature of your lab leader. For compliance purposes, lab coordinators or lab users are not authorized to sign this form.
+- **Data space leader**: This is the field for the signature of your data space leader or data space compliance officer.
 
 - **Place/date**: State the place where your downloader signed the order and the date when the order was signed. 
 
