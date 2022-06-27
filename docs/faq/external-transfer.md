@@ -26,7 +26,7 @@ External kista is our service for controlled data transfers between your lab and
 
 ### How do I order an external kista?
 
-Lab leaders and lab coordinators can order external **`import kistas`** in our [service desk](/service-desk/lab-orders/#external-import-kista). Data space leaders and data space compliance coordinators can order external **`export kistas`** in our [service desk](/service-desk/data-space-orders/#external-export-kista).
+Lab leaders and lab coordinators can order external **`import kistas`** in our [service desk](/service-desk/data-space-orders/#external-import-kista). Data space leaders and data space compliance coordinators can order external **`export kistas`** in our [service desk](/service-desk/data-space-orders/#external-export-kista).
 
 ### Is there any technical requirements for the external party? 
 

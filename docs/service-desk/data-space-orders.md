@@ -133,7 +133,7 @@ Note that time to successful transfer depend on access to SFTP software and pote
 
 ### External export kista
 
-The [external export kista](/faq/external-transfer/#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner. Note that [external import kista](/service-desk/lab-orders/#external-import-kista) can be ordere in the lab section of our service desk.
+The [external export kista](/faq/external-transfer/#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
