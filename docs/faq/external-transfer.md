@@ -17,8 +17,7 @@ This page lists frequently asked questions related to external transfers in labs
 
 ### Can parties outside HUNT Cloud upload data to my lab?
 
-Yes. Parties outside HUNT Cloud can upload data to your lab utilizing the external kista import service.
-You can also make data available for parties outside HUNT Cloud via the external kista export service.
+Yes. Parties outside HUNT Cloud can upload data to your lab utilizing our [external kista import service](/service-desk/data-space-orders/#external-import-kista). You can also make data available for parties outside HUNT Cloud via the [external kista export service](/service-desk/data-space-orders/#external-export-kista).
 
 ### What is an external kista?
 
@@ -26,7 +25,7 @@ External kista is our service for controlled data transfers between your lab and
 
 ### How do I order an external kista?
 
-Lab leaders and lab coordinators can order external **`import kistas`** in our [service desk](/service-desk/data-space-orders/#external-import-kista). Data space leaders and data space compliance coordinators can order external **`export kistas`** in our [service desk](/service-desk/data-space-orders/#external-export-kista).
+Data space leaders and Data space compliance coordinators can order [external import kistas](/service-desk/data-space-orders/#external-import-kista) and [external export kistas](/service-desk/data-space-orders/#external-export-kista) in our service desk.
 
 ### Is there any technical requirements for the external party? 
 
@@ -35,7 +34,7 @@ Yes. Your external party must meet a few [technical requirements](/data-transfer
 
 ### How quickly can I get access to an external kista?
 
-You should order your kista a few weeks before you need the transfer because your external party may need to order firewall openings from his organization, may need to install SFTP software and generate a dedicated SSH key pair, and configure his/her local machine to connect with your external kista.
+You should order your kista a few weeks before you need the transfer since your external party may need to order organizational firewall openings, install SFTP software and/or generate a dedicated SSH key pair, and configure his/her local machine to connect with your external kista.
 
 ### What is an 'uploader' and 'downloader'?
 
@@ -45,9 +44,15 @@ We have defined the Uploader as the user outside HUNT Cloud that will import (up
 
 You may need to communicate with the Uploader if you do not know the size of your transfer. We need this information to allocate storage to your kista.
 
-### How do I know the IP of the external party?
+### How do I know the IP of my external party?
 
-You need to communicate with the external party to get the IPv4 address for the machine they will use to connect to your external kista. We use this information to restrict access to your external kista for other machines.
+You need to communicate with the external party to get the IPv4 address for the machine they will use to connect to your external kista. We use this information to restrict access to your external kista for other machines. A quick way for your external party to identify their IPv4 address is via [ip4.me](http://ip4.me/).
+
+::: warning Note on IP addresses
+
+IP addressess that starts with `10.`, `172.` and `192.` are internal addresses. We are not able to open our firewalls for these IPs. You may kindly ask your external party to request their public IPv4 if you are provided one of the above internal IP ranges for your ordering form.
+
+::: 
 
 ### How do I access my external kista?
 
@@ -63,7 +68,7 @@ Most likely. However, this is decided by the data controller. Feel free to [cont
 
 ### Is external kistas secure enough for my data?
 
-Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/about/certificates/). However, the decision of whether you can use this service is decided by your data controller.
+Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/about/certificates/). However, the decision of whether you can use this service is decided by your data controller. Feel free to [contact us](/contact) for service descriptions aimed at risk assessment of the service. 
 
 ### Where can I get additional security information on the external kistas?
 
