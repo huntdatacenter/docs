@@ -71,6 +71,11 @@ There is -no- restore (backup) on your home-folder. All data in **`home`** may b
 
 Yes. We are more than happy to expand your volumes as your data collections grows. You can expand volumes on both and iaas machines in TB steps. You should plan for a machine restart and a two hour maintenance window where the lab is unavailable during this procedure. Order your volume expansion in our [service desk](/service-desk/lab-orders/#expand-existing-volume).
 
+### Will my data disappear during a volume expansion? 
+
+No. The data that you have in your volume will still be there after your volume expansion.
+
+
 ### What is the upper size of a volume?
 
 We aim to keep individual volumes below 20TB if possible. The soft limit is set for practical purposes when it comes to volume handling on our side. It is also set to help distribute large collections across several logical units in the unlikely case of volume destructions.
@@ -85,7 +90,7 @@ One (1) terabyte of claimed storage is defined as 2^40 bytes. Computers allocate
 
 ### Can I add additional volumes to my lab?
 
-Yes. Nothing is better than seeing your data grow. We are therefore more than happy to include additional volumes to your lab if this is needed to make your science fly. For example, if your data collections reach more that 20TB. Order your [new volume](/service-desk/lab-orders/#new-volume) in our service desk.
+Yes. Nothing is better than seeing your data grow. We are therefore more than happy to include additional volumes to your lab if this is needed to make your science fly. For example, if your data collections reach more that 20 TB. Order your [new volume](/service-desk/lab-orders/#new-volume) in our service desk.
 
 
 
