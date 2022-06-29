@@ -67,32 +67,11 @@ There is -no- restore (backup) on your home-folder. All data in **`home`** may b
 
 :::
 
-### Can I expand my volume sizes?
+## Expansions
 
-Yes. We are more than happy to expand your volumes as your data collections grows. You can expand volumes on both and iaas machines in TB steps. You should plan for a machine restart and a two hour maintenance window where the lab is unavailable during this procedure. Order your volume expansion in our [service desk](/service-desk/lab-orders/#expand-existing-volume).
-
-### Will my data disappear during a volume expansion? 
-
-No. The data that you have in your volume will still be there after your volume expansion.
-
-
-### What is the upper size of a volume?
-
-We aim to keep individual volumes below 20TB if possible. The soft limit is set for practical purposes when it comes to volume handling on our side. It is also set to help distribute large collections across several logical units in the unlikely case of volume destructions.
-
-### Why is my volume size less that I claimed?
-
-The volumes sizes that you see on your machine, for example using the **`df -h `** command, will be a slightly less that the volume sizes that you claim. This is expected. Read why below.
-
-::: details Terabyte definition
-One (1) terabyte of claimed storage is defined as 2^40 bytes. Computers allocate storage in base 2 mathematics (2^40 bytes = 1,099,511,627,776 bytes) and report the allocation attached to machines in base 10 mathematics (10^12 bytes = 1,000,000,000,000 bytes). The discrepancy between the two systems cause volume allocations to be observed in the machines as a lower number than the terabytes claimed. To illustrate, an allocation of one (1) terabyte storage will be reported, and have an operational capacity, of 0.91 terabytes when attached to a machine (10^12 bytes / 2^40 bytes = 0.91 terabytes).
+::: tip Data coordination
+See our [data management FAQ](/data/faq/) in our Coordination section for information on volume expansions.
 :::
-
-### Can I add additional volumes to my lab?
-
-Yes. Nothing is better than seeing your data grow. We are therefore more than happy to include additional volumes to your lab if this is needed to make your science fly. For example, if your data collections reach more that 20 TB. Order your [new volume](/service-desk/lab-orders/#new-volume) in our service desk.
-
-
 
 ## Permissions
 
