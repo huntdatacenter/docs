@@ -180,7 +180,7 @@ Add a fleet of blue machines to distribute analysis for large scale analysis, fo
 
 ### Expand existing volume
 
-You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand.
+You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand. Read more in our [coordinator FAQ](/data/faq/#volumes).
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
@@ -257,7 +257,7 @@ The above example shows for example that `/mnt/archive` has a current `Size` of 
 
 ### New volume
 
-You may add new volumes to your lab machines. We will need separate orders for each individual volume you plan to add.
+You may add new volumes to your lab machines. We will need separate orders for each individual volume you plan to add.  Read more in our [coordinator FAQ](/data/faq/#volumes).
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
