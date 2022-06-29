@@ -3,12 +3,12 @@ title: FAQ
 category: HUNT Cloud
 permalink: /data/faq
 sidebarDepth: 1
-description: This page list data management FAQ for HUNT Cloud.
+description: This page list frequently asked questions about data coordination in HUNT Cloud.
 ---
 
-# FAQ on data management
+# FAQ on data coordination
 
-**This page list frequently asked questions on data management and data coordination. See our [lab user storage FAQ](/faq/storage) for practical use of our storage services.** 
+**This page list frequently asked questions on data coordination. See our [lab user storage FAQ](/faq/storage) for practical use of our storage services.** 
 
 [[toc]]
 

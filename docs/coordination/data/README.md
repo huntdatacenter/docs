@@ -8,7 +8,9 @@ description: This page gives an introduction to data coordination in HUNT Cloud.
 
 # Introduction to data coordination
 
-The aim of this section is to gather information relevant to data coordination under a data space.
+**The aim of this section is to gather information relevant to data coordination under a data space.**
+
+See our [data coordinator FAQ](/data/faq) for frequently asked questions.
 
 ::: tip 
 [Contact us](/contact) with your burning topics to expand this section.
