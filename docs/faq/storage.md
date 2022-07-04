@@ -95,7 +95,7 @@ umask 002" >> ~/.profile; source ~/.profile
 
 ### Can I restrict permissions to files within my lab?
 
-Yes. Sometimes you might want to restrict write permissions of files for valuable data to avoid accidental overwrites or accidental deletions. You can restrict this with the `chmod` command.
+Yes. Sometimes you might want to restrict write permissions to avoid accidental overwrites or accidental deletions of valuable data in your `home`-machine. You may restrict the write access to files with the `chmod` command.
 
 ```
 # -- restrict write privileges for individual file
@@ -107,7 +107,7 @@ chmod 600 -R <foldername>
 
 ::: details Principal example
 
-Log into your lab and test the privileges settings, and then ask one of your lab colleagues to test edit the file:
+Log into your lab and test the privileges settings:
 
 ```bash
 # move to scratch
