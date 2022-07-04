@@ -124,7 +124,7 @@ ls -lh test.txt
 ```
 :::
 
-::: warning Confidentiality
+::: warning 
 
 We do -not- recommend using `chmod` to restrict access to data within your lab for confidentiality purposes. All data within a lab will principally be accessible for all lab users in our agreement framework. [Contact us](/contact) for a dialogue on heightened security measures if you need increased data confidentiality.
 
