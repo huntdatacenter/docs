@@ -81,7 +81,7 @@ Yes. HUNT Cloud is a collaborative computing platform where mutually trusted peo
 
 ### Can anyone access my home folder?
 
-Yes. Other lab users will not be able do access data in your home folder. However, please be aware that the data in your lab is under the control of your data controller. This includes data that you upload and generate, also data in your private home folder. This is stated in our [user agreement](/agreements/downloads/#user-agreement). You data controller or lab leader may request us to transfer data from your home folder into other folders that are accessible for other lab users, for example if you leave your lab. We will not expose your system keys during such moves.
+Yes. More precise, other lab users will not be able do access data in your home folder direclty. However, data in your lab is under the control of your data controller. This includes data that you upload and generate, also data in your private home folder. This is stated in our [user agreement](/agreements/downloads/#user-agreement). Thus, your data controller or lab leader may request us to transfer data from your home folder into other folders that are accessible for other lab users or for compliance archiving, for example if you leave your lab. We will not expose your system keys during such moves.
 
 ### How can other lab users edit my files by default?
 
@@ -92,6 +92,44 @@ echo "
 # -- set default file permissions for user and group to read-write
 umask 002" >> ~/.profile; source ~/.profile
 ```
+
+### Can I restrict permissions to files within my lab?
+
+Yes. Sometimes you might want to restrict write permissions of files for valuable data to avoid accidental overwrites or accidental deletions. You can restrict this with the `chmod` command.
+
+```
+# -- restrict write privileges for individual file
+chmod 600 <filename>
+
+# -- Restrict write privileges for all files in a folder
+chmod 600 -R <foldername>
+```
+
+::: details Principal example
+
+Log into your lab and test the privileges settings, and then ask one of your lab colleagues to test edit the file:
+
+```bash
+# move to scratch
+cd /mnt/scratch
+
+# Make a test file
+touch test.txt
+
+# Restrict write privileges to you only
+chmod 600 test.txt
+
+# Check privileges
+ls -lh test.txt
+```
+:::
+
+::: warning Confidentiality
+
+We do -not- recommend using `chmod` to restrict access to data within your lab for confidentiality purposes. All data within a lab will principally be accessible for all lab users in our agreement framework. [Contact us](/contact) for a dialogue on heightened security measures if you need increased data confidentiality.
+
+:::
+
 
 ## Restore
 
