@@ -97,7 +97,7 @@ umask 002" >> ~/.profile; source ~/.profile
 
 Yes. Sometimes you might want to restrict write permissions to avoid accidental overwrites or accidental deletions of valuable data in your `home`-machine. You may restrict the write access to files with the `chmod` command.
 
-```
+```bash
 # -- restrict write privileges for individual file
 chmod 600 <filename>
 
