@@ -29,7 +29,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 
 After installation is done, log out and log in again to be able to use your conda setup.
 
-### Set up Bioconda and conda-forge channels
+### Set up Bioconda and Conda-forge channels
 
 To find packages in Conda you need to configure relevant channels.
 Follow the [Set up channels](https://bioconda.github.io/user/install.html#set-up-channels) guide from Bioconda.
@@ -41,7 +41,7 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
-### Install Your Tools
+### Install your tools
 
 Have a field day installing your favourite tools
 
@@ -53,7 +53,7 @@ conda install plink2
 We have very easy guide on how to get [Saige](/working-in-your-lab/analytical-tools/saige/) running in Conda environment.
 :::
 
-### Do Cool Science
+### Do cool science
 
 ```bash
 plink2 <input>
