@@ -8,13 +8,17 @@ description: Lagtun is the body that appoints time for the scientific governance
 
 # Lagtun
 
-**High impact science needs continuous evolution of data, tools, expertise and environments to prosper. Lagtun is the body that appoints time three times per year to govern the scientific developments of HUNT Cloud.** 
+**High impact science needs continuous evolution of data, tools, expertise and environments to prosper. Lagtun is the body that appoints time to govern the scientific developments of HUNT Cloud with the aim to ensure continuous change under a trustworthy and reliable structure.** 
 
 [[toc]]
 
 ## Introduction
 
-Utilizing cooperative problem solving and joint strategic thinking among representatives from data controllers, services centers and data spaces on the blue subscription layer, Lagtun meet each Ting week to give recommendations on the scientific development of HUNT Cloud. 
+**The aim** of Lagtun is to enable continuous scientific change of HUNT Cloud's services under a trustworthy and reliable structure.
+
+**The approach** is cooperative problem solving and joint strategic thinking among representatives from data controllers, services centers and data spaces on the blue subscription layer three times per year. 
+
+**The result** is recommendations of change given from Lagtun to HUNT Cloud in the form of resolutions.
 
 ## Attendance
 
@@ -54,9 +58,9 @@ Resolutions from previous Lagtuns are available in our [resolutions](/tingweek/r
 [Click here to read our Lagtun resolutions >>](/tingweek/resolutions) 
 :::
 
-### Propose new resolutions
+### New resolutions
 
-All users are welcome to propose resolutions for the next meeting through their representatives. You can find the representative list in the [resolution documents](/tingweek/resolutions), or you can [contact us](/contact) if you need help identifying your Lagtun representative. See [agenda](/tingweek/lagtun/#agenda) for more details.
+All HUNT Cloud coordinators and users are welcome to propose resolutions for the next meeting through their representatives. You can find the representative list in the [resolution documents](/tingweek/resolutions), or you can [contact us](/contact) if you need help identifying your Lagtun representative. See the [agenda](/tingweek/lagtun/#agenda) section for more details.
 
 ### Consideration
 
