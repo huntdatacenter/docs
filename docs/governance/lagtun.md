@@ -8,11 +8,13 @@ description: Lagtun is the body that appoints time for the scientific governance
 
 # Lagtun
 
-**High impact science needs continuous evolution of data, tools, expertise and environments to prosper. Lagtun is the body that appoints time to govern the scientific developments in HUNT Cloud.** 
-
-Utilizing cooperative problem solving and joint strategic thinking among representatives from our data controllers, services centers and data spaces on the blue subscription layer, Lagtun meet each Ting week to give recommendations on our scientific development. 
+**High impact science needs continuous evolution of data, tools, expertise and environments to prosper. Lagtun is the body that appoints time three times per year to govern the scientific developments of HUNT Cloud.** 
 
 [[toc]]
+
+## Introduction
+
+Utilizing cooperative problem solving and joint strategic thinking among representatives from data controllers, services centers and data spaces on the blue subscription layer, Lagtun meet each Ting week to give recommendations on the scientific development of HUNT Cloud. 
 
 ## Attendance
 
@@ -43,11 +45,18 @@ The invitation criteria was clarified in [R2/LT5/T5/22](https://docs.hdc.ntnu.no
 ## Resolutions
 
 **Lagtun gives recommendations on the development of HUNT Cloud in the form of resolutions. The is introduced with the intention to allow for an inclusive decision making process and multilateral cooperation.** 
+### Passed resolutions
+
+Resolutions from previous Lagtuns are available in our [resolutions](/tingweek/resolutions) page .
 
 ::: tip
 
 [Click here to read our Lagtun resolutions >>](/tingweek/resolutions) 
 :::
+
+### Propose new resolutions
+
+All users are welcome to propose resolutions for the next meeting through their representatives. You can find the representative list in the [resolution documents](/tingweek/resolutions), or you can [contact us](/contact) if you need help identifying your Lagtun representative. See [agenda](/tingweek/lagtun/#agenda) for more details.
 
 ### Consideration
 
@@ -118,23 +127,23 @@ We aim to document meeting records in addition to the public resolutions. These 
 
 ## FAQ
 
-### I can not participate
+#### I can not participate
 
 If you are a ticket holder you may choose to attend your self or forward the invitation to a representative of your choice.
 
-### I have not received my invitation 
+#### I have not received my invitation 
 
 We forward invitations on email addresses that are registered in your Data controller agreement, Services center agreement and Data space agreement. [Contact us](/contact) if you expect to be an invitation recipient and have not received your ticket.
 
-### Can I get the invitation as a calendar booking
+#### Can I get the invitation as a calendar booking
 
 Yes. [Contact us](/contact) if you would like to receive your Lagtun invitation as a calendar booking.
 
-### I can only participate for one hour
+#### I can only participate for one hour
 
 Perfectly fine fine with us. If you are interested in the resolutions, we recommend that you prioritize the first hour (9-10 am) where we aim to complete most of the structured agenda. If you are interested in unstructured discussion, then we recommend that you prioritize the last hour (10-11 am).
 
-### About the Lagtun name
+#### About the Lagtun name
 
 We know, Lagtun is difficult to pronounce in English. However, in Norwegian it is a word with several meanings that we think capture the soul of this Ting. 
 
