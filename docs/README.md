@@ -13,4 +13,11 @@ These pages contains official user documentation on our services. The content is
 
 Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf) and visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services, and see our [Ting reports](/tingweek/#reports) for detailed updates on our activities.
 
+::: tip Next Ting week
 
+- **Lab ting**: Tuesday 18 October 2022 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 19 October 2022 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 19 October 2022 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 20 October 2022 - 9 to 11 a.m. CET
+
+:::

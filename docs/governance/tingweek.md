@@ -15,7 +15,14 @@ We arrange a layered set of Tings for distinct groups in our community. The meet
 
 [[toc]]
 
+::: tip Next Ting week
 
+- **Lab ting**: Tuesday 18 October 2022 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 19 October 2022 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 19 October 2022 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 20 October 2022 - 9 to 11 a.m. CET
+
+:::
 
 ## Reports
 
@@ -82,10 +89,10 @@ Individual Tings are scheduled over the week on the same time slots. The current
 
 #### Ting week #7 (2022-10)
 
-- **Lab ting**
-- **Data space ting**
-- **Data controller ting**
-- **Lagtun**
+- **Lab ting**: Tuesday 18 October 2022 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 19 October 2022 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 19 October 2022 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 20 October 2022 - 9 to 11 a.m. CET
 
 #### Ting week #6 (2022-05)
 
