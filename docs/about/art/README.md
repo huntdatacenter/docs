@@ -12,7 +12,7 @@ description: This page imagine... concepts and reflections of data driven scienc
 
 # Visence (art)
 
-**Our magical world of data science is filled with abstract ideas that are hard to grasp, such as data value, data space, clouds and ethical dimensions. This page present artworks where we visualize aspects of data science into practical forms. Our main purpose is to ease dialogues and strengthen cooperation.**
+**Our magical world of data science is filled with abstract ideas. This page present artworks where we visualize aspects of data science in practical forms. Our main purpose is to ease dialogues and strengthen cooperation.**
  
 ::: tip
 We are publishing these artworks under a `CC BY­-NC-­ND 4.0` license. This means that you are free to use, share, copy and redistribute the works under just a few simple terms ([license](/art/#license)).
@@ -25,9 +25,11 @@ We are publishing these artworks under a `CC BY­-NC-­ND 4.0` license. This mea
 
 *«There are no rules of architecture for a castle in the cloud.»*
 
-It's hard to imagine that Gilbert Chesterton aimed at digital clouds when he constructed his famous paradox more than a century ago. Anyway, the quote inspired us to explore an area where truly only your dreams and imaginations defines the boundaries - art.
+ It's hard to imagine that Gilbert Chesterton aimed at digital clouds when he constructed his famous paradox more than a century ago. Anyway, the quote inspired us to explore an area where truly only your dreams and imaginations defines the boundaries - art.
 
-The aim has been to visualize ideas and concepts into practical forms that make the abstract world of data science more understandable. And maybe contributing a tiny bit of soul and identity to the exiting field of digital science along the way.
+The field of data science is filled with abstract ideas that are hard to grasp and harder to discuss, such as data value, data space, clouds and ethical dimensions.
+
+Our aim is to visualize ideas and concepts into practical forms that make the abstract world of data science more understandable. And maybe contributing a tiny bit of soul and identity to the field on the way.
 
 We are truly appreciative that digital artist Ingunn B. Ferstad entered into the fascinating field of data sciences and on her way established and evolved the exciting world that ends up in these artworks.
 
@@ -228,7 +230,7 @@ Trust enables science. Explorations in unknown terrain, often at a competitive p
 * [Full](https://assets.hdc.ntnu.no/assets/artworks/hunt-cloud_strategic-compass_full.png) - 1901 x 2245 pixels - 4,9M
 * [Medium](https://assets.hdc.ntnu.no/assets/artworks/hunt-cloud_strategic-compass_medium.png) - 1626 x 1920 pixels - 3,4M
 * [Small](https://assets.hdc.ntnu.no/assets/artworks/hunt-cloud_strategic-compass_small.png) - 915 x 1080 pixels - 1,2M
-* [Extra small](https://assets.hdc.ntnu.no/assets/artworks/hunt-cloud_strategic-compass_xsmall.png) - 296 x 350 pixels - 153K
+* [Extra small](https://assets.hdc.ntnu.no/assets/artworks/hunt-cloud_strategic-compass_xsmall.png) - 296 x 350 pixels - 148K
 
 **Title:** Strategic compass  
 **Version:** 1.0  
