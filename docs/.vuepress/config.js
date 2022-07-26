@@ -100,6 +100,7 @@ module.exports = {
             "/about/vision.md",
             "/about/team.md",
             "/about/activities.md",
+            "/about/art/",
             "/about/affiliation.md",
           ]
         },
