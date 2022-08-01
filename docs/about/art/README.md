@@ -12,7 +12,7 @@ description: This page imagine... concepts and reflections of data driven scienc
 
 # Visence (art)
 
-**Our magical world of data science is filled with abstract ideas. This page present artworks where we visualize aspects of data science in practical forms. Our main purpose is to ease dialogues and strengthen cooperation.**
+**Our magical world of data science is filled with abstract ideas. This page present artworks where we visualize such ideas in practical forms. Our main purpose is to ease dialogues and strengthen cooperation.**
  
 ::: tip
 We are publishing these artworks under a `CC BY­-NC-­ND 4.0` license. This means that you are free to use, share, copy and redistribute the works under just a few simple terms ([license](/art/#license)).
