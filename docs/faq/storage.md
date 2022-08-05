@@ -49,13 +49,26 @@ We recommend using [ncdu](/working-in-your-lab/technical-tools/ncdu/) to get bet
 
 ### How can I move my tmp out of the root?
 
-Log into your machine in the lab with your favourite terminal and type:
+Log into your home machine in your lab with your favorite terminal and type:
 
-```
+```bash
 echo "export TMPDIR=/mnt/scratch/tmp" >> ~/.profile
 source ~/.profile
 mkdir -p $TMPDIR
 ```
+
+::: details Move tmp on blue and iaas machines
+
+To move tmp for the default ubuntu user on blue and iaas machines: 
+
+```bash
+# Move tmp folder out of the system disk
+echo "export TMPDIR=/home/ubuntu/tmp/" >> ~/.profile
+source ~/.profile
+mkdir -p $TMPDIR
+```
+:::
+
 
 ### Why is home only 100G?
 
