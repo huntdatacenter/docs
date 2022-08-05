@@ -24,7 +24,9 @@ See our [workbench FAQ](/working-in-your-lab/workbench/faq/) for general questio
 
 If you were previously able to access your applications in Workbench (e.g. RStudio), and then the application suddenly stopped working, one quick approach is to try restarting your Workbench environment. Follow the guide to [restart Workbench environment](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). [Contact us](/contact) if you need further assistance.
 
-### Has my client certificate expired (403 Forbidden)?
+![expired_server_cert.png](./images/expired_server_cert.png)
+
+### 403: Forbidden - Expired client certificate
 
 Your Workbench certificate is time limited. You will meet the **`403 Forbidden`** message below when your certificate expire. Head over to the [service desk](/service-desk/user-orders/#workbench-reissue) to order a new.
 
@@ -32,9 +34,7 @@ Your Workbench certificate is time limited. You will meet the **`403 Forbidden`*
 
 ### Has my lab certificate expired?
 
-If you were previously able to access Workbench and now your browser reports expired/unsafe certificates do not hesitate to contact us on [email](/contact) or Slack, we can usually update lab certificates pretty quickly.
-
-![expired_server_cert.png](./images/expired_server_cert.png)
+If you were previously able to access Workbench and now your browser reports expired/unsafe certificates do not hesitate to contact us on [email](/contact) or Slack, we can usually update lab certificates quickly.
 
 ## RStudio
 
@@ -51,6 +51,21 @@ Could not start rstudio in time
 Try reloading the page (`Ctrl + R` / `CMD + R`) to reconnect with RStudio session.
 [Contact us](/contact) if the error message persists.
 
+### 504: Gateway Timeout Error
+
+The 504 error may be shown when your request are fine, but the workbench can not generate the requested resource. In such cases you will not be able to access the application. If you were previously able to access your RStudio in Workbench, one potential approach is to log into your lab machine in a shell and manually resetting your RStudio settings: 
+
+```bash
+# -- get today's date
+date=`date +%Y-%m-%d`
+
+# -- move rstudio configuration
+#    to a new folder marked by today's date
+mv /mnt/work/workbench/${USER}/.local/share/rstudio /mnt/work/workbench/${USER}/.local/share/rstudio-${date}
+```
+
+Then [restart your Workbench environment](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). If the error still persists, don't hesitate to [contact us](/contact) for further assistance.
+
 ## MATLAB
 
 ### Icons in user interface disappeared
@@ -61,7 +76,7 @@ If MATLAB icons disappeared and application is stuck loading you will need to re
 
 Removing user settings can be done in Workbench terminal:
 
-```
+```bash
 ls /mnt/work/workbench/$USER/.matlab
 rm -r /mnt/work/workbench/$USER/.matlab
 ```
