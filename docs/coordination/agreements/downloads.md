@@ -209,7 +209,7 @@ Lab leaders and lab coordinators from labs that will upload data can order inter
 
 ::: details Clarification of the form fields
 
-The below bullet points clarify the field information needed to complete our internal kista import order (v.1.6).
+The following form fields are included in the "HUNT Cloud Internal Kista Order" version 1.7.
 
 **Uploader Lab**
 
@@ -257,7 +257,7 @@ Data space leaders and Data space compliance coordinators can request external k
 
 ::: details Clarification of the form fields
 
-The below bullet points clarify the field information needed to complete our external kista import order (v2.0).
+The following form fields are included in the "HUNT Cloud External Kista Import Order" version 2.0.
 
 - **Data space name:** This is the short name of you data space that request the transfer.
 
@@ -315,7 +315,7 @@ Data space leaders and Data space compliance officers can request external kista
 
 ::: details Clarification of the form fields
 
-The below bullet points clarify the field information needed to complete our external kista export order (v1.3).
+The following form fields are included in the "HUNT Cloud External Kista Export Order" version 1.3.
 
 - **Data space name:** This is the short name of you data space that request the transfer.
 
