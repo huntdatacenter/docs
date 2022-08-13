@@ -176,7 +176,7 @@ Note that time to successful transfer depend on access to SFTP software and pote
 
 ### Update data space coordinator roles
 
-Click the button below to update your data space coordinator roles under your existing data space.
+Click the button below to update your [data space coordinator roles](/coordinator/roles/) under your existing data space.
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
@@ -189,5 +189,39 @@ Click the button below to update your data space coordinator roles under your ex
 * **Required attachment**: None.
 * **Expected delivery time:** Days.
 * **Cost:**  Included in your data space subscription.
+
+
+### Update lab coordinator role
+
+Click the button below to update the [lab coordinator](/coordinator/roles/#lab-coordinator) role for a lab attached to your data space.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Update%20lab%20coordinator%20role%20-%20%7Blab%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20update%20the%20coordinator%20role%20in%20our%20Lab%3A%0A%0A%2A%20Lab%20name%3A%20%0A%0ANew%20lab%20coordinator%3A%20%0A%0A%2A%20Name%3A%20%20%0A%2A%20Department%3A%20%20%0A%2A%20Faculty%3A%20%20%0A%2A%20Institution%3A%20%20%0A%2A%20Email%3A%20%20%0A%2A%20Phone%3A%20%20%0A%0AI%20am%20looking%20forward%20to%20receive%20an%20email%20acknowledging%20that%20you%20have%20updated%20the%20role.%0A%0ABest%2C" class="nav-link external action-button">
+    Request update of lab coordinator role
+  </a>
+</p></div></div>
+
+* **Who can order:** Data space leaders and data space compliance officers.
+* **Required attachment**: None.
+* **Expected delivery time:** Days.
+* **Cost:** Included in your data space subscription.
+
+
+### Update lab leader role
+
+Click the button below to update lab leader roles for labs attached to your data space.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Update%20lab%20leader%20role%20-%20%7Blab%20name%7D%20in%20%7Bdataspace%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20update%20the%20lab%20leader%20role%20for%20a%20lab%20under%20our%20dataspace.%20%0A%0AI%20have%20attached%20a%20signed%20lab%20agreement%20to%20this%20email.%20%0A%0AI%20am%20looking%20forward%20to%20receive%20an%20email%20acknowledging%20that%20you%20have%20updated%20the%20role.%0A%0ABest%2C" class="nav-link external action-button">
+    Request update of lab leader role
+  </a>
+</p></div></div>
+
+* **Who can order:** Data space leaders and data space compliance officers.
+* **Required attachment**: A new [signed lab order](/agreements/downloads/#lab-order).
+* **Expected delivery time:** Days.
+* **Cost:** Included in your data space subscription.
 
 
