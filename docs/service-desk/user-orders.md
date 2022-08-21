@@ -129,18 +129,24 @@ We allow connection from known IP addresses only outside Norway. Access from net
 
 <div class="home" style="padding: 0px;"><div class="hero">
 <p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20access%20opening%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20VPN%20access%20opening%20for%20the%20following%20IP%20address%3A%20%0A%0A%7BIP4-address%7D.%0A%0AI%20am%20looking%20forward%20to%20be%20notified%20on%20email%20when%20the%20opening%20is%20implemented.%0A%0ABest%2C
-" class="nav-link external action-button">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20access%20opening%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20VPN%20access%20opening%20for%20the%20following%20IP%20address%3A%20%0A%0Aaccess_ip%3D%7BIP4-address%7D%20%20%0Aaccess_duration%3D%7BPermanent/Temporary%7D%0Aaccess_country%3D%7BCountry%7D%0A%0AI%20am%20looking%20forward%20to%20be%20notified%20on%20email%20when%20the%20opening%20is%20implemented.%0A%0ABest%2C" class="nav-link external action-button">
     Request VPN access list opening
   </a>
 </p></div></div>
 
 * **Who can order:** All active lab users.
-* **Required information**: [Your IP4 address](http://ip4.me).
+* **Required information**: [Your IP4 address](http://ip4.me), location and purpose (see below).
 * **Expected response time:** One day.
 * **Expected delivery:** Opening communicated on email.
 * **Cost:** Included in the lab subscription.
 
+::: details About the required information
+
+* **access_ip**. This is the external IP from your local machine that is visible for us when you connect. [Click here](http://ip4.me) to locate your address. Note that IPs that starts with "10.", "192." and "172." are internal addresses that will not work.
+* **access_duration**. State if you request a "permanent" or "temporary" access from the address. Permanent openings will follow your user duration. If you need temporary access during travels or similar, state the desired duration of the opening.
+* **access_country**. State from which country you will be connecting.
+
+:::
 
 ### VPN certificate reset  
 
