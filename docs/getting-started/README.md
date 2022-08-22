@@ -6,7 +6,7 @@ description: This guide will help you to connect and get started on your HUNT Cl
 
 # Introduction
 
-This guide will help you to connect and get started on your HUNT Cloud lab.
+This guide will help you to connect and get started on your HUNT Cloud lab after your lab has requested access in our [service desk](https://docs.hdc.ntnu.no/service-desk/lab-orders/#add-a-new-lab-user).
 
 ::: tip
 
