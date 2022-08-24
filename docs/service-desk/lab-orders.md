@@ -12,12 +12,13 @@ sidebarDepth: 2
 
 [[toc]]
 
-::: tip
+::: tip Save time
 
-(1) Send your order from your organizational email that was registered in your user agreement. (2) Send us a regular [email](/contact) with your request if you can't find what you are looking for on the this page.
+Send the request from your **organizational email**. We use this for identification. Request from private email accounts will need additional verification which takes longer to process.
 
 :::
 
+Send us a regular [email](/contact) with your request if you can't find what you are looking for on the this page.
 
 ## User management
 
