@@ -84,6 +84,26 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 * **Cost:** Included in your lab subscription.
 
 
+### Renew lab user agreement
+
+Lab user agreements needs to be renewed approximately every two years for accounts to be active. Click the button below to renew the lab user areement for one user.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Renew%20lab%20user%20agreement%20-%20%7Blabuser%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20renew%20that%20lab%20user%20agreement%20for%20one%20of%20our%20lab%20users.%0A%0AI%20have%20attached%20a%20new%20signed%20user%20agreement%20to%20this%20email.%0A%0AI%20am%20looking%20forward%20to%20a%20confirmation%20of%20the%20renewal%20on%20email.%0A%0ABest%2C" class="nav-link external action-button">
+    Renew user agreement
+  </a>
+</p></div></div>
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required attachment**: [A signed user agreement](/agreements/downloads/#user-agreement).
+* **Expected response time:** Days.
+* **Expected delivery:** Email acknowledgment.
+* **Cost:** Included in your lab subscription.
+
+
+
+
 
 
 
