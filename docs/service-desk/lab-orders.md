@@ -358,3 +358,26 @@ Head over to the [data space orders](/service-desk/data-space-orders) to request
 * **Cost:** Included in your lab subscription.
 
 
+
+
+
+## Others
+
+### Update lab coordinator role
+
+Click the button below to update the [lab coordinator](/coordinator/roles/#lab-coordinator) role for a lab attached to your data space.
+
+<div class="home" style="padding: 0px;"><div class="hero">
+<p class="action">
+  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Update%20lab%20coordinator%20role%20-%20%7Blab%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20update%20the%20coordinator%20role%20in%20our%20Lab%3A%0A%0A%2A%20Lab%20name%3A%20%0A%0ANew%20lab%20coordinator%3A%20%0A%0A%2A%20Name%3A%20%20%0A%2A%20Department%3A%20%20%0A%2A%20Faculty%3A%20%20%0A%2A%20Institution%3A%20%20%0A%2A%20Email%3A%20%20%0A%2A%20Phone%3A%20%20%0A%0AI%20am%20looking%20forward%20to%20receive%20an%20email%20acknowledging%20that%20you%20have%20updated%20the%20role.%0A%0ABest%2C" class="nav-link external action-button">
+    Request update of lab coordinator role
+  </a>
+</p></div></div>
+
+* **Who can order:** Lab leaders.
+* **Required attachment**: None.
+* **Expected delivery time:** Days.
+* **Cost:** Included in your lab subscription.
+
+
+
