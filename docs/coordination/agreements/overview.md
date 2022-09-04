@@ -8,9 +8,10 @@ description: This page gives an overview of administrative agreements in HUNT Cl
 
 # Administrative agreements
 
-**This page holds an overview of the administrative agreements that are keys to make science fly in HUNT Cloud.** 
+**We believe a solid framework of documented responsibilities is a key success factor to enable your scientists with the freedom to explore. This page holds an overview of the administrative agreements in HUNT Cloud.** 
 
-We believe a solid framework of documented responsibilities is a success factor to enable simple and secure environments for your scientists. Although simple for scientists, as a coordinator you will balance a backstage agreement framework that is somewhat complex. Bear with us, once up and running it will provide you with quite some powers.
+
+As a coordinator you will balance a backstage agreement framework that is somewhat complex. Bear with us, once up and running it will provide you with significant powers.
 
 ::: tip Get going
 Head over to our [get going](/coordination/get-going) page for a step-wise guide on how to start your agreement quest, and the [FAQ](/agreements/faq/) section for frequently asked agreement questions.
