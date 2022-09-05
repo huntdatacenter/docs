@@ -89,6 +89,7 @@ I have installed and activated the Signal app on my phone and are looking forwar
 
 
 Kind regards,
+
 `,
 }' :fields='[
   { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
@@ -107,12 +108,23 @@ Kind regards,
 
 Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to access your workbench and install software on your home machine.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=SSH%20passphrase%20reset%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20passphrase%20reset%20for%20my%20user%20%7Busername%7D%20%40%20%7Blabname%7D.%0A%0AI%20have%20activated%20Signal%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20temporary%20key%20here.%0A%0ABest%2C" class="nav-link external action-button">
-    Request SSH passphrase reset
-  </a>
-</p></div></div>
+<ServiceDesk title="Request SSH passphrase reset" :template='{
+  subject: "SSH passphrase reset - {username} @ {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a passphrase reset for my user {username} @ {labname}.
+
+I have activated Signal on my phone and are looking forward to receive my temporary key here.
+
+
+Kind regards,
+
+`,
+
+}' :fields='[
+  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
 
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
@@ -138,12 +150,25 @@ Head over to the [lab orders page](/service-desk/lab-orders#deactivate-lab-user)
 
 We allow connection from known IP addresses only outside Norway. Access from networks outside Norway needs to be requested included in our VPN access list.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20access%20opening%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20VPN%20access%20opening%20for%20the%20following%20IP%20address%3A%20%0A%0Aaccess_ip%3D%7BIP4-address%7D%20%20%0Aaccess_duration%3D%7BPermanent/Temporary%7D%0Aaccess_country%3D%7BCountry%7D%0A%0AI%20am%20looking%20forward%20to%20be%20notified%20on%20email%20when%20the%20opening%20is%20implemented.%0A%0ABest%2C" class="nav-link external action-button">
-    Request VPN access list opening
-  </a>
-</p></div></div>
+<ServiceDesk title="Request VPN access link opening" :template='{
+  subject: "VPN access opening request - {username}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request an VPN access opening for the following IP address: 
+
+access_ip={IP4-address}  
+access_duration={Permanent/Temporary}
+access_country={Country}
+
+I am looking forward to be notified on email when the opening is implemented.
+
+
+Kind regards,
+
+`,
+}' :fields='[
+  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+]' />
 
 * **Who can order:** All active lab users.
 * **Required information**: [Your IP4 address](http://ip4.me), location and purpose (see below).
@@ -164,13 +189,23 @@ We allow connection from known IP addresses only outside Norway. Access from net
 You may need to reset your VPN certificate when you get a new local machine or if you need a new VPN passphrase.
 
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=VPN%20certificate%20reset%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20reset%20my%20VPN%20certificate.%20%0A%0AI%20have%20an%20active%20Signal%20account%20on%20my%20phone%2C%20and%20are%20looking%20forward%20to%20receive%20my%20new%20VPN%20passphrase%20on%20the%20phone%20and%20a%20link%20to%20the%20new%20VPN%20certificate%20on%20my%20organizational%20email.%0A%0AI%20am%20aware%20that%20my%20lab%20access%20will%20be%20paused%20from%20the%20new%20certificate%20is%20issued%20and%20until%20I%20have%20installed%20the%20new%20certificate%20on%20my%20local%20machine.%0A%0ABest%2C" class="nav-link external action-button">
-    Request VPN certificate reset
-  </a>
-</p></div></div>
+<ServiceDesk title="Request VPN certificate reset" :template='{
+  subject: "VPN certificate reset - {username}",
+  body: `Hi HUNT Cloud team,
 
+I would like to reset my VPN certificate. 
+
+I have an active Signal account on my phone, and are looking forward to receive my new VPN passphrase on the phone and a link to the new VPN certificate on my organizational email.
+
+I am aware that my lab access will be paused from the new certificate is issued and until I have installed the new certificate on my local machine.
+
+
+Kind regards,
+
+`,
+}' :fields='[
+  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+]' />
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
 * **Expected delivery:** VPN passphrase on Signal, link to VPN certificate on email.
@@ -184,13 +219,27 @@ You may need to reset your VPN certificate when you get a new local machine or i
 
 You will need to reset the [Google Authenticator key](/guides/google-authenticator-reset/) that you need to access the HUNT Cloud VPN, for example when you change your phone.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Google%20authenticator%20key%20request%20-%20%7Busername%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20Google%20authenticator%20key%20for%20my%20VPN%20access.%20%0A%0AAlternative%201%3A%20%0A%0AI%20have%20an%20active%20Signal%20account%20on%20the%20same%20phone%20number%20that%20is%20registered%20in%20my%20user%20account%20and%20are%20looking%20forward%20to%20receive%20my%20new%20key%20on%20my%20phone.%0A%0AAlternative%202%3A%20%0A%0APlease%20note%20that%20I%20have%20a%20new%20phone%20number%20%28%2B00-0000000%29.%20I%20have%20activated%20Signal%20on%20this%20number%20and%20are%20looking%20forward%20to%20receive%20my%20new%20key%20on%20the%20app.%0A%0ABest%2C" class="nav-link external action-button">
-    Request Google authenticator key reset
-  </a>
-</p></div></div>
+<ServiceDesk title="Request Google authenticator request" :template='{
+  subject: "Google authenticator key request - {username}",
+  body: `Hi HUNT Cloud team,
 
+I would like to request a new Google authenticator key for my VPN access. 
+
+Alternative 1: 
+
+I have an active Signal account on the same phone number that is registered in my user account and are looking forward to receive my new key on my phone.
+
+Alternative 2: 
+
+Please note that I have a new phone number (+00-0000000). I have activated Signal on this number and are looking forward to receive my new key on the app.
+
+
+Kind regards,
+
+`,
+}' :fields='[
+  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+]' />
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
 * **Expected delivery:** New key on Signal.
@@ -204,13 +253,24 @@ You will need to reset the [Google Authenticator key](/guides/google-authenticat
 
 You may simplify your MobaXterm configuration using a predefined file with credentials and configuration during setup.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=MobaXterm%20file%20-%20%7Busername%7D%40%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20MobXterm%20configuration%20file.%20%0A%0AI%20am%20looking%20forward%20to%20receive%20my%20file%20over%20email%2C%20and%20then%20head%20over%20to%20the%20docs%20to%20get%20going%20on%20the%20configuration%3A%20%0A%0Ahttps%3A//docs.hdc.ntnu.no/working-in-your-lab/technical-tools/mobaxterm/%0A%0ABest%2C" class="nav-link external action-button">
-    Request MobaXterm configuration file
-  </a>
-</p></div></div>
+<ServiceDesk title="Request MobaXterm configuration file" :template='{
+  subject: "MobaXterm file - {username}@{labname}",
+  body: `Hi HUNT Cloud team,
+  
+I would like to request a new MobXterm configuration file. 
 
+I am looking forward to receive my file over email, and then head over to the docs to get going on the configuration: 
+
+https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/mobaxterm/
+
+
+Kind regards,
+
+`,
+}' :fields='[
+  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
 * **Expected delivery:** File as email attachment.
