@@ -79,12 +79,21 @@ Kind regards,
 
 If you have existing Workbench setup and your certificate has expired request new one.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Workbench%20reissue%20-%20%7Busername%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20reissue%20of%20Workbench%20certificate%20for%20lab%3A%20%7Blabname%7D.%0A%0AI%20have%20installed%20and%20activated%20the%20Signal%20app%20on%20my%20phone%20and%20are%20looking%20forward%20to%20receive%20my%20certificate.%20%0A%0ABest%2C" class="nav-link external action-button">
-    Request Workbench reissue
-  </a>
-</p></div></div>
+<ServiceDesk title="Request Workbench reissue" :template='{
+  subject: "Workbench reissue - {username} @ {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request reissue of Workbench certificate for lab: {labname}.
+
+I have installed and activated the Signal app on my phone and are looking forward to receive my certificate. 
+
+
+Kind regards,
+`,
+}' :fields='[
+  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
 
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
