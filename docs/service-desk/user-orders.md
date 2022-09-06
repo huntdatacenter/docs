@@ -156,9 +156,9 @@ We allow connection from known IP addresses only outside Norway. Access from net
 
 I would like to request an VPN access opening for the following IP address: 
 
-access_ip={IP4-address}  
-access_duration={Permanent/Temporary}
-access_country={Country}
+access_ip = {IP4-address}  
+access_duration = {Permanent/Temporary}
+access_country = {Country}
 
 I am looking forward to be notified on email when the opening is implemented.
 
@@ -168,6 +168,9 @@ Kind regards,
 `,
 }' :fields='[
   { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  { label: "Access IP4 address", key: "IP4-address", pattern: "[-a-z0-9.-:_]{3,}", field: "textfield" },
+  { label: "Access duration (Permanent/Temporary)", key: "Permanent/Temporary", pattern: "[-A-z0-9._]{3,}", field: "textfield" },
+  { label: "Access Country", key: "Country", pattern: "[-A-z0-9._]{3,}", field: "textfield" },
 ]' />
 
 * **Who can order:** All active lab users.
