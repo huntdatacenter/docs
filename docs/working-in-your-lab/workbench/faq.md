@@ -72,7 +72,7 @@ You will be able to select default environments including MATLAB kernel and cust
 
 ### How can I install apt packages?
 
-We recommend that you install apt packages in your Conda environments since these will be installed on disk and such be persistent during restarts (regular apt commands run in terminal will be removed during your next restart). Search [anaconda](https://anaconda.org/) to identify your package name and get going with your installation.
+We recommend that instead of using apt, you install your packages using Conda into your environment since these will be installed on disk and such be persistent during restarts (regular apt commands run in terminal will be removed during your next restart). Search [Conda repository](https://anaconda.org/) to identify your package name and get going with your installation.
 
 
 
@@ -145,13 +145,13 @@ Currently we setup `r-base` environment with these conda packages: `r-base`, `r-
 
 ### How do I install additional R packages?
 
-If you want to install your own packages, we recommend to use [Conda](/working-in-your-lab/analytical-tools/conda/) where possible. You can defer to alternative methods such as `install.packages()` when the package is not available in Conda. To install a package: 
+If you want to install your own packages, we recommend to use [Conda](/working-in-your-lab/analytical-tools/conda/) where possible. You can defer to alternative methods such as `install.packages()` when the package is not available in Conda. To install a package:
 
 1. Open your [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
 
 ![workbench_terminal.png](./images/workbench_terminal.png)
 
-2. Add packages to your `r-base` code environment: 
+2. Add packages to your `r-base` code environment:
 
 ```bash
 # -- Principal example
@@ -161,7 +161,7 @@ conda install -n r-base -c conda-forge r-'<package-name>' r-'<another-package-na
 conda install -n r-base -c conda-forge r-dplyr
 ```
 
-For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr). 
+For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr).
 
 3. When the installation is complete, open RStudio or R in your Workbench and load your new package:
 
@@ -193,5 +193,3 @@ Yes. You can find Workbench Terminal in main view of applications under the sect
 ### When do I need to use a terminal?
 
 Terminal can be handy when it comes to managing [Conda packages](/working-in-your-lab/analytical-tools/conda/), monitoring resources (`htop`), or handling other tasks.
-
-
