@@ -167,7 +167,7 @@ Kind regards,
 `,
 }' :fields='[
   { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-  { label: "Access IP4 address", key: "IP4_address", pattern:"^\\s*(((?!10)\\d{1,2}|(?!192)1\\d\\d|2[0-4]\\d|25[0-5])\\.)((\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\.){2}(\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\s*$", field: "textfield" },
+  { label: "Access IP4 address", key: "IP4_address", pattern:"^\\s*((?!169\\.254\\.|10\\.|0\\.|127\\.|255\\.255\\.255\\.255|192\\.168\\.)(\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\.)((\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\.){2}(\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\s*$", hint: "Get your IP address here: http://ip4.me", field: "textfield" },
   {
     label: "Access duration",
     key: "access_duration",
@@ -228,7 +228,7 @@ Kind regards,
 
 ### Google authenticator key reset  
 
-You will need to reset the [Google Authenticator key](/guides/google-authenticator-reset/) that you need to access the HUNT Cloud VPN, for example when you change your phone.
+You need the [Google Authenticator key](/guides/google-authenticator-reset/) to access the HUNT Cloud VPN. Click the button below to request a new key (f.e. when you change your phone).
 
 <ServiceDesk title="Request Google authenticator request" :template='{
   subject: "Google authenticator key request - {username}",
@@ -236,13 +236,9 @@ You will need to reset the [Google Authenticator key](/guides/google-authenticat
 
 I would like to request a new Google authenticator key for my VPN access. 
 
-Alternative 1: 
+I have an active Signal account on my phone and I look forward to receiving new key on my phone.
 
-I have an active Signal account on the same phone number that is registered in my user account and are looking forward to receive my new key on my phone.
-
-Alternative 2: 
-
-Please note that I have a new phone number (+00-0000000). I have activated Signal on this number and are looking forward to receive my new key on the app.
+phone_number = {phone_number}
 
 
 Kind regards,
@@ -250,6 +246,7 @@ Kind regards,
 `,
 }' :fields='[
   { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  { label: "Phone number (optional)", key: "phone_number", pattern: "(not_changed|[+0-9]{3,})", hint: "Phone number should include only + and 0-9 numbers", field: "textfield", optional: true, default: "not_changed" },
 ]' />
 
 * **Who can order:** All active lab users.
