@@ -12,7 +12,7 @@ description: Guide on Google Authenticator key reset.
 
 ::: tip New or lost phone?
 
-Send us an [email](/contact) requesting a new Google Authenticator key.
+Follow these [instructions](/service-desk/user-orders/#google-authenticator-key-reset) to request a new Google Authenticator key.
 
 :::
 
