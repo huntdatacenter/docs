@@ -84,7 +84,7 @@ export default {
     },
     formFilled() {
       return this.fields.every((item) =>
-        this.formData[item.key] ? true : false
+        this.formData[item.key] || item.optional ? true : false
       );
     },
     encodedSubject() {
@@ -103,7 +103,7 @@ export default {
     this.subjectTemplate = this.template ? this.template.subject : null;
     this.bodyTemplate = this.template ? this.template.body : null;
     for (const item of this.fields) {
-      if (item && item.field === "selector" && item.default) {
+      if (item && item.key && item.default) {
         this.formData[item.key] = item.default;
       }
     }
