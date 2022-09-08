@@ -89,7 +89,6 @@ I have installed and activated the Signal app on my phone and are looking forwar
 
 
 Kind regards,
-
 `,
 }' :fields='[
   { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
