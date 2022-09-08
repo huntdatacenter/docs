@@ -222,6 +222,17 @@ export default {
                           outlined
                           hide-details
                         ></v-select>
+                        <v-select
+                          v-else-if="item.field === 'selectone'"
+                          :items="item.options"
+                          v-model="formData[item.key]"
+                          :label="item.label"
+                          placeholder=""
+                          persistent-placeholder
+                          chips
+                          outlined
+                          hide-details
+                        ></v-select>
                       </v-col>
                     </v-row>
                     <v-row justify="center">

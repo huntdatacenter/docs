@@ -156,9 +156,9 @@ We allow connection from known IP addresses only outside Norway. Access from net
 
 I would like to request an VPN access opening for the following IP address: 
 
-access_ip = {IP4-address}  
-access_duration = {Permanent/Temporary}
-access_country = {Country}
+access_ip = {IP4_address}  
+access_duration = {access_duration}  
+access_country = {country}  
 
 I am looking forward to be notified on email when the opening is implemented.
 
@@ -168,9 +168,18 @@ Kind regards,
 `,
 }' :fields='[
   { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-  { label: "Access IP4 address", key: "IP4-address", pattern: "[-a-z0-9.-:_]{3,}", field: "textfield" },
-  { label: "Access duration (Permanent/Temporary)", key: "Permanent/Temporary", pattern: "[-A-z0-9._]{3,}", field: "textfield" },
-  { label: "Access Country", key: "Country", pattern: "[-A-z0-9._]{3,}", field: "textfield" },
+  { label: "Access IP4 address", key: "IP4_address", pattern:"^((\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\.){3}(\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])$", field: "textfield" },
+  {
+    label: "Access duration",
+    key: "access_duration",
+    field: "selectone",
+    options: [
+      "Temporary",
+      "Permanent",
+    ],
+    default: ["Temporary"],
+  },
+  { label: "Access Country", key: "country", pattern: "[-A-z0-9._]{3,}", field: "textfield" },
 ]' />
 
 * **Who can order:** All active lab users.
@@ -243,6 +252,7 @@ Kind regards,
 }' :fields='[
   { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
 ]' />
+
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
 * **Expected delivery:** New key on Signal.
