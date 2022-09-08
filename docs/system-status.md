@@ -8,10 +8,13 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 
-::: danger System access
-**2022-09-08 11:30** - Access to VPN is restricted due to unknown reasons. We are investigating. Next update here 13:00. Rolling updates in Slack.
+::: tip All systems
+Operational
 :::
 
+**2022-09-08 12:12** - System access operational.
+
+**2022-09-08 11:30** - Access to VPN is restricted due to unknown reasons. We are investigating. Next update here 13:00. Rolling updates in Slack.
 
 
 <!--
