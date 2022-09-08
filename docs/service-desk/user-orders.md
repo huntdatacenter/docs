@@ -167,7 +167,7 @@ Kind regards,
 `,
 }' :fields='[
   { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-  { label: "Access IP4 address", key: "IP4_address", pattern:"^((\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\.){3}(\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])$", field: "textfield" },
+  { label: "Access IP4 address", key: "IP4_address", pattern:"^\\s*(((?!10)\\d{1,2}|(?!192)1\\d\\d|2[0-4]\\d|25[0-5])\\.)((\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\.){2}(\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\s*$", field: "textfield" },
   {
     label: "Access duration",
     key: "access_duration",
