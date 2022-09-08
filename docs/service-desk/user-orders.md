@@ -208,6 +208,7 @@ I would like to reset my VPN certificate.
 
 I have an active Signal account on my phone, and are looking forward to receive my new VPN passphrase on the phone and a link to the new VPN certificate on my organizational email.
 
+
 I am aware that my lab access will be paused from the new certificate is issued and until I have installed the new certificate on my local machine.
 
 
@@ -236,6 +237,7 @@ You need the [Google Authenticator key](/guides/google-authenticator-reset/) to 
 
 I would like to request a new Google authenticator key for my VPN access. 
 
+
 I have an active Signal account on my phone and I look forward to receiving new key on my phone.
 
 phone_number = {phone_number}
@@ -247,6 +249,7 @@ Kind regards,
 }' :fields='[
   { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
   { label: "Phone number (optional)", key: "phone_number", pattern: "(not_changed|[+0-9]{3,})", hint: "Phone number should include only + and 0-9 numbers", field: "textfield", optional: true, default: "not_changed" },
+
 ]' />
 
 * **Who can order:** All active lab users.

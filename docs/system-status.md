@@ -7,10 +7,18 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-
 ::: tip All systems
-Operational.
+Operational
 :::
+
+
+**2020-09-08 14:12** - System access restored around 13:20. Potential root cause identified.
+
+**2020-09-08 12:45** - Unstable access again. System access will be off for the next hours as we investigate root cause. Next update expected 14:00.
+
+**2022-09-08 12:12** - System access operational.
+
+**2022-09-08 11:30** - System access restricted due to unknown reasons. We are investigating. Next update here 13:00. Rolling updates in Slack.
 
 
 <!--
