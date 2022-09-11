@@ -25,7 +25,7 @@ We are publishing these artworks under a `CC BY­-NC-­ND 4.0` license. This mea
 
 *«There are no rules of architecture for a castle in the cloud.»*
 
- It's hard to imagine that Gilbert Chesterton aimed at digital clouds when he constructed his famous paradox more than a century ago. Anyway, the quote inspired us to explore an area where truly only your dreams and imaginations defines the boundaries - art.
+ It's hard to imagine that Gilbert Chesterton aimed at digital clouds when he constructed his famous paradox more than a century ago. Regardless, the quote inspired us to explore an area where truly only your dreams and imaginations defines the boundaries - art.
 
 The field of data science is filled with abstract ideas that are hard to grasp and harder to discuss, such as data value, data space, clouds and ethical dimensions.
 
