@@ -33,12 +33,25 @@ Orders for active lab users, such as workbench access and password resets, are l
 
 Click the button below to order access for a new user to your lab.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20labuser%20-%20%7Bname%20of%20new%20user%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20access%20for%20a%20new%20lab%20user.%0A%0AI%20have%20attached%20a%20signed%20user%20agreement%20to%20this%20email%2C%20and%20asked%20our%20new%20colleague%20to%20install%20and%20activate%20the%20Signal%20app%20for%20the%20key%20transfer.%20%0A%0AWe%20are%20looking%20forward%20to%20start%20the%20onboarding%20process.%0A%0ABest%2C" class="nav-link external action-button">
-    Request lab access for a new user
-  </a>
-</p></div></div>
+<ServiceDesk title="Request lab access for a new user" :template='{
+  subject: "New labuser - {username} @ {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request access for a new lab user.
+
+I have attached a signed user agreement to this email, and asked our new colleague to install and activate the Signal app for the key transfer. 
+
+We are looking forward to start the onboarding process.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required attachment**: [A signed user agreement](/agreements/downloads/#user-agreement).
@@ -52,12 +65,28 @@ Click the button below to order access for a new user to your lab.
 
 This order closes access for lab users that no longer need to use your lab, for example when projects ends or lab users switches jobs.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Deactivate%20lab%20user%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20deactivate%20lab%20access%20for%20one%20of%20our%20lab%20users%3A%0A%0Alab%20user%20%3D%20%7Bfull%20name%7D%20%20%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0A%0AI%20am%20looking%20forward%20to%20a%20confirmation%20of%20the%20deactivation%20on%20email.%0A%0ABest%2C" class="nav-link external action-button">
-    Request lab user deactivation
-  </a>
-</p></div></div>
+
+<ServiceDesk title="Request lab user deactivation" :template='{
+  subject: "Deactiave lab user- {username} @ {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to deactivate lab access for one of our lab users:
+ 
+username = {username} 
+lab name = {labname}  
+
+I am looking forward to a confirmation of the deactivation on email.
+
+
+Best regards,
+
+
+
+`,
+}' :fields='[
+  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
 
 * **Who can order:** Lab leaders and lab coordinators can deactivate access for all lab users. Lab users can deactivate their own lab access.
 * **Expected response time:** Days.
@@ -69,12 +98,25 @@ This order closes access for lab users that no longer need to use your lab, for 
 
 Lab users are deactivated on request or after 180 inactive days. Lab leaders and lab coordinator can reactivate their access. We will need one order per lab for multiple lab access reactivations.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Reactivate%20lab%20user%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20reactivate%20access%20for%20one%20of%20our%20lab%20users.%0A%0AI%20have%20attached%20a%20new%20signed%20user%20agreement%20to%20this%20email%2C%20and%20asked%20our%20colleague%20to%20install%20and%20activate%20the%20Signal%20app%20for%20the%20key%20transfer.%0A%0AI%20am%20looking%20forward%20to%20a%20confirmation%20of%20the%20reactivation%20on%20email.%0A%0ABest%2C" class="nav-link external action-button">
-    Request lab user reactivation
-  </a>
-</p></div></div>
+<ServiceDesk title="Request lab user reactivation" :template='{
+  subject: "Reactivate lab user {username} @ {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to reactivate access for one of our lab users.
+
+I have attached a new signed user agreement to this email, and asked our colleague to install and activate the Signal app for the key transfer.
+
+I am looking forward to a confirmation of the reactivation on email.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Name of user", key: "username", pattern: "[-aA-zZ0-9 ]{3,}", hint: "Name of user  should include only letters aA-zZ, 0-9 or dash.", field: "textfield" }
+]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required attachment**: [A new user agreement](/agreements/downloads/#user-agreement).
@@ -88,12 +130,25 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 
 Lab user agreements needs to be renewed approximately every two years for accounts to be active. Click the button below to renew the lab user areement for one user.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Renew%20lab%20user%20agreement%20-%20%7Blabuser%7D%20%40%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20renew%20that%20lab%20user%20agreement%20for%20one%20of%20our%20lab%20users.%0A%0AI%20have%20attached%20a%20new%20signed%20user%20agreement%20to%20this%20email.%0A%0AI%20am%20looking%20forward%20to%20a%20confirmation%20of%20the%20renewal%20on%20email.%0A%0ABest%2C" class="nav-link external action-button">
-    Renew user agreement
-  </a>
-</p></div></div>
+<ServiceDesk title="Renew user agreement" :template='{
+  subject: "Renew lab user agreement - {labuser} @ {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to renew that lab user agreement for one of our lab users.
+
+I have attached a new signed user agreement to this email.
+
+I am looking forward to a confirmation of the renewal on email.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "User name", key: "labuser", pattern: "[-a-z0-9]{3,}", hint: "Lab user should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
+]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required attachment**: [A signed user agreement](/agreements/downloads/#user-agreement).
@@ -114,12 +169,32 @@ Lab user agreements needs to be renewed approximately every two years for accoun
 Increase or decrease the computational power of one of your existing lab machines to a new [machine type](/services/machine-types/).
 
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Update%20machine%20size%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20machine%20update%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Amachine%20name%20%3D%20%7Bmachine%20name%7D%20%20%0Acurrent%20machine%20type%20%3D%20%7Bdefault.b1%7D%20%20%0Anew%20machine%20type%20%3D%20%7Bdefault.b1%7D%20%20%0A%0AI%20am%20aware%20that%20the%20update%20will%20require%20a%20machine%20restart.%0A%0ALet%20us%20touch%20base%20in%20our%20Slack%20lab%20channel%20to%20schedule%20a%20time%20for%20the%20restart%20that%20fits%20our%20scientific%20activities.%0A%0ABest%2C" class="nav-link external action-button">
-    Request a machine size update
-  </a>
-</p></div></div>
+<ServiceDesk title="Request a machine size update" :template='{
+  subject: "Update machine size {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a machine update: 
+
+lab name = {labname}  
+machine name = {machinename}  
+current machine type = {default.b1}  
+new machine type = {newmachine}  
+
+I am aware that the update will require a machine restart.
+
+Let us touch base in our Slack lab channel to schedule a time for the restart that fits our scientific activities.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine name", key: "machinename", pattern: "^[a-z][0-9]{3,}$", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+   { label: "Current machine type", key: "default.b1", pattern: "^[a-z][0-9]{3,}$", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+    { label: "New machine type", key: "newmachine", pattern: "^[a-z][0-9]{3,}$", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" }
+]' />
 
 
 * **Who can order:** Lab leaders and lab coordinators.
@@ -133,12 +208,40 @@ Increase or decrease the computational power of one of your existing lab machine
 
 Add a [new machine](/services/machine-types/) to your lab. A CPU machine is the default lab machine with CPU and memory aimed at data analysis.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20CPU%20machine%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20CPU%20machine%20in%20our%20lab%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Amachine%20type%20%3D%20%7Bdefault.b2%7D%20%20%0Astorage%20size%20%3D%20%7B1%20terabyte%28s%29%7D%20%20%0Asubscription%20%3D%20%7BCommitment%20/%20On-demand%20/%20Blue%7D%0A%0AI%20am%20looking%20forward%20to%20receive%20access%20information%20in%20our%20Slack%20lab%20channel%20when%20the%20machine%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
-    Request a new lab machine
-  </a>
-</p></div></div>
+<ServiceDesk title="Request a new lab machine" :template='{
+  subject: "New CPU machine {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a new CPU machine in our lab: 
+
+lab name = {labname}  
+machine type = {default.b2}  
+storage size = {terabytes}  
+subscription = {type}
+
+I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine type", key: "default.b2", pattern: "^[a-z0-9. ]{3,}$", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
+    {
+    label: "Subscription",
+    key: "type",
+    field: "selectone",
+    options: [
+      "Commitment",
+      "On-demand",
+      "Blue",
+    ],
+    pattern: "{1,}"
+  },
+]' />
 
 
 * **Who can order:** Lab leaders and lab coordinators.
@@ -153,12 +256,42 @@ Add a [new machine](/services/machine-types/) to your lab. A CPU machine is the 
 
 Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) to your lab.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20GPU%20machine%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20GPU%20machine%20in%20our%20lab%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Agpu%20type%20%3D%20%7Bnvidia.p100%7D%0Amachine%20type%20%3D%20%7Bdefault.c2%7D%20%20%0Astorage%20size%20%3D%20%7B1%20terabyte%28s%29%7D%20%20%0Asubscription%20%3D%20%7BCommitment%20/%20On-demand%20/%20Blue%7D%0A%0AI%20am%20looking%20forward%20to%20receive%20access%20information%20in%20our%20Slack%20lab%20channel%20when%20the%20machine%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
-    Request a new GPU machine
-  </a>
-</p></div></div>
+<ServiceDesk title="Request a new GPU machine" :template='{
+  subject: "New GPU machine {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a new GPU machine in our lab: 
+
+lab name = {labname}  
+gpu type = {nvidia.p100}
+machine type = {default.b2}  
+storage size = {terabytes}  
+subscription = {type}
+
+I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "GPU type", key: "nvidia.p100", pattern: "^[aA-zZ0-9.]{3,}$", hint: "GPU type should include only letters aA-zZ, 0-9, or dot.", field: "textfield" },
+  { label: "Machine type", key: "default.b2", pattern: "^[a-z0-9]{3,}$", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
+    {
+    label: "Subscription",
+    key: "type",
+    field: "selectone",
+    options: [
+      "Commitment",
+      "On-demand",
+      "Blue",
+    ],
+    pattern: "{1,}"
+  },
+]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days (subject to availability).
@@ -172,12 +305,30 @@ Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) 
 
 Add a fleet of blue machines to distribute analysis for large scale analysis, for example by utilizing tools such as our [BlueBox](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/bluebox/).
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Fleet%20of%20blue%20machine%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20fleet%20of%20the%20following%20blue%20machines%3A%20%0A%0Alab%20name%20%3D%20%7Blab%20name%7D%20%20%0Anumber%20of%20machines%20%3D%20%7B10%7D%0Amachine%20type%20%3D%20%7Bdefault.c2%7D%20%20%0Astorage%20size%20per%20machine%20%3D%20%7B1%20terabyte%28s%29%7D%20%20%0A%0AI%20am%20looking%20forward%20to%20receive%20access%20information%20in%20our%20Slack%20lab%20channel%20when%20the%20fleet%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
-    Request a fleet of blue machines
-  </a>
-</p></div></div>
+<ServiceDesk title="Request a fleet of Blue machines" :template='{
+  subject: "Fleet of blue machines {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a fleet of the following blue machines: 
+
+lab name = {labname}  
+number of machines = {number}
+machine type = {default.b2}  
+storage size per machine = {terabytes}  
+
+I am looking forward to receive access information in our Slack lab channel when the fleet is up and running.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Number of machines", key: "number", pattern: "^[1-9][0-9]?$", hint: "Number of machines should include only numbers 0-9.", field: "textfield" },
+  { label: "Machine type", key: "default.b2", pattern: "^[a-z0-9 ]{3,}$", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+  { label: "Storage size per machine (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
+]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days (subject to availability).
@@ -352,7 +503,7 @@ You may use this information to plan your new storage names and sizes. We typica
 
 
 
-## Data transfers
+## Data transports
 
 ::: tip External data exports
 
