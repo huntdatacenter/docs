@@ -49,7 +49,7 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  { label: "Name of user", key: "username", field: "textfield" },
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
 ]' />
 
@@ -67,12 +67,12 @@ This order closes access for lab users that no longer need to use your lab, for 
 
 
 <ServiceDesk title="Request lab user deactivation" :template='{
-  subject: "Deactiave lab user- {username} @ {labname}",
+  subject: "Deactivate lab user - {username} @ {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to deactivate lab access for one of our lab users:
  
-username = {username} 
+username = {username}  
 lab name = {labname}  
 
 I am looking forward to a confirmation of the deactivation on email.
@@ -115,7 +115,7 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Name of user", key: "username", pattern: "[-aA-zZ0-9 ]{3,}", hint: "Name of user  should include only letters aA-zZ, 0-9 or dash.", field: "textfield" }
+  { label: "Name of user", key: "username", field: "textfield" }
 ]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
@@ -131,7 +131,7 @@ Best regards,
 Lab user agreements needs to be renewed approximately every two years for accounts to be active. Click the button below to renew the lab user areement for one user.
 
 <ServiceDesk title="Renew user agreement" :template='{
-  subject: "Renew lab user agreement - {labuser} @ {labname}",
+  subject: "Renew lab user agreement - {username} @ {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to renew that lab user agreement for one of our lab users.
@@ -147,7 +147,7 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "User name", key: "labuser", pattern: "[-a-z0-9]{3,}", hint: "Lab user should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
+  { label: "User name", key: "username", pattern: "[-a-z0-9]{3,}", hint: "Lab user should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
 ]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
@@ -191,9 +191,9 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine name", key: "machinename", pattern: "^[a-z][0-9]{3,}$", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-   { label: "Current machine type", key: "default.b1", pattern: "^[a-z][0-9]{3,}$", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
-    { label: "New machine type", key: "newmachine", pattern: "^[a-z][0-9]{3,}$", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" }
+  { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+   { label: "Current machine type", key: "default.b1", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+    { label: "New machine type", key: "newmachine", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" }
 ]' />
 
 
@@ -217,7 +217,7 @@ I would like to request a new CPU machine in our lab:
 lab name = {labname}  
 machine type = {default.b2}  
 storage size = {terabytes}  
-subscription = {type}
+subscription = {type}  
 
 I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
 
@@ -228,7 +228,7 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine type", key: "default.b2", pattern: "^[a-z0-9. ]{3,}$", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
     {
     label: "Subscription",
@@ -263,10 +263,10 @@ Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) 
 I would like to request a new GPU machine in our lab: 
 
 lab name = {labname}  
-gpu type = {nvidia.p100}
+gpu type = {nvidia.p100}  
 machine type = {default.b2}  
 storage size = {terabytes}  
-subscription = {type}
+subscription = {type}  
 
 I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
 
@@ -277,8 +277,8 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "GPU type", key: "nvidia.p100", pattern: "^[aA-zZ0-9.]{3,}$", hint: "GPU type should include only letters aA-zZ, 0-9, or dot.", field: "textfield" },
-  { label: "Machine type", key: "default.b2", pattern: "^[a-z0-9]{3,}$", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "GPU type", key: "nvidia.p100", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters aA-zZ, 0-9, or dot.", field: "textfield" },
+  { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
     {
     label: "Subscription",
@@ -312,7 +312,7 @@ Add a fleet of blue machines to distribute analysis for large scale analysis, fo
 I would like to request a fleet of the following blue machines: 
 
 lab name = {labname}  
-number of machines = {number}
+number of machines = {number}  
 machine type = {default.b2}  
 storage size per machine = {terabytes}  
 
@@ -326,7 +326,7 @@ Best regards,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Number of machines", key: "number", pattern: "^[1-9][0-9]?$", hint: "Number of machines should include only numbers 0-9.", field: "textfield" },
-  { label: "Machine type", key: "default.b2", pattern: "^[a-z0-9 ]{3,}$", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+  { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
   { label: "Storage size per machine (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
 ]' />
 
