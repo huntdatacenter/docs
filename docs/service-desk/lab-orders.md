@@ -582,7 +582,7 @@ Head over to the [data space orders](/service-desk/data-space-orders) to request
 [Internal kista](/data-transfers/internal-kista/) is the best way to transfer data between two labs in HUNT Cloud.
 
 <ServiceDesk title="Request an internal kista" :template='{
-  subject: "Internal kista order {uploader_lab}",
+  subject: "Internal kista order - {uploader_lab}",
   body: `Hi HUNT Cloud team,
 
 I would like to request an internal kista from {uploader_lab} to {downloader_lab}.
