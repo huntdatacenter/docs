@@ -217,6 +217,7 @@ I would like to request a new CPU machine in our lab:
 lab name = {labname}  
 machine type = {default.b2}  
 storage size = {terabytes} TB  
+storage size = {terabytes}  
 subscription = {type}  
 
 I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
@@ -230,6 +231,7 @@ Best regards,
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[0-9 ]{1,5}", hint: "Storage size should include only numbers 0-9.", field: "textfield_suffix" },
+  { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
     {
     label: "Subscription",
     key: "type",
@@ -266,6 +268,7 @@ lab name = {labname}
 gpu type = {nvidia.p100}  
 machine type = {default.b2}  
 storage size = {terabytes} TB  
+storage size = {terabytes}  
 subscription = {type}  
 
 I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
@@ -280,6 +283,7 @@ Best regards,
   { label: "GPU type", key: "nvidia.p100", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters aA-zZ, 0-9, or dot.", field: "textfield" },
   { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[0-9 ]{1,5}", hint: "Storage size should include only numbers 0-9.", field: "textfield_suffix" },
+  { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
     {
     label: "Subscription",
     key: "type",
@@ -315,6 +319,7 @@ lab name = {labname}
 number of machines = {number}  
 machine type = {default.b2}  
 storage size per machine = {terabytes} TB  
+storage size per machine = {terabytes} TB  
 
 I am looking forward to receive access information in our Slack lab channel when the fleet is up and running.
 
@@ -328,6 +333,7 @@ Best regards,
   { label: "Number of machines", key: "number", pattern: "^[1-9][0-9]?$", hint: "Number of machines should include only numbers 0-9.", field: "textfield" },
   { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
   { label: "Storage size per machine (in terabytes)", key: "terabytes", pattern: "[0-9 ]{1,5}", hint: "Storage size should include only numbers 0-9.", field: "textfield_suffix" },
+  { label: "Storage size per machine (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
 ]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
