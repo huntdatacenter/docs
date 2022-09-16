@@ -28,12 +28,42 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 Click the button below to order a new lab under your existing data space.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20lab%20-%20%7Bnew%20labname%7D%20%40%20%7Bdata%20space%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20lab%20under%20our%20data%20space.%0A%0AI%20have%20attached%20a%20signed%20lab%20agreement%20to%20this%20email.%20%0A%0AWe%20would%20like%20to%20start%20with%20the%20following%20machine%20type%20for%20our%20home%20machine%3A%20%0A%0AMACHINE_TYPE%20%3D%20default.b2%0A%0AWe%20would%20like%20to%20attached%20the%20following%20storage%20volume%20sizes%20to%20our%20home%20machine%20%28numbers%20are%20in%20Gigabytes%29%3A%0A%0AARCHIVE%20%3D%20400%20%20%0AWORK%20%3D%20300%20%20%0ASCRACH%20%3D%20300%20%20%0A%0AOur%20lab%20leader%20and%20lab%20coordinator%20will%20as%20quickly%20as%20possible%20forward%20individual%20user%20agreements%20for%20our%20initial%20users%20as%20separate%20requests%20using%20this%20link%3A%20%0A%0Ahttps%3A//docs.hdc.ntnu.no/service-desk/lab-orders.html%23add-a-new-lab-user%0A%0AI%20am%20looking%20forward%20to%20receive%20an%20email%20verification%20stating%20that%20the%20lab%20is%20up%20and%20running.%0A%0ABest%2C" class="nav-link external action-button">
-    Request a new lab
-  </a>
-</p></div></div>
+<ServiceDesk title="Request a new lab" :template='{
+  subject: "New lab order - {labname} @ {dataspace}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a new lab under our data space.
+
+I have attached a signed lab agreement to this email. 
+
+We would like to start with the following machine type for our home machine:  
+
+MACHINE_TYPE = {default.b2}  
+
+We would like to attached the following storage volume sizes to our home machine (numbers are in Gigabytes):  
+
+ARCHIVE = {number1} GB  
+WORK = {number2} GB  
+SCRATCH = {number3} GB  
+
+Our lab leader and lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link: 
+
+https://docs.hdc.ntnu.no/service-desk/lab-orders.html#add-a-new-lab-user
+
+I am looking forward to receive an email verification stating that the lab is up and running.
+
+
+Best regards,
+
+`,
+}' :fields='[
+  { label: "New lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Data space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
+  { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield", default: "default.b2" },
+  { label: "Archive volume size (in gigabytes)", key: "number1", pattern: "[1-9][0-9]{0,2}[0][0]", hint: "Archive volume size should include only numbers 0-9.", field: "textfield", default: "400" }, 
+  { label: "Work volume size (in gigabytes)", key: "number2", pattern: "[1-9][0-9]{0,2}[0][0]", hint: "Work volume size should include only numbers 0-9.", field: "textfield", default: "300" }, 
+  { label: "Scratch volume size (in gigabytes)", key: "number3", pattern: "[1-9][0-9]{0,2}[0][0]", hint: "Scratch volume size should include only numbers 0-9.", field: "textfield", default: "300" }, 
+]' />
 
 * **Who can order:** Data space leaders and data space compliance coordinators in active data spaces.
 * **Required attachment**: [A signed lab order](/agreements/downloads/#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
@@ -66,7 +96,7 @@ ARCHIVE = 400
 WORK = 300  
 SCRACH = 300  
 
-The above numbers are in Gigabytes (1000 Gigabytes = 1 Terabyte). To illustrate, if you want your archive volume to be 2 Terabyte, specify **`ARHICVE = 2000`** in your order.
+The above numbers are in Gigabytes (1000 Gigabytes = 1 Terabyte). To illustrate, if you want your archive volume to be 2 Terabyte, specify **`ARCHIVE = 2000`** in your order.
 
 **More information**
 
@@ -82,12 +112,31 @@ See the "Lab" section in our [Services specifications](/services/specifications/
 
 Click the button below to order a lab deletion of an active lab under your data space.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Lab%20deletion%20order%20-%20%7Blabname%7D%40%7Bdata%20space%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20the%20following%20lab%20under%20our%20data%20space%20to%20be%20deleted%3A%0A%0Alab%3D%7Blabname%7D%0A%0AI%20have%20attached%20a%20signed%20lab%20deletion%20order%20to%20this%20email%20confirming%20the%20request.%20%0A%0AWe%20have%20already%20exported%20the%20data%20that%20we%20need%20from%20the%20lab.%20%0A%0AI%20am%20aware%20that%20all%20data%20in%20the%20lab%20will%20be%20irrevocably%20destroyed%20and%20can%20not%20be%20recreated%20once%20this%20order%20is%20completed.%0A%0AI%20am%20looking%20forward%20to%20receive%20a%20written%20notification%20on%20email%20confirming%20that%20the%20lab%20and%20all%20attached%20data%20is%20deleted.%0A%0ABest%2C" class="nav-link external action-button">
-    Request a lab deletion
-  </a>
-</p></div></div>
+<ServiceDesk title="Request a lab deletion" :template='{
+  subject: "Lab deletion order - {labname} @ {dataspace}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request the following lab under our data space to be deleted:
+
+lab = {labname}  
+
+I have attached a signed lab deletion order to this email confirming the request. 
+
+We have already exported the data that we need from the lab. 
+
+I am aware that all data in the lab will be irrevocably destroyed and can not be recreated once this order is completed.
+
+I am looking forward to receive a written notification on email confirming that the lab and all attached data is deleted.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Data space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
+]' />
 
 * **Who can order:** Data space leaders and Lab leaders in collaboration.
 * **Required attachment**: [A signed lab deletion order](/agreements/downloads/#lab-deletion-order).
@@ -102,7 +151,7 @@ Once your lab data is deleted it can not be recreated. You must ensure that you 
 :::
 
 
-## Transport
+## Transfers
 
 Data transfers in and out of HUNT Cloud needs authorization from Data space leaders or Data space compliance coordinators.
 
@@ -116,12 +165,24 @@ Data transfers between labs inside HUNT Cloud can be requested from our [lab pag
 
 The [external import kista](/faq/external-transfer/#faq-on-external-data-transfer) allows external parties outside HUNT Cloud to transfer data directly to a lab inside HUNT Cloud in a compliant manner.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=External%20import%20kista%20order%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20external%20import%20kista%20for%20%7Blabname%7D.%0A%0AI%20have%20attached%20two%20files%3A%20%281%29%20the%20signed%20external%20import%20kista%20order%2C%20and%20%282%29%20the%20public%20SSH%20key%20from%20the%20external%20uploader.%0A%0AWe%20are%20looking%20forward%20to%20receive%20access%20information%20en%20email.%0A%0ABest%2C" class="nav-link external action-button">
-    Request an external import kista
-  </a>
-</p></div></div>
+<ServiceDesk title="Request an external import kista" :template='{
+  subject: "External import kista order - {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request an external import kista for {labname}.  
+
+I have attached two files: (1) the signed external import kista order, and (2) the public SSH key from the external uploader.
+
+We are looking forward to receive access information en email.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
 
 * **Who can order:** Data space leaders or Data space compliance coordinators.
 * **Required attachments**: (1) [A signed external kista import order](/agreements/downloads/#external-kista-import-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external uploader.
@@ -137,12 +198,24 @@ Note that time to successful transfer depend on access to SFTP software and pote
 
 The [external export kista](/faq/external-transfer/#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=External%20export%20kista%20order%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20an%20external%20export%20kista%20for%20%7Blabname%7D.%0A%0AI%20have%20attached%20two%20files%3A%20%281%29%20the%20signed%20external%20eport%20kista%20order%2C%20and%20%282%29%20the%20public%20SSH%20key%20from%20the%20external%20uploader.%0A%0AWe%20are%20looking%20forward%20to%20receive%20access%20information%20en%20email.%0A%0ABest%2C" class="nav-link external action-button">
-    Request an external export kista
-  </a>
-</p></div></div>
+<ServiceDesk title="Request an external export kista" :template='{
+  subject: "External import kista order - {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request an external export kista for {labname}.  
+
+I have attached two files: (1) the signed external export kista order, and (2) the public SSH key from the external uploader.
+
+We are looking forward to receive access information en email.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
 
 * **Who can order:** Data space leaders or Data space compliance coordinators.
 * **Required attachments**: (1) [A signed external kista export order](/agreements/downloads/#external-kista-export-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external downloader.
@@ -159,12 +232,24 @@ Note that time to successful transfer depend on access to SFTP software and pote
 
 [Network opening orders](/faq/external-transfer/#direct-external-transfers) allows data transfers directly to and from parties outside HUNT Cloud.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Network%20opening%20-%20%7Blabname%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20network%20opening.%20%0A%0AI%20have%20attached%20a%20signed%20network%20opening%20order%20with%20further%20information.%0A%0AWe%20are%20looking%20forward%20to%20receive%20confirmation%20of%20the%20opening%20in%20our%20Slack%20lab%20channel.%0A%0ABest%2C" class="nav-link external action-button">
-    Request a network opening
-  </a>
-</p></div></div>
+<ServiceDesk title="Request a network opening" :template='{
+  subject: "Network opening - {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a network opening. 
+
+I have attached a signed network opening order with further information.
+
+We are looking forward to receive confirmation of the opening in our Slack lab channel.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
 
 * **Who can order:** Data space leaders or Data space compliance coordinators.
 * **Required information**: IPv4 address and port number for the external party.
@@ -180,12 +265,45 @@ Note that time to successful transfer depend on access to SFTP software and pote
 
 Click the button below to update your [data space coordinator roles](/coordinator/roles/) under your existing data space.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Update%20coordianator%20roles%20-%20%7Bdataspace%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20update%20the%20following%20coordinator%20role%28s%29%20in%20our%20data%20space%3A%0A%0A%2A%20Role%3A%20%7BCompliance/Data/Technical/Knowledge/Financial%7D%20coordinator%20%20%0A%2A%20Name%3A%20%20%0A%2A%20Department%3A%20%20%0A%2A%20Faculty%3A%20%20%0A%2A%20Institution%3A%20%20%0A%2A%20Phone%3A%20%20%0A%0AI%20am%20looking%20forward%20to%20receive%20an%20email%20acknowledging%20that%20you%20have%20updated%20our%20coordinator%20roles.%0A%0ABest%2C" class="nav-link external action-button">
-    Request update of data space role(s)
-  </a>
-</p></div></div>
+<ServiceDesk title="Request update of lab coordinator role" :template='{
+  subject: "Update lab coordinator role - {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to update the following coordinator role(s) in our data space:
+
+Role: {role} coordinator  
+Name and Surname: {name}  
+Department: {department}  
+Faculty: {faculty}  
+Institution: {institution}  
+Phone: {phone}  
+
+I am looking forward to receive an email acknowledging that you have updated our coordinator roles.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  {
+    label: "Role",
+    key: "role",
+    field: "selectone",
+    options: [
+      "Compliance",
+      "Data",
+      "Technical",
+      "Knowledge",
+      "Financial",
+    ]},
+  { label: "Name and Surname", key: "name", field: "textfield" },
+  { label: "Department", key: "department", field: "textfield" },
+  { label: "Faculty", key: "faculty", field: "textfield" },
+  { label: "Institution", key: "institution", field: "textfield" },
+  { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
+]' />
 
 * **Who can order:** Data space leaders or Data space compliance coordinators in active data spaces.
 * **Required attachment**: None.
@@ -197,12 +315,24 @@ Click the button below to update your [data space coordinator roles](/coordinato
 
 Click the button below to update lab leader roles for labs attached to your data space.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Update%20lab%20leader%20role%20-%20%7Blab%20name%7D%20in%20%7Bdataspace%20name%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20update%20the%20lab%20leader%20role%20for%20a%20lab%20under%20our%20dataspace.%20%0A%0AI%20have%20attached%20a%20signed%20lab%20agreement%20to%20this%20email.%20%0A%0AI%20am%20looking%20forward%20to%20receive%20an%20email%20acknowledging%20that%20you%20have%20updated%20the%20role.%0A%0ABest%2C" class="nav-link external action-button">
-    Request update of lab leader role
-  </a>
-</p></div></div>
+<ServiceDesk title="Request update of lab leader role" :template='{
+  subject: "Update lab leader role - {labname} in {dataspace}",
+  body: `Hi HUNT Cloud team,
+
+I would like to update the lab leader role for a lab under our dataspace. 
+
+I have attached a signed lab agreement to this email. 
+
+I am looking forward to receive an email acknowledging that you have updated the role.
+
+
+Best regards,
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
 
 * **Who can order:** Data space leaders and data space compliance officers.
 * **Required attachment**: A new [signed lab order](/agreements/downloads/#lab-order).
