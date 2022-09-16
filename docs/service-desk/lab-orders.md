@@ -217,7 +217,6 @@ I would like to request a new CPU machine in our lab:
 lab name = {labname}  
 machine type = {default.b2}  
 storage size = {terabytes} TB  
-storage size = {terabytes}  
 subscription = {type}  
 
 I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
@@ -268,7 +267,6 @@ lab name = {labname}
 gpu type = {nvidia.p100}  
 machine type = {default.b2}  
 storage size = {terabytes} TB  
-storage size = {terabytes}  
 subscription = {type}  
 
 I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
@@ -318,8 +316,7 @@ I would like to request a fleet of the following blue machines:
 lab name = {labname}  
 number of machines = {number}  
 machine type = {default.b2}  
-storage size per machine = {terabytes} TB  
-storage size per machine = {terabytes} TB  
+storage size per machine = {terabytes} TB   
 
 I am looking forward to receive access information in our Slack lab channel when the fleet is up and running.
 
