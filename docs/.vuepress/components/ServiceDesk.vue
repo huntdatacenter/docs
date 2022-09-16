@@ -233,6 +233,23 @@ export default {
                           outlined
                           hide-details
                         ></v-select>
+                        <v-text-field
+                          v-if="item.field === 'textfield_suffix'"
+                          v-model.trim="formData[item.key]"
+                          autocomplete="ignore-field"
+                          :label="item.label"
+                          suffix="TB"
+                          :pattern="item.pattern ? item.pattern : null"
+                          :title="item.hint ? item.hint : null"
+                          :hint="item.hint ? item.hint : null"
+                          :persistent-hint="item.hint && formData[item.key] ? true : false"
+                          placeholder=""
+                          persistent-placeholder
+                          outlined
+                          dense
+                          :hide-details="formData[item.key] ? false : 'auto'"
+                          @focus="$event.target.select()"
+                        ></v-text-field>
                       </v-col>
                     </v-row>
                     <v-row justify="center">
