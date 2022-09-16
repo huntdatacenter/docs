@@ -99,7 +99,7 @@ Best regards,
 Lab users are deactivated on request or after 180 inactive days. Lab leaders and lab coordinator can reactivate their access. We will need one order per lab for multiple lab access reactivations.
 
 <ServiceDesk title="Request lab user reactivation" :template='{
-  subject: "Reactivate lab user {username} @ {labname}",
+  subject: "Reactivate lab user - {username} @ {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to reactivate access for one of our lab users.
@@ -170,7 +170,7 @@ Increase or decrease the computational power of one of your existing lab machine
 
 
 <ServiceDesk title="Request a machine size update" :template='{
-  subject: "Update machine size {labname}",
+  subject: "Update machine size - {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a machine update: 
@@ -209,7 +209,7 @@ Best regards,
 Add a [new machine](/services/machine-types/) to your lab. A CPU machine is the default lab machine with CPU and memory aimed at data analysis.
 
 <ServiceDesk title="Request a new lab machine" :template='{
-  subject: "New CPU machine {labname}",
+  subject: "New CPU machine - {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a new CPU machine in our lab: 
@@ -259,7 +259,7 @@ Best regards,
 Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) to your lab.
 
 <ServiceDesk title="Request a new GPU machine" :template='{
-  subject: "New GPU machine {labname}",
+  subject: "New GPU machine - {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a new GPU machine in our lab: 
@@ -310,7 +310,7 @@ Best regards,
 Add a fleet of blue machines to distribute analysis for large scale analysis, for example by utilizing tools such as our [BlueBox](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/bluebox/).
 
 <ServiceDesk title="Request a fleet of Blue machines" :template='{
-  subject: "Fleet of blue machines {labname}",
+  subject: "Fleet of blue machines - {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a fleet of the following blue machines: 
@@ -362,7 +362,7 @@ Best regards,
 You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand. Read more in our [coordinator FAQ](/data/faq/#volumes).
 
 <ServiceDesk title="Request storage volume expansion" :template='{
-  subject: "Storage volume expansion {labname}",
+  subject: "Storage volume expansion - {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a storage volume expansion: 
@@ -471,7 +471,7 @@ The above example shows for example that `/mnt/archive` has a current `Size` of 
 You may add new volumes to your lab machines. We will need separate orders for each individual volume you plan to add.  Read more in our [coordinator FAQ](/data/faq/#volumes).
 
 <ServiceDesk title="Request a new storage volume" :template='{
-  subject: "New storage volume {labname}",
+  subject: "New storage volume - {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a new storage volume: 
