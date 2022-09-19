@@ -177,7 +177,7 @@ I would like to request a machine update:
 
 lab name = {labname}  
 machine name = {machinename}  
-current machine type = {default.b1}  
+current machine type = {machine_type}  
 new machine type = {newmachine}  
 
 I am aware that the update will require a machine restart.
@@ -192,7 +192,7 @@ Best regards,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Current machine type", key: "default.b1", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+  { label: "Current machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
   { label: "New machine type", key: "newmachine", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" }
 ]' />
 
@@ -228,7 +228,7 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine type", key: "machine_type", "default": "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
   {
     label: "Subscription",
@@ -278,7 +278,7 @@ Best regards,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "GPU type", key: "nvidia.p100", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
-  { label: "Machine type", key: "machine_type", "default": "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
   {
     label: "Subscription",
@@ -326,7 +326,7 @@ Best regards,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 1, max: 100, step: 1, field: "number", default: 1 },
-  { label: "Machine type", key: "machine_type", "default": "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+  { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
   { label: "Storage size per machine (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
 ]' />
 

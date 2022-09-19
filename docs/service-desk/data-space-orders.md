@@ -38,7 +38,7 @@ I have attached a signed lab agreement to this email.
 
 We would like to start with the following machine type for our home machine:  
 
-MACHINE_TYPE = {default.b2}  
+MACHINE_TYPE = {machine_type}  
 
 We would like to attached the following storage volume sizes to our home machine (numbers are in Gigabytes):  
 
@@ -59,7 +59,7 @@ Best regards,
 }' :fields='[
   { label: "New lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Data space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
-  { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield", default: "default.b2" },
+  { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield", default: "default.b2" },
   { label: "Archive volume size (in gigabytes)", key: "number1", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 400 },
   { label: "Work volume size (in gigabytes)", key: "number2", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 300 },
   { label: "Scratch volume size (in gigabytes)", key: "number3", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 300 },
