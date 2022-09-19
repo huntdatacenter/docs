@@ -215,9 +215,9 @@ Add a [new machine](/services/machine-types/) to your lab. A CPU machine is the 
 I would like to request a new CPU machine in our lab: 
 
 lab name = {labname}  
-machine type = {default.b2}  
+machine type = {machine_type}  
 storage size = {terabytes} TB  
-subscription = {type}  
+subscription = {subscription}  
 
 I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
 
@@ -228,11 +228,11 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine type", key: "machine_type", "default": "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
   {
     label: "Subscription",
-    key: "type",
+    key: "subscription",
     field: "selectone",
     options: [
       "Commitment",
@@ -264,9 +264,9 @@ I would like to request a new GPU machine in our lab:
 
 lab name = {labname}  
 gpu type = {nvidia.p100}  
-machine type = {default.b2}  
+machine type = {machine_type}  
 storage size = {terabytes} TB  
-subscription = {type}  
+subscription = {subscription}  
 
 I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
 
@@ -278,11 +278,11 @@ Best regards,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "GPU type", key: "nvidia.p100", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
-  { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine type", key: "machine_type", "default": "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
   {
     label: "Subscription",
-    key: "type",
+    key: "subscription",
     field: "selectone",
     options: [
       "Commitment",
@@ -313,7 +313,7 @@ I would like to request a fleet of the following blue machines:
 
 lab name = {labname}  
 number of machines = {number}  
-machine type = {default.b2}  
+machine type = {machine_type}  
 storage size per machine = {terabytes} TB   
 
 I am looking forward to receive access information in our Slack lab channel when the fleet is up and running.
@@ -326,7 +326,7 @@ Best regards,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 1, max: 100, step: 1, field: "number", default: 1 },
-  { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+  { label: "Machine type", key: "machine_type", "default": "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
   { label: "Storage size per machine (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
 ]' />
 
@@ -472,7 +472,7 @@ I would like to request a new storage volume:
 
 lab name = {labname}  
 machine name = {machinename}  
-volume name = {volume name}  
+volume name = {volume_name}  
 size = {terabytes} TB  
 
 I am aware that the expansion will require a machine restart. So, let us touch base in our Slack lab channel to schedule a time for the restart that fits our scientific activities.
@@ -487,7 +487,7 @@ Best regards,
   { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   {
     label: "Volume name",
-    key: "volumename",
+    key: "volume_name",
     field: "selectone",
     options: [
       "Archive",
