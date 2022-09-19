@@ -83,6 +83,7 @@ export default {
       return this.bodyTemplate ? this.wrap(this.bodyTemplate) : null;
     },
     formFilled() {
+      // console.log(this.formData);
       return this.fields.every((item) =>
         this.formData[item.key] || item.optional ? true : false
       );
@@ -242,6 +243,26 @@ export default {
                           :pattern="item.pattern ? item.pattern : null"
                           :title="item.hint ? item.hint : null"
                           :hint="item.hint ? item.hint : null"
+                          :persistent-hint="item.hint && formData[item.key] ? true : false"
+                          placeholder=""
+                          persistent-placeholder
+                          outlined
+                          dense
+                          :hide-details="formData[item.key] ? false : 'auto'"
+                          @focus="$event.target.select()"
+                        ></v-text-field>
+                        <v-text-field
+                          v-if="item.field === 'number'"
+                          v-model.trim="formData[item.key]"
+                          autocomplete="ignore-field"
+                          type="number"
+                          :label="item.label"
+                          :title="item.hint ? item.hint : null"
+                          :hint="item.hint ? item.hint : null"
+                          :suffix="item.suffix ? item.suffix : null"
+                          :min="item.min ? item.min : null"
+                          :max="item.max ? item.max : null"
+                          :step="item.step ? item.step : null"
                           :persistent-hint="item.hint && formData[item.key] ? true : false"
                           placeholder=""
                           persistent-placeholder

@@ -60,9 +60,9 @@ Best regards,
   { label: "New lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Data space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
   { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield", default: "default.b2" },
-  { label: "Archive volume size (in gigabytes)", key: "number1", pattern: "[1-9][0-9]{0,2}[0][0]", hint: "Archive volume size should include only numbers 0-9.", field: "textfield", default: "400" }, 
-  { label: "Work volume size (in gigabytes)", key: "number2", pattern: "[1-9][0-9]{0,2}[0][0]", hint: "Work volume size should include only numbers 0-9.", field: "textfield", default: "300" }, 
-  { label: "Scratch volume size (in gigabytes)", key: "number3", pattern: "[1-9][0-9]{0,2}[0][0]", hint: "Scratch volume size should include only numbers 0-9.", field: "textfield", default: "300" }, 
+  { label: "Archive volume size (in gigabytes)", key: "number1", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 400 },
+  { label: "Work volume size (in gigabytes)", key: "number2", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 300 },
+  { label: "Scratch volume size (in gigabytes)", key: "number3", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 300 },
 ]' />
 
 * **Who can order:** Data space leaders and data space compliance coordinators in active data spaces.

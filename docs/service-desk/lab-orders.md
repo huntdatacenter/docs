@@ -192,8 +192,8 @@ Best regards,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-   { label: "Current machine type", key: "default.b1", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
-    { label: "New machine type", key: "newmachine", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" }
+  { label: "Current machine type", key: "default.b1", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+  { label: "New machine type", key: "newmachine", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" }
 ]' />
 
 
@@ -229,8 +229,7 @@ Best regards,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[0-9 ]{1,5}", hint: "Storage size should include only numbers 0-9.", field: "textfield_suffix" },
-  { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
+  { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number" },
     {
     label: "Subscription",
     key: "type",
@@ -278,10 +277,9 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "GPU type", key: "nvidia.p100", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters aA-zZ, 0-9, or dot.", field: "textfield" },
+  { label: "GPU type", key: "nvidia.p100", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
   { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[0-9 ]{1,5}", hint: "Storage size should include only numbers 0-9.", field: "textfield_suffix" },
-  { label: "Storage size (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
+  { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
     {
     label: "Subscription",
     key: "type",
@@ -327,10 +325,9 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Number of machines", key: "number", pattern: "^[1-9][0-9]?$", hint: "Number of machines should include only numbers 0-9.", field: "textfield" },
+  { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 1, max: 100, step: 1, field: "number", default: 1 },
   { label: "Machine type", key: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
-  { label: "Storage size per machine (in terabytes)", key: "terabytes", pattern: "[0-9 ]{1,5}", hint: "Storage size should include only numbers 0-9.", field: "textfield_suffix" },
-  { label: "Storage size per machine (in terabytes)", key: "terabytes", pattern: "[-aA-zZ0-9 ]{1,5}", hint: "Storage size should include only letters aA-zZ, 0-9, or dash. (max 5 characters)", field: "textfield" },
+  { label: "Storage size per machine (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
 ]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
@@ -393,8 +390,8 @@ Best regards,
     ],
     pattern: "{1,}"
   },
-  { label: "Current size (in terabytes)", key: "terabytes", pattern: "[0-9 ]{1,5}", hint: "Storage size should include only numbers 0-9.", field: "textfield_suffix" },
-  { label: "New size (in terabytes)", key: "terabytes1", pattern: "[0-9 ]{1,5}", hint: "Storage size should include only numbers 0-9.", field: "textfield_suffix" },
+  { label: "Current size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
+  { label: "New size (in terabytes)", key: "terabytes1", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
 ]' /> 
 
 * **Who can order:** Lab leaders and lab coordinators.
@@ -499,8 +496,8 @@ Best regards,
     ],
     pattern: "{1,}"
   },
-  { label: "Size (in terabytes)", key: "terabytes", pattern: "[0-9 ]{1,5}", hint: "Storage size should include only numbers 0-9.", field: "textfield_suffix" },
-]' /> 
+  { label: "Size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
+]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required information**: lab name, machine name, volume name and total size in terabytes.
