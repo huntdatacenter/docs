@@ -27,12 +27,24 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 Click on the blue button below to order a HUNT Cloud data processor agreement using the HUNT Cloud template.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Data%20processor%20agreement%20request%20-%20%7BOrganization%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20data%20processor%20agreement%20template%20for%20review.%0A%0AI%20have%20attached%20the%20data%20processor%20agreement%20for%20to%20this%20email.%20%0A%0AI%20am%20looking%20forward%20to%20get%20the%20data%20processor%20agreement%20template%20on%20email%2C%20and%20to%20continue%20our%20dialogue%20on%20screen.%0A%0ABest%2C" class="nav-link external action-button">
-    Request a new data processor agreement template
-  </a>
-</p></div></div>
+<ServiceDesk title="Request a new data processor agreement template" :template='{
+  subject: "Data processor agreement request - {organization}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a data processor agreement template for review.
+
+I have attached the data processor agreement for to this email. 
+
+I am looking forward to get the data processor agreement template on email, and to continue our dialogue on screen.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Organization", key: "organization", field: "textfield" },
+]' />
 
 * **Guide:** [Get going as a data controller](/coordination/get-going/data-controller/)
 * **Who can request:** Data controllers for data inteded to be processed in HUNT Cloud.
@@ -46,13 +58,22 @@ Click on the blue button below to order a HUNT Cloud data processor agreement us
 
 Our HUNT Cloud data processor agreement version gets updated from time to time. As an active data controller you may request upgrades to newer versions in between the regular agreement upgrades.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=Data%20processor%20agreement%20upgrade%20-%20%7BOrganization%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20to%20an%20upgraded%20data%20processor%20agreement%20for%20our%20organization.%0A%0AI%20am%20looking%20forward%20to%20get%20the%20data%20processor%20agreement%20on%20email%2C%20and%20to%20continue%20our%20dialogue%20on%20screen.%0A%0ABest%2C" class="nav-link external action-button">
-    Request a data processor agreement version upgrade
-  </a>
-</p></div></div>
+<ServiceDesk title="Request a data processor agreement version upgrade" :template='{
+  subject: "Data processor agreement upgrade - {organization}",
+  body: `Hi HUNT Cloud team,
 
+I would like to request to an upgraded data processor agreement for our organization.
+
+I am looking forward to get the data processor agreement on email, and to continue our dialogue on screen.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Organization", key: "organization", field: "textfield" },
+]' />
 * **Guide:** [Get going as a data controller](/coordination/get-going/data-controller/)
 * **Who can request:** Data controller administrators.
 * **Required attachment**: None, although you may add a new [HUNT Cloud data processor agreement form](/coordination/get-going/data-controller/#_6-forward-required-processor-agreement-information-to-hunt-cloud) if you plan to update your contact information.
@@ -67,13 +88,24 @@ Our HUNT Cloud data processor agreement version gets updated from time to time. 
 
 Click the button below to order a new service center.
 
-<div class="home" style="padding: 0px;"><div class="hero">
-<p class="action">
-  <a href="mailto:cloud.support+hunt-cloud-request@hunt.ntnu.no?subject=New%20service%20center%20-%20%7Bdata%20controller%7D&body=Hi%20HUNT%20Cloud%20team%2C%0A%0AI%20would%20like%20to%20request%20a%20new%20service%20center%20under%20our%20data%20controller%20agreement.%0A%0AI%20have%20attached%20a%20signed%20service%20center%20agreement%20form%20to%20this%20email.%20%0A%0AI%20am%20looking%20forward%20to%20get%20the%20service%20center%20agreement%20on%20email%2C%20and%20to%20continue%20our%20dialogue%20on%20screen.%0A%0ABest%2C" class="nav-link external action-button">
-    Request a new service center
-  </a>
-</p></div></div>
+<ServiceDesk title="Request a new service center" :template='{
+  subject: "New service center - {datacontroller}",
+  body: `Hi HUNT Cloud team,
 
+I would like to request a new service center under our data controller agreement.
+
+I have attached a signed service center agreement form to this email. 
+
+I am looking forward to get the service center agreement on email, and to continue our dialogue on screen.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Data controller", key: "datacontroller", field: "textfield" },
+]' />
 * **Guide:** [Get going with your service center](/coordination/get-going/service-center/)
 * **Who can order:** Data space leaders and data space administrators under active data controller agreements.
 * **Required attachment**: [HUNT Cloud Service Agreement Form](/coordination/get-going/service-center/#_2-forward-required-services-agreement-information-to-hunt-cloud).

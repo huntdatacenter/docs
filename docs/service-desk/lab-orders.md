@@ -566,7 +566,7 @@ You may use this information to plan your new storage names and sizes. We typica
 
 
 
-## Data transports
+## Data transfers
 
 ::: tip External data exports
 
