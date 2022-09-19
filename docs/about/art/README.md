@@ -89,7 +89,7 @@ We use this image to illustrate that,
 
 ### Bottle of knowledge
 
-Knowledge is the currency of science and what we seek with our explorations. It's derived from data. It's not oil nor gold, but it resembles some of the same characteristics. And it's essential to keep it flowing as knowledge empowers both your personal career and our joint journey towards a better world. 
+Knowledge is the currency in science. This is what we seek with our explorations. It's derived from data. It's not oil nor gold, although it resembles some of the same characteristics. It's essential to keep it flowing as knowledge empowers both your personal career and our joint journey towards a better world. 
 
 ![Bottle of knowledge](./images/hunt-cloud_bottle-of-knowledge_xsmall.png)
 
