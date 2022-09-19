@@ -83,7 +83,6 @@ export default {
       return this.bodyTemplate ? this.wrap(this.bodyTemplate) : null;
     },
     formFilled() {
-      // console.log(this.formData);
       return this.fields.every((item) =>
         this.formData[item.key] || item.optional ? true : false
       );
@@ -100,12 +99,13 @@ export default {
   },
   mounted() {},
   created() {
-    // console.log(this.template)
+    this.panel = 0;
     this.subjectTemplate = this.template ? this.template.subject : null;
     this.bodyTemplate = this.template ? this.template.body : null;
     for (const item of this.fields) {
       if (item && item.key && item.default) {
-        this.formData[item.key] = item.default;
+        const defValue = item.default;
+        this.formData[item.key] = defValue;
       }
     }
   },
@@ -114,6 +114,10 @@ export default {
       this.finalizeClicked = true;
       this.sendClicked = true;
       this.panel = 2;
+      this.dialog = false;
+    },
+    closeBtn() {
+      this.panel = 0;
       this.dialog = false;
     },
     submit() {
@@ -130,6 +134,12 @@ export default {
     },
     encode(template) {
       return template ? encodeURIComponent(this.wrap(template)) : null;
+    },
+    setValue(value, key) {
+      // NOTE: enforce reactivity to data change - re-rendering the template
+      const updates = {};
+      updates[key] = value ? value.trim() : value;
+      this.formData = Object.assign({}, this.formData, updates);
     },
     wrap(template) {
       let text = template;
@@ -156,6 +166,7 @@ export default {
         hide-overlay
         transition="dialog-bottom-transition"
         max-width="960px"
+        @click:outside="closeBtn"
       >
         <template v-slot:activator="{ on, attrs }">
           <div class="home" style="padding: 0px">
@@ -176,7 +187,7 @@ export default {
             <v-toolbar-title>Service desk - {{ title }}</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items>
-              <v-btn icon fab @click="dialog = false">
+              <v-btn icon fab @click="closeBtn">
                 <v-icon>close</v-icon>
               </v-btn>
             </v-toolbar-items>
@@ -197,19 +208,23 @@ export default {
                       <v-col v-for="item in fields" cols="8" :key="item.key">
                         <v-text-field
                           v-if="item.field === 'textfield'"
-                          v-model.trim="formData[item.key]"
+                          v-model="formData[item.key]"
                           autocomplete="ignore-field"
                           :label="item.label"
                           :pattern="item.pattern ? item.pattern : null"
                           :title="item.hint ? item.hint : null"
                           :hint="item.hint ? item.hint : null"
-                          :persistent-hint="item.hint && formData[item.key] ? true : false"
+                          :suffix="item.suffix ? item.suffix : null"
+                          :persistent-hint="
+                            item.hint && formData[item.key] ? true : false
+                          "
                           placeholder=""
                           persistent-placeholder
                           outlined
                           dense
                           :hide-details="formData[item.key] ? false : 'auto'"
                           @focus="$event.target.select()"
+                          @change="setValue($event, item.key)"
                         ></v-text-field>
                         <v-select
                           v-else-if="item.field === 'selector'"
@@ -235,25 +250,8 @@ export default {
                           hide-details
                         ></v-select>
                         <v-text-field
-                          v-if="item.field === 'textfield_suffix'"
-                          v-model.trim="formData[item.key]"
-                          autocomplete="ignore-field"
-                          :label="item.label"
-                          suffix="TB"
-                          :pattern="item.pattern ? item.pattern : null"
-                          :title="item.hint ? item.hint : null"
-                          :hint="item.hint ? item.hint : null"
-                          :persistent-hint="item.hint && formData[item.key] ? true : false"
-                          placeholder=""
-                          persistent-placeholder
-                          outlined
-                          dense
-                          :hide-details="formData[item.key] ? false : 'auto'"
-                          @focus="$event.target.select()"
-                        ></v-text-field>
-                        <v-text-field
                           v-if="item.field === 'number'"
-                          v-model.trim="formData[item.key]"
+                          v-model="formData[item.key]"
                           autocomplete="ignore-field"
                           type="number"
                           :label="item.label"
@@ -263,13 +261,16 @@ export default {
                           :min="item.min ? item.min : null"
                           :max="item.max ? item.max : null"
                           :step="item.step ? item.step : null"
-                          :persistent-hint="item.hint && formData[item.key] ? true : false"
+                          :persistent-hint="
+                            item.hint && formData[item.key] ? true : false
+                          "
                           placeholder=""
                           persistent-placeholder
                           outlined
                           dense
                           :hide-details="formData[item.key] ? false : 'auto'"
                           @focus="$event.target.select()"
+                          @change="setValue($event, item.key)"
                         ></v-text-field>
                       </v-col>
                     </v-row>
