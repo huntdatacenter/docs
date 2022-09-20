@@ -52,13 +52,13 @@ Example email:
 
 ### Key transfer
 
-When your account is set up on our side, we will forward your lab keys over Signal from phone number 91001893. This number is registered on '[Norges teknisk-naturvitenskapelige universitet NTNU](https://www.1881.no/?query=91001893)'. We will notify you on your organizational email if this number change.
-
 ::: tip Time estimate
 
 Allow for a week to pass from you send us your agreement and until we forward your keys ([read more](/faq/users/#how-long-does-a-new-account-activation-take)).
 
 :::
+
+When your account is set up on our side, we will forward your lab keys over Signal from phone number 91001893. This number is registered on '[Norges teknisk-naturvitenskapelige universitet NTNU](https://www.1881.no/?query=91001893)'. We will notify you on your organizational email if this number change.
 
 ::: warning Expect these keys on your phone
 
