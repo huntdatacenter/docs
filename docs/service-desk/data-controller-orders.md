@@ -89,7 +89,7 @@ Best regards,
 Click the button below to order a new service center.
 
 <ServiceDesk title="Request a new service center" :template='{
-  subject: "New service center - {datacontroller}",
+  subject: "New service center order - {datacontroller}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a new service center under our data controller agreement.
