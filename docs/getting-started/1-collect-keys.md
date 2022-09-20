@@ -8,7 +8,7 @@ description: Guide on how to request and receive your keys. Note requirements be
 
 # Step 1. Collect your keys
 
-This step ensures that you have the correct keys and configuration files before you invest time in the remaining setup.
+This step ensures that you have the correct keys and config files before you invest time in the remaining setup.
 
 ::: warning Requirements
 
@@ -22,40 +22,43 @@ This step ensures that you have the correct keys and configuration files before 
 
 We will register your account for activation as soon as we receive your signed user agreement.
 
-::: tip Time estimate
-
-Allow for a week to pass from you send us your agreement and until we forward your keys ([read more](/faq/users/#how-long-does-a-new-account-activation-take)).
-
-:::
-
-
 
 ## 1.1 Secrets to your phone
 
 We will communicate your system keys over the Signal mobile app.
 
-### Install and activate Signal
+### Activate your Signal account
 
 Signal is a private messenger app for your phone that provide a secret communication channel. Search for **`Signal`** in the iOS or Android app stores, or use the links below to install.
 
-- [Download and install for **iOS** here](https://itunes.apple.com/us/app/signal-private-messenger/id874139669?mt=8)
-- [Download and install for **Android** here](https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=en)
+- 1.1.1. Install signal application:
+  - [Download and install for **iOS** here](https://itunes.apple.com/us/app/signal-private-messenger/id874139669?mt=8)
+  - [Download and install for **Android** here](https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=en)
+- 1.1.2. Open Signal application
+- 1.1.3. **Activate your Signal account** using the phone number attached in your user agreement.
+- 1.1.4. Check if you have any received messages.
 
-After installation of Signal open the app and follow the steps to activate Signal on the phone.
-
-### Notify us
+Only after your Signal account is active you can move forward notifying us. You can do so by replying to your service desk request for onboarding.
 
 ::: tip
 [Contact us](/contact) on email as soon as you have activated Signal. This allows us to quickly forward your lab keys when they are ready.
-:::
 
 Example email:
 
 > Hi all, I have installed and activated Signal and are looking forward to receive my keys.
 
+:::
+
+
 ### Key transfer
 
-When your account is set up on our side, we will forward your lab keys over Signal from phone number 91001893 . This number is registered on '[Norges teknisk-naturvitenskapelige universitet NTNU](https://www.1881.no/?query=91001893)'. We will notify you on your organizational email if this number change.
+When your account is set up on our side, we will forward your lab keys over Signal from phone number 91001893. This number is registered on '[Norges teknisk-naturvitenskapelige universitet NTNU](https://www.1881.no/?query=91001893)'. We will notify you on your organizational email if this number change.
+
+::: tip Time estimate
+
+Allow for a week to pass from you send us your agreement and until we forward your keys ([read more](/faq/users/#how-long-does-a-new-account-activation-take)).
+
+:::
 
 ::: warning Expect these keys on your phone
 
