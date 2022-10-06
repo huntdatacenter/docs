@@ -62,6 +62,7 @@ Let's increase the complexity slightly. This example is for a machine learning l
 | Store | First 10 TB | 1 year | 2331 | 10 | 23310 |
 | Store | Next 5 TB | 1 year | 1665 | 5 | 8325 | 
 | **PER YEAR** |  | | |  | **91897** | 
+
 As the others examples, this includes a free data space and one lab. The compute resources are split in two machines: a smaller home machine (default.b2) for data handling and day-to-day activities, and a larger machine (default.d3) that has attached one enterprise GPU card. You need to extra machine to obtain administrator privileges. The 15 TB total storage in the lab is priced in the first two storage tiers with a reduced priced for the TB's above 10 TB. The mean storage price in the example is 2109.
 
  
@@ -108,7 +109,8 @@ This example is for a data space consisting of 5 labs: one is dedicated to the i
 | Compute | COMMITMENT default.b1 | 1 year | 2904 | 1 | 2904 |
 | Compute | COMMITMENT default.b2 | 1 year | 4646 | 3 | 13938 |
 | Store | First 10 TB | 1 year | 2331 | 5 | 11655 |
-| **PER YEAR** |  | | |  | **73661** | 
+| **PER YEAR** |  | | |  | **73661** |
+ 
 This examples gives you a ORANGE data space and five lab subscriptions. The day-to-day lab has a slightly larger machine than the external labs. The storage lab holds the smallest machine type. Each lab has attached 1 TB of storage with a total consumption of 5 TB for the data space. 
 
 Since the combined storage do not get above 10 TB to invoke the volume discount, the mean lab price will be slightly more expensive due to the ORANGE subscription cost compared to initial epidemiology example on the free subscription level (14732 vs 12762 = 1970 more per year).
