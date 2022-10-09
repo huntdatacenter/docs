@@ -8,43 +8,45 @@ description: This page holds the current price list for HUNT Cloud.
 
 # Price list
 
-This page list the prices for our cloud services. 
+**This page list the prices for our cloud services. The price list is incorporated as an appendix to cloud services agreement, and costs are metered and billed in accordanced with our [services specifications](/services/specifications).**
 
 [[toc]]
 
-::: tip Pricing calculator
-
-Head over to our [pricing calculator](/prices/calculator) to estimate the cost for your scientific environments.
-
-:::
+Head over to our [price calculator](/prices/calculator) to tailor cost estimates for you desired configuration, or visit our [price examples](/prices/examples/) for common configurations.
 
 
 ## Current 
 
-This is our current price list: 
+::: tip CURRENT PRICE LIST
 
-[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-1.pdf) (pdf)
+[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-2.pdf) (v3.2 pdf)
 
-The price list is incorporated as an appendix to our cloud services agreement.Costs are metered and billed in accordanced with our [services specifications](/services/specifications).
+:::
+
+::: warning Price list effective from 2023-01-10
+
+[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) (v4.0 pdf)
+
+:::
 
 
-**Machine readable version**. This list includes machine readable CSVs of the current price list. The PDF version above holds precedence if discrepancies occur.
+**Machine readable version of current price list**. This list includes machine readable CSVs of the current price list (v3). The PDF version above holds precedence if discrepancies occur.
 
 | **Service** | **Table** | **File** | 
 | - | - | - |
-| Subscription | Data space | [subscription-data-space.csv](https://assets.hdc.ntnu.no/assets/prices/subscription-data-space.csv) | 
-| Subscription | Lab | [subscription-lab.csv](https://assets.hdc.ntnu.no/assets/prices/subscription-lab.csv) | 
-| Secure | Hourly configuration cost | [salary-secure.csv](https://assets.hdc.ntnu.no/assets/prices/salary-secure.csv) | 
-| Compute | Machine types default.b | [compute-default-b.csv](https://assets.hdc.ntnu.no/assets/prices/compute-default-b.csv) | 
-| Compute | Machine types default.c | [compute-default-c.csv](https://assets.hdc.ntnu.no/assets/prices/compute-default-c.csv) | 
-| Compute | Machine types default.d | [compute-default-d.csv](https://assets.hdc.ntnu.no/assets/prices/compute-default-d.csv) | 
-| Compute | GPU types | [compute-gpu.csv](https://assets.hdc.ntnu.no/assets/prices/compute-gpu.csv) | 
-| Compute | Hourly cost advanced support | [salary-support.csv](https://assets.hdc.ntnu.no/assets/prices/salary-support.csv) | 
-| Storage| Block | [store-block-storage.csv](https://assets.hdc.ntnu.no/assets/prices/store-block-storage.csv) | 
-| Storage| Tape | [store-tape.csv](https://assets.hdc.ntnu.no/assets/prices/store-tape.csv) | 
-| Transfer| Internal transfers | [transfer-internal.csv](https://assets.hdc.ntnu.no/assets/prices/transfer-internal.csv) | 
-| Transfer| External transfers | [transfer-external.csv](https://assets.hdc.ntnu.no/assets/prices/transfer-external.csv) | 
-| Transfer| Hourly configuration cost | [salary-transport-configuration.csv](https://assets.hdc.ntnu.no/assets/prices/salary-transport-configuration.csv) | 
+| Subscription | Data space | [subscription-data-space.csv](https://assets.hdc.ntnu.no/assets/prices/v3/subscription-data-space.csv) | 
+| Subscription | Lab | [subscription-lab.csv](https://assets.hdc.ntnu.no/assets/prices/v3/subscription-lab.csv) | 
+| Secure | Hourly configuration cost | [salary-secure.csv](https://assets.hdc.ntnu.no/assets/prices/v3/salary-secure.csv) | 
+| Compute | Machine types default.b | [compute-default-b.csv](https://assets.hdc.ntnu.no/assets/prices/v3/compute-default-b.csv) | 
+| Compute | Machine types default.c | [compute-default-c.csv](https://assets.hdc.ntnu.no/assets/prices/v3/compute-default-c.csv) | 
+| Compute | Machine types default.d | [compute-default-d.csv](https://assets.hdc.ntnu.no/assets/prices/v3/compute-default-d.csv) | 
+| Compute | GPU types | [compute-gpu.csv](https://assets.hdc.ntnu.no/assets/prices/v3/compute-gpu.csv) | 
+| Compute | Hourly cost advanced support | [salary-support.csv](https://assets.hdc.ntnu.no/assets/prices/v3/salary-support.csv) | 
+| Storage| Block | [store-block-storage.csv](https://assets.hdc.ntnu.no/assets/prices/v3/store-block-storage.csv) | 
+| Storage| Tape | [store-tape.csv](https://assets.hdc.ntnu.no/assets/prices/v3/store-tape.csv) | 
+| Transfer| Internal transfers | [transfer-internal.csv](https://assets.hdc.ntnu.no/assets/prices/v3/transfer-internal.csv) | 
+| Transfer| External transfers | [transfer-external.csv](https://assets.hdc.ntnu.no/assets/prices/v3/transfer-external.csv) | 
+| Transfer| Hourly configuration cost | [salary-transport-configuration.csv](https://assets.hdc.ntnu.no/assets/prices/v3/salary-transport-configuration.csv) | 
 
 
 
@@ -60,20 +62,39 @@ The price list will be updated from time to time.
 
 | **Version** | **Announced** | **Effective** |
 | - | - | - |
+| [HUNT Cloud Price List v4.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) (pdf) | 2022-10-10 | 2023-01-10 |
+| [HUNT Cloud Price List v3.2](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-2.pdf) (pdf) | 2022-02-22 | 2022-02-22 |
 | [HUNT Cloud Price List v3.1](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-1.pdf) (pdf) | 2021-10-12 | 2021-10-12 |
 | [HUNT Cloud Price List v3.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-0.pdf) (pdf) | 2021-07-01 | 2021-10-01 |
 
 ## Changes
 
-**v3.1** (minor)
+**HUNT Cloud Price list v4.0** (MAJOR)
+
+*Services updates*
+
+* BLUE data space subscription open for 3Y commitment. 
+* Compute CPU default machine types expanded with larger machine types.
+* Compute GPU types expanded with A100 40GB, A100 80GB and A30 24GB accelerators.
+
+*Price updates*
+
+* General adjustment based on new procurement cost and experience from 2022 rates.
+* Compute CPU prices for COMMITMENT and ON-DEMAND are slightly reduced, while prices for cost-effective BLUE machines are slightly increased to compensate for increased use of this service level. 
+* Prices for external transport on WHITE subscription level removed.
+
+**HUNT Cloud Price list v3.2** (minor)
+
+- Minor format updates.
+
+**HUNT Cloud Price list v3.1** (minor)
 
 - GPU type in GPU table updated to machine readable names.
 - Document information with revision numbers included in PDF.
 - Machine readable version available on this page.
 
-**v3.0** (major)
+**HUNT Cloud Price list v3.0** (major)
 
 - First version published under the new services model.
-
 
 
