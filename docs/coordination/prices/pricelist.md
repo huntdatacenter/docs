@@ -12,7 +12,7 @@ description: This page holds the current price list for HUNT Cloud.
 
 [[toc]]
 
-Head over to our [price calculator](/prices/calculator) to tailor cost estimates for you desired configuration, or visit our [price examples](/prices/examples/) for common configurations.
+Head over to our [price calculator](/prices/calculator) to tailor cost estimates for you desired configuration, or visit our [price examples](/prices/examples/) for commonly used configurations.
 
 
 ## Current 
@@ -23,9 +23,11 @@ Head over to our [price calculator](/prices/calculator) to tailor cost estimates
 
 :::
 
-::: warning Price list effective from 2023-01-10
+::: warning Proposed price list for 2023
 
 [HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) (v4.0 pdf)
+
+This is the proposed price list for 2023 that will be discussed during Lagtun at Tingweek #7. Expected effectuate date is late January. 
 
 :::
 
@@ -69,7 +71,11 @@ The price list will be updated from time to time.
 
 ## Changes
 
-**HUNT Cloud Price list v4.0** (MAJOR)
+#### HUNT Cloud Price list v4.0 (MAJOR)
+
+Proposed changes. Note that the price list will be reviewed in Lagtun during Tingweek #7, updates are expected. 
+
+The new prices are adjusted based on updated equipment cost since 2021, and evaluations of 2022 usage and rates for Q2-Q3 towards our initial cost-recovery estimates for our v3 price list. 
 
 *Services updates*
 
@@ -79,21 +85,23 @@ The price list will be updated from time to time.
 
 *Price updates*
 
-* General adjustment based on new procurement cost and experience from 2022 rates.
-* Compute CPU prices for COMMITMENT and ON-DEMAND are slightly reduced, while prices for cost-effective BLUE machines are slightly increased to compensate for increased use of this service level. 
+* Storage prices are increased with 1-2%.
+* Services subscriptions are increased about 4%.
+* Compute default machine type prices for COMMIT and ONDEMAND service levels are reduced compared to the v3 price list, up to 30% for memory intensive machine types.
+* Compute default machine types for the BLUE service level are increased up to 30% (mean 50% of 1Y COMMIT prices in v4 compared to 35% in v3). 
 * Prices for external transport on WHITE subscription level removed.
 
-**HUNT Cloud Price list v3.2** (minor)
+#### HUNT Cloud Price list v3.2 (minor)
 
 - Minor format updates.
 
-**HUNT Cloud Price list v3.1** (minor)
+#### HUNT Cloud Price list v3.1 (minor)
 
 - GPU type in GPU table updated to machine readable names.
 - Document information with revision numbers included in PDF.
 - Machine readable version available on this page.
 
-**HUNT Cloud Price list v3.0** (major)
+#### HUNT Cloud Price list v3.0 (major)
 
 - First version published under the new services model.
 
