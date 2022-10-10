@@ -75,8 +75,12 @@ Yes, you may add separate invoice profiles for labs under your data space in the
 
 You may update existing invoice profiles in the data space management section of our [service desk](/service-desk/data-space-orders/#update-existing-invoice-profile)
 
-### When will you bill for the services that we consume? 
+### When should we expect bills? 
 
 In short, you should expect the initial invoice for data space subscriptions, lab subscriptions and 1Y/3y commitments of machines and storage to be in the next quarter after your lab deployment. Usage of various services will be combined into one invoice expected to be sent quarterly. Billing details for each service is specified in the [services specification](/services/specifications/) under the "Billing" sections. 
+
+### I am billed too much, now what? 
+
+Oh, we are truly sorry. This may happen from time to time. Our billing process automatically process services orders that we manually punch. From time to time, this may lead to discrepancies between expected and billed amount. [Contact us](/contact) for a review. For billing inaccuracies attributable to us, we will issue a credit memo specifying the incorrect amount in the affected invoice. The process is specified in the HUNT Cloud Services Agreement that we are holding with your service center.
 
 
