@@ -340,3 +340,59 @@ Best regards,
 * **Cost:** Included in your data space subscription.
 
 
+### New invoice profile
+
+Click the button below to add a new invoice profile to your data space. Use this is you want a new lab to be invoiced to a specific account that you control, or if you want to separate one of your existing labs into a separate account.
+
+<ServiceDesk title="Request a new invoice profile" :template='{
+  subject: "Update invoice profile - {dataspace}",
+  body: `Hi HUNT Cloud team,
+
+I would like to add a new invoice profile under our dataspace. 
+
+I have attached a signed invoice profile to this email. 
+
+I am looking forward to receive an email acknowledging that you have added the new invoice profile.
+
+
+Best regards,
+
+`,
+}' :fields='[
+  { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
+
+* **Who can order:** Data space leaders and data space financial officers.
+* **Required attachment**: A new [signed invoice profile](/agreements/downloads/#invoice-profile).
+* **Expected delivery time:** Days.
+* **Cost:** Included in your data space subscription.
+
+
+
+### Update existing invoice profile
+
+Click the button below to update an existing invoice profile to your data space. Use this is you want to update your account information, update your financial contact etc.
+
+<ServiceDesk title="Request update of existing invoice profile" :template='{
+  subject: "Update invoice profile - {dataspace}",
+  body: `Hi HUNT Cloud team,
+
+I would like to update our existing invoice profile for our dataspace. 
+
+I have attached an updated signed invoice profile to this email that holds the correct invoice information.
+
+I am looking forward to receive an email acknowledging that you have updated the existing invoice profile.
+
+
+Best regards,
+
+`,
+}' :fields='[
+  { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
+
+* **Who can order:** Data space leaders and data space financial officers.
+* **Required attachment**: A new [signed invoice profile](/agreements/downloads/#invoice-profile).
+* **Expected delivery time:** Days.
+* **Cost:** Included in your data space subscription.
+

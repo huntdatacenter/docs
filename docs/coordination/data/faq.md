@@ -33,13 +33,18 @@ Yes. Nothing is better than seeing your data grow. We are more than happy to inc
 
 You can expand volumes on both and iaas machines in terabyte (TB) steps. Lab leaders and lab coordinators can expand volume expansion in our [service desk](/service-desk/lab-orders/#expand-existing-volume).
 
+### Can we reduce the size of existing volumes? 
+
+You can not reduce the size of existing volumes. However, you can reduce your storage volumes in the following way: (1) request a new volume with your new desired size in our [service desk](/service-desk/lab-orders/#new-volume), (2) transfer data from your old volume to your new volume, and (3) request deletion of your original volume.
+
+
 ### When should we expand our volumes? 
 
 Full storage means that your lab users no longer can utilize this volume in your scientific activities. We recommend that you expand a storage volume at about 85 percent usage. See how to [check your current usage](/faq/storage/#how-can-i-see-the-sizes-of-my-lab-volumes) here.
 
 ### Will data disappear during a volume expansion? 
 
-No. The data in your volume will still be there after the volume expansion.
+No. The data in your volume will still be there after the volume expansion. For safety reasons, we duplicate your volume before we start the expansion as a safeguard against unexpected failures. That said, your data will be unavailable during the period of the expansion procedures, typically for a few hours. 
 
 ### What's the response time for a volume expansion? 
 
@@ -55,13 +60,13 @@ One (1) terabyte of claimed storage is defined as 2^40 bytes. Computers allocate
 
 ### What is the upper size of a volume?
 
-We aim to keep individual volumes below 20 TB if possible. The soft limit is set for practical purposes when it comes to volume handling on our side. It is also set to help distribute large collections across several logical units in the unlikely case of volume destructions.
+We aim to keep individual volumes below 20 TB if possible. The soft limit is set for practical purposes when it comes to volume handling on our side, both so we are able to handle duplicate copies and complete file checks within reasonable times. The limit is also set to help distribute large collections across several logical units in the unlikely case of volume destructions.
 
 ## Access
 
 ### Can all users access all data in a lab? 
 
-Yes, principally. Practically, maybe. On the `home`-machine, all lab users can by default access all folders on the collaborative data volumes: `/mnt/archive`, `/mnt/work` `/mnt/scratch` and `/mnt/cargo`. Lab users may add individually restrictions to files or folders they upload or generate, although such separation is not guaranteed by us. When needed, we recommend to separate user access by establishing separate labs labs rather than to separate data in folders inside a lab.
+Yes, principally. Practically, maybe. On the `home`-machine, all lab users can by default access all folders on the collaborative data volumes: `/mnt/archive`, `/mnt/work` and `/mnt/scratch`. Lab users may add individually restrictions to files or folders they upload or generate, although such separation is not guaranteed by us. When needed, we recommend to separate user access by establishing separate labs labs rather than to separate data in folders inside a lab.
 
 ### What happens with a user's data when the user is deactivated in a lab? 
 

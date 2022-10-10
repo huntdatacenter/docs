@@ -8,7 +8,7 @@ description: This page list frequently asked questions related to the pricing of
 
 # FAQ on prices
 
-This page list frequently asked questions related to the pricing of services in HUNT Cloud.
+**This page list frequently asked questions related to the pricing of services in HUNT Cloud.**
 
 [[toc]]
 
@@ -21,7 +21,7 @@ Help us expand this page. [Contact us](/contact) with your burning topics.
 
 
 
-## Data space subscriptions
+## Subscriptions
 
 ### Who decide which subscription level we can utilize? 
 
@@ -57,26 +57,31 @@ On-demand resources runs until a deactivation notice from the a lab user. To sav
 
 ### Which terabyte price will each lab pay for their storage? 
 
-In short, each lab pay the mean terabyte price for your data space. This price to automatically incorporate your data space volume discount. For details, see the meter, cost and billing section under the Store chapter in the [services specification](/services/specifications/) and the Store section in the [price list](/prices/pricelist/), or test for yourself in the [price calculator](/prices/calculator/). 
+Each lab pay the mean terabyte price for your data space. We automatically calculate the volume discount for your data space and use this set the mean terabyte price for your data space. For details, see the meter, cost and billing section under the Store chapter in the [services specification](/services/specifications/) and the Store section in the [price list](/prices/pricelist/), or test for yourself in the [price calculator](/prices/calculator/). 
 
 ### Why is one terabyte the minimum storage allocation? 
 
-In short, we try ensure a consistent storage performance by linking usage to the overall system capacity. One of these controls is to ensure that the total number of spinning disks scale with the need for increased input/output operations of actual use. The one terabyte minimum allocation helps us to achieve this.
+We try ensure a consistent storage performance by linking usage to the overall system capacity. One of these controls is to ensure that the total number of spinning disks scale with the need for increased input/output operations of actual use. The one terabyte minimum allocation helps us to achieve this.
 
+### Why to we see less storage on our machines that we pay for? 
 
-
-
+The volumes sizes that you see on your machines are slightly less that the volume sizes that you claim. This is expected. [Read why here](/data/faq/#why-is-volume-sizes-less-than-claimed).
 
 
 
 
 ## Billing 
 
-### Can we file several invoice profiles for our data space? 
+### Can we have several invoice profiles under our data space? 
 
-Data spaces on the WHITE and ORANGE subscription level are billed on the same invoice profile. Data spaces on the BLUE subscription level can file one to many  [invoice profiles](/agreements/downloads/#invoice-profile) for individual billing of labs.
+Yes, you may add separate invoice profiles for labs under your data space in the data space management section of our [service desk](/service-desk/data-space-orders/#new-invoice-profile). All accrued costs for one or more labs will then be invoiced to the new profile. 
+
+### How can we update the account information on the invoice profile? 
+
+You may update existing invoice profiles in the data space management section of our [service desk](/service-desk/data-space-orders/#update-existing-invoice-profile)
 
 ### When will you bill for the services that we consume? 
 
-In short, you should expect the initial invoice for data space subscriptions, lab subscriptions and 1Y/3y commitments of machines and storage to be sent days of your first lab deployment. Other resources will be combined into one invoice expected to be sent quarterly. Billing details for each service is specified in the [services specification](/services/specifications/) under the "Billing" sections. 
+In short, you should expect the initial invoice for data space subscriptions, lab subscriptions and 1Y/3y commitments of machines and storage to be in the next quarter after your lab deployment. Usage of various services will be combined into one invoice expected to be sent quarterly. Billing details for each service is specified in the [services specification](/services/specifications/) under the "Billing" sections. 
+
 
