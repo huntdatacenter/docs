@@ -69,7 +69,7 @@ You can indirectly reduce the size of your storage volume by moving data to a ne
 
 ### Can we have several invoice profiles under our data space? 
 
-Yes, you may add separate invoice profiles for labs under your data space in the data space management section of our [service desk](/service-desk/data-space-orders/#new-invoice-profile). All accrued costs for one or more labs will then be invoiced to the new profile. 
+Yes, you may add separate invoice profiles for labs under your data space in the data space management section of our [service desk](/service-desk/data-space-orders/#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile. 
 
 ### How can we update the account information on the invoice profile? 
 
