@@ -35,7 +35,7 @@ You can expand volumes on both and iaas machines in terabyte (TB) steps. Lab lea
 
 ### Can we reduce the size of existing volumes? 
 
-You can not reduce the size of existing volumes. However, you can reduce your storage volumes in the following way: (1) request a new volume with your new desired size in our [service desk](/service-desk/lab-orders/#new-volume), (2) transfer data from your old volume to your new volume, and (3) request deletion of your original volume.
+Not directly. You can reduce your storage volumes in the following way: (1) request a new volume with your new desired size in our [service desk](/service-desk/lab-orders/#new-volume), (2) transfer data from your old volume to your new volume, and (3) request deletion of your original volume.
 
 
 ### When should we expand our volumes? 

@@ -62,8 +62,7 @@ The volumes sizes that you see on your machines are slightly less that the volum
 
 ### How is storage reduction metered? 
 
-You can not directly reduce the size of a storage volume, however you can indirectly reduce your storage allocation by moving data to a new smaller volume ([read here for steps](/data/faq/#can-we-reduce-the-size-of-existing-volumes)). Both volumes are metered until you request deletion of your original volume.
-
+You can indirectly reduce the size of your storage volume by moving data to a new smaller volume ([see the steps here](/data/faq/#can-we-reduce-the-size-of-existing-volumes)). During such procedures, both volumes are metered until you request deletion of the original volume in the service desk.
 
 
 ## Billing 

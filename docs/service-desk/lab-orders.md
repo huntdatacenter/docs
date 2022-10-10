@@ -164,7 +164,7 @@ Best regards,
 
 ## Compute
 
-### Update machine size
+### Update CPU machine size
 
 Increase or decrease the computational power of one of your existing lab machines to a new [machine type](/services/machine-types/).
 
@@ -202,6 +202,12 @@ Best regards,
 * **Expected delivery:** Lab machine with updated size.
 * **Requirement:** The procedure require a machine restart that needs to be scheduled with your lab users.
 * **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
+
+::: warning GPU machines
+
+Machine types deployed with GPU (GPU machines) can not be updated after deployment due to technical constraints. To update GPU machine types, (1) request a new GPU machine with your preferred machine type, (2) transfer any data or configuration files, and (3) request the deletion of your original machine.
+
+:::
 
 
 ### New CPU machine
