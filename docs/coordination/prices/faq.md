@@ -27,13 +27,6 @@ Help us expand this page. [Contact us](/contact) with your burning topics.
 
 You. The decision to choose a WHITE, ORANGE or BLUE subscription level is fully up to you and your data space leader. Head over to the [services overview](/services/overview/#data-space) to see the differences between them. 
 
-### Why is the BLUE subscription only one year? 
-
-While both the WHITE and ORANGE subscriptions can be reserved for three years, we have kept the BLUE subscription to one year only. The reason behind this is lack of experience in pricing the additional features that are available on this level. As soon as our accuracy increase, we aim to make longer reservations available.
-
-
-
-
 
 
 ## Compute
@@ -67,6 +60,9 @@ We try ensure a consistent storage performance by linking usage to the overall s
 
 The volumes sizes that you see on your machines are slightly less that the volume sizes that you claim. This is expected. [Read why here](/data/faq/#why-is-volume-sizes-less-than-claimed).
 
+### How is storage reduction metered? 
+
+You can not directly reduce the size of a storage volume, however you can indirectly reduce your storage allocation by moving data to a new smaller volume ([read here for steps](/data/faq/#can-we-reduce-the-size-of-existing-volumes)). Both volumes are metered until you request deletion of your original volume.
 
 
 
