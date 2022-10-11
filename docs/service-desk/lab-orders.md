@@ -365,6 +365,9 @@ Best regards,
   { label: "Hostname (Machine name)", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Hostname (Machine name) must contain iaas or blue name and must include only lowercase letters a-z, 0-9 and -", field: "textfield" },
 ]' />
 
+* **Required information**: lab name and machine name.
+* **Expected response time:** Days.
+* **Cost:** No compute cost during shelved time.
 
 
 ### Unshelve machine order
@@ -389,6 +392,13 @@ Best regards,
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Hostname (Machine name)", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Hostname (Machine name) must contain iaas or blue name and must include only lowercase letters a-z, 0-9 and -", field: "textfield" },
 ]' />
+
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: lab name and machine name.
+* **Expected response time:** Days.
+* **Cost:** During unshelving a machine will be started with same [machine type](/services/machine-types/#compute-optimized-machine-types) as before shelving 
+
 
 ### Delete a machine
 
@@ -461,9 +471,10 @@ Best regards,
 ]' /> 
 
 * **Who can order:** Lab leaders and lab coordinators.
-* **Required information**: lab name and machine name.
-* **Expected response time:** Days.
-* **Cost:** No compute cost during shelved time.
+* **Required information**: lab name, machine name, volume name and intended size.
+* **Expected response time:** One week. The volume expansion requires a machine restart that needs to be scheduled 9-11am on a workday.
+* **Expected delivery:** Increased storage capacity.
+* **Cost:** New storage is included in your total storage plan.
 
 ::: details Identify the required information
 
