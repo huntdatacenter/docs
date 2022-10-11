@@ -175,7 +175,8 @@ library(dplyr)
 
 If you have to defer to running `install.packages()` command, because your package is not available in Conda,
 we advice to use `R` in [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal),
-instead of using RStudio. RStudio might cause a broken state of environment where your custom package will not work.
+instead of using RStudio. Packages installed through R in terminal will be available in RStudio.
+Otherwise RStudio might lead to a broken state of environment where your custom package will not work.
 
 ### How can I use R in Workbench terminal?
 
