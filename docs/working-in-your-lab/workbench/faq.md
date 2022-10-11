@@ -200,6 +200,8 @@ You can do that in [Workbench terminal](/working-in-your-lab/workbench/faq/#term
 conda create --yes -n r-base 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
 ```
 
+Remember that this command also removes your other custom packages that might be working.
+
 ### Can others use packages I have installed?
 
 Not directly. The r-packages you install in your Workbench are usually not shared. The separation prevent others from breaking your packages, for example during upgrades. However, you may utilize the powers of Conda to export the definition of your environments so others can use the very same packages that you use. Learn how to manage environments on [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
