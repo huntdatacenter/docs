@@ -342,14 +342,74 @@ Best regards,
 * **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
 
 
+### Shelve machine order
+
+Instance shelving allows you to stop an instance without having it consume compute resources. Shelved instance keeps the storage and can be started in the future when needed again.
+
+<ServiceDesk title="Request a shelving of a machine " :template='{
+  subject: "Shelve machine {hostname} @ {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a shelving of a following machine: 
+
+labname = {labname}
+hostname = {hostname}
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Hostname (Machine name)", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Hostname (Machine name) must contain iaas or blue name and must include only lowercase letters a-z, 0-9 and -", field: "textfield" },
+]' />
 
 
 
+### Unshelve machine order
+
+This form serves for unshelving a machine after it has been shelved.
+
+<ServiceDesk title="Request an unshelving of a machine " :template='{
+  subject: "Unshelve machine {hostname} @ {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request an unshelving of a following machine: 
+
+labname = {labname}
+hostname = {hostname}
 
 
+Best regards,
 
 
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Hostname (Machine name)", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Hostname (Machine name) must contain iaas or blue name and must include only lowercase letters a-z, 0-9 and -", field: "textfield" },
+]' />
 
+### Delete a machine
+
+<ServiceDesk title="Request a shelving of a machine " :template='{
+  subject: "Delete a machine {hostname} @ {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a deletion of a following machine: 
+
+labname = {labname}
+hostname = {hostname}
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Hostname (Machine name)", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*", hint: "Hostname (Machine name) must contain iaas or blue name and must include only lowercase letters a-z, 0-9 and -", field: "textfield" },
+]' />
 
 
 
@@ -401,10 +461,9 @@ Best regards,
 ]' /> 
 
 * **Who can order:** Lab leaders and lab coordinators.
-* **Required information**: lab name, machine name, volume name and intended size.
-* **Expected response time:** One week. The volume expansion requires a machine restart that needs to be scheduled 9-11am on a workday.
-* **Expected delivery:** Increased storage capacity.
-* **Cost:** New storage is included in your total storage plan.
+* **Required information**: lab name and machine name.
+* **Expected response time:** Days.
+* **Cost:** No compute cost during shelved time.
 
 ::: details Identify the required information
 
