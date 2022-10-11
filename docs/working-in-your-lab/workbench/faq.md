@@ -173,6 +173,33 @@ library(<package-name>)
 library(dplyr)
 ```
 
+If you have to defer to running `install.packages()` command, because your package is not available in Conda,
+we advice to do use R in terminal, instead of RStudio. RStudio might cause a broken state of environment,
+described in the next question.
+
+### How can I use R in Workbench terminal?
+
+Start by activate `r-base` environment:
+```
+conda activate r-base
+```
+
+Then run R:
+```
+R
+```
+
+### How can I recover my R environment in case of broken package installation?
+
+If you are getting errors about `GLIBCXX` library not found and essential R packages are not working,
+typically after installing some custom package, you might consider recreating `r-base` environment from scratch.
+
+You can do that in [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
+
+```
+conda create --yes -n r-base 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
+```
+
 ### Can others use packages I have installed?
 
 Not directly. The r-packages you install in your Workbench are usually not shared. The separation prevent others from breaking your packages, for example during upgrades. However, you may utilize the powers of Conda to export the definition of your environments so others can use the very same packages that you use. Learn how to manage environments on [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
