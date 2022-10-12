@@ -352,8 +352,8 @@ Instance shelving allows you to stop an instance without having it consume compu
 
 I would like to request a shelving of a following machine: 
 
-labname = {labname}
-hostname = {hostname}
+labname = {labname}  
+hostname = {hostname}  
 
 
 Best regards,
@@ -380,8 +380,8 @@ This form serves for unshelving a machine after it has been shelved.
 
 I would like to request an unshelving of a following machine: 
 
-labname = {labname}
-hostname = {hostname}
+labname = {labname}  
+hostname (Machine name) = {hostname}
 
 
 Best regards,
@@ -402,14 +402,16 @@ Best regards,
 
 ### Delete a machine
 
-<ServiceDesk title="Request a shelving of a machine " :template='{
+Click the button below to order a machine deletion.
+
+<ServiceDesk title="Request a deletion of a machine " :template='{
   subject: "Delete a machine {hostname} @ {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a deletion of a following machine: 
 
-labname = {labname}
-hostname = {hostname}
+labname = {labname}  
+hostname (Machine name) = {hostname}
 
 
 Best regards,
@@ -421,8 +423,16 @@ Best regards,
   { label: "Hostname (Machine name)", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*", hint: "Hostname (Machine name) must contain iaas or blue name and must include only lowercase letters a-z, 0-9 and -", field: "textfield" },
 ]' />
 
+::: danger
 
+Once data on your machine is deleted, it can not be recreated. You must ensure that you have exported all data that you intend to preserve from the machine **before** you order the machine deletion. [Contact us](/contact) if you need guidance with this work.
 
+:::
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: lab name and machine name.
+* **Expected response time:** Days.
+* **Cost:** No additional costs.
 
 
 ## Store
@@ -637,7 +647,53 @@ Filesystem      Size  Used Avail Use% Mounted on
 You may use this information to plan your new storage names and sizes. We typically recommend to go by type of storage and numbers as usage tends to change over time, such as `archive2`, `work2` etc.
 :::
 
+### Volume Deletion
 
+This form serves for ordering of volume deletion.
+
+<ServiceDesk title="Request a volume deletion" :template='{
+  subject: "Volume deletion - {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a deletion of a storage volume. 
+
+lab name = {labname}  
+machine name = {machinename}  
+volume name = {volume_name}   
+
+I am aware that this process is irreversible and all data stored on this volume will be permanently deleted.
+
+
+Best regards,
+
+
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  {
+    label: "Volume name",
+    key: "volume_name",
+    field: "selectone",
+    options: [
+      "Archive",
+      "Work",
+      "Scratch",
+    ],
+    pattern: "{1,}"
+  },
+]' />
+
+::: danger
+
+Once data on volume is deleted, it can not be recreated. You must ensure that you have exported all data that you intend to preserve from the volume **before** you order a volume deletion. [Contact us](/contact) if you need guidance with this work.
+
+:::
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: lab name, machine name, volume name.
+* **Expected response time:** Days
+* **Cost:** No additional costs.
 
 ## Data transfers
 
