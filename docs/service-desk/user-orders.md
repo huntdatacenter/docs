@@ -135,17 +135,14 @@ Kind regards,
 
 ### SSH Configuration
 
-Click button below if you need your ssh_config.txt file to be resend to you (accidental loss, new computer, etc.)
+Click button below if you need your ssh_config.txt file to be resent to you (accidental loss, new computer, etc.)
 
 
-<ServiceDesk title="Request SSH configuration resend" :template='{
-  subject: "SSH config resend - {username} @ {labname}",
+<ServiceDesk title="Request SSH configuration" :template='{
+  subject: "SSH config request - {username} @ {labname}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a new ssh_config file for user {username} @ {labname}.
-
-
-I have activated Signal on my phone and are looking forward to receive my temporary key here.
 
 
 Kind regards,
