@@ -125,6 +125,39 @@ Kind regards,
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
 ]' />
 
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** Temporary passphrase on Signal.
+* **Requirement:** Active Signal app on your phone.
+* **Next step:** [Guide on the passphrase reset](/guides/configure-ssh/).
+* **Cost:** Included in the lab subscription.
+
+### SSH Configuration
+
+Click button below if you need your ssh_config.txt file to be resend to you (accidental loss, new computer, etc.)
+
+
+<ServiceDesk title="Request SSH configuration resend" :template='{
+  subject: "SSH config resend - {username} @ {labname}",
+  body: `Hi HUNT Cloud team,
+
+I would like to request a new ssh_config file for user {username} @ {labname}.
+
+
+I have activated Signal on my phone and are looking forward to receive my temporary key here.
+
+
+Kind regards,
+
+`,
+
+}' :fields='[
+  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
+
+
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
 * **Expected delivery:** Temporary passphrase on Signal.
