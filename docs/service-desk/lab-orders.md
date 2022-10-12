@@ -413,6 +413,8 @@ I would like to request a deletion of a following machine:
 lab name = `{labname}`  
 machine name = `{hostname}`  
 
+I am aware that this process is irreversible and all data stored on this machine will be permanently deleted.
+
 
 Best regards,
 
@@ -679,6 +681,7 @@ Best regards,
       "Archive",
       "Work",
       "Scratch",
+      "Cargo",
     ],
     pattern: "{1,}"
   },
