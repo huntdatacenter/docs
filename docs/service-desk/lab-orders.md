@@ -352,8 +352,8 @@ Instance shelving allows you to stop an instance without having it consume compu
 
 I would like to request a shelving of a following machine: 
 
-labname = {labname}  
-hostname = {hostname}  
+lab name = `{labname}`  
+machine name = `{hostname}`  
 
 
 Best regards,
@@ -362,7 +362,7 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Hostname (Machine name)", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Hostname (Machine name) must contain iaas or blue name and must include only lowercase letters a-z, 0-9 and -", field: "textfield" },
+  { label: "Machine name", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Machine name only allows blue and iaas machines, you can get machine name by running hostname command on the machine", field: "textfield" },
 ]' />
 
 * **Required information**: lab name and machine name.
@@ -380,8 +380,8 @@ This form serves for unshelving a machine after it has been shelved.
 
 I would like to request an unshelving of a following machine: 
 
-labname = {labname}  
-hostname (Machine name) = {hostname}
+lab name = `{labname}`  
+machine name = `{hostname}`  
 
 
 Best regards,
@@ -390,7 +390,7 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Hostname (Machine name)", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Hostname (Machine name) must contain iaas or blue name and must include only lowercase letters a-z, 0-9 and -", field: "textfield" },
+  { label: "Machine name", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Machine name only allows blue and iaas machines", field: "textfield" },
 ]' />
 
 
@@ -410,8 +410,8 @@ Click the button below to order a machine deletion.
 
 I would like to request a deletion of a following machine: 
 
-labname = {labname}  
-hostname (Machine name) = {hostname}
+lab name = `{labname}`  
+machine name = `{hostname}`  
 
 
 Best regards,
@@ -420,7 +420,7 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Hostname (Machine name)", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*", hint: "Hostname (Machine name) must contain iaas or blue name and must include only lowercase letters a-z, 0-9 and -", field: "textfield" },
+  { label: "Machine name", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*", hint: "Machine name only allows blue, iaas, and gpu machines, you can get machine name by running hostname command on the machine", field: "textfield" },
 ]' />
 
 ::: danger
@@ -464,7 +464,7 @@ Best regards,
 `,
 }' :fields='[
   { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash., You can get machine name by running hostname command on the machine", field: "textfield" },
   {
     label: "Volume name",
     key: "volumename",
