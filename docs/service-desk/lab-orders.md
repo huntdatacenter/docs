@@ -72,8 +72,10 @@ This order closes access for lab users that no longer need to use your lab, for 
 
 I would like to deactivate lab access for one of our lab users:
 
+---
 username = {username}  
 lab name = {labname}  
+---
 
 I am looking forward to a confirmation of the deactivation on email.
 
@@ -175,10 +177,12 @@ Increase or decrease the computational power of one of your existing lab machine
 
 I would like to request a machine update:
 
+---
 lab name = {labname}  
 machine name = {machinename}  
 current machine type = {machine_type}  
 new machine type = {newmachine}  
+---
 
 I am aware that the update will require a machine restart.
 
@@ -220,10 +224,12 @@ Add a [new machine](/services/machine-types/) to your lab. A CPU machine is the 
 
 I would like to request a new CPU machine in our lab:
 
+---
 lab name = {labname}  
 machine type = {machine_type}  
 storage size = {terabytes} TB  
 subscription = {subscription}  
+---
 
 I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
 
@@ -267,11 +273,13 @@ Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) 
 
 I would like to request a new GPU machine in our lab:
 
+---
 lab name = {labname}  
 gpu type = {nvidia.p100}  
 machine type = {machine_type}  
 storage size = {terabytes} TB  
 subscription = {subscription}  
+---
 
 I am looking forward to receive access information in our Slack lab channel when the machine is up and running.
 
@@ -410,8 +418,10 @@ Click the button below to order a machine deletion.
 
 I would like to request a deletion of a following machine:
 
+---
 lab name = {labname}  
 machine name = {hostname}  
+---
 
 I am aware that this process is irreversible and all data stored on this machine will be permanently deleted.
 
@@ -449,11 +459,13 @@ You may expand the existing storage volumes inside your lab up to a maximum of 2
 
 I would like to request a storage volume expansion:
 
+---
 lab name = {labname}  
 machine name = {machinename}  
 volume name = {volumename}  
 current size = {terabytes} TB  
 new size = {terabytes1} TB  
+---
 
 I am aware that the expansion will require a machine restart.
 
@@ -557,10 +569,12 @@ You may add new volumes to your lab machines. We will need separate orders for e
 
 I would like to request a new storage volume:
 
+---
 lab name = {labname}  
 machine name = {machinename}  
 volume name = {volume_name}  
 size = {terabytes} TB  
+---
 
 I am aware that the expansion will require a machine restart. So, let us touch base in our Slack lab channel to schedule a time for the restart that fits our scientific activities.
 
@@ -657,9 +671,11 @@ This form serves for ordering of volume deletion.
 
 I would like to request a deletion of a storage volume.
 
+---
 lab name = {labname}  
 machine name = {machinename}  
-volume name = {volume_name}   
+volume name = {volume_name}  
+---
 
 I am aware that this process is irreversible and all data stored on this volume will be permanently deleted.
 
@@ -754,12 +770,14 @@ Lab name: {labname}
 
 New lab coordinator:  
 
+---
 Name and surname: {name}  
 Department: {department}  
 Faculty: {faculty}  
 Institution: {institution}  
 Email address: {email}  
 Phone number: {phone}  
+---
 
 I am looking forward to receive an email acknowledging that you have updated the role.
 

@@ -85,7 +85,7 @@ If you have existing Workbench setup and your certificate has expired request ne
 
 I would like to request reissue of Workbench certificate for lab: {labname}.
 
-I have installed and activated the Signal app on my phone and are looking forward to receive my certificate. 
+I have installed and activated the Signal app on my phone and are looking forward to receive my certificate.
 
 
 Kind regards,
@@ -183,11 +183,13 @@ We allow connection from known IP addresses only outside Norway. Access from net
   subject: "VPN access opening request - {username}",
   body: `Hi HUNT Cloud team,
 
-I would like to request an VPN access opening for the following IP address: 
+I would like to request an VPN access opening for the following IP address:
 
+---
 access_ip = {IP4_address}  
 access_duration = {access_duration}  
 access_country = {country}  
+---
 
 I am looking forward to be notified on email when the opening is implemented.
 
@@ -234,7 +236,7 @@ You may need to reset your VPN certificate when you get a new local machine or i
   subject: "VPN certificate reset - {username}",
   body: `Hi HUNT Cloud team,
 
-I would like to reset my VPN certificate. 
+I would like to reset my VPN certificate.
 
 I have an active Signal account on my phone, and are looking forward to receive my new VPN passphrase on the phone and a link to the new VPN certificate on my organizational email.
 
@@ -265,12 +267,14 @@ You need the [Google Authenticator key](/guides/google-authenticator-reset/) to 
   subject: "Google authenticator key request - {username}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a new Google authenticator key for my VPN access. 
+I would like to request a new Google authenticator key for my VPN access.
 
 
 I have an active Signal account on my phone and I look forward to receiving new key on my phone.
 
+---
 phone_number = {phone_number}
+---
 
 
 Kind regards,
@@ -298,10 +302,10 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 <ServiceDesk title="Request MobaXterm configuration file" :template='{
   subject: "MobaXterm file - {username}@{labname}",
   body: `Hi HUNT Cloud team,
-  
-I would like to request a new MobXterm configuration file. 
 
-I am looking forward to receive my file over email, and then head over to the docs to get going on the configuration: 
+I would like to request a new MobXterm configuration file.
+
+I am looking forward to receive my file over email, and then head over to the docs to get going on the configuration:
 
 https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/mobaxterm/
 

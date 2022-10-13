@@ -34,19 +34,23 @@ Click the button below to order a new lab under your existing data space.
 
 I would like to request a new lab under our data space.
 
-I have attached a signed lab agreement to this email. 
+I have attached a signed lab agreement to this email.
 
 We would like to start with the following machine type for our home machine:  
 
+---
 MACHINE_TYPE = {machine_type}  
+---
 
 We would like to attached the following storage volume sizes to our home machine (numbers are in Gigabytes):  
 
+---
 ARCHIVE = {number1} GB  
 WORK = {number2} GB  
 SCRATCH = {number3} GB  
+---
 
-Our lab leader and lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link: 
+Our lab leader and lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
 
 https://docs.hdc.ntnu.no/service-desk/lab-orders.html#add-a-new-lab-user
 
@@ -118,11 +122,13 @@ Click the button below to order a lab deletion of an active lab under your data 
 
 I would like to request the following lab under our data space to be deleted:
 
+---
 lab = {labname}  
+---
 
-I have attached a signed lab deletion order to this email confirming the request. 
+I have attached a signed lab deletion order to this email confirming the request.
 
-We have already exported the data that we need from the lab. 
+We have already exported the data that we need from the lab.
 
 I am aware that all data in the lab will be irrevocably destroyed and can not be recreated once this order is completed.
 
@@ -236,7 +242,7 @@ Note that time to successful transfer depend on access to SFTP software and pote
   subject: "Network opening - {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a network opening. 
+I would like to request a network opening.
 
 I have attached a signed network opening order with further information.
 
@@ -271,12 +277,14 @@ Click the button below to update your [data space coordinator roles](/coordinato
 
 I would like to update the following coordinator role(s) in our data space:
 
+---
 Role: {role} coordinator  
 Name and Surname: {name}  
 Department: {department}  
 Faculty: {faculty}  
 Institution: {institution}  
 Phone: {phone}  
+---
 
 I am looking forward to receive an email acknowledging that you have updated our coordinator roles.
 
@@ -319,9 +327,9 @@ Click the button below to update lab leader roles for labs attached to your data
   subject: "Update lab leader role - {labname} in {dataspace}",
   body: `Hi HUNT Cloud team,
 
-I would like to update the lab leader role for a lab under our dataspace. 
+I would like to update the lab leader role for a lab under our dataspace.
 
-I have attached a signed lab agreement to this email. 
+I have attached a signed lab agreement to this email.
 
 I am looking forward to receive an email acknowledging that you have updated the role.
 
@@ -348,9 +356,9 @@ Click the button below to add a new invoice profile to your data space. Use this
   subject: "Update invoice profile - {dataspace}",
   body: `Hi HUNT Cloud team,
 
-I would like to add a new invoice profile under our dataspace. 
+I would like to add a new invoice profile under our dataspace.
 
-I have attached a signed invoice profile to this email. 
+I have attached a signed invoice profile to this email.
 
 I am looking forward to receive an email acknowledging that you have added the new invoice profile.
 
@@ -377,7 +385,7 @@ Click the button below to update an existing invoice profile to your data space.
   subject: "Update invoice profile - {dataspace}",
   body: `Hi HUNT Cloud team,
 
-I would like to update our existing invoice profile for our dataspace. 
+I would like to update our existing invoice profile for our dataspace.
 
 I have attached an updated signed invoice profile to this email that holds the correct invoice information.
 
@@ -395,4 +403,3 @@ Best regards,
 * **Required attachment**: A new [signed invoice profile](/agreements/downloads/#invoice-profile).
 * **Expected delivery time:** Days.
 * **Cost:** Included in your data space subscription.
-
