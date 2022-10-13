@@ -152,6 +152,7 @@ export default {
           }
         }
       }
+      text = text.replaceAll('\n---\n', '\n```  \n');
       return text;
     },
   },

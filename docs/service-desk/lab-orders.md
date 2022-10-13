@@ -378,8 +378,10 @@ This form serves for unshelving a machine after it has been shelved.
 
 I would like to request an unshelving of a following machine:
 
+---
 lab name = {labname}  
 machine name = {hostname}  
+---
 
 
 Best regards,
