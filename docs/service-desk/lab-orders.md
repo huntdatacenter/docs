@@ -39,7 +39,7 @@ Click the button below to order access for a new user to your lab.
 
 I would like to request access for a new lab user.
 
-I have attached a signed user agreement to this email, and asked our new colleague to install and activate the Signal app for the key transfer. 
+I have attached a signed user agreement to this email, and asked our new colleague to install and activate the Signal app for the key transfer.
 
 We are looking forward to start the onboarding process.
 
@@ -71,7 +71,7 @@ This order closes access for lab users that no longer need to use your lab, for 
   body: `Hi HUNT Cloud team,
 
 I would like to deactivate lab access for one of our lab users:
- 
+
 username = {username}  
 lab name = {labname}  
 
@@ -173,7 +173,7 @@ Increase or decrease the computational power of one of your existing lab machine
   subject: "Update machine size - {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a machine update: 
+I would like to request a machine update:
 
 lab name = {labname}  
 machine name = {machinename}  
@@ -218,7 +218,7 @@ Add a [new machine](/services/machine-types/) to your lab. A CPU machine is the 
   subject: "New CPU machine - {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a new CPU machine in our lab: 
+I would like to request a new CPU machine in our lab:
 
 lab name = {labname}  
 machine type = {machine_type}  
@@ -244,8 +244,7 @@ Best regards,
       "Commitment",
       "On-demand",
       "Blue",
-    ],
-    pattern: "{1,}"
+    ]
   },
 ]' />
 
@@ -266,7 +265,7 @@ Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) 
   subject: "New GPU machine - {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a new GPU machine in our lab: 
+I would like to request a new GPU machine in our lab:
 
 lab name = {labname}  
 gpu type = {nvidia.p100}  
@@ -294,8 +293,7 @@ Best regards,
       "Commitment",
       "On-demand",
       "Blue",
-    ],
-    pattern: "{1,}"
+    ]
   },
 ]' />
 
@@ -315,7 +313,7 @@ Add a fleet of blue machines to distribute analysis for large scale analysis, fo
   subject: "Fleet of blue machines - {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a fleet of the following blue machines: 
+I would like to request a fleet of the following blue machines:
 
 lab name = {labname}  
 number of machines = {number}  
@@ -350,10 +348,10 @@ Instance shelving allows you to stop an instance without having it consume compu
   subject: "Shelve machine {hostname} @ {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a shelving of a following machine: 
+I would like to request a shelving of a following machine:
 
-lab name = `{labname}`  
-machine name = `{hostname}`  
+lab name = {labname}  
+machine name = {hostname}  
 
 
 Best regards,
@@ -378,10 +376,10 @@ This form serves for unshelving a machine after it has been shelved.
   subject: "Unshelve machine {hostname} @ {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request an unshelving of a following machine: 
+I would like to request an unshelving of a following machine:
 
-lab name = `{labname}`  
-machine name = `{hostname}`  
+lab name = {labname}  
+machine name = {hostname}  
 
 
 Best regards,
@@ -397,7 +395,7 @@ Best regards,
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required information**: lab name and machine name.
 * **Expected response time:** Days.
-* **Cost:** During unshelving a machine will be started with same [machine type](/services/machine-types/#compute-optimized-machine-types) as before shelving 
+* **Cost:** During unshelving a machine will be started with same [machine type](/services/machine-types/#compute-optimized-machine-types) as before shelving
 
 
 ### Delete a machine
@@ -408,10 +406,10 @@ Click the button below to order a machine deletion.
   subject: "Delete a machine {hostname} @ {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a deletion of a following machine: 
+I would like to request a deletion of a following machine:
 
-lab name = `{labname}`  
-machine name = `{hostname}`  
+lab name = {labname}  
+machine name = {hostname}  
 
 I am aware that this process is irreversible and all data stored on this machine will be permanently deleted.
 
@@ -447,7 +445,7 @@ You may expand the existing storage volumes inside your lab up to a maximum of 2
   subject: "Storage volume expansion - {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a storage volume expansion: 
+I would like to request a storage volume expansion:
 
 lab name = {labname}  
 machine name = {machinename}  
@@ -475,12 +473,11 @@ Best regards,
       "Archive",
       "Work",
       "Scratch",
-    ],
-    pattern: "{1,}"
+    ]
   },
   { label: "Current size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
   { label: "New size (in terabytes)", key: "terabytes1", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
-]' /> 
+]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required information**: lab name, machine name, volume name and intended size.
@@ -556,7 +553,7 @@ You may add new volumes to your lab machines. We will need separate orders for e
   subject: "New storage volume - {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a new storage volume: 
+I would like to request a new storage volume:
 
 lab name = {labname}  
 machine name = {machinename}  
@@ -581,8 +578,7 @@ Best regards,
       "Archive",
       "Work",
       "Scratch",
-    ],
-    pattern: "{1,}"
+    ]
   },
   { label: "Size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
 ]' />
@@ -657,7 +653,7 @@ This form serves for ordering of volume deletion.
   subject: "Volume deletion - {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a deletion of a storage volume. 
+I would like to request a deletion of a storage volume.
 
 lab name = {labname}  
 machine name = {machinename}  
@@ -682,8 +678,7 @@ Best regards,
       "Work",
       "Scratch",
       "Cargo",
-    ],
-    pattern: "{1,}"
+    ]
   },
 ]' />
 
@@ -785,6 +780,3 @@ Best regards,
 * **Required attachment**: None.
 * **Expected delivery time:** Days.
 * **Cost:** Included in your lab subscription.
-
-
-
