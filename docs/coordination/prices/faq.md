@@ -69,18 +69,22 @@ You can indirectly reduce the size of your storage volume by moving data to a ne
 
 ### Can we have several invoice profiles under our data space? 
 
-Yes, you may add separate invoice profiles for labs under your data space in the data space management section of our [service desk](/service-desk/data-space-orders/#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile. 
+Yes, you may add separate invoice profiles for individual labs under your data space in the data space management section of our [service desk](/service-desk/data-space-orders/#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile. 
 
 ### How can we update the account information on the invoice profile? 
 
 You may update existing invoice profiles in the data space management section of our [service desk](/service-desk/data-space-orders/#update-existing-invoice-profile)
 
-### When should we expect bills? 
+### When should we expect our invoices? 
 
-In short, you should expect the initial invoice for data space subscriptions, lab subscriptions and 1Y/3y commitments of machines and storage to be in the next quarter after your lab deployment. Usage of various services will be combined into one invoice expected to be sent quarterly. Billing details for each service is specified in the [services specification](/services/specifications/) under the "Billing" sections. 
+We aim to ship invoices after each quarter. The first invoices under the new services model is planned shipped in the last week of October 2022.
 
-### I am billed too much, now what? 
+### When should we expect commit services to be invoices? 
 
-Oh, we are truly sorry. This may happen from time to time. Our billing process automatically process services orders that we manually punch. From time to time, this may lead to discrepancies between expected and billed amount. [Contact us](/contact) for a review. For billing inaccuracies attributable to us, we will issue a credit memo specifying the incorrect amount in the affected invoice. The process is specified in the HUNT Cloud Services Agreement that we are holding with your service center.
+You should expect the initial invoice for data space subscriptions, lab subscriptions and 1Y/3Y commitments of machines and storage to be in the next quarter after your lab deployment. Usage of various services will be combined into one invoice expected to be sent quarterly. Invoice details for each service is specified in the [services specification](/services/specifications/) under the "Billing" sections. 
+
+### I am invoiced too much, now what? 
+
+Oh, we are truly sorry. This may happen from time to time. Our invoice process automatically process services orders. From time to time, this may lead to discrepancies between expected and invoice amount. [Contact us](/contact) for a review. For inaccuracies attributable to us, we will issue a credit memo specifying the incorrect amount in the affected invoice. The process is specified in the HUNT Cloud Services Agreement that we are holding with your service center.
 
 
