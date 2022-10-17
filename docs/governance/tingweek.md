@@ -17,7 +17,7 @@ We arrange a layered set of Tings for distinct groups in our community. The meet
 
 ::: tip Next Ting week
 
-- **Lab ting**: Tuesday 18 October 2022 - 2 to 4 p.m. CET
+- **Lab ting**: Tuesday 18 October 2022 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-labting-agenda.pdf))
 - **Data space ting**: Wednesday 19 October 2022 - 9 to 11 a.m. CET
 - **Data controller ting**: Wednesday 19 October 2022 - 1 to 3 p.m. CET
 - **Lagtun**: Thursday 20 October 2022 - 9 to 11 a.m. CET
