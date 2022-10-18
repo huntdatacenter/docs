@@ -73,4 +73,4 @@ brew install --cask tigervnc-viewer
 
 ### Windows or other
 
-https://bintray.com/tigervnc/stable/tigervnc/1.11.0
+https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/vncviewer64-1.12.0.exe/download
