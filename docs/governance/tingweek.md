@@ -30,6 +30,7 @@ The intent of the Ting report is to give you the opportunity to read up on **wha
 
 The reports include a letter with reflections from the last Ting period as well as chapters with business description, risk factors, description of properties, and external and internal controls.
 
+- [Ting report #6 (2022-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-report.pdf)
 - [Ting report #4 (2021-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-report.pdf)
 - [Ting report #3 (2021-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-report.pdf)
 - [Ting report #2 (2021-02)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-report.pdf)
