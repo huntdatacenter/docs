@@ -18,6 +18,5 @@ Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf
 - **Lab ting**: Tuesday 18 October 2022 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-labting-agenda.pdf))
 - **Data space ting**: Wednesday 19 October 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-dataspaceting-agenda.pdf))
 - **Data controller ting**: Wednesday 19 October 2022 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-datacontrollerting-agenda.pdf))
-- **Lagtun**: Thursday 20 October 2022 - 9 to 11 a.m. CET
-
+- **Lagtun**: Thursday 20 October 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-lagtun-agenda.pdf))
 :::
