@@ -15,6 +15,36 @@ Read more about [Lagtun](/tingweek/lagtun/) and the use of [resolutions](/tingwe
 
 :::
 
+#### [Clarify reactivation requirements for Lab users](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-resolutions.pdf#page=4)
+
+- TOPIC: Finance
+- ID: R9/LT7/T7/22
+
+#### [Enable individual service orders for service units](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-resolutions.pdf#page=3)
+
+- TOPIC: Finance
+- ID: R8/LT7/T7/22
+
+#### [Clarify machine adjustment responsibilities](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-resolutions.pdf#page=6)
+
+- TOPIC: Resources
+- ID: R10/LT6/T6/22
+
+#### [Clarify community membership criteria](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-resolutions.pdf#page=5)
+
+- TOPIC: Communication
+- ID: R9/LT6/T6/22
+
+#### [Increase awareness of data export controls](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-resolutions.pdf#page=4)
+
+- TOPIC: Data
+- ID: R8/LT6/T6/22
+
+#### [Enable cost sharing for lab services](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-resolutions.pdf#page=3)
+
+- TOPIC: Finance
+- ID: R7/LT6/T6/22
+
 #### [Explore options for a data compliance archive](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=6)
 
 - TOPIC: Data
@@ -34,7 +64,6 @@ Read more about [Lagtun](/tingweek/lagtun/) and the use of [resolutions](/tingwe
 
 - TOPIC: Governance
 - ID: R2/LT5/T5/22
-
 
 #### [Increase conditions for international collaborations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=8)
 
