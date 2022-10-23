@@ -95,7 +95,7 @@ We aim to keep individual volumes below 20 TB if possible. The soft limit is set
 
 ### Do we have 'backup' in our lab?
 
-Yes and no. You have restore functionality by default for two folders on your home machine, **`/mnt/work`** and **`/mnt/archive`**. No other volumes on your home machine, nor your iaas and blue machines have restore activated by deployment.
+Yes and no. You have restore functionality by default for two folders on your home machine, **`/mnt/work`** and **`/mnt/archive`**. No other volumes on your home machine, nor your iaas and blue machines have restore activated by deployment. We strongly recommend to store a copy of data that you care about in one of the above folders. 
 
 
 ### How does restore work?
