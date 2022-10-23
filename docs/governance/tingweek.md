@@ -52,13 +52,13 @@ This is our allting were we focuses on the **user experience inside labs**, and 
 
 This is the Ting where we appoint time to evolve scientific organization and **cross-lab coordination in data spaces**, including coordination of compliance, data, technologies, knowledge and financial aspects. The original Coordinator ting changed name to Data space ting in Ting week #5 to reflect contractual roles in the new services model.
 
-### Enterprise ting
+### Data controller ting
 
-This is the Ting where we appoint time to meet with users from or affiliated with **private institutions**. We have a special focus on issues that is relevant for small and medium sized enterprises (SMEs) and larger contract research non-profit institutions.
+This is the Ting where we appoint time to meet for cross-organizational dialogue on privacy, security and ethics within HUNT Cloud. Privacy, security and compliance coordinators are invited.
 
 ### Lagtun
 
-Lagtun is the Ting where we appoint time for cross-organizational discussions among **data controllers, service centers and large data spaces** in the community. This Ting gives direct advice on our strategic and tactical development to the HUNT Cloud management. [Read more](/tingweek/lagtun/).
+Lagtun is the Ting where we appoint time to evolve data-driven science and the scientific direction for HUNT Cloud through cross-organizational discussions among **data controllers, service centers and large data spaces** in the community. Lagtun gives direct advice on our strategic and tactical development to the HUNT Cloud management in the form of resolutions. [Read more](/tingweek/lagtun/).
 
 
 
@@ -97,10 +97,10 @@ Individual Tings are scheduled over the week on the same time slots. The current
 
 #### Ting week #7 (2022-10)
 
-- **Lab ting**: Tuesday 18 October 2022 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 19 October 2022 - 9 to 11 a.m. CET
-- **Data controller ting**: Wednesday 19 October 2022 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 20 October 2022 - 9 to 11 a.m. CET
+- **Lab ting**: Tuesday 18 October 2022 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-labting-agenda.pdf))
+- **Data space ting**: Wednesday 19 October 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-dataspaceting-agenda.pdf))
+- **Data controller ting**: Wednesday 19 October 2022 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-datacontrollerting-agenda.pdf))
+- **Lagtun**: Thursday 20 October 2022 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-lagtun-agenda.pdf))
 
 #### Ting week #6 (2022-05)
 
