@@ -76,7 +76,7 @@ The intention behind HUNT Cloud is to establish collaborative lab environments w
 
 ::: danger WARNING
 
-There is -no- restore (backup) on your home-folder. All data in **`home`** may be lost in case of unexpected events. We strongly recommend that you keep the scientific data that your care about on the **`work`** or **`archive`** folders. [Click here](/faq/storage/#restore) to read more about restore.
+There is -no- restore (backup) on your home-folder. All data in **`home`** may be lost in case of unexpected events. We strongly recommend that you keep the scientific data that your care about on the **`work`** or **`archive`** folders. [Click here](/data/faq/#restore) to read more about restore.
 
 :::
 
@@ -146,119 +146,11 @@ We do -not- recommend using `chmod` to restrict access to data within your lab f
 
 ## Restore
 
-### Do I have 'backup' in my lab?
+::: tip 
 
-Yes and no. We have activated restore functionality for two folders in your home machine by default, **`/mnt/work`** and **`/mnt/archive`**. No other volumes on your home machine, nor your iaas and blue machines have restore activated by deployment.
-
-::: warning
-
-Restore is activated for two volumes in your lab: **`/mnt/work`** and **`/mnt/archive`**. No other volumes have restore by default.
+See our [Data coordinator FAQ](/data/faq/#restore) for questions regarding backup and restore.
 
 :::
-
-### How does restore work?
-
-The restore is intended to protection your data against accidental overwrites and accidental deletion of files in your lab. Therefore, we do nightly copies of data that has changed during the day from your **`/mnt/work`** and **`/mnt/archive`** volumes. This allows you to revert to previous versions of your files from the period that your restore copies are preserved.
-
-::: danger
-
-Your data are stored in one (1) physical location. This means that your restore do -not- protect against accidents that destroy this location. Keep at least one copy of your data outside HUNT Cloud, or use our tape service to keep encrypted offsite tapes, to ensure improved geographical distribution for data that need such protection.
-
-:::
-
-### How long do you keep my restore copies?
-
-We keep restore files for thirty (30) days by default. This means that you can revert to daily versions of your files in your **`/mnt/work`** and **`/mnt/archive`** volumes as they existed on an individual day over this period.
-
-### Where do I find my restore files?
-
-You can see your restore files by visiting the **`.restore`** folder in the **`/mnt/work`** and **`/mnt/archive`** volumes.
-
-```bash
-ls /mnt/work/.restore
-ls /mnt/archive/.restore
-```
-
-This should give you the list of folders with the date and time for your individual restores in that folder.
-
-```
-2020-01-29-054701  2020-02-10-054701  2020-02-23-054701
-2020-01-30-054701  2020-02-11-054701  2020-02-24-054701
-2020-01-31-054701  2020-02-13-054701  2020-02-25-054701
-2020-02-01-054701  2020-02-14-054701  2020-02-26-054701
-2020-02-02-054701  2020-02-15-054701  2020-02-27-054701
-2020-02-03-054701  2020-02-16-054701
-2020-02-04-054701  2020-02-17-054701
-2020-02-05-054701  2020-02-18-054701
-2020-02-06-054701  2020-02-19-054701
-2020-02-07-054701  2020-02-20-054701
-```
-
-### How can I restore a file?
-
-You will find your files inside the above folders. Move into the folder, for example by using the **`cd <foldername>`** command to identify your file of interest. Then, copy that file or folder back into your current lab folders.
-
-```bash
-# -- Principal example
-cp /mnt/archive/.restore/2020-02-27-054701/<my-file.txt> .
-ls
-```
-
-### Who is responsible for our restore?
-
-We are responsible to ensure that the technical side of your restore work for the **`/mnt/work`** and **`/mnt/archive`** volumes. One or more lab users are assigned to the **`restore`** group that can remove files for your restore folders. These users are responsible for the data inside the restore folders.
-
-### Can I delete restore folders?
-
-Labs users assigned to the **`restore`** group can edit and delete files inside your restore folders. You can see if you are attached to this group by running the **`groups`** command:
-
-```bash
-groups
-```
-
-You should be able to delete restore files if **`restore`** is among the listed groups. Contact your lab leader if you are not listed and you think that you need such authorization. You lab leader can [contact us](/contact) and request that you gets added to this group.
-
-### Do restore consume storage space?
-
-Yes. Your restore folders are stored inside your  **`/mnt/work`** and **`/mnt/archive`** volumes. This will consume storage space in these volumes as a regular folder. Typically, restore will take one duplicate copy of your data and then incremental changes over the 30 day period. You should therefore plan your volume sizes for at least twice the amount of data that you plan to store.
-
-### What is the size of our restore folders?
-
-You can see the consumption of your default restore folders with the following command:
-
-```bash
-du -sh /mnt/work/.restore/*
-du -sh /mnt/archive/.restore/*
-```
-
-### Why is my restore folders filling my volumes?
-
-We take nightly copies of data that has changed over the last day. Thus, folders with data that change on a daily basis will continuously grow your restore. For example, if you store temporary files from your analysis in work or archive. One good way to avoid this is to use your **`/mnt/scratch`** volume for such temporary files.
-
-### Can we deactivate our restore?
-
-Yes. Lab leaders can [contact us](/contact) and request that we deactivate restore for individual folders in your home machine.
-
-### Can I control if my restore works as intended?
-
-Yes. You can check for yourself that your restore is working as intended:
-
-1. Start by controlling that your restore folders do exist, and if so hold duplicate copies from the last 30 days. You should expect to see 30 subfolders with daily time stamps within each **`.restore`** folder:
-
-```bash
-ls /mnt/work/.restore/
-ls /mnt/archive/.restore/
-```
-
-2. Check the size of your daily restore folders (see above). You should expect the earliest date to hold most of your date (largest storage size) and the others to show sizes according to your data changes. Depending on your volume sizes, these commands may take up to many minutes.
-
-3. Manually inspect the content of individual folders inside your daily restores using **`cd <folder>`**.
-
-4. Test that you are able to [copy out a file or folder](/faq/storage/#how-can-i-restore-a-file) into your regular lab storage.
-
-Celebrate the success if you are able to successfully export a file, or [contact us](/contact) if you think something is wrong with your restore.
-
-
 
 
 

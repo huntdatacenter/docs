@@ -37,12 +37,14 @@ We recommend that you [expand your volumes](/service-desk/lab-orders/#store), or
 
 ### Accidentially deleted or overwritten files
 
-It's frustrating to accidentially delete or overwrite data that you care about. For files on `/mnt/work` and `/mnt/archive` you have nightly copies stored in 30 days. [Click here](/faq/storage/#where-do-i-find-my-restore-files) to see how you can find your restore copies and how your can [restore a file](/faq/storage/#how-can-i-restore-a-file).
+It's frustrating to accidentially delete or overwrite data that you care about. For files on `/mnt/work` and `/mnt/archive` you have nightly copies stored in 30 days. [Click here](/data/faq/#where-do-i-find-my-restore-files) to see how you can find your restore copies and how your can [restore a file](/data/faq/#how-can-i-restore-a-file).
+
 
 
 ## Workbench
 
 See our [Workbench troubleshooting section](/working-in-your-lab/workbench/troubleshooting/).
+
 
 
 ## Software
