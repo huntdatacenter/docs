@@ -132,16 +132,19 @@ This form defined the invoice profile for your cloud services fees. One invoice 
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Invoice Profile" version 1.8.
+The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.0.
 
 **Data space**
 
-- *NAME*: Specify the data space where you would like to attache the invoice profile.
+- *NAME*: Specify the data space where you would like to attach the invoice profile.
 - *LEADER*: Specify the full name of the data space leader that is responsible for the payment.
 
 **Invoice unit**
 
-Add DATA SPACE or leave blank if the profile is for your data space. Data spaces on the BLUE subscription have the option to specify labs as individual invoice profiles. If so, add a lab name that is already registered under your data space.
+*DATA SPACE* is default. This means that the Invoice profile will cover accrued costs for all labs attached to your data space. 
+
+You may register additional invoice profiles if you want to separate lab costs in individual bills. To do so, register one new invoice profile per lab and add your LAB NAME as the invoice unit. Note that you are required to already have registered one invoice profile with DATA SPACE as invoice unit before you can add individual invoice profiles for your labs.
+
 
 **Invoice contact**
 
