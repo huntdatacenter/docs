@@ -16,11 +16,9 @@ description: Usage guide for MobaXterm.
 
 (1) A working SSH connection to both entry and home as described in the [How To Connect To Your Lab](/getting-started/) guide.
 
-(2) The Moba file with credentials and configuration will be handy to ease the installation. [Contact us](/contact) for a new file if you need one.
+(2) The MobaXterm configuration file to simplify your setup. You can order a new one in the [service desk](/service-desk/user-orders/#mobaxterm-configuration-file).
 
 Without these it will be hard to ensure a smooth MobaXterm configuration.
-
-<!-- Make sure Putty is installed as shown in the guide above, before you use MobaXterm. -->
 
 :::
 
@@ -42,17 +40,6 @@ Lab users from NTNU can install MobaXterm using the software center.
 2.2 Choose SSH tab and make sure that option `Use internal SSH agent "Mobagent"` is checked. Then click OK to save the settings.
 
 ![mobaxterm_allow_mobagent](./images/mobaxterm_allow_mobagent.png)
-
-<!--
-2.3 After clicking on button `Show keys currently loaded in MobAgent` you might be asked to start MobAgent.
-Confirm by clicking Yes:
-
-![mobaxterm_start_mobagent](./images/mobaxterm_start_mobagent.png)
-
-2.4 If you already have any ssh key you could see them in the list. If not we will make them later in step 3.
-You can click on Close button.
-
-![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_keys.png) -->
 
 2.3 If you are asked to confirm restart of MobaXterm click `Yes` to confirm.
 
