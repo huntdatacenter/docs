@@ -162,8 +162,6 @@ sudo vim /etc/hosts
    you will need to request access to Profile through NTNU Hjelp.
    If you are not NTNU affiliated you can contact IT department of your organisation / university.
 
-  :::
-
 3. Confirm the installation of profile.
 
    ![macos-profiles-continue.png](./images/macos-profiles-continue.png)
