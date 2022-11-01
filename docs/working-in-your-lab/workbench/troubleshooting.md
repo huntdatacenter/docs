@@ -38,7 +38,7 @@ Your Workbench certificate is time limited. You will meet the **`403 Forbidden`*
 
 ### Has my lab certificate expired?
 
-If you were previously able to access Workbench and now your browser reports expired/unsafe certificates (e.g.: Your connection is not private) please reach out in your lab channel on Slack or contact us on [email](/contact). If the certificate is expired we can usually sign and update new lab certificates quickly.
+If you were previously able to access Workbench and now your browser reports expired/unsafe certificates (e.g.: `Your connection is not private` / `ERR_CERT_DATE_INVALID`) please reach out in your lab channel on Slack or contact us on [email](/contact). If the certificate is expired we can usually sign new lab certificates and update the service quickly.
 
 ![expired_server_cert.png](./images/expired_server_cert.png)
 
