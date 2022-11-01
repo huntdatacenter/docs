@@ -129,7 +129,7 @@ Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 RStudio is configured to use packages installed in the conda environment named `r-base`.
 You can find your R version using [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
 
-1. Open your workbench terminal.
+1. Open your Workbench terminal.
 
 ![workbench_terminal.png](./images/workbench_terminal.png)
 
