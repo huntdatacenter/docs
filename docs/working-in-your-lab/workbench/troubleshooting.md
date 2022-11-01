@@ -70,13 +70,20 @@ If the error still persists, don't hesitate to reach out in your lab channel on 
 
 ## MATLAB
 
+### Error - 'matlab' executable not found in PATH
+
+Access to MATLAB requires the application to be installed and activated in your lab.
+
+If you click on the MATLAB icon and the application is missing you will meet a red error box stating that "matlab executable not found in PATH".
+Contact your lab coordinator to investigate your licensing options and [contact us](/contact) us with your installation order.
+
 ### Icons in user interface disappeared
 
 If MATLAB icons disappeared and application is stuck loading you will need to reset user settings.
 
 <!-- [matlab icons missing](./images/matlab_icons_missing.png) -->
 
-Removing user settings can be done in Workbench terminal:
+Removing user settings can be done in [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
 
 ```bash
 ls /mnt/work/workbench/$USER/.matlab
@@ -93,6 +100,6 @@ An unresponsive or slow Workbench may be caused by several things. Here's a smal
 
 - Restart your Workbench environment to start fresh in the case something got hung up. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment) to see how.
 
-- Check the resource consumption of your `home`-machine to ensure that you have availble free memory and cpu resources, for example by logging into your lab `home`-machine and run [htop](/working-in-your-lab/technical-tools/htop/). Consider to upgrade your machine size in the [service desk](/service-desk/lab-orders/#update-machine-size) if your are low on free resources.
+- Check the resource consumption of your `home`-machine to ensure that you have available free cpu and memory resources, for example by logging into your lab `home`-machine and run [htop](/working-in-your-lab/technical-tools/htop/). Consider to upgrade your machine size in [Service desk](/service-desk/lab-orders/#update-machine-size) if you are low on free resources.
 
-[Contact us](/contact) if none of these works for further investigation.
+[Contact us](/contact) for further investigation if none of these works.

@@ -45,7 +45,7 @@ Jupyter Notebooks and code are stored in the shared `work` volume on your home m
 Yes. Here's an example on how you create a Conda environments with Python and IPython kernel:
 
 ```
-conda create -n <name> 'python==3.8' 'ipykernel'
+conda create -n <name> 'python~=3.10.*' 'ipykernel'
 ```
 
 And here's an example on how you create a Conda environment with R and R-IRkernel kernel and commonly used packages:
