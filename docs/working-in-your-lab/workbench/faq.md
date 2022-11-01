@@ -62,7 +62,7 @@ Here is an example of Notebooks that are connected to Conda environments.
 
 ### How do I change the Conda environment for my Notebook?
 
-You can also change Conda environment of your Jupyter Notebook later, by switching the kernel:
+You can change Conda environment of your Jupyter Notebook when it is open, by switching the kernel in the top right corner of menu:
 
 ![wb_notebook_kernel.png](./images/wb_notebook_kernel.png)
 
