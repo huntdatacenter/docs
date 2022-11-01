@@ -73,7 +73,7 @@ Then [restart your Workbench environment](/working-in-your-lab/workbench/faq/#ho
 
 If MATLAB icons disappeared and application is stuck loading you will need to reset user settings.
 
-[matlab icons missing](./images/matlab_icons_missing.png)
+<!-- [matlab icons missing](./images/matlab_icons_missing.png) -->
 
 Removing user settings can be done in Workbench terminal:
 
