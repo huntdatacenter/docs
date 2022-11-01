@@ -154,17 +154,27 @@ sudo vim /etc/hosts
 
 1. Open the system profile config (.mobileconfig) attached in archive.
 
-2. Confirm the installation of profile.
+2. In `System Preferences` open section `Profiles`.
+
+   ::: warning NTNU managed Macbook
+
+   If your Macbook is managed by NTNU and you do not see section Profiles in your System Preferences
+   you will need to request access to Profile through NTNU Hjelp.
+   If you are not NTNU affiliated you can contact IT department of your organisation / university.
+
+  :::
+
+3. Confirm the installation of profile.
 
    ![macos-profiles-continue.png](./images/macos-profiles-continue.png)
 
-3. Enter the passphrase that you received on signal and then confirm.
+4. Enter the passphrase that you received on signal and then confirm.
 
    ![macos-profiles-credentials.png](./images/macos-profiles-credentials.png)
 
-4. Quit your browser and restart it again for the certificate to get recognized.
+5. Quit your browser and restart it again for the certificate to get recognized.
 
-5. When opening Workbench for the first time you will be asked for macOS password,
+6. When opening Workbench for the first time you will be asked for macOS password,
    allowing the browser to access your client certificate stored in Keychain.
    After filling in the password you can confirm by clicking on `Always allow` / `Tillat alltid`.
 
