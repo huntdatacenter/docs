@@ -22,9 +22,7 @@ See our [Workbench FAQ](/working-in-your-lab/workbench/faq/) for general questio
 
 ### I am unable to access my Workbench applications?
 
-If you were previously able to access your applications in Workbench (e.g. RStudio), and then the application suddenly stopped working, one quick approach is to try restarting your Workbench environment. Follow the guide to [restart Workbench environment](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). [Contact us](/contact) if you need further assistance.
-
-![expired_server_cert.png](./images/expired_server_cert.png)
+If you were previously able to access your applications in Workbench (e.g. RStudio), and then the application suddenly stopped working, one quick approach is to try restarting your Workbench environment. Follow the guide to [restart Workbench environment](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). [Contact us](/contact) or reach out in your lab channel on Slack if you do not find answer in [FAQ](/working-in-your-lab/workbench/faq/) or troubleshooting sections below.
 
 ### 504: Gateway Timeout Error
 
@@ -41,6 +39,8 @@ Your Workbench certificate is time limited. You will meet the **`403 Forbidden`*
 ### Has my lab certificate expired?
 
 If you were previously able to access Workbench and now your browser reports expired/unsafe certificates (e.g.: Your connection is not private) please reach out in your lab channel on Slack or contact us on [email](/contact). If the certificate is expired we can usually sign and update new lab certificates quickly.
+
+![expired_server_cert.png](./images/expired_server_cert.png)
 
 ## RStudio
 
