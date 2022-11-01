@@ -8,13 +8,13 @@ description: Workbench troubleshooting in your HUNT Cloud lab.
 
 # Workbench troubleshooting
 
-**Unfortunately, sometimes things don't work as intended. Here is a collect of issues you might encounter in your workbench. Contact us if you are still stuck after reading up.**
+**Unfortunately, sometimes things don't work as intended. Here is a collect of issues you might encounter in your Workbench. Contact us if you are still stuck after reading up.**
 
 [[toc]]
 
 ::: tip
 
-See our [workbench FAQ](/working-in-your-lab/workbench/faq/) for general questions about the workbench..
+See our [Workbench FAQ](/working-in-your-lab/workbench/faq/) for general questions about Workbench.
 
 :::
 
@@ -26,15 +26,21 @@ If you were previously able to access your applications in Workbench (e.g. RStud
 
 ![expired_server_cert.png](./images/expired_server_cert.png)
 
+### 504: Gateway Timeout Error
+
+If you get 504 error code while trying to login to Workbench please reach out in your lab channel on Slack or contact us on [email](/contact).
+In such cases you will not be able to access Workbench.
+This does not apply when you are able to open Workbench, but get 504 when trying to access specific applications, in such cases try to go through sections below.
+
 ### 403: Forbidden - Expired client certificate
 
-Your Workbench certificate is time limited. You will meet the **`403 Forbidden`** message below when your certificate expire. Head over to the [service desk](/service-desk/user-orders/#workbench-reissue) to order a new.
+Your Workbench certificate is time limited. You will meet the **`403 Forbidden`** message below when your certificate expire. Head over to the [service desk](/service-desk/user-orders/#workbench-reissue) to order a new certificate.
 
 ![expired_certificate.png](./images/expired_certificate.png)
 
 ### Has my lab certificate expired?
 
-If you were previously able to access Workbench and now your browser reports expired/unsafe certificates do not hesitate to contact us on [email](/contact) or Slack, we can usually update lab certificates quickly.
+If you were previously able to access Workbench and now your browser reports expired/unsafe certificates (e.g.: Your connection is not private) please reach out in your lab channel on Slack or contact us on [email](/contact). If the certificate is expired we can usually sign and update new lab certificates quickly.
 
 ## RStudio
 
@@ -53,15 +59,10 @@ Try reloading the page (`Ctrl + R` / `CMD + R`) to reconnect with RStudio sessio
 
 ### 504: Gateway Timeout Error
 
-The 504 error may be shown when your request are fine, but the workbench can not generate the requested resource. In such cases you will not be able to access the application. If you were previously able to access your RStudio in Workbench, one potential approach is to log into your lab machine in a shell and manually resetting your RStudio settings: 
+The 504 error may be shown when you access `/user/<username>/rstudio/`, but Workbench cannot start RStudio. If you were previously able to access your RStudio in Workbench, one potential approach is using [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal) and manually resetting your RStudio settings:
 
 ```bash
-# -- get today's date
-date=`date +%Y-%m-%d`
-
-# -- move rstudio configuration
-#    to a new folder marked by today's date
-mv /mnt/work/workbench/${USER}/.local/share/rstudio /mnt/work/workbench/${USER}/.local/share/rstudio-${date}
+mv "/mnt/work/workbench/${USER}/.local/share/rstudio" "/mnt/work/workbench/${USER}/.local/share/rstudio-$(date +%Y-%m-%d)"
 ```
 
 Then [restart your Workbench environment](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). If the error still persists, don't hesitate to [contact us](/contact) for further assistance.
@@ -83,13 +84,13 @@ rm -r /mnt/work/workbench/$USER/.matlab
 
 ## Experience
 
-### Unresponsive workbench
+### Unresponsive Workbench
 
-An unresponsive or slow workbench may be caused by several things. Here's a small checklist to narrow down potential causes:
+An unresponsive or slow Workbench may be caused by several things. Here's a small checklist to narrow down potential causes:
 
 - Use Google Chrome as your browser. Other browsers don't support all features and might cause potential silent failures.
 
-- Restart your workbench environment to start fresh in the case something got hung up. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment) to see how.
+- Restart your Workbench environment to start fresh in the case something got hung up. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment) to see how.
 
 - Check the resource consumption of your `home`-machine to ensure that you have availble free memory and cpu resources, for example by logging into your lab `home`-machine and run [htop](/working-in-your-lab/technical-tools/htop/). Consider to upgrade your machine size in the [service desk](/service-desk/lab-orders/#update-machine-size) if your are low on free resources.
 
