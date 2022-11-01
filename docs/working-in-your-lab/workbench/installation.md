@@ -215,19 +215,19 @@ https://<labname>.lab.hdc.ntnu.no
 https://demolab.lab.hdc.ntnu.no
 ```
 
-Click `OK` if you get a `User Identification Request` for your new certificate and ensure that the `Remember this decision` is checked. The certificate are to be issued by:
+Click `OK` if you get a `User Identification Request` for your new certificate and ensure that the `Remember this decision` is checked.
+The certificates are to be issued by:
 
 ```
 Organization: "HUNT Cloud"
 Issued Under: "HUNT Cloud Trust Services"
 ```
 
+![chrome_select_certificate_confirm.png](./images/chrome_select_certificate_confirm.png)
+
 3. Sign in with your HUNT Cloud lab username and lab passphrase. This is the passphrase that you made on your first login.
 
 4. With a little bit of luck you should now see your new Workbench. Click around and explore your new world!
-
-
-![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
 ::: tip
 
@@ -235,11 +235,13 @@ Read [Principles](/working-in-your-lab/workbench/principles/) and [FAQ](/working
 
 :::
 
+![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
+
 ## Immediate troubleshooting
 
-This section includes only main questions regarding first setup.
+This section includes only main questions regarding first time setup.
 
-If you do not find your answer here you should also look into [FAQ](/working-in-your-lab/workbench/faq/) and [Troubleshooting](/working-in-your-lab/workbench/troubleshooting/)
+You should also look into [FAQ](/working-in-your-lab/workbench/faq/) and [Troubleshooting](/working-in-your-lab/workbench/troubleshooting/) if you do not find your answers here.
 
 ### I don't remember my passphrase
 
