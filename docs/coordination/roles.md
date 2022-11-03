@@ -6,7 +6,7 @@ description: This page contains information on the coordinator roles in HUNT Clo
 
 # Coordinator roles
 
-**Each data space appoints scientific coordinators to the following key responsibility areas: compliance, data, technology, knowledge and finance. These individuals are the point of contact for lab users in the data space and us when it comes to administrative issues and improvements.**
+**Each data space appoints scientific coordinators to the following key responsibility areas: compliance, data, technology, training and finance. These individuals are the point of contact for lab users in the data space and us when it comes to administrative issues and improvements.**
 
 
 [[toc]]
@@ -30,11 +30,11 @@ The data coordinator is the point of contact for issues related to data handling
 
 ### Technical coordinator
 
-The technical coordinator is the point of contact for issues related to the cloud services, such as storage and compute resources and analytical tools and software. This includes coordination and dialogue on topics such as configurations, adjustments, maintenance for labs under the data space, as well as development and piloting of new tools.
+The technical coordinator is our point of contact for issues related to the cloud services, such as storage and compute resources and analytical tools and software. This includes coordination and dialogue on topics such as configurations, adjustments, maintenance for labs under the data space, as well as development and piloting of new tools.
 
-### Knowledge coordinator
+### Training coordinator
 
-The knowledge coordinator is the point of contact for the spread of knowledge and expertise between lab users within the individual labs in your data space on topcis related to onboardings, common configurations, practical analytics, data space routines etc. This also include dialogues with us and other knowledge coordinators on user experience within your labs, user documentation and other educational topics.
+The training coordinator is our point of contact for the spread of knowledge and expertise between lab users within the individual labs in your data space on topcis related to onboardings, common configurations, practical analytics, data space routines etc. This also include dialogues with us and other training coordinators on user experience within your labs and how we best can evolve user documentation and other educational tools.
 
 ### Financial coordinator
 
