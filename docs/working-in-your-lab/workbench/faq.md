@@ -15,7 +15,7 @@ description: Frequently asked questions about Workbench in HUNT Lab.
 
 ::: tip Troubleshooting
 
-Head over to our [workbench troubleshooting](/working-in-your-lab/workbench/troubleshooting/) section if something is not working as expected.
+Head over to our [Workbench troubleshooting](/working-in-your-lab/workbench/troubleshooting/) section if something is not working as expected.
 
 :::
 
@@ -30,7 +30,7 @@ Workbench uses the same storages volumes as your home machine. This means that y
 /mnt/archive/<my-data-folder>
 ```
 
-### Where is my workbench code stored?
+### Where is my Workbench code stored?
 
 Jupyter Notebooks and code are stored in the shared `work` volume on your home machine:
 
@@ -45,7 +45,7 @@ Jupyter Notebooks and code are stored in the shared `work` volume on your home m
 Yes. Here's an example on how you create a Conda environments with Python and IPython kernel:
 
 ```
-conda create -n <name> 'python==3.8' 'ipykernel'
+conda create -n <name> 'python~=3.10.*' 'ipykernel'
 ```
 
 And here's an example on how you create a Conda environment with R and R-IRkernel kernel and commonly used packages:
@@ -62,7 +62,7 @@ Here is an example of Notebooks that are connected to Conda environments.
 
 ### How do I change the Conda environment for my Notebook?
 
-You can also change Conda environment of your Jupyter Notebook later, by switching the kernel:
+You can change Conda environment of your Jupyter Notebook when it is open, by switching the kernel in the top right corner of menu:
 
 ![wb_notebook_kernel.png](./images/wb_notebook_kernel.png)
 
@@ -129,7 +129,7 @@ Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 RStudio is configured to use packages installed in the conda environment named `r-base`.
 You can find your R version using [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
 
-1. Open your workbench terminal.
+1. Open your Workbench terminal.
 
 ![workbench_terminal.png](./images/workbench_terminal.png)
 
@@ -173,10 +173,13 @@ library(<package-name>)
 library(dplyr)
 ```
 
-If you have to defer to running `install.packages()` command, because your package is not available in Conda,
+### How do I install R packages not found in Conda?
+
+If you did not find R package in conda as described above and you have to defer to running `install.packages()` command,
 we advice to use `R` in [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal),
-instead of using RStudio. Packages installed through R in terminal will be available in RStudio.
-Otherwise RStudio might lead to a broken state of environment where your custom package will not work.
+instead of using RStudio. Otherwise RStudio might lead to a broken state of environment where your custom package will not work.
+
+Packages installed into `r-base` environment through **R** in terminal will be available in **RStudio**.
 
 ### How can I use R in Workbench terminal?
 
@@ -185,7 +188,7 @@ Start by activate `r-base` environment:
 conda activate r-base
 ```
 
-Then run R:
+Then start **R** inside your `r-base` environment:
 ```
 R
 ```

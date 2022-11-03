@@ -154,17 +154,25 @@ sudo vim /etc/hosts
 
 1. Open the system profile config (.mobileconfig) attached in archive.
 
-2. Confirm the installation of profile.
+2. In `System Preferences` open section `Profiles`.
+
+   ::: warning NTNU managed Macbook
+
+   If your Macbook is managed by NTNU and you do not see section Profiles in your System Preferences
+   you will need to request access to Profile through NTNU Hjelp.
+   If you are not NTNU affiliated you can contact IT department of your organisation / university.
+
+3. Confirm the installation of profile.
 
    ![macos-profiles-continue.png](./images/macos-profiles-continue.png)
 
-3. Enter the passphrase that you received on signal and then confirm.
+4. Enter the passphrase that you received on signal and then confirm.
 
    ![macos-profiles-credentials.png](./images/macos-profiles-credentials.png)
 
-4. Quit your browser and restart it again for the certificate to get recognized.
+5. Quit your browser and restart it again for the certificate to get recognized.
 
-5. When opening Workbench for the first time you will be asked for macOS password,
+6. When opening Workbench for the first time you will be asked for macOS password,
    allowing the browser to access your client certificate stored in Keychain.
    After filling in the password you can confirm by clicking on `Always allow` / `Tillat alltid`.
 
@@ -207,28 +215,38 @@ https://<labname>.lab.hdc.ntnu.no
 https://demolab.lab.hdc.ntnu.no
 ```
 
-Click `OK` if you get a `User Identification Request` for your new certificate and ensure that the `Remember this decision` is checked. The certificate are to be issued by:
+Click `OK` if you get a `User Identification Request` for your new certificate and ensure that the `Remember this decision` is checked.
+The certificates are to be issued by:
 
 ```
-Organizatoin: "HUNT Cloud"
+Organization: "HUNT Cloud"
 Issued Under: "HUNT Cloud Trust Services"
 ```
 
-3. Sign in with your HUNT Cloud lab username and lab password. This is the password that you made on your first login.
+![chrome_select_certificate_confirm.png](./images/chrome_select_certificate_confirm.png)
+
+3. Sign in with your HUNT Cloud lab username and lab passphrase. This is the passphrase that you made on your first login.
 
 4. With a little bit of luck you should now see your new Workbench. Click around and explore your new world!
 
+::: tip
+
+Read [Principles](/working-in-your-lab/workbench/principles/) and [FAQ](/working-in-your-lab/workbench/faq/) sections to learn more about Workbench.
+
+:::
 
 ![hunt-lab-workbench.png](./images/hunt-lab-workbench.png)
 
-
 ## Immediate troubleshooting
 
+This section includes only main questions regarding first time setup.
 
-### I don't remember my password
+You should also look into [FAQ](/working-in-your-lab/workbench/faq/) and [Troubleshooting](/working-in-your-lab/workbench/troubleshooting/) if you do not find your answers here.
+
+### I don't remember my passphrase
 
 ::: details Read more
-Don't worry. [Contact us](/contact) on email for a password reset.
+Don't worry. [Contact us](/service-desk/user-orders/#ssh-passphrase-reset) on email for an SSH passphrase reset.
 :::
 
 ### Firefox - Did Not Connect
@@ -251,14 +269,6 @@ If you see Error code: `SEC_ERROR_UNKNOWN_ISSUER` when accessing Workbench follo
 
 ::: details Read more
 
-Something is wrong with your certificate configuration or the server in your lab [Contact us](/contact) us for further investigation.
-
-:::
-
-### Error - 'matlab' executable not found in PATH
-
-::: details Read more
-
-Access to MATLAB requires the application to be installed in your lab. For now, if you click on the MATLAB icon and the application is missing you will meet a red error box stating that "matlab executable not found in PATH". Contact your lab coordinator to investigate your licensing options and [contact us](/contact) us with your installation order.
+Something is wrong with configuration of the server, reach out in your lab channel on Slack or [Contact us](/contact) us for further investigation.
 
 :::

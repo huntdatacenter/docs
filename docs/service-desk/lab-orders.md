@@ -34,7 +34,7 @@ Orders for active lab users, such as workbench access and password resets, are l
 Click the button below to order access for a new user to your lab.
 
 <ServiceDesk title="Request lab access for a new user" :template='{
-  subject: "New labuser - {username} @ {labname}",
+  subject: "New labuser - {username} @ {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request access for a new lab user.
@@ -50,7 +50,7 @@ Best regards,
 `,
 }' :fields='[
   { label: "Name of user", key: "username", field: "textfield" },
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
 ]' />
 
 * **Who can order:** Lab leaders and lab coordinators.
@@ -67,14 +67,14 @@ This order closes access for lab users that no longer need to use your lab, for 
 
 
 <ServiceDesk title="Request lab user deactivation" :template='{
-  subject: "Deactivate lab user - {username} @ {labname}",
+  subject: "Deactivate lab user - {username} @ {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to deactivate lab access for one of our lab users:
 
 ---
 username = {username}  
-lab name = {labname}  
+lab name = {lab_name}  
 ---
 
 I am looking forward to a confirmation of the deactivation on email.
@@ -87,7 +87,7 @@ Best regards,
 `,
 }' :fields='[
   { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
 ]' />
 
 * **Who can order:** Lab leaders and lab coordinators can deactivate access for all lab users. Lab users can deactivate their own lab access.
@@ -101,7 +101,7 @@ Best regards,
 Lab users are deactivated on request or after 180 inactive days. Lab leaders and lab coordinator can reactivate their access. We will need one order per lab for multiple lab access reactivations.
 
 <ServiceDesk title="Request lab user reactivation" :template='{
-  subject: "Reactivate lab user - {username} @ {labname}",
+  subject: "Reactivate lab user - {username} @ {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to reactivate access for one of our lab users.
@@ -116,7 +116,7 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Name of user", key: "username", field: "textfield" }
 ]' />
 
@@ -133,7 +133,7 @@ Best regards,
 Lab user agreements needs to be renewed approximately every two years for accounts to be active. Click the button below to renew the lab user areement for one user.
 
 <ServiceDesk title="Renew user agreement" :template='{
-  subject: "Renew lab user agreement - {username} @ {labname}",
+  subject: "Renew lab user agreement - {username} @ {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to renew that lab user agreement for one of our lab users.
@@ -148,7 +148,7 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "User name", key: "username", pattern: "[-a-z0-9]{3,}", hint: "Lab user should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
 ]' />
 
@@ -172,16 +172,16 @@ Increase or decrease the computational power of one of your existing lab machine
 
 
 <ServiceDesk title="Request a machine size update" :template='{
-  subject: "Update machine size - {labname}",
+  subject: "Update machine size - {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a machine update:
 
 ---
-lab name = {labname}  
-machine name = {machinename}  
-current machine type = {machine_type}  
-new machine type = {newmachine}  
+lab name = {lab_name}  
+machine name = {vm_name}  
+current machine type = {source_vm_type}  
+new machine type = {target_vm_type}  
 ---
 
 I am aware that the update will require a machine restart.
@@ -194,10 +194,10 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Current machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
-  { label: "New machine type", key: "newmachine", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" }
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Current machine type", key: "source_vm_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+  { label: "New machine type", key: "target_vm_type", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" }
 ]' />
 
 
@@ -219,13 +219,13 @@ Machine types deployed with GPU (GPU machines) can not be updated after deployme
 Add a [new machine](/services/machine-types/) to your lab. A CPU machine is the default lab machine with CPU and memory aimed at data analysis.
 
 <ServiceDesk title="Request a new lab machine" :template='{
-  subject: "New CPU machine - {labname}",
+  subject: "New CPU machine - {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a new CPU machine in our lab:
 
 ---
-lab name = {labname}  
+lab name = {lab_name}  
 machine type = {machine_type}  
 storage size = {terabytes} TB  
 subscription = {subscription}  
@@ -239,7 +239,7 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
   {
@@ -268,13 +268,13 @@ Best regards,
 Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) to your lab.
 
 <ServiceDesk title="Request a new GPU machine" :template='{
-  subject: "New GPU machine - {labname}",
+  subject: "New GPU machine - {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a new GPU machine in our lab:
 
 ---
-lab name = {labname}  
+lab name = {lab_name}  
 gpu type = {nvidia.p100}  
 machine type = {machine_type}  
 storage size = {terabytes} TB  
@@ -289,7 +289,7 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "GPU type", key: "nvidia.p100", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
   { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
@@ -318,15 +318,17 @@ Best regards,
 Add a fleet of blue machines to distribute analysis for large scale analysis, for example by utilizing tools such as our [BlueBox](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/bluebox/).
 
 <ServiceDesk title="Request a fleet of Blue machines" :template='{
-  subject: "Fleet of blue machines - {labname}",
+  subject: "Fleet of blue machines - {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a fleet of the following blue machines:
 
-lab name = {labname}  
+---
+lab name = {lab_name}  
 number of machines = {number}  
 machine type = {machine_type}  
 storage size per machine = {terabytes} TB   
+---
 
 I am looking forward to receive access information in our Slack lab channel when the fleet is up and running.
 
@@ -336,7 +338,7 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 1, max: 100, step: 1, field: "number", default: 1 },
   { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
   { label: "Storage size per machine (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
@@ -353,13 +355,15 @@ Best regards,
 Instance shelving allows you to stop an instance without having it consume compute resources. Shelved instance keeps the storage and can be started in the future when needed again.
 
 <ServiceDesk title="Request a shelving of a machine " :template='{
-  subject: "Shelve machine {hostname} @ {labname}",
+  subject: "Shelve machine - {vm_name} @ {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a shelving of a following machine:
 
-lab name = {labname}  
-machine name = {hostname}  
+---
+vm_name="{vm_name}"  
+lab_name="{lab_name}"  
+---
 
 
 Best regards,
@@ -367,8 +371,8 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine name", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Machine name only allows blue and iaas machines, you can get machine name by running hostname command on the machine", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine name", key: "vm_name", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Machine name only allows blue and iaas machines, you can get machine name by running hostname command on the machine", field: "textfield" },
 ]' />
 
 * **Required information**: lab name and machine name.
@@ -381,14 +385,14 @@ Best regards,
 This form serves for unshelving a machine after it has been shelved.
 
 <ServiceDesk title="Request an unshelving of a machine " :template='{
-  subject: "Unshelve machine {hostname} @ {labname}",
+  subject: "Unshelve machine - {vm_name} @ {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request an unshelving of a following machine:
 
 ---
-lab name = {labname}  
-machine name = {hostname}  
+vm_name="{vm_name}"  
+lab_name="{lab_name}"  
 ---
 
 
@@ -397,8 +401,8 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine name", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Machine name only allows blue and iaas machines", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine name", key: "vm_name", pattern: "[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*", hint: "Machine name only allows blue and iaas machines", field: "textfield" },
 ]' />
 
 
@@ -413,14 +417,14 @@ Best regards,
 Click the button below to order a machine deletion.
 
 <ServiceDesk title="Request a deletion of a machine " :template='{
-  subject: "Delete a machine {hostname} @ {labname}",
+  subject: "Request machine deletion - {vm_name} @ {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a deletion of a following machine:
 
 ---
-lab name = {labname}  
-machine name = {hostname}  
+vm_name="{vm_name}"  
+lab_name="{lab_name}"  
 ---
 
 I am aware that this process is irreversible and all data stored on this machine will be permanently deleted.
@@ -431,8 +435,8 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine name", key: "hostname", pattern: "[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*", hint: "Machine name only allows blue, iaas, and gpu machines, you can get machine name by running hostname command on the machine", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine name", key: "vm_name", pattern: "[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*", hint: "Machine name only allows blue, iaas, and gpu machines, run hostname command on the machine to get the machine name", field: "textfield" },
 ]' />
 
 ::: danger
@@ -454,14 +458,14 @@ Once data on your machine is deleted, it can not be recreated. You must ensure t
 You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand. Read more in our [coordinator FAQ](/data/faq/#volumes).
 
 <ServiceDesk title="Request storage volume expansion" :template='{
-  subject: "Storage volume expansion - {labname}",
+  subject: "Storage volume expansion - {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a storage volume expansion:
 
 ---
-lab name = {labname}  
-machine name = {machinename}  
+lab name = {lab_name}  
+machine name = {vm_name}  
 volume name = {volumename}  
 current size = {terabytes} TB  
 new size = {terabytes1} TB  
@@ -477,8 +481,8 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash., You can get machine name by running hostname command on the machine", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash., You can get machine name by running hostname command on the machine", field: "textfield" },
   {
     label: "Volume name",
     key: "volumename",
@@ -564,14 +568,14 @@ The above example shows for example that `/mnt/archive` has a current `Size` of 
 You may add new volumes to your lab machines. We will need separate orders for each individual volume you plan to add.  Read more in our [coordinator FAQ](/data/faq/#volumes).
 
 <ServiceDesk title="Request a new storage volume" :template='{
-  subject: "New storage volume - {labname}",
+  subject: "New storage volume - {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a new storage volume:
 
 ---
-lab name = {labname}  
-machine name = {machinename}  
+lab name = {lab_name}  
+machine name = {vm_name}  
 volume name = {volume_name}  
 size = {terabytes} TB  
 ---
@@ -584,8 +588,8 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   {
     label: "Volume name",
     key: "volume_name",
@@ -666,15 +670,15 @@ You may use this information to plan your new storage names and sizes. We typica
 This form serves for ordering of volume deletion.
 
 <ServiceDesk title="Request a volume deletion" :template='{
-  subject: "Volume deletion - {labname}",
+  subject: "Volume deletion - {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to request a deletion of a storage volume.
 
 ---
-lab name = {labname}  
-machine name = {machinename}  
-volume name = {volume_name}  
+lab_name="{lab_name}"  
+machine_name="{vm_name}"  
+volume_name="{volume_name}"  
 ---
 
 I am aware that this process is irreversible and all data stored on this volume will be permanently deleted.
@@ -685,17 +689,17 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Machine name", key: "machinename", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   {
     label: "Volume name",
     key: "volume_name",
     field: "selectone",
     options: [
-      "Archive",
-      "Work",
-      "Scratch",
-      "Cargo",
+      "archive",
+      "work",
+      "scratch",
+      "cargo",
     ]
   },
 ]' />
@@ -761,12 +765,12 @@ Best regards,
 Click the button below to update the [lab coordinator](/coordinator/roles/#lab-coordinator) role for a lab attached to your data space.
 
 <ServiceDesk title="Request update of lab coordinator role" :template='{
-  subject: "Update lab coordinator role - {labname}",
+  subject: "Update lab coordinator role - {lab_name}",
   body: `Hi HUNT Cloud team,
 
 I would like to update the coordinator role in our Lab:
 
-Lab name: {labname}  
+Lab name: {lab_name}  
 
 New lab coordinator:  
 
@@ -787,7 +791,7 @@ Best regards,
 
 `,
 }' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   { label: "Name and Surname", key: "name", field: "textfield" },
   { label: "Department", key: "department", field: "textfield" },
   { label: "Faculty", key: "faculty", field: "textfield" },
