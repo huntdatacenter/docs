@@ -57,25 +57,27 @@ Clicking on Local terminal button opens MobaXterm command line:
 
 ### 3.2 Generate SSH key in local terminal
 
-If you opened local terminal, you should see similar window:
+When you click "Start local terminal", you should see a window similar to this:
 
 ![Local terminal](./images/mobaxterm_local_terminal.png)
 
-Check if you already have ssh keys from before by running this command:
+Before you start, check if you already have a ssh keys in place by running this command:
 
 ```bash
 cat "${USERPROFILE}/.ssh/id_rsa.pub"
 ```
 
-If previous command printed error message (No such file or directory) or there was no output it means that you probably have not created your ssh key yet and you can continue with the next steps.
+If the above command prints several rows of random letters on the screen, you already have a ssh keys that can be used. Jump to section 3.3. 
 
-Before creating SSH key we make sure that your .ssh directory exists:
+If the above command print error message (No such file or directory) or there was no output, you probably don't have your ssh key yet. Continue with the folloing steps: 
+
+First, before creating your new SSH key make sure that your .ssh directory exists:
 
 ```bash
 mkdir -p "${USERPROFILE}/.ssh"
 ```
 
-Now we can create SSH key:
+Then, create your new SSH key:
 
 ```bash
 ssh-keygen -b 4096 -t rsa -f "${USERPROFILE}/.ssh/id_rsa" -q -N ""
@@ -83,29 +85,27 @@ ssh-keygen -b 4096 -t rsa -f "${USERPROFILE}/.ssh/id_rsa" -q -N ""
 
 ### 3.3 Uploading new SSH key
 
-To be able to use the key it needs to be uploaded with `ssh-copy-id`.
-You will be asked to type in your SSH password that you made during the lab installation.
+To be able to use the key you need to be upload it to your lab with the `ssh-copy-id` command. You will be asked to type in your SSH password that you made during the lab installation during this prosess.
 
 ```bash
 ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" username@entry-IP
 ```
 
-Remember to replace `username` with your username, and `entry-IP` with IP address of your lab that
-is included in your `ssh-config.txt` file (format: `10.42.X.Y`). Example: `joe-tester@10.42.X.Y`.
+**Note.** Replace `username` with your username, and `entry-IP` with IP address of your lab that is included in your `ssh-config.txt` file (format: `10.42.X.Y`). Example: `joe-tester@10.42.X.Y`.
 
-If you get asked to save the password, refuse by clicking on `No` to make sure that MobaXterm
-will authenticate with SSH keys instead of passwords.
+If you get asked to save the password, refuse by clicking on `No` to make sure that MobaXterm will authenticate with SSH keys instead of passwords.
 
 ### 3.4 Add SSH key into Mobagent
 
-Check the list of Mobagent SSH keys and make sure that SSH key (`id_rsa` file) is included. If MobaXterm included the new key automatically, you can continue to the next step:
+Check the list of Mobagent SSH keys and make sure that SSH key (`id_rsa` file) is included. 
 
 ![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_add_key.png)
 
+If MobaXterm included the new key automatically, you can continue to the next step. If your `SSH agents` list is empty, click on the plus sign (arrow marked "2.") and add your new `id_rsa` file (key) to the list. You will find the file on your local machine under this path: `C:\Users\<yourlocalusername>\ssh\id_rsa`. 
+
 ## 4. Connect
 
-We usually ship preconfigured Moba file with credentials.
-If you have not opened it, you can open it now and MobaXterm will pick up your lab session.
+We usually ship preconfigured Moba file with credentials. If you have not opened it, you can open it now and MobaXterm will pick up your lab session.
 
 ![Connect](./images/mobaxterm_step5.png)
 
