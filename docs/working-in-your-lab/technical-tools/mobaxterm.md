@@ -175,23 +175,21 @@ EOF
 
 ::: details More information
 
-# 1 Configure Mobagent
-
-1.1 Start MobaXterm and open Settings:
+1. Start MobaXterm and open Settings:
 
 ![mobaxterm_settings](./images/mobaxterm_settings.png)
 
-1.2 Choose SSH tab and make sure that option `Use internal SSH agent "Mobagent"` is checked. Then click OK to save the settings.
+2. Choose SSH tab and make sure that option `Use internal SSH agent "Mobagent"` is checked. Then click OK to save the settings.
 
 ![mobaxterm_allow_mobagent](./images/mobaxterm_allow_mobagent.png)
 
-1.3 If you are asked to confirm restart of MobaXterm click `Yes` to confirm.
+3. If you are asked to confirm restart of MobaXterm click `Yes` to confirm.
 
 ![mobaxterm_restart_settings](./images/mobaxterm_restart_settings.png)
 
-1.4 (optional) if you have not setup ssh before, follow section 2 above (generating SSH key)
+4. (optional) if you have not setup ssh before, follow section 2 above (generating SSH key)
 
-1.5 Add SSH key into Mobagent
+5. Add SSH key into Mobagent
 
 Check the list of Mobagent SSH keys and make sure that SSH key (`id_rsa` file) is included. 
 
