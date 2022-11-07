@@ -36,9 +36,7 @@ Depending on you security model, you may mount selected part of your storage sys
 
 3. Install sshfs:
 
-   ```bash
-   brew install sshfs
-   ```
+   Download latest version of sshfs from [here](https://github.com/osxfuse/sshfs/releases), open and install it
 
 4. Reboot macOS before continuing
 
