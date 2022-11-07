@@ -49,7 +49,9 @@ When you click "Start local terminal", you should see a window similar to this:
 
 Before you start, check if you already have a ssh keys in place by running this command:
 
-**Note:** Do **not** rewrite variables in commands. Keep ${USERPROFILE}  as is.
+::: warning
+Do **not** rewrite variables in commands. Keep `${USERPROFILE}` as is.
+:::
 
 ```bash
 cat "${USERPROFILE}/.ssh/id_rsa.pub"
