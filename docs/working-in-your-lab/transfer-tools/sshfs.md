@@ -83,7 +83,9 @@ If not, don't hesitate to contact us [here](/contact) so we can improve this gui
 
 ## Troubleshooting
 
-::: details Installation on macOS 11 (Big Sur)
+### Installation on macOS 11+
+
+::: details Read more
 
 Brew packages above are deprecated and if you are on new version or could not install old way download
 macFUSE and SSHFS from [osxfuse.github.io](https://osxfuse.github.io/).
