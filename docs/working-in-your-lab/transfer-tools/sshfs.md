@@ -58,15 +58,15 @@ Depending on you security model, you may mount selected part of your storage sys
 4. Mount your storage using sshfs:
 
    ```bash
-   sshfs ${labname}-entry: ~/${labname}-storage -o follow_symlinks -o volname=${labname}
+   sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname=${labname}
    ```
 
-   e.g. `sshfs demolab-entry: demolab -o volname=demolab`
+   e.g. `sshfs demolab: demolab -o volname=demolab`
 
 5. You can make an alias in profile/rc config (`~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`) for easier access:
 
    ```bash
-   echo "alias ${labname}-mount=sshfs ${labname}-entry: ~/${labname}-storage -o follow_symlinks -o volname=${labname}" >> ~/.profile
+   echo "alias ${labname}-mount=sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname=${labname}" >> ~/.profile
    ```
 
 That's it.
