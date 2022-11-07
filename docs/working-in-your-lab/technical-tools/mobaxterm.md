@@ -22,7 +22,7 @@ Without these it will be hard to ensure a smooth MobaXterm configuration.
 
 :::
 
-## 1 How to install
+## 1. How to install
 
 ::: tip
 Lab users from NTNU can install MobaXterm using the software center.
@@ -31,7 +31,7 @@ Lab users from NTNU can install MobaXterm using the software center.
 - Download the `Home edition (installer edition)` from [mobaxterm.mobatek.net](https://mobaxterm.mobatek.net/download.html):
 - Unzip the file and install the software
 
-## 2 Generating SSH Key
+## 2. Generating SSH Key
 
 In case you have not used SSH keys before and you need to generate one, on Windows you can do so in MobaXterm using Local terminal
 
@@ -84,7 +84,7 @@ ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" username@entry-IP
 If you get asked to save the password, refuse by clicking on `No` to make sure that MobaXterm will authenticate with SSH keys instead of passwords.
 
 
-## 3 Connect
+## 3. Connect
 
 We usually ship preconfigured Moba file with credentials. You can open it now and MobaXterm will pick up your lab session.
 
