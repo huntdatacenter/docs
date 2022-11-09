@@ -26,6 +26,7 @@ Depending on you security model, you may mount selected part of your storage sys
 [Install Homebrew package manager for macOS: brew](https://brew.sh/)
 :::
 
+
 1. Install macfuse:
 
    ```bash
@@ -33,6 +34,12 @@ Depending on you security model, you may mount selected part of your storage sys
    ```
 
 2. Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
+
+   ::: warning NTNU managed Macbook
+
+   If your Macbook is managed by NTNU and you do not see section to enable developer in your `System Preferences` -> `Security & Privacy` -> `General`,
+   you will need to request access to enable developer through NTNU Hjelp.
+   If you are not NTNU affiliated you can contact IT department of your organisation / university.
 
 3. Install sshfs:
 
