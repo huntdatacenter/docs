@@ -128,11 +128,11 @@ Send us your signed agreement utilizing the blue button in the service center se
 
 [HUNT Cloud Invoice Profile](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-invoice-profile.pdf) (pdf)
 
-This form defined the invoice profile for your cloud services fees. One invoice profile needs to be attached to your data space agreement. Data spaces on the BLUE subscription level may attach profiles for individual labs.
+This form defined the invoice profile for your cloud services fees. One invoice profile needs to be attached to your data space agreement.
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.0.
+The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.1.
 
 **Data space**
 
@@ -194,7 +194,7 @@ A monetary spending limit may be specified for the invoice profile.
 
 **Signatures**
 
-Invoice profiles are signed by data space leaders. Co-signature from HUNT Cloud is required to effectuate i Pilot period and/or Free quota.
+Invoice profiles are signed by Account signatory. This is the individual that is authorized to operate the account information specified in the invoice profile on behalf of their organization. Co-signature from HUNT Cloud is required to effectuate i Pilot period and/or Free quota.
 
 **Activation**
 
