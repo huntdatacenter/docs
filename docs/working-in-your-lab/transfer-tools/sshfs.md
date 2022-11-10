@@ -26,6 +26,7 @@ Depending on you security model, you may mount selected part of your storage sys
 [Install Homebrew package manager for macOS: brew](https://brew.sh/)
 :::
 
+
 1. Install macfuse:
 
    ```bash
@@ -34,11 +35,15 @@ Depending on you security model, you may mount selected part of your storage sys
 
 2. Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
 
+   ::: warning NTNU managed Macbook
+
+   If your Macbook is managed by NTNU and you do not see section to enable developer in your `System Preferences` -> `Security & Privacy` -> `General`,
+   you will need to request access to enable developer through NTNU Hjelp.
+   If you are not NTNU affiliated you can contact IT department of your organisation / university.
+
 3. Install sshfs:
 
-   ```bash
-   brew install sshfs
-   ```
+   Download latest version of sshfs from [here](https://github.com/osxfuse/sshfs/releases), open and install it
 
 4. Reboot macOS before continuing
 
@@ -60,15 +65,15 @@ Depending on you security model, you may mount selected part of your storage sys
 4. Mount your storage using sshfs:
 
    ```bash
-   sshfs ${labname}-entry: ~/${labname}-storage -o follow_symlinks -o volname=${labname}
+   sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname=${labname}
    ```
 
-   e.g. `sshfs demolab-entry: demolab -o volname=demolab`
+   e.g. `sshfs demolab: demolab -o volname=demolab`
 
 5. You can make an alias in profile/rc config (`~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`) for easier access:
 
    ```bash
-   echo "alias ${labname}-mount=sshfs ${labname}-entry: ~/${labname}-storage -o follow_symlinks -o volname=${labname}" >> ~/.profile
+   echo "alias ${labname}-mount=sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname=${labname}" >> ~/.profile
    ```
 
 That's it.
@@ -85,7 +90,9 @@ If not, don't hesitate to contact us [here](/contact) so we can improve this gui
 
 ## Troubleshooting
 
-::: details Installation on macOS 11 (Big Sur)
+### Installation on macOS 11+
+
+::: details Read more
 
 Brew packages above are deprecated and if you are on new version or could not install old way download
 macFUSE and SSHFS from [osxfuse.github.io](https://osxfuse.github.io/).

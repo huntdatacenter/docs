@@ -49,6 +49,7 @@ You will need to update your **`SSH temporary key`** in the steps below. We pref
 - not a famous quotation from the literature (but could be pretty close)
 - hard to guess by intuition (even by someone who knows you well)
 - easy to remember
+- at least 3 characters have to be different from previous one (temporary passphrase)
 
 Oh, and, it should be unique to this site only (not to mention at least
 _12 characters_ long and include both _lower_ and _upper_ cases).

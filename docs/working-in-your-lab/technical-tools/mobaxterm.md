@@ -31,37 +31,27 @@ Lab users from NTNU can install MobaXterm using the software center.
 - Download the `Home edition (installer edition)` from [mobaxterm.mobatek.net](https://mobaxterm.mobatek.net/download.html):
 - Unzip the file and install the software
 
-## 2. Configure Mobagent
-
-2.1 Start MobaXterm and open Settings:
-
-![mobaxterm_settings](./images/mobaxterm_settings.png)
-
-2.2 Choose SSH tab and make sure that option `Use internal SSH agent "Mobagent"` is checked. Then click OK to save the settings.
-
-![mobaxterm_allow_mobagent](./images/mobaxterm_allow_mobagent.png)
-
-2.3 If you are asked to confirm restart of MobaXterm click `Yes` to confirm.
-
-![mobaxterm_restart_settings](./images/mobaxterm_restart_settings.png)
-
-## 3. Generating SSH Key
+## 2. Generating SSH Key
 
 In case you have not used SSH keys before and you need to generate one, on Windows you can do so in MobaXterm using Local terminal
 
-### 3.1 Open Local terminal
+### 2.1 Open Local terminal
 
 Clicking on Local terminal button opens MobaXterm command line:
 
 ![Main View - Local terminal](./images/mobaxterm_main-local_terminal.png)
 
-### 3.2 Generate SSH key in local terminal
+### 2.2 Generate SSH key in local terminal
 
 When you click "Start local terminal", you should see a window similar to this:
 
 ![Local terminal](./images/mobaxterm_local_terminal.png)
 
 Before you start, check if you already have a ssh keys in place by running this command:
+
+::: warning
+Do **not** rewrite variables in commands. Keep `${USERPROFILE}` as is.
+:::
 
 ```bash
 cat "${USERPROFILE}/.ssh/id_rsa.pub"
@@ -83,7 +73,7 @@ Then, create your new SSH key:
 ssh-keygen -b 4096 -t rsa -f "${USERPROFILE}/.ssh/id_rsa" -q -N ""
 ```
 
-### 3.3 Uploading new SSH key
+### 2.3 Uploading new SSH key
 
 To be able to use the key you need to be upload it to your lab with the `ssh-copy-id` command. You will be asked to type in your SSH password that you made during the lab installation during this prosess.
 
@@ -95,17 +85,10 @@ ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" username@entry-IP
 
 If you get asked to save the password, refuse by clicking on `No` to make sure that MobaXterm will authenticate with SSH keys instead of passwords.
 
-### 3.4 Add SSH key into Mobagent
 
-Check the list of Mobagent SSH keys and make sure that SSH key (`id_rsa` file) is included. 
+## 3. Connect
 
-![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_add_key.png)
-
-If MobaXterm included the new key automatically, you can continue to the next step. If your `SSH agents` list is empty, click on the plus sign (arrow marked "2.") and add your new `id_rsa` file (key) to the list. You will find the file on your local machine under this path: `C:\Users\<yourlocalusername>\ssh\id_rsa`. 
-
-## 4. Connect
-
-We usually ship preconfigured Moba file with credentials. If you have not opened it, you can open it now and MobaXterm will pick up your lab session.
+We usually ship preconfigured Moba file with credentials. You can open it now and MobaXterm will pick up your lab session.
 
 ![Connect](./images/mobaxterm_step5.png)
 
@@ -185,5 +168,33 @@ EOF
   ![Step 3](./images/mobaxterm_step3.png "MobaXterm - Step 3")
 - In **Bookmark settings**, Name your lab session. Click OK to confirm Session settings.
   ![Step 4](./images/mobaxterm_step4.png "MobaXterm - Step 4")
+
+:::
+
+#### Configure MobaAgent
+
+::: details More information
+
+1. Start MobaXterm and open Settings:
+
+![mobaxterm_settings](./images/mobaxterm_settings.png)
+
+2. Choose SSH tab and make sure that option `Use internal SSH agent "Mobagent"` is checked. Then click OK to save the settings.
+
+![mobaxterm_allow_mobagent](./images/mobaxterm_allow_mobagent.png)
+
+3. If you are asked to confirm restart of MobaXterm click `Yes` to confirm.
+
+![mobaxterm_restart_settings](./images/mobaxterm_restart_settings.png)
+
+4. (optional) if you have not setup ssh before, follow section 2 above (generating SSH key)
+
+5. Add SSH key into Mobagent
+
+Check the list of Mobagent SSH keys and make sure that SSH key (`id_rsa` file) is included. 
+
+![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_add_key.png)
+
+If MobaXterm included the new key automatically, you can continue to the next step. If your `SSH agents` list is empty, click on the plus sign (arrow marked "2.") and add your new `id_rsa` file (key) to the list. You will find the file on your local machine under this path: `C:\Users\<yourlocalusername>\.ssh\id_rsa`. 
 
 :::
