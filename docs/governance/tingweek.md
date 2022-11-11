@@ -88,6 +88,13 @@ Individual Tings are scheduled over the week on the same time slots. The current
 
 ## Dates and agendas
 
+#### Ting week #9 (2023-05)
+
+- **Lab ting**: Tuesday 30 May 2023 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 31 May 2023 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 31 May 2023 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 1 June 2023 - 9 to 11 a.m. CET
+
 #### Ting week #8 (2023-02)
 
 - **Lab ting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET
