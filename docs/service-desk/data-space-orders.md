@@ -28,47 +28,7 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 Click the button below to order a new lab under your existing data space.
 
-<ServiceDesk title="Request a new lab" :template='{
-  subject: "New lab order - {lab_name} @ {data_space}",
-  body: `Hi HUNT Cloud team,
-
-I would like to request a new lab under our data space.
-
-I have attached a signed lab agreement to this email.
-
-We would like to start with the following machine type for our home machine:  
-
----
-lab_name="{lab_name}"  
-machine_type="{machine_type}"  
----
-
-We would like to attached the following storage volume sizes to our home machine (numbers are in Gigabytes):  
-
----
-ARCHIVE = {archive_volume} GB  
-WORK = {work_volume} GB  
-SCRATCH = {scratch_volume} GB  
----
-
-Our lab leader and lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
-
-https://docs.hdc.ntnu.no/service-desk/lab-orders.html#add-a-new-lab-user
-
-I am looking forward to receive an email verification stating that the lab is up and running.
-
-
-Best regards,
-
-`,
-}' :fields='[
-  { label: "New lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Data space name", key: "data_space", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
-  { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Archive volume size (in gigabytes)", key: "archive_volume", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 400 },
-  { label: "Work volume size (in gigabytes)", key: "work_volume", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 300 },
-  { label: "Scratch volume size (in gigabytes)", key: "scratch_volume", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 300 },
-]' />
+<SDButton form="request_new_lab" />
 
 * **Who can order:** Data space leaders and data space compliance coordinators in active data spaces.
 * **Required attachment**: [A signed lab order](/agreements/downloads/#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
