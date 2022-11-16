@@ -19,12 +19,6 @@ export default {
     getData() {
       return this.data && this.data[this.form] ? this.data[this.form] : null;
     },
-    getTemplate() {
-      return this.data && this.data[this.form] ? {
-        subject: this.data[this.form]["subject"],
-        body: this.data[this.form]["body"], 
-      } : null;
-    },
     showBtn() {
       return this.data && this.data[this.form];
     },
@@ -50,8 +44,9 @@ export default {
     <section v-if="showBtn">
         <ServiceDesk
           :title="getData['title']"
+          :requirements="getData['requirements']"
           :fields="getData['fields']"
-          :template="getTemplate"
+          :template="getData['template']"
         />
     </section>
 </template>

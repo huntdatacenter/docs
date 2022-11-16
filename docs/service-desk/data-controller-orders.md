@@ -27,31 +27,7 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 Click on the blue button below to order a HUNT Cloud data processor agreement using the HUNT Cloud template.
 
-<ServiceDesk title="Request a new data processor agreement template" :template='{
-  subject: "Data processor agreement request - {organization}",
-  body: `Hi HUNT Cloud team,
-
-I would like to request a data processor agreement template for review.
-
-I have attached the data processor agreement for to this email. 
-
-I am looking forward to get the data processor agreement template on email, and to continue our dialogue on screen.
-
-
-Best regards,
-
-
-`,
-}' :fields='[
-  { label: "Organization", key: "organization", field: "textfield" },
-]' />
-
-* **Guide:** [Get going as a data controller](/coordination/get-going/data-controller/)
-* **Who can request:** Data controllers for data inteded to be processed in HUNT Cloud.
-* **Required attachment**: [HUNT Cloud data processor agreement form](/coordination/get-going/data-controller/#_6-forward-required-processor-agreement-information-to-hunt-cloud).
-* **Expected delivery:** PDF agreements for review/signatures.
-* **Expected delivery time:** One week.
-* **Cost:** There is no direct cost for data controllers establishing data processor agreements. Resource consumptions are billed to attached data spaces and labs.
+<SDButton form="request_new_dp_agreement" />
 
 
 ### Upgrade to a new data processor agreement version
