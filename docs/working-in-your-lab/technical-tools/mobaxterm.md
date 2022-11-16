@@ -57,9 +57,9 @@ Do **not** rewrite variables in commands. Keep `${USERPROFILE}` as is.
 cat "${USERPROFILE}/.ssh/id_rsa.pub"
 ```
 
-If the above command prints several rows of random letters on the screen, you already have a ssh keys that can be used. Jump to section 3.3. 
+If the above command prints several rows of random letters on the screen, you already have a ssh keys that can be used. Jump to section 3.3.
 
-If the above command print error message (No such file or directory) or there was no output, you probably don't have your ssh key yet. Continue with the folloing steps: 
+If the above command print error message (No such file or directory) or there was no output, you probably don't have your ssh key yet. Continue with the folloing steps:
 
 First, before creating your new SSH key make sure that your .ssh directory exists:
 
@@ -101,6 +101,22 @@ With a little bit of luck, you should now be able to connect directly from your 
 :::
 
 ## Troubleshooting
+
+
+#### Mktemp error
+
+::: details More information
+
+- If you are getting this error when trying `ssh-copy-id`:
+  ![mktemp-error](./images/mktemp-error.png)
+
+- Run this command with `TMPDIR` variable:
+  ```
+  TMPDIR="${USERPROFILE}" ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" username@entry-IP
+  ```
+
+:::
+
 
 #### Check SSH keys in session configuration
 
@@ -191,10 +207,10 @@ EOF
 
 5. Add SSH key into Mobagent
 
-Check the list of Mobagent SSH keys and make sure that SSH key (`id_rsa` file) is included. 
+Check the list of Mobagent SSH keys and make sure that SSH key (`id_rsa` file) is included.
 
 ![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_add_key.png)
 
-If MobaXterm included the new key automatically, you can continue to the next step. If your `SSH agents` list is empty, click on the plus sign (arrow marked "2.") and add your new `id_rsa` file (key) to the list. You will find the file on your local machine under this path: `C:\Users\<yourlocalusername>\.ssh\id_rsa`. 
+If MobaXterm included the new key automatically, you can continue to the next step. If your `SSH agents` list is empty, click on the plus sign (arrow marked "2.") and add your new `id_rsa` file (key) to the list. You will find the file on your local machine under this path: `C:\Users\<yourlocalusername>\.ssh\id_rsa`.
 
 :::
