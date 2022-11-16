@@ -30,12 +30,6 @@ Click the button below to order a new lab under your existing data space.
 
 <SDButton form="request_new_lab" />
 
-* **Who can order:** Data space leaders and data space compliance coordinators in active data spaces.
-* **Required attachment**: [A signed lab order](/agreements/downloads/#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
-* **Expected delivery time:** One week.
-* **Next step**: [Add your first lab users](/service-desk/lab-orders.html#add-a-new-lab-user).
-* **Cost:** One lab subscription as specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
-
 ::: details More on the required resource specifications
 
 Your lab comes with one (1) machine with computational resources and attached storage by default. We call this your **`home`**-machine.
@@ -77,39 +71,7 @@ See the "Lab" section in our [Services specifications](/services/specifications/
 
 Click the button below to order a lab deletion of an active lab under your data space.
 
-<ServiceDesk title="Request a lab deletion" :template='{
-  subject: "Lab deletion order - {labname} @ {dataspace}",
-  body: `Hi HUNT Cloud team,
-
-I would like to request the following lab under our data space to be deleted:
-
----
-lab = {labname}  
----
-
-I have attached a signed lab deletion order to this email confirming the request.
-
-We have already exported the data that we need from the lab.
-
-I am aware that all data in the lab will be irrevocably destroyed and can not be recreated once this order is completed.
-
-I am looking forward to receive a written notification on email confirming that the lab and all attached data is deleted.
-
-
-Best regards,
-
-
-`,
-}' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Data space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
-]' />
-
-* **Who can order:** Data space leaders and Lab leaders in collaboration.
-* **Required attachment**: [A signed lab deletion order](/agreements/downloads/#lab-deletion-order).
-* **Expected response time:** Weeks.
-* **Expected delivery:** Countersignature from HUNT Cloud on your lab deletion order confirming that lab data, including online and offline duplicate copies, are deleted.
-* **Cost:** Included in your lab subscription.
+<SDButton form="request_lab_deletion" />
 
 ::: danger
 
@@ -132,30 +94,8 @@ Data transfers between labs inside HUNT Cloud can be requested from our [lab pag
 
 The [external import kista](/faq/external-transfer/#faq-on-external-data-transfer) allows external parties outside HUNT Cloud to transfer data directly to a lab inside HUNT Cloud in a compliant manner.
 
-<ServiceDesk title="Request an external import kista" :template='{
-  subject: "External import kista order - {labname}",
-  body: `Hi HUNT Cloud team,
+<SDButton form="request_external_import_kista" />
 
-I would like to request an external import kista for {labname}.  
-
-I have attached two files: (1) the signed external import kista order, and (2) the public SSH key from the external uploader.
-
-We are looking forward to receive access information en email.
-
-
-Best regards,
-
-
-`,
-}' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-]' />
-
-* **Who can order:** Data space leaders or Data space compliance coordinators.
-* **Required attachments**: (1) [A signed external kista import order](/agreements/downloads/#external-kista-import-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external uploader.
-* **Expected response time:** Days.
-* **Expected delivery:** Kista access information sent to the lab user that will import the data.
-* **Cost:** Included in your data space subscription.
 
 ::: warning External dependency
 Note that time to successful transfer depend on access to SFTP software and potential firewall adjustments for the external-party that will download data.
@@ -165,30 +105,7 @@ Note that time to successful transfer depend on access to SFTP software and pote
 
 The [external export kista](/faq/external-transfer/#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner.
 
-<ServiceDesk title="Request an external export kista" :template='{
-  subject: "External import kista order - {labname}",
-  body: `Hi HUNT Cloud team,
-
-I would like to request an external export kista for {labname}.  
-
-I have attached two files: (1) the signed external export kista order, and (2) the public SSH key from the external uploader.
-
-We are looking forward to receive access information en email.
-
-
-Best regards,
-
-
-`,
-}' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-]' />
-
-* **Who can order:** Data space leaders or Data space compliance coordinators.
-* **Required attachments**: (1) [A signed external kista export order](/agreements/downloads/#external-kista-export-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external downloader.
-* **Expected response time:** Days.
-* **Expected delivery:** Access information sent to the lab user that will make data available for export.
-* **Cost:** Included in your data space subscription.
+<SDButton form="request_external_export_kista" />
 
 ::: warning External dependency
 Note that time to successful transfer depend on access to SFTP software and potential firewall adjustments for the external-party that will upload data.
@@ -199,142 +116,22 @@ Note that time to successful transfer depend on access to SFTP software and pote
 
 [Network opening orders](/faq/external-transfer/#direct-external-transfers) allows data transfers directly to and from parties outside HUNT Cloud.
 
-<ServiceDesk title="Request a network opening" :template='{
-  subject: "Network opening - {labname}",
-  body: `Hi HUNT Cloud team,
-
-I would like to request a network opening.
-
-I have attached a signed network opening order with further information.
-
-We are looking forward to receive confirmation of the opening in our Slack lab channel.
+<SDButton form="request_network_opening" />
 
 
-Best regards,
-
-
-`,
-}' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-]' />
-
-* **Who can order:** Data space leaders or Data space compliance coordinators.
-* **Required information**: IPv4 address and port number for the external party.
-* **Required attachments**: [A signed network opening order](/agreements/downloads/#network-opening-order).
-* **Expected response time:** Days.
-* **Expected delivery:** Network opening communicated in your Slack lab channel.
-* **Cost:** Included in your data space subscription.
-
-
-## Data space mangement
+## Data space management
 
 ### Update data space coordinator roles
 
 Click the button below to update your [data space coordinator roles](/coordinator/roles/) under your existing data space.
 
-<ServiceDesk title="Request update of lab coordinator role" :template='{
-  subject: "Update lab coordinator role - {labname}",
-  body: `Hi HUNT Cloud team,
-
-I would like to update the following coordinator role(s) in our data space:
-
----
-Role: {role} coordinator  
-Name and Surname: {name}  
-Department: {department}  
-Faculty: {faculty}  
-Institution: {institution}  
-Phone: {phone}  
----
-
-I am looking forward to receive an email acknowledging that you have updated our coordinator roles.
-
-
-Best regards,
-
-
-`,
-}' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  {
-    label: "Role",
-    key: "role",
-    field: "selectone",
-    options: [
-      "Compliance",
-      "Data",
-      "Technical",
-      "Knowledge",
-      "Financial",
-    ]},
-  { label: "Name and Surname", key: "name", field: "textfield" },
-  { label: "Department", key: "department", field: "textfield" },
-  { label: "Faculty", key: "faculty", field: "textfield" },
-  { label: "Institution", key: "institution", field: "textfield" },
-  { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
-]' />
-
-* **Who can order:** Data space leaders or Data space compliance coordinators in active data spaces.
-* **Required attachment**: None.
-* **Expected delivery time:** Days.
-* **Cost:**  Included in your data space subscription.
-
-
-### Update lab leader role
-
-Click the button below to update lab leader roles for labs attached to your data space.
-
-<ServiceDesk title="Request update of lab leader role" :template='{
-  subject: "Update lab leader role - {labname} in {dataspace}",
-  body: `Hi HUNT Cloud team,
-
-I would like to update the lab leader role for a lab under our dataspace.
-
-I have attached a signed lab agreement to this email.
-
-I am looking forward to receive an email acknowledging that you have updated the role.
-
-
-Best regards,
-
-`,
-}' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-]' />
-
-* **Who can order:** Data space leaders and data space compliance officers.
-* **Required attachment**: A new [signed lab order](/agreements/downloads/#lab-order).
-* **Expected delivery time:** Days.
-* **Cost:** Included in your data space subscription.
-
+<SDButton form="update_data_space_coordinator_role" />
 
 ### New invoice profile
 
 Click the button below to add a new invoice profile to your data space. Use this is you want a new lab to be invoiced to a specific account that you control, or if you want to separate one of your existing labs into a separate account.
 
-<ServiceDesk title="Request a new invoice profile" :template='{
-  subject: "Update invoice profile - {dataspace}",
-  body: `Hi HUNT Cloud team,
-
-I would like to add a new invoice profile under our dataspace.
-
-I have attached a signed invoice profile to this email.
-
-I am looking forward to receive an email acknowledging that you have added the new invoice profile.
-
-
-Best regards,
-
-`,
-}' :fields='[
-  { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-]' />
-
-* **Who can order:** Data space leaders and data space financial officers.
-* **Required attachment**: A new [signed invoice profile](/agreements/downloads/#invoice-profile).
-* **Expected delivery time:** Days.
-* **Cost:** Included in your data space subscription.
+<SDButton form="request_new_invoice_profile" />
 
 
 
@@ -342,25 +139,4 @@ Best regards,
 
 Click the button below to update an existing invoice profile to your data space. Use this is you want to update your account information, update your financial contact etc.
 
-<ServiceDesk title="Request update of existing invoice profile" :template='{
-  subject: "Update invoice profile - {dataspace}",
-  body: `Hi HUNT Cloud team,
-
-I would like to update our existing invoice profile for our dataspace.
-
-I have attached an updated signed invoice profile to this email that holds the correct invoice information.
-
-I am looking forward to receive an email acknowledging that you have updated the existing invoice profile.
-
-
-Best regards,
-
-`,
-}' :fields='[
-  { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-]' />
-
-* **Who can order:** Data space leaders and data space financial officers.
-* **Required attachment**: A new [signed invoice profile](/agreements/downloads/#invoice-profile).
-* **Expected delivery time:** Days.
-* **Cost:** Included in your data space subscription.
+<SDButton form="request_update_of_existing_invoice" />
