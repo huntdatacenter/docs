@@ -35,65 +35,14 @@ The service orders below are aimed at active lab users. Lab access for new users
 
 [Workbench](/working-in-your-lab/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
 
-<ServiceDesk title="Request Workbench access" :template='{
-  subject: "Workbench order - {username} @ {labname}",
-  body: `Hi HUNT Cloud team,
-
-I would like to try Workbench in {labname}.
-
-I have installed and activated the Signal app on my phone and are looking forward to receive my key and certificate.
-
-These are the tools I plan to use: {tools}.
-
-—  
-Kind regards,  
-
-`,
-}' :fields='[
-  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  {
-    label: "Tools",
-    key: "tools",
-    field: "selector",
-    options: [
-      "Rstudio",
-      "Jupyter",
-      "Python",
-      {text: "MATLAB (need license)", value: "MATLAB"},
-      {text: "Stata (need license)", value: "Stata"}
-    ],
-    default: ["Rstudio", "Jupyter", "Python"],
-  },
-]' />
-
-* **Who can order:** All active lab users.
-* **Expected response time:** Days.
-* **Expected delivery:** Workbench access key and certificate.
-* **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.
-* **Next step:** [Prepare your key transfer](/guides/workbench-request/).
-* **Cost:** Included in the lab subscription.
+<SDButton form="request_workbench_access" />
 
 
 ### Workbench reissue
 
 If you have existing Workbench setup and your certificate has expired request new one.
 
-<ServiceDesk title="Request Workbench reissue" :template='{
-  subject: "Workbench reissue - {username} @ {labname}",
-  body: `Hi HUNT Cloud team,
-
-I would like to request reissue of Workbench certificate for lab: {labname}.
-
-I have installed and activated the Signal app on my phone and are looking forward to receive my certificate.
-
-
-Kind regards,
-`,
-}' :fields='[
-  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-]' />
+<SDButton form="request_workbench_reissue" />
 
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
@@ -111,20 +60,7 @@ Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to acce
   subject: "SSH passphrase reset - {username} @ {labname}",
   body: `Hi HUNT Cloud team,
 
-I would like to request a passphrase reset for my user {username} @ {labname}.
-
-I have activated Signal on my phone and are looking forward to receive my temporary key here.
-
-
-Kind regards,
-
-`,
-
-}' :fields='[
-  { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-]' />
-
+<SDButton form="request_ssh_pass_reset" />
 
 * **Who can order:** All active lab users.
 * **Expected response time:** Days.
