@@ -15,12 +15,12 @@ Read more about [Lagtun](/tingweek/lagtun/) and the use of [resolutions](/tingwe
 
 :::
 
-#### [Clarify reactivation requirements for Lab users](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-resolutions.pdf#page=4)
+#### [Clarify reactivation requirements for Lab users](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-resolutions.pdf#page=4)
 
 - TOPIC: Finance
 - ID: R9/LT7/T7/22
 
-#### [Enable individual service orders for service units](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-resolutions.pdf#page=3)
+#### [Enable individual service orders for service units](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-resolutions.pdf#page=3)
 
 - TOPIC: Finance
 - ID: R8/LT7/T7/22
