@@ -7,9 +7,14 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: warning Lab machines
-**2022-11-21 10:21** - A number of lab machines are unavailable. We are actively restarting machines. New update by 11:00.
+::: tip All systems
+Operational
 :::
+
+**2022-11-21 11:44** - All machines up and running.
+
+**2022-11-21 10:21** - We accidentally shelved 87 lab machines. This means that you may not be able to connect to your lab or lab machines. We are restarting machines now. New update by 11:00.
+
 
 <!--
 
