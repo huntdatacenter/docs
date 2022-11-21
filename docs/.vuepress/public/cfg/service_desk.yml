@@ -1019,12 +1019,12 @@ request_workbench_access:
     },
   ]
   requirements: [
-    "* **Who can order:** All active lab users.",
-    "* **Expected response time:** Days.",
-    "* **Expected delivery:** Workbench access key and certificate.",
-    "* **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.",
-    "* **Next step:** [Prepare your key transfer](/guides/workbench-request/).",
-    "* **Cost:** Included in the lab subscription.",
+    "<b>Who can order:</b> All active lab users.",
+    "<b>Expected response time:</b> Days.",
+    "<b>Expected delivery:</b> Workbench access key and certificate.",
+    "<b>Requirement:</b> (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.",
+    "<b>Next step:</b> [Prepare your key transfer](/guides/workbench-request/).",
+    "<b>Cost:</b> Included in the lab subscription.",
   ]
 
 
@@ -1047,12 +1047,12 @@ request_workbench_reissue:
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
-    "* **Who can order:** All active lab users.",
-    "* **Expected response time:** Days.",
-    "* **Expected delivery:** Workbench certificate.",
-    "* **Requirement:** Active Signal app on phone.",
-    "* **Next step:** <a href='/guides/workbench-reissue-certificate/' target='_blank'>Guide on Workbench reissue</a>.",
-    "* **Cost:** Included in the lab subscription.",
+    "<b>Who can order:</b> All active lab users.",
+    "<b>Expected response time:</b> Days.",
+    "<b>Expected delivery:</b> Workbench certificate.",
+    "<b>Requirement:</b> Active Signal app on phone.",
+    "<b>Next step:</b> <a href='/guides/workbench-reissue-certificate/' target='_blank'>Guide on Workbench reissue</a>.",
+    "<b>Cost:</b> Included in the lab subscription.",
   ]
 
 
@@ -1075,11 +1075,182 @@ request_ssh_pass_reset:
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
-    "* **Who can order:** All active lab users.",
-    "* **Expected response time:** Days.",
-    "* **Expected delivery:** Temporary passphrase on Signal.",
-    "* **Requirement:** Active Signal app on your phone.",
-    "* **Next step:** <a href='/guides/configure-ssh/' target='_blank'> Guide on the passphrase reset</a>.",
-    "* **Cost:** Included in the lab subscription.",
+    "<b>Who can order:</b> All active lab users.",
+    "<b>Expected response time:</b> Days.",
+    "<b>Expected delivery:</b> Temporary passphrase on Signal.",
+    "<b>Requirement:</b> Active Signal app on your phone.",
+    "<b>Next step:</b> <a href='/guides/configure-ssh/' target='_blank'> Guide on the passphrase reset</a>.",
+    "<b>Cost:</b> Included in the lab subscription.",
   ]
 
+
+request_ssh_config: 
+  title: "Request SSH configuration"
+  template:
+    subject: "SSH config request - {username} @ {labname}"
+    body: | 
+      Hi HUNT Cloud team,
+
+      I would like to request a new ssh_config file for user {username} @ {labname}.
+
+
+      Kind regards,
+
+  fields: [
+    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> All active lab users.",
+    "<b>Expected response time:</b> Days.",
+    "<b>Expected delivery:</b> Temporary passphrase on Signal.",
+    "<b>Requirement:</b> Active Signal app on your phone.",
+    "<b>Next step:</b> <a href='/guides/configure-ssh/' target='_blank'>Guide on the passphrase reset<a/>.",
+    "<b>Cost:</b> Included in the lab subscription.",
+  ]
+
+request_vpn_link: 
+  title: "Request VPN access link opening"
+  template:
+    subject: "VPN access opening request - {username}"
+    body: | 
+      Hi HUNT Cloud team,
+
+      I would like to request an VPN access opening for the following IP address:
+
+      ---
+      access_ip = {IP4_address}  
+      access_duration = {access_duration}  
+      access_country = {country}  
+      ---
+
+      I am looking forward to be notified on email when the opening is implemented.
+
+
+      Kind regards,
+
+  fields: [
+    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Access IP4 address", key: "IP4_address", pattern: '^\\s*((?!169\\.254\\.|10\\.|0\\.|127\\.|255\\.255\\.255\\.255|192\\.168\\.)(\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\.)((\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\.){2}(\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\s*$', hint: "Get your IP address here: http://ip4.me", field: "textfield" },
+    {
+      label: "Access duration",
+      key: "access_duration",
+      field: "selectone",
+      options: [
+        "Temporary",
+        "Permanent",
+      ],
+      default: ["Temporary"],
+    },
+    { label: "Access Country", key: "country", pattern: "[-A-z0-9._]{3,}", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> All active lab users.",
+    "<b>Required information</b>: <a href='http://ip4.me' target='_blank'>Your IP4 address</a>, location and purpose (see below).",
+    "<b>Expected response time:</b> One day.",
+    "<b>Expected delivery:</b> Opening communicated on email.",
+    "<b>Cost:</b> Included in the lab subscription.",
+  ]
+
+
+request_vpn_reset: 
+  title: "Request VPN certificate reset"
+  template:
+    subject: "VPN certificate reset - {username}"
+    body: | 
+      Hi HUNT Cloud team,
+
+      I would like to reset my VPN certificate.
+
+      I have an active Signal account on my phone, and are looking forward to receive my new VPN passphrase on the phone and a link to the new VPN certificate on my organizational email.
+
+
+      I am aware that my lab access will be paused from the new certificate is issued and until I have installed the new certificate on my local machine.
+
+
+      Kind regards,
+
+  fields: [
+    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> All active lab users.",
+    "<b>Expected response time:</b> Days.",
+    "<b>Expected delivery:</b> VPN passphrase on Signal, link to VPN certificate on email.",
+    "<b>Requirement:</b> Active Signal app on your phone.",
+    "<b>Next step:</b> <a href='/guides/vpn-certificate-reset/' target='_blank'>Guide on the VPN reset</a>.",
+    "<b>Cost:</b> Included in the lab subscription.",
+  ]
+
+
+request_google_auth: 
+  title: "Request Google authenticator request"
+  template:
+    subject: "Google authenticator key request - {username}"
+    body: | 
+      Hi HUNT Cloud team,
+
+      I would like to request a new Google authenticator key for my VPN access.
+
+
+      I have an active Signal account on my phone and I look forward to receiving new key on my phone.
+
+      ---
+      phone_number = {phone_number}
+      ---
+
+
+      Kind regards,
+
+  fields: [
+    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Phone number (optional)", key: "phone_number", pattern: "(not_changed|[+0-9]{3,})", hint: "Phone number should include only + and 0-9 numbers", field: "textfield", optional: true, default: "not_changed" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> All active lab users.",
+    "<b>Expected response time:</b> Days.",
+    "<b>Expected delivery:</b> New key on Signal.",
+    "<b>Requirement:</b> Active Signal app on your phone.",
+    "<b>Next step:</b> <a href='/guides/google-authenticator-reset/' target='_blank'>Guide on the key reset</a>.",
+    "<b>Cost:</b> Included in the lab subscription.",
+  ]
+
+
+request_mobaxterm_file: 
+  title: "Request MobaXterm configuration file"
+  template:
+    subject: "MobaXterm file - {username}@{labname}"
+    body: | 
+      Hi HUNT Cloud team,
+
+      I would like to request a new MobXterm configuration file.
+
+      I am looking forward to receive my file over email, and then head over to the docs to get going on the configuration:
+
+      https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/mobaxterm/
+
+
+      Kind regards,
+
+  fields: [
+    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> All active lab users.",
+    "<b>Expected response time:</b> Days.",
+    "<b>Expected delivery:</b> File as email attachment.",
+    "<b>Requirement:</b> Active SSH connection.",
+    "<b>Next step:</b> <a href='/working-in-your-lab/technical-tools/mobaxterm/' target='_blank'>MobaXterm configuration guide</a>.",
+    "<b>Cost:</b> Included in the lab subscription.",
+  ]
+
+
+request_: 
+  title:
+  template:
+    subject:
+    body: | 
+
+  fields:
+  requirements:
