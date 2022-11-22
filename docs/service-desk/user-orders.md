@@ -37,6 +37,13 @@ The service orders below are aimed at active lab users. Lab access for new users
 
 <SDButton form="request_workbench_access" />
 
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** Workbench access key and certificate.
+* **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.
+* **Next step:** [Prepare your key transfer](/guides/workbench-request/).
+* **Cost:** Included in the lab subscription.
+
 
 ### Workbench reissue
 
