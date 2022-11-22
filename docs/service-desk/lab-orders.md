@@ -35,11 +35,25 @@ Click the button below to order access for a new user to your lab.
 
 <SDButton form="request_access_new_user" />
 
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required attachment**: [A signed user agreement](/agreements/downloads/#user-agreement).
+* **Expected response time:** One week.
+* **Expected delivery:** Lab keys and VPN certificate.
+* **Next step:** [Prepare your key transfer](/getting-started/).
+* **Cost:** Included in your lab subscription.
+
+
 ### Deactivate lab user
 
 This order closes access for lab users that no longer need to use your lab, for example when projects ends or lab users switches jobs.
 
 <SDButton form="request_lab_user_deactivation" />
+
+* **Who can order:** Lab leaders and lab coordinators can deactivate access for all lab users. Lab users can deactivate their own lab access.
+* **Expected response time:** Days.
+* **Expected delivery:** Confirmation on email that lab access is deactivated.
+* **Cost:** Included in your lab subscription.
+
 
 ### Reactivate lab user
 
@@ -47,11 +61,26 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 
 <SDButton form="reactivate_lab_user" />
 
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required attachment**: [A new user agreement](/agreements/downloads/#user-agreement).
+* **Expected response time:** One week.
+* **Expected delivery:** Lab keys and VPN certificate.
+* **Next step:** [Prepare your key transfer](/getting-started/).
+* **Cost:** Included in your lab subscription.
+
+
 ### Renew lab user agreement
 
 Lab user agreements needs to be renewed approximately every two years for accounts to be active. Click the button below to renew the lab user areement for one user.
 
 <SDButton form="request_renew_user_agreement" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required attachment**: [A signed user agreement](/agreements/downloads/#user-agreement).
+* **Expected response time:** Days.
+* **Expected delivery:** Email acknowledgment.
+* **Cost:** Included in your lab subscription.
+
 
 ## Compute
 
@@ -60,6 +89,13 @@ Lab user agreements needs to be renewed approximately every two years for accoun
 Increase or decrease the computational power of one of your existing lab machines to a new [machine type](/services/machine-types/).
 
 <SDButton form="request_machine_size_update" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Expected response time:** Days.
+* **Expected delivery:** Lab machine with updated size.
+* **Requirement:** The procedure require a machine restart that needs to be scheduled with your lab users.
+* **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
+
 
 ::: warning GPU machines
 
@@ -74,11 +110,23 @@ Add a [new machine](/services/machine-types/) to your lab. A CPU machine is the 
 
 <SDButton form="request_new_cpu" />
 
+* **Who can order:** Lab leaders and lab coordinators.
+* **Expected response time:** Days.
+* **Expected delivery:** New lab machine accessible from your home machine.
+* **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
+
+
 ### New GPU machine
 
 Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) to your lab.
 
 <SDButton form="request_new_gpu" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Expected response time:** Days (subject to availability).
+* **Expected delivery:** New lab machine with GPU accelerator accessible from your home machine.
+* **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
+
 
 ### Fleet of blue machines
 
@@ -86,11 +134,22 @@ Add a fleet of blue machines to distribute analysis for large scale analysis, fo
 
 <SDButton form="request_blue_fleet" />
 
+* **Who can order:** Lab leaders and lab coordinators.
+* **Expected response time:** Days (subject to availability).
+* **Expected delivery:** Multiple blue machines accessible from your home machine.
+* **Cost:** As specified in the [Services specifications](/services/specifications/) and [Price list](/prices/pricelist/).
+
+
 ### Shelve machine order
 
 Instance shelving allows you to stop an instance without having it consume compute resources. Shelved instance keeps the storage and can be started in the future when needed again.
 
 <SDButton form="request_machine_shelving" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: lab name and machine name.
+* **Expected response time:** Days.
+* **Cost:** During unshelving a machine will be started with same [machine type](/services/machine-types/#compute-optimized-machine-types) as before shelving
 
 ### Unshelve machine order
 
@@ -110,6 +169,11 @@ Once data on your machine is deleted, it can not be recreated. You must ensure t
 
 :::
 
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: lab name and machine name.
+* **Expected response time:** Days.
+* **Cost:** No additional costs.
+
 
 ## Store
 
@@ -118,6 +182,12 @@ Once data on your machine is deleted, it can not be recreated. You must ensure t
 You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand. Read more in our [coordinator FAQ](/data/faq/#volumes).
 
 <SDButton form="request_expand_existing_volume" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: lab name, machine name, volume name and intended size.
+* **Expected response time:** One week. The volume expansion requires a machine restart that needs to be scheduled 9-11am on a workday.
+* **Expected delivery:** Increased storage capacity.
+* **Cost:** New storage is included in your total storage plan.
 
 ::: details Identify the required information
 
@@ -184,6 +254,12 @@ The above example shows for example that `/mnt/archive` has a current `Size` of 
 You may add new volumes to your lab machines. We will need separate orders for each individual volume you plan to add.  Read more in our [coordinator FAQ](/data/faq/#volumes).
 
 <SDButton form="request_new_storage_volume" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: lab name, machine name, volume name and total size in terabytes.
+* **Expected response time:** One week. The volume expansion requires a machine restart that needs to be scheduled 9-11 am CET on a workday.
+* **Expected delivery:** New storage volume attached (mounted) to your lab machine.
+* **Cost:** New storage is included in your total storage plan.
 
 ::: details Identify the required information
 
@@ -253,6 +329,11 @@ Once data on volume is deleted, it can not be recreated. You must ensure that yo
 
 :::
 
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: lab name, machine name, volume name.
+* **Expected response time:** Days
+* **Cost:** No additional costs.
+
 
 ## Data transfers
 
@@ -268,6 +349,13 @@ Head over to the [data space orders](/service-desk/data-space-orders) to request
 
 <SDButton form="request_internal_kista" />
 
+* **Who can order:** Lab leaders or lab coordinators from the uploader lab.
+* **Required attachment**: [A signed internal kista order](/agreements/downloads/#internal-kista-order).
+* **Expected response time:** Days.
+* **Expected delivery:** Access information communicated in your Slack lab channel.
+* **Cost:** Included in your lab subscription.
+
+
 ## Others
 
 ### Update lab coordinator role
@@ -275,3 +363,8 @@ Head over to the [data space orders](/service-desk/data-space-orders) to request
 Click the button below to update the [lab coordinator](/coordinator/roles/#lab-coordinator) role for a lab attached to your data space.
 
 <SDButton form="request_coordinator_update" />
+
+* **Who can order:** Lab leaders.
+* **Required attachment**: None.
+* **Expected delivery time:** Days.
+* **Cost:** Included in your lab subscription.
