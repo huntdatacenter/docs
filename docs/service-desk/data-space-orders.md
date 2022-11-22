@@ -162,6 +162,7 @@ Click the button below to update your [data space coordinator roles](/coordinato
 * **Expected delivery time:** Days.
 * **Cost:**  Included in your data space subscription.
 
+
 ### Update lab leader role
 
 Click the button below to update lab leader roles for labs attached to your data space.
