@@ -167,22 +167,7 @@ Click the button below to update your [data space coordinator roles](/coordinato
 
 Click the button below to update lab leader roles for labs attached to your data space.
 
-<ServiceDesk title="Request update of lab leader role" :template='{
-  subject: "Update lab leader role - {labname} in {dataspace}",
-  body: `Hi HUNT Cloud team,
-
-I would like to update the lab leader role for a lab under our dataspace.
-
-I have attached a signed lab agreement to this email.
-
-I am looking forward to receive an email acknowledging that you have updated the role.
-
-Best regards,
-`,
-}' :fields='[
-  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-  { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-]' />
+<SDButton form="request_lab_leader_role" />
 
 * **Who can order:** Data space leaders and data space compliance officers.
 * **Required attachment**: A new [signed lab order](/agreements/downloads/#lab-order).
