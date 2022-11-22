@@ -124,15 +124,15 @@ The [external export kista](/faq/external-transfer/#faq-on-external-data-transfe
 
 <SDButton form="request_external_export_kista" />
 
-::: warning External dependency
-Note that time to successful transfer depends on access to SFTP software and potential firewall adjustments for the external-party that will upload data.
-:::
-
 * **Who can order:** Data space leaders or Data space compliance coordinators.
 * **Required attachments**: (1) [A signed external kista export order](/agreements/downloads/#external-kista-export-order), and (2) one [SSH public key](/data-transfers/external-kista/#ssh-key-pair) from the external downloader.
 * **Expected response time:** Days.
 * **Expected delivery:** Access information sent to the lab user that will make data available for export.
 * **Cost:** Included in your data space subscription.
+
+::: warning External dependency
+Note that time to successful transfer depends on access to SFTP software and potential firewall adjustments for the external-party that will upload data.
+:::
 
 
 ### Network opening
@@ -156,6 +156,28 @@ Note that time to successful transfer depends on access to SFTP software and pot
 Click the button below to update your [data space coordinator roles](/coordinator/roles/) under your existing data space.
 
 <SDButton form="update_data_space_coordinator_role" />
+
+* **Who can order:** Data space leaders or Data space compliance coordinators in active data spaces.
+* **Required attachment**: None.
+* **Expected delivery time:** Days.
+* **Cost:**  Included in your data space subscription.
+
+### Update lab leader role
+
+Click the button below to update lab leader roles for labs attached to your data space.
+
+<ServiceDesk title="Request update of lab leader role" :template='{
+  subject: "Update lab leader role - {labname} in {dataspace}",
+  body: `Hi HUNT Cloud team,
+I would like to update the lab leader role for a lab under our dataspace.
+I have attached a signed lab agreement to this email.
+I am looking forward to receive an email acknowledging that you have updated the role.
+Best regards,
+`,
+}' :fields='[
+  { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+]' />
 
 * **Who can order:** Data space leaders and data space compliance officers.
 * **Required attachment**: A new [signed lab order](/agreements/downloads/#lab-order).
