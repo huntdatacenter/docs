@@ -46,7 +46,7 @@ request_new_lab:
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space compliance coordinators in active data spaces.",
-    "<b>Required attachment:</b> <a href='/agreements/downloads/#lab-order' target='_blank'>A signed lab order</a> and information on storage volume sizes and machine type for the home machine (see below button on main page).",
+    "<b>Required attachment:</b> <a href='/agreements/downloads/#invoice-profile' target='_blank'>Invoice profile for new lab</a> and <a href='/agreements/downloads/#lab-order' target='_blank'>A signed lab order</a>. Information on storage volume sizes and machine type for the home machine can be found below button on main page.",
     "<b>Expected delivery time:</b> One week.",
     "<b>Next step:</b> <a href='/service-desk/lab-orders.html#add-a-new-lab-user' target='_blank'>Add your first lab users</a>.",
     "<b>Cost:</b> One lab subscription as specified in the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
