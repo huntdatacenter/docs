@@ -169,9 +169,13 @@ Click the button below to update lab leader roles for labs attached to your data
 <ServiceDesk title="Request update of lab leader role" :template='{
   subject: "Update lab leader role - {labname} in {dataspace}",
   body: `Hi HUNT Cloud team,
+
 I would like to update the lab leader role for a lab under our dataspace.
+
 I have attached a signed lab agreement to this email.
+
 I am looking forward to receive an email acknowledging that you have updated the role.
+
 Best regards,
 `,
 }' :fields='[
