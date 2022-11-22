@@ -3,7 +3,7 @@
 
 request_new_lab:
   title: "Request a new lab"
-  template: 
+  template:
     subject: "New lab order - {lab_name} @ {data_space}"
     body: |
       Hi HUNT Cloud team,
@@ -12,14 +12,14 @@ request_new_lab:
 
       I have attached a signed lab agreement to this email.
 
-      We would like to start with the following machine type for our home machine:  
+      We would like to start with the following machine type for our home machine:
 
       ---
       lab_name="{lab_name}"  
       machine_type="{machine_type}"  
       ---
 
-      We would like to attached the following storage volume sizes to our home machine (numbers are in Gigabytes):  
+      We would like to attached the following storage volume sizes to our home machine (numbers are in Gigabytes):
 
       ---
       ARCHIVE = {archive_volume} GB  
@@ -91,13 +91,13 @@ request_lab_deletion:
 
 
 request_external_import_kista:
-  title: "Request an external import kista" 
+  title: "Request an external import kista"
   template:
     subject: "External import kista order - {labname}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request an external import kista for {labname}.  
+      I would like to request an external import kista for {labname}.
 
       I have attached two files: (1) the signed external import kista order, and (2) the public SSH key from the external uploader.
 
@@ -122,10 +122,10 @@ request_external_export_kista:
   title: "Request an external export kista"
   template:
     subject: External import kista order - {labname}
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
-      I would like to request an external export kista for {labname}.  
+      I would like to request an external export kista for {labname}.
 
       I have attached two files: (1) the signed external export kista order, and (2) the public SSH key from the external uploader.
 
@@ -284,14 +284,14 @@ request_update_of_existing_invoice:
 
 request_new_dp_agreement:
   title: "Request a new data processor agreement template"
-  template: 
+  template:
     subject: "Data processor agreement request - {organization}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a data processor agreement template for review.
 
-      I have attached the data processor agreement for to this email. 
+      I have attached the data processor agreement for to this email.
 
       I am looking forward to get the data processor agreement template on email, and to continue our dialogue on screen.
 
@@ -319,7 +319,7 @@ request_new_service_center:
 
       I would like to request a new service center under our data controller agreement.
 
-      I have attached a signed service center agreement form to this email. 
+      I have attached a signed service center agreement form to this email.
 
       I am looking forward to get the service center agreement on email, and to continue our dialogue on screen.
 
@@ -399,7 +399,7 @@ request_access_new_user:
     "<b>Next step:</b> <a href='/getting-started/' target='_blank'>Prepare your key transfer</a>.",
     "<b>Cost:</b> Included in your lab subscription.",
   ]
-  
+
 
 request_lab_user_deactivation:
   title: "Request lab user deactivation"
@@ -452,7 +452,7 @@ reactivate_lab_user:
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
     { label: "Name of user", key: "username", field: "textfield" }
   ]
-  requirements: [ 
+  requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
     "<b>Required attachment</b>: <a href='/agreements/downloads/#user-agreement' target='_blank'>A new user agreement</a>.",
     "<b>Expected response time:</b> One week.",
@@ -533,7 +533,7 @@ request_new_cpu:
   title: "Request a new lab machine"
   template:
     subject: "New CPU machine - {lab_name}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a new CPU machine in our lab:
@@ -573,18 +573,18 @@ request_new_cpu:
   ]
 
 
-request_new_gpu: 
+request_new_gpu:
   title: "Request a new GPU machine"
   template:
     subject: "New GPU machine - {lab_name}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a new GPU machine in our lab:
 
       ---
       lab name = {lab_name}  
-      gpu type = {nvidia.p100}  
+      gpu type = {gpu_type}  
       machine type = {machine_type}  
       storage size = {terabytes} TB  
       subscription = {subscription}  
@@ -597,7 +597,7 @@ request_new_gpu:
 
   fields: [
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "GPU type", key: "nvidia.p100", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
+    { label: "GPU type", key: "gpu_type", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
     { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
     { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
     {
@@ -623,7 +623,7 @@ request_blue_fleet:
   title: "Request a fleet of Blue machines"
   template:
     subject: "Fleet of blue machines - {lab_name}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a fleet of the following blue machines:
@@ -632,7 +632,7 @@ request_blue_fleet:
       lab name = {lab_name}  
       number of machines = {number}  
       machine type = {machine_type}  
-      storage size per machine = {terabytes} TB   
+      storage size per machine = {terabytes} TB  
       ---
 
       I am looking forward to receive access information in our Slack lab channel when the fleet is up and running.
@@ -656,9 +656,9 @@ request_blue_fleet:
 
 request_machine_shelving:
   title: "Request a shelving of a machine"
-  template: 
+  template:
     subject: "Shelve machine - {vm_name} @ {lab_name}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a shelving of a following machine:
@@ -716,7 +716,7 @@ request_machine_deletion:
   title: "Request a deletion of a machine"
   template:
     subject: "Request machine deletion - {vm_name} @ {lab_name}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a deletion of a following machine:
@@ -747,7 +747,7 @@ request_expand_existing_volume:
   title: "Request storage volume expansion"
   template:
     subject: "Storage volume expansion - {lab_name}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a storage volume expansion:
@@ -796,7 +796,7 @@ request_new_storage_volume:
   title: "Request a new storage volume"
   template:
     subject: "New storage volume - {lab_name}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a new storage volume:
@@ -841,7 +841,7 @@ request_volume_deletion:
   title: "Request a volume deletion"
   template:
     subject: "Volume deletion - {lab_name}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a deletion of a storage volume.
@@ -885,7 +885,7 @@ request_internal_kista:
   title: "Request an internal kista"
   template:
     subject: "Internal kista order - {uploader_lab}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request an internal kista from {uploader_lab} to {downloader_lab}.
@@ -914,14 +914,14 @@ request_coordinator_update:
   title: "Request update of lab coordinator role"
   template:
     subject: "Update lab coordinator role - {lab_name}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to update the coordinator role in our Lab:
 
-      Lab name: {lab_name}  
+      Lab name: {lab_name}
 
-      New lab coordinator:  
+      New lab coordinator:
 
       ---
       Name and surname: {name}  
@@ -960,12 +960,12 @@ new_data_space:
   title: "Request a new data space"
   template:
     subject: "New data space order - {service_center}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a new data space under our service center.
 
-      I have attached a signed data space agreement to this email. 
+      I have attached a signed data space agreement to this email.
 
       I am looking forward to an email verification on the data space registration so we can start to order our labs.
 
@@ -989,7 +989,7 @@ request_workbench_access:
   title: "Request Workbench access"
   template:
     subject: "Workbench order - {username} @ {labname}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to try Workbench in {labname}.
@@ -998,7 +998,7 @@ request_workbench_access:
 
       These are the tools I plan to use: {tools}.
 
-      —  
+      —
       Kind regards,
 
   fields: [
@@ -1023,7 +1023,7 @@ request_workbench_access:
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Workbench access key and certificate.",
     "<b>Requirement:</b> (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.",
-    "<b>Next step:</b> [Prepare your key transfer](/guides/workbench-request/).",
+    "<b>Next step:</b> <a href='/guides/workbench-request/' target='_blank'>Prepare your key transfer</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
 
@@ -1032,7 +1032,7 @@ request_workbench_reissue:
   title: "Request Workbench reissue"
   template:
     subject: "Workbench reissue - {username} @ {labname}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request reissue of Workbench certificate for lab: {labname}.
@@ -1060,7 +1060,7 @@ request_ssh_pass_reset:
   title: "Request SSH passphrase reset"
   template:
     subject: "SSH passphrase reset - {username} @ {labname}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a passphrase reset for my user {username} @ {labname}.
@@ -1084,11 +1084,11 @@ request_ssh_pass_reset:
   ]
 
 
-request_ssh_config: 
+request_ssh_config:
   title: "Request SSH configuration"
   template:
     subject: "SSH config request - {username} @ {labname}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a new ssh_config file for user {username} @ {labname}.
@@ -1109,19 +1109,19 @@ request_ssh_config:
     "<b>Cost:</b> Included in the lab subscription.",
   ]
 
-request_vpn_link: 
+request_vpn_link:
   title: "Request VPN access link opening"
   template:
     subject: "VPN access opening request - {username}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request an VPN access opening for the following IP address:
 
       ---
-      access_ip = {IP4_address}  
-      access_duration = {access_duration}  
-      access_country = {country}  
+      access_ip="{IP4_address}"  
+      access_duration="{access_duration}"  
+      access_country="{country}"  
       ---
 
       I am looking forward to be notified on email when the opening is implemented.
@@ -1153,11 +1153,11 @@ request_vpn_link:
   ]
 
 
-request_vpn_reset: 
+request_vpn_reset:
   title: "Request VPN certificate reset"
   template:
     subject: "VPN certificate reset - {username}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to reset my VPN certificate.
@@ -1183,11 +1183,11 @@ request_vpn_reset:
   ]
 
 
-request_google_auth: 
+request_google_auth:
   title: "Request Google authenticator request"
   template:
     subject: "Google authenticator key request - {username}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a new Google authenticator key for my VPN access.
@@ -1196,7 +1196,7 @@ request_google_auth:
       I have an active Signal account on my phone and I look forward to receiving new key on my phone.
 
       ---
-      phone_number = {phone_number}
+      phone_number = {phone_number}  
       ---
 
 
@@ -1216,11 +1216,11 @@ request_google_auth:
   ]
 
 
-request_mobaxterm_file: 
+request_mobaxterm_file:
   title: "Request MobaXterm configuration file"
   template:
     subject: "MobaXterm file - {username}@{labname}"
-    body: | 
+    body: |
       Hi HUNT Cloud team,
 
       I would like to request a new MobXterm configuration file.
@@ -1246,11 +1246,11 @@ request_mobaxterm_file:
   ]
 
 
-request_: 
-  title:
+request_template:
+  title: "Button title text"
   template:
-    subject:
-    body: | 
-
-  fields:
-  requirements:
+    subject: "Email subject text"
+    body: |
+      Sample text
+  fields: []
+  requirements: []
