@@ -199,12 +199,12 @@ export default {
             <v-expansion-panels v-model="panel">
               <v-expansion-panel>
                 <v-expansion-panel-header :disable-icon-rotate="formFilled">
-                  Requirements
+                  Request details
                   <!-- <template v-if="formFilled" v-slot:actions>
                     <v-icon color="teal">done</v-icon>
                   </template> -->
                 </v-expansion-panel-header>
-                <v-expansion-panel-content>
+                <v-expansion-panel-content class="mt-2">
                   <v-row justify="center">
                     <v-col v-for="item in requirements" class="pb-0 pt-0" cols="12" :key="item.key" dense>
                       <p class="mb-2" v-html="item"></p>
