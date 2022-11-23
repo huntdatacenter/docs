@@ -1,6 +1,7 @@
 <script>
 const yaml = require("js-yaml");
 const fs = require("fs");
+import fetch from 'node-fetch';
 
 export default {
   name: "SDButton",
