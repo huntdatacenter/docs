@@ -48,7 +48,7 @@ request_new_lab:
     "<b>Who can order:</b> Data space leaders and data space compliance coordinators in active data spaces.",
     "<b>Required attachment:</b> <a href='/agreements/downloads/#invoice-profile' target='_blank'>Invoice profile for new lab</a> and <a href='/agreements/downloads/#lab-order' target='_blank'>A signed lab order</a>. Information on storage volume sizes and machine type for the home machine can be found below button on main page.",
     "<b>Expected delivery time:</b> One week.",
-    "<b>Next step:</b> <a href='/service-desk/lab-orders.html#add-a-new-lab-user' target='_blank'>Add your first lab users</a>.",
+    # "<b>Next step:</b> <a href='/service-desk/lab-orders.html#add-a-new-lab-user' target='_blank'>Add your first lab users</a>.",
     "<b>Cost:</b> One lab subscription as specified in the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
   ]
 
@@ -361,7 +361,7 @@ request_new_service_center:
     "<b>Required attachment</b>: <a href='/coordination/get-going/service-center/#_2-forward-required-services-agreement-information-to-hunt-cloud' target='_blank'>HUNT Cloud Service Agreement Form</a>.",
     "<b>Expected delivery:</b> PDF agreements for review/signatures.",
     "<b>Expected delivery time:</b> One week.",
-    "<b>Next step:</b> <a href='/coordination/get-going/data-space/' target='_blank'>Order your first data space</a>",
+    # "<b>Next step:</b> <a href='/coordination/get-going/data-space/' target='_blank'>Order your first data space</a>",
     "<b>Cost:</b> There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
 
   ]
@@ -422,7 +422,7 @@ request_access_new_user:
     "<b>Required attachment</b>: <a href='/agreements/downloads/#user-agreement' target='_blank'>A signed user agreement</a>.",
     "<b>Expected response time:</b> One week.",
     "<b>Expected delivery:</b> Lab keys and VPN certificate.",
-    "<b>Next step:</b> <a href='/getting-started/' target='_blank'>Prepare your key transfer</a>.",
+    # "<b>Next step:</b> <a href='/getting-started/' target='_blank'>Prepare your key transfer</a>.",
     "<b>Cost:</b> Included in your lab subscription.",
   ]
 
@@ -483,7 +483,7 @@ reactivate_lab_user:
     "<b>Required attachment</b>: <a href='/agreements/downloads/#user-agreement' target='_blank'>A new user agreement</a>.",
     "<b>Expected response time:</b> One week.",
     "<b>Expected delivery:</b> Lab keys and VPN certificate.",
-    "<b>Next step:</b> <a href='/getting-started/' target='_blank'>Prepare your key transfer</a>.",
+    # "<b>Next step:</b> <a href='/getting-started/' target='_blank'>Prepare your key transfer</a>.",
     "<b>Cost:</b> Included in your lab subscription.",
   ]
 
@@ -1004,7 +1004,7 @@ new_data_space:
     "<b>Who can order:</b> Service center leaders and administrative contacts for service centers.",
     "<b>Required attachment</b>: <a href='/agreements/downloads/#data-space-order' target='_blank'>A signed data space order</a> and <a href='/agreements/downloads/#invoice-profile' target='_blank'>invoice profile for the data space</a>.",
     "<b>Expected delivery time:</b> Days.",
-    "<b>Next step:</b> <a href='/service-desk/data-space-orders.html#new-lab' target='_blank'>Order the first lab in your data space</a>",
+    # "<b>Next step:</b> <a href='/service-desk/data-space-orders.html#new-lab' target='_blank'>Order the first lab in your data space</a>",
     "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
   ]
 
@@ -1049,7 +1049,7 @@ request_workbench_access:
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Workbench access key and certificate.",
     "<b>Requirement:</b> (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.",
-    "<b>Next step:</b> <a href='/guides/workbench-request/' target='_blank'>Prepare your key transfer</a>.",
+    # "<b>Next step:</b> <a href='/guides/workbench-request/' target='_blank'>Prepare your key transfer</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
 
@@ -1077,7 +1077,7 @@ request_workbench_reissue:
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Workbench certificate.",
     "<b>Requirement:</b> Active Signal app on phone.",
-    "<b>Next step:</b> <a href='/guides/workbench-reissue-certificate/' target='_blank'>Guide on Workbench reissue</a>.",
+    # "<b>Next step:</b> <a href='/guides/workbench-reissue-certificate/' target='_blank'>Guide on Workbench reissue</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
 
@@ -1105,7 +1105,7 @@ request_ssh_pass_reset:
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Temporary passphrase on Signal.",
     "<b>Requirement:</b> Active Signal app on your phone.",
-    "<b>Next step:</b> <a href='/guides/configure-ssh/' target='_blank'> Guide on the passphrase reset</a>.",
+    # "<b>Next step:</b> <a href='/guides/configure-ssh/' target='_blank'> Guide on the passphrase reset</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
 
@@ -1131,7 +1131,7 @@ request_ssh_config:
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Temporary passphrase on Signal.",
     "<b>Requirement:</b> Active Signal app on your phone.",
-    "<b>Next step:</b> <a href='/guides/configure-ssh/' target='_blank'>Guide on the passphrase reset<a/>.",
+    # "<b>Next step:</b> <a href='/guides/configure-ssh/' target='_blank'>Guide on the passphrase reset<a/>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
 
@@ -1204,7 +1204,7 @@ request_vpn_reset:
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> VPN passphrase on Signal, link to VPN certificate on email.",
     "<b>Requirement:</b> Active Signal app on your phone.",
-    "<b>Next step:</b> <a href='/guides/vpn-certificate-reset/' target='_blank'>Guide on the VPN reset</a>.",
+    # "<b>Next step:</b> <a href='/guides/vpn-certificate-reset/' target='_blank'>Guide on the VPN reset</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
 
@@ -1237,7 +1237,7 @@ request_google_auth:
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> New key on Signal.",
     "<b>Requirement:</b> Active Signal app on your phone.",
-    "<b>Next step:</b> <a href='/guides/google-authenticator-reset/' target='_blank'>Guide on the key reset</a>.",
+    # "<b>Next step:</b> <a href='/guides/google-authenticator-reset/' target='_blank'>Guide on the key reset</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
 
@@ -1267,7 +1267,7 @@ request_mobaxterm_file:
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> File as email attachment.",
     "<b>Requirement:</b> Active SSH connection.",
-    "<b>Next step:</b> <a href='/working-in-your-lab/technical-tools/mobaxterm/' target='_blank'>MobaXterm configuration guide</a>.",
+    # "<b>Next step:</b> <a href='/working-in-your-lab/technical-tools/mobaxterm/' target='_blank'>MobaXterm configuration guide</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
 
