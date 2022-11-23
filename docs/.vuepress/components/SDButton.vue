@@ -29,12 +29,12 @@ export default {
       fetch("/cfg/service_desk.yml")
         .then((response) => response.text())
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           const cfg = yaml.load(data);
-          console.log(cfg);
+          // console.log(cfg);
           this.data = cfg;
         });
-    } 
+    }
   },
   methods: {},
 };
