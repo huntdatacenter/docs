@@ -37,8 +37,9 @@
   },
   "dependencies": {
     "highlight.js": "^11.4.0",
+    "node-fetch": "2",
     "node-forge": "^1.0.0",
-    "vuetify": "^2.6.5",
+    "vuetify": "^2.6.10",
     "ws": "^8.4.2"
   },
   "resolutions": {

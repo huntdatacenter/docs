@@ -55,6 +55,7 @@ export default {
     title: { type: String, default: null },
     fields: { type: Array, default: null },
     template: { type: Object, default: null },
+    requirements: { type: Array, default: null },
     recipient: {
       type: String,
       default: "cloud.support+hunt-cloud-request@hunt.ntnu.no",
@@ -113,7 +114,7 @@ export default {
     close() {
       this.finalizeClicked = true;
       this.sendClicked = true;
-      this.panel = 2;
+      this.panel = 0;
       this.dialog = false;
     },
     closeBtn() {
@@ -121,15 +122,15 @@ export default {
       this.dialog = false;
     },
     submit() {
-      this.panel = 1;
+      this.panel = 2;
     },
     review() {
       this.finalizeClicked = true;
-      this.panel = 1;
+      this.panel = 2;
     },
     actionSend() {
       this.sendClicked = true;
-      this.panel = 2;
+      this.panel = 3;
       window.location.href = this.mailto;
     },
     encode(template) {
@@ -196,6 +197,32 @@ export default {
 
           <v-card-text class="pt-6">
             <v-expansion-panels v-model="panel">
+              <v-expansion-panel>
+                <v-expansion-panel-header :disable-icon-rotate="formFilled">
+                  Request details
+                  <!-- <template v-if="formFilled" v-slot:actions>
+                    <v-icon color="teal">done</v-icon>
+                  </template> -->
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="mt-2">
+                  <v-row justify="center">
+                    <v-col v-for="item in requirements" class="pb-0 pt-0" cols="12" :key="item.key" dense>
+                      <p class="mb-2" v-html="item"></p>
+                    </v-col>
+                  </v-row>
+                  <v-row justify="center">
+                      <v-col cols="6">
+                        <v-btn
+                          color="success"
+                          block
+                          @click="panel = panel + 1"
+                        >
+                          Continue
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
               <v-expansion-panel>
                 <v-expansion-panel-header :disable-icon-rotate="formFilled">
                   Form
