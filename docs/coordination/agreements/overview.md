@@ -253,7 +253,7 @@ Please download the form, update the information and send us the text file for a
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Services Agreement Form" version 1.2.
+The following form fields are including in the "HUNT Cloud Services Agreement Form" version 1.3.
 
 **Services center short name**
 
@@ -274,6 +274,10 @@ This individual is authorized by the data controller to lead the services center
 **Administrative coordinator**
 
 This is the name of the individual that will coordinate administrative aspects of the services center agreement, such as updates to this agreeement. The individual will act as the deputy contact for other contacts if needed, including the ability to authorize new data spaces under the services center. 
+
+**Lagtun invitation**
+
+This is the name of the individual that will receive invitation to Lagtun during the HUNT Cloud Tingweeks.  [Lagtun](/tingweek/lagtun) is the Ting that appoints time to govern the scientific development of HUNT Cloud.
 
 **Signatory official**
 
