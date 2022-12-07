@@ -130,7 +130,7 @@ sudo apt install <packagename>
 
 ::: warning WARNING
 
-Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/conda/). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.
+Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](/working-in-your-lab/analytical-tools/conda/). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.
 
 :::
 
@@ -154,7 +154,7 @@ Yes. You can run [Docker images](https://www.docker.com/) on both [iaas](/faq/co
 
 ::: tip
 
-If you need to run docker images on home machine try using Singularity instead. Read more in our [Singularity installation guide](https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/singularity/).
+If you need to run docker images on home machine try using Singularity instead. Read more in our [Singularity installation guide](/working-in-your-lab/technical-tools/singularity/).
 
 :::
 

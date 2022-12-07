@@ -236,6 +236,7 @@ module.exports = {
                 "/working-in-your-lab/technical-tools/mobaxterm.md",
                 "/working-in-your-lab/technical-tools/ncdu.md",
                 "/working-in-your-lab/technical-tools/singularity.md",
+                "/working-in-your-lab/technical-tools/docker.md",
                 "/working-in-your-lab/technical-tools/terminal-multiplexers.md",
                 "/working-in-your-lab/technical-tools/x2go.md",
                 "/working-in-your-lab/technical-tools/vnc.md",
