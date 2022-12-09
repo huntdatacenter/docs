@@ -22,7 +22,7 @@ Follow official [Docker installation guide](https://docs.docker.com/engine/insta
 
 [GPU machines](/working-in-your-lab/technical-tools/gpu/). come with nvidia-docker preinstalled.
 
-## Moving docker directory
+### Moving docker directory
 
 1. Stop docker service and migrate files:
 
@@ -74,4 +74,20 @@ sudo service docker restart
 
 ```
 docker ps -a
+```
+
+### Troubleshooting installation of pip packages
+
+Add `mtu` size configuration in docker config:
+
+```
+sudo vim /etc/docker/daemon.json
+```
+
+Example configuration setting mtu to 1330 to avoid all possible issues with packet sizes:
+```
+{
+    "data-root": "/home/docker",
+    "mtu": 1330
+}
 ```
