@@ -329,7 +329,7 @@ Once data on volume is deleted, it can not be recreated. You must ensure that yo
 
 :::
 
-* **Who can order:** Lab leaders and lab coordinators.
+* **Who can order:** Lab leaders.
 * **Required information**: lab name, machine name, volume name.
 * **Expected response time:** Days
 * **Cost:** No additional costs.
