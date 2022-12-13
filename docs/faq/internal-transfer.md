@@ -14,6 +14,8 @@ description: This page lists frequently asked questions related to internal tran
 
 ## Internal Kista
 
+Internal kistas handles transfers between labs inside HUNT Cloud.
+
 ### Can I transfer data directly to other labs?
 
 Yes and no. Direct transfers between labs are blocked by default. However, you can transfer data to other labs using our internal kista service.
@@ -87,3 +89,36 @@ No. Internal kistas allows one way data transactions. This means that the downlo
 ### Do I need to encrypt my data before internal kista transfers?
 
 We don't think so. It is our responsibility to ensure the correct receiver of your data and the confidentiality of your data inside internal kistas. All transfers occur in encrypted transfer channels. We log transfers, and such logs may be made available to your data controller on request.
+
+
+## Transfers inside my lab
+
+We recommend [rsync](/working-in-your-lab/transfer-tools/rsync) for transfers between machines inside your lab. 
+
+### How can I transfer data from my home machine to a blue machine? 
+
+You will need to transfer data over to your lab new machine for efficient analysis. From your home machine: 
+
+```bash
+# -- Principal example
+rsync -avuz /mnt/work/my/folder ubuntu@<machinename>:/home/ubuntu/
+
+# -- Practical example
+rsync -avuz path/to/your/local/directory ubuntu@demolab-blue-thea:/home/ubuntu/
+
+```
+
+### How can I transfer data from a blue machine back to my home machine? 
+
+And, you may want to transfer results from your lab machine and back to your home machine. From your home machine: 
+
+```bash
+# -- Principal example
+rsync -avuz ubuntu@<machinename>:/home/ubuntu/ /mnt/work/my/folder 
+
+# -- Practical example
+rsync -avuz ubuntu@demolab-blue-thea:/home/ubuntu/ path/to/your/local/directory
+```
+
+
+
