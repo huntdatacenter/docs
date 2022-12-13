@@ -45,9 +45,11 @@ rsync -avuz path/to/your/local/directory <username>@<labname>:/mount/cargo/
 rsync -avuz path/to/your/local/directory demouser@demolab:/mount/cargo/
 ```
 
-### Transfer from your home machine to blue machine
+### Transfer from your home machine to a blue machine
 
 This is an example of data transfer from your home machine to a iaas or blue machine inside the same lab.
+
+From your home machine: 
 
 ```bash
 # -- Principal example
@@ -55,6 +57,20 @@ rsync -avuz /mnt/work/my/folder ubuntu@<machinename>:/home/ubuntu/
 
 # -- Practical example
 rsync -avuz path/to/your/local/directory ubuntu@demolab-blue-thea:/home/ubuntu/
+```
+
+### Transfer from your blue machine back to your home machine
+
+This is an example of data transfer from a iaas or blue machine back to your home machine inside the same lab.
+
+From your home machine: 
+
+```bash
+# -- Principal example
+rsync -avuz ubuntu@<machinename>:/home/ubuntu/ /mnt/work/my/folder 
+
+# -- Practical example
+rsync -avuz ubuntu@demolab-blue-thea:/home/ubuntu/ path/to/your/local/directory
 ```
 
 ## More information
