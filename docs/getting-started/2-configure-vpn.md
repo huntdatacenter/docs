@@ -27,7 +27,7 @@ Successful [verification](/getting-started/collect-your-keys/#_1-4-verify-your-k
 
 We use the open-source application `OpenVPN` to ensure encrypted communication between your local machine and us.
 
-[Download and install OpenVPN using the latest Windows Installer](https://openvpn.net/community-downloads/)
+[Download and install OpenVPN using the latest stable Windows Installer (Avoid beta versions)](https://openvpn.net/community-downloads/)
 
 Click on the link above, scroll down to the file named **`OpenVPN-<version-number>-i601-amd64.msi`** (Windows 10 users), download the file and follow the on-screen installation instructions.
 
