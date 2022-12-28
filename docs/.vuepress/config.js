@@ -61,10 +61,7 @@ module.exports = {
     logo: "/img/hunt-cloud-logo.svg",
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
     // TODO remove nav key in vuepress 2
-    nav: [{
-        text: "Home",
-        link: "/"
-      },
+    nav: [
       {
         text: "Do science",
         link: "/do-science/"
@@ -76,6 +73,11 @@ module.exports = {
       {
         text: "Govern science",
         link: "/govern-science/"
+      }
+      ,
+      {
+        text: "About",
+        link: "/about/"
       }
     ],
     navbar: [{
@@ -89,8 +91,17 @@ module.exports = {
     ],
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
     sidebar: {
-      "/do-science/": [
+      "/do-science/": [{
+        title: "Do science",
+        collapsable: false,
+        text: "Do science",
+        isGroup: true,
+        children: ["/do-science/",
+        ]
+        },
         "/do-science/getting-started/",
+        "/do-science/workbench/",
+        "/do-science/service-desk/",
       ],
       "/administer-science/": [
         "/administer-science/"
@@ -98,10 +109,30 @@ module.exports = {
       "/govern-science/": [
         "/govern-science/"
       ],
-      "/": [
-        "",
-        "contact", 
-        "system-status"
+      "/about/": [
+        "/about/"
+      ],
+      
+      "/": [{
+        title: "Home",
+        collapsable: false,
+        text: "Home",
+        isGroup: true,
+        children: ["/",
+        "/system-status.md",
+        "/contact.md", 
+        "/contribute.md",
+        ]
+        },
+        {
+        title: "Do science",
+        text: "Do science",
+        link: "/do-science/",
+        activeMatch: "/",
+        },
+        "/administer-science/",
+        "/govern-science/",
+        "/about/"
       ]
    },
   },
