@@ -93,15 +93,60 @@ module.exports = {
     sidebar: {
       "/do-science/": [{
         title: "Do science",
-        collapsable: false,
         text: "Do science",
+        collapsable: false,
         isGroup: true,
-        children: ["/do-science/",
+        children: [
+        {
+        title: "Welcome",
+        path: "/do-science/",
+        }
         ]
         },
         "/do-science/getting-started/",
-        "/do-science/workbench/",
+        {
+        title: "HUNT Workbench",
+        text: "HUNT Workbench",
+        collapsable: true,
+        isGroup: true,
+        children: [
+        {title: "Introduction",
+        path: "/do-science/workbench/",},
+        "/do-science/workbench/principles.md",
+        "/do-science/workbench/installation.md",
+        "/do-science/workbench/troubleshooting.md",
+        "/do-science/workbench/faq.md",
+        ]
+        },
         "/do-science/service-desk/",
+        {
+        title: "Troubleshooting",
+        text: "Troubleshooting",
+        collapsable: true,
+        isGroup: true,
+        children: [
+        {title: "Introduction",
+        path: "/do-science/troubleshooting/",},
+        "/do-science/troubleshooting/connection.md",
+        "/do-science/troubleshooting/lab-activities.md",
+        ]
+        },        {
+        title: "FAQ",
+        text: "FAQ",
+        collapsable: true,
+        isGroup: true,
+        children: [
+        {title: "Introduction",
+        path: "/do-science/faq/",},
+        "/do-science/faq/access.md",
+        "/do-science/faq/compute.md",
+        "/do-science/faq/storage.md",
+        "/do-science/faq/internal-transfer.md",
+        "/do-science/faq/external-transfer.md",
+        "/do-science/faq/security.md",
+        "/do-science/faq/os-upgrade.md",
+        ]
+        },
       ],
       "/administer-science/": [
         "/administer-science/"
@@ -115,8 +160,9 @@ module.exports = {
       
       "/": [{
         title: "Home",
-        collapsable: false,
         text: "Home",
+        path: "/",
+        collapsable: false,
         isGroup: true,
         children: ["/",
         "/system-status.md",
@@ -126,13 +172,20 @@ module.exports = {
         },
         {
         title: "Do science",
-        text: "Do science",
-        link: "/do-science/",
-        activeMatch: "/",
+        path: "/do-science/",
         },
-        "/administer-science/",
-        "/govern-science/",
-        "/about/"
+        {
+        title: "Administer science",
+        path: "/administer-science/",
+        },
+        {
+        title: "Govern science",
+        path: "/govern-science/",
+        },
+        {
+        title: "About HUNT Cloud",
+        path: "/about/",
+        },        
       ]
    },
   },

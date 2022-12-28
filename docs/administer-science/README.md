@@ -1,7 +1,7 @@
 ---
-title: Administer science
+title: Introduction
 category: HUNT Cloud
-permalink: /administer-science/
+permalink: /coordination/
 description: This page contains information in administrative issues aimed at coordinators in HUNT Cloud. 
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: HUNT Workbench
 category: Workbench
-description: Guides to your Workbench setup.
+sidebarDepth: 0
+description: Guides to your HUNT Workbench setup.
 ---
 
 # HUNT Workbench

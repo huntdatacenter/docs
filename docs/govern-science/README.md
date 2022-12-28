@@ -1,7 +1,7 @@
 ---
-title: Govern science
+title: Introduction
 category: HUNT Cloud
-permalink: /govern-science/
+permalink: /governance/
 description: This page gives an overview of the governance and decision making processes in HUNT Cloud. 
 ---
 
