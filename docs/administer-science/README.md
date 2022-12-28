@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Administer science
 category: HUNT Cloud
 permalink: /administer-science/
 description: This page contains information in administrative issues aimed at coordinators in HUNT Cloud. 

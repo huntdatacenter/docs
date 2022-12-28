@@ -1,26 +1,30 @@
 ---
-title: Lab users
+title: Service desk
 category: Service desk
-permalink: /service-desk/user-orders
-description: HUNT Cloud service desk orders for lab users.
-sidebarDepth: 2
+permalink: /do-science/service-desk/
+description: This page list predefined HUNT Cloud service orders for active lab users.
+sidebarDepth: 1
 ---
 
-# Service desk orders for lab users
+# Service desk for lab users
 
-**This page list predefined service orders for active users in one or more labs. To place an order, click the blue button and send us a pre-filled email with required information.**
-
-[[toc]]
+**This page list predefined service orders for active lab users. To place your order, click the blue button and send us a pre-filled email with required information.**
 
 ::: tip Save time
 
-It saves you time to send us the request from your **organizational email**. We use this for identification, and request from private emails need additional verification that takes longer.
+You can speed up your delivery with two optimizations: (1) send the request from your **organizational email**; and (2) send **one request per email**.
 
 :::
 
+Try our service desk in the [administer science](/administer-science/service-desk) section aimed at lab leaders, lab coordinators and data spaces if you can't find what you are looking for.
+
+## Overview
+
+You can request the following service orders as a lab user in HUNT Cloud.
+
+[[toc]]
+
 Send us a regular [email](/contact) with your request if you can't find what you are looking for on the this page.
-
-
 
 
 ## Lab access
@@ -73,9 +77,9 @@ Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to acce
 * **Next step:** [Guide on the passphrase reset](/guides/configure-ssh/).
 * **Cost:** Included in the lab subscription.
 
-### SSH Configuration
+### SSH configuration
 
-Click button below if you need your ssh_config.txt file to be resent to you (accidental loss, new computer, etc.)
+Click button below if you need your `ssh_config.txt` file to be resent to you (accidental loss, new computer, etc.)
 
 <SDButton form="request_ssh_config" />
 
@@ -157,3 +161,29 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 * **Requirement:** Active SSH connection.
 * **Next step:** [MobaXterm configuration guide](/working-in-your-lab/technical-tools/mobaxterm/).
 * **Cost:** Included in the lab subscription.
+
+## FAQ
+
+### I have a new machine, what should I request? 
+
+We are happy to heard about your new machine! To regain lab access you will need to request certificates (required) and potentially configuration files (for consideration): 
+
+**Required**. If you have a new machine, you will need (1) a new VPN certificate (VPN certificate reset) and (2) a new Workbench certificate (Workbench reissue). 
+
+**For consideration**. You may consider to request a new SSH configuration (SSH configuration) if you do not remember your lab IPs, and/or a new SSH passphrase if you don't remember your SSH passphrase (SSH passphrase reset), and/or a new MobaXterm configuration file if you use this application (Windows users). 
+
+Ship one email per request for speedy delivery.
+
+### I have not heard back within the expected delivery time, now what? 
+
+Poke us on [email](/contact) or in your lab channel in Slack if you have not heard back within the expected delivery time of your request. It is good to ensure that we have registered the request, and if we are occupied we will aim to give you a new estimate for delivery.
+
+### Why do I need to ship one email per request? 
+
+We use your prefilled email to start predefined workflows on our side. The automation do not work if several requests are included per email. Therefore, you will be asked to reship requests that include more than one order.
+
+### Why do I need to ship the email from my organiztaional email? 
+
+We use your organizational email for identification and to ensure that you are authorized to make the order. Therefore, you will be asked to reship requests from private emails that is not verified by your organization. 
+
+

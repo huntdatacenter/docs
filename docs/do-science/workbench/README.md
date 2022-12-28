@@ -1,12 +1,12 @@
 ---
-title: Introduction
+title: HUNT Workbench
 category: Workbench
 description: Guides to your Workbench setup.
 ---
 
-# Workbench
+# HUNT Workbench
 
-**Workbench provides you with a simple and secure place to explore your data and tools together with your team.**
+**HUNT Workbench provides you with a simple and secure place to explore your data and tools together with your team.**
 
 ## About
 

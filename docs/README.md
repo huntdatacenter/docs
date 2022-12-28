@@ -2,25 +2,21 @@
 title: Welcome
 category: HUNT Cloud
 readingTime: null
-description: HUNT Cloud is a scientific computing service located at NTNU in Norway. These pages contains official user documentation on our cloud services. Their content is aimed at lab users.
+description: HUNT Cloud is a scientific computing service located at NTNU in Norway. These pages contains official user documentation on our scientific services.
 ---
 
 # Welcome to the HUNT Cloud Documentation
 
-HUNT Cloud is a scientific computing environment located at [NTNU](https://www.ntnu.edu/) in Norway.
+**HUNT Cloud is a scientific computing environment located at [NTNU](https://www.ntnu.edu/) in Norway.**
 
-These pages contains official user documentation on our services. The content is aimed at lab users and data space coordinators.
+These pages contains official user documentation for HUNT Cloud. See HUNT Cloud's [regular pages](https://www.ntnu.edu/mh/huntcloud) for introductory information on our scientific services.
 
-Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf) and visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services, and see our [Ting reports](/tingweek/#reports) for detailed updates on our activities.
+**The content on these pages is organized in four tailored sections:**
 
-::: tip Next Ting week
+[Do science](/do-science) - This section is for **scientists** that do science in HUNT Cloud. The content focuses on practical matters such as how to get started, how to use the HUNT Workbench etc.
 
-- **Lab ting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 15 February 2023 - 9 to 11 a.m. CET
-- **Data controller ting**: Wednesday 15 February 2023 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 16 February 2023 - 9 to 11 a.m. CET
+[Administer science](/administer-science) - This is for **scientific administrators** that adminster science in HUNT Cloud. The content focuses on compliance, training, data handling, financal aspects etc.
 
-[Read more about the Tingweeks](tingweek/)
+[Govern science](/govern-science) - This is for representatives that govern scientific activities in HUNT Cloud. The content focuses on scientific and trust governance, including privacy and security.
 
-:::
-
+[About HUNT Cloud](/about) - Read about the team, thinking and technologies behind HUNT Cloud.

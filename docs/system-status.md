@@ -11,7 +11,7 @@ description: Updates will be posted here if there is any service or performance 
 Operational
 :::
 
-**2023-01-28 13:30** - Machine restarted and labs active. 
+**2023-01-28 13:30** - Machine restarted and labs active.
 
 **2023-01-28 13:00** - One physical machine reports error. Labs on the machine is currently unavailable. We will start to migrate to a new host on Monday morning. [Contact us](/contact) on Slack if you need access over the weekend.
 
