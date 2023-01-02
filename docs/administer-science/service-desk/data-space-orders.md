@@ -1,5 +1,5 @@
 ---
-title: Data spaces
+title: Data space orders
 category: Service desk
 permalink: /service-desk/data-space-orders
 description: HUNT Cloud service desk orders for data spaces.

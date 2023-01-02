@@ -1,7 +1,7 @@
 ---
 title: Overview
 category: HUNT Cloud
-permalink: /services/overview
+permalink: /administer-science/services/overview
 sidebarDepth: 1
 description: This page gives an overview of the HUNT Cloud services.
 ---

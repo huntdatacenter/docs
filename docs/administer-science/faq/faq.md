@@ -1,7 +1,7 @@
 ---
 title: FAQ
 category: HUNT Cloud
-permalink: /coordinator/faq
+permalink: /administer-science/faq/faq
 description: This page contains common questions on scientific coordination in HUNT Cloud.
 ---
 

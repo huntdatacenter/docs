@@ -1,6 +1,6 @@
 ---
 title: Community
-category: Communication
+category: Community
 permalink: /community
 sidebarDepth: 1
 tags:
@@ -8,7 +8,7 @@ tags:
 description: This page holds information on communication within the HUNT Cloud community.
 ---
 
-# Cloud community
+# Community
 
 **All lab users and lab coordinators are invited to participate in our online cloud community. The intention is to enable scientists on all levels with a place to say hello to each other, ask for help when needed, and provide help to others when they can.**
 

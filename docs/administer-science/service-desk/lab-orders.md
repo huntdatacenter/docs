@@ -1,5 +1,5 @@
 ---
-title: Labs
+title: Lab orders
 category: Service desk
 permalink: /service-desk/lab-orders
 description: HUNT Cloud service desk orders for labs.

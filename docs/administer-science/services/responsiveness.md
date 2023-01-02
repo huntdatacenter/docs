@@ -1,7 +1,7 @@
 ---
 title: Responsiveness
 category: HUNT Cloud
-permalink: /responsiveness
+permalink: /administer-science/services/responsiveness
 sidebarDepth: 1
 description: This page gives an overview of estimated response and delivery times for HUNT Cloud services.
 ---

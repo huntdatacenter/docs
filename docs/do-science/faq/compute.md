@@ -1,7 +1,7 @@
 ---
 title: Compute
 category: FAQ
-permalink: /faq/compute
+permalink: /do-science/faq/compute
 sidebarDepth: 1
 description: Frequently asked questions related to computation and analysis in labs.
 ---

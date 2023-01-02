@@ -1,22 +1,18 @@
 ---
-title: Welcome
-category: HUNT Cloud
+title: Do science in HUNT Cloud
+category: Do science
 readingTime: null
-description: HUNT Cloud is a scientific computing service located at NTNU in Norway. These pages contains official user documentation on our cloud services. Their content is aimed at lab users.
+description: These pages contains user documentation aimed at scientists that conduct scientific experiments in HUNT Cloud.
 ---
 
-# Welcome to the HUNT Cloud .... Documentation
+# Do science in HUNT Cloud!
 
-HUNT Cloud is a scientific computing environment located at [NTNU](https://www.ntnu.edu/) in Norway.
+**Welcome to our documentation for scientists that conduct sciencentific experiments in HUNT Cloud.**
 
-These pages contains official user documentation on our services. The content is aimed at lab users and data space coordinators.
+This section is aimed at lab users. You will find practical information on how to use our scientific services. See our [main documentation](/) page for other sections.
 
-Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf) and visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services, and see our [Ting reports](/tingweek/#reports) for detailed updates on our activities.
+::: tip Next Ting
 
-::: tip Next Ting week
-
-- **Lab ting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET
-
-[Read more about the Tingweeks](tingweek/)
+Lab Ting 8 is held Tuesday 14 February 2023 - 2 to 4 p.m. CET. All Lab users are invited. [Read more >>](/do-science/community/lab-ting)
 
 :::

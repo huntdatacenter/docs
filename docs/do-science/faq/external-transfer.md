@@ -1,7 +1,7 @@
 ---
 title: External transfer
 category: FAQ
-permalink: /faq/external-transfer
+permalink: /do-science/faq/external-transfer
 sidebarDepth: 1
 description: This page lists frequently asked questions related to external transfers in labs.
 ---
