@@ -1,33 +1,25 @@
 ---
-title: Introduction
+title: Govern science in HUNT Cloud
 category: HUNT Cloud
-permalink: /governance/
-description: This page gives an overview of the governance and decision making processes in HUNT Cloud. 
+permalink: /govern-science/
+description: These pages contains user documentation aimed at representatives that govern science in HUNT Cloud.
 ---
 
-# Governance
+# Govern science in HUNT Cloud
 
-**Handling of large data values requires trustworthy and predictable structures.**
+**Welcome to our documentation for representatives that govern science in HUNT Cloud.**
 
-This section contains information on the governance and decision making processes that provide such an environment in HUNT Cloud.
+This section is aimed at represenatives for data controllers and service centers. See our [main documentation](/) page for other sections.
 
-::: tip In short
+::: tip Next Ting
 
-Our scientific development is governed by multilateral Tings, while the privacy and security policies of data values is governed directly by us in symphony with instructions from our data controllers.
+Data Controller Ting 8 is held Wednesday 15 February 2023 - 1 to 3 p.m. CET. All compliance coordinators, privacy officers and security officers are invited. 
+
+Lagtun 8 is held Thursday 16 February 2023 - 9 to 11 a.m. CET. Representatives from Data controllers, Service Centers and data spaces on the BLUE subscription level are invited.
+
+[Read more >>](/govern-science/ting/)
 
 :::
 
-#### Scientific development
-
-- [Ting week](/tingweek/). A set of layered Tings meet three times per year to provide recommendations on the scientific development in HUNT Cloud.
-- [Lagtun](/tingweek/lagtun/). Lagtun is the Ting that govern the scientific development of our environments.
-- [Resolutions](/tingweek/resolutions/). Lagtun expressed its recommendation for the scientific development as resolutions.
-
-#### Privacy and security
-
-- [Responsibilities](/responsibilities/). An overview of the responsibilities for our governance.
-- [Policies](/policies/). The security and privacy policies that govern the protection of data values in HUNT Cloud.
-- [Certificates](/certificates/). Third-party verification of our quality and security policies.
-- [Subcontractors](/subcontractors/). A list of subcontractors for HUNT Cloud.
 
 

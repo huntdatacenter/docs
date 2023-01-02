@@ -6,21 +6,22 @@ description: This guide will help you to connect and get started on your HUNT Cl
 
 # Introduction
 
-This guide will help you to connect and get started on your HUNT Cloud lab after your lab has requested access in our [service desk](https://docs.hdc.ntnu.no/service-desk/lab-orders/#add-a-new-lab-user).
+**This guide will help you to connect and get started on your HUNT Cloud lab after your lab has requested access in our administer science service desk.**
 
-::: tip
+::: tip Save time
 
-[Install Signal](/getting-started/collect-your-keys/#_1-1-secrets-to-your-phone) on your phone and [contact us](/contact) by email as soon as you have sent us your signed [user agreement](/agreements/downloads/#user-agreement). This allows us to quickly forward you the lab keys when they are ready.
+[Install Signal](/do-science/getting-started/collect-your-keys/#_1-1-secrets-to-your-phone) as soon as your lab has sent us your signed user agreement. This allows us to quickly forward you the lab keys when they are ready.
 :::
 
-The following steps will help you to invest time in your lab setup so you can enjoy simple and secure access for all your future connections:
+The following steps will help you to invest time in your lab setup, all so you can enjoy simple and secure access for all your future connections:
 
-1. **Collect your keys.** This step ensures that you have all your keys and configuration files before your start to spend time on the setup.
-2. **Configure your VPN connection.** This step ensures an encrypted connection to your lab.
-3. **Configure your SSH connection.** This step ensures a connection for future work in your lab.
+1. [Collect your keys](/do-science/getting-started/collect-your-keys/). This step ensures that you have all your keys and configuration files before your start to spend time on the setup.
+2. [Configure your VPN connection](/do-science/getting-started/configure-vpn/). This step ensures an encrypted system connection to HUNT Cloud.
+3. [Configure your SSH connection](/do-science/getting-started/configure-ssh/). This step ensures a connection to your lab.
 4. **Configure your tools.** This step highlights tools that you can configure to simplify your scientific computing.
 
-::: warning Time estimate
+
+::: tip Time estimate
 
 After you have collected your lab keys in step 1, allow for **two hours** to complete the remaining onboarding steps.
 

@@ -97,59 +97,282 @@ module.exports = {
         collapsable: false,
         isGroup: true,
         children: [
-        {
-        title: "Welcome",
-        path: "/do-science/",
-        }
-        ]
+          {
+            title: "Welcome",
+            path: "/do-science/",
+          },
+          {
+            title: "Back to main page",
+            path: "/",
+          }
+          ]
         },
-        "/do-science/getting-started/",
         {
-        title: "HUNT Workbench",
-        text: "HUNT Workbench",
+          title: "Getting started",
+          text: "Getting started",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/do-science/getting-started/"},
+            "/do-science/getting-started/1-collect-keys.md",
+            "/do-science/getting-started/2-configure-vpn.md",
+            "/do-science/getting-started/3-configure-ssh.md",
+          ]
+        },
+        {
+          title: "HUNT Workbench",
+          text: "HUNT Workbench",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/do-science/workbench/",},
+            "/do-science/workbench/principles.md",
+            "/do-science/workbench/installation.md",
+            "/do-science/workbench/troubleshooting.md",
+            "/do-science/workbench/faq.md",
+          ]
+        },
+        {
+        title: "Tools",
+        text: "Tools",
         collapsable: true,
         isGroup: true,
         children: [
         {title: "Introduction",
-        path: "/do-science/workbench/",},
-        "/do-science/workbench/principles.md",
-        "/do-science/workbench/installation.md",
-        "/do-science/workbench/troubleshooting.md",
-        "/do-science/workbench/faq.md",
+        path: "/do-science/tools/",},
+          {
+            title: "Technical tools",
+            text: "Technical tools",
+            isGroup: true,
+            children: [
+              "/do-science/tools/technical-tools/client-certificate.md",
+              "/do-science/tools/technical-tools/docker.md",
+              "/do-science/tools/technical-tools/git.md",              
+              "/do-science/tools/technical-tools/gpu.md",
+              "/do-science/tools/technical-tools/htop.md",
+              "/do-science/tools/technical-tools/mobaxterm.md",
+              "/do-science/tools/technical-tools/ncdu.md",
+              "/do-science/tools/technical-tools/singularity.md",
+              "/do-science/tools/technical-tools/terminal-multiplexers.md",
+              "/do-science/tools/technical-tools/vnc.md",
+              "/do-science/tools/technical-tools/x2go.md",
+            ]
+          },
+          {
+            title: "Analytical tools",
+            text: "Analytical  tools",
+            isGroup: true,
+            children: [
+              "/do-science/tools/analytical-tools/bluebox.md",
+              "/do-science/tools/analytical-tools/conda.md",
+              "/do-science/tools/analytical-tools/epacts.md",
+              "/do-science/tools/analytical-tools/fsl.md",
+              "/do-science/tools/analytical-tools/freesurfer.md",
+              "/do-science/tools/analytical-tools/jupyter-lab.md",
+              "/do-science/tools/analytical-tools/matlab.md",
+              "/do-science/tools/analytical-tools/plink.md",
+              "/do-science/tools/analytical-tools/pycharm.md",
+              "/do-science/tools/analytical-tools/r-studio.md",
+              "/do-science/tools/analytical-tools/regenie.md",
+              "/do-science/tools/analytical-tools/saige.md",
+              "/do-science/tools/analytical-tools/spyder-ide.md",
+              "/do-science/tools/analytical-tools/stata.md",
+            ]
+          },
+          {
+            title: "Transfer tools",
+            text: "Transfer tools",
+            isGroup: true,
+            children: [
+              "/do-science/tools/transfer-tools/7z.md",
+              "/do-science/tools/transfer-tools/lftp.md",
+              "/do-science/tools/transfer-tools/rsync.md",
+              "/do-science/tools/transfer-tools/sshfs.md",
+              "/do-science/tools/transfer-tools/winscp.md",
+            ]
+          },
         ]
-        },
+        },       
+        {
+          title: "Data transfers",
+          text: "Data transfers",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/do-science/transfers/",},
+          ]
+        },       
+        {
+          title: "Guides",
+          text: "Guides",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/do-science/guides/",},
+          ]
+        },       
+        {
+          title: "Community",
+          text: "Community",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/do-science/community/",},
+          ]
+        },       
         "/do-science/service-desk/",
-        {
-        title: "Troubleshooting",
-        text: "Troubleshooting",
-        collapsable: true,
-        isGroup: true,
-        children: [
-        {title: "Introduction",
-        path: "/do-science/troubleshooting/",},
-        "/do-science/troubleshooting/connection.md",
-        "/do-science/troubleshooting/lab-activities.md",
-        ]
+          {
+          title: "Troubleshooting",
+          text: "Troubleshooting",
+          collapsable: true,
+          isGroup: true,
+           children: [
+           {title: "Introduction",
+           path: "/do-science/troubleshooting/",},
+           "/do-science/troubleshooting/connection.md",
+           "/do-science/troubleshooting/lab-activities.md",
+          ]
         },        {
-        title: "FAQ",
-        text: "FAQ",
-        collapsable: true,
-        isGroup: true,
-        children: [
-        {title: "Introduction",
-        path: "/do-science/faq/",},
-        "/do-science/faq/access.md",
-        "/do-science/faq/compute.md",
-        "/do-science/faq/storage.md",
-        "/do-science/faq/internal-transfer.md",
-        "/do-science/faq/external-transfer.md",
-        "/do-science/faq/security.md",
-        "/do-science/faq/os-upgrade.md",
-        ]
+          title: "FAQ",
+          text: "FAQ",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/do-science/faq/",},
+            "/do-science/faq/access.md",
+            "/do-science/faq/compute.md",
+            "/do-science/faq/storage.md",
+            "/do-science/faq/internal-transfer.md",
+            "/do-science/faq/external-transfer.md",
+            "/do-science/faq/security.md",
+          ]
         },
       ],
-      "/administer-science/": [
-        "/administer-science/"
+      "/administer-science/": [{
+        title: "Administer science",
+        text: "Administer science",
+        collapsable: false,
+        isGroup: true,
+        children: [
+          {
+            title: "Welcome",
+            path: "/administer-science/",
+          },
+          {
+            title: "Introduction",
+            path: "/administer-science/introduction.md",
+          },
+          {
+            title: "Back to main page",
+            path: "/",
+          }
+          ]
+        },
+        {
+          title: "HUNT Lab",
+          text: "HUNT Lab",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/administer-science/hunt-lab/"},
+          ]
+        },
+        {
+          title: "HUNT Dataspace",
+          text: "HUNT Dataspace",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/administer-science/hunt-dataspace/"},
+          ]
+        },
+        {
+          title: "Get going",
+          text: "Get going",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/administer-science/get-going/"},
+            "/administer-science/get-going/lab.md",
+            "/administer-science/get-going/data-space.md",
+          ]
+        },
+        {
+          title: "Agreements",
+          text: "Agreements",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/administer-science/agreements/"},
+            "/administer-science/agreements/overview.md",
+            "/administer-science/agreements/downloads.md",
+
+            "/administer-science/agreements/faq.md",
+          ]
+        },
+        {
+          title: "Services",
+          text: "Services",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/administer-science/services/"},
+            "/administer-science/services/overview.md",
+            "/administer-science/services/specifications.md",
+
+            "/administer-science/agreements/responsiveness.md",
+          ]
+        },
+        {
+          title: "Prices",
+          text: "Prices",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/administer-science/prices/"},
+            "/administer-science/prices/pricelist.md",
+            "/administer-science/prices/calculator.md",
+            "/administer-science/prices/examples.md",
+            "/administer-science/prices/faq.md",
+          ]
+        },
+        {
+          title: "Service desk",
+          text: "Service desk",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/administer-science/service-desk/"},
+            "/administer-science/service-desk/lab-orders.md",
+            "/administer-science/service-desk/data-space-orders.md",
+          ]
+        },       
+       {
+          title: "FAQ",
+          text: "FAQ",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/administer-science/faq/"},
+            "/administer-science/faq/user-management.md",
+            "/administer-science/faq/faq.md",
+            "/administer-science/faq/labreports.md",
+          ]
+        },
       ],
       "/govern-science/": [
         "/govern-science/"

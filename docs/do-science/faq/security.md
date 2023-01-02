@@ -1,7 +1,7 @@
 ---
 title: Security
 category: FAQ
-permalink: /faq/security
+permalink: /do-science/faq/security
 sidebarDepth: 1
 description: This page lists frequently asked questions related to security management in labs.
 ---

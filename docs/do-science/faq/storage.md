@@ -1,7 +1,7 @@
 ---
 title: Storage
 category: FAQ
-permalink: /faq/storage
+permalink: /do-science/faq/storage
 sidebarDepth: 1
 description: This page lists frequently asked questions related to lab storage.
 ---
