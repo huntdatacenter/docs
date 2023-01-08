@@ -1,11 +1,11 @@
 ---
-title: Resolutions
-category: HUNT Cloud
-permalink: /tingweek/resolutions
+title: Ting resolutions
+category: Tingweek
+permalink: /govern-science/tingweek/lagtun/resolutions
 description: This page list Lagtun resolutions that govern the scientific development of HUNT Cloud.
 ---
 
-# Resolutions
+# Ting resolutions
 
 **This page list individual resolutions from Lagtun that governs the scientific development of HUNT Cloud.**
 

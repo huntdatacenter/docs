@@ -1,9 +1,9 @@
 ---
 title: Policies
 category: HUNT Cloud
-permalink: /policies
-sidebarDepth: 1
-description: This page list policies for HUNT Cloud.
+permalink: /govern-science/policies
+sidebarDepth: 0
+description: This page list security and pviacy policies for HUNT Cloud.
 ---
 
 # Policies

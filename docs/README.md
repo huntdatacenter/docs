@@ -10,9 +10,9 @@ description: HUNT Cloud is a scientific computing service located at NTNU in Nor
 
 **HUNT Cloud is a scientific computing environment located at [NTNU](https://www.ntnu.edu/) in Norway.**
 
-These pages contains official user documentation for HUNT Cloud. See our regular [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for introductory information on our scientific services.
+These pages contains official user documentation for HUNT Cloud. See the regular [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for introductory information on our scientific services.
 
-This documentation is organized in four main sections:
+Our documentation is organized in four main sections:
 
 ## [Do science](/do-science)
 
