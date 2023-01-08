@@ -202,7 +202,9 @@ module.exports = {
           isGroup: true,
           children: [
             {title: "Introduction",
-            path: "/do-science/transfers/",},
+            path: "/do-science/transfers/"},
+            "/do-science/transfers/internal-kista.md",
+            "/do-science/transfers/external-kista.md",
           ]
         },       
         {
@@ -223,6 +225,8 @@ module.exports = {
           children: [
             {title: "Introduction",
             path: "/do-science/community/",},
+            "/do-science/community/labting.md",
+            "/do-science/community/digital-cafe.md",
           ]
         },       
         "/do-science/service-desk/",
@@ -374,8 +378,101 @@ module.exports = {
           ]
         },
       ],
-      "/govern-science/": [
-        "/govern-science/"
+      "/govern-science/": [{
+        title: "Govern science",
+        text: "Govern science",
+        collapsable: false,
+        isGroup: true,
+        children: [
+          {
+            title: "Welcome",
+            path: "/govern-science/",
+          },
+          {
+            title: "Introduction",
+            path: "/govern-science/introduction.md",
+          },
+          {
+            title: "Responsibilities",
+            path: "/govern-science/responsibilities.md",
+          },
+          {
+            title: "Back to main page",
+            path: "/",
+          }
+          ]
+        },
+        {
+          title: "Tingweek",
+          text: "Tingweek",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/govern-science/tingweek/"},
+            "/govern-science/tingweek/lagtun.md",
+            "/govern-science/tingweek/datacontrollerting.md",
+            "/govern-science/tingweek/dataspaceting.md",
+            "/govern-science/tingweek/labting.md",
+            "/govern-science/tingweek/resolutions.md",
+            "/govern-science/tingweek/ting-dates.md",
+            "/govern-science/tingweek/faq.md",
+          ]
+        },
+        {
+          title: "Policies",
+          text: "Policies",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Security and privacy policies",
+            path: "/govern-science/policies/"},
+          ]
+        },
+        {
+          title: "Compliance",
+          text: "Compliance",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            "/govern-science/compliance/certificates.md",
+            "/govern-science/compliance/subcontractors.md"
+          ]
+        },
+        {
+          title: "Agreements",
+          text: "Agreements",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/govern-science/agreements/"},
+            "/govern-science/agreements/overview.md",
+            "/govern-science/agreements/faq.md",            
+          ]
+        },
+        {
+          title: "Service desk",
+          text: "Service desk",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/govern-science/service-desk/"},
+            "/govern-science/service-desk/service-center-orders.md",
+            "/govern-science/service-desk/data-controller-orders.md",
+            ]
+        },
+        {
+          title: "FAQ",
+          text: "FAQ",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/govern-science/faq/"},
+          ]
+        },
       ],
       "/about/": [
         "/about/"

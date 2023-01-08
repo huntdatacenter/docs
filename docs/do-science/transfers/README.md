@@ -5,6 +5,18 @@ category: Data transfers
 
 # Introduction to data transfers
 
-This section covers practical aspect of data transfers between labs inside HUNT Cloud ([internal kista](/data-transfers/internal-kista/)) and to and from external users outside HUNT Cloud ([external kista](/data-transfers/external-kista/)).
+This section covers practical aspect of data transfers between labs inside HUNT Cloud.
 
-See our [internal](/faq/internal-transfer/) and [external](/faq/external-transfer/) pages in the FAQ for general information on your transfer options.
+### Data transfers between labs
+
+Our product for data transfers between labs is called [Internal kista](/do-science/transfers/internal-kista/).
+
+### Data transfers from external users
+ 
+Our product for data transfers to and from external users outside HUNT Cloud is called [External kista](/do-science/transfers/external-kista/).
+
+### Other resources
+
+See our [data transfer tools](/do-science/tools/transfer-tools/) section on commonly used tools.
+
+See our [internal](/do-science/faq/internal-transfer/) and [external](/do-science/faq/external-transfer/) pages in the FAQ for general information on your transfer options.

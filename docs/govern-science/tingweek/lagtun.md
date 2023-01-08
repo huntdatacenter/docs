@@ -1,7 +1,7 @@
 ---
 title: Lagtun
 category: HUNT Cloud
-permalink: /tingweek/lagtun
+permalink: /govern-science/tingweek/lagtun
 sidebarDepth: 1
 description: Lagtun is the body that appoints time for the scientific governance of HUNT Cloud.
 ---

@@ -5,14 +5,16 @@ readingTime: null
 description: These pages contains user documentation aimed at scientists that conduct scientific experiments in HUNT Cloud.
 ---
 
-# Do science in HUNT Cloud!
+# Do science in HUNT Cloud
 
-**Welcome to our documentation for scientists that conduct sciencentific experiments in HUNT Cloud.**
+**Welcome to our official user documentation for scientists in HUNT Cloud.**
 
-This section is aimed at lab users. You will find practical information on how to use our scientific services. See our [main documentation](/) page for other sections.
+This section is aimed at lab users. It contains practical information on how to do science in HUNT Cloud. 
 
-::: tip Next Ting
+See our [main documentation page](/) for other sections.
 
-Lab Ting 8 is held Tuesday 14 February 2023 - 2 to 4 p.m. CET. All Lab users are invited. [Read more >>](/do-science/community/lab-ting)
+::: tip Next Lab Ting
+
+The next Lab Ting is held Tuesday 14 February 2023 - 2 to 4 p.m. CET. All Lab users are invited. [Read more >>](/do-science/community/lab-ting)
 
 :::
