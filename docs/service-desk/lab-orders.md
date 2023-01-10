@@ -360,7 +360,7 @@ Head over to the [data space orders](/service-desk/data-space-orders) to request
 
 ### Update lab coordinator role
 
-Click the button below to update the [lab coordinator](/coordinator/roles/#lab-coordinator) role for a lab attached to your data space.
+If you need to update a [lab coordinator](/coordinator/roles/#lab-coordinator) role, please fill new lab coordinator contact in below form.
 
 <SDButton form="request_coordinator_update" />
 

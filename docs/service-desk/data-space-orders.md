@@ -153,7 +153,7 @@ Note that time to successful transfer depends on access to SFTP software and pot
 
 ### Update data space coordinator roles
 
-Click the button below to update your [data space coordinator roles](/coordinator/roles/) under your existing data space.
+Click the button below to update your new [data space coordinator roles](/coordinator/roles/) under your existing data space.
 
 <SDButton form="update_data_space_coordinator_role" />
 
