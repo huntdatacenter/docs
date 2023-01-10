@@ -177,9 +177,9 @@ request_network_opening:
 
 
 update_data_space_coordinator_role:
-  title: "Request update of lab coordinator role"
+  title: "Request update of data space coordinator role"
   template:
-    subject: "Update lab coordinator role - {labname}"
+    subject: "Update data space coordinator role - {labname}"
     body: |
       Hi HUNT Cloud team,
 
@@ -191,7 +191,7 @@ update_data_space_coordinator_role:
       Department: {department}  
       Faculty: {faculty}  
       Institution: {institution}
-      Email: {email}
+      Email: {email} 
       Phone: {phone}  
       ---
 
@@ -902,7 +902,7 @@ request_volume_deletion:
     },
   ]
   requirements: [
-    "<b>Who can order:</b> Lab leaders.",
+    "<b>Who can order:</b> Lab leaders and lab coordinators.",
     "<b>Required information</b>: lab name, machine name, volume name.",
     "<b>Expected response time:</b> Days",
     "<b>Cost:</b> No additional costs.",
