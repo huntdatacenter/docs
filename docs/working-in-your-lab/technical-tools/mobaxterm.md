@@ -57,7 +57,7 @@ Do **not** rewrite variables in commands. Keep `${USERPROFILE}` as is.
 cat "${USERPROFILE}/.ssh/id_rsa.pub"
 ```
 
-If the above command prints several rows of random letters on the screen, you already have a ssh keys that can be used. Jump to section 3.3.
+If the above command prints several rows of random letters on the screen, you already have a ssh keys that can be used. Jump to section 2.3.
 
 If the above command print error message (No such file or directory) or there was no output, you probably don't have your ssh key yet. Continue with the folloing steps:
 
@@ -78,10 +78,10 @@ ssh-keygen -b 4096 -t rsa -f "${USERPROFILE}/.ssh/id_rsa" -q -N ""
 To be able to use the key you need to be upload it to your lab with the `ssh-copy-id` command. You will be asked to type in your SSH password that you made during the lab installation during this prosess.
 
 ```bash
-ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" username@entry-IP
+ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" <username>@<entry-IP>
 ```
 
-**Note.** Replace `username` with your username, and `entry-IP` with IP address of your lab that is included in your `ssh-config.txt` file (format: `10.42.X.Y`). Example: `joe-tester@10.42.X.Y`.
+**Note.** Replace `username` with your username, and `entry-IP` with IP address of your lab that is included in your `ssh-config.txt` file (format: `10.42.X.Y`). Example: `joe-tester@10.42.2.32`.
 
 If you get asked to save the password, refuse by clicking on `No` to make sure that MobaXterm will authenticate with SSH keys instead of passwords.
 
