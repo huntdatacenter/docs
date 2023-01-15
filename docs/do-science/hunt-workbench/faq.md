@@ -1,7 +1,7 @@
 ---
 title: FAQ
 category: Workbench
-permalink: /working-in-your-lab/workbench/faq
+permalink: /working-in-your-lab/hunt-workbench/faq
 sidebarDepth: 1
 description: Frequently asked questions about Workbench in HUNT Lab.
 ---
@@ -14,7 +14,7 @@ description: Frequently asked questions about Workbench in HUNT Lab.
 
 ::: tip Troubleshooting
 
-Head over to our [Workbench troubleshooting](/working-in-your-lab/workbench/troubleshooting/) section if something is not working as expected.
+Head over to our [Workbench troubleshooting](/working-in-your-lab/hunt-workbench/troubleshooting/) section if something is not working as expected.
 
 :::
 
@@ -131,7 +131,7 @@ Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 ### Which R version is available in RStudio?
 
 RStudio is configured to use packages installed in the conda environment named `r-base`.
-You can find your R version using [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
+You can find your R version using [Workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal):
 
 1. Open your Workbench terminal.
 
@@ -151,7 +151,7 @@ Currently we setup `r-base` environment with these conda packages: `r-base`, `r-
 
 If you want to install your own packages, we recommend to use [Conda](/working-in-your-lab/analytical-tools/conda/) where possible. You can defer to alternative methods such as `install.packages()` when the package is not available in Conda. To install a package:
 
-1. Open your [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
+1. Open your [Workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal):
 
 ![workbench_terminal.png](./images/workbench_terminal.png)
 
@@ -186,7 +186,7 @@ library(dplyr)
 ### How do I install R packages not found in Conda?
 
 If you did not find R package in conda as described above and you have to defer to running `install.packages()` command,
-we advice to use `R` in [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal),
+we advice to use `R` in [Workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal),
 instead of using RStudio. Otherwise RStudio might lead to a broken state of environment where your custom package will not work.
 
 Packages installed into `r-base` environment through **R** in [terminal](/working-in-your-lab/workbench/faq/#terminal) will be available in **RStudio**.
@@ -216,7 +216,7 @@ R
 If you are getting errors about `GLIBCXX` library not found and essential R packages are not working,
 typically after installing some custom package, you might consider recreating `r-base` environment from scratch.
 
-You can do that in [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
+You can do that in [Workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal):
 
 ```
 conda create --yes -n r-base 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
@@ -226,7 +226,7 @@ Remember that this command also removes your other custom packages that might be
 
 ### How do I reset my user state in RStudio?
 
-When you [restart your Workbench](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment), your RStudio user state might still be preserved. To achieve complete reset read the RStudio support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server).
+When you [restart your Workbench](/working-in-your-lab/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment), your RStudio user state might still be preserved. To achieve complete reset read the RStudio support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server).
 
 ## Terminal
 

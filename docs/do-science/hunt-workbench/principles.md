@@ -1,7 +1,7 @@
 ---
 title: Principles
 category: Workbench
-permalink: /working-in-your-lab/workbench/principles
+permalink: /working-in-your-lab/hunt-workbench/principles
 sidebarDepth: 1
 description: Principles of Workbench use.
 ---
@@ -23,7 +23,7 @@ We are spawning your Workbench in an isolated container on your home machine. Th
 You should be able to access all the paths that you would expect on your home machine. Workbench is preconfigured with access to data in lab volumes and your home directory, and you have a dedicated Workbench directory on your work volume:
 
 ```
-/mnt/work/workbench/<username>
+/mnt/work/hunt-workbench/<username>
 ```
 
 ## Reproducibility
