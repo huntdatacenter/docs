@@ -1,7 +1,6 @@
 ---
 title: Lab activities
 category: Troubleshooting
-permalink: /troubleshooting/lab-activities
 sidebarDepth: 1
 description: Troubleshooting activities in your HUNT Cloud lab.
 ---
@@ -41,9 +40,9 @@ It's frustrating to accidentially delete or overwrite data that you care about. 
 
 
 
-## Workbench
+## HUNT Workbench
 
-See our [Workbench troubleshooting section](/working-in-your-lab/workbench/troubleshooting/).
+See our [Workbench troubleshooting section](/do-science/hunt-workbench/troubleshooting/).
 
 
 

@@ -1,12 +1,13 @@
 ---
 title: Connection
 category: Troubleshooting
-permalink: /troubleshooting/connection
 sidebarDepth: 1
 description: Your lab connection is encrypted over a virtual private network (VPN) to ensure the confidentiality of the information. We have listed some of the solutions in case you meet any troubles connecting.
 ---
 
-# Troubleshooting lab connections
+# Troubleshooting connection
+
+**This page contains known issues that you might encounter during system connection (VPN and phone) and lab connection (SSH and HUNT Workbench).**
 
 [[toc]]
 
@@ -150,3 +151,11 @@ Your message will be slightly different as the **`username`** and **`machine-nam
 ::: warning
 If you see this message any other time, please [contact us](/contact) for further investigations.
 :::
+
+## HUNT Workbench
+
+See our [HUNT Workbench troubleshooting](/do-science/hunt-workbench/troubleshooting/) section.
+
+
+
+

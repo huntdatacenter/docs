@@ -196,6 +196,17 @@ module.exports = {
         ]
         },       
         {
+          title: "Guides",
+          text: "Guides",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/do-science/guides/",},
+            "/do-science/guides/workbench-stata.md",            
+          ]
+        },       
+        {
           title: "Data transfers",
           text: "Data transfers",
           collapsable: true,
@@ -205,17 +216,6 @@ module.exports = {
             path: "/do-science/transfers/"},
             "/do-science/transfers/internal-kista.md",
             "/do-science/transfers/external-kista.md",
-          ]
-        },       
-        {
-          title: "Guides",
-          text: "Guides",
-          collapsable: true,
-          isGroup: true,
-          children: [
-            {title: "Introduction",
-            path: "/do-science/guides/",},
-            "/do-science/guides/workbench-stata.md",            
           ]
         },       
         {

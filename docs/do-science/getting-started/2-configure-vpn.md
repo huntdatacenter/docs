@@ -1,5 +1,5 @@
 ---
-title: VPN configuration
+title: 2. VPN configuration
 category: Getting started
 permalink: /do-science/getting-started/configure-vpn
 sidebarDepth: 1
@@ -8,7 +8,7 @@ description: Guide on VPN installation and configuration. Make sure you have suc
 
 # Step 2. Configure your VPN
 
-This step configure an encrypted connection between your local machine and your lab. The specific steps are dependent on the operating system on your local machine.
+**This step configure an encrypted connection between your local machine and HUNT Cloud. The specific steps are dependent on the operating system on your local machine.**
 
 ::: warning Requirement
 
@@ -25,15 +25,14 @@ Successful [verification](/do-science/getting-started/collect-your-keys/#_1-4-ve
 
 ::: details Windows
 
-We use the open-source application `OpenVPN` to ensure encrypted communication between your local machine and us.
+We use the open-source application **`OpenVPN`** to ensure encrypted communication between your local machine and us.
 
 [Download and install OpenVPN using the latest stable Windows Installer (Avoid beta versions)](https://openvpn.net/community-downloads/)
 
 Click on the link above, scroll down to the file named **`OpenVPN-<version-number>-i601-amd64.msi`** (Windows 10 users), download the file and follow the on-screen installation instructions.
 
-    Windows users from NTNU can install OpenVPN community edition
-    using NTNU Software Center even without administrative rights.
-
+**NTNU users**: Windows users from NTNU can install OpenVPN community edition using NTNU Software Center even without administrative rights.
+  
   ::: warning
   **You will need administrative rights on your local machine to successfully install OpenVPN.**
 
@@ -51,7 +50,7 @@ You can check if you have administrative rights on your local machine by running
 
 For simplicity, we have outlined the steps they need to perform below which you can attach to your request.
 
-```
+```b
 1. Install the OpenVPN client on the computer for my user:
     Download and install using the Windows installer from https://openvpn.net/index.php/open-source/downloads.html
 
@@ -68,9 +67,12 @@ For simplicity, we have outlined the steps they need to perform below which you 
 
 
 
+
+
+
 ::: details OS X and macOS
 
-We use Tunnelblick to ensure encrypted communication between your local machine and us.
+We use Tunnelblick to ensure encrypted communication between your local machine and HUNT Cloud.
 
 [Download and install the latest **'stable release'** from this page](https://tunnelblick.net/downloads.html)
 
@@ -80,7 +82,7 @@ We use Tunnelblick to ensure encrypted communication between your local machine 
 
 ::: details Ubuntu Linux
 
-We use OpenVPN to ensure encrypted communication between your local machine and us.
+We use OpenVPN to ensure encrypted communication between your local machine and HUNT Cloud.
 
 Install the **`openvpn`** and **`network-manager-openvpn-gnome`** packages from the standard repositories.
 
@@ -123,7 +125,7 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
   1. Select **`I have configuration files`**.
   2. In the **`Welcome to Tunnelblick`** prompt, select **`I have configuration files`**.
   3. When prompted for which type of configuration you have, select **`OpenVPN Configurations`**.
-  4. Select the OpenVPN profile named. **`<username>.ovpn`** in the collection of credentials given from HUNT.
+  4. Select the OpenVPN profile named. **`<username>.ovpn`** in the collection of credentials given from HUNT Cloud.
   5. Continue with the **`Connecting to the VPN section`** below.
 
 **2.2.2 If you 'do not' get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
@@ -186,9 +188,9 @@ You should now be connected to the VPN.
 
 ::: details OS X and macOS
 
-1. Start Tunnelblick and **`Connect`**
-2. Enter your user name (same as the OpenVPN profile file name)
-3. Enter the **`verification code`** from Google Authenticator as your password
+1. Start Tunnelblick and **`Connect`**.
+2. Enter your user name (same as the OpenVPN profile file name).
+3. Enter the **`verification code`** from Google Authenticator as your password.
 
     ![tunnelblick-login](./images/tunnelblick-login.png)
 
@@ -250,7 +252,11 @@ If you received the notification _VPN connection has been successfully establish
 
 :::
 
+::: danger Access list
 
+We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. [Click here](/do-science/service-desk/#vpn-access-list) to request an opning for your location in our Do science service desk.
+
+:::
 
 ::: tip Next step
 
@@ -261,14 +267,13 @@ If you successfully completed this step, head over to Step 3 to [Configure your 
 
 
 
-::: details Immediate troubleshooting
+## Immediate troubleshooting
 
-Below are a few immediate things to try if your connection did not succeed:
+Below are a few immediate things to try if your VPN connection did not succeed:
 
 ### Authenticate VPN
 
 If the _Authenticate VPN_ prompt pops up again, then try to log in again with a new **`verification code`**.
-
 ### VPN connection failed
 
 If you received the notification _VPN Connection Failed_ after 60 seconds, please check the following
@@ -281,5 +286,7 @@ If you received the notification _VPN Connection Failed_ after 60 seconds, pleas
 If you are unable to click _Apply_ after your changes, try to re-enter your _Private Key Password_ using your **`VPN passphrase`** that you collected in Step 1.
 
 ::: tip
-If nothing works, please head over to our main [troubleshooting](/troubleshooting/connection/#vpn) section for more information on how to troubleshoot connections.
+If nothing works, please head over to our main [troubleshooting](/do-science/troubleshooting/connection/#vpn) section for more information on how to troubleshoot connections.
 :::
+
+

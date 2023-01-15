@@ -99,7 +99,7 @@ Head over to the [lab orders page](/service-desk/lab-orders#deactivate-lab-user)
 
 ### VPN access list
 
-We allow connection from known IP addresses only outside Norway. Access from networks outside Norway needs to be requested included in our VPN access list.
+We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. Request access from networks outside Norway can be requested here.
 
 <SDButton form="request_vpn_link" />
 

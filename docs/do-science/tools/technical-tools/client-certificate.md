@@ -1,7 +1,7 @@
 ---
 title: Client certificate
 category: Technical tools
-permalink: /working-in-your-lab/technical-tools/client-certificate
+permalink: /do-science/tools/technical-tools/client-certificate
 sidebarDepth: 1
 description: Installation guide for Client certificates
 ---
