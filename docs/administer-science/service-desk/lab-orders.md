@@ -1,7 +1,7 @@
 ---
 title: Lab orders
 category: Service desk
-permalink: /service-desk/lab-orders
+permalink: /administer-science/service-desk/lab-orders
 description: HUNT Cloud service desk orders for labs.
 sidebarDepth: 2
 ---

@@ -1,12 +1,13 @@
 ---
 title: Getting started
 category: Getting started
+permalink: /do-science/getting-started
 description: This guide will help you to connect and get started on your HUNT Cloud lab.
 ---
 
 # Introduction
 
-**This guide will help you to connect and get started on your HUNT Cloud lab after your lab has requested access in our administer science service desk.**
+**This guide will help you to connect and get started on your HUNT Cloud lab after your lab has requested access in our administer science [service desk](/administer-science/service-desk/lab-orders).**
 
 ::: tip Save time
 
@@ -18,10 +19,8 @@ The following steps will help you to invest time in your lab setup, all so you c
 1. [Collect your keys](/do-science/getting-started/collect-your-keys/). This step ensures that you have all your keys and configuration files before your start to spend time on the setup.
 2. [Configure your VPN connection](/do-science/getting-started/configure-vpn/). This step ensures an encrypted system connection to HUNT Cloud.
 3. [Configure your SSH connection](/do-science/getting-started/configure-ssh/). This step ensures a connection to your lab.
-4. **Configure your tools.** This step highlights tools that you can configure to simplify your scientific computing.
 
-
-::: tip Time estimate
+::: warning Time estimate
 
 After you have collected your lab keys in step 1, allow for **two hours** to complete the remaining onboarding steps.
 
