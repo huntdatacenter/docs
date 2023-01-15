@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # Service desk for lab users
 
-**This page list predefined service orders for active lab users. To place your order, click the blue button and send us a pre-filled email with required information.**
+**This page list predefined service orders that you can order as an active lab user in HUNT Cloud. To place your order, click the blue button and send us a pre-filled email with required information.**
 
 ::: tip Save time
 
@@ -16,13 +16,11 @@ You can speed up your delivery with two optimizations: (1) send the request from
 
 :::
 
-Try our service desk in the [administer science](/administer-science/service-desk) section aimed at lab leaders, lab coordinators and data spaces if you can't find what you are looking for.
-
-## Overview
-
-You can request the following service orders as a lab user in HUNT Cloud.
+You can request the following service orders as a lab user in HUNT Cloud:
 
 [[toc]]
+
+Try our service desk in the [administer science](/administer-science/service-desk) section aimed at lab leaders, lab coordinators and data spaces if you can't find what you are looking for.
 
 Send us a regular [email](/contact) with your request if you can't find what you are looking for on the this page.
 
@@ -31,13 +29,13 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 ::: warning New users
 
-The service orders below are aimed at active lab users. Lab access for new users are ordered by lab leaders or lab coordinators from our [lab orders page](/service-desk/lab-orders) using the [new lab user](/service-desk/lab-orders#new-lab-user) button.
+The service orders below are aimed at active lab users. Lab access for new users are ordered by lab leaders or lab coordinators from our [lab orders page](/administer-science/service-desk/lab-orders) using the [new lab user](/administer-science/service-desk/lab-orders#add-a-new-lab-user) button.
 
 :::
 
 ### Workbench access
 
-[Workbench](/working-in-your-lab/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
+[Workbench](/do-science/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
 
 <SDButton form="request_workbench_access" />
 

@@ -1,7 +1,7 @@
 ---
 title: Installation
 category: Workbench
-permalink: /working-in-your-lab/workbench/installation
+permalink: /working-in-your-lab/hunt-workbench/installation
 sidebarDepth: 1
 description: Installation guide for Workbench in HUNT Lab.
 ---
@@ -231,7 +231,7 @@ Issued Under: "HUNT Cloud Trust Services"
 
 ::: tip
 
-Read [Principles](/working-in-your-lab/workbench/principles/) and [FAQ](/working-in-your-lab/workbench/faq/) sections to learn more about Workbench.
+Read [Principles](/working-in-your-lab/hunt-workbench/principles/) and [FAQ](/working-in-your-lab/hunt-workbench/faq/) sections to learn more about Workbench.
 
 :::
 
@@ -241,7 +241,7 @@ Read [Principles](/working-in-your-lab/workbench/principles/) and [FAQ](/working
 
 This section includes only main questions regarding first time setup.
 
-You should also look into [FAQ](/working-in-your-lab/workbench/faq/) and [Troubleshooting](/working-in-your-lab/workbench/troubleshooting/) if you do not find your answers here.
+You should also look into [FAQ](/working-in-your-lab/hunt-workbench/faq/) and [Troubleshooting](/working-in-your-lab/hunt-workbench/troubleshooting/) if you do not find your answers here.
 
 ### I don't remember my passphrase
 

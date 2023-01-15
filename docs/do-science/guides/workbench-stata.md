@@ -3,18 +3,18 @@ title: Stata guide
 category: Guides
 permalink: /guides/stata
 sidebarDepth: 1
-description: Guide to get going with Stata in your HUNT Cloud workbench.
+description: Guide to get going with Stata in your HUNT Workbench.
 ---
 
 # Stata guide
 
-**[Stata](https://www.stata.com/) is a handy general-purpose statistical tool from StataCorp. This guide aims to get you up and running with Stata in your workbench.**
+**[Stata](https://www.stata.com/) is a handy general-purpose statistical tool from StataCorp. This guide aims to get you up and running with Stata in your HUNT Workbench.**
 
 [[toc]]
 
 ## Introduction
 
-Stata in your workbench runs in a Jupyter notebook. This means that you can write known Stata commands and that you can view your plots directly on your screen. 
+Stata in your HUNT Workbench runs in a Jupyter notebook. This means that you can write known Stata commands and that you can view your plots directly on your screen. 
 
 On the technical side, Stata runs on your lab home machine and conntect with your workbench via [stata_kernel](https://kylebarron.dev/stata_kernel/) developed by Kyle Barron.
 

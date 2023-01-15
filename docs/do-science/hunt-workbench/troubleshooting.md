@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 category: Workbench
-permalink: /working-in-your-lab/workbench/troubleshooting
+permalink: /working-in-your-lab/hunt-workbench/troubleshooting
 sidebarDepth: 1
 description: Workbench troubleshooting in your HUNT Cloud lab.
 ---
@@ -14,7 +14,7 @@ description: Workbench troubleshooting in your HUNT Cloud lab.
 
 ::: tip
 
-See our [Workbench FAQ](/working-in-your-lab/workbench/faq/) for general questions about Workbench.
+See our [Workbench FAQ](/working-in-your-lab/hunt-workbench/faq/) for general questions about Workbench.
 
 :::
 
@@ -22,7 +22,7 @@ See our [Workbench FAQ](/working-in-your-lab/workbench/faq/) for general questio
 
 ### I am unable to access my Workbench applications?
 
-If you were previously able to access your applications in Workbench (e.g. RStudio), and then the application suddenly stopped working, one quick approach is to try restarting your Workbench environment. Follow the guide to [restart Workbench environment](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). [Contact us](/contact) or reach out in your lab channel on Slack if you do not find answer in [FAQ](/working-in-your-lab/workbench/faq/) or troubleshooting sections below.
+If you were previously able to access your applications in Workbench (e.g. RStudio), and then the application suddenly stopped working, one quick approach is to try restarting your Workbench environment. Follow the guide to [restart Workbench environment](/working-in-your-lab/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). [Contact us](/contact) or reach out in your lab channel on Slack if you do not find answer in [FAQ](/working-in-your-lab/hunt-workbench/faq/) or troubleshooting sections below.
 
 ### 504: Gateway Timeout Error
 
@@ -59,13 +59,13 @@ Try reloading the page (`Ctrl + R` / `CMD + R`) to reconnect with RStudio sessio
 
 ### 504: Gateway Timeout Error
 
-The 504 error may be shown when you access `/user/<username>/rstudio/`, but RStudio fails to start. If you were previously able to access your RStudio in Workbench it is possible that RStudio saved more data in environment files than it is able to load into memory. One potential approach is using [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal) and manually resetting your RStudio settings:
+The 504 error may be shown when you access `/user/<username>/rstudio/`, but RStudio fails to start. If you were previously able to access your RStudio in Workbench it is possible that RStudio saved more data in environment files than it is able to load into memory. One potential approach is using [Workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal) and manually resetting your RStudio settings:
 
 ```bash
-mv "/mnt/work/workbench/${USER}/.local/share/rstudio" "/mnt/work/workbench/${USER}/.local/share/rstudio-$(date +%Y-%m-%d)"
+mv "/mnt/work/hunt-workbench/${USER}/.local/share/rstudio" "/mnt/work/hunt-workbench/${USER}/.local/share/rstudio-$(date +%Y-%m-%d)"
 ```
 
-Then [restart your Workbench environment](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch).
+Then [restart your Workbench environment](/working-in-your-lab/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch).
 If the error still persists, don't hesitate to reach out in your lab channel on Slack or [contact us](/contact) for further assistance.
 
 ## MATLAB
@@ -83,11 +83,11 @@ If MATLAB icons disappeared and application is stuck loading you will need to re
 
 <!-- [matlab icons missing](./images/matlab_icons_missing.png) -->
 
-Removing user settings can be done in [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
+Removing user settings can be done in [Workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal):
 
 ```bash
-ls /mnt/work/workbench/$USER/.matlab
-rm -r /mnt/work/workbench/$USER/.matlab
+ls /mnt/work/hunt-workbench/$USER/.matlab
+rm -r /mnt/work/hunt-workbench/$USER/.matlab
 ```
 
 ## Experience
@@ -98,7 +98,7 @@ An unresponsive or slow Workbench may be caused by several things. Here's a smal
 
 - Use Google Chrome as your browser. Other browsers don't support all features and might cause potential silent failures.
 
-- Restart your Workbench environment to start fresh in the case something got hung up. [Click here](/working-in-your-lab/workbench/faq/#how-can-i-restart-my-workbench-environment) to see how.
+- Restart your Workbench environment to start fresh in the case something got hung up. [Click here](/working-in-your-lab/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment) to see how.
 
 - Check the resource consumption of your `home`-machine to ensure that you have available free cpu and memory resources, for example by logging into your lab `home`-machine and run [htop](/working-in-your-lab/technical-tools/htop/). Consider to upgrade your machine size in [Service desk](/service-desk/lab-orders/#update-machine-size) if you are low on free resources.
 

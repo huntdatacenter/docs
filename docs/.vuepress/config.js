@@ -127,11 +127,11 @@ module.exports = {
           isGroup: true,
           children: [
             {title: "Introduction",
-            path: "/do-science/workbench/",},
-            "/do-science/workbench/principles.md",
-            "/do-science/workbench/installation.md",
-            "/do-science/workbench/troubleshooting.md",
-            "/do-science/workbench/faq.md",
+            path: "/do-science/hunt-workbench/",},
+            "/do-science/hunt-workbench/principles.md",
+            "/do-science/hunt-workbench/installation.md",
+            "/do-science/hunt-workbench/troubleshooting.md",
+            "/do-science/hunt-workbench/faq.md",
           ]
         },
         {
@@ -215,6 +215,7 @@ module.exports = {
           children: [
             {title: "Introduction",
             path: "/do-science/guides/",},
+            "/do-science/guides/workbench-stata.md",            
           ]
         },       
         {
@@ -474,10 +475,92 @@ module.exports = {
           ]
         },
       ],
-      "/about/": [
-        "/about/"
-      ],
-      
+      "/about/": [{
+        title: "About HUNT Cloud",
+        text: "About HUNT Cloud",
+        collapsable: false,
+        isGroup: true,
+        children: [
+          {
+            title: "Welcome",
+            path: "/about/",
+   	  },
+          {
+            title: "Introduction",
+            path: "/about/introduction.md",
+          },
+          {
+            title: "Affiliation",
+            path: "/about/affiliation.md",
+          },
+          {
+            title: "Back to main page",
+            path: "/",
+          }
+          ]
+        },
+        {
+          title: "Team",
+          text: "Team",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/about/team/"},
+          ]
+        },
+        {
+          title: "Values",
+          text: "Values",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/about/values/"},
+            "/about/values/vision.md",
+          ]
+        },
+        {
+          title: "Activities",
+          text: "Activities",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/about/activities/"},
+          ]
+        },
+        {
+          title: "Art",
+          text: "Art",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/about/art/"},
+          ]
+        },
+        {
+          title: "History",
+          text: "History",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/about/history/"},
+          ]
+        },
+        {
+          title: "FAQ",
+          text: "FAQ",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/about/faq/"},
+          ]
+        },
+      ],      
       "/": [{
         title: "Home",
         text: "Home",

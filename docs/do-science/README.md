@@ -15,6 +15,6 @@ See our [main documentation page](/) for other sections.
 
 ::: tip Next Lab Ting
 
-The next Lab Ting is held Tuesday 14 February 2023 - 2 to 4 p.m. CET. All Lab users are invited. [Read more >>](/do-science/community/lab-ting)
+The next Lab Ting is held Tuesday 14 February 2023 - 2 to 4 p.m. CET. All Lab users are invited. [Read more >>](/do-science/community/labting)
 
 :::
