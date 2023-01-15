@@ -203,7 +203,19 @@ module.exports = {
           children: [
             {title: "Introduction",
             path: "/do-science/guides/",},
-            "/do-science/guides/workbench-stata.md",            
+            "/do-science/guides/workbench-stata.md",   
+            {
+            title: "Access guides",
+            text: "Access guides",
+            isGroup: true,
+            children: [
+              "/do-science/guides/access-guides/reset-vpn.md",
+              "/do-science/guides/access-guides/reset-gauth.md",
+              "/do-science/guides/access-guides/reset-ssh.md",
+              "/do-science/guides/access-guides/workbench-request.md",
+              "/do-science/guides/access-guides/workbench-reissue.md",
+            ]
+            },
           ]
         },       
         {
