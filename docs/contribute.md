@@ -22,6 +22,6 @@ Improve the existing text by sending us a link to the page with ideas and fixes 
 
 ### Help others in the community
 
-Participate in discussions on in the HUNT Cloud Community on Slack to both learn from fellow scientists and to help others.
+Participate in discussions on in the HUNT Cloud Community on [Slack](/contact) to both learn from fellow scientists and to help others.
 
 
