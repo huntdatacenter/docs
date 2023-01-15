@@ -1,5 +1,5 @@
 ---
-title: Collect your keys
+title: 1. Collect your keys
 category: Getting started
 permalink: /do-science/getting-started/collect-your-keys
 sidebarDepth: 1

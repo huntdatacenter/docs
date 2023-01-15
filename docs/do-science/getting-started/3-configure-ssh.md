@@ -1,5 +1,5 @@
 ---
-title: SSH configuration
+title: 3. SSH configuration
 category: Getting started
 permalink: /do-science/getting-started/configure-ssh
 sidebarDepth: 1
@@ -9,10 +9,12 @@ description: Guide on SSH configuration, requires a working VPN connection.
 
 # Step 3. Configure your SSH
 
-These steps will configure your SSH connection to and from your local machine and your lab. You will first configure a machine used for security purposes that we call **`entry`**, and then one machine that we call **`home`** were you will do your scientific computing.
+**These steps will configure your SSH connection to and from your local machine and your lab.** 
+
+You will first configure a machine used for security purposes that we call **`entry`**, and then one machine that we call **`home`** were you will do your scientific explorations.
 
 ::: warning Requirement
-- A running VPN connection (successful implementation of [Step 2](/getting-started/configure-vpn/#_2-4-verify-your-vpn-connection)).
+- A running VPN connection (successful implementation of [Step 2](/do-science/getting-started/configure-vpn/#_2-4-verify-your-vpn-connection)).
 :::
 
 
@@ -33,9 +35,9 @@ Host <your-lab-name>-entry
 
 ::: warning Expected info
 
-- **`your-lab-name'** - the name of your lab
-- **`your-lab-IP'** - the IP address of your lab
-- **`your-username'** - your username in your lab
+- **`your-lab-name'** - the name of your lab.
+- **`your-lab-IP'** - the IP address of your lab.
+- **`your-username'** - your username in your lab.
 
 :::
 
@@ -49,7 +51,7 @@ You will need to update your **`SSH temporary key`** in the steps below. We pref
 - not a famous quotation from the literature (but could be pretty close)
 - hard to guess by intuition (even by someone who knows you well)
 - easy to remember
-- at least 3 characters have to be different from previous one (temporary passphrase)
+- at least 3 characters have to be different from your previous one (temporary passphrase)
 
 Oh, and, it should be unique to this site only (not to mention at least
 _12 characters_ long and include both _lower_ and _upper_ cases).
@@ -222,32 +224,34 @@ your-username@your-labname-`home`:~$
 
 ## 3.5 Final steps
 
-We hope that you will log into your lab a lot over the coming months and years. To avoid unnecessary frustration, you need to finalize your installation through the following steps:
+::: danger Do not skip this step
+
+We hope that you will log into your lab a lot over the coming months and years. To avoid unnecessary frustration, you need to finalize your installation through these final steps.
+
+:::
 
 ::: details Windows
 
 1. [Request Workbench](/do-science/hunt-workbench/) for smooth access to Jupyter Notebooks, Python, RStudio, R, or MATLAB.
 
-2. [Configure MobaXterm](/do-science/tools/technical-tools/mobaxterm) for "password less" SSH access directly to your home machine, as well as click-based file transfers between your local machine and your home machine.
-
-3. [Configure X2Go](/do-science/tools/technical-tools/x2go/) for "password less" one-click access to graphical software in your lab, such as SPSS or Stata.
+2. [Configure MobaXterm](/do-science/tools/technical-tools/mobaxterm) for "password-less" SSH access directly to your home machine, as well as click-based file transfers between your local machine and your home machine.
 
 :::
 
 
 ::: details OS X, MacOS and Ubuntu Linux
 
-When completed, the steps below should allow you to log "password less" directly into your home machine by typing:
+When completed, the steps below should allow you to log "password-less" directly into your home machine by typing:
 
 ```bash
 ssh your-lab-name
 ```
 
-### Establish a SSH alias
+### 3.5.1 Establish a SSH alias
 
 This will allow you to log directly into your lab without the need to remember your user name or your lab's IP address:
 
-1. On your local machine, open the **`ssh-config.txt`** file from [Step 1.2](/getting-started/collect-your-keys/#_1-2-secrets-on-your-email).
+1. On your local machine, open the **`ssh-config.txt`** file from [Step 1.2](/do-science/getting-started/collect-your-keys/#_1-2-secrets-on-your-email).
 
 2. On your local machine, add the content from the **`ssh-config.txt`** to the file named **`config`** in the hidden ssh-folder in your home directory (**`~/.ssh/config`**) using your favorite file editor. You may need to generate this file if it is your first ssh-configuration.
 
@@ -265,23 +269,44 @@ gedit ~/.ssh/config
 ssh demolab-entry
 ```
 
-You should now be prompted your passphrase and then be logged into your entry-machine. Exit your entry machine and return to your local machine by typing **`exit`**.
+You should now be prompted your passphrase. After typing your passphrase you should be logged into your entry-machine. Exit your entry machine and return to your local machine by typing **`exit`**.
 
 
-### Establish a password-less login
+### 3.5.2 Establish a password-less login
 
 This will allow you to log directly into your lab without the need to remember your passphrase.
 
 > If you already have a RSA certificate on your local computer that you would like to use, start from step 3.
 
-1. In your local computer, open a terminal.
-2. Generate a new RSA certificate by typing **`ssh-keygen -t rsa -b 4096`**. Hint enter _three times_. When this finishes:
-3. Type **`ssh-copy-id <your-lab-name>-entry`** to add your new certificate to your entry machine. Enter your **`passphrase`** when prompted for a password.
-4. Enter **`ssh-add`** to add the certificate to the ssh-agent. If you don't have a running ssh-agent you may see an error message. In such a case, first enter **`eval "$(ssh-agent -s)"`** and next enter **`ssh-add`**.
+1. On your **`local computer`**, open a terminal.
+2. Generate a new RSA certificate:
 
-### Expected result
+```bash
+# -- On your local computer
+ssh-keygen -t rsa -b 4096
+```
+Hint enter _three times_. When this finishes:
 
-Simple and secure, you should now be able to directly enter your home node with this command:
+3. Add your new certificate to your entry machine:
+
+```bash
+# -- On your local computer
+ssh-copy-id <your-lab-name>-entry
+```
+
+Enter your **`passphrase`** when prompted for a password.
+
+4. Add your certificate to the ssh-agent. 
+
+```bash
+ssh-add
+```
+
+If you don't have a running ssh-agent you may see an error message. In such a case, first enter **`eval "$(ssh-agent -s)"`** and next enter **`ssh-add`**.
+
+### 3.5.3 Expected result
+
+You should now be able to directly connect your home machine with this command:
 
 ```bash
 ssh <your-lab-name>
@@ -295,10 +320,11 @@ ssh demolab
 
 **Voilà!**
 
+### 3.5.4 One more ting
 
-::: tip Workbench
+::: tip HUNT Workbench
 
-[Request Workbench](/working-in-your-lab/workbench/) for smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, or MATLAB.
+Request access to [HUNT Workbench](/do-science/hunt-workbench/) for smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, or MATLAB.
 
 :::
 
@@ -306,3 +332,14 @@ ssh demolab
 ::: tip
 Time for coffee!
 :::
+
+
+## Immediate troubleshooting
+
+### Windows 
+
+#### Unable to connect with Putty
+
+Ensure that you did download **`putty.exe`** from the [link above](/do-science/getting-started/configure-ssh/#_3-3-configure-entry). We have experienced issues with preinstalled versions that connects from for us unknown locations.
+
+

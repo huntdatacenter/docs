@@ -1,19 +1,21 @@
 ---
 title: Installation
-category: Workbench
+category: HUNT Workbench
 permalink: /working-in-your-lab/hunt-workbench/installation
 sidebarDepth: 1
-description: Installation guide for Workbench in HUNT Lab.
+description: Installation guide for HUNT Workbench.
 ---
 
-# Workbench installation
+# HUNT Workbench installation
 
-**This guide will help you to connect with your lab Workbench over a web browser.**
+**This guide will help you to connect with your HUNT Workbench over a web browser.**
 
 ::: warning Requirements
 
-- Working VPN and SSH as configured in our [Getting started](/getting-started/) guide.
-- Certificate as described in the [Workbench certificate transfer](/guides/workbench-key-transfer/).
+- A working VPN and SSH configuration as described in our [Getting started](/getting-started/) guide.
+- A HUNT Workbench certificate as described in the [Workbench certificate transfer](/do-science/guides/workbench-key-transfer/).
+
+**Without these, it will be impossible to complete this guide.**
 
 :::
 
