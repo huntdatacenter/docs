@@ -170,6 +170,8 @@ EOF
 :::
 
 
+## Advanced
+
 #### Configure custom session
 
 ::: details More information
@@ -186,6 +188,7 @@ EOF
   ![Step 4](./images/mobaxterm_step4.png "MobaXterm - Step 4")
 
 :::
+
 
 #### Configure MobaAgent
 
@@ -212,5 +215,31 @@ Check the list of Mobagent SSH keys and make sure that SSH key (`id_rsa` file) i
 ![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_add_key.png)
 
 If MobaXterm included the new key automatically, you can continue to the next step. If your `SSH agents` list is empty, click on the plus sign (arrow marked "2.") and add your new `id_rsa` file (key) to the list. You will find the file on your local machine under this path: `C:\Users\<yourlocalusername>\.ssh\id_rsa`.
+
+:::
+
+#### Configure custom session for Blue/IAAS/GPU machine
+
+::: details More information
+
+1. Duplicate your current lab session
+
+![Duplicate_session](./images/1.mobaxterm-configure-custom-session.png)
+
+2. Edit duplicated session (feel free to rename it as well)
+
+![Edit_session](./images/2.mobaxterm-configure-custom-session.png)
+
+3. Set options as described below
+
+![set_remote_host](./images/3.mobaxterm-configure-custom-session.png)
+
+4. Add jump host for home machine.
+
+![edit_jump](./images/4.mobaxterm-configure-custom-session.png)
+
+![edit_jump_home](./images/5.mobaxterm-configure-custom-session.png)
+
+5. Save and enjoy ! 
 
 :::
