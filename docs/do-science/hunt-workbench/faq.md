@@ -1,12 +1,12 @@
 ---
 title: FAQ
-category: Workbench
-permalink: /working-in-your-lab/hunt-workbench/faq
+category: HUNT Workbench
+permalink: /do-science/hunt-workbench/faq
 sidebarDepth: 1
-description: Frequently asked questions about Workbench in HUNT Lab.
+description: Frequently asked questions about HUNT Workbench.
 ---
 
-# Workbench FAQ
+# HUNT Workbench FAQ
 
 **This page contain frequently asked questions about Workbench. Help us expand this section by [sending us questions and ideas](/contact) for new content.**
 
