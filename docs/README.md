@@ -18,15 +18,25 @@ Our documentation is organized in four main sections:
 
 This section is for **scientists** that do science in HUNT Cloud. The content focuses on practical matters such as how to get started, how to use the HUNT Workbench and similar.
 
+![Knowledge](./images/hunt-cloud_bottle-of-knowledge_200px.png)
+
 ## [Administer science](/administer-science)
 
 This is for **scientific administrators** that adminster science in HUNT Cloud. The content focuses on compliance, training, data handling, financal aspects and similar.
+
+![Custom keys](./images/hunt-cloud_the-keymakers_200px.jpg)
+
 
 ## [Govern science](/govern-science)
 
 This is for representatives that govern scientific activities in HUNT Cloud. The content focuses on scientific and trust governance, including privacy and security.
 
+![Strategic compass](./images/hunt-cloud_strategic-compass_200px.png)
+
 ## [About HUNT Cloud](/about)
 
-Read about the team, thinking and technologies behind HUNT Cloud.
+Read about the team, the technologies and the thinking behind HUNT Cloud.
+
+![Mascot](./images/hunt-cloud_mascot_test1_200px.png)
+
 

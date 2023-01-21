@@ -121,7 +121,7 @@ No, not in an easy way. Thus, either we have to install on `home` machines, or y
 
 We need to open for traffic from your lab to your organization's license server. [Contact us](/contact) for network openings.
 
-### Why is live editor not working?
+### Why is the live editor not working?
 
 If Matlab complains that Live editor is unable to run in the current system configuration it is important to check if libnss3 is installed.
 
@@ -133,9 +133,8 @@ sudo apt install libnss3
 
 ### Why is my Matlab installation stuck?
 
-If the installation was progressing and then stuck at some point it is important to check
-disk space `df -h`. In some cases `/tmp` directory may get filled up. We usually recommend
-setting alternative tmp before running install:
+If the installation was progressing and then stuck at some point it is important to check disk space `df -h`. In some cases `/tmp` directory may get filled up. We usually recommend setting alternative tmp before running install:
+
 ```
 mkdir -p /mnt/scratch/tmp
 export TMP=/mnt/scratch/tmp
