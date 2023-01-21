@@ -1,15 +1,21 @@
 ---
-title: Workbench reissue certificate
+title: HUNT Workbench reissue certificate
 category: Guides
-permalink: /guides/workbench-reissue-certificate
+permalink: /do-science/guides/hunt-workbench-reissue-certificate
 sidebarDepth: 1
-description: Guide on installation of new certificate for Workbench.
+description: Guide on how to install a new certificate for your HUNT Workbench.
 ---
 
-# Workbench reissue certificate
+# HUNT Workbench reissue certificate
 
-If you already requested reissue of your expired certificate in [Service desk: Workbench access](/service-desk/user-orders/#workbench-access) and received your new certificate follow the steps below
-to configure it.
+**This guide describes how to replaced an expired web browser certificate for your HUNT Workbench.**
+
+::: tip When to use
+
+This guide applys if you have requested a reissue of your expired certificate in our [do science service desk](/do-science/service-desk/#hunt-workbench-reissue). 
+
+:::
+
 
 ::: details Windows
 
@@ -33,9 +39,7 @@ to configure it.
 
    ![5_cert_p12.png](./images/5_cert_p12.png)
 
-6. Wizard might require additional confirmation for installation of your Lab CA,
-   and your Lab name should appear. Click yes to confirm if asked, or continue
-   to the next step.
+6. Wizard might require additional confirmation for installation of your Lab CA, and your Lab name should appear. Click yes to confirm if asked, or continue to the next step.
 
    ![7_confirmLabCAcertificate.png](./images/7_confirmLabCAcertificate.png)
 
@@ -61,7 +65,7 @@ to configure it.
 
 5. When opening Workbench for the first time you will be asked for macOS password,
    allowing the browser to access your client certificate stored in Keychain.
-   After filling in the password you can confirm by clicking on `Always allow` / `Tillat alltid`.
+   After filling in the password you can confirm by clicking on **`Always allow`** / **`Tillat alltid`**.
 
    ![macos_chrome.png](./images/macos_chrome.png)
 
@@ -73,9 +77,9 @@ We recommend that you use the [Google Chrome browser](https://www.google.com/chr
 
 1. Open Chrome on your local machine.
 
-2. Open url `chrome://settings/certificates` and click the `Import` button on the right side of the screen.
+2. Open url **`chrome://settings/certificates`** and click the **`Import`** button on the right side of the screen.
 
-3. Browse and select your `.p12` file on your local machine and enter the `TLS passphrase` that you got on Signal.
+3. Browse and select your **`.p12`** file on your local machine and enter the **`TLS passphrase`** that you got on Signal.
 
 4. Restart Chrome.
 
@@ -83,4 +87,5 @@ After the restart of Google Chrome the certificate is ready for network or secur
 
 :::
 
-You should now be able to continue your work as before. For more information you can follow to our [Workbench guides](https://docs.hdc.ntnu.no/working-in-your-lab/workbench/) or [Workbench FAQ](https://docs.hdc.ntnu.no/working-in-your-lab/workbench/faq/).
+With a little bit of luck, you should now be able to continue your work as before. Enjoy! [Click here](/do-science/hunt-workbench/) to get back to the HUNT Workbench section. 
+

@@ -8,21 +8,24 @@ description: Installation guide for HUNT Workbench.
 
 # HUNT Workbench installation
 
-**This guide will help you to connect with your HUNT Workbench over a web browser.**
+**This guide will help you to connect to your HUNT Workbench over a web browser. Allow for 30 minutes to complete this installation and some playtime in your new environment.**
+
+[[toc]]
+
+## Before you start
 
 ::: warning Requirements
 
 - A working VPN and SSH configuration as described in our [Getting started](/getting-started/) guide.
-- A HUNT Workbench certificate as described in the [Workbench certificate transfer](/do-science/guides/workbench-key-transfer/).
+- A HUNT Workbench certificate as described in the [HUNT Workbench certificate request](/do-science/guides/workbench-request/).
 
 **Without these, it will be impossible to complete this guide.**
 
 :::
 
 ::: tip Time estimate
-Allow for **30 minutes** to complete this installation and some playtime in your new environment.
-:::
 
+:::
 
 
 
@@ -103,9 +106,20 @@ Example with vim
 ```
 sudo vim /etc/hosts
 ```
-
-
 :::
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## 2. Install certificates
@@ -274,3 +288,13 @@ If you see Error code: `SEC_ERROR_UNKNOWN_ISSUER` when accessing Workbench follo
 Something is wrong with configuration of the server, reach out in your lab channel on Slack or [Contact us](/contact) us for further investigation.
 
 :::
+
+
+
+
+
+
+
+
+
+
