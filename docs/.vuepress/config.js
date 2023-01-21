@@ -102,7 +102,7 @@ module.exports = {
             path: "/do-science/",
           },
           {
-            title: "Back to main page",
+            title: "Back to home page",
             path: "/",
           }
           ]
@@ -286,7 +286,7 @@ module.exports = {
             path: "/administer-science/introduction.md",
           },
           {
-            title: "Back to main page",
+            title: "Back to home page",
             path: "/",
           }
           ]
@@ -410,7 +410,7 @@ module.exports = {
             path: "/govern-science/responsibilities.md",
           },
           {
-            title: "Back to main page",
+            title: "Back to home page",
             path: "/",
           }
           ]
@@ -506,7 +506,7 @@ module.exports = {
             path: "/about/affiliation.md",
           },
           {
-            title: "Back to main page",
+            title: "Back to home page",
             path: "/",
           }
           ]

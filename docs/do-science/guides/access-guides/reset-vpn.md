@@ -1,7 +1,7 @@
 ---
 title: VPN certificate reset
 category: Guides
-permalink: /guides/vpn-certificate-reset
+permalink: /do-science/guides/vpn-certificate-reset
 sidebarDepth: 1
 description: This guide describe how to reset your VPN certificate for HUNT Cloud.
 ---
