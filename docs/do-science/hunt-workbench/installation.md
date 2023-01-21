@@ -1,7 +1,7 @@
 ---
 title: Installation
 category: HUNT Workbench
-permalink: /working-in-your-lab/hunt-workbench/installation
+permalink: /do-science/hunt-workbench/installation
 sidebarDepth: 1
 description: Installation guide for HUNT Workbench.
 ---

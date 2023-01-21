@@ -126,6 +126,10 @@ Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
 
 ![MATLAB-numWorkers.png](./images/MATLAB-numWorkers.png)
 
+### Can I install new toolboxes
+
+Probably not. [Contact us](/contact) on Slack or email if you need new toolboxes in your MATLAB installation. 
+
 ## RStudio
 
 ### Which R version is available in RStudio?
