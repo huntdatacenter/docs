@@ -28,17 +28,21 @@ If you were previously able to access your applications (such as _RStudio_), and
 If this do not help, you may have a look at our [FAQ](/do-science/hunt-workbench/faq/) or [Troubleshooting](/do-science/hunt-workbench/troubleshooting/) sections.  [Contact us](/contact) on email or reach out in your lab channel on Slack for further investigation if this does not help.
 
 
-### 504: Gateway Timeout Error
-
-Reach out to us on [Slack or email](/contact) if you get the **`504 error`** while trying to login to your HUNT Workbench. In these cases you will not be able to access your workbench.
-
-Note. This does not apply if you are able to open your HUNT Workbench, but get a _504 error_ when your try to access specific applications, such as _RStudio_ below (see solution below).
-
 ### 403: Forbidden - Expired client certificate
 
 Your HUNT Workbench certificate is time limited. You will meet the **`403 Forbidden`** message when your certificate expire (example image below). Head over our do science [service desk](/do-science/service-desk#hunt-workbench-reissue) to order a certificate reissue.
 
 ![expired_certificate.png](./images/expired_certificate.png)
+
+### 502: Bad gateway
+
+Reach out to us on [Slack or email](/contact) if you get the **`502 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
+
+### 504: Gateway Timeout Error
+
+Reach out to us on [Slack or email](/contact) if you get the **`504 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
+
+Note. This does not apply if you are able to open your HUNT Workbench, but get a _504 error_ when your try to access specific applications, such as _RStudio_ below (see solution below).
 
 ### Expired lab certificate
 

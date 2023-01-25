@@ -14,57 +14,65 @@ description: Frequently asked questions about HUNT Workbench.
 
 ::: tip Troubleshooting
 
-Head over to our [Workbench troubleshooting](/working-in-your-lab/hunt-workbench/troubleshooting/) section if something is not working as expected.
+Head over to our [HUNT Workbench troubleshooting](/working-in-your-lab/hunt-workbench/troubleshooting/) section if something is not working as expected.
 
 :::
+
+
 
 ## Storage
 
 ### Where is my data?
 
-Workbench uses the same storages volumes as your home machine. This means that you can access all lab data, including your home directory, using the same paths in your scripts, for example:
+HUNT Workbench uses the same storages volumes as your home machine. This means that you can access all lab data, including your **`home`**-directory, using the same paths in your scripts, for example:
 
 ```bash
 /mnt/archive/<my-data-folder>
 ```
 
-### Where is my Workbench code stored?
+### Where is my code stored?
 
-Jupyter Notebooks and code are stored in the shared `work` volume on your home machine:
+Your Jupyter Notebooks and code files are stored in the following shared **`work`**-volume on your home machine:
 
 ```bash
 /mnt/work/workbench
 ```
 
+
+
 ## Reproducibility
 
 ### Can I create my own Conda environment for Jupyter?
 
-Yes. Here's an example on how you create a Conda environments with Python and IPython kernel in [Workbench terminal](/working-in-your-lab/workbench/faq/#terminal):
+Yes. This allows you to install packages and package versions of your choice.
 
-```
+Below is an example on how you create a Conda environments with _Python_ and _IPython_ kernel from your [workbench terminal](/do-science/hunt-workbench/faq/#terminal)::
+
+```bash
 conda create -n <name> 'python~=3.10.*' 'ipykernel'
 ```
 
-And here's an example on how you create a Conda environment with R and R-IRkernel kernel and commonly used packages:
+And here's an example on how to create a Conda environment with _R_ and _R-IRkernel_ kernel and commonly used packages:
 
-```
+```bash
 conda create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
 ```
 
+You need to replace **`<name>`** with your own environment name in the example above, such as **`conda-test-environment`**.
+
 ### How can I start a Notebook with my new Conda environment?
 
-Here is an example of Notebooks that are connected to Conda environments.
+You should see Notebooks with the **`conda env`**-tag. Here are two examples of such Notebooks that are connected to custom Conda environments.
 
 ![wb_notebook_envs.png](./images/wb_notebook_envs.png)
 
-### How do I change the Conda environment for my Notebook?
+### How can I change a Conda environment for my Notebook?
 
-You can change Conda environment of your Jupyter Notebook when it is open, by switching the kernel in the top right corner of menu:
+You can change the Conda environment for your Jupyter Notebook when it is open: Open your Jupyter Notebook of choice and switch the kernel in the top right corner of menu:
 
 ![wb_notebook_kernel.png](./images/wb_notebook_kernel.png)
 
-You will be able to select default environments including MATLAB kernel and custom environments which contain either `ipykernel` (Python) or `r-irkernel` (R 4.0):
+You will be able to select default environments including MATLAB kernel and custom environments which contain either **`ipykernel`** (Python) or **`r-irkernel`** (R 4.0):
 
 ![wb_notebook_conda_env.png](./images/wb_notebook_conda_env.png)
 
@@ -72,9 +80,38 @@ You will be able to select default environments including MATLAB kernel and cust
 
 Not directly. The packages you install in your Workbench are usually not shared. The separation prevent others from breaking your packages, for example during upgrades. However, you may utilize the powers of Conda to export the definition of your environments so others can use restore function to be able to use the very same packages that you use. Learn how to manage environments on [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) or skip directly to [sharing an environment guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment).
 
+### How can I share my Conda environments with others?
+
+It might be handy to share your exact setup with your lab colleagues when you have perfected your workflows.
+
+The packages that you have installed in your HUNT Workbench environment are usually not shared. The separation prevent others from breaking your packages and it allows you to explore packages without breaking the workflows of others.
+
+So, to share environments you will need to export your environments definition to your colleagues so they can reuse them. Read more on how to [share](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment) and manage Code environments on [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Below is a principle guide run in your [workbench terminal](/do-science/hunt-workbench/faq/#terminal):
+
+1. In your Workbench:
+
+```bash
+# -- export your active environment
+conda env export > /mnt/scratch/test-environment.yml
+```
+
+2. In your lab colleague's Workbench (run by your lab-colleague):
+
+```bash
+# -- create a new environment from the saved environment file
+conde env create -f /mnt/scratch/test-environment.yml
+
+# -- activate the environment (it will have the same name as your original environment)
+conda activate <name>
+
+# -- verify the installation
+conda env list
+```
+
+
 ### How can I install apt packages?
 
-We recommend that instead of using apt, you install your packages using Conda into your environment since these will be installed on disk and such be persistent during restarts (regular apt commands run in terminal will be removed during your next restart). Search [Conda repository](https://anaconda.org/) to identify your package name and get going with your installation.
+We recommend that instead of using apt, you install your packages into your environment using Conda since these will be installed on disk and such be persistent during restarts. Regular **`apt`** commands run in terminal will be removed during your next restart. Search [Conda repository](https://anaconda.org/) to identify your package name and get going with your installation.
 
 Example with [plink2](https://anaconda.org/bioconda/plink2) package:
 
@@ -84,9 +121,11 @@ conda activate default
 plink2 --help
 ```
 
+
+
 ## Management
 
-### How can I restart my Workbench environment?
+### How can I restart my workbench environment?
 
 Sometimes you might want to start over with a fresh environment:
 
@@ -102,42 +141,46 @@ You can either start the new instance by hitting the button or by logging in aga
 
 ### Can I install Jupyter extensions?
 
-No. Due to security reasons, this is currently not allowed and the Jupyter extension manager is disabled. Feel free to reach out to us on Slack so we can discuss adding useful extensions into your Workbench.
+No. Due to security reasons, we have disabled the Jupyter extension manager. [Contact us](/contact) if you would like useful extensions to be added to the HUNT Workbench.
+
+
+
 
 ## MATLAB
 
-### Are there any limitations to MATLAB in Workbench?
+### Are there any limitations to MATLAB in HUNT Workbench?
 
-Yes, some limitations to web-based version of MATLAB may apply. Read more in the [official documentation](https://se.mathworks.com/products/matlab-online/limitations.html) from MathWorks.
+Yes, there are some limitations to the web-based version of MATLAB (_MATLAB Online_). Read more in the [official documentation](https://se.mathworks.com/products/matlab-online/limitations.html) from MathWorks.
 
 ### How do I report issues with MATLAB?
 
-Try to note down times when the issues occurred and collect the error logs from Status information window.
-Additionally you could also help by taking a screenshot of error logs in browser console.
-Usually you can open the console with a shortcut: `CTRL + SHIFT + J` (MacOS: `CMD + Option + J`), but this can vary between browsers. Share these logs with us on slack, or feel free to [contact us on email](https://docs.hdc.ntnu.no/contact/).
+Try to document the time when the issue occurred and save the error logs from your Status information window. Additionally, it would also help if you could take a screenshot of the error logs in the browser console. Usually you can open the console with the shortcuts: **`CTRL + SHIFT + J`** (MacOS: **`CMD + Option + J`**), although this may vary between browsers. Share the information with us on [Slack or email](/contact).
 
 ### How can I increase the number of parallel workers?
 
-If you already have "Parallel Computing Toolbox" and cannot set the higher number parallel workers in the pool, Select "Parallel" menu and click on "Create and Manage Clusters":
+If you already have "_Parallel Computing Toolbox_" and cannot set the higher number parallel workers in the pool, select **`Parallel`** menu and click on **`Create and Manage Clusters`**:
 
 ![MATLAB-manage-clusters.png](./images/MATLAB-manage-clusters.png)
 
-Then hit "Edit" and update the "NumWorkers" value (usually number of CPUs):
+Then, hit **`Edit`** and update the **`NumWorkers`** value (usually number of CPUs):
 
 ![MATLAB-numWorkers.png](./images/MATLAB-numWorkers.png)
 
 ### Can I install new toolboxes
 
-Probably not. [Contact us](/contact) on Slack or email if you need new toolboxes in your MATLAB installation. 
+We need to initiate such installation. [Contact us](/contact) on email if you need new toolboxes in your MATLAB installation.
+
+
+
+
 
 ## RStudio
 
 ### Which R version is available in RStudio?
 
-RStudio is configured to use packages installed in the conda environment named `r-base`.
-You can find your R version using [Workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal):
+RStudio is configured to use packages installed in the conda environment named **`r-base`**. You can identify your current _R version_ packages in your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) following these steps:
 
-1. Open your Workbench terminal.
+1. Open your workbench terminal.
 
 ![workbench_terminal.png](./images/workbench_terminal.png)
 
@@ -149,13 +192,25 @@ conda list -n r-base | grep r-base
 
 ### Which R packages are preinstalled?
 
-Currently we setup `r-base` environment with these conda packages: `r-base`, `r-irkernel`, `r-devtools`, `r-remotes`, `r-dplyr`, `r-tidyverse`, `r-haven`. If you have older setup and missing some of these packages you can follow the answer below to install them.
+Currently, we install your **`r-base`** environment with the following conda packages:
+
+```bash
+- r-base
+- r-haven
+- r-irkernel
+- r-devtools
+- r-dplyr
+- r-remotes
+- r-tidyverse
+```
+
+If you have older setup and missing some of these packages you can follow the "_How do I install additional R packages_"-answer below to add them to your conda environment.
 
 ### How do I install additional R packages?
 
-If you want to install your own packages, we recommend to use [Conda](/working-in-your-lab/analytical-tools/conda/) where possible. You can defer to alternative methods such as `install.packages()` when the package is not available in Conda. To install a package:
+If you want to install your own R packages, we recommend that you use [Conda](/working-in-your-lab/analytical-tools/conda/) where ever possible:
 
-1. Open your [Workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal):
+1. Open your [workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal):
 
 ![workbench_terminal.png](./images/workbench_terminal.png)
 
@@ -165,7 +220,7 @@ If you want to install your own packages, we recommend to use [Conda](/working-i
 conda activate r-base
 ```
 
-3. Add packages to your `r-base` code environment:
+3. Add packages to your **`r-base`** code environment:
 
 ```bash
 # -- Principal example
@@ -177,7 +232,7 @@ conda install -n r-base -c conda-forge r-dplyr
 
 For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr).
 
-4. When the installation is complete, open RStudio or R in your Workbench and load your new package:
+3. When the installation is complete, open _RStudio_ or _R_ in your workbench and load your new package:
 
 ```bash
 # -- Principal example
@@ -187,11 +242,11 @@ library(<package-name>)
 library(dplyr)
 ```
 
+You can defer to alternative methods such as `install.packages()` when the package is not available in Conda (see below).
+
 ### How do I install R packages not found in Conda?
 
-If you did not find R package in conda as described above and you have to defer to running `install.packages()` command,
-we advice to use `R` in [Workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal),
-instead of using RStudio. Otherwise RStudio might lead to a broken state of environment where your custom package will not work.
+If you don't find a _R package_ in Conda as described above, you may need to defer to running the **`install.packages()`** command inside R. We recommend to use **`R`** in your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) for such installations (instead of installing directly in RStudio) to avoid broken environment states in RStudio. Packages installed into your **`r-base`** environment through _R_ in terminal should be available in _RStudio_.
 
 Packages installed into `r-base` environment through **R** in [terminal](/working-in-your-lab/workbench/faq/#terminal) will be available in **RStudio**.
 
@@ -201,45 +256,67 @@ Make sure to activate the `r-base` environment before running **R** command.
 conda activate r-base
 ```
 
-### How can I use R in Workbench terminal?
+### How can I use R in my workbench terminal?
 
-Start by activate `r-base` environment:
+First, open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal).
 
-```
+Start by activating `r-base` environment:
+
+```bash
 conda activate r-base
 ```
 
-Then start **R** inside your `r-base` environment:
+Then run **R** inside your `r-base` environment:
 
-```
+```bash
 R
 ```
 
+Enjoy!
+
 ### How can I recover my R environment in case of broken package installation?
 
-If you are getting errors about `GLIBCXX` library not found and essential R packages are not working,
-typically after installing some custom package, you might consider recreating `r-base` environment from scratch.
+Sometimes you may get errors about the **`GLIBCXX`** library not being found and/or essential R packages are not working. This happens typically after installation of custom package. In such cases, you might consider to recreate your **`r-base`** environment from scratch:
 
-You can do that in [Workbench terminal](/working-in-your-lab/hunt-workbench/faq/#terminal):
+1. Open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) and run the following code to reset your **`r-base`** environment:
 
-```
+```bash
 conda create --yes -n r-base 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
 ```
 
-Remember that this command also removes your other custom packages that might be working.
+::: warning
+
+This removes custom packages that you might have installed.
+
+:::
+
+### Can others use my R packages?
+
+When you have perfected your workflows, you can share your setup with your colleagues, although not directly.
+
+The R-packages in your HUNT Workbench environment are usually not shared. This separation prevent others from breaking your packages and it allows you to explore packages without breaking the workflow of others.
+
+So, to share environments you will need to export your environments definitions so others can reuse them:
+
+Learn how to manage environments on [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 ### How do I reset my user state in RStudio?
 
-When you [restart your Workbench](/working-in-your-lab/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment), your RStudio user state might still be preserved. To achieve complete reset read the RStudio support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server).
+When you [restart your HUNT Workbench](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment), your _RStudio_ user state might still be preserved. Read the _RStudio_ support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server) to achieve a complete reset.
+
+
+
 
 ## Terminal
 
-### Can I use a terminal from my Workbench?
+### Can I use a terminal from my workbench?
 
-Yes. You can find Workbench Terminal in main view of applications under the section: Other.
+Yes. You can find your **`workbench terminal`** in the main view of applications under the section: **`Other`**.
 
 ![other_apps_terminal.png](./images/other_apps_terminal.png)
 
 ### When do I need to use a terminal?
 
-Terminal can be handy when it comes to managing [Conda packages](/working-in-your-lab/analytical-tools/conda/), monitoring resources (`htop`), or handling other tasks.
+You **`workbench`** terminal can be handy when it comes to managing [Conda packages](/do-science/analytical-tools/conda/), monitoring resources (**`htop`**), or handling other tasks.
+
+
