@@ -1,46 +1,55 @@
 ---
 title: Docker
 category: Technical tools
-permalink: /working-in-your-lab/technical-tools/docker
+permalink: /do-science/tools/technical-tools/docker
 sidebarDepth: 1
 description: Usage guide for Docker
 ---
 
 # Docker
 
-**[Docker](https://docs.docker.com/engine/install/ubuntu/) provides application containers for Linux.**
+**[Docker](https://docs.docker.com/engine/install/ubuntu/) provides application containers for Linux. You may run Docker on On-demand and BLUE machines.**
 
-## Installation
+[[toc]]
 
-Follow official [Docker installation guide](https://docs.docker.com/engine/install/ubuntu/) if you want to install Docker on Iaas or Blue machine.
+::: warning Singularity on home machines
 
-[GPU machines](/working-in-your-lab/technical-tools/gpu/) come with nvidia-docker preinstalled.
-
-::: tip Singularity on home machines
-
-Docker may fail to run on your home machine due to our security configurations. We recommend that you run Singularity on your home machine. Read more in our [Singularity installation guide](/working-in-your-lab/technical-tools/singularity/).
+Docker will fail on your **`home`** machine due to security restrictions. We recommend that you run Singularity on your home machine. Read more in our [Singularity installation guide](/do-science/tools/technical-tools/singularity/).
 
 :::
 
-## Moving docker directory
+
+## Installation
+
+Follow the official [Docker installation guide](https://docs.docker.com/engine/install/ubuntu/) to install Docker on unmanaged machines (On-demand and BLUE machines). [GPU machines](/do-science/tools/technical-tools/gpu/) come with nvidia-docker preinstalled.
+
+
+
+## Move Docker directory
 
 The operating system volume on your machine is limited in size. Depending on your size requirements, you may want to move your docker directory off the system disk and over to your machine home folder.
 
-1. Stop docker service and migrate files:
+On you unamanged machine: 
+
+1. Stop the docker service.
 
 ```bash
 sudo service docker stop
+```
 
+2. Copy your Docker files to your home folder. 
+ 
+```bash
 sudo rsync -avu /var/lib/docker/ /home/docker
 ```
 
-2. Edit `/etc/docker/daemon.json` and add `data-root` path:
+3. Point Docker to your new location by editing **`/etc/docker/daemon.json`** and add your new **`data-root`** path:
 
 ```bash
 sudo vim /etc/docker/daemon.json
 ```
 
-Example for IAAS / Blue machines:
+Example for On-demand and BLUE machines:
 
 ```bash
 {
@@ -62,19 +71,19 @@ Example for GPU machines:
 }
 ```
 
-3. Backup original Docker files:
+4. Backup your original Docker files.
 
 ```bash
 sudo mv /var/lib/docker /var/lib/docker.backup
 ```
 
-4. Restart Docker service:
+5. Restart the Docker service to fetch the new location.
 
 ```bash
 sudo service docker restart
 ```
 
-5. Test Docker command:
+6. Test your new setup with a Docker command.
 
 ```bash
 docker ps -a
@@ -82,19 +91,19 @@ docker ps -a
 
 ## Troubleshooting
 
-### Issues with pip packages
+#### Issues with pip packages
 
-We have seen issues with installation on pip pakces due to `mtu` size issues. One solution is to add `mtu` size to your docker config file: 
+We have seen issues with installation of pip packages due to **`mtu`** size issues. One solution is to add **`mtu`** size specification to your Docker config file: 
 
-1. Open your docker config file.
+1. Open your Docker config file.
 
 ```bash
 sudo vim /etc/docker/daemon.json
 ```
 
-2. Set `mtu` to 1330.
+2. Set **`mtu`** to 1330.
 
-Example configuration setting `mtu` to 1330 to avoid most issues with packet sizes:
+This is an example configuration setting **`mtu`** to 1330 to avoid most issues with packet sizes:
 
 ```bash
 {
@@ -102,4 +111,5 @@ Example configuration setting `mtu` to 1330 to avoid most issues with packet siz
     "mtu": 1330
 }
 ```
+
 

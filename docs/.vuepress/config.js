@@ -147,7 +147,6 @@ module.exports = {
             text: "Technical tools",
             isGroup: true,
             children: [
-              "/do-science/tools/technical-tools/client-certificate.md",
               "/do-science/tools/technical-tools/docker.md",
               "/do-science/tools/technical-tools/git.md",              
               "/do-science/tools/technical-tools/gpu.md",

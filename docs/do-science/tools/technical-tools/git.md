@@ -1,20 +1,22 @@
 ---
 title: Git
 category: Technical tools
-permalink: /working-in-your-lab/technical-tools/git
+permalink: /do-science/tools/technical-tools/git
 sidebarDepth: 1
-description: Usage guide for Git.
+description: Usage guide for Git in HUNT Cloud.
 ---
 
 # Git
 
-[Git](https://git-scm.com/) is a handy version control system for tracking changes in files and coordinate work across your lab.
+**[Git](https://git-scm.com/) is a handy version control system for tracking changes in files and coordinate work across your lab.**
 
 [[toc]]
 
-## Remote Git repositories on HUNT Cloud
 
-Depending on your lab's security tier, your data controller may allow access to hosted git repository managers such as [GitLab](https://gitlab.com/) and [GitHub](https://github.com/).
+## Introduction 
+
+Depending on your lab's Data Safety Level (DSL), your data controller may allow access to hosted git repository managers such as [GitLab](https://gitlab.com/), [GitHub](https://github.com/) and [Bitbucket](https://bitbucket.org/). 
+
 If so, you will be able to clone remote repositories, for example:
 
 ```bash
@@ -30,6 +32,9 @@ git clone git@github.com:samtools/htslib.git
 This does not work because Git is using SSH on port `22` which is blocked by default by the firewalls on HUNT Cloud.
 
 Luckily we can tell Git to use a different port, such as port `443`, which is open by default. See below how to do this for your favorite hosted git repositories.
+
+## Add remote Git repositories on HUNT Cloud
+
 
 ### How to access GitHub
 
