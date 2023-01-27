@@ -1,25 +1,101 @@
 ---
+pageClass: custom-homepage
 title: Welcome
 category: HUNT Cloud
+sidebar: false
+next: false
+editLink: false
+lastUpdated: false
 readingTime: null
-description: HUNT Cloud is a scientific computing service located at NTNU in Norway. These pages contains official user documentation on our cloud services. Their content is aimed at lab users.
+tagline: null
+description: null
+footerHtml: false
+# description: HUNT Cloud is a scientific computing service located at NTNU in Norway. These pages contains official user documentation on our cloud services. Their content is aimed at lab users.
 ---
 
-# Welcome to the HUNT Cloud Documentation
+<script setup>
 
-HUNT Cloud is a scientific computing environment located at [NTNU](https://www.ntnu.edu/) in Norway.
+</script>
 
-These pages contains official user documentation on our services. The content is aimed at lab users and data space coordinators.
+<div class="hc-container">
+  <div class="hc-header">
+    <div class="hc-header-img"></div>
+  </div>
 
-Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf) and visit our [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for general information on our services, and see our [Ting reports](/tingweek/#reports) for detailed updates on our activities.
+  <div class="hc-row">
+    <div class="hc-column">
+      <VuetifyButton id="btn1" class="hc-btn" color="success" label="Do science" href="/getting-started/" block />
+    </div>
+    <div class="hc-column">
+      <VuetifyButton id="btn2" class="hc-btn" color="primary" label="Administer science" href="/coordination/" block />
+    </div>
+    <div class="hc-column">
+      <VuetifyButton id="btn3" class="hc-btn" color="blue-grey" label="Scientific suite" href="/governance/" block />
+    </div>
+  </div>
 
-::: tip Next Ting week
+</div>
 
-- **Lab ting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 15 February 2023 - 9 to 11 a.m. CET
-- **Data controller ting**: Wednesday 15 February 2023 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 16 February 2023 - 9 to 11 a.m. CET
+<style scoped>
 
-[Read more about the Tingweeks](tingweek/)
+.theme-default-content {
+  max-width: none !important;
+  padding: 0 !important;
+}
 
-:::
+.hc-header {
+  width: 100vw;
+  max-width: 100%;
+  margin-bottom: 64px;
+}
+
+.hc-header-img {
+  background-image: url("https://assets.hdc.ntnu.no/assets/artworks/hunt-cloud_explore_medium.jpg");
+  background-position: 50% 72%;
+  //background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #004c7b;
+  width: 100vw;
+  max-width: 100%;
+  height: 350px;
+  object-fit: fill;
+  margin: 0 auto !important;
+}
+
+.hc-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.hc-row {
+  max-width: 960px;
+  margin: 0 auto !important;
+}
+
+.hc-column {
+  float: left;
+  width: 70%;
+  min-height: 50px;
+  padding-bottom: 32px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (min-width: 720px) {
+
+  .hc-column {
+    width: 33%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}
+
+</style>
+
+
+
