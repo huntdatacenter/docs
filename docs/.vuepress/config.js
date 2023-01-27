@@ -430,6 +430,14 @@ module.exports = {
           add('twitter:data2', type === 'article' ? 'https://docs.hdc.ntnu.no/news/' : null)
         },
       }
+    ],
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          return timestamp ? new Date(timestamp).toLocaleDateString() : timestamp;
+        }
+      }
     ]
   ]
 };
