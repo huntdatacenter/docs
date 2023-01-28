@@ -1,7 +1,6 @@
 ---
 title: Specifications
 category: HUNT Cloud
-permalink: /administer-science/services/specifications
 sidebarDepth: 1
 description: This page gives the official Cloud services specifications.
 ---
