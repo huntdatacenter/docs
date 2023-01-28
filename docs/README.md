@@ -16,6 +16,7 @@ footerHtml: false
 
 </script>
 
+
 <div class="hc-container">
   <div class="hc-header">
     <div class="hc-header-img"></div>
@@ -23,17 +24,18 @@ footerHtml: false
 
   <div class="hc-row">
     <div class="hc-column">
-      <VuetifyButton id="btn1" class="hc-btn" color="#00509e" label="Do science" href="/do-science/" block />
+      <VuetifyButton id="btn1" class="hc-btn" color="primary" label="Do science" href="/do-science/" block />
     </div>
     <div class="hc-column">
       <VuetifyButton id="btn2" class="hc-btn" color="primary" label="Administer science" href="/coordination/" block />
     </div>
     <div class="hc-column">
-      <VuetifyButton id="btn3" class="hc-btn" color="blue-grey" label="Scientific suite" href="/governance/" block />
+      <VuetifyButton id="btn3" class="hc-btn" color="primary" label="Govern science" href="/governance/" block />
     </div>
   </div>
 
 </div>
+
 
 <style scoped>
 
@@ -96,35 +98,37 @@ footerHtml: false
 
 </style>
 
+<center>
+<h1>Welcome to the HUNT Cloud documentation</h1>
+</center>
 
+<center>
+<b>
+These pages contains official user documentation for HUNT Cloud. <br>See <a href="https://www.ntnu.edu/mh/huntcloud">About HUNT Cloud</a> for introductory information on our scientific services.
+</b>
+</center>
 
-
-
-
-# Welcome to the HUNT Cloud Documentation
 
 **HUNT Cloud is a scientific computing environment located at [NTNU](https://www.ntnu.edu/) in Norway.**
 
-These pages contains official user documentation for HUNT Cloud. See the regular [HUNT Cloud](https://www.ntnu.edu/mh/huntcloud) pages for introductory information on our scientific services.
 
-Our documentation is organized in four main sections:
 
 ## [Do science](/do-science)
 
-This section is for **scientists** that do science in HUNT Cloud. The content focuses on practical matters such as how to get started, how to use the HUNT Workbench and similar.
+Practical matters such as how to get started, how to use the HUNT Workbench and similar.
 
 ![Knowledge](./images/hunt-cloud_bottle-of-knowledge_200px.png)
 
 ## [Administer science](/administer-science)
 
-This is for **scientific administrators** that adminster science in HUNT Cloud. The content focuses on compliance, training, data handling, financal aspects and similar.
+How to oranize your scientific group in HUNT Cloud, including compliance, training, data handling, financal aspects and similar.
 
 ![Custom keys](./images/hunt-cloud_the-keymakers_200px.jpg)
 
 
 ## [Govern science](/govern-science)
 
-This is for representatives that govern scientific activities in HUNT Cloud. The content focuses on scientific and trust governance, including privacy and security.
+The content focuses on scientific and trust governance in HUNT Cloud, including privacy and security.
 
 ![Strategic compass](./images/hunt-cloud_strategic-compass_200px.png)
 
