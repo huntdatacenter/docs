@@ -1,7 +1,7 @@
 ---
 title: Rsync
 category: Transfer tools
-permalink: /working-in-your-lab/transfer-tools/rsync
+permalink: /do-science/transfer/rsync
 sidebarDepth: 1
 description: Installation and usage guide for Rsync.
 ---

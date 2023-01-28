@@ -31,7 +31,7 @@ See below for descriptions on how to monitor your memory consumption using the `
 
 Yes. You have several options:
 
-(1) A quick way is to use [HTOP](/working-in-your-lab/technical-tools/htop/) for interactive monitoring of cpu and memory inside individual machines.
+(1) A quick way is to use [HTOP](/do-science/technical/htop/) for interactive monitoring of cpu and memory inside individual machines.
 
 (2) The [time](http://man7.org/linux/man-pages/man1/time.1.html) command is a quick way to determine the duration of execution of a particular command. For example add `/usr/bin/time -v` before your command to get going:
 
@@ -130,7 +130,7 @@ sudo apt install <packagename>
 
 ::: warning WARNING
 
-Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](/working-in-your-lab/analytical-tools/conda/). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.
+Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](/do-science/analytical/conda/). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.
 
 :::
 
@@ -154,20 +154,20 @@ Yes. You can run [Docker images](https://www.docker.com/) on both [iaas](/faq/co
 
 ::: tip
 
-If you need to run docker images on home machine try using Singularity instead. Read more in our [Singularity installation guide](/working-in-your-lab/technical-tools/singularity/).
+If you need to run docker images on home machine try using Singularity instead. Read more in our [Singularity installation guide](/do-science/technical/singularity/).
 
 :::
 
 ### Can I run Singularity containers?
 
 Yes, you can run your Singularity containers on both home, iaas and blue machines. Follow our quick
-[Singularity installation guide](/working-in-your-lab/technical-tools/singularity/). For simplicity, we strongly recommend to install singularity via Conda.
+[Singularity installation guide](/do-science/technical/singularity/). For simplicity, we strongly recommend to install singularity via Conda.
 
 ## Workflow
 
 ### How can I keep my jobs running when I disconnect?
 
-You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/working-in-your-lab/technical-tools/terminal-multiplexers/) to get started. Your jobs over [X2Go](/working-in-your-lab/technical-tools/x2go/#set-up-your-local-machine), such as Rstudio and Stata, should be kept alive between your logins by default.
+You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/do-science/technical/terminal-multiplexers/) to get started. Your jobs over [X2Go](/do-science/technical/x2go/#set-up-your-local-machine), such as Rstudio and Stata, should be kept alive between your logins by default.
 
 ### How can I profile the resources needed in my workflow?
 

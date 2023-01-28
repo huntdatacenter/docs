@@ -93,7 +93,7 @@ We don't think so. It is our responsibility to ensure the correct receiver of yo
 
 ## Transfers inside my lab
 
-We recommend [rsync](/working-in-your-lab/transfer-tools/rsync) for transfers between machines inside your lab. 
+We recommend [rsync](/do-science/transfer/rsync) for transfers between machines inside your lab. 
 
 ### How can I transfer data from my home machine to a blue machine? 
 

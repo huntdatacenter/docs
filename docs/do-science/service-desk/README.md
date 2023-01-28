@@ -49,7 +49,7 @@ The service orders below are aimed at active lab users. Lab access for new users
 
 ### HUNT Workbench reissue
 
-Request a new certificate if you have an existing HUNT Workbench and your previous [certificate expired](/working-in-your-lab/hunt-workbench/troubleshooting/#_403-forbidden-expired-client-certificate).
+Request a new certificate if you have an existing HUNT Workbench and your previous [certificate expired](/do-science/hunt-workbench/troubleshooting/#_403-forbidden-expired-client-certificate).
 
 <SDButton form="request_workbench_reissue" />
 
@@ -157,7 +157,7 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 * **Expected response time:** Days.
 * **Expected delivery:** File as email attachment.
 * **Requirement:** Active SSH connection.
-* **Next step:** [MobaXterm configuration guide](/working-in-your-lab/technical-tools/mobaxterm/).
+* **Next step:** [MobaXterm configuration guide](/do-science/technical/mobaxterm/).
 * **Cost:** Included in the lab subscription.
 
 ## FAQ

@@ -1,7 +1,7 @@
 ---
 title: FSL
 category: Analytical tools
-permalink: /working-in-your-lab/analytical-tools/fsl
+permalink: /do-science/analytical/fsl
 sidebarDepth: 1
 description: Installation guide for FSL.
 ---
@@ -22,13 +22,13 @@ with FSL to speed up analysis by running the tasks in parallel.
 
 ::: tip
 [Bedpostx](https://users.fmrib.ox.ac.uk/~moisesf/Bedpostx_GPU/Installation.html) also supports
-[GPU](/working-in-your-lab/technical-tools/gpu/), which provides significantly faster results on large datasets.
+[GPU](/do-science/technical/gpu/), which provides significantly faster results on large datasets.
 :::
 
 ## Installation using Conda
 
 Simple way for those who manage their dependencies with
-[Conda](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/conda/)
+[Conda](https://docs.hdc.ntnu.no/do-science/analytical/conda/)
 is to install [FSLpy package](https://anaconda.org/conda-forge/fslpy) into their
 environment using this command:
 

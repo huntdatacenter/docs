@@ -1,7 +1,7 @@
 ---
 title: Htop
 category: Technical tools
-permalink: /working-in-your-lab/technical-tools/htop
+permalink: /do-science/technical/htop
 sidebarDepth: 1
 description: Usage guide for Htop.
 ---

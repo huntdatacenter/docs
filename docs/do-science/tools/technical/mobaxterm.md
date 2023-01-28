@@ -1,7 +1,7 @@
 ---
 title: MobaXterm
 category: Technical tools
-permalink: /working-in-your-lab/technical-tools/mobaxterm
+permalink: /do-science/technical/mobaxterm
 sidebarDepth: 1
 description: Usage guide for MobaXterm.
 ---
