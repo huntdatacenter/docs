@@ -119,7 +119,7 @@ ls -lah
 quit
 ```
 
-For large uploads, [terminal multiplexers](/working-in-your-lab/technical-tools/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+For large uploads, [terminal multiplexers](/do-science/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 You can resume an upload with this command:
 
@@ -167,7 +167,7 @@ get -r example-directory /mnt/cargo/
 quit
 ```
 
-For large downloads, [terminal multiplexers](/working-in-your-lab/technical-tools/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+For large downloads, [terminal multiplexers](/do-science/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 You can resume a download with this command:
 

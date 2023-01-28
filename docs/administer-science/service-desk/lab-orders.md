@@ -130,7 +130,7 @@ Add a new [GPU machine](/services/machine-types/#gpu-accelerator-machine-types) 
 
 ### Fleet of blue machines
 
-Add a fleet of blue machines to distribute analysis for large scale analysis, for example by utilizing tools such as our [BlueBox](https://docs.hdc.ntnu.no/working-in-your-lab/analytical-tools/bluebox/).
+Add a fleet of blue machines to distribute analysis for large scale analysis, for example by utilizing tools such as our [BlueBox](https://docs.hdc.ntnu.no/do-science/analytical/bluebox/).
 
 <SDButton form="request_blue_fleet" />
 

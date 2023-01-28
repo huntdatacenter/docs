@@ -1,7 +1,7 @@
 ---
 title: PyCharm
 category: Analytical tools
-permalink: /working-in-your-lab/analytical-tools/pycharm
+permalink: /do-science/analytical/pycharm
 sidebarDepth: 2
 description: Installation guide for PyCharm (unmanaged machine).
 ---

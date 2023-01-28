@@ -1,7 +1,7 @@
 ---
 title: X2Go
 category: Technical tools
-permalink: /working-in-your-lab/technical-tools/x2go
+permalink: /do-science/technical/x2go
 sidebarDepth: 1
 description: Usage guide for X2go.
 ---
@@ -150,7 +150,7 @@ Hit **`OK`** in the lower right corner.
 You may use X2Go to access software with graphical interfaces.
 Such software needs to be installed in your lab machine.
 
-For your home machine, [RStudio](/working-in-your-lab/analytical-tools/r-studio/#install-r-studio) should be installed by default. To access this program, go back to your configuration and update **`Session type`** at the bottom of the **`Session tab`** from **`/usr/bin/xterm/`** to the location of Rstudio (**`/usr/bin/rstudio`**) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/working-in-your-lab/technical-tools/x2go/#troubleshooting).
+For your home machine, [RStudio](/do-science/analytical/r-studio/#install-r-studio) should be installed by default. To access this program, go back to your configuration and update **`Session type`** at the bottom of the **`Session tab`** from **`/usr/bin/xterm/`** to the location of Rstudio (**`/usr/bin/rstudio`**) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/do-science/technical/x2go/#troubleshooting).
 
 ### Configure the X2Go client for unmanaged machines
 
@@ -217,7 +217,7 @@ The configuration below will only work on **`iaas`** or **`blue`** machines, and
 
 #### Remaining configuration
 
-Follow the setups outlines in the **`Configure the X2Go client for home machines`** for further setup, including **`In the connection tab`**, **`In the media tab`**, **`connecting to the X2Go server`** and **`Connect to other software`**: [Start here](/working-in-your-lab/technical-tools/x2go/#configure-the-x2go-client-for-home-machines).
+Follow the setups outlines in the **`Configure the X2Go client for home machines`** for further setup, including **`In the connection tab`**, **`In the media tab`**, **`connecting to the X2Go server`** and **`Connect to other software`**: [Start here](/do-science/technical/x2go/#configure-the-x2go-client-for-home-machines).
 
 ## Install a desktop environment
 
@@ -347,14 +347,14 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
 
 ::: details Password prompts during login
 
-X2Go rely either password or certificate to authenticate your connection. If the certificate do not work (or not included), your may be asked to insert your password four times before your application start. If so, try to fetch and save your certificate as described in our [X2Go configuration](/working-in-your-lab/technical-tools/x2go/#configure-the-x2go-client-for-home-machines) under **`Use RSA/DSA key for ssh connection`**.
+X2Go rely either password or certificate to authenticate your connection. If the certificate do not work (or not included), your may be asked to insert your password four times before your application start. If so, try to fetch and save your certificate as described in our [X2Go configuration](/do-science/technical/x2go/#configure-the-x2go-client-for-home-machines) under **`Use RSA/DSA key for ssh connection`**.
 
 :::
 
 ::: details Keys do not release
 
 Key-buffer not receiving a key release action after a keypress is a known bug of X2GO. There does not seem to be any clear solution to this. It is possible to disable key repeating, which will cause intended key repeating to stop working (e.g. holding arrows). We recommend to check connection settings and to make sure that the best network connection available is used.
-If this is causing too many problems, alternatives to X2GO like [MobaXterm](/working-in-your-lab/technical-tools/mobaxterm/) can be considered.
+If this is causing too many problems, alternatives to X2GO like [MobaXterm](/do-science/technical/mobaxterm/) can be considered.
 
 :::
 

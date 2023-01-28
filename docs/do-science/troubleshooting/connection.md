@@ -108,11 +108,11 @@ The most common causes of **`Connection timed out`** responses are: (1) that you
 
 ### Forgotten passwords
 
-After the initial onboarding, you will need your passphrase to install software using the **`sudo apt install <software>`** command and when you connect to your workbench. If you have forgotten your passphrase, worry not. Order a SSH passphrase reset in our [service desk](/service-desk/user-orders/#ssh-passphrase-reset). If you need to install software sooner thatn we can ship, we recomment that you try [Conda](/working-in-your-lab/analytical-tools/conda/) or ask some of your lab colleagues to install the software.
+After the initial onboarding, you will need your passphrase to install software using the **`sudo apt install <software>`** command and when you connect to your workbench. If you have forgotten your passphrase, worry not. Order a SSH passphrase reset in our [service desk](/service-desk/user-orders/#ssh-passphrase-reset). If you need to install software sooner thatn we can ship, we recomment that you try [Conda](/do-science/analytical/conda/) or ask some of your lab colleagues to install the software.
 
 ### Broken connection
 
-Your SSH connection is transferred inside your VPN connection. You will therefore experience a sudden drop in your SSH connection if your VPN connection break, for example due to our [12 hour timeout](/troubleshooting/connection/#vpn), a [broken internet connection](/troubleshooting/connection/#broken-vpn-connection) etc. You will also experience a broken connection if your lab machine becomes unresponsive, for example due to an [out of memory killer](/troubleshooting/connection/#unresponsive-machine-oom-killer) or other related issues (see below), and when your internet connection temporarily drops. For such cases, see our [terminal multiplexer guide](/working-in-your-lab/technical-tools/terminal-multiplexers/) on how to keep your environment stable during broken connections.
+Your SSH connection is transferred inside your VPN connection. You will therefore experience a sudden drop in your SSH connection if your VPN connection break, for example due to our [12 hour timeout](/troubleshooting/connection/#vpn), a [broken internet connection](/troubleshooting/connection/#broken-vpn-connection) etc. You will also experience a broken connection if your lab machine becomes unresponsive, for example due to an [out of memory killer](/troubleshooting/connection/#unresponsive-machine-oom-killer) or other related issues (see below), and when your internet connection temporarily drops. For such cases, see our [terminal multiplexer guide](/do-science/technical/terminal-multiplexers/) on how to keep your environment stable during broken connections.
 
 ### Unresponsive machine (OOM Killer)
 

@@ -17,6 +17,6 @@ Our product for data transfers to and from external users outside HUNT Cloud is 
 
 ### Other resources
 
-See our [data transfer tools](/do-science/tools/transfer-tools/) section on commonly used tools.
+See our [data transfer tools](/do-science/tools/transfer/) section on commonly used tools.
 
 See our [internal](/do-science/faq/internal-transfer/) and [external](/do-science/faq/external-transfer/) pages in the FAQ for general information on your transfer options.

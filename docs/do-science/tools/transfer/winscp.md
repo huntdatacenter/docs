@@ -1,7 +1,7 @@
 ---
 title: WinSCP
 category: Transfer tools
-permalink: /working-in-your-lab/transfer-tools/winscp
+permalink: /do-science/transfer/winscp
 sidebarDepth: 1
 description: Installation and usage guide for WinSCP.
 ---

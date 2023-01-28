@@ -61,15 +61,15 @@ Rerun your command with sudo. [Contact us](/contact) if this doesn't solve your 
 
 ### MATLAB
 
-See our [MATLAB troubleshooting section](/working-in-your-lab/analytical-tools/Matlab/#activate-license).
+See our [MATLAB troubleshooting section](/do-science/analytical/Matlab/#activate-license).
 
 ### R and Rstudio
 
-See our [R and Rstudio troubleshooting section](/working-in-your-lab/analytical-tools/r-studio/#troubleshooting).
+See our [R and Rstudio troubleshooting section](/do-science/analytical/r-studio/#troubleshooting).
 
 ### Stata
 
-See our [Stata troubleshooting section](/working-in-your-lab/analytical-tools/stata/#troubleshooting).
+See our [Stata troubleshooting section](/do-science/analytical/stata/#troubleshooting).
 
 
 

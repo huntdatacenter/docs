@@ -29,12 +29,12 @@ Software already installed in your initial lab onboarding:
 We will communicate your VPN certificate over your organizational email. You will receive a link to an encrypted file archive (7z-file).
 
 - Click on the link in the email to download the file and save this on your local machine.
-- Unpack (extract) the file with your favorite file archiver software that recognize the [7z format](https://docs.hdc.ntnu.no/working-in-your-lab/transfer-tools/7z/) (see below).
+- Unpack (extract) the file with your favorite file archiver software that recognize the [7z format](https://docs.hdc.ntnu.no/do-science/transfer/7z/) (see below).
 - Use the key named **`ZIP file key`** from your Signal transfer to decrypt the 7-zip archive.
 
 ::: tip Decryption guides
 
-Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](https://docs.hdc.ntnu.no/working-in-your-lab/transfer-tools/7z/#windows), [mac](https://docs.hdc.ntnu.no/working-in-your-lab/transfer-tools/7z/#mac-os-x), [linux](https://www.google.no/search?q=unpack+7z+linux).
+Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](https://docs.hdc.ntnu.no/do-science/transfer/7z/#windows), [mac](https://docs.hdc.ntnu.no/do-science/transfer/7z/#mac-os-x), [linux](https://www.google.no/search?q=unpack+7z+linux).
 
 OS X and macOS: The default archive utility will not recognize the passphrase of 7z files. You will need to install 7z-compatible software from the link above.
 

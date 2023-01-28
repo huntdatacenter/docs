@@ -1,7 +1,7 @@
 ---
 title: Singularity
 category: Technical tools
-permalink: /working-in-your-lab/technical-tools/singularity
+permalink: /do-science/technical/singularity
 sidebarDepth: 0
 description: Installation guide for Singularity
 ---
@@ -14,7 +14,7 @@ description: Installation guide for Singularity
 
 ::: warning Requirements
 
-- Conda (miniconda), see our [Conda tutorial](/working-in-your-lab/analytical-tools/conda/) for more details.
+- Conda (miniconda), see our [Conda tutorial](/do-science/analytical/conda/) for more details.
 - Conda channels: conda-forge, bioconda
 
 :::
