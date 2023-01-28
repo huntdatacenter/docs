@@ -23,7 +23,7 @@ footerHtml: false
 
   <div class="hc-row">
     <div class="hc-column">
-      <VuetifyButton id="btn1" class="hc-btn" color="success" label="Do science" href="/getting-started/" block />
+      <VuetifyButton id="btn1" class="hc-btn" color="#00509e" label="Do science" href="/do-science/" block />
     </div>
     <div class="hc-column">
       <VuetifyButton id="btn2" class="hc-btn" color="primary" label="Administer science" href="/coordination/" block />
