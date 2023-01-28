@@ -1,7 +1,7 @@
 ---
 title: Stata
 category: Analytical tools
-permalink: /do-science/analytical/stata
+permalink: /do-science/tools/analytical/stata
 sidebarDepth: 1
 description: Installation guide for Stata.
 ---

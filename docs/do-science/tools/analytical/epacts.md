@@ -1,7 +1,7 @@
 ---
 title: EPACTS
 category: Analytical tools
-permalink: /do-science/analytical/epacts
+permalink: /do-science/tools/analytical/epacts
 sidebarDepth: 0
 description: Installation guide for EPACTS, a software pipeline to perform various statistical tests for identifying genome-wide association from gwas and sequence data.
 ---

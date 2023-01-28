@@ -1,7 +1,7 @@
 ---
 title: Lftp
 category: Transfer tools
-permalink: /do-science/transfer/lftp
+permalink: /do-science/tools/transfer/lftp
 sidebarDepth: 1
 description: Installation and usage guide for lftp.
 ---

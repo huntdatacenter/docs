@@ -1,7 +1,7 @@
 ---
 title: Saige
 category: Analytical tools
-permalink: /do-science/analytical/saige
+permalink: /do-science/tools/analytical/saige
 sidebarDepth: 1
 description: Installation guide for Saige
 ---

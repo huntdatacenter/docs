@@ -1,7 +1,7 @@
 ---
 title: Conda
 category: Analytical tools
-permalink: /do-science/analytical/conda
+permalink: /do-science/tools/analytical/conda
 sidebarDepth: 1
 description: Installation guide for Conda, including installation of R packages using Conda.
 ---
