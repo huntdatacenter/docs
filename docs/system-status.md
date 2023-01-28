@@ -7,8 +7,8 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: warning Selected machines
-**2023-01-03 00:50** - One physical machine reports error on a system disk raid controller. We will start migration of lab machines to a new physical machine tomorrow morning.
+::: warning Selected lab machines
+**2023-01-13:00** - One physical machine reports error. Labs on the machine is currently unavailable. We will start to migrate to a new host on Monday morning. [Contact us](/contact) on Slack if you need access over the weekend. 
 :::
 
 
