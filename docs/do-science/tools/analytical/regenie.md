@@ -1,7 +1,7 @@
 ---
 title: Regenie
 category: Analytical tools
-permalink: /do-science/analytical/regenie
+permalink: /do-science/tools/analytical/regenie
 sidebarDepth: 1
 description: Installation guide for Regenie
 ---

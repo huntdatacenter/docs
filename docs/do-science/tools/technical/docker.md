@@ -2,6 +2,7 @@
 title: Docker
 category: Technical tools
 sidebarDepth: 1
+permalink: /do-science/tools/technical/docker
 description: Usage guide for Docker
 ---
 

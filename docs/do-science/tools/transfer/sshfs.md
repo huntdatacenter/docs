@@ -1,7 +1,7 @@
 ---
 title: SSHFS
 category: Transfer tools
-permalink: /do-science/transfer/sshfs
+permalink: /do-science/tools/transfer/sshfs
 sidebarDepth: 1
 description: Installation and usage guide for sshfs.
 ---

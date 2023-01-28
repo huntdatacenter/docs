@@ -2,35 +2,49 @@
 title: GPU
 category: Technical tools
 sidebarDepth: 1
+permalink: /do-science/tools/technical/gpu
 description: HUNT Cloud offers GPU machines for your AI/ML workloads.
 ---
 
 # GPU on HUNT Cloud
 
-**We offer GPUs that you can to On-demand and BLUE machine so you can run your AI/ML workloads of your choice.**
+**You can add GPU cards to your On-demand and BLUE machine for your AI/ML workloads.**
+
+[[toc]]
+
+
 
 ## GPU Models
 
-See our [GPU specification](/services/machine-types/#gpu-accelerator-machine-types) for more details on the specific GPU models we offer.
+See our [GPU accelerator machine types](/administer-science/services/machine-types/#gpu-accelerator-machine-types) for more details on the specific GPU models we offer.
+
 
 ## Software
 
-To get you started, the GPU machines come pre-installed with the software below. If you need to install any other tools or versions you can do this as well.
+We pre-install the machines with with the folloing software to get you started: 
 
 - Ubuntu 20.04 LTS
 - Docker
 - NVIDIA 510 drivers or later (from the [`graphics-drivers` repository](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa?field.series_filter=focal))
-- NVIDIA Container Toolkit (also known as `nvidia-docker`)
+- NVIDIA Container Toolkit (also known as **`nvidia-docker`**)
+
+You may install other tools and versions.
+
+## How to order
+
+You can order your GPU machines in our [administer science service desk](/administer-science/service-desk/lab-orders/#new-gpu-machine).
 
 ## How to use
 
-Run the following command to call the NVIDIA System Management Interface (`nvidia-smi`) to manage and verify that things are working:
+Log into your GPU lab machine and run the following command to call the NVIDIA System Management Interface (**`nvidia-smi`**) to manage and verify that things are working:
 
 ```bash
 nvidia-smi
 ```
 
-If you wish to use a specific version of CUDA, you can either install it manually or use the NVIDIA Container Toolkit to run a container of your choosing. Here is an example for CUDA version `11.0`:
+### Specify CUDA version
+
+If you wish to use a specific version of CUDA, we recommend that you use the NVIDIA Container Toolkit to run a container of your choosing. Here is an example for CUDA version **`11.0`**:
 
 ```bash
 sudo docker run --rm --runtime=nvidia nvidia/cuda:11.0-base nvidia-smi
@@ -38,7 +52,9 @@ sudo docker run --rm --runtime=nvidia nvidia/cuda:11.0-base nvidia-smi
 
 ### Jupyter in Nvidia Docker
 
-If you want to use Jupyterlab on GPU machine we recommend [iot-salzburg/gpu-jupyter](https://github.com/iot-salzburg/gpu-jupyter) docker image. This project uses the NVIDIA CUDA image as the base image and installs their toolstack on top of it to enable GPU calculations in the Jupyter notebooks. Python packages Tensorflow and Pytorch are preinstalled to match the Cuda version (GPU drivers).
+If you want to use Jupyterlab on your GPU machine we recommend the [iot-salzburg/gpu-jupyter](https://github.com/iot-salzburg/gpu-jupyter) docker image. 
+
+This project uses the NVIDIA CUDA image as the base image and installs their toolstack on top of it to enable GPU calculations in the Jupyter notebooks. Python packages Tensorflow and Pytorch are preinstalled to match the Cuda version (GPU drivers).
 
 ```bash
 docker pull cschranz/gpu-jupyter:v1.4_cuda-11.6_ubuntu-20.04_python-only
@@ -48,15 +64,15 @@ docker run --rm -d --runtime=nvidia -v ${HOME}:${HOME} --workdir ${HOME} -e HOME
 docker ps
 ```
 
-This starts an instance of GPU-Jupyter with the tag `v1.4_cuda-11.6_ubuntu-20.04_python-only` at `http://localhost:8888` (port _8888_). The default password is `gpu-jupyter`.
+The commands above starts an instance of GPU-Jupyter with the tag **`v1.4_cuda-11.6_ubuntu-20.04_python-only`** at **`http://localhost:8888`** (port _8888_). The default password is **`gpu-jupyter`**.
 
-It is also possible to start interactive bash session and run scripts inside:
+It is also possible to start an interactive bash session and run scripts inside:
 
-```
+```bash
 docker run --rm --runtime=nvidia -v ${HOME}:${HOME} --workdir ${HOME} -e HOME=${HOME} -v /etc/passwd:/etc/passwd -v /etc/group:/etc/group --user "1000" --entrypoint bash -ti cschranz/gpu-jupyter:v1.4_cuda-11.6_ubuntu-20.04_python-only
 ```
 
-More details about docker image can also be found on [docker hub](https://hub.docker.com/r/cschranz/gpu-jupyter).
+More details about this docker image can be found on [docker hub](https://hub.docker.com/r/cschranz/gpu-jupyter).
 
 ## More info
 

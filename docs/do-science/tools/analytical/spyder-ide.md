@@ -1,7 +1,7 @@
 ---
 title: Spyder IDE
 category: Analytical tools
-permalink: /do-science/analytical/spyder-ide
+permalink: /do-science/tools/analytical/spyder-ide
 sidebarDepth: 0
 description: Installation guide for Spyder-IDE.
 ---

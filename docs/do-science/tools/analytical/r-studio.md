@@ -1,7 +1,7 @@
 ---
 title: R and R-Studio
 category: Analytical tools
-permalink: /do-science/analytical/r-studio
+permalink: /do-science/tools/analytical/r-studio
 sidebarDepth: 2
 description: Installation guide for R and R-Studio
 ---

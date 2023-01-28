@@ -1,7 +1,7 @@
 ---
 title: Singularity
 category: Technical tools
-permalink: /do-science/technical/singularity
+permalink: /do-science/tools/technical/singularity
 sidebarDepth: 0
 description: Installation guide for Singularity
 ---

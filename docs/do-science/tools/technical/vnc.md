@@ -1,7 +1,7 @@
 ---
 title: VNC
 category: Technical tools
-permalink: /do-science/technical/vnc
+permalink: /do-science/tools/technical/vnc
 sidebarDepth: 1
 description: Usage guide for VNC.
 ---

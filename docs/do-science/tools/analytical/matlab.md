@@ -1,7 +1,7 @@
 ---
 title: Matlab
 category: Analytical tools
-permalink: /do-science/analytical/Matlab
+permalink: /do-science/tools/analytical/Matlab
 sidebarDepth: 1
 description: Installation guide for Matlab.
 ---

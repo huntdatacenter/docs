@@ -1,7 +1,7 @@
 ---
 title: Jupyter LAB
 category: Analytical tools
-permalink: /do-science/analytical/jupyter-lab
+permalink: /do-science/tools/analytical/jupyter-lab
 sidebarDepth: 0
 description: Installation guide for Jupyter Lab.
 ---

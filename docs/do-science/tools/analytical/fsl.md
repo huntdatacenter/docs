@@ -1,7 +1,7 @@
 ---
 title: FSL
 category: Analytical tools
-permalink: /do-science/analytical/fsl
+permalink: /do-science/tools/analytical/fsl
 sidebarDepth: 1
 description: Installation guide for FSL.
 ---
