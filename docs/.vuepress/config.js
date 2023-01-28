@@ -346,7 +346,7 @@ module.exports = {
             path: "/administer-science/services/"},
             "/administer-science/services/overview.md",
             "/administer-science/services/specifications.md",
-
+            "/administer-science/services/machine-types.md",
             "/administer-science/agreements/responsiveness.md",
           ]
         },

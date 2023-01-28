@@ -1,16 +1,17 @@
 ---
 title: GPU
 category: Technical tools
-permalink: /working-in-your-lab/technical-tools/gpu
 sidebarDepth: 1
-description: We offer GPU machine types in our IaaS tier allowing you to run the AI/ML workloads of your choice.
+description: HUNT Cloud offers GPU machines for your AI/ML workloads.
 ---
 
 # GPU on HUNT Cloud
 
-We offer GPU machine types in our IaaS tier allowing you to run the AI/ML workloads of your choice.
+**We offer GPUs that you can to On-demand and BLUE machine so you can run your AI/ML workloads of your choice.**
 
-See [GPU specification](/services/machine-types/#gpu-accelerator-machine-types) for more details on the specific GPU models we offer.
+## GPU Models
+
+See our [GPU specification](/services/machine-types/#gpu-accelerator-machine-types) for more details on the specific GPU models we offer.
 
 ## Software
 

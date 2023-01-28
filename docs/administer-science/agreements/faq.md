@@ -1,7 +1,6 @@
 ---
 title: FAQ
 category: HUNT Cloud
-permalink: /agreements/faq
 sidebarDepth: 1
 description: Frequently asked questions related to agreements in HUNT Cloud.
 ---
