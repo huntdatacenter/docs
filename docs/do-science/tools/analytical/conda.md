@@ -8,32 +8,47 @@ description: Installation guide for Conda, including installation of R packages 
 
 # Conda, Anaconda, Miniconda and Bioconda
 
-[Conda](https://conda.io/en/latest/) - [Anaconda](https://docs.anaconda.com/anaconda/) - [Miniconda](https://conda.io/en/latest/miniconda.html) - [Bioconda](https://bioconda.github.io)
+**[Conda](https://conda.io/en/latest/), [Anaconda](https://docs.anaconda.com/anaconda/), [Miniconda](https://conda.io/en/latest/miniconda.html) and [Bioconda](https://bioconda.github.io) are handy environment management systems that allow you to reliably install packages and libraries and quickly switch between package versions.** 
 
-## Installation
+[[toc]]
 
-### Install Conda
+::: tip Conda for HUNT Workbench
 
-Follow the [Installing on Linux](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html)
-instructions to install [Miniconda](https://docs.conda.io/en/latest/miniconda.html#linux-installers).
+This guide is for the installation of Conda directly on your lab machines. Head over to our [Reproducibility](/do-science/hunt-workbench/faq/#reproducibility) FAQ in the HUNT Workbench section to learn more about Conda in your workbench environment. 
 
-To get more out of conda we recommend reading
-[Conda - Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
-guide.
+:::
 
-```
+
+## 1. Install Conda
+
+1.1 Log into your lab machine and install Miniconda:
+
+```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
-After installation is done, log out and log in again to be able to use your conda setup.
+See [Installing on Linux](https://conda.io/projects/conda/en/latest/user-guide/install/linux.html)
+for more information on the [Miniconda](https://docs.conda.io/en/latest/miniconda.html#linux-installers) installation.
 
-### Set up Bioconda and Conda-forge channels
+1.2 After the installation, log out and log into your lab to activate your Conda setup.
+
+::: tip Get more out of Conda
+
+To get most out of Conda we recommend reading the guide 
+[Conda - Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+
+:::
+
+
+## 2. Set up Bioconda and Conda-forge channels
 
 To find packages in Conda you need to configure relevant channels.
-Follow the [Set up channels](https://bioconda.github.io/user/install.html#set-up-channels) guide from Bioconda.
-We recommend starting with [bioconda](https://anaconda.org/bioconda) and [conda-forge](https://anaconda.org/conda-forge). Quick way to make sure your channels are added correctly is to (re)add them in this order:
+
+We recommend to start with [bioconda](https://anaconda.org/bioconda) and [conda-forge](https://anaconda.org/conda-forge). 
+
+2.1 A quick way to make sure your channels are added correctly is to (re)add them in this order:
 
 ```
 conda config --add channels defaults
@@ -41,19 +56,24 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
-### Install your tools
+Read more on how to [set up channels](https://bioconda.github.io/) in the guide from Bioconda.
 
-Have a field day installing your favourite tools
+## 3. Install your tools
+
+Search for your favorite tool on the [Bioconda page](https://bioconda.github.io/search.html?q=) and have a field day installing:
 
 ```bash
+# -- Working example
 conda install plink2
 ```
 
 ::: tip
-We have very easy guide on how to get [Saige](/do-science/analytical/saige/) running in Conda environment.
+We have a very easy guide on how to get [Saige](/do-science/tools/analytical/saige/) running in Conda.
 :::
 
-### Do cool science
+## 4. Do cool science
+
+Start your favorite tools and do cool science: 
 
 ```bash
 plink2 <input>
@@ -63,7 +83,9 @@ plink2 <input>
 
 - [Install R with conda](https://conda.io/docs/user-guide/tasks/use-r-with-conda.html)
 - Update to the [latest R version](https://anaconda.org/conda-forge/r-base)
-- Please note that this does work with some, but not all, bioconductor-packages. Please send us a note if you need these. List of available r-packages [here](https://repo.continuum.io/pkgs/r/linux-64/)
+- [List of available R-packages](https://repo.continuum.io/pkgs/r/linux-64/)
+
+Note that this work with some, but not all, bioconductor-packages. Please send us a note if you need these. 
 
 ```bash
 # install

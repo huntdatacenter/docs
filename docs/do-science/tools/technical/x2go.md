@@ -8,31 +8,38 @@ description: Usage guide for X2go.
 
 # X2Go
 
-This guide explain how you can install and configure the [X2Go](https://wiki.x2go.org/doku.php) software to get instant and 'passwordless' access to graphical tools in your lab, such as **RStudio**, **Stata**, **SPSS** and **MatLab**.
+**This guide explain how you can install and configure the [X2Go](https://wiki.x2go.org/doku.php) software to get instant and 'passwordless' access to graphical tools in your lab, such as RStudio, Stata, SPSS and MatLab.**
 
-If you are connecting to the home machine in your lab, you are good to go after you have set up your local machine:
+[[toc]]
+
+If you are connecting to the **`home`** machine in your lab, you are good to go after you have set up your local machine:
 
 - [Set up your local machine](#set-up-your-local-machine)
 
-If you want to connet to an unmanaged machine (iaas or blue) you will need to install the X2Go server before you connect:
+If you want to connet to an unmanaged machine in your lab (On-demand or BLUE machines) you will need to install the X2Go server before you set up your local machine:
 
-- [Set up your unmanaged lab machine (iaas)](#install-x2go-server-on-unmanaged-lab-machine-iaas)
+- [Set up your unmanaged lab machine (On-demand and BLUE)](#install-x2go-server-on-unmanaged-lab-machine-iaas)
 
 ## Set up your local machine
 
-::: tip REQUIREMENTS
+::: warning Requirements
 
-- A working connection to your lab machines.
-- A lab machine set up for X2Go connection (home machines are by default set up with X2Go and Rstudio).
-  :::
+- A working connection to your lab machine(s).
+- A lab machine set up for X2Go connection (Home machines are by default set up with X2Go).
 
-### Install X2Go client
+:::
+
+### 1. Install the X2Go client
 
 Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) on your own local machine.
 
+::: details Windows
+Download and run the [X2Go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#ms_windows) clicking **`Download X2Go for MS Windows™ and install.`** and then selecting the **`exe-file`**.
+:::
+
 ::: details OS X/macOS
 
-- Use [brew](https://brew.sh/) (a handy package manager for macOS) to install both XQuartz (required for X2Go) and the X2Go client:
+Use [brew](https://brew.sh/) to install both XQuartz (required for X2Go) and the X2Go client:
 
   ```bash
   brew install --cask xquartz
@@ -42,19 +49,18 @@ Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2gocl
   ::: warning XQuartz
   If this is your first time installing XQuartz, you **must** logout and log back in or restart your Mac for it to work.
 
-- Please read the [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks of the X2Go client.
+Please read the official [X2Go installation docs](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#os_x) for handy tweaks of the X2Go client.
 
   ::: warning OS X 10.15 Catalina
   In case of issues with x2goclient you can try [nightly build](https://code.x2go.org/releases/X2GoClient_nightly_macosx/x2goclient-4.1.2.2.git20191230.1893.heuler.OSX_10_13.dmg) version.
 
 :::
 
-::: details Windows
-Download and run the [X2Go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#ms_windows) clicking **`Download X2Go for MS Windows™ and install.`** and then selecting the **`exe-file`**.
-:::
+
 
 ::: details Linux (Ubuntu / Debian)
-Install x2goclient using apt:
+
+Install the X2Go client using apt:
 
 ```bash
 sudo apt-get update -y && sudo apt install -y x2goclient
@@ -62,21 +68,21 @@ sudo apt-get update -y && sudo apt install -y x2goclient
 
 :::
 
-### Configure the X2Go client for home machines
+### 2. Configure the X2Go client for your home machine
 
-Once installed, open X2Go and click **`New session`** and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
+Once installed, open the X2Go client and click **`New session`** and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
 ::: warning NOTE
-The configuration below will work on [home](/faq/compute/#machine-types) machines. This configuration will -not- work on unmanaged [iaas and blue](/faq/compute/#machine-types) machines.
+The configuration below will work on **`home`** machines. This configuration will -not- work on unmanaged On-demand and BLUE machines.
 :::
 
-::: details Create session
+#### 2.1 Create session
+
+Click **`Create new session`**.
 
   ![X2GO introduction](./images/x2go_intro.png "X2GO introduction")
 
-:::
-
-#### In the `Session` tab
+#### 2.2 In the `Session` tab
 
 ::: details Server section
 
@@ -87,7 +93,7 @@ The configuration below will work on [home](/faq/compute/#machine-types) machine
 
   - For Mac and Linux:
 
-    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/getting-started/configure-ssh/#_3-5-final-steps)' section in the installation guide.
+    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/do-science/getting-started/configure-ssh/#_3-5-final-steps)' section in the installation guide.
 
   - For Windows:
 
@@ -122,11 +128,11 @@ The configuration below will work on [home](/faq/compute/#machine-types) machine
 - Add **`/usr/bin/xterm`** in the command window
   :::
 
-#### In the `Connection` tab
+#### 2.3 In the `Connection` tab
 
 Play with the _Connection speed_ and _Compression_ methods. For office use **`LAN`** and **`16m-png`** should be fine.
 
-#### In the `Media` tab
+#### 2.4 In the `Media` tab
 
 ![X2GO media](./images/x2go_media.png "X2GO media")
 
@@ -135,38 +141,41 @@ Play with the _Connection speed_ and _Compression_ methods. For office use **`LA
 
 Hit **`OK`** in the lower right corner.
 
-#### Connect to X2Go server
+#### 3. Connect to X2Go server
 
-1. Ensure that your HUNT Cloud VPN is running and connected.
+3.1. Ensure that your HUNT Cloud VPN is running and connected.
 
-2. Click on your newly saved session in X2Go to connect to your lab machine.
-   If this works you should see a terminal pop up on your screen.
+3.2. Click on your newly saved session in X2Go to connect to your lab machine. If this works you should see a terminal pop up on your screen.
 
-3. Type **`xclock`** in the terminal to test the setup. With a little bit of luck,
-   you should now see a new window popping up with a digital clock.
+3.3. Type **`xclock`** in the terminal to test the setup. With a little bit of luck, you should now see a new window popping up with a digital clock.
 
-#### Connect to other software
+#### 4. Connect to other software
 
-You may use X2Go to access software with graphical interfaces.
-Such software needs to be installed in your lab machine.
+You may use X2Go to access software with graphical interfaces. Such software needs to be installed in your lab machine before you can connect.
 
 For your home machine, [RStudio](/do-science/analytical/r-studio/#install-r-studio) should be installed by default. To access this program, go back to your configuration and update **`Session type`** at the bottom of the **`Session tab`** from **`/usr/bin/xterm/`** to the location of Rstudio (**`/usr/bin/rstudio`**) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/do-science/technical/x2go/#troubleshooting).
 
-### Configure the X2Go client for unmanaged machines
+
+### 3. Configure the X2Go client for unmanaged machines
 
 Once installed, open X2Go and click **`New session`** and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
+The configuration below will only work on **`On-demand`** and **`BLUE`** machines, and not on home machines. 
+
 ::: warning NOTE
-The configuration below will only work on **`iaas`** or **`blue`** machines, and not home machines. This setup require that someone in your lab already have installed X2Go server and your software of choice on the particular machine you will be connecting to.
+
+This setup require that someone in your lab already have installed X2Go server and your software of choice on the particular machine you will be connecting to.
 :::
 
-::: details Create session
+
+#### 3.1 Create session
+
+Click **`Create new session`**.
 
   ![X2GO introduction](./images/x2go_intro.png "X2GO introduction")
 
-:::
 
-#### In the `Session` tab
+#### 3.2 In the `Session` tab
 
 ::: details Server section
 
@@ -179,7 +188,7 @@ The configuration below will only work on **`iaas`** or **`blue`** machines, and
 
   - For Mac and Linux:
 
-    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/getting-started/configure-ssh/#_3-5-final-steps)' section in the installation guide.
+    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/do-science/getting-started/configure-ssh/#_3-5-final-steps)' section in the installation guide.
 
   - For Windows:
 
@@ -187,7 +196,9 @@ The configuration below will only work on **`iaas`** or **`blue`** machines, and
 
   - On IAAS nodes:
 
-    In addition to the steps above, ensure that you are able to log directly into the machine from your local machine following [this guide](#install-x2go-server-on-unmanaged-lab-machine-iaas).
+    In addition to the steps above, ensure that you are able to log directly into the machine from your local machine following [this guide](#install-x2go-server-on-unmanaged-lab-machine).
+
+
 
 - _Try auto login_: **`Check`**
 - _Use Proxy server for SSH connection_: **`Check`**
@@ -215,9 +226,9 @@ The configuration below will only work on **`iaas`** or **`blue`** machines, and
 - Add **`/usr/bin/xterm`** in the command window
   :::
 
-#### Remaining configuration
+#### 3.3 Remaining configuration
 
-Follow the setups outlines in the **`Configure the X2Go client for home machines`** for further setup, including **`In the connection tab`**, **`In the media tab`**, **`connecting to the X2Go server`** and **`Connect to other software`**: [Start here](/do-science/technical/x2go/#configure-the-x2go-client-for-home-machines).
+Follow the setups outlines in the **`Configure the X2Go client for home machines`** for further setup, including **`In the connection tab`**, **`In the media tab`**, **`connecting to the X2Go server`** and **`Connect to other software`**: [Start here](#_2-configure-the-x2go-client-for-your-home-machine).
 
 ## Install a desktop environment
 
@@ -229,7 +240,6 @@ The default X2Go setup connects directly to individual applications. This sectio
 sudo apt-get update -y && sudo apt-get autoremove -y
 sudo apt-get install -y --no-install-recommends xubuntu-desktop
 ```
-
 :::
 
 ## Tips for configuration
@@ -286,13 +296,13 @@ Connect to your lab machine and run this code:
 Connection to X2Go require the application **`x2goserver`** to run for connections to work.
 You may install this on iaas and blue machines as follows:
 
-::: warning NOTE
-This section is for lab coordinators that want to set up their unmanaged iaas and blue machines for GUI access.
+::: tip NOTE
+This section is those of you that want to set up an unmanaged On-demand or BLUE machines for GUI access.
 :::
 
-::: tip REQUIREMENTS
+::: warning REQUIREMENTS
 
-- Root access to your lab machine. The below configuration will not work on home machines.
+Root access to your lab machine. The below configuration will not work on home machines.
 
 :::
 
@@ -312,7 +322,7 @@ sudo apt install x2goserver libnss3 libasound2 -y
 
 You need to make sure you and your lab colleagues can log in to the x2go machine passwordless using RSA certificates, e.g. by following these steps:
 
-1. From your local machine, log into your lab's entry machine:
+1. From your local computer, log into your lab's entry machine:
 
    ```bash
    ssh <labname>-entry
@@ -345,20 +355,26 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
 
 ## Troubleshooting
 
-::: details Password prompts during login
+#### Password prompts during login 
 
-X2Go rely either password or certificate to authenticate your connection. If the certificate do not work (or not included), your may be asked to insert your password four times before your application start. If so, try to fetch and save your certificate as described in our [X2Go configuration](/do-science/technical/x2go/#configure-the-x2go-client-for-home-machines) under **`Use RSA/DSA key for ssh connection`**.
+::: details Read more
+
+X2Go rely either password or certificate to authenticate your connection. If the certificate do not work (or not included), your may be asked to insert your password four times before your application start. If so, try to fetch and save your certificate as described in our [X2Go configuration](#_2-configure-the-x2go-client-for-your-home-machine) under **`Use RSA/DSA key for ssh connection`**.
 
 :::
 
-::: details Keys do not release
+#### Keys do not release
+
+::: details Read more
 
 Key-buffer not receiving a key release action after a keypress is a known bug of X2GO. There does not seem to be any clear solution to this. It is possible to disable key repeating, which will cause intended key repeating to stop working (e.g. holding arrows). We recommend to check connection settings and to make sure that the best network connection available is used.
-If this is causing too many problems, alternatives to X2GO like [MobaXterm](/do-science/technical/mobaxterm/) can be considered.
+If this is causing too many problems, alternatives to X2GO like [MobaXterm](/do-science/tools/technical/mobaxterm/) can be considered.
 
 :::
 
-::: details Manually 'killing' a stuck X2Go session
+#### Manually 'killing' a stuck X2Go session
+
+::: details Read more
 
 From time to time your X2Go sessions may get stuck, such as when your software inside X2Go consumes all available memory. In such circumstances you may need to manually terminate the stuck X2Go processes using the command line in your lab machine.
 
@@ -394,7 +410,9 @@ From time to time your X2Go sessions may get stuck, such as when your software i
 6. Restart X2Go.
    :::
 
-::: details XQuartz in Mac
+#### XQuartz in Mac
+
+::: details Read more
 
 If XQuartz is used as X11 Server on OS X, X2Go Client has to be informed. Click on the screw-wrench in the upper left bar in order to open the settings window. If not indicated yet, select XQuartz for the X11 application and supply the right version. Make sure that you have restarted your mac after installing the XQuartz.
 
@@ -402,13 +420,18 @@ If XQuartz is used as X11 Server on OS X, X2Go Client has to be informed. Click 
 
 :::
 
-::: details Slow Firefox in x2go
+
+#### Slow Firefox in x2go
+
+::: details Read more
 
 Since version 47 Firefox became slow when using x11 rendering. Current versions should still allow setting xrender. Open new tab and write `about:config` as a url in your firefox browser, then search for `gfx.xrender.enabled` and set it to `true`. Restart your Firefox browser.
 
 :::
 
-::: details Shared folders
+#### Shared folders
+
+::: details Read more
 
 X2Go requires sshfs to be installed in the lab in order to use Shared folders feature.
 
@@ -418,3 +441,5 @@ sudo apt install -y sshfs
 ```
 
 :::
+
+
