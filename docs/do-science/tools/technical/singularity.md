@@ -8,9 +8,9 @@ description: Installation guide for Singularity
 
 # Singularity
 
-[Singularity](https://sylabs.io/guides/latest/user-guide/index.html) provides application containers for Linux, which are also compatible with docker.
+**[Singularity](https://sylabs.io/guides/latest/user-guide/index.html) provides application containers for Linux that is also compatible with Docker.**
 
-## Install using conda
+## Install with Conda
 
 ::: warning Requirements
 
@@ -19,14 +19,16 @@ description: Installation guide for Singularity
 
 :::
 
-You will need conda-forge channel. If you have not set channels yet make sure to add it:
+**Add the conda-forge channel**
 
-```
+You will need the conda-forge channel to install Singularity. If you have not set channels yet make sure to add it:
+
+```bash
 conda config --add channels conda-forge
 ```
 
-Install singularity in conda base:
+**Install singularity in conda base**
 
-```
+```bash
 conda install -n base -c conda-forge "singularity>=3.0.0"
 ```

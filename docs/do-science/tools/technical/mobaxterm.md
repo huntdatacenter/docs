@@ -14,13 +14,18 @@ description: Usage guide for MobaXterm.
 
 ::: warning Requirements
 
-(1) A working SSH connection to both entry and home as described in the [How To Connect To Your Lab](/getting-started/) guide.
+(1) A Windows operating system on your local computer.
 
-(2) The MobaXterm configuration file to simplify your setup. You can order a new one in the [service desk](/service-desk/user-orders/#mobaxterm-configuration-file).
+(2) A working connection to your lab over SSH as described in the [Configure SSH](/do-science/getting-started/configure-ssh/) guide section of the _How to connect to your lab_ guide.
 
-Without these it will be hard to ensure a smooth MobaXterm configuration.
+(3) The IP address to your lab. This was included in your [SSH configuration file](/do-science/getting-started/configure-ssh/#_3-1-identify-required-info) that you got on email during your initial onboarding.
+
+(4) The [MobaXterm configuration file](/do-science/getting-started/collect-your-keys/#_1-2-secrets-on-your-email) that your that you got on email during your initial onboarding.
+
+**Missing the files?** Worry not. You can order a new [SSH configuration](/do-science/service-desk/#ssh-configuration) file and a new [MobaXterm](/do-science/service-desk/#mobaxterm-configuration-file) configuration file in our do science service desk.
 
 :::
+
 
 ## 1. How to install
 
@@ -28,12 +33,13 @@ Without these it will be hard to ensure a smooth MobaXterm configuration.
 Lab users from NTNU can install MobaXterm using the software center.
 :::
 
-- Download the `Home edition (installer edition)` from [mobaxterm.mobatek.net](https://mobaxterm.mobatek.net/download.html):
-- Unzip the file and install the software
+1.1. Download the **`Home edition (installer edition)`** from [mobaxterm.mobatek.net](https://mobaxterm.mobatek.net/download.html).
+
+1.2. Unzip the file and install the software.
 
 ## 2. Generating SSH Key
 
-In case you have not used SSH keys before and you need to generate one, on Windows you can do so in MobaXterm using Local terminal
+This section generates SSH keys that allow you connect to your lab without typing passwords. Jump to section 2.3 if you know you already have a SSH that you want to use.
 
 ### 2.1 Open Local terminal
 
@@ -47,58 +53,71 @@ When you click "Start local terminal", you should see a window similar to this:
 
 ![Local terminal](./images/mobaxterm_local_terminal.png)
 
-Before you start, check if you already have a ssh keys in place by running this command:
-
-::: warning
-Do **not** rewrite variables in commands. Keep `${USERPROFILE}` as is.
-:::
+2.2.1 Check if you already have a ssh keys in place by running this command in the local terminal:
 
 ```bash
 cat "${USERPROFILE}/.ssh/id_rsa.pub"
 ```
 
+<<<<<<< HEAD
 If the above command prints several rows of random letters on the screen, you already have a ssh keys that can be used. Jump to section 2.3.
+=======
+::: warning
+Run the above command as is. Keep **`${USERPROFILE}`** (do -not- write your user name).
+:::
+>>>>>>> cf1132308 (sanity)
 
-If the above command print error message (No such file or directory) or there was no output, you probably don't have your ssh key yet. Continue with the folloing steps:
+**If you see random letters, jump to section 2.3**
 
-First, before creating your new SSH key make sure that your .ssh directory exists:
+If the above command prints several rows of random letters on the screen, you already have a ssh key that can be used. Great! Jump to section 2.3.
+
+**If you see no output or an error message, continue:**
+
+If the above command prints and error message (No such file or directory) or there was no output, you probably don't have your ssh key yet. Continue with the folloing steps:
+
+2.2.2 Check if your **`.ssh`** directory exist and create one if not:
 
 ```bash
 mkdir -p "${USERPROFILE}/.ssh"
 ```
 
-Then, create your new SSH key:
+2.2.3 Create your new SSH key:
 
 ```bash
 ssh-keygen -b 4096 -t rsa -f "${USERPROFILE}/.ssh/id_rsa" -q -N ""
 ```
 
-### 2.3 Uploading new SSH key
+### 2.3 Upload your SSH key
 
-To be able to use the key you need to be upload it to your lab with the `ssh-copy-id` command. You will be asked to type in your SSH password that you made during the lab installation during this prosess.
+2.3.1 Upload your SSH key to your lab machine.
 
 ```bash
+# -- Principal example
 ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" <username>@<entry-IP>
 ```
 
-**Note.** Replace `username` with your username, and `entry-IP` with IP address of your lab that is included in your `ssh-config.txt` file (format: `10.42.X.Y`). Example: `joe-tester@10.42.2.32`.
+**Note. You need to add your username and lab IP in the above command**.
 
-If you get asked to save the password, refuse by clicking on `No` to make sure that MobaXterm will authenticate with SSH keys instead of passwords.
+Replace **`<username>`** with your username, and replace **`<entry-IP>`** with your lab IP address that was included in your [ssh-config.txt file](/do-science/getting-started/configure-ssh/#_3-1-identify-required-info). A (non-working) example of the would be: **`joedeomuser@10.42.2.32`**.
+
+**Note. Do -not- save your passphrase**.
+
+You will be asked to type in your [SSH passphrase](/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase) that you made during your initial lab onboarding.
+
+If you get asked to save your password, refuse by clicking on **`No`** to make sure that MobaXterm will authenticate with your SSH keys instead of your passphrase.
 
 
 ## 3. Connect
 
-We usually ship preconfigured Moba file with credentials. You can open it now and MobaXterm will pick up your lab session.
+3.1. Locate your **`MobaXterm configuration file`** on your local computer: **`<your-username>.mobaxterm`**.
+
+3.2 Click on the file for MobaXterm to pick up your lab session.
 
 ![Connect](./images/mobaxterm_step5.png)
 
-With a little bit of luck, you should now be able to connect directly from your client computer to your home node in your lab.
+With a little bit of luck, you should now be able to connect directly from your client computer to the home machine in your lab.
 
-::: tip Request a new Moba file
 
-[Contact us](/contact) for a new Moba file with credentials and configuration if you need one.
-
-:::
 
 ## Troubleshooting
 
@@ -107,7 +126,7 @@ With a little bit of luck, you should now be able to connect directly from your 
 
 ::: details More information
 
-- If you are getting this error when trying `ssh-copy-id`:
+- If you are getting this error when trying **`ssh-copy-id`**:
   ![mktemp-error](./images/mktemp-error.png)
 
 - Run this command with `TMPDIR` variable:
@@ -132,16 +151,16 @@ With a little bit of luck, you should now be able to connect directly from your 
 
 ::: details More information
 
-- Right click on the session that you want to edit and choose option `Edit session`.
+- Right click on the session that you want to edit and choose option **`Edit session`**.
   ![mobaxterm_edit-session](./images/mobaxterm_edit-session.png)
-- Assure `SSH` option under the `Session settings` is selected.
-- In **Advanced SSH settings** make sure that private key option is checked. Then select the path to SSH key file (`id_rsa`).
+- Assure **`SSH`** option under the **`Session settings`** is selected.
+- In **Advanced SSH settings** make sure that private key option is checked. Then select the path to SSH key file (**`id_rsa`**).
   ![Step 1](./images/mobaxterm_step1.png)
-- Under `Network settings`, click on `Connect through SSH gateway (jump host)`
+- Under **`Network settings`**, click on **`Connect through SSH gateway (jump host)`**.
   ![Step 2](./images/mobaxterm_step2.png)
-- Check `Use SSH key` option and select the path to SSH key file (`id_rsa`).
+- Check **`Use SSH key`** option and select the path to SSH key file (**`id_rsa`**).
   ![Step 3](./images/mobaxterm_step3.png)
-- Confirm session settings by clicking `OK`.
+- Confirm session settings by clicking **`OK`**.
 
 :::
 
@@ -149,7 +168,7 @@ With a little bit of luck, you should now be able to connect directly from your 
 
 ::: details More information
 
-If you see the error message saying: `Agent refused operation` you need to install Putty.
+If you see the error message saying: **`Agent refused operation`** you need to install Putty.
 
 ![agent-refused-operation](./images/mobaxterm_ssh-agent-refused-operation.png)
 
@@ -165,14 +184,14 @@ Once Pageant is running, you can start MobaXterm.
 
 ::: details More information
 
-This part might be needed if you plan to use SSH tunnel. It is not part of recommended workflow.
+This part might be needed if you plan to use SSH tunneling to other lab machines. It is not part of the recommended workflow.
 
 To setup ssh config to be used in local terminal of MobaXterm use:
 
-```
+```bash
 cat <<-EOF > /home/mobaxterm/.ssh/config
 
-Paste content of your ssh-config.txt here
+<Paste content of your ssh-config.txt here>
 
 EOF
 ```
@@ -228,7 +247,7 @@ If MobaXterm included the new key automatically, you can continue to the next st
 
 :::
 
-#### Configure custom session for Blue/IAAS/GPU machine
+#### Configure custom session for On-Demand and BLUE machines
 
 ::: details More information
 

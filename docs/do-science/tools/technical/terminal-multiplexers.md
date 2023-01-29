@@ -8,15 +8,17 @@ description: Usage guide for terminal multiplexers, tmux and screen.
 
 # Terminal Multiplexers
 
-Working with code and programs in persistent terminal sessions allow your work to run even when you disconnect from your virtual machine. For example, to resume your work back home or to keep your code running if your internet connection get lost for a while.
+**Working with code and programs in persistent terminal sessions allow your work to run even when you disconnect from your virtual machine.**
 
-Thus, it may be good to investment a little bit of time to read up identifying your favorite terminal multiplexer. Below are a couple of popular terminal multiplexers that are all preinstalled on your HUNT Cloud machine.
+This is practical when your want to keep your code running if your internet connection drops, to resume work at home or similar. 
+
+Below are a couple of popular terminal multiplexers, all preinstalled in your lab, so you can find your favorite.
 
 [[toc]]
 
 ## GNU Screen
 
-[GNU Screen](https://www.gnu.org/software/screen/) is one of the most popular terminal multiplexers out there and is a great starting point.
+[GNU Screen](https://www.gnu.org/software/screen/) is one of the most popular terminal multiplexers. It's a great starting point to get you going.
 
 ### Start a new session
 

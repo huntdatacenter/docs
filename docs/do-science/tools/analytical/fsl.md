@@ -3,46 +3,40 @@ title: FSL
 category: Analytical tools
 permalink: /do-science/tools/analytical/fsl
 sidebarDepth: 1
-description: Installation guide for FSL.
+description: Installation guide for FSL in HUNT Cloud.
 ---
 
 # FSL
 
-FSL is a comprehensive library of image analysis and statistical tools
-for fMRI, MRI and DTI brain imaging data. The suite consists of various
-command line tools, as well as simple GUIs for its core analysis pipelines.
-Among others, FSL offers implementations of standard GLM analysis,
-white matter tractography, tissue segmentation, affine and non-linear
-co-registration, and independent component analysis [(Source: Neurodebian)](http://neuro.debian.net/pkgs/fsl-complete.html).
+**[FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/) is a comprehensive library of image analysis and statistical tools for fMRI, MRI and DTI brain imaging data.**
+
+The FSL suite consists of various command line tools, as well as simple GUIs for its core analysis pipelines.
+Among others, FSL offers implementations of standard GLM analysis, white matter tractography, tissue segmentation, affine and non-linear co-registration, and independent component analysis [(Source: Neurodebian)](http://neuro.debian.net/pkgs/fsl-complete.html).
 
 ::: tip
-Use [HTCondor](https://neuro.debian.net/blog/2012/2012-03-09_parallelize_fsl_with_condor.html)
+
+(1) Use [HTCondor](https://neuro.debian.net/blog/2012/2012-03-09_parallelize_fsl_with_condor.html)
 with FSL to speed up analysis by running the tasks in parallel.
-:::
 
-::: tip
-[Bedpostx](https://users.fmrib.ox.ac.uk/~moisesf/Bedpostx_GPU/Installation.html) also supports
-[GPU](/do-science/technical/gpu/), which provides significantly faster results on large datasets.
+(2) [Bedpostx](https://users.fmrib.ox.ac.uk/~moisesf/Bedpostx_GPU/Installation.html) also supports [GPU](/do-science/tools/technical/gpu/), which provides significantly faster results on large datasets.
 :::
 
 ## Installation using Conda
 
-Simple way for those who manage their dependencies with
-[Conda](https://docs.hdc.ntnu.no/do-science/analytical/conda/)
-is to install [FSLpy package](https://anaconda.org/conda-forge/fslpy) into their
-environment using this command:
+A simple way if you manage your dependencies with [Conda](https://docs.hdc.ntnu.no/do-science/analytical/conda/) is to install the [FSLpy package](https://anaconda.org/conda-forge/fslpy) in your environment:
 
-```
+```bash
 conda install -c conda-forge fslpy
 ```
 
 ## Installation using flsinstaller
 
-Our tutorial only briefly summarises the installation, therefore we recommend to read up
-in official [FSL installation](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/Linux).
+You may install FSL directly on your lab machine. We recoomend that your read up on the official [FSL installation](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/Linux) documentation if you choose this path.
 
-::: warning REQUIREMENT
-Python 2
+::: warning Requirement
+
+The installation require Python 2.
+
 :::
 
 ```bash
@@ -55,6 +49,8 @@ rm -rf ~/fslinstaller
 ```
 
 ::: details Output log from installation
+
+This is an example of expected output for a successful installation: 
 
 ```
 --- FSL Installer - Version 3.0.15 ---
@@ -83,11 +79,12 @@ Post install setup complete
 
 ## Configuration
 
-Based on [shell setup](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/ShellSetup)
-in `.profile` or `.bashrc` add following:
+Based on [shell setup](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/ShellSetup), add the following to your `.profile` or `.bashrc` file:
 
 ```
 PATH="$PATH:/mnt/work/software/fsl/bin"
 export FSLDIR=/mnt/work/software/fsl
 source "${FSLDIR}/etc/fslconf/fsl.sh"
 ```
+
+
