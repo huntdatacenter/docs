@@ -50,7 +50,7 @@ You can check if you have administrative rights on your local machine by running
 
 For simplicity, we have outlined the steps they need to perform below which you can attach to your request.
 
-```b
+```bash
 1. Install the OpenVPN client on the computer for my user:
     Download and install using the Windows installer from https://openvpn.net/index.php/open-source/downloads.html
 
