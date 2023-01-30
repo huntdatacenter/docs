@@ -30,21 +30,21 @@ footerHtml: false
         <a href="/do-science/"><img alt="knowledge" height="150" src="/img/hunt-cloud_bottle-of-knowledge_200px.png" /></a>
         <VuetifyButton id="btn1" class="hc-btn" color="black--text" label="Do science" href="/do-science/" block />
         <p>
-          Scientists are explorers. This section is aimed at scientists that uses data to discover knowledge for a better world in HUNT Cloud.
+          Scientists are explorers. This section is aimed at explorers that use data to discover knowledge for a better world in HUNT Cloud.
         </p>
       </div>
       <div class="hc-column-4">
         <a href="/administer-science/"><img alt="custom keys" height="150" src="/img/hunt-cloud_the-keymakers_200px_45dgr.jpg" /></a>
         <VuetifyButton id="btn2" class="hc-btn" color="black--text" label="Administer science" href="/administer-science/" block />
         <p>
-          Seemless scientific explorations needs smooth administration. This section is aimed at lab and data space administrators that make science fly.
+          Seemless explorations needs smooth administration. This section is aimed at lab and data space administrators that make science fly.
         </p>
       </div>
       <div class="hc-column-4">
         <a href="/govern-science/"><img alt="strategic compass" height="150" src="/img/hunt-cloud_strategic-compass_200px.png" /></a>
         <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="Govern science" href="/govern-science/" block />
         <p>
-          Trust enables science. This section is aimed at data controllers and scientific centers that guides and govern the development of HUNT Cloud.
+          Trust enables science. This section is aimed at data controllers and scientific centers that guides the development of HUNT Cloud.
         </p>
       </div>
     </div>
