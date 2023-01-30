@@ -114,6 +114,8 @@ footerHtml: false
   text-align: center;
   max-width: 960px;
   margin: 0 auto !important;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .hc-content {
@@ -132,7 +134,7 @@ footerHtml: false
   justify-self: start;
   display: grid;
   float: left;
-  width: 80%;
+  width: 100%;
   min-height: 12px;
   padding-bottom: 12px;
   margin-left: 0px;
@@ -154,32 +156,32 @@ footerHtml: false
 }
 
 .hc-column-4:has(div.mascot) {
-  /* height: 100%; */
+  display: flex;
   margin-left: 0;
   margin-right: 0;
   min-height: 100px;
 }
 
 div .mascot {
-  display: block;
-  align-self: stretch;
+  flex: 100%;
+  min-height: 250px;
 }
 
 .hc-column-8 {
   justify-self: start;
   display: grid;
   float: left;
-  width: 80%;
+  /* width: 100%; */
   min-height: 12px;
   padding-bottom: 12px;
-  /* margin-left: 10px;
-  margin-right: 10px; */
+  margin-left: 0px;
+  margin-right: 0px;
   text-align: justify;
 }
 
 .hc-column-8:has(p) {
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 @media (min-width: 720px) {
