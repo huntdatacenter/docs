@@ -38,15 +38,15 @@ You will need the Homebrew package manager for macOS to complete this guide: [In
 
 1.2 Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
 
-   ::: warning Request access
-   
-   If you do not see a section to enable develper in your `System Preferences` -> `Security & Privacy` -> `General`, you will need to contact your organiational IT support and request access to this section (NTNU Hjelp for NTNU managed Macbooks).
-
 1.3 Install sshfs:
 
    Download latest version of sshfs from [here](https://github.com/osxfuse/sshfs/releases), open and install it
 
-4. Reboot your machine before continuing.
+1.4 Reboot your machine before continuing.
+
+   ::: warning Request access
+   
+   If you do not see a section to enable develper in your `System Preferences` -> `Security & Privacy` -> `General`, you will need to contact your organiational IT support and request access to this section (NTNU Hjelp for NTNU managed Macbooks).
 
 :::
 
@@ -89,38 +89,49 @@ A working HUNT Cloud VPN and and a working SSH connection to your lab.
 
 2.3. Make a folder on your local computer that is dedicated as mount point for your lab storage:
 
+Run this code without any changes since we defined your labname above.
    ```bash
    mkdir ~/${labname}-storage
    ```
 
-Run this code without any changes since we defined your labname above.
 
 2.4. Mount your labstorage over SSHFS to your local computer:
 
+::: details For OS X and macOS
+Run this code without any changes since we defined your labname above.
    ```bash
-   # -- For OS X and macOS
    sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname="${labname}-storage"
+   ```
+:::
 
-   # -- For Linux (Debian)
+::: details For Linux (Debian)
+Run this code without any changes since we defined your labname above.
+   ```bash
    sshfs ${labname}: ~/${labname}-storage -o follow_symlinks
    ```
-   
-Run this code without any changes since we defined your labname above.
+:::
+
 
 **Simplify future access**
 
-You can make an alias in your profile configuration file. This allows you to connect to the labstorage on your local computer with a simple command.
+You can make an alias in your profile configuration file. This allows you to connect to the lab storage on your local computer with a simple command.
 
 2.5. Make an alias in your profile configuration:
 
+::: details For OS X and macOS
+
    ```bash
-   # -- For OS X and macOS
    echo "alias ${labname}-mount=sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname=${labname}" >> ~/.profile
+   ```
+   The above example adds the alias to your `~/.profile` file. Depending on your preferences you may want to add this to other profile/rc config such as `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`).
+:::
    
-   # -- For OS X and macOS
+::: details For Linux (Debian)
+   ```bash
    echo "alias ${labname}-mount='sshfs ${labname}: ~/${labname}-storage -o follow_symlinks'" >> ~/.profile
    ```
-   The above example add the alias to your `~/.profile` file. Depending on your preferences your may want to add this to other profile/rc config such as `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`).
+   The above example adds the alias to your `~/.profile` file. Depending on your preferences you may want to add this to other profile/rc config such as `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`).
+:::
    
 2.6 Source your new alias. 
 
@@ -140,7 +151,7 @@ With a little bit of luck you should now be able to find your lab folders in "Fi
 
 ### Unmount your lab storage
 
-If you wish to stop the mount before you turn off your computer or vpn, you turn it off with this command:
+If you wish to stop the mount before you turn off your computer or vpn, you can turn it off with this command:
 
   ```bash
   sudo umount ~/<labname>-storage
