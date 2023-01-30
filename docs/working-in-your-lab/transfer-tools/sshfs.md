@@ -72,9 +72,8 @@ A working HUNT Cloud VPN and and a working SSH connection to your lab.
 
 :::
 
-2.1. Connect your HUNT Cloud VPN and open the terminal of your local computer.
 
-2.2. Define your labname as a variable.
+2.1. Define your labname as a variable.
 
    ```bash
    export labname=<labname>
@@ -87,7 +86,7 @@ A working HUNT Cloud VPN and and a working SSH connection to your lab.
    export labname=demolab
    ```
 
-2.3. Make a folder on your local computer that is dedicated as mount point for your lab storage:
+2.2. Make a folder on your local computer that is dedicated as mount point for your lab storage:
 
 Run this code without any changes since we defined your labname above.
    ```bash
@@ -95,7 +94,7 @@ Run this code without any changes since we defined your labname above.
    ```
 
 
-2.4. Mount your labstorage over SSHFS to your local computer:
+2.3. Mount your labstorage over SSHFS to your local computer:
 
 ::: details For OS X and macOS
 Run this code without any changes since we defined your labname above.
@@ -116,12 +115,14 @@ Run this code without any changes since we defined your labname above.
 
 You can make an alias in your profile configuration file. This allows you to connect to the lab storage on your local computer with a simple command.
 
+2.4. Connect to HUNT Cloud VPN
+
 2.5. Make an alias in your profile configuration:
 
 ::: details For OS X and macOS
 
    ```bash
-   echo "alias ${labname}-mount=sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname=${labname}" >> ~/.profile
+   echo "alias ${labname}-mount='sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname=${labname}'" >> ~/.profile
    ```
    The above example adds the alias to your `~/.profile` file. Depending on your preferences you may want to add this to other profile/rc config such as `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`).
 :::
