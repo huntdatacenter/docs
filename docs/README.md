@@ -78,17 +78,18 @@ footerHtml: false
 }
 
 .hc-header-img {
-  background-image: url("https://assets.hdc.ntnu.no/assets/artworks/hunt-cloud_explore_medium.jpg");
-  background-position: 50% 72%;
+  background-image: url("https://assets.hdc.ntnu.no/assets/static/banner_640.jpg");
+  background-position: 50% 50%;
   //background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #004c7b;
   width: 100vw;
   max-width: 100%;
-  height: 350px;
+  height: 200px;
   object-fit: fill;
   margin: 0 auto !important;
+  box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .hc-btn {
@@ -179,6 +180,10 @@ div .mascot {
 }
 
 @media (min-width: 720px) {
+  .hc-header-img {
+    background-image: url("https://assets.hdc.ntnu.no/assets/static/banner_960.jpg");
+    height: 300px;
+  }
 
   .hc-column-8 {
     width: 60%;
@@ -191,7 +196,28 @@ div .mascot {
     margin-left: 0;
     margin-right: 0;
   }
-
 }
+
+@media (min-width: 960px) {
+  .hc-header-img {
+    background-image: url("https://assets.hdc.ntnu.no/assets/static/banner_1280.jpg");
+    height: 350px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hc-header-img {
+    background-image: url("https://assets.hdc.ntnu.no/assets/static/banner_1920.jpg");
+    height: 450px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hc-header-img {
+    background-image: url("https://assets.hdc.ntnu.no/assets/static/banner_1920.jpg");
+    height: 700px;
+  }
+}
+
 
 </style>
