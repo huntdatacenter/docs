@@ -23,3 +23,4 @@ Read our [eBook](https://assets.hdc.ntnu.no/assets/ebook-hunt-cloud-services.pdf
 [Read more about the Tingweeks](tingweek/)
 
 :::
+

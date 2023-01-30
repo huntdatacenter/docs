@@ -8,84 +8,142 @@ description: Installation and usage guide for sshfs.
 
 # SSHFS
 
-This page describe how you can mount your labs file system over an encrypted connection.
+**This page describe how you can mount your labs file system over an encrypted connection on Linux and Mac to your local client machine.**
 
-Depending on you security model, you may mount selected part of your storage system to your client computer over VPN.
+Depending on you security model, you may mount selected parts of your storage system to your client computer over VPN.
 
-## Install software packages on linux (Debian)
+::: warning Requirements
 
-1. Install sshfs:
+You will need a working HUNT Cloud VPN and SSH connection to your lab to complete this guide.
 
-   ```bash
-   sudo apt install sshfs
-   ```
-
-## Install software packages on OS X and macOS
-
-::: tip REQUIREMENT
-[Install Homebrew package manager for macOS: brew](https://brew.sh/)
 :::
 
+## 1. Installation 
 
-1. Install macfuse:
+This step install SSHFS on your local computer.
+
+::: details OS X and macOS
+
+**Requirement:** 
+
+You will need the Homebrew package manager for macOS to complete this guide: [Install Homebrew package manager for macOS: brew](https://brew.sh/).
+
+**Installation guide:**
+
+1.1 Install macfuse:
 
    ```bash
    brew install --cask macfuse
    ```
 
-2. Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
+1.2 Allow developer in `System Preferences` -> `Security & Privacy` -> `General`
 
-   ::: warning NTNU managed Macbook
+   ::: warning Request access
+   
+   If you do not see a section to enable develper in your `System Preferences` -> `Security & Privacy` -> `General`, you will need to contact your organiational IT support and request access to this section (NTNU Hjelp for NTNU managed Macbooks).
 
-   If your Macbook is managed by NTNU and you do not see section to enable developer in your `System Preferences` -> `Security & Privacy` -> `General`,
-   you will need to request access to enable developer through NTNU Hjelp.
-   If you are not NTNU affiliated you can contact IT department of your organisation / university.
-
-3. Install sshfs:
+1.3 Install sshfs:
 
    Download latest version of sshfs from [here](https://github.com/osxfuse/sshfs/releases), open and install it
 
-4. Reboot macOS before continuing
+4. Reboot your machine before continuing.
 
-## Mount your lab storage to your computer
+:::
 
-1. Connect your HUNT Cloud VPN
-2. Set labname
+
+
+::: details Linux (Debian)
+
+Install sshfs:
 
    ```bash
-   export labname=<labname>  # export labname=demolab
+   sudo apt install sshfs
+   ```
+:::
+
+
+## 2. Configure SSHFS
+
+This step configures SSHFS on your local computer.
+
+::: warning Requirements
+
+A working HUNT Cloud VPN and and a working SSH connection to your lab.
+
+:::
+
+2.1. Connect your HUNT Cloud VPN and open the terminal of your local computer.
+
+2.2. Define your labname as a variable.
+
+   ```bash
+   export labname=<labname>
+   ```
+  
+   Change `<labname>` to your lab and run the line in the terminal on your local computer.
+   
+   ```bash
+   # -- non-working example
+   export labname=demolab
    ```
 
-3. Make a folder on the local computer that is dedicated as mount point for your lab storage:
+2.3. Make a folder on your local computer that is dedicated as mount point for your lab storage:
 
    ```bash
    mkdir ~/${labname}-storage
    ```
 
-4. Mount your storage using sshfs:
+Run this code without any changes since we defined your labname above.
+
+2.4. Mount your labstorage over SSHFS to your local computer:
 
    ```bash
-   sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname=${labname}
+   # -- For OS X and macOS
+   sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname="${labname}-storage"
+
+   # -- For Linux (Debian)
+   sshfs ${labname}: ~/${labname}-storage -o follow_symlinks
    ```
+   
+Run this code without any changes since we defined your labname above.
 
-   e.g. `sshfs demolab: demolab -o volname=demolab`
+**Simplify future access**
 
-5. You can make an alias in profile/rc config (`~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`) for easier access:
+You can make an alias in your profile configuration file. This allows you to connect to the labstorage on your local computer with a simple command.
+
+2.5. Make an alias in your profile configuration:
 
    ```bash
+   # -- For OS X and macOS
    echo "alias ${labname}-mount=sshfs ${labname}: ~/${labname}-storage -o follow_symlinks -o volname=${labname}" >> ~/.profile
+   
+   # -- For OS X and macOS
+   echo "alias ${labname}-mount='sshfs ${labname}: ~/${labname}-storage -o follow_symlinks'" >> ~/.profile
    ```
-
-That's it.
-With a little bit of luck you should be able to find your lab folders in "Finder"...
-If not, don't hesitate to contact us [here](/contact) so we can improve this guide together.
-
-## Unmount your lab storage
-
-- If you wish to stop the mount before you turn off your computer or vpn, you turn it off with this command:
+   The above example add the alias to your `~/.profile` file. Depending on your preferences your may want to add this to other profile/rc config such as `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`).
+   
+2.6 Source your new alias. 
 
   ```bash
-  sudo umount ~/${labname}-storage
+  source ~/.profile
+  ```
+
+2.7 Mount your storage: 
+
+  ```bash
+  <labname>-storage
+  ```
+
+With a little bit of luck you should now be able to find your lab folders in "Finder"... If not, don't hesitate to contact us [here](/contact) so we can improve this guide together.
+
+## Good to know commands
+
+### Unmount your lab storage
+
+If you wish to stop the mount before you turn off your computer or vpn, you turn it off with this command:
+
+  ```bash
+  sudo umount ~/<labname>-storage
   ```
 
 ## Troubleshooting
