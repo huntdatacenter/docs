@@ -9,6 +9,8 @@ description: These pages contains user documentation aimed at representatives th
 
 **Welcome to our documentation for representatives that govern science in HUNT Cloud.**
 
+![Strategic compass](../images/hunt-cloud_strategic-compass_200px.png)
+
 This section is aimed at represenatives for data controllers and service centers. See our [main documentation](/) page for other sections.
 
 ::: tip Next Ting
