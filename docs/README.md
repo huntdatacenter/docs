@@ -28,42 +28,36 @@ footerHtml: false
     <div class="hc-row">
       <div class="hc-column-4">
         <a href="/do-science/"><img alt="knowledge" height="150" src="/img/hunt-cloud_bottle-of-knowledge_200px.png" /></a>
-        <VuetifyButton id="btn1" class="hc-btn" color="primary" label="Do science" href="/do-science/" block />
+        <VuetifyButton id="btn1" class="hc-btn" color="black--text" label="Do science" href="/do-science/" block />
         <p>
-          Practical matters such as how to get started, how to use the HUNT Workbench and similar.
+          Scientists are explorers. This section is aimed at scientists that uses data to discover knowledge for a better world in HUNT Cloud.
         </p>
       </div>
       <div class="hc-column-4">
-        <a href="/coordination/"><img alt="custom keys" height="150" src="/img/hunt-cloud_the-keymakers_200px.jpg" /></a>
-        <VuetifyButton id="btn2" class="hc-btn" color="primary" label="Administer science" href="/coordination/" block />
+        <a href="/administer-science/"><img alt="custom keys" height="150" src="/img/hunt-cloud_the-keymakers_200px.jpg" /></a>
+        <VuetifyButton id="btn2" class="hc-btn" color="black--text" label="Administer science" href="/administer-science/" block />
         <p>
-          How to oranize your scientific group in HUNT Cloud, including compliance, training, data handling, financal aspects and similar.
+          Seemless scientific explorations needs smooth administration. This section is aimed at lab and data space administrators that make science fly.
         </p>
       </div>
       <div class="hc-column-4">
-        <a href="/governance/"><img alt="strategic compass" height="150" src="/img/hunt-cloud_strategic-compass_200px.png" /></a>
-        <VuetifyButton id="btn3" class="hc-btn" color="primary" label="Govern science" href="/governance/" block />
+        <a href="/govern-science/"><img alt="strategic compass" height="150" src="/img/hunt-cloud_strategic-compass_200px.png" /></a>
+        <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="Govern science" href="/govern-science/" block />
         <p>
-          The content focuses on scientific and trust governance in HUNT Cloud, including privacy and security.
+          Trust enables science. This section is aimed at data controllers and scientific centers that guides and govern the development of HUNT Cloud.
         </p>
       </div>
     </div>
     <div class="hc-row">
       <div class="hc-column-8">
-        <h2>About HUNT Cloud</h2>
+         <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="About HUNT Cloud" href="/about/" block />
         <p>
-          HUNT Cloud is a scientific computing environment located at <a href="https://www.ntnu.edu/">NTNU</a> in Norway.
+          HUNT Cloud is a scientific infrastructure for data explorations located at <a href="https://www.ntnu.edu/">NTNU</a> in Norway. These pages contains our official user documentation. See <a href="/about/">About HUNT Cloud</a> for introductory information on our products, services and us.
         </p>
-        <p>
-          These pages contains official user documentation for HUNT Cloud.
-        </p>
-        <p>
-          See <a href="https://www.ntnu.edu/mh/huntcloud">About HUNT Cloud</a> for introductory information on our scientific services.
-        </p>
-        <p>Read <a href="/about">about the team</a>, the technologies and the thinking behind HUNT Cloud.</p>
       </div>
       <div class="hc-column-4">
         <div class="mascot"></div>
+         <a href="/about/"><img alt="bot" height=1 width="100" src="/img/transparent10x10.png" /></a>       
       </div>
     </div>
   </div>
