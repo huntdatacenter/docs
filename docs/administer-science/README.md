@@ -9,6 +9,8 @@ description: These pages contains user documentation aimed at individuals that a
 
 **Welcome to our documentation for individuals that administer science in HUNT Cloud.**
 
+![Custom key](../images/hunt-cloud_the-keymakers_200px.jpg)
+
 This section is aimed at lab leaders, lab coordinators, data space leaders and data space administrators that administer science in HUNT Cloud. 
 
 You will find practical information on lab and data space administration. See our [main documentation](/) page for other sections.

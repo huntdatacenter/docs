@@ -6,9 +6,12 @@ permalink: /do-science/
 description: These pages contains user documentation aimed at scientists that conduct scientific experiments in HUNT Cloud.
 ---
 
-# Do science in HUNT Cloud
 
+# Do science in HUNT Cloud
+        
 **Welcome to our official user documentation for scientists in HUNT Cloud.**
+
+![Bottle of knowledge](../images/hunt-cloud_bottle-of-knowledge_200px.png)
 
 This section is aimed at lab users. It contains practical information on how to do science in HUNT Cloud. 
 
