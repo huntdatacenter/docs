@@ -34,7 +34,7 @@ footerHtml: false
         </p>
       </div>
       <div class="hc-column-4">
-        <a href="/administer-science/"><img alt="custom keys" height="150" src="/img/hunt-cloud_the-keymakers_200px.jpg" /></a>
+        <a href="/administer-science/"><img alt="custom keys" height="150" src="/img/hunt-cloud_the-keymakers_200px_45dgr.jpg" /></a>
         <VuetifyButton id="btn2" class="hc-btn" color="black--text" label="Administer science" href="/administer-science/" block />
         <p>
           Seemless scientific explorations needs smooth administration. This section is aimed at lab and data space administrators that make science fly.
@@ -49,20 +49,29 @@ footerHtml: false
       </div>
     </div>
     <div class="hc-row">
-      <div class="hc-column-8">
+      <div class="hc-column-4">
          <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="About HUNT Cloud" href="/about/" block />
         <p>
-          HUNT Cloud is a scientific infrastructure for data explorations located at <a href="https://www.ntnu.edu/">NTNU</a> in Norway. These pages contains our official user documentation. See <a href="/about/">About HUNT Cloud</a> for introductory information on our products, services and us.
+          HUNT Cloud is shaped by a small team of scientific instrument makers. Read more about the thinking and team behind HUNT Cloud.
         </p>
       </div>
       <div class="hc-column-4">
         <div class="mascot"></div>
          <a href="/about/"><img alt="bot" height=1 width="100" src="/img/transparent10x10.png" /></a>       
       </div>
+      <div class="hc-column-4">
+        <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="Scientific products" href="https://www.ntnu.edu/mh/huntcloud" block />
+        <p>
+          Explore and evolve. See the main HUNT Cloud page for information on HUNT Cloud's scientific products and services.
+        </p>
+      </div>
     </div>
   </div>
 </div>
 
+<center>
+<i>These pages contains the official user documentation for HUNT Cloud. <br>HUNT Cloud is a scientific infrastructure for data explorations at <a href="https://www.ntnu.edu/">NTNU</a> in Norway.</i>
+</center>
 
 <style scoped>
 
@@ -135,6 +144,7 @@ footerHtml: false
   margin-left: 0px;
   margin-right: 0px;
   text-align: justify;
+  text-align: left; /* left or justify */
   justify-content: center;
   align-items: center;
 }
@@ -171,7 +181,13 @@ div .mascot {
   padding-bottom: 12px;
   margin-left: 0px;
   margin-right: 0px;
-  text-align: justify;
+  text-align: left; /* left or justify */
+}
+
+.hc-column-8 p {
+  justify-self: center;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .hc-column-8:has(p) {
