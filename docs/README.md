@@ -23,17 +23,69 @@ footerHtml: false
   </div>
 
   <div class="hc-row">
-    <div class="hc-column">
+    <h1>Welcome to the HUNT Cloud documentation</h1>
+  </div>
+
+  <div class="hc-row">
+    <div class="hc-column-4">
+      <a href="/do-science/"><img alt="knowledge" height="150" src="/img/hunt-cloud_bottle-of-knowledge_200px.png" /></a>
+    </div>
+    <div class="hc-column-4">
+      <a href="/coordination/"><img alt="custom keys" height="150" src="/img/hunt-cloud_the-keymakers_200px.jpg" /></a>
+    </div>
+    <div class="hc-column-4">
+      <a href="/governance/"><img alt="strategic compass" height="150" src="/img/hunt-cloud_strategic-compass_200px.png" /></a>
+    </div>
+  </div>
+
+  <div class="hc-row">
+    <div class="hc-column-4">
       <VuetifyButton id="btn1" class="hc-btn" color="primary" label="Do science" href="/do-science/" block />
     </div>
-    <div class="hc-column">
+    <div class="hc-column-4">
       <VuetifyButton id="btn2" class="hc-btn" color="primary" label="Administer science" href="/coordination/" block />
     </div>
-    <div class="hc-column">
+    <div class="hc-column-4">
       <VuetifyButton id="btn3" class="hc-btn" color="primary" label="Govern science" href="/governance/" block />
     </div>
   </div>
 
+  <div class="hc-row">
+    <div class="hc-column-4">
+      <p>
+        Practical matters such as how to get started, how to use the HUNT Workbench and similar.
+      </p>
+    </div>
+    <div class="hc-column-4">
+      <p>
+        How to oranize your scientific group in HUNT Cloud, including compliance, training, data handling, financal aspects and similar.
+      </p>
+    </div>
+    <div class="hc-column-4">
+      <p>
+        The content focuses on scientific and trust governance in HUNT Cloud, including privacy and security.
+      </p>
+    </div>
+  </div>
+
+  <div class="hc-row">
+    <div class="hc-column-8">
+      <h2>About HUNT Cloud</h2>
+      <p>
+        HUNT Cloud is a scientific computing environment located at <a href="https://www.ntnu.edu/">NTNU</a> in Norway.
+      </p>
+      <p>
+        These pages contains official user documentation for HUNT Cloud.
+      </p>
+      <p>
+        See <a href="https://www.ntnu.edu/mh/huntcloud">About HUNT Cloud</a> for introductory information on our scientific services.
+      </p>
+      <p>Read <a href="/about">about the team</a>, the technologies and the thinking behind HUNT Cloud.</p>
+    </div>
+    <div class="hc-column-4">
+      <div class="mascot"></div>
+    </div>
+  </div>
 </div>
 
 
@@ -47,7 +99,7 @@ footerHtml: false
 .hc-header {
   width: 100vw;
   max-width: 100%;
-  margin-bottom: 64px;
+  margin-bottom: 12px;
 }
 
 .hc-header-img {
@@ -70,25 +122,75 @@ footerHtml: false
   align-items: center;
   margin-left: 20px;
   margin-right: 20px;
+  /* width: 90%; */
+}
+
+.hc-title {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto !important;
+  margin-bottom: 24px;
 }
 
 .hc-row {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  vertical-align: top;
   max-width: 960px;
   margin: 0 auto !important;
 }
 
-.hc-column {
+.hc-column-4 {
   float: left;
-  width: 70%;
-  min-height: 50px;
-  padding-bottom: 32px;
+  width: 80%;
+  min-height: 12px;
+  padding-bottom: 12px;
   margin-left: 10px;
   margin-right: 10px;
+  text-align: justify;
+}
+
+.hc-column-4:has(img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  padding-bottom: 24px;
+}
+
+.hc-column-4:has(p) {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.hc-column-8 {
+  float: left;
+  width: 80%;
+  min-height: 12px;
+  padding-bottom: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: justify;
+}
+
+.hc-column-8:has(p) {
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 @media (min-width: 720px) {
 
-  .hc-column {
+  .hc-column-8 {
+    width: 66%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hc-column-4 {
     width: 33%;
     margin-left: 0;
     margin-right: 0;
@@ -97,45 +199,3 @@ footerHtml: false
 }
 
 </style>
-
-<center>
-<h1>Welcome to the HUNT Cloud documentation</h1>
-</center>
-
-<center>
-<b>
-These pages contains official user documentation for HUNT Cloud. <br>See <a href="https://www.ntnu.edu/mh/huntcloud">About HUNT Cloud</a> for introductory information on our scientific services.
-</b>
-</center>
-
-
-**HUNT Cloud is a scientific computing environment located at [NTNU](https://www.ntnu.edu/) in Norway.**
-
-
-
-## [Do science](/do-science)
-
-Practical matters such as how to get started, how to use the HUNT Workbench and similar.
-
-![Knowledge](./images/hunt-cloud_bottle-of-knowledge_200px.png)
-
-## [Administer science](/administer-science)
-
-How to oranize your scientific group in HUNT Cloud, including compliance, training, data handling, financal aspects and similar.
-
-![Custom keys](./images/hunt-cloud_the-keymakers_200px.jpg)
-
-
-## [Govern science](/govern-science)
-
-The content focuses on scientific and trust governance in HUNT Cloud, including privacy and security.
-
-![Strategic compass](./images/hunt-cloud_strategic-compass_200px.png)
-
-## [About HUNT Cloud](/about)
-
-Read about the team, the technologies and the thinking behind HUNT Cloud.
-
-![Mascot](./images/hunt-cloud_mascot_test1_200px.png)
-
-
