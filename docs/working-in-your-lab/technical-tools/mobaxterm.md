@@ -112,8 +112,11 @@ With a little bit of luck, you should now be able to connect directly from your 
 
 - Run this command with `TMPDIR` variable:
   ```
-  TMPDIR="${USERPROFILE}" ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" username@entry-IP
+  # -- Non-working example
+  TMPDIR="${USERPROFILE}" ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" <username>@<entry-IP>
   ```
+
+**Note.** You need to replace `<username>` with you username (without the brackets), and `<entry-IP>` with your entry IP from the SSH config file.
 
 :::
 
