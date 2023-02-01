@@ -118,6 +118,13 @@ With a little bit of luck, you should now be able to connect directly from your 
 
 **Note.** You need to replace `<username>` with you username (without the brackets), and `<entry-IP>` with your entry IP from the SSH config file.
 
+- If permissions error still appears try this alternative approach
+  ```
+  cat "${USERPROFILE}/.ssh/id_rsa.pub" | ssh <username>@<entry-IP> "cat >> ~/.ssh/authorized_keys"
+  ```
+
+**Note.** You need to replace `<username>` with you username (without the brackets), and `<entry-IP>` with your entry IP from the SSH config file.
+
 :::
 
 
@@ -243,6 +250,6 @@ If MobaXterm included the new key automatically, you can continue to the next st
 
 ![edit_jump_home](./images/5.mobaxterm-configure-custom-session.png)
 
-5. Save and enjoy ! 
+5. Save and enjoy !
 
 :::
