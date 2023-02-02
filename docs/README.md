@@ -37,7 +37,7 @@ footerHtml: false
         <a href="/administer-science/"><img alt="Custom keys" height="150" src="/img/hunt-cloud_key_250.png" /></a>
         <VuetifyButton id="btn2" class="hc-btn" color="black--text" label="Administer science" href="/administer-science/" block />
         <p>
-          Seemless explorations needs smooth administration. This section is aimed at lab and data space administrators that make science fly.
+          Scientific administrators are keymakers. This section is aimed at administrators that enables scientific explorations.
         </p>
       </div>
       <div class="hc-column-4">
