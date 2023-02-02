@@ -27,21 +27,21 @@ footerHtml: false
     </div>
     <div class="hc-row">
       <div class="hc-column-4">
-        <a href="/do-science/"><img alt="knowledge" height="150" src="/img/hunt-cloud_bottle-of-knowledge_200px.png" /></a>
+        <a href="/do-science/"><img alt="Bottle of knowledge" height="150" src="/img/hunt-cloud_bottle_250.png" /></a>
         <VuetifyButton id="btn1" class="hc-btn" color="black--text" label="Do science" href="/do-science/" block />
         <p>
           Scientists are explorers. This section is aimed at explorers that use data to discover knowledge for a better world in HUNT Cloud.
         </p>
       </div>
       <div class="hc-column-4">
-        <a href="/administer-science/"><img alt="custom keys" height="150" src="/img/hunt-cloud_the-keymakers_200px_45dgr.jpg" /></a>
+        <a href="/administer-science/"><img alt="Custom keys" height="150" src="/img/hunt-cloud_key_250.png" /></a>
         <VuetifyButton id="btn2" class="hc-btn" color="black--text" label="Administer science" href="/administer-science/" block />
         <p>
           Seemless explorations needs smooth administration. This section is aimed at lab and data space administrators that make science fly.
         </p>
       </div>
       <div class="hc-column-4">
-        <a href="/govern-science/"><img alt="strategic compass" height="150" src="/img/hunt-cloud_strategic-compass_200px.png" /></a>
+        <a href="/govern-science/"><img alt="Strategic compass" height="150" src="/img/hunt-cloud_compass_250.png" /></a>
         <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="Govern science" href="/govern-science/" block />
         <p>
           Trust enables science. This section is aimed at data controllers and scientific centers that guides the development of HUNT Cloud.
@@ -57,7 +57,7 @@ footerHtml: false
       </div>
       <div class="hc-column-4">
         <div class="mascot"></div>
-         <a href="/about/"><img alt="bot" height=1 width="100" src="/img/transparent10x10.png" /></a>       
+         <a href="/about/"><img alt="Transparent" height=1 width="150" src="/img/transparent10x10.png" /></a>       
       </div>
       <div class="hc-column-4">
         <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="Scientific products" href="https://www.ntnu.edu/mh/huntcloud" block />
