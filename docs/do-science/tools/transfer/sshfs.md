@@ -8,23 +8,36 @@ description: Installation and usage guide for sshfs.
 
 # SSHFS
 
-**This page describe how you can mount your labs file system over an encrypted connection on Linux and Mac to your local client machine.**
+**[SSHFS](https://en.wikipedia.org/wiki/SSHFS) is a filesystem client to mount and interact with directories and files located in your lab over a normal ssh connection.**
 
-Depending on you security model, you may mount selected parts of your storage system to your client computer over VPN.
 
-::: warning Requirements
+[[toc]]
 
-You will need a working HUNT Cloud VPN and SSH connection to your lab to complete this guide.
+## Installation
 
+Depending on the data safety level in your lab, you may mount selected part of your storage system to your client computer over VPN.
+
+### Install SSHFS on your local computer with Ubuntu
+
+On your local computer:
+
+```bash
+sudo apt install sshfs
+```
+
+### Install SSHFS on your local computer with OS X and macOS
+
+::: tip REQUIREMENT
+[Install Homebrew package manager for macOS: brew](https://brew.sh/)
 :::
 
-## 1. Installation 
+## 1. Installation
 
 This step install SSHFS on your local computer.
 
 ::: details OS X and macOS
 
-**Requirement:** 
+**Requirement:**
 
 You will need the Homebrew package manager for macOS to complete this guide: [Install Homebrew package manager for macOS: brew](https://brew.sh/).
 
@@ -45,7 +58,7 @@ You will need the Homebrew package manager for macOS to complete this guide: [In
 1.4 Reboot your machine before continuing.
 
    ::: warning Request access
-   
+
    If you do not see a section to enable develper in your `System Preferences` -> `Security & Privacy` -> `General`, you will need to contact your organiational IT support and request access to this section (NTNU Hjelp for NTNU managed Macbooks).
 
 :::
@@ -78,9 +91,9 @@ A working HUNT Cloud VPN and and a working SSH connection to your lab.
    ```bash
    export labname=<labname>
    ```
-  
+
    Change `<labname>` to your lab and run the line in the terminal on your local computer.
-   
+
    ```bash
    # -- non-working example
    export labname=demolab
@@ -126,27 +139,29 @@ You can make an alias in your profile configuration file. This allows you to con
    ```
    The above example adds the alias to your `~/.profile` file. Depending on your preferences you may want to add this to other profile/rc config such as `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`).
 :::
-   
+
 ::: details For Linux (Debian)
    ```bash
    echo "alias ${labname}-mount='sshfs ${labname}: ~/${labname}-storage -o follow_symlinks'" >> ~/.profile
    ```
    The above example adds the alias to your `~/.profile` file. Depending on your preferences you may want to add this to other profile/rc config such as `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`).
 :::
-   
-2.6 Source your new alias. 
 
-  ```bash
-  source ~/.profile
-  ```
+2.6 Source your new alias.
 
-2.7 Mount your storage: 
+```bash
+source ~/.profile
+```
+
+2.7 Mount your storage:
 
   ```bash
   <labname>-storage
   ```
 
-With a little bit of luck you should now be able to find your lab folders in "Finder"... If not, don't hesitate to contact us [here](/contact) so we can improve this guide together.
+That's it.
+With a little bit of luck you should be able to find your lab folders in "Finder"...
+If not, don't hesitate to contact us [here](/contact) so we can improve this guide together.
 
 ## Good to know commands
 

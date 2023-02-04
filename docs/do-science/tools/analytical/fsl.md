@@ -11,7 +11,7 @@ description: Installation guide for FSL in HUNT Cloud.
 **[FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/) is a comprehensive library of image analysis and statistical tools for fMRI, MRI and DTI brain imaging data.**
 
 The FSL suite consists of various command line tools, as well as simple GUIs for its core analysis pipelines.
-Among others, FSL offers implementations of standard GLM analysis, white matter tractography, tissue segmentation, affine and non-linear co-registration, and independent component analysis [(Source: Neurodebian)](http://neuro.debian.net/pkgs/fsl-complete.html).
+Among others, FSL offers implementations of standard GLM analysis, white matter tractography, tissue segmentation, affine and non-linear co-registration, and independent component analysis ([Source: Neurodebian](http://neuro.debian.net/pkgs/fsl-complete.html)).
 
 ::: tip
 

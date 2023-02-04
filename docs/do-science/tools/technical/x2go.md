@@ -153,7 +153,7 @@ Hit **`OK`** in the lower right corner.
 
 You may use X2Go to access software with graphical interfaces. Such software needs to be installed in your lab machine before you can connect.
 
-For your home machine, [RStudio](/do-science/analytical/r-studio/#install-r-studio) should be installed by default. To access this program, go back to your configuration and update **`Session type`** at the bottom of the **`Session tab`** from **`/usr/bin/xterm/`** to the location of Rstudio (**`/usr/bin/rstudio`**) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/do-science/technical/x2go/#troubleshooting).
+For your home machine, [RStudio](/do-science/tools/analytical/r-studio/#install-r-studio) should be installed by default. To access this program, go back to your configuration and update **`Session type`** at the bottom of the **`Session tab`** from **`/usr/bin/xterm/`** to the location of Rstudio (**`/usr/bin/rstudio`**) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/do-science/tools/technical/x2go/#troubleshooting).
 
 
 ### 3. Configure the X2Go client for unmanaged machines

@@ -10,7 +10,7 @@ description: Installation guide for MATLAB.
 
 **[MATLAB](https://www.mathworks.com/) is a computing environment developed by MatWorks for efficient matrix manipulations and other handy computing tools.**
 
-This guide covers the installation of MATLAB on unmanaged On-demand and BLUE machines. [Contact us](/contat) for installations on your [home machine](/faq/compute/#machine-types).
+This guide covers the installation of MATLAB on unmanaged On-demand and BLUE machines. [Contact us](/contat) for installations on your [home machine](/do-science/faq/compute/#machine-types).
 
 ::: tip MATLAB in HUNT Workbench
 
