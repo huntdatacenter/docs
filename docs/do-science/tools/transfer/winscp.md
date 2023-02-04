@@ -8,7 +8,9 @@ description: Installation and usage guide for WinSCP.
 
 # WinSCP
 
-[WinSCP](https://winscp.net/) is an open source data transfer client for Windows that work with commonly used transfer protocols including SFTP, S3 and SCP. If your host organization allows, you can use WinSCP for file transfers and synchronization of folders between your local machine and your lab machines.
+**[WinSCP](https://winscp.net/) is an open source data transfer client for Windows that work with commonly used transfer protocols including SFTP, S3 and SCP.**
+
+If your host organization allows, you can use WinSCP for file transfers and synchronization of folders between your local machine and your lab machines.
 
 [[toc]]
 
@@ -19,7 +21,7 @@ description: Installation and usage guide for WinSCP.
 
 ## Install
 
-Download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and install the software. This may required administrator privileges.
+On your local computer, download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and install the software. This may required administrator privileges.
 
 ## Configure
 

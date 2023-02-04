@@ -8,26 +8,40 @@ description: Installation and usage guide for Rsync.
 
 # Rsync
 
-[RSync](https://linux.die.net/man/1/rsync) is a fast and extraordinarily versatile file copying tool. It can copy locally, to/from another host over any remote shell, or to/from a remote rsync daemon.
+**[RSync](https://linux.die.net/man/1/rsync) is a fast and extraordinarily versatile file copying tool. It can copy locally, to/from another host over any remote shell, or to/from a remote rsync daemon.**
+
+[[toc]]
 
 ## Installation
 
-### Install on Linux (Ubuntu)
+### Install rsync on your lab machine
 
- ```bash
- sudo apt install rsync
- ```
+Log into your lab machine and run: 
 
-### Install on Mac OS X
+```bash
+sudo apt install rsync
+```
 
-::: tip REQUIREMENT
-[Install Homebrew package manager for macOS: brew](https://brew.sh/)
-:::
+### Install rsync on your local computer
 
+::: details OS X / MacOS
 
 ```bash
 brew install rsync
 ```
+
+Note that the code above requires Brew: [Install Homebrew package manager for macOS: brew](https://brew.sh/).
+:::
+
+
+::: details Ubuntu
+
+```bash
+sudo apt install rsync
+```
+
+:::
+
 
 ## Use
 

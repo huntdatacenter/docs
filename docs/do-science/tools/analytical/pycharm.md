@@ -8,15 +8,17 @@ description: Installation guide for PyCharm (unmanaged machine).
 
 # PyCharm
 
-Pycharm is an IDE for Python developers.
+**Pycharm is an IDE for Python developers.**
+
+[[toc]]
 
 ::: warning Requirements
 
-Administrator privileges
+Unmanaged machine with administrator privileges. This guide will -not- work on `home`-machines. 
 :::
 
 
-Installation on unmanaged machines:
+###  Installation on unmanaged machines
 
 ```
 sudo apt update
@@ -25,7 +27,7 @@ sudo apt install snapd
 sudo snap install pycharm-community --classic
 ```
 
-Running PyCharm with x2go:
+### Running PyCharm with x2go
 ```
 /snap/bin/pycharm-community
 ```

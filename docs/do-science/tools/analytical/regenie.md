@@ -8,9 +8,11 @@ description: Installation guide for Regenie
 
 # Regenie
 
-[Regenie](https://github.com/rgcgithub/regenie) is a C++ program for
-whole genome regression modelling of large genome-wide association studies.
-It is developed and supported by a team of scientists at the Regeneron Genetics Center.
+**[Regenie](https://github.com/rgcgithub/regenie) is a C++ program for whole genome regression modelling of large genome-wide association studies. Regenie is developed and supported by a team of scientists at the Regeneron Genetics Center.**
+
+[[toc]]
+
+## Properties
 
 The method has the following properties:
 
@@ -20,9 +22,11 @@ The method has the following properties:
 - For binary traits it supports Firth logistic regression and an SPA test
 - It supports the BGEN, PLINK bed/bim/fam and PLINK2 pgen/pvar/psam genetic data formats
 
+## Requirements
+
 ::: warning Requirements
 
-- Conda (miniconda), see our [Conda tutorial](/do-science/analytical/conda/) for more details.
+- Conda (miniconda), see our [Conda tutorial](/do-science/tools/analytical/conda/) for more details.
 - Conda channels: conda-forge, bioconda
 
 :::

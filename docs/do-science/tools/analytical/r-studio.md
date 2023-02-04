@@ -18,10 +18,10 @@ For those of you running unmanaged machines on our security tier 2 may want to u
 
 ### Install using Conda
 
-We recommend using [Conda](/do-science/analytical/conda/) to install R packages. Conda gives you better flexibility when choosing versions, which will not affect other researchers in your lab.
+We recommend using [Conda](/do-science/tools/analytical/conda/) to install R packages. Conda gives you better flexibility when choosing versions, which will not affect other researchers in your lab.
 
 ::: tip
-We have very easy guide on how to get [Saige](/do-science/analytical/saige/) running in Conda environment.
+We have very easy guide on how to get [Saige](/do-science/tools/analytical/saige/) running in Conda environment.
 :::
 
 If you have a conda setup based on the guide above you will need some additional channels to install the packages.
@@ -100,7 +100,7 @@ The default version in Ubuntu is usually a few versions behind the newest R vers
 
 ::: warning Please note
 Running upgrade affects versions of all packages on your machine. This may break your or others environments.
-We recommend installing new R version using [Conda](/do-science/analytical/r-studio/#install-using-conda) instead.
+We recommend installing new R version using [Conda](/do-science/tools/analytical/r-studio/#install-using-conda) instead.
 :::
 
 
@@ -215,7 +215,7 @@ The below guide will therefore not work on home-machines.
 `Without these, it will be impossible to get RStudio to work.`
 
 - R (installed as above)
-- A machine prepared for a [graphical interface (X2Go)](/do-science/technical/x2go/)
+- A machine prepared for a [graphical interface (X2Go)](/do-science/tools/technical/x2go/)
 - An IAAS-machine or BLUE-machine with administrator access
 
 :::
@@ -246,7 +246,7 @@ or setup environment variable as mentioned in [Troubleshooting RStudio Rendering
 
 ### Configure X2Go
 
-To automatically start RStudio, revisit your _Session preferences_ in the [X2Go setup](/do-science/technical/x2go/) and update your _Single application command path_ to `/usr/bin/rstudio`and _Create a session icon on the desktop..._.
+To automatically start RStudio, revisit your _Session preferences_ in the [X2Go setup](/do-science/tools/technical/x2go/) and update your _Single application command path_ to `/usr/bin/rstudio`and _Create a session icon on the desktop..._.
 
 ::: tip NOTE
 There is a known bug in x2go `1.1.456` that will go away if you comment out (add # before) a line in the x2goagent.options:
@@ -262,7 +262,7 @@ sudo vim /etc/x2go/x2goagent.options
 
 ### I cannot create R_TempDir
 
-If your system disk is full, R will not be able to store temporary files used for computation. You may see the error message **`Fatal error: cannot create 'R_TempDir'`**. [Click here](/faq/storage/#how-can-i-see-the-sizes-of-my-lab-volumes) to verify if the disk disk is full, and this guide to change your temp folder to a larger volume.
+If your system disk is full, R will not be able to store temporary files used for computation. You may see the error message **`Fatal error: cannot create 'R_TempDir'`**. [Click here](/do-science/faq/storage/#how-can-i-see-the-sizes-of-my-lab-volumes) to verify if the disk disk is full, and this guide to change your temp folder to a larger volume.
 
 ### Installation of devtools
 
@@ -296,7 +296,7 @@ sudo apt install tcl tcl8.6 tk tk-table tk8.6
 
 ### RStudio or R becomes unresponsive when I run my code
 
-It might be good to check the resource consumption on your lab machine. The response may be reduced if you or your lab mates consume all memory and/or CPU. A quick way to do this is via [HTOP and time](https://docs.hdc.ntnu.no/faq/compute/#can-i-monitor-my-resource-consumption). 
+It might be good to check the resource consumption on your lab machine. The response may be reduced if you or your lab mates consume all memory and/or CPU. A quick way to do this is via [HTOP and time](/do-sciencefaq/compute/#can-i-monitor-my-resource-consumption). 
 
 For example, if you use all your memory you might need to reduce your table sizes or upgrade your machine size. If your lab mates consume all your resources you may want to ask them to spare some for you.
 

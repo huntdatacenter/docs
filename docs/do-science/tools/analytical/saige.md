@@ -8,15 +8,12 @@ description: Installation guide for Saige
 
 # Saige package for R
 
-[SAIGE is an R package](https://github.com/weizhouUMICH/SAIGE) with Scalable and
-Accurate Implementation of Generalized mixed model (Chen, H. et al. 2016).
-It accounts for sample relatedness and is feasible for genetic association tests
-in large cohorts and biobanks.
+**[SAIGE is an R package](https://github.com/weizhouUMICH/SAIGE) with Scalable and Accurate Implementation of Generalized mixed model (Chen, H. et al. 2016). It accounts for sample relatedness and is feasible for genetic association tests in large cohorts and biobanks.**
+
+[[toc]]
 
 ::: tip
-If you are interested in using Saige, you should definitely give a try to
-[Regenie](/do-science/analytical/regenie/), a strong C++ tool
-for whole genome regression modelling of large GWAS.
+If you are interested in using Saige, you should try to [Regenie](/do-science/analytical/regenie/), a strong C++ tool for whole genome regression modelling of large GWAS.
 :::
 
 ## Install using conda
