@@ -6,18 +6,22 @@ description: Introductory page for predefined HUNT Cloud service desk orders.
 sidebarDepth: 2
 ---
 
-# Service desk orders
+# Govern science service desk
 
-**This is a pilot page. We aim to list predefined service orders that may speed up your delivery time.**
+**This page list predefined service orders that data controllers and service centers can order in HUNT Cloud. To place your order, click the blue button and send us a pre-filled email with required information.**
 
 ::: tip
 
-Click the blue buttons on the pages below to get going with your specific order.
-
+Feel free to [contact us](/contact) on email if you think we can help in your ordering process.
 :::
 
-* [Lab user orders](/do-science/service-desk). This page list service orders that can be requested by lab users, such as system access and lab access.
-* [Lab orders](/administer-science/service-desk/lab-orders). This page list service orders that can be requested by lab leaders and lab coordinators, such as adding new lab users, changing storage and compute resources and data transfers.
-* [Data space orders](/service-desk/data-space-orders). This page list service orders that can be requested by data space leaders and data space compliance coordinators, such as adding new labs and external data exports.
-* [Service center orders](/service-desk/service-center-orders). This page list service orders that can be requested by service center leaders and service center administrative coordinators, such as adding new data spaces.
-* [Data controller orders](/service-desk/data-controller-orders/). This page list service orders and requests for data controller administrators, such as data processing agreement upgrades and adding new service centers.
+### Govern science service desk
+
+* [Service centers](/govern-science/service-desk/service-centers). This page list service orders that can be requested by service center administrators, such as adding new data spaces.
+* [Data controllers](/govern-science/service-desk/data-controllers). This page list service orders that can be requested by data controller administrators, such as adding new service centers and upgrading data processor agreements.
+
+### Other service desks
+
+* [Do science service desk](/do-science/service-desk). This service desk lists service orders that can be requested by lab users.
+* [Administer science service desk](/administer-science/service-desk/). This service desk lists service orders that can be requested by data space administrators and lab coorinators.
+

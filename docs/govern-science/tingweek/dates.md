@@ -1,7 +1,7 @@
 ---
 title: Ting dates
 category: Tingweek
-permalink: /govern-science/tingweek/ting-dates/
+permalink: /govern-science/tingweek/dates/
 sidebarDepth: 1
 description: This page list information and questions about our ting weeks.
 ---

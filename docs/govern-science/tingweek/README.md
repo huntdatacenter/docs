@@ -1,21 +1,21 @@
 ---
-title: Tingweek
+title: Introduction
 category: Tingweek
 permalink: /govern-science/tingweek/
 sidebarDepth: 1
 description: This section list information and questions for the HUNT Cloud Tingweek.
 ---
 
-# Ting week
+# HUNT Cloud Tingweek
 
 **We appoint time three times per year to meet for information, feedback and discussions on how to develop the services in HUNT Cloud to better elevate science. We call these gatherings Tings.**
 
-We arrange a layered set of Tings for distinct groups in our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Ting weeks".
+We arrange a layered set of Tings for distinct groups in our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Tingweeks".
 
 
 [[toc]]
 
-::: tip Next Ting week
+::: tip Next Tingweek
 
 - **Lab ting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET
 - **Data space ting**: Wednesday 15 February 2023 - 9 to 11 a.m. CET
@@ -40,7 +40,7 @@ The reports include a letter with reflections from the last Ting period as well 
 
 ## Tings
 
-We have implemented a layered Ting structure to elevate voices and collective knowledge from distinct groups within the community. As of today, we appoint time for four different Tings that meet during the Ting weeks:
+We have implemented a layered Ting structure to elevate voices and collective knowledge from distinct groups within the community. As of today, we appoint time for four different Tings that meet during the Tingweeks:
 
 ![Tingweek tings](./images/tingweek-tings.png)
 
@@ -50,7 +50,7 @@ This is our allting were we focuses on the **user experience inside labs**, and 
 
 ### Data space ting
 
-This is the Ting where we appoint time to evolve scientific organization and **cross-lab coordination in data spaces**, including coordination of compliance, data, technologies, knowledge and financial aspects. The original Coordinator ting changed name to Data space ting in Ting week #5 to reflect contractual roles in the new services model.
+This is the Ting where we appoint time to evolve scientific organization and **cross-lab coordination in data spaces**, including coordination of compliance, data, technologies, knowledge and financial aspects. The original Coordinator ting changed name to Data space ting in Tingweek #5 to reflect contractual roles in the new services model.
 
 ### Data controller ting
 
@@ -78,7 +78,7 @@ Memberships to the Tings are derived from the following registered roles in cont
 
 ![Ting schedule year](./images/tingweek-schedule-year.png)
 
-Ting weeks are scheduled over one week in the winter, spring and autumn: (i) The winter Ting is usually scheduled mid February; (ii) The spring Ting in late May or early June; and (iii ) the autumn Ting in the second half of October.
+Tingweeks are scheduled over one week in the winter, spring and autumn: (i) The winter Ting is usually scheduled mid February; (ii) The spring Ting in late May or early June; and (iii ) the autumn Ting in the second half of October.
 
 ![Ting schedule days](./images/tingweek-schedule-days.png)
 
