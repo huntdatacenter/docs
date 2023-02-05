@@ -24,7 +24,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 **Required software**. The following required software should aready be installed during your initial onboarding: 
 
-1.3. Working VPN software (if not, head over to our Getting started guide to [install the VPN software](/getting-started/configure-vpn/#_2-1-install-the-vpn-software).
+1.3. Working VPN software (if not, head over to our Getting started guide to [install the VPN software](/do-science/getting-started/configure-vpn/#_2-1-install-the-vpn-software).
 
 1.4. A working Google authenticator application on your phone that provide time-based VPN verification codes (if not, you can order a [Google authenticator key reset](/do-science/service-desk/#google-authenticator-key-reset) in our service desk).
 
@@ -68,15 +68,15 @@ C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remov
 
 ## 4. Setup the new VPN profile
 
-Follow the [Setup the VPN profile](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) section of our "Getting started" guide. 
+Follow the [Setup the VPN profile](/do-science/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) section of our "Getting started" guide. 
 
 ## 5. Connect to the VPN
 
-Follow the [Connect to the VPN](/getting-started/configure-vpn/#_2-3-connect-to-the-vpn) section of our "Getting started guide". 
+Follow the [Connect to the VPN](/do-science/getting-started/configure-vpn/#_2-3-connect-to-the-vpn) section of our "Getting started guide". 
 
 ## 6. Verify your VPN connection
 
-Follow the [Verify your VPN connection](/getting-started/configure-vpn/#_2-4-verify-your-vpn-connection) section to verify a successful VPN connection as your will not be able to log into your lab until the VPN is working.
+Follow the [Verify your VPN connection](/do-science/getting-started/configure-vpn/#_2-4-verify-your-vpn-connection) section to verify a successful VPN connection as your will not be able to log into your lab until the VPN is working.
 
 ## Troubleshooting
 

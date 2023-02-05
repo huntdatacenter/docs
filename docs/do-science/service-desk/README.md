@@ -35,7 +35,7 @@ The service orders below are aimed at active lab users. Lab access for new users
 
 ### HUNT Workbench access
 
-[HUNT Workbench](/do-science/workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
+[HUNT Workbench](/do-science/hunt-workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
 
 <SDButton form="request_workbench_access" />
 
@@ -43,7 +43,7 @@ The service orders below are aimed at active lab users. Lab access for new users
 * **Expected response time:** Days.
 * **Expected delivery:** HUNT Workbench access key and certificate.
 * **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.
-* **Next step:** [Prepare your key transfer](/guides/workbench-request/).
+* **Next step:** [Prepare your key transfer](/do-science/guides/hunt-workbench-request/).
 * **Cost:** Included in the lab subscription.
 
 
@@ -57,13 +57,13 @@ Request a new certificate if you have an existing HUNT Workbench and your previo
 * **Expected response time:** Days.
 * **Expected delivery:** Workbench certificate.
 * **Requirement:** (1) Active Signal app on phone.
-* **Next step:** [Guide on Workbench reissue](/guides/workbench-reissue-certificate/).
+* **Next step:** [Guide on Workbench reissue](/do-science/guides/hunt-workbench-reissue-certificate/).
 * **Cost:** Included in the lab subscription.
 
 
 ### SSH passphrase reset  
 
-Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to access your workbench and install software on your home machine.
+Order a [SSH passphrase reset](/do-science/guides/configure-ssh/) that you may need to access your workbench and install software on your home machine.
 
 
 <SDButton form="request_ssh_pass_reset" />
@@ -72,7 +72,7 @@ Order a [SSH passphrase reset](/guides/configure-ssh/) that you may need to acce
 * **Expected response time:** Days.
 * **Expected delivery:** Temporary passphrase on Signal.
 * **Requirement:** Active Signal app on your phone.
-* **Next step:** [Guide on the passphrase reset](/guides/configure-ssh/).
+* **Next step:** [Guide on the passphrase reset](/do-science/guides/configure-ssh/).
 * **Cost:** Included in the lab subscription.
 
 ### SSH configuration
@@ -85,12 +85,12 @@ Click button below if you need your `ssh_config.txt` file to be resent to you (a
 * **Expected response time:** Days.
 * **Expected delivery:** Temporary passphrase on Signal.
 * **Requirement:** Active Signal app on your phone.
-* **Next step:** [Guide on the passphrase reset](/guides/configure-ssh/).
+* **Next step:** [Guide on the passphrase reset](/do-science/guides/configure-ssh/).
 * **Cost:** Included in the lab subscription.
 
 ### Deactivate lab access
 
-Head over to the [lab orders page](/service-desk/lab-orders#deactivate-lab-user) to deactivate your lab access.
+Head over to the [lab orders page](/administer-science/service-desk/lab-orders#deactivate-lab-user) to deactivate your lab access.
 
 
 
@@ -127,14 +127,14 @@ You may need to reset your VPN certificate when you get a new local machine or i
 * **Expected response time:** Days.
 * **Expected delivery:** VPN passphrase on Signal, link to VPN certificate on email.
 * **Requirement:** Active Signal app on your phone.
-* **Next step:** [Guide on the VPN reset](/guides/vpn-certificate-reset/).
+* **Next step:** [Guide on the VPN reset](/do-science/guides/vpn-certificate-reset/).
 * **Cost:** Included in the lab subscription.
 
 
 
 ### Google authenticator key reset  
 
-You need the [Google Authenticator key](/guides/google-authenticator-reset/) to access the HUNT Cloud VPN. Click the button below to request a new key (f.e. when you change your phone).
+You need the [Google Authenticator key](/do-science/guides/google-authenticator-reset/) to access the HUNT Cloud VPN. Click the button below to request a new key (f.e. when you change your phone).
 
 <SDButton form="request_google_auth" />
 
@@ -142,7 +142,7 @@ You need the [Google Authenticator key](/guides/google-authenticator-reset/) to 
 * **Expected response time:** Days.
 * **Expected delivery:** New key on Signal.
 * **Requirement:** Active Signal app on your phone.
-* **Next step:** [Guide on the key reset](/guides/google-authenticator-reset/).
+* **Next step:** [Guide on the key reset](/do-science/guides/google-authenticator-reset/).
 * **Cost:** Included in the lab subscription.
 
 ## Applications
@@ -157,12 +157,14 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 * **Expected response time:** Days.
 * **Expected delivery:** File as email attachment.
 * **Requirement:** Active SSH connection.
-* **Next step:** [MobaXterm configuration guide](/do-science/technical/mobaxterm/).
+* **Next step:** [MobaXterm configuration guide](/do-science/tools/technical/mobaxterm/).
 * **Cost:** Included in the lab subscription.
 
 ## FAQ
 
-### I have a new machine, what should I request? 
+#### I have a new machine, what should I request? 
+
+::: details Read more
 
 We are happy to heard about your new machine! To regain lab access you will need to request certificates (required) and potentially configuration files (for consideration): 
 
@@ -172,16 +174,29 @@ We are happy to heard about your new machine! To regain lab access you will need
 
 Ship one email per request for speedy delivery.
 
-### I have not heard back within the expected delivery time, now what? 
+:::
+
+#### I have not heard back within the expected delivery time, now what? 
+
+::: details Read more
 
 Poke us on [email](/contact) or in your lab channel in Slack if you have not heard back within the expected delivery time of your request. It is good to ensure that we have registered the request, and if we are occupied we will aim to give you a new estimate for delivery.
 
-### Why do I need to ship one email per request? 
+:::
+
+#### Why do I need to ship one email per request? 
+
+::: details Read more
 
 We use your prefilled email to start predefined workflows on our side. The automation do not work if several requests are included per email. Therefore, you will be asked to reship requests that include more than one order.
 
-### Why do I need to ship the email from my organiztaional email? 
+:::
+
+#### Why do I need to ship the email from my organiztaional email? 
+
+::: details Read more
 
 We use your organizational email for identification and to ensure that you are authorized to make the order. Therefore, you will be asked to reship requests from private emails that is not verified by your organization. 
 
+:::
 

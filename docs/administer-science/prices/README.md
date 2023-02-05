@@ -28,7 +28,7 @@ Your total cost will include a combination of fixed subscription costs and runni
 
 ### Supporting documents
 
-The information should be read together with the [services specifications](/services/specifications) that details the services that are included in the price list. And the [price list](/prices/pricelist) that details the prices of individual service units.
+The information should be read together with the [services specifications](/administer-science/services/specifications) that details the services that are included in the price list. And the [price list](/prices/pricelist) that details the prices of individual service units.
 
 
 
@@ -81,15 +81,15 @@ The total number of terabytes are summarized across all labs attached to one dat
 
 ### Metering
 
-The metering sections in the [services specifications](/services/specifications) specify how individual service units in the price lists are are measured (metered).
+The metering sections in the [services specifications](/administer-science/services/specifications) specify how individual service units in the price lists are are measured (metered).
 
 ### Costs
 
-The cost sections in the [services specifications](/services/specifications) reference the price list and specify how costs are calculated for individual service units when they are adjusted over the service period.
+The cost sections in the [services specifications](/administer-science/services/specifications) reference the price list and specify how costs are calculated for individual service units when they are adjusted over the service period.
 
 ### Billing 
 
-The billing sections in the [services specifications](/services/specifications) specify when fees are billed. Fees are billed to billing accounts under one data spaces. Data spaces on the BLUE subscription level may include separate billing accounts to their labs.
+The billing sections in the [services specifications](/administer-science/services/specifications) specify when fees are billed. Fees are billed to billing accounts under one data spaces. Data spaces on the BLUE subscription level may include separate billing accounts to their labs.
 
 | Data space subscription level: | WHITE | ORANGE | BLUE |
 | ---- | ---- | ---- | ---- |

@@ -1,6 +1,7 @@
 ---
 title: Introduction
 category: Troubleshooting
+permalink: /do-science/troubleshooting
 description: Unfortunately, sometimes things don't work as they should. We have collected some of the common issues you might encounter in these pages.
 ---
 

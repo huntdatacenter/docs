@@ -26,7 +26,7 @@ Internal kista is our service for simple and secure data transfers between two l
 
 ### How do I order an internal kista?
 
-Lab leader or lab coordinator can order internal kistas in our [service desk](/service-desk/lab-orders/#internal-kista).
+Lab leader or lab coordinator can order internal kistas in our [service desk](/administer-science/service-desk/lab-orders/#internal-kista).
 
 ### How long does it take to get access to an internal kista?
 
@@ -42,7 +42,7 @@ Yes. You may specify up to three uploaders and/or downloaders per kista in your 
 
 ### How do I access my internal kista?
 
-See our [internal kista transfer guide](/data-transfers/internal-kista/) for instruction on how to access and upload or download data in internal kista.
+See our [internal kista transfer guide](/do-science/data-transfers/internal-kista/) for instruction on how to access and upload or download data in internal kista.
 
 ### What is the size and utilization of my internal kista?
 
@@ -93,7 +93,7 @@ We don't think so. It is our responsibility to ensure the correct receiver of yo
 
 ## Transfers inside my lab
 
-We recommend [rsync](/do-science/transfer/rsync) for transfers between machines inside your lab. 
+We recommend [rsync](/do-science/tools/transfer/rsync) for transfers between machines inside your lab. 
 
 ### How can I transfer data from my home machine to a blue machine? 
 

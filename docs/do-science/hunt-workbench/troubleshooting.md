@@ -118,7 +118,7 @@ An unresponsive or slow HUNT Workbench may be caused by several things. Here's a
 
 - Use Google Chrome as your browser. Other browsers don't support all features and might cause potential silent failures.
 - Restart your HUNT Workbench environment to start fresh in the case something got hung up. [Click here](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment) to see how.
-- Check the resource consumption on your **`home`**-machine to ensure that you have available free cpu and memory resources, for example in [htop](/do-science/technical/htop/) (see below).
+- Check the resource consumption on your **`home`**-machine to ensure that you have available free cpu and memory resources, for example in [htop](/do-science/tools/technical/htop/) (see below).
 
 ::: details Check your resources
 

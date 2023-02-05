@@ -29,7 +29,7 @@ Data space leaders and Data space compliance coordinators can order [external im
 
 ### Is there any technical requirements for the external party? 
 
-Yes. Your external party must meet a few [technical requirements](/data-transfers/external-kista) to be able to use the external kista service.
+Yes. Your external party must meet a few [technical requirements](/do-science/data-transfers/external-kista) to be able to use the external kista service.
 
 
 ### How quickly can I get access to an external kista?
@@ -56,7 +56,7 @@ IP addressess that starts with `10.`, `172.` and `192.` are internal addresses. 
 
 ### How do I access my external kista?
 
-See our [external kista transfer guide](/data-transfers/external-kista/#for-external-users) for instruction on how to access and upload or download data for an internal kista.
+See our [external kista transfer guide](/do-science/data-transfers/external-kista/#for-external-users) for instruction on how to access and upload or download data for an internal kista.
 
 ### Can I import and export data in the same external kista?
 
@@ -68,7 +68,7 @@ Most likely. However, this is decided by the data controller. Feel free to [cont
 
 ### Is external kistas secure enough for my data?
 
-Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/about/certificates/). However, the decision of whether you can use this service is decided by your data controller. Feel free to [contact us](/contact) for service descriptions aimed at risk assessment of the service. 
+Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/govern-science/compliance/certificates/). However, the decision of whether you can use this service is decided by your data controller. Feel free to [contact us](/contact) for service descriptions aimed at risk assessment of the service. 
 
 ### Where can I get additional security information on the external kistas?
 
@@ -76,7 +76,7 @@ Most likely. The service allows you to be compliant with common acts and regulat
 
 ### How do I order a Kista for transfers from HEMIT?
 
-[HEMIT](https://hemit.no/) is the Central Norway Regional Health Authority's IT department that coordinate transports from our regional hospitals such as St Olavs Hospital, Helse Nord-Trøndelag and Helse More og Romsdal. Transfers with external kistas are pre-approved by HEMIT for transfers from health trusts that hold data processor agreements with HUNT Cloud. Hospital departments can order transfers at **`HEMIT-torget`**. Place a free-text order for an "External kista to HUNT Cloud", include information from our [external kista import order](/agreements/downloads), and state if you need help from HEMIT to install the required SFTP application on your local hospital machine.
+[HEMIT](https://hemit.no/) is the Central Norway Regional Health Authority's IT department that coordinate transports from our regional hospitals such as St Olavs Hospital, Helse Nord-Trøndelag and Helse More og Romsdal. Transfers with external kistas are pre-approved by HEMIT for transfers from health trusts that hold data processor agreements with HUNT Cloud. Hospital departments can order transfers at **`HEMIT-torget`**. Place a free-text order for an "External kista to HUNT Cloud", include information from our [external kista import order](/administer-science/agreements/downloads), and state if you need help from HEMIT to install the required SFTP application on your local hospital machine.
 
 
 ## Direct external transfers
@@ -87,7 +87,7 @@ Yes and no. Direct transfers via SSH are blocked. However, your data space leade
 
 ### Can I have permanent openings to machines outside my lab?
 
-Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be authorized by your data space leader, documented in our [network opening order](/agreements/downloads/#network-opening-order), and the traffic needs to be initiated from inside your lab.
+Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be authorized by your data space leader, documented in our [network opening order](/administer-science/agreements/downloads/#network-opening-order), and the traffic needs to be initiated from inside your lab.
 
 ### How do I request a network opening?
 
@@ -119,4 +119,4 @@ For transfers from TSD to HUNT Cloud: On TSD, put your data in the **`file-expor
 
 ### Do I need to encrypt data for external transfers?
 
-Most likely. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data on the receiving end. Read our [7z guide](/do-science/transfer/7z/#install-the-software) on how encrypt and compress files for large transfers. [Contact us](/contact) if you wonder if your your data needs to be encrypted or not. We are more than happy to help with evaluations.
+Most likely. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data on the receiving end. Read our [7z guide](/do-science/tools/transfer/7z/#install-the-software) on how encrypt and compress files for large transfers. [Contact us](/contact) if you wonder if your your data needs to be encrypted or not. We are more than happy to help with evaluations.

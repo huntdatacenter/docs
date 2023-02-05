@@ -14,20 +14,20 @@ The data processor agreement controls the privacy and security controls for your
 
 [[toc]]
 
-Good to know, there is no cost associated with the establishment of a data processor agreement, and we have solid templates available to for a quick process. You can read more about the data processor agreements in the [agreement section](/agreements/overview/#data-processor-agreement). 
+Good to know, there is no cost associated with the establishment of a data processor agreement, and we have solid templates available to for a quick process. You can read more about the data processor agreements in the [agreement section](/administer-science/agreements/overview/#data-processor-agreement). 
 
 
 ### 1. Is there already a data processor agreement in place between my organization and HUNT Cloud?
 
-Ask inside your organization or [contact us](/contact) if you are unsure. If an agreement is already in place, your might skip this guide and move directly to the [service center guide](/coordination/get-going/service-center).
+Ask inside your organization or [contact us](/contact) if you are unsure. If an agreement is already in place, your might skip this guide and move directly to the [service center guide](/administer-science/get-going/service-center).
 
 Depending on your organization, data processor agreements may be signed on various organizational levels. For example, your Department will be the internal data controller at NTNU. 
 
 ### 2. Which agreement type do I need?
 
-(2.1) [Data processor agreements](/agreements/overview/#data-processor-agreement): This is the "normal" type that regulates situations where you and your organization controls the data and defines the purpose of the processing.
+(2.1) [Data processor agreements](/administer-science/agreements/overview/#data-processor-agreement): This is the "normal" type that regulates situations where you and your organization controls the data and defines the purpose of the processing.
 
-(2.2.) [Data sub-processor agreements](/agreements/overview/#data-subprocessor-agreement): This is when the purpose of the processing is decided by an organization that is not your own, for example contract research. The organization that controls the data may add requirements for privacy and security measures that we will need to incorporate in the sub-processor agreement. 
+(2.2.) [Data sub-processor agreements](/administer-science/agreements/overview/#data-subprocessor-agreement): This is when the purpose of the processing is decided by an organization that is not your own, for example contract research. The organization that controls the data may add requirements for privacy and security measures that we will need to incorporate in the sub-processor agreement. 
 
 [Contact us](/contact) us if you are unsure on the agreement type needed, approaches for joint-controller scenarios. 
 
@@ -43,7 +43,7 @@ This is the individual that is authorized to control data on behalf of your orga
 
 ::: tip NTNU
 
-For NTNU, the internal "[enighetsavtaler](/agreements/overview/#agreements-within-ntnu)" is agreed with Departments with Head of Departments as signatory.
+For NTNU, the internal "[enighetsavtaler](/administer-science/agreements/overview/#agreements-within-ntnu)" is agreed with Departments with Head of Departments as signatory.
 
 :::
 
@@ -54,13 +54,13 @@ Yes. We have agreement templates that is accepted by many organizations. These a
 
 **If yes**, jump to the next section. 
 
-**If no**, your organization may provide other templates as long as they adhere to the above laws, regulations and standards. Discussions between two legal teams take time, so [contact us](/contact) as soon as you can for arrangements. Jump to the [service center guide](/coordination/get-going/service-center) when the data processor agreement is signed.
+**If no**, your organization may provide other templates as long as they adhere to the above laws, regulations and standards. Discussions between two legal teams take time, so [contact us](/contact) as soon as you can for arrangements. Jump to the [service center guide](/administer-science/get-going/service-center) when the data processor agreement is signed.
 
 ### 6. Forward required processor agreement information to HUNT Cloud
 
 We need a few bits of information to prepare your agreement template:
  
-- Download the "[HUNT Cloud Data Processor Agreement Form](/agreements/overview/#required-information)" on your local machine (right click on the link and select "Save Link As...")
+- Download the "[HUNT Cloud Data Processor Agreement Form](/administer-science/agreements/overview/#required-information)" on your local machine (right click on the link and select "Save Link As...")
 - Open the text file in Notepad, Word or a similar application and supply the required information. Field descriptions are included in the "Clarification of the form fields" under the link above. 
 - Save the text file on your local machine and send us the a copy in our [service desk](/service-desk/data-controller-orders/#new-data-processor-agreement).
 
@@ -78,7 +78,7 @@ We will send you the final agreement version by email as a PDF-file after we rec
 - Coordinate signing with the signatory official in your organization and return to us by email. 
 - We will add our countersignature and send you the active agreement for archiving. 
 
-Your data processor agreement is now signed, sealed and delivered. This is a good time for a humble celebration with fresh coffee before you continue with the [service center guide](/coordination/get-going/service-center). 
+Your data processor agreement is now signed, sealed and delivered. This is a good time for a humble celebration with fresh coffee before you continue with the [service center guide](/administer-science/get-going/service-center). 
 
 
 

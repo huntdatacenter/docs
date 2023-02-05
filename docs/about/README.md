@@ -9,5 +9,5 @@ description: This page contains information in administrative issues aimed at co
 
 **Ingress**
 
-![Bot](../images/hunt-cloud_mascot_test1_200px.png)
+![Bot](../images/hunt-cloud_bot_250_3.png)
 

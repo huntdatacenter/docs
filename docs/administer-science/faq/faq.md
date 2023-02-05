@@ -1,7 +1,7 @@
 ---
-title: FAQ
+title: General FAQ
 category: HUNT Cloud
-permalink: /administer-science/faq/faq
+permalink: /administer-science/faq/general
 description: This page contains common questions on scientific coordination in HUNT Cloud.
 ---
 
@@ -29,15 +29,15 @@ This section contains FAQ from compliance coordinators.
 
 #### How can we add a new lab to our existing data space? 
 
-In short, the compliance coordinator sends us a signed lab order and coordinate signed user agreements between your lab leader and your individual lab users. Head over to our [get going](/coordination/get-going/lab)-pages for more information on the process.
+In short, the compliance coordinator sends us a signed lab order and coordinate signed user agreements between your lab leader and your individual lab users. Head over to our [get going](/administer-science/get-going/lab)-pages for more information on the process.
 
 #### How can we split one lab into two labs? 
 
 As science grows inside your individual labs you may see the need to move part of this activity over to a new lab for example due to compliance issues separating data and lab users. Technically we don't split labs but add new ones. To add a new lab to your data space: 
 
 - send us a [new lab order](/service-desk/data-space-orders.html#new-lab) and coordinate new lab user agreements between your lab leader and individual lab users in the new lab;
-- evaluate if you need to deactivate some users in your original lab after the move, and [request user deactivation](/service-desk/lab-orders.html#deactivate-lab-user) in your original lab if relevant.
-- consider how you will transfer data into your new lab, for example by ordering an [internal kista](/agreements/downloads/#external-kista-import-order) from your original to your new lab.
+- evaluate if you need to deactivate some users in your original lab after the move, and [request user deactivation](/administer-science/service-desk/lab-orders.html#deactivate-lab-user) in your original lab if relevant.
+- consider how you will transfer data into your new lab, for example by ordering an [internal kista](/administer-science/agreements/downloads/#external-kista-import-order) from your original to your new lab.
 
 #### How can we move a lab to a different data space? 
 
@@ -57,7 +57,7 @@ No. We would like our lab name spaces to be unique. This is both to help your la
 
 #### How can we delete one of our labs? 
 
-Lab deletions are authorized by Data space leaders and documented in a [lab deletion order](/agreements/downloads/#lab-deletion-order) that is co-signed by both the data space leader and respective lab leader. All data and machines in the lab will be irrevocably destroyed in this process, and neither data nor machines can be recreated. 
+Lab deletions are authorized by Data space leaders and documented in a [lab deletion order](/administer-science/agreements/downloads/#lab-deletion-order) that is co-signed by both the data space leader and respective lab leader. All data and machines in the lab will be irrevocably destroyed in this process, and neither data nor machines can be recreated. 
 
 
 
@@ -66,7 +66,7 @@ Lab deletions are authorized by Data space leaders and documented in a [lab dele
 
 ### Contract management
 
-Head over to our dedicated [FAQ on agreements](/agreements/faq/).
+Head over to our dedicated [FAQ on agreements](/administer-science/agreements/faq/).
 
 ### Risk management
 
@@ -102,7 +102,7 @@ Head over to our dedicated [FAQ on prices](/prices/faq/).
 
 ## Data coordination
 
-Head over to our dedicated [FAQ on data](/data/faq/).
+Head over to our dedicated [FAQ on data](/administer-science/data/faq/).
 
 
 

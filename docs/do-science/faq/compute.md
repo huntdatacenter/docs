@@ -16,12 +16,12 @@ This page lists frequently asked questions related to computation and analysis i
 
 ### Can I update my compute resources?
 
-Yes. Your lab leader and lab coordinator can order machine updates] and order new lab machines in our [service desk](/service-desk/lab-orders/#compute) in accordance with our default [machine types](/services/machine-types).
+Yes. Your lab leader and lab coordinator can order machine updates] and order new lab machines in our [service desk](/administer-science/service-desk/lab-orders/#compute) in accordance with our default [machine types](/administer-science/services/machine-types).
 
 
 ### Can I have custom machine types?
 
-Yes. Don't find what you are looking for among our default [machine types](/services/machine-types)? Labs in a data space on the [blue subscription](/services/overview/#subscriptions) level can request machines types with tailored memory and cpu resources. [Contact us](/contact) on email to get started.
+Yes. Don't find what you are looking for among our default [machine types](/administer-science/services/machine-types)? Labs in a data space on the [blue subscription](/administer-science/services/overview/#subscriptions) level can request machines types with tailored memory and cpu resources. [Contact us](/contact) on email to get started.
 
 ### Is my process hitting memory issues?
 
@@ -31,7 +31,7 @@ See below for descriptions on how to monitor your memory consumption using the `
 
 Yes. You have several options:
 
-(1) A quick way is to use [HTOP](/do-science/technical/htop/) for interactive monitoring of cpu and memory inside individual machines.
+(1) A quick way is to use [HTOP](/do-science/tools/technical/htop/) for interactive monitoring of cpu and memory inside individual machines.
 
 (2) The [time](http://man7.org/linux/man-pages/man1/time.1.html) command is a quick way to determine the duration of execution of a particular command. For example add `/usr/bin/time -v` before your command to get going:
 
@@ -48,7 +48,7 @@ Yes. You have several options:
 /usr/bin/time -v ./script.sh
 ```
 
-[Read more time command example](https://www.cyberciti.biz/faq/unix-linux-time-command-examples-usage-syntax/)
+[See more time command examples](https://www.cyberciti.biz/faq/unix-linux-time-command-examples-usage-syntax/)
 
 When your command or script finishes, `time` writes a message to standard error giving timing statistics about your program run, for example:
 
@@ -130,7 +130,7 @@ sudo apt install <packagename>
 
 ::: warning WARNING
 
-Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](/do-science/analytical/conda/). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.
+Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](/do-science/tools/analytical/conda/). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.
 
 :::
 
@@ -150,24 +150,24 @@ Most likely. Many commonly used software in scientific computing can be run from
 
 ### Can I run Docker containers?
 
-Yes. You can run [Docker images](https://www.docker.com/) on both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](/faq/compute/#what-is-a-blue-machine) machines. Docker images can not be run from home machines due to security reasons.
+Yes. You can run [Docker images](https://www.docker.com/) on both [iaas](/do-science/faq/compute/#what-is-an-iaas-machine) and [blue](/do-science/faq/compute/#what-is-a-blue-machine) machines. Docker images can not be run from home machines due to security reasons.
 
 ::: tip
 
-If you need to run docker images on home machine try using Singularity instead. Read more in our [Singularity installation guide](/do-science/technical/singularity/).
+If you need to run docker images on home machine try using Singularity instead. Read more in our [Singularity installation guide](/do-science/tools/technical/singularity/).
 
 :::
 
 ### Can I run Singularity containers?
 
 Yes, you can run your Singularity containers on both home, iaas and blue machines. Follow our quick
-[Singularity installation guide](/do-science/technical/singularity/). For simplicity, we strongly recommend to install singularity via Conda.
+[Singularity installation guide](/do-science/tools/technical/singularity/). For simplicity, we strongly recommend to install singularity via Conda.
 
 ## Workflow
 
 ### How can I keep my jobs running when I disconnect?
 
-You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/do-science/technical/terminal-multiplexers/) to get started. Your jobs over [X2Go](/do-science/technical/x2go/#set-up-your-local-machine), such as Rstudio and Stata, should be kept alive between your logins by default.
+You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/do-science/tools/technical/terminal-multiplexers/) to get started. Your jobs over [X2Go](/do-science/tools/technical/x2go/#set-up-your-local-machine), such as Rstudio and Stata, should be kept alive between your logins by default.
 
 ### How can I profile the resources needed in my workflow?
 
@@ -201,7 +201,7 @@ sudo reboot
 ```
 
 ::: warning
-Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/faq/users/#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
+Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/do-science/faq/users/#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
 :::
 
 ### What privileges does my account have?
@@ -218,7 +218,7 @@ No. Your home machine is configured for reliability. We have therefore chosen to
 
 ### Can I get a machine with the latest Ubuntu release?
 
-Yes. Both [iaas](/faq/compute/#what-is-an-iaas-machine) and [blue](/faq/compute/#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other linux operating systems.
+Yes. Both [iaas](/do-science/faq/compute/#what-is-an-iaas-machine) and [blue](/do-science/faq/compute/#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other linux operating systems.
 
 ### When do you plan to upgrade our home operating system?
 
@@ -243,7 +243,7 @@ For reliability, we aim to run one OS version below the latest Ubuntu long term 
 
 ### When will you do the upgrade?
 
-We expect the next upgrade cycle to begin in Q1 2022.
+We expect the next upgrade cycle to begin in Q1 2023.
 
 ### How long will the upgrade take?
 
@@ -288,11 +288,11 @@ You will loose possibility to install packages. Many tools like Python are progr
 
 ## Machine types
 
-You will meet four principal machine types in your lab. You may choose to deploy home, iaas and blue machines in [various sizes](/services/machine-types).
+You will meet four principal machine types in your lab. You may choose to deploy home, iaas and blue machines in [various sizes](/administer-science/services/machine-types).
 
 ### What is a "home" machine?
 
-This is a managed machine type. All labs have one "home" machine that is pre-configured with user accounts, [attached storage](/faq/storage/#resources) and some analytical software. Users may download their own software using the **`apt`** package manager and reboot their machine when needed. Further configurations has to be guided by us. Home machines run Ubuntu 16.04 operating systems.
+This is a managed machine type. All labs have one "home" machine that is pre-configured with user accounts, [attached storage](/do-science/faq/storage/#resources) and some analytical software. Users may download their own software using the **`apt`** package manager and reboot their machine when needed. Further configurations has to be guided by us. Home machines run Ubuntu 16.04 operating systems.
 
 ### What is an "iaas" machine?
 

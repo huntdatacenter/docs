@@ -36,7 +36,7 @@ ISO certificates provides verification from a third-party that we comply with th
 
 We report overall risks as we see them three time per year in our Ting report under the "Risk factors" chapter. The report do also provide a summary of relevant laws and regulations and the results of our audit program under the "External and internal controls" chapter. 
 
-### [Services specifications](/services/specifications/)
+### [Services specifications](/administer-science/services/specifications/)
 
 This document specify responsibilities and relevant security measures for individual services. The document is formally incorporated as an appendix to the services center agreement.
 

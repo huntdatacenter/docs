@@ -47,16 +47,16 @@ You can think of a storage volume as a named virtual hard disk that is attached 
 
 ### Can we add new volumes to our labs?
 
-Yes. Nothing is better than seeing your data grow. We are more than happy to include additional volumes to your lab machines to make your science fly. Order your [new volumes](/service-desk/lab-orders/#new-volume) in our service desk.
+Yes. Nothing is better than seeing your data grow. We are more than happy to include additional volumes to your lab machines to make your science fly. Order your [new volumes](/administer-science/service-desk/lab-orders/#new-volume) in our service desk.
 
 
 ### Can we expand existing volumes?
 
-You can expand volumes on both and iaas machines in terabyte (TB) steps. Lab leaders and lab coordinators can expand volume expansion in our [service desk](/service-desk/lab-orders/#expand-existing-volume).
+You can expand volumes on both and iaas machines in terabyte (TB) steps. Lab leaders and lab coordinators can expand volume expansion in our [service desk](/administer-science/service-desk/lab-orders/#expand-existing-volume).
 
 ### Can we reduce the size of existing volumes? 
 
-Not directly. You can reduce your storage volumes in the following way: (1) request a new volume with your new desired size in our [service desk](/service-desk/lab-orders/#new-volume), (2) transfer data from your old volume to your new volume, and (3) request deletion of your original volume.
+Not directly. You can reduce your storage volumes in the following way: (1) request a new volume with your new desired size in our [service desk](/administer-science/service-desk/lab-orders/#new-volume), (2) transfer data from your old volume to your new volume, and (3) request deletion of your original volume.
 
 
 ### When should we expand our volumes? 

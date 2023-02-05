@@ -1,6 +1,6 @@
 ---
-title: FAQ
-category: HUNT Cloud
+title: User management
+category: FAQ
 permalink: /administer-science/faq/user-management
 description: This page contains common questions on scientific coordination in HUNT Cloud.
 ---
@@ -11,7 +11,7 @@ description: This page contains common questions on scientific coordination in H
 
 ### How do we add new users?
 
-Lab leaders and lab coordinators may order access for new lab users in our [servie desk](/service-desk/lab-orders/#add-a-new-lab-user). New users must sign the user agreements. Next, head over to our [onboarding guide](/getting-started) to prepare your key shipment.
+Lab leaders and lab coordinators may order access for new lab users in our [servie desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user). New users must sign the user agreements. Next, head over to our [onboarding guide](/do-science/getting-started) to prepare your key shipment.
 
 ### How long does an account activation take?
 

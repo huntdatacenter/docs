@@ -1,6 +1,7 @@
 ---
 title: Introduction
 category: Frequently asked questions
+permalink: /do-science/faq/
 description: Frequently asked questions
 ---
 
@@ -8,15 +9,15 @@ description: Frequently asked questions
 
 This Lab FAQ is intended for lab users and lab coordinators:
 
-- [Users](/faq/users)
-- [Storage](/faq/storage)
-- [Compute](/faq/compute)
-- [Internal transfers](/faq/internal-transfer)
-- [External transfers](/faq/external-transfer)
-- [Security](/faq/security)
+- [Users](/do-science/faq/users)
+- [Storage](/do-science/faq/storage)
+- [Compute](/do-science/faq/compute)
+- [Internal transfers](/do-science/faq/internal-transfer)
+- [External transfers](/do-science/faq/external-transfer)
+- [Security](/do-science/faq/security)
 
 ::: tip
 
-Head over to our [Coordinator FAQ](/coordinator/faq) for questions on how to organize your sciences in a data space.
+Head over to our [Administer science FAQ](/administer-science/faq) for questions on how to organize your sciences in a data space.
 
 :::
