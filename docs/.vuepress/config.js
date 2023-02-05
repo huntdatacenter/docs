@@ -490,20 +490,11 @@ module.exports = {
           collapsable: true,
           isGroup: true,
           children: [
-            "/govern-science/compliance/certificates.md",
-            "/govern-science/compliance/subcontractors.md"
-          ]
-        },
-        {
-          title: "Agreements",
-          text: "Agreements",
-          collapsable: true,
-          isGroup: true,
-          children: [
             {title: "Introduction",
-            path: "/govern-science/agreements/"},
-            "/govern-science/agreements/overview.md",
-            "/govern-science/agreements/faq.md",
+            path: "/govern-science/compliance/"},
+            "/govern-science/compliance/certificates.md",
+            "/govern-science/compliance/subcontractors.md",
+            "/govern-science/compliance/faq.md"
           ]
         },
         {
