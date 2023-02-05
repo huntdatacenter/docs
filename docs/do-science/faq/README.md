@@ -5,9 +5,9 @@ permalink: /do-science/faq/
 description: Frequently asked questions
 ---
 
-# Lab FAQ
+# Do science FAQ
 
-This Lab FAQ is intended for lab users and lab coordinators:
+This FAQ is intended for lab users that do science in labs:
 
 - [Users](/do-science/faq/users)
 - [Storage](/do-science/faq/storage)

@@ -34,7 +34,7 @@ The following Lagtun membership tickets are issued to contracting parties from p
 
 :::
 
-The membership criteria was clarified in [R6/LT4/T4/21](https://docs.hdc.ntnu.no/tingweek/resolutions/#clarification-of-lagtun-membership). Lagtun is chaired by the Head of HUNT Cloud. HUNT Cloud employees participate as observers.
+The membership criteria was clarified in [R6/LT4/T4/21](/govern-science/tingweek/resolutions/#clarification-of-lagtun-membership). Lagtun is chaired by the Head of HUNT Cloud. HUNT Cloud employees participate as observers.
 
 ### Invitations
 
@@ -44,7 +44,7 @@ Invitations are forwarded on email to leaders and administrators for data proces
 Invitation recipients may [contact us](/contact) for direct calendar bookings for themselves or their chosen representative for future Lagtuns.
 :::
 
-The invitation criteria was clarified in [R2/LT5/T5/22](https://docs.hdc.ntnu.no/tingweek/resolutions/#clarification-of-ting-week-invitations).
+The invitation criteria was clarified in [R2/LT5/T5/22](/govern-science/tingweek/resolutions/#clarification-of-ting-week-invitations).
 
 ## Resolutions
 

@@ -1,3 +1,12 @@
+---
+title: Introduction
+category: Govern science
+permalink: /govern-science/introduction
+description: This page gives an introduction to the HUNT Cloud governance.
+---
+
+## Govern science in HUNT Cloud 
+
 **Handling of large data values requires trustworthy and predictable structures.**
 
 ::: tip In short

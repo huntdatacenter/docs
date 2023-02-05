@@ -1,23 +1,27 @@
 ---
 title: Specifications
-category: HUNT Cloud
+category: Services
 sidebarDepth: 1
+permalink: /administer-science/services/specifications
 description: This page gives the official Cloud services specifications.
 ---
 
 # Services specifications
 
-HUNT Cloud delivers services for management, storage, computation and transfer of data within a compliant security framework.
+**This page lists the services specification for our cloud services. The services specification is incorporated as an appendix to the cloud services agreement. Services are prices in accordance with our [price list](/administer-science/prices/pricelist).**
 
-### Current 
+[[toc]]
 
-This is our current services specifications:
+## Current 
+
+::: tip CURRENT SERVICES SPECIFICATION
 
 [HUNT Cloud Services Specifications](https://assets.hdc.ntnu.no/assets/services/hunt-cloud-services-specifications-2-6.pdf)(pdf)
 
-The services specifications is incorporated as an appendix to our cloud services agreements. Services are prices in accordance with our [price list](/prices/pricelist).
+:::
 
-### Updates
+
+## Updates
 
 The services specifications will be updated from time to time. 
 
@@ -25,7 +29,13 @@ The services specifications will be updated from time to time.
 
 **Minor updates**. Minor updates do -not- affect services. Minor updates are specified by increasing decimals (v2.1, v2.2, v2.3, etc). Minor updates follow the effective date of major updates and take precedence of previous versions when they are published on this page.
 
+## Archive
+
 | **Version** | **Announced** | **Effective** |
 | - | - | - |
 | [HUNT Cloud Services Specification v2.6](https://assets.hdc.ntnu.no/assets/services/hunt-cloud-services-specifications-2-6.pdf)(pdf) | 2021-07-01 | 2021-10-01 |
+
+## Changes
+
+See document information in PDF file for document changes.
 

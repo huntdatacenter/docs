@@ -80,7 +80,7 @@ Service centers inside NTNU are registered at the department levels. The naming 
 
 ### Can I list the same individual on all data space roles? 
 
-Yes. We use the [roles](/coordinator/roles/) in the data space orders for targeted communication for the specific responsibility areas. Thus, they can be assigned to one or several individual. 
+Yes. We use the [roles](/administer-science/roles/) in the data space orders for targeted communication for the specific responsibility areas. Thus, they can be assigned to one or several individual. 
 
 ### Can I leave the coordinator roles empty? 
 

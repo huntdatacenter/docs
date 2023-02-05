@@ -1,7 +1,7 @@
 ---
 title: Data space orders
 category: Service desk
-permalink: /service-desk/data-space-orders
+permalink: /administer-science/service-desk/data-space-orders
 description: HUNT Cloud service desk orders for data spaces.
 sidebarDepth: 2
 ---
@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 ::: tip Save time
 
-It saves you time to send us the request from your **organizational email**. We use this for identification, and request from private emails need additional verification that takes longer.
+It saves you time to send us the request from your **organizational email**. We use this for identification. Requests from private emails need additional verification that takes longer.
 
 :::
 
@@ -34,7 +34,7 @@ Click the button below to order a new lab under your existing data space.
 * **Required attachment**: [A signed lab order](/administer-science/agreements/downloads/#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
 * **Expected delivery time:** One week.
 * **Next step**: [Add your first lab users](/administer-science/service-desk/lab-orders.html#add-a-new-lab-user).
-* **Cost:** One lab subscription as specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/prices/pricelist/).
+* **Cost:** One lab subscription as specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
 ::: details More on the required resource specifications
 
@@ -57,9 +57,9 @@ ii) the **`work`** volume is tailored for your data in your day-to-day activitie
 
 The minimum storage allocation of the three volumes is 1000 Gigabytes (1 Terabyte). We have suggested a default allocation that you may update if you like:
 
-ARCHIVE = 400  
-WORK = 300  
-SCRACH = 300  
+ARCHIVE = 400
+WORK = 300
+SCRACH = 300
 
 The above numbers are in Gigabytes (1000 Gigabytes = 1 Terabyte). To illustrate, if you want your archive volume to be 2 Terabyte, specify **`ARCHIVE = 2000`** in your order.
 
@@ -98,13 +98,13 @@ Data transfers in and out of HUNT Cloud needs authorization from Data space lead
 
 ::: tip Internal transfers and import
 
-Data transfers between labs inside HUNT Cloud can be requested from our [lab page](/administer-science/service-desk/lab-orders).
+Data transfers between labs inside HUNT Cloud can be requested from our [lab order service desk](/administer-science/service-desk/lab-orders).
 
 :::
 
 ### External import kista
 
-The [external import kista](/faq/external-transfer/#faq-on-external-data-transfer) allows external parties outside HUNT Cloud to transfer data directly to a lab inside HUNT Cloud in a compliant manner.
+The [external import kista](/do-science/faq/external-transfer/#faq-on-external-data-transfer) allows external parties outside HUNT Cloud to transfer data directly to a lab inside HUNT Cloud in a compliant manner.
 
 <SDButton form="request_external_import_kista" />
 
@@ -120,7 +120,7 @@ Note that time to successful transfer depend on access to SFTP software and pote
 
 ### External export kista
 
-The [external export kista](/faq/external-transfer/#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner.
+The [external export kista](/do-science/faq/external-transfer/#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner.
 
 <SDButton form="request_external_export_kista" />
 
@@ -137,7 +137,7 @@ Note that time to successful transfer depends on access to SFTP software and pot
 
 ### Network opening
 
-[Network opening orders](/faq/external-transfer/#direct-external-transfers) allows data transfers directly to and from parties outside HUNT Cloud.
+[Network opening orders](/do-science/faq/external-transfer/#direct-external-transfers) allows data transfers directly to and from parties outside HUNT Cloud.
 
 <SDButton form="request_network_opening" />
 
@@ -153,7 +153,7 @@ Note that time to successful transfer depends on access to SFTP software and pot
 
 ### Update data space coordinator roles
 
-Click the button below to update your new [data space coordinator roles](/coordinator/roles/) under your existing data space.
+Click the button below to update your [data space coordinator roles](/administer-science/roles/) under your existing data space.
 
 <SDButton form="update_data_space_coordinator_role" />
 

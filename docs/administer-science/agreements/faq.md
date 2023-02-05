@@ -2,6 +2,7 @@
 title: FAQ
 category: HUNT Cloud
 sidebarDepth: 1
+permalink: /administer-science/agreements/faq
 description: Frequently asked questions related to agreements in HUNT Cloud.
 ---
 
@@ -79,11 +80,11 @@ Service centers inside NTNU are registered at the department levels. The naming 
 
 ### Can I list the same individual on all data space roles? 
 
-Yes. We use the [roles](/coordinator/roles/) in the data space orders for targeted communication for the specific responsibility areas. Thus, they can be assigned to one or several individual. 
+Yes. We use the [roles](/administer-science/roles/) in the data space orders for targeted communication for the specific responsibility areas. Thus, they can be assigned to one or several individual. 
 
 ### Can I leave the coordinator roles empty? 
 
-We use the roles to communicate information throughout the year. Thus, to allow such role specific communication to reach all data spaces, we will include the data space leader in any roles that are left blank on the data space agreement. 
+We use the roles to communicate information throughout the year. Thus, to allow such role specific communication to reach all data spaces, we will include the data space leader in any roles that are left blank on data the space agreement. 
 
 
 
@@ -102,7 +103,7 @@ Maybe. We do allow elevation of security and privacy controls tailored for indiv
 
 ### How can I update contact persons? 
 
-**Data processor and services agreements**: Forward your new contact information on email. We will use this information to update the appendix and return on email. **Data spaces**: Update your coordinator roles via our [service desk](/service-desk/data-space-orders/#update-data-space-coordinator-roles). Fill in and forward a new data space order for updates of data space leaders. **Labs**: Fill in and forward a [new lab order](/service-desk/data-space-orders/#new-lab) to update the lab leader and lab coordinator roles. 
+**Data processor and services agreements**: Forward your new contact information on email. We will use this information to update the appendix and return on email. **Data spaces**: Update your coordinator roles via our [service desk](/administer-science/service-desk/data-space-orders/#update-data-space-coordinator-roles). Fill in and forward a new data space order for updates of data space leaders. **Labs**: Fill in and forward a [new lab order](/administer-science/service-desk/data-space-orders/#new-lab) to update the lab leader and lab coordinator roles. 
 
 ### How often do I need to update our running agreements? 
 

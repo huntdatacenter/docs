@@ -1,9 +1,9 @@
 ---
 title: Policies
-category: HUNT Cloud
+category: Govern science
 permalink: /govern-science/policies
 sidebarDepth: 0
-description: This page list security and pviacy policies for HUNT Cloud.
+description: This page list security and privacy policies for HUNT Cloud.
 ---
 
 # Policies
@@ -12,12 +12,17 @@ description: This page list security and pviacy policies for HUNT Cloud.
 
 These policies are establish to ensure compliance with international standards for privacy and security, laws, regulations and legal requirements set forth in data processor agreements.
 
+::: tip Frequently asked questions
+
+See our [Policies FAQ](/govern-science/policies/faq/) for commonly asked questions regarding our security and privacy policies.
+
+:::
+
 ## Security and privacy management policy
 
 This document state our overarching information security and privacy management policy. We build our security and privacy framework from this policy.
 
 [HUNT Cloud Security And Privacy Management Policy](https://assets.hdc.ntnu.no/assets/policies/hunt-cloud-security-and-privacy-management-policy.pdf)(pdf)
-
 
 
 ## Security and privacy policies

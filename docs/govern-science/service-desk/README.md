@@ -1,7 +1,7 @@
 ---
 title: Introduction
 category: Service desk
-permalink: /service-desk/
+permalink: /govern-science/service-desk/
 description: Introductory page for predefined HUNT Cloud service desk orders.
 sidebarDepth: 2
 ---

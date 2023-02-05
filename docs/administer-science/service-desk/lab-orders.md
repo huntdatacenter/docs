@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 ::: tip Save time
 
-It saves you time to send us the request from your **organizational email**. We use this for identification, and request from private emails need additional verification that takes longer.
+It saves you time to send us the request from your **organizational email**. We use this for identification. Requests from private emails need additional verification that takes longer.
 
 :::
 
@@ -94,7 +94,7 @@ Increase or decrease the computational power of one of your existing lab machine
 * **Expected response time:** Days.
 * **Expected delivery:** Lab machine with updated size.
 * **Requirement:** The procedure require a machine restart that needs to be scheduled with your lab users.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
 
 ::: warning GPU machines
@@ -113,7 +113,7 @@ Add a [new machine](/administer-science/services/machine-types/) to your lab. A 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days.
 * **Expected delivery:** New lab machine accessible from your home machine.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
 
 ### New GPU machine
@@ -125,19 +125,19 @@ Add a new [GPU machine](/administer-science/services/machine-types/#gpu-accelera
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days (subject to availability).
 * **Expected delivery:** New lab machine with GPU accelerator accessible from your home machine.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
 
 ### Fleet of blue machines
 
-Add a fleet of blue machines to distribute analysis for large scale analysis, for example by utilizing tools such as our [BlueBox](https://docs.hdc.ntnu.no/do-science/analytical/bluebox/).
+Add a fleet of blue machines to distribute analysis for large scale analysis, for example by utilizing tools such as our [BlueBox](/do-science/tools/analytical/bluebox/).
 
 <SDButton form="request_blue_fleet" />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days (subject to availability).
 * **Expected delivery:** Multiple blue machines accessible from your home machine.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
 
 ### Shelve machine order
@@ -179,7 +179,7 @@ Once data on your machine is deleted, it can not be recreated. You must ensure t
 
 ### Expand existing volume
 
-You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand. Read more in our [coordinator FAQ](/administer-science/data/faq/#volumes).
+You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand. Read more in our [data FAQ](/administer-science/data/faq/#volumes).
 
 <SDButton form="request_expand_existing_volume" />
 
@@ -339,7 +339,7 @@ Once data on volume is deleted, it can not be recreated. You must ensure that yo
 
 ::: tip External data exports
 
-Head over to the [data space orders](/service-desk/data-space-orders) to request data exports outside HUNT Cloud, such as external export kistas and network openings.
+Head over to the [data space orders](/administer-science/service-desk/data-space-orders) to request data exports outside HUNT Cloud, such as external export kistas and network openings.
 
 :::
 
@@ -360,7 +360,7 @@ Head over to the [data space orders](/service-desk/data-space-orders) to request
 
 ### Update lab coordinator role
 
-If you need to update a [lab coordinator](/coordinator/roles/#lab-coordinator) role, please fill new lab coordinator contact in below form.
+Click the button below to update the [lab coordinator](/administer-science/roles/#lab-coordinator) role for a lab attached to your data space.
 
 <SDButton form="request_coordinator_update" />
 

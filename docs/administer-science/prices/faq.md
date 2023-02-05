@@ -1,7 +1,7 @@
 ---
 title: FAQ
 category: HUNT Cloud
-permalink: /prices/faq
+permalink: /administer-science/prices/faq
 sidebarDepth: 1
 description: This page list frequently asked questions related to the pricing of services in HUNT Cloud.
 ---
@@ -25,7 +25,7 @@ Help us expand this page. [Contact us](/contact) with your burning topics.
 
 ### Who decide which subscription level we can utilize? 
 
-You. The decision to choose a WHITE, ORANGE or BLUE subscription level is fully up to you and your data space leader. Head over to the [services overview](/administer-science/services/overview/#data-space) to see the differences between them. 
+You. The decision to choose a WHITE, ORANGE or BLUE subscription level is fully up to you and your data space leader. Head over to the [services overview](/administer-science/services/overview/#data-space-subscription) to see the differences between them. 
 
 
 
@@ -33,7 +33,7 @@ You. The decision to choose a WHITE, ORANGE or BLUE subscription level is fully 
 
 ### Are entry machines metered? 
 
-No. Entry machines are the machines we use to control the user management and security updates in individual labs. These are mandatory and the cost is included in lab subscription fees. You should -not- include the cost for these machines in your [price calculator](/prices/calculator/) estimates.
+No. Entry machines are the machines we use to control the user management and security updates in individual labs. These are mandatory and the cost is included in lab subscription fees. You should -not- include the cost for these machines in your [price calculator](/administer-science/prices/calculator/) estimates.
 
 ### Can we upsize a commitment machine with on-demand resources? 
 
@@ -50,7 +50,7 @@ On-demand resources runs until a deactivation notice from the a lab user. To sav
 
 ### Which terabyte price will each lab pay for their storage? 
 
-Each lab pay the mean terabyte price for your data space. We automatically calculate the volume discount for your data space and use this set the mean terabyte price for your data space. For details, see the meter, cost and billing section under the Store chapter in the [services specification](/administer-science/services/specifications/) and the Store section in the [price list](/prices/pricelist/), or test for yourself in the [price calculator](/prices/calculator/). 
+Each lab pay the mean terabyte price for your data space. We automatically calculate the volume discount for your data space and use this set the mean terabyte price for your data space. For details, see the meter, cost and billing section under the Store chapter in the [services specification](/administer-science/services/specifications/) and the Store section in the [price list](/administer-science/prices/pricelist/), or test for yourself in the [price calculator](/administer-science/prices/calculator/). 
 
 ### Why is one terabyte the minimum storage allocation? 
 
@@ -69,11 +69,11 @@ You can indirectly reduce the size of your storage volume by moving data to a ne
 
 ### Can we have several invoice profiles under our data space? 
 
-Yes, you may add separate invoice profiles for individual labs under your data space in the data space management section of our [service desk](/service-desk/data-space-orders/#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile. 
+Yes, you may add separate invoice profiles for individual labs under your data space in the data space management section of our [service desk](/administer-science/service-desk/data-space-orders/#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile. 
 
 ### How can we update the account information on the invoice profile? 
 
-You may update existing invoice profiles in the data space management section of our [service desk](/service-desk/data-space-orders/#update-existing-invoice-profile)
+You may update existing invoice profiles in the data space management section of our [service desk](/administer-science/service-desk/data-space-orders/#update-existing-invoice-profile)
 
 ### When should we expect our invoices? 
 
