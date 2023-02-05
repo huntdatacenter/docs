@@ -8,21 +8,19 @@ description: Internal kistas provide labs with a simple and controlled way to tr
 
 # Internal kista
 
-**Internal kistas provide labs with a simple and controlled way to transfer data between two labs inside HUNT Cloud.**
+**Internal kistas provides controlled data transfers between two labs inside HUNT Cloud. In short, internal kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)-servers dedicated to one data transaction between two labs.**
 
 [[toc]]
 
-In short, internal kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers dedicated to one data transaction between two labs.
-
 ::: tip Note
-This page describes the practical aspects of kista transfers. Head over to our [internal transfer](/faq/internal-transfer/) section in the FAQ for more information on the service itself.
+This page describes the practical aspects of kista transfers. Head over to our [internal transfer](/do-science/faq/internal-transfer/) section in the FAQ for more information on the service itself.
 :::
 
 
 
 ## Order
 
-Lab leaders and lab coordinators can order internal kistas in our [service desk](/service-desk/lab-orders/#internal-kista). 
+Lab leaders and lab coordinators can order internal kistas in our administer-science [service desk](/administer-science/service-desk/lab-orders/#internal-kista). 
 
 ## Roles 
 
@@ -119,7 +117,7 @@ ls -lah
 quit
 ```
 
-For large uploads, [terminal multiplexers](/do-science/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+For large uploads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 You can resume an upload with this command:
 
@@ -167,7 +165,7 @@ get -r example-directory /mnt/cargo/
 quit
 ```
 
-For large downloads, [terminal multiplexers](/do-science/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 You can resume a download with this command:
 
@@ -189,7 +187,9 @@ You might see this warning message when you log into a kista that has been rebui
 
 ::: details Solution
 
-[Click here](/troubleshooting/connection/#warning-remote-host-identification-has-changed) to see the full message and explanation in our main troubleshooting section. You may ignore this message if you connect to a kista inside your lab. 
+[Click here](/do-science/troubleshooting/connection.html#warning-remote-host-identification-has-changed) to see the full message and explanation in our main troubleshooting section. You may ignore this message if you connect to a kista inside your lab. 
+
+
 
 You can remove the message and proceed with the login by running the command that is stated at the end of the screen message similar to:
 
