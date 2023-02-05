@@ -23,6 +23,6 @@ Click the blue buttons on the pages below to get going with your specific order.
 
 ### Other service desks
 
-* [Lab user orders](/do-science/service-desk). This service desk lists service orders that can be requested by lab users, such as system access and lab access.
-* [Service center orders](/govern-science/service-desk/service-center-orders). This service desk lists  service orders that can be requested by service center leaders and service center administrative coordinators, such as adding new data spaces.
-* [Data controller orders](/govern-science/service-desk/data-controller-orders/). This service desk lists service orders and requests for data controller administrators, such as data processing agreement upgrades and adding new service centers.
+* [Do science service desk](/do-science/service-desk). This service desk lists service orders that can be requested by lab users.
+* [Govern science service desk](/govern-science/service-desk/). This service desk lists service orders that can be requested by data controllers and service center leaders, such as adding new data spaces.
+

@@ -1,7 +1,7 @@
 ---
 title: Ting resolutions
 category: Tingweek
-permalink: /govern-science/tingweek/lagtun/resolutions
+permalink: /govern-science/tingweek/resolutions
 description: This page list Lagtun resolutions that govern the scientific development of HUNT Cloud.
 ---
 

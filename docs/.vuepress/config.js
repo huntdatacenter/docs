@@ -464,12 +464,12 @@ module.exports = {
           children: [
             {title: "Introduction",
             path: "/govern-science/tingweek/"},
-            "/govern-science/tingweek/lagtun.md",
-            "/govern-science/tingweek/datacontrollerting.md",
-            "/govern-science/tingweek/dataspaceting.md",
             "/govern-science/tingweek/labting.md",
+            "/govern-science/tingweek/dataspaceting.md",
+            "/govern-science/tingweek/datacontrollerting.md",
+            "/govern-science/tingweek/lagtun.md",
             "/govern-science/tingweek/resolutions.md",
-            "/govern-science/tingweek/ting-dates.md",
+            "/govern-science/tingweek/dates.md",
             "/govern-science/tingweek/faq.md",
           ]
         },
@@ -498,13 +498,14 @@ module.exports = {
           ]
         },
         {
-          title: "Risk",
-          text: "Risk",
+          title: "Risk management",
+          text: "Risk management",
           collapsable: true,
           isGroup: true,
           children: [
             {title: "Introduction",
             path: "/govern-science/risk/"},
+            "/govern-science/risk/resources.md",    
             "/govern-science/risk/faq.md"    
           ]
         },
