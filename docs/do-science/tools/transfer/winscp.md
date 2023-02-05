@@ -16,7 +16,7 @@ If your host organization allows, you can use WinSCP for file transfers and sync
 
 ::: warning Requirement
 - Windows operating system.
-- A [working connection](/getting-started/) to your lab.
+- A [working connection](/do-science/getting-started/) to your lab.
 :::
 
 ## Install
@@ -26,7 +26,7 @@ On your local computer, download WinSCP from [winscp.net](https://winscp.net/eng
 ## Configure
 
 ::: tip
-This section configures WinSCP to connect your local machine to your [home machine](/faq/compute/#machine-types). Additional configurations will be needed for connections to iaas and blue machines.
+This section configures WinSCP to connect your local machine to your [home machine](/do-science/faq/compute/#machine-types). Additional configurations will be needed for connections to iaas and blue machines.
 :::
 
 You will see the **`Login`** screen when you start WinSCP for the first time.

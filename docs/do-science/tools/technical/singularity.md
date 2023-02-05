@@ -14,7 +14,7 @@ description: Installation guide for Singularity
 
 ::: warning Requirements
 
-- Conda (miniconda), see our [Conda tutorial](/do-science/analytical/conda/) for more details.
+- Conda (miniconda), see our [Conda tutorial](/do-science/tools/analytical/conda/) for more details.
 - Conda channels: conda-forge, bioconda
 
 :::

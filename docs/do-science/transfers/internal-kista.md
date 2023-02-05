@@ -1,7 +1,7 @@
 ---
 title: Internal kista
 category: Data transfers
-permalink: /data-transfers/internal-kista
+permalink: /do-science/data-transfers/internal-kista
 sidebarDepth: 1
 description: Internal kistas provide labs with a simple and controlled way to transfer data between two labs inside HUNT Cloud.
 ---

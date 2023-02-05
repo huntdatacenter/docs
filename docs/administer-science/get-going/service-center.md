@@ -12,7 +12,7 @@ description: This page helps you to get going with administrative agreements in 
 
 [[toc]]
 
-Service agreements defines a services center and regulates how services are provided, billed and controlled. Read more about the services agreement in our [agreement section](/agreements/overview/#services-agreement).
+Service agreements defines a services center and regulates how services are provided, billed and controlled. Read more about the services agreement in our [agreement section](/administer-science/agreements/overview/#services-agreement).
 
 
 ### 1. Decide where your services center should be located 
@@ -32,7 +32,7 @@ For NTNU, Services centers are located at the Department level with Deputy Head 
 
 We need a few bits of information to prepare your agreement:
  
-- Download the "[HUNT Cloud Services Agreement Form](/agreements/overview/#required-information-2)" on your local machine (right click on the link and select "Save Link As...")
+- Download the "[HUNT Cloud Services Agreement Form](/administer-science/agreements/overview/#required-information-2)" on your local machine (right click on the link and select "Save Link As...")
 - Open the text file in Notepad, Word or a similar application and supply the required information. Field descriptions are included in the "Clarification of the form fields" under the link above. 
 - Save the text file on your local machine and send ut the file from the data controller section of our [service desk](/service-desk/data-controller-orders/#add-a-service-center).
 
@@ -49,7 +49,7 @@ We will send you the services final agreement by email as a PDF-file after we re
 - Coordinate signing with the signatory official in your organization and return to us by email. 
 - We will add our countersignature and send you the active agreement for archiving. 
 
-Your data services agreement is signed, sealed and delivered. You have now paved the way for scientists to manage the remaining agreement levels. Celebrate with more coffee and proudly pass the torch to your scientific leaders to get going with their [data spaces](/coordination/get-going/data-space/).
+Your data services agreement is signed, sealed and delivered. You have now paved the way for scientists to manage the remaining agreement levels. Celebrate with more coffee and proudly pass the torch to your scientific leaders to get going with their [data spaces](/administer-science/get-going/data-space/).
 
 
 

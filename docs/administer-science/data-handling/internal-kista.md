@@ -22,7 +22,7 @@ This page describes the practical aspects of kista transfers. Head over to our [
 
 ## Order
 
-Lab leaders and lab coordinators can order internal kistas in our [service desk](/service-desk/lab-orders/#internal-kista). 
+Lab leaders and lab coordinators can order internal kistas in our [service desk](/administer-science/service-desk/lab-orders/#internal-kista). 
 
 ## Roles 
 
@@ -119,7 +119,7 @@ ls -lah
 quit
 ```
 
-For large uploads, [terminal multiplexers](/do-science/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+For large uploads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 You can resume an upload with this command:
 
@@ -167,7 +167,7 @@ get -r example-directory /mnt/cargo/
 quit
 ```
 
-For large downloads, [terminal multiplexers](/do-science/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 You can resume a download with this command:
 
@@ -189,7 +189,7 @@ You might see this warning message when you log into a kista that has been rebui
 
 ::: details Solution
 
-[Click here](/troubleshooting/connection/#warning-remote-host-identification-has-changed) to see the full message and explanation in our main troubleshooting section. You may ignore this message if you connect to a kista inside your lab. 
+[Click here](/do-science/troubleshooting/connection/#warning-remote-host-identification-has-changed) to see the full message and explanation in our main troubleshooting section. You may ignore this message if you connect to a kista inside your lab. 
 
 You can remove the message and proceed with the login by running the command that is stated at the end of the screen message similar to:
 

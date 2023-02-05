@@ -8,7 +8,7 @@ description: This page holds the current price list for HUNT Cloud.
 
 # Price list
 
-**This page list the prices for our cloud services. The price list is incorporated as an appendix to cloud services agreement, and costs are metered and billed in accordanced with our [services specifications](/services/specifications).**
+**This page list the prices for our cloud services. The price list is incorporated as an appendix to cloud services agreement, and costs are metered and billed in accordanced with our [services specifications](/administer-science/services/specifications).**
 
 [[toc]]
 

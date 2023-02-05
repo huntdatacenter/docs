@@ -7,13 +7,13 @@ description: This page gives an overview of the HUNT Cloud services.
 
 # Services overview
 
-This page gives a brief overview of our cloud services. See the [Services specifications](/services/specifications) for detailed documentation.
+This page gives a brief overview of our cloud services. See the [Services specifications](/administer-science/services/specifications) for detailed documentation.
 
 [[toc]]
 
 ## Subscriptions
 
-Our subscriptions forms the frame where you attach resources for computation, storage and transportation. See [Services specifications](/services/specifications) for detailed information.
+Our subscriptions forms the frame where you attach resources for computation, storage and transportation. See [Services specifications](/administer-science/services/specifications) for detailed information.
 
 
 ### Data space
@@ -49,7 +49,7 @@ This is the subscription that establishes a management account (data space) in H
 
 ### Lab
 
-This is the subscription that gives to access to one digital laboratory where you add resources for computation and storage. One to many labs can be organized under one data space. The availability of certain resources are defined by the subscription level of the data space for which the lab is attached (see above). See the [Services specifications](/services/specifications) for detailed information.
+This is the subscription that gives to access to one digital laboratory where you add resources for computation and storage. One to many labs can be organized under one data space. The availability of certain resources are defined by the subscription level of the data space for which the lab is attached (see above). See the [Services specifications](/administer-science/services/specifications) for detailed information.
 
 | Subscription level: | LAB |
 | ---- | ---- |
@@ -63,7 +63,7 @@ This is the default service that deploys the security and compliance framework f
 
 ### Compute
 
-This is the service that deploys one to many virtual machines for data analysis in labs. The service allows you to deploy both short term and long term [machine types](/services/machine-types) of various sizes.
+This is the service that deploys one to many virtual machines for data analysis in labs. The service allows you to deploy both short term and long term [machine types](/administer-science/services/machine-types) of various sizes.
 
 | Subscription levels: | WHITE | ORANGE | BLUE |
 | ---- | ---- | ---- | ---- | 

@@ -2,6 +2,7 @@
 title: Guides
 category: Guides
 description: Pilot page for guides on scientific activities in HUNT Cloud.
+permalink: /do-science/guides/
 ---
 
 # Introduction guides

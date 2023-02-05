@@ -1,7 +1,7 @@
 ---
 title: Lab reports
-category: Troubleshooting
-permalink: /troubleshooting/labreports
+category: FAQ
+permalink: /administer-science/faq/labreports
 sidebarDepth: 1
 description: Starting from January 2020, we aim to send monthly reports to lab leaders and lab coordinators of the resource allocations and usage in their lab environments. Here is a collection of some of the known issues as of today.
 ---

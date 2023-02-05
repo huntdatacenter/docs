@@ -1,6 +1,7 @@
 ---
 title: Introduction
 category: Data transfers
+permalink: /do-science/data-transfers/
 ---
 
 # Introduction to data transfers
@@ -9,11 +10,11 @@ category: Data transfers
 
 ### Transfers inside HUNT Cloud 
 
-[Internal kistas](/do-science/transfers/internal-kista/) ensures controlled transfers between labs inside HUNT Cloud.
+[Internal kistas](/do-science/tools/transfers/internal-kista/) ensures controlled transfers between labs inside HUNT Cloud.
 
 ### Transfers with partners outside HUNT Cloud
 
-[External kistas](/do-science/transfers/external-kista/) ensures controlled transfers between external parties outside HUNT Cloud and labs inside HUNT Cloud.
+[External kistas](/do-science/tools/transfers/external-kista/) ensures controlled transfers between external parties outside HUNT Cloud and labs inside HUNT Cloud.
 
 ### General transfer resources
 

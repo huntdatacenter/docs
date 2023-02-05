@@ -2,6 +2,7 @@
 title: Downloads
 category: HUNT Cloud
 sidebarDepth: 1
+permalink: /administer-science/agreements/downloads
 description: This page list agreements that may be relevant for you as a lab user. Contact your lab leader for more details on other agreement types.
 ---
 
@@ -231,7 +232,7 @@ your-username@`your-labname`-home~$
 
 - **Uploader:** This is the name of the lab user that will copy date from your lab and to the internal kista.
 
-- **Data size**: This is the size in gigabytes of the storage area in the kista. You can for example use [NCDU](/do-science/technical/ncdu/) to estimate the size of your data.
+- **Data size**: This is the size in gigabytes of the storage area in the kista. You can for example use [NCDU](/do-science/tools/technical/ncdu/) to estimate the size of your data.
 
 - **Kista duration**: Specify the number of days that you need the kista. Default is 30 days, maxium is 90 days.
 

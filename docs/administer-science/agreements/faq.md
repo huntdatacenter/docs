@@ -21,15 +21,15 @@ This section prosper on questions. [Contact us](/contact) with your wonders and 
 
 ### Where do I start? 
 
-Welcome onboard! Your starting point depends on your role and organization. We have provided a step-wise guide on how to [get going](/coordination/get-going/) so you can jump directly into your section of choice. In short, you need to ensure that the data controller agreement is signed, sealed and delivered before you can sign a services center agreement and so forth. [Contact us](/contact) if you don't know where to start. 
+Welcome onboard! Your starting point depends on your role and organization. We have provided a step-wise guide on how to [get going](/administer-science/get-going/) so you can jump directly into your section of choice. In short, you need to ensure that the data controller agreement is signed, sealed and delivered before you can sign a services center agreement and so forth. [Contact us](/contact) if you don't know where to start. 
 
 ### Do I need all of the agreement layers? 
 
-Yes. All labs needs to be run under a complete [agreement layer](/agreements/overview/#overview) so we can ensure compliance with relevant laws, regulations and certificates. We know, this is complex. Although on the bright side, it allows for a solid base to organize and grow your scientific activities.
+Yes. All labs needs to be run under a complete [agreement layer](/administer-science/agreements/overview/#overview) so we can ensure compliance with relevant laws, regulations and certificates. We know, this is complex. Although on the bright side, it allows for a solid base to organize and grow your scientific activities.
 
 ### Why do you need all these agreement layers? 
 
-Our [agreement structure](/agreements/overview/#overview) has evolved over time to enable high variability in activities among many member organizations. We know, this is a mouthful if you need access to one lab only. However, once you [get going](/coordination/get-going/) with the terminology and structure we hope you will enjoy the flexibility. The layered structure is utilized both for governance, reporting, incentives and to comply with laws and regulations.
+Our [agreement structure](/administer-science/agreements/overview/#overview) has evolved over time to enable high variability in activities among many member organizations. We know, this is a mouthful if you need access to one lab only. However, once you [get going](/administer-science/get-going/) with the terminology and structure we hope you will enjoy the flexibility. The layered structure is utilized both for governance, reporting, incentives and to comply with laws and regulations.
 
 ## Management
 

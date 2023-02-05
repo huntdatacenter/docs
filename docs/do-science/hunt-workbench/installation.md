@@ -18,8 +18,8 @@ You will need the following to complete this guide:
 
 ::: warning Requirements
 
-- A working VPN and SSH configuration as described in our [Getting started](/getting-started/) guide.
-- A HUNT Workbench certificate as described in the [HUNT Workbench certificate request](/do-science/guides/workbench-request/).
+- A working VPN and SSH configuration as described in our [Getting started](/do-science/getting-started/) guide.
+- A HUNT Workbench certificate as described in the [HUNT Workbench certificate request](/do-science/guides/hunt-workbench-request/).
 
 Without these it's impossible to complete this guide. 
 

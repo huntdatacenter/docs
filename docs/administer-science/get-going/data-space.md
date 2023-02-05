@@ -14,7 +14,7 @@ Data spaces in HUNT Cloud are scientific units such as centers and research grou
 
 [[toc]]
 
-Data spaces are controlled in data space orders that specify subscription levels for available resources in labs and identify cross-lab coordinators. Read more abou the data space orders in our [agreement section](/agreements/overview/#data-space-order).
+Data spaces are controlled in data space orders that specify subscription levels for available resources in labs and identify cross-lab coordinators. Read more abou the data space orders in our [agreement section](/administer-science/agreements/overview/#data-space-order).
 
 ### 1. Brand your data space
 
@@ -28,20 +28,20 @@ High-trust and high-paced science needs smooth and seamless coordination to fly.
 
 ### 3. Decide your data space subscription level
 
-You have the option to choose three different data space subscription levels. Our [services overview](/services/overview/#data-space) provides a summary of different features, the [services specifications](/services/specifications/) holds the detailed description, and the [price list](/prices/pricelist/) specify the yearly cost. 
+You have the option to choose three different data space subscription levels. Our [services overview](/administer-science/services/overview/#data-space) provides a summary of different features, the [services specifications](/administer-science/services/specifications/) holds the detailed description, and the [price list](/prices/pricelist/) specify the yearly cost. 
 
 [Contact us](/contact) if you are unsure which subscription level that may provide the best fit for your scientific activities.
 
 ### 4. Download and complete the data space order
 
-- Download the "[Data space order](/agreements/downloads/#data-space-order)" on your local machine (right click on the link and select "Save Link As...")
+- Download the "[Data space order](/administer-science/agreements/downloads/#data-space-order)" on your local machine (right click on the link and select "Save Link As...")
 - Open the PDF on your local machine and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. The "Clarification of the form fields" includes a field by field descriptions of the order.
 - Add your own signature, save the PDF and forward the document to your services center leader for co-signature. 
 - [Contact us](/contact) if you need help to identify the service center leader for your organization.
 
 ### 5. Download and complete the invoice profile
 
-- Download the "[Invoice profile](/agreements/downloads/#invoice-profile)" on your local machine (right click on the link and select "Save Link As...")
+- Download the "[Invoice profile](/administer-science/agreements/downloads/#invoice-profile)" on your local machine (right click on the link and select "Save Link As...")
 - Open the PDF on your local machine and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. The "Clarification of the form fields" includes a field by field descriptions of the profile.
 - Add your own signature, save the PDF. 
 
@@ -71,4 +71,4 @@ Reasons to keep your activities together may be unity, simplicity, and cost. Rea
 [Contact us ](/contact) if you think we can assist in your evaluation, and keep in mind that you can add more labs later. 
 
 
-Once you have your plan crafted, head our to our [lab guide](/coordination/get-going/lab/) to get going with your first lab under your data space.
+Once you have your plan crafted, head our to our [lab guide](/administer-science/get-going/lab/) to get going with your first lab under your data space.

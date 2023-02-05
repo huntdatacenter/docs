@@ -1,7 +1,7 @@
 ---
 title: Certificates
 category: HUNT Cloud
-permalink: /certificates
+permalink: /govern-science/compliance/certificates
 sidebarDepth: 1
 description: This page list compliance certificates for HUNT Cloud.
 ---

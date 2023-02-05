@@ -81,10 +81,6 @@ module.exports = {
       }
     ],
     navbar: [{
-        text: "Home - test1",
-        link: "/"
-      },
-      {
         text: "Getting started",
         link: "/getting-started/"
       }
@@ -101,10 +97,6 @@ module.exports = {
             title: "Welcome",
             path: "/do-science/",
           },
-          {
-            title: "Back to home page",
-            path: "/",
-          }
           ]
         },
         {
@@ -235,10 +227,8 @@ module.exports = {
           collapsable: true,
           isGroup: true,
           children: [
-            {title: "Introduction",
-            path: "/do-science/community/",},
-            "/do-science/community/labting.md",
-            "/do-science/community/digital-cafe.md",
+           "/do-science/community/cafe.md",
+           "/do-science/community/labting.md",
           ]
         },       
         "/do-science/service-desk/",
@@ -253,7 +243,8 @@ module.exports = {
            "/do-science/troubleshooting/connection.md",
            "/do-science/troubleshooting/lab-activities.md",
           ]
-        },        {
+        },
+        {
           title: "FAQ",
           text: "FAQ",
           collapsable: true,
@@ -268,6 +259,30 @@ module.exports = {
             "/do-science/faq/external-transfer.md",
             "/do-science/faq/security.md",
           ]
+         },        
+         {
+          title: "Global",
+          text: "Global",
+          collapsable: false,
+          isGroup: true,
+          children: [
+          {
+            title: "Start page",
+            path: "/",
+          },
+          {
+            title: "System status",
+            path: "/system-status.md",
+          },
+          {
+            title: "Contact",
+            path: "/contact.md",
+          },
+          {
+            title: "Contribute",
+            path: "/contribute.md",
+          },
+        ]  
         },
       ],
       "/administer-science/": [{
@@ -280,36 +295,30 @@ module.exports = {
             title: "Welcome",
             path: "/administer-science/",
           },
-          {
-            title: "Introduction",
-            path: "/administer-science/introduction.md",
-          },
-          {
-            title: "Back to home page",
-            path: "/",
-          }
+          "/administer-science/roles.md",
+
           ]
         },
-        {
-          title: "HUNT Lab",
-          text: "HUNT Lab",
-          collapsable: true,
-          isGroup: true,
-          children: [
-            {title: "Introduction",
-            path: "/administer-science/hunt-lab/"},
-          ]
-        },
-        {
-          title: "HUNT Dataspace",
-          text: "HUNT Dataspace",
-          collapsable: true,
-          isGroup: true,
-          children: [
-            {title: "Introduction",
-            path: "/administer-science/hunt-dataspace/"},
-          ]
-        },
+//         {
+//           title: "HUNT Lab",
+//           text: "HUNT Lab",
+//           collapsable: true,
+//           isGroup: true,
+//           children: [
+//             {title: "Introduction",
+//             path: "/administer-science/hunt-lab/"},
+//           ]
+//         },
+//         {
+//           title: "HUNT Dataspace",
+//           text: "HUNT Dataspace",
+//           collapsable: true,
+//           isGroup: true,
+//           children: [
+//             {title: "Introduction",
+//             path: "/administer-science/hunt-dataspace/"},
+//           ]
+//         },
         {
           title: "Get going",
           text: "Get going",
@@ -318,8 +327,10 @@ module.exports = {
           children: [
             {title: "Introduction",
             path: "/administer-science/get-going/"},
-            "/administer-science/get-going/lab.md",
+            "/administer-science/get-going/data-controller.md",
+            "/administer-science/get-going/service-center.md",
             "/administer-science/get-going/data-space.md",
+            "/administer-science/get-going/lab.md",
           ]
         },
         {
@@ -388,6 +399,30 @@ module.exports = {
             "/administer-science/faq/faq.md",
             "/administer-science/faq/labreports.md",
           ]
+         },
+         {
+          title: "Global",
+          text: "Global",
+          collapsable: false,
+          isGroup: true,
+          children: [
+          {
+            title: "Start page",
+            path: "/",
+          },
+          {
+            title: "System status",
+            path: "/system-status.md",
+          },
+          {
+            title: "Contact",
+            path: "/contact.md",
+          },
+          {
+            title: "Contribute",
+            path: "/contribute.md",
+          },
+        ]  
         },
       ],
       "/govern-science/": [{
@@ -408,10 +443,6 @@ module.exports = {
             title: "Responsibilities",
             path: "/govern-science/responsibilities.md",
           },
-          {
-            title: "Back to home page",
-            path: "/",
-          }
           ]
         },
         {
@@ -485,6 +516,30 @@ module.exports = {
             path: "/govern-science/faq/"},
           ]
         },
+        {
+          title: "Global",
+          text: "Global",
+          collapsable: false,
+          isGroup: true,
+          children: [
+          {
+            title: "Start page",
+            path: "/",
+          },
+          {
+            title: "System status",
+            path: "/system-status.md",
+          },
+          {
+            title: "Contact",
+            path: "/contact.md",
+          },
+          {
+            title: "Contribute",
+            path: "/contribute.md",
+          },
+        ]  
+        },        
       ],
       "/about/": [{
         title: "About HUNT Cloud",
@@ -504,10 +559,6 @@ module.exports = {
             title: "Affiliation",
             path: "/about/affiliation.md",
           },
-          {
-            title: "Back to home page",
-            path: "/",
-          }
           ]
         },
         {
@@ -542,13 +593,13 @@ module.exports = {
           ]
         },
         {
-          title: "Art",
-          text: "Art",
+          title: "Illustrations",
+          text: "Illustrations",
           collapsable: true,
           isGroup: true,
           children: [
             {title: "Introduction",
-            path: "/about/art/"},
+            path: "/about/illustrations/"},
           ]
         },
         {
@@ -570,6 +621,30 @@ module.exports = {
             {title: "Introduction",
             path: "/about/faq/"},
           ]
+        },
+        {
+          title: "Global",
+          text: "Global",
+          collapsable: false,
+          isGroup: true,
+          children: [
+          {
+            title: "Start page",
+            path: "/",
+          },
+          {
+            title: "System status",
+            path: "/system-status.md",
+          },
+          {
+            title: "Contact",
+            path: "/contact.md",
+          },
+          {
+            title: "Contribute",
+            path: "/contribute.md",
+          },
+        ]  
         },
       ],      
       "/": [{

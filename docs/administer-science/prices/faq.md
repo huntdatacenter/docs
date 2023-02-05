@@ -25,7 +25,7 @@ Help us expand this page. [Contact us](/contact) with your burning topics.
 
 ### Who decide which subscription level we can utilize? 
 
-You. The decision to choose a WHITE, ORANGE or BLUE subscription level is fully up to you and your data space leader. Head over to the [services overview](/services/overview/#data-space) to see the differences between them. 
+You. The decision to choose a WHITE, ORANGE or BLUE subscription level is fully up to you and your data space leader. Head over to the [services overview](/administer-science/services/overview/#data-space) to see the differences between them. 
 
 
 
@@ -50,7 +50,7 @@ On-demand resources runs until a deactivation notice from the a lab user. To sav
 
 ### Which terabyte price will each lab pay for their storage? 
 
-Each lab pay the mean terabyte price for your data space. We automatically calculate the volume discount for your data space and use this set the mean terabyte price for your data space. For details, see the meter, cost and billing section under the Store chapter in the [services specification](/services/specifications/) and the Store section in the [price list](/prices/pricelist/), or test for yourself in the [price calculator](/prices/calculator/). 
+Each lab pay the mean terabyte price for your data space. We automatically calculate the volume discount for your data space and use this set the mean terabyte price for your data space. For details, see the meter, cost and billing section under the Store chapter in the [services specification](/administer-science/services/specifications/) and the Store section in the [price list](/prices/pricelist/), or test for yourself in the [price calculator](/prices/calculator/). 
 
 ### Why is one terabyte the minimum storage allocation? 
 
@@ -58,11 +58,11 @@ We try ensure a consistent storage performance by linking usage to the overall s
 
 ### Why to we see less storage on our machines that we pay for? 
 
-The volumes sizes that you see on your machines are slightly less that the volume sizes that you claim. This is expected. [Read why here](/data/faq/#why-is-volume-sizes-less-than-claimed).
+The volumes sizes that you see on your machines are slightly less that the volume sizes that you claim. This is expected. [Read why here](/administer-science/data/faq/#why-is-volume-sizes-less-than-claimed).
 
 ### How is storage reduction metered? 
 
-You can indirectly reduce the size of your storage volume by moving data to a new smaller volume ([see the steps here](/data/faq/#can-we-reduce-the-size-of-existing-volumes)). During such procedures, both volumes are metered until you request deletion of the original volume in the service desk.
+You can indirectly reduce the size of your storage volume by moving data to a new smaller volume ([see the steps here](/administer-science/data/faq/#can-we-reduce-the-size-of-existing-volumes)). During such procedures, both volumes are metered until you request deletion of the original volume in the service desk.
 
 
 ## Billing 
@@ -81,7 +81,7 @@ We aim to ship invoices after each quarter. The first invoices under the new ser
 
 ### When should we expect commit services to be invoices? 
 
-You should expect the initial invoice for data space subscriptions, lab subscriptions and 1Y/3Y commitments of machines and storage to be in the next quarter after your lab deployment. Usage of various services will be combined into one invoice expected to be sent quarterly. Invoice details for each service is specified in the [services specification](/services/specifications/) under the "Billing" sections. 
+You should expect the initial invoice for data space subscriptions, lab subscriptions and 1Y/3Y commitments of machines and storage to be in the next quarter after your lab deployment. Usage of various services will be combined into one invoice expected to be sent quarterly. Invoice details for each service is specified in the [services specification](/administer-science/services/specifications/) under the "Billing" sections. 
 
 ### I am invoiced too much, now what? 
 

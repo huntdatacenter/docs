@@ -88,7 +88,7 @@ We will communicate your VPN certificate and SSH configuration over your organiz
 
 ::: tip Decryption guides
 
-Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](/do-science/transfer/7z/#windows), [mac](/do-science/transfer/7z/#mac-os-x), [linux](https://www.google.no/search?q=unpack+7z+linux).
+Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](/do-science/tools/transfer/7z/#windows), [mac](/do-science/tools/transfer/7z/#mac-os-x), [linux](https://www.google.no/search?q=unpack+7z+linux).
 
 :::
 

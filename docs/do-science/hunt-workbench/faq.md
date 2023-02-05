@@ -208,7 +208,7 @@ If you have older setup and missing some of these packages you can follow the "_
 
 ### How do I install additional R packages?
 
-If you want to install your own R packages, we recommend that you use [Conda](/do-science/analytical/conda/) where ever possible:
+If you want to install your own R packages, we recommend that you use [Conda](/do-science/tools/analytical/conda/) where ever possible:
 
 1. Open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal):
 
@@ -317,6 +317,6 @@ Yes. You can find your **`workbench terminal`** in the main view of applications
 
 ### When do I need to use a terminal?
 
-You **`workbench`** terminal can be handy when it comes to managing [Conda packages](/do-science/analytical/conda/), monitoring resources (**`htop`**), or handling other tasks.
+You **`workbench`** terminal can be handy when it comes to managing [Conda packages](/do-science/tools/analytical/conda/), monitoring resources (**`htop`**), or handling other tasks.
 
 

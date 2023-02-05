@@ -14,7 +14,7 @@ Labs in HUNT Cloud are digital environments (laboratories) where scientists acce
 
 [[toc]]
 
-Labs are controlled in lab orders that specify lab leaders and coordinators that can authorize lab users and adjust resources. Read more about the lab orders in our [agreement section](/agreements/overview/#lab-order)
+Labs are controlled in lab orders that specify lab leaders and coordinators that can authorize lab users and adjust resources. Read more about the lab orders in our [agreement section](/administer-science/agreements/overview/#lab-order)
 
 
 ### 1. Identify your lab team
@@ -33,7 +33,7 @@ Your lab will be configured with one default machine that we call the **`home`**
 
 ::: tip Machine type adjustments
 
-Machine sizes can be adjusted up and down throughout your lab's life cycle from our [service desk](/service-desk/lab-orders.html#compute).
+Machine sizes can be adjusted up and down throughout your lab's life cycle from our [service desk](/administer-science/service-desk/lab-orders.html#compute).
  
 :::
 
@@ -66,7 +66,7 @@ Your home machine type and attached storage will be billed in accordance with ou
 
 ### 5. Prepare your lab order
 
-- Download the "[Lab order](/agreements/downloads/#lab-order)" on your local machine (right click on the link and select "Save Link As...")
+- Download the "[Lab order](/administer-science/agreements/downloads/#lab-order)" on your local machine (right click on the link and select "Save Link As...")
 - Open the PDF on your local machine and either (i) print and complete the fields by hand or (i) open in an PDF-editor and complete the fields digitally. Field descriptions are included in the "Clarification of the form fields" under the link above. 
 - Add your own signature and the signature of the lab leader.
 
@@ -92,11 +92,11 @@ You lab leader is responsible for the identification and verification of individ
 
 ::: tip Service desk
 
-[Click here to add users to your lab](/service-desk/lab-orders.html#add-a-new-lab-user)
+[Click here to add users to your lab](/administer-science/service-desk/lab-orders.html#add-a-new-lab-user)
 
 :::
 
-- Download the "[User agreement](/agreements/downloads/#user-agreement)" on your local machine (right click on the link and select "Save Link As...").
+- Download the "[User agreement](/administer-science/agreements/downloads/#user-agreement)" on your local machine (right click on the link and select "Save Link As...").
 - Open the PDF on your local machine and either (i) print and complete the fields by hand or (i) open in an PDF-editor and complete the fields digitally. Field descriptions are included in the "Clarification of the form fields" under the link above. 
 - Ensure that both the lab leader and the new user sign the agreement.
 - Forword the signed agreements us using the service desk link above.

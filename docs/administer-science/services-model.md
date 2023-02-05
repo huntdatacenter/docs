@@ -1,7 +1,7 @@
 ---
 title: Services model
 category: HUNT Cloud
-permalink: /services/services-model
+permalink: /administer-science/services/services-model
 description: This page contains information on the services model in HUNT Cloud.
 ---
 
@@ -45,11 +45,11 @@ We are introducing two new management units: Services centers and Data spaces. T
  
 ![Unit hierarchy](./services/images/hunt-cloud-service-units-overview.png "HUNT Cloud unit hierarchy")
 
-**Services center** is a new cloud unit intended for the department level that regulates how cloud resources are controlled, priced and billed across data spaces and labs. This is controlled in a new [services agreement](/agreements/overview/#services-agreement) that includes the services specification and price list. Services centers are attached to data controllers.
+**Services center** is a new cloud unit intended for the department level that regulates how cloud resources are controlled, priced and billed across data spaces and labs. This is controlled in a new [services agreement](/administer-science/agreements/overview/#services-agreement) that includes the services specification and price list. Services centers are attached to data controllers.
 
-**Data space** is a new cloud unit that is intended for the research center and research group level to simplify management of one to many labs, including cross-lab coordination, reporting and billing. Data spaces are now attached to a services center via a simple [data space order](/agreements/downloads/#data-space-order).
+**Data space** is a new cloud unit that is intended for the research center and research group level to simplify management of one to many labs, including cross-lab coordination, reporting and billing. Data spaces are now attached to a services center via a simple [data space order](/administer-science/agreements/downloads/#data-space-order).
 
-**Lab** is still the same place where you can explore and discover together with your team: you collaborate, store and analyze your data inside a digital laboratory. No changes, except that the registration of new labs are simplified into a quick to complete [lab order](/agreements/downloads/#lab-order).
+**Lab** is still the same place where you can explore and discover together with your team: you collaborate, store and analyze your data inside a digital laboratory. No changes, except that the registration of new labs are simplified into a quick to complete [lab order](/administer-science/agreements/downloads/#lab-order).
 
 To summarize, the separation of scientific aspects (data spaces and labs) from contractual complexity (data controller and services centers) allow for a simplified and quick way to boot up your data space and add new labs into your portfolio. The practical aspect is that we will need new agreements with all labs, and new agreements with data spaces and services centers. 
 
@@ -92,11 +92,11 @@ A second goal of this setup is to enhance exchanges of scientific coordination e
 
 ### New services model
 
-We are introducing new [services specifications](/services/specifications/) with the intention to increase the predictability and to tune expectations of available services. The document is attached to the services agreement and includes the following service categories:
+We are introducing new [services specifications](/administer-science/services/specifications/) with the intention to increase the predictability and to tune expectations of available services. The document is attached to the services agreement and includes the following service categories:
 
 ![HUNT Cloud services](./services/images/hunt-cloud-services.png "HUNT Cloud services")
 
-The services specifications include three new [data space subscription levels](/services/overview/#data-space) named by colors. These differ in their individual service availability, resource prioritization, costs for individual resources etc. In short, 
+The services specifications include three new [data space subscription levels](/administer-science/services/overview/#data-space) named by colors. These differ in their individual service availability, resource prioritization, costs for individual resources etc. In short, 
 
 ![Data space subscription levels](./services/images/hunt-cloud-data-space-subscriptions.png "HUNT Cloud data space subscription levels")
 
@@ -133,7 +133,7 @@ For storage, we have a **VOLUME DISCOUNT** that is automatically calculated from
 
 ![Price elements](./services/images/hunt-cloud-prices-elements.png "HUNT Cloud price elements")
 
-Details on how costs are measured (metered), adjusted and billed are included under each service chapter in our [services specifications](/services/specifications). 
+Details on how costs are measured (metered), adjusted and billed are included under each service chapter in our [services specifications](/administer-science/services/specifications). 
 
 ::: tip PRICE LIST
 
