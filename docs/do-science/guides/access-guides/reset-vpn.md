@@ -8,39 +8,50 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 # VPN certificate reset
 
-**This guide describes how to reset your VPN certificate and passphrase required to access your lab when you receieve your shipments from the [VPN certificate reset](/service-desk/user-orders/#vpn-certificate-reset) order.**
+**This guide describes how to reset your VPN certificate and passphrase required to access your lab when you receieve your shipments from the [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) order.**
 
-### Requirements
+[[toc]]
+
+## 1. Requirements
 
 ::: warning Shipments from the VPN certificate reset order 
 
-1. Your new VPN certificate and VPN profile sent over Filesender.no
-2. Your new **`VPN passphrase`** and your **`ZIP file key`** sent over Signal.
+1.1 Your new VPN certificate and VPN profile in a compressed `7z`-file sent over filesender.no
+
+1.2. Your new `VPN passphrase` and your `ZIP file key` sent over Signal.
 
 :::
 
-Software already installed in your initial lab onboarding: 
+**Required software**. The following required software should aready be installed during your initial onboarding: 
 
-3. VPN software already installed (if not, head over to our Getting started guide to [install the VPN software](/getting-started/configure-vpn/#_2-1-install-the-vpn-software).
-4. A working Google authenticator application on your phone that provid time-based VPN verification codes (if not, you can order [Google authenticator key reset](/service-desk/user-orders/#google-authenticator-key-reset) in our service desk).
+1.3. Working VPN software (if not, head over to our Getting started guide to [install the VPN software](/getting-started/configure-vpn/#_2-1-install-the-vpn-software).
 
-### Download and unpack the certificate
+1.4. A working Google authenticator application on your phone that provide time-based VPN verification codes (if not, you can order a [Google authenticator key reset](/do-science/service-desk/#google-authenticator-key-reset) in our service desk).
+
+## 2. Download and unpack your new certificate
 
 We will communicate your VPN certificate over your organizational email. You will receive a link to an encrypted file archive (7z-file).
 
-- Click on the link in the email to download the file and save this on your local machine.
-- Unpack (extract) the file with your favorite file archiver software that recognize the [7z format](https://docs.hdc.ntnu.no/do-science/transfer/7z/) (see below).
-- Use the key named **`ZIP file key`** from your Signal transfer to decrypt the 7-zip archive.
+2.1 Click on the link in the email to download the file and save this on your local computer.
+
+2.2 Unpack (extract) the file with your favorite file archiver software that recognize the [7z format](/do-science/tools/transfer/7z/) (see below).
+
+Use the key named **`ZIP file key`** from your Signal transfer to decrypt the 7-zip archive.
 
 ::: tip Decryption guides
 
-Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](https://docs.hdc.ntnu.no/do-science/transfer/7z/#windows), [mac](https://docs.hdc.ntnu.no/do-science/transfer/7z/#mac-os-x), [linux](https://www.google.no/search?q=unpack+7z+linux).
-
-OS X and macOS: The default archive utility will not recognize the passphrase of 7z files. You will need to install 7z-compatible software from the link above.
+[Click here](/do-science/tools/transfer/7z/#install-7z-on-your-local-computer) for installation guidance if your current software don't recognize the 7z-format.
 
 :::
 
-### Remove the old VPN certificate
+::: danger OS X and MacOS - Passphrase not working?
+
+Note that the default archive utility on MacOS do -not- recognize the passphrase of the 7z files. You will need to install the 7z-compatible software from the link above.
+
+:::
+
+
+## 3. Remove your old VPN certificate
 
 You will need to remove your old VPN certificate and passwords before you install a new one. 
 
@@ -53,25 +64,22 @@ You will need to remove your old VPN certificate and passwords before you instal
 C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>
 ```
 
-3. Right click on the OpenVPN icon once more and **`Import from file`** from the Connect to the VPN section of our Getting started guide.
-
 :::
 
-### Setup the new VPN profile
+## 4. Setup the new VPN profile
 
 Follow the [Setup the VPN profile](/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) section of our "Getting started" guide. 
 
-### Connect to the VPN
+## 5. Connect to the VPN
 
 Follow the [Connect to the VPN](/getting-started/configure-vpn/#_2-3-connect-to-the-vpn) section of our "Getting started guide". 
 
-### Verify your VPN connection
+## 6. Verify your VPN connection
 
 Follow the [Verify your VPN connection](/getting-started/configure-vpn/#_2-4-verify-your-vpn-connection) section to verify a successful VPN connection as your will not be able to log into your lab until the VPN is working.
 
-### Troubleshooting
+## Troubleshooting
 
-[Contact us](/contact) in your Slack lab table if you experience trouble with installation and suggestions on how to improve this guide..
-
+See the [Immediate troubleshooting](/do-science/getting-started/configure-vpn/#immediate-troubleshooting) section in our [VPN configuration](/do-science/getting-started/configure-vpn/#_2-1-install-the-vpn-software) guide. 
 
 
