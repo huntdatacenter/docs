@@ -24,6 +24,8 @@ We recommend that you open your workbench in the **`Google Chrome`** browser for
 
 :::
 
+## Start
+
 ### Open a Stata notebook
 
 To get going, open your workbench and click on the Stata icon. This opens a new workbench that runs the `stata_kernel`.

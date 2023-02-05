@@ -8,16 +8,23 @@ description: Guide on SSH passphrase reset.
 
 # SSH passphrase reset
 
-If you already [contacted us](/contact/) and received your temporary passphrase follow the steps below
-to design your new passphrase and update it on both entry and home machines.
+**This guide describes how to reset your SSH passphrase on your entry and home machines.**
 
-::: warning Requirement
+[[toc]]
 
-A running VPN connection.
+::: tip Need a passphrase reset? 
+
+Order a SSH passphrase reset in our do-science [service desk](/do-science/service-desk/#ssh-passphrase-reset).
 
 :::
 
-## 1. Design a passphrase
+
+## 1. Requirements
+
+A running VPN connection to HUNT Cloud as described in our [Configure your VPN](/do-science/getting-started/configure-vpn/) guide.
+
+
+## 2. Design a passphrase
 
 You will need to update your **`SSH temporary key`** in the steps below. We prefer that you design a **`passphrase`** instead of a password. A passphrase is a series of words that creates a phrase. It should be:
 
@@ -41,7 +48,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 :::
 
-## 2. Change passphrase for Entry
+## 3. Change passphrase for your Entry machine
 
 ::: details Windows
 
@@ -131,7 +138,7 @@ It should mention **-entry** to be sure you are connected to correct machine:
 
 
 
-## 3. Change passphrase for Home
+## 3. Change passphrase for your Home machine
 
 1. When logged into your entry machine (see expected result above), connect to your home server by typing **`ssh home`** in your terminal window.
 
@@ -170,4 +177,8 @@ By completion your should see a terminal window that looks similar to the text b
 
 :::
 
-If everything worked as expected, you should now be logged into your lab.
+
+
+With a little bit of luck, and if everything worked as expected, you should now be logged into your lab.
+
+

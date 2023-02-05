@@ -12,7 +12,7 @@ description: Guide on how to install a new certificate for your HUNT Workbench.
 
 ::: tip When to use
 
-This guide applys if you have requested a reissue of your expired certificate in our [do science service desk](/do-science/service-desk/#hunt-workbench-reissue). 
+This guide applys when you have requested a reissue of your expired HUNT Workbench certificate in our do science [service desk](/do-science/service-desk/#hunt-workbench-reissue). 
 
 :::
 

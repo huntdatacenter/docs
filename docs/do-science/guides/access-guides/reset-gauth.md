@@ -10,24 +10,26 @@ description: Guide on Google Authenticator key reset.
 
 **This guide describes how to reset your Google Authenticator key that you use to access your HUNT Cloud VPN.**
 
+[[toc]]
+
 ::: tip New or lost phone?
 
-Follow these [instructions](/service-desk/user-orders/#google-authenticator-key-reset) to request a new Google Authenticator key.
+Order a new Google Authenticator key in our do-science [service desk](/do-science/service-desk/#google-authenticator-key-reset).
 
 :::
 
-### Requirement
+## 1. Requirement
 
-New Google Authenticator key sent over Signal from HUNT Cloud.
+The new Google Authenticator key sent over Signal from HUNT Cloud.
 
-### Install Google Authenticator
+## 2. Install Google Authenticator
 
 Search for **`Google Authenticator`** in the Android or iOS app stores, or use the links below.
 
 * [Download and install for iOS here](https://apps.apple.com/us/app/google-authenticator/id388497605)
 * [Download and install for Android here](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)
 
-### Setup the app and add a new account
+## 3. Setup the app and add a new account
 
 1. Start the Google Authenticator app.
 2. Tap *Begin setup* (first time setup) or *Add an account* (additional accounts).
@@ -43,6 +45,7 @@ A 6 digit **`verification code`** that refreshes ever 30 seconds in the Google A
 
 :::
 
-### Connect to your lab
+## 4. Connect to your lab
 
 Verify a successful setup by connecting your VPN and access your lab. [Contact us](/contact) if you are unable to connect after the key reset.
+
