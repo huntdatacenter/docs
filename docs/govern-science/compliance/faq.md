@@ -1,13 +1,13 @@
 ---
 title: FAQ
 category: FAQ
-permalink: /govern-science/policies/faq/
-description: This page contains common questions on policies in HUNT Cloud.
+permalink: /govern-science/compliance/faq/
+description: This page contains common questions on compliance in HUNT Cloud.
 ---
 
-# Policies FAQ
+# Compliance FAQ
 
-**This FAQ list commonly asked questions about the security and privacy policies within HUNT Cloud.**
+**This FAQ list commonly asked questions about the HUNT Cloud compliance programs.**
 
 [[toc]]
 
