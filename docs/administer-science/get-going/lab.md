@@ -60,7 +60,7 @@ Storage volumes can be increased -not decreased- in size throughout your lab's l
 
 :::
 
-Your home machine type and attached storage will be billed in accordance with our price list. Head over to our [prices section](/prices/introduction) to read more about the price model, see our price list and test your cost in our [prices calculator](/prices/calculator/). Note that the default configuration of home machines are priced as one year commitment. 
+Your home machine type and attached storage will be billed in accordance with our price list. Head over to our [prices section](/administer-science/prices/introduction) to read more about the price model, see our price list and test your cost in our [prices calculator](/administer-science/prices/calculator/). Note that the default configuration of home machines are priced as one year commitment. 
 
 [Contact us ](/contact) for guidance on both generic and tailored setups if you think we may help. 
 
@@ -76,7 +76,7 @@ Head over to our service desk to place your lab order.
 
 ::: tip Service desk
 
-[Click here to order your lab](/service-desk/data-space-orders.html#new-lab)
+[Click here to order your lab](/administer-science/service-desk/data-space-orders.html#new-lab)
 
 :::
 

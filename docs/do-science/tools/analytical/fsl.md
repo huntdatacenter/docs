@@ -23,7 +23,7 @@ with FSL to speed up analysis by running the tasks in parallel.
 
 ## Installation using Conda
 
-A simple way if you manage your dependencies with [Conda](https://docs.hdc.ntnu.no/do-science/analytical/conda/) is to install the [FSLpy package](https://anaconda.org/conda-forge/fslpy) in your environment:
+A simple way if you manage your dependencies with [Conda](/do-science/tools/analytical/conda/) is to install the [FSLpy package](https://anaconda.org/conda-forge/fslpy) in your environment:
 
 ```bash
 conda install -c conda-forge fslpy

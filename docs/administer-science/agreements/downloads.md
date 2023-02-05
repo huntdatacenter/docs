@@ -14,7 +14,7 @@ description: This page list agreements that may be relevant for you as a lab use
 
 ::: tip Service desk
 
-Head over to our [service desk](/service-desk/) to place orders using the agreements listed on this page. 
+Head over to our [administer science service desk](/administer-science/service-desk/) to place orders using the agreements listed on this page. 
 
 :::
 
@@ -22,7 +22,8 @@ Head over to our [service desk](/service-desk/) to place orders using the agreem
 
 [HUNT Cloud User Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf) (pdf)
 
-Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator. Read more about how to add new users in our [FAQ user section](/faq/users/).
+Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator.
+
 
 ## Lab order
 
@@ -65,7 +66,7 @@ We use this to document activities in the lab, for example in reporting to your 
 
 **Request a lab**
 
-Send us your signed agreement utilizing the blue button in the data space section of our [service desk](/service-desk/data-space-orders/#new-lab).
+Send us your signed agreement utilizing the blue button in the data space section of our [service desk](/administer-science/service-desk/data-space-orders/#new-lab).
 
 :::
 
@@ -118,7 +119,7 @@ The following individual is the point of contact for financial discussions, incl
 
 **Request a data space**
 
-Send us your signed agreement utilizing the blue button in the service center section of our [service desk](/service-desk/service-center-orders/#new-data-space).
+Send us your signed agreement utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders/#new-data-space).
 
 :::
 
@@ -198,7 +199,7 @@ Invoice profiles are signed by Account signatory. This is the individual that is
 
 **Activation**
 
-Send us your signed invoice profile together with your data space order utilizing the blue button in the service center section of our [service desk](/service-desk/service-center-orders/#new-data-space).
+Send us your signed invoice profile together with your data space order utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders/#new-data-space).
 
 :::
 
@@ -208,7 +209,7 @@ Send us your signed invoice profile together with your data space order utilizin
 
 [HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf) (pdf)
 
-Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab. Read more about Internal kistas in our [FAQ transfer section](/faq/internal-transfer/).
+Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab.
 
 ::: details Clarification of the form fields
 
@@ -256,7 +257,7 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud - External Kista Import Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-import-order.pdf) (pdf)
 
-Data space leaders and Data space compliance coordinators can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from a lab. The order is co-signed by the uploader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
+Data space leaders and Data space compliance coordinators can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from a lab. The order is co-signed by the uploader outside HUNT Cloud.
 
 ::: details Clarification of the form fields
 
@@ -314,7 +315,7 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud - External Kista Export Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-export-order.pdf) (pdf)
 
-Data space leaders and Data space compliance officers can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. The order is co-signed by downloader outside HUNT Cloud. Read more about External kistas in our [FAQ transfer section](/faq/external-transfer/).
+Data space leaders and Data space compliance officers can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. The order is co-signed by downloader outside HUNT Cloud.
 
 ::: details Clarification of the form fields
 
@@ -372,7 +373,7 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud Network Opening Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-network-opening-order.pdf) (pdf)
 
-Your data space leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab. Read more about network openings in our [FAQ transfer section](/faq/external-transfer/).
+Your data space leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab.
 
 
 ::: details Clarification of the form fields
@@ -420,6 +421,30 @@ your-username@`your-labname`-home~$
 
 
 
+## Lab deactivation order
+
+[HUNT Cloud Lab Deactivation Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-deactivation-order.pdf) (pdf)
+
+Data space leaders can request deactivation of labs under their data space. We use the deactivation order that is co-signed by the data space leader and lab leader do document such requests.
+
+::: details Clarification of the form fields
+
+The following form fields are included in the "HUNT Cloud Lab Deactivation Order" version 1.0.
+
+**Data space**
+
+- *Name*. This is the short name for the data space where the lab is attached.
+- *Leader*. This is the full name of the data space leader. 
+
+**Lab**
+
+- *Name*. This is the short name for the lab that is authorized for deletion.
+- *Leader*. This is the full name of the lab leader. 
+
+:::
+
+
+
 ## Lab deletion order
 
 [HUNT Cloud Lab Deletion Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-deletion-order.pdf) (pdf)
@@ -443,3 +468,34 @@ The following form fields are included in the "HUNT Cloud Lab Deletion Order" ve
 :::
 
 
+
+## Data deletion order
+
+[HUNT Cloud Data Deletion Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-deletion-order.pdf) (pdf)
+
+Data space leaders can request deletion of individual storage volumes and data files in labs under their data space. We use the data deletion order that is co-signed by the data space leader and lab leader do document such requests.
+
+::: details Clarification of the form fields
+
+The following form fields are included in the "HUNT Cloud Data Deletion Order" version 1.4.
+
+**Data space**
+
+- *Name*. This is the short name for the data space where the lab is attached.
+- *Leader*. This is the full name of the data space leader. 
+
+**Lab**
+
+- *Name*. This is the short name for the lab that is authorized for deletion.
+- *Leader*. This is the full name of the lab leader. 
+
+**Data to be deleted**
+
+* Specify absolute paths to data folders and/or data volumes that your request for deletion. 
+* Do also specify the machine name where the folders and/or volumes are located.
+
+**Confirmation of deletion by HUNT Cloud**
+
+Leave these fields blank. We will return the order with signatures when the data is deleted. 
+
+:::

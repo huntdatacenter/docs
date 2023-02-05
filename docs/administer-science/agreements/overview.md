@@ -2,6 +2,7 @@
 title: Overview
 category: HUNT Cloud
 sidebarDepth: 1
+permalink: /administer-science/agreements/
 description: This page gives an overview of administrative agreements in HUNT Cloud.
 ---
 
@@ -83,18 +84,18 @@ For NTNU, we recommend Head of Departments as signatories on our internal data p
 
 
 
-Our signatory will be the Head of Department at our department, the [Department of Public Health and Nursing](https://www.ntnu.no/ism/ledelse) at the Faculty of Medicine and Health Sciences, NTNU. 
+Our signatory will be the Head of Department at our department, the [Department of Public Health and Nursing](https://www.ntnu.edu/ism/contact) at the Faculty of Medicine and Health Sciences, NTNU. 
 
 ### Getting started
 
-We need to ensure that we have an active data processor agreement with your host organization or department (for NTNU) before we can process your data space and lab orders. Head over to the [get going](/administer-science/get-going/data-processor) section for a step-by-step guide on how to start.
+We need to ensure that we have an active data processor agreement with your host organization or department (for NTNU) before we can process your data space and lab orders. Head over to the [get going](/administer-science/get-going/data-controller) section for a step-by-step guide on how to start.
 
 
 ### Required information
 
 [HUNT Cloud Data Processor Agreement Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-processor-form.txt)(txt)
 
-We use information from the text file above to render the final data processor agreement. Please download the form, update the information and send us the text file for agreement rendering in the data processor section of our [service desk](/service-desk/data-controller-orders/#new-data-processor-agreement). Click the "Clarification of the form fields" below for more information on each field.
+We use information from the text file above to render the final data processor agreement. Please download the form, update the information and send us the text file for agreement rendering in the data processor section of our [service desk](/govern-science/service-desk/data-controller-orders/#new-data-processor-agreement). Click the "Clarification of the form fields" below for more information on each field.
 
 ::: details Clarification of the form fields
 
@@ -157,7 +158,7 @@ This information is aimed at the overall processing purpose of the information u
 
 **Send us the text file for activation**
 
-When you have added the information to the text file, forward the text file to us on in the data controller section of our [service desk](/service-desk/data-controller-orders/#new-data-processor-agreement).
+When you have added the information to the text file, forward the text file to us on in the data controller section of our [service desk](/govern-science/service-desk/data-controller-orders/#new-data-processor-agreement).
 
 :::
 
@@ -238,7 +239,7 @@ For NTNU, services agreements are signed at the Department level with Deputy Hea
 
 We need to ensure that we have an active service center agreement to attach your data space and lab orders.
 
-We already have many such agreements in place for speedy processing. If you know your organization holds an active service center agreement with us, let's jump to the [data space order](agreements/overview/#data-space-order).
+We already have many such agreements in place for speedy processing. If you know your organization holds an active service center agreement with us, let's jump to the [data space order](/administer-science/agreements/overview/#data-space-order).
 
 [Contact us](/contact) if you don't know if your organization or research center holds an active services agreement, or to get started on a new agreement. For new agreements it will bootstrap the process if your help us with the required information below.
 
@@ -246,7 +247,7 @@ We already have many such agreements in place for speedy processing. If you know
 
 [HUNT Cloud Services Agreement Form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-services-agreement-form.txt)(txt)
 
-Please download the form, update the information and send us the text file for agreement rendering in the data processor section of our [service desk](/service-desk/data-controller-orders/#add-a-service-center). Click the "Clarification of the form fields" below for more information on each field.
+Please download the form, update the information and send us the text file for agreement rendering in the data processor section of our [service desk](/govern-science/service-desk/data-controller-orders/#add-a-service-center). Click the "Clarification of the form fields" below for more information on each field.
 
 
 
@@ -284,7 +285,7 @@ This individual is legally entitled to accept the financial side of the Cloud Se
 
 **Send us the text file for activation**
 
-When you have added the information to the text file, forward the text file to us on in the data controller section of our [service desk](/service-desk/data-controller-orders/#add-a-service-center).
+When you have added the information to the text file, forward the text file to us on in the data controller section of our [service desk](/govern-science/service-desk/data-controller-orders/#add-a-service-center).
 
 :::
 
@@ -314,13 +315,13 @@ The data space order is co-signed by the services center leader and the data spa
 
 ### Invoice profile
 
-Each data space needs to specify at least one invoice porfile where services gets billed. Depending on your data space subscription, you can establish several profiles (BLUE subscription layer). [Click here](/administer-science/agreements/downloads/#data-space-order) to download the form. 
+Each data space needs to specify at least one invoice porfile where services gets billed. Depending on your data space subscription, you can establish several profiles (BLUE subscription layer). [Click here](/administer-science/agreements/downloads/#invoice-profile) to download the form. 
 
 ### Getting started
 
 We need to ensure that we have an active services center agreement with your host organization or department (for NTNU) before we can process your data space order.
 
-When the services agreement are in place, it's quite simple to order a data space: (1) Download the [data space order](/administer-science/agreements/downloads/#data-space-order) and the [invoice profile](/administer-science/agreements/downloads/#invoice-profile), (2) fill in the fields (descriptions on the download page), (3) and send the order and invoice profile to us via the service center section in our [service desk](/service-desk/service-center-orders/#new-data-space).
+When the services agreement are in place, it's quite simple to order a data space: (1) Download the [data space order](/administer-science/agreements/downloads/#data-space-order) and the [invoice profile](/administer-science/agreements/downloads/#invoice-profile), (2) fill in the fields (descriptions on the download page), (3) and send the order and invoice profile to us via the service center section in our [service desk](/govern-science/service-desk/service-center-orders/#new-data-space).
 
 
 
@@ -345,7 +346,7 @@ The lab order agreement is signed by the data space leader and the lab leader (t
 
 We need to ensure that we have an active data space order with your research group or research center before we can process your lab order.
 
-When the data space order are in place, it's quite simple to order a lab: (1) Download the [lab order](/administer-science/agreements/downloads/#lab-order), (2) fill in the fields (descriptions on the download page), (3) and send us the lab order in the data space section of our [service desk](/service-desk/data-space-orders/#new-lab). 
+When the data space order are in place, it's quite simple to order a lab: (1) Download the [lab order](/administer-science/agreements/downloads/#lab-order), (2) fill in the fields (descriptions on the download page), (3) and send us the lab order in the data space section of our [service desk](/administer-science/service-desk/data-space-orders/#new-lab). 
 
 [Contact us](/contact) for a chat before you start the process so we can learn about your science and together discuss how to best onboard your scientists and adjust and tune your storage and compute resources to best make your science fly.
 

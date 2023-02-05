@@ -339,8 +339,8 @@ module.exports = {
           collapsable: true,
           isGroup: true,
           children: [
-            {title: "Introduction",
-            path: "/administer-science/agreements/"},
+//            {title: "Introduction",
+//            path: "/administer-science/agreements/"},
             "/administer-science/agreements/overview.md",
             "/administer-science/agreements/downloads.md",
 
@@ -353,8 +353,8 @@ module.exports = {
           collapsable: true,
           isGroup: true,
           children: [
-            {title: "Introduction",
-            path: "/administer-science/services/"},
+//            {title: "Introduction",
+//            path: "/administer-science/services/"},
             "/administer-science/services/overview.md",
             "/administer-science/services/specifications.md",
             "/administer-science/services/machine-types.md",
@@ -376,6 +376,17 @@ module.exports = {
           ]
         },
         {
+          title: "Data",
+          text: "Data",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/administer-science/data/"},
+            "/administer-science/data/faq.md",
+          ]
+        },       
+        {
           title: "Service desk",
           text: "Service desk",
           collapsable: true,
@@ -395,9 +406,12 @@ module.exports = {
           children: [
             {title: "Introduction",
             path: "/administer-science/faq/"},
-            "/administer-science/faq/user-management.md",
-            "/administer-science/faq/faq.md",
-            "/administer-science/faq/labreports.md",
+            "/administer-science/faq/lab-faq.md",
+            "/administer-science/faq/compliance-faq.md",
+            "/administer-science/faq/finance-faq.md",
+            "/administer-science/faq/data-faq.md",
+            "/administer-science/faq/tech-faq.md",
+            "/administer-science/faq/training-faq.md",
           ]
          },
          {
@@ -439,10 +453,7 @@ module.exports = {
             title: "Introduction",
             path: "/govern-science/introduction.md",
           },
-          {
-            title: "Responsibilities",
-            path: "/govern-science/responsibilities.md",
-          },
+          "/govern-science/accountability.md",
           ]
         },
         {
@@ -470,6 +481,7 @@ module.exports = {
           children: [
             {title: "Security and privacy policies",
             path: "/govern-science/policies/"},
+            "/govern-science/policies/faq.md",
           ]
         },
         {
@@ -491,7 +503,18 @@ module.exports = {
             {title: "Introduction",
             path: "/govern-science/agreements/"},
             "/govern-science/agreements/overview.md",
-            "/govern-science/agreements/faq.md",            
+            "/govern-science/agreements/faq.md",
+          ]
+        },
+        {
+          title: "Risk",
+          text: "Risk",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {title: "Introduction",
+            path: "/govern-science/risk/"},
+            "/govern-science/risk/faq.md"    
           ]
         },
         {

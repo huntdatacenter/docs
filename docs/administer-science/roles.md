@@ -4,7 +4,7 @@ permalink: /administer-science/roles
 description: This page contains information on the administrator roles in HUNT Cloud.
 ---
 
-# Administrator roles
+# Administrative roles in HUNT Cloud
 
 **Each data space appoints scientific administrators to the following key responsibility areas: compliance, data, technology, training and finance. These individuals are the point of contact for lab users in the data space and us when it comes to administrative issues and improvements.**
 

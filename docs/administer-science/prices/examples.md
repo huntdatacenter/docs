@@ -1,7 +1,7 @@
 ---
 title: Price examples
 category: HUNT Cloud
-permalink: /prices/examples
+permalink: /administer-science/prices/examples
 sidebarDepth: 1
 description: This page list examples of yearly cost for selected use cases in HUNT Cloud.
 ---
@@ -10,11 +10,11 @@ description: This page list examples of yearly cost for selected use cases in HU
 
 **We know, the complexity of flexible cloud prices is demanding. Bare with us, because the flexibility opens opportunities.** 
 
-Below are a few examples to guide you on a pricing direction. Head over to our [pricing calculator](/prices/calculator) to estimate the cost for your specific scientific environment, and to not hesitate to [contact us](/contact) for assistance in your estimations.
+Below are a few examples to guide you on a pricing direction. Head over to our [pricing calculator](/administer-science/prices/calculator) to estimate the cost for your specific scientific environment, and to not hesitate to [contact us](/contact) for assistance in your estimations.
 
 [[toc]]
 
-For the record, all prices in the examples are listed as VAT exclusive NOK from the [price list](/prices/pricelist/). The prices are provided for guidance and may contain both errors and outdated information.
+For the record, all prices in the examples are listed as VAT exclusive NOK from the [price list](/administer-science/prices/pricelist/). The prices are provided for guidance and may contain both errors and outdated information.
 
 ## Individual labs
 

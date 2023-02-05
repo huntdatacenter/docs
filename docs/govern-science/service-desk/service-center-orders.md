@@ -1,7 +1,7 @@
 ---
 title: Service centers
 category: Service desk
-permalink: /service-desk/service-center-orders
+permalink: /govern-science/service-desk/service-center-orders
 description: HUNT Cloud service desk orders for service centers.
 sidebarDepth: 2
 ---

@@ -50,7 +50,7 @@ For NTNU, the internal "[enighetsavtaler](/administer-science/agreements/overvie
 
 ### 5. Can we use HUNT Cloud's data processor templates?
 
-Yes. We have agreement templates that is accepted by many organizations. These agreements comply with requirements in GDPR, ISO 27001 and Norwegian health laws. Utilizing these templates is a quick way to ensure compliance with most requirements. Request a copy in our data controller section of our [service desk](/service-desk/data-controller-orders/#new-data-processor-agreement) that you and your privacy officer can assess.
+Yes. We have agreement templates that is accepted by many organizations. These agreements comply with requirements in GDPR, ISO 27001 and Norwegian health laws. Utilizing these templates is a quick way to ensure compliance with most requirements. Request a copy in our data controller section of our [service desk](/govern-science/service-desk/data-controller-orders/#new-data-processor-agreement) that you and your privacy officer can assess.
 
 **If yes**, jump to the next section. 
 
@@ -62,7 +62,7 @@ We need a few bits of information to prepare your agreement template:
  
 - Download the "[HUNT Cloud Data Processor Agreement Form](/administer-science/agreements/overview/#required-information)" on your local machine (right click on the link and select "Save Link As...")
 - Open the text file in Notepad, Word or a similar application and supply the required information. Field descriptions are included in the "Clarification of the form fields" under the link above. 
-- Save the text file on your local machine and send us the a copy in our [service desk](/service-desk/data-controller-orders/#new-data-processor-agreement).
+- Save the text file on your local machine and send us the a copy in our [service desk](/govern-science/service-desk/data-controller-orders/#new-data-processor-agreement).
 
 ::: tip NTNU
 

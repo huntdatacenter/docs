@@ -24,11 +24,11 @@ We recommend that you invest some time to identify a short and powerful name for
 
 High-trust and high-paced science needs smooth and seamless coordination to fly. Therefore, this is the step to list your team of coordinators for five key areas: compliance, data, technical, knowledge and finance. 
 
-[Click here](/coordinator/roles/) to read more about the different roles. Your coordinator team will be the main points of contacts for both your scientists and us. 
+[Click here](/administer-science/roles/) to read more about the different roles. Your coordinator team will be the main points of contacts for both your scientists and us. 
 
 ### 3. Decide your data space subscription level
 
-You have the option to choose three different data space subscription levels. Our [services overview](/administer-science/services/overview/#data-space) provides a summary of different features, the [services specifications](/administer-science/services/specifications/) holds the detailed description, and the [price list](/prices/pricelist/) specify the yearly cost. 
+You have the option to choose three different data space subscription levels. Our [services overview](/administer-science/services/overview/#data-space) provides a summary of different features, the [services specifications](/administer-science/services/specifications/) holds the detailed description, and the [price list](/administer-science/prices/pricelist/) specify the yearly cost. 
 
 [Contact us](/contact) if you are unsure which subscription level that may provide the best fit for your scientific activities.
 
@@ -51,7 +51,7 @@ Head over to our service desk and place your data space order.
 
 ::: tip Service desk
 
-[Click here to order your data space](/service-desk/service-center-orders.html#new-data-space)
+[Click here to order your data space](/govern-science/service-desk/service-center-orders.html#new-data-space)
 
 :::
 

@@ -1,55 +1,34 @@
 ---
 title: Price list
 category: HUNT Cloud
-permalink: /prices/pricelist
+permalink: /administer-science/prices/pricelist
 sidebarDepth: 1
 description: This page holds the current price list for HUNT Cloud.
 ---
 
 # Price list
 
-**This page list the prices for our cloud services. The price list is incorporated as an appendix to cloud services agreement, and costs are metered and billed in accordanced with our [services specifications](/administer-science/services/specifications).**
+**This page lists the prices for our cloud services. The price list is incorporated as an appendix to cloud services agreement, and costs are metered and billed in accordanced with our [services specifications](/administer-science/services/specifications).**
 
 [[toc]]
 
-Head over to our [price calculator](/prices/calculator) to tailor cost estimates for you desired configuration, or visit our [price examples](/prices/examples/) for commonly used configurations.
+Head over to our [price calculator](/administer-science/prices/calculator) to tailor cost estimates for you desired configuration, or visit our [price examples](/administer-science/prices/examples/) for commonly used configurations.
 
 
 ## Current 
 
 ::: tip CURRENT PRICE LIST
 
-[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-2.pdf) (v3.2 pdf)
-
-:::
-
-::: warning Proposed price list for 2023
-
 [HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) (v4.0 pdf)
 
-This is the proposed price list for 2023 that will be discussed during Lagtun at Tingweek #7. Expected effectuate date is late January. 
-
 :::
 
+**Machine readable version of current price list:** The table below include a machine readable CSV of the current price list (v4). The PDF version holds precedence if discrepancies occur.
 
-**Machine readable version of current price list**. This list includes machine readable CSVs of the current price list (v3). The PDF version above holds precedence if discrepancies occur.
-
-| **Service** | **Table** | **File** | 
-| - | - | - |
-| Subscription | Data space | [subscription-data-space.csv](https://assets.hdc.ntnu.no/assets/prices/v3/subscription-data-space.csv) | 
-| Subscription | Lab | [subscription-lab.csv](https://assets.hdc.ntnu.no/assets/prices/v3/subscription-lab.csv) | 
-| Secure | Hourly configuration cost | [salary-secure.csv](https://assets.hdc.ntnu.no/assets/prices/v3/salary-secure.csv) | 
-| Compute | Machine types default.b | [compute-default-b.csv](https://assets.hdc.ntnu.no/assets/prices/v3/compute-default-b.csv) | 
-| Compute | Machine types default.c | [compute-default-c.csv](https://assets.hdc.ntnu.no/assets/prices/v3/compute-default-c.csv) | 
-| Compute | Machine types default.d | [compute-default-d.csv](https://assets.hdc.ntnu.no/assets/prices/v3/compute-default-d.csv) | 
-| Compute | GPU types | [compute-gpu.csv](https://assets.hdc.ntnu.no/assets/prices/v3/compute-gpu.csv) | 
-| Compute | Hourly cost advanced support | [salary-support.csv](https://assets.hdc.ntnu.no/assets/prices/v3/salary-support.csv) | 
-| Storage| Block | [store-block-storage.csv](https://assets.hdc.ntnu.no/assets/prices/v3/store-block-storage.csv) | 
-| Storage| Tape | [store-tape.csv](https://assets.hdc.ntnu.no/assets/prices/v3/store-tape.csv) | 
-| Transfer| Internal transfers | [transfer-internal.csv](https://assets.hdc.ntnu.no/assets/prices/v3/transfer-internal.csv) | 
-| Transfer| External transfers | [transfer-external.csv](https://assets.hdc.ntnu.no/assets/prices/v3/transfer-external.csv) | 
-| Transfer| Hourly configuration cost | [salary-transport-configuration.csv](https://assets.hdc.ntnu.no/assets/prices/v3/salary-transport-configuration.csv) | 
-
+| **Content** | **Type** | **File** |
+| ---- | ---- | ---- |
+| HUNT Cloud Price List (v4.0) | PDF | [hunt-cloud-price-list-4-0.pdf](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) |
+| HUNT Cloud Price List (v4.0) | CVS | [hunt-cloud-price-list-v4-0.csv](https://assets.hdc.ntnu.no/assets/prices/v4/hunt-cloud-price-list-4-0.csv) |
 
 
 ## Updates
@@ -59,6 +38,7 @@ The price list will be updated from time to time.
 **Major updates**. Major updates affect prices and/or available services. Major updates are specified by increasing numbers (v1, v2, v3, etc.). These become effective ninety days after they are announcement to service centers and data spaces on email. The new version is immediately effective for new service centers. 
 
 **Minor updates**. Major updates do -not- affect prices and/or available services. Minor updates are specified by increasing decimals (v2.1, v2.2, v2.3, etc). Minor updates follow the effective date of major updates and take precedence of previous versions when they are published on this page.
+
 
 ## Archive
 
@@ -73,9 +53,7 @@ The price list will be updated from time to time.
 
 #### HUNT Cloud Price list v4.0 (MAJOR)
 
-Proposed changes. Note that the price list will be reviewed in Lagtun during Tingweek #7, updates are expected. 
-
-The new prices are adjusted based on updated equipment cost since 2021, and evaluations of 2022 usage and rates for Q2-Q3 towards our initial cost-recovery estimates for our v3 price list. 
+The new prices are adjusted based on updated equipment cost, and evaluations of 2022 usage and rates for Q2-Q3 towards our initial cost-recovery estimates for our v3 price list. 
 
 *Services updates*
 

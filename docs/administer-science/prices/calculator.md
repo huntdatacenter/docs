@@ -1,7 +1,7 @@
 ---
 title: Price calculator
 category: HUNT Cloud
-permalink: /prices/calculator
+permalink: /administer-science/prices/calculator
 sidebarDepth: 1
 editLink: false
 description: HUNT Cloud price calculator.

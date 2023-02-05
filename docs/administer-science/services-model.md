@@ -66,7 +66,7 @@ To summarize, the separation of scientific aspects (data spaces and labs) from c
 
 ### New coordinator roles
 
-One intention with data spaces is to simplify coordination and knowledge transfers between labs under the same research group or center. Based on discussions from our last two coordinator tings we are now introducing [cross-lab coordinators](/coordinator/roles) for the following areas: 
+One intention with data spaces is to simplify coordination and knowledge transfers between labs under the same research group or center. Based on discussions from our last two coordinator tings we are now introducing [cross-lab coordinators](/administer-science/roles) for the following areas: 
 
 ![Coordinator roles](./services/images/hunt-cloud-data-space-roles.png "HUNT Cloud data space coordinator roles")
 
@@ -139,7 +139,7 @@ Details on how costs are measured (metered), adjusted and billed are included un
 
 Details on the cost for individual services are included in our price list.
 
-[Click here to see the price list](/prices/pricelist)
+[Click here to see the price list](/administer-science/prices/pricelist)
 
 :::
 

@@ -1,30 +1,33 @@
 ---
 title: Overview
-category: HUNT Cloud
+category: Services
 sidebarDepth: 1
+permalink: /administer-science/services/overview
 description: This page gives an overview of the HUNT Cloud services.
 ---
 
 # Services overview
 
-This page gives a brief overview of our cloud services. See the [Services specifications](/administer-science/services/specifications) for detailed documentation.
+**This page gives a brief overview of our cloud services. See the [Services specifications](/administer-science/services/specifications) for detailed documentation.**
 
 [[toc]]
 
 ## Subscriptions
 
-Our subscriptions forms the frame where you attach resources for computation, storage and transportation. See [Services specifications](/administer-science/services/specifications) for detailed information.
+We have two type of subscriptions in HUNT Cloud: (1) Data space subscription and (2) Lab subscription. You will need both.
 
 
-### Data space
+### Data space subscription
 
-This is the subscription that establishes a management account (data space) in HUNT Cloud where individual labs are attached and their resources managed, controlled and billed. We have established three subscription levels that differs in the individual service availability, resource prioritixation, ting membership and costs for individual resources: 
+**This is the subscription that establishes a management account (data space) in HUNT Cloud where individual labs are attached and their resources managed, controlled and billed.**
+
+We have established three subscription levels that differs in the individual service availability, resource prioritixation, ting membership and costs for individual resources: 
 
 | Subscription levels: | WHITE | ORANGE | BLUE |
 | ---- | ---- | ---- | ---- | 
 | Subscription type | Basic | Standard | Premium | 
 | Maximum attached labs | 2 | 10 | 20 |
-| Maximum commitment length | 3 YEARS | 3 YEARS | 1 YEAR |
+| Maximum commitment length | 3 YEARS | 3 YEARS | 3 YEAR |
 | Deploy COMMITMENT machines | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Deploy ON-DEMAND machines | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Deploy BLUE machines | ![no](./images/no-30.png "no") | ![yes](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
@@ -34,9 +37,9 @@ This is the subscription that establishes a management account (data space) in H
 | Volume discount** | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Free internal transfers | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Free external imports | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Free external exports | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
+| Free external exports | ![yes](./images/no-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Access to new pilot services | ![no](./images/no-30.png "no") | ![yes](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
-| Multiple billing accounts | ![no](./images/no-30.png "no") | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
+| Multiple billing accounts | ![no](./images/no-30.png "no") | ![yes](./images/no-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Lab ting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Coordinator ting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Lagtun membership | ![no](./images/no-30.png "no") | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
@@ -47,9 +50,11 @@ This is the subscription that establishes a management account (data space) in H
 
 
 
-### Lab
+### Lab subscription
 
-This is the subscription that gives to access to one digital laboratory where you add resources for computation and storage. One to many labs can be organized under one data space. The availability of certain resources are defined by the subscription level of the data space for which the lab is attached (see above). See the [Services specifications](/administer-science/services/specifications) for detailed information.
+**This is the subscription that gives to access to one digital laboratory where you add resources for computation and storage.**
+
+One to many labs can be organized under one data space. The availability of certain resources are defined by the subscription level of the data space for which the lab is attached (see above). See the [Services specifications](/administer-science/services/specifications) for detailed information.
 
 | Subscription level: | LAB |
 | ---- | ---- |
@@ -97,7 +102,7 @@ This is the service that enables compliant data transfers to and from labs, both
 | ---- | ---- | ---- | ---- | 
 | Free internal transfers | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Free external imports | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Free external exports | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
+| Free external exports | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 
 
 

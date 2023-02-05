@@ -1,34 +1,34 @@
 ---
 title: Introduction
 category: HUNT Cloud
-permalink: /prices/introduction
+permalink: /administer-science/prices/introduction
 sidebarDepth: 1
 description: This page gives an introduction to the pricing of services in HUNT Cloud.
 ---
 
 # Introduction to pricing
 
-This page gives you an introduction to our prices. Your total cost will include a combination of fixed subscription costs and flexible costs for attached individual services such as storage and computation.
+**This page gives you an introduction to our prices.**
 
 [[toc]]
 
 ::: tip Pricing calculator
-Head over to our [pricing calculator](/prices/calculator) to estimate the cost for your scientific environments.
+Head over to our [pricing calculator](/administer-science/prices/calculator) to estimate the cost for your scientific environments.
 ::: 
 
 ## Context
 
-### Background 
+### First
 
-Our passion is to inspire scientists to elevate data for a better world. To do so, we have chosen to spend our time developing digital tools for your quest. Money is a means towards this goal - not an end. We are part of a public university that runs these services with zero profit. 
+Our passion is to inspire scientists to elevate data for a better world. To do so, we have chosen to spend our time developing scientific instruments for your quest. Money is a means towards this goal, not an end. We are part of a public university that runs these services with zero profit. 
 
-### Overview
+### Total cost
 
-Your total cost will include a combination of fixed subscription costs and running costs for the resources your attached to your labs. The fees across all labs inside one data space are summarized and billed to the data spaces' billing accounts. 
+Your total cost will include a combination of fixed subscription costs and running costs for the resources your attached to your labs. The fees across all labs inside one data space are summarized and billed to the data spaces' billing accounts. You may choose to split the total cost into individual invoice profiles, for example per lab.
 
 ### Supporting documents
 
-The information should be read together with the [services specifications](/administer-science/services/specifications) that details the services that are included in the price list. And the [price list](/prices/pricelist) that details the prices of individual service units.
+The information should be read together with the [services specifications](/administer-science/services/specifications) that details the services that are included in the price list. And the [price list](/administer-science/prices/pricelist) that details the prices of individual service units.
 
 
 
@@ -36,21 +36,19 @@ The information should be read together with the [services specifications](/admi
 
 Data spaces and labs are deployed as subscription services that are prices for one year or three years. 
 
-### Data space
+### Data space subscription
 
-You will need an active data space subscription to add a lab subscription. 
+You will need an active data space subscription to add a lab subscription.
 
 | Commitment length: | 1 YEAR | 3 YEAR |
 | ---- | ---- | ---- |
 | WHITE data space | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | ORANGE data space | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| BLUE data space* | ![yes](./images/yes-30.png "yes") | ![no](./images/no-30.png "no") |
+| BLUE data space | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 
-*) The BLUE data space subscription level was introduced 1 July 2021. The subscription level includes access to highly affordable BLUE machines. We are awaiting longer commitments until we have improved user data for long term price calculations.
+### Lab subscription
 
-### Lab
-
-And you need and active lab subscription to allocate individual services inside a lab.
+You will need and attach a lab subscription to your data space subscription to allocate individual services inside a lab.
 
 | Commitment length: | 1 YEAR | 3 YEAR |
 | ---- | ---- | ---- |
@@ -75,7 +73,9 @@ GPU accelerators may be added to the COMMITMENT and ON-DEMAND machine types. The
 
 ### Store
 
-The total number of terabytes are summarized across all labs attached to one data space (billing account). We use this combined storage allocation to calculate the price tiers. The effect is that your terabyte price drops as your data grows. Storage may be consumed as prepaid one or three years COMMITMENT storage, or as a daily pay-as-you-go cost for ON-DEMAND storage. Prepaid and on-demand storage may be combined within data spaces and labs. Free quota or pilot period storage are not included in the terabytes used in the calculations.
+The total number of terabytes are summarized across all labs attached to one data space (billing account). We use the combined storage allocation under a data space to calculate a storage volume price. The effect is that your terabyte price drops as your data grows. 
+
+Storage may be consumed as prepaid one or three years COMMITMENT storage, or as a daily pay-as-you-go cost for ON-DEMAND storage. Prepaid and on-demand storage may be combined within data spaces and labs. Free quota or pilot period storage are not included in the terabytes used in the calculations.
 
 ## Others
 
@@ -94,6 +94,6 @@ The billing sections in the [services specifications](/administer-science/servic
 | Data space subscription level: | WHITE | ORANGE | BLUE |
 | ---- | ---- | ---- | ---- |
 | One billing account | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |  ![yes](./images/yes-30.png "yes") |
-| Multiple billing accounts | ![no](./images/no-30.png "no") | ![no](./images/no-30.png "no") |  ![yes](./images/yes-30.png "yes") |
+| Multiple billing accounts | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |  ![yes](./images/yes-30.png "yes") |
 
 
