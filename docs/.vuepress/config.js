@@ -1,4 +1,4 @@
-const prefixer = require('postcss-prefix-selector');
+const prefixer = require("postcss-prefix-selector");
 
 module.exports = {
   // https://v1.vuepress.vuejs.org/config/#title
@@ -16,8 +16,8 @@ module.exports = {
       "link",
       {
         rel: "shortcut icon",
-        href: "https://www.ntnu.no/assets/images/favicon.ico"
-      }
+        href: "https://www.ntnu.no/assets/images/favicon.ico",
+      },
     ],
     [
       "link",
@@ -30,23 +30,23 @@ module.exports = {
       "meta",
       {
         name: "theme-color",
-        content: "#00509e"
-      }
+        content: "#00509e",
+      },
     ],
     [
       "meta",
       {
         name: "apple-mobile-web-app-capable",
-        content: "yes"
-      }
+        content: "yes",
+      },
     ],
     [
       "meta",
       {
         name: "apple-mobile-web-app-status-bar-style",
-        content: "black"
-      }
-    ]
+        content: "black",
+      },
+    ],
   ],
   // https://v1.vuepress.vuejs.org/theme/default-theme-config.html
   themeConfig: {
@@ -64,19 +64,19 @@ module.exports = {
     nav: [
       {
         text: "Do science",
-        link: "/do-science/"
+        link: "/do-science/",
       },
       {
         text: "Administer science",
-        link: "/administer-science/"
+        link: "/administer-science/",
       },
       {
         text: "Govern science",
-        link: "/govern-science/"
+        link: "/govern-science/",
       },
       {
         text: "About",
-        link: "/about/"
+        link: "/about/",
       },
       // {
       //   text: "About",
@@ -88,10 +88,11 @@ module.exports = {
       //   ]
       // }
     ],
-    navbar: [{
+    navbar: [
+      {
         text: "Getting started",
-        link: "/getting-started/"
-      }
+        link: "/getting-started/",
+      },
     ],
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
     sidebar: {
@@ -106,7 +107,7 @@ module.exports = {
               title: "Welcome",
               path: "/do-science/",
             },
-          ]
+          ],
         },
         {
           title: "Getting started",
@@ -116,12 +117,12 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/do-science/getting-started/"
+              path: "/do-science/getting-started/",
             },
             "/do-science/getting-started/1-collect-keys.md",
             "/do-science/getting-started/2-configure-vpn.md",
             "/do-science/getting-started/3-configure-ssh.md",
-          ]
+          ],
         },
         {
           title: "HUNT Workbench",
@@ -137,7 +138,7 @@ module.exports = {
             "/do-science/hunt-workbench/installation.md",
             "/do-science/hunt-workbench/troubleshooting.md",
             "/do-science/hunt-workbench/faq.md",
-          ]
+          ],
         },
         {
           title: "Tools",
@@ -164,7 +165,7 @@ module.exports = {
                 "/do-science/tools/technical/terminal-multiplexers.md",
                 "/do-science/tools/technical/vnc.md",
                 "/do-science/tools/technical/x2go.md",
-              ]
+              ],
             },
             {
               title: "Analytical tools",
@@ -185,7 +186,7 @@ module.exports = {
                 "/do-science/tools/analytical/saige.md",
                 "/do-science/tools/analytical/spyder-ide.md",
                 "/do-science/tools/analytical/stata.md",
-              ]
+              ],
             },
             {
               title: "Transfer tools",
@@ -197,9 +198,9 @@ module.exports = {
                 "/do-science/tools/transfer/rsync.md",
                 "/do-science/tools/transfer/sshfs.md",
                 "/do-science/tools/transfer/winscp.md",
-              ]
+              ],
             },
-          ]
+          ],
         },
         {
           title: "Guides",
@@ -222,9 +223,9 @@ module.exports = {
                 "/do-science/guides/access-guides/reset-ssh.md",
                 "/do-science/guides/access-guides/workbench-request.md",
                 "/do-science/guides/access-guides/workbench-reissue.md",
-              ]
+              ],
             },
-          ]
+          ],
         },
         {
           title: "Data transfers",
@@ -234,21 +235,18 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/do-science/transfers/"
+              path: "/do-science/transfers/",
             },
             "/do-science/transfers/internal-kista.md",
             "/do-science/transfers/external-kista.md",
-          ]
+          ],
         },
         {
           title: "Community",
           text: "Community",
           collapsable: true,
           isGroup: true,
-          children: [
-            "/do-science/community/cafe.md",
-            "/do-science/community/labting.md",
-          ]
+          children: ["/do-science/community/cafe.md", "/do-science/community/labting.md"],
         },
         "/do-science/service-desk/",
         {
@@ -263,7 +261,7 @@ module.exports = {
             },
             "/do-science/troubleshooting/connection.md",
             "/do-science/troubleshooting/lab-activities.md",
-          ]
+          ],
         },
         {
           title: "FAQ",
@@ -281,7 +279,7 @@ module.exports = {
             "/do-science/faq/internal-transfer.md",
             "/do-science/faq/external-transfer.md",
             "/do-science/faq/security.md",
-          ]
+          ],
         },
         {
           title: "Global",
@@ -305,7 +303,7 @@ module.exports = {
               title: "Contribute",
               path: "/contribute.md",
             },
-          ]
+          ],
         },
       ],
       "/administer-science/": [
@@ -320,7 +318,7 @@ module.exports = {
               path: "/administer-science/",
             },
             "/administer-science/roles.md",
-          ]
+          ],
         },
         // {
         //   title: "HUNT Lab",
@@ -354,13 +352,13 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/administer-science/get-going/"
+              path: "/administer-science/get-going/",
             },
             "/administer-science/get-going/data-controller.md",
             "/administer-science/get-going/service-center.md",
             "/administer-science/get-going/data-space.md",
             "/administer-science/get-going/lab.md",
-          ]
+          ],
         },
         {
           title: "Agreements",
@@ -375,7 +373,7 @@ module.exports = {
             "/administer-science/agreements/overview.md",
             "/administer-science/agreements/downloads.md",
             "/administer-science/agreements/faq.md",
-          ]
+          ],
         },
         {
           title: "Services",
@@ -391,7 +389,7 @@ module.exports = {
             "/administer-science/services/specifications.md",
             "/administer-science/services/machine-types.md",
             "/administer-science/services/responsiveness.md",
-          ]
+          ],
         },
         {
           title: "Prices",
@@ -401,13 +399,13 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/administer-science/prices/"
+              path: "/administer-science/prices/",
             },
             "/administer-science/prices/pricelist.md",
             "/administer-science/prices/calculator.md",
             "/administer-science/prices/examples.md",
             "/administer-science/prices/faq.md",
-          ]
+          ],
         },
         {
           title: "Data",
@@ -417,10 +415,10 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/administer-science/data/"
+              path: "/administer-science/data/",
             },
             "/administer-science/data/faq.md",
-          ]
+          ],
         },
         {
           title: "Service desk",
@@ -430,13 +428,13 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/administer-science/service-desk/"
+              path: "/administer-science/service-desk/",
             },
             "/administer-science/service-desk/lab-orders.md",
             "/administer-science/service-desk/data-space-orders.md",
-          ]
+          ],
         },
-       {
+        {
           title: "FAQ",
           text: "FAQ",
           collapsable: true,
@@ -444,7 +442,7 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/administer-science/faq/"
+              path: "/administer-science/faq/",
             },
             "/administer-science/faq/lab-faq.md",
             "/administer-science/faq/compliance-faq.md",
@@ -452,49 +450,50 @@ module.exports = {
             "/administer-science/faq/data-faq.md",
             "/administer-science/faq/tech-faq.md",
             "/administer-science/faq/training-faq.md",
-          ]
-         },
-         {
+          ],
+        },
+        {
           title: "Global",
           text: "Global",
           collapsable: false,
           isGroup: true,
           children: [
-          {
-            title: "Start page",
-            path: "/",
-          },
-          {
-            title: "System status",
-            path: "/system-status.md",
-          },
-          {
-            title: "Contact",
-            path: "/contact.md",
-          },
-          {
-            title: "Contribute",
-            path: "/contribute.md",
-          },
-        ]
+            {
+              title: "Start page",
+              path: "/",
+            },
+            {
+              title: "System status",
+              path: "/system-status.md",
+            },
+            {
+              title: "Contact",
+              path: "/contact.md",
+            },
+            {
+              title: "Contribute",
+              path: "/contribute.md",
+            },
+          ],
         },
       ],
-      "/govern-science/": [{
-        title: "Govern science",
-        text: "Govern science",
-        collapsable: false,
-        isGroup: true,
-        children: [
-          {
-            title: "Welcome",
-            path: "/govern-science/",
-          },
-          {
-            title: "Introduction",
-            path: "/govern-science/introduction.md",
-          },
-          "/govern-science/accountability.md",
-          ]
+      "/govern-science/": [
+        {
+          title: "Govern science",
+          text: "Govern science",
+          collapsable: false,
+          isGroup: true,
+          children: [
+            {
+              title: "Welcome",
+              path: "/govern-science/",
+            },
+            {
+              title: "Introduction",
+              path: "/govern-science/introduction.md",
+            },
+            "/govern-science/accountability.md",
+          ],
         },
         {
           title: "Tingweek",
@@ -504,13 +503,13 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/govern-science/tingweek/"
+              path: "/govern-science/tingweek/",
             },
             "/govern-science/tingweek/lagtun.md",
             "/govern-science/tingweek/resolutions.md",
             "/govern-science/tingweek/dates.md",
             "/govern-science/tingweek/faq.md",
-          ]
+          ],
         },
         {
           title: "Policies",
@@ -520,10 +519,10 @@ module.exports = {
           children: [
             {
               title: "Security and privacy policies",
-              path: "/govern-science/policies/"
+              path: "/govern-science/policies/",
             },
             "/govern-science/policies/faq.md",
-          ]
+          ],
         },
         {
           title: "Compliance",
@@ -533,12 +532,12 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/govern-science/compliance/"
+              path: "/govern-science/compliance/",
             },
             "/govern-science/compliance/certificates.md",
             "/govern-science/compliance/subcontractors.md",
-            "/govern-science/compliance/faq.md"
-          ]
+            "/govern-science/compliance/faq.md",
+          ],
         },
         {
           title: "Risk management",
@@ -548,11 +547,11 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/govern-science/risk/"
+              path: "/govern-science/risk/",
             },
             "/govern-science/risk/resources.md",
-            "/govern-science/risk/faq.md"
-          ]
+            "/govern-science/risk/faq.md",
+          ],
         },
         {
           title: "Service desk",
@@ -562,11 +561,11 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/govern-science/service-desk/"
+              path: "/govern-science/service-desk/",
             },
             "/govern-science/service-desk/service-center-orders.md",
             "/govern-science/service-desk/data-controller-orders.md",
-            ]
+          ],
         },
         {
           title: "FAQ",
@@ -576,9 +575,9 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/govern-science/faq/"
+              path: "/govern-science/faq/",
             },
-          ]
+          ],
         },
         {
           title: "Global",
@@ -586,23 +585,23 @@ module.exports = {
           collapsable: false,
           isGroup: true,
           children: [
-          {
-            title: "Start page",
-            path: "/",
-          },
-          {
-            title: "System status",
-            path: "/system-status.md",
-          },
-          {
-            title: "Contact",
-            path: "/contact.md",
-          },
-          {
-            title: "Contribute",
-            path: "/contribute.md",
-          },
-        ]
+            {
+              title: "Start page",
+              path: "/",
+            },
+            {
+              title: "System status",
+              path: "/system-status.md",
+            },
+            {
+              title: "Contact",
+              path: "/contact.md",
+            },
+            {
+              title: "Contribute",
+              path: "/contribute.md",
+            },
+          ],
         },
       ],
       "/about/": [
@@ -620,7 +619,7 @@ module.exports = {
               title: "Affiliation",
               path: "/about/affiliation.md",
             },
-          ]
+          ],
         },
         {
           title: "Team",
@@ -630,9 +629,9 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/about/team/"
+              path: "/about/team/",
             },
-          ]
+          ],
         },
         // {
         //   title: "Values",
@@ -667,9 +666,9 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/about/illustrations/"
+              path: "/about/illustrations/",
             },
-          ]
+          ],
         },
         // {
         //   title: "History",
@@ -701,23 +700,23 @@ module.exports = {
           collapsable: false,
           isGroup: true,
           children: [
-          {
-            title: "Start page",
-            path: "/",
-          },
-          {
-            title: "System status",
-            path: "/system-status.md",
-          },
-          {
-            title: "Contact",
-            path: "/contact.md",
-          },
-          {
-            title: "Contribute",
-            path: "/contribute.md",
-          },
-        ]
+            {
+              title: "Start page",
+              path: "/",
+            },
+            {
+              title: "System status",
+              path: "/system-status.md",
+            },
+            {
+              title: "Contact",
+              path: "/contact.md",
+            },
+            {
+              title: "Contribute",
+              path: "/contribute.md",
+            },
+          ],
         },
       ],
       "/": [
@@ -727,12 +726,7 @@ module.exports = {
           path: "/",
           collapsable: false,
           isGroup: true,
-          children: [
-            "/",
-            "/system-status.md",
-            "/contact.md",
-            "/contribute.md",
-          ]
+          children: ["/", "/system-status.md", "/contact.md", "/contribute.md"],
         },
         {
           title: "Do science",
@@ -750,72 +744,76 @@ module.exports = {
           title: "About HUNT Cloud",
           path: "/about/",
         },
-      ]
-   },
+      ],
+    },
   },
-  chainWebpack: (config) => {
+  chainWebpack: config => {
     config.module.rule("images").use("url-loader").options({
       limit: 10000,
       esModule: false,
       name: `assets/img/[name].[hash:8].[ext]`,
     });
     // Patch for Vuetify CSS conflict: https://github.com/vuetifyjs/vuetify/issues/8530#issuecomment-680942337
-    const sassRule = config.module.rule('sass');
-    const sassNormalRule = sassRule.oneOfs.get('normal');
+    const sassRule = config.module.rule("sass");
+    const sassNormalRule = sassRule.oneOfs.get("normal");
     // creating a new rule
-    const vuetifyRule = sassRule.oneOf('vuetify').test(/[\\/]vuetify[\\/]src[\\/]/);
+    const vuetifyRule = sassRule.oneOf("vuetify").test(/[\\/]vuetify[\\/]src[\\/]/);
     // taking all uses from the normal rule and adding them to the new rule
-    Object.keys(sassNormalRule.uses.entries()).forEach((key) => {
-        vuetifyRule.uses.set(key, sassNormalRule.uses.get(key));
+    Object.keys(sassNormalRule.uses.entries()).forEach(key => {
+      vuetifyRule.uses.set(key, sassNormalRule.uses.get(key));
     });
     // moving rule "vuetify" before "normal"
-    sassRule.oneOfs.delete('normal');
-    sassRule.oneOfs.set('normal', sassNormalRule);
+    sassRule.oneOfs.delete("normal");
+    sassRule.oneOfs.set("normal", sassNormalRule);
     // adding prefixer to the "vuetify" rule
-    vuetifyRule.use('vuetify').loader(require.resolve('postcss-loader')).tap((options = {}) => {
-        options.sourceMap = process.env.NODE_ENV !== 'production';
+    vuetifyRule
+      .use("vuetify")
+      .loader(require.resolve("postcss-loader"))
+      .tap((options = {}) => {
+        options.sourceMap = process.env.NODE_ENV !== "production";
         options.plugins = [
-            prefixer({
-                prefix: '[data-vuetify]',
-                transform(prefix, selector, prefixedSelector) {
-                    let result = prefixedSelector;
-                    if (selector.startsWith('html') || selector.startsWith('body')) {
-                        result = prefix + selector.substring(4);
-                    }
-                    return result;
-                },
-            }),
+          prefixer({
+            prefix: "[data-vuetify]",
+            transform(prefix, selector, prefixedSelector) {
+              let result = prefixedSelector;
+              if (selector.startsWith("html") || selector.startsWith("body")) {
+                result = prefix + selector.substring(4);
+              }
+              return result;
+            },
+          }),
         ];
         return options;
-    });
+      });
     // moving sass-loader to the end
-    vuetifyRule.uses.delete('sass-loader');
-    vuetifyRule.uses.set('sass-loader', sassNormalRule.uses.get('sass-loader'));
+    vuetifyRule.uses.delete("sass-loader");
+    vuetifyRule.uses.set("sass-loader", sassNormalRule.uses.get("sass-loader"));
   },
   // https://v1.vuepress.vuejs.org/plugin/
   plugins: [
     "@vuepress/plugin-back-to-top",
     "@vuepress/active-header-links",
     [
-      "@mr-hope/sitemap", {
-        hostname: "https://docs.hdc.ntnu.no"
-      }
+      "@mr-hope/sitemap",
+      {
+        hostname: "https://docs.hdc.ntnu.no",
+      },
     ],
     [
-      "vuepress-plugin-reading-time", {
-        excludes: ['/about', '/system-status', '/contribute', '/contact', '/faq']
-      }
+      "vuepress-plugin-reading-time",
+      {
+        excludes: ["/about", "/system-status", "/contribute", "/contact", "/faq"],
+      },
     ],
     [
-      "seo", {
+      "seo",
+      {
         // siteTitle: (_, $site) => $site.title,
-        title: $page => $page.frontmatter.category ? ($page.frontmatter.category + ': ' + $page.title) : $page.title,
+        title: $page => ($page.frontmatter.category ? $page.frontmatter.category + ": " + $page.title : $page.title),
         description: $page => $page.frontmatter.description,
-        twitterCard: _ => 'summary',
-        type: $page => [
-          'getting-started', 'working-in-your-lab', 'data-transfer'
-        ].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
-        url: (_, $site, path) => ($site.themeConfig.domain || 'https://docs.hdc.ntnu.no') + path,
+        twitterCard: _ => "summary",
+        type: $page => (["getting-started", "working-in-your-lab", "data-transfer"].some(folder => $page.regularPath.startsWith("/" + folder)) ? "article" : "website"),
+        url: (_, $site, path) => ($site.themeConfig.domain || "https://docs.hdc.ntnu.no") + path,
         customMeta: (add, context) => {
           const {
             $site, // Site configs provided by Vuepress
@@ -823,23 +821,26 @@ module.exports = {
 
             // All the computed options from above:
             // siteTitle,
-            title, description, type, url,
-          } = context
+            title,
+            description,
+            type,
+            url,
+          } = context;
 
-          add('twitter:label1', ($page.readingTime && type === 'article') ? 'Reading time' : null)
-          add('twitter:data1', ($page.readingTime && type === 'article') ? '🕑 ' + $page.readingTime.text : null)
-          add('twitter:label2', type === 'article' ? 'Latest updates' : null)
-          add('twitter:data2', type === 'article' ? 'https://docs.hdc.ntnu.no/news/' : null)
+          add("twitter:label1", $page.readingTime && type === "article" ? "Reading time" : null);
+          add("twitter:data1", $page.readingTime && type === "article" ? "🕑 " + $page.readingTime.text : null);
+          add("twitter:label2", type === "article" ? "Latest updates" : null);
+          add("twitter:data2", type === "article" ? "https://docs.hdc.ntnu.no/news/" : null);
         },
-      }
+      },
     ],
     [
-      '@vuepress/last-updated',
+      "@vuepress/last-updated",
       {
         transformer: (timestamp, lang) => {
           return timestamp ? new Date(timestamp).toLocaleDateString() : timestamp;
-        }
-      }
-    ]
-  ]
+        },
+      },
+    ],
+  ],
 };
