@@ -76,6 +76,24 @@ export default ({
         // Rewrite the link to correct path
         window.location.href = to_path.replace("/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders/");
         next();
+      } else if (
+        to_path.startsWith("/working-in-your-lab/technical-tools/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/working-in-your-lab/technical-tools/", "/do-science/tools/technical/");
+        next();
+      } else if (
+        to_path.startsWith("/working-in-your-lab/analytical-tools/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/working-in-your-lab/analytical-tools/", "/do-science/tools/analytical/");
+        next();
+      } else if (
+        to_path.startsWith("/working-in-your-lab/transfer-tools/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/working-in-your-lab/transfer-tools/", "/do-science/tools/transfer/");
+        next();
       } else {
         next();
       }
