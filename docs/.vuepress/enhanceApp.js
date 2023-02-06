@@ -94,6 +94,12 @@ export default ({
         // Rewrite the link to correct path
         window.location.href = to_path.replace("/working-in-your-lab/transfer-tools/", "/do-science/tools/transfer/");
         next();
+      } else if (
+        to_path.startsWith("/working-in-your-lab/workbench/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/working-in-your-lab/workbench/", "/do-science/hunt-workbench/");
+        next();
       } else {
         next();
       }
