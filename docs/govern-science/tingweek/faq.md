@@ -9,8 +9,10 @@ description: This page list Lagtun resolutions that govern the scientific develo
 
 **This page lists frequently asked questions related to Tingweek.**
 
+[[toc]]
 
 
+## About the Tingweek
 
 ### Why Tings?
 
@@ -28,6 +30,32 @@ Ting invitations, agenda and digital meeting links are forwarded on email a few 
 
 We will meet digitally at Zoom utilizing the NTNU subscription. Links will be forwarded on email and on Slack for the lab ting.
 
-### Where are the minutes?
 
-Our tings have public agendas and internal minutes. We write up a summary after the week that gets distributed directly to the invited parties. The summary contains statements from all tings.
+
+## Lagtun
+
+### I can not participate
+
+If you are a ticket holder you may choose to attend your self or forward the invitation to a representative of your choice.
+
+### I have not received my invitation 
+
+We forward invitations on email addresses that are registered in your Data controller agreement, Services center agreement and Data space agreement. [Contact us](/contact) if you expect to be an invitation recipient and have not received your ticket.
+
+### Can I get the invitation as a calendar booking
+
+Yes. [Contact us](/contact) if you would like to receive your Lagtun invitation as a calendar booking.
+
+### I can only participate for one hour
+
+Perfectly fine fine with us. If you are interested in the resolutions, we recommend that you prioritize the first hour (9-10 am) where we aim to complete most of the structured agenda. If you are interested in unstructured discussion, then we recommend that you prioritize the last hour (10-11 am).
+
+### About the Lagtun name
+
+We know, Lagtun is difficult to pronounce in English. However, in Norwegian it is a word with several meanings that we think capture the soul of this Ting. 
+
+First, **Lag** means "law" In Old Norse. This meaning is included in the last part of the name of our region, Trøndelag, which means the law of the Trønders. In addition, "lag" means "team" in modern Norwegian, reflecting the collaborative nature of the ting. 
+
+The second part, **tun** is also an Old Norse word for a fenced in area, usually around a collection of farm houses, much like your fenced in lab machines. Also relevant, the old tings were held on fenced in tuns for which the the Vikings had to leave all weapons by the fence before they entered the ting.
+
+

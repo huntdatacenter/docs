@@ -14,13 +14,14 @@ This section is aimed at represenatives for data controllers and service centers
 
 ![Strategic compass](../images/hunt-cloud_compass_250.png)
 
-::: tip Next Ting
+::: tip Next Tingweek (Ting 8)
 
-Data Controller Ting 8 is held Wednesday 15 February 2023 - 1 to 3 p.m. CET. All compliance coordinators, privacy officers and security officers are invited. 
+- **Lab ting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-labting-agenda.pdf))
+- **Data space ting**: Wednesday 15 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-dataspaceting-agenda.pdf))
+- **Data controller ting**: Wednesday 15 February 2023 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-datacontrollerting-agenda.pdf))
+- **Lagtun**: Thursday 16 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-lagtun-agenda.pdf))
 
-Lagtun 8 is held Thursday 16 February 2023 - 9 to 11 a.m. CET. Representatives from Data controllers, Service Centers and data spaces on the BLUE subscription level are invited.
-
-[Read more >>](/govern-science/ting/)
+[Read more about Tingweek](/govern-science/tingweek/)
 
 :::
 
