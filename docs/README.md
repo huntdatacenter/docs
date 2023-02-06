@@ -56,8 +56,7 @@ footerHtml: false
         </p>
       </div>
       <div class="hc-column-4">
-        <div class="mascot"></div>
-         <a href="/about/"><img alt="Transparent" height=1 width="150" src="/img/transparent10x10.png" /></a>       
+         <a href="/about/"><img alt="Transparent" height="200" src="/img/hunt-cloud_bot_250_2.png" /></a>
       </div>
       <div class="hc-column-4">
         <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="Scientific products" href="https://www.ntnu.edu/mh/huntcloud" block />
