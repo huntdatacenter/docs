@@ -65,12 +65,14 @@ footerHtml: false
         </p>
       </div>
     </div>
+    <div class="hc-row">
+        <center>
+            <i>These pages contain the official user documentation for HUNT Cloud. <br>HUNT Cloud is a scientific infrastructure for data explorations at <a href="https://www.ntnu.edu/">NTNU</a> in Norway.</i>
+        </center>
+    </div>
   </div>
 </div>
-
-<center>
-<i>These pages contains the official user documentation for HUNT Cloud. <br>HUNT Cloud is a scientific infrastructure for data explorations at <a href="https://www.ntnu.edu/">NTNU</a> in Norway.</i>
-</center>
+<!-- DO NOT PLACE CONTENT outside hc-content -->
 
 <style scoped>
 
