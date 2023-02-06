@@ -59,23 +59,17 @@ When you click "Start local terminal", you should see a window similar to this:
 cat "${USERPROFILE}/.ssh/id_rsa.pub"
 ```
 
-<<<<<<< HEAD
-If the above command prints several rows of random letters on the screen, you already have a ssh keys that can be used. Jump to section 2.3.
-=======
 ::: warning
 Run the above command as is. Keep **`${USERPROFILE}`** (do -not- write your user name).
 :::
->>>>>>> cf1132308 (sanity)
 
 **If you see random letters, jump to section 2.3**
 
 If the above command prints several rows of random letters on the screen, you already have a ssh key that can be used. Great! Jump to section 2.3.
 
-**If you see no output or an error message, continue:**
+**If you see no output or an error message (No such file or directory), continue here:**
 
-If the above command prints and error message (No such file or directory) or there was no output, you probably don't have your ssh key yet. Continue with the folloing steps:
-
-2.2.2 Check if your **`.ssh`** directory exist and create one if not:
+2.2.2 Assure your **`.ssh`** directory exists by running:
 
 ```bash
 mkdir -p "${USERPROFILE}/.ssh"
