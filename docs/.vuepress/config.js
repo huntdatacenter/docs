@@ -63,6 +63,10 @@ module.exports = {
     // TODO remove nav key in vuepress 2
     nav: [
       {
+        text: "Home",
+        link: "/",
+      },
+      {
         text: "Do science",
         link: "/do-science/",
       },
@@ -106,6 +110,18 @@ module.exports = {
             {
               title: "Welcome",
               path: "/do-science/",
+            },
+            {
+              title: "System status",
+              path: "/do-science/system-status.md",
+            },
+            {
+              title: "Contact",
+              path: "/do-science/contact.md",
+            },
+            {
+              title: "Contribute",
+              path: "/do-science/contribute.md",
             },
           ],
         },
@@ -281,30 +297,6 @@ module.exports = {
             "/do-science/faq/security.md",
           ],
         },
-        {
-          title: "Global",
-          text: "Global",
-          collapsable: false,
-          isGroup: true,
-          children: [
-            {
-              title: "Start page",
-              path: "/",
-            },
-            {
-              title: "System status",
-              path: "/system-status.md",
-            },
-            {
-              title: "Contact",
-              path: "/contact.md",
-            },
-            {
-              title: "Contribute",
-              path: "/contribute.md",
-            },
-          ],
-        },
       ],
       "/administer-science/": [
         {
@@ -317,7 +309,22 @@ module.exports = {
               title: "Welcome",
               path: "/administer-science/",
             },
-            "/administer-science/roles.md",
+            {
+              title: "Roles",
+              path: "/administer-science/roles.md",
+            },
+            {
+              title: "System status",
+              path: "/administer-science/system-status.md",
+            },
+            {
+              title: "Contact",
+              path: "/administer-science/contact.md",
+            },
+            {
+              title: "Contribute",
+              path: "/administer-science/contribute.md",
+            },
           ],
         },
         // {
@@ -452,30 +459,6 @@ module.exports = {
             "/administer-science/faq/training-faq.md",
           ],
         },
-        {
-          title: "Global",
-          text: "Global",
-          collapsable: false,
-          isGroup: true,
-          children: [
-            {
-              title: "Start page",
-              path: "/",
-            },
-            {
-              title: "System status",
-              path: "/system-status.md",
-            },
-            {
-              title: "Contact",
-              path: "/contact.md",
-            },
-            {
-              title: "Contribute",
-              path: "/contribute.md",
-            },
-          ],
-        },
       ],
       "/govern-science/": [
         {
@@ -492,7 +475,22 @@ module.exports = {
               title: "Introduction",
               path: "/govern-science/introduction.md",
             },
-            "/govern-science/accountability.md",
+            {
+              title: "Accountability",
+              path: "/govern-science/accountability.md",
+            },
+            {
+              title: "System status",
+              path: "/govern-science/system-status.md",
+            },
+            {
+              title: "Contact",
+              path: "/govern-science/contact.md",
+            },
+            {
+              title: "Contribute",
+              path: "/govern-science/contribute.md",
+            },
           ],
         },
         {
@@ -579,30 +577,6 @@ module.exports = {
             },
           ],
         },
-        {
-          title: "Global",
-          text: "Global",
-          collapsable: false,
-          isGroup: true,
-          children: [
-            {
-              title: "Start page",
-              path: "/",
-            },
-            {
-              title: "System status",
-              path: "/system-status.md",
-            },
-            {
-              title: "Contact",
-              path: "/contact.md",
-            },
-            {
-              title: "Contribute",
-              path: "/contribute.md",
-            },
-          ],
-        },
       ],
       "/about/": [
         {
@@ -618,6 +592,18 @@ module.exports = {
             {
               title: "Affiliation",
               path: "/about/affiliation.md",
+            },
+            {
+              title: "System status",
+              path: "/about/system-status.md",
+            },
+            {
+              title: "Contact",
+              path: "/about/contact.md",
+            },
+            {
+              title: "Contribute",
+              path: "/about/contribute.md",
             },
           ],
         },
@@ -694,30 +680,6 @@ module.exports = {
         //     },
         //   ]
         // },
-        {
-          title: "Global",
-          text: "Global",
-          collapsable: false,
-          isGroup: true,
-          children: [
-            {
-              title: "Start page",
-              path: "/",
-            },
-            {
-              title: "System status",
-              path: "/system-status.md",
-            },
-            {
-              title: "Contact",
-              path: "/contact.md",
-            },
-            {
-              title: "Contribute",
-              path: "/contribute.md",
-            },
-          ],
-        },
       ],
       "/": [
         {

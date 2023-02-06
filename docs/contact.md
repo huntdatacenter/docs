@@ -1,7 +1,6 @@
 ---
 title: Contact us
 category: HUNT Cloud
-permalink: /contact
 sidebarDepth: 0
 description: If you run into any issues, please send us an email or chat with us on Slack.
 ---
