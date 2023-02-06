@@ -464,9 +464,6 @@ module.exports = {
           children: [
             {title: "Introduction",
             path: "/govern-science/tingweek/"},
-            "/govern-science/tingweek/labting.md",
-            "/govern-science/tingweek/dataspaceting.md",
-            "/govern-science/tingweek/datacontrollerting.md",
             "/govern-science/tingweek/lagtun.md",
             "/govern-science/tingweek/resolutions.md",
             "/govern-science/tingweek/dates.md",
@@ -567,10 +564,6 @@ module.exports = {
             path: "/about/",
    	  },
           {
-            title: "Introduction",
-            path: "/about/introduction.md",
-          },
-          {
             title: "Affiliation",
             path: "/about/affiliation.md",
           },
@@ -586,27 +579,27 @@ module.exports = {
             path: "/about/team/"},
           ]
         },
-        {
-          title: "Values",
-          text: "Values",
-          collapsable: true,
-          isGroup: true,
-          children: [
-            {title: "Introduction",
-            path: "/about/values/"},
-            "/about/values/vision.md",
-          ]
-        },
-        {
-          title: "Activities",
-          text: "Activities",
-          collapsable: true,
-          isGroup: true,
-          children: [
-            {title: "Introduction",
-            path: "/about/activities/"},
-          ]
-        },
+//        {
+//          title: "Values",
+//          text: "Values",
+//          collapsable: true,
+//          isGroup: true,
+//          children: [
+//            {title: "Introduction",
+//            path: "/about/values/"},
+//            "/about/values/vision.md",
+//          ]
+//        },
+//        {
+//          title: "Activities",
+//          text: "Activities",
+//          collapsable: true,
+//          isGroup: true,
+//          children: [
+//            {title: "Introduction",
+//            path: "/about/activities/"},
+//          ]
+//        },
         {
           title: "Illustrations",
           text: "Illustrations",
@@ -617,26 +610,26 @@ module.exports = {
             path: "/about/illustrations/"},
           ]
         },
-        {
-          title: "History",
-          text: "History",
-          collapsable: true,
-          isGroup: true,
-          children: [
-            {title: "Introduction",
-            path: "/about/history/"},
-          ]
-        },
-        {
-          title: "FAQ",
-          text: "FAQ",
-          collapsable: true,
-          isGroup: true,
-          children: [
-            {title: "Introduction",
-            path: "/about/faq/"},
-          ]
-        },
+ //       {
+ //         title: "History",
+ //         text: "History",
+ //         collapsable: true,
+ //         isGroup: true,
+ //         children: [
+ //           {title: "Introduction",
+ //           path: "/about/history/"},
+ //         ]
+ //       },
+ //       {
+ //         title: "FAQ",
+ //         text: "FAQ",
+ //         collapsable: true,
+ //         isGroup: true,
+ //         children: [
+ //           {title: "Introduction",
+ //           path: "/about/faq/"},
+ //         ]
+ //       },
         {
           title: "Global",
           text: "Global",

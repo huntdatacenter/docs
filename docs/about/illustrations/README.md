@@ -1,7 +1,7 @@
 ---
 title: Visence (art)
 category: HUNT Cloud
-permalink: /visence
+permalink: /about/illustrations
 description: This page presents artwork from HUNT Cloud where we aim to visualize datascience (visence).
 ---
 
@@ -15,7 +15,7 @@ description: This page presents artwork from HUNT Cloud where we aim to visualiz
 **Our magical world of data science is filled with abstract ideas. This page present artworks where we visualize such ideas in practical forms. Our main purpose is to ease dialogues and strengthen cooperation.**
  
 ::: tip
-We are publishing these artworks under a `CC BY­-NC-­ND 4.0` license. This means that you are free to use, share, copy and redistribute the works under just a few simple terms ([license](/visence/#license)).
+We are publishing these artworks under a `CC BY­-NC-­ND 4.0` license. This means that you are free to use, share, copy and redistribute the works under just a few simple terms ([license](/#license)).
 :::
 
 [[toc]]

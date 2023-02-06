@@ -8,11 +8,14 @@ description: Lagtun is the body that appoints time for the scientific governance
 
 # Lagtun
 
-**High impact science needs continuous evolution of data, tools, expertise and environments to prosper. Lagtun is the body that appoints time to govern the scientific developments of HUNT Cloud with the aim to ensure continuous change under a trustworthy and reliable structure.** 
+**Lagtun is the body that appoints time to govern the scientific developments of HUNT Cloud with the aim to ensure continuous change under a trustworthy and reliable structure.**
+
 
 [[toc]]
 
 ## Introduction
+
+**High impact science needs continuous evolution of data, tools, expertise and environments to prosper.**
 
 **The aim** of Lagtun is to enable continuous scientific change of HUNT Cloud's services under a trustworthy and reliable structure.
 
@@ -51,16 +54,16 @@ The invitation criteria was clarified in [R2/LT5/T5/22](/govern-science/tingweek
 **Lagtun gives recommendations on the development of HUNT Cloud in the form of resolutions. The is introduced with the intention to allow for an inclusive decision making process and multilateral cooperation.** 
 ### Passed resolutions
 
-Resolutions from previous Lagtuns are available in our [resolutions](/tingweek/resolutions) page .
+Resolutions from previous Lagtuns are available in our [resolutions](/govern-science/tingweek/resolutions) page .
 
 ::: tip
 
-[Click here to read our Lagtun resolutions >>](/tingweek/resolutions) 
+[Click here to read our Lagtun resolutions >>](/govern-science/tingweek/resolutions) 
 :::
 
 ### New resolutions
 
-All HUNT Cloud coordinators and users are welcome to propose resolutions for the next meeting through their representatives. You can find the representative list in the [resolution documents](/tingweek/resolutions), or you can [contact us](/contact) if you need help identifying your Lagtun representative. See the [agenda](/tingweek/lagtun/#agenda) section for more details.
+All HUNT Cloud coordinators and users are welcome to propose resolutions for the next meeting through their representatives. You can find the representative list in the [resolution documents](/govern-science/tingweek/resolutions), or you can [contact us](/contact) if you need help identifying your Lagtun representative. See the [agenda](/govern-science/tingweek/lagtun/#agenda) section for more details.
 
 ### Consideration
 
@@ -107,7 +110,7 @@ Operational clauses inside a resolution are numbered with the item number and le
 
 ### Schedule 
 
-Lagtun is scheduled on Thursdays between 9-11 am CET during the Ting weeks. Click here to see [upcoming dates](/tingweek/#dates-and-agendas).
+Lagtun is scheduled on Thursdays between 9-11 am CET during the Ting weeks. Click here to see [upcoming dates](/govern-science/tingweek/dates).
 
 ### Location
 
@@ -117,7 +120,7 @@ Lagtun meets digitally utilizing NTNU's Zoom subscription.
 
 After each Tingweek, we start to identify and allocate new topics for consideration on the next Lagtun. Items are typically identified through dialogues among community members and our cloud team.
 
-All users are welcome to propose agenda items for the next meeting through their representatives. You can find the representative list in the [resolution document](/tingweek/resolutions), or you may [contact us](/contact/) if you need help identifying your Lagtun representative. 
+All users are welcome to propose agenda items for the next meeting through their representatives. You can find the representative list in the [resolution document](/govern-science/tingweek/resolutions), or you may [contact us](/contact/) if you need help identifying your Lagtun representative. 
 
 Items will be floated to members of Lagtun, and one or more resolutions will be added on the topic based on discussions and negotiations. A draft resolution will be tabled in the agenda. 
 
@@ -131,34 +134,8 @@ We aim to document meeting records in addition to the public resolutions. These 
 
 ## FAQ
 
-#### I can not participate
+::: tip
 
-If you are a ticket holder you may choose to attend your self or forward the invitation to a representative of your choice.
-
-#### I have not received my invitation 
-
-We forward invitations on email addresses that are registered in your Data controller agreement, Services center agreement and Data space agreement. [Contact us](/contact) if you expect to be an invitation recipient and have not received your ticket.
-
-#### Can I get the invitation as a calendar booking
-
-Yes. [Contact us](/contact) if you would like to receive your Lagtun invitation as a calendar booking.
-
-#### I can only participate for one hour
-
-Perfectly fine fine with us. If you are interested in the resolutions, we recommend that you prioritize the first hour (9-10 am) where we aim to complete most of the structured agenda. If you are interested in unstructured discussion, then we recommend that you prioritize the last hour (10-11 am).
-
-#### About the Lagtun name
-
-We know, Lagtun is difficult to pronounce in English. However, in Norwegian it is a word with several meanings that we think capture the soul of this Ting. 
-
-First, **Lag** means "law" In Old Norse. This meaning is included in the last part of the name of our region, Trøndelag, which means the law of the Trønders. In addition, "lag" means "team" in modern Norwegian, reflecting the collaborative nature of the ting. 
-
-The second part, **tun** is also an Old Norse word for a fenced in area, usually around a collection of farm houses, much like your fenced in lab machines. Also relevant, the old tings were held on fenced in tuns for which the the Vikings had to leave all weapons by the fence before they entered the ting.
-
-::: tip Ting week FAQs
-
-[Click here](/tingweek/#faq) to read frequently asked questions about the Ting weeks.
+See our Lagtun section in the [Tingweek FAQ](/govern-science/tingweek/faq#lagtun) for frequently asked questions.
 
 :::
-
-
