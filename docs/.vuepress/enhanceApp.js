@@ -28,11 +28,16 @@ export default ({
         window.location.href = "https://assets.hdc.ntnu.no" + to.path;
         next();
       } else if (
-        to.path.startsWith("/tingweeks/") ||
-        to.path === "/tingweeks"
+        to.path.startsWith("/tingweek/") || to.path === "/tingweek"
       ) {
         // NOTE Correct wrong link
-        window.location.href = "https://docs.hdc.ntnu.no/tingweek/";
+        window.location.href = "/govern-science/tingweek/";
+        next();
+      } else if (
+        to.path.startsWith("/tingweeks/") || to.path === "/tingweeks"
+      ) {
+        // NOTE Correct wrong link
+        window.location.href = "/govern-science/tingweek/";
         next();
       } else {
         next();
