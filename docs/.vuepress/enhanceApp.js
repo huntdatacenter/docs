@@ -22,7 +22,7 @@ export default ({
   router.beforeEach(async (to, from, next) => {
     // `to` and `from` are both route objects
     // this.name = to.params.name
-    const to_path = to.path;
+    const to_path = to.fullPath;
     try {
       if (to.path.startsWith("/assets/") && to.path.endsWith(".pdf")) {
         // NOTE Redirect PDF assets if not found - fails to redirect existing
