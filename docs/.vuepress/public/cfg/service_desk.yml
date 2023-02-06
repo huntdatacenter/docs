@@ -190,8 +190,8 @@ update_data_space_coordinator_role:
       Name and Surname: {name}  
       Department: {department}  
       Faculty: {faculty}  
-      Institution: {institution}
-      Email: {email} 
+      Institution: {institution}  
+      Email: {email}  
       Phone: {phone}  
       ---
 
