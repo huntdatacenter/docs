@@ -8,7 +8,7 @@ This repository holds HUNT Cloud Documentation source.
 
 #### Prerequisites
 
-- [Node.js v12.x:](https://nodejs.org)
+- [Node.js v14.x:](https://nodejs.org)
 - [Yarn](https://yarnpkg.com)
 
 #### How to run VuePress
@@ -16,7 +16,7 @@ This repository holds HUNT Cloud Documentation source.
 Install the dependencies of project with:
 
 ```bash
-yarn install
+yarn install --frozen-lockfile
 ```
 
 Start a local VuePress development server with:
