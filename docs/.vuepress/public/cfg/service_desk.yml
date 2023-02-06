@@ -29,7 +29,7 @@ request_new_lab:
 
       Our lab leader and lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
 
-      https://docs.hdc.ntnu.no/service-desk/lab-orders.html#add-a-new-lab-user
+      https://docs.hdc.ntnu.no/administer-science/service-desk/lab-orders/#add-a-new-lab-user
 
       I am looking forward to receive an email verification stating that the lab is up and running.
 
@@ -48,7 +48,7 @@ request_new_lab:
     "<b>Who can order:</b> Data space leaders and data space compliance coordinators in active data spaces.",
     "<b>Required attachment:</b> <a href='/agreements/downloads/#invoice-profile' target='_blank'>Invoice profile for new lab</a> and <a href='/agreements/downloads/#lab-order' target='_blank'>A signed lab order</a>. Information on storage volume sizes and machine type for the home machine can be found below button on main page.",
     "<b>Expected delivery time:</b> One week.",
-    # "<b>Next step:</b> <a href='/service-desk/lab-orders.html#add-a-new-lab-user' target='_blank'>Add your first lab users</a>.",
+    # "<b>Next step:</b> <a href='/administer-science/service-desk/lab-orders/#add-a-new-lab-user' target='_blank'>Add your first lab users</a>.",
     "<b>Cost:</b> One lab subscription as specified in the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
   ]
 
@@ -1255,7 +1255,7 @@ request_mobaxterm_file:
 
       I am looking forward to receive my file over email, and then head over to the docs to get going on the configuration:
 
-      https://docs.hdc.ntnu.no/working-in-your-lab/technical-tools/mobaxterm/
+      https://docs.hdc.ntnu.no/do-science/tools/technical/mobaxterm/
 
 
       Kind regards,
@@ -1269,7 +1269,7 @@ request_mobaxterm_file:
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> File as email attachment.",
     "<b>Requirement:</b> Active SSH connection.",
-    # "<b>Next step:</b> <a href='/working-in-your-lab/technical-tools/mobaxterm/' target='_blank'>MobaXterm configuration guide</a>.",
+    # "<b>Next step:</b> <a href='/do-science/tools/technical/mobaxterm/' target='_blank'>MobaXterm configuration guide</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
 
