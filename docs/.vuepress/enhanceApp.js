@@ -46,6 +46,36 @@ export default ({
         // Rewrite the link to correct path
         window.location.href = to_path.replace("/getting-started/", "/do-science/getting-started/");
         next();
+      } else if (
+        to_path.startsWith("/service-desk/user-orders/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/service-desk/user-orders/", "/do-science/service-desk/");
+        next();
+      } else if (
+        to_path.startsWith("/service-desk/lab-orders/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders/");
+        next();
+      } else if (
+        to_path.startsWith("/service-desk/data-space-orders/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/service-desk/data-space-orders/", "/administer-science/service-desk/data-space-orders/");
+        next();
+      } else if (
+        to_path.startsWith("/service-desk/service-center-orders/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders/");
+        next();
+      } else if (
+        to_path.startsWith("/service-desk/data-controller-orders/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders/");
+        next();
       } else {
         next();
       }
