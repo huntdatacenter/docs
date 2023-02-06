@@ -73,12 +73,20 @@ module.exports = {
       {
         text: "Govern science",
         link: "/govern-science/"
-      }
-      ,
+      },
       {
         text: "About",
         link: "/about/"
-      }
+      },
+      // {
+      //   text: "About",
+      //   items: [
+      //     { text: "HUNT Cloud", link: "/about/" },
+      //     { text: "System status", link: "/system-status.md" },
+      //     { text: "Contact", link: "/contact.md" },
+      //     { text: "Contribute", link: "/contribute.md" }
+      //   ]
+      // }
     ],
     navbar: [{
         text: "Getting started",
