@@ -1,21 +1,26 @@
 ---
 title: Contribute
 category: HUNT Cloud
-permalink: /contribute
 sidebarDepth: 0
 description: We are proud of the content on these pages. They have come together as a collaborative contribution from lab users in our cloud community. We are grateful if you would like to help new lab users on their way by sharing your hard earned tips and tricks.
 ---
 
 # Contribute
 
-**We are proud of the content on these pages. They have come together as a collaborative contribution from members in the cloud community.**
+**We are proud of the content on these pages. They have gradually evolved from dialogues, reflections and contributions from our scientific community.**
 
-However, they are by no means perfect. We know it's frustrating when you don't find an instant fix to your problems. We are all grateful if you would like to continue the tradition of helping the next lab users in line by sharing your hard earned tips and expertise.
+However, they are by no means perfect. We know it's frustrating when you don't find a fix to your problem. Here are a few ways you can help the next scientist in line with your hard earned knowledge and expertise:
 
-Here are a some ways you can help out:
+### Suggest new content
 
-- **Suggest new content.** [Contact us](/contact) with ideas for new content that will help science fly. Also, keep asking us questions to improve the [FAQ section](/faq/) and tell us about troubles to improve the [troubleshooting section](/troubleshooting/).
+Suggest ideas for new content that will help science fly: Keep asking us questions and telling us about your troubles on [email](/contact) or on Slack! Also bring your burning issues to our Tings.
 
-- **Improve current content.** Improve the text directly on a page by clicking the **`Help us improve this page!`** link at the bottom of each page or create an issue on our [issue page](https://github.com/huntdatacenter/docs/issues). Please note that this requires a [GitHub](https://github.com) account. If you don't have one, feel free contact us directly.
+### Improve current content
 
-- **Help out on Slack.** Participate in discussions on Slack to both help and learn from fellow users in topic related channels.
+Improve the existing text by sending us a link to the page with ideas and fixes on [email](/contact) or in Slack.
+
+### Help others in the community
+
+Participate in discussions on in the HUNT Cloud Community on [Slack](/contact) to both learn from fellow scientists and to help others.
+
+

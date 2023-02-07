@@ -1,21 +1,20 @@
 ---
 title: Contact us
 category: HUNT Cloud
-permalink: /contact
 sidebarDepth: 0
 description: If you run into any issues, please send us an email or chat with us on Slack.
 ---
 
 # Contact us
 
-If you run into any issues, please send us an email or chat with us on Slack.
+If you run into any issue, please send us an email or chat with us on Slack.
 
 - **Email:** [cloud@hunt.ntnu.no](mailto:cloud@hunt.ntnu.no)
 - **Slack:** [hunt-genes.slack.com](https://hunt-genes.slack.com)
 
 ::: tip Service desk
 
-To speed up delivery, check if your order is predefined in our [service desk](/service-desk).
+To speed up delivery, check if your order is predefined in our service desks for [do science](/do-science/service-desk), [administer science](/administer-science/service-desk) and [govern science](/govern-science/service-desk).
 
 :::
 

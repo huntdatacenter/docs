@@ -31,6 +31,7 @@
     "sass-loader": "^7.3.1",
     "vue-template-compiler": "^2.6.10",
     "vuepress": "^1.9.7",
+    "vuepress-plugin-clean-urls": "^1.1.2",
     "vuepress-plugin-reading-time": "^0.1.1",
     "vuepress-plugin-seo": "^0.1.4",
     "vuetify-loader": "^1.7.3"

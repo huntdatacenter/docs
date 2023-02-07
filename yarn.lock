@@ -2389,9 +2389,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001317:
-  version "1.0.30001320"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001320.tgz#8397391bec389b8ccce328636499b7284ee13285"
-  integrity sha512-MWPzG54AGdo3nWx7zHZTefseM5Y1ccM7hlQKHRqJkPozUaw3hNbBTMmLn16GG2FUzjR13Cr3NPfhIieX5PzXDA==
+  version "1.0.30001450"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001450.tgz"
+  integrity sha512-qMBmvmQmFXaSxexkjjfMvD5rnDL0+m+dUMZKoDYsGG8iZN29RuYh9eRoMvKsT6uMAWlyUUGDEQGJJYjzCIO9ew==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -8214,6 +8214,11 @@ vuepress-html-webpack-plugin@^3.2.0:
     tapable "^1.0.0"
     toposort "^1.0.0"
     util.promisify "1.0.0"
+
+vuepress-plugin-clean-urls@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-clean-urls/-/vuepress-plugin-clean-urls-1.1.2.tgz#40e3ef16a029dca71b23eb0523957a2abec9dc8d"
+  integrity sha512-36r6XT9stybGSL9zHfFM6F+EBOF9rRDzGdNeias3AmU3AH5+DqsciMjRpHfecKXDKeVcc0PlNfG1Tf19CW5MzA==
 
 vuepress-plugin-container@^2.0.2:
   version "2.1.5"
