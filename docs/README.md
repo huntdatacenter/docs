@@ -118,9 +118,11 @@ footerHtml: false
   /* align-items: center; */
   text-align: center;
   max-width: 960px;
-  margin: 0 auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding-left: 12px;
   padding-right: 12px;
+  margin-bottom: 12px;
 }
 
 .hc-content {
