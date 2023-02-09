@@ -12,7 +12,7 @@ description: These pages contains user documentation aimed at representatives th
 
 This section is aimed at represenatives for data controllers and service centers. See our [main documentation](/) page for other sections.
 
-![Strategic compass](../images/hunt-cloud_compass_250.png)
+!["Illustration of sundial compass in brass."](../images/hunt-cloud_compass_250.png)
 
 ::: tip Next Tingweek (Ting 8)
 

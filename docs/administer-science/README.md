@@ -11,7 +11,7 @@ description: These pages contains user documentation aimed at individuals that a
 
 This section is aimed at lab leaders, lab coordinators, data space leaders and data space administrators that administer science in HUNT Cloud. 
 
-![Custom key](../images/hunt-cloud_key_250.png)
+!["Illustration of decorative hand-made golden key with purple gem stones."](../images/hunt-cloud_key_250.png)
 
 You will find practical information on lab and data space administration. See our [main documentation](/) page for other sections.
 

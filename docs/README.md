@@ -27,21 +27,21 @@ footerHtml: false
     </div>
     <div class="hc-row">
       <div class="hc-column-4">
-        <a href="/do-science/"><img alt="Bottle of knowledge" height="150" src="/img/hunt-cloud_bottle_250.png" /></a>
+        <a href="/do-science/"><img alt="Illustration of laboratory glass bottle with yellow shimmery substance." height="150" src="/img/hunt-cloud_bottle_250.png" /></a>
         <VuetifyButton id="btn1" class="hc-btn" color="black--text" label="Do science" href="/do-science/" block />
         <p>
           Scientists are explorers. This section is aimed at explorers that use data to discover knowledge for a better world in HUNT Cloud.
         </p>
       </div>
       <div class="hc-column-4">
-        <a href="/administer-science/"><img alt="Custom keys" height="150" src="/img/hunt-cloud_key_250.png" /></a>
+        <a href="/administer-science/"><img alt="Illustration of decorative hand-made golden key with purple gem stones." height="150" src="/img/hunt-cloud_key_250.png" /></a>
         <VuetifyButton id="btn2" class="hc-btn" color="black--text" label="Administer science" href="/administer-science/" block />
         <p>
           Scientific administrators are keymakers. This section is aimed at administrators that enables scientific explorations.
         </p>
       </div>
       <div class="hc-column-4">
-        <a href="/govern-science/"><img alt="Strategic compass" height="150" src="/img/hunt-cloud_compass_250.png" /></a>
+        <a href="/govern-science/"><img alt="Illustration of sundial compass in brass." height="150" src="/img/hunt-cloud_compass_250.png" /></a>
         <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="Govern science" href="/govern-science/" block />
         <p>
           Trust enables science. This section is aimed at data controllers and scientific centers that guides the development of HUNT Cloud.
@@ -56,7 +56,7 @@ footerHtml: false
         </p>
       </div>
       <div class="hc-column-4">
-         <a href="/about/"><img alt="Transparent" height="200" src="/img/hunt-cloud_bot_250_2.png" /></a>
+         <a href="/about/"><img alt="Illustration of small centien robot made of metal with shiny lightbulb on top of its head." height="200" src="/img/hunt-cloud_bot_250_2.png" /></a>
       </div>
       <div class="hc-column-4">
         <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="Scientific products" href="https://www.ntnu.edu/mh/huntcloud" block />
