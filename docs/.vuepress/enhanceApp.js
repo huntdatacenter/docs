@@ -29,16 +29,16 @@ export default ({
         window.location.href = "https://assets.hdc.ntnu.no" + to.path;
         next();
       } else if (
-        to.path.startsWith("/tingweek/") || to.path === "/tingweek"
+        to_path.startsWith("/tingweek/") || to_path === "/tingweek"
       ) {
         // NOTE Correct wrong link
-        window.location.href = "/govern-science/tingweek/";
+        window.location.href = to_path.replace("/tingweek", "/govern-science/tingweek");
         next();
       } else if (
-        to.path.startsWith("/tingweeks/") || to.path === "/tingweeks"
+        to_path.startsWith("/tingweeks/") || to_path === "/tingweeks"
       ) {
         // NOTE Correct wrong link
-        window.location.href = "/govern-science/tingweek/";
+        window.location.href = to_path.replace("/tingweeks", "/govern-science/tingweek");
         next();
       } else if (
         to_path.startsWith("/getting-started/")
@@ -99,6 +99,36 @@ export default ({
       ) {
         // Rewrite the link to correct path
         window.location.href = to_path.replace("/working-in-your-lab/workbench/", "/do-science/hunt-workbench/");
+        next();
+      } else if (
+        to_path.startsWith("/community/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/community/", "/do-science/community/");
+        next();
+      } else if (
+        to_path.startsWith("/troubleshooting/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/troubleshooting/", "/do-science/troubleshooting/");
+        next();
+      } else if (
+        to_path.startsWith("/faq/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/faq/", "/do-science/faq/");
+        next();
+      } else if (
+        to_path.startsWith("/certificates/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/certificates/", "/govern-science/compliance/certificates/");
+        next();
+      } else if (
+        to_path.startsWith("/policies/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/policies/", "/govern-science/policies/");
         next();
       } else {
         next();

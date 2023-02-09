@@ -84,7 +84,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 3. Type **`<your-username>@<your-lab-IP>`** in the "_Host Name (or IP address)_" field and click "_Open_".
 
-4. Enter your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password and hit enter. You will not see anything on the screen when you type your password.
+4. Enter your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password and hit enter. You will not see anything on the screen when you type your password. Pasting with ctrl + v does not work in Putty.
 
 5. Type the same **`SSH temporary key`** _one more time_ when asked and hit enter.
 
@@ -106,7 +106,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 3. You should then be prompted to enter a password **`<your-username>@<your-lab-IP>'s password:`**
 
-4. Enter your **`SSH temporary key`** colelcted in Step 1 _two_ times.
+4. Enter your **`SSH temporary key`** collected in Step 1 _two_ times. Pasting with ctrl + v does not work in Putty.
 
 5. Enter your new **`passphrase`** and retype for verification. You will be kicked off the entry machine by completion.
 
