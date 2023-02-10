@@ -30,7 +30,7 @@ footerHtml: false
         <a href="/do-science/"><img alt="Illustration of laboratory glass bottle with yellow shimmery substance." height="150" src="/img/hunt-cloud_bottle_250.png" /></a>
         <VuetifyButton id="btn1" class="hc-btn" color="black--text" label="Do science" href="/do-science/" block />
         <p>
-          Scientists are explorers. This section is aimed at explorers that use data to discover knowledge for a better world in HUNT Cloud.
+          Scientists are explorers. This section is aimed at those who use data to discover knowledge for a better world in HUNT Cloud.
         </p>
       </div>
       <div class="hc-column-4">
