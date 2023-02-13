@@ -22,13 +22,23 @@ The inspiration to appoint time to meet at regular intervals in a layered struct
 
 No. Our tings are not the same as a general assembly (generalforsamling) with binding decisions. As of today, our tings are to be seen as a gathering of people that both champion and dream up ideas on how to best utilize data for a better world. HUNT Cloud is owned by NTNU which has the full financial and compliance responsibilities for our services.
 
-### How do I get invited?
+## Participation
+
+### Short on time, which Ting should I prioritize? 
+
+All where you are invited ;-) That said, we know science never sleeps, so if you are short on time and hold several roles and such recieve several invitations: Here's a quick reminder of the scope of the different meetings to help you prioritize. 
+
+!["Tingweek schedule"](./images/tingweek-schedule-times.png)
+
+You can read more about the different Tings in our [main Tingweek page](/govern-science/tingweek/#tings).
+
+### How do I get my invitation?
 
 Ting invitations, agenda and digital meeting links are forwarded on email a few weeks before the Ting week. Dates will also be announced on these pages and on Slack.
 
 ### Where do we meet?
 
-We will meet digitally at Zoom utilizing the NTNU subscription. Links will be forwarded on email and on Slack for the lab ting.
+We will meet digitally at Zoom utilizing the NTNU subscription. Links will be forwarded on email and on Slack for the lab ting and the data space ting.
 
 
 

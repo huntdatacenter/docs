@@ -14,6 +14,8 @@ description: This section list information and questions for the HUNT Cloud Ting
 
 We arrange a layered set of Tings for distinct groups in our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Tingweeks".
 
+
+
 ::: tip Next Tingweek (Ting 8)
 
 - **Lab ting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-labting-agenda.pdf))
@@ -22,6 +24,7 @@ We arrange a layered set of Tings for distinct groups in our community. The meet
 - **Lagtun**: Thursday 16 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-lagtun-agenda.pdf))
 
 :::
+
 
 
 
@@ -69,10 +72,10 @@ Memberships to the Tings are derived from the following registered roles in cont
 
 | Ting | Invitations |
 | - | - |
-| **Lab ting** | All active lab users. |
-| **Data space ting** | All coordinators in data spaces. |
-| **Enterprise ting** | All active users registered or associated with a private enterprise. |
-| **Lagtun** | Data controllers, service centers and data spaces on the BLUE subscription level ([read more](/govern-science/tingweek/lagtun/#representatives)). |
+| **Lab ting** | Active lab users. |
+| **Data space ting** | Data space administrators. |
+| **Data controller ting** | Data space compliance administrators, Privacy and security officers from Data controllers. |
+| **Lagtun** | Representatives from Data controllers, Service centers and Data spaces on the BLUE subscription level ([read more](/govern-science/tingweek/lagtun/#representatives)). |
 
 
 ## Schedule
@@ -90,6 +93,9 @@ Tingweeks are scheduled over one week in the winter, spring and autumn: (i) The 
 
 ![Ting schedule days](./images/tingweek-schedule-days.png)
 
-Individual Tings are scheduled over the week on the same time slots. The current scheule is as follows: Lab tings are held on Tuesdays 2-4 pm CET, Data space tings on Wednesdays 9-11 am CET, Enterprise tings on Wednesdays 1-3 pm CET and Lagtun on Thursdays 9-11 am CET.
+Individual Tings are scheduled over the week on the same time slots. The current scheule is as follows: Lab ting is held on Tuesdays 2-4 pm CET, Data space ting on Wednesdays 9-11 am CET, Data controller ting on Wednesdays 1-3 pm CET and Lagtun on Thursdays 9-11 am CET.
 
+#### Tingweek schedule with times and scope
+
+!["Tingweek schedule"](./images/tingweek-schedule-times.png)
 
