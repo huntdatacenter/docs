@@ -1,5 +1,5 @@
 ---
-title: Compliance FAQ
+title: Compliance
 category: Frequently asked questions
 permalink: /administer-science/faq/compliance-administration/
 description: This page contains common questions on scientific administration in HUNT Cloud.
@@ -37,7 +37,7 @@ We may transfer the ownership of a lab under your data space to another data spa
 
 ### Can we rename an existing lab? 
 
-No. Not at the moment. You can not rename an existing lab. However, you can register a new lab under your preferred name and migrate your data and activities over to this new name space.
+No. You can not rename an existing lab at the moment. However, you can register a new lab under your preferred name and migrate your data and activities over to this new name space.
 
 ### Must our lab name be linked to a research project? 
 
