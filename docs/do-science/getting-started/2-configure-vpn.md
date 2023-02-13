@@ -111,9 +111,22 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 ::: details Windows
 
 1. Start the OpenVPN client (if it is not running already)
-2. Right-click on the OpenVPN [notification icon](https://pchelp.ricmedia.com/wp-content/uploads/connect-vpn-using-openvpn-on-windows/openvpn-gui-taskbar-icon.png) on the taskbar
+
+![OpenVPN-icon](./images/1.OpenVPN-guide.png)
+
+2. Expand pane on taskbar
+
+![OpenVPN-icon](./images/3.OpenVPN-guide.png)
+
 3. Select **`Import file...`**
-4. Select the OpenVPN profile file named **`<username>.ovpn`** that you collected in Step 1.
+
+![OpenVPN-icon](./images/4.OpenVPN-guide.png)
+
+4. Click on Import file and select OpenVPN profile file **`<username>.ovpn`** that you collected in Step 1.
+
+![OpenVPN-icon](./images/5.OpenVPN-guide.png)
+
+![OpenVPN-icon](./images/6.OpenVPN-guide.png)
 
 :::
 
@@ -162,19 +175,21 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 ::: details Windows
 
 1. Right-click on the OpenVPN notification icon on the taskbar.
+
 2. Select _Connect_.
+
+![OpenVPN-icon](./images/7.OpenVPN-guide.png)
+
 3. Enter your user name (same as the OpenVPN profile file name).
+
 4. Enter a rotating **`verification code`** from Google Authenticator as your password.
 
-    ::: warning
-    Make sure that the _Save password_ checkbox is **`unchecked`**.
+    ![OpenVPN-icon](./images/9.OpenVPN-guide.png)
 
-5. When prompted for a _Private Key Password_ or _Passphrase_, insert the **`VPN passphrase`** that your collected in Step 1.
+5. When prompted for a _Private Key Password_, insert the **`VPN passphrase`** that your collected in Step 1. 
+   Your authentication will fail when you complete your passphrase below. This is expected since your verification code timed out while you typed your passphrase.
 
-    ::: tip
-    Save this passphrase.
-
-Your authentication will fail when you complete your passphrase above. This is expected since your verification code timed out while you typed your passphrase.
+    ![OpenVPN-icon](./images/8.OpenVPN-guide.png)
 
 6. Now try again to connect with a fresh **`verfication code`** from Google Authenticator.
 
@@ -235,6 +250,8 @@ Please invest some time to verify a successful VPN connection as you will not be
 ::: details Windows
 
 The OpenVPN notification icon on the taskbar should be green.
+
+![OpenVPN-icon](./images/2.OpenVPN-guide.png)
 
 :::
 
