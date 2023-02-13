@@ -130,6 +130,18 @@ export default ({
         // Rewrite the link to correct path
         window.location.href = to_path.replace("/policies/", "/govern-science/policies/");
         next();
+      } else if (
+        to_path.startsWith("/subcontractors/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/subcontractors/", "/govern-science/compliance/subcontractors/");
+        next();
+      } else if (
+        to_path.startsWith("/responsibilities/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/responsibilities/", "/govern-science/risk-management/#clarification-of-responsibilities");
+        next();
       } else {
         next();
       }
