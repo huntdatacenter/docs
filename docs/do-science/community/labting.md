@@ -14,9 +14,9 @@ description: This page list information and questions about our Labting.
 
 ::: tip Why should I care? 
 
-The products and services that you use have come together as a collaborative contribution from members of the cloud community and the HUNT Cloud team. 
+The products and services that you use in HUNT Clou have come together as a collaboration between members from our cloud community and the HUNT Cloud team.
 
-However, science never sleeps. And such, no service will never be perfect. Join the Ting to voice your hard earned tips and expertise and help yourself, us and the next scientist in line to develop.
+However, science never sleeps. And such, no service will ever be perfect. Join the Labting to voice your hard earned expertise to evolve the experience for yourself and the greater community.
 
 ::: 
 
