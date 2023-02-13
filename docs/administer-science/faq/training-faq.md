@@ -1,5 +1,5 @@
 ---
-title: Training FAQ
+title: Training
 category: Frequently asked questions
 permalink: /administer-science/faq/training-administration/
 description: This page contains common questions on scientific administration in HUNT Cloud.

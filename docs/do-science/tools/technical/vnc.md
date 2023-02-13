@@ -20,7 +20,7 @@ description: Usage guide for VNC.
 
 ```
 # -- Example for version 3.0.2 
-wget wget https://netix.dl.sourceforge.net/project/turbovnc/3.0.2/turbovnc_3.0.2_amd64.deb
+wget https://netix.dl.sourceforge.net/project/turbovnc/3.0.2/turbovnc_3.0.2_amd64.deb
 ```
 
 [Click here](https://sourceforge.net/projects/turbovnc/files/) to see the latest version and update the text above with a new version number if needed.

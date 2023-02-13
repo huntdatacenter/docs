@@ -1,5 +1,5 @@
 ---
-title: Finance FAQ
+title: Finance
 category: Frequently asked questions
 permalink: /administer-science/faq/financial-administration/
 description: This page contains common questions on scientific administration in HUNT Cloud.

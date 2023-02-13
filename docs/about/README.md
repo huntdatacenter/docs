@@ -11,7 +11,7 @@ description: This page contains information on HUNT Cloud.
 
 This is a pilot page that where we will add information about the thinking and team behind HUNT Cloud.
 
-![Bot](../images/hunt-cloud_bot_250_3.png)
+!["Illustration of small centien robot made of metal with shiny lightbulb on top of its head."](../images/hunt-cloud_bot_250_3.png)
 
 ::: tip Next Tingweek (Ting 8)
 
