@@ -34,7 +34,7 @@ You can read more about the different Tings in our [main Tingweek page](/govern-
 
 ### How do I get my invitation?
 
-Ting invitations, agenda and digital meeting links are forwarded on email a few weeks before the Ting week. Dates will also be announced on these pages and on Slack.
+Ting invitations, agenda and digital meeting links are forwarded on email a few weeks before the Tingweek. Dates will also be announced on these pages and on Slack.
 
 ### Where do we meet?
 

@@ -17,7 +17,7 @@ Our scientific development is governed by multilateral Tings, while the privacy 
 
 ### Scientific development
 
-- [Ting week](/tingweek/). A set of layered Tings meet three times per year to provide recommendations on the scientific development in HUNT Cloud.
+- [Tingweek](/tingweek/). A set of layered Tings meet three times per year to provide recommendations on the scientific development in HUNT Cloud.
 - [Lagtun](/tingweek/lagtun/). Lagtun is the Ting that govern the scientific development of our environments.
 - [Resolutions](/tingweek/resolutions/). Lagtun expressed its recommendation for the scientific development as resolutions.
 

@@ -22,7 +22,7 @@ description: This page list information and questions about our Labting.
 
 ## Context
 
-We arrange Ting weeks at fixed intervals three times per year to meet for information, feedback and discussions on how to develop the services in HUNT Cloud to better elevate science. We call these gatherings Tings. Read more about the Tingweek in our [govern-science section](/govern-science/tingweek/). 
+We arrange Tingweeks at fixed intervals three times per year to meet for information, feedback and discussions on how to develop the services in HUNT Cloud to better elevate science. We call these gatherings Tings. Read more about the Tingweek in our [govern-science section](/govern-science/tingweek/). 
 
 ## About the HUNT Cloud Labting
 
@@ -63,3 +63,5 @@ However, science never sleeps. And such, no service will ever be perfect.
 Join the Labting to voice your hard earned expertise to evolve the experience for yourself, the greater community and new scientists in line that all deserves exciting and cool environments to enhance their explorations.
 
 ::: 
+
+

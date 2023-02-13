@@ -95,9 +95,9 @@ Resolutions consist of two parts: (i) the introductory sentence that states the 
 
 ### Referencing
 
-Resolutions are numbered as follows: item on the agenda, Lagtun meeting number, Ting week number and year. 
+Resolutions are numbered as follows: item on the agenda, Lagtun meeting number, Tingweek number and year. 
 
-To illustrate, resolution **`R6/LT4/T4/21`** means that this was the resolution from item 6 on the agenda in the fourth Lagtun during the fourth Ting week held in 2021. 
+To illustrate, resolution **`R6/LT4/T4/21`** means that this was the resolution from item 6 on the agenda in the fourth Lagtun during the fourth Tingweek held in 2021. 
 
 Operational clauses inside a resolution are numbered with the item number and letters in alphabetical order. For example, **`6(a)`** means that this is the first operational clause of resolution 6 in the given Lagtun.
 
@@ -110,7 +110,7 @@ Operational clauses inside a resolution are numbered with the item number and le
 
 ### Schedule 
 
-Lagtun is scheduled on Thursdays between 9-11 am CET during the Ting weeks. Click here to see [upcoming dates](/govern-science/tingweek/dates).
+Lagtun is scheduled on Thursdays between 9-11 am CET during the Tingweeks. Click here to see [upcoming dates](/govern-science/tingweek/dates).
 
 ### Location
 

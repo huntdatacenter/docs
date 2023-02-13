@@ -60,7 +60,7 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun/) and the use of [resol
 - TOPIC: Governance
 - ID: R4/LT5/T5/22
 
-#### [Clarification of Ting week invitations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=3)
+#### [Clarification of Tingweek invitations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=3)
 
 - TOPIC: Governance
 - ID: R2/LT5/T5/22
