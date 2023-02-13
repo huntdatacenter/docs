@@ -12,13 +12,13 @@ description: This page list information and questions about our Labting.
 
 [[toc]]
 
-::: tip Why should I care? 
 
-The products and services that you use in HUNT Clou have come together as a collaboration between members from our cloud community and the HUNT Cloud team.
+::: tip Why should I care?... 
 
-However, science never sleeps. And such, no service will ever be perfect. Join the Labting to voice your hard earned expertise to evolve the experience for yourself and the greater community.
+[Read why you should participate in the Labting](#why-should-i-care)
 
-::: 
+:::
+
 
 ## Context
 
@@ -50,4 +50,16 @@ We aim to cover a combination of relevant shifting topics and appointed topics t
 
 Read more about Tingweeks, Labting, and see past agendas in our [govern-science section](/govern-science/tingweek/).
 
+## FAQ
 
+### Why should I care? 
+
+::: tip You should care because... 
+
+Products and services that you use in HUNT Cloud have come together as a collaborative effort between members from the cloud community and our HUNT Cloud team.
+
+However, science never sleeps. And such, no service will ever be perfect. 
+
+Join the Labting to voice your hard earned expertise to evolve the experience for yourself, the greater community and new scientists in line that all deserves exciting and cool environments to enhance their explorations.
+
+::: 

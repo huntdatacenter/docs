@@ -18,7 +18,7 @@ We arrange a layered set of Tings for distinct groups in our community. The meet
 
 ::: tip Next Tingweek (Ting 8)
 
-- **Lab ting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-labting-agenda.pdf))
+- **Labting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-labting-agenda.pdf))
 - **Data space ting**: Wednesday 15 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-dataspaceting-agenda.pdf))
 - **Data controller ting**: Wednesday 15 February 2023 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-datacontrollerting-agenda.pdf))
 - **Lagtun**: Thursday 16 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-lagtun-agenda.pdf))
@@ -48,9 +48,9 @@ We have implemented a layered Ting structure to elevate voices and collective kn
 
 ![Tingweek tings](./images/tingweek-tings.png)
 
-#### Lab ting
+#### Labting
 
-This is our allting were we focuses on the **user experience inside labs**, and communication between lab users and with us. All active lab users, lab leaders and lab coordinators are invited for information, feedback and discussions on all aspects of existing, planned and future services.
+This is our allting were we focuses on the **user experience inside labs**, and communication between lab users and with us. All active lab users, lab leaders and lab coordinators are invited for information, feedback and discussions on all aspects of existing, planned and future services. [Read more our Labting] in the do science section.
 
 #### Data space ting
 
@@ -72,7 +72,7 @@ Memberships to the Tings are derived from the following registered roles in cont
 
 | Ting | Invitations |
 | - | - |
-| **Lab ting** | Active lab users. |
+| **Labting** | Active lab users. |
 | **Data space ting** | Data space administrators. |
 | **Data controller ting** | Data space compliance administrators, Privacy and security officers from Data controllers. |
 | **Lagtun** | Representatives from Data controllers, Service centers and Data spaces on the BLUE subscription level ([read more](/govern-science/tingweek/lagtun/#representatives)). |
@@ -93,7 +93,7 @@ Tingweeks are scheduled over one week in the winter, spring and autumn: (i) The 
 
 ![Ting schedule days](./images/tingweek-schedule-days.png)
 
-Individual Tings are scheduled over the week on the same time slots. The current scheule is as follows: Lab ting is held on Tuesdays 2-4 pm CET, Data space ting on Wednesdays 9-11 am CET, Data controller ting on Wednesdays 1-3 pm CET and Lagtun on Thursdays 9-11 am CET.
+Individual Tings are scheduled over the week on the same time slots. The current scheule is as follows: Labting is held on Tuesdays 2-4 pm CET, Data space ting on Wednesdays 9-11 am CET, Data controller ting on Wednesdays 1-3 pm CET and Lagtun on Thursdays 9-11 am CET.
 
 #### Tingweek schedule with times and scope
 
