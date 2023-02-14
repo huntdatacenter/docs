@@ -81,7 +81,7 @@ Inactive accounts will be deactivated after about 180 days. This will cause your
 
 ### New local machine
 
-We are happy to hear that! If you have a new local machine you will need to install a new VPN certificate on all machines that you will connect from. Order your VPN certificate reset in our [service desk](/do-science/service-desk/#vpn-certificate-reset).
+We are happy to hear that! If you have a new local machine you will need to install a new VPN certificate on all machines that you will connect from. You can find all required steps in our [FAQ section](/do-science/service-desk/#i-have-a-new-machine-what-should-i-request).
 
 
 ### New VPN certificate
