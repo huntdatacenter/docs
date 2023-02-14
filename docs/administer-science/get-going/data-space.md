@@ -1,7 +1,7 @@
 ---
 title: Data space
 category: HUNT Cloud
-permalink: /coordination/get-going/data-space
+permalink: /administer-science/get-going/data-space
 sidebarDepth: 1
 description: This page helps you to get going with administrative agreements in HUNT Cloud.
 ---
@@ -10,21 +10,21 @@ description: This page helps you to get going with administrative agreements in 
 
 **This guide aims to describe the steps to get you going with your first data space in HUNT Cloud.**
 
-Data spaces in HUNT Cloud are scientific units such as centers and research groups that mange and coordinate scientific activities across one or many labs. 
+Data spaces in HUNT Cloud are scientific units such as centers and research groups that mange and administer scientific activities across one to many labs. 
 
 [[toc]]
 
-Data spaces are controlled in data space orders that specify subscription levels for available resources in labs and identify cross-lab coordinators. Read more abou the data space orders in our [agreement section](/administer-science/agreements/overview/#data-space-order).
+Data spaces are controlled in data space orders that specify subscription levels for available resources in labs and identify cross-lab administrators. Read more abou the data space orders in our [agreement section](/administer-science/agreements/overview/#data-space-order).
 
 ### 1. Brand your data space
 
 We recommend that you invest some time to identify a short and powerful name for your data space. Name recognition may help strengthen your scientific brand when you communicate with colleagues, collaborators and other interested parties. We will use this name in communication with your team and when we communicate with your department and faculty. 
 
-### 2. Identify your coordinator team
+### 2. Identify your administrator team
 
-High-trust and high-paced science needs smooth and seamless coordination to fly. Therefore, this is the step to list your team of coordinators for five key areas: compliance, data, technical, knowledge and finance. 
+High-trust and high-paced science needs smooth and seamless administration to fly. Therefore, this is the step to list your team of administrators for five key areas: compliance, data, technical, knowledge and finance. 
 
-[Click here](/administer-science/roles/) to read more about the different roles. Your coordinator team will be the main points of contacts for both your scientists and us. 
+[Click here](/administer-science/roles/) to read more about the different roles. Your administrator team will be the main points of contacts for both your scientists and us. 
 
 ### 3. Decide your data space subscription level
 

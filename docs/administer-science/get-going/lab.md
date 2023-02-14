@@ -1,7 +1,7 @@
 ---
 title: Lab
 category: HUNT Cloud
-permalink: /coordination/get-going/lab
+permalink: /administer-science/get-going/lab
 sidebarDepth: 1
 description: This page helps you to get going with administrative agreements in HUNT Cloud.
 ---

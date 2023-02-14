@@ -1,7 +1,7 @@
 ---
 title: Service center
 category: HUNT Cloud
-permalink: /coordination/get-going/service-center
+permalink: /administer-science/get-going/service-center
 sidebarDepth: 1
 description: This page helps you to get going with administrative agreements in HUNT Cloud.
 ---

@@ -148,7 +148,7 @@ We do -not- recommend using `chmod` to restrict access to data within your lab f
 
 ::: tip 
 
-See our [Data coordinator FAQ](/administer-science/data/faq/#restore) for questions regarding backup and restore.
+See our [Data administrator FAQ](/administer-science/data/faq/#restore) for questions regarding backup and restore.
 
 :::
 

@@ -1,13 +1,13 @@
 ---
 title: Introdution
 category: HUNT Cloud
-permalink: /coordination/get-going/
+permalink: /administer-science/get-going/
 description: Learn how to utilize HUNT Cloud for your scientific environments and explorations. 
 ---
 
 # Get going
 
-**This section provides step-by-step guides on how to get going with your agreements in HUNT Cloud. The guide is intended for compliance coordinators that handles practical aspects of the scientific coordination on behalf of their organizations and/or scientific groups.**
+**This section provides step-by-step guides on how to get going with your agreements in HUNT Cloud. The guide is intended for compliance administrators that handles practical aspects of the scientific coordination on behalf of their organizations and/or scientific groups.**
 
 [[toc]]
 

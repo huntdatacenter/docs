@@ -39,7 +39,7 @@ Residual risks needs to be accepted. We call the individual that have the author
 
 ## Data Protection Impact Assessment (DPIA)
 
-The data processing in your labs may require a Data Protection Impact Assessments (DPIA) prior to the initiation of scientific activities (GDPR Article 35). See the [resources](/govern-science/risk-management/resources) to get going, and [contact us](/contact) for review of written text. We are happy to assist compliance coordinators with this work. 
+The data processing in your labs may require a Data Protection Impact Assessments (DPIA) prior to the initiation of scientific activities (GDPR Article 35). See the [resources](/govern-science/risk-management/resources) to get going, and [contact us](/contact) for review of written text. We are happy to assist compliance administrators with this work. 
 
 ## Risk assessment reports (RAR)
 

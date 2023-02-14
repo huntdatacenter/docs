@@ -50,7 +50,7 @@ Yes. We hold an extensive collection of security documentation that is not avail
 
 ### Do you allow audits?
 
-Yes. We encourage data controllers to audit our systems to ensure that they are implemented and operated as we state in our policies. Our Compliance coordinator will coordinate the audit with your auditor team, and we will invite relevant team members for interviews in accordance on your audit scope. We are happy to arrange both physical and digital audits. [Contact us](/contact) for arrangements. 
+Yes. We encourage data controllers to audit our systems to ensure that they are implemented and operated as we state in our policies. Our Compliance administrator will coordinate the audit with your auditor team, and we will invite relevant team members for interviews in accordance on your audit scope. We are happy to arrange both physical and digital audits. [Contact us](/contact) for arrangements. 
 
 ### Do you allow third-party audits? 
 

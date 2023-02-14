@@ -97,19 +97,19 @@ Attach your new data space to the following established services center:
 
 This individual is authorized by the services center to lead the data space. The role include a responsibility authorize new labs under the data space, authorizing data transfers out of the data space, and to pay for resources consumed by the labs attached to the data space.
 
-**Compliance coordinator**
+**Compliance administrator**
 
-This individual is authorized by the data controller to place individual Cloud Service Orders for resource adjustments and to onboard new labs on behalf of your Data space leader. The Compliance coordinator is also our point of contact for discussions on running agreement updates and compliance reporting.
+This individual is authorized by the data controller to place individual Cloud Service Orders for resource adjustments and to onboard new labs on behalf of your Data space leader. The Compliance administrator is also our point of contact for discussions on running agreement updates and compliance reporting.
 
-**Data coordinator**
+**Data administrator**
 
 This individual is our contact point for data coordination for labs attached to your data space. This includes communication on data transfers, backups and other data related issues.
 
-**Technical coordinator**
+**Technical administrator**
 
 This individual is our contact point for technical configuration for labs attached to your data space. This includes configuration and adaptation of analytical tools, including distributed computing and graphical interfaces. 
 
-**Training coordinator**
+**Training administrator**
 
 This individual is our contact point for knowledge transfers between lab users across labs attached to the data space. This includes transfers of know-how related to onboardings, configurations, data flow etc. This individual is also our contact for discussion and evolution of user training and knowledge transfer.
 
@@ -257,7 +257,7 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud - External Kista Import Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-import-order.pdf) (pdf)
 
-Data space leaders and Data space compliance coordinators can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from a lab. The order is co-signed by the uploader outside HUNT Cloud.
+Data space leaders and Data space compliance administrators can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from a lab. The order is co-signed by the uploader outside HUNT Cloud.
 
 ::: details Clarification of the form fields
 

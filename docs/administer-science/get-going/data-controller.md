@@ -1,7 +1,7 @@
 ---
 title: Data controller
 category: HUNT Cloud
-permalink: /coordination/get-going/data-controller
+permalink: /administer-science/get-going/data-controller
 sidebarDepth: 1
 description: This page helps you to get going with administrative agreements in HUNT Cloud.
 ---

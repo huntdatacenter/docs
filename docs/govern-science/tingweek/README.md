@@ -58,7 +58,7 @@ This is the Ting where we appoint time to evolve scientific organization and **c
 
 #### Data controller ting
 
-This is the Ting where we appoint time to meet for cross-organizational dialogue on privacy, security and ethics within HUNT Cloud. Privacy, security and compliance coordinators are invited.
+This is the Ting where we appoint time to meet for cross-organizational dialogue on privacy, security and ethics within HUNT Cloud. Privacy, security and compliance administrators are invited.
 
 #### Lagtun
 

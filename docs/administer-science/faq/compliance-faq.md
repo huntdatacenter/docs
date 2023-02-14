@@ -21,7 +21,7 @@ See our [Administer science FAQ](/administer-science/faq) for supplemental admin
 
 ### How can we add a new lab to our existing data space? 
 
-In short, the compliance coordinator sends us a signed lab order and coordinate signed user agreements between your lab leader and your individual lab users. Head over to our [get going](/administer-science/get-going/lab)-pages for more information on the process.
+In short, the compliance administrator sends us a signed lab order and coordinate signed user agreements between your lab leader and your individual lab users. Head over to our [get going](/administer-science/get-going/lab)-pages for more information on the process.
 
 ### How can we split one lab into two labs? 
 

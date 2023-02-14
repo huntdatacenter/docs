@@ -30,7 +30,7 @@ Click the button below to order a new lab under your existing data space.
 
 <SDButton form="request_new_lab" />
 
-* **Who can order:** Data space leaders and data space compliance coordinators in active data spaces.
+* **Who can order:** Data space leaders and data space compliance administrators in active data spaces.
 * **Required attachment**: [A signed lab order](/administer-science/agreements/downloads/#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
 * **Expected delivery time:** One week.
 * **Next step**: [Add your first lab users](/administer-science/service-desk/lab-orders.html#add-a-new-lab-user).
@@ -94,7 +94,7 @@ Once your lab data is deleted it can not be recreated. You must ensure that you 
 
 ## Transfers
 
-Data transfers in and out of HUNT Cloud needs authorization from Data space leaders or Data space compliance coordinators.
+Data transfers in and out of HUNT Cloud needs authorization from Data space leaders or Data space compliance administrators.
 
 ::: tip Internal transfers and import
 
@@ -108,7 +108,7 @@ The [external import kista](/do-science/faq/external-transfer/#faq-on-external-d
 
 <SDButton form="request_external_import_kista" />
 
-* **Who can order:** Data space leaders or Data space compliance coordinators.
+* **Who can order:** Data space leaders or Data space compliance administrators.
 * **Required attachments**: (1) [A signed external kista import order](/administer-science/agreements/downloads/#external-kista-import-order), and (2) one [SSH public key](/do-science/data-transfers/external-kista/#ssh-key-pair) from the external uploader.
 * **Expected response time:** Days.
 * **Expected delivery:** Kista access information sent to the lab user that will import the data.
@@ -124,7 +124,7 @@ The [external export kista](/do-science/faq/external-transfer/#faq-on-external-d
 
 <SDButton form="request_external_export_kista" />
 
-* **Who can order:** Data space leaders or Data space compliance coordinators.
+* **Who can order:** Data space leaders or Data space compliance administrators.
 * **Required attachments**: (1) [A signed external kista export order](/administer-science/agreements/downloads/#external-kista-export-order), and (2) one [SSH public key](/do-science/data-transfers/external-kista/#ssh-key-pair) from the external downloader.
 * **Expected response time:** Days.
 * **Expected delivery:** Access information sent to the lab user that will make data available for export.
@@ -141,7 +141,7 @@ Note that time to successful transfer depends on access to SFTP software and pot
 
 <SDButton form="request_network_opening" />
 
-* **Who can order:** Data space leaders or Data space compliance coordinators.
+* **Who can order:** Data space leaders or Data space compliance administrators.
 * **Required information**: IPv4 address and port number for the external party.
 * **Required attachments**: [A signed network opening order](/administer-science/agreements/downloads/#network-opening-order).
 * **Expected response time:** Days.
@@ -157,7 +157,7 @@ Click the button below to update your [data space coordinator roles](/administer
 
 <SDButton form="update_data_space_coordinator_role" />
 
-* **Who can order:** Data space leaders or Data space compliance coordinators in active data spaces.
+* **Who can order:** Data space leaders or Data space compliance administrators in active data spaces.
 * **Required attachment**: None.
 * **Expected delivery time:** Days.
 * **Cost:**  Included in your data space subscription.

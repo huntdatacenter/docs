@@ -8,7 +8,7 @@ description: This page list risk management resources for HUNT Cloud.
 
 # Risk management
 
-**This page list risk management resources for HUNT Cloud. The text is intended for security and privacy officers, compliance coordinators in data spaces and lab coordinators on their quest to document, assess and evaluate security and privacy risks for their scientific endeavors in HUNT Cloud.** 
+**This page list risk management resources for HUNT Cloud. The text is intended for security and privacy officers, compliance administrators in data spaces and lab coordinators on their quest to document, assess and evaluate security and privacy risks for their scientific endeavors in HUNT Cloud.** 
 
 [[toc]]
 
@@ -38,7 +38,7 @@ See the [resources](/riskmanagement/resources) section for link to our public se
 
 ## Data Protection Impact Assessment (DPIA)
 
-The data processing in your labs may require a Data Protection Impact Assessments (DPIA) prior to the initiation of scientific activities (GDPR Article 35). See the [resources](/riskmanagement/resources) to get going, and [contact us](/contact) for review of written text. We are happy to assist compliance coordinators with this work. 
+The data processing in your labs may require a Data Protection Impact Assessments (DPIA) prior to the initiation of scientific activities (GDPR Article 35). See the [resources](/riskmanagement/resources) to get going, and [contact us](/contact) for review of written text. We are happy to assist compliance administrators with this work. 
 
 ## Risk assessment reports (RAR)
 
