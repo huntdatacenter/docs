@@ -52,7 +52,7 @@ This individual is authorized by the data space leader to lead the lab. The role
 
 **Lab coordinator**
 
-This individual is authorized by the data space leader to place individual Cloud Service Orders for resource adjustments. The administrative coordinator is also our point of contact for discussions on running agreement updates and resource reporting.
+This individual is authorized by the data space leader to place individual Cloud Service Orders for resource adjustments. The lab coordinator is also our point of contact for discussions on running agreement updates and resource reporting.
 
 **Lawful processing**
 
@@ -97,9 +97,9 @@ Attach your new data space to the following established services center:
 
 This individual is authorized by the services center to lead the data space. The role include a responsibility authorize new labs under the data space, authorizing data transfers out of the data space, and to pay for resources consumed by the labs attached to the data space.
 
-**Administrative coordinator**
+**Compliance coordinator**
 
-This individual is authorized by the data controller to place individual Cloud Service Orders for resource adjustments and to onboard new labs on behalf of your Data space leader. The administrative coordinator is also our point of contact for discussions on running agreement updates and compliance reporting.
+This individual is authorized by the data controller to place individual Cloud Service Orders for resource adjustments and to onboard new labs on behalf of your Data space leader. The Compliance coordinator is also our point of contact for discussions on running agreement updates and compliance reporting.
 
 **Data coordinator**
 

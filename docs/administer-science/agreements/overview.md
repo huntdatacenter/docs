@@ -273,7 +273,7 @@ This individual is authorized by the data controller to lead the services center
 
 **Administrative coordinator**
 
-This is the name of the individual that will coordinate administrative aspects of the services center agreement, such as updates to this agreeement. The individual will act as the deputy contact for other contacts if needed, including the ability to authorize new data spaces under the services center. 
+This is the name of the individual that will coordinate administrative aspects of the services center agreement, such as updates to this agreement. The individual will act as the deputy contact for other contacts if needed, including the ability to authorize new data spaces under the services center. 
 
 **Lagtun invitation**
 
