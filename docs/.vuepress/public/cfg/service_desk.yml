@@ -1310,13 +1310,13 @@ request_update_data_rep:
       I would like to update our data controller ting representative.
 
       Name and Surname: {name}
-      Dataspace: {dataspace}
+      Data Controller: {dataspace}
 
       Kind regards,
   
   fields: [
     { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Data Space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
+    { label: "Data Controller name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
   ]
   requirements: [
     "<b>Who can order:</b> Data controller administrators.",

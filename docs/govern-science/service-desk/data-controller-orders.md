@@ -65,3 +65,16 @@ Click the button below to order a new service center.
 * **Expected delivery time:** One week.
 * **Next step:** [Order your first data space](/administer-science/get-going/data-space/)
 * **Cost:** There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+
+### Update Data controller ting representative
+
+Data controller ting is the Ting for cross-organizational dialogue on privacy, security and ethics within HUNT Cloud. 
+Privacy contacts, security contacts and data space compliance administrators are invited. 
+Data controller administrators may appoint representatives that receive invitations and meeting information on behalf of their organization.
+
+<SDButton form="request_update_data_rep" />
+
+* **Who can order:** Data controller administrators.
+* **Required attachment:** None.
+* **Expected delivery time:** Days.
+* **Cost:** None.
