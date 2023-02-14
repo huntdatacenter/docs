@@ -1284,13 +1284,15 @@ request_update_lagtun_rep:
       I would like to update our lagtun ting representative.
 
       Name and Surname: {name}
-      Dataspace: {dataspace}
+      Data space: {dataspace}
+      Email: {email}
 
       Kind regards,
   
   fields: [
     { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Data Space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
+    { label: "Data Space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data controller administrators, Service center administrators, Data space leaders and compliance administrators on the BLUE subscription level.",
@@ -1311,12 +1313,14 @@ request_update_data_rep:
 
       Name and Surname: {name}
       Data Controller: {dataspace}
+      Email: {email}
 
       Kind regards,
   
   fields: [
     { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Data Controller name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
+    { label: "Data Controller name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data controller administrators.",
