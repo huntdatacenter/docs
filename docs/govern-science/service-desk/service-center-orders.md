@@ -36,3 +36,30 @@ Click the button below to order a new data space under your existing service cen
 * **Expected delivery time:** Days.
 * **Next step:** [Order the first lab in the new data space](/administer-science/service-desk/data-space-orders#new-lab)
 * **Cost:** There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+
+### Update Data controller ting representative
+
+Data controller ting is the Ting for cross-organizational dialogue on privacy, security and ethics within HUNT Cloud. 
+Privacy contacts, security contacts and data space compliance administrators are invited. 
+Data controller administrators may appoint representatives that receive invitations and meeting information on behalf of their organization.
+
+<SDButton form="request_update_data_rep" />
+
+* **Who can order:** Data controller administrators.
+* **Required attachment:** None.
+* **Expected delivery time:** Days.
+* **Cost:** None.
+
+### Update Lagtun ting representative
+
+Lagtun is the body that appoints time to govern the scientific developments of HUNT Cloud. 
+Lagtun members may appoint representatives that receive invitations and meeting information on behalf of their organization.
+
+<SDButton form="request_update_lagtun_rep" />
+
+* **Who can order:** Data controller administrators, Service center administrators, Data space leaders and compliance administrators on the BLUE subscription level.
+* **Required attachment:** None.
+* **Expected delivery time:** Days.
+* **Cost:** None.
+
+

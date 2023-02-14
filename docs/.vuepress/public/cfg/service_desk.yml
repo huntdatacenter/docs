@@ -1274,6 +1274,57 @@ request_mobaxterm_file:
   ]
 
 
+request_update_lagtun_rep:
+  title: "Update Lagtun representative"
+  template:
+    subject: "Update Lagtun ting representatives {name} @ {dataspace}"
+    body: |
+      Hi HUNT Cloud team,
+
+      I would like to update our lagtun ting representative.
+
+      Name and Surname: {name}
+      Dataspace: {dataspace}
+
+      Kind regards,
+  
+  fields: [
+    { label: "Name and Surname", key: "name", field: "textfield" },
+    { label: "Data Space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
+  ]
+  requirements: [
+    "<b>Who can order:</b> Data controller administrators, Service center administrators, Data space leaders and compliance administrators on the BLUE subscription level.",
+    "<b>Required attachment:</b> None.",
+    "<b>Expected delivery time:</b> Days.",
+    "<b>Cost:</b> None.",
+  ]
+
+
+request_update_data_rep:
+  title: "Update Data controller representative"
+  template:
+    subject: "Update Data controller ting representative {name} @ {dataspace}"
+    body: |
+      Hi HUNT Cloud team,
+
+      I would like to update our data controller ting representative.
+
+      Name and Surname: {name}
+      Dataspace: {dataspace}
+
+      Kind regards,
+  
+  fields: [
+    { label: "Name and Surname", key: "name", field: "textfield" },
+    { label: "Data Space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
+  ]
+  requirements: [
+    "<b>Who can order:</b> Data controller administrators.",
+    "<b>Required attachment:</b> None.",
+    "<b>Expected delivery time:</b> Days.",
+    "<b>Cost:</b> None.",
+  ]
+
 request_template:
   title: "Button title text"
   template:
