@@ -1,13 +1,13 @@
 ---
 title: Lab coordination
 category: Frequently asked questions
-permalink: /administer-science/faq/lab-coordination/
+permalink: /administer-science/faq/lab-management/
 description: This page contains common questions on scientific administration in HUNT Cloud.
 ---
 
-# Lab coordination FAQ
+# Lab management FAQ
 
-**This FAQ is intended for lab coordinators and lab leaders that coordinate activites whitin one lab.**
+**This FAQ is intended for lab coordinators and lab leaders that manages activites whitin one lab.**
 
 [[toc]]
 
@@ -17,17 +17,27 @@ Head over to our [Do science FAQ](/do-science/faq) for questions on how to do sc
 
 :::
 
+## General questions 
+
+### What can I order as a lab coordinator? 
+
+Head over to our service desk for [lab orders](/administer-science/service-desk/lab-orders/) to get an overview of the pre-defined orders that you can manage as a lab coordinator or lab leaders. 
+
 ## User management
 
-### How do we add new lab users?
+### How do we add new lab users to our existing lab?
 
 Lab leaders and lab coordinators may order access for new lab users in our [administer science service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
+
+### How do we add existing lab users to a new lab? 
+
+You will need to send us one user agreement per user via the [administer science service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) similar to new users as each lab holds independent user agreements. However, existing users will only configure the SSH connection as part of the access since their VPN and user name stays the same.
 
 ### How long does an account activation take?
 
 Usually within days, although it may be good to allow for one week. We do recognize that science never sleeps, so [contact us](/contact) for high priority activations same or next business day when strictly needed.
 
-### How many users can we add to a lab?
+### How many users can we add to one lab?
 
 We have no hard limits. When that is said, all users in your lab will have access to all the data in the lab. Thus, we require that you limit users to those that have permissions in place to work with your data. Usually, labs with up to 6-7 people seem to be most effective. We are more than happy to spin off new labs as your team grows.
 
