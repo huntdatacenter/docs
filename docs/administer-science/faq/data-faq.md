@@ -1,5 +1,5 @@
 ---
-title: Data
+title: Data administration
 category: Frequently asked questions
 permalink: /administer-science/faq/data-administration/
 description: This page contains common questions on scientific administration in HUNT Cloud.

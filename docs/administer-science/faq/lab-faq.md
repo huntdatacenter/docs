@@ -1,5 +1,5 @@
 ---
-title: Lab coordination
+title: Lab management
 category: Frequently asked questions
 permalink: /administer-science/faq/lab-management/
 description: This page contains common questions on scientific administration in HUNT Cloud.

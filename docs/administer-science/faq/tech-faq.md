@@ -1,5 +1,5 @@
 ---
-title: Technical
+title: Technical administration
 category: Frequently asked questions
 permalink: /administer-science/faq/technical-administration/
 description: This page contains common questions on scientific administration in HUNT Cloud.
