@@ -31,7 +31,7 @@ Lab leaders and lab coordinators may order access for new lab users in our [admi
 
 ### How do we add existing lab users to a new lab? 
 
-You will need to send us one user agreement per user via the [administer science service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) similar to new users as each lab holds independent user agreements. However, existing users will only configure the SSH connection as part of the access since their VPN and user name stays the same.
+Send us one user agreement per user via the [administer science service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) as each lab holds independent user agreements. This is the same process as adding new users. However, existing users will only received a SSH connection for the new lab as VPN and user name stays the same.
 
 ### How long does an account activation take?
 
