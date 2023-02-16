@@ -88,6 +88,14 @@ We are happy to hear that! If you have a new local machine you will need to inst
 
 When you got your new VPN certificate, head over to our [VPN certificate reset guide](/do-science/guides/vpn-certificate-reset/) to get going.
 
+### VPN failed to negotiate cipher error
+
+If you are experiencing error below while you are trying to connect to VPN, please order a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset).
+
+```
+failed to negotiate cipher with server.  Add the server's cipher ('AES-256-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM') if you want to connect to this server.
+```
+
 
 ## Phone
 
