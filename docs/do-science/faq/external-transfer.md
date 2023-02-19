@@ -34,7 +34,7 @@ Yes. Your external party must meet a few [technical requirements](/do-science/da
 
 ### How quickly can I get access to an external kista?
 
-You should order your kista a few weeks before you need the transfer since your external party may need to order organizational firewall openings, install SFTP software and/or generate a dedicated SSH key pair, and configure his/her local machine to connect with your external kista.
+You should order your kista a few weeks before you need the transfer since your external party may need to order organizational firewall openings, install SFTP software and/or generate a dedicated SSH key pair, and configure his/her local computer to connect with your external kista.
 
 ### What is an 'uploader' and 'downloader'?
 

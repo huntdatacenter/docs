@@ -59,7 +59,7 @@ Your VPN session will reset after 12 hours. This will cause your connection to b
 
 ### Conflict with existing VPN
 
-Already running VPN services on your local machine may cause conflicts when connecting to our HUNT Cloud VPN. Try to disconnect the already running VPN service and reconnect to the HUNT Cloud VPN. 
+Already running VPN services on your local computer may cause conflicts when connecting to our HUNT Cloud VPN. Try to disconnect the already running VPN service and reconnect to the HUNT Cloud VPN. 
 
 ::: details For NTNU users
 
@@ -85,9 +85,9 @@ If your VPN login suddenly stops working, and you are pretty sure your user name
 
 Inactive accounts will be deactivated after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. Your lab leader or lab coordinator may order your user reactivation in our [service desk](/administer-science/service-desk/lab-orders/#reactivate-lab-user).
 
-### New local machine
+### New local computer
 
-We are happy to hear that! If you have a new local machine you will need to install a new VPN certificate on all machines that you will connect from. You can find all required steps in our [FAQ section](/do-science/service-desk/#i-have-a-new-machine-what-should-i-request).
+We are happy to hear that! If you have a new local computer you will need to install a new VPN certificate on all machines that you will connect from. You can find all required steps in our [FAQ section](/do-science/service-desk/#i-have-a-new-machine-what-should-i-request).
 
 
 ### New VPN certificate

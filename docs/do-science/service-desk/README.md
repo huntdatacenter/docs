@@ -111,7 +111,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 ::: details About the required information
 
-* **access_ip**. This is the external IP from your local machine that is visible for us when you connect. [Click here](http://ip4.me) to locate your address. Note that IPs that starts with "10.", "192." and "172." are internal addresses that will not work.
+* **access_ip**. This is the external IP from your local computer that is visible for us when you connect. [Click here](http://ip4.me) to locate your address. Note that IPs that starts with "10.", "192." and "172." are internal addresses that will not work.
 * **access_duration**. State if you request a "permanent" or "temporary" access from the address. Permanent openings will follow your user duration. If you need temporary access during travels or similar, state the desired duration of the opening.
 * **access_country**. State from which country you will be connecting.
 
@@ -119,7 +119,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 ### VPN certificate reset  
 
-You may need to reset your VPN certificate when you get a new local machine or if you need a new VPN passphrase.
+You may need to reset your VPN certificate when you get a new local computer or if you need a new VPN passphrase.
 
 <SDButton form="request_vpn_reset" />
 
@@ -162,13 +162,13 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 
 ## FAQ
 
-#### I have a new local machine, what should I request? 
+#### I have a new local computer, what should I request? 
 
 ::: details Read more
 
 We are happy to heard about your new machine! To regain lab access you will need to request certificates (required) and potentially configuration files (for consideration): 
 
-**Required**. If you have a new local machine, you will need (1) a new [VPN certificate](/do-science/service-desk/#vpn-certificate-reset)  and (2) a new [Workbench certificate](/do-science/service-desk/#hunt-workbench-reissue). 
+**Required**. If you have a new local computer, you will need (1) a new [VPN certificate](/do-science/service-desk/#vpn-certificate-reset)  and (2) a new [Workbench certificate](/do-science/service-desk/#hunt-workbench-reissue). 
 
 **For consideration**. You may consider to request a new [SSH configuration](/do-science/service-desk/#ssh-configuration) if you do not remember your lab IPs, and/or a new [SSH passphrase](/do-science/service-desk/#ssh-passphrase-reset) if you don't remember your SSH passphrase, and/or a new [MobaXterm configuration](/do-science/service-desk/#mobaxterm-configuration-file) if you use this application (Windows users). 
 

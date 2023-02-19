@@ -9,7 +9,7 @@ description: Guide on SSH configuration, requires a working VPN connection.
 
 # Step 3. Configure your SSH
 
-**These steps will configure your SSH connection to and from your local machine and your lab.** 
+**These steps will configure your SSH connection to and from your local computer and your lab.** 
 
 You will first configure a machine used for security purposes that we call **`entry`**, and then one machine that we call **`home`** were you will do your scientific explorations.
 
@@ -80,7 +80,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 1. Download and save the **`Putty`** SSH client from [this link](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe).
 
-2. Click on the **`putty.exe`** file that your save your local machine to start the client.
+2. Click on the **`putty.exe`** file that your save your local computer to start the client.
 
 3. Type **`<your-username>@<your-lab-IP>`** in the "_Host Name (or IP address)_" field and click "_Open_".
 
@@ -234,7 +234,7 @@ We hope that you will log into your lab a lot over the coming months and years. 
 
 1. [Request Workbench](/do-science/hunt-workbench/) for smooth access to Jupyter Notebooks, Python, RStudio, R, or MATLAB.
 
-2. [Configure MobaXterm](/do-science/tools/technical/mobaxterm) for "password-less" SSH access directly to your home machine, as well as click-based file transfers between your local machine and your home machine.
+2. [Configure MobaXterm](/do-science/tools/technical/mobaxterm) for "password-less" SSH access directly to your home machine, as well as click-based file transfers between your local computer and your home machine.
 
 :::
 
@@ -251,9 +251,9 @@ ssh your-lab-name
 
 This will allow you to log directly into your lab without the need to remember your user name or your lab's IP address:
 
-1. On your local machine, open the **`ssh-config.txt`** file from [Step 1.2](/do-science/getting-started/collect-your-keys/#_1-2-secrets-on-your-email).
+1. On your local computer, open the **`ssh-config.txt`** file from [Step 1.2](/do-science/getting-started/collect-your-keys/#_1-2-secrets-on-your-email).
 
-2. On your local machine, add the content from the **`ssh-config.txt`** to the file named **`config`** in the hidden ssh-folder in your home directory (**`~/.ssh/config`**) using your favorite file editor. You may need to generate this file if it is your first ssh-configuration.
+2. On your local computer, add the content from the **`ssh-config.txt`** to the file named **`config`** in the hidden ssh-folder in your home directory (**`~/.ssh/config`**) using your favorite file editor. You may need to generate this file if it is your first ssh-configuration.
 
 ```bash
 # -- Open editor in OS X and macOS
@@ -269,7 +269,7 @@ gedit ~/.ssh/config
 ssh demolab-entry
 ```
 
-You should now be prompted your passphrase. After typing your passphrase you should be logged into your entry-machine. Exit your entry machine and return to your local machine by typing **`exit`**.
+You should now be prompted your passphrase. After typing your passphrase you should be logged into your entry-machine. Exit your entry machine and return to your local computer by typing **`exit`**.
 
 
 ### 3.5.2 Establish a password-less login

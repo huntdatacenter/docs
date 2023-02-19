@@ -37,7 +37,7 @@ Similar to your initial onboarding, we will send you (1) your keys over Signal t
 
 2. On email you should expect a link to one (1) compressed file:
 
-::: warning Expect these files on your local machine
+::: warning Expect these files on your local computer
 
 A successful opening of the 7z-file file should include two (2) files:
 

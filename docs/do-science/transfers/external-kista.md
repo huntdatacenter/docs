@@ -266,7 +266,7 @@ Below is a guide on how to connect using the WinSCP SFTP client on Windows.
 
 ::: details How to connect to an external kista on OS X, macOS and Ubuntu
 
-You can connect to the kista from your local machine using the built in sftp tool.
+You can connect to the kista from your local computer using the built in sftp tool.
 
 ```bash
 # -- principal example

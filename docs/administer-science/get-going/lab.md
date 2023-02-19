@@ -66,8 +66,8 @@ Your home machine type and attached storage will be billed in accordance with ou
 
 ### 5. Prepare your lab order
 
-- Download the "[Lab order](/administer-science/agreements/downloads/#lab-order)" on your local machine (right click on the link and select "Save Link As...")
-- Open the PDF on your local machine and either (i) print and complete the fields by hand or (i) open in an PDF-editor and complete the fields digitally. Field descriptions are included in the "Clarification of the form fields" under the link above. 
+- Download the "[Lab order](/administer-science/agreements/downloads/#lab-order)" on your local computer (right click on the link and select "Save Link As...")
+- Open the PDF on your local computer and either (i) print and complete the fields by hand or (i) open in an PDF-editor and complete the fields digitally. Field descriptions are included in the "Clarification of the form fields" under the link above. 
 - Add your own signature and the signature of the lab leader.
 
 ### 6. Place your lab order
@@ -96,8 +96,8 @@ You lab leader is responsible for the identification and verification of individ
 
 :::
 
-- Download the "[User agreement](/administer-science/agreements/downloads/#user-agreement)" on your local machine (right click on the link and select "Save Link As...").
-- Open the PDF on your local machine and either (i) print and complete the fields by hand or (i) open in an PDF-editor and complete the fields digitally. Field descriptions are included in the "Clarification of the form fields" under the link above. 
+- Download the "[User agreement](/administer-science/agreements/downloads/#user-agreement)" on your local computer (right click on the link and select "Save Link As...").
+- Open the PDF on your local computer and either (i) print and complete the fields by hand or (i) open in an PDF-editor and complete the fields digitally. Field descriptions are included in the "Clarification of the form fields" under the link above. 
 - Ensure that both the lab leader and the new user sign the agreement.
 - Forword the signed agreements us using the service desk link above.
 

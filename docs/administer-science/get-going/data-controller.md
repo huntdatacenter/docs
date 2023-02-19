@@ -60,9 +60,9 @@ Yes. We have agreement templates that is accepted by many organizations. These a
 
 We need a few bits of information to prepare your agreement template:
  
-- Download the "[HUNT Cloud Data Processor Agreement Form](/administer-science/agreements/overview/#required-information)" on your local machine (right click on the link and select "Save Link As...")
+- Download the "[HUNT Cloud Data Processor Agreement Form](/administer-science/agreements/overview/#required-information)" on your local computer (right click on the link and select "Save Link As...")
 - Open the text file in Notepad, Word or a similar application and supply the required information. Field descriptions are included in the "Clarification of the form fields" under the link above. 
-- Save the text file on your local machine and send us the a copy in our [service desk](/govern-science/service-desk/data-controller-orders/#new-data-processor-agreement).
+- Save the text file on your local computer and send us the a copy in our [service desk](/govern-science/service-desk/data-controller-orders/#new-data-processor-agreement).
 
 ::: tip NTNU
 

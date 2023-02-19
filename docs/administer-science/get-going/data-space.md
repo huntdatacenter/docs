@@ -34,15 +34,15 @@ You have the option to choose three different data space subscription levels. Ou
 
 ### 4. Download and complete the data space order
 
-- Download the "[Data space order](/administer-science/agreements/downloads/#data-space-order)" on your local machine (right click on the link and select "Save Link As...")
-- Open the PDF on your local machine and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. The "Clarification of the form fields" includes a field by field descriptions of the order.
+- Download the "[Data space order](/administer-science/agreements/downloads/#data-space-order)" on your local computer (right click on the link and select "Save Link As...")
+- Open the PDF on your local computer and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. The "Clarification of the form fields" includes a field by field descriptions of the order.
 - Add your own signature, save the PDF and forward the document to your services center leader for co-signature. 
 - [Contact us](/contact) if you need help to identify the service center leader for your organization.
 
 ### 5. Download and complete the invoice profile
 
-- Download the "[Invoice profile](/administer-science/agreements/downloads/#invoice-profile)" on your local machine (right click on the link and select "Save Link As...")
-- Open the PDF on your local machine and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. The "Clarification of the form fields" includes a field by field descriptions of the profile.
+- Download the "[Invoice profile](/administer-science/agreements/downloads/#invoice-profile)" on your local computer (right click on the link and select "Save Link As...")
+- Open the PDF on your local computer and (i) open in an PDF-editor and complete the fields digitally, or (ii) print on paper and complete the fields by hand. The "Clarification of the form fields" includes a field by field descriptions of the profile.
 - Add your own signature, save the PDF. 
 
 ### 6. Place your data space order

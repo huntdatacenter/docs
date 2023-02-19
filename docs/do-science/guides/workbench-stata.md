@@ -183,7 +183,7 @@ The above command will save the latest graph that you viewed in your notebook in
 
 ![Stata graph save 1](./images/stata_graph_export1.png)
 
-Click on the `mygraph.svg` file to view the graph in your workbench, or right click on the file and select `Download` to export the graph to your local machine. 
+Click on the `mygraph.svg` file to view the graph in your workbench, or right click on the file and select `Download` to export the graph to your local computer. 
 
 You may also save your graphs in other folders on your lab machine to make them accessible for your lab colleagues:
 

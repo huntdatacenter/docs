@@ -12,15 +12,15 @@ description: Usage guide for X2go.
 
 [[toc]]
 
-If you are connecting to the **`home`** machine in your lab, you are good to go after you have set up your local machine:
+If you are connecting to the **`home`** machine in your lab, you are good to go after you have set up your local computer:
 
-- [Set up your local machine](#set-up-your-local-machine)
+- [Set up your local computer](#set-up-your-local-machine)
 
-If you want to connet to an unmanaged machine in your lab (On-demand or BLUE machines) you will need to install the X2Go server before you set up your local machine:
+If you want to connet to an unmanaged machine in your lab (On-demand or BLUE machines) you will need to install the X2Go server before you set up your local computer:
 
 - [Set up your unmanaged lab machine (On-demand and BLUE)](#install-x2go-server-on-unmanaged-lab-machine-iaas)
 
-## Set up your local machine
+## Set up your local computer
 
 ::: warning Requirements
 
@@ -31,7 +31,7 @@ If you want to connet to an unmanaged machine in your lab (On-demand or BLUE mac
 
 ### 1. Install the X2Go client
 
-Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) on your own local machine.
+Install the [x2go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) on your own local computer.
 
 ::: details Windows
 Download and run the [X2Go client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient#ms_windows) clicking **`Download X2Go for MS Windows™ and install.`** and then selecting the **`exe-file`**.
@@ -97,10 +97,10 @@ Click **`Create new session`**.
 
   - For Windows:
 
-    You will need to save the access key to your local machine and point to this file: (1) log into your lab **`home`** machine, (2) print your key with **`cat ~/.ssh/id_rsa`**, (3) open _Notepad_ on your local machine and copy the text from **`-----BEGIN KEY-----`** to **`-----END KEY-----`** (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
+    You will need to save the access key to your local computer and point to this file: (1) log into your lab **`home`** machine, (2) print your key with **`cat ~/.ssh/id_rsa`**, (3) open _Notepad_ on your local computer and copy the text from **`-----BEGIN KEY-----`** to **`-----END KEY-----`** (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
 
     ::: warning NOTE
-    This file is a key to your lab. Store the key somewhere in the **`C:`** drive on your local machine.
+    This file is a key to your lab. Store the key somewhere in the **`C:`** drive on your local computer.
 
 - _Try auto login_: **`Check`**
 - _Use Proxy server for SSH connection_: **`Check`**
@@ -192,11 +192,11 @@ Click **`Create new session`**.
 
   - For Windows:
 
-    You will need to save the access keys to your local machine and point to this file: (1) log into your lab **`home`** machine, (2) print your key with **`cat ~/.ssh/id_rsa`**, (3) open _Notepad_ on your local machine and copy the text from **`-----BEGIN KEY-----`** to **`-----END KEY-----`** (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
+    You will need to save the access keys to your local computer and point to this file: (1) log into your lab **`home`** machine, (2) print your key with **`cat ~/.ssh/id_rsa`**, (3) open _Notepad_ on your local computer and copy the text from **`-----BEGIN KEY-----`** to **`-----END KEY-----`** (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
 
   - On IAAS nodes:
 
-    In addition to the steps above, ensure that you are able to log directly into the machine from your local machine following [this guide](#install-x2go-server-on-unmanaged-lab-machine).
+    In addition to the steps above, ensure that you are able to log directly into the machine from your local computer following [this guide](#install-x2go-server-on-unmanaged-lab-machine).
 
 
 
@@ -345,7 +345,7 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
 
 4. Get the IP for your IAAS machine
 
-   Inside your IAAS node, list the IP address for the node with **`ifconfig`**. The IP address is listed after **`inet addr:`** and start with 10.5. Note this as you will use this for the X2Go setup on your local machine (steps above).
+   Inside your IAAS node, list the IP address for the node with **`ifconfig`**. The IP address is listed after **`inet addr:`** and start with 10.5. Note this as you will use this for the X2Go setup on your local computer (steps above).
 
    ```bash
    hostname -I
@@ -378,7 +378,7 @@ If this is causing too many problems, alternatives to X2GO like [MobaXterm](/do-
 
 From time to time your X2Go sessions may get stuck, such as when your software inside X2Go consumes all available memory. In such circumstances you may need to manually terminate the stuck X2Go processes using the command line in your lab machine.
 
-1. From your local machine, connect to your lab machine over SSH, either using command line (Mac/Linux) or MobaXterm (Windows).
+1. From your local computer, connect to your lab machine over SSH, either using command line (Mac/Linux) or MobaXterm (Windows).
 
 2. Once onboard your lab machine, list X2Go processes running under your user name.
 

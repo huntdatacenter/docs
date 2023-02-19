@@ -47,9 +47,9 @@ sudo apt install rsync
 
 Here are a few simple examples to get you started. 
 
-### Transfer from your local machine
+### Transfer from your local computer
 
-This is an example of data transfers from your local machine to your lab.
+This is an example of data transfers from your local computer to your lab.
 
 ```bash
 # -- Principal example

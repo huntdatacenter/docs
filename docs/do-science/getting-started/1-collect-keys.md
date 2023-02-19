@@ -82,7 +82,7 @@ A successful transfer to your phone should include four (4) keys:
 
 We will communicate your VPN certificate and SSH configuration over your organizational email. You will receive a link to an encrypted file archive (7z-file).
 
-- 1.2.1. Click on the link in the email to download the file and save this on your local machine.
+- 1.2.1. Click on the link in the email to download the file and save this on your local computer.
 - 1.2.2. Unpack (extract) the file with your favorite file archiver software that recognize the [7z format](/do-science/tools/transfer/7z/) (see below).
 - 1.2.3. Use the key named **`ZIP file key`** from your Signal transfer to decrypt the 7-zip archive.
 
@@ -98,9 +98,9 @@ You will need to install 7z-compatible software from the decryption guides link 
 
 :::
 
-::: warning Expect these files on your local machine
+::: warning Expect these files on your local computer
 
-A successful extraction on your local machine should include three (3) files:
+A successful extraction on your local computer should include three (3) files:
 
 
 - **`<your-username>.ovpn`** - your personal VPN certificate to be used in step 2.
@@ -144,7 +144,7 @@ A 6 digit **`verification code`** that refreshes ever 30 seconds in the Google A
 A successful completion of this step should give you:
 
 - Four (4) keys on your phone stored in Signal
-- Three (3) files stored on your local machine
+- Three (3) files stored on your local computer
 - Rotating verification codes on your phone
 
 Without these, it will be impossible to complete the remaining steps.

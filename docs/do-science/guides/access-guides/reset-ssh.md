@@ -54,7 +54,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 1. Download and save the **`Putty`** SSH client from [this link](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe), or follow with the next step if you already have **`Putty`** installed.
 
-2. Click on the **`putty.exe`** file that you downloaded to your local machine and start the client.
+2. Click on the **`putty.exe`** file that you downloaded to your local computer and start the client.
 
 3. Make sure "_Host Name (or IP address)_" field contains: **`<your-username>@<your-lab-IP>`** and click "_Open_".
 

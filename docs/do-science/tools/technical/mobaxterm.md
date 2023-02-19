@@ -237,7 +237,7 @@ Check the list of Mobagent SSH keys and make sure that SSH key (`id_rsa` file) i
 
 ![mobaxterm_mobagent_keys](./images/mobaxterm_mobagent_add_key.png)
 
-If MobaXterm included the new key automatically, you can continue to the next step. If your `SSH agents` list is empty, click on the plus sign (arrow marked "2.") and add your new `id_rsa` file (key) to the list. You will find the file on your local machine under this path: `C:\Users\<yourlocalusername>\.ssh\id_rsa`.
+If MobaXterm included the new key automatically, you can continue to the next step. If your `SSH agents` list is empty, click on the plus sign (arrow marked "2.") and add your new `id_rsa` file (key) to the list. You will find the file on your local computer under this path: `C:\Users\<yourlocalusername>\.ssh\id_rsa`.
 
 :::
 

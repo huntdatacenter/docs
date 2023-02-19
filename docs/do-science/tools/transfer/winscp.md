@@ -10,7 +10,7 @@ description: Installation and usage guide for WinSCP.
 
 **[WinSCP](https://winscp.net/) is an open source data transfer client for Windows that work with commonly used transfer protocols including SFTP, S3 and SCP.**
 
-If your host organization allows, you can use WinSCP for file transfers and synchronization of folders between your local machine and your lab machines.
+If your host organization allows, you can use WinSCP for file transfers and synchronization of folders between your local computer and your lab machines.
 
 [[toc]]
 
@@ -26,7 +26,7 @@ On your local computer, download WinSCP from [winscp.net](https://winscp.net/eng
 ## Configure
 
 ::: tip
-This section configures WinSCP to connect your local machine to your [home machine](/do-science/faq/compute/#machine-types). Additional configurations will be needed for connections to iaas and blue machines.
+This section configures WinSCP to connect your local computer to your [home machine](/do-science/faq/compute/#machine-types). Additional configurations will be needed for connections to iaas and blue machines.
 :::
 
 You will see the **`Login`** screen when you start WinSCP for the first time.
@@ -75,7 +75,7 @@ Synchronization allows multiple adjustments such as synchronization towards targ
 ![Synchronization - Step 2](./images/sync_2.png "Synchronization - Step 2")
 
 ::: warning Be careful!
-Selecting **`Both`** or **`Local`** targets will download data from your lab to your local machine. It is your responsibility to only use this configuration for folders in your lab that contains non-sensitive data that you can keep on your local machine.
+Selecting **`Both`** or **`Local`** targets will download data from your lab to your local computer. It is your responsibility to only use this configuration for folders in your lab that contains non-sensitive data that you can keep on your local computer.
 :::
 
 When confirmed, a file comparison is done by WinSCP, where one can choose files to be synchronized. Click **`Ok`** to confirm.

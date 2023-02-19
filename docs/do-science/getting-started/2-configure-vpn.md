@@ -8,7 +8,7 @@ description: Guide on VPN installation and configuration. Make sure you have suc
 
 # Step 2. Configure your VPN
 
-**This step configure an encrypted connection between your local machine and HUNT Cloud. The specific steps are dependent on the operating system on your local machine.**
+**This step configure an encrypted connection between your local computer and HUNT Cloud. The specific steps are dependent on the operating system on your local computer.**
 
 ::: warning Requirement
 
@@ -25,7 +25,7 @@ Successful [verification](/do-science/getting-started/collect-your-keys/#_1-4-ve
 
 ::: details Windows
 
-We use the open-source application **`OpenVPN`** to ensure encrypted communication between your local machine and us.
+We use the open-source application **`OpenVPN`** to ensure encrypted communication between your local computer and us.
 
 [Download and install OpenVPN using the latest stable Windows Installer (Avoid beta versions)](https://openvpn.net/community-downloads/)
 
@@ -34,19 +34,19 @@ Click on the link above, scroll down to the file named **`OpenVPN-<version-numbe
 **NTNU users**: Windows users from NTNU can install OpenVPN community edition using NTNU Software Center even without administrative rights.
   
   ::: warning
-  **You will need administrative rights on your local machine to successfully install OpenVPN.**
+  **You will need administrative rights on your local computer to successfully install OpenVPN.**
 
-Click on the link below if you do not hold administrative rights on your local machine, or don't know if you have such rights.
+Click on the link below if you do not hold administrative rights on your local computer, or don't know if you have such rights.
 
   ::: details Installing OpenVPN without administrative rights
 
-You can check if you have administrative rights on your local machine by running **`net localgroup "Administrators"`** in a [command prompt](https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/) and see if your username is listed.
+You can check if you have administrative rights on your local computer by running **`net localgroup "Administrators"`** in a [command prompt](https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/) and see if your username is listed.
 
-**Request assistance from your local IT personnel if you do not hold administrative rights on your local machine and request that they:**
+**Request assistance from your local IT personnel if you do not hold administrative rights on your local computer and request that they:**
 
 (1) assist you in the OpenVPN installation, or
 
-(2) grant you administrative rights on your local machine so you can install OpenVPN yourself.
+(2) grant you administrative rights on your local computer so you can install OpenVPN yourself.
 
 For simplicity, we have outlined the steps they need to perform below which you can attach to your request.
 
@@ -72,7 +72,7 @@ For simplicity, we have outlined the steps they need to perform below which you 
 
 ::: details OS X and macOS
 
-We use Tunnelblick to ensure encrypted communication between your local machine and HUNT Cloud.
+We use Tunnelblick to ensure encrypted communication between your local computer and HUNT Cloud.
 
 [Download and install the latest **'stable release'** from this page](https://tunnelblick.net/downloads.html)
 
@@ -82,7 +82,7 @@ We use Tunnelblick to ensure encrypted communication between your local machine 
 
 ::: details Ubuntu Linux
 
-We use OpenVPN to ensure encrypted communication between your local machine and HUNT Cloud.
+We use OpenVPN to ensure encrypted communication between your local computer and HUNT Cloud.
 
 Install the **`openvpn`** and **`network-manager-openvpn-gnome`** packages from the standard repositories.
 

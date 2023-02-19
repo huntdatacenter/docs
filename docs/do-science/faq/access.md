@@ -23,13 +23,13 @@ Yes. We allow connections both from organizations and private network. However, 
 
 
 
-### Can I connect from several local machines?
+### Can I connect from several local computers?
 
-Yes. We allow you to configure several local machines to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/do-science/getting-started/configure-vpn/) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to request a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) in the service desk to get going.
+Yes. We allow you to configure several local computers to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/do-science/getting-started/configure-vpn/) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to request a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) in the service desk to get going.
 
 ### Can I do multiple connections at the same time?
 
-No. For security reasons we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local machine. Check our [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/) guide for how to instantly get back to your work when your connect from multiple local machines.
+No. For security reasons we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local copmuter. Check our [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/) guide for how to instantly get back to your work when your connect from multiple local computers.
 
 ### Can I connect from my private machine?
 

@@ -33,7 +33,7 @@ Allow for **30 minutes** to complete this installation and some playtime in your
 
 ## 2. Edit your hosts file
 
-First, let's set up your hosts file on your local machine. This allows you to connect to the HUNT workbench 
+First, let's set up your hosts file on your local computer. This allows you to connect to the HUNT workbench 
 in your lab using a URL name, for example **`demolab.lab.hdc.ntnu.no`**, in your web-browser rather than an IP address.
 
 Your **`host record`**, the record of your lab IP address and your lab host name, are included in your HUNT Workbench onboardig email. Example of a hosts record:
@@ -77,7 +77,7 @@ Select steps for your operating system:
 
 ::: details OS X and macOS
 
-1. On your local machine, open your **`/etc/hosts`** file in your preferred text editor.
+1. On your local computer, open your **`/etc/hosts`** file in your preferred text editor.
 
 Example with text editor:
 
@@ -101,7 +101,7 @@ sudo vim /etc/hosts
 
 ::: details Ubuntu Linux
 
-1. On your local machine, open your **`/etc/hosts`** file in your preferred text editor.
+1. On your local computer, open your **`/etc/hosts`** file in your preferred text editor.
 
 Example with gedit:
 
@@ -206,11 +206,11 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 We recommend that you use the [Google Chrome browser](https://www.google.com/chrome/) for predictabe access to your HUNT Workbench.
 
-1. Open **`Google Chrome`** on your local machine.
+1. Open **`Google Chrome`** on your local computer.
 
 2. In Google Chrome, open the URL **`chrome://settings/certificates`** and click the **`Import`** button on the right side of the screen.
 
-3. Browse and select your **`.p12`** file that you downloaded to your local machine, and enter the **`TLS passphrase`** that we sent you on Signal.
+3. Browse and select your **`.p12`** file that you downloaded to your local computer, and enter the **`TLS passphrase`** that we sent you on Signal.
 
 4. Restart Chrome.
 

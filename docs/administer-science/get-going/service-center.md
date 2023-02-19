@@ -32,9 +32,9 @@ For NTNU, Services centers are located at the Department level with Deputy Head 
 
 We need a few bits of information to prepare your agreement:
  
-- Download the "[HUNT Cloud Services Agreement Form](/administer-science/agreements/overview/#required-information-2)" on your local machine (right click on the link and select "Save Link As...")
+- Download the "[HUNT Cloud Services Agreement Form](/administer-science/agreements/overview/#required-information-2)" on your local computer (right click on the link and select "Save Link As...")
 - Open the text file in Notepad, Word or a similar application and supply the required information. Field descriptions are included in the "Clarification of the form fields" under the link above. 
-- Save the text file on your local machine and send ut the file from the data controller section of our [service desk](/govern-science/service-desk/data-controller-orders/#add-a-service-center).
+- Save the text file on your local computer and send ut the file from the data controller section of our [service desk](/govern-science/service-desk/data-controller-orders/#add-a-service-center).
 
 ::: tip NTNU
 
