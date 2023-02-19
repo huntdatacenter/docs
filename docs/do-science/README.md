@@ -17,9 +17,9 @@ This section is aimed at lab users. It contains practical information on how to 
 
 See our [main documentation page](/) for other sections.
 
-::: tip Next Tingweek (Ting 8)
+::: tip Next Tingweek (Ting 9)
 
-- **Labting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-labting-agenda.pdf))
+- **Labting**: Tuesday 30 May 2023 - 2 to 4 p.m. CET
 
 [Read more about Labting](/do-science/community/labting/)
 

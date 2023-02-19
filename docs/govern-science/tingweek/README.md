@@ -16,29 +16,16 @@ We arrange a layered set of Tings for distinct groups in our community. The meet
 
 
 
-::: tip Next Tingweek (Ting 8)
+::: tip Next Tingweek (Ting 9)
 
-- **Labting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-labting-agenda.pdf))
-- **Data space ting**: Wednesday 15 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-dataspaceting-agenda.pdf))
-- **Data controller ting**: Wednesday 15 February 2023 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-datacontrollerting-agenda.pdf))
-- **Lagtun**: Thursday 16 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-lagtun-agenda.pdf))
+- **Labting**: Tuesday 30 May 2023 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 31 May 2023 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 31 May 2023 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 1 June 2023 - 9 to 11 a.m. CET
 
 :::
 
 
-
-
-## Reports
-
-The intent of the Ting report is to give you the opportunity to read up on **what** we are doing at HUNT Cloud, and a little bit on **why** we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
-
-We will not be able to make the reports for each Tingweek, although we will do our best to keep the list updated.
-
-- [Ting report #6 (2022-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-report.pdf)
-- [Ting report #4 (2021-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-report.pdf)
-- [Ting report #3 (2021-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-report.pdf)
-- [Ting report #2 (2021-02)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-report.pdf)
-- [Ting report #1 (2020-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-report.pdf)
 
 
 
@@ -98,4 +85,19 @@ Individual Tings are scheduled over the week on the same time slots. The current
 #### Tingweek schedule with times and scope
 
 !["Tingweek schedule"](./images/tingweek-schedule-times.png)
+
+
+## Reports
+
+The intent of the Ting report is to give you the opportunity to read up on **what** we are doing at HUNT Cloud, and a little bit on **why** we do it. All so we can meet at the tings and have informed discussions on how to best elevate data for a better world!
+
+We will not be able to make the reports for each Tingweek, although we will do our best to keep the list updated.
+
+- [Ting report #6 (2022-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-report.pdf)
+- [Ting report #4 (2021-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-report.pdf)
+- [Ting report #3 (2021-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-report.pdf)
+- [Ting report #2 (2021-02)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-report.pdf)
+- [Ting report #1 (2020-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-report.pdf)
+
+
 

@@ -38,7 +38,7 @@ Ting invitations, agenda and digital meeting links are forwarded on email a few 
 
 ### Where do we meet?
 
-We will meet digitally at Zoom utilizing the NTNU subscription. Links will be forwarded on email and on Slack for the lab ting and the data space ting.
+We will meet digitally at Zoom utilizing the NTNU subscription. Links will be forwarded on email and on Slack for the Labting and the data space ting.
 
 
 

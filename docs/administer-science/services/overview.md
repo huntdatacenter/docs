@@ -40,7 +40,7 @@ We have established three subscription levels that differs in the individual ser
 | Free external exports | ![yes](./images/no-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Access to new pilot services | ![no](./images/no-30.png "no") | ![yes](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
 | Multiple billing accounts | ![no](./images/no-30.png "no") | ![yes](./images/no-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Lab ting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
+| Labting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Coordinator ting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 | Lagtun membership | ![no](./images/no-30.png "no") | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
 

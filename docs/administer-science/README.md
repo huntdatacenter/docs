@@ -15,14 +15,11 @@ This section is aimed at lab leaders, lab coordinators, data space leaders and d
 
 You will find practical information on lab and data space administration. See our [main documentation](/) page for other sections.
 
-::: tip Next Tingweek (Ting 8)
+::: tip Next Tingweek (Ting 9)
 
-- **Lab ting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-labting-agenda.pdf))
-- **Data space ting**: Wednesday 15 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-dataspaceting-agenda.pdf))
-- **Data controller ting**: Wednesday 15 February 2023 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-datacontrollerting-agenda.pdf))
-- **Lagtun**: Thursday 16 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-lagtun-agenda.pdf))
+- **Data space ting**: Wednesday 31 May 2023 - 9 to 11 a.m. CET
 
-[Read more about Tingweek](/govern-science/tingweek/)
+[Read more about HUNT Cloud Tingweek](/govern-science/tingweek/)
 
 :::
 

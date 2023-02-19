@@ -15,9 +15,24 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun/) and the use of [resol
 
 :::
 
-#### [Clarify reactivation requirements for Lab users](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-resolutions.pdf#page=4)
+#### [Pilot a framework for courses that utilizes sensitive data](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-resolutions.pdf#page=5)
+
+- TOPIC: Teaching
+- ID: R9/LT8/T8/23
+
+#### [Support lab separations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-resolutions.pdf#page=4)
 
 - TOPIC: Finance
+- ID: R8/LT8/T8/23
+
+#### [Extend spare capacity to GPU accelerators](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-resolutions.pdf#page=3)
+
+- TOPIC: Reliability
+- ID: R7/LT8/T8/23
+
+#### [Clarify reactivation requirements for Lab users](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-resolutions.pdf#page=4)
+
+- TOPIC: Communication
 - ID: R9/LT7/T7/22
 
 #### [Enable individual service orders for service units](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek7-resolutions.pdf#page=3)
@@ -27,7 +42,7 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun/) and the use of [resol
 
 #### [Clarify machine adjustment responsibilities](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-resolutions.pdf#page=6)
 
-- TOPIC: Resources
+- TOPIC: Authorization
 - ID: R10/LT6/T6/22
 
 #### [Clarify community membership criteria](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-resolutions.pdf#page=5)
@@ -95,3 +110,4 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun/) and the use of [resol
 - TOPIC: Resources
 - ID: R4/LT4/T4/21
  
+
