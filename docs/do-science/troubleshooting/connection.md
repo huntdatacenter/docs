@@ -18,7 +18,7 @@ Your lab connection is encrypted over a virtual private network (VPN) to ensure 
 
 ### Access list
 
-We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. We are happy to open for new connections. Look up your IP address ([ip4.me](http://ip4.me)) and order your VPN access list opening in our [service desk](/do-science/service-desk/#vpn-access-list). 
+We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. We are happy to open for new connections. Look up your IP address ([ip4.me](http://ip4.me)) and request your VPN access list opening in our [service desk](/do-science/service-desk/#vpn-access-list). 
 
 ::: tip For NTNU users
 
@@ -28,14 +28,20 @@ You can access your lab over the Cisco Anyconnect VPN from NTNU worldwide on Win
 
 ### Cannot connect due to local firewalls
 
-Some organizations and companies have local firewalls which prohibit your computer from connecting to the HUNT Cloud VPN. Blocked network connections will typically give an error such as `The VPN failed because the connection attempt timed out`. Please contact your local IT department for assistance with the network requirements below if you think this may be the case. Feel free to [include us](/contact) in the communication if you need assistance.
+Some organizations and companies have local firewalls which prohibit your computer from connecting to the HUNT Cloud VPN. Blocked network connections will typically give an error such as `TLS Error: TLS key negotiation failed to occur within 60 seconds` or `The VPN failed because the connection attempt timed out`. Please contact your local IT department for assistance with the network requirements below if you think this may be the case. Feel free to include [our email](/contact) in the communication if you need assistance.
 
-##### Network requirements for HUNT Cloud
+**Network requirements for HUNT Cloud**
+
 ```
 IP: 129.241.176.121
 Port: 1194
 Protocol: UDP
 ```
+
+
+
+
+
 
 ### Administrator rights
 
