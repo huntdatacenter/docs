@@ -8,26 +8,23 @@ description: This page lists frequently asked questions related to access for la
 
 # FAQ on user access
 
-This page lists frequently asked questions related to users and user management in labs.
+This page lists frequently asked questions related to lab user access in labs.
 
 [[toc]]
 
 
 
-## Connectivity
+## System access
 
-### Can I connect and work from home?
+### Can I connect from home?
 
-Yes. We allow connections both from organizations and private network. However, be aware that teleworking conditions from your own organization and/or conditions from your data controller may restrict connections outside your office space and from [private machines](#can-i-connect-from-my-private-machine). Contact your lab owner for more information on the specific conditions in your lab.
+Most likely. We allow connections both from organizations and private network. However, be aware that teleworking conditions from your own organization and/or conditions from your data controller may restrict connections outside your office space and from [private machines](#can-i-connect-from-my-private-machine). Contact your lab owner for more information on the specific conditions in your lab.
 
-
-
-
-### Can I connect from several local computers?
+### Can I connect from more than one local computer?
 
 Yes. We allow you to configure several local computers to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/do-science/getting-started/configure-vpn/) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to request a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) in the service desk to get going.
 
-### Can I do multiple connections at the same time?
+### Can I have multiple connections at the same time?
 
 No. For security reasons we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local copmuter. Check our [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/) guide for how to instantly get back to your work when your connect from multiple local computers.
 
@@ -41,14 +38,11 @@ Maybe. We do allow such connections, however teleworking conditions from your ow
 
 
 
+## Lab access
 
+### How can I reset my password? 
 
-
-
-
-
-
-## Current users
+You may request a SSH passphrase reset in our do science [service desk](/do-science/service-desk/#ssh-passphrase-reset).
 
 ### How do I change my machine passphrase?
 
@@ -57,11 +51,6 @@ You can change your SSH passphrase with the **`passwd`** command. You will be as
 ```bash
 passwd
 ```
-
-### I don't remember my password, now what?
-
-Worry not. Order a SSH passphrase reset in our [service desk](/do-science/service-desk/#ssh-passphrase-reset). After the initial setup, you do need to remember your SSH password when you install software and access your workbench. Since you will not use your password for other activities after the initial onboarding it may be hard to remember. 
-
 
 ### How can I see the other users in my lab?
 
