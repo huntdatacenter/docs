@@ -88,13 +88,11 @@ We are happy to hear that! If you have a new local machine you will need to inst
 
 When you got your new VPN certificate, head over to our [VPN certificate reset guide](/do-science/guides/vpn-certificate-reset/) to get going.
 
-### VPN failed to negotiate cipher error
+### Failed to negotiate cipher
 
-If you are experiencing error below while you are trying to connect to VPN, please order a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset).
+You will need an updated VPN configuration when you see the `Failed to negotiate cipher with server`-error while connecting to the VPN. Order a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) in our do science service desk. 
 
-```
-failed to negotiate cipher with server.  Add the server's cipher ('AES-256-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM') if you want to connect to this server.
-```
+> **Full message**: Failed to negotiate cipher with server.  Add the server's cipher ('AES-256-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM') if you want to connect to this server.
 
 
 ## Phone
@@ -131,7 +129,7 @@ Your SSH connection is transferred inside your VPN connection. You will therefor
 
 ### Unresponsive machine (OOM Killer)
 
-Your lab machines may become unresponsive. You will notice this as a lost connection. A typical reason for this is that one or more a processes inside your machine consumed all the memory, initiating a Out Of Memory Killer (OOM Killer). You will be unable to log onto your lab if an OOM Killer is triggered on your **`home`** machine. You will be able to log into your lab, although unable to log into the affected **`iaas`** or **`blue`** machines, if an OOM Killer is triggered on other machines in your lab. Your data will not be affected of OOM Killers. [Contact us](/contact) us for a machine restart and consider to update your machine type in our [service desk](/administer-science/service-desk/lab-orders/#update-machine-size).
+Your lab machines may become unresponsive. You will notice this as a lost connection. A typical reason for this is that one or more a processes inside your machine consumed all the memory, initiating a Out Of Memory Killer (OOM Killer). You will be unable to log onto your lab if an OOM Killer is triggered on your **`home`** machine. You will be able to log into your lab, although unable to log into the affected **`iaas`** or **`blue`** machines, if an OOfM Killer is triggered on other machines in your lab. Your data will not be affected of OOM Killers. [Contact us](/contact) us for a machine restart and consider to update your machine type in our [service desk](/administer-science/service-desk/lab-orders/#update-machine-size).
 
 ### WARNING: Remote host identification has changed
 
