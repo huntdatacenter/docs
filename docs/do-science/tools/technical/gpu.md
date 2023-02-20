@@ -44,10 +44,10 @@ nvidia-smi
 
 ### Specify CUDA version
 
-If you wish to use a specific version of CUDA, we recommend that you use the NVIDIA Container Toolkit to run a container of your choosing. Here is an example for CUDA version **`11.0`**:
+If you wish to use a specific version of CUDA, we recommend that you use the NVIDIA Container Toolkit to run a container of your choosing. Here is an example for CUDA version **`12.0`**:
 
 ```bash
-sudo docker run --rm --runtime=nvidia nvidia/cuda:11.0-base nvidia-smi
+sudo docker run --rm --runtime=nvidia nvidia/cuda:12.0.0-base-ubuntu22.04 nvidia-smi
 ```
 
 ### Jupyter in Nvidia Docker
