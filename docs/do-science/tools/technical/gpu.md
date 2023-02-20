@@ -50,9 +50,11 @@ If you wish to use a specific version of CUDA, we recommend that you use the NVI
 sudo docker run --rm --runtime=nvidia nvidia/cuda:12.0.0-base-ubuntu22.04 nvidia-smi
 ```
 
+More versions of CUDA base image can be found in [Docker Hub](https://hub.docker.com/r/nvidia/cuda/tags?page=1&name=base-ubuntu22.04).
+
 ### Jupyter in Nvidia Docker
 
-If you want to use Jupyterlab on your GPU machine we recommend the [iot-salzburg/gpu-jupyter](https://github.com/iot-salzburg/gpu-jupyter) docker image. 
+If you want to use Jupyterlab on your GPU machine we recommend the [iot-salzburg/gpu-jupyter](https://github.com/iot-salzburg/gpu-jupyter) docker image.
 
 This project uses the NVIDIA CUDA image as the base image and installs their toolstack on top of it to enable GPU calculations in the Jupyter notebooks. Python packages Tensorflow and Pytorch are preinstalled to match the Cuda version (GPU drivers).
 
