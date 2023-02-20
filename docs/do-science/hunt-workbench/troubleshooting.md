@@ -34,6 +34,12 @@ Your HUNT Workbench certificate is time limited. You will meet the **`403 Forbid
 
 ![expired_certificate.png](./images/expired_certificate.png)
 
+### 403: Forbidden - oauth state does not match
+
+Try to logout and login again. If logging in does not help, try different browser. We usually recommend Chrome, but here it is important to confirm whether it works in different browser. If this issue appear in all do not hesitate to reach out in your lab channel on Slack and remember to specify the error message `oauth state does not match`.
+
+![oauth_state_does_not_match.png](./images/oauth_state_does_not_match.png)
+
 ### 502: Bad gateway
 
 Reach out to us on [Slack or email](/contact) if you get the **`502 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
