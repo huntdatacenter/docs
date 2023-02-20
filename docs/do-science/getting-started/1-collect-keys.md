@@ -167,13 +167,19 @@ Steps to resolve issues with Signal may vary by phone model and OS. Signal has a
 
 ### 7z file
 
-#### OS X and macOS: The ZIP password do not seem to work?
-
-The default archive utility may give you an error message when unpacking the [7z-format](/do-science/tools/transfer/7z/) locked with a passphrase. Try to download and unpack with the 7z application in the [decryption guides](/do-science/getting-started/collect-your-keys/#_1-2-secrets-on-your-email). [Contact us](/contact) if this does not work.
-
-#### Windows: I am unable to unpack the 7z-file forwarded on email.
+#### Windows: I am unable to unpack the 7z-file forwarded on email
 
 If the [decryption guides](/do-science/getting-started/collect-your-keys/#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
+
+#### OS X, macOS: The ZIP password do not seem to work?
+
+The default archive utility may give you an error message when unpacking the `7z-format` locked with a passphrase. Try to download and unpack with the 
+`7z software` described in the [7z transfer guide](/do-science/tools/transfer/7z/). [Contact us](/contact) if this does not work.
+
+#### Debian Linux (Ubuntu): I am unable to unpack the 7z-file forwarded on email
+
+The default archive utility may give you an error message when unpacking the `7z-format` locked with a passphrase. Try to download and unpack with the 
+`7z software` described in the [7z transfer guide](/do-science/tools/transfer/7z/). [Contact us](/contact) if this does not work.
 
 ### More information
 
