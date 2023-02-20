@@ -185,7 +185,9 @@ your-username@your-labname-`entry`:~$
 
 5. Similar to above, verify a successful passphrase update by logging into your home machine typing **`ssh home`** once more.
 
-6 With a tiny bit of luck, you should now be logged into your lab!
+6. First time you are usually asked to confirm the authenticity of host, it is fine to confirm with **`yes`**.
+
+7. With a tiny bit of luck, you should now be logged into your lab!
 
 
 ::: warning Expected result
