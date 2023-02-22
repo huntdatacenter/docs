@@ -287,7 +287,7 @@ This will allow you to log directly into your lab without the need to remember y
 # -- On your local computer
 ssh-keygen -t rsa -b 4096
 ```
-Hint enter _three times_. When this finishes:
+Hit enter _three times_. When this finishes:
 
 3. Add your new certificate to your entry machine:
 
