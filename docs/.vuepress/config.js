@@ -51,14 +51,17 @@ module.exports = {
   // https://v1.vuepress.vuejs.org/theme/default-theme-config.html
   themeConfig: {
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#git-repo-and-edit-links
-//    repo: "https://github.com/huntdatacenter/docs",
-//    repoLabel: "Contribute!",
+    // repo: "https://github.com/huntdatacenter/docs",
+    // repoLabel: "Contribute!",
     docsDir: "docs",
     editLinks: false,
     editLinkText: "Help us improve this page!",
     lastUpdated: true,
     // https://vuepress.vuejs.org/theme/default-theme-config.html#navbar-logo
     logo: "/img/hunt-cloud-logo.svg",
+    // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#built-in-search
+    searchMaxSuggestions: 6,
+    // searchPlaceholder: 'Search...',
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
     // TODO remove nav key in vuepress 2
     nav: [
