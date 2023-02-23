@@ -142,6 +142,12 @@ export default ({
         // Rewrite the link to correct path
         window.location.href = to_path.replace("/responsibilities/", "/govern-science/risk-management/#clarification-of-responsibilities");
         next();
+      } else if (
+        to_path.startsWith("/service-desk/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/service-desk/", "/administer-science/service-desk/");
+        next();
       } else {
         next();
       }
