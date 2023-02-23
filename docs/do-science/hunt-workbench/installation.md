@@ -271,6 +271,23 @@ See our HUNT Workbench [principles](/do-science/hunt-workbench/principles/) and 
 
 This section includes issues that you might encounter during your first setup. See our HUNT Workbench [FAQ](/do-science/hunt-workbench/faq/) and HUNT Workbench [Troubleshooting](/do-science/hunt-workbench/troubleshooting/) if you do not find your answers below.
 
+#### This site can’t be reached
+
+::: details Read more
+
+If you are getting `DNS_PROBE_FINISHED_NXDOMAIN` error you need to repeat the [Step 2](#_2-edit-your-hosts-file) of this guide.
+
+On MacOS or Linux you can also assure hosts return IP address using the command below:
+
+```
+# -- Principal example
+getent hosts <labname>.lab.hdc.ntnu.no
+
+# -- Demo example
+getent hosts demolab.lab.hdc.ntnu.no
+```
+:::
+
 #### I don't remember my passphrase
 
 ::: details Read more
