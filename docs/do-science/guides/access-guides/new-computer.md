@@ -13,8 +13,7 @@ description: What to order when you get a new computer.
 
 # Access from new computer
 
-We are happy to hear that! If you have a new local computer you will need to install a new VPN certificate
-on all machines that you will connect from.
+We are happy to hear that! If you have a new local computer you will need to request new certificates.
 
 ### Required
 
