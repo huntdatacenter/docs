@@ -15,4 +15,28 @@ description: What to order when you get a new computer.
 
 We are happy to hear that! If you have a new local computer you will need to install a new VPN certificate
 on all machines that you will connect from.
-You can find all required steps in our [Service desk](/do-science/service-desk/#faq).
+
+### Required
+
+You will need new VPN certificate and new workbench certificate.
+
+<SDButton form="request_vpn_reset" />
+
+
+<SDButton form="request_workbench_reissue" />
+
+### For consideration
+
+If you do not remember your lab IPs You may consider to request a new SSH configuration file
+
+<SDButton form="request_ssh_config" />
+
+If you don't remember your passphrase, you may request a reset
+
+<SDButton form="request_ssh_pass_reset" />
+
+If you are a windows user, you might need a new mobaXterm configuration
+
+<SDButton form="request_mobaxterm_file" />
+
+

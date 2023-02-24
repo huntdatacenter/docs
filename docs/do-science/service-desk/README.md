@@ -162,20 +162,6 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 
 ## FAQ
 
-#### I have a new local computer, what should I request? 
-
-::: details Read more
-
-We are happy to heard about your new machine! To regain lab access you will need to request certificates (required) and potentially configuration files (for consideration): 
-
-**Required**. If you have a new local computer, you will need (1) a new [VPN certificate](/do-science/service-desk/#vpn-certificate-reset)  and (2) a new [Workbench certificate](/do-science/service-desk/#hunt-workbench-reissue). 
-
-**For consideration**. You may consider to request a new [SSH configuration](/do-science/service-desk/#ssh-configuration) if you do not remember your lab IPs, and/or a new [SSH passphrase](/do-science/service-desk/#ssh-passphrase-reset) if you don't remember your SSH passphrase, and/or a new [MobaXterm configuration](/do-science/service-desk/#mobaxterm-configuration-file) if you use this application (Windows users). 
-
-Request each configuration through buttons above.
-
-:::
-
 #### I have not heard back within the expected delivery time, now what? 
 
 ::: details Read more
