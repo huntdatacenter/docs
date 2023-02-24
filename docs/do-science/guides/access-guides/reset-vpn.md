@@ -18,7 +18,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 1.1 Your new VPN certificate and VPN profile in a compressed `7z`-file sent over filesender.no
 
-1.2. Your new `VPN passphrase` and your `ZIP file key` sent over Signal.
+1.2. Your new `VPN passphrase` and your `7-ZIP file key` sent over Signal.
 
 :::
 
@@ -36,7 +36,7 @@ We will communicate your VPN certificate over your organizational email. You wil
 
 2.2 Unpack (extract) the file with your favorite file archiver software that recognize the [7z format](/do-science/tools/transfer/7z/) (see below).
 
-Use the key named **`ZIP file key`** from your Signal transfer to decrypt the 7-zip archive.
+Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the 7z archive.
 
 ::: tip Decryption guides
 
