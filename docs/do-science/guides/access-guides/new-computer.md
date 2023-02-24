@@ -26,13 +26,18 @@ You will need new VPN certificate and new workbench certificate.
 
 ### For consideration
 
+If you don't remember your passphrase, you may request a reset
+
+<SDButton form="request_ssh_pass_reset" />
+
 If you do not remember your lab IPs You may consider to request a new SSH configuration file
 
 <SDButton form="request_ssh_config" />
 
-If you don't remember your passphrase, you may request a reset
+::: tip 
+If you order SSH configuration reset, mobaXterm configuration will be included.
 
-<SDButton form="request_ssh_pass_reset" />
+:::
 
 If you are a windows user, you might need a new mobaXterm configuration
 
