@@ -1,49 +1,33 @@
 <script>
 import {
   VApp,
-  VDialog,
-  VBtn,
   VCol,
   VRow,
   VTextField,
   VTextarea,
-  VSelect,
-  VIcon,
   VCard,
-  VCardText,
-  VCardActions,
-  VSubheader,
-  VSpacer,
-  VDivider,
 } from "vuetify/lib";
 
 export default {
   name: "SSHConfig",
   components: {
     VApp,
-    VDialog,
-    VBtn,
     VCol,
     VRow,
     VTextField,
     VTextarea,
-    VSelect,
-    VIcon,
     VCard,
-    VCardText,
-    VCardActions,
-    VSubheader,
-    VSpacer,
-    VDivider,
   },
   props: {
     id: { type: String, default: "applet" },
   },
   data() {
     return {
-      ipAddress: null,
-      labName: null,
-      username: null,
+      query: {
+        ipAddress: null,
+        labName: null,
+        username: null,
+      },
       template: `# Place in ~/.ssh/config
 
 Host {lab_name}-entry
@@ -60,26 +44,24 @@ Host {lab_name}
     };
   },
   computed: {
-    showConfig() {
-      return this.ipAddress && this.labName && this.username ? true : false
-    },
     configText() {
-      return this.ipAddress && this.labName && this.username ? this.wrap(this.template) : null;
+      return this.query.ipAddress && this.query.labName && this.query.username ? this.wrap(this.template) : null;
     },
   },
   mounted() {},
   created() {
     console.log(this.$route.query);
-    this.ipAddress = this.$route.query.ip_address
-    this.labName = this.$route.query.lab_name
-    this.username = this.$route.query.username
+    this.query.ipAddress = this.$route.query.ip_address
+    this.query.labName = this.$route.query.lab_name
+    this.query.username = this.$route.query.username
+    console.log(this.query);
   },
   methods: {
     wrap(template) {
       let text = template;
-      text = text.replaceAll('{ip_address}', this.ipAddress);
-      text = text.replaceAll('{lab_name}', this.labName);
-      text = text.replaceAll('{username}', this.username);
+      text = text.replaceAll('{ip_address}', this.query.ipAddress);
+      text = text.replaceAll('{lab_name}', this.query.labName);
+      text = text.replaceAll('{username}', this.query.username);
       return text;
     },
   },
@@ -92,9 +74,9 @@ Host {lab_name}
         <v-app :id="id">
             <v-card class="pt-4">
                 <v-row class="mb-2">
-                    <v-col>
+                    <v-col cols="10">
                         <v-text-field
-                            v-model="username"
+                            v-model="query.username"
                             autocomplete="ignore-field"
                             label="Username"
                             placeholder="Missing username query"
@@ -106,9 +88,9 @@ Host {lab_name}
                             @focus="$event.target.select()"
                         ></v-text-field>
                     </v-col>
-                    <v-col>
+                    <v-col cols="10">
                         <v-text-field
-                            v-model="labName"
+                            v-model="query.labName"
                             autocomplete="ignore-field"
                             label="Lab name"
                             placeholder="Missing lab_name query"
@@ -120,9 +102,9 @@ Host {lab_name}
                             @focus="$event.target.select()"
                         ></v-text-field>
                     </v-col>
-                    <v-col>
+                    <v-col cols="10">
                         <v-text-field
-                            v-model="ipAddress"
+                            v-model="query.ipAddress"
                             autocomplete="ignore-field"
                             label="IP Address"
                             placeholder="Missing ip_address query"
@@ -135,20 +117,19 @@ Host {lab_name}
                         ></v-text-field>
                     </v-col>
                 </v-row>
+                <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH-Config</h3>
                 <v-textarea
-                    v-if="showConfig"
                     v-model.trim="configText"
                     label="SSH Config"
-                    class="py-2"
+                    placeholder="URL is missing parameters"
+                    persistent-placeholder
+                    class="py-2 mt-2"
                     outlined
                     readonly
                     rows="13"
                     hide-details
                     @focus="$event.target.select()"
                 ></v-textarea>
-                <v-card v-else>
-                    URL is missing parameters
-                </v-card>
             </v-card>
         </v-app>
     </div>
@@ -169,7 +150,4 @@ Host {lab_name}
       width: 100%
       overflow-x: hidden
 
-  a.v-btn
-    border: inherit
 </style>
-  
