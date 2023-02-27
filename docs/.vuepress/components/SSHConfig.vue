@@ -117,10 +117,10 @@ Host {lab_name}
                         ></v-text-field>
                     </v-col>
                 </v-row>
-                <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH-Config</h3>
+                <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH Config</h3>
                 <v-textarea
                     v-model.trim="configText"
-                    label="SSH Config"
+                    label="SSH Config file"
                     placeholder="URL is missing parameters"
                     persistent-placeholder
                     class="py-2 mt-2"
