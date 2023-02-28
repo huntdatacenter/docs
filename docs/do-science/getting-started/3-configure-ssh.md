@@ -101,7 +101,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
    ![putty step 3.3.7](./images/putty_3.3.7.png)
 
-8. Repeat Step 2 and 3 to verify your passphrase update. Type your **`passphrase`** when asked for a password. You should now be logged into your entry machine.
+8. Repeat Step 2 and 3 to verify that your passphrase has been updated. Type your **`passphrase`** when asked for a password. You should now be logged into your entry machine.
 
 :::
 
@@ -165,7 +165,7 @@ Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-174-generic x86_64)
 
 Welcome to YOUR-LABNAME.
 
-For the record, if you shouldn't be here - please
+For the record, if you should not be here - please
 leave and report the incident to cloud@hunt.ntnu.no.
 
 Last login: Mon Jul  2 17:40:16 2018 from 10.10.10.10
@@ -218,7 +218,7 @@ Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-98-generic x86_64)
 
 Welcome to YOUR-LABNAME.
 
-For the record, if you shouldn't be here - please
+For the record, if you should not be here - please
 leave and report the incident to cloud@hunt.ntnu.no.
 
 Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
