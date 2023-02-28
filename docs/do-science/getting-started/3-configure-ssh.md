@@ -82,15 +82,24 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 2. Click on the **`putty.exe`** file that your save your local computer to start the client.
 
-3. Type **`<your-username>@<your-lab-IP>`** in the "_Host Name (or IP address)_" field and click "_Open_".
+3. Enter **`<your-username>@<your-lab-IP>`** in the "_Host Name (or IP address)_" field and click "_Open_".
 
-4. Enter your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password and hit enter. You will not see anything on the screen when you type your password. Pasting with ctrl + v does not work in Putty.
+4. Type in your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password and hit enter. You will not see anything on the screen when you type your password.
+   > NOTE: You **CANNOT** paste with ctrl + v in Putty.
+
+   ![putty step 3.3.4](./images/putty_3.3.4.png)
 
 5. Type the same **`SSH temporary key`** _one more time_ when asked and hit enter.
 
+   ![putty step 3.3.5](./images/putty_3.3.5.png)
+
 6. Enter your new **`passphrase`** from above and hit enter.
 
+   ![putty step 3.3.6](./images/putty_3.3.6.png)
+
 7. Retype your **`passphrase`** for verification and hit enter. You will now be kicked out of the entry machine connection.
+
+   ![putty step 3.3.7](./images/putty_3.3.7.png)
 
 8. Repeat Step 2 and 3 to verify your passphrase update. Type your **`passphrase`** when asked for a password. You should now be logged into your entry machine.
 
