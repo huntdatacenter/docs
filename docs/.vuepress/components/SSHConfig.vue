@@ -52,7 +52,7 @@ Host {lab_name}
   created() {
     console.log(this.$route.query);
     // /do-science/lab/?access=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXI%3D
-    // access = $(echo -n "${ip_address}|${lab_name}|${username}" | base64)
+    // access = $(echo -n "${ip_address}|${lab_name}|${username}" | base64 | sed 's|=|%3D|g' )
     const access = this.$route.query.access ? atob(this.$route.query.access).split('|') : [];
 
     if (access.length == 3) {
