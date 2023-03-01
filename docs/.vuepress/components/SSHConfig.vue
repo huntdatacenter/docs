@@ -51,9 +51,15 @@ Host {lab_name}
   mounted() {},
   created() {
     console.log(this.$route.query);
-    this.query.ipAddress = this.$route.query.ip_address
-    this.query.labName = this.$route.query.lab_name
-    this.query.username = this.$route.query.username
+    // /do-science/lab/?access=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXI%3D
+    // access = $(echo -n "${ip_address}|${lab_name}|${username}" | base64)
+    const access = this.$route.query.access ? atob(this.$route.query.access).split('|') : null;
+
+    if (access.length == 3) {
+        this.query.ipAddress = access[0]
+        this.query.labName = access[1]
+        this.query.username = access[2]
+    }
     console.log(this.query);
   },
   methods: {
