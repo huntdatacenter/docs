@@ -80,9 +80,11 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 1. Download and save the **`Putty`** SSH client from [this link](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe).
 
-2. Click on the **`putty.exe`** file that your save your local computer to start the client.
+2. Double click on the **`putty.exe`** file that your save your local computer to start the client.
 
 3. Enter **`<your-username>@<your-lab-IP>`** in the "_Host Name (or IP address)_" field and click "_Open_".
+
+   ![putty step 3.3.3](./images/putty_3.3.3.png)
 
 4. Type in your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password and hit enter. You will not see anything on the screen when you type your password.
    > NOTE: You **CANNOT** paste with ctrl + v in Putty.
