@@ -6,6 +6,10 @@ import {
   VTextField,
   VTextarea,
   VCard,
+  VExpansionPanel,
+  VExpansionPanels,
+  VExpansionPanelHeader,
+  VExpansionPanelContent,
 } from "vuetify/lib";
 
 export default {
@@ -17,6 +21,10 @@ export default {
     VTextField,
     VTextarea,
     VCard,
+    VExpansionPanel,
+    VExpansionPanels,
+    VExpansionPanelHeader,
+    VExpansionPanelContent,
   },
   props: {
     id: { type: String, default: "applet" },
@@ -44,9 +52,15 @@ Host {lab_name}
     };
   },
   computed: {
+    show() {
+      return this.query.ipAddress && this.query.labName && this.query.username ? true : false;
+    },
     configText() {
       return this.query.ipAddress && this.query.labName && this.query.username ? this.wrap(this.template) : null;
     },
+    puttyHostName() {
+      return this.query.ipAddress && this.query.username ? `${this.query.username}@${this.query.ipAddress}` : null
+    }
   },
   mounted() {},
   created() {
@@ -78,14 +92,14 @@ Host {lab_name}
 <template>
     <div class="vuewidget vuewrapper" data-vuetify>
         <v-app :id="id">
-            <v-card class="pt-4">
-                <v-row class="mb-2">
+            <v-card v-if="show" class="pt-4">
+                <v-row class="ml-3 mb-2">
                     <v-col cols="10">
                         <v-text-field
                             v-model="query.username"
                             autocomplete="ignore-field"
                             label="Username"
-                            placeholder="Missing username query"
+                            placeholder="Your link is missing access token"
                             persistent-placeholder
                             outlined
                             dense
@@ -99,7 +113,7 @@ Host {lab_name}
                             v-model="query.labName"
                             autocomplete="ignore-field"
                             label="Lab name"
-                            placeholder="Missing lab_name query"
+                            placeholder="Your link is missing access token"
                             persistent-placeholder
                             outlined
                             dense
@@ -113,7 +127,7 @@ Host {lab_name}
                             v-model="query.ipAddress"
                             autocomplete="ignore-field"
                             label="IP Address"
-                            placeholder="Missing ip_address query"
+                            placeholder="Your link is missing access token"
                             persistent-placeholder
                             outlined
                             dense
@@ -123,19 +137,54 @@ Host {lab_name}
                         ></v-text-field>
                     </v-col>
                 </v-row>
-                <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH Config</h3>
-                <v-textarea
-                    v-model.trim="configText"
-                    label="SSH Config file"
-                    placeholder="URL is missing parameters"
-                    persistent-placeholder
-                    class="py-2 mt-2"
-                    outlined
-                    readonly
-                    rows="13"
-                    hide-details
-                    @focus="$event.target.select()"
-                ></v-textarea>
+
+                <v-card elevation="1">
+                    <v-expansion-panels elevation="0">
+                        <v-expansion-panel>
+                            <v-expansion-panel-header :disable-icon-rotate="formFilled">
+                                <h3 id="putty"><a href="#putty" class="header-anchor">#</a> Putty</h3>
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content class="mt-2">
+                                <v-col cols="10">
+                                    <v-text-field
+                                        v-model="puttyHostName"
+                                        autocomplete="ignore-field"
+                                        label="Putty - Host Name"
+                                        placeholder="Your link is missing access token"
+                                        persistent-placeholder
+                                        outlined
+                                        dense
+                                        readonly
+                                        hide-details
+                                        @focus="$event.target.select()"
+                                    ></v-text-field>
+                                </v-col>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header :disable-icon-rotate="formFilled">
+                                <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH Config</h3>
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content class="mt-2">
+                                <v-textarea
+                                    v-model.trim="configText"
+                                    label="SSH Config file"
+                                    placeholder="Your link is missing access token"
+                                    persistent-placeholder
+                                    class="py-2 mt-2"
+                                    outlined
+                                    readonly
+                                    rows="13"
+                                    hide-details
+                                    @focus="$event.target.select()"
+                                ></v-textarea>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                    </v-expansion-panels>
+                </v-card>
+            </v-card>
+            <v-card v-else class="pt-4">
+                Invalid link. Please check your emails to find the full link.
             </v-card>
         </v-app>
     </div>
@@ -155,5 +204,8 @@ Host {lab_name}
       min-width: inherit
       width: 100%
       overflow-x: hidden
+
+.last-updated
+  display: none
 
 </style>
