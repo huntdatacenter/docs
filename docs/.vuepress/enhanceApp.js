@@ -148,6 +148,18 @@ export default ({
         // Rewrite the link to correct path
         window.location.href = to_path.replace("/service-desk/", "/administer-science/service-desk/");
         next();
+      } else if (
+        to_path.startsWith("/data-transfers/internal-kista/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/data-transfers/internal-kista/", "/do-science/data-transfers/internal-kista/");
+        next();
+      } else if (
+        to_path.startsWith("/data-transfers/external-kista/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/data-transfers/external-kista/", "/do-science/data-transfers/external-kista/");
+        next();
       } else {
         next();
       }
