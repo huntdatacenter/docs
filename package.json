@@ -22,7 +22,7 @@
     "commander": "^8.3.0",
     "css-what": "^6.0.1",
     "deepmerge": "^4.2.2",
-    "dns-packet": "^5.2.2",
+    "dns-packet": "^5.4.0",
     "esm": "^3.0.0",
     "material-design-icons-iconfont": "^6.7.0",
     "postcss": "^8.2.13",
