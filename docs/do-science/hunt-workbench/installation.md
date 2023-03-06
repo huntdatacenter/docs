@@ -40,10 +40,10 @@ Your **`host record`**, the record of your lab IP address and your lab host name
 
 ```bash
 # -- Principal example of a host record
-10.42.130.X <lab_name>.lab.hdc.ntnu.no
+10.42.X.Y <lab_name>.lab.hdc.ntnu.no
 ```
 
-Select steps for your operating system: 
+Select steps for your operating system:
 
 ::: details Windows
 
