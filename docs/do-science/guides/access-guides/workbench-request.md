@@ -39,7 +39,7 @@ Similar to your initial onboarding, we will send you (1) your keys over Signal t
 
 ::: warning Expect these files on your local computer
 
-A successful opening of the 7z-file file should include two (2) files:
+A successful opening of the 7z-file file should include two (2) files related to HUNT Workbench setup:
 
 * `<labname>-<your-username>.p12` - your TLS certificate.
 * `<labname>-<your-username>.mobileconfig` - your OS X and MacOS configuration file.
