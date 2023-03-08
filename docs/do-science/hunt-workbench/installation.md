@@ -19,7 +19,7 @@ You will need the following to complete this guide:
 ::: warning Requirements
 
 - A working VPN and SSH configuration as described in our [Getting started](/do-science/getting-started/) guide.
-- A HUNT Workbench certificate as described in the [HUNT Workbench certificate request](/do-science/guides/hunt-workbench-request/).
+- A HUNT Workbench TLS certificate as described in the [HUNT Workbench certificate request](/do-science/guides/hunt-workbench-request/).
 
 Without these it's impossible to complete this guide. 
 
@@ -261,7 +261,7 @@ Ensure that the **`Remember this decision`** box is checked, and click **`OK`**.
 
 ::: tip Further reading
 
-See our HUNT Workbench [principles](/do-science/hunt-workbench/principles/) and [FAQ](/do-science/hunt-workbench/faq/) sections to learn more about your new environment.
+See our [HUNT Workbench principles](/do-science/hunt-workbench/principles/) section to learn more about your new environment. For more practical advices on how to install your Python/R packages head over to [Workbench FAQ](/do-science/hunt-workbench/faq/).
 
 :::
 

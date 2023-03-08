@@ -20,7 +20,7 @@ description: Guide on the certificate request for your HUNT Workbench.
 
 ## 1. Request access
 
-You can request access to your HUNT Workbench in our [do science service desk](/do-science/service-desk/#hunt-workbench-access).
+If you have not received the certificate as part of your onboarding you can request access to your HUNT Workbench in our [do science service desk](/do-science/service-desk/#hunt-workbench-access).
 
 ## 2. Prepare Signal
 
