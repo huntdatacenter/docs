@@ -33,10 +33,10 @@ Allow for **30 minutes** to complete this installation and some playtime in your
 
 ## 2. Edit your hosts file
 
-First, let's set up your hosts file on your local computer. This allows you to connect to the HUNT workbench 
-in your lab using a URL name, for example **`demolab.lab.hdc.ntnu.no`**, in your web-browser rather than an IP address.
+First, let's set up your hosts file on your local computer. This allows you to connect to HUNT Workbench
+in your lab using a URL name, for example **`demolab.lab.hdc.ntnu.no`**, in your web-browser.
 
-Your **`host record`**, the record of your lab IP address and your lab host name, are included in your HUNT Workbench onboardig email. Example of a hosts record:
+Your **`host file record`** consists of IP address of your lab entry machine and your lab host name. You can find it included in your onboardig email. Example of a hosts record:
 
 ```bash
 # -- Principal example of a host record
