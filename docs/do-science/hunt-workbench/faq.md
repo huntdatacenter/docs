@@ -49,13 +49,18 @@ Yes. This allows you to install packages and package versions of your choice.
 Below is an example on how you create a Conda environments with _Python_ and _IPython_ kernel from your [workbench terminal](/do-science/hunt-workbench/faq/#terminal)::
 
 ```bash
-conda create -n <name> 'python~=3.10.*' 'ipykernel'
+mamba create -n <name> 'python~=3.10.*' 'ipykernel'
+```
+If you have older setup and missing mamba, you can use conda command instead:
+
+```bash
+mamba create -n <name> 'python~=3.10.*' 'ipykernel'
 ```
 
 And here's an example on how to create a Conda environment with _R_ and _R-IRkernel_ kernel and commonly used packages:
 
 ```bash
-conda create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
+mamba create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
 ```
 
 You need to replace **`<name>`** with your own environment name in the example above, such as **`conda-test-environment`**.
@@ -116,7 +121,7 @@ We recommend that instead of using apt, you install your packages into your envi
 Example with [plink2](https://anaconda.org/bioconda/plink2) package:
 
 ```
-conda install -n default -c bioconda -y plink2
+mamba install -n default -c bioconda -y plink2
 conda activate default
 plink2 --help
 ```
@@ -227,7 +232,7 @@ conda activate r-base
 conda install -n r-base -c conda-forge r-'<package-name>' r-'<another-package-name>'
 
 # -- Practical example*
-conda install -n r-base -c conda-forge r-dplyr
+mamba install -n r-base -c conda-forge r-dplyr
 ```
 
 For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr).
@@ -280,6 +285,11 @@ Sometimes you may get errors about the **`GLIBCXX`** library not being found and
 
 1. Open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) and run the following code to reset your **`r-base`** environment:
 
+```bash
+mamba create --yes -n r-base 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
+```
+
+If you have older setup without mamba, use conda command instead:
 ```bash
 conda create --yes -n r-base 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
 ```
