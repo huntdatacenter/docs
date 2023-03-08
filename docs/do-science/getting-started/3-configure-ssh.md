@@ -245,7 +245,7 @@ We hope that you will log into your lab a lot over the coming months and years. 
 
 ::: details Windows
 
-1. [Request Workbench](/do-science/hunt-workbench/) for smooth access to Jupyter Notebooks, Python, RStudio, R, or MATLAB.
+1. [HUNT Workbench](/do-science/hunt-workbench/) for smooth access to Jupyter Notebooks, Python, RStudio, R, or MATLAB.
 
 2. [Configure MobaXterm](/do-science/tools/technical/mobaxterm) for "password-less" SSH access directly to your home machine, as well as click-based file transfers between your local computer and your home machine.
 
@@ -337,7 +337,7 @@ ssh demolab
 
 ::: tip HUNT Workbench
 
-Request access to [HUNT Workbench](/do-science/hunt-workbench/) for smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, or MATLAB.
+Setup [HUNT Workbench](/do-science/hunt-workbench/) for smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, or MATLAB.
 
 :::
 
