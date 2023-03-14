@@ -25,9 +25,9 @@ Operational
 
 # Colors
 
-- Green = operational.
-- Yellow = reduced performance.
-- Red = some or all services are inaccessible.
+- Green (tip) = operational.
+- Yellow (warning) = reduced performance.
+- Red (danger) = some or all services are inaccessible.
 
 # Example statement
 
