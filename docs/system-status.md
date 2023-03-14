@@ -7,8 +7,15 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 
-::: warning Selected labs
+::: tip All systems
+Operational
+:::
+
+
+::: warning VPN service
 **2023-03-14 14:00** - At around 14:00 we noticed issues with VPN. We are currently working on resolving the issue. New update 15:00.
+
+**2023-03-14 15:00** - All systems operational.
 :::
 
 
