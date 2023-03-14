@@ -6,8 +6,9 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
+
 ::: warning Selected labs
-**2023-02-27 13:21** - We have located memory error in one physical machine. This will affect the availability of lab machines located here. We plan for a restart and/or migration of labs to a new physical machine. New update 15:00.
+**2023-03-14 14:00** - At around 14:00 we noticed issues with VPN. We are currently working on resolving the issue. New update 15:00.
 :::
 
 
@@ -60,6 +61,11 @@ Operational
 
 ::: danger All systems
 Shut off.
+:::
+
+
+::: warning Selected labs
+**2023-02-27 13:21** - We have located memory error in one physical machine. This will affect the availability of lab machines located here. We plan for a restart and/or migration of labs to a new physical machine. New update 15:00.
 :::
 
 -->
