@@ -291,12 +291,20 @@ Below are a few immediate things to try if your VPN connection did not succeed:
 ### Authenticate VPN
 
 If the _Authenticate VPN_ prompt pops up again, then try to log in again with a new **`verification code`**.
+
 ### VPN connection failed
 
 If you received the notification _VPN Connection Failed_ after 60 seconds, please check the following
 
 - Verify that you have an active internet connection.
 - Verify that the _Private Key Password_ is correct.
+
+### Could not read Private Key error
+
+The error message below indicates that there is a typo in the _Private Key Password_ (step 2.3.5) and you need to type it in again:
+```
+ERROR: could not read Private Key username/password/ok/string from management interface
+```
 
 ### Unable to apply changes
 
