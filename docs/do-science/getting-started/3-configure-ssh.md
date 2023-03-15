@@ -349,10 +349,11 @@ Time for coffee!
 
 ## Immediate troubleshooting
 
-### Windows 
+### Authentication token manipulation error
 
-#### Unable to connect with Putty
+If you are getting `Authentication token manipulation error` make sure you follow advices from Step 3.2 when creating your new passphrase and following steps on changing the passphrase for both entry and home machine.
+
+### Unable to connect with Putty
 
 Ensure that you did download **`putty.exe`** from the [link above](/do-science/getting-started/configure-ssh/#_3-3-configure-entry). We have experienced issues with preinstalled versions that connects from for us unknown locations.
-
 
