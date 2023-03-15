@@ -208,11 +208,17 @@ We recommend that you use the [Google Chrome browser](https://www.google.com/chr
 
 1. Open **`Google Chrome`** on your local computer.
 
-2. In Google Chrome, open the URL **`chrome://settings/certificates`** and click the **`Import`** button on the right side of the screen.
+2. Download our public CA certificate from [https://pki.hdc.ntnu.no/hctsca1.crt](https://pki.hdc.ntnu.no/hctsca1.crt)
 
-3. Browse and select your **`.p12`** file that you downloaded to your local computer, and enter the **`TLS passphrase`** that we sent you on Signal.
+3. In Google Chrome, open the URL **`chrome://settings/certificates`** and navigate to section **`Authorities`** then click the **`Import`** button on the right side of the screen to import `hctsca1.crt` certificate file. Select first option `Trust this certificate for identifying websites`.
 
-4. Restart Chrome.
+![import-ca-trust-websites.png](./images/import-ca-trust-websites.png)
+
+4. Within **`chrome://settings/certificates`** navigate to section **`Your certificates`** and click the **`Import`** button on the right side of the screen.
+
+5. Browse and select your **`.p12`** file that you downloaded to your local computer, and enter the **`TLS passphrase`** that we sent you on Signal.
+
+6. Restart Chrome.
 
 :::
 
@@ -320,6 +326,22 @@ If you see Error code: **`SEC_ERROR_UNKNOWN_ISSUER`** when accessing Workbench f
 5. Select **`hctsca1.crt`** and check option **`Trust this CA to identify websites`**.
 
    ![mac-firefox-trust-ca.png](./images/mac-firefox-trust-ca.png)
+
+:::
+
+#### Chrome on Ubuntu
+
+::: details Read more
+
+If you are getting `ERR_CERT_AUTHORITY_INVALID` error:
+
+1. In Google Chrome, open the URL **`chrome://settings/certificates`** and navigate to section **`Authorities`**
+
+2. Search for HUNT Cloud certificates (`org-HUNT Cloud Trust Services`)
+
+3. Edit the HCTS CA 1 certificate and select first option `Trust this certificate for identifying websites`.
+
+![import-ca-trust-websites.png](./images/import-ca-trust-websites.png)
 
 :::
 
