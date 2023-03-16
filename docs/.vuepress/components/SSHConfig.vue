@@ -39,6 +39,44 @@ export default {
         labName: null,
         username: null,
       },
+      powershell: `# -- Set new passphrase on entry
+ssh {username}@{ip_address}
+# -- Reconnect to entry
+ssh {username}@{ip_address}
+
+# -- Set new passphrase on home
+ssh home
+# -- Confirm passphrase change by reconnecting to home
+ssh home
+
+# -- Open new Powershell window and generate ssh key
+ssh-keygen -q -t rsa -b 4096 -N '""'
+
+# -- Set public key in lab
+type $env:USERPROFILE\\.ssh\\id_rsa.pub | ssh {username}@{ip_address} add-public-key
+
+# -- Confirm passwordless access
+ssh {username}@{ip_address}
+      `,
+      cmdline: `# -- Set new passphrase on entry
+ssh {username}@{ip_address}
+# -- Reconnect to entry
+ssh {username}@{ip_address}
+
+# -- Set new passphrase on home
+ssh home
+# -- Confirm passphrase change by reconnecting to home
+ssh home
+
+# -- Open new Powershell window and generate ssh key
+ssh-keygen -q -t rsa -b 4096 -N ""
+
+# -- Set public key in lab
+type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh {username}@{ip_address} add-public-key
+
+# -- Confirm passwordless access
+ssh {username}@{ip_address}
+      `,
       template: `# Place in ~/.ssh/config
 
 Host {lab_name}-entry
@@ -51,7 +89,7 @@ Host {lab_name}
     User {username}
     # Use ProxyCommand to jump directly to home via entry
     ProxyCommand ssh -W %h:%p {lab_name}-entry
-`,
+      `,
     };
   },
   computed: {
@@ -60,6 +98,12 @@ Host {lab_name}
     },
     configText() {
       return this.query.ipAddress && this.query.labName && this.query.username ? this.wrap(this.template) : null;
+    },
+    powershellText() {
+      return this.query.ipAddress && this.query.labName && this.query.username ? this.wrap(this.powershell) : null;
+    },
+    cmdlineText() {
+      return this.query.ipAddress && this.query.labName && this.query.username ? this.wrap(this.cmdline) : null;
     },
     puttyHostName() {
       return this.query.ipAddress && this.query.username ? `${this.query.username}@${this.query.ipAddress}` : null;
@@ -160,10 +204,68 @@ Host {lab_name}
                             @focus="$event.target.select()"
                         ></v-text-field>
                     </v-col>
+                    <v-col cols="10">
+                        <v-text-field
+                            v-model="hostsWorkbench"
+                            autocomplete="ignore-field"
+                            label="Hosts file - Workbench"
+                            placeholder="Your link is missing access token"
+                            persistent-placeholder
+                            outlined
+                            dense
+                            readonly
+                            hide-details
+                            @focus="$event.target.select()"
+                        ></v-text-field>
+                    </v-col>
                 </v-row>
 
                 <v-card elevation="1">
                     <v-expansion-panels elevation="0">
+                        <v-expansion-panel>
+                            <v-expansion-panel-header :disable-icon-rotate="formFilled">
+                                <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> Command line</h3>
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content class="mt-2">
+                                <v-col cols="10">
+                                    <v-textarea
+                                        v-model="cmdlineText"
+                                        autocomplete="ignore-field"
+                                        label="Command line"
+                                        placeholder="Your link is missing access token"
+                                        persistent-placeholder
+                                        outlined
+                                        dense
+                                        readonly
+                                        rows="19"
+                                        hide-details
+                                        @focus="$event.target.select()"
+                                    ></v-textarea>
+                                </v-col>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                        <v-expansion-panel>
+                            <v-expansion-panel-header :disable-icon-rotate="formFilled">
+                                <h3 id="powershell"><a href="#powershell" class="header-anchor">#</a> Powershell</h3>
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content class="mt-2">
+                                <v-col cols="10">
+                                    <v-textarea
+                                        v-model="powershellText"
+                                        autocomplete="ignore-field"
+                                        label="Powershell setup"
+                                        placeholder="Your link is missing access token"
+                                        persistent-placeholder
+                                        outlined
+                                        dense
+                                        readonly
+                                        rows="19"
+                                        hide-details
+                                        @focus="$event.target.select()"
+                                    ></v-textarea>
+                                </v-col>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
                         <v-expansion-panel>
                             <v-expansion-panel-header :disable-icon-rotate="formFilled">
                                 <h3 id="putty"><a href="#putty" class="header-anchor">#</a> Putty</h3>
@@ -203,27 +305,6 @@ Host {lab_name}
                                         hide-details
                                         @focus="$event.target.select()"
                                     ></v-textarea>
-                                </v-col>
-                            </v-expansion-panel-content>
-                        </v-expansion-panel>
-                        <v-expansion-panel>
-                            <v-expansion-panel-header :disable-icon-rotate="formFilled">
-                                <h3 id="workbench"><a href="#workbench" class="header-anchor">#</a> Workbench</h3>
-                            </v-expansion-panel-header>
-                            <v-expansion-panel-content class="mt-2">
-                                <v-col cols="10">
-                                    <v-text-field
-                                        v-model="hostsWorkbench"
-                                        autocomplete="ignore-field"
-                                        label="Workbench - Hosts"
-                                        placeholder="Your link is missing access token"
-                                        persistent-placeholder
-                                        outlined
-                                        dense
-                                        readonly
-                                        hide-details
-                                        @focus="$event.target.select()"
-                                    ></v-text-field>
                                 </v-col>
                             </v-expansion-panel-content>
                         </v-expansion-panel>
