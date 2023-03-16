@@ -1,10 +1,11 @@
-printWidth: 200
-semi: true
-tabWidth: 2
-useTabs: false
-singleQuote: false
-trailingComma: "all"
-endOfLine: "auto"
-arrowParens: "avoid"
-bracketSameLine: false
-vueIndentScriptAndStyle: false
+{
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": false,
+  "trailingComma": "all",
+  "endOfLine": "auto",
+  "arrowParens": "avoid",
+  "bracketSameLine": false,
+  "semi": true
+}

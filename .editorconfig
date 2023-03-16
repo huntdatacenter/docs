@@ -1,21 +1,32 @@
+# editorconfig.org
+
+# This is the project's root directory
+root = true
+
 [*]
-charset = utf-8
+# Use spaces for indentation
+indent_style = space
+# Each indent should contain 2 spaces
+indent_size = 2
+# Use Unix line endings
 end_of_line = lf
+# The files are utf-8 encoded
+charset = utf-8
+# No whitespace at the end of line
+trim_trailing_whitespace = true
+# A file must end with an empty line - this is good for version control systems
 insert_final_newline = true
 
-# Matches multiple files with brace expansion notation
-# Set default charset
-[*.{js,py,json,md}]
+[{Makefile,**.mk}]
+# Use tabs for indentation (Makefiles require tabs)
+indent_style = tab
+
+[*.py]
+indent_style = space
+indent_size = 4
 trim_trailing_whitespace = true
 
-# Indentation override for all JS under docs directory
-[docs/**.js]
-indent_style = space
-indent_size = 2
-
-[*.vue]
-indent_style = space
-indent_size = 2
-
 [*.{yml,yaml}]
+indent_style = space
+indent_size = 2
 trim_trailing_whitespace = false
