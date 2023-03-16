@@ -40,17 +40,17 @@ export default {
         username: null,
       },
       powershell: `# -- Set new passphrase on entry
-ssh {username}@{ip_address}
+ssh -o StrictHostKeyChecking=accept-new {username}@{ip_address}
 # -- Reconnect to entry
 ssh {username}@{ip_address}
 
 # -- Set new passphrase on home
-ssh home
+ssh -o StrictHostKeyChecking=accept-new home
 # -- Confirm passphrase change by reconnecting to home
 ssh home
 
 # -- Open new Powershell window and generate ssh key
-ssh-keygen -q -t rsa -b 4096 -N '""'
+ssh-keygen -q -t rsa -b 4096 -f $env:USERPROFILE\\.ssh\\id_rsa -N '""'
 
 # -- Set public key in lab
 type $env:USERPROFILE\\.ssh\\id_rsa.pub | ssh {username}@{ip_address} add-public-key
@@ -69,7 +69,7 @@ ssh home
 ssh home
 
 # -- Open new Powershell window and generate ssh key
-ssh-keygen -q -t rsa -b 4096 -N ""
+ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""
 
 # -- Set public key in lab
 type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh {username}@{ip_address} add-public-key
