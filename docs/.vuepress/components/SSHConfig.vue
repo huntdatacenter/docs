@@ -228,6 +228,9 @@ Host {lab_name}
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
                                 <v-col cols="10">
+                                  To start Command line press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
+                                </v-col>
+                                <v-col cols="10">
                                     <v-textarea
                                         v-model="cmdlineText"
                                         autocomplete="ignore-field"
