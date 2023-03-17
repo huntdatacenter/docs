@@ -131,11 +131,16 @@ Host {lab_name}
       text = text.replaceAll('{username}', this.query.username);
       return text;
     },
-    copyText (key) {
+    copyText(key) {
       let textToCopy = this.$refs[key].$el.querySelector('input')
       textToCopy.select()
       document.execCommand("copy");
-    }
+    },
+    copyTextArea(key) {
+      let textToCopy = this.$refs[key].$el.querySelector('textarea')
+      textToCopy.select()
+      document.execCommand("copy");
+    },
   },
 };
 </script>
@@ -231,7 +236,7 @@ Host {lab_name}
                                 <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH Config</h3>
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
-                                <v-col cols="10">
+                                <v-col cols="11">
                                     <v-textarea
                                         v-model.trim="configText"
                                         ref="ssh-config"
@@ -245,9 +250,9 @@ Host {lab_name}
                                         hide-details
                                         @focus="$event.target.select()"
                                     >
-                                      <!-- <template v-slot:append>
-                                        <a class="material-icons content_copy" @click="copyText('ssh-config')">&#xe14d;</a>
-                                      </template> -->
+                                      <template v-slot:append>
+                                        <a class="material-icons content_copy" @click="copyTextArea('ssh-config')">&#xe14d;</a>
+                                      </template>
                                     </v-textarea>
                                 </v-col>
                             </v-expansion-panel-content>
@@ -257,10 +262,10 @@ Host {lab_name}
                                 <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> Command Prompt (Windows)</h3>
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
-                                <v-col cols="10">
+                                <v-col cols="11">
                                   1. To start Command Prompt press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
                                 </v-col>
-                                <v-col cols="10">
+                                <v-col cols="11">
                                   2. Set new passphrase on entry
                                   <v-text-field
                                     :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
@@ -279,7 +284,7 @@ Host {lab_name}
                                     </template>
                                   </v-text-field>
                                 </v-col>
-                                <v-col cols="10">
+                                <v-col cols="11">
                                   3. Reconnect to entry
                                   <v-text-field
                                     :value="`ssh ${query.username}@${query.ipAddress}`"
@@ -298,7 +303,7 @@ Host {lab_name}
                                     </template>
                                   </v-text-field>
                                 </v-col>
-                                <v-col cols="10">
+                                <v-col cols="11">
                                   4. Set new passphrase on home
                                   <v-text-field
                                     :value="`ssh -o StrictHostKeyChecking=accept-new home`"
@@ -317,7 +322,7 @@ Host {lab_name}
                                     </template>
                                   </v-text-field>
                                 </v-col>
-                                <v-col cols="10">
+                                <v-col cols="11">
                                   5. Confirm passphrase change by reconnecting to home
                                   <v-text-field
                                     :value="`ssh home`"
@@ -337,7 +342,7 @@ Host {lab_name}
                                   </v-text-field>
                                 </v-col>
 
-                                <v-col cols="10">
+                                <v-col cols="11">
                                   6. Open new Command Prompt window and generate ssh key
                                   <v-text-field
                                     :value="sshKeygen"
@@ -356,7 +361,7 @@ Host {lab_name}
                                     </template>
                                   </v-text-field>
                                 </v-col>
-                                <v-col cols="10">
+                                <v-col cols="11">
                                   7. Set public key in lab
                                   <v-text-field
                                     :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${query.username}@${query.ipAddress} add-public-key`"
@@ -375,7 +380,7 @@ Host {lab_name}
                                     </template>
                                   </v-text-field>
                                 </v-col>
-                                <v-col cols="10">
+                                <v-col cols="11">
                                   8. Confirm passwordless access
                                   <v-text-field
                                     :value="`ssh ${query.username}@${query.ipAddress}`"
@@ -401,7 +406,7 @@ Host {lab_name}
                                 <h3 id="powershell"><a href="#powershell" class="header-anchor">#</a> Powershell</h3>
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
-                                <v-col cols="10">
+                                <v-col cols="11">
                                     <v-textarea
                                         v-model="powershellText"
                                         autocomplete="ignore-field"
@@ -423,7 +428,7 @@ Host {lab_name}
                                 <h3 id="putty"><a href="#putty" class="header-anchor">#</a> Putty</h3>
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
-                                <v-col cols="10">
+                                <v-col cols="11">
                                     <v-text-field
                                         v-model="puttyHostName"
                                         autocomplete="ignore-field"
