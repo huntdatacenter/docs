@@ -329,6 +329,7 @@ Host {lab_name}
                                     label=""
                                     placeholder="Your link is missing access token"
                                     persistent-placeholder
+                                    :prefix="`${query.username}@${query.labName}-entry:~$ `"
                                     outlined
                                     dense
                                     readonly
@@ -357,6 +358,7 @@ Host {lab_name}
                                     label=""
                                     placeholder="Your link is missing access token"
                                     persistent-placeholder
+                                    :prefix="`${query.username}@${query.labName}-entry:~$ `"
                                     outlined
                                     dense
                                     readonly
@@ -379,7 +381,7 @@ Host {lab_name}
                                 </v-col>
 
                                 <v-col cols="11">
-                                  12. Open new Command Prompt window and generate ssh key.
+                                  12. Open new Command Prompt window and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
                                   <v-text-field
                                     :value="sshKeygen"
                                     ref="step6"
@@ -537,5 +539,9 @@ Host {lab_name}
 
 .language-text
   display: flex
+
+.v-text-field__prefix
+  color: rgba(0, 0, 0, 0.5)
+  font-size: 14px
 
 </style>
