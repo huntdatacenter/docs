@@ -39,6 +39,7 @@ export default {
         labName: null,
         username: null,
       },
+      sshKeygen: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
       powershell: `# -- Set new passphrase on entry
 ssh -o StrictHostKeyChecking=accept-new {username}@{ip_address}
 # -- Reconnect to entry
@@ -54,25 +55,6 @@ ssh-keygen -q -t rsa -b 4096 -f $env:USERPROFILE\\.ssh\\id_rsa -N '""'
 
 # -- Set public key in lab
 type $env:USERPROFILE\\.ssh\\id_rsa.pub | ssh {username}@{ip_address} add-public-key
-
-# -- Confirm passwordless access
-ssh {username}@{ip_address}
-      `,
-      cmdline: `# -- Set new passphrase on entry
-ssh {username}@{ip_address}
-# -- Reconnect to entry
-ssh {username}@{ip_address}
-
-# -- Set new passphrase on home
-ssh home
-# -- Confirm passphrase change by reconnecting to home
-ssh home
-
-# -- Open new Powershell window and generate ssh key
-ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""
-
-# -- Set public key in lab
-type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh {username}@{ip_address} add-public-key
 
 # -- Confirm passwordless access
 ssh {username}@{ip_address}
@@ -101,9 +83,6 @@ Host {lab_name}
     },
     powershellText() {
       return this.query.ipAddress && this.query.labName && this.query.username ? this.wrap(this.powershell) : null;
-    },
-    cmdlineText() {
-      return this.query.ipAddress && this.query.labName && this.query.username ? this.wrap(this.cmdline) : null;
     },
     puttyHostName() {
       return this.query.ipAddress && this.query.username ? `${this.query.username}@${this.query.ipAddress}` : null;
@@ -152,6 +131,11 @@ Host {lab_name}
       text = text.replaceAll('{username}', this.query.username);
       return text;
     },
+    copyText (key) {
+      let textToCopy = this.$refs[key].$el.querySelector('input')
+      textToCopy.select()
+      document.execCommand("copy");
+    }
   },
 };
 </script>
@@ -165,6 +149,7 @@ Host {lab_name}
                     <v-col cols="10">
                         <v-text-field
                             v-model="query.username"
+                            ref="username"
                             autocomplete="ignore-field"
                             label="Username"
                             placeholder="Your link is missing access token"
@@ -174,11 +159,16 @@ Host {lab_name}
                             readonly
                             hide-details
                             @focus="$event.target.select()"
-                        ></v-text-field>
+                        >
+                          <template v-slot:append>
+                            <a class="material-icons content_copy" @click="copyText('username')">&#xe14d;</a>
+                          </template>
+                        </v-text-field>
                     </v-col>
                     <v-col cols="10">
                         <v-text-field
                             v-model="query.labName"
+                            ref="labName"
                             autocomplete="ignore-field"
                             label="Lab name"
                             placeholder="Your link is missing access token"
@@ -188,11 +178,16 @@ Host {lab_name}
                             readonly
                             hide-details
                             @focus="$event.target.select()"
-                        ></v-text-field>
+                        >
+                          <template v-slot:append>
+                            <a class="material-icons content_copy" @click="copyText('labName')">&#xe14d;</a>
+                          </template>
+                        </v-text-field>
                     </v-col>
                     <v-col cols="10">
                         <v-text-field
                             v-model="query.ipAddress"
+                            ref="ipAddress"
                             autocomplete="ignore-field"
                             label="IP Address"
                             placeholder="Your link is missing access token"
@@ -202,11 +197,16 @@ Host {lab_name}
                             readonly
                             hide-details
                             @focus="$event.target.select()"
-                        ></v-text-field>
+                        >
+                          <template v-slot:append>
+                            <a class="material-icons content_copy" @click="copyText('ipAddress')">&#xe14d;</a>
+                          </template>
+                        </v-text-field>
                     </v-col>
                     <v-col cols="10">
                         <v-text-field
                             v-model="hostsWorkbench"
+                            ref="hostsWorkbench"
                             autocomplete="ignore-field"
                             label="Hosts file - Workbench"
                             placeholder="Your link is missing access token"
@@ -216,39 +216,162 @@ Host {lab_name}
                             readonly
                             hide-details
                             @focus="$event.target.select()"
-                        ></v-text-field>
+                        >
+                          <template v-slot:append>
+                            <a class="material-icons content_copy" @click="copyText('hostsWorkbench')">&#xe14d;</a>
+                          </template>
+                        </v-text-field>
                     </v-col>
                 </v-row>
 
                 <v-card elevation="1">
                     <v-expansion-panels elevation="0">
                         <v-expansion-panel>
-                            <v-expansion-panel-header :disable-icon-rotate="formFilled">
-                                <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> Command line</h3>
+                            <v-expansion-panel-header>
+                                <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> Command Prompt</h3>
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
                                 <v-col cols="10">
-                                  To start Command line press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
+                                  1. To start Command Prompt press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
                                 </v-col>
                                 <v-col cols="10">
-                                    <v-textarea
-                                        v-model="cmdlineText"
-                                        autocomplete="ignore-field"
-                                        label="Command line"
-                                        placeholder="Your link is missing access token"
-                                        persistent-placeholder
-                                        outlined
-                                        dense
-                                        readonly
-                                        rows="19"
-                                        hide-details
-                                        @focus="$event.target.select()"
-                                    ></v-textarea>
+                                  2. Set new passphrase on entry
+                                  <v-text-field
+                                    :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
+                                    ref="step2"
+                                    label=""
+                                    placeholder="Your link is missing access token"
+                                    persistent-placeholder
+                                    outlined
+                                    dense
+                                    readonly
+                                    hide-details
+                                    @focus="$event.target.select()"
+                                  >
+                                    <template v-slot:append>
+                                      <a class="material-icons content_copy" @click="copyText('step2')">&#xe14d;</a>
+                                    </template>
+                                  </v-text-field>
+                                </v-col>
+                                <v-col cols="10">
+                                  3. Reconnect to entry
+                                  <v-text-field
+                                    :value="`ssh ${query.username}@${query.ipAddress}`"
+                                    ref="step3"
+                                    label=""
+                                    placeholder="Your link is missing access token"
+                                    persistent-placeholder
+                                    outlined
+                                    dense
+                                    readonly
+                                    hide-details
+                                    @focus="$event.target.select()"
+                                  >
+                                    <template v-slot:append>
+                                      <a class="material-icons content_copy" @click="copyText('step3')">&#xe14d;</a>
+                                    </template>
+                                  </v-text-field>
+                                </v-col>
+                                <v-col cols="10">
+                                  4. Set new passphrase on home
+                                  <v-text-field
+                                    :value="`ssh -o StrictHostKeyChecking=accept-new home`"
+                                    ref="step4"
+                                    label=""
+                                    placeholder="Your link is missing access token"
+                                    persistent-placeholder
+                                    outlined
+                                    dense
+                                    readonly
+                                    hide-details
+                                    @focus="$event.target.select()"
+                                  >
+                                    <template v-slot:append>
+                                      <a class="material-icons content_copy" @click="copyText('step4')">&#xe14d;</a>
+                                    </template>
+                                  </v-text-field>
+                                </v-col>
+                                <v-col cols="10">
+                                  5. Confirm passphrase change by reconnecting to home
+                                  <v-text-field
+                                    :value="`ssh home`"
+                                    ref="step5"
+                                    label=""
+                                    placeholder="Your link is missing access token"
+                                    persistent-placeholder
+                                    outlined
+                                    dense
+                                    readonly
+                                    hide-details
+                                    @focus="$event.target.select()"
+                                  >
+                                    <template v-slot:append>
+                                      <a class="material-icons content_copy" @click="copyText('step5')">&#xe14d;</a>
+                                    </template>
+                                  </v-text-field>
+                                </v-col>
+
+                                <v-col cols="10">
+                                  6. Open new Command Prompt window and generate ssh key
+                                  <v-text-field
+                                    :value="sshKeygen"
+                                    ref="step6"
+                                    label=""
+                                    placeholder="Your link is missing access token"
+                                    persistent-placeholder
+                                    outlined
+                                    dense
+                                    readonly
+                                    hide-details
+                                    @focus="$event.target.select()"
+                                  >
+                                    <template v-slot:append>
+                                      <a class="material-icons content_copy" @click="copyText('step6')">&#xe14d;</a>
+                                    </template>
+                                  </v-text-field>
+                                </v-col>
+                                <v-col cols="10">
+                                  7. Set public key in lab
+                                  <v-text-field
+                                    :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${query.username}@${query.ipAddress} add-public-key`"
+                                    ref="step7"
+                                    label=""
+                                    placeholder="Your link is missing access token"
+                                    persistent-placeholder
+                                    outlined
+                                    dense
+                                    readonly
+                                    hide-details
+                                    @focus="$event.target.select()"
+                                  >
+                                    <template v-slot:append>
+                                      <a class="material-icons content_copy" @click="copyText('step7')">&#xe14d;</a>
+                                    </template>
+                                  </v-text-field>
+                                </v-col>
+                                <v-col cols="10">
+                                  8. Confirm passwordless access
+                                  <v-text-field
+                                    :value="`ssh ${query.username}@${query.ipAddress}`"
+                                    ref="step8"
+                                    label=""
+                                    placeholder="Your link is missing access token"
+                                    persistent-placeholder
+                                    outlined
+                                    dense
+                                    readonly
+                                    hide-details
+                                    @focus="$event.target.select()"
+                                  >
+                                    <template v-slot:append>
+                                      <a class="material-icons content_copy" @click="copyText('step8')">&#xe14d;</a>
+                                    </template>
+                                  </v-text-field>
                                 </v-col>
                             </v-expansion-panel-content>
                         </v-expansion-panel>
-                        <v-expansion-panel>
-                            <v-expansion-panel-header :disable-icon-rotate="formFilled">
+                        <!-- <v-expansion-panel>
+                            <v-expansion-panel-header>
                                 <h3 id="powershell"><a href="#powershell" class="header-anchor">#</a> Powershell</h3>
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
@@ -268,9 +391,9 @@ Host {lab_name}
                                     ></v-textarea>
                                 </v-col>
                             </v-expansion-panel-content>
-                        </v-expansion-panel>
+                        </v-expansion-panel> -->
                         <v-expansion-panel>
-                            <v-expansion-panel-header :disable-icon-rotate="formFilled">
+                            <v-expansion-panel-header>
                                 <h3 id="putty"><a href="#putty" class="header-anchor">#</a> Putty</h3>
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
@@ -291,7 +414,7 @@ Host {lab_name}
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                         <v-expansion-panel>
-                            <v-expansion-panel-header :disable-icon-rotate="formFilled">
+                            <v-expansion-panel-header>
                                 <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH Config</h3>
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
@@ -312,7 +435,7 @@ Host {lab_name}
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                         <v-expansion-panel>
-                            <v-expansion-panel-header :disable-icon-rotate="formFilled">
+                            <v-expansion-panel-header>
                                 <h3 id="mobaxterm"><a href="#mobaxterm" class="header-anchor">#</a> MobaXterm (Windows)</h3>
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
