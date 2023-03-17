@@ -71,7 +71,7 @@ Host {lab_name}
     User {username}
     # Use ProxyCommand to jump directly to home via entry
     ProxyCommand ssh -W %h:%p {lab_name}-entry
-      `,
+`,
     };
   },
   computed: {
@@ -226,9 +226,35 @@ Host {lab_name}
 
                 <v-card elevation="1">
                     <v-expansion-panels elevation="0">
+                      <v-expansion-panel>
+                            <v-expansion-panel-header>
+                                <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH Config</h3>
+                            </v-expansion-panel-header>
+                            <v-expansion-panel-content class="mt-2">
+                                <v-col cols="10">
+                                    <v-textarea
+                                        v-model.trim="configText"
+                                        ref="ssh-config"
+                                        label="SSH Config file"
+                                        placeholder="Your link is missing access token"
+                                        persistent-placeholder
+                                        class="py-2 mt-2"
+                                        outlined
+                                        readonly
+                                        rows="13"
+                                        hide-details
+                                        @focus="$event.target.select()"
+                                    >
+                                      <!-- <template v-slot:append>
+                                        <a class="material-icons content_copy" @click="copyText('ssh-config')">&#xe14d;</a>
+                                      </template> -->
+                                    </v-textarea>
+                                </v-col>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
                         <v-expansion-panel>
                             <v-expansion-panel-header>
-                                <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> Command Prompt</h3>
+                                <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> Command Prompt (Windows)</h3>
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
                                 <v-col cols="10">
@@ -392,7 +418,7 @@ Host {lab_name}
                                 </v-col>
                             </v-expansion-panel-content>
                         </v-expansion-panel> -->
-                        <v-expansion-panel>
+                        <!-- <v-expansion-panel>
                             <v-expansion-panel-header>
                                 <h3 id="putty"><a href="#putty" class="header-anchor">#</a> Putty</h3>
                             </v-expansion-panel-header>
@@ -412,28 +438,7 @@ Host {lab_name}
                                     ></v-text-field>
                                 </v-col>
                             </v-expansion-panel-content>
-                        </v-expansion-panel>
-                        <v-expansion-panel>
-                            <v-expansion-panel-header>
-                                <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH Config</h3>
-                            </v-expansion-panel-header>
-                            <v-expansion-panel-content class="mt-2">
-                                <v-col cols="10">
-                                    <v-textarea
-                                        v-model.trim="configText"
-                                        label="SSH Config file"
-                                        placeholder="Your link is missing access token"
-                                        persistent-placeholder
-                                        class="py-2 mt-2"
-                                        outlined
-                                        readonly
-                                        rows="13"
-                                        hide-details
-                                        @focus="$event.target.select()"
-                                    ></v-textarea>
-                                </v-col>
-                            </v-expansion-panel-content>
-                        </v-expansion-panel>
+                        </v-expansion-panel> -->
                         <v-expansion-panel>
                             <v-expansion-panel-header>
                                 <h3 id="mobaxterm"><a href="#mobaxterm" class="header-anchor">#</a> MobaXterm (Windows)</h3>
