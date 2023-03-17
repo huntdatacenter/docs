@@ -263,10 +263,13 @@ Host {lab_name}
                             </v-expansion-panel-header>
                             <v-expansion-panel-content class="mt-2">
                                 <v-col cols="11">
-                                  1. To start Command Prompt press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
+                                  1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                                 </v-col>
                                 <v-col cols="11">
-                                  2. Set new passphrase on entry
+                                  2. To start Command Prompt press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
+                                </v-col>
+                                <v-col cols="11">
+                                  3. Login to entry machine.
                                   <v-text-field
                                     :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
                                     ref="step2"
@@ -285,7 +288,19 @@ Host {lab_name}
                                   </v-text-field>
                                 </v-col>
                                 <v-col cols="11">
-                                  3. Reconnect to entry
+                                  4. You should then be prompted to enter a password.
+                                  <div class="language- extra-class"><pre class="language-text">
+                                      <code v-text="`${query.username}@${query.ipAddress}'s password:`"></code>
+                                  </pre></div>
+                                </v-col>
+                                <v-col cols="11">
+                                  5. Enter your <code>SSH temporary key</code> from Signal message.
+                                </v-col>
+                                <v-col cols="11">
+                                  6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+                                </v-col>
+                                <v-col cols="11">
+                                  7. Reconnect to entry using your new passphrase.
                                   <v-text-field
                                     :value="`ssh ${query.username}@${query.ipAddress}`"
                                     ref="step3"
@@ -304,7 +319,13 @@ Host {lab_name}
                                   </v-text-field>
                                 </v-col>
                                 <v-col cols="11">
-                                  4. Set new passphrase on home
+                                  Expected result:
+                                  <div class="language- extra-class"><pre class="language-text">
+                                      <code v-text="`${query.username}@${query.labName}-entry:~$`"></code>
+                                  </pre></div>
+                                </v-col>
+                                <v-col cols="11">
+                                  8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
                                   <v-text-field
                                     :value="`ssh -o StrictHostKeyChecking=accept-new home`"
                                     ref="step4"
@@ -323,7 +344,16 @@ Host {lab_name}
                                   </v-text-field>
                                 </v-col>
                                 <v-col cols="11">
-                                  5. Confirm passphrase change by reconnecting to home
+                                  9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+                                  <div class="language- extra-class"><pre class="language-text">
+                                      <code v-text="`${query.username}@home's password:`"></code>
+                                  </pre></div>
+                                </v-col>
+                                <v-col cols="11">
+                                  10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
+                                </v-col>
+                                <v-col cols="11">
+                                  11. Verify a successful passphrase update by logging into your home machine.
                                   <v-text-field
                                     :value="`ssh home`"
                                     ref="step5"
@@ -341,9 +371,18 @@ Host {lab_name}
                                     </template>
                                   </v-text-field>
                                 </v-col>
+                                <v-col cols="11">
+                                  Expected result:
+                                  <div class="language- extra-class"><pre class="language-text">
+                                      <code v-text="`${query.username}@${query.labName}-home:~$`"></code>
+                                  </pre></div>
+                                </v-col>
+                                <v-col cols="11">
+                                  12. Close Command Prompt window to make sure you are disconnected from your lab.
+                                </v-col>
 
                                 <v-col cols="11">
-                                  6. Open new Command Prompt window and generate ssh key
+                                  13. Open new Command Prompt window and generate ssh key.
                                   <v-text-field
                                     :value="sshKeygen"
                                     ref="step6"
@@ -362,7 +401,7 @@ Host {lab_name}
                                   </v-text-field>
                                 </v-col>
                                 <v-col cols="11">
-                                  7. Set public key in lab
+                                  14. Place your public key into the lab.
                                   <v-text-field
                                     :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${query.username}@${query.ipAddress} add-public-key`"
                                     ref="step7"
@@ -381,7 +420,7 @@ Host {lab_name}
                                   </v-text-field>
                                 </v-col>
                                 <v-col cols="11">
-                                  8. Confirm passwordless access
+                                  15. Confirm passwordless access.
                                   <v-text-field
                                     :value="`ssh ${query.username}@${query.ipAddress}`"
                                     ref="step8"
@@ -498,5 +537,8 @@ Host {lab_name}
 
 .last-updated
   display: none
+
+.language-text
+  display: flex
 
 </style>
