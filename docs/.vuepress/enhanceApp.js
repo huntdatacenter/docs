@@ -160,6 +160,12 @@ export default ({
         // Rewrite the link to correct path
         window.location.href = to_path.replace("/data-transfers/external-kista/", "/do-science/data-transfers/external-kista/");
         next();
+      } else if (
+        to_path.startsWith("/agreements/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/agreements/", "/administer-science/agreements/");
+        next();
       } else {
         next();
       }
