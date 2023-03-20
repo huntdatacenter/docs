@@ -46,7 +46,7 @@ request_new_lab:
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space compliance coordinators in active data spaces.",
-    "<b>Required attachment:</b> <a href='/agreements/downloads/#invoice-profile' target='_blank'>Invoice profile for new lab</a> and <a href='/agreements/downloads/#lab-order' target='_blank'>A signed lab order</a>. Information on storage volume sizes and machine type for the home machine can be found below button on main page.",
+    "<b>Required attachment:</b> <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>Invoice profile for new lab</a> and <a href='/administer-science/agreements/downloads/#lab-order' target='_blank'>A signed lab order</a>. Information on storage volume sizes and machine type for the home machine can be found below button on main page.",
     "<b>Expected delivery time:</b> One week.",
     # "<b>Next step:</b> <a href='/administer-science/service-desk/lab-orders/#add-a-new-lab-user' target='_blank'>Add your first lab users</a>.",
     "<b>Cost:</b> One lab subscription as specified in the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
@@ -83,7 +83,7 @@ request_lab_deletion:
     ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and Lab leaders in collaboration.",
-    "<b>Required attachment</b>: <a href='/agreements/downloads/#lab-deletion-order' target='_blank'>A signed lab deletion order</a>.",
+    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#lab-deletion-order' target='_blank'>A signed lab deletion order</a>.",
     "<b>Expected response time:</b> Weeks.",
     "<b>Expected delivery:</b> Countersignature from HUNT Cloud on your lab deletion order confirming that lab data, including online and offline duplicate copies, are deleted.",
     "<b>Cost:</b> Included in your lab subscription.",
@@ -111,7 +111,7 @@ request_external_import_kista:
     ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
-    "<b>Required attachments</b>: (1) <a href='/agreements/downloads/#external-kista-import-order' target='_blank'>A signed external kista import order</a>, and (2) one <a href='/data-transfers/external-kista/#ssh-key-pair' target='_blank'>SSH public key</a> from the external uploader.",
+    "<b>Required attachments</b>: (1) <a href='/administer-science/agreements/downloads/#external-kista-import-order' target='_blank'>A signed external kista import order</a>, and (2) one <a href='/data-transfers/external-kista/#ssh-key-pair' target='_blank'>SSH public key</a> from the external uploader.",
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Kista access information sent to the lab user that will import the data.",
     "<b>Cost:</b> Included in your data space subscription.",
@@ -139,7 +139,7 @@ request_external_export_kista:
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
-    "<b>Required attachments</b>: (1) <a href='/agreements/downloads/#external-kista-export-order' target='_blank'>A signed external kista export order </a> and (2) <a href='/data-transfers/external-kista/#ssh-key-pair' target='_blank'>SSH public key </a> from the external downloader.",
+    "<b>Required attachments</b>: (1) <a href='/administer-science/agreements/downloads/#external-kista-export-order' target='_blank'>A signed external kista export order </a> and (2) <a href='/data-transfers/external-kista/#ssh-key-pair' target='_blank'>SSH public key </a> from the external downloader.",
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Access information sent to the lab user that will make data available for export.",
     "<b>Cost:</b> Included in your data space subscription.",
@@ -169,7 +169,7 @@ request_network_opening:
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
     "<b>Required information</b>: IPv4 address and port number for the external party.",
-    "<b>Required attachments</b>: <a href='/agreements/downloads/#network-opening-order' target='_blank'>A signed network opening order </a>.",
+    "<b>Required attachments</b>: <a href='/administer-science/agreements/downloads/#network-opening-order' target='_blank'>A signed network opening order </a>.",
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Network opening communicated in your Slack lab channel.",
     "<b>Cost:</b> Included in your data space subscription.",
@@ -248,7 +248,7 @@ request_lab_leader_role:
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space compliance officers.",
-    "<b>Required attachment</b>: A new <a href'/agreements/downloads/#lab-order' target='_blank'>signed lab order</a>.",
+    "<b>Required attachment</b>: A new <a href'/administer-science/agreements/downloads/#lab-order' target='_blank'>signed lab order</a>.",
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your data space subscription.",
   ]
@@ -275,7 +275,7 @@ request_new_invoice_profile:
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space financial officers.",
-    "<b>Required attachment</b>: A new <a href='/agreements/downloads/#invoice-profile' target='_blank'>signed invoice profile</a>.",
+    "<b>Required attachment</b>: A new <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice profile</a>.",
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your data space subscription.",
   ]
@@ -302,7 +302,7 @@ request_update_of_existing_invoice:
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space financial officers.",
-    "<b>Required attachment</b>: A new <a href='/agreements/downloads/#invoice-profile' target='_blank'>signed invoice agreemnent</a>.",
+    "<b>Required attachment</b>: A new <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice agreemnent</a>.",
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your data space subscription.",
   ]
@@ -421,7 +421,7 @@ request_access_new_user:
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required attachment</b>: <a href='/agreements/downloads/#user-agreement' target='_blank'>A signed user agreement</a>.",
+    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#user-agreement' target='_blank'>A signed user agreement</a>.",
     "<b>Expected response time:</b> One week.",
     "<b>Expected delivery:</b> Lab keys and VPN certificate.",
     # "<b>Next step:</b> <a href='/getting-started/' target='_blank'>Prepare your key transfer</a>.",
@@ -482,7 +482,7 @@ reactivate_lab_user:
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required attachment</b>: <a href='/agreements/downloads/#user-agreement' target='_blank'>A new user agreement</a>.",
+    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#user-agreement' target='_blank'>A new user agreement</a>.",
     "<b>Expected response time:</b> One week.",
     "<b>Expected delivery:</b> Lab keys and VPN certificate.",
     # "<b>Next step:</b> <a href='/getting-started/' target='_blank'>Prepare your key transfer</a>.",
@@ -512,7 +512,7 @@ request_renew_user_agreement:
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required attachment</b>: <a href='/agreements/downloads/#user-agreement' target='_blank'>A signed user agreement</a>.",
+    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#user-agreement' target='_blank'>A signed user agreement</a>.",
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Email acknowledgment.",
     "<b>Cost:</b> Included in your lab subscription.",
@@ -931,7 +931,7 @@ request_internal_kista:
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders or lab coordinators from the uploader lab.",
-    "<b>Required attachment</b>: <a href='/agreements/downloads/#internal-kista-order' target='_blank'>A signed internal kista order</a>.",
+    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#internal-kista-order' target='_blank'>A signed internal kista order</a>.",
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Access information communicated in your Slack lab channel.",
     "<b>Cost:</b> Included in your lab subscription.",
@@ -1004,7 +1004,7 @@ new_data_space:
   requirements: [
     "<b>Guide:</b> <a href='/coordination/get-going/data-space/' target='_blank'>Get going with your data space</a>",
     "<b>Who can order:</b> Service center leaders and administrative contacts for service centers.",
-    "<b>Required attachment</b>: <a href='/agreements/downloads/#data-space-order' target='_blank'>A signed data space order</a> and <a href='/agreements/downloads/#invoice-profile' target='_blank'>invoice profile for the data space</a>.",
+    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#data-space-order' target='_blank'>A signed data space order</a> and <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>invoice profile for the data space</a>.",
     "<b>Expected delivery time:</b> Days.",
     # "<b>Next step:</b> <a href='/service-desk/data-space-orders.html#new-lab' target='_blank'>Order the first lab in your data space</a>",
     "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
