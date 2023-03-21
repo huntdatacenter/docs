@@ -400,6 +400,7 @@ module.exports = {
             "/administer-science/services/specifications.md",
             "/administer-science/services/machine-types.md",
             "/administer-science/services/responsiveness.md",
+            "/administer-science/services/tape-archive.md",
           ],
         },
         {
