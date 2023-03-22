@@ -91,7 +91,7 @@ docker ps -a
 
 ## Troubleshooting
 
-#### Issues with pip packages
+### Issues with pip packages
 
 We have seen issues with installation of pip packages due to **`mtu`** size issues. One solution is to add **`mtu`** size specification to your Docker config file: 
 
