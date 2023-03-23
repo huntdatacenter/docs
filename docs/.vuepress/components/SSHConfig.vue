@@ -44,6 +44,7 @@ export default {
   data() {
     return {
       tab: null,
+      access: null,
       query: {
         ipAddress: null,
         // homeIpAddress: null,
@@ -132,46 +133,42 @@ Host {lab_name}
       localStorage.osTab = val
     }
   },
-  mounted() {},
+  mounted() {
+    if (access.length == 3) {
+      this.query.ipAddress = access[0]
+      localStorage.ipAddress = access[0]
+      this.query.labName = access[1]
+      localStorage.labName = access[1]
+      this.query.username = access[2]
+      localStorage.username = access[2]
+    } else if (access.length == 4) {
+      this.query.ipAddress = access[0]
+      localStorage.ipAddress = access[0]
+      // this.query.homeIpAddress = access[1]
+      this.query.labName = access[2]
+      localStorage.labName = access[2]
+      this.query.username = access[3]
+      localStorage.username = access[3]
+    } else if (!access || access.length == 0) {
+      if (localStorage.ipAddress) {
+        this.query.ipAddress = localStorage.ipAddress
+      }
+      if (localStorage.labName) {
+        this.query.labName = localStorage.labName
+      }
+      if (localStorage.username) {
+        this.query.username = localStorage.username
+      }
+    }
+    if (localStorage.osTab) {
+      this.tab = localStorage.osTab
+    }
+  },
   created() {
     // console.log(this.$route.query)
     // /do-science/lab/?access=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXI%3D
     // access = $(echo -n "${ip_address}|${lab_name}|${username}" | base64 | sed 's|=|%3D|g' )
-    const access = this.$route.query.access ? atob(this.$route.query.access).split('|') : []
-
-    if (access.length == 3) {
-        this.query.ipAddress = access[0]
-        localStorage.ipAddress = access[0]
-        this.query.labName = access[1]
-        localStorage.labName = access[1]
-        this.query.username = access[2]
-        localStorage.username = access[2]
-    } else if (access.length == 4) {
-        this.query.ipAddress = access[0]
-        localStorage.ipAddress = access[0]
-        // this.query.homeIpAddress = access[1]
-        this.query.labName = access[2]
-        localStorage.labName = access[2]
-        this.query.username = access[3]
-        localStorage.username = access[3]
-    } else if (!access || access.length == 0) {
-      if (process.browser) {
-        if (localStorage.ipAddress) {
-          this.query.ipAddress = localStorage.ipAddress
-        }
-        if (localStorage.labName) {
-          this.query.labName = localStorage.labName
-        }
-        if (localStorage.username) {
-          this.query.username = localStorage.username
-        }
-      }
-    }
-    if (process.browser) {
-      if (localStorage.osTab) {
-        this.tab = localStorage.osTab
-      }
-    }
+    this.access = this.$route.query.access ? atob(this.$route.query.access).split('|') : []
     // console.log(this.query)
   },
   methods: {
