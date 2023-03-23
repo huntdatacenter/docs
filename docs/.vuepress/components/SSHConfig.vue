@@ -155,18 +155,22 @@ Host {lab_name}
         this.query.username = access[3]
         localStorage.username = access[3]
     } else if (!access || access.length == 0) {
-      if (localStorage.ipAddress) {
-        this.query.ipAddress = localStorage.ipAddress
-      }
-      if (localStorage.labName) {
-        this.query.labName = localStorage.labName
-      }
-      if (localStorage.username) {
-        this.query.username = localStorage.username
+      if (process.browser) {
+        if (localStorage.ipAddress) {
+          this.query.ipAddress = localStorage.ipAddress
+        }
+        if (localStorage.labName) {
+          this.query.labName = localStorage.labName
+        }
+        if (localStorage.username) {
+          this.query.username = localStorage.username
+        }
       }
     }
-    if (localStorage.osTab) {
-      this.tab = localStorage.osTab
+    if (process.browser) {
+      if (localStorage.osTab) {
+        this.tab = localStorage.osTab
+      }
     }
     // console.log(this.query)
   },
