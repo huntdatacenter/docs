@@ -134,6 +134,7 @@ Host {lab_name}
     }
   },
   mounted() {
+    const access = this.access
     if (access.length == 3) {
       this.query.ipAddress = access[0]
       localStorage.ipAddress = access[0]
