@@ -18,7 +18,7 @@ Make sure to send us a tape archive [order](add link) before you continue with n
 
 1.1 Identify what data you want stored on the tape. Mark down whole directories. Generally, we expect your data to be stored in /mnt/archive directory
 
-1.3 Do you use symbolic links ? If you are not sure, you can identifiy symlink directories by first letter in permission string. Letter l stands for a symbolic link. You can also use command below to count your symlinks. If output is other than 0, contact us on slack for further instructions.
+1.2 Do you use symbolic links ? If you are not sure, you can identifiy symlink directories by first letter in permission string. Letter l stands for a symbolic link. You can also use command below to count your symlinks. If output is other than 0, contact us on slack for further instructions.
 
 Example:
 ```bash
