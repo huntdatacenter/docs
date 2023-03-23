@@ -23,6 +23,9 @@ export default {
     showBtn() {
       return this.data && this.data[this.form];
     },
+    getRecipient() {
+      return this.data && this.data[this.form] && this.data[this.form]["recipient"] ? this.data[this.form]["recipient"] : "cloud.support+hunt-cloud-request@hunt.ntnu.no";
+    }
   },
   mounted() {},
   created() {
@@ -48,6 +51,7 @@ export default {
           :requirements="getData['requirements']"
           :fields="getData['fields']"
           :template="getData['template']"
+          :recipient="getRecipient"
         />
     </section>
 </template>
