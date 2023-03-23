@@ -196,907 +196,907 @@ Host {lab_name}
 
 
 <template>
-    <div class="vuewidget vuewrapper" data-vuetify>
-        <v-app :id="id">
-            <v-card v-show="cfgShow" class="pt-4">
-                <v-row class="ml-3 mb-2">
-                    <v-col cols="10">
-                        <v-text-field
-                            v-model="query.username"
-                            ref="username"
-                            autocomplete="ignore-field"
-                            label="Username"
-                            placeholder="Your link is missing access token"
-                            persistent-placeholder
-                            outlined
-                            dense
-                            readonly
-                            hide-details
-                            @focus="$event.target.select()"
-                        >
-                          <template v-slot:append>
-                            <a class="material-icons content_copy" @click="copyText('username')">&#xe14d;</a>
-                          </template>
-                        </v-text-field>
+  <div class="vuewidget vuewrapper" data-vuetify>
+    <v-app :id="id">
+      <v-card v-show="cfgShow" class="pt-4">
+        <v-row class="ml-3 mb-2">
+          <v-col cols="10">
+            <v-text-field
+              v-model="query.username"
+              ref="username"
+              autocomplete="ignore-field"
+              label="Username"
+              placeholder="Your link is missing access token"
+              persistent-placeholder
+              outlined
+              dense
+              readonly
+              hide-details
+              @focus="$event.target.select()"
+            >
+              <template v-slot:append>
+                <a class="material-icons content_copy" @click="copyText('username')">&#xe14d;</a>
+              </template>
+            </v-text-field>
+          </v-col>
+          <v-col cols="10">
+            <v-text-field
+              v-model="query.labName"
+              ref="labName"
+              autocomplete="ignore-field"
+              label="Lab name"
+              placeholder="Your link is missing access token"
+              persistent-placeholder
+              outlined
+              dense
+              readonly
+              hide-details
+              @focus="$event.target.select()"
+            >
+              <template v-slot:append>
+                <a class="material-icons content_copy" @click="copyText('labName')">&#xe14d;</a>
+              </template>
+            </v-text-field>
+          </v-col>
+          <v-col cols="10">
+            <v-text-field
+              v-model="query.ipAddress"
+              ref="ipAddress"
+              autocomplete="ignore-field"
+              label="IP Address"
+              placeholder="Your link is missing access token"
+              persistent-placeholder
+              outlined
+              dense
+              readonly
+              hide-details
+              @focus="$event.target.select()"
+            >
+              <template v-slot:append>
+                <a class="material-icons content_copy" @click="copyText('ipAddress')">&#xe14d;</a>
+              </template>
+            </v-text-field>
+          </v-col>
+          <v-col cols="10">
+            <v-text-field
+              v-model="hostsWorkbench"
+              ref="hostsWorkbench"
+              autocomplete="ignore-field"
+              label="Hosts file - Workbench"
+              placeholder="Your link is missing access token"
+              persistent-placeholder
+              outlined
+              dense
+              readonly
+              hide-details
+              @focus="$event.target.select()"
+            >
+              <template v-slot:append>
+                <a class="material-icons content_copy" @click="copyText('hostsWorkbench')">&#xe14d;</a>
+              </template>
+            </v-text-field>
+          </v-col>
+        </v-row>
+
+        <v-card elevation="1">
+          <v-expansion-panels elevation="0">
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                  <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> VPN Configuration</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content class="mt-2">
+                <a href="/do-science/getting-started/configure-vpn/" target="_blank">VPN configuration guide</a>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                  <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> SSH Configuration</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content class="mt-2">
+                <v-tabs
+                  v-model="tab"
+                  centered
+                >
+                  <!-- <v-tabs-slider></v-tabs-slider> -->
+
+                  <v-tab href="#windows">Windows</v-tab>
+
+                  <v-tab href="#macos">MacOS</v-tab>
+
+                  <v-tab href="#linux">Linux</v-tab>
+                </v-tabs>
+                <v-tabs-items v-model="tab">
+                  <v-tab-item value="windows">
+                    <v-col cols="12">
+                      1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
-                    <v-col cols="10">
-                        <v-text-field
-                            v-model="query.labName"
-                            ref="labName"
-                            autocomplete="ignore-field"
-                            label="Lab name"
-                            placeholder="Your link is missing access token"
-                            persistent-placeholder
-                            outlined
-                            dense
-                            readonly
-                            hide-details
-                            @focus="$event.target.select()"
-                        >
-                          <template v-slot:append>
-                            <a class="material-icons content_copy" @click="copyText('labName')">&#xe14d;</a>
-                          </template>
-                        </v-text-field>
+                    <v-col cols="12">
+                      2. To start Command Prompt press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
                     </v-col>
-                    <v-col cols="10">
-                        <v-text-field
-                            v-model="query.ipAddress"
-                            ref="ipAddress"
-                            autocomplete="ignore-field"
-                            label="IP Address"
-                            placeholder="Your link is missing access token"
-                            persistent-placeholder
-                            outlined
-                            dense
-                            readonly
-                            hide-details
-                            @focus="$event.target.select()"
-                        >
-                          <template v-slot:append>
-                            <a class="material-icons content_copy" @click="copyText('ipAddress')">&#xe14d;</a>
-                          </template>
-                        </v-text-field>
+                    <v-col cols="12">
+                      3. Login to entry machine.
+                      <v-text-field
+                        :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
+                        ref="winStep2"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep2')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
                     </v-col>
-                    <v-col cols="10">
-                        <v-text-field
-                            v-model="hostsWorkbench"
-                            ref="hostsWorkbench"
-                            autocomplete="ignore-field"
-                            label="Hosts file - Workbench"
-                            placeholder="Your link is missing access token"
-                            persistent-placeholder
-                            outlined
-                            dense
-                            readonly
-                            hide-details
-                            @focus="$event.target.select()"
-                        >
-                          <template v-slot:append>
-                            <a class="material-icons content_copy" @click="copyText('hostsWorkbench')">&#xe14d;</a>
-                          </template>
-                        </v-text-field>
+                    <v-col cols="12">
+                      4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="`${query.username}@${query.ipAddress}'s password:`"></code>
+                      </pre></div>
                     </v-col>
-                </v-row>
+                    <v-col cols="12">
+                      5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passExpiredText"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passSetNew"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      7. Reconnect to entry using your new passphrase.
+                      <v-text-field
+                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        ref="winStep7"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep7')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      Expected result:
+                      <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`${query.username}@${query.labName}-entry:~$`"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
+                      <v-text-field
+                        :value="`ssh -o StrictHostKeyChecking=accept-new home`"
+                        ref="winStep8"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        :prefix="`${query.username}@${query.labName}-entry:~$`"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep8')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+                      <!-- <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`${query.username}@home's password:`"></code>
+                      </pre></div> -->
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passExpiredText"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passSetNew"></code>
+                      </pre></div>
+                      <!-- Expected result:
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passChangedHome"></code>
+                      </pre></div> -->
+                    </v-col>
+                    <v-col cols="12">
+                      11. Verify a successful passphrase update by logging into your home machine.
+                      <v-text-field
+                        :value="`ssh home`"
+                        ref="winStep11"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        :prefix="`${query.username}@${query.labName}-entry:~$`"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep11')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      Expected result:
+                      <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`${query.username}@${query.labName}-home:~$`"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      12. Close Command Prompt window to make sure you are disconnected from your lab.
+                    </v-col>
 
-                <v-card elevation="1">
-                  <v-expansion-panels elevation="0">
-                    <v-expansion-panel>
-                      <v-expansion-panel-header>
-                          <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> VPN Configuration</h3>
-                      </v-expansion-panel-header>
-                      <v-expansion-panel-content class="mt-2">
-                        <a href="/do-science/getting-started/configure-vpn/" target="_blank">VPN configuration guide</a>
-                      </v-expansion-panel-content>
-                    </v-expansion-panel>
-                    <v-expansion-panel>
-                      <v-expansion-panel-header>
-                          <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> SSH Configuration</h3>
-                      </v-expansion-panel-header>
-                      <v-expansion-panel-content class="mt-2">
-                        <v-tabs
-                          v-model="tab"
-                          centered
-                        >
-                          <!-- <v-tabs-slider></v-tabs-slider> -->
+                    <v-col cols="12">
+                      13. Open new Command Prompt window (<code>WIN + R</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      <v-text-field
+                        :value="sshKeygenWin"
+                        ref="winStep13"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep13')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      14. Place your public key into the lab.
+                      <v-text-field
+                        :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${query.username}@${query.ipAddress} add-public-key`"
+                        ref="winStep14"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep14')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      15. Confirm passwordless access.
+                      <v-text-field
+                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        ref="winStep15"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep15')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                  </v-tab-item>
+                  <v-tab-item value="macos">
+                    <v-col cols="12">
+                      1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
+                    </v-col>
+                    <v-col cols="12">
+                      2. Start Terminal application.
+                    </v-col>
+                    <v-col cols="12">
+                      3. Login to entry machine.
+                      <v-text-field
+                        :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
+                        ref="macStep2"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep2')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="`${query.username}@${query.ipAddress}'s password:`"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passExpiredText"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passSetNew"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      7. Reconnect to entry using your new passphrase.
+                      <v-text-field
+                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        ref="macStep7"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep7')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      Expected result:
+                      <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`${query.username}@${query.labName}-entry:~$`"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
+                      <v-text-field
+                        :value="`ssh -o StrictHostKeyChecking=accept-new home`"
+                        ref="macStep8"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        :prefix="`${query.username}@${query.labName}-entry:~$`"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep8')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+                      <!-- <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`${query.username}@home's password:`"></code>
+                      </pre></div> -->
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passExpiredText"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passSetNew"></code>
+                      </pre></div>
+                      <!-- Expected result:
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passChangedHome"></code>
+                      </pre></div> -->
+                    </v-col>
+                    <v-col cols="12">
+                      11. Verify a successful passphrase update by logging into your home machine.
+                      <v-text-field
+                        :value="`ssh home`"
+                        ref="macStep11"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        :prefix="`${query.username}@${query.labName}-entry:~$`"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep11')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      Expected result:
+                      <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`${query.username}@${query.labName}-home:~$`"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      12. Close Command Prompt window to make sure you are disconnected from your lab.
+                    </v-col>
 
-                          <v-tab href="#windows">Windows</v-tab>
+                    <v-col cols="12">
+                      13. Open new Terminal tab (<code>CMD + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      <v-text-field
+                        :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
+                        ref="macStep13"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep13')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      14. Start ssh-agent.
+                      <v-text-field
+                        :value='`eval "$(ssh-agent -s)"`'
+                        ref="macStep14"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep14')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      15. Add your public key to the ssh agent.
+                      <v-text-field
+                        :value="`ssh-add --apple-use-keychain ~/.ssh/id_rsa`"
+                        ref="macStep15"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep15')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      16. Place your public key into the lab.
+                      <v-text-field
+                        :value="`ssh-copy-id ${query.username}@${query.ipAddress}`"
+                        ref="macStep16"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep16')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      17. Confirm passwordless access.
+                      <v-text-field
+                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        ref="macStep17"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep17')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                  </v-tab-item>
+                  <v-tab-item value="linux">
+                    <v-col cols="12">
+                      1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
+                    </v-col>
+                    <v-col cols="12">
+                      2. Start Terminal application.
+                    </v-col>
+                    <v-col cols="12">
+                      3. Login to entry machine.
+                      <v-text-field
+                        :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
+                        ref="linuxStep2"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxStep2')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="`${query.username}@${query.ipAddress}'s password:`"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passExpiredText"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passSetNew"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      7. Reconnect to entry using your new passphrase.
+                      <v-text-field
+                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        ref="linuxStep7"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxStep7')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      Expected result:
+                      <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`${query.username}@${query.labName}-entry:~$`"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
+                      <v-text-field
+                        :value="`ssh -o StrictHostKeyChecking=accept-new home`"
+                        ref="linuxStep8"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        :prefix="`${query.username}@${query.labName}-entry:~$`"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxStep8')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+                      <!-- <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`${query.username}@home's password:`"></code>
+                      </pre></div> -->
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passExpiredText"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passSetNew"></code>
+                      </pre></div>
+                      <!-- Expected result:
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="passChangedHome"></code>
+                      </pre></div> -->
+                    </v-col>
+                    <v-col cols="12">
+                      11. Verify a successful passphrase update by logging into your home machine.
+                      <v-text-field
+                        :value="`ssh home`"
+                        ref="linuxStep11"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        :prefix="`${query.username}@${query.labName}-entry:~$`"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxStep11')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      Expected result:
+                      <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`${query.username}@${query.labName}-home:~$`"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      12. Close Command Prompt window to make sure you are disconnected from your lab.
+                    </v-col>
 
-                          <v-tab href="#macos">MacOS</v-tab>
-
-                          <v-tab href="#linux">Linux</v-tab>
-                        </v-tabs>
-                        <v-tabs-items v-model="tab">
-                          <v-tab-item value="windows">
-                            <v-col cols="12">
-                              1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
-                            </v-col>
-                            <v-col cols="12">
-                              2. To start Command Prompt press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
-                            </v-col>
-                            <v-col cols="12">
-                              3. Login to entry machine.
-                              <v-text-field
-                                :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
-                                ref="winStep2"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="C:\Users\User>"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('winStep2')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="`${query.username}@${query.ipAddress}'s password:`"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passExpiredText"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passSetNew"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              7. Reconnect to entry using your new passphrase.
-                              <v-text-field
-                                :value="`ssh ${query.username}@${query.ipAddress}`"
-                                ref="winStep7"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="C:\Users\User>"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('winStep7')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              Expected result:
-                              <div class="language- extra-class"><pre class="language-text">
-                                  <code v-text="`${query.username}@${query.labName}-entry:~$`"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
-                              <v-text-field
-                                :value="`ssh -o StrictHostKeyChecking=accept-new home`"
-                                ref="winStep8"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                :prefix="`${query.username}@${query.labName}-entry:~$`"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('winStep8')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
-                              <!-- <div class="language- extra-class"><pre class="language-text">
-                                  <code v-text="`${query.username}@home's password:`"></code>
-                              </pre></div> -->
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passExpiredText"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passSetNew"></code>
-                              </pre></div>
-                              <!-- Expected result:
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passChangedHome"></code>
-                              </pre></div> -->
-                            </v-col>
-                            <v-col cols="12">
-                              11. Verify a successful passphrase update by logging into your home machine.
-                              <v-text-field
-                                :value="`ssh home`"
-                                ref="winStep11"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                :prefix="`${query.username}@${query.labName}-entry:~$`"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('winStep11')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              Expected result:
-                              <div class="language- extra-class"><pre class="language-text">
-                                  <code v-text="`${query.username}@${query.labName}-home:~$`"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              12. Close Command Prompt window to make sure you are disconnected from your lab.
-                            </v-col>
-
-                            <v-col cols="12">
-                              13. Open new Command Prompt window (<code>WIN + R</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
-                              <v-text-field
-                                :value="sshKeygenWin"
-                                ref="winStep13"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="C:\Users\User>"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('winStep13')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              14. Place your public key into the lab.
-                              <v-text-field
-                                :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${query.username}@${query.ipAddress} add-public-key`"
-                                ref="winStep14"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="C:\Users\User>"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('winStep14')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              15. Confirm passwordless access.
-                              <v-text-field
-                                :value="`ssh ${query.username}@${query.ipAddress}`"
-                                ref="winStep15"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="C:\Users\User>"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('winStep15')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                          </v-tab-item>
-                          <v-tab-item value="macos">
-                            <v-col cols="12">
-                              1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
-                            </v-col>
-                            <v-col cols="12">
-                              2. Start Terminal application.
-                            </v-col>
-                            <v-col cols="12">
-                              3. Login to entry machine.
-                              <v-text-field
-                                :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
-                                ref="macStep2"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="~"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('macStep2')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="`${query.username}@${query.ipAddress}'s password:`"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passExpiredText"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passSetNew"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              7. Reconnect to entry using your new passphrase.
-                              <v-text-field
-                                :value="`ssh ${query.username}@${query.ipAddress}`"
-                                ref="macStep7"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="~"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('macStep7')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              Expected result:
-                              <div class="language- extra-class"><pre class="language-text">
-                                  <code v-text="`${query.username}@${query.labName}-entry:~$`"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
-                              <v-text-field
-                                :value="`ssh -o StrictHostKeyChecking=accept-new home`"
-                                ref="macStep8"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                :prefix="`${query.username}@${query.labName}-entry:~$`"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('macStep8')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
-                              <!-- <div class="language- extra-class"><pre class="language-text">
-                                  <code v-text="`${query.username}@home's password:`"></code>
-                              </pre></div> -->
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passExpiredText"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passSetNew"></code>
-                              </pre></div>
-                              <!-- Expected result:
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passChangedHome"></code>
-                              </pre></div> -->
-                            </v-col>
-                            <v-col cols="12">
-                              11. Verify a successful passphrase update by logging into your home machine.
-                              <v-text-field
-                                :value="`ssh home`"
-                                ref="macStep11"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                :prefix="`${query.username}@${query.labName}-entry:~$`"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('macStep11')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              Expected result:
-                              <div class="language- extra-class"><pre class="language-text">
-                                  <code v-text="`${query.username}@${query.labName}-home:~$`"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              12. Close Command Prompt window to make sure you are disconnected from your lab.
-                            </v-col>
-
-                            <v-col cols="12">
-                              13. Open new Terminal tab (<code>CMD + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
-                              <v-text-field
-                                :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
-                                ref="macStep13"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="~"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('macStep13')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              14. Start ssh-agent.
-                              <v-text-field
-                                :value='`eval "$(ssh-agent -s)"`'
-                                ref="macStep14"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="~"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('macStep14')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              15. Add your public key to the ssh agent.
-                              <v-text-field
-                                :value="`ssh-add --apple-use-keychain ~/.ssh/id_rsa`"
-                                ref="macStep15"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="~"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('macStep15')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              16. Place your public key into the lab.
-                              <v-text-field
-                                :value="`ssh-copy-id ${query.username}@${query.ipAddress}`"
-                                ref="macStep16"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="~"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('macStep16')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              17. Confirm passwordless access.
-                              <v-text-field
-                                :value="`ssh ${query.username}@${query.ipAddress}`"
-                                ref="macStep17"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="~"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('macStep17')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                          </v-tab-item>
-                          <v-tab-item value="linux">
-                            <v-col cols="12">
-                              1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
-                            </v-col>
-                            <v-col cols="12">
-                              2. Start Terminal application.
-                            </v-col>
-                            <v-col cols="12">
-                              3. Login to entry machine.
-                              <v-text-field
-                                :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
-                                ref="linuxStep2"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="$"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('linuxStep2')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="`${query.username}@${query.ipAddress}'s password:`"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passExpiredText"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passSetNew"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              7. Reconnect to entry using your new passphrase.
-                              <v-text-field
-                                :value="`ssh ${query.username}@${query.ipAddress}`"
-                                ref="linuxStep7"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="$"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('linuxStep7')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              Expected result:
-                              <div class="language- extra-class"><pre class="language-text">
-                                  <code v-text="`${query.username}@${query.labName}-entry:~$`"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
-                              <v-text-field
-                                :value="`ssh -o StrictHostKeyChecking=accept-new home`"
-                                ref="linuxStep8"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                :prefix="`${query.username}@${query.labName}-entry:~$`"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('linuxStep8')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
-                              <!-- <div class="language- extra-class"><pre class="language-text">
-                                  <code v-text="`${query.username}@home's password:`"></code>
-                              </pre></div> -->
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passExpiredText"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passSetNew"></code>
-                              </pre></div>
-                              <!-- Expected result:
-                              <div class="language- extra-class"><pre class="language-text">
-                                <code v-text="passChangedHome"></code>
-                              </pre></div> -->
-                            </v-col>
-                            <v-col cols="12">
-                              11. Verify a successful passphrase update by logging into your home machine.
-                              <v-text-field
-                                :value="`ssh home`"
-                                ref="linuxStep11"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                :prefix="`${query.username}@${query.labName}-entry:~$`"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('linuxStep11')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              Expected result:
-                              <div class="language- extra-class"><pre class="language-text">
-                                  <code v-text="`${query.username}@${query.labName}-home:~$`"></code>
-                              </pre></div>
-                            </v-col>
-                            <v-col cols="12">
-                              12. Close Command Prompt window to make sure you are disconnected from your lab.
-                            </v-col>
-
-                            <v-col cols="12">
-                              13. Open new Terminal tab (<code>CMD + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
-                              <v-text-field
-                                :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
-                                ref="linuxStep13"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="$"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('linuxStep13')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              14. Start ssh-agent.
-                              <v-text-field
-                                :value='`eval "$(ssh-agent -s)"`'
-                                ref="linuxStep14"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="$"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('linuxStep14')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              15. Add your public key to the ssh agent.
-                              <v-text-field
-                                :value="`ssh-add ~/.ssh/id_rsa`"
-                                ref="linuxStep15"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="$"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('linuxStep15')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              16. Place your public key into the lab.
-                              <v-text-field
-                                :value="`ssh-copy-id ${query.username}@${query.ipAddress}`"
-                                ref="linuxStep16"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="$"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('linuxStep16')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                            <v-col cols="12">
-                              17. Confirm passwordless access.
-                              <v-text-field
-                                :value="`ssh ${query.username}@${query.ipAddress}`"
-                                ref="linuxStep17"
-                                label=""
-                                placeholder="Your link is missing access token"
-                                persistent-placeholder
-                                prefix="$"
-                                outlined
-                                dense
-                                readonly
-                                hide-details
-                                @focus="$event.target.select()"
-                              >
-                                <template v-slot:append>
-                                  <a class="material-icons content_copy" @click="copyText('linuxStep17')">&#xe14d;</a>
-                                </template>
-                              </v-text-field>
-                            </v-col>
-                          </v-tab-item>
-                        </v-tabs-items>
-                          
-                      </v-expansion-panel-content>
-                    </v-expansion-panel>
-                    <v-expansion-panel>
-                      <v-expansion-panel-header>
-                        <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH Config file</h3>
-                      </v-expansion-panel-header>
-                      <v-expansion-panel-content class="mt-2">
-                        <v-col cols="12">
-                          <v-textarea
-                            v-model.trim="configText"
-                            ref="ssh-config"
-                            label="SSH Config file"
-                            placeholder="Your link is missing access token"
-                            persistent-placeholder
-                            class="py-2 mt-2"
-                            outlined
-                            readonly
-                            rows="13"
-                            hide-details
-                            @focus="$event.target.select()"
-                          >
-                            <template v-slot:append>
-                              <a class="material-icons content_copy" @click="copyTextArea('ssh-config')">&#xe14d;</a>
-                            </template>
-                          </v-textarea>
-                        </v-col>
-                      </v-expansion-panel-content>
-                    </v-expansion-panel>
-                    <!-- <v-expansion-panel>
-                      <v-expansion-panel-header>
-                        <h3 id="powershell"><a href="#powershell" class="header-anchor">#</a> Powershell</h3>
-                      </v-expansion-panel-header>
-                      <v-expansion-panel-content class="mt-2">
-                        <v-col cols="12">
-                          <v-textarea
-                            v-model="powershellText"
-                            autocomplete="ignore-field"
-                            label="Powershell setup"
-                            placeholder="Your link is missing access token"
-                            persistent-placeholder
-                            outlined
-                            dense
-                            readonly
-                            rows="19"
-                            hide-details
-                            @focus="$event.target.select()"
-                          ></v-textarea>
-                        </v-col>
-                      </v-expansion-panel-content>
-                    </v-expansion-panel> -->
-                    <!-- <v-expansion-panel>
-                      <v-expansion-panel-header>
-                        <h3 id="putty"><a href="#putty" class="header-anchor">#</a> Putty</h3>
-                      </v-expansion-panel-header>
-                      <v-expansion-panel-content class="mt-2">
-                        <v-col cols="12">
-                          <v-text-field
-                            v-model="puttyHostName"
-                            autocomplete="ignore-field"
-                            label="Putty - Host Name"
-                            placeholder="Your link is missing access token"
-                            persistent-placeholder
-                            outlined
-                            dense
-                            readonly
-                            hide-details
-                            @focus="$event.target.select()"
-                          ></v-text-field>
-                        </v-col>
-                      </v-expansion-panel-content>
-                    </v-expansion-panel> -->
-                    <v-expansion-panel>
-                      <v-expansion-panel-header>
-                        <h3 id="mobaxterm"><a href="#mobaxterm" class="header-anchor">#</a> MobaXterm (Windows)</h3>
-                      </v-expansion-panel-header>
-                      <v-expansion-panel-content class="mt-2">
-                        <v-col cols="10">
-                          <v-btn
-                            color="success"
-                            block
-                            target="_blank"
-                            :href="mobaxtermTerminal"
-                          >
-                            Create terminal session
-                          </v-btn>
-                        </v-col>
-                        <v-col cols="10">
-                          <v-btn
-                            color="primary"
-                            block
-                            target="_blank"
-                            :href="mobaxtermRdp"
-                          >
-                            Create remote desktop session
-                          </v-btn>
-                        </v-col>
-                      </v-expansion-panel-content>
-                    </v-expansion-panel>
-                  </v-expansion-panels>
-                </v-card>
-            </v-card>
-            <v-card v-show="!cfgShow" class="pt-4">
-                Invalid link. Please check your emails to find the full link.
-            </v-card>
-        </v-app>
-    </div>
+                    <v-col cols="12">
+                      13. Open new Terminal tab (<code>CMD + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      <v-text-field
+                        :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
+                        ref="linuxStep13"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxStep13')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      14. Start ssh-agent.
+                      <v-text-field
+                        :value='`eval "$(ssh-agent -s)"`'
+                        ref="linuxStep14"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxStep14')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      15. Add your public key to the ssh agent.
+                      <v-text-field
+                        :value="`ssh-add ~/.ssh/id_rsa`"
+                        ref="linuxStep15"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxStep15')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      16. Place your public key into the lab.
+                      <v-text-field
+                        :value="`ssh-copy-id ${query.username}@${query.ipAddress}`"
+                        ref="linuxStep16"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxStep16')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      17. Confirm passwordless access.
+                      <v-text-field
+                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        ref="linuxStep17"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxStep17')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                  </v-tab-item>
+                </v-tabs-items>
+                  
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH Config file</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content class="mt-2">
+                <v-col cols="12">
+                  <v-textarea
+                    v-model.trim="configText"
+                    ref="ssh-config"
+                    label="SSH Config file"
+                    placeholder="Your link is missing access token"
+                    persistent-placeholder
+                    class="py-2 mt-2"
+                    outlined
+                    readonly
+                    rows="13"
+                    hide-details
+                    @focus="$event.target.select()"
+                  >
+                    <template v-slot:append>
+                      <a class="material-icons content_copy" @click="copyTextArea('ssh-config')">&#xe14d;</a>
+                    </template>
+                  </v-textarea>
+                </v-col>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <!-- <v-expansion-panel>
+              <v-expansion-panel-header>
+                <h3 id="powershell"><a href="#powershell" class="header-anchor">#</a> Powershell</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content class="mt-2">
+                <v-col cols="12">
+                  <v-textarea
+                    v-model="powershellText"
+                    autocomplete="ignore-field"
+                    label="Powershell setup"
+                    placeholder="Your link is missing access token"
+                    persistent-placeholder
+                    outlined
+                    dense
+                    readonly
+                    rows="19"
+                    hide-details
+                    @focus="$event.target.select()"
+                  ></v-textarea>
+                </v-col>
+              </v-expansion-panel-content>
+            </v-expansion-panel> -->
+            <!-- <v-expansion-panel>
+              <v-expansion-panel-header>
+                <h3 id="putty"><a href="#putty" class="header-anchor">#</a> Putty</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content class="mt-2">
+                <v-col cols="12">
+                  <v-text-field
+                    v-model="puttyHostName"
+                    autocomplete="ignore-field"
+                    label="Putty - Host Name"
+                    placeholder="Your link is missing access token"
+                    persistent-placeholder
+                    outlined
+                    dense
+                    readonly
+                    hide-details
+                    @focus="$event.target.select()"
+                  ></v-text-field>
+                </v-col>
+              </v-expansion-panel-content>
+            </v-expansion-panel> -->
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                <h3 id="mobaxterm"><a href="#mobaxterm" class="header-anchor">#</a> MobaXterm (Windows)</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content class="mt-2">
+                <v-col cols="10">
+                  <v-btn
+                    color="success"
+                    block
+                    target="_blank"
+                    :href="mobaxtermTerminal"
+                  >
+                    Create terminal session
+                  </v-btn>
+                </v-col>
+                <v-col cols="10">
+                  <v-btn
+                    color="primary"
+                    block
+                    target="_blank"
+                    :href="mobaxtermRdp"
+                  >
+                    Create remote desktop session
+                  </v-btn>
+                </v-col>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </v-card>
+      </v-card>
+      <v-card v-show="!cfgShow" class="pt-4">
+        Invalid link. Please check your emails to find the full link.
+      </v-card>
+    </v-app>
+  </div>
 </template>
 
 <style lang="sass">
