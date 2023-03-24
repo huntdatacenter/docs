@@ -740,7 +740,7 @@ Host {lab_name}
             <!-- ============================================================================================== -->
             <v-expansion-panel>
               <v-expansion-panel-header>
-                <h3><a href="#passwordless-access" class="header-anchor">#</a> 3. Passwordless access</h3>
+                <h3><a href="#passwordless-access" class="header-anchor">#</a> 3. SSH Passwordless access</h3>
               </v-expansion-panel-header>
               <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
                 <v-tabs
@@ -800,7 +800,7 @@ Host {lab_name}
                     <v-col cols="12">
                       3.3. Confirm passwordless access.
                       <v-text-field
-                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${query.username}@${query.ipAddress}`"
                         ref="winStep15"
                         label=""
                         placeholder="Your link is missing access token"
@@ -902,7 +902,7 @@ Host {lab_name}
                     <v-col cols="12">
                       3.5. Confirm passwordless access.
                       <v-text-field
-                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${query.username}@${query.ipAddress}`"
                         ref="macStep17"
                         label=""
                         placeholder="Your link is missing access token"
@@ -1004,7 +1004,7 @@ Host {lab_name}
                     <v-col cols="12">
                       3.5. Confirm passwordless access.
                       <v-text-field
-                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${query.username}@${query.ipAddress}`"
                         ref="linuxStep17"
                         label=""
                         placeholder="Your link is missing access token"
@@ -1045,7 +1045,7 @@ Host {lab_name}
                 <v-tabs-items v-model="tab">
                   <v-tab-item value="windows">
                     <v-col cols="12">
-                      4.1. Assure SSH Config file exists.
+                      4.1. Open new Command Prompt window (<code>WIN + R</code>) and assure SSH Config file exists.
                       <v-text-field
                         :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
                         ref="winSshConfig1"
@@ -1103,6 +1103,26 @@ Host {lab_name}
                           <a class="material-icons content_copy" @click="copyTextArea('ssh-config-win')">&#xe14d;</a>
                         </template>
                       </v-textarea>
+                    </v-col>
+                    <v-col cols="12">
+                      4.4. Test by connecting straight into home machine.
+                      <v-text-field
+                        :value="`ssh ${query.labName}`"
+                        ref="ssh-config-lab-win"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('ssh-config-lab-win')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
                     </v-col>
                   </v-tab-item>
                   <v-tab-item value="macos">
@@ -1167,6 +1187,26 @@ Host {lab_name}
                         </template>
                       </v-textarea>
                     </v-col>
+                    <v-col cols="12">
+                      4.4. Test by connecting straight into home machine.
+                      <v-text-field
+                        :value="`ssh ${query.labName}`"
+                        ref="ssh-config-lab-mac"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('ssh-config-lab-mac')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
                   </v-tab-item>
                   <v-tab-item value="linux">
                     <!-- Place in <code>~/.ssh/config</code>. -->
@@ -1229,6 +1269,26 @@ Host {lab_name}
                           <a class="material-icons content_copy" @click="copyTextArea('ssh-config-linux')">&#xe14d;</a>
                         </template>
                       </v-textarea>
+                    </v-col>
+                    <v-col cols="12">
+                      4.4. Test by connecting straight into home machine.
+                      <v-text-field
+                        :value="`ssh ${query.labName}`"
+                        ref="ssh-config-lab-linux"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('ssh-config-lab-linux')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
                     </v-col>
                   </v-tab-item>
                 </v-tabs-items>
