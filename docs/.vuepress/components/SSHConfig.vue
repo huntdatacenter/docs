@@ -318,7 +318,7 @@ Host {lab_name}
                       2.1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
                     <v-col cols="12">
-                      2.2. To start Command Prompt press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
+                      2.2. To start Command Prompt press <code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
                     </v-col>
                     <v-col cols="12">
                       2.3. Login to entry machine.
@@ -758,7 +758,7 @@ Host {lab_name}
                 <v-tabs-items v-model="tab">
                   <v-tab-item value="windows">
                     <v-col cols="12">
-                      3.1. Open new Command Prompt window (<code>WIN + R</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      3.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
                       <v-text-field
                         :value="sshKeygenWin"
                         ref="winStep13"
@@ -1045,7 +1045,7 @@ Host {lab_name}
                 <v-tabs-items v-model="tab">
                   <v-tab-item value="windows">
                     <v-col cols="12">
-                      4.1. Open new Command Prompt window (<code>WIN + R</code>) and assure SSH Config file exists.
+                      4.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists.
                       <v-text-field
                         :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
                         ref="winSshConfig1"
