@@ -41,10 +41,10 @@ df -H
 
 For compression of data we will use tar command and store archive in **/lab/scratch** directory.
 
-2.2 Create a file_list of all files you want to save
+2.2 Create a file_list text file of all files you want to save using below command.
 
 ```bash
-find -L /mnt/archive -not -type d >  labname-filelist.txt # this will check /mnt/archive directory and list all files. Permissions can be issue 
+find -L /mnt/archive -not -type d >  labname-filelist.txt # this will check /mnt/archive directory and list all files.
 ```
 
 Options used:  
@@ -56,19 +56,16 @@ Options used:
 
 Examples:   
 ```bash
-tar -czvf single_file.tar.gz ~/archive/data.dta    # single file or directory
+tar -czvf single_file.tar.gz /mnt/archive/data.dta    # single file or directory
 ```
-
 ```bash
-tar -chzvf archive_symlink.tar.gz ~/archive    # includes symbolic links
+tar -chzvf archive_symlink.tar.gz /mnt/archive    # includes symbolic links
 ```
-
 ```bash
-tar -czvf archive_multiple_dir.tar.gz /home/foo/one/test.txt /home/foo/two/data.dta  # compress multiple directories
+tar -czvf archive_multiple_dir.tar.gz /mnt/archive/test.txt /mnt/scratch/data.dta  # compress multiple directories
 ```
-
 ```bash
-tar -czvf excluded_files.tar.gz /included/path --exclude=/home/excluded/path --exclude=/home/another/excluded/path # excludes specified directories
+tar -czvf excluded_files.tar.gz /mnt/archive --exclude=/mnt/archive/test/data.txt --exclude=/mnt/archive/test1/data1.txt # excludes specified directories
 ```
 
 3. Hash the data
