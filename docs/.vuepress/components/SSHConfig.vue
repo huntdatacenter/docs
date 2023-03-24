@@ -710,7 +710,7 @@ Host {lab_name}
                     <v-col cols="12">
                       16. Place your public key into the lab.
                       <v-text-field
-                        :value="`ssh-copy-id ${query.username}@${query.ipAddress}`"
+                        :value="`ssh-copy-id -i ~/.ssh/id_rsa ${query.username}@${query.ipAddress}`"
                         ref="macStep16"
                         label=""
                         placeholder="Your link is missing access token"
@@ -951,7 +951,7 @@ Host {lab_name}
                     <v-col cols="12">
                       16. Place your public key into the lab.
                       <v-text-field
-                        :value="`ssh-copy-id ${query.username}@${query.ipAddress}`"
+                        :value="`ssh-copy-id -i ~/.ssh/id_rsa ${query.username}@${query.ipAddress}`"
                         ref="linuxStep16"
                         label=""
                         placeholder="Your link is missing access token"
