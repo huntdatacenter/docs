@@ -1,8 +1,8 @@
 ---
-title: Tape Archive
-category: Services
+title: Technical guide
+category: Data
 sidebarDepth: 1
-permalink: /administer-science/services/tape-archive
+permalink: /administer-science/data/tape-archive
 description: This page gives the official Cloud tape archive specification.
 ---
 # Tape Archive

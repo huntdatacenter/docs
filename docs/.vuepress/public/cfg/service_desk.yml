@@ -1329,6 +1329,30 @@ request_update_data_rep:
     "<b>Cost:</b> None.",
   ]
 
+request_tape_archive:
+  title: "Order tape archive"
+  template:
+    subject: "Tape archive {username} @ {labname}"
+    body: |
+      Hi HUNT Cloud team,
+
+      I would like to order a tape archive for my lab {labname}.
+
+      Let us touch base on Slack to schedule a time to discuss the details.
+
+      Kind regards,
+  fields: [
+    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> Lab coordiators.",
+    "<b>Required information:</b> .",
+    "<b>Expected response time:</b> Days.",
+    "<b>Cost:</b> Can be found is costs section.",
+  ]
+
+
 request_template:
   title: "Button title text"
   template:

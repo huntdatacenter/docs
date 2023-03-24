@@ -400,7 +400,6 @@ module.exports = {
             "/administer-science/services/specifications.md",
             "/administer-science/services/machine-types.md",
             "/administer-science/services/responsiveness.md",
-            "/administer-science/services/tape-archive.md",
           ],
         },
         {
@@ -428,6 +427,15 @@ module.exports = {
             {
               title: "Introduction",
               path: "/administer-science/data/",
+            },
+            {
+              title: "Tape archive",
+              text: "Tape archive",
+              isGroup: true,
+              children: [
+                "/administer-science/data/introduction.md",
+                "/administer-science/data/technical-guide.md",
+              ],
             },
             "/administer-science/data/faq.md",
           ],

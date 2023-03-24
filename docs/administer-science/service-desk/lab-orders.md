@@ -334,6 +334,17 @@ Once data on volume is deleted, it can not be recreated. You must ensure that yo
 * **Expected response time:** Days
 * **Cost:** No additional costs.
 
+### Tape archive
+
+Click button below to order a long term archivation of your data
+
+<SDButton form="request_tape_archive" />
+
+* **Who can order:** Lab coordiators.
+* **Required information**: .
+* **Expected response time:** Days
+* **Cost:** Can be found is costs section.
+
 
 ## Data transfers
 
