@@ -134,6 +134,12 @@ Host {lab_name}
     }
   },
   mounted() {
+    // Open accordion if hash parameter is defined
+    if (window.location.hash !== null && window.location.hash !== "") {
+      if (window.location.hash in this.$refs) {
+        this.$refs[window.location.hash].isActive = true
+      }
+    }
     const access = this.access
     if (access.length == 3) {
       this.query.ipAddress = access[0]
@@ -282,17 +288,18 @@ Host {lab_name}
           <v-expansion-panels elevation="0">
             <v-expansion-panel>
               <v-expansion-panel-header>
-                  <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> VPN Configuration</h3>
+                  <h3><a href="#vpn-config" class="header-anchor">#</a> 1. VPN Configuration</h3>
               </v-expansion-panel-header>
-              <v-expansion-panel-content class="mt-2">
+              <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
+                If you have not setup HUNT Cloud VPN yet follow our
                 <a href="/do-science/getting-started/configure-vpn/" target="_blank">VPN configuration guide</a>
               </v-expansion-panel-content>
             </v-expansion-panel>
             <v-expansion-panel>
               <v-expansion-panel-header>
-                  <h3 id="cmdline"><a href="#cmdline" class="header-anchor">#</a> SSH Passphrase change</h3>
+                  <h3><a href="#ssh-passphrase" class="header-anchor">#</a> 2. SSH Passphrase change</h3>
               </v-expansion-panel-header>
-              <v-expansion-panel-content class="mt-2">
+              <v-expansion-panel-content id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
                 <v-tabs
                   v-model="tab"
                   centered
@@ -308,13 +315,13 @@ Host {lab_name}
                 <v-tabs-items v-model="tab">
                   <v-tab-item value="windows">
                     <v-col cols="12">
-                      1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
+                      2.1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
                     <v-col cols="12">
-                      2. To start Command Prompt press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
+                      2.2. To start Command Prompt press <code>WIN</code> + <code>R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
                     </v-col>
                     <v-col cols="12">
-                      3. Login to entry machine.
+                      2.3. Login to entry machine.
                       <v-text-field
                         :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
                         ref="winStep2"
@@ -334,25 +341,25 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
+                      2.4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="`${query.username}@${query.ipAddress}'s password:`"></code>
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
+                      2.5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passExpiredText"></code>
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+                      2.6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passSetNew"></code>
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      7. Reconnect to entry using your new passphrase.
+                      2.7. Reconnect to entry using your new passphrase.
                       <v-text-field
                         :value="`ssh ${query.username}@${query.ipAddress}`"
                         ref="winStep7"
@@ -378,7 +385,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
+                      2.8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
                       <v-text-field
                         :value="`ssh -o StrictHostKeyChecking=accept-new home`"
                         ref="winStep8"
@@ -398,7 +405,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+                      2.9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
                       <!-- <div class="language- extra-class"><pre class="language-text">
                           <code v-text="`${query.username}@home's password:`"></code>
                       </pre></div> -->
@@ -407,7 +414,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
+                      2.10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passSetNew"></code>
                       </pre></div>
@@ -417,7 +424,7 @@ Host {lab_name}
                       </pre></div> -->
                     </v-col>
                     <v-col cols="12">
-                      11. Verify a successful passphrase update by logging into your home machine.
+                      2.11. Verify a successful passphrase update by logging into your home machine.
                       <v-text-field
                         :value="`ssh home`"
                         ref="winStep11"
@@ -443,79 +450,18 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      12. Close Command Prompt window to make sure you are disconnected from your lab.
-                    </v-col>
-
-                    <v-col cols="12">
-                      13. Open new Command Prompt window (<code>WIN + R</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
-                      <v-text-field
-                        :value="sshKeygenWin"
-                        ref="winStep13"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('winStep13')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      14. Place your public key into the lab.
-                      <v-text-field
-                        :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${query.username}@${query.ipAddress} add-public-key`"
-                        ref="winStep14"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('winStep14')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      15. Confirm passwordless access.
-                      <v-text-field
-                        :value="`ssh ${query.username}@${query.ipAddress}`"
-                        ref="winStep15"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('winStep15')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
+                      2.12. Close Command Prompt window to make sure you are disconnected from your lab.
                     </v-col>
                   </v-tab-item>
                   <v-tab-item value="macos">
                     <v-col cols="12">
-                      1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
+                      2.1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
                     <v-col cols="12">
-                      2. Start Terminal application.
+                      2.2. Start Terminal application.
                     </v-col>
                     <v-col cols="12">
-                      3. Login to entry machine.
+                      2.3. Login to entry machine.
                       <v-text-field
                         :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
                         ref="macStep2"
@@ -535,25 +481,25 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
+                      2.4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="`${query.username}@${query.ipAddress}'s password:`"></code>
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
+                      2.5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passExpiredText"></code>
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+                      2.6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passSetNew"></code>
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      7. Reconnect to entry using your new passphrase.
+                      2.7. Reconnect to entry using your new passphrase.
                       <v-text-field
                         :value="`ssh ${query.username}@${query.ipAddress}`"
                         ref="macStep7"
@@ -579,7 +525,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
+                      2.8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
                       <v-text-field
                         :value="`ssh -o StrictHostKeyChecking=accept-new home`"
                         ref="macStep8"
@@ -599,7 +545,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+                      2.9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
                       <!-- <div class="language- extra-class"><pre class="language-text">
                           <code v-text="`${query.username}@home's password:`"></code>
                       </pre></div> -->
@@ -608,7 +554,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
+                      2.10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passSetNew"></code>
                       </pre></div>
@@ -618,7 +564,7 @@ Host {lab_name}
                       </pre></div> -->
                     </v-col>
                     <v-col cols="12">
-                      11. Verify a successful passphrase update by logging into your home machine.
+                      2.11. Verify a successful passphrase update by logging into your home machine.
                       <v-text-field
                         :value="`ssh home`"
                         ref="macStep11"
@@ -644,119 +590,18 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      12. Close Command Prompt window to make sure you are disconnected from your lab.
-                    </v-col>
-
-                    <v-col cols="12">
-                      13. Open new Terminal tab (<code>CMD + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
-                      <v-text-field
-                        :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
-                        ref="macStep13"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macStep13')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      14. Start ssh-agent.
-                      <v-text-field
-                        :value='`eval "$(ssh-agent -s)"`'
-                        ref="macStep14"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macStep14')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      15. Add your public key to the ssh agent.
-                      <v-text-field
-                        :value="`ssh-add --apple-use-keychain ~/.ssh/id_rsa`"
-                        ref="macStep15"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macStep15')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      16. Place your public key into the lab.
-                      <v-text-field
-                        :value="`ssh-copy-id -i ~/.ssh/id_rsa ${query.username}@${query.ipAddress}`"
-                        ref="macStep16"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macStep16')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      17. Confirm passwordless access.
-                      <v-text-field
-                        :value="`ssh ${query.username}@${query.ipAddress}`"
-                        ref="macStep17"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macStep17')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
+                      2.12. Close Command Prompt window to make sure you are disconnected from your lab.
                     </v-col>
                   </v-tab-item>
                   <v-tab-item value="linux">
                     <v-col cols="12">
-                      1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
+                      2.1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
                     <v-col cols="12">
-                      2. Start Terminal application.
+                      2.2. Start Terminal application.
                     </v-col>
                     <v-col cols="12">
-                      3. Login to entry machine.
+                      2.3. Login to entry machine.
                       <v-text-field
                         :value="`ssh -o StrictHostKeyChecking=accept-new ${query.username}@${query.ipAddress}`"
                         ref="linuxStep2"
@@ -776,25 +621,25 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
+                      2.4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="`${query.username}@${query.ipAddress}'s password:`"></code>
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
+                      2.5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passExpiredText"></code>
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+                      2.6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passSetNew"></code>
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      7. Reconnect to entry using your new passphrase.
+                      2.7. Reconnect to entry using your new passphrase.
                       <v-text-field
                         :value="`ssh ${query.username}@${query.ipAddress}`"
                         ref="linuxStep7"
@@ -820,7 +665,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
+                      2.8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
                       <v-text-field
                         :value="`ssh -o StrictHostKeyChecking=accept-new home`"
                         ref="linuxStep8"
@@ -840,7 +685,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+                      2.9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
                       <!-- <div class="language- extra-class"><pre class="language-text">
                           <code v-text="`${query.username}@home's password:`"></code>
                       </pre></div> -->
@@ -849,7 +694,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
+                      2.10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passSetNew"></code>
                       </pre></div>
@@ -859,7 +704,7 @@ Host {lab_name}
                       </pre></div> -->
                     </v-col>
                     <v-col cols="12">
-                      11. Verify a successful passphrase update by logging into your home machine.
+                      2.11. Verify a successful passphrase update by logging into your home machine.
                       <v-text-field
                         :value="`ssh home`"
                         ref="linuxStep11"
@@ -885,11 +730,199 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      12. Close Command Prompt window to make sure you are disconnected from your lab.
+                      2.12. Close Command Prompt window to make sure you are disconnected from your lab.
                     </v-col>
+                  </v-tab-item>
+                </v-tabs-items>
+                  
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <!-- ============================================================================================== -->
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                <h3><a href="#passwordless-access" class="header-anchor">#</a> 3. Passwordless access</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
+                <v-tabs
+                  v-model="tab"
+                  centered
+                >
+                  <!-- <v-tabs-slider></v-tabs-slider> -->
 
+                  <v-tab href="#windows">Windows</v-tab>
+
+                  <v-tab href="#macos">MacOS</v-tab>
+
+                  <v-tab href="#linux">Linux</v-tab>
+                </v-tabs>
+                <v-tabs-items v-model="tab">
+                  <v-tab-item value="windows">
                     <v-col cols="12">
-                      13. Open new Terminal tab (<code>CMD + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      3.1. Open new Command Prompt window (<code>WIN + R</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      <v-text-field
+                        :value="sshKeygenWin"
+                        ref="winStep13"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep13')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.2. Place your public key into the lab.
+                      <v-text-field
+                        :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${query.username}@${query.ipAddress} add-public-key`"
+                        ref="winStep14"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep14')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.3. Confirm passwordless access.
+                      <v-text-field
+                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        ref="winStep15"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep15')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                  </v-tab-item>
+                  <v-tab-item value="macos">
+                    <v-col cols="12">
+                      3.1. Open new Terminal tab (<code>CMD + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      <v-text-field
+                        :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
+                        ref="macStep13"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep13')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.2. Start ssh-agent.
+                      <v-text-field
+                        :value='`eval "$(ssh-agent -s)"`'
+                        ref="macStep14"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep14')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.3. Add your public key to the ssh agent.
+                      <v-text-field
+                        :value="`ssh-add --apple-use-keychain ~/.ssh/id_rsa`"
+                        ref="macStep15"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep15')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.4. Place your public key into the lab.
+                      <v-text-field
+                        :value="`ssh-copy-id -i ~/.ssh/id_rsa ${query.username}@${query.ipAddress}`"
+                        ref="macStep16"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep16')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.5. Confirm passwordless access.
+                      <v-text-field
+                        :value="`ssh ${query.username}@${query.ipAddress}`"
+                        ref="macStep17"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep17')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                  </v-tab-item>
+                  <v-tab-item value="linux">
+                    <v-col cols="12">
+                      3.1. Open new Terminal tab (<code>CMD + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
                       <v-text-field
                         :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
                         ref="linuxStep13"
@@ -909,7 +942,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      14. Start ssh-agent.
+                      3.2. Start ssh-agent.
                       <v-text-field
                         :value='`eval "$(ssh-agent -s)"`'
                         ref="linuxStep14"
@@ -929,7 +962,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      15. Add your public key to the ssh agent.
+                      3.3. Add your public key to the ssh agent.
                       <v-text-field
                         :value="`ssh-add ~/.ssh/id_rsa`"
                         ref="linuxStep15"
@@ -949,7 +982,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      16. Place your public key into the lab.
+                      3.4. Place your public key into the lab.
                       <v-text-field
                         :value="`ssh-copy-id -i ~/.ssh/id_rsa ${query.username}@${query.ipAddress}`"
                         ref="linuxStep16"
@@ -969,7 +1002,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      17. Confirm passwordless access.
+                      3.5. Confirm passwordless access.
                       <v-text-field
                         :value="`ssh ${query.username}@${query.ipAddress}`"
                         ref="linuxStep17"
@@ -990,14 +1023,13 @@ Host {lab_name}
                     </v-col>
                   </v-tab-item>
                 </v-tabs-items>
-                  
               </v-expansion-panel-content>
             </v-expansion-panel>
             <v-expansion-panel>
               <v-expansion-panel-header>
-                <h3 id="ssh-config"><a href="#ssh-config" class="header-anchor">#</a> SSH Config file</h3>
+                <h3><a href="#ssh-config" class="header-anchor">#</a> 4. SSH Config file</h3>
               </v-expansion-panel-header>
-              <v-expansion-panel-content class="mt-2">
+              <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
                 <v-tabs
                   v-model="tab"
                   centered
@@ -1013,7 +1045,7 @@ Host {lab_name}
                 <v-tabs-items v-model="tab">
                   <v-tab-item value="windows">
                     <v-col cols="12">
-                      1. Assure SSH Config file exists.
+                      4.1. Assure SSH Config file exists.
                       <v-text-field
                         :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
                         ref="winSshConfig1"
@@ -1033,7 +1065,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      2. Open SSH Config file.
+                      4.2. Open SSH Config file.
                       <v-text-field
                         :value='`Notepad.exe "%USERPROFILE%\\.ssh\\config"`'
                         ref="winSshConfig2"
@@ -1053,7 +1085,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      3. Add lab configuration into SSH Config opened in Notepad.
+                      4.3. Add lab configuration into SSH Config opened in Notepad.
                       <v-textarea
                         v-model.trim="configText"
                         ref="ssh-config-win"
@@ -1076,7 +1108,7 @@ Host {lab_name}
                   <v-tab-item value="macos">
                     <!-- Place in <code>~/.ssh/config</code>. -->
                     <v-col cols="12">
-                      1. Assure SSH Config file exists.
+                      4.1. Assure SSH Config file exists.
                       <v-text-field
                         :value="`touch ~/.ssh/config`"
                         ref="macSshConfig1"
@@ -1096,7 +1128,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      2. Open SSH Config file.
+                      4.2. Open SSH Config file.
                       <v-text-field
                         :value="`open -Wne ~/.ssh/config`"
                         ref="macSshConfig2"
@@ -1116,7 +1148,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      3. Add lab configuration into SSH Config opened in Text Editor.
+                      4.3. Add lab configuration into SSH Config opened in Text Editor.
                       <v-textarea
                         v-model.trim="configText"
                         ref="ssh-config-mac"
@@ -1139,7 +1171,7 @@ Host {lab_name}
                   <v-tab-item value="linux">
                     <!-- Place in <code>~/.ssh/config</code>. -->
                     <v-col cols="12">
-                      1. Assure SSH Config file exists.
+                      4.1. Assure SSH Config file exists.
                       <v-text-field
                         :value="`touch ~/.ssh/config`"
                         ref="linuxSshConfig1"
@@ -1159,7 +1191,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      2. Open SSH Config file.
+                      4.2. Open SSH Config file.
                       <v-text-field
                         :value="`gedit ~/.ssh/config`"
                         ref="linuxSshConfig2"
@@ -1179,7 +1211,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      3. Add lab configuration into SSH Config opened in Text Editor.
+                      4.3. Add lab configuration into SSH Config opened in Text Editor.
                       <v-textarea
                         v-model.trim="configText"
                         ref="ssh-config-linux"
@@ -1247,9 +1279,9 @@ Host {lab_name}
             </v-expansion-panel> -->
             <v-expansion-panel>
               <v-expansion-panel-header>
-                <h3 id="mobaxterm"><a href="#mobaxterm" class="header-anchor">#</a> MobaXterm (Windows)</h3>
+                <h3><a href="#mobaxterm" class="header-anchor">#</a> MobaXterm (Windows)</h3>
               </v-expansion-panel-header>
-              <v-expansion-panel-content class="mt-2">
+              <v-expansion-panel-content id="mobaxterm" ref="#mobaxterm" class="mt-2">
                 <v-col cols="10">
                   <v-btn
                     color="success"
