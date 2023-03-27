@@ -31,6 +31,11 @@ sudo apt install sshfs
 [Install Homebrew package manager for macOS: brew](https://brew.sh/)
 :::
 
+::: warning
+SSHFS installation on new versions of MacOS requires advanced installation with special permissions.
+You are taking all the responsibility for setup of SSHFS and requirements it might need.
+:::
+
 ## 1. Installation
 
 This step install SSHFS on your local computer.
@@ -86,7 +91,7 @@ A working HUNT Cloud VPN and and a working SSH connection to your lab.
 :::
 
 
-2.1. Define your labname as a variable.
+2.1. Open new Terminal window and define your labname as a variable.
 
    ```bash
    export labname=<labname>
@@ -95,7 +100,7 @@ A working HUNT Cloud VPN and and a working SSH connection to your lab.
    Change `<labname>` to your lab and run the line in the terminal on your local computer.
 
    ```bash
-   # -- non-working example
+   # -- principal example
    export labname=demolab
    ```
 
@@ -103,7 +108,7 @@ A working HUNT Cloud VPN and and a working SSH connection to your lab.
 
 Run this code without any changes since we defined your labname above.
    ```bash
-   mkdir ~/${labname}-storage
+   mkdir -v ~/${labname}-storage
    ```
 
 
