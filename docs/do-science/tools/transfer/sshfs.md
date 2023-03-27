@@ -13,38 +13,33 @@ description: Installation and usage guide for sshfs.
 
 [[toc]]
 
-## Installation
+## 1. Installation
 
 Depending on the data safety level in your lab, you may mount selected part of your storage system to your client computer over VPN.
 
-### Install SSHFS on your local computer with Ubuntu
 
-On your local computer:
+::: details Linux (Ubuntu)
 
-```bash
-sudo apt install sshfs
-```
+Install sshfs:
 
-### Install SSHFS on your local computer with OS X and macOS
-
-::: tip REQUIREMENT
-[Install Homebrew package manager for macOS: brew](https://brew.sh/)
+   ```bash
+   sudo apt install sshfs
+   ```
 :::
 
-::: warning
-SSHFS installation on new versions of MacOS requires advanced installation with special permissions.
-You are taking all the responsibility for setup of SSHFS and requirements it might need.
-:::
-
-## 1. Installation
-
-This step install SSHFS on your local computer.
 
 ::: details OS X and macOS
 
 **Requirement:**
 
 You will need the Homebrew package manager for macOS to complete this guide: [Install Homebrew package manager for macOS: brew](https://brew.sh/).
+
+
+**Warning:**
+
+SSHFS installation on new versions of MacOS requires advanced installation with special permissions.
+You are taking all the responsibility for setup of SSHFS and requirements it might need.
+
 
 **Installation guide:**
 
@@ -66,17 +61,6 @@ You will need the Homebrew package manager for macOS to complete this guide: [In
 
    If you do not see a section to enable develper in your `System Preferences` -> `Security & Privacy` -> `General`, you will need to contact your organiational IT support and request access to this section (NTNU Hjelp for NTNU managed Macbooks).
 
-:::
-
-
-
-::: details Linux (Debian)
-
-Install sshfs:
-
-   ```bash
-   sudo apt install sshfs
-   ```
 :::
 
 
@@ -121,7 +105,7 @@ Run this code without any changes since we defined your labname above.
    ```
 :::
 
-::: details For Linux (Debian)
+::: details For Linux (Ubuntu)
 Run this code without any changes since we defined your labname above.
    ```bash
    sshfs ${labname}: ~/${labname}-storage -o follow_symlinks
@@ -145,7 +129,7 @@ You can make an alias in your profile configuration file. This allows you to con
    The above example adds the alias to your `~/.profile` file. Depending on your preferences you may want to add this to other profile/rc config such as `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`).
 :::
 
-::: details For Linux (Debian)
+::: details For Linux (Ubuntu)
    ```bash
    echo "alias ${labname}-mount='sshfs ${labname}: ~/${labname}-storage -o follow_symlinks'" >> ~/.profile
    ```
