@@ -1,5 +1,23 @@
 ########################### this is the beginning of file ###########################
-general_request:
+general_lab_user_request:
+  title: "General lab user request"
+  template:
+    subject: "User request - {username} @ {lab_name}"
+    body: |
+      Hi HUNT Cloud team,
+
+      <your-text>
+
+  fields: [
+    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> Lab users.",
+    "<b>Expected response time:</b> Days.",
+  ]
+
+general_lab_request:
   title: "General request"
   template:
     subject: "Request - {lab_name}"
@@ -12,7 +30,7 @@ general_request:
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
-    "<b>Who can order:</b> Lab users.",
+    "<b>Who can order:</b> Lab leaders, coordinators, and users.",
     "<b>Expected response time:</b> Days.",
   ]
 

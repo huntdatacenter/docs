@@ -68,6 +68,17 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 * **Next step:** [Prepare your key transfer](/do-science/getting-started/).
 * **Cost:** Included in your lab subscription.
 
+### Update lab coordinator role
+
+Click the button below to update the [lab coordinator](/administer-science/roles/#lab-coordinator) role for a lab attached to your data space.
+
+<SDButton form="request_coordinator_update" />
+
+* **Who can order:** Lab leaders.
+* **Required attachment**: None.
+* **Expected delivery time:** Days.
+* **Cost:** Included in your lab subscription.
+
 
 ### Renew lab user agreement
 
@@ -355,16 +366,9 @@ Head over to the [data space orders](/administer-science/service-desk/data-space
 * **Expected delivery:** Access information communicated in your Slack lab channel.
 * **Cost:** Included in your lab subscription.
 
+## General requests
 
-## Others
+If you have not found a button for your type of request you can use this general request. This is typically slower than structured requests, but you will get same tracking.
 
-### Update lab coordinator role
+<SDButton form="general_lab_user_request" />
 
-Click the button below to update the [lab coordinator](/administer-science/roles/#lab-coordinator) role for a lab attached to your data space.
-
-<SDButton form="request_coordinator_update" />
-
-* **Who can order:** Lab leaders.
-* **Required attachment**: None.
-* **Expected delivery time:** Days.
-* **Cost:** Included in your lab subscription.

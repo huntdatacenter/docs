@@ -166,7 +166,7 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 
 If you have not found a button for your type of request you can use this general request. This is typically slower than structured requests, but you will get same tracking.
 
-<SDButton form="general_request" />
+<SDButton form="general_lab_user_request" />
 
 
 ## FAQ
