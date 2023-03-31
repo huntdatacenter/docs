@@ -8,11 +8,11 @@ sidebarDepth: 1
 
 # Service desk for lab users
 
-**This page list predefined service orders that you can order as an active lab user in HUNT Cloud. To place your order, click the blue button and send us a pre-filled email with required information.**
+**This page list predefined service orders that you can request as an active lab user in HUNT Cloud. To place your order, click the blue button and send us a pre-filled email with required information.**
 
 ::: tip Save time
 
-You can speed up your delivery with two optimizations: (1) send the request from your **organizational email**; and (2) send **one request per email**.
+Speed up your delivery by (1) send the request from your **organizational email**; and (2) send **one request per email**. 
 
 :::
 
@@ -22,14 +22,14 @@ You can request the following service orders as a lab user in HUNT Cloud:
 
 Try our service desk in the [administer science](/administer-science/service-desk) section aimed at lab leaders, lab coordinators and data spaces if you can't find what you are looking for.
 
-Send us a regular [email](/contact) with your request if you can't find what you are looking for on the this page.
+Send us a [general service request](#general-service-request) if you can not find what you are looking for on this page.
 
 
 ## Lab access
 
 ::: warning New users
 
-The service orders below are aimed at active lab users. Lab access for new users are ordered by lab leaders or lab coordinators from our [lab orders page](/administer-science/service-desk/lab-orders) using the [new lab user](/administer-science/service-desk/lab-orders#add-a-new-lab-user) button.
+The service orders below are aimed at active lab users. Lab access for new users are ordered by lab leaders or lab coordinators from our [administer science service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
 
 :::
 
@@ -162,11 +162,27 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 * **Cost:** Included in the lab subscription.
 
 
-## General requests
+## General service request
 
-If you have not found a button for your type of request you can use this general request. This is typically slower than structured requests, but you will get same tracking.
+Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request. 
 
 <SDButton form="general_lab_user_request" />
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+
+::: warning General responses are slower
+
+Note that a general lab user request has slower response time than a predefined order. If you don't find what you are looking for here, it might be good to invest some time investigating options in our [administer science](/administer-science/service-desk/) and [govern science](/govern-science/service-desk/) service desk.
+
+:::
+
+::: tip Not an active user? 
+
+[Contact us](/contact) on email for general questions and information on our scientific services and activities.
+
+:::
+
 
 
 ## FAQ
