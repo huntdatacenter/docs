@@ -776,7 +776,7 @@ request_machine_unshelving:
 request_machine_deletion:
   title: "Request a deletion of a machine"
   template:
-    subject: "Request machine deletion - {vm_name} @ {lab_name}"
+    subject: "Machine deletion - {vm_name} @ {lab_name}"
     body: |
       Hi HUNT Cloud team,
 
