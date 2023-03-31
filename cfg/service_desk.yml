@@ -43,12 +43,15 @@ cost_query:
 
       <your-text>
 
+      Best regards, 
+
   fields: [
+    { label: "Data space name", key: "data_space_name", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
-    "<b>Who can order:</b> Lab leaders and Lab coordinators.",
-    "<b>Expected response time:</b> Days.",
+    "<b>Who can order:</b> Data space leaders, Data space financial administrators, Lab leaders and Lab coordinators.",
+    "<b>Expected delivery time:</b> One week.",
   ]
 
 ### Data Space orders
