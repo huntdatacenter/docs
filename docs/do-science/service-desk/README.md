@@ -33,6 +33,7 @@ The service orders below are aimed at active lab users. Lab access for new users
 
 :::
 
+
 ### HUNT Workbench access
 
 [HUNT Workbench](/do-science/hunt-workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
@@ -160,6 +161,14 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 * **Next step:** [MobaXterm configuration guide](/do-science/tools/technical/mobaxterm/).
 * **Cost:** Included in the lab subscription.
 
+
+## General requests
+
+If you have not found a button for your type of request you can use this general request. This is typically slower than structured requests, but you will get same tracking.
+
+<SDButton form="general_request" />
+
+
 ## FAQ
 
 #### I have not heard back within the expected delivery time, now what? 
@@ -185,4 +194,5 @@ We use your prefilled email to start predefined workflows on our side. The autom
 We use your organizational email for identification and to ensure that you are authorized to make the order. Therefore, you will be asked to reship requests from private emails that is not verified by your organization. 
 
 :::
+
 
