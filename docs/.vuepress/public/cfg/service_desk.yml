@@ -16,6 +16,23 @@ general_request:
     "<b>Expected response time:</b> Days.",
   ]
 
+cost_query:
+  title: "Ask about cost"
+  template:
+    subject: "Cost - {lab_name}"
+    body: |
+      Hi HUNT Cloud team,
+
+      <your-text>
+
+  fields: [
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> Lab leaders and Lab coordinators.",
+    "<b>Expected response time:</b> Days.",
+  ]
+
 ### Data Space orders
 request_new_lab:
   title: "Request a new lab"
