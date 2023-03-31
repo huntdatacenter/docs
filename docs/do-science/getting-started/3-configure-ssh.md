@@ -168,7 +168,7 @@ Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-174-generic x86_64)
 Welcome to YOUR-LABNAME.
 
 For the record, if you should not be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
+leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
 Last login: Mon Jul  2 17:40:16 2018 from 10.10.10.10
 your-username@your-labname-`entry`:~$
@@ -221,7 +221,7 @@ Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-98-generic x86_64)
 Welcome to YOUR-LABNAME.
 
 For the record, if you should not be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
+leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
 Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@your-labname-`home`:~$

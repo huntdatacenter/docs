@@ -223,7 +223,7 @@ The following form fields are included in the "HUNT Cloud Internal Kista Order" 
 Welcome to `LAB NAME`.
 
 For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
+leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
 Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
@@ -273,7 +273,7 @@ The following form fields are included in the "HUNT Cloud External Kista Import 
 Welcome to `LAB NAME`.
 
 For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
+leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
 Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
@@ -331,7 +331,7 @@ The following form fields are included in the "HUNT Cloud External Kista Export 
 Welcome to `LAB NAME`.
 
 For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
+leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
 Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
@@ -391,7 +391,7 @@ The following form fields are included in the "HUNT Cloud Network Opening Order"
 Welcome to `LAB NAME`.
 
 For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
+leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
 Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$

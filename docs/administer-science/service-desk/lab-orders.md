@@ -201,7 +201,7 @@ You will find the lab and machine name for you home machine when you log into yo
 Welcome to `LAB NAME`.
 
 For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
+leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
 Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
@@ -273,7 +273,7 @@ You will find the lab and machine name for you home machine when you log into yo
 Welcome to `LAB NAME`.
 
 For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
+leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
 Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
