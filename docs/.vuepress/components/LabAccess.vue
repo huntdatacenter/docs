@@ -1338,6 +1338,40 @@ Host {lab_name}
               </v-expansion-panel-content>
             </v-expansion-panel> -->
 
+            <!-- Workbench draft - troubleshooting and similar -->
+            <!-- <v-expansion-panel>
+              <v-expansion-panel-header>
+                <h3><a href="#workbench" class="header-anchor">#</a> Workbench</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
+                <v-tabs
+                  v-model="tab"
+                  centered
+                >
+                  <v-tab href="#windows">Windows</v-tab>
+                  <v-tab href="#macos">MacOS</v-tab>
+                  <v-tab href="#linux">Linux</v-tab>
+                </v-tabs>
+                <v-tabs-items v-model="tab">
+                  <v-tab-item value="windows">
+                    <v-col cols="12">
+                      WIP
+                    </v-col>
+                  </v-tab-item>
+                  <v-tab-item value="macos">
+                    <v-col cols="12">
+                      WIP
+                    </v-col>
+                  </v-tab-item>
+                  <v-tab-item value="linux">
+                    <v-col cols="12">
+                      WIP
+                    </v-col>
+                  </v-tab-item>
+                </v-tabs-items>
+              </v-expansion-panel-content>
+            </v-expansion-panel> -->
+
             <v-expansion-panel>
               <v-expansion-panel-header>
                 <h3><a href="#mobaxterm" class="header-anchor">#</a> MobaXterm (Windows)</h3>
@@ -1386,10 +1420,10 @@ Host {lab_name}
                 <v-tabs-items v-model="tab">
                   <v-tab-item value="windows">
                     <v-col cols="12">
-                      Removing VPN config
+                      Removing saved OpenVPN passphrases and metadata
                       <v-text-field
-                        :value="`del %USERPROFILE%\\OpenVPN\\config\\${query.username}`"
-                        ref="troubleshooting-removing-ovpn"
+                        :value="`REG DELETE HKEY_CURRENT_USER\\SOFTWARE\\OpenVPN-GUI\\configs\\${query.username}`"
+                        ref="troubleshooting-remove-ovpn-passphrase"
                         label=""
                         placeholder="Your link is missing access token"
                         persistent-placeholder
@@ -1401,7 +1435,33 @@ Host {lab_name}
                         @focus="$event.target.select()"
                       >
                         <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('troubleshooting-removing-ovpn')">&#xe14d;</a>
+                          <a class="material-icons content_copy" @click="copyText('troubleshooting-remove-ovpn-passphrase')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      Confirm deletion with by typing <code>Yes</code> and then press <code>Enter</code>:
+                      <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`Permanently delete the registry key\nHKEY_CURRENT_USER\\SOFTWARE\\OpenVPN-GUI\\configs\\${query.username} (Yes/No)? Yes\n\nThe operation completed successfully.`"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      Deleting OpenVPN config
+                      <v-text-field
+                        :value="`del %USERPROFILE%\\OpenVPN\\config\\${query.username}`"
+                        ref="troubleshooting-remove-ovpn-config"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('troubleshooting-remove-ovpn-config')">&#xe14d;</a>
                         </template>
                       </v-text-field>
                     </v-col>
