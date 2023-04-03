@@ -19,7 +19,7 @@ import {
 } from "vuetify/lib";
 
 export default {
-  name: "SSHConfig",
+  name: "LabAccess",
   components: {
     VApp,
     VBtn,
