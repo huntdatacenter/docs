@@ -1337,6 +1337,7 @@ Host {lab_name}
                 </v-col>
               </v-expansion-panel-content>
             </v-expansion-panel> -->
+
             <v-expansion-panel>
               <v-expansion-panel-header>
                 <h3><a href="#mobaxterm" class="header-anchor">#</a> MobaXterm (Windows)</h3>
@@ -1362,6 +1363,66 @@ Host {lab_name}
                     Create remote desktop session
                   </v-btn>
                 </v-col>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                <h3><a href="#troubleshooting" class="header-anchor">#</a> Troubleshooting</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content id="troubleshooting" ref="#troubleshooting" class="mt-2">
+                <v-tabs
+                  v-model="tab"
+                  centered
+                >
+                  <!-- <v-tabs-slider></v-tabs-slider> -->
+
+                  <v-tab href="#windows">Windows</v-tab>
+
+                  <v-tab href="#macos">MacOS</v-tab>
+
+                  <v-tab href="#linux">Linux</v-tab>
+                </v-tabs>
+                <v-tabs-items v-model="tab">
+                  <v-tab-item value="windows">
+                    <v-col cols="12">
+                      Removing VPN config
+                      <v-text-field
+                        :value="`del %USERPROFILE%\\OpenVPN\\config\\${query.username}`"
+                        ref="troubleshooting-removing-ovpn"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('troubleshooting-removing-ovpn')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      Confirm deletion with by pressing <code>Y</code> and then <code>Enter</code>:
+                      <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`C:\\Users\\User\\OpenVPN\\config\\${query.username}\\*, Are you sure (Y/N)? Y`"></code>
+                      </pre></div>
+                    </v-col>
+                  </v-tab-item>
+                  <v-tab-item value="macos">
+                    <v-col cols="12">
+                      WIP
+                    </v-col>
+                  </v-tab-item>
+                  <v-tab-item value="linux">
+                    <v-col cols="12">
+                      WIP
+                    </v-col>
+                  </v-tab-item>
+                </v-tabs-items>
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
