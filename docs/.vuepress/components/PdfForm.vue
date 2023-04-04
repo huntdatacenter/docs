@@ -71,7 +71,9 @@ export default {
                 .then((doc) => {
                   this.pdfDoc = doc
                   console.log(doc)
-                  this.pdfFields = doc.getForm()
+                  let form = doc.getForm()
+                  console.log(form)
+                  this.pdfFields = form.getFields().map(field => field.getName())
                   console.log(this.pdfFields)
                 })
             } catch (error) {
