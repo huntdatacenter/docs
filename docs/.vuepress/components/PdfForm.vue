@@ -116,7 +116,7 @@ export default {
         <!--  class="customiframe" frameBorder="0" -->
         <iframe id="pdf" title="Agreement" style="width: 100%; height: 100%; min-height: 1000px; min-width: 960px;"></iframe>
       </v-card>
-      <v-row align="center" justify="center">
+      <v-row align="center" justify="center" style="margin-top: 24px;">
         <v-col cols="6">
           <v-card v-show="!showPdf" class="pt-4">
             <v-row align="center" justify="center" style="padding-left: 36px; padding-right:36px; margin-bottom: 24px;">
