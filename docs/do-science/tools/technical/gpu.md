@@ -25,7 +25,7 @@ We pre-install the machines with with the folloing software to get you started:
 
 - Ubuntu 22.04 LTS
 - Docker
-- NVIDIA 530 drivers or later (from the [`graphics-drivers` repository](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa?field.series_filter=jammy))
+- NVIDIA 525 drivers or later (from the [`graphics-drivers` repository](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa?field.series_filter=jammy))
 - NVIDIA Container Toolkit (also known as **`nvidia-docker`**)
 
 You may install other tools and versions.
