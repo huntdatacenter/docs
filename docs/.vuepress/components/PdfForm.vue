@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       formFields: {
-        fullName: null
+        labuserfullname: null
       },
       pdfDoc: null,
       pdfFields: [],
@@ -90,8 +90,10 @@ export default {
         PDFDocument.load(read_buf)
           .then((pdfDoc) => {
             const form = pdfDoc.getForm()
+
             const nameField = form.getTextField('labuserfullname')
-            nameField.setText(this.formFields.fullName)
+            nameField.setText(this.formFields.labuserfullname)
+
             pdfDoc.saveAsBase64({ dataUri: true }).then((data) => {
               const pdfDataUri = data
               document.getElementById('pdf').src = pdfDataUri
@@ -126,8 +128,8 @@ export default {
               <v-row class="ml-3 mb-2" style="padding-left: 24px; padding-right:24px;">
                 <v-col cols="12">
                   <v-text-field
-                  v-model="formFields.fullName"
-                  ref="fullName"
+                  v-model="formFields.labuserfullname"
+                  ref="labuserfullname"
                   autocomplete="ignore-field"
                   label="Full name"
                   placeholder=""
