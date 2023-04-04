@@ -41,6 +41,7 @@
     "highlight.js": "^11.4.0",
     "node-fetch": "2",
     "node-forge": "^1.0.0",
+    "pdf-lib": "^1.17.1",
     "vuetify": "^2.6.10",
     "ws": "^8.4.2"
   },
