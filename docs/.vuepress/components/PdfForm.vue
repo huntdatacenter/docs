@@ -2,6 +2,7 @@
 const fs = require("fs")
 import fetch from 'node-fetch'
 import { PDFDocument } from 'pdf-lib'
+import { countries } from 'country-list-json'
 
 import {
   VApp,
@@ -11,6 +12,7 @@ import {
   VForm,
   VBtn,
   VTextField,
+  VAutocomplete,
 } from "vuetify/lib"
 
 export default {
@@ -24,6 +26,7 @@ export default {
     VForm,
     VBtn,
     VTextField,
+    VAutocomplete,
   },
   props: {
     id: { type: String, default: "applet" },
@@ -42,9 +45,13 @@ export default {
   },
   computed: {
     // Getters
+    getCountries() {
+      return countries ? countries : []
+    }
   },
   mounted() {
     // Run code when component is mounted
+    console.log(countries)
   },
   created() {
     // Run code when component is created
@@ -54,6 +61,7 @@ export default {
       this.loadPdf(this.url)
     }
   },
+
   methods: {
     // Functions that can be called with parameters
     loadPdf(url) {
@@ -95,6 +103,9 @@ export default {
 
             const nameField = form.getTextField('labuserfullname')
             nameField.setText(this.formFields.labuserfullname)
+
+            const countryField = form.getTextField('labusercountry')
+            countryField.setText(this.formFields.labusercountry)
 
             pdfDoc.saveAsBase64({ dataUri: true }).then((data) => {
               const pdfDataUri = data
@@ -141,6 +152,22 @@ export default {
                   hide-details
                   @focus="$event.target.select()"
                   ></v-text-field>
+                  <v-autocomplete
+                  v-model="formFields.labusercountry"
+                  ref="labusercountry"
+                  autocomplete="ignore-field"
+                  label="Country"
+                  placeholder=""
+                  :items="getCountries"
+                  :item-text="item => `${item.name} ${item.flag}`"
+                  :item-value="item => item.name"
+                  persistent-placeholder
+                  outlined
+                  dense
+                  filled
+                  hide-details
+                  @focus="$event.target.select()"
+                  ></v-autocomplete>
                 </v-col>
                 <v-col cols="12">
                   <v-btn type="submit" block class="mt-2" @click="submitForm">{{ label }}</v-btn>
