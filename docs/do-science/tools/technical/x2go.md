@@ -273,7 +273,7 @@ Connect to your lab machine and run this code:
   ```bash
   touch ~/.Xresources
   chmod u+x ~/.Xresources
-  echo -e "*VT100.translations: #override Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0) \n" >> ~/.Xresources
+  echo "*VT100.translations: #override Meta <KeyPress> V: insert-selection(PRIMARY, CUT_BUFFER0) \n" >> ~/.Xresources
   cp ~/.Xresources ~/.Xdefaults
   xrdb -merge ~/.Xresources
   ```
