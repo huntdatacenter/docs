@@ -35,7 +35,7 @@ All NTNU employees are covered by the NTNU license which allow for quick install
 After our installation, you can access Stata over [X2Go](/do-science/tools/technical/x2go/) with this **`Single application`** address in the X2Go configuration (or similar provided by us):
 
 ```bash
-/mnt/work/software/stata16/xstata-mp
+/mnt/work/software/stata170/xstata-mp
 ```
 
 
