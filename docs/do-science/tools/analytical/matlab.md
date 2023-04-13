@@ -132,7 +132,7 @@ Open X2Go, connect to your lab machine where you installed MATLAB and run the fo
   or with full path e.g.:
 
   ```bash
-  /usr/bin/xterm -e /usr/bin/xterm -e /mnt/work/software/matlab_r2022b/bin/matlab
+  /usr/bin/xterm -e /mnt/work/software/matlab_r2022b/bin/matlab
   ```
 
 For the example above, you will need to update the MATLAB version to the one you just installed.
