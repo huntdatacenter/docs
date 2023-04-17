@@ -63,7 +63,7 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required attachment**: [A new user agreement](/administer-science/agreements/downloads/#user-agreement).
-* **Expected response time:** One week.
+* **Expected response time:** Days.
 * **Expected delivery:** Lab keys and VPN certificate.
 * **Next step:** [Prepare your key transfer](/do-science/getting-started/).
 * **Cost:** Included in your lab subscription.
