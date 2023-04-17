@@ -132,6 +132,8 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 ::: expander "Windows" id="3-windows"
 
+<!-- Tested version: Windows 10 -->
+
 1. Open your **`p12 certificate`** that you downloaded from Filesender. Make sure the store location is set to **`Current User`** and click **`Next`**:
 
    ![1_cert_p12.png](./images/1_cert_p12.png)
@@ -178,6 +180,8 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 ::: expander "OS X and macOS" id="3-osx-and-macos"
 
+<!-- Tested version: MacOS Monterey -->
+
 1. Open your system profile config file that you got from Filesender (**`<your_user_name>.mobileconfig`**).
 
 2. In **`System Preferences`** open section **`Profiles`**.
@@ -203,6 +207,8 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 :::
 
 ::: expander "Ubuntu Linux" id="3-ubuntu-linux"
+
+<!-- Tested version: Ubuntu 22.04 -->
 
 We recommend that you use the [Google Chrome browser](https://www.google.com/chrome/) for predictabe access to your HUNT Workbench.
 
