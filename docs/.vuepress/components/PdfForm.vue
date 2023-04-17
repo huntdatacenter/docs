@@ -31,12 +31,13 @@ export default {
   props: {
     id: { type: String, default: "applet" },
     url: { type: String, default: null },
-    label: { type: String, default: null },
+    title: { type: String, default: "Agreement" },
+    fields: { type: Array, default: null },
   },
   data() {
     return {
-      formFields: {
-        labuserfullname: null
+      formData: {
+        // labuserfullname: null
       },
       pdfDoc: null,
       pdfFields: [],
@@ -51,7 +52,7 @@ export default {
   },
   mounted() {
     // Run code when component is mounted
-    console.log(countries)
+    console.log(this.fields)
   },
   created() {
     // Run code when component is created
@@ -94,7 +95,7 @@ export default {
       }
     },
     submitForm() {
-      console.log(this.formFields)
+      console.log(this.formData)
       try {
         const read_buf = this.pdfBuffer
         PDFDocument.load(read_buf)
@@ -102,10 +103,10 @@ export default {
             const form = pdfDoc.getForm()
 
             const nameField = form.getTextField('labuserfullname')
-            nameField.setText(this.formFields.labuserfullname)
+            nameField.setText(this.formData.labuserfullname)
 
             const countryField = form.getTextField('labusercountry')
-            countryField.setText(this.formFields.labusercountry)
+            countryField.setText(this.formData.labusercountry)
 
             pdfDoc.saveAsBase64({ dataUri: true }).then((data) => {
               const pdfDataUri = data
@@ -134,29 +135,38 @@ export default {
           <v-card v-show="!showPdf" class="pt-4">
             <v-row align="center" justify="center" style="padding-left: 36px; padding-right:36px; margin-bottom: 24px;">
               <v-col cols="12">
-                <b>PDF Form</b>
+                <b>{{ title }}</b>
               </v-col>
             </v-row>
             <v-form @submit.prevent>
               <v-row class="ml-3 mb-2" style="padding-left: 24px; padding-right:24px;">
-                <v-col cols="12">
+                <v-col v-for="item in fields" cols="12" :key="item.key">
                   <v-text-field
-                  v-model="formFields.labuserfullname"
-                  ref="labuserfullname"
+                  v-if="item.field === 'textfield'"
+                  v-model="formData[item.key]"
+                  :ref="item.key"
                   autocomplete="ignore-field"
-                  label="Full name"
+                  :label="item.label"
+                  :pattern="item.pattern ? item.pattern : null"
+                  :title="item.hint ? item.hint : null"
+                  :hint="item.hint ? item.hint : null"
+                  :suffix="item.suffix ? item.suffix : null"
+                  :persistent-hint="
+                    item.hint && formData[item.key] ? true : false
+                  "
                   placeholder=""
                   persistent-placeholder
                   outlined
                   dense
-                  hide-details
+                  :hide-details="formData[item.key] ? false : 'auto'"
                   @focus="$event.target.select()"
                   ></v-text-field>
                   <v-autocomplete
-                  v-model="formFields.labusercountry"
-                  ref="labusercountry"
+                  v-else-if="item.field === 'countries'"
+                  v-model="formData[item.key]"
+                  :ref="item.key"
                   autocomplete="ignore-field"
-                  label="Country"
+                  :label="item.label"
                   placeholder=""
                   :items="getCountries"
                   :item-text="item => `${item.name} ${item.flag}`"
@@ -164,13 +174,12 @@ export default {
                   persistent-placeholder
                   outlined
                   dense
-                  filled
                   hide-details
                   @focus="$event.target.select()"
                   ></v-autocomplete>
                 </v-col>
                 <v-col cols="12">
-                  <v-btn type="submit" block class="mt-2" @click="submitForm">{{ label }}</v-btn>
+                  <v-btn type="submit" block class="mt-2" @click="submitForm">Generate Agreement</v-btn>
                 </v-col>
               </v-row>
             </v-form>

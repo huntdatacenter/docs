@@ -16,7 +16,7 @@ footerHtml: false
 
 <!-- Local testing with direct URL: http://localhost:8080/administer-science/pdf-form/ -->
 
-<PdfForm label="Submit button" url="https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf" />
+<AgreementForm />
 
 
 

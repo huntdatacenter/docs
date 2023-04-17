@@ -1,0 +1,25 @@
+########################### this is the beginning of file ###########################
+agreements:
+  - value: lab_user_agreement
+    text: "Lab User Agreement"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf
+  - value: lab_agreement
+    text: "Lab Agreement"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-order.pdf
+
+forms:
+  lab_user_agreement:
+    fields: [
+      { key: "labuserfullname", label: "Full Name", field: "textfield"  },
+      { key: "labusercountry", label: "Country", field: "countries"  },
+    
+    ]
+
+  lab_agreement:
+    fields: [
+      { key: "labuserfullname", label: "Full Name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    
+    ]
+
+
+
