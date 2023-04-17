@@ -1,4 +1,5 @@
 const prefixer = require("postcss-prefix-selector");
+const { getSlug, getTitle } = require("./customUtils.js");
 
 module.exports = {
   // https://v1.vuepress.vuejs.org/config/#title
@@ -769,6 +770,17 @@ module.exports = {
       "vuepress-plugin-reading-time",
       {
         excludes: ["/about", "/system-status", "/contribute", "/contact", "/faq"],
+      },
+    ],
+    // Expander title examples
+    // ::: expander Custom title
+    // ::: expander "Custom title" id="1-custom-url-slug"
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'expander',
+        before: title => `<details class="custom-block expander" id="${getSlug(title)}"><summary><a href="#${getSlug(title)}" class="header-anchor" onclick='document.querySelector("#${getSlug(title)}").setAttribute("open", "")'>#</a> ${getTitle(title)}</summary>`,
+        after: '</details>',
       },
     ],
     [
