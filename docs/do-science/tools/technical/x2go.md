@@ -246,7 +246,7 @@ sudo apt-get install -y --no-install-recommends xubuntu-desktop
 
 The default setup will need some care to run smoothly:
 
-::: details TAB completion
+::: expander "TAB completion"
 
 - Fixing TAB completion using shell: (1) Log into your lab machine and (2) run this code:
 
@@ -264,11 +264,11 @@ The default setup will need some care to run smoothly:
 
 :::
 
-::: details Copy-paste functionality
+::: expander "Copy-paste functionality"
 
 Connect to your lab machine and run this code:
 
-- Client is connecting **from macOS**
+- Client is connecting **from MacOS**
 
   ```bash
   touch ~/.Xresources
@@ -283,11 +283,17 @@ Connect to your lab machine and run this code:
   ```bash
   touch ~/.Xresources
   chmod u+x ~/.Xresources
-  echo -e "*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n" >> ~/.Xresources
-  echo -e "*VT100.Translations: #override Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n" >> ~/.Xresources
+  echo "*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n" >> ~/.Xresources
+  echo "*VT100.Translations: #override Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n" >> ~/.Xresources
   cp ~/.Xresources ~/.Xdefaults
   xrdb -merge ~/.Xresources
   ```
+
+  ::: warning MATLAB for X2Go users on MacOS
+
+  MATLAB does not use system shotcuts and implements it's own configuration of shortcuts.
+  You might be able to add META + C / META + V, but the behavior is not as expected.
+  Since MATLAB is running on Linux server it enforces `CTRL + C` / `CTRL + V` and those should work as expected.
 
 :::
 
