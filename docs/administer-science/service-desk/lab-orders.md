@@ -37,7 +37,7 @@ Click the button below to order access for a new user to your lab.
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads/#user-agreement).
-* **Expected response time:** One week.
+* **Expected response time:** Days.
 * **Expected delivery:** Lab keys and VPN certificate.
 * **Next step:** [Prepare your key transfer](/do-science/getting-started/).
 * **Cost:** Included in your lab subscription.
