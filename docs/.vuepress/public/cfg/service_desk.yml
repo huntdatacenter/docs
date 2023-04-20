@@ -1,6 +1,60 @@
 ########################### this is the beginning of file ###########################
-### Data Space orders
+general_lab_user_request:
+  title: "General lab user request"
+  template:
+    subject: "User request - {username} @ {lab_name}"
+    body: |
+      Hi HUNT Cloud team,
 
+      <your-text>
+
+  fields: [
+    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> Lab users.",
+    "<b>Expected response time:</b> Days.",
+  ]
+
+general_lab_request:
+  title: "General request"
+  template:
+    subject: "Request - {lab_name}"
+    body: |
+      Hi HUNT Cloud team,
+
+      <your-text>
+
+  fields: [
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> Lab leaders, coordinators, and users.",
+    "<b>Expected response time:</b> Days.",
+  ]
+
+cost_query:
+  title: "Ask about cost"
+  template:
+    subject: "Cost - {lab_name}"
+    body: |
+      Hi HUNT Cloud team,
+
+      <your-text>
+
+      Best regards, 
+
+  fields: [
+    { label: "Data space name", key: "data_space_name", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> Data space leaders, Data space financial administrators, Lab leaders and Lab coordinators.",
+    "<b>Expected delivery time:</b> One week.",
+  ]
+
+### Data Space orders
 request_new_lab:
   title: "Request a new lab"
   template:
@@ -80,7 +134,7 @@ request_lab_deletion:
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
     { label: "Data space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
-    ]
+  ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and Lab leaders in collaboration.",
     "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#lab-deletion-order' target='_blank'>A signed lab deletion order</a>.",
@@ -108,7 +162,7 @@ request_external_import_kista:
 
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    ]
+  ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
     "<b>Required attachments</b>: (1) <a href='/administer-science/agreements/downloads/#external-kista-import-order' target='_blank'>A signed external kista import order</a>, and (2) one <a href='/data-transfers/external-kista/#ssh-key-pair' target='_blank'>SSH public key</a> from the external uploader.",
@@ -743,7 +797,7 @@ request_machine_unshelving:
 request_machine_deletion:
   title: "Request a deletion of a machine"
   template:
-    subject: "Request machine deletion - {vm_name} @ {lab_name}"
+    subject: "Machine deletion - {vm_name} @ {lab_name}"
     body: |
       Hi HUNT Cloud team,
 

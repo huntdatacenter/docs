@@ -1,6 +1,7 @@
 import Vuetify from "vuetify/lib";
 import "./sass/index.scss";
 
+
 export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
@@ -173,4 +174,35 @@ export default ({
       next();
     }
   });
+
+  // Expander Container - scroll to selected item when URL with ID is opened
+  if (typeof document !== 'undefined') {
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        const { hash } = location
+        const decoded = decodeURIComponent(hash)
+        // console.log(decoded)
+        if (decoded && decoded.startsWith('#detail-') ) {
+          let el = document.querySelector(decoded)
+
+          if (el) {
+            try {
+              var headerOffset = 64
+              var elementPosition = el.getBoundingClientRect().top
+              var offsetPosition = elementPosition + window.pageYOffset - headerOffset
+              window.scrollTo({top: offsetPosition, behavior: "smooth"})
+            } catch (err) {
+              el.scrollIntoView()
+            } finally {
+              el.setAttribute("open", "")
+              // Highlight the newly opened block for a few seconds
+              if (!el.classList.contains('glow')) {
+                el.classList.add('glow')
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 };

@@ -91,14 +91,14 @@ The below steps require the code to be run in `xterm` started from X2GO on the m
 3.1. Prepare target directory:
 
    ```bash
-   mkdir -p /mnt/work/software/MATLAB_r2019b
+   mkdir -p /mnt/work/software/matlab_r2022b
    mkdir -p /mnt/scratch/tmp
    ```
 
-3.2 Go to your MATLAB installation folder (e.g. /mnt/scratch/software/MATLAB_r2019b) and run the installer:
+3.2 Go to your MATLAB installation folder (e.g. /mnt/scratch/software/matlab_r2022b) and run the installer:
 
    ```bash
-   bash ./install -downloadFolder /mnt/scratch/software/MATLAB_r2019b -tmpdir /mnt/scratch/tmp -destinationFolder /mnt/work/software/MATLAB_r2019b
+   bash ./install -downloadFolder /mnt/scratch/software/matlab_r2022b -tmpdir /mnt/scratch/tmp -destinationFolder /mnt/work/software/matlab_r2022b
    ```
    
    Note that you will need to update the MATLAB version in the above code to the version your are installing.
@@ -126,13 +126,13 @@ If you prefer MATLAB's graphical interface, run `MATLAB` in your terminal (`xter
 Open X2Go, connect to your lab machine where you installed MATLAB and run the following command in `xterm`:
 
   ```bash
-  /usr/bin/xterm -e MATLAB
+  /usr/bin/xterm -e matlab
   ```
   
   or with full path e.g.:
 
   ```bash
-  /usr/bin/xterm -e /mnt/work/software/MATLAB2019b/bin/MATLAB
+  /usr/bin/xterm -e /mnt/work/software/matlab_r2022b/bin/matlab
   ```
 
 For the example above, you will need to update the MATLAB version to the one you just installed.
@@ -190,5 +190,17 @@ mkdir -p /mnt/scratch/tmp
 export TMP=/mnt/scratch/tmp
 export TEMP_DIR=/mnt/scratch/tmp
 ```
+
+:::
+
+####  MacOS - cannot copy-paste in MATLAB
+
+::: details Read more
+
+If standard copy-pasting is not working for you, you might want to change your keyboard shortcuts settings in MATLAB
+
+`Matlab --> Preferences --> Keyboard --> Shortcuts --> select preffered keyboard`
+
+![image_1](./images/Preferences_and_MATLAB_R2022b_-_academic_use-2.png)
 
 :::
