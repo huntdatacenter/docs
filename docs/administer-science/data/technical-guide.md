@@ -10,13 +10,13 @@ description: This page gives the official Cloud tape archive specification.
 Following guide is meant to help you archive your data using simple bash commands and afterwards send it to us using internal [kista](/administer-science/service-desk/lab-orders/#internal-kista) where we can collect the data and store it on a long term tape medium.
 
 ::: warning Attention
-Make sure to send us a tape archive [order](add link) before you continue with next steps.
+This is a pilot service for tape archiving. [Contact us](https://docs.hdc.ntnu.no/about/contact/) for further information.
 
 :::
 
 ### 1. Identification of data
 
-1.1 Identify what data you want stored on the tape. Mark down whole directories. Generally, we expect your data to be stored in /mnt/archive directory
+1.1 Identify what data you want stored on the tape. Mark down whole directories. Generally, we expect your data to be stored in `/mnt/archive` directory
 
 1.2 Do you use symbolic links ? If you are not sure, you can identifiy symlink directories by first letter in permission string. Letter l stands for a symbolic link. You can also use command below to count your symlinks. If output is other than 0, contact us on slack for further instructions.
 
