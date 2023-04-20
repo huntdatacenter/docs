@@ -48,7 +48,12 @@ export default {
     // Getters
     getCountries() {
       return countries ? countries : []
-    }
+    },
+    formFilled() {
+      return this.fields.every((item) =>
+        this.formData[item.key] || item.optional ? true : false
+      );
+    },
   },
   mounted() {
     // Run code when component is mounted
@@ -94,7 +99,7 @@ export default {
         console.log(error)
       }
     },
-    submitForm() {
+    submit() {
       console.log(this.formData)
       try {
         const read_buf = this.pdfBuffer
@@ -102,11 +107,10 @@ export default {
           .then((pdfDoc) => {
             const form = pdfDoc.getForm()
 
-            const nameField = form.getTextField('labuserfullname')
-            nameField.setText(this.formData.labuserfullname)
-
-            const countryField = form.getTextField('labusercountry')
-            countryField.setText(this.formData.labusercountry)
+            this.fields.forEach((item) => {
+              let field = form.getTextField(item.key)
+              field.setText(this.formData[item.key])
+            })
 
             pdfDoc.saveAsBase64({ dataUri: true }).then((data) => {
               const pdfDataUri = data
@@ -128,61 +132,62 @@ export default {
     <v-app :id="id">
       <v-card v-show="showPdf" class="pt-4">
         <!--  class="customiframe" frameBorder="0" -->
-        <iframe id="pdf" title="Agreement" style="width: 100%; height: 100%; min-height: 1000px; min-width: 960px;"></iframe>
+        <iframe id="pdf" title="Agreement" style="width: 100%; height: auto; min-height: 1000px; min-width: 960px;"></iframe>
       </v-card>
-      <v-row align="center" justify="center" style="margin-top: 24px;">
+      <v-row v-show="!showPdf" align="center" justify="center" style="margin-top: 24px;">
         <v-col cols="6">
-          <v-card v-show="!showPdf" class="pt-4">
+          <v-card class="pt-4">
             <v-row align="center" justify="center" style="padding-left: 36px; padding-right:36px; margin-bottom: 24px;">
               <v-col cols="12">
                 <b>{{ title }}</b>
               </v-col>
             </v-row>
-            <v-form @submit.prevent>
+            <form ref="form" @submit.prevent="submit">
               <v-row class="ml-3 mb-2" style="padding-left: 24px; padding-right:24px;">
                 <v-col v-for="item in fields" cols="12" :key="item.key">
                   <v-text-field
-                  v-if="item.field === 'textfield'"
-                  v-model="formData[item.key]"
-                  :ref="item.key"
-                  autocomplete="ignore-field"
-                  :label="item.label"
-                  :pattern="item.pattern ? item.pattern : null"
-                  :title="item.hint ? item.hint : null"
-                  :hint="item.hint ? item.hint : null"
-                  :suffix="item.suffix ? item.suffix : null"
-                  :persistent-hint="
-                    item.hint && formData[item.key] ? true : false
-                  "
-                  placeholder=""
-                  persistent-placeholder
-                  outlined
-                  dense
-                  :hide-details="formData[item.key] ? false : 'auto'"
-                  @focus="$event.target.select()"
+                    v-if="item.field === 'textfield'"
+                    v-model="formData[item.key]"
+                    :ref="item.key"
+                    autocomplete="ignore-field"
+                    :label="item.label"
+                    :pattern="item.pattern ? item.pattern : null"
+                    :title="item.hint ? item.hint : null"
+                    :hint="item.hint ? item.hint : null"
+                    :suffix="item.suffix ? item.suffix : null"
+                    :persistent-hint="
+                      item.hint && formData[item.key] ? true : false
+                    "
+                    placeholder=""
+                    persistent-placeholder
+                    outlined
+                    dense
+                    :hide-details="formData[item.key] ? false : 'auto'"
+                    @focus="$event.target.select()"
                   ></v-text-field>
                   <v-autocomplete
-                  v-else-if="item.field === 'countries'"
-                  v-model="formData[item.key]"
-                  :ref="item.key"
-                  autocomplete="ignore-field"
-                  :label="item.label"
-                  placeholder=""
-                  :items="getCountries"
-                  :item-text="item => `${item.name} ${item.flag}`"
-                  :item-value="item => item.name"
-                  persistent-placeholder
-                  outlined
-                  dense
-                  hide-details
-                  @focus="$event.target.select()"
+                    v-else-if="item.field === 'countries'"
+                    v-model="formData[item.key]"
+                    :ref="item.key"
+                    autocomplete="ignore-field"
+                    :label="item.label"
+                    placeholder=""
+                    :items="getCountries"
+                    :item-text="item => `${item.name} ${item.flag}`"
+                    :item-value="item => item.name"
+                    persistent-placeholder
+                    outlined
+                    dense
+                    hide-details
+                    @focus="$event.target.select()"
                   ></v-autocomplete>
                 </v-col>
                 <v-col cols="12">
-                  <v-btn type="submit" block class="mt-2" @click="submitForm">Generate Agreement</v-btn>
+                  <!-- <v-btn type="submit" block class="mt-2" @click="submitForm">Generate Agreement</v-btn> -->
+                  <v-btn type="submit" block class="mt-2" :disabled="!formFilled">Generate Agreement</v-btn>
                 </v-col>
               </v-row>
-            </v-form>
+            </form>
           </v-card>
         </v-col>
       </v-row>
@@ -206,7 +211,7 @@ export default {
       width: 100%
       overflow-x: hidden
 
-.last-updated
+.page-edit
   display: none
 
 .language-text

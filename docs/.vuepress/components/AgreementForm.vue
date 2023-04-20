@@ -134,7 +134,7 @@ export default {
       width: 100%
       overflow-x: hidden
 
-.last-updated
+.page-edit
   display: none
 
 .language-text

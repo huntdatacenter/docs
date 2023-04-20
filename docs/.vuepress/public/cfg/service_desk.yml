@@ -271,7 +271,7 @@ update_data_space_coordinator_role:
     { label: "Department", key: "department", field: "textfield" },
     { label: "Faculty", key: "faculty", field: "textfield" },
     { label: "Institution", key: "institution", field: "textfield" },
-    { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
+    { label: "Email", key: "email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
     { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
   ]
   requirements: [

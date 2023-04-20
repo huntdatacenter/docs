@@ -10,9 +10,17 @@ agreements:
 forms:
   lab_user_agreement:
     fields: [
-      { key: "labuserfullname", label: "Full Name", field: "textfield"  },
-      { key: "labusercountry", label: "Country", field: "countries"  },
-    
+      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",  field: "textfield"  },
+      # { key: "lableadernamefull", label: "Lab Leader", field: "textfield"  },
+      # { key: "labuserfullname", label: "Full Name", field: "textfield"  },
+      # { key: "labuserposition", label: "Position", field: "textfield"  },
+      # { key: "labuserdepartment", label: "Department", field: "textfield"  },
+      # { key: "labuserfaculty", label: "Faculty", field: "textfield"  },
+      # { key: "labuserinstitution", label: "Insitution", field: "textfield"  },
+      # { key: "labusercountry", label: "Country", field: "countries"  },
+      { key: "labuseremail", label: "Email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield"  },
+      { key: "labuserphone", label: "Phone", pattern: "[0-9+]{3,}", field: "textfield"  },
+      # { key: "labusersignatureplaceanddate", label: "Signature", field: "TBD"},
     ]
 
   lab_agreement:
@@ -20,6 +28,5 @@ forms:
       { key: "labuserfullname", label: "Full Name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
     
     ]
-
 
 
