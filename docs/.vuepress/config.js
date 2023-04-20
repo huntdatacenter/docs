@@ -429,6 +429,15 @@ module.exports = {
               title: "Introduction",
               path: "/administer-science/data/",
             },
+            {
+              title: "Tape archive",
+              text: "Tape archive",
+              isGroup: true,
+              children: [
+                "/administer-science/data/introduction.md",
+                "/administer-science/data/technical-guide.md",
+              ],
+            },
             "/administer-science/data/faq.md",
           ],
         },
