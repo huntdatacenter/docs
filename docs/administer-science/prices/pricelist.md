@@ -28,8 +28,9 @@ Head over to our [price calculator](/administer-science/prices/calculator) to ta
 | **Content** | **Type** | **File** |
 | ---- | ---- | ---- |
 | HUNT Cloud Price List (v4.0) | PDF | [hunt-cloud-price-list-4-0.pdf](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) |
-| HUNT Cloud Price List (v4.0) | CVS | [hunt-cloud-price-list-4-0.csv](https://assets.hdc.ntnu.no/assets/prices/v4/hunt-cloud-price-list-4-0.csv) |
+| HUNT Cloud Price List (v4.0) | CVS* | [hunt-cloud-price-list-4-0.csv](https://assets.hdc.ntnu.no/assets/prices/v4/hunt-cloud-price-list-4-0.csv) |
 
+*) The current CSV version do not contain prices for transport services, hourly based services and tape services.
 
 ## Updates
 

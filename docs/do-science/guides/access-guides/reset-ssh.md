@@ -122,7 +122,7 @@ It should mention **-entry** to be sure you are connected to correct machine:
     Welcome to YOUR-LABNAME.
 
     For the record, if you should not be here - please
-    leave and report the incident to cloud@hunt.ntnu.no.
+    leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
     Last login: Mon Jul  2 17:40:16 2018 from 10.10.10.10
     your-username@your-labname-`entry`:~$
@@ -170,7 +170,7 @@ By completion your should see a terminal window that looks similar to the text b
     Welcome to YOUR-LABNAME.
 
     For the record, if you should not be here - please
-    leave and report the incident to cloud@hunt.ntnu.no.
+    leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
     Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
     {your-username}@{your-labname}-`home`:~$

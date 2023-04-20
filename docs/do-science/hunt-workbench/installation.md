@@ -45,7 +45,7 @@ Your **`host file record`** consists of IP address of your lab entry machine and
 
 Select steps for your operating system:
 
-::: details Windows
+::: expander "Windows" id="2-windows"
 
 1. Press the Windows key.
 
@@ -75,7 +75,7 @@ Select steps for your operating system:
 
 
 
-::: details OS X and macOS
+::: expander "OS X and macOS" id="2-osx-and-macos"
 
 1. On your local computer, open your **`/etc/hosts`** file in your preferred text editor.
 
@@ -99,7 +99,7 @@ sudo vim /etc/hosts
 
 
 
-::: details Ubuntu Linux
+::: expander "Ubuntu Linux" id="2-ubuntu-linux"
 
 1. On your local computer, open your **`/etc/hosts`** file in your preferred text editor.
 
@@ -130,7 +130,9 @@ sudo vim /etc/hosts
 
 Let's install the certificates that is required to allow traffic with your HUNT Workbench that is located in your lab. 
 
-::: details Windows
+::: expander "Windows" id="3-windows"
+
+<!-- Tested version: Windows 10 -->
 
 1. Open your **`p12 certificate`** that you downloaded from Filesender. Make sure the store location is set to **`Current User`** and click **`Next`**:
 
@@ -176,7 +178,9 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 
 
-::: details OS X and macOS
+::: expander "OS X and macOS" id="3-osx-and-macos"
+
+<!-- Tested version: MacOS Monterey -->
 
 1. Open your system profile config file that you got from Filesender (**`<your_user_name>.mobileconfig`**).
 
@@ -202,7 +206,9 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 :::
 
-::: details Ubuntu Linux
+::: expander "Ubuntu Linux" id="3-ubuntu-linux"
+
+<!-- Tested version: Ubuntu 22.04 -->
 
 We recommend that you use the [Google Chrome browser](https://www.google.com/chrome/) for predictabe access to your HUNT Workbench.
 

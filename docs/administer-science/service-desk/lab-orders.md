@@ -37,7 +37,7 @@ Click the button below to order access for a new user to your lab.
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads/#user-agreement).
-* **Expected response time:** One week.
+* **Expected response time:** Days.
 * **Expected delivery:** Lab keys and VPN certificate.
 * **Next step:** [Prepare your key transfer](/do-science/getting-started/).
 * **Cost:** Included in your lab subscription.
@@ -63,9 +63,20 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required attachment**: [A new user agreement](/administer-science/agreements/downloads/#user-agreement).
-* **Expected response time:** One week.
+* **Expected response time:** Days.
 * **Expected delivery:** Lab keys and VPN certificate.
 * **Next step:** [Prepare your key transfer](/do-science/getting-started/).
+* **Cost:** Included in your lab subscription.
+
+### Update lab coordinator role
+
+Click the button below to update the [lab coordinator](/administer-science/roles/#lab-coordinator) role for a lab attached to your data space.
+
+<SDButton form="request_coordinator_update" />
+
+* **Who can order:** Lab leaders.
+* **Required attachment**: None.
+* **Expected delivery time:** Days.
 * **Cost:** Included in your lab subscription.
 
 
@@ -201,7 +212,7 @@ You will find the lab and machine name for you home machine when you log into yo
 Welcome to `LAB NAME`.
 
 For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
+leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
 Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
@@ -273,7 +284,7 @@ You will find the lab and machine name for you home machine when you log into yo
 Welcome to `LAB NAME`.
 
 For the record, if you shouldn't be here - please
-leave and report the incident to cloud@hunt.ntnu.no.
+leave and report the incident to cloud.support+hunt-cloud-contact-form@hunt.ntnu.no.
 
 Last login: Sun Dec  3 12:29:28 2017 from 10.10.10.10
 your-username@`your-labname`-home~$
@@ -366,16 +377,9 @@ Head over to the [data space orders](/administer-science/service-desk/data-space
 * **Expected delivery:** Access information communicated in your Slack lab channel.
 * **Cost:** Included in your lab subscription.
 
+## General requests
 
-## Others
+If you have not found a button for your type of request you can use this general request. This is typically slower than structured requests, but you will get same tracking.
 
-### Update lab coordinator role
+<SDButton form="general_lab_user_request" />
 
-Click the button below to update the [lab coordinator](/administer-science/roles/#lab-coordinator) role for a lab attached to your data space.
-
-<SDButton form="request_coordinator_update" />
-
-* **Who can order:** Lab leaders.
-* **Required attachment**: None.
-* **Expected delivery time:** Days.
-* **Cost:** Included in your lab subscription.

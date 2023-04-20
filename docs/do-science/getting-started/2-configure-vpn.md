@@ -301,9 +301,14 @@ If you received the notification _VPN Connection Failed_ after 60 seconds, pleas
 
 ### Could not read Private Key error
 
-The error message below indicates that there is a typo in the _Private Key Password_ (step 2.3.5) and you need to type it in again:
+The error messages below indicates that there is a typo in the _Private Key Password_ (step 2.3.5) and you need to type it in again.
+
 ```
 ERROR: could not read Private Key username/password/ok/string from management interface
+```
+
+```
+Cannot load private key file
 ```
 
 ### Unable to apply changes
