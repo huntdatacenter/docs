@@ -199,7 +199,8 @@ export default {
                     placeholder=""
                     persistent-placeholder
                     outlined
-                    
+                    dense
+                    :rows="1"
                     :hide-details="formData[item.key] ? false : 'auto'"
                     @focus="$event.target.select()"
                   ></v-textarea>
