@@ -11,22 +11,47 @@ forms:
   lab_user_agreement:
     fields: [
       { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",  field: "textfield"  },
-      # { key: "lableadernamefull", label: "Lab Leader", field: "textfield"  },
-      # { key: "labuserfullname", label: "Full Name", field: "textfield"  },
-      # { key: "labuserposition", label: "Position", field: "textfield"  },
-      # { key: "labuserdepartment", label: "Department", field: "textfield"  },
-      # { key: "labuserfaculty", label: "Faculty", field: "textfield"  },
-      # { key: "labuserinstitution", label: "Insitution", field: "textfield"  },
-      # { key: "labusercountry", label: "Country", field: "countries"  },
+      { key: "lableadernamefull", label: "Lab Leader", field: "textfield"  },
+      { key: "labuserfullname", label: "Full Name", field: "textfield"  },
+      { key: "labuserposition", label: "Position", field: "textfield"  },
+      { key: "labuserdepartment", label: "Department", field: "textfield"  },
+      { key: "labuserfaculty", label: "Faculty", field: "textfield"  },
+      { key: "labuserinstitution", label: "Insitution", field: "textfield"  },
+      { key: "labusercountry", label: "Country", field: "countries"  },
       { key: "labuseremail", label: "Email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield"  },
       { key: "labuserphone", label: "Phone", pattern: "[0-9+]{3,}", field: "textfield"  },
-      # { key: "labusersignatureplaceanddate", label: "Signature", field: "TBD"},
+      #{ key: "labusersignatureplaceanddate", label: "Signature", field: "TBD"},
     ]
 
   lab_agreement:
     fields: [
-      { key: "labuserfullname", label: "Full Name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    
+      #{ label: "Data space", field: "section" },
+      { key: "dataspacenameshort", label: "Data Space name", field: "textfield" },
+      { key: "dataspaceleaderfullname", label: "Data Space leader full name", field: "textfield" },
+      { key: "labnameshort", label: "Lab name (short name) ", field: "textfield" },
+      { key: "labnamefull", label: "Lab name (full name)", field: "textfield" },
+      { key: "labsubscriptionlength", label: "Subscription length", field: "textfield" },
+      { key: "lableaderfullname", label: "Lab leader (Full name)", field: "textfield" },
+      { key: "lableaderdepartment", label: "Department", field: "textfield" },
+      { key: "lableaderfaculty", label: "Faculty", field: "textfield" },
+      { key: "lableaderinstitution", label: "Institution", field: "textfield" },
+      { key: "lableaderemail", label: "Lab leader email", field: "textfield" },
+      { key: "lableaderphone", label: "Lab leader phone number", field: "textfield" },
+      { key: "labcoordinatorfullname", label: "Lab Coordinator (Full name)", field: "textfield" },
+      { key: "labcoordinatordepartment", label: "Department", field: "textfield" },
+      { key: "labcoordinatorfaculty", label: "Faculty", field: "textfield" },
+      { key: "labcoordinatorinstitution", label: "Institution", field: "textfield" },
+      { key: "labcoordinatoremail", label: "Lab coordiantor email", field: "textfield" },
+      { key: "labcoordinatorphone", label: "Lab coordinator phone number", field: "textfield" },
+      { key: "labethicalapproval", label: "Ethical approval", field: "textfield" },
+      { key: "labprivacyjustification", label: "Privacy justification", field: "textfield" },
+      { key: "labprocessingpurpose", label: "Purpouse of the processing", field: "textfield" },
+      { key: "labcategoriesdatasubjects1", label: "Categories of data subjects", field: "textfield" },
+      { key: "labpersonaldatacontent1", label: "Personal data content", field: "textfield" },
+      #{ key: "labsignatureplaceanddate", label: "Full Name", field: "textfield" },  
     ]
+
+
+
 
 
