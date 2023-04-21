@@ -13,6 +13,7 @@ import {
   VBtn,
   VTextField,
   VAutocomplete,
+  VTextarea,
 } from "vuetify/lib"
 
 export default {
@@ -27,6 +28,7 @@ export default {
     VBtn,
     VTextField,
     VAutocomplete,
+    VTextarea,
   },
   props: {
     id: { type: String, default: "applet" },
@@ -50,7 +52,7 @@ export default {
       return countries ? countries : []
     },
     formFilled() {
-      return this.fields.every((item) =>
+      return this.fields.filter(item => item.key).every((item) =>
         this.formData[item.key] || item.optional ? true : false
       );
     },
@@ -181,6 +183,27 @@ export default {
                     hide-details
                     @focus="$event.target.select()"
                   ></v-autocomplete>
+                  <v-textarea 
+                    v-if="item.field === 'textarea'"
+                    v-model="formData[item.key]"
+                    :ref="item.key"
+                    autocomplete="ignore-field"
+                    :label="item.label"
+                    :hint="item.hint ? item.hint : null"
+                    :pattern="item.pattern ? item.pattern : null"
+                    :title="item.hint ? item.hint : null"
+                    :suffix="item.suffix ? item.suffix : null"
+                    :persistent-hint="
+                      item.hint && formData[item.key] ? true : false
+                    "
+                    placeholder=""
+                    persistent-placeholder
+                    outlined
+                    
+                    :hide-details="formData[item.key] ? false : 'auto'"
+                    @focus="$event.target.select()"
+                  ></v-textarea>
+                  <p v-if="item.field === 'section'" class="font-weight-bold">{{ item.label }}</p>
                 </v-col>
                 <v-col cols="12">
                   <!-- <v-btn type="submit" block class="mt-2" @click="submitForm">Generate Agreement</v-btn> -->

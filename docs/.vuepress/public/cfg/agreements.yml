@@ -25,7 +25,7 @@ forms:
 
   lab_agreement:
     fields: [
-      #{ label: "Data space", field: "section" },
+      { label: "Data space", field: "section" },
       { key: "dataspacenameshort", label: "Data Space name", field: "textfield" },
       { key: "dataspaceleaderfullname", label: "Data Space leader full name", field: "textfield" },
       { key: "labnameshort", label: "Lab name (short name) ", field: "textfield" },
@@ -45,8 +45,8 @@ forms:
       { key: "labcoordinatorphone", label: "Lab coordinator phone number", field: "textfield" },
       { key: "labethicalapproval", label: "Ethical approval", field: "textfield" },
       { key: "labprivacyjustification", label: "Privacy justification", field: "textfield" },
-      { key: "labprocessingpurpose", label: "Purpouse of the processing", field: "textfield" },
-      { key: "labcategoriesdatasubjects1", label: "Categories of data subjects", field: "textfield" },
+      { key: "labprocessingpurpose", label: "Purpose of the processing", field: "textfield" },
+      { key: "labcategoriesdatasubjects1", label: "Categories of data subjects", field: "textarea" },
       { key: "labpersonaldatacontent1", label: "Personal data content", field: "textfield" },
       #{ key: "labsignatureplaceanddate", label: "Full Name", field: "textfield" },  
     ]
