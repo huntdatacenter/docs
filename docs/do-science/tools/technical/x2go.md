@@ -242,6 +242,8 @@ sudo apt-get install -y --no-install-recommends xubuntu-desktop
 ```
 :::
 
+In session preferences change Session type to `XFCE`.
+
 ## Tips for configuration
 
 The default setup will need some care to run smoothly:
