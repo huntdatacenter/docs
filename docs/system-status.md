@@ -7,17 +7,14 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 
-::: tip All systems
-Operational
+::: warning Planned maintenance
+
+**2023-04-24 09:00-11:00** - We plan to implement changes to our core network infrastructure. This will impact the external connectivity to and from all labs for all users. Internal communication should not be implemented. 
 :::
 
-
-::: warning VPN service
 **2023-03-14 14:00** - At around 14:00 we noticed issues with VPN. We are currently working on resolving the issue. New update 15:00.
 
 **2023-03-14 15:00** - All systems operational.
-:::
-
 
 <!--
 
