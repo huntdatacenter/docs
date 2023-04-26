@@ -185,6 +185,7 @@ module.exports = {
                 "/do-science/tools/technical/terminal-multiplexers.md",
                 "/do-science/tools/technical/vnc.md",
                 "/do-science/tools/technical/x2go.md",
+                "/do-science/tools/technical/vscode.md",
               ],
             },
             {
