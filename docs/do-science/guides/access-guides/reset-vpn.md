@@ -55,7 +55,7 @@ Note that the default archive utility on MacOS do -not- recognize the passphrase
 
 You will need to remove your old VPN certificate and passwords before you install a new one. 
 
-::: details Windows 
+::: expander "Windows" id="3-windows"
 
 1. Right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select **`Clear Saved Passwords`** 
 2. Open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here: 
@@ -63,6 +63,31 @@ You will need to remove your old VPN certificate and passwords before you instal
 ```
 C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>
 ```
+
+:::
+
+::: expander "MacOS" id="3-macos"
+
+To remove old VPN configuration on MacOS using tunnelblick, follow our guide belo
+
+1. Click on running Tunnelblick icon in upper menu bar and select `VPN details...`
+
+![VPNemovalstep1.png](./images/VPNemovalstep1.png)
+
+2. Select your VPN profile on the left side of the window. Then, in the bottom left corner, select expansion window maked with 3 dots in a circle
+
+![credentialsremoval1](./images/credentialsremovalpart1.png)
+
+3. At the very bottom of the newly opened withdow, select `Delete configuration's credentials in keychain`
+
+![credentialsremoval2](./images/configremovalpart2.png)
+
+4. Afterwards, select your VPN profile and delete it from Tunnelblick app as described on below picture
+
+![profileremoval](./images/Configurations.png)
+
+5. You can now continue with next step
+
 
 :::
 
