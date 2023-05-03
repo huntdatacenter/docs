@@ -32,17 +32,21 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 We will communicate your VPN certificate over your organizational email. You will receive a link to an encrypted file archive (7z-file).
 
-2.1 Click on the link in the email to download the file and save this on your local computer.
-
-2.2 Unpack (extract) the file with compatible archive software
-
 ::: expander "Windows" id="2-windows"
 
-extract your folder using [7-zip](https://www.7-zip.org/download.html)
+2.1 Click on the link in the email to download the file and save this on your local computer.
+
+2.2 Unpack (extract) the file using [7-zip](https://www.7-zip.org/download.html)
+
+2.3 Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the archive folder.
 
 :::
 
 ::: expander "MacOS" id="2-macos"
+
+2.1 Click on the link in the email to download the file and save this on your local computer.
+
+2.2 Unpack (extract) the file with compatible archive software
 
 We recommend downloading [Keka](https://www.keka.io/en/download) to successfully unpack your archive folder
 
@@ -51,6 +55,10 @@ alternatively, you can install keka using brew command below
 ```bash
 brew install keka
 ```
+
+2.3 Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the archive folder.
+
+:::
 
 ::: danger OS X and MacOS - Passphrase not working?
 
@@ -61,15 +69,19 @@ Note that the default archive utility on MacOS does not recognize the passphrase
 
 ::: expander "Ubuntu linux" id="2-linux"
 
-install p7zip 
+2.1 Click on the link in the email to download the file and save this on your local computer.
+
+2.2 Unpack (extract) the file with compatible archive software
+
+install p7zip
 
 ```bash
 sudo apt update && sudo apt-get install p7zip-full
 ```
- 
-::: 
 
 2.3 Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the archive folder.
+
+::: 
 
 
 
