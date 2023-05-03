@@ -207,6 +207,10 @@ Host {lab_name}
       <v-card v-show="cfgShow" class="pt-4">
         <v-row class="ml-3 mb-2">
           <v-col cols="10">
+            Once you have <a href="/do-science/getting-started/collect-your-keys/" target="_blank">collected your keys</a>
+            use the guides below to setup your lab access.
+          </v-col>
+          <v-col cols="10">
             <v-text-field
               v-model="query.username"
               ref="username"
@@ -263,7 +267,7 @@ Host {lab_name}
               </template>
             </v-text-field>
           </v-col>
-          <v-col cols="10">
+          <!-- <v-col cols="10">
             <v-text-field
               v-model="hostsWorkbench"
               ref="hostsWorkbench"
@@ -281,7 +285,7 @@ Host {lab_name}
                 <a class="material-icons content_copy" @click="copyText('hostsWorkbench')">&#xe14d;</a>
               </template>
             </v-text-field>
-          </v-col>
+          </v-col> -->
         </v-row>
 
         <v-card elevation="1">
@@ -1339,7 +1343,7 @@ Host {lab_name}
             </v-expansion-panel> -->
 
             <!-- Workbench draft - troubleshooting and similar -->
-            <!-- <v-expansion-panel>
+            <v-expansion-panel>
               <v-expansion-panel-header>
                 <h3><a href="#workbench" class="header-anchor">#</a> Workbench</h3>
               </v-expansion-panel-header>
@@ -1355,22 +1359,88 @@ Host {lab_name}
                 <v-tabs-items v-model="tab">
                   <v-tab-item value="windows">
                     <v-col cols="12">
-                      WIP
+                      HUNT Workbench provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
+                    </v-col>
+                    <v-col cols="12">
+                      Follow <a href="/do-science/hunt-workbench/installation/" target="_blank">Workbench Installation guide</a> to configure your access.
+                    </v-col>
+                    <v-col cols="12">
+                      <v-text-field
+                        v-model="hostsWorkbench"
+                        ref="hostsWorkbenchWindows"
+                        autocomplete="ignore-field"
+                        label="Hosts file - Workbench"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('hostsWorkbenchWindows')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
                     </v-col>
                   </v-tab-item>
                   <v-tab-item value="macos">
                     <v-col cols="12">
-                      WIP
+                      HUNT Workbench provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
+                    </v-col>
+                    <v-col cols="12">
+                      Follow <a href="/do-science/hunt-workbench/installation/" target="_blank">Workbench Installation guide</a> to configure your access.
+                    </v-col>
+                    <v-col cols="12">
+                      <v-text-field
+                        v-model="hostsWorkbench"
+                        ref="hostsWorkbenchMacOS"
+                        autocomplete="ignore-field"
+                        label="Hosts file - Workbench"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('hostsWorkbenchMacOS')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
                     </v-col>
                   </v-tab-item>
                   <v-tab-item value="linux">
                     <v-col cols="12">
-                      WIP
+                      HUNT Workbench provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
+                    </v-col>
+                    <v-col cols="12">
+                      Follow <a href="/do-science/hunt-workbench/installation/" target="_blank">Workbench Installation guide</a> to configure your access.
+                    </v-col>
+                    <v-col cols="12">
+                      <v-text-field
+                        v-model="hostsWorkbench"
+                        ref="hostsWorkbenchLinux"
+                        autocomplete="ignore-field"
+                        label="Hosts file - Workbench"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('hostsWorkbenchLinux')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
                     </v-col>
                   </v-tab-item>
                 </v-tabs-items>
               </v-expansion-panel-content>
-            </v-expansion-panel> -->
+            </v-expansion-panel>
 
             <v-expansion-panel>
               <v-expansion-panel-header>
