@@ -594,7 +594,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      2.12. Close Command Prompt window to make sure you are disconnected from your lab.
+                      2.12. Close Terminal window to make sure you are disconnected from your lab.
                     </v-col>
                   </v-tab-item>
                   <v-tab-item value="linux">
@@ -734,7 +734,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      2.12. Close Command Prompt window to make sure you are disconnected from your lab.
+                      2.12. Close Terminal window to make sure you are disconnected from your lab.
                     </v-col>
                   </v-tab-item>
                 </v-tabs-items>
@@ -821,10 +821,13 @@ Host {lab_name}
                         </template>
                       </v-text-field>
                     </v-col>
+                    <v-col cols="12">
+                      3.4. Close Command prompt window to make sure you are disconnected from your lab.
+                    </v-col>
                   </v-tab-item>
                   <v-tab-item value="macos">
                     <v-col cols="12">
-                      3.1. Open new Terminal tab (<code>CMD + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      3.1. Open new Terminal window and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
                       <v-text-field
                         :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
                         ref="macStep13"
@@ -923,10 +926,13 @@ Host {lab_name}
                         </template>
                       </v-text-field>
                     </v-col>
+                    <v-col cols="12">
+                      3.6. Close Terminal window to make sure you are disconnected from your lab.
+                    </v-col>
                   </v-tab-item>
                   <v-tab-item value="linux">
                     <v-col cols="12">
-                      3.1. Open new Terminal tab (<code>CMD + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      3.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
                       <v-text-field
                         :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
                         ref="linuxStep13"
@@ -1024,6 +1030,9 @@ Host {lab_name}
                           <a class="material-icons content_copy" @click="copyText('linuxStep17')">&#xe14d;</a>
                         </template>
                       </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.6. Close Terminal window to make sure you are disconnected from your lab.
                     </v-col>
                   </v-tab-item>
                 </v-tabs-items>
@@ -1132,7 +1141,7 @@ Host {lab_name}
                   <v-tab-item value="macos">
                     <!-- Place in <code>~/.ssh/config</code>. -->
                     <v-col cols="12">
-                      4.1. Assure SSH Config file exists.
+                      4.1. Open new Terminal window and assure SSH Config file exists.
                       <v-text-field
                         :value="`touch ~/.ssh/config`"
                         ref="macSshConfig1"
@@ -1215,7 +1224,7 @@ Host {lab_name}
                   <v-tab-item value="linux">
                     <!-- Place in <code>~/.ssh/config</code>. -->
                     <v-col cols="12">
-                      4.1. Assure SSH Config file exists.
+                      4.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists.
                       <v-text-field
                         :value="`touch ~/.ssh/config`"
                         ref="linuxSshConfig1"
