@@ -34,21 +34,43 @@ We will communicate your VPN certificate over your organizational email. You wil
 
 2.1 Click on the link in the email to download the file and save this on your local computer.
 
-2.2 Unpack (extract) the file with your favorite file archiver software that recognize the [7z format](/do-science/tools/transfer/7z/) (see below).
+2.2 Unpack (extract) the file with compatible archive software
 
-Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the 7z archive.
+::: expander "Windows" id="2-windows"
 
-::: tip Decryption guides
-
-[Click here](/do-science/tools/transfer/7z/#install-7z-on-your-local-computer) for installation guidance if your current software don't recognize the 7z-format.
+extract your folder using [7-zip](https://www.7-zip.org/download.html)
 
 :::
+
+::: expander "MacOS" id="2-macos"
+
+We recommend downloading [Keka](https://www.keka.io/en/download) to successfully unpack your archive folder
+
+alternatively, you can install keka using brew command below
+
+```bash
+brew install keka
+```
 
 ::: danger OS X and MacOS - Passphrase not working?
 
-Note that the default archive utility on MacOS do -not- recognize the passphrase of the 7z files. You will need to install the 7z-compatible software from the link above.
+Note that the default archive utility on MacOS does not recognize the passphrase of the 7z files. You will need to install the 7z-compatible software from the link above.
+
 
 :::
+
+::: expander "Ubuntu linux" id="2-linux"
+
+install p7zip 
+
+```bash
+sudo apt update && sudo apt-get install p7zip-full
+```
+ 
+::: 
+
+2.3 Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the archive folder.
+
 
 
 ## 3. Remove your old VPN certificate
@@ -93,18 +115,208 @@ To remove old VPN configuration on MacOS using tunnelblick, follow our guide bel
 
 ## 4. Setup the new VPN profile
 
-Follow the [Setup the VPN profile](/do-science/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) section of our "Getting started" guide. 
+::: expander "Windows" id="4-windows"
+
+1. Start the OpenVPN client (if it is not running already)
+
+![OpenVPN-icon](./images/1.OpenVPN-guide.png)
+
+2. Expand pane on taskbar
+
+![OpenVPN-icon](./images/3.OpenVPN-guide.png)
+
+3. Select **`Import file...`**
+
+![OpenVPN-icon](./images/4.OpenVPN-guide.png)
+
+4. Click on Import file and select OpenVPN profile file **`<username>.ovpn`** that you collected in Step 1.
+
+![OpenVPN-icon](./images/5.OpenVPN-guide.png)
+
+![OpenVPN-icon](./images/6.OpenVPN-guide.png)
+
+:::
+
+
+
+::: expander "MacOS" id="4-macos"
+
+**2.2.1 If you 'do' get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
+  1. Select **`I have configuration files`**.
+  2. In the **`Welcome to Tunnelblick`** prompt, select **`I have configuration files`**.
+  3. When prompted for which type of configuration you have, select **`OpenVPN Configurations`**.
+  4. Select the OpenVPN profile named. **`<username>.ovpn`** in the collection of credentials given from HUNT Cloud.
+  5. Continue with the **`Connecting to the VPN section`** below.
+
+**2.2.2 If you 'do not' get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
+   1. Find the OpenVPN profile named **`<username>.ovpn`** that you collected in Step 1.
+   2. Right-click the file OpenVPN profile named **`<username>.ovpn`**.
+   3. Select **`Open With -> Tunnelblick`**.
+   4. When prompted for **`Install Configuration For All Users`**, select **`Only Me`**.
+   5. Enter your macOS password to allow Tunnelblick to install the OpenVPN configuration.
+   6. Continue with the **`Connecting to the VPN section`** below.
+
+:::
+
+
+::: expander "Ubuntu linux" id="4-linux"
+
+1. Click on the _Network Manager_ icon in the task bar.
+2. Select _Edit Connections..._.
+3. Click _Add_.
+4. Choose _Import a saved VPN configuration_ and click _Create_.
+5. Select the OpenVPN profile named **`<username>.ovpn`** that you collected in Step 1.
+6. Enter your user name (same as the OpenVPN profile file name).
+7. Click on the person icon in the _Password_ field and select **`Ask for this password every time`**.
+8. Enter the _Private Key Password_ with the **`VPN passphrase`** sent to you from HUNT over Signal.
+9. Click on the _IPv4 Settings_ tab.
+10. Click _Routes..._.
+11. Select the _Use this connection only for resources on its network_ and click _OK_.
+12. Click _Apply_.
+
+:::
+
 
 ## 5. Connect to the VPN
 
-Follow the [Connect to the VPN](/do-science/getting-started/configure-vpn/#_2-3-connect-to-the-vpn) section of our "Getting started guide". 
+::: expander "Windows" id="5-windows"
+
+1. Right-click on the OpenVPN notification icon on the taskbar.
+
+2. Select _Connect_.
+
+![OpenVPN-icon](./images/7.OpenVPN-guide.png)
+
+3. Enter your user name (same as the OpenVPN profile file name).
+
+4. Enter a rotating **`verification code`** from Google Authenticator as your password.
+
+    ![OpenVPN-icon](./images/9.OpenVPN-guide.png)
+
+5. When prompted for a _Private Key Password_, insert the **`VPN passphrase`** that your collected in Step 1. 
+   Your authentication will fail when you complete your passphrase below. This is expected since your verification code timed out while you typed your passphrase.
+
+    ![OpenVPN-icon](./images/8.OpenVPN-guide.png)
+
+6. Now try again to connect with a fresh **`verfication code`** from Google Authenticator.
+
+You should now be connected to the VPN.
+
+:::
+
+
+::: expander "macOS" id="5-macos"
+
+1. Start Tunnelblick and **`Connect`**.
+2. Enter your user name (same as the OpenVPN profile file name).
+3. Enter the **`verification code`** from Google Authenticator as your password.
+
+    ![tunnelblick-login](./images/tunnelblick-login.png)
+
+    ::: warning
+    Make sure that the _Save password_ checkbox is **`unchecked`**.
+
+4. When prompted for a _Private Key Password_ or _Passphrase_, insert the **`VPN passphrase`** that you collected in Step 1.
+
+    ::: tip
+    Save this passphrase.
+
+Your authentication will fail when you complete your passphrase above. This is expected since your verification code timed out while you typed your passphrase.
+
+6. Now try again to connect with a fresh **`verfication code`** from Google Authenticator.
+
+You should now be connected to the VPN.
+
+:::
+
+
+
+::: expander "Ubuntu Linux" id="5-linux"
+
+
+1. Click on the _Network Manager_ icon in the task bar.
+2. Select _VPN Connections >_ and the name of your profile.
+3. In the _Authenticate VPN_ window, enter the **`verification code`** from Google Authenticator in the _Password_ field.
+4. Click _OK_ to connect.
+
+:::
 
 ## 6. Verify your VPN connection
 
-Follow the [Verify your VPN connection](/do-science/getting-started/configure-vpn/#_2-4-verify-your-vpn-connection) section to verify a successful VPN connection as your will not be able to log into your lab until the VPN is working.
+
+::: expander "Windows" id="6-windows"
+
+The OpenVPN notification icon on the taskbar should be green.
+
+![OpenVPN-icon](./images/2.OpenVPN-guide.png)
+
+:::
+
+
+::: expander "MacOS" id="6-macos"
+
+A small Tunnelblick window should state "Connected" in green letters with a timer that count the connection length.
+
+:::
+
+
+::: expander "Ubuntu Linux" id="6-linux"
+
+If you received the notification _VPN connection has been successfully established_, then you are good to go.
+
+:::
+
+::: danger Access list
+
+We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. [Click here](/do-science/service-desk/#vpn-access-list) to request an opning for your location in our Do science service desk.
+
+:::
+
+::: tip Next step
+
+If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/getting-started/configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+
+:::
 
 ## Troubleshooting
 
-See the [Immediate troubleshooting](/do-science/getting-started/configure-vpn/#immediate-troubleshooting) section in our [VPN configuration](/do-science/getting-started/configure-vpn/#_2-1-install-the-vpn-software) guide. 
+Below are a few immediate things to try if your VPN connection did not succeed:
 
+### Authenticate VPN
 
+If the _Authenticate VPN_ prompt pops up again, then try to log in again with a new **`verification code`**.
+
+### VPN connection failed
+
+If you received the notification _VPN Connection Failed_ after 60 seconds, please check the following
+
+- Verify that you have an active internet connection.
+- Verify that the _Private Key Password_ is correct.
+
+### Could not read Private Key error
+
+The error messages below indicates that there is a typo in the _Private Key Password_ (step 2.3.5) and you need to type it in again.
+
+```
+ERROR: could not read Private Key username/password/ok/string from management interface
+```
+
+```
+Cannot load private key file
+```
+
+### Unable to apply changes
+
+If you are unable to click _Apply_ after your changes, try to re-enter your _Private Key Password_ using your **`VPN passphrase`** that you collected in Step 1.
+
+::: tip
+If nothing works, please head over to our main [troubleshooting](/do-science/troubleshooting/connection/#vpn) section for more information on how to troubleshoot connections.
+:::
+
+### Tunnelblick does not respond
+
+If tunnelblick stopped responding, you can try following command in your terminal to stop tunnelblick app
+
+```bash
+sudo pkill -9 -i 'Tunnelblick|openvpn'
+```
