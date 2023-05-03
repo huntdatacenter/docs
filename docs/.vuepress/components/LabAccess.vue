@@ -1345,7 +1345,7 @@ Host {lab_name}
             <!-- Workbench draft - troubleshooting and similar -->
             <v-expansion-panel>
               <v-expansion-panel-header>
-                <h3><a href="#workbench" class="header-anchor">#</a> Workbench</h3>
+                <h3><a href="#workbench" class="header-anchor">#</a> 5. Workbench</h3>
               </v-expansion-panel-header>
               <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
                 <v-tabs
