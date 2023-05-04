@@ -168,7 +168,7 @@ This section is aimed at the lab user that will **download** data from a kista. 
 # -- Principal example
 sftp <username>-<role>@10.42.132.<number>
 
-# -- Demo example uploader
+# -- Demo example downloader
 sftp demouser-download@10.42.132.118
 ```
 
