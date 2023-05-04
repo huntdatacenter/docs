@@ -31,7 +31,18 @@ The kista order defines two roles that we will use in this document:
 
 We wil notify the lab user that registered as the uploader when the kista is deployed. The uploader is responsible for notifying the downloader when data is uploaded and ready to be downloaded.
 
-## Connect
+
+## Transfer methods
+
+::: tip
+This section is aimed at the lab user that will **upload** data to a kista. See the [download section](#download) if you plan to download data to your lab.
+:::
+
+
+
+::: expander "SFTP" id="1-sftp"
+
+### Connect 
 
 You can view the kista transfer information directly from your home machine both as a uploader and downloader:
 
@@ -83,11 +94,7 @@ Connected to 10.42.132.<number>.
 sftp>
 ```
 
-## Upload
-
-::: tip
-This section is aimed at the lab user that will **upload** data to a kista. See the [download section](#download) if you plan to download data to your lab.
-:::
+### Upload
 
 1. Once inside your kista, move to the **`upload`** folder.
 
@@ -125,7 +132,46 @@ You can resume an upload with this command:
 reput /mnt/cargo/example-file1.txt
 ```
 
+:::
 
+::: expander "LFTP" id="1-lftp"
+
+### Connect
+
+1. Log into your home machine
+2. View the kista transfer information in the **`/opt/hunt-cloud/kista/`** folder:
+
+```bash
+# -- List kista transfer information files
+ls /opt/hunt-cloud/kista/
+
+# -- Principle example to see transfer information
+cat /opt/hunt-cloud/kista/*<number>*
+
+# -- Practical example to see transfer information
+cat /opt/hunt-cloud/kista/*5623*
+```
+
+The transfer information will look similar to this:
+
+```bash
+### SFTP account information
+Protocol: sftp
+Server: 10.42.132.<number>
+Port: 22
+Username: <username>-<role>
+```
+
+*Note. The information above is for illustration and will not work for your connection. Your account information will contain different information for the "Server" and "Username".*
+
+### Upload
+1. From your home machine, using command below you will be able to connect to remote kista, specify **directories** for transfer. Ideally you should run your command in [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/#gnu-screen).
+
+```bash
+lftp -e "mirror -cR /mnt/archive/example_archive.tar.gz /upload; bye" sftp://username-upload:@kista-ip-address
+```
+
+:::
 
 ## Download
 
