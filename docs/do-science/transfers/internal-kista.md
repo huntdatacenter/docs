@@ -143,7 +143,6 @@ LFTP method works in similar fashion, except it offers you more reliable transfe
 
 ```bash
 # -- Principal example
-
 lftp -e "mirror -cR <upload_directory> /upload; bye" sftp://<username>-upload:@<ip-address>
 
 # -- Demo example
@@ -193,9 +192,6 @@ ls -lah
 4. Download a file or folder by specifying the file or folder name and the local path that you want to download to.
 
 ```bash
-# -- Demo example downloader
-sftp demouser-download@10.42.132.118
-
 # -- Principal example
 get <sftp-file> <home-machine-folder>
 
@@ -226,9 +222,7 @@ reget /mnt/cargo/example-file1.txt
 For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 ```bash
-
 # -- Principal example
-
 lftp -e "mirror -cR /upload <download_to_directory>; bye" sftp://<username>-<role>:@<ip-address>
 
 # -- Demo example downloader
