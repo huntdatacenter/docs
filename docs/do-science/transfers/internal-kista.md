@@ -69,7 +69,7 @@ This section is aimed at the lab user that will **upload** data to a kista. See 
 
 SFTP method allows you to connect to a remote kista through your home machine and safely transfer your data. 
 
-::: expander "SFTP" id="1-sftp"
+::: expander "SFTP" id="upload-sftp"
 
 **Connect**
 
@@ -134,7 +134,7 @@ reput /mnt/cargo/example-file1.txt
 
 LFTP method works in similar fashion, except it offers you more reliable transfer in case you are transferring a lot of data over long period of time using **mirror** option, f.e it will allow you to continue upload even if connection is broken.
 
-::: expander "LFTP" id="1-lftp"
+::: expander "LFTP" id="upload-lftp"
 
 **Connect and upload**
 
@@ -160,7 +160,7 @@ This section is aimed at the lab user that will **download** data from a kista. 
 
 :::
 
-::: expander "SFTP" id="2-sftp"
+::: expander "SFTP" id="download-sftp"
 
 1. From your home machine, connect to the kista over SFTP using the transfer information collected above.
 
@@ -221,7 +221,7 @@ reget /mnt/cargo/example-file1.txt
 ```
 :::
 
-::: expander "LFTP" id="2-lftp"
+::: expander "LFTP" id="download-lftp"
 
 For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
