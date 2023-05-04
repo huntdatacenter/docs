@@ -31,18 +31,7 @@ The kista order defines two roles that we will use in this document:
 
 We wil notify the lab user that registered as the uploader when the kista is deployed. The uploader is responsible for notifying the downloader when data is uploaded and ready to be downloaded.
 
-
-## Transfer methods
-
-::: tip
-This section is aimed at the lab user that will **upload** data to a kista. See the [download section](#download) if you plan to download data to your lab.
-:::
-
-
-
-::: expander "SFTP" id="1-sftp"
-
-### Connect 
+## Connection details
 
 You can view the kista transfer information directly from your home machine both as a uploader and downloader:
 
@@ -72,9 +61,21 @@ Username: <username>-<role>
 
 *Note. The information above is for illustration and will not work for your connection. Your account information will contain different information for the "Server" and "Username".*
 
-Next, connect to your kista using the SFTP protocol. This may seem unfamiliar at first, however its simple to use once you get going:
+## Transfer methods
 
-3. From your home machine, connect to the kista over SFTP using the transfer information collected above.
+::: tip
+This section is aimed at the lab user that will **upload** data to a kista. See the [download section](#download) if you plan to download data to your lab.
+:::
+
+SFTP method allows you to connect to a remote kista through your home machine and safely transfer your data. 
+
+::: expander "SFTP" id="1-sftp"
+
+**Connect**
+
+Connect to your kista using the SFTP protocol. This may seem unfamiliar at first, however its simple to use once you get going:
+
+1. From your home machine, connect to the kista over SFTP using the transfer information collected above.
 
 ```bash
 # -- Principal example
@@ -94,7 +95,7 @@ Connected to 10.42.132.<number>.
 sftp>
 ```
 
-### Upload
+**Upload**
 
 1. Once inside your kista, move to the **`upload`** folder.
 
@@ -124,7 +125,7 @@ ls -lah
 quit
 ```
 
-For large uploads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+For large uploads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 You can resume an upload with this command:
 
@@ -134,41 +135,16 @@ reput /mnt/cargo/example-file1.txt
 
 :::
 
+LFTP method works in similar fasion, except it offers you more reliable transfer in case you are transferring a lot of data over long period of time using **mirror** option, f.e it will allow you to continue upload even if connection is broken.
+
 ::: expander "LFTP" id="1-lftp"
 
-### Connect
+**Connect and upload**
 
-1. Log into your home machine
-2. View the kista transfer information in the **`/opt/hunt-cloud/kista/`** folder:
-
-```bash
-# -- List kista transfer information files
-ls /opt/hunt-cloud/kista/
-
-# -- Principle example to see transfer information
-cat /opt/hunt-cloud/kista/*<number>*
-
-# -- Practical example to see transfer information
-cat /opt/hunt-cloud/kista/*5623*
-```
-
-The transfer information will look similar to this:
+1. From your home machine, using command below you will be able to connect to remote kista and specify **directories** for transfer. Ideally you should run your command in [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/).
 
 ```bash
-### SFTP account information
-Protocol: sftp
-Server: 10.42.132.<number>
-Port: 22
-Username: <username>-<role>
-```
-
-*Note. The information above is for illustration and will not work for your connection. Your account information will contain different information for the "Server" and "Username".*
-
-### Upload
-1. From your home machine, using command below you will be able to connect to remote kista, specify **directories** for transfer. Ideally you should run your command in [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/#gnu-screen).
-
-```bash
-lftp -e "mirror -cR /mnt/archive/example_archive.tar.gz /upload; bye" sftp://username-upload:@kista-ip-address
+lftp -e "mirror -cR /mnt/archive/example_archive/ /upload; bye" sftp://username-upload:@kista-ip-address
 ```
 
 :::
