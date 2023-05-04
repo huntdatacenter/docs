@@ -142,12 +142,12 @@ LFTP method works in similar fashion, except it offers you more reliable transfe
 
 
 ```bash
-# -- Demo example
-lftp -e "mirror -cR /mnt/archive/example_archive/ /upload; bye" sftp://demouser-upload:@10.42.132.118
-
 # -- Principal example
 
 lftp -e "mirror -cR <upload_directory> /upload; bye" sftp://<username>-upload:@<ip-address>
+
+# -- Demo example
+lftp -e "mirror -cR /mnt/archive/example_archive/ /upload; bye" sftp://demouser-upload:@10.42.132.118
 ```
 You can read more about LFTP [here](/do-science/tools/transfer/lftp/)
 
@@ -226,12 +226,13 @@ reget /mnt/cargo/example-file1.txt
 For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 ```bash
-# -- Demo example downloader
-lftp -e "mirror -cR /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
 
 # -- Principal example
 
 lftp -e "mirror -cR /upload <download_to_directory>; bye" sftp://<username>-<role>:@<ip-address>
+
+# -- Demo example downloader
+lftp -e "mirror -cR /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
 ```
 :::
 
