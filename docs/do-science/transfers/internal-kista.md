@@ -83,9 +83,6 @@ sftp <usernam>-<role>@10.42.132.<number>
 
 # -- Demo example uploader
 sftp demouser-upload@10.42.132.118
-
-# -- Demo example downloader
-sftp demouser-download@10.42.132.118
 ```
 
 When successfully connected, you should see the following message in your terminal:
@@ -135,7 +132,7 @@ reput /mnt/cargo/example-file1.txt
 
 :::
 
-LFTP method works in similar fasion, except it offers you more reliable transfer in case you are transferring a lot of data over long period of time using **mirror** option, f.e it will allow you to continue upload even if connection is broken.
+LFTP method works in similar fashion, except it offers you more reliable transfer in case you are transferring a lot of data over long period of time using **mirror** option, f.e it will allow you to continue upload even if connection is broken.
 
 ::: expander "LFTP" id="1-lftp"
 
@@ -143,9 +140,12 @@ LFTP method works in similar fasion, except it offers you more reliable transfer
 
 1. From your home machine, using command below you will be able to connect to remote kista and specify **directories** for transfer. Ideally you should run your command in [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/).
 
+
 ```bash
-lftp -e "mirror -cR /mnt/archive/example_archive/ /upload; bye" sftp://username-upload:@kista-ip-address
+# -- Demo example
+lftp -e "mirror -cR /mnt/archive/example_archive/ /upload; bye" sftp://demouser-upload:@10.42.132.118
 ```
+You can read more about LFTP [here](/do-science/tools/transfer/lftp/)
 
 :::
 
@@ -170,7 +170,11 @@ ls -lah
 
 2. Download a file or folder by specifying the file or folder name and the local path that you want to download to.
 
+::: expander "SFTP" id="2-sftp"
 ```bash
+# -- Demo example downloader
+sftp demouser-download@10.42.132.118
+
 # -- Principal example
 get <sftp-file> <home-machine-folder>
 
@@ -180,7 +184,16 @@ get example-filename1.txt /mnt/cargo/
 # -- Download folder
 get -r example-directory /mnt/cargo/
 ```
+:::
 
+::: expander "LFTP" id="2-lftp"
+
+```bash
+# -- Demo example downloader
+lftp -e "mirror -cR /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
+```
+
+:::
 3. Disconnect from your the SFTP-server
 
 ```bash
