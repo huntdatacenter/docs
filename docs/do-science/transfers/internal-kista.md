@@ -156,6 +156,8 @@ This section is aimed at the lab user that will **download** data from a kista. 
 
 :::
 
+::: expander "SFTP" id="2-sftp"
+
 1. Once inside your kista, move to the **`upload`** folder.
 
 ```bash
@@ -170,7 +172,6 @@ ls -lah
 
 2. Download a file or folder by specifying the file or folder name and the local path that you want to download to.
 
-::: expander "SFTP" id="2-sftp"
 ```bash
 # -- Demo example downloader
 sftp demouser-download@10.42.132.118
@@ -184,16 +185,7 @@ get example-filename1.txt /mnt/cargo/
 # -- Download folder
 get -r example-directory /mnt/cargo/
 ```
-:::
 
-::: expander "LFTP" id="2-lftp"
-
-```bash
-# -- Demo example downloader
-lftp -e "mirror -cR /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
-```
-
-:::
 3. Disconnect from your the SFTP-server
 
 ```bash
@@ -207,6 +199,18 @@ You can resume a download with this command:
 ```bash
 reget /mnt/cargo/example-file1.txt
 ```
+:::
+
+::: expander "LFTP" id="2-lftp"
+
+For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+
+```bash
+# -- Demo example downloader
+lftp -e "mirror -cR /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
+```
+:::
+
 
 ## Troubleshooting
 
