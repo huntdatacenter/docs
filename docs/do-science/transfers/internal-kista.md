@@ -162,19 +162,35 @@ This section is aimed at the lab user that will **download** data from a kista. 
 
 ::: expander "SFTP" id="2-sftp"
 
-1. Once inside your kista, move to the **`upload`** folder.
+1. From your home machine, connect to the kista over SFTP using the transfer information collected above.
+
+```bash
+# -- Principal example
+sftp <username>-<role>@10.42.132.<number>
+
+# -- Demo example uploader
+sftp demouser-download@10.42.132.118
+```
+
+When successfully connected, you should see the following message in your terminal:
+
+```
+Connected to 10.42.132.<number>.
+sftp>
+```
+2. Once inside your kista, move to the **`upload`** folder.
 
 ```bash
 cd upload
 ```
 
-2. List files in the current directory.
+3. List files in the current directory.
 
 ```bash
 ls -lah
 ```
 
-2. Download a file or folder by specifying the file or folder name and the local path that you want to download to.
+4. Download a file or folder by specifying the file or folder name and the local path that you want to download to.
 
 ```bash
 # -- Demo example downloader
@@ -190,7 +206,7 @@ get example-filename1.txt /mnt/cargo/
 get -r example-directory /mnt/cargo/
 ```
 
-3. Disconnect from your the SFTP-server
+5. Disconnect from your the SFTP-server
 
 ```bash
 quit
@@ -215,7 +231,7 @@ lftp -e "mirror -cR /upload /home/demouser/download-hunt; bye" sftp://demouser-d
 
 # -- Principal example
 
-lftp -e "mirror -cR /upload <download_to_directory>; bye" sftp://<username>-upload:@<ip-address>
+lftp -e "mirror -cR /upload <download_to_directory>; bye" sftp://<username>-<role>:@<ip-address>
 ```
 :::
 
