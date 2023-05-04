@@ -61,7 +61,7 @@ Username: <username>-<role>
 
 *Note. The information above is for illustration and will not work for your connection. Your account information will contain different information for the "Server" and "Username".*
 
-## Transfer methods
+## Upload
 
 ::: tip
 This section is aimed at the lab user that will **upload** data to a kista. See the [download section](#download) if you plan to download data to your lab.
