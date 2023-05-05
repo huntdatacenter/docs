@@ -203,7 +203,7 @@ We use your prefilled email to start predefined workflows on our side. The autom
 
 :::
 
-#### Why do I need to ship the email from my organiztaional email? 
+#### Why do I need to ship the email from my organizational email? 
 
 ::: details Read more
 
