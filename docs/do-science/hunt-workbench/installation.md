@@ -183,16 +183,16 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 2. In **`System settings`** open section **`Privacy & Security`**, scroll to the bottom of the page and sellect **`Profiles`**
 
-  ![macventura1](./images/macventura1.png)
+   ![macventura1](./images/macventura1.png)
 
 3. Select certificate required for installation.
 
-  ![macventura2](./images/macventura2.png)
+   ![macventura2](./images/macventura2.png)
 
 
 4. Click **`Install`**  when prompted. Then enter the **`TLS passphrase`** that you received on Signal and confirm.
 
-  ![macventura3](./images/macventura3.png)
+   ![macventura3](./images/macventura3.png)
 
 5. Quit your browser and restart it again for the certificate to get recognized.
 
