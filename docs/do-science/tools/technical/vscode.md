@@ -22,7 +22,7 @@ Below guide establishes a connection between [Iaas](/do-science/faq/compute/#wha
 
 Below extensions are required in order for you to setup a successfull connection between your local machine and iaas machine.
 
-In [extensions](https://code.visualstudio.com/docs/editor/extension-marketplace), find and install `Remote-SSH`.
+In [extensions](https://code.visualstudio.com/docs/editor/extension-marketplace), find and install `Remote-SSH` or follow this [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) for easy install.
 After you have successfully installed this extension, you can move to next step.
 
 #### 1.2 Setup .ssh config file
@@ -56,7 +56,25 @@ Example:
 :::
 
 ::: expander "Windows" id="widows-1"
-WIP
+1. You need to access VSCode `command palette` by shortuct `CTRL+SHIFT+P`, or selecting `View --> Command Palette`.
+
+2. A command pallete should pop-up. Type in:
+
+```
+ Remote-SSH: Open SSH Configuration file
+```
+
+![mvscode2](./images/vscode2.png)
+
+Press enter. Now  select config file, f.e. `C:\Users\username\.ssh\config`
+
+![wvscode9](./images/vscode9.png)
+
+3. A window with your ssh config file should open in VScode. In here, you can paste your iaas [ssh-config.txt](/do-science/getting-started/configure-ssh/#_3-1-identify-required-info) file which you have recevied from us. Send us a [general request](/do-science/service-desk/#general-service-request) if you are missing this text file.
+
+Example:
+
+![mvscode4](./images/vscode4.png)
 :::
 
 ::: expander "Linux" id="linux-1"
