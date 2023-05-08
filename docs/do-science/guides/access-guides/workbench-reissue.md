@@ -50,21 +50,22 @@ This guide applys when you have requested a reissue of your expired HUNT Workben
 :::
 
 
-::: expander "OS X and macOS Ventura 13.+" id="osx-and-macos-ventura"
+::: expander "macOS Ventura 13+" id="macos"
+
 1. Open your system profile config file that you got from Filesender (**`<your_user_name>.mobileconfig`**).
 
 2. In **`System settings`** open section **`Privacy & Security`**, scroll to the bottom of the page and sellect **`Profiles`**
 
-![macventura1](./images/macventura1.png)
+   ![macventura1](./images/macventura1.png)
 
 3. Select certificate required for installation.
 
-![macventura2](./images/macventura2.png)
+   ![macventura2](./images/macventura2.png)
 
 
 4. Click **`Install`**  when prompted. Then enter the **`TLS passphrase`** that you received on Signal and confirm.
 
-![macventura3](./images/macventura3.png)
+   ![macventura3](./images/macventura3.png)
 
 5. Quit your browser and restart it again for the certificate to get recognized.
 
@@ -72,10 +73,9 @@ This guide applys when you have requested a reissue of your expired HUNT Workben
 
    ![macos_chrome.png](./images/macos_chrome.png)
 
-
 :::
 
-::: expander "OS X and macOS Monterey and older" id="macos-monterey"
+::: expander "macOS Monterey and older" id="macos-monterey-and-older"
 
 1. Open the system profile config (.mobileconfig) attached in archive.
 
