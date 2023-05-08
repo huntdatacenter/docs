@@ -153,14 +153,14 @@ To remove old VPN configuration on MacOS using tunnelblick, follow our guide bel
 
 ::: expander "MacOS" id="4-macos"
 
-**2.2.1 If you 'do' get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
+**4.1  If you 'do' get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
   1. Select **`I have configuration files`**.
   2. In the **`Welcome to Tunnelblick`** prompt, select **`I have configuration files`**.
   3. When prompted for which type of configuration you have, select **`OpenVPN Configurations`**.
   4. Select the OpenVPN profile named. **`<username>.ovpn`** in the collection of credentials given from HUNT Cloud.
   5. Continue with the **`Connecting to the VPN section`** below.
 
-**2.2.2 If you 'do not' get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
+**4.2 If you 'do not' get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
    1. Find the OpenVPN profile named **`<username>.ovpn`** that you collected in Step 1.
    2. Right-click the file OpenVPN profile named **`<username>.ovpn`**.
    3. Select **`Open With -> Tunnelblick`**.
