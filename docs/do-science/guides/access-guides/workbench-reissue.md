@@ -17,7 +17,7 @@ This guide applys when you have requested a reissue of your expired HUNT Workben
 :::
 
 
-::: details Windows
+::: expander "Windows" id="windows"
 
 1. Open the p12 certificate. Make sure the store location is set to Current User and click next:
 
@@ -49,7 +49,33 @@ This guide applys when you have requested a reissue of your expired HUNT Workben
 
 :::
 
-::: details OS X and macOS
+
+::: expander "OS X and macOS Ventura 13.+" id="osx-and-macos-ventura"
+1. Open your system profile config file that you got from Filesender (**`<your_user_name>.mobileconfig`**).
+
+2. In **`System settings`** open section **`Privacy & Security`**, scroll to the bottom of the page and sellect **`Profiles`**
+
+![macventura1](./images/macventura1.png)
+
+3. Select certificate required for installation.
+
+![macventura2](./images/macventura2.png)
+
+
+4. Click **`Install`**  when prompted. Then enter the **`TLS passphrase`** that you received on Signal and confirm.
+
+![macventura3](./images/macventura3.png)
+
+5. Quit your browser and restart it again for the certificate to get recognized.
+
+6. When you open your HUNT Workbench for the first time you will be asked for your local macOS password. This allows the browser to access your client certificate stored in your local Keychain. After filling in the password, confirm by clicking **`Always allow`** / **`Tillat alltid`**.
+
+   ![macos_chrome.png](./images/macos_chrome.png)
+
+
+:::
+
+::: expander "OS X and macOS Monterey and older" id="macos-monterey"
 
 1. Open the system profile config (.mobileconfig) attached in archive.
 
@@ -71,7 +97,7 @@ This guide applys when you have requested a reissue of your expired HUNT Workben
 
 :::
 
-::: details Ubuntu Linux
+::: expander "Ubuntu Linux"
 
 We recommend that you use the [Google Chrome browser](https://www.google.com/chrome/) for predictability.
 
