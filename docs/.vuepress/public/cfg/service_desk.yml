@@ -1224,7 +1224,7 @@ request_vpn_link:
       ],
       default: ["Temporary"],
     },
-    { label: "Access Country", key: "country", pattern: '^[\-a-z0-9\._]*$', field: "textfield" },
+    { label: "Access Country", key: "country", pattern: '^[\-A-z0-9\._]*$', field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> All active lab users.",
