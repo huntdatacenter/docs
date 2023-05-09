@@ -9,7 +9,7 @@ general_lab_user_request:
       <your-text>
 
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
@@ -503,7 +503,7 @@ request_lab_user_deactivation:
       Best regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
@@ -1084,7 +1084,7 @@ request_workbench_access:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
     {
       label: "Tools",
@@ -1125,7 +1125,7 @@ request_workbench_reissue:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
@@ -1153,7 +1153,7 @@ request_ssh_pass_reset:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
@@ -1179,7 +1179,7 @@ request_ssh_config:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
@@ -1212,8 +1212,8 @@ request_vpn_link:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Access IP4 address", key: "IP4_address", pattern: '^\\s*((?!169\\.254\\.|10\\.|0\\.|127\\.|255\\.255\\.255\\.255|192\\.168\\.)(\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\.)((\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\.){2}(\\d{1,2}|1\\d\\d|2[0-4]\\d|25[0-5])\\s*$', hint: "Get your IP address here: http://ip4.me", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Access IP4 address", key: "IP4_address", pattern: '^\s*((?!169\.254\.|10\.|0\.|127\.|255\.255\.255\.255|192\.168\.)(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Get your IP address here: http://ip4.me", field: "textfield" },
     {
       label: "Access duration",
       key: "access_duration",
@@ -1224,7 +1224,7 @@ request_vpn_link:
       ],
       default: ["Temporary"],
     },
-    { label: "Access Country", key: "country", pattern: "[-A-z0-9._]{3,}", field: "textfield" },
+    { label: "Access Country", key: "country", pattern: '^[\-A-z0-9\._]*$', field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> All active lab users.",
@@ -1253,7 +1253,7 @@ request_vpn_reset:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> All active lab users.",
@@ -1285,7 +1285,7 @@ request_google_auth:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
     { label: "Phone number (optional)", key: "phone_number", pattern: "(not_changed|[+0-9]{3,})", hint: "Phone number should include only + and 0-9 numbers", field: "textfield", optional: true, default: "not_changed" },
   ]
   requirements: [
@@ -1315,7 +1315,7 @@ request_mobaxterm_file:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
@@ -1396,7 +1396,7 @@ request_tape_archive:
 
       Kind regards,
   fields: [
-    { label: "Username", key: "username", pattern: "[-a-z0-9._]{3,}", hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
