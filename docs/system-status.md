@@ -6,15 +6,21 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
+::: tip All systems
 
-::: warning Planned maintenance
+Operational
 
-**2023-04-24 09:00-11:00** - We plan to implement changes to our core network infrastructure. This will impact the external connectivity to and from all labs for all users. 
 :::
 
-**2023-03-14 14:00** - At around 14:00 we noticed issues with VPN. We are currently working on resolving the issue. New update 15:00.
+We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
+
+Latest system updates:
+
+**2023-04-24 09:00** - We plan to implement changes to our core network infrastructure. This will impact the external connectivity to and from all labs for all users between 9-11 am. 
 
 **2023-03-14 15:00** - All systems operational.
+
+**2023-03-14 14:00** - We have noticed issues with the VPN connection. We are currently working on resolving the issue. New update 15:00.
 
 <!--
 
@@ -74,5 +80,4 @@ Shut off.
 
 -->
 
-We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
 
