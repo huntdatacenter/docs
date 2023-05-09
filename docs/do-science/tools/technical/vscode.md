@@ -8,17 +8,11 @@ description: Usage guide for VNC.
 
 # Visual Studio Code
 
-**[VS Code](https://code.visualstudio.com/) is a source-code editor made by Microsoft that supports features such as debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git. Lab users may for exampe use VSCode to run GPU accelerators inside their labs.**
+**[VS Code](https://code.visualstudio.com/) is a source-code editor made by Microsoft that supports features such as debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git. Lab users may for example use VSCode to run GPU accelerators inside their labs.**
 
 [[toc]]
 
-::: tip 
-
-
-
-:::
-
-This guide describes a setup where you use VSCode installed on your local computer to connect and analyse data that is located inside a lab machine in HUNT Cloud.
+This guide describes a setup where you use VSCode installed on your local computer to connect and analyze data that is located inside a lab machine in HUNT Cloud.
 
 ## Requirements
 
@@ -76,7 +70,7 @@ This step configure the .ssh configuration file on your local computer.
 
 ![mvscode4](./images/vscode4.png)
 
-5. In the new window, paste your IAAS [ssh-config.txt](/do-science/getting-started/configure-ssh/#_3-1-identify-required-info) file which you have recevied from us. You can order a new SSH configuration file in the [service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#ssh-configuration).
+5. In the new window, paste your IAAS [ssh-config.txt](/do-science/getting-started/configure-ssh/#_3-1-identify-required-info) file which you have received from us. You can order a new SSH configuration file in the [service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#ssh-configuration).
 
 4. Save your changes before you continue to the next step.
 
@@ -101,7 +95,7 @@ This step configure the .ssh configuration file on your local computer.
 
 4. With a little bit of luck, a window with your local ssh configuration file should open in VScode. 
 
-5. In the new window, paste your IAAS [ssh-config.txt](/do-science/getting-started/configure-ssh/#_3-1-identify-required-info) file which you have recevied from us. You can order a new SSH configuration file in the [service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#ssh-configuration).
+5. In the new window, paste your IAAS [ssh-config.txt](/do-science/getting-started/configure-ssh/#_3-1-identify-required-info) file which you have received from us. You can order a new SSH configuration file in the [service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#ssh-configuration).
 
 ![mvscode4](./images/vscode4.png)
 
