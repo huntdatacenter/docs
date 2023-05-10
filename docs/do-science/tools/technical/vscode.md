@@ -35,18 +35,18 @@ Connection to your lab machine require two adjustment to your local VSCode insta
 You will need to install the `Remote-SSH` extension to the VSCode on your local computer. This is required to successfully connect to your lab machine over ssh.
 
 1. Open VSCode on your local computer
-2. Inside VSCode, launch VSCode Quick Open (Ctrl+P)
+2. Inside VSCode, launch VSCode Quick Open `Ctrl+P` or if on mac `CMD+P`
 3. Paste the following command and press enter: 
 
 ```bash
 ext install ms-vscode-remote.remote-ssh
 ```
 
-Alternatively, open the [VSCode Remote SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) page diretly, or identify the package in the [extension marketsplace](https://code.visualstudio.com/docs/editor/extension-marketplace) and follow the installation instructions. 
+Alternatively, open the [VSCode Remote SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) page directly, or identify the package in the [extension marketsplace](https://code.visualstudio.com/docs/editor/extension-marketplace) and follow the installation instructions. 
 
 ### 1.2 Configure your local .ssh config file
 
-This step configure the .ssh configuration file on your local computer.
+This step configures the .ssh configuration file on your local computer.
 
 ::: expander "macOS" id="macos-1"
 
@@ -77,9 +77,9 @@ This step configure the .ssh configuration file on your local computer.
 :::
 
 
-::: expander "Windows" id="widows-1"
+::: expander "Windows" id="windows-1"
 
-1. Access VSCode `command palette` by shortuct `CTRL+SHIFT+P`, or selecting `View --> Command Palette`.
+1. Access VSCode `command palette` by shortcut `CTRL+SHIFT+P`, or selecting `View --> Command Palette`.
 
 2. A command pallete should pop-up. Type in the following text and press enter:
 
@@ -133,7 +133,7 @@ A new window will open and after a short moment you should be prompted for your 
 
 You should see an option to Open Folder. 
 
-2.5 Clik on the "Open Folder" button, keep default path `/home/<username>`, or select your preferred path. Type IAAS machine password once more when prompted. 
+2.5 Click on the "Open Folder" button, keep default path `/home/<username>`, or select your preferred path. Type IAAS machine password once more when prompted. 
 
 ![vscode8](./images/vscode8.png)
 
