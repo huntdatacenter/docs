@@ -50,9 +50,9 @@ Reach out to us on [Slack or email](/contact) if you get the **`504 error`** whi
 
 Note. This does not apply if you are able to open your HUNT Workbench, but get a _504 error_ when your try to access specific applications, such as _RStudio_ below (see solution below).
 
-### Expired lab certificate
+### Your connection is not private
 
-If you were previously able to access your HUNT Workbench and your browser suddenly reports expired/unsafe certificates, e.g.: **`Your connection is not private`** or **`ERR_CERT_DATE_INVALID`**, [contact us](/contact) in your lab channel on Slack or contact us on [email]. We need to sign a new lab certificate and update the service.
+If you were previously able to access your HUNT Workbench and your browser suddenly reports expired/unsafe certificates, e.g.: **`Your connection is not private`** or **`ERR_CERT_DATE_INVALID`**, [contact us](/contact) in your lab channel on Slack or contact us on email. We need to sign a new lab certificate and update the service.
 
 ![expired_server_cert.png](./images/expired_server_cert.png)
 
