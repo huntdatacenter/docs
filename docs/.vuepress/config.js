@@ -186,7 +186,7 @@ module.exports = {
                 "/do-science/tools/technical/vnc.md",
                 "/do-science/tools/technical/x2go.md",
                 "/do-science/tools/technical/vscode.md",
-                "/do-science/tools/technical/rdp",
+                "/do-science/tools/technical/rdp.md",
               ],
             },
             {
