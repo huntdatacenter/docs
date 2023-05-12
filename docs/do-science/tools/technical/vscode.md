@@ -12,9 +12,12 @@ description: Usage guide for VNC.
 
 [[toc]]
 
+
+## Connecting to IaaS machine from your local machine
+
 This guide describes a setup where you use VSCode installed on your local computer to connect and analyze data that is located inside a lab machine in HUNT Cloud.
 
-## Requirements
+### Requirements
 
 ::: warning Requirements
 
@@ -26,11 +29,11 @@ To complete this guide, you will need (1) [VS Code](https://code.visualstudio.co
 
 
 
-## 1. Local computer configuration
+### 1. Local computer configuration
 
-Connection to your lab machine require two adjustment to your local VSCode installation: 
+Connection to your lab machine requires two adjustments to your local VSCode installation: 
 
-### 1.1 Add required extension
+#### 1.1 Add required extension
 
 You will need to install the `Remote-SSH` extension to the VSCode on your local computer. This is required to successfully connect to your lab machine over ssh.
 
@@ -44,7 +47,7 @@ ext install ms-vscode-remote.remote-ssh
 
 Alternatively, open the [VSCode Remote SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) page directly, or identify the package in the [extension marketsplace](https://code.visualstudio.com/docs/editor/extension-marketplace) and follow the installation instructions. 
 
-### 1.2 Configure your local .ssh config file
+#### 1.2 Configure your local .ssh config file
 
 This step configures the .ssh configuration file on your local computer.
 
@@ -109,7 +112,7 @@ See macOS guide.
 :::
 
 
-## 2. Connect to your lab machine
+### 2. Connect to your lab machine
 
 This section establishes a connection between your local computer and your IAAS lab machine.
 
@@ -140,5 +143,18 @@ You should see an option to Open Folder.
 If all is fine, you should now see your lab machine files and selected directory. 
 
 **Happy coding!**
+
+
+## Recommended extensions for working in HUNT Cloud
+
+### 1. Jupyter Notebooks
+
+### 2. 
+
+
+## Troubleshooting
+
+Stumbled upon an issue and cannot find a solution here ? Get in touch with us on slack or through [general request](/do-science/service-desk/#general-service-request) contact form.
+
 
 
