@@ -181,7 +181,7 @@ export default {
   },
   created() {
     console.log(this.$route.query)
-    // /do-science/lab/?access=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXI%3D
+    // /do-science/lab/?access=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXJ8ZGVtb2xhYi1ibHVlLWFyZGFu
     // access = $(echo -n "${ip_address}|${lab_name}|${username}" | base64 | sed 's|=|%3D|g' )
     this.access = this.$route.query.access ? atob(this.$route.query.access).split('|') : []
     console.log(this.query)

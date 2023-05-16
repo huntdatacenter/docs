@@ -8,4 +8,4 @@ description: Iaas Access details with customized guiding.
 
 # Iaas Access
 
-<!-- <IaasAccess /> -->
+<IaasAccess />
