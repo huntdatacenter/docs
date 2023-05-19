@@ -183,9 +183,9 @@ We need to initiate such installation. [Contact us](/contact) on email if you ne
 
 ### Which R version is available in RStudio?
 
-RStudio is configured to use packages installed in the conda environment named **`r-base`**. You can identify your current _R version_ packages in your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) following these steps:
+RStudio is configured to use packages installed in the conda environment named **`r-base`**. You can identify your current _R version_ packages in your [Workbench Terminal](/do-science/hunt-workbench/faq/#terminal) following these steps:
 
-1. Open your workbench terminal.
+1. Open your Workbench Terminal.
 
 ![workbench_terminal.png](./images/workbench_terminal.png)
 
@@ -215,7 +215,7 @@ If you have older setup and missing some of these packages you can follow the "_
 
 If you want to install your own R packages, we recommend that you use [Conda](/do-science/tools/analytical/conda/) where ever possible:
 
-1. Open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal):
+1. Open [Workbench Terminal](/do-science/hunt-workbench/faq/#terminal):
 
 ![workbench_terminal.png](./images/workbench_terminal.png)
 
@@ -261,9 +261,9 @@ Make sure to activate the `r-base` environment before running **R** command.
 conda activate r-base
 ```
 
-### How can I use R in my workbench terminal?
+### How can I use R in my Workbench Terminal?
 
-First, open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal).
+First, open your [Workbench Terminal](/do-science/hunt-workbench/faq/#terminal).
 
 Start by activating `r-base` environment:
 
@@ -319,14 +319,14 @@ When you [restart your HUNT Workbench](/do-science/hunt-workbench/faq/#how-can-i
 
 ## Terminal
 
-### Can I use a terminal from my workbench?
+### Can I use a terminal from my Workbench?
 
-Yes. You can find your **`workbench terminal`** in the main view of applications under the section: **`Other`**.
+Yes. You can find your **`Workbench Terminal`** in the main view of applications under the section: **`Other`**.
 
 ![other_apps_terminal.png](./images/other_apps_terminal.png)
 
 ### When do I need to use a terminal?
 
-You **`workbench`** terminal can be handy when it comes to managing [Conda packages](/do-science/tools/analytical/conda/), monitoring resources (**`htop`**), or handling other tasks.
+**`Workbench Terminal`** can be handy when it comes to managing [Conda packages](/do-science/tools/analytical/conda/), monitoring resources (**`htop`**), or handling other tasks.
 
 
