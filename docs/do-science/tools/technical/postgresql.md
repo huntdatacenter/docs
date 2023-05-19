@@ -1,4 +1,3 @@
-
 ---
 title: PostgreSQL
 category: Technical tools
