@@ -8,7 +8,7 @@ description: Connection guide for PostgreSQL.
 
 # PostgreSQL
 
-**[PostgreSQL](https://www.postgresql.org/) is a relational database management system that might come handy in data handling.**
+**[PostgreSQL](https://www.postgresql.org/) is a relational database management system that can elevate your data handling.**
 
 [[toc]]
 
