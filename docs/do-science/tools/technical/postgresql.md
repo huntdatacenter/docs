@@ -8,7 +8,17 @@ description: Connection guide for PostgreSQL.
 
 # PostgreSQL
 
-If you have requested [PostgreSQL](https://www.postgresql.org/) installation and received a confirmation you can use this guide to connect.
+**[PostgreSQL](https://www.postgresql.org/) is a relational database management system that might come handy in data handling.**
+
+[[toc]]
+
+::: warning Requirement
+
+This guide is for the managed PostgreSQL pilot service on home machines. 
+
+You can use this guide to connection to your installation if you have requested the setup and received a confirmation that the setup is completed.
+
+:::
 
 ## Set password
 
