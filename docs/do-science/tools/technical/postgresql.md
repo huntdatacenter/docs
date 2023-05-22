@@ -16,7 +16,7 @@ description: Connection guide for PostgreSQL.
 
 This guide is for the managed PostgreSQL pilot service on home machines. 
 
-You can use this guide to connection to your installation if you have requested the setup and received a confirmation that the setup is completed.
+You can use this guide to connect to your installation if you have requested the setup and received a confirmation that the setup is completed.
 
 :::
 
