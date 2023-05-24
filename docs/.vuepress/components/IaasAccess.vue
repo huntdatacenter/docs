@@ -83,17 +83,12 @@ export default {
 // Connection to {ip_address} closed.`,
 //       passChangedHome: `passwd: Password updated successfully
 // Connection to home closed.`,
-//       template: `Host {lab_name}-entry
-//     HostName {ip_address}
-//     User {username}
-
-// Host {lab_name}
-//     HostName home
-//     HostKeyAlias {lab_name}
-//     User {username}
-//     # Use ProxyCommand to jump directly to home via entry
-//     ProxyCommand ssh -W %h:%p {lab_name}-entry
-// `,
+      template: `Host {lab_name}
+    HostName {iaasip}
+    HostKeyAlias {iaasname}
+    User Ubuntu
+    ProxyCommand ssh -W %h:%p {lab_name}
+`,
     };
   },
   computed: {
@@ -116,7 +111,7 @@ export default {
       return this.query.ipAddress && this.query.labName ? `${this.query.ipAddress}    ${this.query.labName}.lab.hdc.ntnu.no` : null;
     },
     iaasMachine() {
-      return this.query.ipAddress && this.query.labName  && this.query.username && this.query.iaasName ? true : false;
+      return this.query.ipAddress && this.query.labName  && this.query.username && this.query.iaasName && this.query.iaasIp ? true : false;
     },
     entryIpUrl() {
       return this.query.ipAddress ? this.query.ipAddress.replace('.', '%2E') : '';
@@ -145,7 +140,7 @@ export default {
       }
     }
     const access = this.access
-    if (access.length == 4) {
+    if (access.length == 5) {
       this.query.ipAddress = access[0]
       localStorage.ipAddress = access[0]
       this.query.labName = access[1]
@@ -154,7 +149,9 @@ export default {
       localStorage.username = access[2]
       this.query.iaasName = access[3]
       localStorage.iaasName = access[3]
-    } else if (access.length == 5) {
+      this.query.iaasIp = access[4]
+      localStorage.iaasIp = access[4]
+    } else if (access.length == 6) {
       this.query.ipAddress = access[0]
       localStorage.ipAddress = access[0]
       // this.query.homeIpAddress = access[1]
@@ -164,6 +161,8 @@ export default {
       localStorage.username = access[3]
       this.query.iaasName = access[4]
       localStorage.iaasName = access[4]
+      this.query.iaasIp = access[5]
+      localStorage.iaasIp = access[5]
     } else if (!access || access.length == 0) {
       if (localStorage.ipAddress) {
         this.query.ipAddress = localStorage.ipAddress
@@ -181,8 +180,7 @@ export default {
   },
   created() {
     console.log(this.$route.query)
-    // /do-science/lab/?access=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXJ8ZGVtb2xhYi1ibHVlLWFyZGFu
-    // access = $(echo -n "${ip_address}|${lab_name}|${username}" | base64 | sed 's|=|%3D|g' )
+    // /do-science/iaas/?iaas=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXJ8ZGVtb2xhYi1ibHVlLWFyZGFufDEwLjUuNS4xNg%3D%3D
     this.access = this.$route.query.access ? atob(this.$route.query.access).split('|') : []
     console.log(this.query)
   },
@@ -193,6 +191,7 @@ export default {
       text = text.replaceAll('{lab_name}', this.query.labName)
       text = text.replaceAll('{username}', this.query.username)
       text = text.replaceAll('{iaasname}', this.query.iaasName)
+      text = text.replaceAll('{iaasip}', this.query.iaasIp)
       return text
     },
     copyText(key) {
@@ -271,17 +270,17 @@ export default {
               hide-details
               @focus="$event.target.select()"
             >
-             <template v-slot:append>
+              <template v-slot:append>
                 <a class="material-icons content_copy" @click="copyText('ipAddress')">&#xe14d;</a>
               </template>
             </v-text-field>
-          </v-col> 
+          </v-col>
           <v-col cols="10">
             <v-text-field
               v-model="query.iaasName"
-              ref="iaasname"
+              ref="IaasName"
               autocomplete="ignore-field"
-              label="Iaas Machine"
+              label="IaaS Name"
               placeholder="Your link is missing access token"
               persistent-placeholder
               outlined
@@ -295,11 +294,304 @@ export default {
               </template>
             </v-text-field>
           </v-col>
-        </v-row>
+          <v-col cols="10">
+            <v-text-field
+              v-model="query.iaasIp"
+              ref="IaasIp"
+              autocomplete="ignore-field"
+              label="IaaS IP address"
+              placeholder="Your link is missing access token"
+              persistent-placeholder
+              outlined
+              dense
+              readonly
+              hide-details
+              @focus="$event.target.select()"
+            >
+              <template v-slot:append>
+                <a class="material-icons content_copy" @click="copyText('iaasip')">&#xe14d;</a>
+              </template>
+            </v-text-field>
+          </v-col>
+          <v-card elevation="1">
+          <v-expansion-panels elevation="0">
+          <v-expansion-panel>
+              <v-expansion-panel-header>
+                <h3><a href="#ssh-config" class="header-anchor">#</a> 4. SSH Config file</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
+                <v-tabs
+                  v-model="tab"
+                  centered
+                >
+                  <!-- <v-tabs-slider></v-tabs-slider> -->
+
+                  <v-tab href="#windows">Windows</v-tab>
+
+                  <v-tab href="#macos">MacOS</v-tab>
+
+                  <v-tab href="#linux">Linux</v-tab>
+                </v-tabs>
+                <v-tabs-items v-model="tab">
+                  <v-tab-item value="windows">
+                    <v-col cols="12">
+                      4.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists.
+                      <v-text-field
+                        :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
+                        ref="winSshConfig1"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winSshConfig1')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4.2. Open SSH Config file.
+                      <v-text-field
+                        :value='`Notepad.exe "%USERPROFILE%\\.ssh\\config"`'
+                        ref="winSshConfig2"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winSshConfig2')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4.3. Add lab configuration into SSH Config opened in Notepad.
+                      <v-textarea
+                        v-model.trim="configText"
+                        ref="ssh-config-win"
+                        label="SSH Config file"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        class="py-2 mt-2"
+                        outlined
+                        readonly
+                        rows="11"
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyTextArea('ssh-config-win')">&#xe14d;</a>
+                        </template>
+                      </v-textarea>
+                    </v-col>
+                    <v-col cols="12">
+                      4.4. Test by connecting straight into home machine.
+                      <v-text-field
+                        :value="`ssh ${query.labName}`"
+                        ref="ssh-config-lab-win"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('ssh-config-lab-win')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                  </v-tab-item>
+                  <v-tab-item value="macos">
+                    <!-- Place in <code>~/.ssh/config</code>. -->
+                    <v-col cols="12">
+                      4.1. Open new Terminal window and assure SSH Config file exists.
+                      <v-text-field
+                        :value="`touch ~/.ssh/config`"
+                        ref="macSshConfig1"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macSshConfig1')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4.2. Open SSH Config file.
+                      <v-text-field
+                        :value="`open -Wne ~/.ssh/config`"
+                        ref="macSshConfig2"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macSshConfig2')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4.3. Add lab configuration into SSH Config opened in Text Editor.
+                      <v-textarea
+                        v-model.trim="configText"
+                        ref="ssh-config-mac"
+                        label="SSH Config file"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        class="py-2 mt-2"
+                        outlined
+                        readonly
+                        rows="11"
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyTextArea('ssh-config-mac')">&#xe14d;</a>
+                        </template>
+                      </v-textarea>
+                    </v-col>
+                    <v-col cols="12">
+                      4.4. Test by connecting straight into home machine.
+                      <v-text-field
+                        :value="`ssh ${query.labName}`"
+                        ref="ssh-config-lab-mac"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('ssh-config-lab-mac')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                  </v-tab-item>
+                  <v-tab-item value="linux">
+                    <!-- Place in <code>~/.ssh/config</code>. -->
+                    <v-col cols="12">
+                      4.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists.
+                      <v-text-field
+                        :value="`touch ~/.ssh/config`"
+                        ref="linuxSshConfig1"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxSshConfig1')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4.2. Open SSH Config file.
+                      <v-text-field
+                        :value="`gedit ~/.ssh/config`"
+                        ref="linuxSshConfig2"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('linuxSshConfig2')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4.3. Add lab configuration into SSH Config opened in Text Editor.
+                      <v-textarea
+                        v-model.trim="configText"
+                        ref="ssh-config-linux"
+                        label="SSH Config file"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        class="py-2 mt-2"
+                        outlined
+                        readonly
+                        rows="11"
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyTextArea('ssh-config-linux')">&#xe14d;</a>
+                        </template>
+                      </v-textarea>
+                    </v-col>
+                    <v-col cols="12">
+                      4.4. Test by connecting straight into home machine.
+                      <v-text-field
+                        :value="`ssh ${query.labName}`"
+                        ref="ssh-config-lab-linux"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="$"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('ssh-config-lab-linux')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                </v-tab-item>
+              </v-tabs-items>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-expansion-panels>
+        </v-card>
+        </v-row>  
       </v-card>
-     </v-app>
-   </div>
+    </v-app>
+  </div>
 </template>
+
 
 <style lang="sass">
 .vuewidget
