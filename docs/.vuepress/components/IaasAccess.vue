@@ -84,8 +84,7 @@ export default {
 //       passChangedHome: `passwd: Password updated successfully
 // Connection to home closed.`,
       template: `Host {lab_name}
-    HostName {iaasip}
-    HostKeyAlias {iaasname}
+    HostName {iaasname}
     User Ubuntu
     ProxyCommand ssh -W %h:%p {lab_name}
 `,
@@ -111,7 +110,7 @@ export default {
       return this.query.ipAddress && this.query.labName ? `${this.query.ipAddress}    ${this.query.labName}.lab.hdc.ntnu.no` : null;
     },
     iaasMachine() {
-      return this.query.ipAddress && this.query.labName  && this.query.username && this.query.iaasName && this.query.iaasIp ? true : false;
+      return this.query.ipAddress && this.query.labName  && this.query.username && this.query.iaasName ? true : false;
     },
     entryIpUrl() {
       return this.query.ipAddress ? this.query.ipAddress.replace('.', '%2E') : '';
@@ -140,7 +139,7 @@ export default {
       }
     }
     const access = this.access
-    if (access.length == 5) {
+    if (access.length == 4) {
       this.query.ipAddress = access[0]
       localStorage.ipAddress = access[0]
       this.query.labName = access[1]
@@ -149,9 +148,7 @@ export default {
       localStorage.username = access[2]
       this.query.iaasName = access[3]
       localStorage.iaasName = access[3]
-      this.query.iaasIp = access[4]
-      localStorage.iaasIp = access[4]
-    } else if (access.length == 6) {
+    } else if (access.length == 5) {
       this.query.ipAddress = access[0]
       localStorage.ipAddress = access[0]
       // this.query.homeIpAddress = access[1]
@@ -161,8 +158,6 @@ export default {
       localStorage.username = access[3]
       this.query.iaasName = access[4]
       localStorage.iaasName = access[4]
-      this.query.iaasIp = access[5]
-      localStorage.iaasIp = access[5]
     } else if (!access || access.length == 0) {
       if (localStorage.ipAddress) {
         this.query.ipAddress = localStorage.ipAddress
@@ -180,7 +175,7 @@ export default {
   },
   created() {
     console.log(this.$route.query)
-    // /do-science/iaas/?iaas=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXJ8ZGVtb2xhYi1ibHVlLWFyZGFufDEwLjUuNS4xNg%3D%3D
+    // /do-science/iaas/?iaas=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXJ8ZGVtb2xhYi1ibHVlLWFyZGFu
     this.access = this.$route.query.access ? atob(this.$route.query.access).split('|') : []
     console.log(this.query)
   },
@@ -191,7 +186,6 @@ export default {
       text = text.replaceAll('{lab_name}', this.query.labName)
       text = text.replaceAll('{username}', this.query.username)
       text = text.replaceAll('{iaasname}', this.query.iaasName)
-      text = text.replaceAll('{iaasip}', this.query.iaasIp)
       return text
     },
     copyText(key) {
@@ -280,7 +274,7 @@ export default {
               v-model="query.iaasName"
               ref="IaasName"
               autocomplete="ignore-field"
-              label="IaaS Name"
+              label="Iaas Name"
               placeholder="Your link is missing access token"
               persistent-placeholder
               outlined
@@ -291,25 +285,6 @@ export default {
             >
               <template v-slot:append>
                 <a class="material-icons content_copy" @click="copyText('iaasName')">&#xe14d;</a>
-              </template>
-            </v-text-field>
-          </v-col>
-          <v-col cols="10">
-            <v-text-field
-              v-model="query.iaasIp"
-              ref="IaasIp"
-              autocomplete="ignore-field"
-              label="IaaS IP address"
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-            >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('iaasip')">&#xe14d;</a>
               </template>
             </v-text-field>
           </v-col>
