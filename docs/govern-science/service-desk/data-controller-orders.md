@@ -25,13 +25,13 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 ### New data processor agreement
 
-Click on the blue button below to order a HUNT Cloud data processor agreement using the HUNT Cloud template.
+Click on the blue button below to order a HUNT Cloud data processor agreement.
 
 <SDButton form="request_new_dp_agreement" />
 
-* **Guide:** [Get going as a data controller](/administer-science/get-going/data-controller/)
+* **Guide:** [Organiational access](/govern-science/organizational-access/)
 * **Who can request:** Data controllers for data inteded to be processed in HUNT Cloud.
-* **Required attachment**: [HUNT Cloud data processor agreement form](/administer-science/get-going/data-controller/#_6-forward-required-processor-agreement-information-to-hunt-cloud).
+* **Required attachment**: [HUNT Cloud organizational agreement information form](/govern-science/organizational-access/#request-organizational-agreements).
 * **Expected delivery:** PDF agreements for review/signatures.
 * **Expected delivery time:** One week.
 * **Cost:** There is no direct cost for data controllers establishing data processor agreements. Resource consumptions are billed to attached data spaces and labs.
@@ -43,12 +43,13 @@ Our HUNT Cloud data processor agreement version gets updated from time to time. 
 
 <SDButton form="request__dp_agreement_version_upgrade" />
 
-* **Guide:** [Get going as a data controller](/administer-science/get-going/data-controller/)
+* **Guide:** [Organiational access](/govern-science/organizational-access/)
 * **Who can request:** Data controller administrators.
-* **Required attachment**: None, although you may add a new [HUNT Cloud data processor agreement form](/administer-science/get-going/data-controller/#_6-forward-required-processor-agreement-information-to-hunt-cloud) if you plan to update your contact information.
+* **Required attachment**: None, although you may add a new [HUNT Cloud organizational agreement information form](/govern-science/organizational-access/#request-organizational-agreements) if you plan to update your contact information.
 * **Expected delivery:** PDF agreements for review/signatures.
 * **Expected delivery time:** One week.
 * **Cost:** There is no direct cost upgrading data processor agreements.
+
 
 ## Service center management
 
@@ -58,19 +59,17 @@ Click the button below to order a new service center.
 
 <SDButton form="request_new_service_center" />
 
-* **Guide:** [Get going with your service center](/administer-science/get-going/service-center/)
-* **Who can order:** Data space leaders and data space administrators under active data controller agreements.
-* **Required attachment**: [HUNT Cloud Service Agreement Form](/administer-science/get-going/service-center/#_2-forward-required-services-agreement-information-to-hunt-cloud).
+* **Guide:** [Organiational access](/govern-science/organizational-access/)
+* **Who can order:** Data controllers.
+* **Required attachment**: [HUNT Cloud organizational agreement information form](/govern-science/organizational-access/#request-organizational-agreements).
 * **Expected delivery:** PDF agreements for review/signatures.
 * **Expected delivery time:** One week.
-* **Next step:** [Order your first data space](/administer-science/get-going/data-space/)
+* **Next step:** [Scientific access](/administer-science/scientific-access/)
 * **Cost:** There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
 ### Update Data controller ting representative
 
-Data controller ting is the Ting for cross-organizational dialogue on privacy, security and ethics within HUNT Cloud. 
-Privacy contacts, security contacts and data space compliance administrators are invited. 
-Data controller administrators may appoint representatives that receive invitations and meeting information on behalf of their organization.
+Data controller ting is the Ting for cross-organizational dialogue on privacy, security and ethics within HUNT Cloud. Privacy contacts, security contacts and data space compliance administrators are invited. Data controller administrators may appoint representatives that receive invitations and meeting information on behalf of their organization.
 
 <SDButton form="request_update_data_rep" />
 

@@ -360,19 +360,16 @@ module.exports = {
         //   ]
         // },
         {
-          title: "Get going",
-          text: "Get going",
+          title: "Scientific access",
+          text: "Scientific access",
           collapsable: true,
           isGroup: true,
           children: [
             {
               title: "Introduction",
-              path: "/administer-science/get-going/",
+              path: "/administer-science/scientific-access/",
             },
-            "/administer-science/get-going/data-controller.md",
-            "/administer-science/get-going/service-center.md",
-            "/administer-science/get-going/data-space.md",
-            "/administer-science/get-going/lab.md",
+            "/administer-science/scientific-access/faq.md",
           ],
         },
         {
@@ -508,6 +505,21 @@ module.exports = {
               title: "Contribute",
               path: "/govern-science/contribute.md",
             },
+          ],
+        },
+        {
+          title: "Organizational access",
+          text: "Organizational access",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {
+              title: "Introduction",
+              path: "/govern-science/organizational-access/",
+            },
+            "/govern-science/organizational-access/data-processor-agreement.md",
+            "/govern-science/organizational-access/service-center-agreement.md",
+            "/govern-science/organizational-access/faq.md",
           ],
         },
         {

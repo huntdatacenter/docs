@@ -30,11 +30,11 @@ Click the button below to order a new data space under your existing service cen
 
 <SDButton form="new_data_space" />
 
-* **Guide:** [Get going with your data space](/administer-science/get-going/data-space/)
+* **Guide:** [Scientific access](/administer-science/scientific-access/)
 * **Who can order:** Service center leaders and administrative contacts for service centers.
-* **Required attachment**: (1) [A signed data space order](/administer-science/agreements/downloads/#data-space-order), and (2) [invoice profile for the data space](/administer-science/agreements/downloads/#invoice-profile).
+* **Required attachment**: [A signed Scientific Access Order](/administer-science/scientific-access/#order-scientific-access).
 * **Expected delivery time:** Days.
-* **Next step:** [Order the first lab in the new data space](/administer-science/service-desk/data-space-orders#new-lab)
+* **Next step:** [Add a new lab user](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) by Lab leaders.
 * **Cost:** There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
 ### Update Lagtun ting representative
