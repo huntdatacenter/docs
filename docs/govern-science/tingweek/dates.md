@@ -9,21 +9,31 @@ description: This page list information and questions about our Tingweeks.
 
 # Ting dates and agendas
 
-**This pages contains paste and future Ting dates and Ting agendas. [Click here](/govern-science/tingweek/#schedule) to read about the Ting schedule.**
+**This pages contains paste and future Ting dates and agendas.**
 
-::: tip Next Tingweek (Ting 8)
 
-- **Labting**: Tuesday 14 February 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-labting-agenda.pdf))
-- **Data space ting**: Wednesday 15 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-dataspaceting-agenda.pdf))
-- **Data controller ting**: Wednesday 15 February 2023 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-datacontrollerting-agenda.pdf))
-- **Lagtun**: Thursday 16 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-lagtun-agenda.pdf))
-
-:::
 
 [[toc]]
 
+::: tip 
 
+[Click here](/govern-science/tingweek/#schedule) to read about the Ting schedule.
 
+:::
+
+### Tingweek #11 (2024-02)
+
+- **Labting**: Tuesday 13 February 2023 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 14 February 2023 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 14 February 2023 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 15 February 2023 - 9 to 11 a.m. CET
+
+### Tingweek #10 (2023-10)
+
+- **Labting**: Tuesday 17 October 2023 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 18 October 2023 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 18 October 2023 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 19 October 2023 - 9 to 11 a.m. CET
 
 ### Tingweek #9 (2023-05)
 

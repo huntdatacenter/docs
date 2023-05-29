@@ -1329,11 +1329,11 @@ request_mobaxterm_file:
 request_update_lagtun_rep:
   title: "Update Lagtun representative"
   template:
-    subject: "Update Lagtun ting representatives {name} @ {dataspace}"
+    subject: "Update Lagtun representatives {name} @ {dataspace}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to update our lagtun ting representative.
+      I would like to update our Lagtun representative.
 
       Name and Surname: {name}
       Data space: {dataspace}
@@ -1361,7 +1361,7 @@ request_update_data_rep:
     body: |
       Hi HUNT Cloud team,
 
-      I would like to update our data controller ting representative.
+      I would like to update our Data controller ting representative.
 
       Name and Surname: {name}
       Data Controller: {dataspace}
