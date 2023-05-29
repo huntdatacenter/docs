@@ -42,6 +42,18 @@ export default ({
         window.location.href = to_path.replace("/tingweeks", "/govern-science/tingweek");
         next();
       } else if (
+        to_path.startsWith("/do-science/getting-started/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/do-science/getting-started/", "/do-science/lab-access/");
+        next();
+      } else if (
+        to_path.startsWith("/getting-started/")
+      ) {
+        // Rewrite the link to correct path
+        window.location.href = to_path.replace("/getting-started/", "/do-science/lab-access/");
+        next();
+      } else if (
         to_path.startsWith("/lab-access/")
       ) {
         // Rewrite the link to correct path
