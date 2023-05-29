@@ -9,7 +9,7 @@ description: This page provides a guide for scientific centers and groups that w
 
 **This page provides a guide for scientific centers and groups that wants to enable HUNT Cloud resources for their data scientists.**
 
-::: tip Skip to the chase
+::: tip Cut to the chase
 
 [Click here](#order-scientific-access) to jump directly to the service orders that needs to be in place before you can onboard your scientists to HUNT Cloud.
 

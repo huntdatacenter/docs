@@ -9,7 +9,7 @@ description: Enable organiational access to HUNT Cloud for your scientists and s
 
 **This pages provides a guide for organizations that wants to enable HUNT Cloud resources for their scientists and data explorers.**
 
-::: tip Skip to the chase
+::: tip Cut to the chase
 
 [Click here](#request-organizational-agreements) to request the organizational agreements that we need before you can onboard your scientists to HUNT Cloud.
 
