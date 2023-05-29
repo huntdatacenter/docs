@@ -383,9 +383,9 @@ request_new_dp_agreement:
     { label: "Organization", key: "organization", field: "textfield" },
   ]
   requirements: [
-    "<b>Guide:</b> <a href='/coordination/get-going/data-controller/' target='_blank'>Get going as a data controller</a>.",
+    "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going as a data controller</a>.",
     "<b>Who can request:</b> Data controllers for data inteded to be processed in HUNT Cloud.",
-    "<b>Required attachment</b>: <a href='/coordination/get-going/data-controller/#_6-forward-required-processor-agreement-information-to-hunt-cloud' target='_blank'>HUNT Cloud data processor agreement form</a>.",
+    "<b>Required attachment</b>: <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a>.",
     "<b>Expected delivery:</b> PDF agreements for review/signatures.",
     "<b>Expected delivery time:</b> One week.",
     "<b>Cost:</b> There is no direct cost for data controllers establishing data processor agreements. Resource consumptions are billed to attached data spaces and labs.",
@@ -412,12 +412,11 @@ request_new_service_center:
     { label: "Data controller", key: "datacontroller", field: "textfield" },
   ]
   requirements: [
-    "<b>Guide:</b> <a href='/coordination/get-going/service-center/' target='_blank'>Get going with your service center </a>",
+    "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going with your service center </a>",
     "<b>Who can order:</b> Data space leaders and data space administrators under active data controller agreements.",
-    "<b>Required attachment</b>: <a href='/coordination/get-going/service-center/#_2-forward-required-services-agreement-information-to-hunt-cloud' target='_blank'>HUNT Cloud Service Agreement Form</a>.",
+    "<b>Required attachment</b>: <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a>.",
     "<b>Expected delivery:</b> PDF agreements for review/signatures.",
     "<b>Expected delivery time:</b> One week.",
-    # "<b>Next step:</b> <a href='/coordination/get-going/data-space/' target='_blank'>Order your first data space</a>",
     "<b>Cost:</b> There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
 
   ]
@@ -441,9 +440,9 @@ request__dp_agreement_version_upgrade:
     { label: "Organization", key: "organization", field: "textfield" },
   ]
   requirements: [
-    "<b>Guide:</b> <a href='/coordination/get-going/data-controller/' target='_blank'>Get going as a data controller</a>",
+    "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going as a data controller</a>",
     "<b>Who can request:</b> Data controller administrators.",
-    "<b>Required attachment</b>: None, although you may add a new <a href='/coordination/get-going/data-controller/#_6-forward-required-processor-agreement-information-to-hunt-cloud' target='_blank'>HUNT Cloud data processor agreement form</a> if you plan to update your contact information.",
+    "<b>Required attachment</b>: None, although you may add a new <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a> if you plan to update your contact information.",
     "<b>Expected delivery:</b> PDF agreements for review/signatures.",
     "<b>Expected delivery time:</b> One week.",
     "<b>Cost:</b> There is no direct cost upgrading data processor agreements.",
@@ -1056,11 +1055,10 @@ new_data_space:
     { label: "Service center name", key: "service_center", pattern: "(.){3,}", field: "textfield" },
   ]
   requirements: [
-    "<b>Guide:</b> <a href='/coordination/get-going/data-space/' target='_blank'>Get going with your data space</a>",
+    "<b>Guide:</b> <a href='/administer-science/scientific-access/' target='_blank'>Scientific access</a>",
     "<b>Who can order:</b> Service center leaders and administrative contacts for service centers.",
     "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#data-space-order' target='_blank'>A signed data space order</a> and <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>invoice profile for the data space</a>.",
     "<b>Expected delivery time:</b> Days.",
-    # "<b>Next step:</b> <a href='/service-desk/data-space-orders.html#new-lab' target='_blank'>Order the first lab in your data space</a>",
     "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
   ]
 
