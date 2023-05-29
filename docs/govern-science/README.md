@@ -17,7 +17,7 @@ See our [organizational access](/govern-science/organizational-access) section f
 
 ::: tip Next Tingweek (Ting 9)
 
-- **Labting**: Tuesday 30 May 2023 - 2 to 4 p.m. CET
+- **Labting**: Tuesday 30 May 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek9-labting-agenda.pdf))
 - **Data space ting**: Wednesday 31 May 2023 - 9 to 11 a.m. CET
 - **Data controller ting**: Wednesday 31 May 2023 - 1 to 3 p.m. CET
 - **Lagtun**: Thursday 1 June 2023 - 9 to 11 a.m. CET

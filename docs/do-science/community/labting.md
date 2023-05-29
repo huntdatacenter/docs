@@ -8,60 +8,53 @@ description: This page list information and questions about our Labting.
 
 # Labting
 
-**You will be invited to Labting three times per year. Labting is the Ting where we come together to elevate the scientific user experiences in HUNT Cloud.** 
+**You will be invited to Labting three times per year. This is our allting where we meet to elevate the scientific user experiences in HUNT Cloud.** 
 
 [[toc]]
 
+::: tip
 
-::: tip Why should I care?... 
-
-[Read why you should participate in the Labting](#why-should-i-care)
+Read more about the [Tingweek](/govern-science/tingweek/) in our govern-science section. 
 
 :::
 
+!["Old feather pen and letter seal."](./images/hunt-cloud-writing-tools.png)
 
-## Context
 
-We arrange Tingweeks at fixed intervals three times per year to meet for information, feedback and discussions on how to develop the services in HUNT Cloud to better elevate science. We call these gatherings Tings. Read more about the Tingweek in our [govern-science section](/govern-science/tingweek/). 
+## Why should you participate? 
 
-## About the HUNT Cloud Labting
+**Science never sleeps. And no service will ever be perfect.** 
 
-**Labting is our allting were we together evolve the user experience within HUNT Cloud**. 
+Join the Labting to voice your hard earned expertise to evolve the experience in HUNT Cloud for both yourself and others.
 
-### Invitations
+Both you and the next generation of scientists deserves exciting, cool and relevant environments to enhance our joint explorations.
+
+## Background
+
+**Most products and services that you use in HUNT Cloud have come together as a collaborative effort between members of the cloud community and our HUNT Cloud team.**
+
+We arrange Tingweeks three times per year to meet for information, feedback and discussions on how to evolve HUNT Cloud to better elevate your science.
+
+## Invitations
 
 All active lab users, lab leaders and lab coordinators will get an invitation on the organizational email specified in your user agreement.
 
-### Locations
-
-Labtings are held digitally utilizing NTNU's Zoom subscription. Links are shared in the email invitation and will be shared on the cloud-community table in Slack on the same days as the meeting. 
-
-### Duration
-
-Labting is held on Tuesday between 2-4 pm CET during the Tingweek. The first hour is reserved for the agenda, while the second hour is reserved for unstructured dialogue. 
-
-You may choose to join and leav when you want. Some prefer to stay for fixed agenda, while others like to stay for the dialogue in the second hour.
-
-### Agenda
+## Topics
 
 We aim to cover a combination of relevant shifting topics and appointed topics that is repeated during each Ting, such as documentation, communication, service desk, working in your lab and similar.
 
-## Read more
+## Location
 
-Read more about Tingweeks, Labting, and see past agendas in our [govern-science section](/govern-science/tingweek/).
+Labtings are held digitally utilizing NTNU's Zoom subscription. Links are shared in the email invitation and will be shared on the cloud-community table in Slack on the same days as the meeting. 
 
-## FAQ
+## Duration
 
-### Why should I care? 
+Labting is held on Tuesday between 2-4 pm CET during the Tingweek. 
 
-::: tip You should care because... 
+The first hour is reserved for the agenda, while the second hour is reserved for unstructured dialogue. 
 
-Products and services that you use in HUNT Cloud have come together as a collaborative effort between members from the cloud community and our HUNT Cloud team.
+You may choose to join and leave when you want. Some prefer to stay for fixed agenda, while others like to stay for the dialogue in the second hour.
 
-However, science never sleeps. And such, no service will ever be perfect. 
 
-Join the Labting to voice your hard earned expertise to evolve the experience for yourself, the greater community and new scientists in line that all deserves exciting and cool environments to enhance their explorations.
-
-::: 
 
 
