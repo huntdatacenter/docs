@@ -69,7 +69,7 @@ The form below contains several small decision points that organizations outside
 ## Request organizational agreements
 
 ::: tip For NTNU departments
-Send us the name of your administrative contact person that will coordinate the agreement process on [email](/contact). We will generate the additional agreement information.
+Send us the name of the administrative contact person at your Department that will coordinate the agreement process on [email](/contact). We will generate the additional agreement information.
 :::
 
 ::: tip For all other institutions
