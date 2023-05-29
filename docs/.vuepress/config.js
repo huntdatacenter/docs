@@ -98,7 +98,7 @@ module.exports = {
     ],
     navbar: [
       {
-        text: "Getting started",
+        text: "Lab access",
         link: "/lab-access/",
       },
     ],
@@ -130,8 +130,8 @@ module.exports = {
           ],
         },
         {
-          title: "Getting started",
-          text: "Getting started",
+          title: "Lab access",
+          text: "Lab access",
           collapsable: true,
           isGroup: true,
           children: [

@@ -1,6 +1,6 @@
 ---
 title: 1. Collect your keys
-category: Getting started
+category: Lab access
 permalink: /do-science/lab-access/collect-your-keys
 sidebarDepth: 1
 description: Guide on how to request and receive your keys. Note requirements before proceeding with the guide.

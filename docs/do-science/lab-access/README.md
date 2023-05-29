@@ -1,13 +1,13 @@
 ---
-title: Getting started
-category: Getting started
+title: Lab access
+category: Lab access
 permalink: /do-science/lab-access
-description: This guide will help you to connect and get started on your HUNT Cloud lab.
+description: This guide will help you to access to your HUNT Cloud lab.
 ---
 
-# Introduction
+# Lab access
 
-**This guide will help you to connect and get started on your HUNT Cloud lab after your lab has requested access in our administer science [service desk](/administer-science/service-desk/lab-orders).**
+**This guide will help you to connect to your HUNT Cloud lab after your lab has requested access in our administer science [service desk](/administer-science/service-desk/lab-orders).**
 
 ::: tip Save time
 
