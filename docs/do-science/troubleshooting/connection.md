@@ -45,11 +45,11 @@ Protocol: UDP
 
 ### Administrator rights
 
-Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/do-science/getting-started/configure-vpn/#_2-1-install-the-vpn-software).
+Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/do-science/lab-access/configure-vpn/#_2-1-install-the-vpn-software).
 
 ### Lost or missing VPN passphrase
 
-Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/do-science/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile)  if this happens. Order your VPN certificate reset in our [service desk](/do-science/service-desk/#vpn-certificate-reset).
+Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/do-science/lab-access/configure-vpn/#_2-2-setup-the-vpn-profile)  if this happens. Order your VPN certificate reset in our [service desk](/do-science/service-desk/#vpn-certificate-reset).
 
 
 
@@ -75,7 +75,7 @@ You cannot access your HUNT Cloud lab while using the default Cisco Anyconnect V
 
 ### No internet while connected to VPN
 
-If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check that you selected the **`Use this connection only for resources on its network`** in the final steps of [Setup the VPN profile](/do-science/getting-started/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
+If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check that you selected the **`Use this connection only for resources on its network`** in the final steps of [Setup the VPN profile](/do-science/lab-access/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
 
 ### Wrong password
 

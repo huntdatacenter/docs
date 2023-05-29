@@ -39,7 +39,7 @@ Click the button below to order access for a new user to your lab.
 * **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads/#user-agreement).
 * **Expected response time:** Days.
 * **Expected delivery:** Lab keys and VPN certificate.
-* **Next step:** [Prepare your key transfer](/do-science/getting-started/).
+* **Next step:** [Prepare your key transfer](/do-science/lab-access/).
 * **Cost:** Included in your lab subscription.
 
 
@@ -65,7 +65,7 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 * **Required attachment**: [A new user agreement](/administer-science/agreements/downloads/#user-agreement).
 * **Expected response time:** Days.
 * **Expected delivery:** Lab keys and VPN certificate.
-* **Next step:** [Prepare your key transfer](/do-science/getting-started/).
+* **Next step:** [Prepare your key transfer](/do-science/lab-access/).
 * **Cost:** Included in your lab subscription.
 
 ### Update lab coordinator role

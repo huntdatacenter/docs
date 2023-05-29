@@ -1,7 +1,7 @@
 ---
 title: 2. VPN configuration
 category: Getting started
-permalink: /do-science/getting-started/configure-vpn
+permalink: /do-science/lab-access/configure-vpn
 sidebarDepth: 1
 description: Guide on VPN installation and configuration. Make sure you have successfully collected your keys before proceeding with this guide.
 ---
@@ -12,7 +12,7 @@ description: Guide on VPN installation and configuration. Make sure you have suc
 
 ::: warning Requirement
 
-Successful [verification](/do-science/getting-started/collect-your-keys/#_1-4-verify-your-key-collection) of Step 1.
+Successful [verification](/do-science/lab-access/collect-your-keys/#_1-4-verify-your-key-collection) of Step 1.
 
 :::
 
@@ -277,7 +277,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 ::: tip Next step
 
-If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/getting-started/configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/lab-access/configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 

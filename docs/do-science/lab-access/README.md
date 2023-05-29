@@ -1,7 +1,7 @@
 ---
 title: Getting started
 category: Getting started
-permalink: /do-science/getting-started
+permalink: /do-science/lab-access
 description: This guide will help you to connect and get started on your HUNT Cloud lab.
 ---
 
@@ -11,15 +11,15 @@ description: This guide will help you to connect and get started on your HUNT Cl
 
 ::: tip Save time
 
-[Install Signal](/do-science/getting-started/collect-your-keys/#_1-1-secrets-to-your-phone) as soon as your lab has sent us your signed user agreement. This allows us to quickly forward you the lab keys when they are ready.
+[Install Signal](/do-science/lab-access/collect-your-keys/#_1-1-secrets-to-your-phone) as soon as your lab has sent us your signed user agreement. This allows us to quickly forward you the lab keys when they are ready.
 
 :::
 
 The following steps will help you to invest time in your lab setup, all so you can enjoy simple and secure access for all your future connections:
 
-1. [Collect your keys](/do-science/getting-started/collect-your-keys/). This step ensures that you have all your keys and configuration files before your start to spend time on the setup.
-2. [Configure your VPN connection](/do-science/getting-started/configure-vpn/). This step ensures an encrypted system connection to HUNT Cloud.
-3. [Configure your SSH connection](/do-science/getting-started/configure-ssh/). This step ensures a connection to your lab.
+1. [Collect your keys](/do-science/lab-access/collect-your-keys/). This step ensures that you have all your keys and configuration files before your start to spend time on the setup.
+2. [Configure your VPN connection](/do-science/lab-access/configure-vpn/). This step ensures an encrypted system connection to HUNT Cloud.
+3. [Configure your SSH connection](/do-science/lab-access/configure-ssh/). This step ensures a connection to your lab.
 
 
 ::: tip Connecting from outside Norway?

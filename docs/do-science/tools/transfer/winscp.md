@@ -16,7 +16,7 @@ If your host organization allows, you can use WinSCP for file transfers and sync
 
 ::: warning Requirement
 - Windows operating system.
-- A [working connection](/do-science/getting-started/) to your lab.
+- A [working connection](/do-science/lab-access/) to your lab.
 :::
 
 ## Install

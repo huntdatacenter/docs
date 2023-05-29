@@ -99,7 +99,7 @@ module.exports = {
     navbar: [
       {
         text: "Getting started",
-        link: "/getting-started/",
+        link: "/lab-access/",
       },
     ],
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
@@ -137,11 +137,11 @@ module.exports = {
           children: [
             {
               title: "Introduction",
-              path: "/do-science/getting-started/",
+              path: "/do-science/lab-access/",
             },
-            "/do-science/getting-started/1-collect-keys.md",
-            "/do-science/getting-started/2-configure-vpn.md",
-            "/do-science/getting-started/3-configure-ssh.md",
+            "/do-science/lab-access/1-collect-keys.md",
+            "/do-science/lab-access/2-configure-vpn.md",
+            "/do-science/lab-access/3-configure-ssh.md",
           ],
         },
         {
@@ -814,7 +814,7 @@ module.exports = {
         title: $page => ($page.frontmatter.category ? $page.frontmatter.category + ": " + $page.title : $page.title),
         description: $page => $page.frontmatter.description,
         twitterCard: _ => "summary",
-        type: $page => (["getting-started", "working-in-your-lab", "data-transfer"].some(folder => $page.regularPath.startsWith("/" + folder)) ? "article" : "website"),
+        type: $page => (["lab-access", "working-in-your-lab", "data-transfer"].some(folder => $page.regularPath.startsWith("/" + folder)) ? "article" : "website"),
         url: (_, $site, path) => ($site.themeConfig.domain || "https://docs.hdc.ntnu.no") + path,
         customMeta: (add, context) => {
           const {

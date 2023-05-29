@@ -1,7 +1,7 @@
 ---
 title: 1. Collect your keys
 category: Getting started
-permalink: /do-science/getting-started/collect-your-keys
+permalink: /do-science/lab-access/collect-your-keys
 sidebarDepth: 1
 description: Guide on how to request and receive your keys. Note requirements before proceeding with the guide.
 ---
@@ -151,7 +151,7 @@ Without these, it will be impossible to complete the remaining steps.
 
 ::: tip Time for coffee!
 
-If you successfully completed this step, celebrate with fresh coffee and head over to the [VPN configuration](/do-science/getting-started/configure-vpn). If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+If you successfully completed this step, celebrate with fresh coffee and head over to the [VPN configuration](/do-science/lab-access/configure-vpn). If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 
@@ -169,7 +169,7 @@ Steps to resolve issues with Signal may vary by phone model and OS. Signal has a
 
 #### Windows: I am unable to unpack the 7z-file forwarded on email
 
-If the [decryption guides](/do-science/getting-started/collect-your-keys/#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
+If the [decryption guides](/do-science/lab-access/collect-your-keys/#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
 
 #### OS X, macOS: The 7z archive password do not seem to work?
 

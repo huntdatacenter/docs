@@ -24,7 +24,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 **Required software**. The following required software should aready be installed during your initial onboarding: 
 
-1.3. Working VPN software (if not, head over to our Getting started guide to [install the VPN software](/do-science/getting-started/configure-vpn/#_2-1-install-the-vpn-software).
+1.3. Working VPN software (if not, head over to our Getting started guide to [install the VPN software](/do-science/lab-access/configure-vpn/#_2-1-install-the-vpn-software).
 
 1.4. A working Google authenticator application on your phone that provide time-based VPN verification codes (if not, you can order a [Google authenticator key reset](/do-science/service-desk/#google-authenticator-key-reset) in our service desk).
 
@@ -286,7 +286,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 ::: tip Next step
 
-If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/getting-started/configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/lab-access/configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 

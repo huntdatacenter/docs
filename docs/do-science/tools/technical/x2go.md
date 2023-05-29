@@ -93,7 +93,7 @@ Click **`Create new session`**.
 
   - For Mac and Linux:
 
-    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/do-science/getting-started/configure-ssh/#_3-5-final-steps)' section in the installation guide.
+    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/do-science/lab-access/configure-ssh/#_3-5-final-steps)' section in the installation guide.
 
   - For Windows:
 
@@ -188,7 +188,7 @@ Click **`Create new session`**.
 
   - For Mac and Linux:
 
-    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/do-science/getting-started/configure-ssh/#_3-5-final-steps)' section in the installation guide.
+    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/do-science/lab-access/configure-ssh/#_3-5-final-steps)' section in the installation guide.
 
   - For Windows:
 

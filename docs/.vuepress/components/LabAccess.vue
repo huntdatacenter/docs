@@ -207,7 +207,7 @@ Host {lab_name}
       <v-card v-show="cfgShow" class="pt-4">
         <v-row class="ml-3 mb-2">
           <v-col cols="10">
-            Once you have <a href="/do-science/getting-started/collect-your-keys/" target="_blank">collected your keys</a>
+            Once you have <a href="/do-science/lab-access/collect-your-keys/" target="_blank">collected your keys</a>
             use the guides below to setup your lab access.
           </v-col>
           <v-col cols="10">
@@ -296,7 +296,7 @@ Host {lab_name}
               </v-expansion-panel-header>
               <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
                 If you have not setup HUNT Cloud VPN yet follow our
-                <a href="/do-science/getting-started/configure-vpn/" target="_blank">VPN configuration guide</a>
+                <a href="/do-science/lab-access/configure-vpn/" target="_blank">VPN configuration guide</a>
               </v-expansion-panel-content>
             </v-expansion-panel>
             <v-expansion-panel>
@@ -319,7 +319,7 @@ Host {lab_name}
                 <v-tabs-items v-model="tab">
                   <v-tab-item value="windows">
                     <v-col cols="12">
-                      2.1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
+                      2.1. Design <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
                     <v-col cols="12">
                       2.2. To start Command Prompt press <code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
@@ -357,7 +357,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      2.6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+                      2.6. Enter <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passSetNew"></code>
                       </pre></div>
@@ -459,7 +459,7 @@ Host {lab_name}
                   </v-tab-item>
                   <v-tab-item value="macos">
                     <v-col cols="12">
-                      2.1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
+                      2.1. Design <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
                     <v-col cols="12">
                       2.2. Start Terminal application.
@@ -497,7 +497,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      2.6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+                      2.6. Enter <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passSetNew"></code>
                       </pre></div>
@@ -599,7 +599,7 @@ Host {lab_name}
                   </v-tab-item>
                   <v-tab-item value="linux">
                     <v-col cols="12">
-                      2.1. Design <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
+                      2.1. Design <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
                     <v-col cols="12">
                       2.2. Start Terminal application.
@@ -637,7 +637,7 @@ Host {lab_name}
                       </pre></div>
                     </v-col>
                     <v-col cols="12">
-                      2.6. Enter <a href="/do-science/getting-started/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+                      2.6. Enter <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
                       <div class="language- extra-class"><pre class="language-text">
                         <code v-text="passSetNew"></code>
                       </pre></div>

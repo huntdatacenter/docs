@@ -42,10 +42,10 @@ export default ({
         window.location.href = to_path.replace("/tingweeks", "/govern-science/tingweek");
         next();
       } else if (
-        to_path.startsWith("/getting-started/")
+        to_path.startsWith("/lab-access/")
       ) {
         // Rewrite the link to correct path
-        window.location.href = to_path.replace("/getting-started/", "/do-science/getting-started/");
+        window.location.href = to_path.replace("/lab-access/", "/do-science/lab-access/");
         next();
       } else if (
         to_path.startsWith("/service-desk/user-orders/")
