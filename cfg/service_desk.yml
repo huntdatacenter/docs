@@ -417,7 +417,7 @@ request_new_service_center:
     "<b>Required attachment</b>: <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a>.",
     "<b>Expected delivery:</b> PDF agreements for review/signatures.",
     "<b>Expected delivery time:</b> One week.",
-    "<b>Cost:</b> There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
+    "<b>Cost:</b> There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
 
   ]
 
@@ -1059,7 +1059,7 @@ new_data_space:
     "<b>Who can order:</b> Service center leaders and administrative contacts for service centers.",
     "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#data-space-order' target='_blank'>A signed data space order</a> and <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>invoice profile for the data space</a>.",
     "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/services/specifications/' target='_blank'>Services specifications</a> and <a href='/prices/pricelist/' target='_blank'>Price list</a>.",
+    "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
   ]
 
 
