@@ -21,7 +21,7 @@ description: Lagtun is the body that appoints time for the scientific governance
 
 **The approach** is cooperative problem solving and joint strategic thinking among representatives from data controllers, services centers and data spaces on the blue subscription layer three times per year. 
 
-**The result** is recommendations of change given from Lagtun to HUNT Cloud in the form of resolutions.
+**The result** is recommendations of change given from Lagtun to HUNT Cloud in a form of resolutions.
 
 ## Attendance
 
@@ -52,6 +52,7 @@ The invitation criteria was clarified in [R2/LT5/T5/22](/govern-science/tingweek
 ## Resolutions
 
 **Lagtun gives recommendations on the development of HUNT Cloud in the form of resolutions. The is introduced with the intention to allow for an inclusive decision making process and multilateral cooperation.** 
+
 ### Passed resolutions
 
 Resolutions from previous Lagtuns are available in our [resolutions](/govern-science/tingweek/resolutions) page .
