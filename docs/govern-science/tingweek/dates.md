@@ -3,13 +3,13 @@ title: Dates
 category: Tingweek
 permalink: /govern-science/tingweek/dates/
 sidebarDepth: 1
-description: This page list information and questions about our Tingweeks.
+description: This page lists information and questions about our Tingweeks.
 ---
 
 
 # Ting dates and agendas
 
-**This pages contains paste and future Ting dates and agendas.**
+**These pages contain past and future Ting dates and agendas.**
 
 
 
