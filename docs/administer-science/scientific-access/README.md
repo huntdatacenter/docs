@@ -19,7 +19,7 @@ description: This page provides a guide for scientific centers and groups that w
 
 ## Background
 
-We have five agreement layers in HUNT Cloud (illustration below). This guide covers Data space orders and Lab orders that need to be in place before you can onboarding your scientists and data explorers.
+We have five agreement layers in HUNT Cloud (illustration below). This guide covers Data space orders and Lab orders that need to be in place before you can onboard your scientists and data explorers.
 
 !["Illustration of five agreement layers in HUNT Cloud with data processor agreements and service center agreements highlighted with a red frame since they are placed on the organizational level."](./images/hunt-cloud-agreement-layers-data-space-and-lab.png)
 
