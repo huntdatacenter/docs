@@ -847,7 +847,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      3.2. Start ssh-agent.
+                      3.2. Start ssh-agent. Note: Output of this command is only informational
                       <v-text-field
                         :value='`eval "$(ssh-agent -s)"`'
                         ref="macStep14"
@@ -867,7 +867,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      3.3. Add your public key to the ssh agent.
+                      3.3. Add your public key to the ssh agent. 
                       <v-text-field
                         :value="`ssh-add --apple-use-keychain ~/.ssh/id_rsa`"
                         ref="macStep15"
