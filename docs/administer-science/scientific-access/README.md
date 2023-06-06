@@ -7,11 +7,11 @@ description: This page provides a guide for scientific centers and groups that w
 
 # Scientific access
 
-**This page provides a guide for scientific centers and groups that wants to enable HUNT Cloud resources for their data scientists.**
+**This page provides a guide for scientific centers and groups that want to enable HUNT Cloud resources for their data scientists.**
 
 ::: tip Cut to the chase
 
-[Click here](#order-scientific-access) to jump directly to the service orders that needs to be in place before you can onboard your scientists to HUNT Cloud.
+[Click here](#order-scientific-access) to jump directly to the service orders that need to be in place before you can onboard your scientists to HUNT Cloud.
 
 :::
 
@@ -19,13 +19,13 @@ description: This page provides a guide for scientific centers and groups that w
 
 ## Background
 
-We have five agreement layers in HUNT Cloud (illustration below). This guide covers Data space orders and Lab orders that needs to be in place before you can onboarding your scientists and data explorers.
+We have five agreement layers in HUNT Cloud (illustration below). This guide covers Data space orders and Lab orders that need to be in place before you can onboarding your scientists and data explorers.
 
 !["Illustration of five agreement layers in HUNT Cloud with data processor agreements and service center agreements highlighted with a red frame since they are placed on the organizational level."](./images/hunt-cloud-agreement-layers-data-space-and-lab.png)
 
 ::: warning Organizational access dependency
 
-Both your Data space order and Lab orders are attached to your organizations Service center agreement. Your organization do need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/contact) if you are unsure of your current organizational agreement status or need guidance on how to start your organizational onboarding. 
+Both your Data space order and Lab orders are attached to your organizations Service center agreement. Your organization need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/contact) if you are unsure of your current organizational agreement status or need guidance on how to start your organizational onboarding. 
 
 :::
 
@@ -36,11 +36,11 @@ Data space orders and Lab orders are formally attached to your organizations Ser
 
 ### Data space order
 
-**A Data spaces in HUNT Cloud is the administrative unit that coordinate scientific activities across one or many labs. The aim is to simplify your management.** 
+**A Data space in HUNT Cloud is the administrative unit that coordinate scientific activities across one or many labs. The aim is to simplify your management.** 
 
 Your Data space is the management account where your labs and their attached services are managed, controlled and billed. A Data space subscription is therefore required before individual labs and services can be ordered.
 
-Your Data space do also identify your management team that we interact with to ensure smooth activities across your labs, and your Data space subscription level defines the service level that is available to the labs under your control. 
+Your Data space does also identify your management team that we interact with to ensure smooth activities across your labs, and your Data space subscription level defines the service level that is available to the labs under your control. 
 
 ::: details Data space order resources
 
@@ -54,9 +54,9 @@ Your Data space do also identify your management team that we interact with to e
 
 **A lab in HUNT Cloud is a digital environment (laboratory) where your scientists access their scientific tools and resources for storage, computation and transport. You may attach one to many labs under your Data space**
 
-By default, a lab consist of a security framework that we control, and a home machine where your scientists can store data and run analysis. 
+By default, a lab consists of a security framework that we control, and a home machine where your scientists can store data and run analysis. 
 
-Your lab leader or lab coordinator choose the initial size of the home machine and the initial storage your want to start with. From there they can adjust the machine size, add additional machines, and expand the storage resources throughout the project period. 
+Your lab leader or lab coordinator choosees the initial size of the home machine and the initial storage you want to start with. From there they can adjust the machine size, add additional machines, and expand the storage resources throughout the project period. 
 
 ::: details Lab order resources
 
