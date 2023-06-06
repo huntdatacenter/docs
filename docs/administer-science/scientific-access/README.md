@@ -47,14 +47,14 @@ Your Data space does also identify your management team that we interact with to
 * [HUNT Cloud Services specification](/administer-science/services/specifications/) specifies the Data spaces services details. 
 * [HUNT Cloud Price list](/administer-science/prices/pricelist/) specifies the Data space subscription cost. 
 * [HUNT Cloud Data space order](/administer-science/agreements/downloads/#data-space-order)
-* [HUNT Cloud Invoice rofile](/administer-science/agreements/downloads/#invoice-profile
+* [HUNT Cloud Invoice rofile](/administer-science/agreements/downloads/#invoice-profile)
 :::
 
 ### Lab order
 
-**A lab in HUNT Cloud is a digital environment (laboratory) where your scientists access their scientific tools and resources for storage, computation and transport. You may attach one to many labs under your Data space**
+**A Lab in HUNT Cloud is a digital environment (laboratory) where your scientists access their scientific tools and resources for storage, computation and transport. You may attach one to many labs under your Data space.**
 
-By default, a lab consists of a security framework that we control, and a home machine where your scientists can store data and run analysis. 
+By default, a lab consists of a security framework that we control and a home machine where your scientists can store data and run analysis. 
 
 Your lab leader or lab coordinator choosees the initial size of the home machine and the initial storage you want to start with. From there they can adjust the machine size, add additional machines, and expand the storage resources throughout the project period. 
 
