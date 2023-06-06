@@ -31,7 +31,7 @@ Both your Data space order and Lab orders are attached to your organizations Ser
 
 ## Service orders
 
-Data space orders and Lab orders are formally attached to your organizations Service center agreement as Service orders. These orders defines the type of services you request and those at your side that are responsible for services.
+Data space orders and Lab orders are formally attached to your organization's Service center agreement as Service orders. These orders defines the type of services you request and those at your side that are responsible for services.
 
 
 ### Data space order
