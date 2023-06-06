@@ -107,7 +107,7 @@ export default {
       return this.query.ipAddress && this.query.username ? `${this.query.username}@${this.query.ipAddress}` : null;
     },
     hostsWorkbench() {
-      return this.query.ipAddress && this.query.labName ? `${this.query.ipAddress}    ${this.query.labName}.lab.hdc.ntnu.no` : null;
+      return this.query.ipAddress && this.query.labName ? `${this.query.ipAddress}  ${this.query.labName}.lab.hdc.ntnu.no` : null;
     },
     iaasMachine() {
       return this.query.ipAddress && this.query.labName  && this.query.username && this.query.iaasName ? true : false;
@@ -168,6 +168,9 @@ export default {
       if (localStorage.username) {
         this.query.username = localStorage.username
       }
+      if (localStorage.iaasName) {
+        this.query.iaasName = localStorage.iaasName
+      }
     }
     if (localStorage.osTab) {
       this.tab = localStorage.osTab
@@ -175,7 +178,7 @@ export default {
   },
   created() {
     console.log(this.$route.query)
-    // /do-science/iaas/?iaas=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXJ8ZGVtb2xhYi1ibHVlLWFyZGFu
+    // /do-science/iaas/?access=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXJ8ZGVtb2xhYi1ibHVlLWFyZGFu
     this.access = this.$route.query.access ? atob(this.$route.query.access).split('|') : []
     console.log(this.query)
   },
@@ -206,7 +209,7 @@ export default {
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
-      <v-card v-show="cfgShow" class="pt-4">
+      <v-card v-show="iaasMachine" class="pt-4">
         <v-row class="ml-3 mb-2">
           <v-col cols="10">
             Once you have <a href="/do-science/getting-started/collect-your-keys/" target="_blank">collected your keys</a>
@@ -288,11 +291,12 @@ export default {
               </template>
             </v-text-field>
           </v-col>
+        </v-row>
           <v-card elevation="1">
           <v-expansion-panels elevation="0">
           <v-expansion-panel>
               <v-expansion-panel-header>
-                <h3><a href="#ssh-config" class="header-anchor">#</a> 4. SSH Config file</h3>
+                <h3><a href="#ssh-config" class="header-anchor">#</a> 1. SSH Config file</h3>
               </v-expansion-panel-header>
               <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
                 <v-tabs
@@ -310,7 +314,7 @@ export default {
                 <v-tabs-items v-model="tab">
                   <v-tab-item value="windows">
                     <v-col cols="12">
-                      4.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists.
+                      1.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists.
                       <v-text-field
                         :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
                         ref="winSshConfig1"
@@ -330,7 +334,7 @@ export default {
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      4.2. Open SSH Config file.
+                      1.2. Open SSH Config file.
                       <v-text-field
                         :value='`Notepad.exe "%USERPROFILE%\\.ssh\\config"`'
                         ref="winSshConfig2"
@@ -350,7 +354,7 @@ export default {
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      4.3. Add lab configuration into SSH Config opened in Notepad.
+                      1.3. Add lab configuration into SSH Config opened in Notepad.
                       <v-textarea
                         v-model.trim="configText"
                         ref="ssh-config-win"
@@ -370,7 +374,7 @@ export default {
                       </v-textarea>
                     </v-col>
                     <v-col cols="12">
-                      4.4. Test by connecting straight into home machine.
+                      1.4. Test by connecting straight into home machine.
                       <v-text-field
                         :value="`ssh ${query.labName}`"
                         ref="ssh-config-lab-win"
@@ -393,7 +397,7 @@ export default {
                   <v-tab-item value="macos">
                     <!-- Place in <code>~/.ssh/config</code>. -->
                     <v-col cols="12">
-                      4.1. Open new Terminal window and assure SSH Config file exists.
+                      1.1. Open new Terminal window and assure SSH Config file exists.
                       <v-text-field
                         :value="`touch ~/.ssh/config`"
                         ref="macSshConfig1"
@@ -413,7 +417,7 @@ export default {
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      4.2. Open SSH Config file.
+                      1.2. Open SSH Config file.
                       <v-text-field
                         :value="`open -Wne ~/.ssh/config`"
                         ref="macSshConfig2"
@@ -433,7 +437,7 @@ export default {
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      4.3. Add lab configuration into SSH Config opened in Text Editor.
+                      1.3. Add lab configuration into SSH Config opened in Text Editor.
                       <v-textarea
                         v-model.trim="configText"
                         ref="ssh-config-mac"
@@ -453,7 +457,7 @@ export default {
                       </v-textarea>
                     </v-col>
                     <v-col cols="12">
-                      4.4. Test by connecting straight into home machine.
+                      1.4 Test by connecting straight into home machine.
                       <v-text-field
                         :value="`ssh ${query.labName}`"
                         ref="ssh-config-lab-mac"
@@ -476,7 +480,7 @@ export default {
                   <v-tab-item value="linux">
                     <!-- Place in <code>~/.ssh/config</code>. -->
                     <v-col cols="12">
-                      4.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists.
+                      1.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists.
                       <v-text-field
                         :value="`touch ~/.ssh/config`"
                         ref="linuxSshConfig1"
@@ -496,7 +500,7 @@ export default {
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      4.2. Open SSH Config file.
+                      1.2. Open SSH Config file.
                       <v-text-field
                         :value="`gedit ~/.ssh/config`"
                         ref="linuxSshConfig2"
@@ -516,7 +520,7 @@ export default {
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      4.3. Add lab configuration into SSH Config opened in Text Editor.
+                      1.3. Add lab configuration into SSH Config opened in Text Editor.
                       <v-textarea
                         v-model.trim="configText"
                         ref="ssh-config-linux"
@@ -536,7 +540,7 @@ export default {
                       </v-textarea>
                     </v-col>
                     <v-col cols="12">
-                      4.4. Test by connecting straight into home machine.
+                      1.4. Test by connecting straight into home machine.
                       <v-text-field
                         :value="`ssh ${query.labName}`"
                         ref="ssh-config-lab-linux"
@@ -561,7 +565,6 @@ export default {
           </v-expansion-panel>
         </v-expansion-panels>
         </v-card>
-        </v-row>  
       </v-card>
     </v-app>
   </div>
