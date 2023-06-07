@@ -15,13 +15,19 @@ Operational
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
 
-Latest system updates:
+### Latest system updates:
 
-**2023-06-07 15:00** - All systems operational.
+[..]
 
-**2023-06-07 13:21** - We have noticed issues with the VPN connection. Implementing preventing measures.
+**2023-06-07 14:00** - All systems operational.
+
+**2023-06-07 13:21** - We have noticed issues with the VPN connection. We are investigating and implementing preventing measures. New update 14:00.
+
+[..]
 
 **2023-04-24 09:00** - We plan to implement changes to our core network infrastructure. This will impact the external connectivity to and from all labs for all users between 9-11 am.
+
+[..]
 
 **2023-03-14 15:00** - All systems operational.
 
