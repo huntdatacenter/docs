@@ -8,7 +8,10 @@ description: Updates will be posted here if there is any service or performance 
 
 
 ::: danger Lab access
-**2023-06-07 13:21** - We have noticed issues with the VPN connection. We are currently working on resolving the issue. New update 14:00.
+**2023-06-07 13:21** - We have noticed issues with the VPN connection. We are currently working on resolving the issue.
+
+**2023-06-07 14:00** - Connectivity to VPN restored. Implementing preventing measures. New update 15:00.
+
 :::
 
 
