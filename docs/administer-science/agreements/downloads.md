@@ -420,7 +420,7 @@ your-username@`your-labname`-home~$
 :::
 
 
-
+<!-- 
 ## Lab deactivation order
 
 [HUNT Cloud Lab Deactivation Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-deactivation-order.pdf) (pdf)
@@ -443,7 +443,7 @@ The following form fields are included in the "HUNT Cloud Lab Deactivation Order
 
 :::
 
-
+-->
 
 ## Lab deletion order
 
