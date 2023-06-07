@@ -6,11 +6,17 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: tip All systems
+
+::: danger Lab access
+**2023-06-07 13:21** - We have noticed issues with the VPN connection. We are currently working on resolving the issue. New update 14:00.
+:::
+
+
+<!-- ::: tip All systems
 
 Operational
 
-:::
+::: -->
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
 
