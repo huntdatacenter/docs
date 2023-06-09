@@ -266,7 +266,7 @@ Use this PDF to activate your first Data space and Lab in HUNT Cloud.
 
 ::: danger Next: Add your first lab user
 
-It's important that your lab leader order lab access for each scientist (lab user) that will work with the data as soon as you send us the PDF bundle above. [Click on this link to get going](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
+It's important that your lab leader order lab access for each scientist (lab user) that will work in your lab as soon as you send us the PDF bundle above. [Click on this link to get going](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
 
 :::
 

@@ -69,19 +69,20 @@ The form below contains several small decision points that organizations outside
 ## Request organizational agreements
 
 ::: tip For NTNU departments
-Send us the name of the administrative contact person at your Department that will coordinate the agreement process on [email](/contact). We will generate the additional agreement information.
+Send us the name of the administrative contact person at your Department that will coordinate the agreement process on [email](/contact). We will generate the additional agreement information and guide in the next steps.
 :::
 
 ::: tip For all other institutions
 
 [HUNT Cloud organizational agreement information form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-organizational-agreement-information.pdf) (pdf)
 
-1. Click on the PDF-link above, fill out the needed agreement information, and save the PDF on your local computer. 
-2. Send us the saved PDF as an [email](/contact) attachment.
+1. Click on the PDF-link above.
+2. Fill out the needed information, and save the PDF on your local computer. 
+3. Send us the saved PDF as an [email](/contact) attachment.
 
 :::
 
-
+Your scientific centers and groups may start their [scientific access](/administer-science/scientific-access/) process as soon as these organizational agreements are signed, sealed and delivered. 
 
 ## FAQ
 
