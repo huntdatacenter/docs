@@ -36,6 +36,14 @@ Click the button below to order a new lab under your existing data space.
 * **Next step**: [Add your first lab users](/administer-science/service-desk/lab-orders.html#add-a-new-lab-user).
 * **Cost:** One lab subscription as specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
+::: warning Next: Add your first lab user(s)
+
+It's important that you order lab access for each scientist (lab user) that will work in your lab as soon as you send us the above Lab order. Without these, your scientists will not be able to access your new lab. 
+
+[Click on this link to get going](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
+
+:::
+
 ::: details More on the required resource specifications
 
 Your lab comes with one (1) machine with computational resources and attached storage by default. We call this your **`home`**-machine.

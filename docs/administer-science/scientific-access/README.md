@@ -23,9 +23,9 @@ We have five agreement layers in HUNT Cloud (illustration below). This guide cov
 
 !["Illustration of five agreement layers in HUNT Cloud with data processor agreements and service center agreements highlighted with a red frame since they are placed on the organizational level."](./images/hunt-cloud-agreement-layers-data-space-and-lab.png)
 
-::: warning Organizational access dependency
+::: warning Organizational access
 
-Both your Data space order and Lab orders are attached to your organizations Service center agreement. Your organization need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/contact) if you are unsure of your current organizational agreement status or need guidance on how to start your organizational onboarding. 
+You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/contact) if need guidance on how to start your organizational onboarding. 
 
 :::
 
@@ -71,13 +71,20 @@ Your lab leader or lab coordinator choosees the initial size of the home machine
 
 ## Decision support
 
-**Time to grab fresh coffee!**
+**There are a set of small decisions that needs to be made to get the first lab up and running.** 
 
-There are a number of small decisions to be made in your first order. We recommend that you set aside 30 minutes to fill out the three PDF forms within the HUNT Cloud Scientific Access Bundle in the PDF link supported by the decision support below: 
+We recommend that you set aside 30 minutes to fill out the for fields in the "HUNT Cloud Scientific Access Bundle" below. The bundle contains the following elements:
 
 1. Data space order
 2. Invoice profile
 3. Lab order
+
+::: tip Attach a Lab to an already active Data space 
+
+If you already have an active Data space, you can skip this section and request your new lab directly in our [administer science service desk](/administer-science/service-desk/data-space-orders/#new-lab).
+
+:::
+
 
 ::: details Data space order decision support
 
@@ -241,19 +248,27 @@ You need to get a signature from your Lab leader, typically by saving the PDF an
 
 ## Order scientific access
 
-::: tip First time access:
+::: tip First time scientific access:
 
 [HUNT Cloud Scientific Access Bundle](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-scientific-access-bundle.pdf) (PDF)
 
-**Steps:**
+Use this PDF to activate your first Data space and Lab in HUNT Cloud.
 
-1. Click on the PDF-link above. This file contains a (i) Data space order, an (ii) invoice profile, and a (iii) Lab order. You need all three to get going.
-2. Fill out the needed information and save the PDF on your local computer.
-3. Send us the saved PDF as an [email](/contact) attachment to get going. Expect an email confirmation for the received order. 
-
-**Allow for a few days in processing time from your order is sent until you can order onboard of your first lab user.**
 :::
 
+**Steps:**
+
+1. Click on the PDF-link above: This file contains three order forms: a (i) Data space order, an (ii) invoice profile, and a (iii) Lab order. 
+2. Fill out the needed information in your web-browser and save the PDF to your local computer.
+3. Send us the saved PDF as an attachment on [email](/contact). Expect an email confirmation for the received order. 
+
+**Allow for a few days in processing time from your order is sent until you can order onboard of your first lab user.**
+
+::: danger Next: Add your first lab user
+
+It's important that your lab leader order lab access for each scientist (lab user) that will work with the data as soon as you send us the PDF bundle above. [Click on this link to get going](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
+
+:::
 
 ## FAQ
 
