@@ -114,6 +114,11 @@ Host {lab_name}
     hostsWorkbench() {
       return this.query.ipAddress && this.query.labName ? `${this.query.ipAddress}    ${this.query.labName}.lab.hdc.ntnu.no` : null;
     },
+    hostsCyberduck() {
+      return this.query.ipAddress && this.query.labName ? `10.5.5.12    home
+${this.query.ipAddress}    ${this.query.labName}-entry
+` : null;
+    },
     entryIpUrl() {
       return this.query.ipAddress ? this.query.ipAddress.replace('.', '%2E') : '';
     },
@@ -1475,6 +1480,44 @@ Host {lab_name}
                   >
                     Create remote desktop session
                   </v-btn>
+                </v-col>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                <h3><a href="#cyberduck" class="header-anchor">#</a> Cyberduck (Mac)</h3>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content id="cyberduck" ref="#cyberduck" class="mt-2">
+                <v-col cols="12">
+                  Cyberduck is an SFTP client with graphical user interface.
+                </v-col>
+                <v-col cols="12">
+                  1. Add the hosts records below to your <code>/etc/hosts</code> file.
+                </v-col>
+                <v-col cols="12">
+                  <v-textarea
+                    v-model="hostsCyberduck"
+                    ref="hostsCyberduck"
+                    autocomplete="ignore-field"
+                    label="Hosts file - Cyberduck"
+                    placeholder="Your link is missing access token"
+                    persistent-placeholder
+                    class="py-2 mt-2"
+                    outlined
+                    readonly
+                    rows="3"
+                    hide-details
+                    @focus="$event.target.select()"
+                  >
+                    <template v-slot:append>
+                      <a class="material-icons content_copy" @click="copyText('hostsCyberduck')">&#xe14d;</a>
+                    </template>
+                  </v-textarea>
+                </v-col>
+                <v-col cols="12">
+                  2. Follow <a href="/do-science/tools/transfer/cyberduck/" target="_blank">Cyberduck guide</a>
+                  to configure your access.
                 </v-col>
               </v-expansion-panel-content>
             </v-expansion-panel>
