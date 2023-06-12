@@ -1058,7 +1058,7 @@ Host {lab_name}
                 <v-tabs-items v-model="tab">
                   <v-tab-item value="windows">
                     <v-col cols="12">
-                      4.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists.
+                      4.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists. No output is expected.
                       <v-text-field
                         :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
                         ref="winSshConfig1"
@@ -1141,7 +1141,7 @@ Host {lab_name}
                   <v-tab-item value="macos">
                     <!-- Place in <code>~/.ssh/config</code>. -->
                     <v-col cols="12">
-                      4.1. Open new Terminal window and assure SSH Config file exists.
+                      4.1. Open new Terminal window and assure SSH Config file exists. No output is expected.
                       <v-text-field
                         :value="`touch ~/.ssh/config`"
                         ref="macSshConfig1"
@@ -1224,7 +1224,7 @@ Host {lab_name}
                   <v-tab-item value="linux">
                     <!-- Place in <code>~/.ssh/config</code>. -->
                     <v-col cols="12">
-                      4.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists.
+                      4.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists. No output is expected.
                       <v-text-field
                         :value="`touch ~/.ssh/config`"
                         ref="linuxSshConfig1"
