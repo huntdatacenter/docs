@@ -1120,7 +1120,7 @@ Host {lab_name}
                     <v-col cols="12">
                       4.4. Test by connecting straight into home machine.
                       <v-text-field
-                        :value="`ssh ${query.labName}`"
+                        :value="`ssh -o StrictHostKeyChecking=accept-new ${query.labName}`"
                         ref="ssh-config-lab-win"
                         label=""
                         placeholder="Your link is missing access token"
@@ -1203,7 +1203,7 @@ Host {lab_name}
                     <v-col cols="12">
                       4.4. Test by connecting straight into home machine.
                       <v-text-field
-                        :value="`ssh ${query.labName}`"
+                        :value="`ssh -o StrictHostKeyChecking=accept-new ${query.labName}`"
                         ref="ssh-config-lab-mac"
                         label=""
                         placeholder="Your link is missing access token"
@@ -1286,7 +1286,7 @@ Host {lab_name}
                     <v-col cols="12">
                       4.4. Test by connecting straight into home machine.
                       <v-text-field
-                        :value="`ssh ${query.labName}`"
+                        :value="`ssh -o StrictHostKeyChecking=accept-new ${query.labName}`"
                         ref="ssh-config-lab-linux"
                         label=""
                         placeholder="Your link is missing access token"
