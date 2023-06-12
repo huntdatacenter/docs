@@ -91,7 +91,7 @@ Host {lab_name}
     HostKeyAlias {lab_name}
     User {username}
     # Use ProxyCommand to jump directly to home via entry
-    ProxyCommand ssh -W %h:%p {lab_name}-entry
+    ProxyJump {lab_name}-entry
 `,
     };
   },
