@@ -12,5 +12,6 @@ description: How to use Conda and Mamba
 
 - why do we recommend using conda
 - what is the difference between mamba and conda
+- how to create shared conda environment
 
 -->
