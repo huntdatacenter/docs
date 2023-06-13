@@ -16,20 +16,23 @@ You can download free version of Cyberduck through their main [webpage](https://
 
 ## Setup connection to your lab
 
-1. After you open the app, you should see following window. Select + sign in bottom left corner in order to setup new connection
+1. You will need to setup your `hosts file` and `SSH config file` according to your customized Access link which you received during your onboarding.
+
+2. After you open the app, you should see following window. Select + sign in bottom left corner in order to setup new connection
 
 ![cyberduck1](./images/cyberduck1.png)
 
-2. New window should pop-up. Fill in details as described in below image. 
+3. New window should pop-up. Fill in details as described in below image. 
 
 ![cyberduck2](./images/cyberduck2.png)
 
-3. Double-click on your new connection. You should successfully connect to your lab entry node.
+4. Double-click on your new connection. You should successfully connect to your lab entry node.
+
 
 ## How to transfer your files
 
-As of current state, you are unable to directly see all of your lab directories. For transfer of files, use your `cargo`directory for transfers. In cyberduck, you should see cargo folder under `/nfs/home/username`
-
+You can confirm correct setup by checking if your `archive` and `work` directory are avialable in Cyberduck. 
+Then, you are able to download/upload file by simple drag-n-drop or right clicking on your files and selecting *Download to*.
 
 
 ## Immediate troubleshooting
