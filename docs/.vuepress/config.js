@@ -248,6 +248,7 @@ module.exports = {
                 "/do-science/guides/access-guides/reset-ssh.md",
                 "/do-science/guides/access-guides/workbench-request.md",
                 "/do-science/guides/access-guides/workbench-reissue.md",
+                "/do-science/guides/access-guides/reset-ssh-workbench.md",
               ],
             },
           ],
