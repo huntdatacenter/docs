@@ -28,7 +28,7 @@ Order a SSH passphrase reset in our do-science [service desk](/do-science/servic
 
 1.1 A running VPN connection to HUNT Cloud as described in our [Configure your VPN](/do-science/lab-access/configure-vpn/) guide.
 
-1.2 An established connection to [Workbench](/do-science/hunt-workbench/principles). You can order your Workbench certificate [here](/do-science/service-desk/#hunt-workbench-access)
+1.2 An established connection to [Workbench](/do-science/hunt-workbench/principles). If you have not used Workbench before, order your certificate [here](/do-science/service-desk/#hunt-workbench-access)
 
 
 ## 2. Design a passphrase
@@ -52,9 +52,9 @@ AnalysingPokemon4FunInTheMorning
 ```
 :::
 
-::: expander "Generate passphrase" id="pass-2"
+::: expander "Password management" id="pass-2"
 
-Safest way for you to create a passphrase, is to generate one using some of the recommended tools below:
+Safest way for you to create a passphrase is to generate and store it using some of the recommended tools below:
 
 [KeePassXC](https://keepassxc.org/) and [LastPass](https://www.lastpass.com/) available on all common platforms.
 
@@ -74,7 +74,7 @@ After you have successfully completed above steps, you can login to your Workben
 
 ::: tip Cannot find your access link ?
 
-Request reissue [here]()
+Request reissue [here](/do-science/service-desk/#lab-access)
 
 ::: 
 
@@ -87,11 +87,11 @@ Example:
 
 3.2 Type in your username and your temporary SSH passphrase. 
 
-![workbench_image1](./images/workbench_passreset_1.png)
+<img src="./images/workbench_passreset_1.png" width="300px">
 
 3.3 Afterwards, you should be prompted for a passhprase change. Type in your temporary SSH key again, then your new passhprase which you created in previous steps.
 
-![workbench_image2](./images/workbench_passreset_3.png)
+<img src="./images/workbench_passreset_3.png" width="300px">
 
 3.4 You can login to workbench now with your new passphrase.
 
