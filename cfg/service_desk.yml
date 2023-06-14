@@ -1405,6 +1405,27 @@ request_tape_archive:
   ]
 
 
+request_lab_access_link:
+  title: "Lab access link reissue"
+  template:
+    subject: "Lab access link reissue - {username} @ {labname}"
+    body: |
+      Hi HUNT Cloud team,
+
+      I would like to request a reissue of lab access link for my lab {labname}.
+
+      Kind regards,
+  fields: [
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> Lab user.",
+    "<b>Required information:</b> Your username and lab name.",
+    "<b>Expected response time:</b> Days.",
+    "<b>Cost:</b> Included in the lab subscription.",
+  ]
+
 request_template:
   title: "Button title text"
   template:
