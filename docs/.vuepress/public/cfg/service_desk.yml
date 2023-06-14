@@ -1408,7 +1408,7 @@ request_tape_archive:
 request_lab_access_link:
   title: "Lab access link reissue"
   template:
-    subject: "Lab access link reissue {username} @ {labname}"
+    subject: "Lab access link reissue - {username} @ {labname}"
     body: |
       Hi HUNT Cloud team,
 
