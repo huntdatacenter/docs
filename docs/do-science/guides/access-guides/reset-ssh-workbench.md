@@ -11,8 +11,7 @@ description: Guide on SSH passphrase reset in workbench.
 
 ::: warning Pilot phase
 
-This guide is currently in pilot phase. We are aware of some issues and are actively working on it.
-Noticed an issue ? Share feedback with us on Slack !
+This guide is currently in pilot phase. Noticed an issue ? Share feedback with us on Slack !
 
 ::: 
 
@@ -74,7 +73,7 @@ After you have successfully completed above steps, you can login to your Workben
 
 ::: tip Cannot find your access link ?
 
-Request reissue [here](/do-science/service-desk/#lab-access)
+Request reissue [here](/do-science/service-desk/#request-lab-access-reissue)
 
 ::: 
 
@@ -92,6 +91,10 @@ Example:
 3.3 Afterwards, you should be prompted for a passhprase change. Type in your temporary SSH key again, then your new passhprase which you created in previous steps.
 
 <img src="./images/workbench_passreset_3.png" width="300px">
+
+Your password change will be confirmed by following screen.
+
+<img src="./images/workbench_passreset_5.png" width="300px">
 
 3.4 You can login to workbench now with your new passphrase.
 

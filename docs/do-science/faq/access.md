@@ -86,9 +86,15 @@ groups
 You lab leader or lab coordinator will need to send us a [new user agreement](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
 
 
+### What is Lab Access link ? 
+
+Lab access link is our new approach to how we onboard new users and how we instruct you to connect to HUNT Cloud services.
+It comes prefilled with your username and labname information, aallowing you to simply copy-paste customized commands into your terminal and at the same time, inform you about expected outcome.
 
 
+### How can I order lab access link ?
 
+If you cannot find your lab access link or did not receive it, you can order one in our [do-science service desk](/do-science/service-desk/#request-lab-access-reissue)
 
 
 ## Access to more than one lab
