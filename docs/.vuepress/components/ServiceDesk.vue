@@ -8,6 +8,7 @@ import {
   VTextField,
   VTextarea,
   VSelect,
+  VAutocomplete,
   VIcon,
   VToolbar,
   VToolbarTitle,
@@ -35,6 +36,7 @@ export default {
     VTextField,
     VTextarea,
     VSelect,
+    VAutocomplete,
     VIcon,
     VToolbar,
     VToolbarTitle,
@@ -277,6 +279,19 @@ export default {
                           outlined
                           hide-details
                         ></v-select>
+                        <v-autocomplete
+                          v-else-if="item.field === 'autocompleteone'"
+                          :items="item.options"
+                          v-model="formData[item.key]"
+                          :label="item.label"
+                          placeholder=""
+                          persistent-placeholder
+                          small-chips
+                          outlined
+                          dense
+                          clear-icon="close"
+                          hide-details
+                        ></v-autocomplete>
                         <v-text-field
                           v-if="item.field === 'number'"
                           v-model="formData[item.key]"
@@ -436,4 +451,9 @@ export default {
 
   a.v-btn
     border: inherit
+
+.v-chip.v-size--small
+    margin-top: 8px !important
+    margin-bottom: 5px !important
+
 </style>

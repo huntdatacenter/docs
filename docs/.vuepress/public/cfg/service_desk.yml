@@ -678,17 +678,30 @@ request_new_gpu:
 
   fields: [
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "GPU type", key: "gpu_type", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
+    # { label: "GPU type", key: "gpu_type", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
+    {
+      label: "GPU type",
+      key: "gpu_type",
+      field: "autocompleteone",
+      options: [
+        { text: "NVIDIA p100 16G", value: "p100.16g" },
+        { text: "NVIDIA v100 32G", value: "v100.32g" },
+        { text: "NVIDIA v100s 32G", value: "v100s.32g" },
+        { text: "NVIDIA a30 24G", value: "a30.24g" },
+        { text: "NVIDIA a100 40G", value: "a100.40g" },
+        { text: "NVIDIA a100 80G", value: "a100.80g" },
+      ]
+    },
     { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
     { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
     {
       label: "Subscription",
       key: "subscription",
-      field: "selectone",
+      field: "autocompleteone",
       options: [
-        "Commitment",
-        "On-demand",
-        "Blue",
+        { text: "Commitment", value: "commitment" },
+        { text: "On-demand", value: "ondemand" },
+        { text: "Blue", value: "blue" },
       ]
     },
   ]
