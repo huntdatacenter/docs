@@ -11,6 +11,7 @@ description: Guide on VPN installation and configuration. Make sure you have suc
 **This step configure an encrypted connection between your local computer and HUNT Cloud. The specific steps are dependent on the operating system on your local computer.**
 
 [[toc]]
+
 ## Requirements
 
 1. Confirmed [collection of secret keys](/do-science/lab-access/collect-your-keys/#step-1-collect-your-keys) in Step 1 of onboarding process.
