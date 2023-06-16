@@ -83,7 +83,7 @@ groups
 
 ### I have moved to a new institution, now what? 
 
-You lab leader or lab coordinator will need to send us a [new user agreement](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
+Your lab leader or lab coordinator will need to send us a [new user agreement](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
 
 
 ### What is Lab Access link ? 
