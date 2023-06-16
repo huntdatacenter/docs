@@ -57,7 +57,7 @@ Safest way for you to create a passphrase is to generate and store it using some
 
 [KeePassXC](https://keepassxc.org/) and [LastPass](https://www.lastpass.com/) available on all common platforms.
 
-[GoogleChrome](https://support.google.com/chrome/answer/7570435?hl=en&co=GENIE.Platform%3DDesktop) password generator.
+<!-- [GoogleChrome](https://support.google.com/chrome/answer/7570435?hl=en&co=GENIE.Platform%3DDesktop) password generator. -->
 
 :::
 
