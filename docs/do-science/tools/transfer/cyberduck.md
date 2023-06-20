@@ -20,13 +20,13 @@ You can download free version of Cyberduck through their main [webpage](https://
 
 2. After you open the app, you should see following window. Select + sign in bottom left corner in order to setup new connection
 
-![cyberduck1](./images/cyberduck1.png)
+<img src="./images/cyberduck1.png" width="600px">
 
 3. New window should pop-up. Fill in details as described in below image. 
 
-![cyberduck2](./images/cyberduck2.png)
+<img src="./images/cyberduck2.png" width="600px">
 
-4. Double-click on your new connection. You should successfully connect to your lab entry node.
+4. Double-click on your new connection. You should successfully connect to your lab *home* node.
 
 
 ## How to transfer your files
@@ -39,4 +39,4 @@ Then, you are able to download/upload file by simple drag-n-drop or right clicki
 
 ### What is my lab IP address ?
 
-You can find you lab IP address in config.txt file sent over to your email or via access link which you were provided during initial onboarding. If you cannot find either, ping us in your lab channel on slack and we will help you out.
+You can find you lab IP address in config.txt file sent over to your email or via access link which you were provided during initial onboarding. Cannot find lab access link ? Request your lab access link [here](/do-science/service-desk/#request-lab-access-reissue)
