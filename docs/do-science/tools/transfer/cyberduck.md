@@ -24,7 +24,7 @@ You can download free version of Cyberduck through their main [webpage](https://
 
 3. New window should pop-up. Fill in details as described in below image. 
 
-<img src="./images/cyberduck2.png" width="600px">
+<img src="./images/cyberduck_2.png" width="600px">
 
 4. Double-click on your new connection. You should successfully connect to your lab *home* node.
 
