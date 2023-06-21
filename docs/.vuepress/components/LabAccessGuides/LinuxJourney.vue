@@ -482,6 +482,25 @@ Connection to home closed.`,
           </v-text-field>
         </v-col>
 
+        <v-col cols="12">
+          After you have successfully configured your access, you can use the following link to access your Workbench.
+          <v-text-field
+            :value="`https://${this.labName}.lab.hdc.ntnu.no`"
+            ref="workbench-link"
+            placeholder="Your link is missing access token"
+            persistent-placeholder
+            outlined
+            dense
+            readonly
+            hide-details
+            @focus="$event.target.select()"
+          >
+            <template v-slot:append>
+              <a class="material-icons content_copy" @click="copyText('workbench-link')">&#xe14d;</a>
+            </template>
+          </v-text-field>
+        </v-col>
+
       </v-expansion-panel-content>
     </v-expansion-panel>
 
