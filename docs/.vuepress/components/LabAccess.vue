@@ -294,35 +294,38 @@ ${this.query.ipAddress}    ${this.query.labName}-entry
         </v-row>
 
         <v-card elevation="1">
-          <v-expansion-panels elevation="0">
-            <v-expansion-panel>
-              <v-expansion-panel-header>
-                  <h3><a href="#vpn-config" class="header-anchor">#</a> 1. VPN Configuration</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
-                If you have not setup HUNT Cloud VPN yet follow our
-                <a href="/do-science/lab-access/configure-vpn/" target="_blank">VPN configuration guide</a>
-              </v-expansion-panel-content>
-            </v-expansion-panel>
-            <v-expansion-panel>
-              <v-expansion-panel-header>
-                  <h3><a href="#ssh-passphrase" class="header-anchor">#</a> 2. SSH Passphrase change</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
-                <v-tabs
-                  v-model="tab"
-                  centered
-                >
-                  <!-- <v-tabs-slider></v-tabs-slider> -->
+          <v-tabs
+            v-model="tab"
+            centered
+          >
+            <!-- <v-tabs-slider></v-tabs-slider> -->
 
-                  <v-tab href="#windows">Windows</v-tab>
+            <v-tab href="#windows">Windows</v-tab>
 
-                  <v-tab href="#macos">MacOS</v-tab>
+            <v-tab href="#macos">MacOS</v-tab>
 
-                  <v-tab href="#linux">Linux</v-tab>
-                </v-tabs>
-                <v-tabs-items v-model="tab">
-                  <v-tab-item value="windows">
+            <v-tab href="#linux">Linux</v-tab>
+          </v-tabs>
+          <v-tabs-items v-model="tab">
+            <v-tab-item value="windows">
+              <v-expansion-panels elevation="0">
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                      <h3><a href="#vpn-config" class="header-anchor">#</a> 1. VPN Configuration</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
+                    If you have not setup HUNT Cloud VPN yet follow our
+                    <a href="/do-science/lab-access/configure-vpn/" target="_blank">VPN configuration guide</a>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- 2. SSH Passphrase change -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                      <h3><a href="#ssh-passphrase" class="header-anchor">#</a> 2. SSH Passphrase change</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
+
                     <v-col cols="12">
                       2.1. Design <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
@@ -461,8 +464,325 @@ ${this.query.ipAddress}    ${this.query.labName}-entry
                     <v-col cols="12">
                       2.12. Close Command Prompt window to make sure you are disconnected from your lab.
                     </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="macos">
+                      
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- 3. SSH Passwordless access -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#passwordless-access" class="header-anchor">#</a> 3. SSH Passwordless access</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
+
+                    <v-col cols="12">
+                      3.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      <v-text-field
+                        :value="sshKeygenWin"
+                        ref="winStep13"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep13')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.2. Place your public key into the lab.
+                      <v-text-field
+                        :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${query.username}@${query.ipAddress} add-public-key`"
+                        ref="winStep14"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep14')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.3. Confirm passwordless access.
+                      <v-text-field
+                        :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${query.username}@${query.ipAddress}`"
+                        ref="winStep15"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winStep15')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.4. Close Command prompt window to make sure you are disconnected from your lab.
+                    </v-col>
+
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- 4. SSH Config file -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#ssh-config" class="header-anchor">#</a> 4. SSH Config file</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
+
+                    <v-col cols="12">
+                      4.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists. No output is expected.
+                      <v-text-field
+                        :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
+                        ref="winSshConfig1"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winSshConfig1')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4.2. Open SSH Config file.
+                      <v-text-field
+                        :value='`Notepad.exe "%USERPROFILE%\\.ssh\\config"`'
+                        ref="winSshConfig2"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('winSshConfig2')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4.3. Add lab configuration into SSH Config opened in Notepad.
+                      <v-textarea
+                        v-model.trim="configText"
+                        ref="ssh-config-win"
+                        label="SSH Config file"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        class="py-2 mt-2"
+                        outlined
+                        readonly
+                        rows="11"
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyTextArea('ssh-config-win')">&#xe14d;</a>
+                        </template>
+                      </v-textarea>
+                    </v-col>
+                    <v-col cols="12">
+                      4.4. Test by connecting straight into home machine.
+                      <v-text-field
+                        :value="`ssh -o StrictHostKeyChecking=accept-new ${query.labName}`"
+                        ref="ssh-config-lab-win"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('ssh-config-lab-win')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- 5. Workbench -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#workbench" class="header-anchor">#</a> 5. Workbench</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
+
+                    <v-col cols="12">
+                      HUNT Workbench provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
+                    </v-col>
+                    <v-col cols="12">
+                      Follow <a href="/do-science/hunt-workbench/installation/" target="_blank">Workbench Installation guide</a> to configure your access.
+                    </v-col>
+                    <v-col cols="12">
+                      <v-text-field
+                        v-model="hostsWorkbench"
+                        ref="hostsWorkbenchWindows"
+                        autocomplete="ignore-field"
+                        label="Hosts file - Workbench"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('hostsWorkbenchWindows')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- Mobaxterm (Windows only) -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#mobaxterm" class="header-anchor">#</a> MobaXterm</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="mobaxterm" ref="#mobaxterm" class="mt-2">
+                    <v-col cols="10">
+                      <v-btn
+                        color="success"
+                        block
+                        target="_blank"
+                        :href="mobaxtermTerminal"
+                      >
+                        Create terminal session
+                      </v-btn>
+                    </v-col>
+                    <v-col cols="10">
+                      <v-btn
+                        color="primary"
+                        block
+                        target="_blank"
+                        :href="mobaxtermRdp"
+                      >
+                        Create remote desktop session
+                      </v-btn>
+                    </v-col>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- Troubleshooting -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#troubleshooting" class="header-anchor">#</a> Troubleshooting</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="troubleshooting" ref="#troubleshooting" class="mt-2">
+
+                    <v-col cols="12">
+                      Removing saved OpenVPN passphrases and metadata
+                      <v-text-field
+                        :value="`REG DELETE HKEY_CURRENT_USER\\SOFTWARE\\OpenVPN-GUI\\configs\\${query.username}`"
+                        ref="troubleshooting-remove-ovpn-passphrase"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('troubleshooting-remove-ovpn-passphrase')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      Confirm deletion with by typing <code>Yes</code> and then press <code>Enter</code>:
+                      <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`Permanently delete the registry key\nHKEY_CURRENT_USER\\SOFTWARE\\OpenVPN-GUI\\configs\\${query.username} (Yes/No)? Yes\n\nThe operation completed successfully.`"></code>
+                      </pre></div>
+                    </v-col>
+                    <v-col cols="12">
+                      Deleting OpenVPN config
+                      <v-text-field
+                        :value="`del %USERPROFILE%\\OpenVPN\\config\\${query.username}`"
+                        ref="troubleshooting-remove-ovpn-config"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="C:\Users\User>"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('troubleshooting-remove-ovpn-config')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      Confirm deletion with by pressing <code>Y</code> and then <code>Enter</code>:
+                      <div class="language- extra-class"><pre class="language-text">
+                          <code v-text="`C:\\Users\\User\\OpenVPN\\config\\${query.username}\\*, Are you sure (Y/N)? Y`"></code>
+                      </pre></div>
+                    </v-col>
+
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+              </v-expansion-panels>
+            </v-tab-item>
+            <!-- ============================================================================================== -->
+            <v-tab-item value="macos">
+              <v-expansion-panels elevation="0">
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                      <h3><a href="#vpn-config" class="header-anchor">#</a> 1. VPN Configuration</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
+                    If you have not setup HUNT Cloud VPN yet follow our
+                    <a href="/do-science/lab-access/configure-vpn/" target="_blank">VPN configuration guide</a>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+            
+                <!-- 2. SSH Passphrase change -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                      <h3><a href="#ssh-passphrase" class="header-anchor">#</a> 2. SSH Passphrase change</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
+
                     <v-col cols="12">
                       2.1. Design <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
@@ -601,8 +921,327 @@ ${this.query.ipAddress}    ${this.query.labName}-entry
                     <v-col cols="12">
                       2.12. Close Terminal window to make sure you are disconnected from your lab.
                     </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="linux">
+                      
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- 3. SSH Passwordless access -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#passwordless-access" class="header-anchor">#</a> 3. SSH Passwordless access</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
+
+                    <v-col cols="12">
+                      3.1. Open new Terminal window and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                      <v-text-field
+                        :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
+                        ref="macStep13"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep13')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.2. Start ssh-agent. Note: Output of this command is only informational.
+                      <v-text-field
+                        :value='`eval "$(ssh-agent -s)"`'
+                        ref="macStep14"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep14')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.3. Add your public key to the ssh agent.
+                      <v-text-field
+                        :value="`ssh-add --apple-use-keychain ~/.ssh/id_rsa`"
+                        ref="macStep15"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep15')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.4. Place your public key into the lab.
+                      <v-text-field
+                        :value="`ssh-copy-id -i ~/.ssh/id_rsa ${query.username}@${query.ipAddress}`"
+                        ref="macStep16"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep16')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.5. Confirm passwordless access.
+                      <v-text-field
+                        :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${query.username}@${query.ipAddress}`"
+                        ref="macStep17"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macStep17')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      3.6. Close Terminal window to make sure you are disconnected from your lab.
+                    </v-col>
+
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- 4. SSH Config file -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#ssh-config" class="header-anchor">#</a> 4. SSH Config file</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
+
+                    <!-- Place in <code>~/.ssh/config</code>. -->
+                    <v-col cols="12">
+                      4.1. Open new Terminal window and assure SSH Config file exists. No output is expected.
+                      <v-text-field
+                        :value="`touch ~/.ssh/config`"
+                        ref="macSshConfig1"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macSshConfig1')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4.2. Open SSH Config file.
+                      <v-text-field
+                        :value="`open -Wne ~/.ssh/config`"
+                        ref="macSshConfig2"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('macSshConfig2')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+                    <v-col cols="12">
+                      4.3. Add lab configuration into SSH Config opened in Text Editor.
+                      <v-textarea
+                        v-model.trim="configText"
+                        ref="ssh-config-mac"
+                        label="SSH Config file"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        class="py-2 mt-2"
+                        outlined
+                        readonly
+                        rows="11"
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyTextArea('ssh-config-mac')">&#xe14d;</a>
+                        </template>
+                      </v-textarea>
+                    </v-col>
+                    <v-col cols="12">
+                      4.4. Test by connecting straight into home machine.
+                      <v-text-field
+                        :value="`ssh -o StrictHostKeyChecking=accept-new ${query.labName}`"
+                        ref="ssh-config-lab-mac"
+                        label=""
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        prefix="~"
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('ssh-config-lab-mac')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- 5. Workbench -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#workbench" class="header-anchor">#</a> 5. Workbench</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
+
+                    <v-col cols="12">
+                      HUNT Workbench provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
+                    </v-col>
+                    <v-col cols="12">
+                      Follow <a href="/do-science/hunt-workbench/installation/" target="_blank">Workbench Installation guide</a> to configure your access.
+                    </v-col>
+                    <v-col cols="12">
+                      <v-text-field
+                        v-model="hostsWorkbench"
+                        ref="hostsWorkbenchMacOS"
+                        autocomplete="ignore-field"
+                        label="Hosts file - Workbench"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        outlined
+                        dense
+                        readonly
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('hostsWorkbenchMacOS')">&#xe14d;</a>
+                        </template>
+                      </v-text-field>
+                    </v-col>
+
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- Cyberduck (MacOS only) -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#cyberduck" class="header-anchor">#</a> Cyberduck</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="cyberduck" ref="#cyberduck" class="mt-2">
+                    <v-col cols="12">
+                      Cyberduck is an SFTP client with graphical user interface.
+                    </v-col>
+                    <v-col cols="12">
+                      1. Add the hosts records below to your <code>/etc/hosts</code> file.
+                    </v-col>
+                    <v-col cols="12">
+                      <v-textarea
+                        v-model="hostsCyberduck"
+                        ref="hostsCyberduck"
+                        autocomplete="ignore-field"
+                        label="Hosts file - Cyberduck"
+                        placeholder="Your link is missing access token"
+                        persistent-placeholder
+                        class="py-2 mt-2"
+                        outlined
+                        readonly
+                        rows="3"
+                        hide-details
+                        @focus="$event.target.select()"
+                      >
+                        <template v-slot:append>
+                          <a class="material-icons content_copy" @click="copyText('hostsCyberduck')">&#xe14d;</a>
+                        </template>
+                      </v-textarea>
+                    </v-col>
+                    <v-col cols="12">
+                      2. Follow <a href="/do-science/tools/transfer/cyberduck/" target="_blank">Cyberduck guide</a>
+                      to configure your access.
+                    </v-col>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- Troubleshooting -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#troubleshooting" class="header-anchor">#</a> Troubleshooting</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="troubleshooting" ref="#troubleshooting" class="mt-2">
+
+                    <v-col cols="12">
+                      WIP
+                    </v-col>
+
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+              </v-expansion-panels>
+            </v-tab-item>
+            <!-- ============================================================================================== -->
+            <v-tab-item value="linux">
+              <v-expansion-panels elevation="0">
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                      <h3><a href="#vpn-config" class="header-anchor">#</a> 1. VPN Configuration</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
+                    If you have not setup HUNT Cloud VPN yet follow our
+                    <a href="/do-science/lab-access/configure-vpn/" target="_blank">VPN configuration guide</a>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- 2. SSH Passphrase change -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                      <h3><a href="#ssh-passphrase" class="header-anchor">#</a> 2. SSH Passphrase change</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
+
                     <v-col cols="12">
                       2.1. Design <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
                     </v-col>
@@ -741,201 +1380,17 @@ ${this.query.ipAddress}    ${this.query.labName}-entry
                     <v-col cols="12">
                       2.12. Close Terminal window to make sure you are disconnected from your lab.
                     </v-col>
-                  </v-tab-item>
-                </v-tabs-items>
-                  
-              </v-expansion-panel-content>
-            </v-expansion-panel>
-            <!-- ============================================================================================== -->
-            <v-expansion-panel>
-              <v-expansion-panel-header>
-                <h3><a href="#passwordless-access" class="header-anchor">#</a> 3. SSH Passwordless access</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
-                <v-tabs
-                  v-model="tab"
-                  centered
-                >
-                  <!-- <v-tabs-slider></v-tabs-slider> -->
 
-                  <v-tab href="#windows">Windows</v-tab>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
 
-                  <v-tab href="#macos">MacOS</v-tab>
+                <!-- 3. SSH Passwordless access -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#passwordless-access" class="header-anchor">#</a> 3. SSH Passwordless access</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
 
-                  <v-tab href="#linux">Linux</v-tab>
-                </v-tabs>
-                <v-tabs-items v-model="tab">
-                  <v-tab-item value="windows">
-                    <v-col cols="12">
-                      3.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
-                      <v-text-field
-                        :value="sshKeygenWin"
-                        ref="winStep13"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('winStep13')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      3.2. Place your public key into the lab.
-                      <v-text-field
-                        :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${query.username}@${query.ipAddress} add-public-key`"
-                        ref="winStep14"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('winStep14')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      3.3. Confirm passwordless access.
-                      <v-text-field
-                        :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${query.username}@${query.ipAddress}`"
-                        ref="winStep15"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('winStep15')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      3.4. Close Command prompt window to make sure you are disconnected from your lab.
-                    </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="macos">
-                    <v-col cols="12">
-                      3.1. Open new Terminal window and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
-                      <v-text-field
-                        :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
-                        ref="macStep13"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macStep13')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      3.2. Start ssh-agent. Note: Output of this command is only informational.
-                      <v-text-field
-                        :value='`eval "$(ssh-agent -s)"`'
-                        ref="macStep14"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macStep14')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      3.3. Add your public key to the ssh agent.
-                      <v-text-field
-                        :value="`ssh-add --apple-use-keychain ~/.ssh/id_rsa`"
-                        ref="macStep15"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macStep15')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      3.4. Place your public key into the lab.
-                      <v-text-field
-                        :value="`ssh-copy-id -i ~/.ssh/id_rsa ${query.username}@${query.ipAddress}`"
-                        ref="macStep16"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macStep16')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      3.5. Confirm passwordless access.
-                      <v-text-field
-                        :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${query.username}@${query.ipAddress}`"
-                        ref="macStep17"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macStep17')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      3.6. Close Terminal window to make sure you are disconnected from your lab.
-                    </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="linux">
                     <v-col cols="12">
                       3.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
                       <v-text-field
@@ -1039,194 +1494,17 @@ ${this.query.ipAddress}    ${this.query.labName}-entry
                     <v-col cols="12">
                       3.6. Close Terminal window to make sure you are disconnected from your lab.
                     </v-col>
-                  </v-tab-item>
-                </v-tabs-items>
-              </v-expansion-panel-content>
-            </v-expansion-panel>
-            <v-expansion-panel>
-              <v-expansion-panel-header>
-                <h3><a href="#ssh-config" class="header-anchor">#</a> 4. SSH Config file</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
-                <v-tabs
-                  v-model="tab"
-                  centered
-                >
-                  <!-- <v-tabs-slider></v-tabs-slider> -->
 
-                  <v-tab href="#windows">Windows</v-tab>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
 
-                  <v-tab href="#macos">MacOS</v-tab>
+                <!-- 4. SSH Config file -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#ssh-config" class="header-anchor">#</a> 4. SSH Config file</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
 
-                  <v-tab href="#linux">Linux</v-tab>
-                </v-tabs>
-                <v-tabs-items v-model="tab">
-                  <v-tab-item value="windows">
-                    <v-col cols="12">
-                      4.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists. No output is expected.
-                      <v-text-field
-                        :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
-                        ref="winSshConfig1"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('winSshConfig1')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      4.2. Open SSH Config file.
-                      <v-text-field
-                        :value='`Notepad.exe "%USERPROFILE%\\.ssh\\config"`'
-                        ref="winSshConfig2"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('winSshConfig2')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      4.3. Add lab configuration into SSH Config opened in Notepad.
-                      <v-textarea
-                        v-model.trim="configText"
-                        ref="ssh-config-win"
-                        label="SSH Config file"
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        class="py-2 mt-2"
-                        outlined
-                        readonly
-                        rows="11"
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyTextArea('ssh-config-win')">&#xe14d;</a>
-                        </template>
-                      </v-textarea>
-                    </v-col>
-                    <v-col cols="12">
-                      4.4. Test by connecting straight into home machine.
-                      <v-text-field
-                        :value="`ssh -o StrictHostKeyChecking=accept-new ${query.labName}`"
-                        ref="ssh-config-lab-win"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('ssh-config-lab-win')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="macos">
-                    <!-- Place in <code>~/.ssh/config</code>. -->
-                    <v-col cols="12">
-                      4.1. Open new Terminal window and assure SSH Config file exists. No output is expected.
-                      <v-text-field
-                        :value="`touch ~/.ssh/config`"
-                        ref="macSshConfig1"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macSshConfig1')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      4.2. Open SSH Config file.
-                      <v-text-field
-                        :value="`open -Wne ~/.ssh/config`"
-                        ref="macSshConfig2"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('macSshConfig2')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      4.3. Add lab configuration into SSH Config opened in Text Editor.
-                      <v-textarea
-                        v-model.trim="configText"
-                        ref="ssh-config-mac"
-                        label="SSH Config file"
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        class="py-2 mt-2"
-                        outlined
-                        readonly
-                        rows="11"
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyTextArea('ssh-config-mac')">&#xe14d;</a>
-                        </template>
-                      </v-textarea>
-                    </v-col>
-                    <v-col cols="12">
-                      4.4. Test by connecting straight into home machine.
-                      <v-text-field
-                        :value="`ssh -o StrictHostKeyChecking=accept-new ${query.labName}`"
-                        ref="ssh-config-lab-mac"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('ssh-config-lab-mac')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="linux">
                     <!-- Place in <code>~/.ssh/config</code>. -->
                     <v-col cols="12">
                       4.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists. No output is expected.
@@ -1308,124 +1586,17 @@ ${this.query.ipAddress}    ${this.query.labName}-entry
                         </template>
                       </v-text-field>
                     </v-col>
-                  </v-tab-item>
-                </v-tabs-items>
-              </v-expansion-panel-content>
-            </v-expansion-panel>
-            <!-- <v-expansion-panel>
-              <v-expansion-panel-header>
-                <h3 id="powershell"><a href="#powershell" class="header-anchor">#</a> Powershell</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content class="mt-2">
-                <v-col cols="12">
-                  <v-textarea
-                    v-model="powershellText"
-                    autocomplete="ignore-field"
-                    label="Powershell setup"
-                    placeholder="Your link is missing access token"
-                    persistent-placeholder
-                    outlined
-                    dense
-                    readonly
-                    rows="19"
-                    hide-details
-                    @focus="$event.target.select()"
-                  ></v-textarea>
-                </v-col>
-              </v-expansion-panel-content>
-            </v-expansion-panel> -->
-            <!-- <v-expansion-panel>
-              <v-expansion-panel-header>
-                <h3 id="putty"><a href="#putty" class="header-anchor">#</a> Putty</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content class="mt-2">
-                <v-col cols="12">
-                  <v-text-field
-                    v-model="puttyHostName"
-                    autocomplete="ignore-field"
-                    label="Putty - Host Name"
-                    placeholder="Your link is missing access token"
-                    persistent-placeholder
-                    outlined
-                    dense
-                    readonly
-                    hide-details
-                    @focus="$event.target.select()"
-                  ></v-text-field>
-                </v-col>
-              </v-expansion-panel-content>
-            </v-expansion-panel> -->
 
-            <!-- Workbench draft - troubleshooting and similar -->
-            <v-expansion-panel>
-              <v-expansion-panel-header>
-                <h3><a href="#workbench" class="header-anchor">#</a> 5. Workbench</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
-                <v-tabs
-                  v-model="tab"
-                  centered
-                >
-                  <v-tab href="#windows">Windows</v-tab>
-                  <v-tab href="#macos">MacOS</v-tab>
-                  <v-tab href="#linux">Linux</v-tab>
-                </v-tabs>
-                <v-tabs-items v-model="tab">
-                  <v-tab-item value="windows">
-                    <v-col cols="12">
-                      HUNT Workbench provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
-                    </v-col>
-                    <v-col cols="12">
-                      Follow <a href="/do-science/hunt-workbench/installation/" target="_blank">Workbench Installation guide</a> to configure your access.
-                    </v-col>
-                    <v-col cols="12">
-                      <v-text-field
-                        v-model="hostsWorkbench"
-                        ref="hostsWorkbenchWindows"
-                        autocomplete="ignore-field"
-                        label="Hosts file - Workbench"
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('hostsWorkbenchWindows')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="macos">
-                    <v-col cols="12">
-                      HUNT Workbench provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
-                    </v-col>
-                    <v-col cols="12">
-                      Follow <a href="/do-science/hunt-workbench/installation/" target="_blank">Workbench Installation guide</a> to configure your access.
-                    </v-col>
-                    <v-col cols="12">
-                      <v-text-field
-                        v-model="hostsWorkbench"
-                        ref="hostsWorkbenchMacOS"
-                        autocomplete="ignore-field"
-                        label="Hosts file - Workbench"
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('hostsWorkbenchMacOS')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="linux">
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <!-- 5. Workbench -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#workbench" class="header-anchor">#</a> 5. Workbench</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
+
                     <v-col cols="12">
                       HUNT Workbench provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
                     </v-col>
@@ -1451,163 +1622,29 @@ ${this.query.ipAddress}    ${this.query.labName}-entry
                         </template>
                       </v-text-field>
                     </v-col>
-                  </v-tab-item>
-                </v-tabs-items>
-              </v-expansion-panel-content>
-            </v-expansion-panel>
 
-            <v-expansion-panel>
-              <v-expansion-panel-header>
-                <h3><a href="#mobaxterm" class="header-anchor">#</a> MobaXterm (Windows)</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content id="mobaxterm" ref="#mobaxterm" class="mt-2">
-                <v-col cols="10">
-                  <v-btn
-                    color="success"
-                    block
-                    target="_blank"
-                    :href="mobaxtermTerminal"
-                  >
-                    Create terminal session
-                  </v-btn>
-                </v-col>
-                <v-col cols="10">
-                  <v-btn
-                    color="primary"
-                    block
-                    target="_blank"
-                    :href="mobaxtermRdp"
-                  >
-                    Create remote desktop session
-                  </v-btn>
-                </v-col>
-              </v-expansion-panel-content>
-            </v-expansion-panel>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
 
-            <v-expansion-panel>
-              <v-expansion-panel-header>
-                <h3><a href="#cyberduck" class="header-anchor">#</a> Cyberduck (Mac)</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content id="cyberduck" ref="#cyberduck" class="mt-2">
-                <v-col cols="12">
-                  Cyberduck is an SFTP client with graphical user interface.
-                </v-col>
-                <v-col cols="12">
-                  1. Add the hosts records below to your <code>/etc/hosts</code> file.
-                </v-col>
-                <v-col cols="12">
-                  <v-textarea
-                    v-model="hostsCyberduck"
-                    ref="hostsCyberduck"
-                    autocomplete="ignore-field"
-                    label="Hosts file - Cyberduck"
-                    placeholder="Your link is missing access token"
-                    persistent-placeholder
-                    class="py-2 mt-2"
-                    outlined
-                    readonly
-                    rows="3"
-                    hide-details
-                    @focus="$event.target.select()"
-                  >
-                    <template v-slot:append>
-                      <a class="material-icons content_copy" @click="copyText('hostsCyberduck')">&#xe14d;</a>
-                    </template>
-                  </v-textarea>
-                </v-col>
-                <v-col cols="12">
-                  2. Follow <a href="/do-science/tools/transfer/cyberduck/" target="_blank">Cyberduck guide</a>
-                  to configure your access.
-                </v-col>
-              </v-expansion-panel-content>
-            </v-expansion-panel>
 
-            <v-expansion-panel>
-              <v-expansion-panel-header>
-                <h3><a href="#troubleshooting" class="header-anchor">#</a> Troubleshooting</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content id="troubleshooting" ref="#troubleshooting" class="mt-2">
-                <v-tabs
-                  v-model="tab"
-                  centered
-                >
-                  <!-- <v-tabs-slider></v-tabs-slider> -->
+                <!-- Troubleshooting -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#troubleshooting" class="header-anchor">#</a> Troubleshooting</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="troubleshooting" ref="#troubleshooting" class="mt-2">
 
-                  <v-tab href="#windows">Windows</v-tab>
-
-                  <v-tab href="#macos">MacOS</v-tab>
-
-                  <v-tab href="#linux">Linux</v-tab>
-                </v-tabs>
-                <v-tabs-items v-model="tab">
-                  <v-tab-item value="windows">
-                    <v-col cols="12">
-                      Removing saved OpenVPN passphrases and metadata
-                      <v-text-field
-                        :value="`REG DELETE HKEY_CURRENT_USER\\SOFTWARE\\OpenVPN-GUI\\configs\\${query.username}`"
-                        ref="troubleshooting-remove-ovpn-passphrase"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('troubleshooting-remove-ovpn-passphrase')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      Confirm deletion with by typing <code>Yes</code> and then press <code>Enter</code>:
-                      <div class="language- extra-class"><pre class="language-text">
-                          <code v-text="`Permanently delete the registry key\nHKEY_CURRENT_USER\\SOFTWARE\\OpenVPN-GUI\\configs\\${query.username} (Yes/No)? Yes\n\nThe operation completed successfully.`"></code>
-                      </pre></div>
-                    </v-col>
-                    <v-col cols="12">
-                      Deleting OpenVPN config
-                      <v-text-field
-                        :value="`del %USERPROFILE%\\OpenVPN\\config\\${query.username}`"
-                        ref="troubleshooting-remove-ovpn-config"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        outlined
-                        dense
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append>
-                          <a class="material-icons content_copy" @click="copyText('troubleshooting-remove-ovpn-config')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                      Confirm deletion with by pressing <code>Y</code> and then <code>Enter</code>:
-                      <div class="language- extra-class"><pre class="language-text">
-                          <code v-text="`C:\\Users\\User\\OpenVPN\\config\\${query.username}\\*, Are you sure (Y/N)? Y`"></code>
-                      </pre></div>
-                    </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="macos">
                     <v-col cols="12">
                       WIP
                     </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="linux">
-                    <v-col cols="12">
-                      WIP
-                    </v-col>
-                  </v-tab-item>
-                </v-tabs-items>
-              </v-expansion-panel-content>
-            </v-expansion-panel>
-          </v-expansion-panels>
+
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+
+              </v-expansion-panels>
+            </v-tab-item>
+          </v-tabs-items>
         </v-card>
       </v-card>
       <v-card v-show="!cfgShow" class="pt-4">
