@@ -52,37 +52,6 @@ export default {
         username: null,
         iaasName: null,
       },
-//       sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
-//       sshKeygenMac: `ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`,
-//       powershell: `# -- Set new passphrase on entry
-// ssh -o StrictHostKeyChecking=accept-new {username}@{ip_address}
-// # -- Reconnect to entry
-// ssh {username}@{ip_address}
-
-// # -- Set new passphrase on home
-// ssh -o StrictHostKeyChecking=accept-new home
-// # -- Confirm passphrase change by reconnecting to home
-// ssh home
-
-// # -- Open new Powershell window and generate ssh key
-// ssh-keygen -q -t rsa -b 4096 -f $env:USERPROFILE\\.ssh\\id_rsa -N '""'
-
-// # -- Set public key in lab
-// type $env:USERPROFILE\\.ssh\\id_rsa.pub | ssh {username}@{ip_address} add-public-key
-
-// # -- Confirm passwordless access
-// ssh {username}@{ip_address}
-//       `,
-//       passExpired: `WARNING: Your password has expired.
-// You must change your password now and login again!
-// Changing password for {username}.
-// (current) UNIX password:`,
-//       passSetNew: `New password:
-// Retype new password:`,
-//       passChangedEntry: `passwd: Password updated successfully
-// Connection to {ip_address} closed.`,
-//       passChangedHome: `passwd: Password updated successfully
-// Connection to home closed.`,
       template: `Host {lab_name}-entry
     HostName {ip_address}
     User {username}
@@ -91,12 +60,11 @@ Host {lab_name}
     HostName home
     HostKeyAlias {lab_name}
     User {username}
-    # Use ProxyCommand to jump directly to home via entry
     ProxyJump {lab_name}-entry
 
-    Host {iaasname}
+Host {iaas_name}
     HostName 10.5.5.16
-    HostKeyAlias {iaasname}
+    HostKeyAlias {iaas_name}
     User ubuntu
     ProxyJump {lab_name}
 
@@ -122,7 +90,7 @@ Host {lab_name}
     hostsWorkbench() {
       return this.query.ipAddress && this.query.labName ? `${this.query.ipAddress}  ${this.query.labName}.lab.hdc.ntnu.no` : null;
     },
-    iaasMachine() {
+    isDataComplete() {
       return this.query.ipAddress && this.query.labName  && this.query.username && this.query.iaasName ? true : false;
     },
     entryIpUrl() {
@@ -161,17 +129,7 @@ Host {lab_name}
       localStorage.username = access[2]
       this.query.iaasName = access[3]
       localStorage.iaasName = access[3]
-    } else if (access.length == 5) {
-      this.query.ipAddress = access[0]
-      localStorage.ipAddress = access[0]
-      // this.query.homeIpAddress = access[1]
-      this.query.labName = access[2]
-      localStorage.labName = access[2]
-      this.query.username = access[3]
-      localStorage.username = access[3]
-      this.query.iaasName = access[4]
-      localStorage.iaasName = access[4]
-    } else if (!access || access.length == 0) {
+    } else {
       if (localStorage.ipAddress) {
         this.query.ipAddress = localStorage.ipAddress
       }
@@ -201,7 +159,7 @@ Host {lab_name}
       text = text.replaceAll('{ip_address}', this.query.ipAddress)
       text = text.replaceAll('{lab_name}', this.query.labName)
       text = text.replaceAll('{username}', this.query.username)
-      text = text.replaceAll('{iaasname}', this.query.iaasName)
+      text = text.replaceAll('{iaas_name}', this.query.iaasName)
       return text
     },
     copyText(key) {
@@ -219,16 +177,15 @@ Host {lab_name}
 </script>
 
 
+
+
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
-      <v-card v-show="iaasMachine" class="pt-4">
-        <v-row class="ml-3 mb-2">
-          <v-col cols="10">
-            Once you have <a href="/do-science/getting-started/collect-your-keys/" target="_blank">collected your keys</a>
-            use the guides below to setup your lab access.
-          </v-col>
-          <v-col cols="10">
+      <v-card v-show="isDataComplete" class="pt-4">
+
+        <v-row class="ml-3 mb-2" justify="center">
+          <v-col cols="6">
             <v-text-field
               v-model="query.username"
               ref="username"
@@ -247,7 +204,7 @@ Host {lab_name}
               </template>
             </v-text-field>
           </v-col>
-          <v-col cols="10">
+          <v-col cols="6">
             <v-text-field
               v-model="query.labName"
               ref="labName"
@@ -266,12 +223,12 @@ Host {lab_name}
               </template>
             </v-text-field>
           </v-col>
-          <v-col cols="10">
+          <v-col cols="6">
             <v-text-field
               v-model="query.ipAddress"
               ref="ipAddress"
               autocomplete="ignore-field"
-              label="IP Address"
+              label="Lab IP Address"
               placeholder="Your link is missing access token"
               persistent-placeholder
               outlined
@@ -285,12 +242,12 @@ Host {lab_name}
               </template>
             </v-text-field>
           </v-col>
-          <v-col cols="10">
+          <v-col cols="6">
             <v-text-field
               v-model="query.iaasName"
               ref="IaasName"
               autocomplete="ignore-field"
-              label="Iaas Name"
+              label="IAAS machine name"
               placeholder="Your link is missing access token"
               persistent-placeholder
               outlined
@@ -304,28 +261,26 @@ Host {lab_name}
               </template>
             </v-text-field>
           </v-col>
-        </v-row>
-          <v-card elevation="1">
-          <v-expansion-panels elevation="0">
-          <v-expansion-panel>
-              <v-expansion-panel-header>
-                <h3><a href="#ssh-config" class="header-anchor">#</a> 1. SSH Config file</h3>
-              </v-expansion-panel-header>
-              <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
-                <v-tabs
-                  v-model="tab"
-                  centered
-                >
-                  <!-- <v-tabs-slider></v-tabs-slider> -->
+          </v-row>
+        <v-card elevation="1">
+          <v-tabs
+            v-model="tab"
+            centered
+            grow
+          >
+            <v-tab href="#windows">Windows</v-tab>
+            <v-tab href="#macos">MacOS</v-tab>
+            <v-tab href="#linux">Linux</v-tab>
+          </v-tabs>
+          <v-tabs-items v-model="tab">
+            <v-tab-item value="windows" style="padding-top: 24px;">
+              <v-expansion-panels elevation="0">
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#ssh-config" class="header-anchor">#</a> 1. SSH Config file</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
 
-                  <v-tab href="#windows">Windows</v-tab>
-
-                  <v-tab href="#macos">MacOS</v-tab>
-
-                  <v-tab href="#linux">Linux</v-tab>
-                </v-tabs>
-                <v-tabs-items v-model="tab">
-                  <v-tab-item value="windows">
                     <v-col cols="12">
                       1.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists.
                       <v-text-field
@@ -367,7 +322,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      1.3. Add lab configuration into SSH Config opened in Notepad.
+                      1.3. Copy and paste configuration into SSH Config opened in Notepad.
                       <v-textarea
                         v-model.trim="configText"
                         ref="ssh-config-win"
@@ -377,7 +332,7 @@ Host {lab_name}
                         class="py-2 mt-2"
                         outlined
                         readonly
-                        rows="11"
+                        rows="16"
                         hide-details
                         @focus="$event.target.select()"
                       >
@@ -387,9 +342,9 @@ Host {lab_name}
                       </v-textarea>
                     </v-col>
                     <v-col cols="12">
-                      1.4. Test by connecting straight into home machine.
+                      1.4. Test by connecting straight into IAAS machine.
                       <v-text-field
-                        :value="`ssh ${query.labName}`"
+                        :value="`ssh ${query.iaasName}`"
                         ref="ssh-config-lab-win"
                         label=""
                         placeholder="Your link is missing access token"
@@ -406,10 +361,31 @@ Host {lab_name}
                         </template>
                       </v-text-field>
                     </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="macos">
-                    <!-- Place in <code>~/.ssh/config</code>. -->
-                    <v-col cols="12">
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#troubleshooting" class="header-anchor">#</a> Troubleshooting</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="troubleshooting" ref="#troubleshooting" class="mt-2">
+                    <v-col>Work in progress.</v-col>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+              </v-expansion-panels>
+            </v-tab-item>
+
+            <!-- =========================================== -->
+            <v-tab-item value="macos" style="padding-top: 24px;">
+              <v-expansion-panels elevation="0">
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#ssh-config" class="header-anchor">#</a> 1. SSH Config file</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
+                     <!-- Place in <code>~/.ssh/config</code>. -->
+                     <v-col cols="12">
                       1.1. Open new Terminal window and assure SSH Config file exists.
                       <v-text-field
                         :value="`touch ~/.ssh/config`"
@@ -450,7 +426,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      1.3. Add lab configuration into SSH Config opened in Text Editor.
+                      1.3. Copy and paste configuration into SSH Config opened in Text Editor.
                       <v-textarea
                         v-model.trim="configText"
                         ref="ssh-config-mac"
@@ -460,7 +436,7 @@ Host {lab_name}
                         class="py-2 mt-2"
                         outlined
                         readonly
-                        rows="11"
+                        rows="16"
                         hide-details
                         @focus="$event.target.select()"
                       >
@@ -470,9 +446,9 @@ Host {lab_name}
                       </v-textarea>
                     </v-col>
                     <v-col cols="12">
-                      1.4 Test by connecting straight into home machine.
+                      1.4 Test by connecting straight into IAAS machine.
                       <v-text-field
-                        :value="`ssh ${query.labName}`"
+                        :value="`ssh ${query.iaasName}`"
                         ref="ssh-config-lab-mac"
                         label=""
                         placeholder="Your link is missing access token"
@@ -489,8 +465,30 @@ Host {lab_name}
                         </template>
                       </v-text-field>
                     </v-col>
-                  </v-tab-item>
-                  <v-tab-item value="linux">
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#troubleshooting" class="header-anchor">#</a> Troubleshooting</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="troubleshooting" ref="#troubleshooting" class="mt-2">
+                    <v-col>Work in progress.</v-col>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+              </v-expansion-panels>
+            </v-tab-item>
+
+            <!-- =========================================== -->
+            <v-tab-item value="linux" style="padding-top: 24px;">
+              <v-expansion-panels elevation="0">
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#ssh-config" class="header-anchor">#</a> 1. SSH Config file</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
+
                     <!-- Place in <code>~/.ssh/config</code>. -->
                     <v-col cols="12">
                       1.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists.
@@ -533,7 +531,7 @@ Host {lab_name}
                       </v-text-field>
                     </v-col>
                     <v-col cols="12">
-                      1.3. Add lab configuration into SSH Config opened in Text Editor.
+                      1.3. Copy and paste configuration into SSH Config opened in Text Editor.
                       <v-textarea
                         v-model.trim="configText"
                         ref="ssh-config-linux"
@@ -543,7 +541,7 @@ Host {lab_name}
                         class="py-2 mt-2"
                         outlined
                         readonly
-                        rows="11"
+                        rows="16"
                         hide-details
                         @focus="$event.target.select()"
                       >
@@ -553,9 +551,9 @@ Host {lab_name}
                       </v-textarea>
                     </v-col>
                     <v-col cols="12">
-                      1.4. Test by connecting straight into home machine.
+                      1.4. Test by connecting straight into IAAS machine.
                       <v-text-field
-                        :value="`ssh ${query.labName}`"
+                        :value="`ssh ${query.iaasName}`"
                         ref="ssh-config-lab-linux"
                         label=""
                         placeholder="Your link is missing access token"
@@ -572,12 +570,25 @@ Host {lab_name}
                         </template>
                       </v-text-field>
                     </v-col>
-                </v-tab-item>
-              </v-tabs-items>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#troubleshooting" class="header-anchor">#</a> Troubleshooting</h3>
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content id="troubleshooting" ref="#troubleshooting" class="mt-2">
+                    <v-col>Work in progress.</v-col>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+              </v-expansion-panels>
+            </v-tab-item>
+          </v-tabs-items>
         </v-card>
+      </v-card>
+      <v-card v-show="!isDataComplete" class="pt-4">
+        Invalid link. Please check your emails to find the full link.
       </v-card>
     </v-app>
   </div>
