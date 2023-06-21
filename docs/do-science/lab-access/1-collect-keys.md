@@ -163,7 +163,7 @@ If you successfully completed this step, celebrate with fresh coffee and head ov
 
 #### I am unable to install or run Signal on my phone.
 
-Steps to resolve issues with Signal may vary by phone model and OS. Signal has a handy guide for [Troubleshooting Installs or Updates](https://support.signal.org/hc/en-us/articles/360007211952-Troubleshooting-Installs-or-Updates) as a starting point. [Contact us](/contact) if this do not resolve your issue.
+Steps to resolve issues with Signal may vary by phone model and OS. Signal has a handy guide for [Troubleshooting Installs or Updates](https://support.signal.org/hc/en-us/articles/360007211952-Troubleshooting-Installs-or-Updates) as a starting point. [Contact us](/about/contact) if this do not resolve your issue.
 
 ### 7z file
 
@@ -174,13 +174,13 @@ If the [decryption guides](/do-science/lab-access/collect-your-keys/#_1-2-secret
 #### OS X, macOS: The 7z archive password do not seem to work?
 
 The default archive utility will give you an error message when unpacking the `7z-format` locked with a passphrase. You need to download and unpack with the 
-`7z software` or `Keka` described in [the 7z installation guide](/do-science/tools/transfer/7z/). [Contact us](/contact) if this does not work.
+`7z software` or `Keka` described in [the 7z installation guide](/do-science/tools/transfer/7z/). [Contact us](/about/contact) if this does not work.
 
 #### Debian Linux (Ubuntu): I am unable to unpack the 7z archive file forwarded on email
 
 The default archive utility may give you an error message when unpacking the `7z-format` locked with a passphrase. Try to download and unpack with the 
-`7z software` described in [the 7z guide](/do-science/tools/transfer/7z/). [Contact us](/contact) if this does not work.
+`7z software` described in [the 7z guide](/do-science/tools/transfer/7z/). [Contact us](/about/contact) if this does not work.
 
 ### More information
 
-See our main [troubleshooting](/do-science/troubleshooting/connection/) section for more information. Please [contact us](/contact) if you encounter issues that we have not yet documented.
+See our main [troubleshooting](/do-science/troubleshooting/connection/) section for more information. Please [contact us](/about/contact) if you encounter issues that we have not yet documented.
