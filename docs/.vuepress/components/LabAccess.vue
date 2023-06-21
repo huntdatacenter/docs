@@ -1,7 +1,6 @@
 <script>
 import {
   VApp,
-  VBtn,
   VCol,
   VRow,
   VTextField,
@@ -23,7 +22,6 @@ export default {
   name: "LabAccess",
   components: {
     VApp,
-    VBtn,
     VCol,
     VRow,
     VTextField,
@@ -38,6 +36,7 @@ export default {
     VTabsSlider,
     VTabItem,
     VTabsItems,
+    AccessIntro: () => import('./LabAccessGuides/AccessIntro.vue'),
     WindowsJourney: () => import('./LabAccessGuides/WindowsJourney.vue'),
     MacJourney: () => import('./LabAccessGuides/MacJourney.vue'),
     LinuxJourney: () => import('./LabAccessGuides/LinuxJourney.vue'),
@@ -122,12 +121,6 @@ Host {lab_name}
       // return '10.5.5.12'.replace('.', '%2E');
       return 'home';
     },
-    mobaxtermTerminal() {
-      return this.cfgShow ? `mobaxterm:${this.query.labName}%3D%23109%230%25${this.homeIpUrl}%2522%25${this.query.username}%25%250%250%25%25${this.entryIpUrl}%2522%25${this.query.username}%25%2D1%250%250%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%2D1%250%250%250%25%251080%25%250%250%251%23MobaFont%2510%250%250%25%2D1%2515%25236%2C236%2C236%2530%2C30%2C30%25180%2C180%2C192%250%25%2D1%250%25%25xterm%2D256color%25%2D1%25%2D1%25%5FStd%5FColors%5F0%5F%2580%2524%250%251%25%2D1%25%3Cnone%3E%25%250%250%25%2D1%230%23%20%23%2D1` : null;
-    },
-    mobaxtermRdp() {
-      return this.cfgShow ? `mobaxterm:${this.query.labName}%2DRDP%3D%2391%234%25${this.query.labName}%2D${this.homeIpUrl}%253389%25${this.query.username}%250%250%250%250%25%2D1%250%250%25%2D1%25xfce4%2Dsession%25${this.entryIpUrl}%5F%5FPIPE%5F%5F${this.homeIpUrl}%2522%5F%5FPIPE%5F%5F22%25${this.query.username}%5F%5FPIPE%5F%5F${this.query.username}%250%250%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%5F%5FPIPE%5F%5F%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%2D1%25%25%2D1%25%2D1%250%250%250%25%2D1%23MobaFont%2510%250%250%25%2D1%2515%25236%2C236%2C236%2530%2C30%2C30%25180%2C180%2C192%250%25%2D1%250%25%25xterm%25%2D1%25%2D1%25%5FStd%5FColors%5F0%5F%2580%2524%250%251%25%2D1%25%3Cnone%3E%25%250%250%25%2D1%230%23%20%23%2D1` : null;
-    },
   },
   watch: {
     tab(val) {
@@ -206,88 +199,6 @@ Host {lab_name}
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
       <v-card v-show="cfgShow" class="pt-4">
-        <v-row class="ml-3 mb-2">
-          <v-col cols="10">
-            Once you have <a href="/do-science/lab-access/collect-your-keys/" target="_blank">collected your keys</a>
-            use the guides below to setup your lab access.
-          </v-col>
-          <v-col cols="10">
-            <v-text-field
-              v-model="query.username"
-              ref="username"
-              autocomplete="ignore-field"
-              label="Username"
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-            >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('username')">&#xe14d;</a>
-              </template>
-            </v-text-field>
-          </v-col>
-          <v-col cols="10">
-            <v-text-field
-              v-model="query.labName"
-              ref="labName"
-              autocomplete="ignore-field"
-              label="Lab name"
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-            >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('labName')">&#xe14d;</a>
-              </template>
-            </v-text-field>
-          </v-col>
-          <v-col cols="10">
-            <v-text-field
-              v-model="query.ipAddress"
-              ref="ipAddress"
-              autocomplete="ignore-field"
-              label="IP Address"
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-            >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('ipAddress')">&#xe14d;</a>
-              </template>
-            </v-text-field>
-          </v-col>
-          <!-- <v-col cols="10">
-            <v-text-field
-              v-model="hostsWorkbench"
-              ref="hostsWorkbench"
-              autocomplete="ignore-field"
-              label="Hosts file - Workbench"
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-            >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('hostsWorkbench')">&#xe14d;</a>
-              </template>
-            </v-text-field>
-          </v-col> -->
-        </v-row>
 
         <v-card elevation="1">
           <v-tabs
@@ -296,6 +207,8 @@ Host {lab_name}
           >
             <!-- <v-tabs-slider></v-tabs-slider> -->
 
+            <v-tab href="#first-time">First time?</v-tab>
+
             <v-tab href="#windows">Windows</v-tab>
 
             <v-tab href="#macos">MacOS</v-tab>
@@ -303,7 +216,47 @@ Host {lab_name}
             <v-tab href="#linux">Linux</v-tab>
           </v-tabs>
           <v-tabs-items v-model="tab">
+            <v-tab-item value="first-time" style="padding-top: 24px;">
+
+              <v-row justify="center">
+                <v-col cols="8" align="center">
+                  <b>First time setting up access to your lab?</b>
+                </v-col>
+              </v-row>
+
+              <v-row justify="center">
+                <v-col cols="8" align="center">
+                  We have tailored all the steps in this guide to you. 
+                  They contain your username and connection info where needed.
+                </v-col>
+              </v-row>
+              <v-row justify="center">
+                <v-col cols="8" align="center">
+                  To save your time all the commands that have a blue copy button in the right corner can be copy pasted.
+                </v-col>
+              </v-row>
+
+              <v-row justify="center">
+                <v-col cols="8" align="center">
+                  <i>Feel free to choose your OS and start your journey.</i>
+                </v-col>
+              </v-row>
+
+              <v-row justify="center">
+                <v-col align="center">
+                  <img alt="Illustration of a robot" src="/img/hunt-cloud_bot_250_2.png" />
+                </v-col>
+              </v-row>
+
+            </v-tab-item>
+
             <v-tab-item value="windows">
+
+              <AccessIntro
+                :username="this.query.username"
+                :labName="this.query.labName"
+                :ipAddress="this.query.ipAddress"
+              />
 
               <WindowsJourney
                 :username="this.query.username"
@@ -317,6 +270,12 @@ Host {lab_name}
             <v-tab-item value="macos">
               <v-expansion-panels elevation="0">
 
+                <AccessIntro
+                  :username="this.query.username"
+                  :labName="this.query.labName"
+                  :ipAddress="this.query.ipAddress"
+                />
+
                 <MacJourney
                   :username="this.query.username"
                   :labName="this.query.labName"
@@ -329,6 +288,12 @@ Host {lab_name}
             <!-- ============================================================================================== -->
             <v-tab-item value="linux">
               <v-expansion-panels elevation="0">
+
+                <AccessIntro
+                  :username="this.query.username"
+                  :labName="this.query.labName"
+                  :ipAddress="this.query.ipAddress"
+                />
 
                 <LinuxJourney
                   :username="this.query.username"
