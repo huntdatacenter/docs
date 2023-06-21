@@ -15,6 +15,7 @@ import {
   VTabsSlider,
   VTabItem,
   VTabsItems,
+  VContainer,
 } from "vuetify/lib";
 
 
@@ -36,6 +37,7 @@ export default {
     VTabsSlider,
     VTabItem,
     VTabsItems,
+    VContainer,
     AccessIntro: () => import('./LabAccessGuides/AccessIntro.vue'),
     WindowsJourney: () => import('./LabAccessGuides/WindowsJourney.vue'),
     MacJourney: () => import('./LabAccessGuides/MacJourney.vue'),
@@ -204,6 +206,7 @@ Host {lab_name}
           <v-tabs
             v-model="tab"
             centered
+            grow
           >
             <!-- <v-tabs-slider></v-tabs-slider> -->
 
@@ -217,31 +220,42 @@ Host {lab_name}
           </v-tabs>
           <v-tabs-items v-model="tab">
             <v-tab-item value="first-time" style="padding-top: 24px;">
-
               <v-row justify="center">
-                <v-col cols="8" align="center">
-                  <b>First time setting up access to your lab?</b>
+                <v-col cols="10">
+                  <v-container class="introblock">
+                    <v-row justify="center" style="margin-left: 16px; margin-right: 16px;">
+                      <v-col cols="10" align="center">
+                        <b>First time setting up access to your lab?</b>
+                      </v-col>
+                    </v-row>
+                    <v-row justify="center" style="margin-left: 16px; margin-right: 16px;">
+                      <v-col cols="10" align="center">
+                        We have tailored all the steps in this guide to you.
+                        You'll find your unique connection information conveniently included where necessary.
+                      </v-col>
+                    </v-row>
+                    <v-row justify="center" style="margin-left: 16px; margin-right: 16px;">
+                      <v-col cols="10" align="center">
+                        To make your onboarding process as efficient as possible, we've made it easy for you to copy and paste commands.
+                        Simply look for a button in the right corner of commands.
+                      </v-col>
+                    </v-row>
+
+                    <v-row justify="center" style="margin-left: 16px; margin-right: 16px;">
+                      <v-col cols="10" align="center">
+                        Whether you're using Windows, macOS, or Linux, this guide accommodates your operating system preference. 
+                        So go ahead, choose your OS, and embark on your journey with confidence.
+                      </v-col>
+                    </v-row>
+
+                    <v-row justify="center" style="margin-left: 16px; margin-right: 16px;">
+                      <v-col cols="10" align="center">
+                        <i>Let's get started!</i>
+                      </v-col>
+                    </v-row>
+                  </v-container>
                 </v-col>
               </v-row>
-
-              <v-row justify="center">
-                <v-col cols="8" align="center">
-                  We have tailored all the steps in this guide to you. 
-                  They contain your username and connection info where needed.
-                </v-col>
-              </v-row>
-              <v-row justify="center">
-                <v-col cols="8" align="center">
-                  To save your time all the commands that have a blue copy button in the right corner can be copy pasted.
-                </v-col>
-              </v-row>
-
-              <v-row justify="center">
-                <v-col cols="8" align="center">
-                  <i>Feel free to choose your OS and start your journey.</i>
-                </v-col>
-              </v-row>
-
               <v-row justify="center">
                 <v-col align="center">
                   <img alt="Illustration of a robot" src="/img/hunt-cloud_bot_250_2.png" />
@@ -352,5 +366,12 @@ Host {lab_name}
   color: rgba(0, 0, 0, 0.5)
   font-size: 13px
   margin-right: 5px
+
+.introblock
+  background: url('/img/arrowup.svg')
+  background-position: right
+  background-repeat: no-repeat
+  background-size: contain
+  height: 100%
 
 </style>
