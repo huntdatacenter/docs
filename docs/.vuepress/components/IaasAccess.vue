@@ -83,10 +83,23 @@ export default {
 // Connection to {ip_address} closed.`,
 //       passChangedHome: `passwd: Password updated successfully
 // Connection to home closed.`,
-      template: `Host {lab_name}
-    HostName {iaasname}
-    User Ubuntu
-    ProxyCommand ssh -W %h:%p {lab_name}
+      template: `Host {lab_name}-entry
+    HostName {ip_address}
+    User {username}
+
+Host {lab_name}
+    HostName home
+    HostKeyAlias {lab_name}
+    User {username}
+    # Use ProxyCommand to jump directly to home via entry
+    ProxyJump {lab_name}-entry
+
+    Host {iaasname}
+    HostName 10.5.5.16
+    HostKeyAlias {iaasname}
+    User ubuntu
+    ProxyJump {lab_name}
+
 `,
     };
   },
