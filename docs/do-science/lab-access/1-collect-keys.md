@@ -163,7 +163,7 @@ If you successfully completed this step, celebrate with fresh coffee and head ov
 
 #### I am unable to install or run Signal on my phone.
 
-Steps to resolve issues with Signal may vary by phone model and OS. Signal has a handy [troubleshooting guide ](https://support.signal.org/hc/en-us/articles/360007318711-Troubleshooting-Notifications) as a starting point. [Contact us](/contact) if this do not resolve your issue.
+Steps to resolve issues with Signal may vary by phone model and OS. Signal has a handy guide for [Troubleshooting Installs or Updates](https://support.signal.org/hc/en-us/articles/360007211952-Troubleshooting-Installs-or-Updates) as a starting point. [Contact us](/contact) if this do not resolve your issue.
 
 ### 7z file
 
