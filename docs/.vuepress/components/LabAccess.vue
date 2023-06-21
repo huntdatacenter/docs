@@ -1,7 +1,6 @@
 <script>
 import {
   VApp,
-  VBtn,
   VCol,
   VRow,
   VTextField,
@@ -23,7 +22,6 @@ export default {
   name: "LabAccess",
   components: {
     VApp,
-    VBtn,
     VCol,
     VRow,
     VTextField,

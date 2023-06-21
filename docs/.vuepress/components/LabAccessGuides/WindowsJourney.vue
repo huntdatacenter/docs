@@ -2,6 +2,7 @@
 import {
   VCol,
   VRow,
+  VBtn,
   VTextField,
   VTextarea,
   VExpansionPanel,
@@ -15,6 +16,7 @@ export default {
   components: {
     VCol,
     VRow,
+    VBtn,
     VTextField,
     VTextarea,
     VExpansionPanel,
