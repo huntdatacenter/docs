@@ -23,7 +23,6 @@ export default {
     VExpansionPanelContent,
   },
   props: {
-    id: { type: String, default: "applet" },
     username: { type: String, default: null },
     labName: { type: String, default: null },
     ipAddress: { type: String, default: null },
