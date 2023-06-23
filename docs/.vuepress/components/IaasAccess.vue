@@ -37,6 +37,7 @@ export default {
     VTabsSlider,
     VTabItem,
     VTabsItems,
+    CopyTextField: () => import('./generic/CopyTextField.vue'),
   },
   props: {
     id: { type: String, default: "applet" },
@@ -186,82 +187,34 @@ Host {iaas_name}
 
         <v-row class="ml-3 mb-2" justify="center">
           <v-col cols="6">
-            <v-text-field
+            <CopyTextField
               v-model="query.username"
-              ref="username"
-              autocomplete="ignore-field"
               label="Username"
               placeholder="Your link is missing access token"
-              persistent-placeholder
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-            >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('username')">&#xe14d;</a>
-              </template>
-            </v-text-field>
+            />
           </v-col>
           <v-col cols="6">
-            <v-text-field
+            <CopyTextField
               v-model="query.labName"
-              ref="labName"
-              autocomplete="ignore-field"
               label="Lab name"
               placeholder="Your link is missing access token"
-              persistent-placeholder
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-            >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('labName')">&#xe14d;</a>
-              </template>
-            </v-text-field>
+            />
           </v-col>
           <v-col cols="6">
-            <v-text-field
+            <CopyTextField
               v-model="query.ipAddress"
-              ref="ipAddress"
-              autocomplete="ignore-field"
               label="Lab IP Address"
               placeholder="Your link is missing access token"
-              persistent-placeholder
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-            >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('ipAddress')">&#xe14d;</a>
-              </template>
-            </v-text-field>
+            />
           </v-col>
           <v-col cols="6">
-            <v-text-field
+            <CopyTextField
               v-model="query.iaasName"
-              ref="IaasName"
-              autocomplete="ignore-field"
               label="IAAS machine name"
               placeholder="Your link is missing access token"
-              persistent-placeholder
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-            >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('iaasName')">&#xe14d;</a>
-              </template>
-            </v-text-field>
+            />
           </v-col>
-          </v-row>
+        </v-row>
         <v-card elevation="1">
           <v-tabs
             v-model="tab"

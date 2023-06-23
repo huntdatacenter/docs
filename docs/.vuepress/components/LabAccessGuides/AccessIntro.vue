@@ -11,6 +11,7 @@ export default {
     VCol,
     VRow,
     VTextField,
+    CopyTextField: () => import('../generic/CopyTextField.vue'),
   },
   props: {
     username: { type: String, default: null },
@@ -40,61 +41,28 @@ export default {
       use the guides below to setup your lab access.
     </v-col>
     <v-col cols="10">
-      <v-text-field
+      <CopyTextField
         v-model="username"
-        ref="username"
-        autocomplete="ignore-field"
         label="Username"
         placeholder="Your link is missing access token"
-        persistent-placeholder
-        outlined
-        dense
-        readonly
-        hide-details
-        @focus="$event.target.select()"
-      >
-        <template v-slot:append>
-          <a class="material-icons content_copy" @click="copyText('username')">&#xe14d;</a>
-        </template>
-      </v-text-field>
+        prefix=""
+      />
     </v-col>
     <v-col cols="10">
-      <v-text-field
+      <CopyTextField
         v-model="labName"
-        ref="labName"
-        autocomplete="ignore-field"
         label="Lab name"
         placeholder="Your link is missing access token"
-        persistent-placeholder
-        outlined
-        dense
-        readonly
-        hide-details
-        @focus="$event.target.select()"
-      >
-        <template v-slot:append>
-          <a class="material-icons content_copy" @click="copyText('labName')">&#xe14d;</a>
-        </template>
-      </v-text-field>
+        prefix=""
+      />
     </v-col>
     <v-col cols="10">
-      <v-text-field
+      <CopyTextField
         v-model="ipAddress"
-        ref="ipAddress"
-        autocomplete="ignore-field"
-        label="IP Address"
+        label="Lab IP Address"
         placeholder="Your link is missing access token"
-        persistent-placeholder
-        outlined
-        dense
-        readonly
-        hide-details
-        @focus="$event.target.select()"
-      >
-        <template v-slot:append>
-          <a class="material-icons content_copy" @click="copyText('ipAddress')">&#xe14d;</a>
-        </template>
-      </v-text-field>
+        prefix=""
+      />
     </v-col>
   </v-row >
 
