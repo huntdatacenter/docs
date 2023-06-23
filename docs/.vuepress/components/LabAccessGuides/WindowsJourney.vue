@@ -23,6 +23,7 @@ export default {
     VExpansionPanels,
     VExpansionPanelHeader,
     VExpansionPanelContent,
+    CopyTextField: () => import('../generic/CopyTextField.vue'),
   },
   props: {
     username: { type: String, default: null },
@@ -117,23 +118,12 @@ Connection to home closed.`,
         </v-col>
         <v-col cols="12">
           2.3. Login to entry machine.
-          <v-text-field
-          :value="`ssh -o StrictHostKeyChecking=accept-new ${username}@${ipAddress}`"
-          ref="winStep2"
-          label=""
-          placeholder="Your link is missing access token"
-          persistent-placeholder
-          prefix="C:\Users\User>"
-          outlined
-          dense
-          readonly
-          hide-details
-          @focus="$event.target.select()"
-          >
-          <template v-slot:append>
-              <a class="material-icons content_copy" @click="copyText('winStep2')">&#xe14d;</a>
-          </template>
-          </v-text-field>
+          <CopyTextField
+            :value="`ssh -o StrictHostKeyChecking=accept-new ${username}@${ipAddress}`"
+            label=""
+            prefix="C:\Users\User>"
+            placeholder="Your link is missing access token"
+          />
         </v-col>
         <v-col cols="12">
           2.4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.

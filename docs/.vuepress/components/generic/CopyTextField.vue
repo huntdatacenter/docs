@@ -12,9 +12,13 @@ export default {
     VRow,
     VTextField,
   },
-  props: [
-    'ref', 'value', 'label', 'placeholder'
-  ],
+  props: {
+    value: { type: [Object, String], default: null },
+    label: { type: String, default: "" },
+    placeholder: { type: String, default: null },
+    prefix: { type: String, default: null },
+    suffix: { type: String, default: null },
+  },
   data() {
     return {}
   },
@@ -43,6 +47,8 @@ export default {
     :label="label"
     :placeholder="placeholder"
     persistent-placeholder
+    :prefix="prefix"
+    :suffix="suffix"
     outlined
     dense
     readonly
