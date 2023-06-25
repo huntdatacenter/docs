@@ -17,11 +17,12 @@ See our [scientific access](/administer-science/scientific-access) section for g
 
 
 
-::: tip Next Tingweek (Ting 9)
+::: tip Next Tingweek (Ting #10)
 
-- **Data space ting**: Wednesday 31 May 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek9-dataspaceting-agenda.pdf))
-
-[Read more about HUNT Cloud Tingweek](/govern-science/tingweek/)
+- **Labting**: Tuesday 17 October 2023 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 18 October 2023 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 18 October 2023 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 19 October 2023 - 9 to 11 a.m. CET
 
 :::
 

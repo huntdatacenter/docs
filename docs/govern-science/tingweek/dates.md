@@ -37,10 +37,10 @@ description: This page lists information and questions about our Tingweeks.
 
 ### Tingweek #9 (2023-05)
 
-- **Labting**: Tuesday 30 May 2023 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 31 May 2023 - 9 to 11 a.m. CET
-- **Data controller ting**: Wednesday 31 May 2023 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 1 June 2023 - 9 to 11 a.m. CET
+- **Labting**: Tuesday 30 May 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek9-labting-agenda.pdf))
+- **Data space ting**: Wednesday 31 May 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek9-dataspaceting-agenda.pdf))
+- **Data controller ting**: Wednesday 31 May 2023 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek9-datacontrollerting-agenda.pdf))
+- **Lagtun**: Thursday 1 June 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek9-lagtun-agenda.pdf))
 
 ### Tingweek #8 (2023-02)
 
