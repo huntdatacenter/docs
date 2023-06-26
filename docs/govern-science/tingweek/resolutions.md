@@ -15,9 +15,24 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun/) and the use of [resol
 
 :::
 
+#### [Enable reductions of inactive compute resources](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek9-resolutions.pdf#page=5)
+
+- TOPIC: Finance
+- ID: R9/LT9/T9/23
+
+#### [Clarify costs for migrations to new systems](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek9-resolutions.pdf#page=4)
+
+- TOPIC: Finance
+- ID: R8/LT9/T9/23
+
+#### [Explore data provider initiated data deliveries](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek9-resolutions.pdf#page=3)
+
+- TOPIC: Transport
+- ID: R7/LT9/T9/23
+
 #### [Pilot a framework for courses that utilizes sensitive data](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-resolutions.pdf#page=5)
 
-- TOPIC: Teaching
+- TOPIC: Training
 - ID: R9/LT8/T8/23
 
 #### [Support lab separations](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek8-resolutions.pdf#page=4)

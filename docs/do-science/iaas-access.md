@@ -1,11 +1,11 @@
 ---
-title: Iaas Access
+title: IAAS Access
 category: Getting started
 permalink: /do-science/iaas
 sidebarDepth: 1
-description: Iaas Access details with customized guiding.
+description: IAAS Access details with customized guiding.
 ---
 
-# Iaas Access
+# IAAS Access
 
 <IaasAccess />
