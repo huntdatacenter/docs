@@ -16,8 +16,8 @@ This is a pilot page initiated in June 2023.
 
 #### Patch 2023-06-26
 
-*Administer science* 
+*Administer science: Agreements* 
 
-* New agreement versions for *External kista import order* (v2.1) and *External kista export order* (v1.4): Internal lab user included in separate header (uploader/downloader) to improve separation from lab leader.
+* New agreement versions for *External kista import order* (v2.1) and *External kista export order* (v1.4): Naming of Internal lab user added to separate header (uploader/downloader) to improve differentiation from lab leader.
 
 
