@@ -261,11 +261,15 @@ Data space leaders and Data space compliance administrators can request external
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud External Kista Import Order" version 2.0.
+The following form fields are included in the "HUNT Cloud External Kista Import Order" version 2.1.
+
+*Data space*
 
 - **Data space name:** This is the short name of you data space that request the transfer.
 
 - **Data space leader:** This is the name of the data space leader.
+
+*Lab*
 
 - **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
 
@@ -281,7 +285,11 @@ your-username@`your-labname`-home~$
 
 - **Lab leader:** This is the name of the individual that is the contracting party of your lab agreement with HUNT Cloud, typically your principal investigator or center leader.
 
+*Internal downloader*
+
 - **Lab user:** This is the name of the individual in your lab that your authorize to download the data from the kista and into your lab storage.
+
+*External party*
 
 - **Uploader name:** This is the name of the individual that is authorized to do the technical transfer fraom the external party and into the external kista (uploader). We use this to communicate configuration information, and we expect the public key to be sent from this address.
 
@@ -295,17 +303,24 @@ your-username@`your-labname`-home~$
 
 - **Country:** This is the country where the uploader institution is located.
 
+*Kista configuration*
+
 - **Data size**: This is the size in gigabytes of the storage area in the external kistas. Contact the uploader coordinator if you do not know this number.
 
 - **Data sensitivity**: Specify if the data in the transfer includes indirect or direct identifiable information. Indirect identifiable information is typical for research data where names, addresses, unique identification numbers (fødselsnummer) are substituted with project specific individual identifiers (løpenummer). Direct identifiable information is information such as names, unique ids etc. that may directly identify the research participant. We ask this since import of direct identifiable information may require special security controls in your lab and/or agreement adjustments.
 
 - **Kista duration**: Specify the number of days that the kista will be online. External kistas are indendent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
 
+*Data space leader*
+
 - **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
 
 - **Data space leader**: This is the field for the signature of your lab leader. Data space compliance officers may sign this field as well.
 
 - **Place/date**: State the place where your uploader signed the order and the date when the order was signed. 
+
+*Uploader (exernal party)*
+
 
 - **Uploader**: This is the field for the signature of your external uploader. For compliance purpuses, we need the uploader to accept our use policy of the service before we grant access into our systems.
 
@@ -319,11 +334,15 @@ Data space leaders and Data space compliance officers can request external kista
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud External Kista Export Order" version 1.3.
+The following form fields are included in the "HUNT Cloud External Kista Export Order" version 1.4.
+
+*Data space*
 
 - **Data space name:** This is the short name of you data space that request the transfer.
 
 - **Data space leader:** This is the name of the data space leader.
+
+*Lab*
 
 - **Lab name:** This is the name of your lab. You may find the name when you log into your lab:
 
@@ -339,7 +358,11 @@ your-username@`your-labname`-home~$
 
 - **Lab leader:** This is the name of the individual that is the contracting party of your lab agreement with HUNT Cloud, typically your principal investigator or center leader.
 
+*Internal uploader*
+
 - **Lab user:** This is the name of the individual in your lab that your authorize to download the data from the kista and into your lab storage.
+
+*External party*
 
 - **Downloader name:** This is the name of the individual that is authorized to do the technical transfer from your external kista to the external party (downloader). 
 
@@ -353,15 +376,22 @@ your-username@`your-labname`-home~$
 
 - **Country:** This is the country where the uploader institution is located.
 
+
+*Kista configuration*
+
 - **Data size**: This is the size in gigabytes of the storage area in the external kistas.
 
 - **Data sensitivity**: Specify if the data in the transfer includes indirect or direct identifiable information. Indirect identifiable information is typical for research data where names, addresses, unique identification numbers (fødselsnummer) are substituted with project specific individual identifiers (løpenummer). Direct identifiable information is information such as names, unique ids etc. that may directly identify the research participant. We ask this since export of direct identifiable information may require special security controls.
 
 - **Kista duration**: Specify the number of days that the kista will be online. External kistas are indendent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
 
+*Data space leader*
+
 - **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
 
 - **Data space leader**: This is the field for the signature of your data space leader or data space compliance officer.
+
+*Downloader (external party)
 
 - **Place/date**: State the place where your downloader signed the order and the date when the order was signed. 
 

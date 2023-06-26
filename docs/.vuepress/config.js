@@ -124,6 +124,10 @@ module.exports = {
               path: "/do-science/contact.md",
             },
             {
+              title: "Patch notes",
+              path: "/do-science/patch-notes.md",
+            },
+            {
               title: "Contribute",
               path: "/do-science/contribute.md",
             },
@@ -333,6 +337,10 @@ module.exports = {
               path: "/administer-science/contact.md",
             },
             {
+              title: "Patch notes",
+              path: "/administer-science/patch-notes.md",
+            },
+            {
               title: "Contribute",
               path: "/administer-science/contribute.md",
             },
@@ -503,6 +511,10 @@ module.exports = {
             {
               title: "Contact",
               path: "/govern-science/contact.md",
+            },
+            {
+              title: "Patch notes",
+              path: "/govern-science/patch-notes.md",
             },
             {
               title: "Contribute",
