@@ -222,6 +222,7 @@ module.exports = {
                 "/do-science/tools/transfer/sshfs.md",
                 "/do-science/tools/transfer/winscp.md",
                 "/do-science/tools/transfer/cyberduck.md",
+                "/do-science/tools/transfer/azcopy.md",
               ],
             },
           ],
