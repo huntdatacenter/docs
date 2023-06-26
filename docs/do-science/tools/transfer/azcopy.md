@@ -17,7 +17,12 @@ This guide is meant to help you setup correct parameters for your transfer and i
 
 ## Installation
 
-You can use [conda](https://anaconda.org/conda-forge/azcopy) to install azcopy.
+If this is your first time using conda, follow our [guide](/do-science/tools/analytical/conda/) for proper installation in your lab.
+Afterwards, you can run following command in conda environment to install azcopy.
+
+```bash
+conda install -c conda-forge azcopy
+```
 
 
 ## Setup parameters
