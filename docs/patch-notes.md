@@ -8,64 +8,101 @@ description: Minor and major updates to HUNT Cloud's services.
 
 **This page contains minor and major updates to our services.**
 
+## Patch note 2.8.2.0
 
+*2023-06-27*
 
-## Patch 2.8.2.0 Notes 
-*2023-06-27*  
+Dear cloud community, 
 
-<!-- Welcome to our first patch note ! In order To keep users informed about progress and activities, created this page we did.  -->
-Dear user, welcome to our first patch notes !  
+Welcome to our first patch note!
 
-We created this page to keep you informed about our activities and progress here at HUNT Cloud.
-In below notes, you will read about what is new, what we are currently working on, known issues and more.
+We created this page to keep you informed about our activities and progress here at HUNT Cloud. In the below notes, you will read about what is new, what we are currently working on, known issues and more.
 
+*For the HUNT Cloud team,*  
+Jakub
 
-### Major changes
-
-
-### Do science
-
-#### *Workbench Guides for SSH Reset*
-
-We are introducing abillity for users to reset passphrase in Workbench.
-
-* This method works for *new* and *existing* users 
-* Once you request SSH passphrase reset, head over to your Workbench and easily reset your passphrase in familliar manner. 
-    You can find all details in this [guide](/do-science/guides/configure-ssh-workbench/#ssh-passphrase-reset-in-workbench)
-
-
-#### *Lab Access Link*
-
-We are changing the way we approach onboarding of new users. This approach allows you to connect to our services using tailored to you copy-paste commands.
-
-* You can find Lab Access link in your onboarding email, or request it in our [Service Desk](/do-science/service-desk/#request-lab-access-reissue)
-
-### Minor changes
+### <u>Major changes</u>
 
 ### Do science
 
+#### *Workbench guides for SSH reset*
 
-#### *Azcopy guide*
+We are introducing the abillity for users to reset passphrase directly in Workbench.
 
-* Created a quick guide for users who want to transfer files from Azure Storage to HUNT Cloud. Click [here](/do-science/tools/transfer/azcopy) for details.
+* This method works for *new* and *existing* users. 
+* Once you request SSH passphrase reset, head over to your Workbench to easily reset your passphrase in a familliar manner. 
+* You can find further details in this [guide](/do-science/guides/configure-ssh-workbench/#ssh-passphrase-reset-in-workbench).
+
+
+#### *Lab access link*
+
+We are changing the way we approach onboarding of new users. This approach allows you to connect to our services using tailored-to-you copy-paste commands for your initial configuration.
+
+* You can find Lab access link in your onboarding email, or request a new link in our Do science [service desk](/do-science/service-desk/#request-lab-access-reissue)
+
 
 ### Administer science
 
-#### *Agreements* 
+#### *Scientific access*
 
-* New agreement versions for [*External kista import order*](/administer-science/agreements/downloads/#external-kista-import-order) (v2.1) and [*External kista export order*](/administer-science/agreements/downloads/#external-kista-export-order) (v1.4): Naming of Internal lab user added to separate header (uploader/downloader) to improve differentiation from lab leader.
+We are simplifying [Scientific access](/administer-science/scientific-access/) for new scientific centers and scientfic groups and have updated the initial onboarding process: 
+
+* [New section](/administer-science/scientific-access/) that describes the scientific onboarding.
+* [New scientific access bundle](/administer-science/scientific-access/#order-scientific-access) that combines information needed to add your first Data space and Lab. 
+* [FAQ section](/administer-science/scientific-access/faq/) dedicated to scientific access.
+
+
+### Govern science
+
+#### *Organizational access*
+
+We are simplifying [Organizational access](/govern-science/organizational-access/) and have updated the initial onboarding process:
+
+* [New section](/govern-science/organizational-access/) that describes the organizational onboarding.
+* [New organiztional agreement information form](/govern-science/organizational-access/#request-organizational-agreements) that combines information needed to generate your first data processor agreement and services center agreements. 
+* [FAQ section](/govern-science/organizational-access/faq/) dedicated to organizational access.
+
+
+### <u>Minor changes</u>
+
+### Do science
+
+#### *Azcopy guide*
+
+* We added a quick guide for users who want to transfer files from Azure Storage to their lab. [Click here](/do-science/tools/transfer/azcopy) for details.
+
+### Administer science
+
+#### *Agreement updates* 
+
+We updated the agreements for [External kista import order](/administer-science/agreements/downloads/#external-kista-import-order) (v2.1) and [External kista export order](/administer-science/agreements/downloads/#external-kista-export-order) (v1.4): 
+
+* Naming of "Internal lab user" included in separate header to improve differentiation from lab leader.
 
   
 ### Upcoming features
 
 What are we working on ? 
 
-* NVMe storage
-* User paths - easier way to use our services
+* NVMe storage - faster storage type for GPU and CPU intensive workloads.
+* User paths - simplify ways to use our services.
+* Simplified IaaS access - similar to Lab Access.
 
+
+## About 
 
 ### Feedback
 
-Found an issue, or want to submit a feedback ? Send us a general request form in [Service Desk](/do-science/service-desk/#general-service-request)
+Found an issue, or want to submit a feedback? Send us a general request form in [Service Desk](/do-science/service-desk/#general-service-request).
 
+### Patch numbering
+
+We use a four digit numbering system on our Patch notes, for example `2.8.3.0`. 
+
+| Number | Description | Communication |
+| ---- | ---- | ---- | 
+| 2 | Major change in [Services specification](/administer-science/services/specifications/) | Major Services center agreement update | 
+| 8 | Minor change in [Services specification](/administer-science/services/specifications/) | Minor Services center agreement update |
+| 3 | Major Patch note | Major user experience update | 
+| 2 | Minor Patch note | Minor user experience update | 
 

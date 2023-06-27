@@ -11,7 +11,7 @@ description: Guide on SSH passphrase reset in workbench.
 
 ::: warning Pilot phase
 
-This guide is currently in pilot phase. Noticed an issue ? Share feedback with us on Slack !
+This guide is currently in pilot phase. Noticed an issue? Share feedback with us on Slack!
 
 ::: 
 
