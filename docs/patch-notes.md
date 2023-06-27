@@ -9,7 +9,9 @@ description: Minor and major updates to HUNT Cloud's services.
 **This page contains minor and major updates to our services.**
 
 
+
 ## Patch 2.8.2.0 Notes 
+## Major Patch 2.0.0 Notes 
 *2023-06-27*  
 
 <!-- Welcome to our first patch note ! In order To keep users informed about progress and activities, created this page we did.  -->
@@ -18,7 +20,9 @@ Dear user, welcome to our first patch notes !
 We created this page to keep you informed about our activities and progress here at HUNT Cloud.
 In below notes, you will read about what is new, what we are currently working on, known issues and more.
 
+
 ### Major changes
+
 
 ### Do science
 
@@ -41,10 +45,10 @@ We are changing the way we approach onboarding of new users. This approach allow
 
 ### Do science
 
+
 #### *Azcopy guide*
 
 * Created a quick guide for users who want to transfer files from Azure Storage to HUNT Cloud. Click [here](/do-science/tools/transfer/azcopy) for details.
-
 
 ### Administer science
 
