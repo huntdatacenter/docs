@@ -9,6 +9,8 @@ description: Minor and major updates to HUNT Cloud's services.
 **This page contains minor and major updates to our services.**
 
 
+
+## Patch 2.8.2.0 Notes 
 ## Major Patch 2.0.0 Notes 
 *2023-06-27*  
 
@@ -17,6 +19,9 @@ Dear user, welcome to our first patch notes !
 
 We created this page to keep you informed about our activities and progress here at HUNT Cloud.
 In below notes, you will read about what is new, what we are currently working on, known issues and more.
+
+
+### Major changes
 
 
 ### Do science
@@ -35,6 +40,10 @@ We are introducing abillity for users to reset passphrase in Workbench.
 We are changing the way we approach onboarding of new users. This approach allows you to connect to our services using tailored to you copy-paste commands.
 
 * You can find Lab Access link in your onboarding email, or request it in our [Service Desk](/do-science/service-desk/#request-lab-access-reissue)
+
+### Minor changes
+
+### Do science
 
 
 #### *Azcopy guide*
