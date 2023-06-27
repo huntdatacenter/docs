@@ -10,6 +10,7 @@ description: Minor and major updates to HUNT Cloud's services.
 
 
 ## Major Patch 2.0.0 Notes 
+*2023-06-27*  
 
 <!-- Welcome to our first patch note ! In order To keep users informed about progress and activities, created this page we did.  -->
 Dear user, welcome to our first patch notes !  
