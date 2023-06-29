@@ -101,7 +101,7 @@ What are we working on?
 * User paths - simplify ways to use our services.
 * Simplified IaaS access - similar to Lab Access.
 
-## About 
+## About Patch Notes
 
 ### Feedback
 
