@@ -107,16 +107,20 @@ What are we working on?
 
 Found an issue, or want to submit a feedback? Send us a general request form in [Service Desk](/do-science/service-desk/#general-service-request).
 
-### Versioning
+### Numbering
 
-We use a four digit numbering system on our Patch notes, for example version `1.2.3.4`. 
+We use a four digit numbering system on our Patch notes, for example version `2.8.3.0`. 
 
 | Number | Description | 
 | ---- | ---- | 
-| 1 | Major services agreement update | 
-| 2 | Minor services agreement update |
+| 2 | Major services agreement update | 
+| 8 | Minor services agreement update |
 | 3 | Major Patch notes | 
-| 4 | Minor Patch notes | 
+| 0 | Minor Patch notes | 
+
+::: details Read more about the numbering
+
+.
 
 #### Major services agreement update 
 
@@ -147,7 +151,7 @@ The fourth number indicates which minor Patch notes version the current notes ar
 
 Minor Patch notes indicates what we think are small (but often important) user experience updates of our services, for example updates of guides, agreements or other good-to-know-about things.
 
-
+:::
 
 
 
