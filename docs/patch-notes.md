@@ -95,7 +95,7 @@ We updated the agreements for [External kista import order](/administer-science/
   
 ### Upcoming features
 
-What are we working on ? 
+What are we working on? 
 
 * NVMe storage - faster storage type for GPU and CPU intensive workloads.
 * User paths - simplify ways to use our services.
@@ -109,12 +109,45 @@ Found an issue, or want to submit a feedback? Send us a general request form in 
 
 ### Patch numbering
 
-We use a four digit numbering system on our Patch notes, for example `2.8.3.0`. 
+We use a four digit numbering system on our Patch notes, for example version `1.2.3.4`. 
 
-| Number | Description | Communication |
-| ---- | ---- | ---- | 
-| 2 | Major change in [Services specification](/administer-science/services/specifications/) | Major Services center agreement update | 
-| 8 | Minor change in [Services specification](/administer-science/services/specifications/) | Minor Services center agreement update |
-| 3 | Major Patch note | Major user experience update | 
-| 2 | Minor Patch note | Minor user experience update | 
+| Number | Description | 
+| ---- | ---- | 
+| 1 | Major services agreement update | 
+| 2 | Minor services agreement update |
+| 3 | Major Patch notes | 
+| 4 | Minor Patch notes | 
+
+#### Major services agreement update 
+
+The first number indicates which major [Services specification](/administer-science/services/specifications/) version the Patch notes are attached to. 
+
+The number references the first digit of the current Services specification version. For example, Services specification version `2.8` will be listed as `2`. 
+
+A major services agreement update indicates that services are changes in a way that need major agreement updates. Such updates are forwarded to all contractual partners on email, and major changes on existing services take effect 90 days after the announcement.
+
+#### Minor services agreement update
+
+The second number indicates which minor [Services specification](/administer-science/services/specifications/) version the Patch note are attached to.
+
+The number references the second digit of the current Services specification version. For example, Services specification version `2.8` will be listed as `8`. 
+
+A minor services agreement update indicate a change in the agreement text, such as clarifications, syntax updates and similar. These changes takes effect when they are communicted on these docs pages, and are not forwarded to contractual partners on email.
+
+#### Major Patch notes
+
+The third number indicates which major Patch notes version the current notes are attached to. 
+
+Major Patch notes indicates what we think are a substantial update in your user experience of our services. 
+Such improvements may not always need updates in legal documents.
+
+#### Minor Patch notes
+
+The fourth number indicates which minor Patch notes version the current notes are attached to. 
+
+Minor Patch notes indicates what we think are small (but often important) user experience updates of our services, for example updates of guides, agreements or other good-to-know-about things.
+
+
+
+
 
