@@ -107,7 +107,7 @@ What are we working on?
 
 Found an issue, or want to submit a feedback? Send us a general request form in [Service Desk](/do-science/service-desk/#general-service-request).
 
-### Patch numbering
+### Versioning
 
 We use a four digit numbering system on our Patch notes, for example version `1.2.3.4`. 
 
