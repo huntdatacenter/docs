@@ -62,6 +62,14 @@ We are simplifying [Organizational access](/govern-science/organizational-access
 * [New organiztional agreement information form](/govern-science/organizational-access/#request-organizational-agreements) that combines information needed to generate your first data processor agreement and services center agreements. 
 * [FAQ section](/govern-science/organizational-access/faq/) dedicated to organizational access.
 
+#### Lagtun resolutions
+
+The new [resolutions from Tingweek #9](/govern-science/tingweek/resolutions/) are adopted:
+
+* Enable reduction of inactive compute resources
+* Clarify costs for migration to new systems
+* Explore data provider initiated data deliveries 
+
 
 ### <u>Minor changes</u>
 
@@ -79,6 +87,11 @@ We updated the agreements for [External kista import order](/administer-science/
 
 * Naming of "Internal lab user" included in separate header to improve differentiation from lab leader.
 
+### Govern science
+
+#### New Tingweek dates
+
+[Dates for upcoming Tingweeks](/govern-science/tingweek/dates/): Tingweek #10 (2023-10) and Tingweek #11 (2024-02) are published in the Tingweek section.
   
 ### Upcoming features
 
@@ -87,7 +100,6 @@ What are we working on ?
 * NVMe storage - faster storage type for GPU and CPU intensive workloads.
 * User paths - simplify ways to use our services.
 * Simplified IaaS access - similar to Lab Access.
-
 
 ## About 
 
