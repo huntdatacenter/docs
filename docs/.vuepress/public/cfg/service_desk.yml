@@ -147,11 +147,11 @@ request_lab_deletion:
 request_external_import_kista:
   title: "Request an external import kista"
   template:
-    subject: "External import kista order - {labname}"
+    subject: "External import kista order - {external_organization} to {labname}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request an external import kista for {labname}.
+      I would like to request an external import kista from {external_organization} to {labname}.
 
       I have attached two files: (1) the signed external import kista order, and (2) the public SSH key from the external uploader.
 
@@ -162,6 +162,7 @@ request_external_import_kista:
 
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "External organization", key: "external_organization", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
@@ -175,11 +176,11 @@ request_external_import_kista:
 request_external_export_kista:
   title: "Request an external export kista"
   template:
-    subject: External import kista order - {labname}
+    subject: External import kista order - {labname} to {external_organization}
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request an external export kista for {labname}.
+      I would like to request an external export kista from {labname} to {external_organization}.
 
       I have attached two files: (1) the signed external export kista order, and (2) the public SSH key from the external uploader.
 
@@ -190,6 +191,7 @@ request_external_export_kista:
 
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "External organization", key: "external_organization", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
