@@ -13,7 +13,7 @@ Julia is not part of standard setup, but it takes only a few steps to add.
 1. Start by creating conda environment named julia with Julia package installed:
 
 ```
-conda create -n julia -c conda-forge -y julia
+mamba create -n julia -c conda-forge -y julia
 ```
 
 2. When you environment is created activate it:
