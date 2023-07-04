@@ -80,53 +80,13 @@ The configuration below will work on **`home`** machines. This configuration wil
 
 Click **`Create new session`**.
 
-  ![X2GO introduction](./images/x2go_intro.png "X2GO introduction")
+![X2GO introduction](./images/x2go_intro.png "X2GO introduction")
 
 #### 2.2 In the `Session` tab
 
-::: details Server section
+2.1 Follow instructions below 
 
-- _Host_: **`10.5.5.12`**
-- _Login/username_: **`<your-lab-username>`**
-- _SSH port_: **`22`**
-- _Use RSA/DSA key for ssh connection_:
-
-  - For Mac and Linux:
-
-    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/do-science/lab-access/configure-ssh/#_3-5-final-steps)' section in the installation guide.
-
-  - For Windows:
-
-    You will need to save the access key to your local computer and point to this file: (1) log into your lab **`home`** machine, (2) print your key with **`cat ~/.ssh/id_rsa`**, (3) open _Notepad_ on your local computer and copy the text from **`-----BEGIN KEY-----`** to **`-----END KEY-----`** (including both headers and the key between) into a file that your save on your computer. (4) link to this file in the window _Use RSA/DSA key for ssh connection_.
-
-    ::: warning NOTE
-    This file is a key to your lab. Store the key somewhere in the **`C:`** drive on your local computer.
-
-- _Try auto login_: **`Check`**
-- _Use Proxy server for SSH connection_: **`Check`**
-  :::
-
-::: details Proxy server section
-
-- _Proxy server type:_ **`SSH`**
-- _Host:_ **`<lab-ip>`**
-  - For all: This is your lab specific IP that starts with **`10.42.130.`**. You will find the full address in the software that you use to connect to your lab.
-- _Port:_ **`22`**
-- _Same login as on X2Go Sever:_ **`Leave blank`**
-- _Login:_ **`<your-lab-username>`**
-  - For all: This is the user name that you use to connect to your lab.
-- _Same password as on X2Go Server:_ **`Leave blank`**
-- _RSA/DSA key:_
-  - For Mac and Linux: **`Leave blank`**
-  - For Windows: **`Link to the same file that you established above`**
-- _ssh-agent or default ssh key:_ **`Check`**
-  :::
-
-::: details Session type section
-
-- Choose **`Single application`** from the drop down menu
-- Add **`/usr/bin/xterm`** in the command window
-  :::
+![x2go_session_image](./images/x2go_session.png)
 
 #### 2.3 In the `Connection` tab
 
