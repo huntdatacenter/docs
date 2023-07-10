@@ -28,8 +28,41 @@ Create your own environments for Python or R packages. Export the details into t
 
 ## Conda or Mamba
 
-We install both. Generally they should be interchangeable. Use mamba instead of conda for create and install commands for quicker setup.
+We install both. Generally they should be interchangeable. We recommend that you mamba instead of conda for create and install commands for quicker setup. If you have older setup without mamba command replace it with conda.
+
+## Conda environments
+
+Start by finding out which environments you already have:
+
+```bash
+conda env list
+```
+
+List packages installed in your environment. Replace "name" with a name of one of your environments from the list above.
+
+```bash
+# General example
+conda list -n name
+
+# Specific example with py310
+conda env export -n py310
+```
 
 ## Create a sharable environment
 
-<!-- How to export environment config file. -->
+You can keep configuration of your environment in your git repository together with your code.
+In general example replace name with name of your environment:
+
+```bash
+# General example
+conda env export -n name > environment.yml
+
+# Specific example with py310
+conda env export -n py310 > environment.yml
+```
+
+You or your lab mates can use this environment file to recreate same environment.
+
+```bash
+conda env create -f environment.yml
+```
