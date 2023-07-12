@@ -23,7 +23,7 @@ description: How to use RStudio and R
 Here's an example on how to create a Conda environment with _R_ and _R-IRkernel_ kernel and commonly used packages:
 
 ```bash
-mamba create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
+mamba create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'cmake' 'compilers' 'cmake' 'gmp'
 ```
 
 ## Rstudio

@@ -15,10 +15,10 @@ description: How to use Python
 
  -->
 
-## Create python environment
+## Create Python environment
 
 Below is an example on how you create a Conda environments with _Python_ and _IPython_ kernel from your [workbench terminal](/do-science/hunt-workbench/faq/#terminal)::
 
 ```bash
-mamba create -n <name> 'python~=3.10.*' 'ipykernel'
+mamba create -n <name> 'python~=3.10.*' 'ipykernel' 'pip' 'ipywidgets>=8.0.2,<9.0.0'
 ```
