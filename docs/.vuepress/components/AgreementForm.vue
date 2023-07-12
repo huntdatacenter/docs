@@ -5,12 +5,16 @@ import fetch from 'node-fetch';
 
 import {
   VApp,
+  VAppBar,
+  VAppBarNavIcon,
+  VToolbarTitle,
   VCol,
   VRow,
   VCard,
   VForm,
   VBtn,
   VSheet,
+  VLayout,
   VTextField,
   VAutocomplete,
   VCardTitle,
@@ -22,11 +26,15 @@ export default {
   components: {
     PdfForm: () => import('./PdfForm.vue'),
     VApp,
+    VAppBar,
+    VAppBarNavIcon,
+    VToolbarTitle,
     VCol,
     VRow,
     VCard,
     VForm,
     VSheet,
+    VLayout,
     VBtn,
     VTextField,
     VAutocomplete,
@@ -42,6 +50,7 @@ export default {
       agreements: [],
       forms: {},
       selected: null,
+      expandOnHover: false,
     };
   },
   computed: {
@@ -79,13 +88,19 @@ export default {
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
-      <v-sheet v-if="showForm" class="pt-0">
+      <v-app-bar dense>
+        <v-app-bar-nav-icon @click="expandOnHover = !expandOnHover"></v-app-bar-nav-icon>
+        <v-toolbar-title v-if="selected && selected.text ? true : false">{{ selected.text }}</v-toolbar-title>
+      </v-app-bar>
+      <v-layout v-if="showForm" class="pt-0">
         <PdfForm
+          v-if="showForm"
           :title="selected.text"
           :url="selected.url"
           :fields="getFields"
+          :expand-on-hover="expandOnHover"
         />
-      </v-sheet>
+      </v-layout>
       <v-row v-else align="center" justify="center" style="margin-top: 24px;">
         <v-col class="mx-2" style="max-width: 900px">
           <v-card class="mb-4">

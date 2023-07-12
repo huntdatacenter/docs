@@ -7,6 +7,8 @@ import SignaturePad from "signature_pad"
 
 import {
   VApp,
+  VAppBar,
+  VAppBarNavIcon,
   VCol,
   VRow,
   VList,
@@ -39,6 +41,8 @@ export default {
   // Components need to be imported above
   components: {
     VApp,
+    VAppBar,
+    VAppBarNavIcon,
     VCol,
     VRow,
     VList,
@@ -70,6 +74,7 @@ export default {
     url: { type: String, default: null },
     title: { type: String, default: "Agreement" },
     fields: { type: Array, default: null },
+    expandOnHover: { type: Boolean, default: false },
   },
   data() {
     return {
@@ -85,9 +90,8 @@ export default {
       dialogs: {},
       showSignatures: false,
       signaturePad: null,
-      defaultScale: 0.2,
-      drawer: true,
-      expandNavigation: false,
+      defaultScale: 0.19,
+      drawer: null,
     }
   },
   computed: {
@@ -109,6 +113,7 @@ export default {
   mounted() {
     // Run code when component is mounted
     console.log(this.fields)
+    this.drawer = true
   },
   created() {
     // Run code when component is created
@@ -343,23 +348,17 @@ export default {
       :permanent="drawer ? true : false"
       :temporary="drawer ? false : true"
     -->
+    <!-- <v-app-bar app dense>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>{{ title }}</v-toolbar-title>
+    </v-app-bar> -->
     <v-navigation-drawer
       v-model="drawer"
-      :expand-on-hover="false"
-      :permanent="drawer ? true : false"
-      :absolute="drawer ? false : true"
-      :temporary="drawer ? false : true"
+      :expand-on-hover="expandOnHover"
+      :permanent="expandOnHover"
       width="600"
+      mini-variant-width="600"
     >
-      <v-list>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title class="text-h6">
-              {{ title }}
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
       <v-divider></v-divider>
       <form ref="form" @submit.prevent="submit">
         <v-list>
@@ -536,16 +535,6 @@ export default {
     <!-- <v-container class="fill-height"> -->
     <v-sheet class="pt-0" style="width: 100%">
       <v-row align="start" justify="start">
-        <v-col cols="2" class="">
-          <v-btn
-            v-if="!drawer"
-            color="primary"
-            block
-            @click="drawer = !drawer"
-          >
-            Show Agreement form
-          </v-btn>
-        </v-col>
         <!-- <v-col cols="2" class="">
           <v-btn type="submit" block class="" @click="browsePdf">Back</v-btn>
         </v-col> -->
