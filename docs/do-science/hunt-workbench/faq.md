@@ -60,7 +60,7 @@ mamba create -n <name> 'python~=3.10.*' 'ipykernel'
 And here's an example on how to create a Conda environment with _R_ and _R-IRkernel_ kernel and commonly used packages:
 
 ```bash
-mamba create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
+mamba create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'cmake' 'compilers' 'cmake' 'gmp'
 ```
 
 You need to replace **`<name>`** with your own environment name in the example above, such as **`conda-test-environment`**.
@@ -91,7 +91,7 @@ It might be handy to share your exact setup with your lab colleagues when you ha
 
 The packages that you have installed in your HUNT Workbench environment are usually not shared. The separation prevent others from breaking your packages and it allows you to explore packages without breaking the workflows of others.
 
-So, to share environments you will need to export your environments definition to your colleagues so they can reuse them. Read more on how to [share](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment) and manage Code environments on [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Below is a principle guide run in your [workbench terminal](/do-science/hunt-workbench/faq/#terminal):
+So, to share environments you will need to export your environments definition to your colleagues so they can reuse them. Read more on how to [share](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment) and manage Code environments on [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Below is a principle guide run in your [Workbench terminal](/do-science/hunt-workbench/faq/#terminal):
 
 1. In your Workbench:
 
