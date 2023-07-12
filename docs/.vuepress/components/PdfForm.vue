@@ -323,7 +323,7 @@ export default {
         <iframe id="pdf" title="Agreement" style="width: 100%; height: auto; min-height: 1000px; min-width: 960px;"></iframe>
       </v-sheet>
       <v-row v-show="!showPdf" align="center" justify="center" style="margin-top: 24px;">
-        <v-col cols="6">
+        <v-col class="mx-2" style="max-width: 900px">
           <v-card>
             <v-card-title>{{ title }}</v-card-title>
             <v-card-text>
@@ -338,11 +338,13 @@ export default {
                       :label="item.label"
                       :pattern="item.pattern ? item.pattern : null"
                       :title="item.hint ? item.hint : null"
-                      :hint="item.hint ? item.hint : null"
                       :minlength="item.minlength ? item.minlength : null"
                       :maxlength="item.maxlength ? item.maxlength : null"
                       :required="isFieldRequired(item.required)"
+                      :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
                       :suffix="item.suffix ? item.suffix : null"
+                      :type="item.specialType ? item.specialType : null"
+                      :hint="item.hint ? item.hint : null"
                       :persistent-hint="
                         item.hint && formData[item.key] ? true : false
                       "
@@ -359,10 +361,11 @@ export default {
                       :ref="item.key"
                       autocomplete="ignore-field"
                       :label="item.label"
-                      placeholder=""
                       :items="getCountries"
                       :item-text="item => `${item.name} ${item.flag}`"
                       :item-value="item => item.name"
+                      :required="isFieldRequired(item.required)"
+                      placeholder=""
                       persistent-placeholder
                       outlined
                       dense
@@ -375,10 +378,12 @@ export default {
                       :ref="item.key"
                       autocomplete="ignore-field"
                       :label="item.label"
-                      :hint="item.hint ? item.hint : null"
                       :pattern="item.pattern ? item.pattern : null"
                       :title="item.hint ? item.hint : null"
-                      :suffix="item.suffix ? item.suffix : null"
+                      :minlength="item.minlength ? item.minlength : null"
+                      :maxlength="item.maxlength ? item.maxlength : null"
+                      :required="isFieldRequired(item.required)"
+                      :hint="item.hint ? item.hint : null"
                       :persistent-hint="
                         item.hint && formData[item.key] ? true : false
                       "

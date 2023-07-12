@@ -79,7 +79,7 @@ export default {
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
-      <v-sheet v-if="showForm" class="pt-4">
+      <v-sheet v-if="showForm" class="pt-0">
         <PdfForm
           :title="selected.text"
           :url="selected.url"
@@ -87,7 +87,7 @@ export default {
         />
       </v-sheet>
       <v-row v-else align="center" justify="center" style="margin-top: 24px;">
-        <v-col cols="6">
+        <v-col class="mx-2" style="max-width: 900px">
           <v-card class="mb-4">
             <v-card-title>Select Agreement Form</v-card-title>
             <v-card-text>

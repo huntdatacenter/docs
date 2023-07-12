@@ -13,11 +13,13 @@ forms:
   test_agreement:
     fields: [
       { key: null, label: "Lab", field: "section" },
-      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield", required: "true" },
+      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield" },
       { key: null, label: "Lab user", field: "section" },
-      { key: "labuserfullname", label: "Full Name", field: "textfield", required: "true" },
+      { key: "labuserfullname", label: "Full Name", field: "textfield" },
+      { key: "labuseremail", label: "Email", pattern: "[^@]+@[^@]+\\.[^@]+", specialType: "email", field: "textfield" },
+      { key: "labuserphone", label: "Phone", pattern: "[0-9+]+", minlength: 3, specialType: "tel", field: "textfield" },
       { key: null, label: "Signatures", field: "section" },
-      { key: "labusersignatureplaceanddate", label: "Date and place", field: "textfield", required: "true"},
+      { key: "labusersignatureplaceanddate", label: "Date and place", field: "textfield" },
       { key: "labusersignature", label: "Lab User signature", field: "signature", page: 1, xpos: 0.25, ypos: 0.18 },
       { key: "lableadersignature", label: "Lab Leader signature", field: "signature", page: 1, xpos: 0.25, ypos: 0.13 },
     ]
@@ -25,7 +27,7 @@ forms:
   lab_user_agreement:
     fields: [
       { key: null, label: "Lab", field: "section" },
-      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield", required: "true" },
+      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
       { key: "lableadernamefull", label: "Lab Leader", field: "textfield", required: "true" },
       { key: null, label: "Lab user", field: "section" },
       { key: "labuserfullname", label: "Full Name", field: "textfield", required: "true" },
@@ -34,10 +36,12 @@ forms:
       { key: "labuserfaculty", label: "Faculty", field: "textfield" },
       { key: "labuserinstitution", label: "Insitution", field: "textfield", required: "true" },
       { key: "labusercountry", label: "Country", field: "countries", required: "true" },
-      { key: "labuseremail", label: "Email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield", required: "true" },
-      { key: "labuserphone", label: "Phone", pattern: "[0-9+]{3,}", field: "textfield", required: "true" },
+      { key: "labuseremail", label: "Email", pattern: "[^@]+@[^@]+\\.[^@]+", specialType: "email", field: "textfield", required: "true" },
+      { key: "labuserphone", label: "Phone", pattern: "[0-9+]+", minlength: 3, specialType: "tel", field: "textfield", required: "true" },
       { key: null, label: "Signatures", field: "section" },
       { key: "labusersignatureplaceanddate", label: "Date and place", field: "textfield", required: "true"},
+      { key: "labusersignature", label: "Lab User signature", field: "signature", page: 1, xpos: 0.25, ypos: 0.18 },
+      { key: "lableadersignature", label: "Lab Leader signature", field: "signature", page: 1, xpos: 0.25, ypos: 0.13 },
     ]
 
   lab_agreement:
