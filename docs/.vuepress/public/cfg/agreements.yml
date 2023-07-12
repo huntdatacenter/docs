@@ -1,5 +1,8 @@
 ########################### this is the beginning of file ###########################
 agreements:
+  - value: test_agreement
+    text: "Test Agreement"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf
   - value: lab_user_agreement
     text: "Lab User Agreement"
     url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf
@@ -8,27 +11,41 @@ agreements:
     url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-order.pdf
 
 forms:
+  test_agreement:
+    fields: [
+      { key: null, label: "Lab", field: "section" },
+      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield" },
+      { key: null, label: "Lab user", field: "section" },
+      { key: "labuserfullname", label: "Full Name", field: "textfield" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "labusersignature", label: "Lab User signature", field: "signature", xpos: 0.18 },
+      #{ key: "labusersignatureplaceanddate", label: "Signature", field: "TBD"},
+    ]
+
   lab_user_agreement:
     fields: [
-      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",  field: "textfield"  },
-      { key: "lableadernamefull", label: "Lab Leader", field: "textfield"  },
-      { key: "labuserfullname", label: "Full Name", field: "textfield"  },
-      { key: "labuserposition", label: "Position", field: "textfield"  },
-      { key: "labuserdepartment", label: "Department", field: "textfield"  },
-      { key: "labuserfaculty", label: "Faculty", field: "textfield"  },
-      { key: "labuserinstitution", label: "Insitution", field: "textfield"  },
-      { key: "labusercountry", label: "Country", field: "countries"  },
-      { key: "labuseremail", label: "Email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield"  },
-      { key: "labuserphone", label: "Phone", pattern: "[0-9+]{3,}", field: "textfield"  },
+      { key: null, label: "Lab", field: "section" },
+      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield" },
+      { key: "lableadernamefull", label: "Lab Leader", field: "textfield" },
+      { key: null, label: "Lab user", field: "section" },
+      { key: "labuserfullname", label: "Full Name", field: "textfield" },
+      { key: "labuserposition", label: "Position", field: "textfield" },
+      { key: "labuserdepartment", label: "Department", field: "textfield" },
+      { key: "labuserfaculty", label: "Faculty", field: "textfield" },
+      { key: "labuserinstitution", label: "Insitution", field: "textfield" },
+      { key: "labusercountry", label: "Country", field: "countries" },
+      { key: "labuseremail", label: "Email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
+      { key: "labuserphone", label: "Phone", pattern: "[0-9+]{3,}", field: "textfield" },
       #{ key: "labusersignatureplaceanddate", label: "Signature", field: "TBD"},
     ]
 
   lab_agreement:
     fields: [
-      { label: "Data space", field: "section" },
+      { key: null, label: "Data space", field: "section" },
       { key: "dataspacenameshort", label: "Data Space name", field: "textfield" },
       { key: "dataspaceleaderfullname", label: "Data Space leader full name", field: "textfield" },
-      { key: "labnameshort", label: "Lab name (short name) ", field: "textfield" },
+      { key: null, label: "Lab", field: "section" },
+      { key: "labnameshort", label: "Lab name (short name)", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield" },
       { key: "labnamefull", label: "Lab name (full name)", field: "textfield" },
       { key: "labsubscriptionlength", label: "Subscription length", field: "textfield" },
       { key: "lableaderfullname", label: "Lab leader (Full name)", field: "textfield" },
