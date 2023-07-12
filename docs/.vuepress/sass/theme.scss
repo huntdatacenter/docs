@@ -13,6 +13,14 @@ ol {
   padding-left: 20rem;
 }
 
+.custom-homepage {
+  .page {
+    // display: flex !important;
+    height: 100%;
+    padding-bottom: 0px !important;
+  }
+}
+
 /* Hide external repository in regular navbar */
 .nav-links .repo-link {
   display: none;
