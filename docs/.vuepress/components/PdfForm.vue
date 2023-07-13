@@ -90,9 +90,9 @@ export default {
       downloadPdf: false,
       // canvas: null,
       dialogs: {},
-      showSignatures: false,
+      // showSignatures: false,
       signaturePad: null,
-      defaultScale: 0.19,
+      defaultScale: 0.16,
       drawer: null,
     }
   },
@@ -129,7 +129,7 @@ export default {
         ypos: item.ypos && item.ypos > 0 ? item.ypos : 0.5,
         scale: item.scale && item.scale > 0 ? item.scale : this.defaultScale,
       }
-      this.showSignatures = true
+      // this.showSignatures = true
     })
     console.log(this.pdfSignatures)
 
@@ -344,19 +344,14 @@ export default {
 <!-- HTML goes inside v-app -->
 <template>
   <v-layout>
-  <!-- 
-    class="overflow-hidden"
-    style="position: relative;"
-   -->
-
+    <!-- 
+      class="overflow-hidden"
+      style="position: relative;"
+    -->
     <!-- 
       :permanent="drawer ? true : false"
       :temporary="drawer ? false : true"
     -->
-    <!-- <v-app-bar app dense>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>{{ title }}</v-toolbar-title>
-    </v-app-bar> -->
     <v-navigation-drawer
       v-model="drawer"
       :expand-on-hover="expandOnHover"
@@ -369,7 +364,6 @@ export default {
         <v-list>
           <v-list-item v-for="item in fields" cols="12" :key="item.key">
             <p v-if="item.field === 'section'" class="font-weight-bold py-0 my-0">{{ item.label }}</p>
-            <!-- <v-list-item-content></v-list-item-content> -->
             <v-text-field
               v-if="item.field === 'textfield'"
               v-model="formData[item.key]"
@@ -436,100 +430,83 @@ export default {
               @focus="$event.target.select()"
             ></v-textarea>
 
-            <!-- <v-card
-              v-if="item.field === 'signature'"
-              v-show="showSignatures"
-              :id="`v-card--${item.key}`"
-              class="v-text-field--outlined rounded"
-              elevation="0"
-              outlined
-            > -->
             <v-card
               v-if="item.field === 'signature'"
-              v-show="showSignatures"
               class="px-0 my-4"
+              style="width: 100%"
               elevation="0"
               outlined
             >
-              <!-- <div class="v-input__control"> -->
-                <!-- <div class="v-input__slot"> -->
-                  <!-- <fieldset aria-hidden="true">
-                    <legend style="width: 60px;">
-                      <span class="notranslate">​</span>
-                    </legend>
-                  </fieldset> -->
-                  <!-- <div class="v-card__title v-text-field--outlined v-input--dense" style=""><label :for="`v-card--${item.key}`" class="v-label v-label--active theme--light" style="left: 0px; right: auto; position: absolute;">{{ item.label }}</label></div> -->
-                  <!-- <div><label for="input-97" class="v-label v-label--active theme--light" style="left: 0px; right: auto; position: absolute;">Full Name</label><input autocomplete="ignore-field" id="input-97" placeholder="" type="text"></div> -->
-                  <v-card-subtitle class="font-weight-bold">{{ item.label }}</v-card-subtitle>
-                  <!-- <v-card-text class="v-text-field__slot"> -->
-                  <v-card-text>
-                    <!-- <label :for="`v-card--${item.key}`" class="v-label v-label--active theme--light" style="left: 0px; right: auto; position: absolute;">{{ item.label }}</label> -->
-                    <v-row>
-                      <v-col cols="8">
-                        <div v-if="signatures && signatures[item.key] && signatures[item.key]['signed']">
-                          <img :src="signatures[item.key]['pngurl']" style="max-height: 40px;" />
-                        </div>
-                        <div v-else>
-                          Use easy sign or sign later
-                        </div>
-                      </v-col>
-                      <v-col cols="4">
-                        <v-btn
-                          color="primary"
-                          block
-                          @click="openDialog(item.key)"
-                        >
-                          Add signature
-                        </v-btn>
-                      </v-col>
-                    </v-row>
-
-                    <v-dialog
-                      v-model="dialogs[item.key]"
-                      fullscreen
-                      hide-overlay
-                      transition="dialog-bottom-transition"
+              <v-card-text>
+                <v-row align="center" justify="space-around" class="mr-16">
+                  <v-col cols="8">
+                    <div class="font-weight-bold">{{ item.label }}</div>
+                  </v-col>
+                  <v-col cols="4">
+                    <v-btn
+                      color="primary"
+                      block
+                      @click="openDialog(item.key)"
                     >
-                      <v-card style="height: 100%">
-                        <v-toolbar
+                      Add signature
+                    </v-btn>
+                  </v-col>
+                </v-row>
+                <v-row align="center" justify="space-around">
+                  <v-col cols="11">
+                    <div v-if="signatures && signatures[item.key] && signatures[item.key]['signed']">
+                      <img :src="signatures[item.key]['pngurl']" style="max-height: 40px;" />
+                    </div>
+                    <div v-else>
+                      Add digital signature now or sign later
+                    </div>
+                  </v-col>
+                </v-row>
+
+                <v-dialog
+                  v-model="dialogs[item.key]"
+                  fullscreen
+                  hide-overlay
+                  transition="dialog-bottom-transition"
+                >
+                  <v-card style="height: 100%">
+                    <v-toolbar
+                      dark
+                      color="primary"
+                    >
+                      <v-toolbar-title>{{ item.label }}</v-toolbar-title>
+                      <v-spacer></v-spacer>
+                      <v-btn
+                        icon
+                        dark
+                        @click="closeDialog(item.key)"
+                      >
+                        <!-- <v-icon>mdi-close</v-icon> -->
+                        Close
+                      </v-btn>
+                      <v-toolbar-items>
+                        <v-btn
                           dark
-                          color="primary"
+                          text
+                          @click="saveDialog(item.key)"
                         >
-                          <v-toolbar-title>{{ item.label }}</v-toolbar-title>
-                          <v-spacer></v-spacer>
-                          <v-btn
-                            icon
-                            dark
-                            @click="closeDialog(item.key)"
-                          >
-                            <!-- <v-icon>mdi-close</v-icon> -->
-                            Close
-                          </v-btn>
-                          <v-toolbar-items>
-                            <v-btn
-                              dark
-                              text
-                              @click="saveDialog(item.key)"
-                            >
-                              Save
-                            </v-btn>
-                          </v-toolbar-items>
-                        </v-toolbar>
-                        <div class="signature-card">
-                          <div :id="`signature-pad--${item.key}`" class="signature-pad mt-8">
-                            <div class="signature-pad--body">
-                              <canvas></canvas>
-                            </div>
-                            <div class="signature-pad--footer">
-                              <div class="description">Sign above</div>
-                            </div>
-                          </div>
+                          Save
+                        </v-btn>
+                      </v-toolbar-items>
+                    </v-toolbar>
+                    <div class="signature-card">
+                      <div :id="`signature-pad--${item.key}`" class="signature-pad mt-8">
+                        <div class="signature-pad--body">
+                          <canvas></canvas>
                         </div>
-                      </v-card>
-                    </v-dialog>
-                  </v-card-text>
-                <!-- </div> -->
-              <!-- </div> -->
+                        <div class="signature-pad--footer">
+                          <div class="description">Sign above</div>
+                        </div>
+                      </div>
+                    </div>
+                  </v-card>
+                </v-dialog>
+              </v-card-text>
             </v-card>
           </v-list-item>
           <v-list-item>
@@ -547,12 +524,6 @@ export default {
     </v-navigation-drawer>
     <!-- <v-container class="fill-height"> -->
     <v-sheet class="pt-0" style="width: 100%">
-      <v-row align="start" justify="start">
-        <!-- <v-col cols="2" class="">
-          <v-btn type="submit" block class="" @click="browsePdf">Back</v-btn>
-        </v-col> -->
-      </v-row>
-      <!-- <iframe id="pdf" title="Agreement" scrolling="no" frameborder="0" style="width: 100%; height: auto; min-height: 1000px; min-width: 960px;"></iframe> -->
       <object v-if="pdfFile ? true : false" :data="pdfFile" type="application/pdf" style="width: 100%; height: auto; min-height: 1000px; min-width: 960px;">
         <p>Unable to display PDF file. <a id="pdfDownload" :href="pdfFile">Download</a> instead.</p>
       </object>
@@ -580,6 +551,9 @@ export default {
 
 //.v-label
 //  background-color: white 
+
+.v-card:hover
+  background-color: red
 
 .signature-card
   display: flex
