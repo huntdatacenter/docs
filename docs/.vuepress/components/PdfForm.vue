@@ -85,7 +85,9 @@ export default {
       pdfSignatures: {}, // positions in PDF per signature key
       pdfDoc: null,
       pdfFields: [],
+      pdfFile: null,
       showPdf: false,
+      downloadPdf: false,
       // canvas: null,
       dialogs: {},
       showSignatures: false,
@@ -310,7 +312,7 @@ export default {
                 // Render PDF when image is added
                 console.log('Render PDF with signatures')
                 pdfDoc.saveAsBase64({ dataUri: true }).then((base64Data) => {
-                  this.browsePdf(base64Data, true)
+                  this.browsePdf(base64Data, true, true)
                 })
               })
 
@@ -318,7 +320,7 @@ export default {
               // Render PDF without signature image
               console.log('PDF without signatures')
               pdfDoc.saveAsBase64({ dataUri: true }).then((base64Data) => {
-                this.browsePdf(base64Data, true)
+                this.browsePdf(base64Data, true, true)
               })
             }
           })
@@ -326,10 +328,13 @@ export default {
         console.log(error)
       }
     },
-    browsePdf(data = null, show = false) {
+    browsePdf(data = null, show = false, download = false) {
       const pdfDataUri = data
-      document.getElementById('pdf').src = pdfDataUri
+      this.pdfFile = pdfDataUri
+      // document.getElementById('pdf').data = this.pdfFile
+      // document.getElementById('pdfDownload').href = this.pdfFile
       this.showPdf = show
+      this.downloadPdf = download
     },
   },
 }
@@ -431,11 +436,18 @@ export default {
               @focus="$event.target.select()"
             ></v-textarea>
 
-            <v-card
+            <!-- <v-card
               v-if="item.field === 'signature'"
               v-show="showSignatures"
               :id="`v-card--${item.key}`"
               class="v-text-field--outlined rounded"
+              elevation="0"
+              outlined
+            > -->
+            <v-card
+              v-if="item.field === 'signature'"
+              v-show="showSignatures"
+              class="px-0 my-4"
               elevation="0"
               outlined
             >
@@ -448,8 +460,9 @@ export default {
                   </fieldset> -->
                   <!-- <div class="v-card__title v-text-field--outlined v-input--dense" style=""><label :for="`v-card--${item.key}`" class="v-label v-label--active theme--light" style="left: 0px; right: auto; position: absolute;">{{ item.label }}</label></div> -->
                   <!-- <div><label for="input-97" class="v-label v-label--active theme--light" style="left: 0px; right: auto; position: absolute;">Full Name</label><input autocomplete="ignore-field" id="input-97" placeholder="" type="text"></div> -->
-                  <v-card-subtitle>{{ item.label }}</v-card-subtitle>
-                  <v-card-text class="v-text-field__slot">
+                  <v-card-subtitle class="font-weight-bold">{{ item.label }}</v-card-subtitle>
+                  <!-- <v-card-text class="v-text-field__slot"> -->
+                  <v-card-text>
                     <!-- <label :for="`v-card--${item.key}`" class="v-label v-label--active theme--light" style="left: 0px; right: auto; position: absolute;">{{ item.label }}</label> -->
                     <v-row>
                       <v-col cols="8">
@@ -521,11 +534,11 @@ export default {
           </v-list-item>
           <v-list-item>
             <v-row class="px-2" align="center" justify="space-around">
-              <v-col cols="3">
-                <v-btn class="mr-4" block @click="drawer = !drawer">Hide form</v-btn>
+              <v-col cols="12">
+                <v-btn class="mr-8 px-0" type="submit" block color="teal" :disabled="!formFilled">Generate Agreement</v-btn>
               </v-col>
-              <v-col cols="9">
-                <v-btn type="submit" block class="ml-4" color="teal" :disabled="!formFilled">Generate Agreement</v-btn>
+              <v-col v-if="pdfFile && downloadPdf ? true : false" cols="12">
+                <v-btn class="mr-8 px-0"  block color="success" :href="pdfFile" :download="`agreement.pdf`" target="_blank">Download Agreement</v-btn>
               </v-col>
             </v-row>
           </v-list-item>
@@ -539,7 +552,10 @@ export default {
           <v-btn type="submit" block class="" @click="browsePdf">Back</v-btn>
         </v-col> -->
       </v-row>
-      <iframe id="pdf" title="Agreement" scrolling="no" frameborder="0" style="width: 100%; height: auto; min-height: 1000px; min-width: 960px;"></iframe>
+      <!-- <iframe id="pdf" title="Agreement" scrolling="no" frameborder="0" style="width: 100%; height: auto; min-height: 1000px; min-width: 960px;"></iframe> -->
+      <object v-if="pdfFile ? true : false" :data="pdfFile" type="application/pdf" style="width: 100%; height: auto; min-height: 1000px; min-width: 960px;">
+        <p>Unable to display PDF file. <a id="pdfDownload" :href="pdfFile">Download</a> instead.</p>
+      </object>
     </v-sheet>
     <!-- </v-container> -->
 
