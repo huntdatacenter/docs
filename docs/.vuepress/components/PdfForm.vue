@@ -468,7 +468,7 @@ export default {
                     hide-overlay
                     transition="dialog-bottom-transition"
                   >
-                    <v-card style="height: 100%">
+                    <v-card class="prevent-select" style="height: 100%">
                       <v-toolbar
                         dark
                         color="primary"
@@ -493,7 +493,7 @@ export default {
                           </v-btn>
                         </v-toolbar-items>
                       </v-toolbar>
-                      <div class="signature-card prevent-select">
+                      <div class="signature-card">
                         <div :id="`signature-pad--${item.key}`" class="signature-pad mt-8">
                           <div class="signature-pad--body">
                             <canvas></canvas>
