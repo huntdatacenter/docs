@@ -362,7 +362,6 @@ export default {
                   class="mb-3"
                   :ref="item.key"
                   autocomplete="ignore-field"
-                  :label="item.label"
                   :pattern="item.pattern ? item.pattern : null"
                   :title="item.hint ? item.hint : null"
                   :minlength="item.minlength ? item.minlength : null"
@@ -381,7 +380,11 @@ export default {
                   dense
                   :hide-details="formData[item.key] ? false : 'auto'"
                   @focus="$event.target.select()"
-                ></v-text-field>
+                >
+                  <template v-slot:label>
+                    {{ item.label }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
+                  </template>
+                </v-text-field>
               </v-list-item>
               <v-list-item v-if="item.field === 'countries'" :key="item.key" cols="12" dense>
                 <v-autocomplete
@@ -389,7 +392,6 @@ export default {
                   class="mb-3"
                   :ref="item.key"
                   autocomplete="ignore-field"
-                  :label="item.label"
                   :items="getCountries"
                   :item-text="item => `${item.name} ${item.flag}`"
                   :item-value="item => item.name"
@@ -400,7 +402,11 @@ export default {
                   dense
                   hide-details
                   @focus="$event.target.select()"
-                ></v-autocomplete>
+                >
+                  <template v-slot:label>
+                    {{ item.label }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
+                  </template>
+                </v-autocomplete>
               </v-list-item>
               <v-list-item v-if="item.field === 'textarea'" :key="item.key" cols="12" dense>
                 <v-textarea
@@ -408,7 +414,6 @@ export default {
                   class="mb-3"
                   :ref="item.key"
                   autocomplete="ignore-field"
-                  :label="item.label"
                   :pattern="item.pattern ? item.pattern : null"
                   :title="item.hint ? item.hint : null"
                   :minlength="item.minlength ? item.minlength : null"
@@ -425,7 +430,11 @@ export default {
                   :rows="1"
                   :hide-details="formData[item.key] ? false : 'auto'"
                   @focus="$event.target.select()"
-                ></v-textarea>
+                >
+                  <template v-slot:label>
+                    {{ item.label }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
+                  </template>
+                </v-textarea>
               </v-list-item>
               <v-list-item v-if="item.field === 'signature'" :key="item.key" cols="12" dense>
                 <v-card
