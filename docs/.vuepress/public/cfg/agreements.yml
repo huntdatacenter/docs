@@ -34,7 +34,7 @@ forms:
       { key: "labuserposition", label: "Position", field: "textfield", required: "true" },
       { key: "labuserdepartment", label: "Department", field: "textfield" },
       { key: "labuserfaculty", label: "Faculty", field: "textfield" },
-      { key: "labuserinstitution", label: "Insitution", field: "textfield", required: "true" },
+      { key: "labuserinstitution", label: "Institution", field: "textfield", required: "true" },
       { key: "labusercountry", label: "Country", field: "countries", required: "true" },
       { key: "labuseremail", label: "Email", pattern: "[^@]+@[^@]+\\.[^@]+", specialType: "email", field: "textfield", required: "true" },
       { key: "labuserphone", label: "Phone", pattern: "[0-9+]+", minlength: 3, specialType: "tel", field: "textfield", required: "true" },

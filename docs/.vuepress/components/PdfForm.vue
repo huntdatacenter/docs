@@ -75,6 +75,7 @@ export default {
         pdfCols: 7,
         hidePdf: false
       },
+      canvasOffsets: {},
       signatures: {}, // signature data
       pdfSignatures: {}, // positions in PDF per signature key
       pdfDoc: null,
@@ -87,7 +88,7 @@ export default {
       dialogs: {},
       // showSignatures: false,
       signaturePad: null,
-      defaultScale: 0.16,
+      defaultScale: 0.04,
       drawer: null,
       expandForm: true,
     }
@@ -105,7 +106,7 @@ export default {
   },
   watch: {
     expandForm(val) {
-      console.log(val)
+      // console.log(val)
       if (val) {
         const layout = { formCols: 12, pdfCols: 12, hidePdf: true}
         this.layout = layout
@@ -120,8 +121,6 @@ export default {
   },
   created() {
     // Run code when component is created
-    console.log(this.url)
-
     this.fields.filter(item => item.field === "signature").forEach((item) => {
       this.dialogs = Object.assign({}, this.dialogs, { [item.key]: null })
       this.pdfSignatures[item.key] = {
@@ -132,7 +131,7 @@ export default {
       }
       // this.showSignatures = true
     })
-    console.log(this.pdfSignatures)
+    // console.log(this.pdfSignatures)
 
     if (this.url) {
       this.loadPdf(this.url)
@@ -158,9 +157,9 @@ export default {
                   this.pdfDoc.saveAsBase64({ dataUri: true }).then((base64Data) => {
                     this.browsePdf(base64Data, true)
                   })
-                  console.log(doc)
+                  // console.log(doc)
                   let form = doc.getForm()
-                  console.log(form)
+                  // console.log(form)
                   this.pdfFields = form.getFields().map(field => field.getName())
                   console.log(this.pdfFields)
                 })
@@ -209,7 +208,7 @@ export default {
       }
     },
     resizeCanvas(event, itemKey = null) {
-      console.log(event)
+      // console.log(event)
       const keys = itemKey ? [itemKey] : Object.keys(this.signatures)
 
       keys.forEach((key) => {
@@ -223,10 +222,21 @@ export default {
           // and only part of the canvas is cleared then.
           var ratio =  Math.max(window.devicePixelRatio || 1, 1)
 
+          if (this.canvasOffsets && this.canvasOffsets[key] && this.canvasOffsets[key]['width'] && this.canvasOffsets[key]['height']) {
+            var offsetWidth = this.canvasOffsets[key]['width']
+            var offsetHeight = this.canvasOffsets[key]['height']
+          } else {
+            var offsetWidth = canvas.offsetWidth
+            var offsetHeight = canvas.offsetHeight
+            this.canvasOffsets[key] = {
+              width: offsetWidth,
+              height: offsetHeight,
+            }
+          }
           // This part causes the canvas to be cleared
-          console.log(`Canvas current size ${canvas.offsetWidth} x ${canvas.offsetHeight} (device ratio: ${window.devicePixelRatio})`)
-          canvas.width = canvas.offsetWidth * ratio
-          canvas.height = canvas.offsetHeight * ratio
+          console.log(`Canvas current size ${offsetWidth} x ${offsetHeight} (device ratio: ${window.devicePixelRatio})`)
+          canvas.width = offsetWidth * ratio
+          canvas.height = offsetHeight * ratio
           canvas.getContext("2d").scale(ratio, ratio)
           // console.log(`Set signature canvas size ${canvas.width} x ${canvas.height} (ratio: ${ratio})`)
 
