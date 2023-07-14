@@ -3,7 +3,7 @@ title: PDF Form
 category: Administer science
 permalink: /administer-science/pdf-form/
 # sidebarDepth: 0
-pageClass: custom-homepage
+pageClass: custom-page-class
 sidebar: false
 next: false
 editLink: false

@@ -50,7 +50,7 @@ export default {
       agreements: [],
       forms: {},
       selected: null,
-      expandOnHover: false,
+      expandForm: false,
     };
   },
   computed: {
@@ -88,18 +88,18 @@ export default {
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
-      <v-app-bar dense>
-        <v-app-bar-nav-icon @click="expandOnHover = !expandOnHover"></v-app-bar-nav-icon>
+      <!-- <v-app-bar elevation="2" dense>
+        <v-app-bar-nav-icon @click="expandForm = !expandForm"></v-app-bar-nav-icon>
         <v-toolbar-title v-if="selected && selected.text ? true : false">{{ selected.text }}</v-toolbar-title>
-      </v-app-bar>
-      <v-layout v-if="showForm" class="pt-0">
+      </v-app-bar> -->
+      <v-layout v-if="showForm" class="d-flex flex-nowrap h-100 w-100 pt-0 align-center justify-center">
         <PdfForm
           v-if="showForm"
           :title="selected.text"
           :url="selected.url"
           :fields="getFields"
-          :expand-on-hover="expandOnHover"
         />
+        <!-- :expand-form="expandForm" -->
       </v-layout>
       <v-row v-else align="center" justify="center" style="margin-top: 24px;">
         <v-col class="mx-2" style="max-width: 900px">
@@ -140,14 +140,19 @@ export default {
   &.vuewrapper
     // reset full view - no scroll bars, no full view
     overflow: inherit
+    height: 100%
 
-    .v-application--wrap
-      display: block
-      flex: inherit
-      min-height: initial
-      min-width: inherit
-      width: 100%
-      overflow-x: hidden
+    .v-application
+      height: 100%
+
+      .v-application--wrap
+        display: block
+        flex: inherit
+        min-height: initial
+        min-width: inherit
+        width: 100%
+        height: 100%
+        overflow-x: hidden
 
 .page-edit
   display: none

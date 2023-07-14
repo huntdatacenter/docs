@@ -27,6 +27,38 @@ module.exports = {
       },
     ],
     [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "/js/pdf_viewer.css_2.1.266",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        src: "/viewer/viewer.css",
+      },
+    ],
+    [
+      "script",
+      {
+        src: "/viewer/pdf.min.js_2.1.266",
+      },
+    ],
+    [
+      "script",
+      {
+        src: "/viewer/pdf_viewer.js_2.1.266",
+      },
+    ],
+    [
+      "script",
+      {
+        src: "/viewer/viewer.js",
+      },
+    ],
+    [
       "meta",
       {
         name: "theme-color",
