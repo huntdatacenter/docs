@@ -517,17 +517,18 @@ export default {
                 </v-col>
               </v-row>
             </v-list-item>
-            <v-list-item v-if="pdfFile && downloadPdf ? true : false">
+            <!-- <v-list-item v-if="pdfFile && downloadPdf ? true : false"> -->
+            <v-list-item>
               <v-row class="px-2" align="center" justify="space-around">
                 <v-col cols="12">
-                  <v-btn class="mr-8 px-0"  block color="success" :href="pdfFile" :download="`agreement.pdf`" target="_blank">Download Agreement</v-btn>
+                  <v-btn class="mr-8 px-0"  block color="success" :href="pdfFile" :download="`agreement.pdf`" target="_blank" :disabled="pdfFile && downloadPdf ? false : true">Download Agreement</v-btn>
                 </v-col>
               </v-row>
             </v-list-item>
           </v-list>
         </form>
       </v-sheet>
-      <v-sheet class="flex-grow-1 flex-shrink-1 mx-2 px-2 h-100 col-12 col-xs-12 col-sm-12 col-md-6 col-md-6 col-lg-6 col-xl-6" style="min-width: 300px; max-width: 100%;">
+      <v-sheet class="flex-grow-1 flex-shrink-1 mx-2 px-2 h-100 col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="min-width: 300px; max-width: 100%;">
         <iframe v-if="showPdf" class="card" :src="`/viewer/?url=${getPdfTitle(pdfTimestamp)}`" style="width: 100%; height: 99%; min-height: 400px; min-width: 300px; border: 1;"></iframe>
       </v-sheet>
     </v-sheet>
