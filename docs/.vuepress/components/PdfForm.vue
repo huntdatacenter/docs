@@ -35,6 +35,7 @@ export default {
   name: "PdfForm",
   // Components need to be imported above
   components: {
+    EmbedPdfViewer: () => import('./EmbedPdfViewer.vue'),
     VApp,
     VCol,
     VRow,
@@ -81,9 +82,10 @@ export default {
       pdfDoc: null,
       pdfFields: [],
       pdfFile: null,
+      pdfPages: 1,
       showPdf: false,
       downloadPdf: false,
-      pdfTimestamp: null,
+      pdfTimestamp: new Date().toISOString(),
       // canvas: null,
       dialogs: {},
       // showSignatures: false,
@@ -102,6 +104,9 @@ export default {
       return this.fields.filter(item => item.key).every((item) =>
         this.formData[item.key] || !this.isFieldRequired(item.required) ? true : false
       )
+    },
+    pdfData() {
+      return this.pdfFile ? this.pdfFile : ""
     },
   },
   watch: {
@@ -154,8 +159,10 @@ export default {
               PDFDocument.load(read_buf)
                 .then((doc) => {
                   this.pdfDoc = doc
+                  // this.browsePdf(this.pdfDoc, true, false)
                   this.pdfDoc.saveAsBase64({ dataUri: true }).then((base64Data) => {
-                    this.browsePdf(base64Data, true)
+                    const pages = doc.getPages().length
+                    this.browsePdf(base64Data, pages, true)
                   })
                   // console.log(doc)
                   let form = doc.getForm()
@@ -192,7 +199,10 @@ export default {
         const signaturePad = new SignaturePad(canvas, {
           // It's Necessary to use an opaque color when saving image as JPEG
           // this option can be omitted if only saving as PNG or SVG
-          // backgroundColor: 'rgb(255, 255, 255)'
+          // backgroundColor: 'rgb(255, 255, 255)',
+          dotSize: 2.0,
+          minWidth: 1.5,
+          maxWidth: 4.0,
         })
         this.signatures[key]['signature'] = signaturePad
         signaturePad.addEventListener("beginStroke", () => {
@@ -215,7 +225,6 @@ export default {
         var wrapper = document.getElementById(`signature-pad--${key}`)
         if (wrapper) {
           var canvas = wrapper.querySelector("canvas")
-          // var canvas = this.signatures[key]['canvas']
 
           // When zoomed out to less than 100%, for some very strange reason,
           // some browsers report devicePixelRatio as less than 1
@@ -318,16 +327,20 @@ export default {
               Promise.all(embeddedImages).then(() => {
                 // Render PDF when image is added
                 console.log('Render PDF with signatures')
+                // this.browsePdf(pdfDoc, true, true)
                 pdfDoc.saveAsBase64({ dataUri: true }).then((pdfData) => {
-                  this.browsePdf(pdfData, true, true)
+                  const pages = pdfDoc.getPages().length
+                  this.browsePdf(pdfData, pages, true, true)
                 })
               })
 
             } else {
               // Render PDF without signature image
               console.log('PDF without signatures')
+              // this.browsePdf(pdfDoc, true, true)
               pdfDoc.saveAsBase64({ dataUri: true }).then((pdfData) => {
-                this.browsePdf(pdfData, true, true)
+                const pages = pdfDoc.getPages().length
+                this.browsePdf(pdfData, pages, true, true)
               })
             }
           })
@@ -335,10 +348,10 @@ export default {
         console.log(error)
       }
     },
-    browsePdf(data = null, show = false, download = false) {
+    browsePdf(data = null, pages = 1, show = false, download = false) {
       const pdfDataUri = data
       this.pdfFile = pdfDataUri
-      sessionStorage.setItem('pdfBase64', pdfDataUri);
+      this.pdfPages = pages
       this.pdfTimestamp = this.getTimestamp()
       this.showPdf = show
       this.downloadPdf = download
@@ -527,7 +540,6 @@ export default {
                 </v-col>
               </v-row>
             </v-list-item>
-            <!-- <v-list-item v-if="pdfFile && downloadPdf ? true : false"> -->
             <v-list-item>
               <v-row class="px-2" align="center" justify="space-around">
                 <v-col cols="12">
@@ -539,7 +551,7 @@ export default {
         </form>
       </v-sheet>
       <v-sheet class="flex-grow-1 flex-shrink-1 mx-2 px-2 h-100 col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="min-width: 300px; max-width: 100%;">
-        <iframe v-if="showPdf" class="card" :src="`/viewer/?url=${getPdfTitle(pdfTimestamp)}`" style="width: 100%; height: 99%; min-height: 400px; min-width: 300px; border: 1;"></iframe>
+        <EmbedPdfViewer v-if="showPdf ? true : false" :source="pdfData" :pages="pdfPages" height="500" />
       </v-sheet>
     </v-sheet>
 
