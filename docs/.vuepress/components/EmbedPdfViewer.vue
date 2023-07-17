@@ -249,7 +249,6 @@ export default {
 }
 
 #pdf-viewer #pageNumber {
-  -moz-appearance: textfield; /* hides the spinner in moz */
   width: 28%;
   height: 100%;
   left: 36%;
