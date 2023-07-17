@@ -1,0 +1,85 @@
+agreements:
+  - value: test_agreement
+    text: "Test Agreement"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf
+  - value: lab_user_agreement
+    text: "Lab User Agreement"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf
+  - value: lab_agreement
+    text: "Lab Agreement"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-order.pdf
+
+forms:
+  test_agreement:
+    fields: [
+      { key: null, label: "Lab", field: "section" },
+      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield" },
+      { key: null, label: "Lab user", field: "section" },
+      { key: "labuserfullname", label: "Lab User (Full name)", field: "textfield" },
+      { key: "labuseremail", label: "Email", minlength: 3, specialType: "email", field: "textfield" },
+      { key: "labuserphone", label: "Phone", minlength: 3, specialType: "tel", field: "textfield" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "labusersignatureplaceanddate", label: "Place and date", field: "textfield" },
+      { key: "lab_user_signature", label: "Lab User signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.185 },
+      { key: "lab_leader_signature", label: "Lab Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.135 },
+    ]
+
+  lab_user_agreement:
+    fields: [
+      { key: null, label: "Lab", field: "section" },
+      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
+      { key: "lableadernamefull", label: "Lab Leader", field: "textfield", required: "true" },
+      { key: null, label: "Lab user", field: "section" },
+      { key: "labuserfullname", label: "Lab User (Full name)", field: "textfield", required: "true" },
+      { key: "labuserposition", label: "Position", field: "textfield", required: "true" },
+      { key: "labuserdepartment", label: "Department", field: "textfield" },
+      { key: "labuserfaculty", label: "Faculty", field: "textfield" },
+      { key: "labuserinstitution", label: "Institution", field: "textfield", required: "true" },
+      { key: "labusercountry", label: "Country", field: "countries", required: "true" },
+      { key: "labuseremail", label: "Email", minlength: 3, specialType: "email", field: "textfield", required: "true" },
+      { key: "labuserphone", label: "Phone", minlength: 3, specialType: "tel", field: "textfield", required: "true" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "labusersignatureplaceanddate", label: "Place and date", field: "textfield", required: "true"},
+      { key: "lab_user_signature", label: "Lab User signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.185 },
+      { key: "lab_leader_signature", label: "Lab Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.135 },
+    ]
+
+  lab_agreement:
+    fields: [
+      { key: null, label: "Data space", field: "section" },
+      { key: "dataspacenameshort", label: "Data Space name", field: "textfield", required: "true" },
+      { key: "dataspaceleaderfullname", label: "Data Space leader full name", field: "textfield" },
+      { key: null, label: "Lab", field: "section" },
+      { key: "labnameshort", label: "Lab name (short name)", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield", required: "true" },
+      { key: "labnamefull", label: "Lab name (full name)", field: "textfield" },
+      { key: "labsubscriptionlength", label: "Subscription length", field: "textfield", required: "true" },
+      { key: null, label: "Lab leader", field: "section" },
+      { key: "lableaderfullname", label: "Lab leader (Full name)", field: "textfield", required: "true" },
+      { key: "lableaderinstitution", label: "Institution", field: "textfield", required: "true" },
+      { key: "lableaderfaculty", label: "Faculty", field: "textfield" },
+      { key: "lableaderdepartment", label: "Department", field: "textfield" },
+      { key: "lableaderemail", label: "Lab leader email", minlength: 3, specialType: "email", field: "textfield", required: "true" },
+      { key: "lableaderphone", label: "Lab leader phone number", minlength: 3, specialType: "tel", field: "textfield", required: "true" },
+      { key: null, label: "Lab coordinator", field: "section" },
+      { key: "labcoordinatorfullname", label: "Lab Coordinator (Full name)", field: "textfield", required: "true" },
+      { key: "labcoordinatorinstitution", label: "Institution", field: "textfield", required: "true" },
+      { key: "labcoordinatorfaculty", label: "Faculty", field: "textfield" },
+      { key: "labcoordinatordepartment", label: "Department", field: "textfield" },
+      { key: "labcoordinatoremail", label: "Lab coordinator email", minlength: 3, specialType: "email", field: "textfield", required: "true" },
+      { key: "labcoordinatorphone", label: "Lab coordinator phone number", minlength: 3, specialType: "tel", field: "textfield", required: "true" },
+      { key: null, label: "Lawfull processing", field: "section" },
+      { key: "labethicalapproval", label: "Ethical approval", field: "textfield" },
+      { key: "labprivacyjustification", label: "Privacy justification", field: "textfield" },
+      { key: "labprocessingpurpose", label: "Purpose of the processing", field: "textfield" },
+      { key: "labcategoriesdatasubjects1", label: "Categories of data subjects", field: "textarea" },
+      { key: "labpersonaldatacontent1", label: "Personal data content", field: "textfield" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "labsignatureplaceanddate", label: "Place and date", field: "textfield" },
+      { key: "lab_leader_signature", label: "Lab Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.185 },
+      { key: "data_space_leader_signature", label: "Data Space Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.135 },
+    ]
+
+
+
+
+
