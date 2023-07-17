@@ -1,7 +1,7 @@
 ---
 title: PDF Form
 category: Administer science
-permalink: /administer-science/pdf-form/
+permalink: /administer-science/sign-agreement/
 # sidebarDepth: 0
 pageClass: custom-page-class
 sidebar: false
@@ -14,7 +14,7 @@ description: null
 footerHtml: false
 ---
 
-<!-- Local testing with direct URL: http://localhost:8080/administer-science/pdf-form/ -->
+<!-- Local testing with direct URL: http://localhost:8080/administer-science/sign-agreement/ -->
 
 <AgreementForm />
 
