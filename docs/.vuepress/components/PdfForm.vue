@@ -108,6 +108,11 @@ export default {
     pdfData() {
       return this.pdfFile ? this.pdfFile : ""
     },
+    getPdfTitle() {
+      var d = new Date();
+      var datestring = d.getFullYear() + ("0"+(d.getMonth()+1)).slice(-2) + ("0" + d.getDate()).slice(-2) + "-" + ("0" + d.getHours()).slice(-2) + ("0" + d.getMinutes()).slice(-2) + ("0" + d.getSeconds()).slice(-2)
+      return `agreement-${datestring}.pdf`
+    },
   },
   watch: {
     expandForm(val) {
@@ -297,6 +302,9 @@ export default {
               }
             })
 
+            // Flatten the form once filled up
+            form.flatten()
+
             // TODO 
             // 1. consider to also check if signature was started - beginStroke
             const signedOnly = Object.keys(this.signatures).filter(key => this.signatures[key]['signed'])
@@ -354,10 +362,9 @@ export default {
       this.pdfPages = pages
       this.pdfTimestamp = this.getTimestamp()
       this.showPdf = show
-      this.downloadPdf = download
-    },
-    getPdfTitle(timestamp) {
-      return timestamp ? `agreement-${timestamp}.pdf` : 'agreement.pdf'
+      this.$nextTick(() => {
+        this.downloadPdf = download
+      })
     },
   },
 }
@@ -543,7 +550,7 @@ export default {
             <v-list-item>
               <v-row class="px-2" align="center" justify="space-around">
                 <v-col cols="12">
-                  <v-btn class="mr-8 px-0"  block color="success" :href="pdfFile" :download="`agreement.pdf`" target="_blank" :disabled="pdfFile && downloadPdf ? false : true">Download Agreement</v-btn>
+                  <v-btn class="mr-8 px-0"  block color="success" :href="pdfFile" :download="getPdfTitle" target="_blank" :disabled="pdfFile && downloadPdf ? false : true">Download Agreement</v-btn>
                 </v-col>
               </v-row>
             </v-list-item>
