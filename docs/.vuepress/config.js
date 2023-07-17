@@ -160,6 +160,32 @@ module.exports = {
             },
             "/do-science/hunt-workbench/principles.md",
             "/do-science/hunt-workbench/installation.md",
+            {
+              title: "Getting started",
+              text: "Getting started",
+              collapsable: true,
+              isGroup: true,
+              // Open main page on first click
+              path: "/do-science/hunt-workbench/getting-started/",
+              children: [
+                "/do-science/hunt-workbench/getting-started/1-jupyterlab.md",
+                "/do-science/hunt-workbench/getting-started/2-conda.md",
+                "/do-science/hunt-workbench/getting-started/3-data.md",
+                {
+                  title: "Tooling",
+                  text: "Tooling",
+                  collapsable: true,
+                  isGroup: true,
+                  children: [
+                    "/do-science/hunt-workbench/getting-started/4-python.md",
+                    "/do-science/hunt-workbench/getting-started/5-rstudio.md",
+                    "/do-science/hunt-workbench/getting-started/6-matlab.md",
+                    "/do-science/hunt-workbench/getting-started/7-stata.md",
+                    "/do-science/hunt-workbench/getting-started/8-julia.md",
+                  ],
+                },
+              ],
+            },
             "/do-science/hunt-workbench/troubleshooting.md",
             "/do-science/hunt-workbench/faq.md",
           ],
