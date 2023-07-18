@@ -14,6 +14,27 @@
   }
 }
 
+.theme-container.custom-page-class {
+  height: calc(100dvh - 3.6rem) !important;
+
+  .page {
+    padding-bottom: 0px !important;
+    height: 100%;
+
+    .theme-default-content {
+      height: 100%;
+    }
+  }
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
 .custom-block.details {
   display: block;
   position: relative;
@@ -161,6 +182,53 @@ code {
     padding-right: 20px !important;
   }
 }
+
+/* Vuetify - standard xs/sm/md/lg/xl sizing */
+
+/* xs	- Extra small - Small to large phone */
+@media only screen and (max-width: 600px) {
+  .h-xs-auto {
+    height: auto !important;
+  }
+
+  .pdf-min-height {
+    min-heigh: 100%;
+  }
+}
+
+/* sm	- Small - Small to medium tablet */
+@media only screen and (max-width: 960px) and (min-width: 600px) {
+  .h-sm-auto {
+    height: auto !important;
+  }
+
+  .pdf-min-height {
+    min-heigh: 100%;
+  }
+}
+
+/* md	- Medium - Large tablet to laptop */
+@media only screen and (max-width: 1264px) and (min-width: 600px) {
+  .h-md-auto {
+    height: auto !important;
+  }
+}
+
+/* lg	- Large - Desktop */
+@media only screen and (max-width: 1904px) and (min-width: 1264px) {
+  .h-lg-auto {
+    height: auto !important;
+  }
+}
+
+/* xl	- Extra large - 4k and ultra-wide */
+@media only screen and (min-width: 1904px) {
+  .h-xl-auto {
+    height: auto !important;
+  }
+}
+
+
 
 .mascot {
   background-image: url("/img/hunt-cloud_bot_250_2.png");
