@@ -4,6 +4,12 @@ category: HUNT Cloud
 sidebarDepth: 1
 permalink: /administer-science/agreements/downloads
 description: This page list agreements that may be relevant for you as a lab user. Contact your lab leader for more details on other agreement types.
+tags:
+  - hunt cloud user agreement
+  - hunt cloud lab user agreement
+  - hunt cloud lab agreement
+  - hunt cloud data space agreement
+  - hunt cloud service center agreement
 ---
 
 # Download agreements

@@ -4,6 +4,12 @@ category: HUNT Cloud
 sidebarDepth: 1
 permalink: /administer-science/agreements/
 description: This page gives an overview of administrative agreements in HUNT Cloud.
+tags:
+  - hunt cloud user agreement
+  - hunt cloud lab user agreement
+  - hunt cloud lab agreement
+  - hunt cloud data space agreement
+  - hunt cloud service center agreement
 ---
 
 # Administrative agreements
