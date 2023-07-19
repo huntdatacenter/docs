@@ -108,14 +108,14 @@ When you are finished with your instance you can clean it up with the `instance 
 By default, Singularity will create a set of folders in your `$HOME` directory for docker layers, Cloud library images, and metadata, respectively:
 
 ```bash
-$HOME/.singularity/cache/library
-$HOME/.singularity/cache/oci
-$HOME/.singularity/cache/oci-tmp
+$SINGULARITY_CACHEDIR/cache/library
+$SINGULARITY_CACHEDIR/cache/oci
+$SINGULARITY_CACHEDIR/cache/oci-tmp
 ```
 
 ### Temporary file storage
 
-by default, Singularity won't recognize lab tmp storage. You can apply lab tmp storage location `/mnt/scratch/tmp` to a container using `-B $TMPDIR` variable
+By default, Singularity won't recognize lab tmp storage. You can apply lab tmp storage location `/mnt/scratch/tmp` to a container using `-B $TMPDIR` variable
 
 ```bash
 #-- Example
