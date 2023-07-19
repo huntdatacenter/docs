@@ -67,14 +67,14 @@ singularity build  -B $TMPDIR lolcow.sif docker://godlovedc/lolcow
 For demonstration, let’s use an easy (though somewhat useless) example of [alpine_latest.sif](https://cloud.sylabs.io/library/_container/5baba5e594feb900016ea41c) image from the [container library](https://cloud.sylabs.io/library/):
 
 ```bash
-singularity pull  library://alpine
+singularity pull library://alpine
 #-- The above command will save the alpine image from the Container Library as alpine_latest.sif.
 ```
 
 To start an instance, you should follow below pattern:
 
 ```
-[command]                      [image]              [name of instance]
+[command]                                    [image]        [name of instance]
 ```
 ```bash
 $ singularity instance start -B $TMPDIR   alpine_latest.sif     instance1
