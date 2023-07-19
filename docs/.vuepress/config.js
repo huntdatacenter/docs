@@ -855,7 +855,7 @@ module.exports = {
         title: $page => ($page.frontmatter.category ? $page.frontmatter.category + ": " + $page.title : $page.title),
         description: $page => $page.frontmatter.description,
         twitterCard: _ => "summary",
-        type: $page => (["lab-access", "working-in-your-lab", "data-transfer"].some(folder => $page.regularPath.startsWith("/" + folder)) ? "article" : "website"),
+        type: $page => (["lab-access", "tools", "working-in-your-lab", "data-transfers"].some(folder => $page.regularPath.startsWith(`/do-science/${folder}`)) ? "article" : "website"),
         url: (_, $site, path) => ($site.themeConfig.domain || "https://docs.hdc.ntnu.no") + path,
         customMeta: (add, context) => {
           const {
