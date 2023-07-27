@@ -13,7 +13,7 @@ forms:
   test_agreement:
     fields: [
       { key: null, label: "Lab", field: "section" },
-      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield" },
+      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", tooltip: "Lab name in the lowercase letters", autocapitalize: "off", field: "textfield" },
       { key: null, label: "Lab user", field: "section" },
       { key: "labuserfullname", label: "Lab User (Full name)", field: "textfield" },
       { key: "labuseremail", label: "Email", minlength: 3, specialType: "email", field: "textfield" },
