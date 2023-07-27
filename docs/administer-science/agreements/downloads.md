@@ -219,7 +219,7 @@ Lab leaders and lab coordinators from labs that will upload data can order inter
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud Internal Kista Order" version 1.7.
+The following form fields are included in the "HUNT Cloud Internal Kista Order" version 1.8.
 
 **Uploader Lab**
 
@@ -267,7 +267,7 @@ Data space leaders and Data space compliance administrators can request external
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud External Kista Import Order" version 2.1.
+The following form fields are included in the "HUNT Cloud External Kista Import Order" version 2.2.
 
 *Data space*
 
@@ -340,7 +340,7 @@ Data space leaders and Data space compliance officers can request external kista
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud External Kista Export Order" version 1.4.
+The following form fields are included in the "HUNT Cloud External Kista Export Order" version 1.5.
 
 *Data space*
 
@@ -414,7 +414,7 @@ Your data space leader can request external network openings through our network
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud Network Opening Order" version 1.8.
+The following form fields are included in the "HUNT Cloud Network Opening Order" version 1.9.
 
 - **Data space name:** This is the name of the data space where your lab is attached. You may find the name by asking your data space coordinators.
 

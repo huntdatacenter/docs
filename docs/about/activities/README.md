@@ -65,6 +65,7 @@ We do also rely on applied ethics such as the "[principle of proportionality](ht
 
 We support scientific coordinators in their writing of ethical research applications and teach courses in big data ethics, and we are exploring activities in non-medical ethics, such as AI and surveillance. 
 
+
 Our ethical activities happen in close collaboration with the [Research Group for Medical Ethics (REMET)](https://www.ntnu.edu/ism/ethics) at NTNU.
 
 ### Law and politics
