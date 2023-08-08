@@ -16,7 +16,7 @@ description: This page gives the official Cloud services specifications.
 
 ::: tip CURRENT SERVICES SPECIFICATION
 
-[HUNT Cloud Services Specifications](https://assets.hdc.ntnu.no/assets/services/hunt-cloud-services-specifications-2-6.pdf)(pdf)
+[HUNT Cloud Services Specifications](https://assets.hdc.ntnu.no/assets/services/hunt-cloud-services-specifications-2-9.pdf)(pdf)
 
 :::
 
@@ -33,9 +33,33 @@ The services specifications will be updated from time to time.
 
 | **Version** | **Announced** | **Effective** |
 | - | - | - |
-| [HUNT Cloud Services Specification v2.6](https://assets.hdc.ntnu.no/assets/services/hunt-cloud-services-specifications-2-6.pdf)(pdf) | 2021-07-01 | 2021-10-01 |
+| [HUNT Cloud Services Specification v2.9](https://assets.hdc.ntnu.no/assets/services/hunt-cloud-services-specifications-2-9.pdf)(pdf) | 2023-08-07 | 2023-08-07 |
+| [HUNT Cloud Services Specification v2.8](https://assets.hdc.ntnu.no/assets/services/hunt-cloud-services-specifications-2-8.pdf)(pdf) | 2022-02-20 | 2022-02-20 |
+| [HUNT Cloud Services Specification v2.7](https://assets.hdc.ntnu.no/assets/services/hunt-cloud-services-specifications-2-7.pdf)(pdf) | 2021-12-08 | 2021-12-08 |
+| [HUNT Cloud Services Specification v2.6](https://assets.hdc.ntnu.no/assets/services/hunt-cloud-services-specifications-2-6.pdf)(pdf) | 2021-09-03 | 2021-10-01 |
+| [HUNT Cloud Services Specification v2.5](https://assets.hdc.ntnu.no/assets/services/hunt-cloud-services-specifications-2-5.pdf)(pdf) | 2021-07-01 | 2021-10-01 |
 
 ## Changes
 
 See document information in PDF file for document changes.
+
+#### HUNT Cloud Services Specification v2.9
+
+* "Security controls" updated to "Security and privacy controls". 
+
+#### HUNT Cloud Services Specification v2.8
+
+* Format updates.
+
+#### HUNT Cloud Services Specification v2.7
+
+* Prepayment changed to next quarter billing.
+
+#### HUNT Cloud Services Specification v2.6
+
+* Billing account updated to Invoice profile.
+
+#### HUNT Cloud Services Specification v2.5
+
+* First version under the new services model.
 

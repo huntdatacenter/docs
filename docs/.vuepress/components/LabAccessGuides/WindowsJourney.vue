@@ -493,6 +493,41 @@ Connection to home closed.`,
       </v-expansion-panel-content>
     </v-expansion-panel>
 
+    <!-- Copy SSH Public key -->
+    <v-expansion-panel>
+      <v-expansion-panel-header>
+        <h3><a href="#copypubkey" class="header-anchor">#</a> Copy SSH Public key</h3>
+      </v-expansion-panel-header>
+      <v-expansion-panel-content id="copypubkey" ref="#copypubkey" class="mt-2">
+        <v-col cols="12">
+          1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>).
+        </v-col>
+        <v-col cols="10">
+          2. Run this command to copy SSH Public key into clipboard.
+          <v-text-field
+          :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | clip`"
+          ref="winCopyPubKeyCmd"
+          label=""
+          placeholder=""
+          persistent-placeholder
+          prefix="C:\Users\User>"
+          outlined
+          dense
+          readonly
+          hide-details
+          @focus="$event.target.select()"
+          >
+          <template v-slot:append>
+            <a class="material-icons content_copy" @click="copyText('winCopyPubKeyCmd')">&#xe14d;</a>
+          </template>
+          </v-text-field>
+        </v-col>
+        <v-col cols="12">
+          3. Paste (CTRL+V) your SSH Public key where needed.
+        </v-col>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+
     <!-- Troubleshooting -->
     <v-expansion-panel>
       <v-expansion-panel-header>

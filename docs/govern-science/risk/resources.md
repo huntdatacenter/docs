@@ -24,7 +24,7 @@ This is the document that states the implementation status of the individual sec
 
 ### [ISO certificates](/govern-science/compliance/certificates/)
 
-ISO certificates provides verification from a third-party that we comply with the requirements in the international standards as stated in our SoA. We hold certificates for information security (ISO 27001) and quality (ISO 9001).
+ISO certificates provides verification from a third-party that we comply with the requirements in the international standards as stated in our SoA. We hold certificates for information security and privacy (ISO 27001) and quality (ISO 9001).
 
 ### [Current risks and audit view](/govern-science/tingweek/#reports)
 
@@ -32,7 +32,7 @@ We report overall risks as we see them three time per year in our Ting report un
 
 ### [Services specifications](/administer-science/services/specifications/)
 
-This document specify responsibilities and relevant security measures for individual services. The document is formally incorporated as an appendix to the services center agreement.
+This document specify responsibilities and relevant security and privacy measures for individual services. The document is formally incorporated as an appendix to the services center agreement.
 
 ### More information
 

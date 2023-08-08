@@ -48,3 +48,18 @@ For checking storage capacity and how much data are written on disk have a look 
 
 Read more in the official JupyterLab guide about [Managing Kernels and Terminals](https://jupyterlab.readthedocs.io/en/latest/user/running.html) to find out about Kernels in Jupyterlab and how you can stop them to free up RAM (operational memory) once you do not use them.
 
+### Long running notebooks
+
+If your Jupyter Notebook takes too long to execute (more than VPN session), you should consider running it from terminal. You will also need to use [terminal multiplexers](https://docs.hdc.ntnu.no/do-science/tools/technical/terminal-multiplexers/#tmux) to assure that you can always reconnect to your session.
+
+Activate your conda environment first:
+
+```
+conda activate py310
+```
+
+Then run your notebook:
+
+```
+jupyter run your_notebook.ipynb
+```

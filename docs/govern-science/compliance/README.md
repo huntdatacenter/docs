@@ -15,7 +15,7 @@ description: This page contains information on the compliance program in HUNT Cl
 
 **We are proud to work with data controllers that expect strict independent compliance verifications.**
 
-HUNT Cloud comply with two international standards, IEC/ISO 27001 for privacy and information security and IEC/ISO 9001 for quality management.
+HUNT Cloud comply with two international standards, IEC/ISO 27001 for information security and privacy and IEC/ISO 9001 for quality management.
 
 [Click here to see our certificates](certificates).
 

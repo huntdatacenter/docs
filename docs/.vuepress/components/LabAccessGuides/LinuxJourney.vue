@@ -494,6 +494,60 @@ Connection to home closed.`,
       </v-expansion-panel-content>
     </v-expansion-panel>
 
+    <!-- Copy SSH Public key -->
+    <v-expansion-panel>
+      <v-expansion-panel-header>
+        <h3><a href="#copypubkey" class="header-anchor">#</a> Copy SSH Public key</h3>
+      </v-expansion-panel-header>
+      <v-expansion-panel-content id="copypubkey" ref="#copypubkey" class="mt-2">
+        <v-col cols="12">
+          1. Open new Terminal window (<code>CTRL + ALT + T</code>).
+        </v-col>
+        <v-col cols="10">
+          2. If you don't have xclip installed yet run installation.
+          <v-text-field
+          :value="`sudo apt-get update && sudo apt-get install -y xclip`"
+          ref="linuxXclipCmd"
+          label=""
+          placeholder=""
+          persistent-placeholder
+          prefix="$"
+          outlined
+          dense
+          readonly
+          hide-details
+          @focus="$event.target.select()"
+          >
+          <template v-slot:append>
+            <a class="material-icons content_copy" @click="copyText('linuxXclipCmd')">&#xe14d;</a>
+          </template>
+          </v-text-field>
+        </v-col>
+        <v-col cols="10">
+          3. Run this command to copy SSH Public key created in Step 3 into clipboard.
+          <v-text-field
+          :value="`xclip -selection clipboard < ~/.ssh/id_rsa.pub`"
+          ref="linuxCopyPubKeyCmd"
+          label=""
+          placeholder=""
+          persistent-placeholder
+          prefix="$"
+          outlined
+          dense
+          readonly
+          hide-details
+          @focus="$event.target.select()"
+          >
+          <template v-slot:append>
+            <a class="material-icons content_copy" @click="copyText('linuxCopyPubKeyCmd')">&#xe14d;</a>
+          </template>
+          </v-text-field>
+        </v-col>
+        <v-col cols="12">
+          3. Paste (CTRL+V) your SSH Public key where needed.
+        </v-col>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
 
     <!-- Troubleshooting -->
     <v-expansion-panel>
