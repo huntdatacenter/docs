@@ -39,7 +39,7 @@ Your data space leader or administrative data space coordinator can use this ord
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud Lab Agreement" version 3.4.
+The following form fields are included in the "HUNT Cloud Lab Order" version 3.9.
 
 
 **Data space**
@@ -51,6 +51,10 @@ The following form fields are included in the "HUNT Cloud Lab Agreement" version
 
 - *Short name*. This is the short name or abbreviation for your lab. We will use this name in day to day communication.
 - *Full name*. This is the full name of your new lab. 
+
+**Subscription**
+
+This field specify the length of the prepaid subscription length. The default is one (1) year. See our [Price list](/administer-science/prices/pricelist/) and [Services specification](/administer-science/services/specifications/) for more information, or [contact us](/contact) for guidance.
 
 **Lab leader**
 
@@ -70,6 +74,10 @@ We use this to document activities in the lab, for example in reporting to your 
 - *Categories of data subjects*. If applicable, specify the broad categories of data subjects such as research participants, patients etc. 
 - *Personal data content*. If applicable, specify the personal data content included in the processing such as "self reported health information, genomics information, medical images, information from medical records" etc.
 
+**Signatories**
+
+This agreements are to be signed by the Data space leader or Data space compliance coordinator and the Lab leader. 
+
 **Request a lab**
 
 Send us your signed agreement utilizing the blue button in the data space section of our [service desk](/administer-science/service-desk/data-space-orders/#new-lab).
@@ -85,7 +93,7 @@ Your services center leader or serices center administratorcan use this order to
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Data Space Agreement" version 1.9.
+The following form fields are including in the "HUNT Cloud Data Space Order" version 2.0.
 
 **Services center**
 
@@ -123,6 +131,15 @@ This individual is our contact point for knowledge transfers between lab users a
 
 The following individual is the point of contact for financial discussions, including issues related to reporting, invoice profiles, know-hows related to the prices model, dialogue on continous development of the finacial model and prices etc. Note that this is a different roles that our invoice contact which is our point of contact for technicalities for the invoice handling.
 
+**Subscription level**
+
+* *Subscription level*. This field specify the subscription level for the Data space. The default is WHITE.. See our [Services specification](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/) for more information, or [contact us](/contact) for guidance.
+* *Subscription length*. This field specify the length of the prepaid subscription period. The default is one (1) year. See our [Price list](/administer-science/prices/pricelist/) and [Services specification](/administer-science/services/specifications/) for more information, or [contact us](/contact) for guidance.
+
+**Signatories**
+
+This agreements are to be signed by the Service center leader or Service center administrator and the Data space leader. 
+
 **Request a data space**
 
 Send us your signed agreement utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders/#new-data-space).
@@ -139,7 +156,7 @@ This form defined the invoice profile for your cloud services fees. One invoice 
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.1.
+The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.2.
 
 **Data space**
 
@@ -219,7 +236,7 @@ Lab leaders and lab coordinators from labs that will upload data can order inter
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud Internal Kista Order" version 1.7.
+The following form fields are included in the "HUNT Cloud Internal Kista Order" version 1.8.
 
 **Uploader Lab**
 
@@ -267,7 +284,7 @@ Data space leaders and Data space compliance administrators can request external
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud External Kista Import Order" version 2.1.
+The following form fields are included in the "HUNT Cloud External Kista Import Order" version 2.2.
 
 *Data space*
 
@@ -340,7 +357,7 @@ Data space leaders and Data space compliance officers can request external kista
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud External Kista Export Order" version 1.4.
+The following form fields are included in the "HUNT Cloud External Kista Export Order" version 1.5.
 
 *Data space*
 
@@ -414,7 +431,7 @@ Your data space leader can request external network openings through our network
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud Network Opening Order" version 1.8.
+The following form fields are included in the "HUNT Cloud Network Opening Order" version 1.9.
 
 - **Data space name:** This is the name of the data space where your lab is attached. You may find the name by asking your data space coordinators.
 
@@ -489,7 +506,7 @@ Your data space leader can request irrevocable destruction (deletion) of labs un
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud Lab Deletion Order" version 1.1.
+The following form fields are included in the "HUNT Cloud Lab Deletion Order" version 1.3.
 
 **Data space**
 
@@ -513,7 +530,7 @@ Data space leaders can request deletion of individual storage volumes and data f
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud Data Deletion Order" version 1.4.
+The following form fields are included in the "HUNT Cloud Data Deletion Order" version 1.5.
 
 **Data space**
 
@@ -527,8 +544,8 @@ The following form fields are included in the "HUNT Cloud Data Deletion Order" v
 
 **Data to be deleted**
 
-* Specify absolute paths to data folders and/or data volumes that your request for deletion. 
-* Do also specify the machine name where the folders and/or volumes are located.
+* Specify the machine name where the folders and/or volumes are located, for example `demolab-home`.
+* Specify the absolute paths to data folders and/or data volumes that your request for deletion, for example `/mnt/<foldername>/`. 
 
 **Confirmation of deletion by HUNT Cloud**
 

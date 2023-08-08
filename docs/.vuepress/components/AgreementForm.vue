@@ -1,6 +1,6 @@
 <script>
 const yaml = require("js-yaml");
-const fs = require("fs");
+// const fs = require("fs");
 import fetch from 'node-fetch';
 
 import {
@@ -62,13 +62,18 @@ export default {
     },
   },
   watch: {
-    selected(val) {
-      console.log(val)
-    }
+    '$route.query.open': {
+      handler(to, from) {
+        // console.log(`changed uri: ${from} -> ${to}`)
+        this.loadSelectedFromUri()
+      }
+    },
+    // selected(val) {
+    //   console.log(val)
+    // },
   },
   mounted() {},
   created() {
-  
     fetch("/cfg/agreements.yml")
       .then((response) => response.text())
       .then((data) => {
@@ -77,10 +82,26 @@ export default {
         console.log(cfg);
         this.agreements = cfg.agreements
         this.forms = cfg.forms
+        if (this.$route.query.open) {
+          this.loadSelectedFromUri()
+        }
       });
   },
   methods: {
-    
+    loadSelectedFromUri() {
+      this.selected = this.$route.query && this.$route.query.open ? this.agreements.find((item) => item.value == this.$route.query.open) : null
+    },
+    updateUrl(event) {
+      const state = window.history.state
+      window.history.pushState(state, '', '?open=')
+
+      this.$nextTick(() => {
+        const state2 = window.history.state
+        const searchURL = new URL(window.location)
+        searchURL.searchParams.set('open', event.value)
+        window.history.pushState(state2, '', searchURL)
+      })
+    }
   },
 };
 </script>
@@ -121,6 +142,7 @@ export default {
                   dense
                   hide-details
                   @focus="$event.target.select()"
+                  @change="updateUrl($event)"
                   ></v-autocomplete>
                 </v-col>
               </v-row>

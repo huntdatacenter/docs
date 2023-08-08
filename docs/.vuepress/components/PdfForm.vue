@@ -24,6 +24,8 @@ import {
   VSpacer,
   VForm,
   VBtn,
+  VIcon,
+  VTooltip,
   VTextField,
   VAutocomplete,
   VTextarea,
@@ -54,6 +56,8 @@ export default {
     VSpacer,
     VForm,
     VBtn,
+    VIcon,
+    VTooltip,
     VTextField,
     VAutocomplete,
     VTextarea,
@@ -366,6 +370,9 @@ export default {
         this.downloadPdf = download
       })
     },
+    showTooltip(text) {
+      console.log(text)
+    },
   },
 }
 </script>
@@ -413,6 +420,29 @@ export default {
                 >
                   <template v-slot:label>
                     {{ item.label }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
+                  </template>
+                  <template v-if="item.tooltip ? true : false" v-slot:append>
+                    <!-- <v-btn
+                      icon
+                      @click="showTooltip(item.tooltip)"
+                      x-small
+                    >
+                      <v-icon class="material-icons">info</v-icon>
+                    </v-btn> -->
+                    <v-tooltip top>
+                      <template v-slot:activator="{ on, attrs }">
+                        <!-- @click="showTooltip(item.tooltip)" -->
+                        <v-btn
+                          icon
+                          x-small
+                          v-bind="attrs"
+                          v-on="on"
+                        >
+                          <v-icon class="material-icons">info</v-icon>
+                        </v-btn>
+                      </template>
+                      <span>{{ item.tooltip }}</span>
+                    </v-tooltip>
                   </template>
                 </v-text-field>
               </v-list-item>
@@ -624,6 +654,9 @@ export default {
   -webkit-user-select: none
   -ms-user-select: none
   user-select: none
+
+//.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner
+//  margin-top: 2px !important
 
 </style>
 

@@ -65,6 +65,7 @@ We do also rely on applied ethics such as the "[principle of proportionality](ht
 
 We support scientific coordinators in their writing of ethical research applications and teach courses in big data ethics, and we are exploring activities in non-medical ethics, such as AI and surveillance. 
 
+
 Our ethical activities happen in close collaboration with the [Research Group for Medical Ethics (REMET)](https://www.ntnu.edu/ism/ethics) at NTNU.
 
 ### Law and politics
@@ -104,7 +105,7 @@ This activity also includes knowledge transfers to new community members, betwee
 
 [KM essentials](https://www.youtube.com/watch?v=sVtMC3GkMr0) by Lead Lauren and Cindy Hubert gives a video introduction to the core challenges, and [Knowledge management at NASA](https://nscpolteksby.ac.id/ebook/files/Ebook/Business%20Administration/Knowledge%20Management%20in%20The%20Public%20Sector%20a%20Blueprint%20for%20Innovation%20in%20Government%20(2007)/11%20-%20Knowledge%20Management%20at%20NASA.pdf) give a history view of their challenges in an environment we admire. 
 
-We also invest time on popular presentations and traditional teaching on master and PhD levels that includes lectures in big data ethics, value in data, big data biobanking, digital lab management, introduction to information security, and scientific publication and dissemination. And we contribute public presentations on similar subjects.
+We also invest time on popular presentations and traditional teaching on master and PhD levels that includes lectures in big data ethics, value in data, big data biobanking, digital lab management, introduction to information security and privacy, and scientific publication and dissemination. And we contribute public presentations on similar subjects.
 
 
 
