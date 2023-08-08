@@ -23,7 +23,7 @@ Our compliance with the international standard in quality management Â«ISO 9001Â
 
 **Period #3: 2023-2026**
 
-* [Download certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso9001-2020.pdf) (pdf)
+* [Download certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso9001-2023.pdf) (pdf)
 * ISO version: NS-EN ISO 9001:2015
 * Issued by: [Kiwa](https://www.kiwa.com/en/), Norway
 * Certificate ID: 3-911
