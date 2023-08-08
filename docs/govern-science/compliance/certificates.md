@@ -15,13 +15,13 @@ Both certificates have been issued since 2017. For each certificate, independent
 
 ## ISO 9001
 
-[NS-EN ISO 9001:2015 Certificate](https://assets.hdc.ntnu.no/assets/certificates/iso9001.pdf) (pdf)
+[NS-EN ISO 9001:2015 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso9001-2020.pdf) (pdf)
 
 Our compliance with the international standard in quality management «ISO 9001» is certified by Kiwa, Norway.
 
 ## ISO 27001
 
-[NS-EN ISO 27001:2017 Certificate](https://assets.hdc.ntnu.no/assets/certificates/iso27001.pdf) (pdf)
+[NS-EN ISO 27001:2017 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27001-2020.pdf) (pdf)
 
 Our compliance with the international standard in information security and privacy management «[ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)» is certified in accordance with our Statement of Applicability (SoA) by Kiwa, Norway. 
 
