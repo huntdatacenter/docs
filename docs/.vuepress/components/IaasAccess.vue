@@ -95,10 +95,16 @@ Host {iaas_name}
       return this.query.ipAddress && this.query.labName  && this.query.username && this.query.iaasName ? true : false;
     },
     entryIpUrl() {
-      return this.query.ipAddress ? this.query.ipAddress.replace('.', '%2E') : '';
+      return this.query.ipAddress ? this.query.ipAddress.replaceAll('.', '%2E') : '';
+    },
+    iaasName() {
+      return this.query.iaasName ? this.query.iaasName.replaceAll('.', '%2E').replaceAll("-", "%2D") : '';
+    },
+    userName() {
+      return this.query.username ? this.query.username.replaceAll("-", "%2D").replaceAll(".", "%2E") : '';
     },
     iaas_mobaxtermTerminal() {
-      return this.cfgShow ? `mobaxterm:${this.query.iaasName.replace("-", "%2D")}%20%3D%23109%230%25${this.query.iaasName.replace("-", "%2D")}%2522%25ubuntu%25%25%2D1%25%2D1%25%25${this.entryIpUrl}%5F%5FPIPE%5F%5F${this.homeIpUrl}%2522%5F%5FPIPE%5F%5F22%25${this.username.replace("-", "%2D").replace(".", "%2E")}%5F%5FPIPE%5F%5F${this.username.replace("-", "%2D").replace(".", "%2E")}%25%2D1%250%250%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%5F%5FPIPE%5F%5F%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%2D1%250%250%250%25%251080%25%250%250%251%25%250%25%25%25%250%25%2D1%25%2D1%250%23MobaFont%2510%250%250%25%2D1%2515%25236%2C236%2C236%2530%2C30%2C30%25180%2C180%2C192%250%25%2D1%250%25%25xterm%2D256color%25%2D1%250%25%5FStd%5FColors%5F0%5F%2580%2524%250%251%25%2D1%25%3Cnone%3E%25%250%250%25%2D1%25%2D1%230%23%20%23%2D1` : null;
+      return this.cfgShow ? `mobaxterm:${this.iaasName}%20%3D%23109%230%25${this.iaasName}%2522%25ubuntu%25%25%2D1%25%2D1%25%25${this.entryIpUrl}%5F%5FPIPE%5F%5F${this.homeIpUrl}%2522%5F%5FPIPE%5F%5F22%25${this.userName}%5F%5FPIPE%5F%5F${this.userName}%25%2D1%250%250%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%5F%5FPIPE%5F%5F%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%2D1%250%250%250%25%251080%25%250%250%251%25%250%25%25%25%250%25%2D1%25%2D1%250%23MobaFont%2510%250%250%25%2D1%2515%25236%2C236%2C236%2530%2C30%2C30%25180%2C180%2C192%250%25%2D1%250%25%25xterm%2D256color%25%2D1%250%25%5FStd%5FColors%5F0%5F%2580%2524%250%251%25%2D1%25%3Cnone%3E%25%250%250%25%2D1%25%2D1%230%23%20%23%2D1` : null;
     },
     homeIpUrl() {
       // return '10.5.5.12'.replace('.', '%2E');

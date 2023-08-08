@@ -25,7 +25,7 @@ export default {
     },
     getRecipient() {
       return this.data && this.data[this.form] && this.data[this.form]["recipient"] ? this.data[this.form]["recipient"] : "cloud.support+hunt-cloud-request@hunt.ntnu.no";
-    }
+    },
   },
   mounted() {},
   created() {
