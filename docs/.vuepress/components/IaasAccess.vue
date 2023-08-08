@@ -97,16 +97,13 @@ Host {iaas_name}
     entryIpUrl() {
       return this.query.ipAddress ? this.query.ipAddress.replace('.', '%2E') : '';
     },
+    iaas_mobaxtermTerminal() {
+      return this.cfgShow ? `mobaxterm:${this.query.iaasName.replace("-", "%2D")}%20%3D%23109%230%25${this.query.iaasName.replace("-", "%2D")}%2522%25ubuntu%25%25%2D1%25%2D1%25%25${this.entryIpUrl}%5F%5FPIPE%5F%5F${this.homeIpUrl}%2522%5F%5FPIPE%5F%5F22%25${this.username.replace("-", "%2D").replace(".", "%2E")}%5F%5FPIPE%5F%5F${this.username.replace("-", "%2D").replace(".", "%2E")}%25%2D1%250%250%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%5F%5FPIPE%5F%5F%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%2D1%250%250%250%25%251080%25%250%250%251%25%250%25%25%25%250%25%2D1%25%2D1%250%23MobaFont%2510%250%250%25%2D1%2515%25236%2C236%2C236%2530%2C30%2C30%25180%2C180%2C192%250%25%2D1%250%25%25xterm%2D256color%25%2D1%250%25%5FStd%5FColors%5F0%5F%2580%2524%250%251%25%2D1%25%3Cnone%3E%25%250%250%25%2D1%25%2D1%230%23%20%23%2D1` : null;
+    },
     homeIpUrl() {
       // return '10.5.5.12'.replace('.', '%2E');
       return 'home';
     },
-    // mobaxtermTerminal() {
-    //   return this.cfgShow ? `mobaxterm:${this.query.labName}%3D%23109%230%25${this.homeIpUrl}%2522%25${this.query.username}%25%250%250%25%25${this.entryIpUrl}%2522%25${this.query.username}%25%2D1%250%250%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%2D1%250%250%250%25%251080%25%250%250%251%23MobaFont%2510%250%250%25%2D1%2515%25236%2C236%2C236%2530%2C30%2C30%25180%2C180%2C192%250%25%2D1%250%25%25xterm%2D256color%25%2D1%25%2D1%25%5FStd%5FColors%5F0%5F%2580%2524%250%251%25%2D1%25%3Cnone%3E%25%250%250%25%2D1%230%23%20%23%2D1` : null;
-    // },
-    // mobaxtermRdp() {
-    //   return this.cfgShow ? `mobaxterm:${this.query.labName}%2DRDP%3D%2391%234%25${this.query.labName}%2D${this.homeIpUrl}%253389%25${this.query.username}%250%250%250%250%25%2D1%250%250%25%2D1%25xfce4%2Dsession%25${this.entryIpUrl}%5F%5FPIPE%5F%5F${this.homeIpUrl}%2522%5F%5FPIPE%5F%5F22%25${this.query.username}%5F%5FPIPE%5F%5F${this.query.username}%250%250%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%5F%5FPIPE%5F%5F%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%2D1%25%25%2D1%25%2D1%250%250%250%25%2D1%23MobaFont%2510%250%250%25%2D1%2515%25236%2C236%2C236%2530%2C30%2C30%25180%2C180%2C192%250%25%2D1%250%25%25xterm%25%2D1%25%2D1%25%5FStd%5FColors%5F0%5F%2580%2524%250%251%25%2D1%25%3Cnone%3E%25%250%250%25%2D1%230%23%20%23%2D1` : null;
-    // },
   },
   watch: {
     tab(val) {
@@ -316,6 +313,25 @@ Host {iaas_name}
                     </v-col>
                   </v-expansion-panel-content>
                 </v-expansion-panel>
+                <!-- Mobaxterm iaas terminal session -->
+                <v-expansion-panel>
+                  <v-expansion-panel-header>
+                    <h3><a href="#mobaxterm" class="header-anchor">#</a>2. IaaS MobaXterm</h3>
+                  </v-expansion-panel-header>
+                    <v-expansion-panel-content id="mobaxterm" ref="#mobaxterm" class="mt-2">
+                      <v-col cols="10">
+                        <v-btn
+                          color="success"
+                          block
+                          target="_blank"
+                          :href="iaas_mobaxtermTerminal"
+                          >
+                          Create terminal session
+                        </v-btn>
+                      </v-col>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+                
 
                 <v-expansion-panel>
                   <v-expansion-panel-header>
@@ -588,3 +604,4 @@ Host {iaas_name}
   margin-right: 5px
 
 </style>
+
