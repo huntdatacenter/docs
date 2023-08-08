@@ -40,6 +40,10 @@ Try to logout and login again. If logging in does not help, try different browse
 
 ![oauth_state_does_not_match.png](./images/oauth_state_does_not_match.png)
 
+### 404: Page Not Found Error
+
+Your workbench stopped working for no apparent reason and you are printed the NTNU logo with error **`404 error`**? Follow the link to your control panel. Click on the red button to stop your sever, this may take some time. Click on the geen/blue button to launch your server again, this may also take some time. Reach out to us on [Slack or email](/contact) if the problem is not resolved.
+
 ### 502: Bad gateway
 
 Reach out to us on [Slack or email](/contact) if you get the **`502 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
