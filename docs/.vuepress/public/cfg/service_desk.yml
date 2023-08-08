@@ -1214,7 +1214,7 @@ request_vpn_link:
       I would like to request an VPN access opening for the following IP address:
 
       ---
-      access_ip="{IP4_address}"  
+      access_ip="{ipaddress}"  
       access_duration="{access_duration}"  
       access_country="{country}"  
       ---
@@ -1226,8 +1226,7 @@ request_vpn_link:
 
   fields: [
     { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Access IP4 address", key: "IP4_address", pattern: '^\s*((?!169\.254\.|10\.|0\.|127\.|255\.255\.255\.255|192\.168\.)(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Get your IP address here: http://ip4.me", field: "textfield" },
-    {label: "Your public IP address", key: "ipaddress" },
+    { label: "Public IP4 address", key: "ipaddress", pattern: '^\s*((?!169\.254\.|10\.|0\.|127\.|255\.255\.255\.255|192\.168\.)(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Get your IP address here: http://ip4.me", field: "textfield" },
     {
       label: "Access duration",
       key: "access_duration",
