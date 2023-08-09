@@ -703,7 +703,7 @@ request_new_gpu:
       options: [
         { text: "Commitment", value: "commitment" },
         { text: "On-demand", value: "ondemand" },
-        # { text: "Blue", value: "blue" },  # Blue is not available in price list
+        { text: "Blue", value: "blue" },
       ]
     },
   ]
