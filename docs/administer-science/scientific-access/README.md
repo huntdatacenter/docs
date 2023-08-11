@@ -25,13 +25,13 @@ We have five agreement layers in HUNT Cloud (illustration below). This guide cov
 
 ::: warning Organizational access
 
-You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/contact) if need guidance on how to start your organizational onboarding. 
+You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/administer-science/contact/) if need guidance on how to start your organizational onboarding. 
 
 :::
 
 ## Service orders
 
-Data space orders and Lab orders are formally attached to your organization's Service center agreement as Service orders. These orders defines the type of services you request and those at your side that are responsible for services.
+Data space orders and Lab orders are formally attached to your organization's [Service center agreement](/govern-science/organizational-access/#service-center-agreement) as Service orders. These orders defines the type of services you request and those at your side that are responsible for services.
 
 
 ### Data space order
@@ -92,11 +92,11 @@ If you already have an active Data space, you can skip this section and request 
 
 *Find your Service center name*
 
-[Contact us](/contact) for a quick clarification if you are unsure of your Service center name. For NTNU, your service center name is the acronym of your Department, such as `ntnu-ism`, `ntnu-idi` etc.
+[Contact us](/administer-science/contact/) for a quick clarification if you are unsure of your Service center name. For NTNU, your service center name is the acronym of your Department, such as `ntnu-ism`, `ntnu-idi` etc.
 
 *Identify your Service center leader*
 
-[Contact us](/contact) for a quick clarification if you are unsure of your Service center leader. For NTNU, your service center leader is the Deputy head of Research (Nestleder forskning) of your Department.
+[Contact us](/administer-science/contact/) for a quick clarification if you are unsure of your Service center leader. For NTNU, your service center leader is the Deputy head of Research (Nestleder forskning) of your Department.
 
 **Data space name**
 
@@ -126,7 +126,7 @@ For larger center and groups, we see these roles as senior positions that admini
 
 Your Data space subscription level decide the degrees of freedom for your scientists. Our [services overview](/administer-science/services/overview/#data-space) provides a summary of different features, the [services specifications](/administer-science/services/specifications/) holds the detailed description, and the [price list](/administer-science/prices/pricelist/) specify the yearly cost.
 
-We recommend that you start with the free-of-charge WHITE subscription level if you are unsure of which level you should choose as you may easily upgrade this later. [Contact us](/contact) if you need guidance in your selection process.
+We recommend that you start with the free-of-charge WHITE subscription level if you are unsure of which level you should choose as you may easily upgrade this later. [Contact us](/administer-science/contact/) if you need guidance in your selection process.
 
 *Subscription length*
 
@@ -236,7 +236,7 @@ We use the Lab order to document activities in the lab on behalf of your host or
 
 **Signatures**
 
-You need to get a signature from your Lab leader, typically by saving the PDF and forwarding it on email, and then add the signature of the Data space leader before you submit the final agreement to HUNT Cloud on [email](contact) for Lab activation.
+You need to get a signature from your Lab leader, typically by saving the PDF and forwarding it on email, and then add the signature of the Data space leader before you submit the final agreement to HUNT Cloud on [email](/administer-science/contact/) for Lab activation.
 
 :::
 
@@ -244,7 +244,7 @@ You need to get a signature from your Lab leader, typically by saving the PDF an
 
 
 
-[Contact us](/contact) if you think we can provide additional guidance. We are more than happy to help!
+[Contact us](/administer-science/contact/) if you think we can provide additional guidance. We are more than happy to help!
 
 ## Order scientific access
 
@@ -260,7 +260,7 @@ Use this PDF to activate your first Data space and Lab in HUNT Cloud.
 
 1. Click on the PDF-link above: This file contains three order forms: a (i) Data space order, an (ii) invoice profile, and a (iii) Lab order. 
 2. Fill out the needed information in your web-browser and save the PDF to your local computer.
-3. Send us the saved PDF as an attachment on [email](/contact). Expect an email confirmation for the received order. 
+3. Send us the saved PDF as an attachment on [email](/administer-science/contact/). Expect an email confirmation for the received order. 
 
 **Allow for a few days in processing time from your order is sent until you can order onboard of your first lab user.**
 
