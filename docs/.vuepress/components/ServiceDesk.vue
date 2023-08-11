@@ -96,12 +96,15 @@ export default {
     encodedBody() {
       return this.bodyTemplate ? this.encode(this.bodyTemplate) : null;
     },
+    encodedRecipient() {
+      return this.recipient ? this.recipient.replace('+', '%2B') : this.recipient;
+    },
     mailto() {
-      return `mailto:${this.recipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`.replace('+', '%2B');
+      return `mailto:${this.encodedRecipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`;
     },
     deeplinkUrl() {
       const url = 'https://outlook.office.com/mail/deeplink/compose'
-      return `${url}?to=${this.recipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`.replace('+', '%2B');
+      return `${url}?to=${this.encodedRecipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
     },
   },
   mounted() {},
