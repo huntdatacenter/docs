@@ -97,7 +97,11 @@ export default {
       return this.bodyTemplate ? this.encode(this.bodyTemplate) : null;
     },
     mailto() {
-      return `mailto:${this.recipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      return `mailto:${this.recipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`.replace('+', '%2B');
+    },
+    deeplinkUrl() {
+      const url = 'https://outlook.office.com/mail/deeplink/compose'
+      return `${url}?to=${this.recipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`.replace('+', '%2B');
     },
   },
   mounted() {},
@@ -134,6 +138,17 @@ export default {
       this.sendClicked = true;
       this.panel = 3;
       window.location.href = this.mailto;
+    },
+    actionSendOutlook() {
+      this.sendClicked = true;
+      this.panel = 3;
+      window.location.href = this.deeplinkUrl;
+    },
+    actionSendOutlookPopup() {
+      this.sendClicked = true;
+      this.panel = 3;
+      // window.location.href = this.deeplinkUrl;
+      window.open(this.deeplinkUrl, '_blank');
     },
     encode(template) {
       return template ? encodeURIComponent(this.wrap(template)) : null;
@@ -344,7 +359,7 @@ export default {
                     <v-col cols="10">
                       <v-text-field
                         :value="recipient"
-                        label="To"
+                        label="Email recipient (TO)"
                         class="py-2"
                         outlined
                         readonly
@@ -354,7 +369,7 @@ export default {
                       ></v-text-field>
                       <v-text-field
                         v-model.trim="messageSubject"
-                        label="Subject"
+                        label="Email subject"
                         class="py-2"
                         outlined
                         readonly
@@ -375,9 +390,14 @@ export default {
                     </v-col>
                   </v-row>
                   <v-row justify="center">
-                    <v-col cols="6">
-                      <v-btn color="primary" block @click="actionSend">
-                        Open Email Client
+                    <v-col cols="4">
+                      <v-btn color="success" block @click="actionSend">
+                        Open in Email Client
+                      </v-btn>
+                    </v-col>
+                    <v-col cols="4">
+                      <v-btn color="primary" block @click="actionSendOutlookPopup">
+                        Open in Outlook Web
                       </v-btn>
                     </v-col>
                   </v-row>
@@ -405,9 +425,9 @@ export default {
                     </v-col>
                     <v-col cols="10">
                       <p class="text-center body-1">
-                        In case your Email client did not open and you want to
+                        In case your <b>Email client did not open</b> and you want to
                         send email manually feel free to hit Review button and
-                        copy the message contents and use our service desk
+                        copy the message contents and use our service desk email
                         address.
                       </p>
                     </v-col>
@@ -419,8 +439,13 @@ export default {
           <v-card-actions v-if="sendClicked">
             <v-row class="mb-2" justify="center">
               <v-col cols="4">
-                <v-btn color="primary" block outlined @click="review">
-                  Review
+                <v-btn color="success" block outlined @click="review">
+                  Review email
+                </v-btn>
+              </v-col>
+              <v-col cols="4">
+                <v-btn color="primary" block outlined @click="actionSendOutlook">
+                  Open in Outlook Web
                 </v-btn>
               </v-col>
               <v-col cols="4">
