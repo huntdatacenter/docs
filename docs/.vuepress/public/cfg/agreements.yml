@@ -56,7 +56,7 @@ forms:
       { key: "dataspacenameshort", label: "Data Space name", field: "textfield", required: "true" },
       { key: "dataspaceleaderfullname", label: "Data Space leader full name", field: "textfield" },
       { key: null, label: "Lab", field: "section" },
-      { key: "labnameshort", label: "Lab name (short name)", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield", required: "true" },
+      { key: "labnameshort", label: "Lab name (short name)", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
       { key: "labnamefull", label: "Lab name (full name)", field: "textfield" },
       { key: "labsubscriptionlength", label: "Subscription length", field: "textfield", required: "true" },
       { key: null, label: "Lab leader", field: "section" },
@@ -88,10 +88,10 @@ forms:
   invoice_profile:
     fields: [
       { key: null, label: "Data space", field: "section" },
-      { key: "dataspacename", label: "Data Space name", field: "textfield", required: "true" },
+      { key: "dataspacename", label: "Data Space name", field: "textfield", autocapitalize: "off", required: "true" },
       { key: "dataspaceleaderfullname", label: "Data Space leader (full name)", field: "textfield" },
       { key: null, label: "Invoice unit", field: "section" },
-      { key: "invoiceunit", label: "Invoice unit", hint: "Data space is a default. Lab names can be included.", field: "textfield" },
+      { key: "invoiceunit", label: "Invoice unit", hint: "Data space is a default. Lab names can be included.", autocapitalize: "off", field: "textfield" },
       { key: null, label: "Invoice contact", field: "section" },
       { key: "invoicecontactfullname", label: "Full name", field: "textfield", required: "true" },
       { key: "invoicecontactrole", label: "Role", field: "textfield" },
@@ -140,13 +140,13 @@ forms:
   internal_kista:
     fields: [
       { key: null, label: "Uploader Lab", field: "section" },
-      { key: "labname", label: "Lab name", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield", required: "true" },
+      { key: "labname", label: "Lab name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
       { key: "uploaderlabresponsiblefullname", label: "Lab leader", field: "textfield" },
       { key: "uploaderlabuploaderfullname", label: "Uploading users", hint: "Comma separated list of internal Lab users that will copy data from the Lab to the internal kista. (max 3 users).", field: "textfield" },
-      { key: "kistasizegb", label: "Size", suffix: "GB", specialType: "number", min: 1, max: 25000, field: "textfield" },
+      { key: "kistasizegb", label: "Size", placeholder: 1000, suffix: "GB", specialType: "number", min: 1, max: 25000, hint: "Specify the kista size in gigabytes (1,000 GB = 1 TB).", field: "textfield" },
       { key: "kistaduration", label: "Duration", placeholder: 30, suffix: "days", specialType: "number", min: 1, max: 90, hint: "Default is 30 days. Specify number of days if shorter or longer duration is required (max is 90 days).", field: "textfield" },
       { key: null, label: "Downloader Lab", field: "section" },
-      { key: "downloaderlabname", label: "Lab name", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield", required: "true" },
+      { key: "downloaderlabname", label: "Lab name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield", required: "true" },
       { key: "downloaderresponsiblefullname", label: "Lab leader", field: "textfield" },
       { key: "downloaderlabuserfullname", label: "Downloading users", hint: "Comma separated list of Lab users in the Downloader lab that will download data from the internal kista into the Downloader lab. (max 3 users).", field: "textfield" },
       { key: null, label: "Signatures", field: "section" },
