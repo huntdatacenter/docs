@@ -406,6 +406,8 @@ export default {
                   :title="item.hint ? item.hint : null"
                   :minlength="item.minlength ? item.minlength : null"
                   :maxlength="item.maxlength ? item.maxlength : null"
+                  :min="item.min && item.specialType === 'number' ? item.min : null"
+                  :max="item.max && item.specialType === 'number' ? item.max : null"
                   :required="isFieldRequired(item.required)"
                   :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
                   :suffix="item.suffix ? item.suffix : null"
@@ -414,7 +416,7 @@ export default {
                   :persistent-hint="
                     item.hint && formData[item.key] ? true : false
                   "
-                  placeholder=""
+                  :placeholder="item.placeholder ? item.placeholder : ''"
                   persistent-placeholder
                   outlined
                   dense

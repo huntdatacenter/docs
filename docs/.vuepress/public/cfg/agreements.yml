@@ -11,6 +11,9 @@ agreements:
   - value: invoice_profile
     text: "Invoice Profile"
     url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-invoice-profile.pdf
+  - value: internal_kista
+    text: "Internal Kista"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf
 
 forms:
   test_agreement:
@@ -85,18 +88,18 @@ forms:
   invoice_profile:
     fields: [
       { key: null, label: "Data space", field: "section" },
-      { key: "dataspacenameshort", label: "Data Space name", field: "textfield", required: "true" },
-      { key: "dataspaceleaderfullname", label: "Data Space leader full name", field: "textfield" },
+      { key: "dataspacename", label: "Data Space name", field: "textfield", required: "true" },
+      { key: "dataspaceleaderfullname", label: "Data Space leader (full name)", field: "textfield" },
       { key: null, label: "Invoice unit", field: "section" },
       { key: "invoiceunit", label: "Invoice unit", hint: "Data space is a default. Lab names can be included.", field: "textfield" },
       { key: null, label: "Invoice contact", field: "section" },
       { key: "invoicecontactfullname", label: "Full name", field: "textfield", required: "true" },
       { key: "invoicecontactrole", label: "Role", field: "textfield" },
-      { key: "invoicecontactemail", label: "Email", field: "textfield", required: "true" },
-      { key: "invoicecontactphone", label: "Phone", field: "textfield" },
+      { key: "invoicecontactemail", label: "Email", minlength: 3, specialType: "email", field: "textfield", required: "true" },
+      { key: "invoicecontactphone", label: "Phone", specialType: "tel", field: "textfield" },
       { key: null, label: "Invoice address (Outside NTNU)", field: "section" },
       { key: "invoiceaddressexternaladdress1", label: "Address", field: "textfield" },
-      { key: "invoiceaddressexternaladdress2", label: "", field: "textfield" },
+      { key: "invoiceaddressexternaladdress2", label: "Address", field: "textfield" },
       { key: "invoiceaddressexternalzipcode", label: "ZIP Code", field: "textfield" },
       { key: "invoiceaddressexternalcity", label: "City", field: "textfield" },
       { key: "invoiceaddressexternalcountry", label: "Country", field: "countries" },
@@ -104,8 +107,8 @@ forms:
       { key: "accountinfoksted", label: "K. sted", hint: "Kostnadsted", field: "textfield" },
       { key: "accountinfopnumber", label: "Project number", field: "textfield" },
       { key: null, label: "Billing information (Outside NTNU)", field: "section" },
-      { key: "accountinfopeppolbis", label: "Peppol BIS", hint: "Peppol BIS or EHF-ID.", field: "textfield" },
-      { key: "accountinforeferencenumber", label: "Reference number", hint: "Customer reference number.", field: "textfield" },
+      { key: "accountinfopeppolbis", label: "Peppol BIS", hint: "Specify the Participant ID in the 0000:00000000 (reference) format.", field: "textfield" },
+      { key: "accountinforeferencenumber", label: "Reference number", hint: "This is your internal reference number for the order.", field: "textfield" },
       { key: null, label: "Pilot period", field: "section" },
       { key: "pilotperiodservices", label: "Service(s)", hint: "Specify subscription and/or individual services that are included in the pilot period.", field: "textfield" },
       { key: "pilotperiodend", label: "End of pilot period", hint: "Date in YYYY-MM-DD format", field: "textfield" },
@@ -128,11 +131,25 @@ forms:
       },
       { key: "spendinglimitperiod", label: "Spending limit period", hint: "Default is per ninety (90) days. Specify other intervals if required.", field: "textfield" },
       { key: null, label: "Signatures", field: "section" },
-      { key: "labsignatureplaceanddate", label: "Place and date", field: "textfield", required: "true" },
-      { key: "lab_leader_signature", label: "Lab Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.185 },
+      { key: "signaturedatedataspaceleader", label: "Place and date", field: "textfield", required: "true" },
+      { key: "data_space_leader_signature", label: "Data Space Leader signature", field: "signature", page: 2, xpos: 0.28, ypos: 0.335 },
       # { key: "signaturedatedataspaceleader", label: "signaturedatedataspaceleader", field: "textfield" },
       # { key: "signaturedatehuntcloud", label: "signaturedatehuntcloud", field: "textfield" },
     ]
 
-
-
+  internal_kista:
+    fields: [
+      { key: null, label: "Uploader Lab", field: "section" },
+      { key: "labname", label: "Lab name", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield", required: "true" },
+      { key: "uploaderlabresponsiblefullname", label: "Lab leader", field: "textfield" },
+      { key: "uploaderlabuploaderfullname", label: "Uploading users", hint: "Comma separated list of internal Lab users that will copy data from the Lab to the internal kista. (max 3 users).", field: "textfield" },
+      { key: "kistasizegb", label: "Size", suffix: "GB", specialType: "number", min: 1, max: 25000, field: "textfield" },
+      { key: "kistaduration", label: "Duration", placeholder: 30, suffix: "days", specialType: "number", min: 1, max: 90, hint: "Default is 30 days. Specify number of days if shorter or longer duration is required (max is 90 days).", field: "textfield" },
+      { key: null, label: "Downloader Lab", field: "section" },
+      { key: "downloaderlabname", label: "Lab name", pattern: "[-a-z0-9]", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield", required: "true" },
+      { key: "downloaderresponsiblefullname", label: "Lab leader", field: "textfield" },
+      { key: "downloaderlabuserfullname", label: "Downloading users", hint: "Comma separated list of Lab users in the Downloader lab that will download data from the internal kista into the Downloader lab. (max 3 users).", field: "textfield" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "signatureplaceanddate", label: "Place and date", field: "textfield", required: "true" },
+      { key: "lab_leader_signature", label: "Signature from Lab leader or Lab coordinator of the Uploader lab", field: "signature", page: 0, xpos: 0.28, ypos: 0.115 },
+    ]
