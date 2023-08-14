@@ -195,6 +195,9 @@ export default {
     isFieldRequired(check) {
       return check && check !== 'false' ? true : false
     },
+    isBoolTrue(check) {
+      return check && check !== 'false' ? true : false
+    },
     addSignature(key) {
       // TODO
       // 1. handle reopening of signature dialog
@@ -445,6 +448,35 @@ export default {
                     </v-tooltip>
                   </template>
                 </v-text-field>
+              </v-list-item>
+              <v-list-item v-if="item.field === 'autocompleteone'" :key="item.key" cols="12" dense>
+                <v-autocomplete
+                  v-model="formData[item.key]"
+                  class="mb-3"
+                  :ref="item.key"
+                  autocomplete="ignore-field"
+                  :items="item.options"
+                  :required="isFieldRequired(item.required)"
+                  :clearable="isBoolTrue(item.clearable)"
+                  clear-icon=""
+                  placeholder=""
+                  persistent-placeholder
+                  outlined
+                  dense
+                  hide-details
+                  @focus="$event.target.select()"
+                >
+                  <template v-slot:label>
+                    {{ item.label }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
+                  </template>
+                  <template v-slot:append>
+                    <div v-if="isBoolTrue(item.clearable) && formData[item.key] ? true : false" class="v-input__icon v-input__icon--clear">
+                      <i @click.stop="formData[item.key] = null" type="button" aria-label="clear icon" tabindex="-1" class="v-icon notranslate v-icon--link material-icons theme--dark primary--text">
+                        close
+                      </i>
+                    </div>
+                  </template>
+                </v-autocomplete>
               </v-list-item>
               <v-list-item v-if="item.field === 'countries'" :key="item.key" cols="12" dense>
                 <v-autocomplete
