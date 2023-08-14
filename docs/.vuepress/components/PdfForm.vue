@@ -212,8 +212,8 @@ export default {
           // It's Necessary to use an opaque color when saving image as JPEG
           // this option can be omitted if only saving as PNG or SVG
           // backgroundColor: 'rgb(255, 255, 255)',
-          dotSize: 2.0,
-          minWidth: 1.5,
+          dotSize: 3.0,
+          minWidth: 2.0,
           maxWidth: 4.0,
         })
         this.signatures[key]['signature'] = signaturePad
