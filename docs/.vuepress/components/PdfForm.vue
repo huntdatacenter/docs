@@ -31,6 +31,7 @@ import {
   VTextarea,
   VDialog,
   VDivider,
+  VDatePicker,
 } from "vuetify/lib"
 
 export default {
@@ -63,6 +64,7 @@ export default {
     VTextarea,
     VDialog,
     VDivider,
+    VDatePicker,
   },
   props: {
     id: { type: String, default: "applet" },
@@ -80,6 +82,8 @@ export default {
         pdfCols: 7,
         hidePdf: false
       },
+      datemodal: {},
+      datedialog: {},
       canvasOffsets: {},
       signatures: {}, // signature data
       pdfSignatures: {}, // positions in PDF per signature key
@@ -144,6 +148,10 @@ export default {
         scale: item.scale && item.scale > 0 ? item.scale : this.defaultScale,
       }
       // this.showSignatures = true
+    })
+    this.fields.filter(item => item.field === "date").forEach((item) => {
+      var dateToday = new Date()
+      this.formData[item.key] = dateToday.toISOString().substring(0, 10)
     })
     // console.log(this.pdfSignatures)
 
@@ -303,9 +311,13 @@ export default {
             const form = pdfDoc.getForm()
 
             this.fields.forEach((item) => {
-              if (item.key && !["section", "signature"].includes(item.field) && this.formData[item.key]) {
+              if (item.key && !["section", "signature", "date"].includes(item.field) && this.formData[item.key]) {
                 let field = form.getTextField(item.key)
-                field.setText(this.formData[item.key])
+                if (item.joinkey) {
+                  field.setText(`${this.formData[item.joinkey]}, ${this.formData[item.key]}`)
+                } else {
+                  field.setText(this.formData[item.key])
+                }
               }
             })
 
@@ -376,6 +388,11 @@ export default {
     showTooltip(text) {
       console.log(text)
     },
+    saveDate(key, value) {
+      // console.log(value)
+      this.$refs[key][0].save(value)
+      this.datemodal[key] = false
+    }
   },
 }
 </script>
@@ -461,7 +478,7 @@ export default {
                   :required="isFieldRequired(item.required)"
                   :clearable="isBoolTrue(item.clearable)"
                   clear-icon=""
-                  placeholder=""
+                  :placeholder="item.placeholder ? item.placeholder : ''"
                   persistent-placeholder
                   outlined
                   dense
@@ -480,6 +497,54 @@ export default {
                   </template>
                 </v-autocomplete>
               </v-list-item>
+              <v-list-item v-if="item.field === 'date'" :key="item.key" cols="12" dense>
+                <v-dialog
+                  :ref="item.key"
+                  v-model="datemodal[item.key]"
+                  :return-value.sync="formData[item.key]"
+                  persistent
+                  width="290px"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-text-field
+                      v-model="formData[item.key]"
+                      class="mb-3"
+                      :placeholder="item.placeholder ? item.placeholder : ''"
+                      persistent-placeholder
+                      outlined
+                      dense
+                      hide-details
+                      readonly
+                      v-bind="attrs"
+                      v-on="on"
+                    >
+                      <template v-slot:label>
+                        {{ item.label }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
+                      </template>
+                    </v-text-field>
+                  </template>
+                  <v-date-picker
+                    v-model="datedialog[item.key]"
+                    scrollable
+                  >
+                    <!-- <v-spacer></v-spacer> -->
+                    <v-btn
+                      text
+                      color="primary"
+                      @click="datemodal[item.key] = false"
+                    >
+                      Cancel
+                    </v-btn>
+                    <v-btn
+                      text
+                      color="primary"
+                      @click="saveDate(item.key, datedialog[item.key])"
+                    >
+                      OK
+                    </v-btn>
+                  </v-date-picker>
+                </v-dialog>
+              </v-list-item>
               <v-list-item v-if="item.field === 'countries'" :key="item.key" cols="12" dense>
                 <v-autocomplete
                   v-model="formData[item.key]"
@@ -490,7 +555,7 @@ export default {
                   :item-text="item => `${item.name} ${item.flag}`"
                   :item-value="item => item.name"
                   :required="isFieldRequired(item.required)"
-                  placeholder=""
+                  :placeholder="item.placeholder ? item.placeholder : ''"
                   persistent-placeholder
                   outlined
                   dense
@@ -517,7 +582,7 @@ export default {
                   :persistent-hint="
                     item.hint && formData[item.key] ? true : false
                   "
-                  placeholder=""
+                  :placeholder="item.placeholder ? item.placeholder : ''"
                   persistent-placeholder
                   outlined
                   dense
