@@ -8,6 +8,9 @@ agreements:
   - value: lab_agreement
     text: "Lab Agreement"
     url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-order.pdf
+  - value: invoice_profile
+    text: "Invoice Profile"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-invoice-profile.pdf
 
 forms:
   test_agreement:
@@ -79,7 +82,57 @@ forms:
       { key: "data_space_leader_signature", label: "Data Space Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.135 },
     ]
 
-
+  invoice_profile:
+    fields: [
+      { key: null, label: "Data space", field: "section" },
+      { key: "dataspacenameshort", label: "Data Space name", field: "textfield", required: "true" },
+      { key: "dataspaceleaderfullname", label: "Data Space leader full name", field: "textfield" },
+      { key: null, label: "Invoice unit", field: "section" },
+      { key: "invoiceunit", label: "Invoice unit", hint: "Data space is a default. Lab names can be included.", field: "textfield" },
+      { key: null, label: "Invoice contact", field: "section" },
+      { key: "invoicecontactfullname", label: "Full name", field: "textfield", required: "true" },
+      { key: "invoicecontactrole", label: "Role", field: "textfield" },
+      { key: "invoicecontactemail", label: "Email", field: "textfield", required: "true" },
+      { key: "invoicecontactphone", label: "Phone", field: "textfield" },
+      { key: null, label: "Invoice address (Outside NTNU)", field: "section" },
+      { key: "invoiceaddressexternaladdress1", label: "Address", field: "textfield" },
+      { key: "invoiceaddressexternaladdress2", label: "", field: "textfield" },
+      { key: "invoiceaddressexternalzipcode", label: "ZIP Code", field: "textfield" },
+      { key: "invoiceaddressexternalcity", label: "City", field: "textfield" },
+      { key: "invoiceaddressexternalcountry", label: "Country", field: "countries" },
+      { key: null, label: "Account information (Inside NTNU)", field: "section" },
+      { key: "accountinfoksted", label: "K. sted", hint: "Kostnadsted", field: "textfield" },
+      { key: "accountinfopnumber", label: "Project number", field: "textfield" },
+      { key: null, label: "Billing information (Outside NTNU)", field: "section" },
+      { key: "accountinfopeppolbis", label: "Peppol BIS", hint: "Peppol BIS or EHF-ID.", field: "textfield" },
+      { key: "accountinforeferencenumber", label: "Reference number", hint: "Customer reference number.", field: "textfield" },
+      { key: null, label: "Pilot period", field: "section" },
+      { key: "pilotperiodservices", label: "Service(s)", hint: "Specify subscription and/or individual services that are included in the pilot period.", field: "textfield" },
+      { key: "pilotperiodend", label: "End of pilot period", hint: "Date in YYYY-MM-DD format", field: "textfield" },
+      { key: null, label: "Free quota", field: "section" },
+      { key: "freequotaquota", label: "Free quota", field: "textfield" },
+      { key: "freequotaperiod", label: "End of quota period", hint: "Date in YYYY-MM-DD format", field: "textfield" },
+      { key: null, label: "Advance payment", field: "section" },
+      { key: "advancepaynok", label: "Advance payment", suffix: "NOK", field: "textfield" },
+      { key: null, label: "Spending limit", field: "section" },
+      { key: "spendinglimitnok", label: "Spending limit", suffix: "NOK", field: "textfield" },
+      {
+        key: "spendinglimittype",
+        label: "Limit type",
+        field: "autocompleteone",
+        clearable: "true",
+        options: [
+          { text: 'Hard limit', value: 'hard limit'},
+          { text: 'Soft limit', value: 'soft limit'},
+        ]
+      },
+      { key: "spendinglimitperiod", label: "Spending limit period", hint: "Default is per ninety (90) days. Specify other intervals if required.", field: "textfield" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "labsignatureplaceanddate", label: "Place and date", field: "textfield", required: "true" },
+      { key: "lab_leader_signature", label: "Lab Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.185 },
+      # { key: "signaturedatedataspaceleader", label: "signaturedatedataspaceleader", field: "textfield" },
+      # { key: "signaturedatehuntcloud", label: "signaturedatehuntcloud", field: "textfield" },
+    ]
 
 
 
