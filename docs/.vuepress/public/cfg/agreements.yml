@@ -146,7 +146,7 @@ forms:
       { key: "kistasizegb", label: "Size", placeholder: "1000", suffix: "GB", specialType: "number", min: 1, max: 25000, hint: "Specify the kista size in gigabytes (1,000 GB = 1 TB).", field: "textfield" },
       { key: "kistaduration", label: "Duration", placeholder: "30", suffix: "days", specialType: "number", min: 1, max: 90, hint: "Default is 30 days. Specify number of days if shorter or longer duration is required (max is 90 days).", field: "textfield" },
       { key: null, label: "Downloader Lab", field: "section" },
-      { key: "downloaderlabname", label: "Lab name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", field: "textfield", required: "true" },
+      { key: "downloaderlabname", label: "Lab name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
       { key: "downloaderresponsiblefullname", label: "Lab leader", field: "textfield" },
       { key: "downloaderlabuserfullname", label: "Downloading users", hint: "Comma separated list of Lab users in the Downloader lab that will download data from the internal kista into the Downloader lab. (max 3 users).", field: "textfield" },
       { key: null, label: "Signatures", field: "section" },
