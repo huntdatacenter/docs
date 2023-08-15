@@ -274,6 +274,7 @@ export default {
                           :title="item.hint ? item.hint : null"
                           :hint="item.hint ? item.hint : null"
                           :suffix="item.suffix ? item.suffix : null"
+                          :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
                           :persistent-hint="
                             item.hint && formData[item.key] ? true : false
                           "
