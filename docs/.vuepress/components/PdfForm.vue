@@ -70,6 +70,7 @@ export default {
     id: { type: String, default: "applet" },
     url: { type: String, default: null },
     title: { type: String, default: "Agreement" },
+    servicedesk: { type: String, default: null },
     fields: { type: Array, default: null },
   },
   data() {
@@ -88,8 +89,10 @@ export default {
       signatures: {}, // signature data
       pdfSignatures: {}, // positions in PDF per signature key
       pdfDoc: null,
+      renderedFields: null,
       pdfFields: [],
       pdfFile: null,
+      pdfDownloadClicked: false,
       pdfPages: 1,
       showPdf: false,
       downloadPdf: false,
@@ -310,14 +313,19 @@ export default {
           .then((pdfDoc) => {
             const form = pdfDoc.getForm()
 
+            this.renderedFields = {}
+
             this.fields.forEach((item) => {
               if (item.key && !["section", "signature", "date"].includes(item.field) && this.formData[item.key]) {
                 let field = form.getTextField(item.key)
+                var fieldValue = null
                 if (item.joinkey) {
-                  field.setText(`${this.formData[item.joinkey]}, ${this.formData[item.key]}`)
+                  fieldValue = `${this.formData[item.joinkey]}, ${this.formData[item.key]}`
                 } else {
-                  field.setText(this.formData[item.key])
+                  fieldValue = this.formData[item.key]
                 }
+                field.setText(fieldValue)
+                this.renderedFields[item.key] = fieldValue
               }
             })
 
@@ -371,6 +379,7 @@ export default {
               })
             }
           })
+        this.pdfDownloadClicked = false
       } catch (error) {
         console.log(error)
       }
@@ -392,7 +401,18 @@ export default {
       // console.log(value)
       this.$refs[key][0].save(value)
       this.datemodal[key] = false
-    }
+    },
+    serviceDeskRedirect() {
+      const state = window.history.state
+      const searchURL = new URL('/-/service-desk/', window.location.origin)
+      searchURL.searchParams.set('open', this.servicedesk)
+
+      for (const [key, value] of Object.entries(this.renderedFields)) {
+        searchURL.searchParams.set(key, value)
+      }
+      // window.history.pushState(state, '', searchURL)
+      window.location = searchURL
+    },
   },
 }
 </script>
@@ -679,7 +699,34 @@ export default {
             <v-list-item>
               <v-row class="px-2" align="center" justify="space-around">
                 <v-col cols="12">
-                  <v-btn class="mr-8 px-0"  block color="success" :href="pdfFile" :download="getPdfTitle" target="_blank" :disabled="pdfFile && downloadPdf ? false : true">Download Agreement</v-btn>
+                  <v-btn
+                    class="mr-8 px-0"
+                    block
+                    :color="pdfDownloadClicked ? 'link' : 'success'"
+                    :href="pdfFile"
+                    :download="getPdfTitle"
+                    target="_blank"
+                    :disabled="pdfFile && downloadPdf ? false : true"
+                    @click="pdfDownloadClicked = true"
+                  >
+                    Download Agreement
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-list-item>
+            <v-list-item v-if="servicedesk">
+              <v-row class="px-2" align="center" justify="space-around">
+                <v-col cols="12">
+                  <v-btn
+                    class="mr-8 px-0"
+                    block
+                    color="primary"
+                    target="_blank"
+                    :disabled="!pdfDownloadClicked"
+                    @click="serviceDeskRedirect"
+                  >
+                    Service desk
+                  </v-btn>
                 </v-col>
               </v-row>
             </v-list-item>

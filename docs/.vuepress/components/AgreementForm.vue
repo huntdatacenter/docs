@@ -118,6 +118,7 @@ export default {
           v-if="showForm"
           :title="selected.text"
           :url="selected.url"
+          :servicedesk="selected.servicedesk"
           :fields="getFields"
         />
         <!-- :expand-form="expandForm" -->

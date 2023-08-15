@@ -1178,11 +1178,11 @@ request_volume_deletion:
 request_internal_kista:
   title: "Request an internal kista"
   template:
-    subject: "Internal kista order - {uploader_lab}"
+    subject: "Internal kista order - {labname}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request an internal kista from {uploader_lab} to {downloader_lab}.
+      I would like to request an internal kista from {labname} to {downloaderlabname}.
 
       I have attached the signed internal kista order.
 
@@ -1190,10 +1190,12 @@ request_internal_kista:
 
 
       Best regards,
+      {uploaderlabresponsiblefullname}
 
   fields: [
-    { label: "Uploader Lab", key: "uploader_lab", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Downloader Lab", key: "downloader_lab", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Name and Surname", key: "name", hint: "Full name of sender or signatory", field: "textfield" },
+    { label: "Uploader Lab", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Downloader Lab", key: "downloaderlabname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders or lab coordinators from the uploader lab.",
