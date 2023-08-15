@@ -9,8 +9,8 @@ general_lab_user_request:
       <your-text>
 
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab users.",
@@ -27,7 +27,7 @@ general_lab_request:
       <your-text>
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders, coordinators, and users.",
@@ -46,8 +46,8 @@ cost_query:
       Best regards, 
 
   fields: [
-    { label: "Data space name", key: "data_space_name", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Data space name", key: "data_space_name", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders, Data space financial administrators, Lab leaders and Lab coordinators.",
@@ -91,9 +91,9 @@ request_new_lab:
       Best regards,
 
   fields: [
-    { label: "New lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "New lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "Data space name", key: "data_space", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
-    # { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    # { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     {
       label: "Machine type",
       key: "machine_type",
@@ -172,8 +172,8 @@ request_lab_deletion:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Data space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Data space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and Lab leaders in collaboration.",
@@ -201,7 +201,7 @@ request_external_import_kista:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "External organization", key: "external_organization", field: "textfield" },
   ]
   requirements: [
@@ -230,7 +230,7 @@ request_external_export_kista:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "External organization", key: "external_organization", field: "textfield" },
   ]
   requirements: [
@@ -260,7 +260,7 @@ request_network_opening:
 
 
   fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
@@ -297,7 +297,7 @@ update_data_space_coordinator_role:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     {
       label: "Role",
       key: "role",
@@ -339,8 +339,8 @@ request_lab_leader_role:
 
       Best regards,
   fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space compliance officers.",
@@ -367,7 +367,7 @@ request_new_invoice_profile:
       Best regards,
 
   fields: [
-    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space financial officers.",
@@ -394,7 +394,7 @@ request_update_of_existing_invoice:
       Best regards,
 
   fields: [
-    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space financial officers.",
@@ -451,7 +451,7 @@ request_new_service_center:
       Best regards,
 
   fields: [
-    { label: "Data controller", key: "datacontroller", field: "textfield" },
+    { label: "Data controller", key: "datacontroller", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going with your service center </a>",
@@ -511,8 +511,8 @@ request_access_new_user:
       Best regards,
 
   fields: [
-    { label: "Name of user", key: "username", field: "textfield" },
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Name of user", key: "username", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
@@ -544,8 +544,8 @@ request_lab_user_deactivation:
       Best regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators can deactivate access for all lab users. Lab users can deactivate their own lab access.",
@@ -572,8 +572,8 @@ reactivate_lab_user:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Name of user", key: "username", field: "textfield" }
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Name of user", key: "username", autocapitalize: "off", field: "textfield" }
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
@@ -602,8 +602,8 @@ request_renew_user_agreement:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "User name", key: "username", pattern: "[-a-z0-9]{3,}", hint: "Lab user should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" }
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "User name", key: "username", pattern: "[-a-z0-9]{3,}", hint: "Lab user should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" }
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
@@ -638,8 +638,8 @@ request_machine_size_update:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     # { label: "Current machine type", key: "source_machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
     # { label: "New machine type", key: "target_machine_type", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
     {
@@ -754,7 +754,7 @@ request_new_cpu:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     {
       label: "Machine type",
       key: "machine_type",
@@ -838,7 +838,7 @@ request_new_gpu:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     # { label: "GPU type", key: "gpu_type", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
     {
       label: "GPU type",
@@ -935,7 +935,7 @@ request_blue_fleet:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 1, max: 100, step: 1, field: "number", default: 1 },
     { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
     { label: "Storage size per machine (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
@@ -966,8 +966,8 @@ request_machine_shelving:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*', hint: "Machine name only allows blue and iaas machines, you can get machine name by running hostname command on the machine", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*', hint: "Machine name only allows blue and iaas machines, you can get machine name by running hostname command on the machine", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Required information</b>: lab name and machine name.",
@@ -994,8 +994,8 @@ request_machine_unshelving:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*', hint: "Machine name only allows blue and iaas machines", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue)[a-z0-9\-]*', hint: "Machine name only allows blue and iaas machines", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
@@ -1026,8 +1026,8 @@ request_machine_deletion:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*', hint: "Machine name only allows blue, iaas, and gpu machines, run hostname command on the machine to get the machine name", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*', hint: "Machine name only allows blue, iaas, and gpu machines, run hostname command on the machine to get the machine name", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
@@ -1062,8 +1062,8 @@ request_expand_existing_volume:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash., You can get machine name by running hostname command on the machine", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash., You can get machine name by running hostname command on the machine", autocapitalize: "off", field: "textfield" },
     {
       label: "Volume name",
       key: "volume_name",
@@ -1108,8 +1108,8 @@ request_new_storage_volume:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     {
       label: "Volume name",
       key: "volume_name",
@@ -1153,8 +1153,8 @@ request_volume_deletion:
 
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     {
       label: "Volume name",
       key: "volume_name",
@@ -1178,11 +1178,11 @@ request_volume_deletion:
 request_internal_kista:
   title: "Request an internal kista"
   template:
-    subject: "Internal kista order - {uploader_lab}"
+    subject: "Internal kista order - {labname}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request an internal kista from {uploader_lab} to {downloader_lab}.
+      I would like to request an internal kista from {labname} to {downloaderlabname}.
 
       I have attached the signed internal kista order.
 
@@ -1190,10 +1190,12 @@ request_internal_kista:
 
 
       Best regards,
+      {uploaderlabresponsiblefullname}
 
   fields: [
-    { label: "Uploader Lab", key: "uploader_lab", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
-    { label: "Downloader Lab", key: "downloader_lab", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Name and Surname", key: "name", hint: "Full name of sender or signatory", field: "textfield" },
+    { label: "Uploader Lab", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Downloader Lab", key: "downloaderlabname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders or lab coordinators from the uploader lab.",
@@ -1232,7 +1234,7 @@ request_coordinator_update:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "Name and Surname", key: "name", field: "textfield" },
     { label: "Department", key: "department", field: "textfield" },
     { label: "Faculty", key: "faculty", field: "textfield" },
@@ -1295,8 +1297,8 @@ request_workbench_access:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     {
       label: "Tools",
       key: "tools",
@@ -1336,8 +1338,8 @@ request_workbench_reissue:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> All active lab users.",
@@ -1364,8 +1366,8 @@ request_ssh_pass_reset:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> All active lab users.",
@@ -1390,8 +1392,8 @@ request_ssh_config:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> All active lab users.",
@@ -1423,7 +1425,7 @@ request_vpn_link:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
     { label: "Public IP4 address", key: "ipaddress", pattern: '^\s*((?!169\.254\.|10\.|0\.|127\.|255\.255\.255\.255|192\.168\.)(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Get your IP address here: http://ip4.me", field: "textfield" },
     {
       label: "Access duration",
@@ -1464,7 +1466,7 @@ request_vpn_reset:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> All active lab users.",
@@ -1496,7 +1498,7 @@ request_google_auth:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
     { label: "Phone number (optional)", key: "phone_number", pattern: "(not_changed|[+0-9]{3,})", hint: "Phone number should include only + and 0-9 numbers", field: "textfield", optional: true, default: "not_changed" },
   ]
   requirements: [
@@ -1526,8 +1528,8 @@ request_mobaxterm_file:
       Kind regards,
 
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> All active lab users.",
@@ -1556,7 +1558,7 @@ request_update_lagtun_rep:
   
   fields: [
     { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Data Space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Data Space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
   ]
   requirements: [
@@ -1584,7 +1586,7 @@ request_update_data_rep:
   
   fields: [
     { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Data Controller name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Data Controller name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
   ]
   requirements: [
@@ -1607,8 +1609,8 @@ request_tape_archive:
 
       Kind regards,
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab coordiators.",
@@ -1629,8 +1631,8 @@ request_lab_access_link:
 
       Kind regards,
   fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab user.",

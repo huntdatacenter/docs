@@ -14,6 +14,7 @@ agreements:
   - value: internal_kista
     text: "Internal Kista"
     url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf
+    servicedesk: request_internal_kista
 
 forms:
   test_agreement:
@@ -141,7 +142,7 @@ forms:
     fields: [
       { key: null, label: "Uploader Lab", field: "section" },
       { key: "labname", label: "Lab name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
-      { key: "uploaderlabresponsiblefullname", label: "Lab leader", field: "textfield" },
+      { key: "uploaderlabresponsiblefullname", label: "Lab leader / Lab coordinator", field: "textfield", required: "true" },
       { key: "uploaderlabuploaderfullname", label: "Uploading users", hint: "Comma separated list of internal Lab users that will copy data from the Lab to the internal kista. (max 3 users).", field: "textfield" },
       { key: "kistasizegb", label: "Size", placeholder: "1000", suffix: "GB", specialType: "number", min: 1, max: 25000, hint: "Specify the kista size in gigabytes (1,000 GB = 1 TB).", field: "textfield" },
       { key: "kistaduration", label: "Duration", placeholder: "30", suffix: "days", specialType: "number", min: 1, max: 90, hint: "Default is 30 days. Specify number of days if shorter or longer duration is required (max is 90 days).", field: "textfield" },
