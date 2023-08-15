@@ -1193,7 +1193,7 @@ request_internal_kista:
       {uploaderlabresponsiblefullname}
 
   fields: [
-    { label: "Name and Surname", key: "name", hint: "Full name of sender or signatory", field: "textfield" },
+    { label: "Name and Surname", key: "uploaderlabresponsiblefullname", hint: "Full name of sender or signatory", field: "textfield" },
     { label: "Uploader Lab", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "Downloader Lab", key: "downloaderlabname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
