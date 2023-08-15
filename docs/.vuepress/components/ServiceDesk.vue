@@ -119,10 +119,27 @@ export default {
     this.panel = 0;
     this.subjectTemplate = this.template ? this.template.subject : null;
     this.bodyTemplate = this.template ? this.template.body : null;
+    var formFields = []
     for (const item of this.fields) {
-      if (item && item.key && item.default) {
-        const defValue = item.default;
-        this.formData[item.key] = defValue;
+      if (item && item.key) {
+        formFields.push(item.key)
+        if (item.default) {
+          const defValue = item.default;
+          this.formData[item.key] = defValue;
+        }
+      }
+    }
+    // console.log(formFields)
+
+    if (this.$route.query) {
+      for (const [key, value] of Object.entries(this.$route.query)) {
+        if (key !== "open") {
+          if (formFields.includes(key)) {
+            console.log(`Prefill from URL: ${key} = ${value}`)
+            this.setValue(value, key)
+            // console.log(this.formData[key])
+          }
+        }
       }
     }
   },
