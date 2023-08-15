@@ -107,7 +107,7 @@ export default {
       return `HUNT Cloud - Service Desk <${this.encodedRecipient}>`.replace('<', '%3C').replace('>', '%3E');
     },
     mailto() {
-      return `mailto:${this.wrapRecipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      return `mailto:${this.encodedRecipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`;
     },
     deeplinkUrl() {
       const url = 'https://outlook.office.com/mail/deeplink/compose'
