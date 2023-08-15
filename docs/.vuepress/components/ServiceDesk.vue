@@ -52,8 +52,12 @@ export default {
     VExpansionPanelHeader,
     VExpansionPanelContent,
   },
+  emits: [
+    'input',  // used to update value prop assigned from parent using v-model
+  ],
   props: {
     id: { type: String, default: "applet" },
+    value: { type: Boolean, default: false },
     title: { type: String, default: null },
     fields: { type: Array, default: null },
     template: { type: Object, default: null },
@@ -62,6 +66,7 @@ export default {
       type: String,
       default: "cloud.support+hunt-cloud-request@hunt.ntnu.no",
     },
+    fullscreen: { type: Boolean, default: false },
   },
   data() {
     return {
@@ -72,7 +77,6 @@ export default {
         subject: null,
         body: null,
       },
-      dialog: null,
       sendClicked: false,
       finalizeClicked: false,
       panel: 0,
@@ -127,11 +131,11 @@ export default {
       this.finalizeClicked = true;
       this.sendClicked = true;
       this.panel = 0;
-      this.dialog = false;
+      this.$emit('input', false);
     },
     closeBtn() {
       this.panel = 0;
-      this.dialog = false;
+      this.$emit('input', false);
     },
     submit() {
       this.panel = 2;
@@ -187,26 +191,13 @@ export default {
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
       <v-dialog
-        v-model="dialog"
+        v-model="value"
         hide-overlay
         transition="dialog-bottom-transition"
         max-width="960px"
+        :fullscreen="fullscreen"
         @click:outside="closeBtn"
       >
-        <template v-slot:activator="{ on, attrs }">
-          <div class="home" style="padding: 0px">
-            <div class="hero">
-              <p class="action">
-                <a
-                  v-bind="attrs"
-                  v-on="on"
-                  class="nav-link external action-button"
-                  >{{ title }}</a
-                >
-              </p>
-            </div>
-          </div>
-        </template>
         <v-card>
           <v-toolbar dark color="#00509e">
             <v-toolbar-title>Service desk - {{ title }}</v-toolbar-title>

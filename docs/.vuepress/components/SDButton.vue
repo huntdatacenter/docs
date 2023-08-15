@@ -13,6 +13,7 @@ export default {
   },
   data() {
     return {
+      dialog: false,
       data: {},
     };
   },
@@ -45,13 +46,30 @@ export default {
 </script>
 
 <template>
-    <section v-if="showBtn">
-        <ServiceDesk
-          :title="getData['title']"
-          :requirements="getData['requirements']"
-          :fields="getData['fields']"
-          :template="getData['template']"
-          :recipient="getRecipient"
-        />
-    </section>
+  <section v-if="showBtn">
+    <!-- Service desk blue button -->
+    <div class="home" style="padding: 0px">
+      <div class="hero">
+        <p class="action">
+          <input
+            :value="getData['title']"
+            class="nav-link external action-button"
+            type="button"
+            style="padding: 18px; cursor:pointer;"
+            @click="dialog = true"
+          />
+        </p>
+      </div>
+    </div>
+    <!-- Service desk dialog window -->
+    <ServiceDesk
+      v-model="dialog"
+      :ref="form"
+      :title="getData['title']"
+      :requirements="getData['requirements']"
+      :fields="getData['fields']"
+      :template="getData['template']"
+      :recipient="getRecipient"
+    />
+  </section>
 </template>
