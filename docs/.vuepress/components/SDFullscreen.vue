@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
 export default {
   name: "SDFullscreen",
   components: {
-    ServiceDesk: () => import('./ServiceDesk.vue')
+    ServiceDesk: () => import('./ServiceDesk.vue'),
   },
   props: {
     form: { type: String, default: null },
