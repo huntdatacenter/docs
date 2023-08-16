@@ -66,6 +66,7 @@ export default {
       type: String,
       default: "cloud.support+hunt-cloud-request@hunt.ntnu.no",
     },
+    cacheKey: { type: String, default: null },
     fullscreen: { type: Boolean, default: false },
   },
   data() {
@@ -130,16 +131,20 @@ export default {
       }
     }
     // console.log(formFields)
-
-    if (this.$route.query) {
-      for (const [key, value] of Object.entries(this.$route.query)) {
-        if (key !== "open") {
-          if (formFields.includes(key)) {
-            console.log(`Prefill from URL: ${key} = ${value}`)
-            this.setValue(value, key)
-            // console.log(this.formData[key])
+    let cache = this.fetchAgreementFormCache(this.cacheKey)
+    if (cache) {
+      try {
+        for (const [key, value] of Object.entries(cache)) {
+          if (key !== "open") {
+            if (formFields.includes(key)) {
+              console.log(`Prefill from cache: ${key} = ${value}`)
+              this.setValue(value, key)
+              // console.log(this.formData[key])
+            }
           }
         }
+      } catch (ex) {
+        console.log("Failed to load form fields from cache")
       }
     }
   },
@@ -199,6 +204,16 @@ export default {
       }
       text = text.replaceAll('\n---\n', '\n```  \n');
       return text;
+    },
+    fetchAgreementFormCache(key) {
+      let fields = {}
+      const jsonData = key ? localStorage.getItem(key) : null
+      try {
+        fields = jsonData ? JSON.parse(jsonData) : {}
+      } catch (ex) {
+        console.log("Failed to fetch data from cache")
+      }
+      return fields
     },
   },
 };
