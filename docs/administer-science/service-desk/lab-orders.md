@@ -369,6 +369,22 @@ Head over to the [data space orders](/administer-science/service-desk/data-space
 
 [Internal kista](/do-science/data-transfers/internal-kista/) is the best way to transfer data between two labs in HUNT Cloud.
 
+<div class="home" style="padding: 0px">
+    <div class="hero">
+        <p class="action">
+            <a href="/administer-science/sign-agreement/?open=internal_kista">
+                <input
+                    value="Prepare internal kista order"
+                    class="nav-link external action-button"
+                    color="deeppink"
+                    type="button"
+                    style="padding: 18px; cursor:pointer; background-color: rgb(0, 150, 136); border-color: rgb(0, 150, 136); border-bottom: 1px solid rgb(0, 50, 45);"
+                />
+            </a>
+        </p>
+    </div>
+</div>
+
 <SDButton form="request_internal_kista" />
 
 * **Who can order:** Lab leaders or lab coordinators from the uploader lab.
