@@ -12,7 +12,7 @@ agreements:
     text: "Invoice Profile"
     url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-invoice-profile.pdf
   - value: internal_kista
-    text: "Internal Kista"
+    text: "Internal Kista Order"
     url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf
     servicedesk: request_internal_kista
 
@@ -142,16 +142,16 @@ forms:
     fields: [
       { key: null, label: "Uploader Lab", field: "section" },
       { key: "labname", label: "Lab name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
-      { key: "uploaderlabresponsiblefullname", label: "Lab leader / Lab coordinator", field: "textfield", required: "true" },
-      { key: "uploaderlabuploaderfullname", label: "Uploading users", hint: "Comma separated list of internal Lab users that will copy data from the Lab to the internal kista. (max 3 users).", field: "textfield" },
-      { key: "kistasizegb", label: "Size", placeholder: "1000", suffix: "GB", specialType: "number", min: 1, max: 25000, hint: "Specify the kista size in gigabytes (1,000 GB = 1 TB).", field: "textfield" },
-      { key: "kistaduration", label: "Duration", placeholder: "30", suffix: "days", specialType: "number", min: 1, max: 90, hint: "Default is 30 days. Specify number of days if shorter or longer duration is required (max is 90 days).", field: "textfield" },
+      { key: "uploaderlabresponsiblefullname", label: "Lab leader / Lab coordinator", hint: "Lab leader or Lab coordinator responsible for upload of data from the Lab to the internal kista.", field: "textfield", required: "true" },
+      { key: "uploaderlabuploaderfullname", label: "Uploading users", hint: "Comma separated list of internal Lab users that will copy data from the Lab to the internal kista (Maximum 3 users).", field: "textfield", required: "true" },
+      { key: "kistasizegb", label: "Size", default: "1000", suffix: "GB", specialType: "number", min: 1, max: 25000, hint: "Specify the kista size in gigabytes (1,000 GB = 1 TB).", field: "textfield", required: "true" },
+      { key: "kistaduration", label: "Duration", default: "30", suffix: "days", specialType: "number", min: 1, max: 90, hint: "Default is 30 days. Specify number of days if shorter or longer duration is required (max is 90 days).", field: "textfield", required: "true" },
       { key: null, label: "Downloader Lab", field: "section" },
       { key: "downloaderlabname", label: "Lab name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
-      { key: "downloaderresponsiblefullname", label: "Lab leader", field: "textfield" },
-      { key: "downloaderlabuserfullname", label: "Downloading users", hint: "Comma separated list of Lab users in the Downloader lab that will download data from the internal kista into the Downloader lab. (max 3 users).", field: "textfield" },
+      { key: "downloaderresponsiblefullname", label: "Lab leader / Lab coordinator", hint: "Lab leader or Lab coordinator responsible for download of data from the internal kista into the Downloader lab.", field: "textfield", required: "true" },
+      { key: "downloaderlabuserfullname", label: "Downloading users", hint: "Comma separated list of Lab users in the Downloader lab that will download data from the internal kista into the Downloader lab (Maximum 3 users).", field: "textfield", required: "true" },
       { key: null, label: "Signatures", field: "section" },
-      { key: "signatureplaceanddate", joinkey: "signaturedate", label: "Place", field: "textfield", required: "true" },
       { key: "signaturedate", label: "Date", field: "date", required: "true" },
+      { key: "signatureplaceanddate", joinkey: "signaturedate", label: "Place", field: "textfield", required: "true" },
       { key: "lab_leader_signature", label: "Signature from Lab leader or Lab coordinator of the Uploader lab", field: "signature", page: 0, xpos: 0.28, ypos: 0.115 },
     ]

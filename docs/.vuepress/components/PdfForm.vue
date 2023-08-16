@@ -1,5 +1,5 @@
 <script>
-// const fs = require("fs")
+const yaml = require("js-yaml");
 import fetch from 'node-fetch'
 import { PDFDocument } from 'pdf-lib'
 import { countries } from 'country-list-json'
@@ -39,6 +39,7 @@ export default {
   // Components need to be imported above
   components: {
     EmbedPdfViewer: () => import('./EmbedPdfViewer.vue'),
+    ServiceDesk: () => import('./ServiceDesk.vue'),
     VApp,
     VCol,
     VRow,
@@ -68,6 +69,7 @@ export default {
   },
   props: {
     id: { type: String, default: "applet" },
+    agreementTag: { type: String, default: null },
     url: { type: String, default: null },
     title: { type: String, default: "Agreement" },
     servicedesk: { type: String, default: null },
@@ -104,6 +106,8 @@ export default {
       defaultScale: 0.04,
       drawer: null,
       expandForm: true,
+      serviceDeskDialog: false,
+      data: {},
     }
   },
   computed: {
@@ -123,6 +127,15 @@ export default {
       var d = new Date();
       var datestring = d.getFullYear() + ("0"+(d.getMonth()+1)).slice(-2) + ("0" + d.getDate()).slice(-2) + "-" + ("0" + d.getHours()).slice(-2) + ("0" + d.getMinutes()).slice(-2) + ("0" + d.getSeconds()).slice(-2)
       return `agreement-${datestring}.pdf`
+    },
+    getData() {
+      return this.data && this.data[this.servicedesk] ? this.data[this.servicedesk] : null;
+    },
+    showServiceDesk() {
+      return this.data && this.servicedesk && this.data[this.servicedesk];
+    },
+    getRecipient() {
+      return this.data && this.data[this.servicedesk] && this.data[this.servicedesk]["recipient"] ? this.data[this.servicedesk]["recipient"] : "cloud.support+hunt-cloud-request@hunt.ntnu.no";
     },
   },
   watch: {
@@ -152,14 +165,24 @@ export default {
       }
       // this.showSignatures = true
     })
-    this.fields.filter(item => item.field === "date").forEach((item) => {
-      var dateToday = new Date()
-      this.formData[item.key] = dateToday.toISOString().substring(0, 10)
-    })
+
+    this.resetFormData()
+
     // console.log(this.pdfSignatures)
 
     if (this.url) {
       this.loadPdf(this.url)
+    }
+
+    const fieldsCache = this.fetchAgreementFormCache(this.agreementTag)
+    if (fieldsCache) {
+      this.renderedFields = fieldsCache
+      console.log('loaded fields from cache')
+      console.log(fieldsCache)
+      if (this.$refs['form']) {
+        console.log('submit from cache')
+        this.$refs['form'].submit()
+      }
     }
   },
 
@@ -305,8 +328,26 @@ export default {
       console.log(`Signature signed [${key}]: ${this.signatures[key]['signed']}`)
       this.signatures[key]['pngurl'] = this.signatures[key]['signature'].toDataURL()
     },
+    fetchAgreementFormCache(key) {
+      let fields = {}
+      const jsonData = key ? localStorage.getItem(key) : null
+      try {
+        fields = jsonData ? JSON.parse(jsonData) : {}
+      } catch (ex) {
+        console.log("Failed to fetch data from cache")
+      }
+      return fields
+    },
+    updateAgreementFormCache(key, fields) {
+      if (!localStorage.agreementFields) {
+        localStorage.agreementFields = {}
+      }
+      if (key && fields) {
+        localStorage.setItem(key, JSON.stringify(fields));
+      }
+    },
     submit() {
-      console.log(this.formData)
+      // console.log(this.formData)
       try {
         const read_buf = this.pdfBuffer
         PDFDocument.load(read_buf)
@@ -328,6 +369,8 @@ export default {
                 this.renderedFields[item.key] = fieldValue
               }
             })
+
+            this.updateAgreementFormCache(this.agreementTag, this.renderedFields)
 
             // Flatten the form once filled up
             form.flatten()
@@ -402,16 +445,40 @@ export default {
       this.$refs[key][0].save(value)
       this.datemodal[key] = false
     },
-    serviceDeskRedirect() {
-      const state = window.history.state
-      const searchURL = new URL('/-/service-desk/', window.location.origin)
-      searchURL.searchParams.set('form', this.servicedesk)
+    loadFormData() {
+      fetch("/cfg/service_desk.yml")
+        .then((response) => response.text())
+        .then((data) => {
+          // console.log(data);
+          const cfg = yaml.load(data);
+          // console.log(cfg);
+          this.data = cfg;
 
-      for (const [key, value] of Object.entries(this.renderedFields)) {
-        searchURL.searchParams.set(key, value)
-      }
-      // window.history.pushState(state, '', searchURL)
-      window.location = searchURL
+          this.serviceDeskDialog = true;
+        });
+    },
+    serviceDeskRedirect() {
+      // const searchURL = new URL('/-/service-desk/', window.location.origin)
+      // searchURL.searchParams.set('form', this.servicedesk)
+
+      // for (const [key, value] of Object.entries(this.renderedFields)) {
+      //   searchURL.searchParams.set(key, value)
+      // }
+      // window.location = searchURL
+      this.loadFormData()
+    },
+    resetFormData() {
+      this.pdfDownloadClicked = false
+      this.formData = {}
+      this.fields.filter(item => item.key && item.default && !["signature", "date"].includes(item.field)).forEach((item) => {
+        const defValue = item.default
+        this.formData[item.key] = defValue
+      })
+      this.fields.filter(item => item.field === "date").forEach((item) => {
+        var dateToday = new Date()
+        this.formData[item.key] = dateToday.toISOString().substring(0, 10)
+      })
+      this.updateAgreementFormCache(this.agreementTag, {})
     },
   },
 }
@@ -425,13 +492,29 @@ export default {
         <form ref="form" @submit.prevent="submit">
           <v-list>
             <v-list-item>
-              <p class="font-weight-bold py-0 my-0">{{ title }}</p>
+              <!-- <p class="font-weight-bold py-0 my-0">{{ title }}</p> -->
+              <v-row justify="space-between" class="mr-xs-1 pr-sm-1" no-gutters>
+                <!-- <v-col cols="10"> -->
+                  <div class="font-weight-bold">{{ title }}</div>
+                <!-- </v-col> -->
+                <!-- <v-col cols="1"> -->
+                  <v-btn
+                    fab
+                    x-small
+                    title="Reset the form fields"
+                    color="link"
+                    elevation="0"
+                    @click="resetFormData"
+                  >
+                    <v-icon>close</v-icon>
+                  </v-btn>
+              </v-row>
             </v-list-item>
 
             <template v-for="item in fields">
               <v-divider v-if="item.field === 'divider'" :key="item.key"></v-divider>
               <v-list-item v-if="item.field === 'section'" :key="item.key" cols="12" dense>
-                <p class="text-darken-1 py-0 mt-0 mb-2">{{ item.label }}</p>
+                <p class="text-darken-1 py-0 mt-1 mb-4">{{ item.label }}</p>
               </v-list-item>
               <v-list-item v-if="item.field === 'textfield'" :key="item.key" cols="12" dense>
                 <v-text-field
@@ -453,7 +536,7 @@ export default {
                   :persistent-hint="
                     item.hint && formData[item.key] ? true : false
                   "
-                  :placeholder="item.placeholder ? item.placeholder : ''"
+                  :placeholder="item.placeholder ? item.placeholder : null"
                   persistent-placeholder
                   outlined
                   dense
@@ -692,40 +775,54 @@ export default {
             <v-list-item>
               <v-row class="px-2" align="center" justify="space-around">
                 <v-col cols="12">
-                  <v-btn class="mr-8 px-0" type="submit" block color="teal" :disabled="!formFilled">Generate Agreement</v-btn>
+                  <!-- :disabled="!formFilled" -->
+                  <v-btn
+                    class="mr-8 px-0"
+                    type="submit"
+                    block
+                    :color="formFilled ? 'teal' : 'link'"
+                  >
+                    Preview agreement
+                  </v-btn>
                 </v-col>
               </v-row>
             </v-list-item>
             <v-list-item>
               <v-row class="px-2" align="center" justify="space-around">
+                <v-col v-if="pdfFile && downloadPdf ? true : false" class="px-4 mt-4" cols="12">
+                  Double check the preview and then save the agreement file.
+                </v-col>
                 <v-col cols="12">
                   <v-btn
                     class="mr-8 px-0"
                     block
-                    :color="pdfDownloadClicked ? 'link' : 'success'"
+                    :color="pdfDownloadClicked ? 'link' : 'primary'"
                     :href="pdfFile"
                     :download="getPdfTitle"
                     target="_blank"
                     :disabled="pdfFile && downloadPdf ? false : true"
                     @click="pdfDownloadClicked = true"
                   >
-                    Download Agreement
+                    Save Agreement
                   </v-btn>
                 </v-col>
               </v-row>
             </v-list-item>
             <v-list-item v-if="servicedesk">
               <v-row class="px-2" align="center" justify="space-around">
+                <v-col v-if="pdfDownloadClicked" class="px-4 mt-4" cols="12">
+                  Make sure to attach <b>signed agreement file</b> to your Service desk email.
+                </v-col>
                 <v-col cols="12">
                   <v-btn
                     class="mr-8 px-0"
                     block
-                    color="primary"
+                    color="success"
                     target="_blank"
                     :disabled="!pdfDownloadClicked"
                     @click="serviceDeskRedirect"
                   >
-                    Service desk
+                    Prepare Service desk email
                   </v-btn>
                 </v-col>
               </v-row>
@@ -735,6 +832,18 @@ export default {
       </v-sheet>
       <v-sheet class="flex-grow-1 flex-shrink-1 mx-2 px-2 h-100 col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="min-width: 300px; max-width: 100%;">
         <EmbedPdfViewer v-if="showPdf ? true : false" :source="pdfData" :pages="pdfPages" height="500" />
+      </v-sheet>
+      <v-sheet v-if="showServiceDesk">
+        <ServiceDesk
+          v-model="serviceDeskDialog"
+          :ref="servicedesk"
+          :title="getData['title']"
+          :requirements="getData['requirements']"
+          :fields="getData['fields']"
+          :template="getData['template']"
+          :recipient="getRecipient"
+          :cache-key="agreementTag"
+        />
       </v-sheet>
     </v-sheet>
 

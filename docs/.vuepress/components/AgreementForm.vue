@@ -116,6 +116,7 @@ export default {
       <v-layout v-if="showForm" class="d-flex flex-nowrap h-100 w-100 pt-0 align-center justify-center">
         <PdfForm
           v-if="showForm"
+          :agreement-tag="selected.value"
           :title="selected.text"
           :url="selected.url"
           :servicedesk="selected.servicedesk"
