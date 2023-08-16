@@ -64,8 +64,7 @@ Host {lab_name}
     ProxyJump {lab_name}-entry
 
 Host {iaas_name}
-    HostName 10.5.5.16
-    HostKeyAlias {iaas_name}
+    HostName {iaas_name}
     User ubuntu
     ProxyJump {lab_name}
 
