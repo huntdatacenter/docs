@@ -405,7 +405,7 @@ export default {
     serviceDeskRedirect() {
       const state = window.history.state
       const searchURL = new URL('/-/service-desk/', window.location.origin)
-      searchURL.searchParams.set('open', this.servicedesk)
+      searchURL.searchParams.set('form', this.servicedesk)
 
       for (const [key, value] of Object.entries(this.renderedFields)) {
         searchURL.searchParams.set(key, value)

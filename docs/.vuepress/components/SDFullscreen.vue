@@ -7,41 +7,48 @@ export default {
   components: {
     ServiceDesk: () => import('./ServiceDesk.vue')
   },
-  props: {},
+  props: {
+    form: { type: String, default: null },
+  },
   data() {
     return {
-      form: null,
+      formTag: null,
       data: {},
       dialog: false,
     };
   },
   computed: {
     getData() {
-      return this.data && this.data[this.form] ? this.data[this.form] : null;
+      return this.data && this.data[this.formTag] ? this.data[this.formTag] : null;
     },
     showForm() {
-      return this.data && this.data[this.form];
+      return this.data && this.data[this.formTag];
     },
     getRecipient() {
-      return this.data && this.data[this.form] && this.data[this.form]["recipient"] ? this.data[this.form]["recipient"] : "cloud.support+hunt-cloud-request@hunt.ntnu.no";
+      return this.data && this.data[this.formTag] && this.data[this.formTag]["recipient"] ? this.data[this.formTag]["recipient"] : "cloud.support+hunt-cloud-request@hunt.ntnu.no";
     },
   },
   watch: {
-    dialog(val) {
-      console.log(val)
-      if (!val) {
-        const state = window.history.state
-        const searchURL = new URL(window.location)
-        // console.log(searchURL)
-        // searchURL.searchParams.set('open', event.value)
-        window.history.pushState(state, '', searchURL)
-      }
-    }
+    // dialog(val) {
+    //   console.log(val)
+    //   if (!val) {
+    //     const state = window.history.state
+    //     const searchURL = new URL(window.location)
+    //     window.history.pushState(state, '', searchURL)
+    //   }
+    // }
   },
   mounted() {},
   created() {
-    this.loadFormFromUri()
-    if (this.form) {
+    this.loadFormTag()
+    this.loadFormData()
+  },
+  methods: {
+    loadFormTag() {
+      // URI: ?form=form_name
+      this.formTag = this.$route.query && this.$route.query.form ? this.$route.query.form : this.form
+    },
+    loadFormData() {
       fetch("/cfg/service_desk.yml")
         .then((response) => response.text())
         .then((data) => {
@@ -52,12 +59,6 @@ export default {
 
           this.dialog = true;
         });
-    }
-  },
-  methods: {
-    loadFormFromUri() {
-      // open=form_name
-      this.form = this.$route.query && this.$route.query.open ? this.$route.query.open : null
     },
   },
 };
@@ -67,7 +68,7 @@ export default {
   <section v-if="showForm">
     <ServiceDesk
       v-model="dialog"
-      :ref="form"
+      :ref="formTag"
       :title="getData['title']"
       :requirements="getData['requirements']"
       :fields="getData['fields']"
