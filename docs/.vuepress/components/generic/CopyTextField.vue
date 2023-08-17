@@ -18,6 +18,7 @@ export default {
     placeholder: { type: String, default: null },
     prefix: { type: String, default: null },
     suffix: { type: String, default: null },
+    prependInnerIcon: { type: String, default: null },
   },
   data() {
     return {}
@@ -49,6 +50,7 @@ export default {
     persistent-placeholder
     :prefix="prefix"
     :suffix="suffix"
+    :prepend-inner-icon="prependInnerIcon"
     outlined
     dense
     readonly

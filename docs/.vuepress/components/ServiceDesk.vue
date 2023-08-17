@@ -6,7 +6,6 @@ import {
   VCol,
   VRow,
   VTextField,
-  VTextarea,
   VSelect,
   VAutocomplete,
   VIcon,
@@ -34,7 +33,6 @@ export default {
     VCol,
     VRow,
     VTextField,
-    VTextarea,
     VSelect,
     VAutocomplete,
     VIcon,
@@ -51,6 +49,8 @@ export default {
     VExpansionPanels,
     VExpansionPanelHeader,
     VExpansionPanelContent,
+    CopyTextField: () => import('./generic/CopyTextField.vue'),
+    CopyTextArea: () => import('./generic/CopyTextArea.vue'),
   },
   emits: [
     'input',  // used to update value prop assigned from parent using v-model
@@ -79,6 +79,7 @@ export default {
         subject: null,
         body: null,
       },
+      loadingEmailButtons: true,
       sendClicked: false,
       finalizeClicked: false,
       panel: 0,
@@ -119,6 +120,7 @@ export default {
   mounted() {},
   created() {
     this.panel = 0;
+    this.loadingEmailButtons = true;
     this.subjectTemplate = this.template ? this.template.subject : null;
     this.bodyTemplate = this.template ? this.template.body : null;
     var formFields = []
@@ -160,8 +162,12 @@ export default {
       this.panel = 0;
       this.$emit('input', false);
     },
+    activateSendButtons() {
+      this.loadingEmailButtons = false
+    },
     submit() {
-      this.panel = 2;
+      this.panel = 2
+      setTimeout(this.activateSendButtons, 1200)
     },
     review() {
       this.finalizeClicked = true;
@@ -388,43 +394,37 @@ export default {
                 <v-expansion-panel-content>
                   <v-row justify="center">
                     <v-col cols="10">
-                      <v-text-field
+                      <CopyTextField
                         :value="recipient"
                         label="Email recipient (TO)"
                         class="py-2"
-                        outlined
-                        readonly
-                        dense
-                        hide-details
-                        @focus="$event.target.select()"
-                      ></v-text-field>
-                      <v-text-field
-                        v-model.trim="messageSubject"
+                        prepend-inner-icon="mail"
+                      />
+                      <CopyTextField
+                        :value="messageSubject"
                         label="Email subject"
                         class="py-2"
-                        outlined
-                        readonly
-                        dense
-                        hide-details
-                        @focus="$event.target.select()"
-                      ></v-text-field>
-                      <v-textarea
-                        v-model.trim="messageBody"
+                      />
+                      <CopyTextArea
+                        :value="messageBody"
                         label="Body"
                         class="py-2"
-                        outlined
-                        readonly
-                        rows="13"
-                        hide-details
-                        @focus="$event.target.select()"
-                      ></v-textarea>
+                        rows="8"
+                      />
                     </v-col>
                   </v-row>
+
+                  <!-- Attachments reminder -->
                   <v-row v-if="attachments && attachments.length > 0" justify="center">
-                    <v-col class="pb-0 pt-0" cols="10" dense>
-                      <b><p class="mb-2">Remember to attach these documents once you are redirected to your email client:</p></b>
+                    <v-col class="pb-0 pt-0 px-4" cols="10" dense>
+                      <b><p class="mb-2">Remember to attach these documents in the email request:</p></b>
                     </v-col>
-                    <v-col class="pb-0 pt-0" cols="10" dense>
+                  </v-row>
+                  <v-row v-if="attachments && attachments.length > 0" class="mb-6" justify="center">
+                    <v-col class="pb-0 pt-0" cols="1" dense>
+                      <v-icon>attach_file</v-icon>
+                    </v-col>
+                    <v-col class="pb-0 pt-0" cols="9" dense>
                       <ul>
                         <li v-for="item in attachments" class="pb-0 pt-0" :key="item.key" dense>
                           <p class="mb-2" v-html="item"></p>
@@ -432,14 +432,15 @@ export default {
                       </ul>
                     </v-col>
                   </v-row>
+
                   <v-row justify="center">
                     <v-col cols="4">
-                      <v-btn color="success" block @click="actionSend">
+                      <v-btn color="success" block :loading="loadingEmailButtons" :disabled="loadingEmailButtons" @click="actionSend">
                         Open in Email Client
                       </v-btn>
                     </v-col>
                     <v-col cols="4">
-                      <v-btn color="primary" block @click="actionSendOutlookPopup">
+                      <v-btn color="primary" block :loading="loadingEmailButtons" :disabled="loadingEmailButtons" @click="actionSendOutlookPopup">
                         Open in Outlook Web
                       </v-btn>
                     </v-col>
@@ -459,7 +460,7 @@ export default {
                   <v-row justify="center">
                     <v-col cols="10"> </v-col>
                   </v-row>
-                  <v-row justify="center">
+                  <v-row class="mb-6" justify="center">
                     <v-col cols="10">
                       <p class="text-center body-1">
                         Now your Email client should open and you can follow up
@@ -475,6 +476,28 @@ export default {
                       </p>
                     </v-col>
                   </v-row>
+
+                  <!-- Attachments reminder -->
+                  <v-row v-if="attachments && attachments.length > 0" class="mb-6" justify="center">
+                    <v-col class="pb-0 pt-0 px-4" cols="1" dense>
+                      <v-col class="pb-0 pt-0" cols="1" dense>
+                        <v-icon>attach_file</v-icon>
+                      </v-col>
+                    </v-col>
+                    <v-col class="pb-0 pt-0 px-4" cols="9" dense>
+                      <v-row>
+                        <b><p class="mb-2">Remember to attach these documents in the email request:</p></b>
+                      </v-row>
+                      <v-row>
+                        <ul>
+                          <li v-for="item in attachments" class="pb-0 pt-0" :key="item.key" dense>
+                            <p class="mb-2" v-html="item"></p>
+                          </li>
+                        </ul>
+                      </v-row>
+                    </v-col>
+                  </v-row>
+
                 </v-expansion-panel-content>
               </v-expansion-panel>
             </v-expansion-panels>
