@@ -810,8 +810,8 @@ export default {
             </v-list-item>
             <v-list-item v-if="servicedesk">
               <v-row class="px-2" align="center" justify="space-around">
-                <v-col v-if="pdfDownloadClicked" class="px-4 mt-4" cols="12">
-                  Make sure to attach <b>signed agreement file</b> to your Service desk email.
+                <v-col v-if="pdfDownloadClicked" class="px-4 mt-6" cols="12">
+                  <v-icon>attach_file</v-icon> Make sure to attach <b>signed agreement file (.pdf)</b> to your email request.
                 </v-col>
                 <v-col cols="12">
                   <v-btn

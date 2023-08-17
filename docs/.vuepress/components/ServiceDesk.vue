@@ -421,7 +421,7 @@ export default {
                     </v-col>
                   </v-row>
                   <v-row v-if="attachments && attachments.length > 0" class="mb-6" justify="center">
-                    <v-col class="pb-0 pt-0" cols="1" dense>
+                    <v-col class="pb-0 pt-0" cols="1" align="center" dense>
                       <v-icon>attach_file</v-icon>
                     </v-col>
                     <v-col class="pb-0 pt-0" cols="9" dense>
@@ -479,10 +479,8 @@ export default {
 
                   <!-- Attachments reminder -->
                   <v-row v-if="attachments && attachments.length > 0" class="mb-6" justify="center">
-                    <v-col class="pb-0 pt-0 px-4" cols="1" dense>
-                      <v-col class="pb-0 pt-0" cols="1" dense>
-                        <v-icon>attach_file</v-icon>
-                      </v-col>
+                    <v-col class="pb-0 pt-0 px-4" cols="1" align="center" dense>
+                      <v-icon>attach_file</v-icon>
                     </v-col>
                     <v-col class="pb-0 pt-0 px-4" cols="9" dense>
                       <v-row>
