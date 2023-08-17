@@ -1,7 +1,7 @@
 ---
-title: Sign agreement
-category: Administer science
-permalink: /administer-science/sign-agreement/
+title: HUNT Cloud | Service order
+category: HUNT Cloud
+permalink: /-/service-order/
 # sidebarDepth: 0
 pageClass: custom-page-class
 sidebar: false
@@ -14,7 +14,7 @@ description: null
 footerHtml: false
 ---
 
-<!-- Local testing with direct URL: http://localhost:8080/administer-science/sign-agreement/ -->
+<!-- Local testing with direct URL: http://localhost:8080/-/service-order/?open= -->
 
 <AgreementForm />
 

@@ -372,7 +372,7 @@ Head over to the [data space orders](/administer-science/service-desk/data-space
 <div class="home" style="padding: 0px">
     <div class="hero">
         <p class="action">
-            <a href="/administer-science/sign-agreement/?open=internal_kista">
+            <a href="/-/service-order/?open=internal_kista">
                 <input
                     value="Prepare internal kista order"
                     class="nav-link external action-button"
