@@ -13,9 +13,8 @@ readingTime: null
 tagline: null
 description: null
 footerHtml: false
+# Local testing with direct URL: http://localhost:8080/-/service-desk/?open=request_internal_kista
 ---
-
-<!-- Local testing with direct URL: http://localhost:8080/-/service-desk/?open=request_internal_kista -->
 
 <SDFullscreen />
 
