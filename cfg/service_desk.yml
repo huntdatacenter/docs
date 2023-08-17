@@ -1234,7 +1234,7 @@ request_internal_kista:
     "<b>Cost:</b> Included in your lab subscription.",
   ]
   attachments: [
-    "Signed agreement file (.pdf)"
+    "Signed internal kista order file (.pdf)",
   ]
 
 
