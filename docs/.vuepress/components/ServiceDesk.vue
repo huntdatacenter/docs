@@ -62,6 +62,7 @@ export default {
     fields: { type: Array, default: null },
     template: { type: Object, default: null },
     requirements: { type: Array, default: null },
+    attachments: { type: Array, default: null },
     recipient: {
       type: String,
       default: "cloud.support+hunt-cloud-request@hunt.ntnu.no",
@@ -417,6 +418,18 @@ export default {
                         hide-details
                         @focus="$event.target.select()"
                       ></v-textarea>
+                    </v-col>
+                  </v-row>
+                  <v-row v-if="attachments && attachments.length > 0" justify="center">
+                    <v-col class="pb-0 pt-0" cols="10" dense>
+                      <b><p class="mb-2">Remember to attach these documents once you are redirected to your email client:</p></b>
+                    </v-col>
+                    <v-col class="pb-0 pt-0" cols="10" dense>
+                      <ul>
+                        <li v-for="item in attachments" class="pb-0 pt-0" :key="item.key" dense>
+                          <p class="mb-2" v-html="item"></p>
+                        </li>
+                      </ul>
                     </v-col>
                   </v-row>
                   <v-row justify="center">

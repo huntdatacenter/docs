@@ -16,6 +16,7 @@ general_lab_user_request:
     "<b>Who can order:</b> Lab users.",
     "<b>Expected response time:</b> Days.",
   ]
+  attachments: []
 
 general_lab_request:
   title: "General request"
@@ -33,6 +34,7 @@ general_lab_request:
     "<b>Who can order:</b> Lab leaders, coordinators, and users.",
     "<b>Expected response time:</b> Days.",
   ]
+  attachments: []
 
 cost_query:
   title: "Ask about cost"
@@ -53,6 +55,7 @@ cost_query:
     "<b>Who can order:</b> Data space leaders, Data space financial administrators, Lab leaders and Lab coordinators.",
     "<b>Expected delivery time:</b> One week.",
   ]
+  attachments: []
 
 ### Data Space orders
 request_new_lab:
@@ -145,6 +148,7 @@ request_new_lab:
     # "<b>Next step:</b> <a href='/administer-science/service-desk/lab-orders/#add-a-new-lab-user' target='_blank'>Add your first lab users</a>.",
     "<b>Cost:</b> One lab subscription as specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
   ]
+  attachments: []
 
 
 request_lab_deletion:
@@ -182,6 +186,7 @@ request_lab_deletion:
     "<b>Expected delivery:</b> Countersignature from HUNT Cloud on your lab deletion order confirming that lab data, including online and offline duplicate copies, are deleted.",
     "<b>Cost:</b> Included in your lab subscription.",
   ]
+  attachments: []
 
 
 request_external_import_kista:
@@ -211,6 +216,7 @@ request_external_import_kista:
     "<b>Expected delivery:</b> Kista access information sent to the lab user that will import the data.",
     "<b>Cost:</b> Included in your data space subscription.",
   ]
+  attachments: []
 
 
 request_external_export_kista:
@@ -240,6 +246,7 @@ request_external_export_kista:
     "<b>Expected delivery:</b> Access information sent to the lab user that will make data available for export.",
     "<b>Cost:</b> Included in your data space subscription.",
   ]
+  attachments: []
 
 
 request_network_opening:
@@ -270,6 +277,7 @@ request_network_opening:
     "<b>Expected delivery:</b> Network opening communicated in your Slack lab channel.",
     "<b>Cost:</b> Included in your data space subscription.",
   ]
+  attachments: []
 
 
 update_data_space_coordinator_role:
@@ -322,6 +330,7 @@ update_data_space_coordinator_role:
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b>  Included in your data space subscription.",
   ]
+  attachments: []
 
 
 request_lab_leader_role:
@@ -348,6 +357,7 @@ request_lab_leader_role:
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your data space subscription.",
   ]
+  attachments: []
 
 
 request_new_invoice_profile:
@@ -375,6 +385,7 @@ request_new_invoice_profile:
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your data space subscription.",
   ]
+  attachments: []
 
 
 request_update_of_existing_invoice:
@@ -402,6 +413,7 @@ request_update_of_existing_invoice:
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your data space subscription.",
   ]
+  attachments: []
 
 ### Data Controller Orders
 
@@ -432,6 +444,7 @@ request_new_dp_agreement:
     "<b>Expected delivery time:</b> One week.",
     "<b>Cost:</b> There is no direct cost for data controllers establishing data processor agreements. Resource consumptions are billed to attached data spaces and labs.",
   ]
+  attachments: []
 
 
 request_new_service_center:
@@ -462,6 +475,7 @@ request_new_service_center:
     "<b>Cost:</b> There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
 
   ]
+  attachments: []
 
 
 request__dp_agreement_version_upgrade:
@@ -490,6 +504,7 @@ request__dp_agreement_version_upgrade:
     "<b>Cost:</b> There is no direct cost upgrading data processor agreements.",
 
   ]
+  attachments: []
 
 
 ### Lab orders
@@ -522,6 +537,7 @@ request_access_new_user:
     # "<b>Next step:</b> <a href='/getting-started/' target='_blank'>Prepare your key transfer</a>.",
     "<b>Cost:</b> Included in your lab subscription.",
   ]
+  attachments: []
 
 
 request_lab_user_deactivation:
@@ -553,6 +569,7 @@ request_lab_user_deactivation:
     "<b>Expected delivery:</b> Confirmation on email that lab access is deactivated.",
     "<b>Cost:</b> Included in your lab subscription.",
   ]
+  attachments: []
 
 
 reactivate_lab_user:
@@ -583,6 +600,7 @@ reactivate_lab_user:
     # "<b>Next step:</b> <a href='/getting-started/' target='_blank'>Prepare your key transfer</a>.",
     "<b>Cost:</b> Included in your lab subscription.",
   ]
+  attachments: []
 
 
 request_renew_user_agreement:
@@ -612,6 +630,7 @@ request_renew_user_agreement:
     "<b>Expected delivery:</b> Email acknowledgment.",
     "<b>Cost:</b> Included in your lab subscription.",
   ]
+  attachments: []
 
 
 request_machine_size_update:
@@ -730,6 +749,7 @@ request_machine_size_update:
     "<b>Requirement:</b> The procedure require a machine restart that needs to be scheduled with your lab users.",
     "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
   ]
+  attachments: []
 
 
 request_new_cpu:
@@ -813,6 +833,7 @@ request_new_cpu:
     "<b>Expected delivery:</b> New lab machine accessible from your home machine.",
     "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
   ]
+  attachments: []
 
 
 request_new_gpu:
@@ -911,6 +932,7 @@ request_new_gpu:
     "<b>Expected delivery:</b> New lab machine with GPU accelerator accessible from your home machine.",
     "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
   ]
+  attachments: []
 
 
 request_blue_fleet:
@@ -946,6 +968,7 @@ request_blue_fleet:
     "<b>Expected delivery:</b> Multiple blue machines accessible from your home machine.",
     "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
   ]
+  attachments: []
 
 
 request_machine_shelving:
@@ -974,6 +997,7 @@ request_machine_shelving:
     "<b>Expected response time:</b> Days.",
     "<b>Cost:</b> No compute cost during shelved time.",
   ]
+  attachments: []
 
 
 request_machine_unshelving:
@@ -1004,6 +1028,7 @@ request_machine_unshelving:
     "<b>Cost:</b> During unshelving a machine will be started with same <a href='/services/machine-types/#compute-optimized-machine-types' target='_blank'>machine type</a> as before shelving",
 
   ]
+  attachments: []
 
 
 request_machine_deletion:
@@ -1035,6 +1060,7 @@ request_machine_deletion:
     "<b>Expected response time:</b> Days.",
     "<b>Cost:</b> No additional costs.",
   ]
+  attachments: []
 
 
 request_expand_existing_volume:
@@ -1084,6 +1110,7 @@ request_expand_existing_volume:
     "<b>Expected delivery:</b> Increased storage capacity.",
     "<b>Cost:</b> New storage is included in your total storage plan.",
   ]
+  attachments: []
 
 
 request_new_storage_volume:
@@ -1129,6 +1156,7 @@ request_new_storage_volume:
     "<b>Expected delivery:</b> New storage volume attached (mounted) to your lab machine.",
     "<b>Cost:</b> New storage is included in your total storage plan.",
   ]
+  attachments: []
 
 
 request_volume_deletion:
@@ -1173,6 +1201,7 @@ request_volume_deletion:
     "<b>Expected response time:</b> Days",
     "<b>Cost:</b> No additional costs.",
   ]
+  attachments: []
 
 
 request_internal_kista:
@@ -1203,6 +1232,9 @@ request_internal_kista:
     "<b>Expected response time:</b> Days.",
     "<b>Expected delivery:</b> Access information communicated in your Slack lab channel.",
     "<b>Cost:</b> Included in your lab subscription.",
+  ]
+  attachments: [
+    "Signed agreement file (.pdf)"
   ]
 
 
@@ -1248,6 +1280,7 @@ request_coordinator_update:
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your lab subscription.",
   ]
+  attachments: []
 
 
 ### Service center
@@ -1276,6 +1309,7 @@ new_data_space:
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
   ]
+  attachments: []
 
 
 ### User orders
@@ -1321,6 +1355,7 @@ request_workbench_access:
     # "<b>Next step:</b> <a href='/guides/workbench-request/' target='_blank'>Prepare your key transfer</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
+  attachments: []
 
 
 request_workbench_reissue:
@@ -1349,6 +1384,7 @@ request_workbench_reissue:
     # "<b>Next step:</b> <a href='/guides/workbench-reissue-certificate/' target='_blank'>Guide on Workbench reissue</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
+  attachments: []
 
 
 request_ssh_pass_reset:
@@ -1377,6 +1413,7 @@ request_ssh_pass_reset:
     # "<b>Next step:</b> <a href='/guides/configure-ssh/' target='_blank'> Guide on the passphrase reset</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
+  attachments: []
 
 
 request_ssh_config:
@@ -1403,6 +1440,7 @@ request_ssh_config:
     # "<b>Next step:</b> <a href='/guides/configure-ssh/' target='_blank'>Guide on the passphrase reset<a/>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
+  attachments: []
 
 request_vpn_link:
   title: "Request VPN access link opening"
@@ -1446,6 +1484,7 @@ request_vpn_link:
     "<b>Expected delivery:</b> Opening communicated on email.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
+  attachments: []
 
 
 request_vpn_reset:
@@ -1476,6 +1515,7 @@ request_vpn_reset:
     # "<b>Next step:</b> <a href='/guides/vpn-certificate-reset/' target='_blank'>Guide on the VPN reset</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
+  attachments: []
 
 
 request_google_auth:
@@ -1509,6 +1549,7 @@ request_google_auth:
     # "<b>Next step:</b> <a href='/guides/google-authenticator-reset/' target='_blank'>Guide on the key reset</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
+  attachments: []
 
 
 request_mobaxterm_file:
@@ -1539,6 +1580,7 @@ request_mobaxterm_file:
     # "<b>Next step:</b> <a href='/do-science/tools/technical/mobaxterm/' target='_blank'>MobaXterm configuration guide</a>.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
+  attachments: []
 
 
 request_update_lagtun_rep:
@@ -1567,6 +1609,7 @@ request_update_lagtun_rep:
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> None.",
   ]
+  attachments: []
 
 
 request_update_data_rep:
@@ -1595,6 +1638,7 @@ request_update_data_rep:
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> None.",
   ]
+  attachments: []
 
 request_tape_archive:
   title: "Order tape archive"
@@ -1618,6 +1662,7 @@ request_tape_archive:
     "<b>Expected response time:</b> Days.",
     "<b>Cost:</b> Can be found is costs section.",
   ]
+  attachments: []
 
 
 request_lab_access_link:
@@ -1640,6 +1685,7 @@ request_lab_access_link:
     "<b>Expected response time:</b> Days.",
     "<b>Cost:</b> Included in the lab subscription.",
   ]
+  attachments: []
 
 request_template:
   title: "Button title text"
@@ -1649,3 +1695,4 @@ request_template:
       Sample text
   fields: []
   requirements: []
+  attachments: []

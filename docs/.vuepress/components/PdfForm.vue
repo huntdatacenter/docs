@@ -839,6 +839,7 @@ export default {
           :ref="servicedesk"
           :title="getData['title']"
           :requirements="getData['requirements']"
+          :attachments="getData['attachments']"
           :fields="getData['fields']"
           :template="getData['template']"
           :recipient="getRecipient"
