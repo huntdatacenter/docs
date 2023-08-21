@@ -22,7 +22,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 ::: tip For NTNU users
 
-You can access your lab over the Cisco Anyconnect VPN from NTNU worldwide on Windows and Linux: (1) Connect the NTNU VPN using this address: **`vpn.ntnu.no`**, (2) connect the HUNT Cloud VPN, (3) connect to your lab, and (4) do cool science!
+You can access your lab over the Cisco AnyConnect VPN from NTNU worldwide on Windows and Linux: (1) Connect the NTNU VPN using this address: **`vpn.ntnu.no`**, (2) connect the HUNT Cloud VPN, (3) connect to your lab, and (4) do cool science!
 
 :::
 
@@ -49,7 +49,7 @@ Windows users needs administrator rights on their local computer to successfully
 
 ### Lost or missing VPN passphrase
 
-Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/do-science/lab-access/configure-vpn/#_2-2-setup-the-vpn-profile)  if this happens. Order your VPN certificate reset in our [service desk](/do-science/service-desk/#vpn-certificate-reset).
+Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password Keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/do-science/lab-access/configure-vpn/#_2-2-setup-the-vpn-profile)  if this happens. Order your VPN certificate reset in our [service desk](/do-science/service-desk/#vpn-certificate-reset).
 
 
 
@@ -69,7 +69,7 @@ NTNU users on Windows and Linux operating systems may connect to both NTNU VPN a
 
 ::: details For UiB users
 
-You cannot access your HUNT Cloud lab while using the default Cisco Anyconnect VPN from UiB. In order to connect to your lab with the UiB VPN activated, use split tunneling as described [here](https://hjelp.uib.no/tas/public/ssp/content/search?q=KI%200881). Using the split tunneling will allow you to access UiB services, e.g. mail, while connected to your lab.
+You cannot access your HUNT Cloud lab while using the default Cisco AnyConnect VPN from UiB. In order to connect to your lab with the UiB VPN activated, use split tunneling as described [here](https://hjelp.uib.no/tas/public/ssp/content/search?q=KI%200881). Using the split tunneling will allow you to access UiB services, e.g. mail, while connected to your lab.
 
 :::
 
@@ -113,7 +113,7 @@ Unfortunately, you do need a phone to connect to your lab. You will use this bot
 
 ### Phone without internet connection
 
-You will need to connect your phone to the internet to install Signal, Google authenticator and to receive your keys, either over wifi or roaming.
+You will need to connect your phone to the internet to install Signal, Google authenticator and to receive your keys, either over WiFi or roaming.
 
 ### Signal is unavailable for my phone
 
@@ -127,7 +127,7 @@ The most common causes of **`Connection timed out`** responses are: (1) that you
 
 ### Forgotten passwords
 
-After the initial onboarding, you will need your passphrase to install software using the **`sudo apt install <software>`** command and when you connect to your workbench. If you have forgotten your passphrase, worry not. Order a SSH passphrase reset in our [service desk](/do-science/service-desk/#ssh-passphrase-reset). If you need to install software sooner thatn we can ship, we recomment that you try [Conda](/do-science/tools/analytical/conda/) or ask some of your lab colleagues to install the software.
+After the initial onboarding, you will need your passphrase to install software using the **`sudo apt install <software>`** command and when you connect to your workbench. If you have forgotten your passphrase, worry not. Order a SSH passphrase reset in our [service desk](/do-science/service-desk/#ssh-passphrase-reset). If you need to install software sooner than we can ship, we recommend that you try [Conda](/do-science/tools/analytical/conda/) or ask some of your lab colleagues to install the software.
 
 ### Broken connection
 

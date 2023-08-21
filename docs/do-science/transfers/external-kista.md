@@ -107,7 +107,7 @@ You should now have a SSH key pair consisting of the following files:
 
 ::: details How to generate a RSA SSH key pair on OS X, macOS and Ubuntu
 
-**1. Generate a new dedicated public/private rsa key pair.**
+**1. Generate a new dedicated public/private RSA key pair.**
 
 ```bash 
 cd ~/.ssh
@@ -137,7 +137,7 @@ Enter passphrase (empty for no passphrase):
 
 We recommend that you add a passphrase on your key. You will use this passphrase when you use the SSH key during the kista connection, so please make sure to remember it or store it in a suitable password manager.
 
-The key shoul not be generated with the expected output: 
+The key should not be generated with the expected output: 
 
 ```
 Your identification has been saved in ekista
@@ -179,12 +179,12 @@ We accept the following public key types:
 
 **2. Share public SSH key with HUNT Cloud**
 
-After generating the SSH key pair, please share the **public key** (not the private one) with us. Send your new public key (`ekista.pub`) as an email attachement to your HUNT Cloud contact that can forward your key to us as an attachment in their service order.
+After generating the SSH key pair, please share the **public key** (not the private one) with us. Send your new public key (`ekista.pub`) as an email attachment to your HUNT Cloud contact that can forward your key to us as an attachment in their service order.
 
 
 ### SFTP client
 
-You will need a SFTP client to connect and transfer data to the external kista. For Windows, we recommnet the WinSCP client. OS X, macOS and Ubuntu can use built in command line tools. 
+You will need a SFTP client to connect and transfer data to the external kista. For Windows, we recommend the WinSCP client. OS X, macOS and Ubuntu can use built in command line tools. 
 
 In addition to the SFTP software, you will need the external kista transfer information shipped by HUNT Cloud on the time of deployment to be able to connect.
 
@@ -266,7 +266,7 @@ Below is a guide on how to connect using the WinSCP SFTP client on Windows.
 
 ::: details How to connect to an external kista on OS X, macOS and Ubuntu
 
-You can connect to the kista from your local computer using the built in sftp tool.
+You can connect to the kista from your local computer using the built in SFTP tool.
 
 ```bash
 # -- principal example

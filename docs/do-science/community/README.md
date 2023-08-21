@@ -18,6 +18,6 @@ We aim to enable scientists on all levels with a place to say hello to each othe
 
 ## Labting
 
-## Digital café
+## Digital cafe
 
 

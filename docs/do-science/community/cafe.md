@@ -1,5 +1,5 @@
 ---
-title: Community café
+title: Community cafe
 category: Community
 permalink: /do-science/community/digital-cafe
 sidebarDepth: 1
@@ -8,15 +8,15 @@ tags:
 description: This page holds information on communication within the HUNT Cloud community.
 ---
 
-# Community café
+# Community cafe
 
-**All lab users are invited to join our community café that is currently located at Slack. We have arranged tables both for your lab team and for your scientific interests.** 
+**All lab users are invited to join our community cafe that is currently located at Slack. We have arranged tables both for your lab team and for your scientific interests.** 
 
 [[toc]]
 
 ## Invitations
 
-Scientists and scientific administrators in HUNT Cloud gets an invitation to our community café as part of the onboarding process. The invitation remains as long as you have an active user agreement.
+Scientists and scientific administrators in HUNT Cloud gets an invitation to our community cafe as part of the onboarding process. The invitation remains as long as you have an active user agreement.
 
 ::: tip Looking for a new invitation? 
 
@@ -27,18 +27,18 @@ Scientists and scientific administrators in HUNT Cloud gets an invitation to our
 
 ## Location
 
-Our community café is located at [Slack](https://slack.com/) under the name space [hunt-genes.slack.com](hunt-genes.slack.com).
+Our community cafe is located at [Slack](https://slack.com/) under the name space [hunt-genes.slack.com](hunt-genes.slack.com).
 
 
 ## Pre-arranged tables
 
-You will see two pre-arranged tables (channels) when you join the café, our community-table and your lab-table: 
+You will see two pre-arranged tables (channels) when you join the cafe, our community-table and your lab-table: 
 
 ### community-table
 
 `#cloud-community` is our main community table where all lab users, lab coordinators and data space coordinators gets invited by default. 
 
-We use this table for announcements that affect multiple data spaces and labs, such as response information when services gets affeted, information on Tingweeks, new products and similar. 
+We use this table for announcements that affect multiple data spaces and labs, such as response information when services gets affected, information on Tingweeks, new products and similar. 
 
 You are welcome to use this table to celebrate scientific achievements from your team, announce scientific positions, requests collaborations and similar.
 
@@ -52,7 +52,7 @@ You may use this table for all kinds of day-to-day activities in your lab, such 
 
 ### dataspace-table
 
-Scientific administrators from data spaces on the ORANGE and BLUE subscription level are invited to a table dedicated for their administrative data space team (`dataspace-<yourdataspacename>`). We use this table for dialogues and coordination of adminsitrative activities that span labs inside the data space portfolio.
+Scientific administrators from data spaces on the ORANGE and BLUE subscription level are invited to a table dedicated for their administrative data space team (`dataspace-<yourdataspacename>`). We use this table for dialogues and coordination of administrative activities that span labs inside the data space portfolio.
 
 ## Optional tables
 
@@ -108,7 +108,7 @@ We are truly proud of the warm and welcoming tone in our community discussion. N
 
 ::: warning
 
-Our community café is aimed at general communication. Do -not- share study data. 
+Our community cafe is aimed at general communication. Do -not- share study data. 
 
 ::: 
 
@@ -118,7 +118,7 @@ Slack holds the option of both chat and video communication (`Huddle`). You are 
 
 ## Security and privacy
 
-Data in HUNT Cloud Community Café is covered by controls in the data processor agreement that we hold with the organization that controls the data in your lab. 
+Data in HUNT Cloud Community Cafe is covered by controls in the data processor agreement that we hold with the organization that controls the data in your lab. 
 
 The Slack subscription is part of HUNT Cloud / NTNU's Slack subscription. All communication data is stored in EU in accordance with GDPR, and Slack Inc. is listed as a subcontractor in our [subcontractors](/subcontractors/) list.
 

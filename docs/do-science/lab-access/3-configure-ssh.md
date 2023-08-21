@@ -21,7 +21,7 @@ You will first configure a machine used for security purposes that we call **`en
 
 ## 3.1 Identify required info
 
-Open the **`ssh-config.txt`** file that you collected in Step 1 using your favourite text editor.
+Open the **`ssh-config.txt`** file that you collected in Step 1 using your favorite text editor.
 
 This file contains the necessary information for your SSH configuration. Take note of your **`lab-name`**, your **`lab-IP`** and your **`username`**.
 
@@ -87,7 +87,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
    ![putty step 3.3.3](./images/putty_3.3.3.png)
 
 4. Type in your **`SSH temporary key`** collected in Step 1 in the terminal window that appear when asked for a password and hit enter. You will not see anything on the screen when you type your password.
-   > NOTE: You **CANNOT** paste with ctrl + v in Putty.
+   > NOTE: You **CANNOT** paste with Ctrl + v in Putty.
 
    ![putty step 3.3.4](./images/putty_3.3.4.png)
 
@@ -117,7 +117,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 3. You should then be prompted to enter a password **`<your-username>@<your-lab-IP>'s password:`**
 
-4. Enter your **`SSH temporary key`** collected in Step 1 _two_ times. Pasting with ctrl + v does not work in Putty.
+4. Enter your **`SSH temporary key`** collected in Step 1 _two_ times. Pasting with Ctrl + v does not work in Putty.
 
 5. Enter your new **`passphrase`** and retype for verification. You will be kicked off the entry machine by completion.
 
@@ -351,7 +351,7 @@ Time for coffee!
 
 ### Authentication token manipulation error
 
-If you are getting `Authentication token manipulation error` make sure you follow advices from Step 3.2 when creating your new passphrase and following steps on changing the passphrase for both entry and home machine.
+If you are getting `Authentication token manipulation error` make sure you follow advises from Step 3.2 when creating your new passphrase and following steps on changing the passphrase for both entry and home machine.
 
 ### Unable to connect with Putty
 

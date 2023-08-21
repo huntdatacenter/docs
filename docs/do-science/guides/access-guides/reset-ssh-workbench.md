@@ -88,7 +88,7 @@ Example:
 
 <img src="./images/workbench_passreset_1.png" width="300px">
 
-3.3 Afterwards, you should be prompted for a passhprase change. Type in your temporary SSH key again, then your new passhprase which you created in previous steps.
+3.3 Afterwards, you should be prompted for a passphrase change. Type in your temporary SSH key again, then your new passphrase which you created in previous steps.
 
 <img src="./images/workbench_passreset_3.png" width="300px">
 

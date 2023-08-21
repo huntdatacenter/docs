@@ -3,7 +3,7 @@ title: Introduction
 category: Do science
 sidebarDepth: 1
 permalink: /do-science/introduction
-description: Introduction to HUNT Cloud's do science documention.
+description: Introduction to HUNT Cloud's do science documentation.
 ---
 
 **Handling of large data values requires trustworthy and predictable structures.**

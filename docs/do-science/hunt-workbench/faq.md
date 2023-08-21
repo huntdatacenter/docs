@@ -51,7 +51,7 @@ Below is an example on how you create a Conda environments with _Python_ and _IP
 ```bash
 mamba create -n <name> 'python~=3.10.*' 'ipykernel'
 ```
-If you have older setup and missing mamba, you can use conda command instead:
+If you have older setup and missing mamba, you can use Conda command instead:
 
 ```bash
 mamba create -n <name> 'python~=3.10.*' 'ipykernel'
@@ -183,13 +183,13 @@ We need to initiate such installation. [Contact us](/contact) on email if you ne
 
 ### Which R version is available in RStudio?
 
-RStudio is configured to use packages installed in the conda environment named **`r-base`**. You can identify your current _R version_ packages in your [Workbench Terminal](/do-science/hunt-workbench/faq/#terminal) following these steps:
+RStudio is configured to use packages installed in the Conda environment named **`r-base`**. You can identify your current _R version_ packages in your [Workbench Terminal](/do-science/hunt-workbench/faq/#terminal) following these steps:
 
 1. Open your Workbench Terminal.
 
 ![workbench_terminal.png](./images/workbench_terminal.png)
 
-2. List the packages in your r-base conda environment.
+2. List the packages in your r-base Conda environment.
 
 ```bash
 conda list -n r-base | grep r-base
@@ -197,7 +197,7 @@ conda list -n r-base | grep r-base
 
 ### Which R packages are preinstalled?
 
-Currently, we install your **`r-base`** environment with the following conda packages:
+Currently, we install your **`r-base`** environment with the following Conda packages:
 
 ```bash
 - r-base
@@ -209,7 +209,7 @@ Currently, we install your **`r-base`** environment with the following conda pac
 - r-tidyverse
 ```
 
-If you have older setup and missing some of these packages you can follow the "_How do I install additional R packages_"-answer below to add them to your conda environment.
+If you have older setup and missing some of these packages you can follow the "_How do I install additional R packages_"-answer below to add them to your Conda environment.
 
 ### How do I install additional R packages?
 
@@ -289,7 +289,7 @@ Sometimes you may get errors about the **`GLIBCXX`** library not being found and
 mamba create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
 ```
 
-If you have older setup without mamba, use conda command instead:
+If you have older setup without mamba, use Conda command instead:
 ```bash
 conda create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
 ```

@@ -24,7 +24,7 @@ The following steps will help you to invest time in your lab setup, all so you c
 
 ::: tip Connecting from outside Norway?
 
-If you are conneting from a location outside Norway, [click here](/do-science/service-desk/#vpn-access-list) to add your IP to our VPN access list.
+If you are connecting from a location outside Norway, [click here](/do-science/service-desk/#vpn-access-list) to add your IP to our VPN access list.
 
 :::
 

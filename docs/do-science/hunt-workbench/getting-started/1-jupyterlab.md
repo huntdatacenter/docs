@@ -38,21 +38,21 @@ For this to work efficiently you will need to know how to check your resource us
 
 ### Monitoring resources
 
-One way to monitor resources is using Glances. We have included [Glances proxy extension](https://github.com/huntdatacenter/jupyter-glances-proxy) in Jupyterlab installation.
+One way to monitor resources is using Glances. We have included [Glances proxy extension](https://github.com/huntdatacenter/jupyter-glances-proxy) in JupyterLab installation.
 
-You can also you Terminal app inside your Workbench and run standard commands like [Htop](https://docs.hdc.ntnu.no/do-science/tools/technical/htop/) and [others](/do-science/faq/compute/#can-i-monitor-my-resource-consumption)
+You can also you Terminal app inside your Workbench and run standard commands like [HTOP](https://docs.hdc.ntnu.no/do-science/tools/technical/htop/) and [others](/do-science/faq/compute/#can-i-monitor-my-resource-consumption)
 
 For checking storage capacity and how much data are written on disk have a look at [df -h --type=ext4](/do-science/faq/storage/#resources) and [ncdu](/do-science/tools/technical/ncdu/).
 
 ### Managing resources
 
-Read more in the official JupyterLab guide about [Managing Kernels and Terminals](https://jupyterlab.readthedocs.io/en/latest/user/running.html) to find out about Kernels in Jupyterlab and how you can stop them to free up RAM (operational memory) once you do not use them.
+Read more in the official JupyterLab guide about [Managing Kernels and Terminals](https://jupyterlab.readthedocs.io/en/latest/user/running.html) to find out about Kernels in JupyterLab and how you can stop them to free up RAM (operational memory) once you do not use them.
 
 ### Long running notebooks
 
 If your Jupyter Notebook takes too long to execute (more than VPN session), you should consider running it from terminal. You will also need to use [terminal multiplexers](https://docs.hdc.ntnu.no/do-science/tools/technical/terminal-multiplexers/#tmux) to assure that you can always reconnect to your session.
 
-Activate your conda environment first:
+Activate your Conda environment first:
 
 ```
 conda activate py310

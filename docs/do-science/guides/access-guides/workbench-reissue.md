@@ -12,7 +12,7 @@ description: Guide on how to install a new certificate for your HUNT Workbench.
 
 ::: tip When to use
 
-This guide applys when you have requested a reissue of your expired HUNT Workbench certificate in our do science [service desk](/do-science/service-desk/#hunt-workbench-reissue). 
+This guide apply when you have requested a reissue of your expired HUNT Workbench certificate in our do science [service desk](/do-science/service-desk/#hunt-workbench-reissue). 
 
 :::
 
@@ -52,9 +52,9 @@ This guide applys when you have requested a reissue of your expired HUNT Workben
 
 ::: expander "macOS Ventura 13+" id="macos"
 
-1. Open your system profile config file that you got from Filesender (**`<your_user_name>.mobileconfig`**).
+1. Open your system profile config file that you got from FileSender (**`<your_user_name>.mobileconfig`**).
 
-2. In **`System settings`** open section **`Privacy & Security`**, scroll to the bottom of the page and sellect **`Profiles`**
+2. In **`System settings`** open section **`Privacy & Security`**, scroll to the bottom of the page and select **`Profiles`**
 
    ![macventura1](./images/macventura1.png)
 
@@ -103,7 +103,7 @@ We recommend that you use the [Google Chrome browser](https://www.google.com/chr
 
 1. Open Chrome on your local computer.
 
-2. Open url **`chrome://settings/certificates`** and click the **`Import`** button on the right side of the screen.
+2. Open URL **`chrome://settings/certificates`** and click the **`Import`** button on the right side of the screen.
 
 3. Browse and select your **`.p12`** file on your local computer and enter the **`TLS passphrase`** that you got on Signal.
 

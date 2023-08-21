@@ -14,7 +14,7 @@ description: Guide on the certificate request for your HUNT Workbench.
 
 ::: tip
 
-[Click here](/do-science/hunt-workbench/installation/) for the main HUNT Worbench installation guide.
+[Click here](/do-science/hunt-workbench/installation/) for the main HUNT Workbench installation guide.
 
 :::
 

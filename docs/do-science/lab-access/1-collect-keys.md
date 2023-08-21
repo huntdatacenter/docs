@@ -88,7 +88,7 @@ We will communicate your VPN certificate and SSH configuration over your organiz
 
 ::: tip Decryption guides
 
-Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](/do-science/tools/transfer/7z/#windows), [mac](/do-science/tools/transfer/7z/#mac-os-x), [linux](https://www.google.no/search?q=unpack+7z+linux).
+Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](/do-science/tools/transfer/7z/#windows), [mac](/do-science/tools/transfer/7z/#mac-os-x), [Linux](https://www.google.no/search?q=unpack+7z+linux).
 
 :::
 
@@ -112,7 +112,7 @@ A successful extraction on your local computer should include three (3) files:
 
 ## 1.3 One-time verification codes
 
-You will use one-time verification codes for your system access to HUNT Cloud (VPN). We use Google Authenticator for this purpose. Google Authenticator is a multifactor app for phones that generates one-time verification codes every 30 seconds. We call this the **`verification code`**.
+You will use one-time verification codes for your system access to HUNT Cloud (VPN). We use Google Authenticator for this purpose. Google Authenticator is a multi-factor app for phones that generates one-time verification codes every 30 seconds. We call this the **`verification code`**.
 
 ### 1.3.1 Install Google Authenticator on your phone
 

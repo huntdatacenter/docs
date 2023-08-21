@@ -207,7 +207,7 @@ Poke us on [email](/contact) or in your lab channel in Slack if you have not hea
 
 ::: details Read more
 
-We use your prefilled email to start predefined workflows on our side. The automation do not work if several requests are included per email. Therefore, you will be asked to reship requests that include more than one order.
+We use your pre-filled email to start predefined workflows on our side. The automation do not work if several requests are included per email. Therefore, you will be asked to reship requests that include more than one order.
 
 :::
 

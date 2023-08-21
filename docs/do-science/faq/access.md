@@ -26,7 +26,7 @@ Yes. We allow you to configure several local computers to connect to your lab, f
 
 ### Can I have multiple connections at the same time?
 
-No. For security reasons we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local copmuter. Check our [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/) guide for how to instantly get back to your work when your connect from multiple local computers.
+No. For security reasons we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local computer. Check our [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/) guide for how to instantly get back to your work when your connect from multiple local computers.
 
 ### Can I connect from my private machine?
 
@@ -89,7 +89,7 @@ Your lab leader or lab coordinator will need to send us a [new user agreement](/
 ### What is Lab Access link ? 
 
 Lab access link is our new approach to how we onboard new users and how we instruct you to connect to HUNT Cloud services.
-It comes prefilled with your username and labname information, aallowing you to simply copy-paste customized commands into your terminal and at the same time, inform you about expected outcome.
+It comes pre-filled with your username and labname information, allowing you to simply copy-paste customized commands into your terminal and at the same time, inform you about expected outcome.
 
 
 ### How can I order lab access link ?
@@ -101,7 +101,7 @@ If you cannot find your lab access link or did not receive it, you can order one
 
 ### Can I get access to several labs?
 
-Yes. You can access more than one lab. We encourage data spaces to separate data in labs and bring top expertise into their lab to do analysis there. You will need to send us one user agreement for each lab your want to acces. Lab leaders and lab coordinators may order your access in our [service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
+Yes. You can access more than one lab. We encourage data spaces to separate data in labs and bring top expertise into their lab to do analysis there. You will need to send us one user agreement for each lab your want to access. Lab leaders and lab coordinators may order your access in our [service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
 
 ### How do I get started with my second lab?
 
@@ -130,11 +130,11 @@ You can keep your account as long as you are actively working in your lab. We de
 
 ### Will I loose my data if I get deactivated? 
 
-No, not as long as your lab is active. We will deactivate your account, although we do not delete your data as long as the lab is active. Please note that your lab leader has the same ability to delete, change or share data the lab under their control regardless if you your account is active or deactived. 
+No, not as long as your lab is active. We will deactivate your account, although we do not delete your data as long as the lab is active. Please note that your lab leader has the same ability to delete, change or share data the lab under their control regardless if you your account is active or deactivated. 
 
 ### Can I reactivate my old account?
 
-Yes. Lab leaders and lab coordintors can order reactivations in our [service desk](/administer-science/service-desk/lab-orders/#reactivate-lab-user). Reactivation requires a new user agreement if it is more than two years since your first user agreement was signed. You will need to reconfigure VPN and SSH to get up and running.
+Yes. Lab leaders and lab coordinators can order reactivations in our [service desk](/administer-science/service-desk/lab-orders/#reactivate-lab-user). Reactivation requires a new user agreement if it is more than two years since your first user agreement was signed. You will need to reconfigure VPN and SSH to get up and running.
 
 
 

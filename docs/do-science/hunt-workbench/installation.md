@@ -36,7 +36,7 @@ Allow for **30 minutes** to complete this installation and some playtime in your
 First, let's set up your hosts file on your local computer. This allows you to connect to HUNT Workbench
 in your lab using a URL name, for example **`demolab.lab.hdc.ntnu.no`**, in your web-browser.
 
-Your **`host file record`** consists of IP address of your lab entry machine and your lab host name. You can find it included in your onboardig email. Example of a hosts record:
+Your **`host file record`** consists of IP address of your lab entry machine and your lab host name. You can find it included in your onboarding email. Example of a hosts record:
 
 ```bash
 # -- Principal example of a host record
@@ -134,7 +134,7 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 <!-- Tested version: Windows 10 -->
 
-1. Open your **`p12 certificate`** that you downloaded from Filesender. Make sure the store location is set to **`Current User`** and click **`Next`**:
+1. Open your **`p12 certificate`** that you downloaded from FileSender. Make sure the store location is set to **`Current User`** and click **`Next`**:
 
    ![1_cert_p12.png](./images/1_cert_p12.png)
 
@@ -179,9 +179,9 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 ::: expander "macOS Ventura 13+" id="3-macos"
 
-1. Open your system profile config file that you got from Filesender (**`<your_user_name>.mobileconfig`**).
+1. Open your system profile config file that you got from FileSender (**`<your_user_name>.mobileconfig`**).
 
-2. In **`System settings`** open section **`Privacy & Security`**, scroll to the bottom of the page and sellect **`Profiles`**
+2. In **`System settings`** open section **`Privacy & Security`**, scroll to the bottom of the page and select **`Profiles`**
 
    ![macventura1](./images/macventura1.png)
 
@@ -207,13 +207,13 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 <!-- Tested version: MacOS Monterey -->
 
-1. Open your system profile config file that you got from Filesender (**`<your_user_name>.mobileconfig`**).
+1. Open your system profile config file that you got from FileSender (**`<your_user_name>.mobileconfig`**).
 
 2. In **`System Preferences`** open section **`Profiles`**.
 
-   ::: warning NTNU managed Macbook
+   ::: warning NTNU managed MacBook
 
-   If your Macbook is managed by NTNU and you do not see section Profiles in your System Preferences you will need to request access to Profile through NTNU Hjelp. If you are not NTNU affiliated, can contact your IT department for assistance.
+   If your MacBook is managed by NTNU and you do not see section Profiles in your System Preferences you will need to request access to Profile through NTNU Hjelp. If you are not NTNU affiliated, can contact your IT department for assistance.
 
 3. Click **`Continue`** to confirm your profile installation.
 
@@ -235,7 +235,7 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 <!-- Tested version: Ubuntu 22.04 -->
 
-We recommend that you use the [Google Chrome browser](https://www.google.com/chrome/) for predictabe access to your HUNT Workbench.
+We recommend that you use the [Google Chrome browser](https://www.google.com/chrome/) for predictable access to your HUNT Workbench.
 
 1. Open **`Google Chrome`** on your local computer.
 
@@ -298,7 +298,7 @@ Ensure that the **`Remember this decision`** box is checked, and click **`OK`**.
 
 ::: tip Further reading
 
-See our [HUNT Workbench principles](/do-science/hunt-workbench/principles/) section to learn more about your new environment. For more practical advices on how to install your Python/R packages head over to [Workbench FAQ](/do-science/hunt-workbench/faq/).
+See our [HUNT Workbench principles](/do-science/hunt-workbench/principles/) section to learn more about your new environment. For more practical advises on how to install your Python/R packages head over to [Workbench FAQ](/do-science/hunt-workbench/faq/).
 
 :::
 

@@ -29,7 +29,7 @@ The kista order defines two roles that we will use in this document:
 - **Uploader**. This is the lab user in the lab that has ordered the Kista and that will provide (upload) data.
 - **Downloader**. This the lab user in the lab that will receive (download) data.
 
-We wil notify the lab user that registered as the uploader when the kista is deployed. The uploader is responsible for notifying the downloader when data is uploaded and ready to be downloaded.
+We will notify the lab user that registered as the uploader when the kista is deployed. The uploader is responsible for notifying the downloader when data is uploaded and ready to be downloaded.
 
 ## Connection details
 
