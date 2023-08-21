@@ -7,7 +7,7 @@ description: This page contains common questions on scientific administration in
 
 # Training administration FAQ
 
-**This is a pilot FAQ intended for training administrators that administer activites across one to many labs inside a data spaces.**
+**This is a pilot FAQ intended for training administrators that administer activities across one to many labs inside a data spaces.**
 
 [[toc]]
 

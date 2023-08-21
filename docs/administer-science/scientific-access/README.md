@@ -47,7 +47,7 @@ Your Data space does also identify your management team that we interact with to
 * [HUNT Cloud Services specification](/administer-science/services/specifications/) specifies the Data spaces services details. 
 * [HUNT Cloud Price list](/administer-science/prices/pricelist/) specifies the Data space subscription cost. 
 * [HUNT Cloud Data space order](/administer-science/agreements/downloads/#data-space-order)
-* [HUNT Cloud Invoice rofile](/administer-science/agreements/downloads/#invoice-profile)
+* [HUNT Cloud Invoice profile](/administer-science/agreements/downloads/#invoice-profile)
 :::
 
 ### Lab order
@@ -56,7 +56,7 @@ Your Data space does also identify your management team that we interact with to
 
 By default, a lab consists of a security framework that we control and a home machine where your scientists can store data and run analysis. 
 
-Your lab leader or lab coordinator choosees the initial size of the home machine and the initial storage you want to start with. From there they can adjust the machine size, add additional machines, and expand the storage resources throughout the project period. 
+Your lab leader or lab coordinator chooses the initial size of the home machine and the initial storage you want to start with. From there they can adjust the machine size, add additional machines, and expand the storage resources throughout the project period. 
 
 ::: details Lab order resources
 

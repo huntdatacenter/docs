@@ -14,7 +14,7 @@ description: This page list default machine types in HUNT Cloud.
 
 ::: tip Pending activation
 
-Machine types marked with a star (`*`) in the tables below are expected to be avilable during 2023-Q2. 
+Machine types marked with a star (`*`) in the tables below are expected to be available during 2023-Q2. 
 
 :::
 

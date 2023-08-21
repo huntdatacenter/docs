@@ -52,7 +52,7 @@ Yes. Nothing is better than seeing your data grow. We are more than happy to inc
 
 ### Can we expand existing volumes?
 
-You can expand volumes on both and iaas machines in terabyte (TB) steps. Lab leaders and lab coordinators can expand volume expansion in our [service desk](/administer-science/service-desk/lab-orders/#expand-existing-volume).
+You can expand volumes on both and IaaS machines in terabyte (TB) steps. Lab leaders and lab coordinators can expand volume expansion in our [service desk](/administer-science/service-desk/lab-orders/#expand-existing-volume).
 
 ### Can we reduce the size of existing volumes? 
 
@@ -95,7 +95,7 @@ We aim to keep individual volumes below 20 TB if possible. The soft limit is set
 
 ### Do we have 'backup' in our lab?
 
-Yes and no. You have restore functionality by default for two folders on your home machine, **`/mnt/work`** and **`/mnt/archive`**. No other volumes on your home machine, nor your iaas and blue machines have restore activated by deployment. We strongly recommend to store a copy of data that you care about in one of the above folders. 
+Yes and no. You have restore functionality by default for two folders on your home machine, **`/mnt/work`** and **`/mnt/archive`**. No other volumes on your home machine, nor your IaaS and blue machines have restore activated by deployment. We strongly recommend to store a copy of data that you care about in one of the above folders. 
 
 
 ### How does restore work?

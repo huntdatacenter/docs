@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # Service desk orders for labs
 
-**This page list predefined service orders for activities within one lab. To place an order, click the blue button and send us a prefilled email.**
+**This page list predefined service orders for activities within one lab. To place an order, click the blue button and send us a pre-filled email.**
 
 [[toc]]
 
@@ -82,7 +82,7 @@ Click the button below to update the [lab coordinator](/administer-science/roles
 
 ### Renew lab user agreement
 
-Lab user agreements needs to be renewed approximately every two years for accounts to be active. Click the button below to renew the lab user areement for one user.
+Lab user agreements needs to be renewed approximately every two years for accounts to be active. Click the button below to renew the lab user agreement for one user.
 
 <SDButton form="request_renew_user_agreement" />
 
@@ -347,11 +347,11 @@ Once data on volume is deleted, it can not be recreated. You must ensure that yo
 
 ### Tape archive
 
-Click button below to order a long term archivation of your data
+Click button below to order a long term archiving of your data
 
 <SDButton form="request_tape_archive" />
 
-* **Who can order:** Lab coordiators.
+* **Who can order:** Lab coordinators.
 * **Required information**: .
 * **Expected response time:** Days
 * **Cost:** Can be found is costs section.
