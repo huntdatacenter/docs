@@ -6,9 +6,88 @@ description: Minor and major updates to HUNT Cloud's services.
 
 # Patch notes
 
-**This page contains minor and major updates to our services.**
+**This page contains major and minor updates to our services.**
 
-## Patch note 2.8.2.0
+
+<!-- <section id="link1">
+  <button type="button" class="collapsible">Link 1 Title<span style="color:#e4b101;">.</span></button>
+  <div class="collapsed-content">
+    <hr />
+    <p>Link 1 content.</p>
+  </div>
+</section> -->
+
+
+<details open><summary style="font-weight: 600; font-size: 20px;">Patch note 2.9.3.0</summary>
+
+### <u>Major changes</u>
+
+*2023-08-21*
+
+### Do science
+
+#### *VSCode in HUNT Workbench*
+
+We have added VSCode to Workbench, available to all Workbench users. 
+
+* VSCode is linked wih your lab directory
+* Jupyter and python extensions are available by default. If you require additional extensions, let us know in Slack channel
+
+#### *Iaas Access link*
+
+Created tailored-to-user guide for Iaas/GPU machines. This guide will be shipped with every Iaas/GPU machine order
+
+
+### Administer science
+
+### Govern science
+
+### <u>Minor changes</u>
+
+### Do science
+
+#### *Sigularity guide*
+
+Added basic guide on how to run Singularity in your lab environment using conda. Click [here](/do-science/tools/technical/singularity/#singularity) for more.
+
+Guide currently covers: 
+
+* Installation
+* Common practices and commands
+* Pull, Run Docker image
+* Listing running containers
+* Stop running container
+* Where are the images stored ?
+* Temporary file storage
+
+
+#### *Updates*
+
+* HUNT Workbench - Updated RStudio to version 2023.06.1
+* Docs pages - Updated X2Go guide with screenshot, clearly explaining how to setup your lab session
+
+
+### Administer science
+
+On agreements: Updated links to service desk for all agreements: https://gitlab.hdc.ntnu.no/workspace/issues_and_docs/-/issues/8808
+
+Update to Services specification: 2.9   2923-08-07    Description of "Security controls" updated to include "Security and privacy controls".
+
+### Govern science
+
+
+### Upcoming features
+
+* Singularity guide - nextflow
+* Community consent on Slack
+* NVMe storage - faster storage type for GPU and CPU intensive workloads
+* User paths - simplify ways to use our services
+
+
+</details>
+
+
+<details><summary style="font-weight: 600; font-size: 20px;">Patch note 2.8.2.0</summary>
 
 *2023-06-27*
 
@@ -18,8 +97,9 @@ Welcome to our first patch note!
 
 We created this page to keep you informed about our activities and progress here at HUNT Cloud. In the below notes, you will read about what is new, what we are currently working on, known issues and more.
 
-*For the HUNT Cloud team,*  
-Jakub
+For the HUNT Cloud team  
+*Jakub*
+
 
 ### <u>Major changes</u>
 
@@ -101,11 +181,17 @@ What are we working on?
 * User paths - simplify ways to use our services.
 * Simplified IaaS access - similar to Lab Access.
 
-## About Patch Notes
+</details>
 
 ### Feedback
 
 Found an issue, or want to submit a feedback? Send us a general request form in [Service Desk](/do-science/service-desk/#general-service-request).
+
+
+<details><summary style="font-weight: 450; font-size: 20px;">About Patch Notes</summary>
+
+
+
 
 ### Numbering
 
@@ -118,9 +204,7 @@ We use a four digit numbering system on our Patch notes, for example version `2.
 | 3 | Major Patch notes | 
 | 0 | Minor Patch notes | 
 
-::: details Read more about the numbering
 
-.
 
 #### Major services agreement update 
 
@@ -151,7 +235,5 @@ The fourth number indicates which minor Patch notes version the current notes ar
 
 Minor Patch notes indicates what we think are small (but often important) user experience updates of our services, for example updates of guides, agreements or other good-to-know-about things.
 
-:::
-
-
+</details>
 
