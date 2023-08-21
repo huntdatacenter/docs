@@ -2,7 +2,7 @@
 title: Organizational access
 category: HUNT Cloud
 permalink: /govern-science/organizational-access/
-description: Enable organiational access to HUNT Cloud for your scientists and scientific projects. 
+description: Enable organizational access to HUNT Cloud for your scientists and scientific projects. 
 ---
 
 # Organizational access
@@ -53,7 +53,7 @@ There is no direct cost for the organizational unit that sign the service center
 
 We need to collaborate on a few steps to complete your organizational onboarding:
 
-!["Illustration of the organiztional agreement process with six steps described in the main text: 1) assess decision points, 2) fill in required information, 3) make areements, 4) and 5) sign the agreements, and 6) archive the agreements."](./images/hunt-cloud-organizational-agreement-process.png)
+!["Illustration of the organizational agreement process with six steps described in the main text: 1) assess decision points, 2) fill in required information, 3) make agreements, 4) and 5) sign the agreements, and 6) archive the agreements."](./images/hunt-cloud-organizational-agreement-process.png)
 
 
 ## Decision support
@@ -74,7 +74,7 @@ Send us the name of the administrative contact person at your Department that wi
 
 ::: tip For all other institutions
 
-[HUNT Cloud organizational agreement information form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-organizational-agreement-information.pdf) (pdf)
+[HUNT Cloud organizational agreement information form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-organizational-agreement-information.pdf) (PDF)
 
 1. Click on the PDF-link above.
 2. Fill out the needed information, and save the PDF on your local computer. 

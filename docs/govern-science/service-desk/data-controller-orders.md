@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # Service desk orders for data controllers
 
-**This page list predefined service orders for data controllers. To place an order, click the blue button and send us a prefilled email.**
+**This page list predefined service orders for data controllers. To place an order, click the blue button and send us a pre-filled email.**
 
 [[toc]]
 
@@ -29,12 +29,12 @@ Click on the blue button below to order a HUNT Cloud data processor agreement.
 
 <SDButton form="request_new_dp_agreement" />
 
-* **Guide:** [Organiational access](/govern-science/organizational-access/)
-* **Who can request:** Data controllers for data inteded to be processed in HUNT Cloud.
+* **Guide:** [Organizational access](/govern-science/organizational-access/)
+* **Who can request:** Data controllers for data intended to be processed in HUNT Cloud.
 * **Required attachment**: [HUNT Cloud organizational agreement information form](/govern-science/organizational-access/#request-organizational-agreements).
 * **Expected delivery:** PDF agreements for review/signatures.
 * **Expected delivery time:** One week.
-* **Cost:** There is no direct cost for data controllers establishing data processor agreements. Resource consumptions are billed to attached data spaces and labs.
+* **Cost:** There is no direct cost for data controllers establishing data processor agreements. Resource consumption are billed to attached data spaces and labs.
 
 
 ### Upgrade to a new data processor agreement version
@@ -43,7 +43,7 @@ Our HUNT Cloud data processor agreement version gets updated from time to time. 
 
 <SDButton form="request__dp_agreement_version_upgrade" />
 
-* **Guide:** [Organiational access](/govern-science/organizational-access/)
+* **Guide:** [Organizational access](/govern-science/organizational-access/)
 * **Who can request:** Data controller administrators.
 * **Required attachment**: None, although you may add a new [HUNT Cloud organizational agreement information form](/govern-science/organizational-access/#request-organizational-agreements) if you plan to update your contact information.
 * **Expected delivery:** PDF agreements for review/signatures.
@@ -59,7 +59,7 @@ Click the button below to order a new service center.
 
 <SDButton form="request_new_service_center" />
 
-* **Guide:** [Organiational access](/govern-science/organizational-access/)
+* **Guide:** [Organizational access](/govern-science/organizational-access/)
 * **Who can order:** Data controllers.
 * **Required attachment**: [HUNT Cloud organizational agreement information form](/govern-science/organizational-access/#request-organizational-agreements).
 * **Expected delivery:** PDF agreements for review/signatures.

@@ -7,7 +7,7 @@ description: This page contains information on the compliance program in HUNT Cl
 
 # Compliance program
 
-**We belive that trust is the single most valuable asset in data-driven science. Our compliance program aims to ensure a trustworthy frame for which you can build your science.**
+**We believe that trust is the single most valuable asset in data-driven science. Our compliance program aims to ensure a trustworthy frame for which you can build your science.**
 
 [[toc]]
 
@@ -31,7 +31,7 @@ We welcome audits from data controllers and research leaders to ensure complianc
 
 :::
 
-Representatives from data controllers are also welcome to participate in our internal audits for educational purposes. [Contat us](/contact) to schedule a partner audits.
+Representatives from data controllers are also welcome to participate in our internal audits for educational purposes. [Contact us](/contact) to schedule a partner audits.
 
 ## Internal audits
 
@@ -39,7 +39,7 @@ Our internal audit program aims to review the various parts of our activities wi
 
 ## Subcontractors
 
-HUNT Cloud delivers services that include the use of subcontractors. The subcontractors are subject to laws, regulartions and terms no less protective than the terms HUNT Cloud is subject to under data processor agreements with our data controllers.
+HUNT Cloud delivers services that include the use of subcontractors. The subcontractors are subject to laws, regulations and terms no less protective than the terms HUNT Cloud is subject to under data processor agreements with our data controllers.
 
 [Click here to see our subcontractors](subcontractors).
 

@@ -3,7 +3,7 @@ title: Risk management
 category: Govern science
 permalink: /govern-science/risk-management
 sidebarDepth: 0
-description: This page cover risk managment within HUNT Cloud.
+description: This page cover risk management within HUNT Cloud.
 ---
 
 # Risk management

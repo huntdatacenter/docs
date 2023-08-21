@@ -108,7 +108,7 @@ Memberships to the Tings are derived from the following registered roles in cont
 
 **Individual Tings are scheduled over the week on fixed time slots.** 
 
-The current scheule is as follows: Labting is held on Tuesdays 2-4 pm CET, Data space ting on Wednesdays 9-11 am CET, Data controller ting on Wednesdays 1-3 pm CET and Lagtun on Thursdays 9-11 am CET.
+The current schedule is as follows: Labting is held on Tuesdays 2-4 pm CET, Data space ting on Wednesdays 9-11 am CET, Data controller ting on Wednesdays 1-3 pm CET and Lagtun on Thursdays 9-11 am CET.
 
 !["Tingweek schedule"](./images/tingweek-schedule-times.png)
 
