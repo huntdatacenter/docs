@@ -17,7 +17,7 @@ Both certificates have been issued since 2017. For each certificate, independent
 
 [NS-EN ISO 9001:2015 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso9001-2023.pdf) (pdf)
 
-Our compliance with the international standard in quality management «ISO 9001» is certified by Kiwa, Norway.
+Our compliance with the international standard in quality management «ISO 9001» is certified by Kiwa, Norway. The certificate is part of HUNT Research Centre's main certificate that has been issued since 2011. 
 
 ::: details List of issued certificates
 
@@ -77,11 +77,10 @@ Our compliance with the international standard in information security and priva
 
 [ISO 27001 Statement of Applicability](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-soa-iso27001.pdf) (pdf)
 
-Our Statement of Applicability, most often referred to as "SoA", states which ISO 27001 policies and controls we have applied in our ISO 27001 certificate. 
+Our Statement of Applicability, most often referred to as "SoA", states which ISO control objectives we have applied in our ISO 27001 certificate. 
 
-SoA is a central document in our certification audits, and it guides Data controllers to quickly asses which controls we have put in place to safeguard their data. 
+SoA is a central document in our certification audits, and it guides Data controllers to quickly asses which controls they should expect to be in place to safeguard their data. 
 
-In short, we state applicability for a total of 161 controls derived from [ISO 27002](https://www.iso.org/standard/54533.html) (general information security), [ISO 27017](https://www.iso.org/standard/43757.html) (cloud security) and [ISO 27018](https://www.iso.org/standard/76559.html) (cloud privacy).
+In short, we state applicability for a total of 209 controls derived from [ISO 27002](https://www.iso.org/standard/54533.html) (general information security), [ISO 27017](https://www.iso.org/standard/43757.html) (cloud security), [ISO 27018](https://www.iso.org/standard/76559.html) (cloud privacy) and [ISO 27701](https://www.iso.org/standard/71670.html) (privacy information management system).
 
-
-To ease the readability, we have included the control's implementation status and a comment where applicable. 
+To ease the readability, we have included the control's implementation status and a comment where applicable.
