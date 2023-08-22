@@ -156,274 +156,274 @@ Connection to home closed.`,
 
     <!-- 2. VPN Configuration -->
     <v-expansion-panel>
-        <v-expansion-panel-header>
-          <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Configuration</h3>
-        </v-expansion-panel-header>
-        <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
-          If you have not setup <b>HUNT Cloud VPN</b> yet follow <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
+      <v-expansion-panel-header>
+        <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Configuration</h3>
+      </v-expansion-panel-header>
+      <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
+        If you have not setup <b>HUNT Cloud VPN</b> yet follow <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
 
-          <TotpGuide />
+        <TotpGuide />
 
-          <v-row class="my-1">
-            <v-col cols="12">
-              <v-btn
-                text
-                color="link"
-                @click.stop="vpnDialog = true"
-                elevation="2"
-              >
-                <v-icon>vpn_lock</v-icon>&nbsp;&nbsp;2. OpenVPN Configuration
-              </v-btn>
-            </v-col>
-          </v-row>
-          <v-dialog
-            v-model="vpnDialog"
-            persistent
-            scrollable
-            max-width="960px"
-            @keydown.esc="vpnDialog = false"
-          >
-            <v-card elevation="0">
-              <v-card-title class="pa-0">
-                <v-toolbar dark color="#00509e" flat>
-                  <v-toolbar-title>OpenVPN Configuration</v-toolbar-title>
-                  <v-spacer></v-spacer>
-                  <v-toolbar-items>
-                    <v-btn icon fab @click="vpnDialog = false">
-                      <v-icon>close</v-icon>
-                    </v-btn>
-                  </v-toolbar-items>
-                </v-toolbar>
-              </v-card-title>
+        <v-row class="my-1">
+          <v-col cols="12">
+            <v-btn
+              text
+              color="link"
+              @click.stop="vpnDialog = true"
+              elevation="2"
+            >
+              <v-icon>vpn_lock</v-icon>&nbsp;&nbsp;2. OpenVPN Configuration
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-dialog
+          v-model="vpnDialog"
+          persistent
+          scrollable
+          max-width="960px"
+          @keydown.esc="vpnDialog = false"
+        >
+          <v-card elevation="0">
+            <v-card-title class="pa-0">
+              <v-toolbar dark color="#00509e" flat>
+                <v-toolbar-title>OpenVPN Configuration</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-toolbar-items>
+                  <v-btn icon fab @click="vpnDialog = false">
+                    <v-icon>close</v-icon>
+                  </v-btn>
+                </v-toolbar-items>
+              </v-toolbar>
+            </v-card-title>
 
-              <v-card-text class="pa-0">
-                <v-stepper v-model="vpnStepper" vertical>
-                  <v-stepper-step
-                    :complete="vpnStepper > 1"
-                    step="1"
+            <v-card-text class="pa-0">
+              <v-stepper v-model="vpnStepper" vertical>
+                <v-stepper-step
+                  :complete="vpnStepper > 1"
+                  step="1"
+                >
+                  Install OpenVPN
+                </v-stepper-step>
+
+                <v-stepper-content step="1">
+                  <v-card
+                    class="mb-12 pr-4"
+                    elevation="0"
                   >
-                    Install OpenVPN
-                  </v-stepper-step>
+                    We use the open-source application <b>OpenVPN GUI</b> to ensure encrypted communication between your local computer and us.<br /><br />
 
-                  <v-stepper-content step="1">
-                    <v-card
-                      class="mb-12 pr-4"
-                      elevation="0"
+                    <a href="https://openvpn.net/community-downloads/" target="_blank">Download and install <b>OpenVPN</b> using the latest stable Windows Installer (Avoid beta versions)</a>
+                    <br /><br />
+
+                    Click on the link above, scroll down to the file named <code>{{ openvpnName }}</code> (Windows 10 users),
+                    download the file and follow the on-screen installation instructions until finished.
+                    <br /><br />
+
+                    <v-alert
+                      border="left"
+                      colored-border
+                      type="info"
+                      elevation="2"
                     >
-                      We use the open-source application <b>OpenVPN GUI</b> to ensure encrypted communication between your local computer and us.<br /><br />
+                      <b>NTNU users should use NTNU Software center.</b>
+                      <hr class="mt-1 mb-2" />
+                      Windows users from NTNU can install OpenVPN community edition
+                      using NTNU Software Center even without administrative rights.
+                    </v-alert>
 
-                      <a href="https://openvpn.net/community-downloads/" target="_blank">Download and install <b>OpenVPN</b> using the latest stable Windows Installer (Avoid beta versions)</a>
-                      <br /><br />
+                    <v-alert
+                      border="left"
+                      colored-border
+                      type="warning"
+                      elevation="2"
+                    >
+                      <b>You will need administrative rights on your local computer to successfully install OpenVPN.</b>
+                      <hr class="mt-1 mb-2" />
+                      Click on the link below if you do not hold administrative rights on your local computer, or don't know if you have such rights.
+                    </v-alert>
 
-                      Click on the link above, scroll down to the file named <code>{{ openvpnName }}</code> (Windows 10 users),
-                      download the file and follow the on-screen installation instructions until finished.
-                      <br /><br />
+                    <details><summary style="cursor: pointer;"><b>Installing OpenVPN without administrative rights</b></summary>
 
-                      <v-alert
-                        border="left"
-                        colored-border
-                        type="info"
-                        elevation="2"
-                      >
-                        <b>NTNU users should use NTNU Software center.</b>
-                        <hr class="mt-1 mb-2" />
-                        Windows users from NTNU can install OpenVPN community edition
-                        using NTNU Software Center even without administrative rights.
-                      </v-alert>
+                      <div class="pl-4 pr-12 py-0">
+                        <br />
+                        You can check if you have administrative rights on your local computer by running net localgroup "Administrators" in a command prompt (opens new window)and see if your username is listed.
+                        <br /><br />
 
-                      <v-alert
-                        border="left"
-                        colored-border
-                        type="warning"
-                        elevation="2"
-                      >
-                        <b>You will need administrative rights on your local computer to successfully install OpenVPN.</b>
-                        <hr class="mt-1 mb-2" />
-                        Click on the link below if you do not hold administrative rights on your local computer, or don't know if you have such rights.
-                      </v-alert>
+                        Request assistance from your local IT personnel if you do not hold administrative rights on your local computer and request that they:<br /><br />
 
-                      <details><summary style="cursor: pointer;"><b>Installing OpenVPN without administrative rights</b></summary>
+                        (1) assist you in the OpenVPN installation, or<br /><br />
 
-                        <div class="pl-4 pr-12 py-0">
-                          <br />
-                          You can check if you have administrative rights on your local computer by running net localgroup "Administrators" in a command prompt (opens new window)and see if your username is listed.
-                          <br /><br />
+                        (2) grant you administrative rights on your local computer so you can install OpenVPN yourself.<br /><br />
 
-                          Request assistance from your local IT personnel if you do not hold administrative rights on your local computer and request that they:<br /><br />
+                        For simplicity, we have outlined the steps they need to perform below which you can attach to your request.<br /><br />
 
-                          (1) assist you in the OpenVPN installation, or<br /><br />
+                        <ol>
+                          <li class="mb-2">
+                            Install the OpenVPN client on the computer for my user:<br />
+                            Download and install using the Windows installer from <a href="https://openvpn.net/community-downloads/" target="_blank">https://openvpn.net/community-downloads/</a>
+                            <br />
+                          </li>
+                          <li class="mb-3">
+                            Create an OpenVPN Administrators group on my computer:<br />
 
-                          (2) grant you administrative rights on your local computer so you can install OpenVPN yourself.<br /><br />
+                            <CopyTextField
+                              :value='`net localgroup /add "OpenVPN Administrators"`'
+                              label=""
+                              prefix=""
+                            />
+                          </li>
+                          <li class="mb-3">
+                            Add my user to OpenVPN Administrators group on my computer:<br />
 
-                          For simplicity, we have outlined the steps they need to perform below which you can attach to your request.<br /><br />
+                            <CopyTextField
+                              :value='`net localgroup "OpenVPN Administrators" /add <DOMAIN>\<USERNAME>`'
+                              label=""
+                              prefix=""
+                            />
+                          </li>
+                        </ol>
+                      </div>
 
-                          <ol>
-                            <li class="mb-2">
-                              Install the OpenVPN client on the computer for my user:<br />
-                              Download and install using the Windows installer from <a href="https://openvpn.net/community-downloads/" target="_blank">https://openvpn.net/community-downloads/</a>
-                              <br />
-                            </li>
-                            <li class="mb-3">
-                              Create an OpenVPN Administrators group on my computer:<br />
+                    </details>
+                  </v-card>
+                  <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
+                  <!-- <v-btn color="link" class="mx-2 mb-1" @click="totpDialog = false">Close</v-btn> -->
+                </v-stepper-content>
 
-                              <CopyTextField
-                                :value='`net localgroup /add "OpenVPN Administrators"`'
-                                label=""
-                                prefix=""
-                              />
-                            </li>
-                            <li class="mb-3">
-                              Add my user to OpenVPN Administrators group on my computer:<br />
+                <v-stepper-step
+                  :complete="vpnStepper > 2"
+                  step="2"
+                >
+                  Setup the VPN profile
+                </v-stepper-step>
 
-                              <CopyTextField
-                                :value='`net localgroup "OpenVPN Administrators" /add <DOMAIN>\<USERNAME>`'
-                                label=""
-                                prefix=""
-                              />
-                            </li>
-                          </ol>
-                        </div>
-
-                      </details>
-                    </v-card>
-                    <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
-                    <!-- <v-btn color="link" class="mx-2 mb-1" @click="totpDialog = false">Close</v-btn> -->
-                  </v-stepper-content>
-
-                  <v-stepper-step
-                    :complete="vpnStepper > 2"
-                    step="2"
+                <v-stepper-content step="2">
+                  <v-card
+                    class="mb-8 pr-4"
+                    elevation="0"
                   >
-                    Setup the VPN profile
-                  </v-stepper-step>
+                    <ol>
+                      <li>
+                        Start the OpenVPN client (if it is not running already) <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/1.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        Expand pane on taskbar <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/3.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        Select <code>Import file...</code> <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/4.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        Click on Import file and select OpenVPN profile file <code>&lt;username&gt;.ovpn</code> that you extracted from 7-ZIP archive. <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/5.OpenVPN-guide.png" /> <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/6.OpenVPN-guide.png" />
+                      </li>
+                    </ol>
+                  </v-card>
+                  <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 3">Continue</v-btn>
+                  <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 1">Back</v-btn>
+                </v-stepper-content>
 
-                  <v-stepper-content step="2">
-                    <v-card
-                      class="mb-8 pr-4"
-                      elevation="0"
-                    >
-                      <ol>
-                        <li>
-                          Start the OpenVPN client (if it is not running already) <br />
-                          <img alt="OpenVPN-icon" src="/img/vpn/1.OpenVPN-guide.png" />
-                        </li>
-                        <li>
-                          Expand pane on taskbar <br />
-                          <img alt="OpenVPN-icon" src="/img/vpn/3.OpenVPN-guide.png" />
-                        </li>
-                        <li>
-                          Select <code>Import file...</code> <br />
-                          <img alt="OpenVPN-icon" src="/img/vpn/4.OpenVPN-guide.png" />
-                        </li>
-                        <li>
-                          Click on Import file and select OpenVPN profile file <code>&lt;username&gt;.ovpn</code> that you extracted from 7-ZIP archive. <br />
-                          <img alt="OpenVPN-icon" src="/img/vpn/5.OpenVPN-guide.png" /> <br />
-                          <img alt="OpenVPN-icon" src="/img/vpn/6.OpenVPN-guide.png" />
-                        </li>
-                      </ol>
-                    </v-card>
-                    <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 3">Continue</v-btn>
-                    <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 1">Back</v-btn>
-                  </v-stepper-content>
+                <v-stepper-step
+                  :complete="vpnStepper > 3"
+                  step="3"
+                >
+                  Connect to the VPN
+                </v-stepper-step>
 
-                  <v-stepper-step
-                    :complete="vpnStepper > 3"
-                    step="3"
+                <v-stepper-content step="3">
+                  <v-card
+                    class="mb-8 pr-4"
+                    elevation="0"
                   >
-                    Connect to the VPN
-                  </v-stepper-step>
+                    <ol>
+                      <li>
+                        Right-click on the OpenVPN notification icon on the taskbar.
+                      </li>
+                      <li>
+                        Select <i>Connect</i>. <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/7.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        Enter your user name (same as the OpenVPN profile file name).
+                      </li>
+                      <li>
+                        Enter a rotating <code>verification code</code> from Google Authenticator as your password. <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/9.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        When prompted for a Private Key Password, insert the <code>VPN passphrase</code> that your collected in Step 1. Your authentication will fail when you complete your passphrase below. 
+                        This is expected since your verification code timed out while you typed your passphrase. <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/8.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        Now try again to connect with a fresh verfication code from Google Authenticator.
+                      </li>
+                    </ol>
+                    <br /><br />
+                    You should now be connected to the VPN.
+                  </v-card>
+                  <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 4">Continue</v-btn>
+                  <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 2">Back</v-btn>
+                </v-stepper-content>
 
-                  <v-stepper-content step="3">
-                    <v-card
-                      class="mb-8 pr-4"
-                      elevation="0"
-                    >
-                      <ol>
-                        <li>
-                          Right-click on the OpenVPN notification icon on the taskbar.
-                        </li>
-                        <li>
-                          Select <i>Connect</i>. <br />
-                          <img alt="OpenVPN-icon" src="/img/vpn/7.OpenVPN-guide.png" />
-                        </li>
-                        <li>
-                          Enter your user name (same as the OpenVPN profile file name).
-                        </li>
-                        <li>
-                          Enter a rotating <code>verification code</code> from Google Authenticator as your password. <br />
-                          <img alt="OpenVPN-icon" src="/img/vpn/9.OpenVPN-guide.png" />
-                        </li>
-                        <li>
-                          When prompted for a Private Key Password, insert the <code>VPN passphrase</code> that your collected in Step 1. Your authentication will fail when you complete your passphrase below. 
-                          This is expected since your verification code timed out while you typed your passphrase. <br />
-                          <img alt="OpenVPN-icon" src="/img/vpn/8.OpenVPN-guide.png" />
-                        </li>
-                        <li>
-                          Now try again to connect with a fresh verfication code from Google Authenticator.
-                        </li>
-                      </ol>
-                      <br /><br />
-                      You should now be connected to the VPN.
-                    </v-card>
-                    <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 4">Continue</v-btn>
-                    <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 2">Back</v-btn>
-                  </v-stepper-content>
+                <v-stepper-step
+                  :complete="vpnStepper > 4"
+                  step="4"
+                >
+                  Verify your VPN connection
+                </v-stepper-step>
 
-                  <v-stepper-step
-                    :complete="vpnStepper > 4"
-                    step="4"
+                <v-stepper-content step="4">
+                  <v-card
+                    class="mb-8 pr-4"
+                    elevation="0"
                   >
-                    Verify your VPN connection
-                  </v-stepper-step>
-
-                  <v-stepper-content step="4">
-                    <v-card
-                      class="mb-8 pr-4"
-                      elevation="0"
+                    <v-alert
+                      border="left"
+                      colored-border
+                      type="success"
+                      elevation="2"
+                      icon="chevron_right"
                     >
-                      <v-alert
-                        border="left"
-                        colored-border
-                        type="success"
-                        elevation="2"
-                        icon="chevron_right"
-                      >
-                        <b>The OpenVPN notification icon on the taskbar should be green.</b>
-                        <hr class="mt-1 mb-2" />
-                        <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" />
-                      </v-alert>
+                      <b>The OpenVPN notification icon on the taskbar should be green.</b>
+                      <hr class="mt-1 mb-2" />
+                      <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" />
+                    </v-alert>
 
-                    </v-card>
-                    <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
-                    <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 5">Troubleshooting</v-btn>
-                    <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
-                  </v-stepper-content>
+                  </v-card>
+                  <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
+                  <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 5">Troubleshooting</v-btn>
+                  <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
+                </v-stepper-content>
 
-                  <v-stepper-step
-                    :complete="vpnStepper > 5"
-                    step="5"
+                <v-stepper-step
+                  :complete="vpnStepper > 5"
+                  step="5"
+                >
+                  Troubleshooting
+                </v-stepper-step>
+
+                <v-stepper-content step="5">
+                  <v-card
+                    class="mb-8 pr-4"
+                    elevation="0"
                   >
-                    Troubleshooting
-                  </v-stepper-step>
+                    WIP
 
-                  <v-stepper-content step="5">
-                    <v-card
-                      class="mb-8 pr-4"
-                      elevation="0"
-                    >
-                      WIP
+                  </v-card>
+                  <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
+                  <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 4">Back</v-btn>
+                </v-stepper-content>
 
-                    </v-card>
-                    <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
-                    <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 4">Back</v-btn>
-                  </v-stepper-content>
+              </v-stepper>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
 
-                </v-stepper>
-              </v-card-text>
-            </v-card>
-          </v-dialog>
-
-        </v-expansion-panel-content>
+      </v-expansion-panel-content>
     </v-expansion-panel>
 
     <!-- 3. SSH Passphrase change -->
