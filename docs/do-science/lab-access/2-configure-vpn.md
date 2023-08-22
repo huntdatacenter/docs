@@ -48,18 +48,8 @@ You can check if you have administrative rights on your local computer by runnin
 
 (2) grant you administrative rights on your local computer so you can install OpenVPN yourself.
 
-For simplicity, we have outlined the steps they need to perform below which you can attach to your request.
-
-```bash
-1. Install the OpenVPN client on the computer for my user:
-    Download and install using the Windows installer from https://openvpn.net/index.php/open-source/downloads.html
-
-2. Create an OpenVPN Administrators group on my computer:
-    net localgroup /add "OpenVPN Administrators"
-
-3. Add my user to OpenVPN Administrators group on my computer:
-    net localgroup "OpenVPN Administrators" /add <DOMAIN>\<USERNAME>
-```
+<b>For simplicity, we have outlined the steps they need to perform, which you can attach to your request:</b>
+<a href="/do-science/guides/openvpn-admin-group/" target="_blank">https://docs.hdc.ntnu.no/do-science/guides/openvpn-admin-group/</a>
 
 :::
 

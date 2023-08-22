@@ -259,36 +259,8 @@ Connection to home closed.`,
 
                         (2) grant you administrative rights on your local computer so you can install OpenVPN yourself.<br /><br />
 
-                        <b>For simplicity, we have outlined the steps they need to perform below which you can attach to your request:</b>
-                        <br /><br />
-
-                        <ol>
-                          <li class="mb-2">
-                            Install the OpenVPN client on the computer for my user:<br />
-                            Download and install using the Windows installer from <a href="https://openvpn.net/community-downloads/" target="_blank">https://openvpn.net/community-downloads/</a>
-                            <br />
-                          </li>
-                          <li class="mb-3">
-                            Create an OpenVPN Administrators group on my computer:<br />
-
-                            <CopyTextField
-                              :value='`net localgroup /add "OpenVPN Administrators"`'
-                              label=""
-                              prefix=""
-                            />
-                          </li>
-                          <li class="mb-3">
-                            Add my user to OpenVPN Administrators group on my computer:<br />
-
-                            <CopyTextField
-                              :value='`net localgroup "OpenVPN Administrators" /add "myDomain\\myUsername"`'
-                              label=""
-                              prefix=""
-                            />
-
-                            Replace <code>myDomain</code> and <code>myUsername</code> with user information.
-                          </li>
-                        </ol>
+                        <b>For simplicity, we have outlined the steps they need to perform, which you can attach to your request:</b>
+                        <a href="/do-science/guides/openvpn-admin-group/" target="_blank">https://docs.hdc.ntnu.no/do-science/guides/openvpn-admin-group/</a>
                       </div>
 
                     </details>
