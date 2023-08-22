@@ -7,7 +7,7 @@ description: This page contains common questions on scientific administration in
 
 # Technical administration FAQ
 
-**This FAQ is intended for technical administrators that administer activites across one to many labs inside a data spaces.**
+**This FAQ is intended for technical administrators that administer activities across one to many labs inside a data spaces.**
 
 [[toc]]
 

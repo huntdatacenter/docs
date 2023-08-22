@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # Service desk orders for service centers
 
-**This page list predefined service orders for service centers. To place an order, click the blue button and send us a prefilled email.**
+**This page list predefined service orders for service centers. To place an order, click the blue button and send us a pre-filled email.**
 
 [[toc]]
 
@@ -22,7 +22,7 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 
 
-## Data space mangement
+## Data space management
 
 ### New data space
 

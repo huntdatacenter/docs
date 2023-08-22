@@ -42,7 +42,7 @@ Try to logout and login again. If logging in does not help, try different browse
 
 ### 404: Page Not Found Error
 
-Your workbench stopped working for no apparent reason and you are printed the NTNU logo with error **`404 error`**? Follow the link to your control panel. Click on the red button to stop your sever, this may take some time. Click on the geen/blue button to launch your server again, this may also take some time. Reach out to us on [Slack or email](/contact) if the problem is not resolved.
+Your workbench stopped working for no apparent reason and you are printed the NTNU logo with error **`404 error`**? Follow the link to your control panel. Click on the red button to stop your sever, this may take some time. Click on the green/blue button to launch your server again, this may also take some time. Reach out to us on [Slack or email](/contact) if the problem is not resolved.
 
 ### 502: Bad gateway
 
@@ -128,11 +128,11 @@ An unresponsive or slow HUNT Workbench may be caused by several things. Here's a
 
 - Use Google Chrome as your browser. Other browsers don't support all features and might cause potential silent failures.
 - Restart your HUNT Workbench environment to start fresh in the case something got hung up. [Click here](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment) to see how.
-- Check the resource consumption on your **`home`**-machine to ensure that you have available free cpu and memory resources, for example in [htop](/do-science/tools/technical/htop/) (see below).
+- Check the resource consumption on your **`home`**-machine to ensure that you have available free CPU and memory resources, for example in [HTOP](/do-science/tools/technical/htop/) (see below).
 
 ::: expander Check your resources
 
-One way to check your resource consumption is to log into your lab **`home`**-machine and run [htop](/do-science/tools/technical/htop/). Consider to upgrade the machine size in the administer science [Service desk](/administer-science/service-desk/lab-orders/#update-cpu-machine-size) if you are low on free resources.
+One way to check your resource consumption is to log into your lab **`home`**-machine and run [HTOP](/do-science/tools/technical/htop/). Consider to upgrade the machine size in the administer science [Service desk](/administer-science/service-desk/lab-orders/#update-cpu-machine-size) if you are low on free resources.
 
 :::
 

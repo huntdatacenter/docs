@@ -78,7 +78,7 @@ A unique **`passphrase`** of minimum 12 characters containing both lower and upp
 
 3. You should then be prompted to enter a password **`<your-username>@<your-lab-IP>'s password:`**
 
-4. Enter your **`SSH temporary key`** colelcted in Step 1 _two_ times.
+4. Enter your **`SSH temporary key`** collected in Step 1 _two_ times.
 
 5. Enter your new **`passphrase`** and retype for verification. You will be kicked off the entry machine by completion.
 

@@ -8,7 +8,7 @@ description: This page holds the current price list for HUNT Cloud.
 
 # Price list
 
-**This page lists the prices for our cloud services. The price list is incorporated as an appendix to cloud services agreement, and costs are metered and billed in accordanced with our [services specifications](/administer-science/services/specifications).**
+**This page lists the prices for our cloud services. The price list is incorporated as an appendix to cloud services agreement, and costs are metered and billed in accordance with our [services specifications](/administer-science/services/specifications).**
 
 [[toc]]
 
@@ -19,7 +19,7 @@ Head over to our [price calculator](/administer-science/prices/calculator) to ta
 
 ::: tip CURRENT PRICE LIST
 
-[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) (v4.0 pdf)
+[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) (v4.0 PDF)
 
 :::
 
@@ -45,10 +45,10 @@ The price list will be updated from time to time.
 
 | **Version** | **Announced** | **Effective** |
 | - | - | - |
-| [HUNT Cloud Price List v4.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) (pdf) | 2022-10-10 | 2023-01-10 |
-| [HUNT Cloud Price List v3.2](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-2.pdf) (pdf) | 2022-02-22 | 2022-02-22 |
-| [HUNT Cloud Price List v3.1](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-1.pdf) (pdf) | 2021-10-12 | 2021-10-12 |
-| [HUNT Cloud Price List v3.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-0.pdf) (pdf) | 2021-07-01 | 2021-10-01 |
+| [HUNT Cloud Price List v4.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) (PDF) | 2022-10-10 | 2023-01-10 |
+| [HUNT Cloud Price List v3.2](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-2.pdf) (PDF) | 2022-02-22 | 2022-02-22 |
+| [HUNT Cloud Price List v3.1](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-1.pdf) (PDF) | 2021-10-12 | 2021-10-12 |
+| [HUNT Cloud Price List v3.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-0.pdf) (PDF) | 2021-07-01 | 2021-10-01 |
 
 ## Changes
 

@@ -30,7 +30,7 @@ You will find the following storage volumes inside your [home](compute/#what-is-
 
 ### How can I see the sizes of my lab volumes?
 
-Log into your [home](compute/#what-is-a-home-machine) machine in your lab with your favourite terminal and type: **`df -h --type=ext4'`**. This will give you an overview of the storage resources (volumes) that are allocated to your lab machine. Example output that list attached volumes:
+Log into your [home](compute/#what-is-a-home-machine) machine in your lab with your favorite terminal and type: **`df -h --type=ext4'`**. This will give you an overview of the storage resources (volumes) that are allocated to your lab machine. Example output that list attached volumes:
 
 ```bash
 $ df -h --type=ext4'
@@ -57,9 +57,9 @@ source ~/.profile
 mkdir -p $TMPDIR
 ```
 
-::: details Move tmp on blue and iaas machines
+::: details Move tmp on blue and IaaS machines
 
-To move tmp for the default ubuntu user on blue and iaas machines: 
+To move tmp for the default Ubuntu user on blue and IaaS machines: 
 
 ```bash
 # Move tmp folder out of the system disk
@@ -94,7 +94,7 @@ Yes. HUNT Cloud is a collaborative computing platform where mutually trusted peo
 
 ### Can anyone access my home folder?
 
-Yes. More precise, other lab users will not be able do access data in your home folder direclty. However, data in your lab is under the control of your data controller. This includes data that you upload and generate, also data in your private home folder. This is stated in our [user agreement](/administer-science/agreements/downloads/#user-agreement). Thus, your data controller or lab leader may request us to transfer data from your home folder into other folders that are accessible for other lab users or for compliance archiving, for example if you leave your lab. We will not expose your system keys during such moves.
+Yes. More precise, other lab users will not be able do access data in your home folder directly. However, data in your lab is under the control of your data controller. This includes data that you upload and generate, also data in your private home folder. This is stated in our [user agreement](/administer-science/agreements/downloads/#user-agreement). Thus, your data controller or lab leader may request us to transfer data from your home folder into other folders that are accessible for other lab users or for compliance archiving, for example if you leave your lab. We will not expose your system keys during such moves.
 
 ### How can other lab users edit my files by default?
 
@@ -168,22 +168,22 @@ We recommend using the 7z software to compress and decompress files and folders.
 
 
 
-## Iaas and blue storage
+## IaaS and blue storage
 
-This section list commonly asked questions for storage our unmanaged [iaas and blue machine types](/do-science/faq/compute/#machine-types) that you maintain yourself.
+This section list commonly asked questions for storage our unmanaged [IaaS and blue machine types](/do-science/faq/compute/#machine-types) that you maintain yourself.
 
-### What storage do I get on iaas and blue machines?
+### What storage do I get on IaaS and blue machines?
 
-Default iaas and blue machines comes with a 1TB empty volume attached to your **`/home`** folder. That is the same folder as you log into with the default user (**`/home/ubuntu`**). You can request other storage sizes according to your need before deployment.
+Default IaaS and blue machines comes with a 1TB empty volume attached to your **`/home`** folder. That is the same folder as you log into with the default user (**`/home/ubuntu`**). You can request other storage sizes according to your need before deployment.
 
 ### Where is my data?
 
-Your data is located on your [home](/do-science/faq/compute/#machine-types) machine. You will need to (1) transfer data to your iaas and blue machine for analysis, and (2) transfer your your results back to your home machine for long term preservation afterwards.
+Your data is located on your [home](/do-science/faq/compute/#machine-types) machine. You will need to (1) transfer data to your IaaS and blue machine for analysis, and (2) transfer your your results back to your home machine for long term preservation afterwards.
 
 
-### How can I transfer data to my iaas and blue machines?
+### How can I transfer data to my IaaS and blue machines?
 
-We recommend **`rsync`** for data transfers between your home machine and iaas and blue machines. This will sync up your data and only transfer files that has changed since your last transfer.
+We recommend **`rsync`** for data transfers between your home machine and IaaS and blue machines. This will sync up your data and only transfer files that has changed since your last transfer.
 
 ```bash
 # -- Principal example
@@ -197,31 +197,31 @@ rsync -avhP /mnt/scratch/data/ ubuntu@demolab-blue-sarga:~/data/
 ```
 
 
-### Where should I store my data on iaas and blue machines?
+### Where should I store my data on IaaS and blue machines?
 
-You are free to create the directory structure that fits your needs under the **`/home`** folder in your iaas and blue machines. For example, under the default login folder (**`/mnt/ubuntu/`**):
+You are free to create the directory structure that fits your needs under the **`/home`** folder in your IaaS and blue machines. For example, under the default login folder (**`/mnt/ubuntu/`**):
 
 ```bash
 mkdir data
 ```
 
-### Do iaas and blue machines have backup?
+### Do IaaS and blue machines have backup?
 
 ::: warning
-Your iaas and blue machines have **NO** backup installed by default. You will need to transfer your results back to your **`/mnt/archive`** and **`/mnt/work`** folders on your **`home`** machine for restore provided by us.
+Your IaaS and blue machines have **NO** backup installed by default. You will need to transfer your results back to your **`/mnt/archive`** and **`/mnt/work`** folders on your **`home`** machine for restore provided by us.
 :::
 
 
-### What happens to my data when iaas and blue machines are destroyed?
+### What happens to my data when IaaS and blue machines are destroyed?
 
 ::: danger DANGER
 
-All data on iaas and blue machines will be lost when your machine is reclaimed. It is your sole responsibility to ensure that you transfer the data that your care about from your iaas and blue machines back to your home machine for long term preservation.
+All data on IaaS and blue machines will be lost when your machine is reclaimed. It is your sole responsibility to ensure that you transfer the data that your care about from your IaaS and blue machines back to your home machine for long term preservation.
 :::
 
 ### My scripts require data storage outside of the /home folder
 
-When you need to store larger chunks of data outside of your **`/home`** folder, **`bind mounts`** is a handy tool. With a bind mount you can create whatever path you need on the file system and map it back to a suitable location under your **`/home`** folder. Such trick might be handy if you want to transfer the exact same scripts from your **`home`** machine (not to be confused with the **`/home`** folder on your iaas and blue machines, sorry...) to your new iaas and blue machines:
+When you need to store larger chunks of data outside of your **`/home`** folder, **`bind mounts`** is a handy tool. With a bind mount you can create whatever path you need on the file system and map it back to a suitable location under your **`/home`** folder. Such trick might be handy if you want to transfer the exact same scripts from your **`home`** machine (not to be confused with the **`/home`** folder on your IaaS and blue machines, sorry...) to your new IaaS and blue machines:
 
 ```bash
 # -- Principal example:

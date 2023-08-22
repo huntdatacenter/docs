@@ -13,8 +13,8 @@ description: This page contains common questions on scientific administration in
 * [Compliance administration FAQ](/administer-science/faq/compliance-administration)
 * [Financial administration FAQ](/administer-science/faq/financial-administration)
 * [Data administration FAQ](/administer-science/faq/data-administration)
-* [Technical adminisatration FAQ](/administer-science/faq/technical-administration)
-* [Training adminisatration FAQ](/training-science/faq/training-administration)
+* [Technical administration FAQ](/administer-science/faq/technical-administration)
+* [Training administration FAQ](/training-science/faq/training-administration)
 
 ::: tip
 

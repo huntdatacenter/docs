@@ -50,7 +50,7 @@ You need to communicate with the external party to get the IPv4 address for the 
 
 ::: warning Note on IP addresses
 
-IP addressess that starts with `10.`, `172.` and `192.` are internal addresses. We are not able to open our firewalls for these IPs. You may kindly ask your external party to request their public IPv4 if you are provided one of the above internal IP ranges for your ordering form.
+IP addresses that starts with `10.`, `172.` and `192.` are internal addresses. We are not able to open our firewalls for these IPs. You may kindly ask your external party to request their public IPv4 if you are provided one of the above internal IP ranges for your ordering form.
 
 ::: 
 
@@ -95,7 +95,7 @@ Data space leaders and data space compliance administrators can order network op
 
 ### Why do I need authorization from my data space leader? 
 
-Network openings allow lab users to initiate data transactions outside your data space and outside HUNT Cloud. For transparecy, data space leaders are asked to authorize transfers when data moves outside your data space. They are also asked to confirm that your lab holds necessary approvals for the requested transfer.
+Network openings allow lab users to initiate data transactions outside your data space and outside HUNT Cloud. For transparency, data space leaders are asked to authorize transfers when data moves outside your data space. They are also asked to confirm that your lab holds necessary approvals for the requested transfer.
 
 ### Which network openings do the machine outside HUNT Cloud need to approve?
 
@@ -111,7 +111,7 @@ Your remote party will need to open for incoming traffic from your lab in HUNT C
 
 ### How do I transfer data to and from TSD at UiO?
 
-Services for senstivie data ([TSD](https://www.uio.no/english/services/it/research/sensitive-data/)) at the University of Oslo has developed a handy [API client](https://github.com/unioslo/tsd-api-client) that can be utilized for direct data transfers to and from your lab. The setup requires that you hold user accounts for both TSD and HUNT Cloud. Depending on your lab configuration, you may have to [contact us](/contact) for a network opening.
+Services for sensitive data ([TSD](https://www.uio.no/english/services/it/research/sensitive-data/)) at the University of Oslo has developed a handy [API client](https://github.com/unioslo/tsd-api-client) that can be utilized for direct data transfers to and from your lab. The setup requires that you hold user accounts for both TSD and HUNT Cloud. Depending on your lab configuration, you may have to [contact us](/contact) for a network opening.
 
 ::: details More information
 For transfers from TSD to HUNT Cloud: On TSD, put your data in the **`file-export`** folder on **`durable`**. Then, log into your HUNT Cloud lab and download the data via the API as described in their [guide](https://github.com/unioslo/tsd-api-client).

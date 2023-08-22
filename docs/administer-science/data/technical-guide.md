@@ -18,7 +18,7 @@ This is a pilot service for tape archiving. [Contact us](https://docs.hdc.ntnu.n
 
 1.1 Identify what data you want stored on the tape. Mark down whole directories. Generally, we expect your data to be stored in `/mnt/archive` directory
 
-1.2 Do you use symbolic links ? If you are not sure, you can identifiy symlink directories by first letter in permission string. Letter l stands for a symbolic link. You can also use command below to count your symlinks. If output is other than 0, contact us on slack for further instructions.
+1.2 Do you use symbolic links ? If you are not sure, you can identify symlink directories by first letter in permission string. Letter l stands for a symbolic link. You can also use command below to count your symlinks. If output is other than 0, contact us on slack for further instructions.
 
 Example:
 ```bash
@@ -33,7 +33,7 @@ ls -lR /mnt/archive | grep ^l |wc -l
 
 ### 2. Compress data using tar
 
-2.1 Check diskspace available with command below.
+2.1 Check disk space available with command below.
 
 ```bash
 df -H

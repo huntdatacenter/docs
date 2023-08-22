@@ -12,4 +12,4 @@ description: Unfortunately, sometimes things don't work as they should. We have 
 * [Connection](/do-science/troubleshooting/connection) - This is a collection of troubleshooting related to system access (VPN, phone) and lab access (SSH, HUNT Workbench).
 * [Lab activities](/do-science/troubleshooting/lab-activities) - This is a collection of troubleshooting related to lab activities.
 
-[Contact us](/contact) if you are still stucked after reading up.
+[Contact us](/contact) if you are still stuck after reading up.

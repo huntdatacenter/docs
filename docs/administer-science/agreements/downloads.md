@@ -26,14 +26,14 @@ Head over to our [administer science service desk](/administer-science/service-d
 
 ## User agreement
 
-[HUNT Cloud User Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf) (pdf)
+[HUNT Cloud User Agreement](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf) (PDF)
 
 Your lab leader and lab coordinator can add new users to your lab through our user agreement. The agreement is signed by both the new user and the lab leader or lab coordinator.
 
 
 ## Lab order
 
-[HUNT Cloud Lab Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-order.pdf) (pdf)
+[HUNT Cloud Lab Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-order.pdf) (PDF)
 
 Your data space leader or administrative data space coordinator can use this order to attach new labs under a data space. The order is co-signed by both the data space leader and the new lab leader.
 
@@ -87,9 +87,9 @@ Send us your signed agreement utilizing the blue button in the data space sectio
 
 ## Data space order
 
-[HUNT Cloud Data Space Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-space-order.pdf) (pdf)
+[HUNT Cloud Data Space Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-space-order.pdf) (PDF)
 
-Your services center leader or serices center administratorcan use this order to attach new data spaces to their service center. The order is co-signed by both the services center leader and data space leader. 
+Your services center leader or services center administrator can use this order to attach new data spaces to their service center. The order is co-signed by both the services center leader and data space leader. 
 
 ::: details Clarification of the form fields
 
@@ -129,7 +129,7 @@ This individual is our contact point for knowledge transfers between lab users a
 
 **Financial coordinator**
 
-The following individual is the point of contact for financial discussions, including issues related to reporting, invoice profiles, know-hows related to the prices model, dialogue on continous development of the finacial model and prices etc. Note that this is a different roles that our invoice contact which is our point of contact for technicalities for the invoice handling.
+The following individual is the point of contact for financial discussions, including issues related to reporting, invoice profiles, know-hows related to the prices model, dialogue on continuous development of the financial model and prices etc. Note that this is a different roles that our invoice contact which is our point of contact for technicalities for the invoice handling.
 
 **Subscription level**
 
@@ -150,7 +150,7 @@ Send us your signed agreement utilizing the blue button in the service center se
 
 ## Invoice profile
 
-[HUNT Cloud Invoice Profile](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-invoice-profile.pdf) (pdf)
+[HUNT Cloud Invoice Profile](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-invoice-profile.pdf) (PDF)
 
 This form defined the invoice profile for your cloud services fees. One invoice profile needs to be attached to your data space agreement.
 
@@ -192,21 +192,21 @@ Specify "K.STED" and "PROJECT NUMBER" for your data space. These fields are mand
 
 New labs may for testing purposes by entitled to a pilot period before the lab is metered is accordance with the services specifications. If applicable, this is included in dialogue with representatives from HUNT Cloud. 
 
-- *SERVICES*: Specify one or more services indvluded in the pilot period.
-- *END OF PILOT PERIOD*: Specify the date from where the specified servies are metered in accordance with the services specifications.
+- *SERVICES*: Specify one or more services included in the pilot period.
+- *END OF PILOT PERIOD*: Specify the date from where the specified services are metered in accordance with the services specifications.
 
 **Free quote**
 
-If certain cloud services are to be provided without charce (free quote). If applicable, this is included in dialogue with representatives from HUNT Cloud. 
+If certain cloud services are to be provided without charge (free quote). If applicable, this is included in dialogue with representatives from HUNT Cloud. 
 
 - *FREE QUOTA*: Specify the quota that is provided without charge.
-- *END OF FREE QUOTA*: Specify the date from where the free quota period will end and the services will be metered in accordance with the Services Sepecification.
+- *END OF FREE QUOTA*: Specify the date from where the free quota period will end and the services will be metered in accordance with the Services Specification.
 
 **Advanced payment**
 
 You may make an advance payment to your invoice profile. The payment is applied to the accrued costs. If the payment is larger than the amount currently owed, it will reduce the next automatic charge. For clarification, a positive account balance due to advance payments will not be refunded at the end of services.
 
-- *AMOUNT*: This is the optional amount in NOK that will be payed at the initiation of the invoice porfile. 
+- *AMOUNT*: This is the optional amount in NOK that will be payed at the initiation of the invoice profile. 
 
 **Spending limit**
 
@@ -230,7 +230,7 @@ Send us your signed invoice profile together with your data space order utilizin
 
 ## Internal kista order
 
-[HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf) (pdf)
+[HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf) (PDF)
 
 Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab. You can order Internal kista order in [Service Desk](/administer-science/service-desk/lab-orders/#internal-kista)
 
@@ -258,15 +258,15 @@ your-username@`your-labname`-home~$
 
 - **Data size**: This is the size in gigabytes of the storage area in the kista. You can for example use [NCDU](/do-science/tools/technical/ncdu/) to estimate the size of your data.
 
-- **Kista duration**: Specify the number of days that you need the kista. Default is 30 days, maxium is 90 days.
+- **Kista duration**: Specify the number of days that you need the kista. Default is 30 days, maximum is 90 days.
 
 **Downloader Lab**
 
-- **Uploader Lab:** This is the name of the lab that will download the data that you upload. If you are uncertain about the lab name, contact their lab coordinator or downlaoder. We need a correct Lab name to proceed your order. 
+- **Uploader Lab:** This is the name of the lab that will download the data that you upload. If you are uncertain about the lab name, contact their lab coordinator or downloader. We need a correct Lab name to proceed your order. 
 
-- **Lab leader / Lab coordinator:** This is the name of the lab leader or lab coordintor in the downloader lab. 
+- **Lab leader / Lab coordinator:** This is the name of the lab leader or lab coordinator in the downloader lab. 
 
-- **Dwonloader:** This is the name of the lab user that will copy date from your kista and into the downloader lab.
+- **Downloader:** This is the name of the lab user that will copy date from your kista and into the downloader lab.
 
 - **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
 
@@ -278,7 +278,7 @@ your-username@`your-labname`-home~$
 
 ## External kista import order
 
-[HUNT Cloud - External Kista Import Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-import-order.pdf) (pdf)
+[HUNT Cloud - External Kista Import Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-import-order.pdf) (PDF)
 
 Data space leaders and Data space compliance administrators can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from a lab. The order is co-signed by the uploader outside HUNT Cloud. You can order external kista import in [Service Desk](/administer-science/service-desk/data-space-orders/#external-import-kista)
 
@@ -314,7 +314,7 @@ your-username@`your-labname`-home~$
 
 *External party*
 
-- **Uploader name:** This is the name of the individual that is authorized to do the technical transfer fraom the external party and into the external kista (uploader). We use this to communicate configuration information, and we expect the public key to be sent from this address.
+- **Uploader name:** This is the name of the individual that is authorized to do the technical transfer from the external party and into the external kista (uploader). We use this to communicate configuration information, and we expect the public key to be sent from this address.
 
 - **Uploader email:** This is organizational email that we use to communicate with the uploader. List their organizational email as we use this for part of the identification process.
 
@@ -332,7 +332,7 @@ your-username@`your-labname`-home~$
 
 - **Data sensitivity**: Specify if the data in the transfer includes indirect or direct identifiable information. Indirect identifiable information is typical for research data where names, addresses, unique identification numbers (fødselsnummer) are substituted with project specific individual identifiers (løpenummer). Direct identifiable information is information such as names, unique ids etc. that may directly identify the research participant. We ask this since import of direct identifiable information may require special security controls in your lab and/or agreement adjustments.
 
-- **Kista duration**: Specify the number of days that the kista will be online. External kistas are indendent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
+- **Kista duration**: Specify the number of days that the kista will be online. External kistas are independent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
 
 *Data space leader*
 
@@ -342,16 +342,16 @@ your-username@`your-labname`-home~$
 
 - **Place/date**: State the place where your uploader signed the order and the date when the order was signed. 
 
-*Uploader (exernal party)*
+*Uploader (external party)*
 
 
-- **Uploader**: This is the field for the signature of your external uploader. For compliance purpuses, we need the uploader to accept our use policy of the service before we grant access into our systems.
+- **Uploader**: This is the field for the signature of your external uploader. For compliance purposes, we need the uploader to accept our use policy of the service before we grant access into our systems.
 
 :::
 
 ## External kista export order
 
-[HUNT Cloud - External Kista Export Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-export-order.pdf) (pdf)
+[HUNT Cloud - External Kista Export Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-export-order.pdf) (PDF)
 
 Data space leaders and Data space compliance officers can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. The order is co-signed by downloader outside HUNT Cloud. You can order external kista export in [Service Desk](/administer-science/service-desk/data-space-orders/#external-export-kista)
 
@@ -406,7 +406,7 @@ your-username@`your-labname`-home~$
 
 - **Data sensitivity**: Specify if the data in the transfer includes indirect or direct identifiable information. Indirect identifiable information is typical for research data where names, addresses, unique identification numbers (fødselsnummer) are substituted with project specific individual identifiers (løpenummer). Direct identifiable information is information such as names, unique ids etc. that may directly identify the research participant. We ask this since export of direct identifiable information may require special security controls.
 
-- **Kista duration**: Specify the number of days that the kista will be online. External kistas are indendent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
+- **Kista duration**: Specify the number of days that the kista will be online. External kistas are independent for limited duration. Contact us for other transfer alternatives if you need permanent or long-term transfer services.
 
 *Data space leader*
 
@@ -418,13 +418,13 @@ your-username@`your-labname`-home~$
 
 - **Place/date**: State the place where your downloader signed the order and the date when the order was signed. 
 
-- **Uploader**: This is the field for the signature of your external downloader. For compliance purpuses, we need the downloader to accept our use policy of the service before we grant access into our systems.
+- **Uploader**: This is the field for the signature of your external downloader. For compliance purposes, we need the downloader to accept our use policy of the service before we grant access into our systems.
 
 :::
 
 ## Network opening order
 
-[HUNT Cloud Network Opening Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-network-opening-order.pdf) (pdf)
+[HUNT Cloud Network Opening Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-network-opening-order.pdf) (PDF)
 
 Your data space leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab. Afterwards, send us filled network opening order in [Service Desk](/administer-science/service-desk/data-space-orders/#network-opening)
 

@@ -23,7 +23,7 @@ The compliance administrator orchestrate  issues related to agreements, and secu
 
 The activities includes agreements related to the data space, including as the data space agreement, individual lab orders, external kista forms, as well as dialogue on contractual development and other improvements. 
 
-The activities also includes coordination of compliance evaluations such as ethical approvals, privacy assessment (DPIA) and security assessments (RAR/ROS)  for scientific acitivities in the labs under your data space.
+The activities also includes coordination of compliance evaluations such as ethical approvals, privacy assessment (DPIA) and security assessments (RAR/ROS)  for scientific activities in the labs under your data space.
 
 
 ### Data administrator
@@ -36,7 +36,7 @@ The technical administrator is our point of contact for issues related to the cl
 
 ### Training administrator
 
-The training administrator is our point of contact for the spread of knowledge and expertise between lab users within the individual labs in your data space on topcis related to onboardings, common configurations, practical analytics, data space routines etc. This also include dialogues with us and other training administrators on user experience within your labs and how we best can evolve user documentation and other educational tools.
+The training administrator is our point of contact for the spread of knowledge and expertise between lab users within the individual labs in your data space on topics related to onboardings, common configurations, practical analytics, data space routines etc. This also include dialogues with us and other training administrators on user experience within your labs and how we best can evolve user documentation and other educational tools.
 
 ### Financial administrator
 

@@ -16,7 +16,7 @@ description: Guide on VPN installation and configuration. Make sure you have suc
 
 1. Confirmed [collection of secret keys](/do-science/lab-access/collect-your-keys/#step-1-collect-your-keys) in Step 1 of onboarding process.
 
-2. Successfull setup of [Google authenticator](/do-science/lab-access/collect-your-keys/#_1-3-one-time-verification-codes) app. 
+2. Successful setup of [Google authenticator](/do-science/lab-access/collect-your-keys/#_1-3-one-time-verification-codes) app. 
 
 
 ## 2.1 Install the VPN software
@@ -271,7 +271,7 @@ If you received the notification _VPN connection has been successfully establish
 
 ::: danger Access list
 
-We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. [Click here](/do-science/service-desk/#vpn-access-list) to request an opning for your location in our Do science service desk.
+We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. [Click here](/do-science/service-desk/#vpn-access-list) to request an opening for your location in our Do science service desk.
 
 :::
 

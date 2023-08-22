@@ -7,7 +7,7 @@ description: This page contains common questions on scientific administration in
 
 # Lab management FAQ
 
-**This FAQ is intended for lab coordinators and lab leaders that manages activites whitin one lab.**
+**This FAQ is intended for lab coordinators and lab leaders that manages activities within one lab.**
 
 [[toc]]
 
@@ -35,7 +35,7 @@ Send us one user agreement per user via the [administer science service desk](/a
 
 ### How long does an account activation take?
 
-Usually within days, although it may be good to allow for one week. We do recognize that science never sleeps, so [contact us](/contact) for high priority activations same or next business day when strictly needed.
+Usually within days, although it may be good to allow for one week. We do recognize that science never sleeps, so [contact us](/contact) for high priority activation same or next business day when strictly needed.
 
 ### How many users can we add to one lab?
 

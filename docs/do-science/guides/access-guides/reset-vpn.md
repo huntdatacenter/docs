@@ -8,7 +8,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 # VPN certificate reset
 
-**This guide describes how to reset your VPN certificate and passphrase required to access your lab when you receieve your shipments from the [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) order.**
+**This guide describes how to reset your VPN certificate and passphrase required to access your lab when you receive your shipments from the [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) order.**
 
 [[toc]]
 
@@ -22,7 +22,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 :::
 
-**Required software**. The following required software should aready be installed during your initial onboarding: 
+**Required software**. The following required software should already be installed during your initial onboarding: 
 
 1.3. Working VPN software (if not, head over to our Getting started guide to [install the VPN software](/do-science/lab-access/configure-vpn/#_2-1-install-the-vpn-software).
 
@@ -102,17 +102,17 @@ C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remov
 
 ::: expander "MacOS" id="3-macos"
 
-To remove old VPN configuration on MacOS using tunnelblick, follow our guide belo
+To remove old VPN configuration on MacOS using Tunnelblick, follow our guide below
 
 1. Click on running Tunnelblick icon in upper menu bar and select `VPN details...`
 
 ![VPNemovalstep1.png](./images/VPNemovalstep1.png)
 
-2. Select your VPN profile on the left side of the window. Then, in the bottom left corner, select expansion window maked with 3 dots in a circle
+2. Select your VPN profile on the left side of the window. Then, in the bottom left corner, select expansion window marked with 3 dots in a circle
 
 ![credentialsremoval1](./images/credentialsremovalpart1.png)
 
-3. At the very bottom of the newly opened withdow, select `Delete configuration's credentials in keychain`
+3. At the very bottom of the newly opened widow, select `Delete configuration's credentials in keychain`
 
 ![credentialsremoval2](./images/configremovalpart2.png)
 
@@ -280,7 +280,7 @@ If you received the notification _VPN connection has been successfully establish
 
 ::: danger Access list
 
-We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. [Click here](/do-science/service-desk/#vpn-access-list) to request an opning for your location in our Do science service desk.
+We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. [Click here](/do-science/service-desk/#vpn-access-list) to request an opening for your location in our Do science service desk.
 
 :::
 
@@ -327,7 +327,7 @@ If nothing works, please head over to our main [troubleshooting](/do-science/tro
 
 ### Tunnelblick does not respond
 
-If tunnelblick stopped responding, you can try following command in your terminal to stop tunnelblick app
+If Tunnelblick stopped responding, you can try following command in your terminal to stop Tunnelblick app
 
 ```bash
 sudo pkill -9 -i 'Tunnelblick|openvpn'

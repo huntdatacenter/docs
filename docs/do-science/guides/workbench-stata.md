@@ -16,7 +16,7 @@ description: Guide to get going with Stata in your HUNT Workbench.
 
 Stata in your HUNT Workbench runs in a Jupyter notebook. This means that you can write known Stata commands and that you can view your plots directly on your screen. 
 
-On the technical side, Stata runs on your lab home machine and conntect with your workbench via [stata_kernel](https://kylebarron.dev/stata_kernel/) developed by Kyle Barron.
+On the technical side, Stata runs on your lab home machine and connect with your workbench via [stata_kernel](https://kylebarron.dev/stata_kernel/) developed by Kyle Barron.
 
 ::: tip Recommended browser
 
@@ -63,9 +63,9 @@ Your command should look similar to this when included in the notebook:
 
 ![Load data](./images/stata_load_data_example.png)
 
-Now click on the cell and hit `shift+enter` on your keyboard, or click the `play-button` at the top of your notebook, to run the code. This will load the standard Stata `auto` dataset and acknowledge witht the text `(1978 Automobile Data)` which means that the command was completed successfully.
+Now click on the cell and hit `shift+enter` on your keyboard, or click the `play-button` at the top of your notebook, to run the code. This will load the standard Stata `auto` dataset and acknowledge with the text `(1978 Automobile Data)` which means that the command was completed successfully.
 
-![Load data acknowledgement](./images/stata_load_data_example_ack.png)
+![Load data acknowledgment](./images/stata_load_data_example_ack.png)
 
 ::: details Load data from your lab
 
@@ -157,7 +157,7 @@ Next, let's do a histogram:
 // make a histogram
 histogram mpg
 ```
-And before we head to the next section, a slighlty more advanced graph example:
+And before we head to the next section, a slightly more advanced graph example:
 
 ```python
 // Twoway linear prediction plots with CIs
@@ -231,7 +231,7 @@ It's great to see that you followed the guide all the way to the end. Time to ce
 
 ## Going further
 
-If you want to learn more about the stata kernel, head over to Kayle Barron's [Example stata_kernel Jupyter notebook](https://nbviewer.org/github/kylebarron/stata_kernel/blob/master/examples/Example.ipynb). The notebook includes more examples, including the `magics` commands that gives you special powers. Cut and paste the text from the cells into your current stata_kernel workbench notebook to get going. 
+If you want to learn more about the Stata kernel, head over to Kayle Barron's [Example stata_kernel Jupyter notebook](https://nbviewer.org/github/kylebarron/stata_kernel/blob/master/examples/Example.ipynb). The notebook includes more examples, including the `magics` commands that gives you special powers. Cut and paste the text from the cells into your current stata_kernel workbench notebook to get going. 
 
 #### Community discussions
 

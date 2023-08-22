@@ -23,5 +23,5 @@ Feel free to [contact us](/contact) on email if you think we can help in your or
 ### Other service desks
 
 * [Do science service desk](/do-science/service-desk). This service desk lists service orders that can be requested by lab users.
-* [Administer science service desk](/administer-science/service-desk/). This service desk lists service orders that can be requested by data space administrators and lab coorinators.
+* [Administer science service desk](/administer-science/service-desk/). This service desk lists service orders that can be requested by data space administrators and lab coordinators.
 

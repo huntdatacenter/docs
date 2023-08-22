@@ -37,9 +37,9 @@ We recommend that you [expand your volumes](/administer-science/service-desk/lab
 
 ::: 
 
-### Accidentially deleted or overwritten files
+### Accidentally deleted or overwritten files
 
-It's frustrating to accidentially delete or overwrite data that you care about. For files on `/mnt/work` and `/mnt/archive` you have nightly copies stored in 30 days. [Click here](/administer-science/data/faq/#where-do-i-find-my-restore-files) to see how you can find your restore copies and how your can [restore a file](/administer-science/data/faq/#how-can-i-restore-a-file).
+It's frustrating to accidentally delete or overwrite data that you care about. For files on `/mnt/work` and `/mnt/archive` you have nightly copies stored in 30 days. [Click here](/administer-science/data/faq/#where-do-i-find-my-restore-files) to see how you can find your restore copies and how your can [restore a file](/administer-science/data/faq/#how-can-i-restore-a-file).
 
 
 
@@ -66,9 +66,9 @@ Rerun your command with sudo. [Contact us](/contact) if this doesn't solve your 
 
 See our [MATLAB troubleshooting section](/do-science/tools/analytical/Matlab/#activate-license).
 
-### R and Rstudio
+### R and RStudio
 
-See our [R and Rstudio troubleshooting section](/do-science/tools/analytical/r-studio/#troubleshooting).
+See our [R and RStudio troubleshooting section](/do-science/tools/analytical/r-studio/#troubleshooting).
 
 ### Stata
 

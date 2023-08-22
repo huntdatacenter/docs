@@ -21,7 +21,7 @@ Yes. Your lab leader and lab coordinator can order machine updates] and order ne
 
 ### Can I have custom machine types?
 
-Yes. Don't find what you are looking for among our default [machine types](/administer-science/services/machine-types)? Labs in a data space on the [blue subscription](/administer-science/services/overview/#subscriptions) level can request machines types with tailored memory and cpu resources. [Contact us](/contact) on email to get started.
+Yes. Don't find what you are looking for among our default [machine types](/administer-science/services/machine-types)? Labs in a data space on the [blue subscription](/administer-science/services/overview/#subscriptions) level can request machines types with tailored memory and CPU resources. [Contact us](/contact) on email to get started.
 
 ### Is my process hitting memory issues?
 
@@ -31,7 +31,7 @@ See below for descriptions on how to monitor your memory consumption using the `
 
 Yes. You have several options:
 
-(1) A quick way is to use [HTOP](/do-science/tools/technical/htop/) for interactive monitoring of cpu and memory inside individual machines.
+(1) A quick way is to use [HTOP](/do-science/tools/technical/htop/) for interactive monitoring of CPU and memory inside individual machines.
 
 (2) The [time](http://man7.org/linux/man-pages/man1/time.1.html) command is a quick way to determine the duration of execution of a particular command. For example add `/usr/bin/time -v` before your command to get going:
 
@@ -80,14 +80,14 @@ When your command or script finishes, `time` writes a message to standard error 
 
 :::
 
-(3) Use your monthly "Lab report" sent to your lab leader and lab coordinator for tracking of longer term resource consumptions inside your lab.
+(3) Use your monthly "Lab report" sent to your lab leader and lab coordinator for tracking of longer term resource consumption inside your lab.
 
 
 ## Access
 
-### How can I access our iaas and blue machines?
+### How can I access our IaaS and blue machines?
 
-In your home machine, type **`ssh `** (ssh and space) and hit the **`Tab`** button twice. This will give you a list of the available iaas and blue machines in your lab. The default user will be **`ubuntu`** and the default password will be **`ubuntu`**.
+In your home machine, type **`ssh `** (ssh and space) and hit the **`Tab`** button twice. This will give you a list of the available IaaS and blue machines in your lab. The default user will be **`ubuntu`** and the default password will be **`ubuntu`**.
 
 ```bash
 ssh ubuntu@<machine-name>
@@ -95,7 +95,7 @@ ssh ubuntu@<machine-name>
 
 ### How can I make the login 'passwordless'?
 
-You can add your keys to the iaas and blue machines or 'passwordless' logins. In your home machine:
+You can add your keys to the IaaS and blue machines or 'passwordless' logins. In your home machine:
 
 ```bash
 # -- Add keys
@@ -142,15 +142,15 @@ On you home machine, we recommend that you install software that you download in
 
 ### Can I run MATLAB, Stata, SPSS and RStudio?
 
-Yes. You can run commonly used analytical tools, such MATLAB, Stata, SPSS and Rstudio directly from your lab. You will need to bring a license from your host institution if you are affiliated outside of NTNU. Graphical user interfaces are accessed through the X2Go-software. [Contact us](/contact) for installations on home-machines.
+Yes. You can run commonly used analytical tools, such MATLAB, Stata, SPSS and RStudio directly from your lab. You will need to bring a license from your host institution if you are affiliated outside of NTNU. Graphical user interfaces are accessed through the X2Go-software. [Contact us](/contact) for installations on home-machines.
 
 ### Can I run Windows software?
 
-Most likely. Many commonly used software in scientific computing can be run from your lab, such as MatLab, Stata, and SPSS, including many special tools for image analysis and genetic analysis. However, we do run Linux as the operating systems in your lab. Some Windows tools will therefore be unavailable. We do provide Windows systems in those rare cases when this is the only option to run mission critical applications. [Contact us](/contact) if you think you do need Windows tools to get your science to fly.
+Most likely. Many commonly used software in scientific computing can be run from your lab, such as MATLAB, Stata, and SPSS, including many special tools for image analysis and genetic analysis. However, we do run Linux as the operating systems in your lab. Some Windows tools will therefore be unavailable. We do provide Windows systems in those rare cases when this is the only option to run mission critical applications. [Contact us](/contact) if you think you do need Windows tools to get your science to fly.
 
 ### Can I run Docker containers?
 
-Yes. You can run [Docker images](https://www.docker.com/) on both [iaas](/do-science/faq/compute/#what-is-an-iaas-machine) and [blue](/do-science/faq/compute/#what-is-a-blue-machine) machines. Docker images can not be run from home machines due to security reasons.
+Yes. You can run [Docker images](https://www.docker.com/) on both [IaaS](/do-science/faq/compute/#what-is-an-iaas-machine) and [blue](/do-science/faq/compute/#what-is-a-blue-machine) machines. Docker images can not be run from home machines due to security reasons.
 
 ::: tip
 
@@ -160,18 +160,18 @@ If you need to run docker images on home machine try using Singularity instead. 
 
 ### Can I run Singularity containers?
 
-Yes, you can run your Singularity containers on both home, iaas and blue machines. Follow our quick
+Yes, you can run your Singularity containers on both home, IaaS and blue machines. Follow our quick
 [Singularity installation guide](/do-science/tools/technical/singularity/). For simplicity, we strongly recommend to install singularity via Conda.
 
 ## Workflow
 
 ### How can I keep my jobs running when I disconnect?
 
-You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/do-science/tools/technical/terminal-multiplexers/) to get started. Your jobs over [X2Go](/do-science/tools/technical/x2go/#set-up-your-local-machine), such as Rstudio and Stata, should be kept alive between your logins by default.
+You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/do-science/tools/technical/terminal-multiplexers/) to get started. Your jobs over [X2Go](/do-science/tools/technical/x2go/#set-up-your-local-machine), such as RStudio and Stata, should be kept alive between your logins by default.
 
 ### How can I profile the resources needed in my workflow?
 
-For longer workflows your resource consumption may differ for each step in your code. Profiling tools may help to identify consumption for each part, such as time, cpu, mem, etc., both within your code and any third party libraries that you may utilize.
+For longer workflows your resource consumption may differ for each step in your code. Profiling tools may help to identify consumption for each part, such as time, CPU, mem, etc., both within your code and any third party libraries that you may utilize.
 
 ::: details See example of profiling tools
 
@@ -194,7 +194,7 @@ Examples of R profilers:
 
 ### Can I restart our lab machines?
 
-Yes. You can restart your home, iaas and blue machines by running the **`reboot`** command. We have enabled this command so that you can schedule restarts in according with computational workflows.
+Yes. You can restart your home, IaaS and blue machines by running the **`reboot`** command. We have enabled this command so that you can schedule restarts in according with computational workflows.
 
 ```bash
 sudo reboot
@@ -206,19 +206,19 @@ Please be aware that restarts will affect all of your lab colleagues working on 
 
 ### What privileges does my account have?
 
-You have [sudo](https://en.wikipedia.org/wiki/Sudo) rights in home machines for application installation (apt) and machine restart (reboot). You have full administrator privileges on other machine types in your lab ([iaas and blue](faq/compute/#machine-types)).
+You have [sudo](https://en.wikipedia.org/wiki/Sudo) rights in home machines for application installation (apt) and machine restart (reboot). You have full administrator privileges on other machine types in your lab ([IaaS and blue](faq/compute/#machine-types)).
 
-### Can I get additional adminsitrator privileges?
+### Can I get additional administrator privileges?
 
-We fully understand that you might need to tune your lab. Thus, you get full administrator privileges on other machine types than home in your lab ([iaas and blue](faq/compute/#machine-types)). [Contact us](/contact) if you would like try one of these. Privileges on home machines are restricted to allow us to be responsible for data and user management.
+We fully understand that you might need to tune your lab. Thus, you get full administrator privileges on other machine types than home in your lab ([IaaS and blue](faq/compute/#machine-types)). [Contact us](/contact) if you would like try one of these. Privileges on home machines are restricted to allow us to be responsible for data and user management.
 
 ### Can I update our operating system on home?
 
-No. Your home machine is configured for reliability. We have therefore chosen to run long term support versions of your operating systems here. Your home machine will therefore typically run one version behind the latest release. We understand that your workflow sometimes require newer versions. Therefore, [contact us](/contact) for deployment of iaas and blue machines that comes with the latest LTS Ubuntu release as default.
+No. Your home machine is configured for reliability. We have therefore chosen to run long term support versions of your operating systems here. Your home machine will therefore typically run one version behind the latest release. We understand that your workflow sometimes require newer versions. Therefore, [contact us](/contact) for deployment of IaaS and blue machines that comes with the latest LTS Ubuntu release as default.
 
 ### Can I get a machine with the latest Ubuntu release?
 
-Yes. Both [iaas](/do-science/faq/compute/#what-is-an-iaas-machine) and [blue](/do-science/faq/compute/#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other linux operating systems.
+Yes. Both [IaaS](/do-science/faq/compute/#what-is-an-iaas-machine) and [blue](/do-science/faq/compute/#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other Linux operating systems.
 
 ### When do you plan to upgrade our home operating system?
 
@@ -239,7 +239,7 @@ Entry and home machines runs on Ubuntu 18.04. The next cycle will upgrade Ubuntu
 
 ### Why not upgrade to the latest version?
 
-For reliability, we aim to run one OS version below the latest Ubuntu long term release. That said, we do recognize the need to utilize newer OS versions to keep your science flying. These are available on IAAS og Blue machines.
+For reliability, we aim to run one OS version below the latest Ubuntu long term release. That said, we do recognize the need to utilize newer OS versions to keep your science flying. These are available on IAAS and Blue machines.
 
 ### When will you do the upgrade?
 
@@ -265,7 +265,7 @@ Maybe. Below is a description of expected changes in packages that may cause pot
 
 System python version may change. We will specify such changes on these pages prior to each cycle. You may need to reinstall some of your Pip packages.
 
-#### R / Rstudio
+#### R / RStudio
 
 R version can change slightly, although the main version will remain the same. This should minimize any risk of affecting your scripts. Be aware that the operating system upgrade also upgrade system packages that your R-packages may depend on.
 
@@ -288,23 +288,23 @@ You will loose possibility to install packages. Many tools like Python are progr
 
 ## Machine types
 
-You will meet four principal machine types in your lab. You may choose to deploy home, iaas and blue machines in [various sizes](/administer-science/services/machine-types).
+You will meet four principal machine types in your lab. You may choose to deploy home, IaaS and blue machines in [various sizes](/administer-science/services/machine-types).
 
 ### What is a "home" machine?
 
 This is a managed machine type. All labs have one "home" machine that is pre-configured with user accounts, [attached storage](/do-science/faq/storage/#resources) and some analytical software. Users may download their own software using the **`apt`** package manager and reboot their machine when needed. Further configurations has to be guided by us. Home machines run Ubuntu 16.04 operating systems.
 
-### What is an "iaas" machine?
+### What is an "IaaS" machine?
 
-In addition to the home machine, lab leaders and lab coordinators may request new "iaas" (infrastructure as a service) machines to be deployed in your lab. This is an unmanaged machine type where you as a lab user get full administrator privileges (root access). We expect you to configure and maintain these machines yourself. We usually deploy these machines with vanilla Ubuntu 20.04 operating system, 1TB of storage and the machine size of your choice. Iaas machines are deployed for a minimum of 30 days.
+In addition to the home machine, lab leaders and lab coordinators may request new "IaaS" (infrastructure as a service) machines to be deployed in your lab. This is an unmanaged machine type where you as a lab user get full administrator privileges (root access). We expect you to configure and maintain these machines yourself. We usually deploy these machines with vanilla Ubuntu 20.04 operating system, 1TB of storage and the machine size of your choice. IaaS machines are deployed for a minimum of 30 days.
 
 ### What is a "blue" machine?
 
-Blue machines are identical to iaas machine with one exceptions: they are deployed for a maximum of 30 days. The machine type is introduced to allow for flexible deployments of short-lived high capacity environments.
+Blue machines are identical to IaaS machine with one exceptions: they are deployed for a maximum of 30 days. The machine type is introduced to allow for flexible deployments of short-lived high capacity environments.
 
 ### What is an "entry" machine?
 
-You will meet the "entry" machine when you configure your account during your initial onboarding. Hopefully, you will not meet this machine type again. The machine type is introduced for security purposes allowing us to quickly install security updates and do machine restarts without affecting your analyis in the other lab machines.
+You will meet the "entry" machine when you configure your account during your initial onboarding. Hopefully, you will not meet this machine type again. The machine type is introduced for security purposes allowing us to quickly install security updates and do machine restarts without affecting your analysis in the other lab machines.
 
 ### What is your "local" machine?
 

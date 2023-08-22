@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # Service desk orders for data spaces
 
-**This page list predefined service orders for data space management. To place an order, click the blue button and send us a prefilled email.**
+**This page list predefined service orders for data space management. To place an order, click the blue button and send us a pre-filled email.**
 
 [[toc]]
 
@@ -22,7 +22,7 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 
 
-## Lab mangement
+## Lab management
 
 ### New lab
 
@@ -67,7 +67,7 @@ The minimum storage allocation of the three volumes is 1000 Gigabytes (1 Terabyt
 
 ARCHIVE = 400
 WORK = 300
-SCRACH = 300
+SCRATCH = 300
 
 The above numbers are in Gigabytes (1000 Gigabytes = 1 Terabyte). To illustrate, if you want your archive volume to be 2 Terabyte, specify **`ARCHIVE = 2000`** in your order.
 

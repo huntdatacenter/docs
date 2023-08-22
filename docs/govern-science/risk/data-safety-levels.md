@@ -6,7 +6,7 @@ sidebarDepth: 1
 description: This page holds information on data safety levels in HUNT Cloud.
 ---
 
-# Data safey levels
+# Data safety levels
 
 **This is a holding page for our data safety levels (DSL) pilot program. DSL is our approach to a set of layered information security and privacy controls to allow for more science to be done among our scientists.**
 
@@ -26,7 +26,7 @@ To allow for such flexibility we see a need to standardize the possibilities to 
 
 ### What?
 
-Our DSL approach is inspired by the [biosafety levels](https://en.wikipedia.org/wiki/Biosafety_level) for scientific labwork. 
+Our DSL approach is inspired by the [biosafety levels](https://en.wikipedia.org/wiki/Biosafety_level) for scientific lab work. 
 
 We aim to evolve a set of predictable information security and privacy controls that range from the lowest data safety level 2 (DSL-2) in HUNT Cloud to the highest at level 4 (DSL-4).
 

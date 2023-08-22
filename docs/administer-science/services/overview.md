@@ -21,7 +21,7 @@ We have two type of subscriptions in HUNT Cloud: (1) Data space subscription and
 
 **This is the subscription that establishes a management account (data space) in HUNT Cloud where individual labs are attached and their resources managed, controlled and billed.**
 
-We have established three subscription levels that differs in the individual service availability, resource prioritixation, ting membership and costs for individual resources: 
+We have established three subscription levels that differs in the individual service availability, resource prioritization, ting membership and costs for individual resources: 
 
 | Subscription levels: | WHITE | ORANGE | BLUE |
 | ---- | ---- | ---- | ---- | 

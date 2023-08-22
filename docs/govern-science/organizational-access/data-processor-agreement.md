@@ -8,7 +8,7 @@ description: This page contain information of the data processor agreement betwe
 
 # Data processor agreement
 
-**The data processor agreement in HUTN Cloud is on top of our agreement hierarchy because it regulates one of the most important asset in digital science: your trustworthiness towards your research participants (data protection and data privacy).**
+**The data processor agreement in HUNT Cloud is on top of our agreement hierarchy because it regulates one of the most important asset in digital science: your trustworthiness towards your research participants (data protection and data privacy).**
 
 [[toc]]
 
@@ -20,12 +20,12 @@ The data processor agreement allows your research to be compliant with the Data 
 
 All other agreements with your organization are  formally incorporated into the data processor agreement as attachments. 
 
-## Attachements
+## Attachments
 
 The following documents are attached to the agreement:
 
 - Purpose of the processing
-- List of individual processing (data spacesa and labs)
+- List of individual processing (data spaces and labs)
 - "Avgrensning mot Helsenormen" (Norwegian health law) 
 - Security measures
 - Contact list

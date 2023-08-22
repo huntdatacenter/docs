@@ -9,7 +9,7 @@ description: These pages contains user documentation aimed at representatives th
 
 **Welcome to our documentation for representatives that govern science in HUNT Cloud.**
 
-This section is aimed at represenatives for data controllers and service centers. See our [main documentation page](/) for other sections.
+This section is aimed at representatives for data controllers and service centers. See our [main documentation page](/) for other sections.
 
 See our [organizational access](/govern-science/organizational-access) section for guidance on how new organizations can enable HUNT Cloud resources for their scientific centers and research groups. 
 
