@@ -146,7 +146,7 @@ export default {
               In your <i>Google authenticator</i> app you should see a field<br />
               with name <code>HUNT CLOUD VPN</code> showing <b>6 digit verification code</b>.
               <br /><br />
-              This code refreshes ever 30 seconds.
+              This code refreshes every 30 seconds.
             </v-card>
             <v-btn color="primary" class="mx-2" @click="totpStepper = 1">Start again</v-btn>
             <v-btn color="link" class="mx-2" @click="totpStepper = 2">Back</v-btn>
