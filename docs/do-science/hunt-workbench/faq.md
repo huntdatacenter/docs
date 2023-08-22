@@ -315,6 +315,15 @@ Learn how to manage environments on [docs.conda.io](https://docs.conda.io/projec
 When you [restart your HUNT Workbench](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment), your _RStudio_ user state might still be preserved. Read the _RStudio_ support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server) to achieve a complete reset.
 
 
+## Visual Studio Code
+
+### Pre-installed extensions
+
+VSCode in Workbench comes with jupyter and python extension.
+
+### Can I install my own extensions? 
+
+No. This option is not available to user. If you need additional extensions [contact us](/contact).
 
 
 ## Terminal

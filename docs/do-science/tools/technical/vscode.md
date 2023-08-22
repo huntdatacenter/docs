@@ -3,7 +3,7 @@ title: Visual Studio Code
 category: Technical tools
 permalink: /do-science/tools/technical/vscode
 sidebarDepth: 1
-description: Usage guide for VNC.
+description: Usege guide for VSCode.
 ---
 
 # Visual Studio Code
@@ -143,13 +143,6 @@ You should see an option to Open Folder.
 If all is fine, you should now see your lab machine files and selected directory. 
 
 **Happy coding!**
-
-
-## Recommended extensions for working in HUNT Cloud
-
-### 1. Jupyter Notebooks
-
-### 2. 
 
 
 ## Troubleshooting
