@@ -10,14 +10,11 @@ description: Minor and major updates to our services.
 
 [[toc]]
 
-We think of patching as an act of taking care of something. And this page holds some of the descriptions on how we take care of HUNT Cloud's services. All with the aim of providing the best possible conditions for your scientific explorations. [Contact us](/contact) if you have ideas on that we can evolve in future patch notes.
-
+This page holds some of the descriptions on how we take care of HUNT Cloud's services. All with the aim of providing the best possible conditions for your scientific explorations.
 
 ## Patch note 2.9.1
 
 *2023-08-21*
-
-
 
 ::: details Do science
 
@@ -25,7 +22,7 @@ We think of patching as an act of taking care of something. And this page holds 
 
 **Visual Studio Code added to HUNT Workbench**
 
-We are happy to announce that Virtual Studio Code (VS Code) is available to all [HUNT Workbench](/do-science/hunt-workbench/) users. The application is linked with your lab directory, and Jupyter and python extensions are available by default. [Contact us](/contact) in your Slack channel if your require additional extensions.
+Virtual Studio Code (VS Code) is now available to all [HUNT Workbench](/do-science/hunt-workbench/) users. The application is linked with your lab directory, and Jupyter and python extensions are available by default. [Contact us](/contact) in your Slack lab channel if your require additional extensions.
 
 **Custom IaaS access links**
 
@@ -49,9 +46,9 @@ We have added a guide on [how to run Singularity](/do-science/tools/technical/si
 
 RStudio is now updated to version 2023.06.1 in HUNT Workbench.
 
-**Extended X2GO guide**
+**Extended X2Go guide**
 
-We have updated the [X2GO guide](/do-science/tools/technical/x2go/) with screenshots and tried to clarify how you best can setup your lab session.
+We have updated the [X2Go guide](/do-science/tools/technical/x2go/) with screenshots and tried to clarify how you best can setup your lab session.
 
 <h3>Upcoming features</h3>
 
@@ -69,7 +66,7 @@ We have updated the [X2GO guide](/do-science/tools/technical/x2go/) with screens
 
 **Services specification**
 
-Minor update to the [Services specification](/administer-science/services/specifications/) (2.9) where references to "security" is extended to "security and privacy" as a preparation for the upcoming ISO/IEC 27701-certification.
+Update to the [Services specification](/administer-science/services/specifications/) (2.9) where references to "security" is extended to "security and privacy" as a preparation for the upcoming ISO/IEC 27701-certification.
 
 **Agreement updates**
 
@@ -114,13 +111,7 @@ Our new [Security and privacy policies](https://docs.hdc.ntnu.no/govern-science/
 :::
 
 
-
-
-
-
-
-
-
+<!-- ================== -->
 
 
 ## Patch note 2.8.2
@@ -228,8 +219,7 @@ The new [resolutions from Tingweek #9](/govern-science/tingweek/resolutions/) ar
 :::
 
 
-
-
+<!-- ================== -->
 
 
 ## About
@@ -246,7 +236,7 @@ There are no fixed publication schedule for the next Patch note. The intention i
 
 #### Numbering
 
-We use a four digit numbering system on our Patch notes, for example version `2.8.3`. 
+We use a three digit numbering system on our Patch notes, for example version `2.8.3`. 
 
 | Number | Description | 
 | ---- | ---- | 
