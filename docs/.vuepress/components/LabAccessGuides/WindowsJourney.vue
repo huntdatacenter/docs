@@ -276,12 +276,12 @@ Connection to home closed.`,
                       </li>
                       <li>
                         Enter a rotating <code>verification code</code> from Google Authenticator as your password. <br />
-                        <img alt="OpenVPN-icon" src="/img/vpn/8.OpenVPN-guide.png" />
+                        <img alt="OpenVPN-icon" src="/img/vpn/9.OpenVPN-guide.png" />
                       </li>
                       <li>
                         When prompted for a Private Key Password, insert the <code>VPN passphrase</code> that your collected in Step 1. Your authentication will fail when you complete your passphrase below. 
                         This is expected since your verification code timed out while you typed your passphrase. <br />
-                        <img alt="OpenVPN-icon" src="/img/vpn/9.OpenVPN-guide.png" />
+                        <img alt="OpenVPN-icon" src="/img/vpn/8.OpenVPN-guide.png" />
                       </li>
                       <li>
                         Now try again to connect with a fresh verfication code from Google Authenticator.
