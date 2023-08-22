@@ -70,6 +70,7 @@ export default {
       passLessId: 4,
       sshConfId: 5,
       workbenchId: 6,
+      cmdPrompt: `<code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>`,
       openvpnName: `OpenVPN-<version-number>-I001-amd64.msi`,
       sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
       passExpired: `WARNING: Your password has expired.
@@ -244,18 +245,22 @@ Connection to home closed.`,
 
                     <details><summary style="cursor: pointer;"><b>Installing OpenVPN without administrative rights</b></summary>
 
-                      <div class="pl-4 pr-12 py-0">
+                      <div class="pl-4 pr-16 py-0">
                         <br />
-                        You can check if you have administrative rights on your local computer by running net localgroup "Administrators" in a command prompt (opens new window)and see if your username is listed.
+                        You can check if you have administrative rights on your local computer by running
+                        <code>net localgroup "Administrators"</code> in a Command prompt (<span v-html="cmdPrompt"></span>)
+                        and see if your username is listed.
                         <br /><br />
 
-                        Request assistance from your local IT personnel if you do not hold administrative rights on your local computer and request that they:<br /><br />
+                        <b>Request assistance from your local IT personnel if you do not hold administrative rights on your local computer and request that they:</b>
+                        <br /><br />
 
                         (1) assist you in the OpenVPN installation, or<br /><br />
 
                         (2) grant you administrative rights on your local computer so you can install OpenVPN yourself.<br /><br />
 
-                        For simplicity, we have outlined the steps they need to perform below which you can attach to your request.<br /><br />
+                        <b>For simplicity, we have outlined the steps they need to perform below which you can attach to your request:</b>
+                        <br /><br />
 
                         <ol>
                           <li class="mb-2">
@@ -276,10 +281,12 @@ Connection to home closed.`,
                             Add my user to OpenVPN Administrators group on my computer:<br />
 
                             <CopyTextField
-                              :value='`net localgroup "OpenVPN Administrators" /add <DOMAIN>\<USERNAME>`'
+                              :value='`net localgroup "OpenVPN Administrators" /add "myDomain\\myUsername"`'
                               label=""
                               prefix=""
                             />
+
+                            Replace <code>myDomain</code> and <code>myUsername</code> with user information.
                           </li>
                         </ol>
                       </div>
@@ -378,9 +385,10 @@ Connection to home closed.`,
 
                 <v-stepper-content step="4">
                   <v-card
-                    class="mb-8 pr-4"
+                    class="mb-8 pr-16"
                     elevation="0"
                   >
+
                     <v-alert
                       border="left"
                       colored-border
@@ -395,15 +403,17 @@ Connection to home closed.`,
 
                   </v-card>
                   <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
-                  <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 5">Troubleshooting</v-btn>
+                  <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
+                  <v-btn color="warning" class="mx-2 mb-1" @click="vpnStepper = 5">Troubleshooting</v-btn>
                   <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
                 </v-stepper-content>
 
                 <v-stepper-step
                   :complete="vpnStepper > 5"
-                  step="5"
+                  step="?"
                 >
                   Troubleshooting
+                  <small>Optional tips to try in case of issues</small>
                 </v-stepper-step>
 
                 <v-stepper-content step="5">
