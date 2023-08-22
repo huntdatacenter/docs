@@ -59,7 +59,7 @@ export default {
     @focus="$event.target.select()"
   >
     <template v-slot:append>
-      <a class="material-icons content_copy" @click="copyText(getRef)">&#xe14d;</a>
+      <a class="material-icons content_copy" style="cursor: pointer;" @click="copyText(getRef)">&#xe14d;</a>
     </template>
   </v-text-field>
 
