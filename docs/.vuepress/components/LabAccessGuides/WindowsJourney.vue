@@ -129,11 +129,13 @@ Connection to home closed.`,
     copyText(key) {
       let textToCopy = this.$refs[key].$el.querySelector('input')
       textToCopy.select()
+      // TODO: change to https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API
       document.execCommand("copy");
     },
     copyTextArea(key) {
       let textToCopy = this.$refs[key].$el.querySelector('textarea')
       textToCopy.select()
+      // TODO: change to https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API
       document.execCommand("copy");
     },
     nextPanel() {
