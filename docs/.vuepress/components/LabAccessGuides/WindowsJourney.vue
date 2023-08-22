@@ -9,6 +9,20 @@ import {
   VExpansionPanels,
   VExpansionPanelHeader,
   VExpansionPanelContent,
+  VCard,
+  VCardText,
+  VToolbar,
+  VToolbarTitle,
+  VToolbarItems,
+  VSpacer,
+  VDialog,
+  VStepper,
+  VStepperHeader,
+  VStepperContent,
+  VStepperStep,
+  VStepperItems,
+  VDivider,
+  VIcon,
 } from "vuetify/lib";
 
 export default {
@@ -23,6 +37,20 @@ export default {
     VExpansionPanels,
     VExpansionPanelHeader,
     VExpansionPanelContent,
+    VCard,
+    VCardText,
+    VToolbar,
+    VToolbarTitle,
+    VToolbarItems,
+    VSpacer,
+    VDialog,
+    VStepper,
+    VStepperHeader,
+    VStepperContent,
+    VStepperStep,
+    VStepperItems,
+    VDivider,
+    VIcon,
     CopyTextField: () => import('../generic/CopyTextField.vue'),
   },
   props: {
@@ -33,6 +61,9 @@ export default {
   },
   data() {
     return {
+      totpDialog: false,
+      e1: null,
+      vpnDialog: false,
       sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
       passExpired: `WARNING: Your password has expired.
 You must change your password now and login again!
@@ -107,6 +138,147 @@ Connection to home closed.`,
         <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
           If you have not setup HUNT Cloud VPN yet follow our
           <a href="/do-science/lab-access/configure-vpn/" target="_blank">VPN configuration guide</a>
+
+          <v-row class="my-1">
+            <v-col cols="12">
+              <v-btn
+                text
+                @click.stop="totpDialog = true"
+                elevation="2"
+              >
+                <v-icon>smartphone</v-icon>&nbsp;&nbsp;Time-based one-time password (TOTP)
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-dialog
+            v-model="totpDialog"
+            persistent
+            max-width="960px"
+            @keydown.esc="totpDialog = false"
+          >
+            <v-card>
+              <v-toolbar dark color="#00509e">
+                <v-toolbar-title>TOTP Configuration</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-toolbar-items>
+                  <v-btn icon fab @click="totpDialog = false">
+                    <v-icon>close</v-icon>
+                  </v-btn>
+                </v-toolbar-items>
+              </v-toolbar>
+
+              <v-stepper v-model="e1" vertical>
+                <v-stepper-step
+                  :complete="e1 > 1"
+                  step="1"
+                >
+                  Install TOTP application on your phone
+                </v-stepper-step>
+
+                <v-stepper-content step="1">
+                  <v-card
+                    class="mb-12"
+                    elevation="0"
+                  >
+                    Search for <code>Google Authenticator</code> in the iOS or Android app stores, or use the links below:
+
+                    <ul class="my-2">
+                      <li>
+                        <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8" target="_blank">Download and install for iOS here (opens new window)</a>
+                      </li>
+                      <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en" target="_blank">Download and install for Android here (opens new window)</a>
+                      </li>
+                    </ul>
+
+                    If you prefer different TOTP application e.g. <code>Microsoft Authenticator</code> you can use it,
+                    although the steps might be sligthly different and we do not cover them in our guides.
+                  </v-card>
+                  <v-btn color="primary" @click="e1 = 2">Continue</v-btn>
+                  <!-- <v-btn text @click="totpDialog = false">Close</v-btn> -->
+                </v-stepper-content>
+
+                <v-stepper-step
+                  :complete="e1 > 2"
+                  step="2"
+                >
+                  Add new TOTP account
+                </v-stepper-step>
+
+                <v-stepper-content step="2">
+                  <v-card
+                    class="mb-12"
+                    elevation="0"
+                  >
+                    <ol>
+                      <li>Start the Google Authenticator app.</li>
+                      <li>Tap <i>Begin setup</i> (first time setup) or <i>Add an account</i> (additional accounts).</li>
+                      <li>Select Enter a provided key.</li>
+                      <li>Enter <code>HUNT CLOUD VPN</code> as the account name.</li>
+                      <li>Enter the <code>Google Authenticator</code> key sent to you over Signal.</li>
+                      <li>Make sure <i>Time based</i> is selected.</li>
+                      <li>Tap <i>Add</i> to finish the setup of the new account.</li>
+                    </ol>
+                  </v-card>
+                  <v-btn color="primary" @click="e1 = 3">Continue</v-btn>
+                  <!-- <v-btn text @click="totpDialog = false">Close</v-btn> -->
+                </v-stepper-content>
+
+                <v-stepper-step step="3">
+                  Check your TOTP codes
+                </v-stepper-step>
+
+                <v-stepper-content step="3">
+                  <v-card
+                    class="mb-12"
+                    elevation="0"
+                  >
+                    In your <i>Google authenticator</i> app you should see a field<br />
+                    with name <code>HUNT CLOUD VPN</code> showing <b>6 digit verification code</b>.
+                    <br /><br />
+                    This code refreshes ever 30 seconds.
+                  </v-card>
+                  <v-btn color="primary" @click="e1 = 1">Continue</v-btn>
+                  <v-btn color="success" @click="totpDialog = false">Close</v-btn>
+                </v-stepper-content>
+              </v-stepper>
+            </v-card>
+          </v-dialog>
+
+          <v-row class="my-1">
+            <v-col cols="12">
+              <v-btn
+                text
+                color="link"
+                @click.stop="vpnDialog = true"
+                elevation="2"
+              >
+                <v-icon>vpn_lock</v-icon>&nbsp;&nbsp;OpenVPN Configuration
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-dialog
+            v-model="vpnDialog"
+            persistent
+            max-width="960px"
+            @keydown.esc="vpnDialog = false"
+          >
+            <v-card>
+              <v-toolbar dark color="#00509e">
+                <v-toolbar-title>OpenVPN Configuration</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-toolbar-items>
+                  <v-btn icon fab @click="vpnDialog = false">
+                    <v-icon>close</v-icon>
+                  </v-btn>
+                </v-toolbar-items>
+              </v-toolbar>
+
+              <v-card-text class="pt-6">
+                Testing testing
+              </v-card-text>
+            </v-card>
+          </v-dialog>
         </v-expansion-panel-content>
     </v-expansion-panel>
 
