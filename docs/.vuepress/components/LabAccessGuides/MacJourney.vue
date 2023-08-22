@@ -282,7 +282,9 @@ ${this.ipAddress}    ${this.labName}-entry
                       Enter your user name (same as the OpenVPN profile file name).
                     </li>
                     <li>
-                      Enter the verification code from Google Authenticator as your password.
+                      Enter the verification code from Google Authenticator as your password. <br />
+                      <img alt="tunnelblick-login" src="/img/vpn/tunnelblick-login.png" /> <br />
+                      Make sure that the Save password checkbox is <b>unchecked</b>.
                     </li>
                     <li>
                       When prompted for a Private Key Password or Passphrase, insert the VPN passphrase from Signal message.
