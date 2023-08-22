@@ -74,7 +74,6 @@ export default {
       passLessId: 4,
       sshConfId: 5,
       workbenchId: 6,
-      whatNextId: 7,
       sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
       passExpired: `WARNING: Your password has expired.
 You must change your password now and login again!
@@ -126,6 +125,9 @@ ${this.ipAddress}    ${this.labName}-entry
       textToCopy.select()
       document.execCommand("copy");
     },
+    nextPanel() {
+      this.mainExpansionPanel = this.mainExpansionPanel ? this.mainExpansionPanel + 1 : 1
+    },
   },
 };
 </script>
@@ -149,6 +151,8 @@ ${this.ipAddress}    ${this.labName}-entry
                 <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#install-7z-on-your-local-computer" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
                 <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
               </ol>
+
+              <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
             </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -420,6 +424,7 @@ ${this.ipAddress}    ${this.labName}-entry
               </v-card>
             </v-dialog>
 
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -557,7 +562,8 @@ ${this.ipAddress}    ${this.labName}-entry
             <v-col cols="12">
               {{ passChangeId }}.12. Close Terminal window to make sure you are disconnected from your lab.
             </v-col>
-              
+
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -672,6 +678,7 @@ ${this.ipAddress}    ${this.labName}-entry
               {{ passLessId }}.6. Close Terminal window to make sure you are disconnected from your lab.
             </v-col>
 
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -764,6 +771,7 @@ ${this.ipAddress}    ${this.labName}-entry
               </v-text-field>
             </v-col>
 
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -819,13 +827,14 @@ ${this.ipAddress}    ${this.labName}-entry
               </v-text-field>
             </v-col>
 
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
-        <!-- 7. What next -->
-        <v-expansion-panel>
+        <!-- Where to go next -->
+        <v-expansion-panel v-if="mainExpansionPanel && mainExpansionPanel == 6">
           <v-expansion-panel-header>
-            <h3><a href="#where-to-go-next" class="header-anchor">#</a> {{ whatNextId }}. Where to go next</h3>
+            <h3><a href="#where-to-go-next" class="header-anchor">#</a> Where to go next</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="where-to-go-next" ref="#where-to-go-next" class="mt-2">
             <v-sheet
@@ -842,7 +851,7 @@ ${this.ipAddress}    ${this.labName}-entry
               <h2 class="text-h5 mb-6">You have configured your lab access</h2>
 
               <p class="mb-4 text-medium-emphasis text-body-2">
-                Feel free to continue reading our docs and figure out what <a href="/do-science/tools/" target="_blank">tools</a> do you need for your work.
+                Feel free to continue reading our docs and figure out which <a href="/do-science/tools/" target="_blank">tools</a> do you need for your work.
                 <br>
 
                 Otherwise, you're done!

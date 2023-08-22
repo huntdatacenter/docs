@@ -74,7 +74,6 @@ export default {
       passLessId: 4,
       sshConfId: 5,
       workbenchId: 6,
-      whatNextId: 7,
       cmdPrompt: `<code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>`,
       openvpnName: `OpenVPN-<version-number>-I001-amd64.msi`,
       sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
@@ -117,6 +116,7 @@ Connection to home closed.`,
       return this.cfgShow ? `mobaxterm:${this.labName}%2DRDP%3D%2391%234%25${this.labName}%2D${this.homeIpUrl}%253389%25${this.username}%250%250%250%250%25%2D1%250%250%25%2D1%25xfce4%2Dsession%25${this.entryIpUrl}%5F%5FPIPE%5F%5F${this.homeIpUrl}%2522%5F%5FPIPE%5F%5F22%25${this.username}%5F%5FPIPE%5F%5F${this.username}%250%250%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%5F%5FPIPE%5F%5F%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%2D1%25%25%2D1%25%2D1%250%250%250%25%2D1%23MobaFont%2510%250%250%25%2D1%2515%25236%2C236%2C236%2530%2C30%2C30%25180%2C180%2C192%250%25%2D1%250%25%25xterm%25%2D1%25%2D1%25%5FStd%5FColors%5F0%5F%2580%2524%250%251%25%2D1%25%3Cnone%3E%25%250%250%25%2D1%230%23%20%23%2D1` : null;
     },
   },
+  // watch: {},
   created() {},
   methods: {
     wrap(template) {
@@ -135,6 +135,9 @@ Connection to home closed.`,
       let textToCopy = this.$refs[key].$el.querySelector('textarea')
       textToCopy.select()
       document.execCommand("copy");
+    },
+    nextPanel() {
+      this.mainExpansionPanel = this.mainExpansionPanel ? this.mainExpansionPanel + 1 : 1
     },
   },
 };
@@ -159,6 +162,8 @@ Connection to home closed.`,
                 <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#install-7z-on-your-local-computer" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
                 <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
               </ol>
+
+              <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
             </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -449,6 +454,7 @@ Connection to home closed.`,
               </v-card>
             </v-dialog>
 
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -586,7 +592,8 @@ Connection to home closed.`,
             <v-col cols="12">
               {{ passChangeId }}.12. Close Command Prompt window to make sure you are disconnected from your lab.
             </v-col>
-              
+
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -661,6 +668,7 @@ Connection to home closed.`,
               {{ passLessId }}.4. Close Command prompt window to make sure you are disconnected from your lab.
             </v-col>
 
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -750,6 +758,8 @@ Connection to home closed.`,
               </template>
               </v-text-field>
             </v-col>
+
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -805,13 +815,14 @@ Connection to home closed.`,
               </v-text-field>
             </v-col>
 
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
-        <!-- 7. What next -->
-        <v-expansion-panel>
+        <!-- Where to go next -->
+        <v-expansion-panel v-if="mainExpansionPanel && mainExpansionPanel == 6">
           <v-expansion-panel-header>
-            <h3><a href="#where-to-go-next" class="header-anchor">#</a> {{ whatNextId }}. Where to go next</h3>
+            <h3><a href="#where-to-go-next" class="header-anchor">#</a> Where to go next</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="where-to-go-next" ref="#where-to-go-next" class="mt-2">
             <v-sheet
@@ -828,7 +839,7 @@ Connection to home closed.`,
               <h2 class="text-h5 mb-6">You have configured your lab access</h2>
 
               <p class="mb-4 text-medium-emphasis text-body-2">
-                Feel free to continue reading our docs and figure out what <a href="/do-science/tools/" target="_blank">tools</a> do you need for your work.
+                Feel free to continue reading our docs and figure out which <a href="/do-science/tools/" target="_blank">tools</a> do you need for your work.
                 <br>
 
                 Otherwise, you're done!
