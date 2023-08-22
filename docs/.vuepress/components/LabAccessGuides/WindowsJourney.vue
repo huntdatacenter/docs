@@ -9,6 +9,17 @@ import {
   VExpansionPanels,
   VExpansionPanelHeader,
   VExpansionPanelContent,
+  VCard,
+  VToolbar,
+  VToolbarTitle,
+  VToolbarItems,
+  VSpacer,
+  VDialog,
+  VStepper,
+  VStepperContent,
+  VStepperStep,
+  VStepperItems,
+  VIcon,
 } from "vuetify/lib";
 
 export default {
@@ -23,7 +34,19 @@ export default {
     VExpansionPanels,
     VExpansionPanelHeader,
     VExpansionPanelContent,
+    VCard,
+    VToolbar,
+    VToolbarTitle,
+    VToolbarItems,
+    VSpacer,
+    VDialog,
+    VStepper,
+    VStepperContent,
+    VStepperStep,
+    VStepperItems,
+    VIcon,
     CopyTextField: () => import('../generic/CopyTextField.vue'),
+    TotpGuide: () => import('../LabAccessGuides/TotpGuide.vue'),
   },
   props: {
     username: { type: String, default: null },
@@ -33,6 +56,15 @@ export default {
   },
   data() {
     return {
+      vpnDialog: false,
+      vpnStepper: 1,
+      fetchSecretsId: 1,
+      vpnConfId: 2,
+      passChangeId: 3,
+      passLessId: 4,
+      sshConfId: 5,
+      workbenchId: 6,
+      openvpnName: `OpenVPN-<version-number>-I001-amd64.msi`,
       sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
       passExpired: `WARNING: Your password has expired.
 You must change your password now and login again!
@@ -100,31 +132,211 @@ Connection to home closed.`,
 <template>
   <v-expansion-panels elevation="0">
 
+    <!-- 1. Fetch secrets -->
     <v-expansion-panel>
         <v-expansion-panel-header>
-          <h3><a href="#vpn-config" class="header-anchor">#</a> 1. VPN Configuration</h3>
+          <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ fetchSecretsId }}. Fetch secrets</h3>
         </v-expansion-panel-header>
-        <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
-          If you have not setup HUNT Cloud VPN yet follow our
-          <a href="/do-science/lab-access/configure-vpn/" target="_blank">VPN configuration guide</a>
+        <v-expansion-panel-content id="fetch-secrets" ref="#fetch-secrets" class="mt-2">
+          You have received a link to an encrypted file archive (7-ZIP file).
+
+          <ol>
+            <li>Click on the filesender link in the email to download the file and save this on your local computer.</li>
+            <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#install-7z-on-your-local-computer" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
+            <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
+          </ol>
         </v-expansion-panel-content>
     </v-expansion-panel>
 
-    <!-- 2. SSH Passphrase change -->
+    <!-- 2. VPN Configuration -->
+    <v-expansion-panel>
+        <v-expansion-panel-header>
+          <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Configuration</h3>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
+          If you have not setup <b>HUNT Cloud VPN</b> yet follow <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
+
+          <TotpGuide />
+
+          <v-row class="my-1">
+            <v-col cols="12">
+              <v-btn
+                text
+                color="link"
+                @click.stop="vpnDialog = true"
+                elevation="2"
+              >
+                <v-icon>vpn_lock</v-icon>&nbsp;&nbsp;2. OpenVPN Configuration
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-dialog
+            v-model="vpnDialog"
+            persistent
+            max-width="960px"
+            @keydown.esc="vpnDialog = false"
+          >
+            <v-card>
+              <v-toolbar dark color="#00509e">
+                <v-toolbar-title>OpenVPN Configuration</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-toolbar-items>
+                  <v-btn icon fab @click="vpnDialog = false">
+                    <v-icon>close</v-icon>
+                  </v-btn>
+                </v-toolbar-items>
+              </v-toolbar>
+
+              <v-stepper v-model="vpnStepper" vertical>
+                <v-stepper-step
+                  :complete="vpnStepper > 1"
+                  step="1"
+                >
+                  Install OpenVPN
+                </v-stepper-step>
+
+                <v-stepper-content step="1">
+                  <v-card
+                    class="mb-12"
+                    elevation="0"
+                  >
+                    We use the open-source application <code>OpenVPN GUI</code> to ensure encrypted communication between your local computer and us.<br /><br />
+
+                    <a href="https://openvpn.net/community-downloads/" target="_blank">Download and install <b>OpenVPN</b> using the latest stable Windows Installer (Avoid beta versions)</a>
+                    <br /><br />
+
+                    Click on the link above, scroll down to the file named <code>{{ openvpnName }}</code> (Windows 10 users),
+                    download the file and follow the on-screen installation instructions.<br /><br />
+
+                    <b>NTNU users:</b> Windows users from NTNU can install OpenVPN community edition
+                    using NTNU Software Center even without administrative rights.<br />
+                  </v-card>
+                  <v-btn color="primary" class="mx-2" @click="vpnStepper = 2">Continue</v-btn>
+                  <!-- <v-btn color="link" class="mx-2" @click="totpDialog = false">Close</v-btn> -->
+                </v-stepper-content>
+
+                <v-stepper-step
+                  :complete="vpnStepper > 2"
+                  step="2"
+                >
+                  Setup the VPN profile
+                </v-stepper-step>
+
+                <v-stepper-content step="2">
+                  <v-card
+                    class="mb-12"
+                    elevation="0"
+                  >
+                    <ol>
+                      <li>
+                        Start the OpenVPN client (if it is not running already) <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/1.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        Expand pane on taskbar <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/3.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        Select <code>Import file...</code> <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/4.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        Click on Import file and select OpenVPN profile file <code>&lt;username&gt;.ovpn</code> that you extracted from 7-ZIP archive. <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/5.OpenVPN-guide.png" /> <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/6.OpenVPN-guide.png" />
+                      </li>
+                    </ol>
+                  </v-card>
+                  <v-btn color="primary" class="mx-2" @click="vpnStepper = 3">Continue</v-btn>
+                  <v-btn color="link" class="mx-2" @click="vpnStepper = 1">Back</v-btn>
+                </v-stepper-content>
+
+                <v-stepper-step
+                  :complete="vpnStepper > 3"
+                  step="3"
+                >
+                  Connect to the VPN
+                </v-stepper-step>
+
+                <v-stepper-content step="3">
+                  <v-card
+                    class="mb-12"
+                    elevation="0"
+                  >
+                    <ol>
+                      <li>
+                        Right-click on the OpenVPN notification icon on the taskbar.
+                      </li>
+                      <li>
+                        Select <i>Connect</i>. <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/7.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        Enter your user name (same as the OpenVPN profile file name).
+                      </li>
+                      <li>
+                        Enter a rotating <code>verification code</code> from Google Authenticator as your password. <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/8.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        When prompted for a Private Key Password, insert the <code>VPN passphrase</code> that your collected in Step 1. Your authentication will fail when you complete your passphrase below. 
+                        This is expected since your verification code timed out while you typed your passphrase. <br />
+                        <img alt="OpenVPN-icon" src="/img/vpn/9.OpenVPN-guide.png" />
+                      </li>
+                      <li>
+                        Now try again to connect with a fresh verfication code from Google Authenticator.
+                      </li>
+                    </ol>
+                    <br /><br />
+                    You should now be connected to the VPN.
+                  </v-card>
+                  <v-btn color="primary" class="mx-2" @click="vpnStepper = 4">Continue</v-btn>
+                  <v-btn color="link" class="mx-2" @click="vpnStepper = 2">Back</v-btn>
+                </v-stepper-content>
+
+                <v-stepper-step
+                  :complete="vpnStepper > 4"
+                  step="4"
+                >
+                  Verify your VPN connection
+                </v-stepper-step>
+
+                <v-stepper-content step="4">
+                  <v-card
+                    class="mb-12"
+                    elevation="0"
+                  >
+                    The OpenVPN notification icon on the taskbar should be green. <br />
+                    <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" />
+                    <br /><br />
+                  </v-card>
+                  <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
+                  <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
+                  <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
+                </v-stepper-content>
+
+              </v-stepper>
+            </v-card>
+          </v-dialog>
+
+        </v-expansion-panel-content>
+    </v-expansion-panel>
+
+    <!-- 3. SSH Passphrase change -->
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <h3><a href="#ssh-passphrase" class="header-anchor">#</a> 2. SSH Passphrase change</h3>
+        <h3><a href="#ssh-passphrase" class="header-anchor">#</a> {{ passChangeId }}. SSH Passphrase change</h3>
       </v-expansion-panel-header>
       <v-expansion-panel-content id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
 
         <v-col cols="12">
-          2.1. Design <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
+          {{ passChangeId }}.1. Design <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
         </v-col>
         <v-col cols="12">
-          2.2. To start Command Prompt press <code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
+          {{ passChangeId }}.2. To start Command Prompt press <code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
         </v-col>
         <v-col cols="12">
-          2.3. Login to entry machine.
+          {{ passChangeId }}.3. Login to entry machine.
           <CopyTextField
             :value="`ssh -o StrictHostKeyChecking=accept-new ${username}@${ipAddress}`"
             label=""
@@ -133,25 +345,25 @@ Connection to home closed.`,
           />
         </v-col>
         <v-col cols="12">
-          2.4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
+          {{ passChangeId }}.4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
           <div class="language- extra-class"><pre class="language-text">
           <code v-text="`${username}@${ipAddress}'s password:`"></code>
           </pre></div>
         </v-col>
         <v-col cols="12">
-          2.5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
+          {{ passChangeId }}.5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
           <div class="language- extra-class"><pre class="language-text">
           <code v-text="passExpiredText"></code>
           </pre></div>
         </v-col>
         <v-col cols="12">
-          2.6. Enter <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+          {{ passChangeId }}.6. Enter <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
           <div class="language- extra-class"><pre class="language-text">
           <code v-text="passSetNew"></code>
           </pre></div>
         </v-col>
         <v-col cols="12">
-          2.7. Reconnect to entry using your new passphrase.
+          {{ passChangeId }}.7. Reconnect to entry using your new passphrase.
           <v-text-field
           :value="`ssh ${username}@${ipAddress}`"
           ref="winStep7"
@@ -177,7 +389,7 @@ Connection to home closed.`,
           </pre></div>
         </v-col>
         <v-col cols="12">
-          2.8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
+          {{ passChangeId }}.8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
           <v-text-field
           :value="`ssh -o StrictHostKeyChecking=accept-new home`"
           ref="winStep8"
@@ -197,7 +409,7 @@ Connection to home closed.`,
           </v-text-field>
         </v-col>
         <v-col cols="12">
-          2.9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+          {{ passChangeId }}.9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
           <!-- <div class="language- extra-class"><pre class="language-text">
               <code v-text="`${username}@home's password:`"></code>
           </pre></div> -->
@@ -206,7 +418,7 @@ Connection to home closed.`,
           </pre></div>
         </v-col>
         <v-col cols="12">
-          2.10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
+          {{ passChangeId }}.10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
           <div class="language- extra-class"><pre class="language-text">
           <code v-text="passSetNew"></code>
           </pre></div>
@@ -216,7 +428,7 @@ Connection to home closed.`,
           </pre></div> -->
         </v-col>
         <v-col cols="12">
-          2.11. Verify a successful passphrase update by logging into your home machine.
+          {{ passChangeId }}.11. Verify a successful passphrase update by logging into your home machine.
           <v-text-field
           :value="`ssh home`"
           ref="winStep11"
@@ -242,21 +454,21 @@ Connection to home closed.`,
           </pre></div>
         </v-col>
         <v-col cols="12">
-          2.12. Close Command Prompt window to make sure you are disconnected from your lab.
+          {{ passChangeId }}.12. Close Command Prompt window to make sure you are disconnected from your lab.
         </v-col>
           
       </v-expansion-panel-content>
     </v-expansion-panel>
 
-    <!-- 3. SSH Passwordless access -->
+    <!-- 4. SSH Passwordless access -->
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <h3><a href="#passwordless-access" class="header-anchor">#</a> 3. SSH Passwordless access</h3>
+        <h3><a href="#passwordless-access" class="header-anchor">#</a> {{ passLessId }}. SSH Passwordless access</h3>
       </v-expansion-panel-header>
       <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
 
         <v-col cols="12">
-          3.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+          {{ passLessId }}.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
           <v-text-field
           :value="sshKeygenWin"
           ref="winStep13"
@@ -276,7 +488,7 @@ Connection to home closed.`,
           </v-text-field>
         </v-col>
         <v-col cols="12">
-          3.2. Place your public key into the lab.
+          {{ passLessId }}.2. Place your public key into the lab.
           <v-text-field
           :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${username}@${ipAddress} add-public-key`"
           ref="winStep14"
@@ -296,7 +508,7 @@ Connection to home closed.`,
           </v-text-field>
         </v-col>
         <v-col cols="12">
-          3.3. Confirm passwordless access.
+          {{ passLessId }}.3. Confirm passwordless access.
           <v-text-field
           :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${username}@${ipAddress}`"
           ref="winStep15"
@@ -316,20 +528,20 @@ Connection to home closed.`,
           </v-text-field>
         </v-col>
         <v-col cols="12">
-          3.4. Close Command prompt window to make sure you are disconnected from your lab.
+          {{ passLessId }}.4. Close Command prompt window to make sure you are disconnected from your lab.
         </v-col>
 
       </v-expansion-panel-content>
     </v-expansion-panel>
 
-    <!-- 4. SSH Config file -->
+    <!-- 5. SSH Config file -->
     <v-expansion-panel>
       <v-expansion-panel-header>
-          <h3><a href="#ssh-config" class="header-anchor">#</a> 4. SSH Config file</h3>
+          <h3><a href="#ssh-config" class="header-anchor">#</a> {{ sshConfId }}. SSH Config file</h3>
       </v-expansion-panel-header>
       <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
         <v-col cols="12">
-          4.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists. No output is expected.
+          {{ sshConfId }}.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists. No output is expected.
           <v-text-field
           :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
           ref="winSshConfig1"
@@ -349,7 +561,7 @@ Connection to home closed.`,
           </v-text-field>
         </v-col>
         <v-col cols="12">
-          4.2. Open SSH Config file.
+          {{ sshConfId }}.2. Open SSH Config file.
           <v-text-field
           :value='`Notepad.exe "%USERPROFILE%\\.ssh\\config"`'
           ref="winSshConfig2"
@@ -369,7 +581,7 @@ Connection to home closed.`,
           </v-text-field>
         </v-col>
         <v-col cols="12">
-          4.3. Add lab configuration into SSH Config opened in Notepad.
+          {{ sshConfId }}.3. Add lab configuration into SSH Config opened in Notepad.
           <v-textarea
           v-model.trim="configText"
           ref="ssh-config-win"
@@ -389,7 +601,7 @@ Connection to home closed.`,
           </v-textarea>
         </v-col>
         <v-col cols="12">
-          4.4. Test by connecting straight into home machine.
+          {{ sshConfId }}.4. Test by connecting straight into home machine.
           <v-text-field
           :value="`ssh -o StrictHostKeyChecking=accept-new ${labName}`"
           ref="ssh-config-lab-win"
@@ -411,10 +623,10 @@ Connection to home closed.`,
       </v-expansion-panel-content>
     </v-expansion-panel>
 
-    <!-- 5. Workbench -->
+    <!-- 6. Workbench -->
     <v-expansion-panel>
       <v-expansion-panel-header>
-        <h3><a href="#workbench" class="header-anchor">#</a> 5. Workbench</h3>
+        <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench</h3>
       </v-expansion-panel-header>
       <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
         <v-col cols="12">
