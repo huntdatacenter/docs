@@ -10,6 +10,8 @@ import {
   VExpansionPanelHeader,
   VExpansionPanelContent,
   VCard,
+  VCardTitle,
+  VCardText,
   VToolbar,
   VToolbarTitle,
   VToolbarItems,
@@ -20,6 +22,7 @@ import {
   VStepperStep,
   VStepperItems,
   VIcon,
+  VAlert,
 } from "vuetify/lib";
 
 export default {
@@ -35,6 +38,8 @@ export default {
     VExpansionPanelHeader,
     VExpansionPanelContent,
     VCard,
+    VCardTitle,
+    VCardText,
     VToolbar,
     VToolbarTitle,
     VToolbarItems,
@@ -45,6 +50,7 @@ export default {
     VStepperStep,
     VStepperItems,
     VIcon,
+    VAlert,
     CopyTextField: () => import('../generic/CopyTextField.vue'),
     TotpGuide: () => import('../LabAccessGuides/TotpGuide.vue'),
   },
@@ -173,149 +179,174 @@ Connection to home closed.`,
           <v-dialog
             v-model="vpnDialog"
             persistent
+            scrollable
             max-width="960px"
             @keydown.esc="vpnDialog = false"
           >
-            <v-card>
-              <v-toolbar dark color="#00509e">
-                <v-toolbar-title>OpenVPN Configuration</v-toolbar-title>
-                <v-spacer></v-spacer>
-                <v-toolbar-items>
-                  <v-btn icon fab @click="vpnDialog = false">
-                    <v-icon>close</v-icon>
-                  </v-btn>
-                </v-toolbar-items>
-              </v-toolbar>
+            <v-card elevation="0">
+              <v-card-title class="pa-0">
+                <v-toolbar dark color="#00509e" flat>
+                  <v-toolbar-title>OpenVPN Configuration</v-toolbar-title>
+                  <v-spacer></v-spacer>
+                  <v-toolbar-items>
+                    <v-btn icon fab @click="vpnDialog = false">
+                      <v-icon>close</v-icon>
+                    </v-btn>
+                  </v-toolbar-items>
+                </v-toolbar>
+              </v-card-title>
 
-              <v-stepper v-model="vpnStepper" vertical>
-                <v-stepper-step
-                  :complete="vpnStepper > 1"
-                  step="1"
-                >
-                  Install OpenVPN
-                </v-stepper-step>
-
-                <v-stepper-content step="1">
-                  <v-card
-                    class="mb-12"
-                    elevation="0"
+              <v-card-text class="pa-0">
+                <v-stepper v-model="vpnStepper" vertical>
+                  <v-stepper-step
+                    :complete="vpnStepper > 1"
+                    step="1"
                   >
-                    We use the open-source application <code>OpenVPN GUI</code> to ensure encrypted communication between your local computer and us.<br /><br />
+                    Install OpenVPN
+                  </v-stepper-step>
 
-                    <a href="https://openvpn.net/community-downloads/" target="_blank">Download and install <b>OpenVPN</b> using the latest stable Windows Installer (Avoid beta versions)</a>
-                    <br /><br />
+                  <v-stepper-content step="1">
+                    <v-card
+                      class="mb-12 pr-4"
+                      elevation="0"
+                    >
+                      We use the open-source application <b>OpenVPN GUI</b> to ensure encrypted communication between your local computer and us.<br /><br />
 
-                    Click on the link above, scroll down to the file named <code>{{ openvpnName }}</code> (Windows 10 users),
-                    download the file and follow the on-screen installation instructions.<br /><br />
+                      <a href="https://openvpn.net/community-downloads/" target="_blank">Download and install <b>OpenVPN</b> using the latest stable Windows Installer (Avoid beta versions)</a>
+                      <br /><br />
 
-                    <b>NTNU users:</b> Windows users from NTNU can install OpenVPN community edition
-                    using NTNU Software Center even without administrative rights.<br />
-                  </v-card>
-                  <v-btn color="primary" class="mx-2" @click="vpnStepper = 2">Continue</v-btn>
-                  <!-- <v-btn color="link" class="mx-2" @click="totpDialog = false">Close</v-btn> -->
-                </v-stepper-content>
+                      Click on the link above, scroll down to the file named <code>{{ openvpnName }}</code> (Windows 10 users),
+                      download the file and follow the on-screen installation instructions.<br /><br />
 
-                <v-stepper-step
-                  :complete="vpnStepper > 2"
-                  step="2"
-                >
-                  Setup the VPN profile
-                </v-stepper-step>
+                      <v-alert
+                        border="left"
+                        colored-border
+                        type="info"
+                        elevation="2"
+                      >
+                        <b>NTNU users should use NTNU Software center.</b>
+                        <hr class="mt-1 mb-2" />
+                        Windows users from NTNU can install OpenVPN community edition
+                        using NTNU Software Center even without administrative rights.
+                      </v-alert>
 
-                <v-stepper-content step="2">
-                  <v-card
-                    class="mb-12"
-                    elevation="0"
+                      <v-alert
+                        border="left"
+                        colored-border
+                        type="warning"
+                        elevation="2"
+                      >
+                        <b>You will need administrative rights on your local computer to successfully install OpenVPN.</b>
+                        <hr class="mt-1 mb-2" />
+                        Click on the link below if you do not hold administrative rights on your local computer, or don't know if you have such rights.
+                      </v-alert>
+                    </v-card>
+                    <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
+                    <!-- <v-btn color="link" class="mx-2 mb-1" @click="totpDialog = false">Close</v-btn> -->
+                  </v-stepper-content>
+
+                  <v-stepper-step
+                    :complete="vpnStepper > 2"
+                    step="2"
                   >
-                    <ol>
-                      <li>
-                        Start the OpenVPN client (if it is not running already) <br />
-                        <img alt="OpenVPN-icon" src="/img/vpn/1.OpenVPN-guide.png" />
-                      </li>
-                      <li>
-                        Expand pane on taskbar <br />
-                        <img alt="OpenVPN-icon" src="/img/vpn/3.OpenVPN-guide.png" />
-                      </li>
-                      <li>
-                        Select <code>Import file...</code> <br />
-                        <img alt="OpenVPN-icon" src="/img/vpn/4.OpenVPN-guide.png" />
-                      </li>
-                      <li>
-                        Click on Import file and select OpenVPN profile file <code>&lt;username&gt;.ovpn</code> that you extracted from 7-ZIP archive. <br />
-                        <img alt="OpenVPN-icon" src="/img/vpn/5.OpenVPN-guide.png" /> <br />
-                        <img alt="OpenVPN-icon" src="/img/vpn/6.OpenVPN-guide.png" />
-                      </li>
-                    </ol>
-                  </v-card>
-                  <v-btn color="primary" class="mx-2" @click="vpnStepper = 3">Continue</v-btn>
-                  <v-btn color="link" class="mx-2" @click="vpnStepper = 1">Back</v-btn>
-                </v-stepper-content>
+                    Setup the VPN profile
+                  </v-stepper-step>
 
-                <v-stepper-step
-                  :complete="vpnStepper > 3"
-                  step="3"
-                >
-                  Connect to the VPN
-                </v-stepper-step>
+                  <v-stepper-content step="2">
+                    <v-card
+                      class="mb-12"
+                      elevation="0"
+                    >
+                      <ol>
+                        <li>
+                          Start the OpenVPN client (if it is not running already) <br />
+                          <img alt="OpenVPN-icon" src="/img/vpn/1.OpenVPN-guide.png" />
+                        </li>
+                        <li>
+                          Expand pane on taskbar <br />
+                          <img alt="OpenVPN-icon" src="/img/vpn/3.OpenVPN-guide.png" />
+                        </li>
+                        <li>
+                          Select <code>Import file...</code> <br />
+                          <img alt="OpenVPN-icon" src="/img/vpn/4.OpenVPN-guide.png" />
+                        </li>
+                        <li>
+                          Click on Import file and select OpenVPN profile file <code>&lt;username&gt;.ovpn</code> that you extracted from 7-ZIP archive. <br />
+                          <img alt="OpenVPN-icon" src="/img/vpn/5.OpenVPN-guide.png" /> <br />
+                          <img alt="OpenVPN-icon" src="/img/vpn/6.OpenVPN-guide.png" />
+                        </li>
+                      </ol>
+                    </v-card>
+                    <v-btn color="primary" class="mx-2" @click="vpnStepper = 3">Continue</v-btn>
+                    <v-btn color="link" class="mx-2" @click="vpnStepper = 1">Back</v-btn>
+                  </v-stepper-content>
 
-                <v-stepper-content step="3">
-                  <v-card
-                    class="mb-12"
-                    elevation="0"
+                  <v-stepper-step
+                    :complete="vpnStepper > 3"
+                    step="3"
                   >
-                    <ol>
-                      <li>
-                        Right-click on the OpenVPN notification icon on the taskbar.
-                      </li>
-                      <li>
-                        Select <i>Connect</i>. <br />
-                        <img alt="OpenVPN-icon" src="/img/vpn/7.OpenVPN-guide.png" />
-                      </li>
-                      <li>
-                        Enter your user name (same as the OpenVPN profile file name).
-                      </li>
-                      <li>
-                        Enter a rotating <code>verification code</code> from Google Authenticator as your password. <br />
-                        <img alt="OpenVPN-icon" src="/img/vpn/9.OpenVPN-guide.png" />
-                      </li>
-                      <li>
-                        When prompted for a Private Key Password, insert the <code>VPN passphrase</code> that your collected in Step 1. Your authentication will fail when you complete your passphrase below. 
-                        This is expected since your verification code timed out while you typed your passphrase. <br />
-                        <img alt="OpenVPN-icon" src="/img/vpn/8.OpenVPN-guide.png" />
-                      </li>
-                      <li>
-                        Now try again to connect with a fresh verfication code from Google Authenticator.
-                      </li>
-                    </ol>
-                    <br /><br />
-                    You should now be connected to the VPN.
-                  </v-card>
-                  <v-btn color="primary" class="mx-2" @click="vpnStepper = 4">Continue</v-btn>
-                  <v-btn color="link" class="mx-2" @click="vpnStepper = 2">Back</v-btn>
-                </v-stepper-content>
+                    Connect to the VPN
+                  </v-stepper-step>
 
-                <v-stepper-step
-                  :complete="vpnStepper > 4"
-                  step="4"
-                >
-                  Verify your VPN connection
-                </v-stepper-step>
+                  <v-stepper-content step="3">
+                    <v-card
+                      class="mb-12"
+                      elevation="0"
+                    >
+                      <ol>
+                        <li>
+                          Right-click on the OpenVPN notification icon on the taskbar.
+                        </li>
+                        <li>
+                          Select <i>Connect</i>. <br />
+                          <img alt="OpenVPN-icon" src="/img/vpn/7.OpenVPN-guide.png" />
+                        </li>
+                        <li>
+                          Enter your user name (same as the OpenVPN profile file name).
+                        </li>
+                        <li>
+                          Enter a rotating <code>verification code</code> from Google Authenticator as your password. <br />
+                          <img alt="OpenVPN-icon" src="/img/vpn/9.OpenVPN-guide.png" />
+                        </li>
+                        <li>
+                          When prompted for a Private Key Password, insert the <code>VPN passphrase</code> that your collected in Step 1. Your authentication will fail when you complete your passphrase below. 
+                          This is expected since your verification code timed out while you typed your passphrase. <br />
+                          <img alt="OpenVPN-icon" src="/img/vpn/8.OpenVPN-guide.png" />
+                        </li>
+                        <li>
+                          Now try again to connect with a fresh verfication code from Google Authenticator.
+                        </li>
+                      </ol>
+                      <br /><br />
+                      You should now be connected to the VPN.
+                    </v-card>
+                    <v-btn color="primary" class="mx-2" @click="vpnStepper = 4">Continue</v-btn>
+                    <v-btn color="link" class="mx-2" @click="vpnStepper = 2">Back</v-btn>
+                  </v-stepper-content>
 
-                <v-stepper-content step="4">
-                  <v-card
-                    class="mb-12"
-                    elevation="0"
+                  <v-stepper-step
+                    :complete="vpnStepper > 4"
+                    step="4"
                   >
-                    The OpenVPN notification icon on the taskbar should be green. <br />
-                    <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" />
-                    <br /><br />
-                  </v-card>
-                  <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
-                  <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
-                  <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
-                </v-stepper-content>
+                    Verify your VPN connection
+                  </v-stepper-step>
 
-              </v-stepper>
+                  <v-stepper-content step="4">
+                    <v-card
+                      class="mb-12"
+                      elevation="0"
+                    >
+                      The OpenVPN notification icon on the taskbar should be green. <br />
+                      <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" />
+                      <br /><br />
+                    </v-card>
+                    <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
+                    <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
+                    <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
+                  </v-stepper-content>
+
+                </v-stepper>
+              </v-card-text>
             </v-card>
           </v-dialog>
 
