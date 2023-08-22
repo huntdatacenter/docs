@@ -37,10 +37,9 @@ export default {
 <template>
   <v-row justify="center" class="pt-4 pb-4">
     <v-col cols="10">
-      Once you have <a href="/do-science/lab-access/collect-your-keys/" target="_blank">collected your keys</a>
-      use the guides below to setup your lab access.
+      These are the essential access credentials. Follow the guides below to configure your access.
     </v-col>
-    <v-col cols="10">
+    <v-col cols="4">
       <CopyTextField
         v-model="username"
         label="Username"
@@ -48,7 +47,7 @@ export default {
         prefix=""
       />
     </v-col>
-    <v-col cols="10">
+    <v-col cols="4">
       <CopyTextField
         v-model="labName"
         label="Lab name"
@@ -56,7 +55,7 @@ export default {
         prefix=""
       />
     </v-col>
-    <v-col cols="10">
+    <v-col cols="4">
       <CopyTextField
         v-model="ipAddress"
         label="Lab IP Address"
