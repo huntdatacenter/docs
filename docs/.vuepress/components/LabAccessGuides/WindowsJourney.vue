@@ -216,7 +216,8 @@ Connection to home closed.`,
                       <br /><br />
 
                       Click on the link above, scroll down to the file named <code>{{ openvpnName }}</code> (Windows 10 users),
-                      download the file and follow the on-screen installation instructions.<br /><br />
+                      download the file and follow the on-screen installation instructions until finished.
+                      <br /><br />
 
                       <v-alert
                         border="left"
@@ -240,6 +241,50 @@ Connection to home closed.`,
                         <hr class="mt-1 mb-2" />
                         Click on the link below if you do not hold administrative rights on your local computer, or don't know if you have such rights.
                       </v-alert>
+
+                      <details><summary style="cursor: pointer;"><b>Installing OpenVPN without administrative rights</b></summary>
+
+                        <div class="pl-4 pr-12 py-0">
+                          <br />
+                          You can check if you have administrative rights on your local computer by running net localgroup "Administrators" in a command prompt (opens new window)and see if your username is listed.
+                          <br /><br />
+
+                          Request assistance from your local IT personnel if you do not hold administrative rights on your local computer and request that they:<br /><br />
+
+                          (1) assist you in the OpenVPN installation, or<br /><br />
+
+                          (2) grant you administrative rights on your local computer so you can install OpenVPN yourself.<br /><br />
+
+                          For simplicity, we have outlined the steps they need to perform below which you can attach to your request.<br /><br />
+
+                          <ol>
+                            <li class="mb-2">
+                              Install the OpenVPN client on the computer for my user:<br />
+                              Download and install using the Windows installer from <a href="https://openvpn.net/community-downloads/" target="_blank">https://openvpn.net/community-downloads/</a>
+                              <br />
+                            </li>
+                            <li class="mb-3">
+                              Create an OpenVPN Administrators group on my computer:<br />
+
+                              <CopyTextField
+                                :value='`net localgroup /add "OpenVPN Administrators"`'
+                                label=""
+                                prefix=""
+                              />
+                            </li>
+                            <li class="mb-3">
+                              Add my user to OpenVPN Administrators group on my computer:<br />
+
+                              <CopyTextField
+                                :value='`net localgroup "OpenVPN Administrators" /add <DOMAIN>\<USERNAME>`'
+                                label=""
+                                prefix=""
+                              />
+                            </li>
+                          </ol>
+                        </div>
+
+                      </details>
                     </v-card>
                     <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
                     <!-- <v-btn color="link" class="mx-2 mb-1" @click="totpDialog = false">Close</v-btn> -->
@@ -254,7 +299,7 @@ Connection to home closed.`,
 
                   <v-stepper-content step="2">
                     <v-card
-                      class="mb-12"
+                      class="mb-8 pr-4"
                       elevation="0"
                     >
                       <ol>
@@ -277,8 +322,8 @@ Connection to home closed.`,
                         </li>
                       </ol>
                     </v-card>
-                    <v-btn color="primary" class="mx-2" @click="vpnStepper = 3">Continue</v-btn>
-                    <v-btn color="link" class="mx-2" @click="vpnStepper = 1">Back</v-btn>
+                    <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 3">Continue</v-btn>
+                    <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 1">Back</v-btn>
                   </v-stepper-content>
 
                   <v-stepper-step
@@ -290,7 +335,7 @@ Connection to home closed.`,
 
                   <v-stepper-content step="3">
                     <v-card
-                      class="mb-12"
+                      class="mb-8 pr-4"
                       elevation="0"
                     >
                       <ol>
@@ -320,8 +365,8 @@ Connection to home closed.`,
                       <br /><br />
                       You should now be connected to the VPN.
                     </v-card>
-                    <v-btn color="primary" class="mx-2" @click="vpnStepper = 4">Continue</v-btn>
-                    <v-btn color="link" class="mx-2" @click="vpnStepper = 2">Back</v-btn>
+                    <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 4">Continue</v-btn>
+                    <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 2">Back</v-btn>
                   </v-stepper-content>
 
                   <v-stepper-step
@@ -333,16 +378,44 @@ Connection to home closed.`,
 
                   <v-stepper-content step="4">
                     <v-card
-                      class="mb-12"
+                      class="mb-8 pr-4"
                       elevation="0"
                     >
-                      The OpenVPN notification icon on the taskbar should be green. <br />
-                      <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" />
-                      <br /><br />
+                      <v-alert
+                        border="left"
+                        colored-border
+                        type="success"
+                        elevation="2"
+                        icon="chevron_right"
+                      >
+                        <b>The OpenVPN notification icon on the taskbar should be green.</b>
+                        <hr class="mt-1 mb-2" />
+                        <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" />
+                      </v-alert>
+
+                    </v-card>
+                    <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
+                    <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 5">Troubleshooting</v-btn>
+                    <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
+                  </v-stepper-content>
+
+                  <v-stepper-step
+                    :complete="vpnStepper > 5"
+                    step="5"
+                  >
+                    Troubleshooting
+                  </v-stepper-step>
+
+                  <v-stepper-content step="5">
+                    <v-card
+                      class="mb-8 pr-4"
+                      elevation="0"
+                    >
+                      WIP
+
                     </v-card>
                     <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
-                    <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
-                    <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
+                    <v-btn color="link" class="mx-2 mb-1" @click="vpnStepper = 4">Back</v-btn>
                   </v-stepper-content>
 
                 </v-stepper>
