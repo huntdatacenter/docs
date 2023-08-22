@@ -364,7 +364,44 @@ ${this.ipAddress}    ${this.labName}-entry
                     class="mb-8 pr-4"
                     elevation="0"
                   >
-                    WIP
+
+                  <br />
+                    <h3 id="authenticate-vpn"><a href="#authenticate-vpn" class="header-anchor">#</a> Authenticate VPN</h3>
+                    <p>If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.</p>
+
+                    <br />
+                    <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
+                    <p>
+                      If you received the notification VPN Connection Failed after 60 seconds, please check the following:
+                      <ul>
+                        <li>Verify that you have an active internet connection.</li>
+                        <li>Verify that the Private Key Password is correct.</li>
+                      </ul>
+                    </p>
+
+                    <br />
+                    <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
+                    <p>
+                      The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="`ERROR: could not read Private Key username/password/ok/string from management interface`"></code>
+                      </pre></div>
+
+                      <div class="language- extra-class"><pre class="language-text">
+                        <code v-text="`Cannot load private key file`"></code>
+                      </pre></div>
+                    </p>
+
+                    <v-alert
+                      border="left"
+                      colored-border
+                      type="info"
+                      elevation="2"
+                    >
+                      <b>TIP</b>
+                      <hr class="mt-1 mb-2" />
+                      If nothing works, please head over to our main <a href="/do-science/troubleshooting/connection/#vpn" target="_blank">troubleshooting section</a> for more information on how to troubleshoot connections.
+                    </v-alert>
 
                   </v-card>
                   <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
