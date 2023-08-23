@@ -44,11 +44,22 @@ We have added a guide on [how to run Singularity](/do-science/tools/technical/si
 
 **RStudio updated in HUNT Workbench**
 
-RStudio is now updated to version 2023.06.1 in HUNT Workbench.
+RStudio is updated to version 2023.06.1 in HUNT Workbench.
+
+**Updatad Jupyterhub in HUNT Workbench**
+
+Jupyterhub4 is now running on all Workbench sessions.
+
+**Lab Access link update**
+
+We keep improving onboarding experience for new users.
+
+* Users are now guided on how to setup VPN and TOTP (Time-based One-Time Password) in more convenient fasion with trackable progress of your onboarding.
 
 **Extended X2Go guide**
 
 We have updated the [X2Go guide](/do-science/tools/technical/x2go/) with screenshots and tried to clarify how you best can setup your lab session.
+
 
 <h3>Upcoming features</h3>
 
