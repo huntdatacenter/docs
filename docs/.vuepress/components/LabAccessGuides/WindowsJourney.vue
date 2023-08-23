@@ -126,7 +126,7 @@ Connection to home closed.`,
       if (typeof this.hostsChangeSuccess == "boolean") {
         return this.hostsChangeSuccess ? "success" : "error"
       } else {
-        return "primary"
+        return "link"
       }
     }
   },
@@ -317,7 +317,7 @@ Connection to home closed.`,
                         </details>
                       </v-card>
                       <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
-                      <!-- <v-btn color="link" class="mx-2 mb-1" @click="totpDialog = false">Close</v-btn> -->
+                      <!-- <v-btn color="link" class="mx-2 mb-1" @click="vpnDialog = false">Close</v-btn> -->
                     </v-stepper-content>
 
                     <v-stepper-step
@@ -810,40 +810,13 @@ Connection to home closed.`,
           <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
 
             <v-col cols="12">
-              HUNT Workbench provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
+              <a href="/do-science/hunt-workbench/" target="_blank">HUNT Workbench</a> provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
             </v-col>
             <v-col cols="12">
-              Follow <a href="/do-science/hunt-workbench/installation/" target="_blank">Workbench Installation guide</a> to configure your access.
-            </v-col>
-            <v-col cols="12">
-              <CopyTextField
-                :value="hostsWorkbench"
-                label="Hosts file - Workbench"
-                prefix=""
-                placeholder="Your link is missing access token"
-              />
+              <strong>Follow Workbench Access guide to configure your access:</strong>
             </v-col>
 
-            <v-col cols="12">
-              After you have successfully configured your access, you can use the following link to access your Workbench.
-              <v-text-field
-                :value="`https://${fqdn}`"
-                ref="workbench-link"
-                placeholder="Your link is missing access token"
-                persistent-placeholder
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('workbench-link')">&#xe14d;</a>
-                </template>
-              </v-text-field>
-            </v-col>
-
-            <v-row class="my-1">
+            <v-row class="my-1 mx-1">
               <v-col cols="12">
                 <v-btn
                   text
@@ -851,7 +824,7 @@ Connection to home closed.`,
                   @click.stop="workbenchDialog = true"
                   elevation="2"
                 >
-                  <v-icon>settings</v-icon>&nbsp;&nbsp;Workbench Configuration
+                  <v-icon>settings</v-icon>&nbsp;&nbsp;Workbench Access
                 </v-btn>
               </v-col>
             </v-row>
@@ -889,10 +862,26 @@ Connection to home closed.`,
                         class="mb-12 pr-4"
                         elevation="0"
                       >
-                        1. Assure working VPN connection
+                        <v-alert
+                          border="left"
+                          colored-border
+                          type="warning"
+                          elevation="2"
+                        >
+                          Make sure you have received your Workbench certificate (<code>.p12</code>).
+                        </v-alert>
+                        <v-alert
+                          border="left"
+                          colored-border
+                          type="warning"
+                          elevation="2"
+                        >
+                          Assure working VPN connection.
+                        </v-alert>
                       </v-card>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 2">Continue</v-btn>
-                      <!-- <v-btn color="link" class="mx-2 mb-1" @click="totpDialog = false">Close</v-btn> -->
+                      <!-- <v-btn color="link" class="mx-2 mb-1" @click="workbenchDialog = false">Close</v-btn> -->
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 5">Skip to Troubleshooting</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step
@@ -907,6 +896,18 @@ Connection to home closed.`,
                         class="mb-8 pr-4"
                         elevation="0"
                       >
+                      <v-alert
+                          border="left"
+                          colored-border
+                          type="warning"
+                          elevation="2"
+                        >
+                          <strong>Administrator permissions are required.</strong>
+                          <hr class="mt-1 mb-2" />
+                          If you do not have Administrator permissions on your local workstation make sure to ask
+                          IT department in your organization for assistance or permissions.
+                        </v-alert>
+
                         First, let's set up your hosts file on your local computer. <br />
                         This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
                         <br /><br />
@@ -1066,19 +1067,26 @@ Connection to home closed.`,
                         class="mb-8 pr-16"
                         elevation="0"
                       >
-
                         <v-alert
                           border="left"
                           colored-border
                           type="warning"
                           elevation="2"
                         >
-                          <b>Make sure you are connected to the VPN before you access your HUNT Workbench.</b>
+                          <strong>Make sure you are connected to the VPN before you access your HUNT Workbench.</strong>
+                        </v-alert>
+                        <v-alert
+                          border="left"
+                          colored-border
+                          type="info"
+                          elevation="2"
+                        >
+                          We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
                         </v-alert>
 
                         <ol>
                           <li>
-                            Open your web browser (we recommend <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a>).
+                            Open your web browser.
                           </li>
                           <li>
                             Open the URL address below to access your lab in your web browser:
@@ -1097,28 +1105,31 @@ Connection to home closed.`,
                             <img class="pa-2" alt="chrome_select_certificate_confirm" src="/img/workbench/chrome_select_certificate_confirm.png" style="max-width: 300px;" />
                             <br />
                           </li>
-                          <li>
-                            Sign in with your HUNT Cloud lab username and lab passphrase. This is the passphrase that you made on your first login.
+                          <li class="mb-2">
+                            Sign in with your HUNT Cloud lab username and lab passphrase. This is the same passphrase that you created yourself on your first SSH login.
+                            If you did not create a lab passphrase yet use a temporary SSH passphrase from Signal message.
                           </li>
                           <li>
                             With a little bit of luck you should now see your new HUNT Workbench.
-                            <br /><br />
-                            <strong>Click around and explore your new world!</strong>
-                            <br /><br />
-                            <img class="pa-2" alt="hunt-workbench-screenshot" src="/img/workbench/hunt-workbench-screenshot.png" />
-                            <br />
-                          </li>
-                          <li>
-                            Remember to bookmark your Lab address:
-                            <br />
-                            <div class="language- extra-class"><pre class="language-text">
-                              <code v-html='`https://${fqdn}`'></code>
-                            </pre></div>
-                            <br />
-                            <br />
                             Feel free to read our <a href="/do-science/hunt-workbench/getting-started/" target="_blank">getting started guide</a>.
+                            <br />
+                            <strong>Click around and explore your new world!</strong>
                           </li>
                         </ol>
+                        <br />
+
+                        <v-alert
+                          border="left"
+                          colored-border
+                          type="info"
+                          elevation="2"
+                        >
+                          <b>Remember to bookmark your Lab address</b>
+                          <hr class="mt-1 mb-2" />
+                          <code>https://{{fqdn}}</code>
+                        </v-alert>
+
+                        <img class="pa-2" alt="hunt-workbench-screenshot" src="/img/workbench/hunt-workbench-screenshot.png" />
 
                       </v-card>
                       <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
@@ -1144,31 +1155,139 @@ Connection to home closed.`,
                       See our <a href="/do-science/hunt-workbench/faq/" target="_blank">HUNT Workbench FAQ</a> and <a href="/do-science/hunt-workbench/troubleshooting/" target="_blank">HUNT Workbench Troubleshooting</a> if you do not find your answers below.
 
                         <details class="my-2"><summary style="cursor: pointer;"><strong>This site can’t be reached</strong></summary>
-                          <div class="pl-4 pr-16 py-0">
+                          <div class="pl-4 pr-16 py-2">
                             If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <a @click="workbenchStepper = 2">Step 2 (Edit your hosts file)</a> of this guide.
                           </div>
                         </details>
 
-                        <details><summary style="cursor: pointer;"><strong>I don't remember my passphrase</strong></summary>
-                          <div class="pl-4 pr-16 py-0">
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>I don't remember my passphrase</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
                             Don't worry. Request a <a href="/do-science/service-desk/#ssh-passphrase-reset" target="_blank">SSH passphrase reset</a> in our "do-science" Service desk.
                           </div>
                         </details>
 
-                        <!-- <details><summary style="cursor: pointer;"><strong>Title</strong></summary>
-                          <div class="pl-4 pr-16 py-0">
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Did Not Connect</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            <v-alert
+                              border="left"
+                              colored-border
+                              type="info"
+                              elevation="2"
+                            >
+                              We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
+                            </v-alert>
+
+                            Firefox may require that you manually import the HUNT Cloud Certificate Authority to consider it trusted.
+
+                            If you see Error code: <code>SEC_ERROR_UNKNOWN_ISSUER</code> when accessing Workbench follow these steps:
+
+                            <ol>
+                              <li>
+                                Download our public CA certificate from <a href="https://pki.hdc.ntnu.no/hctsca1.crt" target="_blank">https://pki.hdc.ntnu.no/hctsca1.crt</a>
+                              </li>
+                              <li>
+                                Open the following Firefox URL: <code>about:preferences#privacy</code>.
+                              </li>
+                              <li>
+                                Scroll down to section <code>Certificates</code> and click on <code>View Certificates</code>.
+                                <br />
+                                <img class="pa-2" alt="mac-firefox-certificates" src="/img/workbench/mac-firefox-certificates.png" />
+                                <br />
+                              </li>
+                              <li>
+                                Switch to tab <code>Authorities</code> and click on <code>Import</code>.
+                                <br />
+                                <img class="pa-2" alt="mac-firefox-import-cert" src="/img/workbench/mac-firefox-import-cert.png" />
+                                <br />
+                              </li>
+                              <li>
+                                Select <code>hctsca1.crt</code> and check option <code>Trust this CA to identify websites</code>.
+                                <br />
+                                <img class="pa-2" alt="mac-firefox-trust-ca" src="/img/workbench/mac-firefox-trust-ca.png" />
+                                <br />
+                              </li>
+                            </ol>
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Chrome on Ubuntu</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            <ol>
+                              <li>
+                                In Google Chrome, open the URL <a href="chrome://settings/certificates" target="_blank">chrome://settings/certificates</a> and navigate to section <code>Authorities</code>.
+                              </li>
+                              <li>
+                                Search for HUNT Cloud certificates (<code>org-HUNT Cloud Trust Services</code>).
+                              </li>
+                              <li>
+                                Edit the HCTS CA 1 certificate and select first option <code>Trust this certificate for identifying websites</code>.
+                                <br />
+                                <img class="pa-2" alt="import-ca-trust-websites" src="/img/workbench/import-ca-trust-websites.png" />
+                                <br />
+                              </li>
+                            </ol>
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>502 Bad gateway</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            A 502 Bad gateway error when accessing <a :href="`https://${fqdn}/hub/home`" target="_blank">https://{{ fqdn }}/hub/home</a>
+                            is an indication that something is wrong with the configuration on the server side.<br />
+                            Contact us in your lab channel on Slack (#lab-{{ labName }}) or <a href="/do-science/service-desk/#general-service-request" target="_blank">Service desk email</a> further investigations.
+                          </div>
+                        </details>
+
+                        <!-- <details class="my-2"><summary style="cursor: pointer;"><strong>Title</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
                             text
                           </div>
                         </details> -->
                       </v-card>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
                       <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 4">Back</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Close</v-btn>
                     </v-stepper-content>
 
                   </v-stepper>
                 </v-card-text>
               </v-card>
             </v-dialog>
+
+            <v-col cols="12">
+              After you have successfully completed all the steps, you can start using your Workbench environment by opening this URL address: <a :href="`https://${fqdn}`" target="_blank">https://{{ fqdn }}</a>
+              <!-- <CopyTextField
+                :value="`https://${fqdn}`"
+                class="my-2"
+                label=""
+                prefix=""
+                placeholder="Your link is missing access token"
+              /> -->
+            </v-col>
+
+            <v-col cols="12">
+              <details class="my-2"><summary style="cursor: pointer;"><strong>Hosts file record</strong></summary>
+                <div class="pl-4 pr-16 py-2">
+                  Below you can find hosts file record for quick copying.
+                  If you need to configure your access step by step use Workbench Access guide above.
+                  <CopyTextField
+                    :value="hostsWorkbench"
+                    class="my-2"
+                    label="Hosts file - Workbench"
+                    prefix=""
+                    placeholder="Your link is missing access token"
+                  />
+                </div>
+              </details>
+            </v-col>
+
+            <v-col cols="12">
+              <details class="my-2"><summary style="cursor: pointer;"><strong>Workbench Control panel</strong></summary>
+                <div class="pl-4 pr-16 py-2">
+                  You can access Control panel on this URL address:
+                  <a :href="`https://${fqdn}/hub/home`" target="_blank">https://{{ fqdn }}/hub/home</a>
+                </div>
+              </details>
+            </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
