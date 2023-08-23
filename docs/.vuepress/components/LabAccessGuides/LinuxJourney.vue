@@ -1089,7 +1089,7 @@ Connection to home closed.`,
                         </ol>
                         <br />
 
-                        <img class="pa-2" alt="hunt-workbench-screenshot" src="/img/workbench/hunt-workbench-screenshot.png" />
+                        <img class="pa-2" alt="JupyterLab" src="/img/workbench/JupyterLab.png" />
 
                         <v-alert
                           border="left"
