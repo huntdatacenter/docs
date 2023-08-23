@@ -87,6 +87,8 @@ Retype new password:`,
 Connection to {ip_address} closed.`,
       passChangedHome: `passwd: Password updated successfully
 Connection to home closed.`,
+      hostsChangeSuccess: null,
+      hostsChangeLoading: false,
     }
   },
   computed: {
@@ -115,6 +117,16 @@ Connection to home closed.`,
     mobaxtermRdp() {
       return this.cfgShow ? `mobaxterm:${this.labName}%2DRDP%3D%2391%234%25${this.labName}%2D${this.homeIpUrl}%253389%25${this.username}%250%250%250%250%25%2D1%250%250%25%2D1%25xfce4%2Dsession%25${this.entryIpUrl}%5F%5FPIPE%5F%5F${this.homeIpUrl}%2522%5F%5FPIPE%5F%5F22%25${this.username}%5F%5FPIPE%5F%5F${this.username}%250%250%25%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%5F%5FPIPE%5F%5F%5FProfileDir%5F%5C%2Essh%5Cid%5Frsa%25%2D1%25%25%2D1%25%2D1%250%250%250%25%2D1%23MobaFont%2510%250%250%25%2D1%2515%25236%2C236%2C236%2530%2C30%2C30%25180%2C180%2C192%250%25%2D1%250%25%25xterm%25%2D1%25%2D1%25%5FStd%5FColors%5F0%5F%2580%2524%250%251%25%2D1%25%3Cnone%3E%25%250%250%25%2D1%230%23%20%23%2D1` : null;
     },
+    fqdn() {
+      return this.labName ? `${this.labName}.lab.hdc.ntnu.no` : null
+    },
+    hostsChangeColor() {
+      if (typeof this.hostsChangeSuccess == "boolean") {
+        return this.hostsChangeSuccess ? "success" : "error"
+      } else {
+        return "primary"
+      }
+    }
   },
   // watch: {},
   created() {},
@@ -140,6 +152,29 @@ Connection to home closed.`,
     },
     nextPanel() {
       this.mainExpansionPanel = this.mainExpansionPanel ? this.mainExpansionPanel + 1 : 1
+    },
+    setHostsChangeSuccess() {
+      this.hostsChangeSuccess = true
+      this.hostsChangeLoading = false
+    },
+    setHostsChangeError() {
+      this.hostsChangeSuccess = false
+      this.hostsChangeLoading = false
+    },
+    testHosts() {
+      this.hostsChangeSuccess = null
+      this.hostsChangeLoading = true
+
+      fetch(`http://${this.fqdn}`, { redirect: "manual" }).then((item) => {
+        if (item.type === "opaqueredirect") {
+          setTimeout(this.setHostsChangeSuccess, 500)
+        } else {
+          setTimeout(this.setHostsChangeError, 500)
+        }
+      }).catch((err) => {
+        setTimeout(this.setHostsChangeError, 500)
+        // console.log(err)
+      })
     },
   },
 };
@@ -798,10 +833,12 @@ Connection to home closed.`,
               </v-text-field>
             </v-col>
 
+            <!-- <v-btn class="mx-2" :color="hostsChangeColor" :loading="hostsChangeLoading" @click.stop="testHosts()">Test hosts record</v-btn> -->
+
             <v-col cols="12">
               After you have successfully configured your access, you can use the following link to access your Workbench.
               <v-text-field
-                :value="`https://${this.labName}.lab.hdc.ntnu.no`"
+                :value="`https://${fqdn}`"
                 ref="workbench-link"
                 placeholder="Your link is missing access token"
                 persistent-placeholder
