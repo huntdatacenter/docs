@@ -129,6 +129,9 @@ Connection to home closed.`,
         return "link"
       }
     },
+    tlsClientIssuer() {
+      return this.labName ? `LAB-${this.labName.toUpperCase()} CA` : ''
+    },
   },
   // watch: {},
   created() {},
@@ -1097,7 +1100,7 @@ Connection to home closed.`,
                             Verify that the certificates are issued by HUNT Cloud:
                             <br />
                             <div class="language- extra-class"><pre class="language-text">
-                              <code v-html='`Organization: "HUNT Cloud"\nIssued Under: "HUNT Cloud Trust Services"`'></code>
+                              <code v-html='`Issuer: "${tlsClientIssuer}"\nOrganization: "HUNT Cloud"\nIssued Under: "HUNT Cloud Trust Services"`'></code>
                             </pre></div>
                             <br />
                             Ensure that the <code>Remember this decision</code> box is checked, and click <code>OK</code>.
@@ -1106,8 +1109,20 @@ Connection to home closed.`,
                             <br />
                           </li>
                           <li class="mb-2">
-                            Sign in with your HUNT Cloud lab username and lab passphrase. This is the same passphrase that you created yourself on your first SSH login.
-                            If you did not create a lab passphrase yet use a temporary SSH passphrase from Signal message.
+                            Sign in with your HUNT Cloud <strong>username</strong> and <strong>lab passphrase</strong>.<br />
+                            Lab passphrase is the same passphrase that you created yourself on your first SSH login.<br />
+                            <CopyTextField
+                              :value="username"
+                              class="my-2"
+                              label="Username"
+                              prefix=""
+                              placeholder="Your link is missing access token"
+                            />
+                            If you did not create a lab passphrase yet use a temporary SSH passphrase that you received
+                            from us on Signal message to login and then follow passphrase change flow.
+                            <br />
+                            <img class="pa-2" alt="workbench-login-form" src="/img/workbench/workbench-login-form.png" style="max-width: 250px;" />
+                            <br />
                           </li>
                           <li>
                             With a little bit of luck you should now see your new HUNT Workbench.
