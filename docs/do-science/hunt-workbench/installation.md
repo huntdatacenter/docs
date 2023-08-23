@@ -308,7 +308,7 @@ See our [HUNT Workbench principles](/do-science/hunt-workbench/principles/) sect
 
 This section includes issues that you might encounter during your first setup. See our HUNT Workbench [FAQ](/do-science/hunt-workbench/faq/) and HUNT Workbench [Troubleshooting](/do-science/hunt-workbench/troubleshooting/) if you do not find your answers below.
 
-#### This site can’t be reached
+#### This site can't be reached
 
 ::: details Read more
 
