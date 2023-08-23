@@ -838,7 +838,7 @@ Connection to home closed.`,
               <v-card elevation="0">
                 <v-card-title class="pa-0">
                   <v-toolbar dark color="#00509e" flat>
-                    <v-toolbar-title>Workbench Configuration</v-toolbar-title>
+                    <v-toolbar-title>Workbench Access Configuration</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-toolbar-items>
                       <v-btn icon fab @click="workbenchDialog = false">
