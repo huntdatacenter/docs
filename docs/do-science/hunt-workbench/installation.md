@@ -12,9 +12,17 @@ description: Installation guide for HUNT Workbench.
 
 [[toc]]
 
+
+::: tip Check your onboarding email for Lab access link
+
+We recommend that you follow the tailored guide in **Lab access link** for setting up **Workbench access** instead of this generic guide.
+
+:::
+
+
 ## 1. Before you start
 
-You will need the following to complete this guide: 
+You will need the following to complete this guide:
 
 ::: warning Requirements
 
@@ -35,13 +43,6 @@ Allow for **30 minutes** to complete this installation and some playtime in your
 
 First, let's set up your hosts file on your local computer. This allows you to connect to HUNT Workbench
 in your lab using a URL name, for example **`demolab.lab.hdc.ntnu.no`**, in your web-browser.
-
-Your **`host file record`** consists of IP address of your lab entry machine and your lab host name. You can find it included in your onboarding email. Example of a hosts record:
-
-```bash
-# -- Principal example of a host record
-10.42.X.Y <lab_name>.lab.hdc.ntnu.no
-```
 
 Select steps for your operating system:
 
@@ -67,7 +68,7 @@ Select steps for your operating system:
 
    ![notepad-open-hosts-steps.png](./images/notepad-open-hosts-steps.png)
 
-5. Add your **`hosts record`** to the text file. This is the line that you received from us in your HUNT Workbench onboarding email (see above).
+5. Add your **`hosts record`** to the text file. This is the line that you received from us in your HUNT Workbench onboarding email (look for Lab access link).
 
 6. Select **`File`** > **`Save`** to save your changes and close the **`Notepad`** application.
 
@@ -91,7 +92,7 @@ Example with vim:
 sudo vim /etc/hosts
 ```
 
-2. Add (append) the **`host record`** line that you received from us on email.
+2. Add (append) the **`hosts record`** line that you received from us on email (look for Lab access link).
 
 3. Close your text editor.
 
@@ -115,7 +116,7 @@ Example with vim:
 sudo vim /etc/hosts
 ```
 
-2. Add (append) the **`host record`** line that you received from us on email.
+2. Add (append) the **`hosts record`** line that you received from us on email (look for Lab access link).
 
 3. Close your text editor.
 
@@ -150,7 +151,7 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
    ![4_cert_p12.png](./images/4_cert_p12.png)
 
-5. You should now get a _Completing the Certificate Import Wizard_ message. Click **`Finish`** to complete the the iport:
+5. You should now get a _Completing the Certificate Import Wizard_ message. Click **`Finish`** to complete the import:
 
    ![5_cert_p12.png](./images/5_cert_p12.png)
 
