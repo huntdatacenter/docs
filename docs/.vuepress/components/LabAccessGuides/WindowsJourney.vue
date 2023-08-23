@@ -128,7 +128,7 @@ Connection to home closed.`,
       } else {
         return "link"
       }
-    }
+    },
   },
   // watch: {},
   created() {},
@@ -346,7 +346,7 @@ Connection to home closed.`,
                             <img alt="OpenVPN-icon" src="/img/vpn/4.OpenVPN-guide.png" />
                           </li>
                           <li>
-                            Click on Import file and select OpenVPN profile file <code>&lt;username&gt;.ovpn</code> that you extracted from 7-ZIP archive. <br />
+                            Click on Import file and select OpenVPN profile file <code>{{ username }}.ovpn</code> that you extracted from 7-ZIP archive. <br />
                             <img alt="OpenVPN-icon" src="/img/vpn/5.OpenVPN-guide.png" /> <br />
                             <img alt="OpenVPN-icon" src="/img/vpn/6.OpenVPN-guide.png" />
                           </li>
@@ -868,7 +868,7 @@ Connection to home closed.`,
                           type="warning"
                           elevation="2"
                         >
-                          Make sure you have received your Workbench certificate (<code>.p12</code>).
+                          Make sure you have received your Workbench certificate (<code>{{ labName }}-{{ username }}.p12</code>).
                         </v-alert>
                         <v-alert
                           border="left"
@@ -896,7 +896,7 @@ Connection to home closed.`,
                         class="mb-8 pr-4"
                         elevation="0"
                       >
-                      <v-alert
+                        <v-alert
                           border="left"
                           colored-border
                           type="warning"
@@ -939,11 +939,11 @@ Connection to home closed.`,
                             <br />
                           </li>
                           <li>
-                            Add the host record below to the text file:<br />
+                            Add (append) the <strong>hosts record</strong> below to the text file:<br />
                             <CopyTextField
                               :value="hostsWorkbench"
                               class="my-2"
-                              label="Hosts file - Workbench"
+                              label=""
                               prefix=""
                               placeholder="Your link is missing access token"
                             />
@@ -1043,7 +1043,7 @@ Connection to home closed.`,
                             <br />
                           </li>
                           <li>
-                            Now quit your internet browser (we recommend Google Chrome)<br />
+                            Now quit your internet browser (we recommend <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a>)<br />
                             and restart it for the certificate to get recognized.
                             <br />
                             <img class="pa-2" alt="8_import_success" src="/img/workbench/8_import_success.png" style="max-width: 300px;" />
@@ -1059,7 +1059,7 @@ Connection to home closed.`,
                       :complete="workbenchStepper > 4"
                       step="4"
                     >
-                      Connect to Workbench
+                      Login to Workbench
                     </v-stepper-step>
 
                     <v-stepper-content step="4">
@@ -1100,7 +1100,7 @@ Connection to home closed.`,
                               <code v-html='`Organization: "HUNT Cloud"\nIssued Under: "HUNT Cloud Trust Services"`'></code>
                             </pre></div>
                             <br />
-                            Ensure that the Remember this decision box is checked, and click OK.
+                            Ensure that the <code>Remember this decision</code> box is checked, and click <code>OK</code>.
                             <br />
                             <img class="pa-2" alt="chrome_select_certificate_confirm" src="/img/workbench/chrome_select_certificate_confirm.png" style="max-width: 300px;" />
                             <br />
@@ -1118,6 +1118,8 @@ Connection to home closed.`,
                         </ol>
                         <br />
 
+                        <img class="pa-2" alt="hunt-workbench-screenshot" src="/img/workbench/hunt-workbench-screenshot.png" />
+
                         <v-alert
                           border="left"
                           colored-border
@@ -1128,8 +1130,6 @@ Connection to home closed.`,
                           <hr class="mt-1 mb-2" />
                           <code>https://{{fqdn}}</code>
                         </v-alert>
-
-                        <img class="pa-2" alt="hunt-workbench-screenshot" src="/img/workbench/hunt-workbench-screenshot.png" />
 
                       </v-card>
                       <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
@@ -1154,7 +1154,7 @@ Connection to home closed.`,
                       This section includes issues that you might encounter during your first setup.
                       See our <a href="/do-science/hunt-workbench/faq/" target="_blank">HUNT Workbench FAQ</a> and <a href="/do-science/hunt-workbench/troubleshooting/" target="_blank">HUNT Workbench Troubleshooting</a> if you do not find your answers below.
 
-                        <details class="my-2"><summary style="cursor: pointer;"><strong>This site can’t be reached</strong></summary>
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>This site can't be reached</strong></summary>
                           <div class="pl-4 pr-16 py-2">
                             If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <a @click="workbenchStepper = 2">Step 2 (Edit your hosts file)</a> of this guide.
                           </div>
@@ -1162,7 +1162,7 @@ Connection to home closed.`,
 
                         <details class="my-2"><summary style="cursor: pointer;"><strong>I don't remember my passphrase</strong></summary>
                           <div class="pl-4 pr-16 py-2">
-                            Don't worry. Request a <a href="/do-science/service-desk/#ssh-passphrase-reset" target="_blank">SSH passphrase reset</a> in our "do-science" Service desk.
+                            Don't worry. Request a <a href="/do-science/service-desk/#ssh-passphrase-reset" target="_blank">reset of SSH passphrase</a> in our "do-science" Service desk.
                           </div>
                         </details>
 
