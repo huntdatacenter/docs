@@ -68,6 +68,8 @@ export default {
       extrasExpansionPanel: null,
       vpnDialog: false,
       vpnStepper: 1,
+      workbenchDialog: false,
+      workbenchStepper: 1,
       fetchSecretsId: 1,
       vpnConfId: 2,
       passChangeId: 3,
@@ -814,26 +816,13 @@ Connection to home closed.`,
               Follow <a href="/do-science/hunt-workbench/installation/" target="_blank">Workbench Installation guide</a> to configure your access.
             </v-col>
             <v-col cols="12">
-              <v-text-field
-              v-model="hostsWorkbench"
-              ref="hostsWorkbenchWindows"
-              autocomplete="ignore-field"
-              label="Hosts file - Workbench"
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('hostsWorkbenchWindows')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="hostsWorkbench"
+                label="Hosts file - Workbench"
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
             </v-col>
-
-            <!-- <v-btn class="mx-2" :color="hostsChangeColor" :loading="hostsChangeLoading" @click.stop="testHosts()">Test hosts record</v-btn> -->
 
             <v-col cols="12">
               After you have successfully configured your access, you can use the following link to access your Workbench.
@@ -853,6 +842,333 @@ Connection to home closed.`,
                 </template>
               </v-text-field>
             </v-col>
+
+            <v-row class="my-1">
+              <v-col cols="12">
+                <v-btn
+                  text
+                  color="link"
+                  @click.stop="workbenchDialog = true"
+                  elevation="2"
+                >
+                  <v-icon>settings</v-icon>&nbsp;&nbsp;Workbench Configuration
+                </v-btn>
+              </v-col>
+            </v-row>
+            <v-dialog
+              v-model="workbenchDialog"
+              persistent
+              scrollable
+              max-width="960px"
+              @keydown.esc="workbenchDialog = false"
+            >
+              <v-card elevation="0">
+                <v-card-title class="pa-0">
+                  <v-toolbar dark color="#00509e" flat>
+                    <v-toolbar-title>Workbench Configuration</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-toolbar-items>
+                      <v-btn icon fab @click="workbenchDialog = false">
+                        <v-icon>close</v-icon>
+                      </v-btn>
+                    </v-toolbar-items>
+                  </v-toolbar>
+                </v-card-title>
+
+                <v-card-text class="pa-0">
+                  <v-stepper v-model="workbenchStepper" vertical>
+                    <v-stepper-step
+                      :complete="workbenchStepper > 1"
+                      step="1"
+                    >
+                    Checks
+                    </v-stepper-step>
+
+                    <v-stepper-content step="1">
+                      <v-card
+                        class="mb-12 pr-4"
+                        elevation="0"
+                      >
+                        1. Assure working VPN connection
+                      </v-card>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 2">Continue</v-btn>
+                      <!-- <v-btn color="link" class="mx-2 mb-1" @click="totpDialog = false">Close</v-btn> -->
+                    </v-stepper-content>
+
+                    <v-stepper-step
+                      :complete="workbenchStepper > 2"
+                      step="2"
+                    >
+                      Edit your hosts file
+                    </v-stepper-step>
+
+                    <v-stepper-content step="2">
+                      <v-card
+                        class="mb-8 pr-4"
+                        elevation="0"
+                      >
+                        First, let's set up your hosts file on your local computer. <br />
+                        This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
+                        <br /><br />
+                        <ol>
+                          <li>Press the Windows key.</li>
+                          <li>Type <code>Notepad</code> in the search field.</li>
+                          <li>
+                            In the search results, <strong>right-click</strong> Notepad and select <code>Run as administrator</code>.
+                            <br />
+                            <img class="pa-2" alt="notepad-administrator" src="/img/workbench/notepad-administrator.png" style="max-width: 600px;" />
+                          </li>
+                          <li>
+                            Confirm administrator permissions by clicking on <code>Yes</code>.
+                            <br />
+                            <img class="pa-2" alt="notepad-admin-confirm" src="/img/workbench/notepad-admin-confirm.png" style="max-width: 350px;" />
+                          </li>
+                          <li>
+                            From Notepad, open the following file: <code>C:\Windows\System32\Drivers\etc\hosts</code>.
+                            <br />
+                            Start by selecting <code>File</code> > <code>Open</code>.
+                            <br />
+                            <img class="pa-2" alt="notepad-open-file" src="/img/workbench/notepad-open-file.png" style="max-width: 450px;" />
+                            <br />
+                            (1) Find the directory.<br />
+                            (2) Change Text documents to view <strong>All files</strong>.<br />
+                            (3) When a file named <strong>hosts</strong> appears in the list select it.<br />
+                            (4) Click <strong>Open</strong>: <br />
+                            <img class="pa-2" alt="notepad-open-hosts-steps" src="/img/workbench/notepad-open-hosts-steps.png" style="max-width: 500px;" />
+                            <br />
+                          </li>
+                          <li>
+                            Add the host record below to the text file:<br />
+                            <CopyTextField
+                              :value="hostsWorkbench"
+                              class="my-2"
+                              label="Hosts file - Workbench"
+                              prefix=""
+                              placeholder="Your link is missing access token"
+                            />
+                            <br />
+                            Make sure to avoid duplicate records.
+                          </li>
+                          <li>
+                            Select <code>File</code> > <code>Save</code> to save your changes and close the <code>Notepad</code> application.
+                          </li>
+                          <li>
+                            Confirm your settings with a quick test:
+                            <br />
+                            <v-btn class="my-2" :color="hostsChangeColor" :loading="hostsChangeLoading" @click.stop="testHosts()">Test hosts record</v-btn>
+                            <br />
+                            If a button turned red you should try to repeat this guide to make sure all the steps were followed.<br />
+                            Then you can try to click the button again.
+                            <br />
+                          </li>
+                        </ol>
+                        <br />
+
+                      </v-card>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 3">Continue</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 1">Back</v-btn>
+                    </v-stepper-content>
+
+                    <v-stepper-step
+                      :complete="workbenchStepper > 3"
+                      step="3"
+                    >
+                      Install your certificates
+                    </v-stepper-step>
+
+                    <v-stepper-content step="3">
+                      <v-card
+                        class="mb-8 pr-4"
+                        elevation="0"
+                      >
+                        Let's install the certificates that are required to allow traffic with HUNT Workbench that is located in your lab.
+                        <br /><br />
+                        <ol>
+                          <li>
+                            Open your <code>.p12 certificate</code> that you downloaded from FileSender. 
+                            Make sure the store location is set to <code>Current User</code> and click <code>Next</code>:
+                            <br />
+                            <img class="pa-2" alt="1_cert_p12" src="/img/workbench/1_cert_p12.png" style="max-width: 500px;" />
+                            <br />
+                          </li>
+                          <li>
+                            Click <code>Next</code> one more time.
+                            <br />
+                            <img class="pa-2" alt="2_cert_p12" src="/img/workbench/2_cert_p12.png" style="max-width: 500px;" />
+                            <br />
+                          </li>
+                          <li>
+                            Fill in the <code>TLS passphrase</code> that you received on signal, and make sure the options are checked exactly as in the image.
+                            Then click <code>Next</code>:
+                            <br />
+                            <img class="pa-2" alt="3_cert_p12" src="/img/workbench/3_cert_p12.png" style="max-width: 500px;" />
+                            <br />
+                          </li>
+                          <li>
+                            Check the first option: <i>Automatically select the certificate store based on the type of certificate</i>.
+                            Click <code>Next</code>:
+                            <br />
+                            <img class="pa-2" alt="4_cert_p12" src="/img/workbench/4_cert_p12.png" style="max-width: 500px;" />
+                            <br />
+                          </li>
+                          <li>
+                            You should now get a Completing the Certificate Import Wizard message.
+                            Click Finish to complete the import:
+                            <br />
+                            <img class="pa-2" alt="5_cert_p12" src="/img/workbench/5_cert_p12.png" style="max-width: 500px;" />
+                            <br />
+                          </li>
+                          <li>
+                            The wizard will require a confirmation to install a certificate from us: HCTS CA 1 (HUNT Cloud Trust Services). 
+                            Our certificate is required to safely access your workbench environment.
+                            <br /><br />
+                            You will normally be asked to confirm our certificate only when you set up the HUNT Workbench for the first time. 
+                            Thus, if you see <code>LAB</code> instead of <code>HCTS CA 1</code> skip to step 7.
+                            <br /><br />
+                            Before clicking <code>YES</code>, confirm that you see our thumbprint (fingerprint):
+                            <br />
+                            <div class="language- extra-class"><pre class="language-text">
+                              <code v-text="`ADD9DFEC C998BE44 AC2F254E 75E5EB98 D91879A6`"></code>
+                            </pre></div>
+                            <br />
+                            <img class="pa-2" alt="6_confirmCAcertificate" src="/img/workbench/6_confirmCAcertificate.png" style="max-width: 500px;" />
+                            <br />
+                          </li>
+                          <li>
+                            Similar to Step 6, you will also need to install a certificate for your lab (<code>Lab CA</code>),<br />
+                            where your <strong>Lab name should appear</strong>. Click <code>YES</code>.
+                            <br />
+                            <img class="pa-2" alt="7_confirmLabCAcertificate" src="/img/workbench/7_confirmLabCAcertificate.png" style="max-width: 500px;" />
+                            <br />
+                          </li>
+                          <li>
+                            Now quit your internet browser (we recommend Google Chrome)<br />
+                            and restart it for the certificate to get recognized.
+                            <br />
+                            <img class="pa-2" alt="8_import_success" src="/img/workbench/8_import_success.png" style="max-width: 300px;" />
+                            <br />
+                          </li>
+                        </ol>
+                      </v-card>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 4">Continue</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 2">Back</v-btn>
+                    </v-stepper-content>
+
+                    <v-stepper-step
+                      :complete="workbenchStepper > 4"
+                      step="4"
+                    >
+                      Connect to Workbench
+                    </v-stepper-step>
+
+                    <v-stepper-content step="4">
+                      <v-card
+                        class="mb-8 pr-16"
+                        elevation="0"
+                      >
+
+                        <v-alert
+                          border="left"
+                          colored-border
+                          type="warning"
+                          elevation="2"
+                        >
+                          <b>Make sure you are connected to the VPN before you access your HUNT Workbench.</b>
+                        </v-alert>
+
+                        <ol>
+                          <li>
+                            Open your web browser (we recommend <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a>).
+                          </li>
+                          <li>
+                            Open the URL address below to access your lab in your web browser:
+                            <br />
+                            <strong><a :href="`https://${fqdn}`" target="_blank">https://{{ fqdn }}</a></strong>
+                            <br /><br />
+                            You may get a User Identification Request for your new certificate.<br />
+                            Verify that the certificates are issued by HUNT Cloud:
+                            <br />
+                            <div class="language- extra-class"><pre class="language-text">
+                              <code v-html='`Organization: "HUNT Cloud"\nIssued Under: "HUNT Cloud Trust Services"`'></code>
+                            </pre></div>
+                            <br />
+                            Ensure that the Remember this decision box is checked, and click OK.
+                            <br />
+                            <img class="pa-2" alt="chrome_select_certificate_confirm" src="/img/workbench/chrome_select_certificate_confirm.png" style="max-width: 300px;" />
+                            <br />
+                          </li>
+                          <li>
+                            Sign in with your HUNT Cloud lab username and lab passphrase. This is the passphrase that you made on your first login.
+                          </li>
+                          <li>
+                            With a little bit of luck you should now see your new HUNT Workbench.
+                            <br /><br />
+                            <strong>Click around and explore your new world!</strong>
+                            <br /><br />
+                            <img class="pa-2" alt="hunt-workbench-screenshot" src="/img/workbench/hunt-workbench-screenshot.png" />
+                            <br />
+                          </li>
+                          <li>
+                            Remember to bookmark your Lab address:
+                            <br />
+                            <div class="language- extra-class"><pre class="language-text">
+                              <code v-html='`https://${fqdn}`'></code>
+                            </pre></div>
+                            <br />
+                            <br />
+                            Feel free to read our <a href="/do-science/hunt-workbench/getting-started/" target="_blank">getting started guide</a>.
+                          </li>
+                        </ol>
+
+                      </v-card>
+                      <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
+                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper = 5">Troubleshooting</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 3">Back</v-btn>
+                    </v-stepper-content>
+
+                    <v-stepper-step
+                      :complete="workbenchStepper > 5"
+                      step="?"
+                    >
+                      Troubleshooting
+                      <small>Optional tips to try in case of issues</small>
+                    </v-stepper-step>
+
+                    <v-stepper-content step="5">
+                      <v-card
+                        class="mb-8 pr-4 ml-0 pl-0"
+                        elevation="0"
+                      >
+                      This section includes issues that you might encounter during your first setup.
+                      See our <a href="/do-science/hunt-workbench/faq/" target="_blank">HUNT Workbench FAQ</a> and <a href="/do-science/hunt-workbench/troubleshooting/" target="_blank">HUNT Workbench Troubleshooting</a> if you do not find your answers below.
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>This site can’t be reached</strong></summary>
+                          <div class="pl-4 pr-16 py-0">
+                            If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <a @click="workbenchStepper = 2">Step 2 (Edit your hosts file)</a> of this guide.
+                          </div>
+                        </details>
+
+                        <details><summary style="cursor: pointer;"><strong>I don't remember my passphrase</strong></summary>
+                          <div class="pl-4 pr-16 py-0">
+                            Don't worry. Request a <a href="/do-science/service-desk/#ssh-passphrase-reset" target="_blank">SSH passphrase reset</a> in our "do-science" Service desk.
+                          </div>
+                        </details>
+
+                        <!-- <details><summary style="cursor: pointer;"><strong>Title</strong></summary>
+                          <div class="pl-4 pr-16 py-0">
+                            text
+                          </div>
+                        </details> -->
+                      </v-card>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 4">Back</v-btn>
+                    </v-stepper-content>
+
+                  </v-stepper>
+                </v-card-text>
+              </v-card>
+            </v-dialog>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
@@ -878,7 +1194,7 @@ Connection to home closed.`,
               <h2 class="text-h5 mb-6">You have configured your lab access</h2>
 
               <p class="mb-4 text-medium-emphasis text-body-2">
-                Feel free to continue reading our docs and figure out which <a href="/do-science/tools/" target="_blank">tools</a> do you need for your work.
+                Feel free to continue reading our <a href="/do-science/hunt-workbench/getting-started/" target="_blank">getting started guides</a> and figure out which <a href="/do-science/tools/" target="_blank">tools</a> do you need for your work.
                 <br>
 
                 Otherwise, you're done!
