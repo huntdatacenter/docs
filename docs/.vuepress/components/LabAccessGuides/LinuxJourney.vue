@@ -1221,14 +1221,14 @@ Connection to home closed.`,
             </v-col>
 
             <v-col cols="12">
-              <details class="my-2"><summary style="cursor: pointer;"><strong>Hosts file record</strong></summary>
+              <details class="my-2"><summary style="cursor: pointer;"><strong>Hosts record</strong></summary>
                 <div class="pl-4 pr-16 py-2">
-                  Below you can find hosts file record for quick copying.
+                  Below you can find <strong>hosts record</strong> for quick copying.
                   If you need to configure your access step by step use Workbench Access guide above.
                   <CopyTextField
                     :value="hostsWorkbench"
                     class="my-2"
-                    label="Hosts file - Workbench"
+                    label=""
                     prefix=""
                     placeholder="Your link is missing access token"
                   />
