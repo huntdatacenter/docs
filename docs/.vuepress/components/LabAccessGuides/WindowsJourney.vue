@@ -397,14 +397,14 @@ Connection to home closed.`,
                             Enter a rotating 6-digit <code style="font-weight: bold;">verification code</code> from Google Authenticator as your password. <br />
                             <strong>Do not save rotating password.</strong> Make sure that save password box is empty and then click OK.
                             <br />
-                            <img alt="8-openvpn-totp-fill" src="/img/vpn/8-openvpn-totp-fill.png" style="max-width: 280px;" />
+                            <img alt="8-openvpn-totp-fill-guide" src="/img/vpn/8-openvpn-totp-fill-guide.png" style="max-width: 280px;" />
                           </li>
                           <li>
                             When prompted for a Private Key Password, insert the <code style="font-weight: bold;">VPN passphrase</code> from Signal. <br />
                             Make sure to save this long password and then click OK. <br />
                             Your authentication will fail when you complete your passphrase below.
                             This is expected since your <code style="font-weight: bold;">verification code</code> timed out while you typed your passphrase. <br />
-                            <img alt="9-openvpn-passphrase-fill" src="/img/vpn/9-openvpn-passphrase-fill.png" style="max-width: 280px;" />
+                            <img alt="9-openvpn-passphrase-fill-guide" src="/img/vpn/9-openvpn-passphrase-fill-guide.png" style="max-width: 280px;" />
                           </li>
                           <li>
                             If the same window as in step 4 pops up try to connect again with a fresh <code style="font-weight: bold;">verification code</code> from Google Authenticator app.
