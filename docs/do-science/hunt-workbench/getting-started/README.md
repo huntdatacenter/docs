@@ -18,6 +18,13 @@ Once you have configured access to Workbench and you want to learn more about th
 
 -->
 
+<img src="./images/jupyter.png" style="max-height: 60px; padding: 10px;" />
+<img src="./images/pandas.png" style="max-height: 80px;" />
+<img src="./images/python.png" style="max-height: 40px; padding: 20px;" />
+<img src="./images/matlab.png" style="max-height: 80px; padding: 0px;" />
+<img src="./images/rstudio.png" style="max-height: 40px; padding: 20px;" />
+
+
 ## Essential reading
 
 Most important parts of Workbench that you need to know:
