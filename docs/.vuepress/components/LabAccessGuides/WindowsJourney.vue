@@ -367,7 +367,7 @@ Connection to home closed.`,
                       :complete="vpnStepper > 3"
                       step="3"
                     >
-                      Connect to the VPN
+                      Connect to HUNT Cloud VPN
                     </v-stepper-step>
 
                     <v-stepper-content step="3">
