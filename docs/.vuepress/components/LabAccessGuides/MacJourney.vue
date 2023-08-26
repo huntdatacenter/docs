@@ -186,7 +186,7 @@ ${this.ipAddress}    ${this.labName}-entry
 
               <ol>
                 <li>Click on the filesender link in the email to download the file and save this on your local computer.</li>
-                <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#install-7z-on-your-local-computer" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
+                <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#detail-2-macos" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
                 <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
               </ol>
 
@@ -194,10 +194,10 @@ ${this.ipAddress}    ${this.labName}-entry
             </v-expansion-panel-content>
         </v-expansion-panel>
 
-        <!-- 2. VPN Configuration -->
+        <!-- 2. VPN Access -->
         <v-expansion-panel>
           <v-expansion-panel-header>
-            <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Configuration</h3>
+            <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Access</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
             If you have not setup <b>HUNT Cloud VPN</b> yet follow <i>TOTP</i> and <i>Tunnelblick</i> configuration guides:
