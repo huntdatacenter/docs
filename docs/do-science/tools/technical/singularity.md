@@ -30,7 +30,7 @@ You will need the conda-forge channel to install Singularity. If you have not se
 conda config --add channels conda-forge
 ```
 
-**Install singularity in conda base**
+**Install singularity in conda environment**
 
 Create environment and install Singularity:
 
