@@ -32,16 +32,18 @@ conda config --add channels conda-forge
 
 **Install singularity in conda base**
 
-Activate your base environment
+Create environment and install Singularity:
 
 ```bash
-conda activate base
+conda create -n singularity -c conda-forge "singularity>=3.0.0"
 ```
 
-Install Singularity
+Activate your singularity environment and try running Singularity:
 
 ```bash
-conda install -n base -c conda-forge "singularity>=3.0.0"
+conda activate singularity
+
+singularity --help
 ```
 
 ## Common practices and commands
