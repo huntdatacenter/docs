@@ -971,7 +971,7 @@ Connection to home closed.`,
                           <li>
                             Select <code>File</code> > <code>Save</code> to save your changes and close the <code>Notepad</code> application.
                           </li>
-                          <li>
+                          <!-- <li>
                             Confirm your settings with a quick test:
                             <br />
                             <v-btn class="my-2" :color="hostsChangeColor" :loading="hostsChangeLoading" @click.stop="testHosts()">Test hosts record</v-btn>
@@ -979,7 +979,7 @@ Connection to home closed.`,
                             If a button turned red you should try to repeat this guide to make sure all the steps were followed.<br />
                             Then you can try to click the button again.
                             <br />
-                          </li>
+                          </li> -->
                         </ol>
                         <br />
 
