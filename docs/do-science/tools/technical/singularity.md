@@ -76,10 +76,10 @@ singularity pull library://alpine
 To start an instance, you should follow below pattern:
 
 ```
-[command]                                    [image]        [name of instance]
+singularity instance start -B $TMPDIR      <image>    <instance-name>
 ```
 ```bash
-$ singularity instance start -B $TMPDIR   alpine_latest.sif     instance1
+singularity instance start -B $TMPDIR alpine_latest.sif instance1
 ```
 
 This command causes Singularity to create an isolated environment for the container services to live inside. 
@@ -102,7 +102,7 @@ instance1        12715    /home/ysub/alpine_latest.sif
 When you are finished with your instance you can clean it up with the `instance stop` command as follows:
 
 ```bash
- singularity instance stop instance1
+singularity instance stop instance1
 ```
 
 ### Where are the images stored ?
