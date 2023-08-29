@@ -10,7 +10,7 @@ description: Guides to your HUNT Workbench setup.
 
 **HUNT Workbench provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.**
 
-![hunt-lab-workbench.png](./images/JupyterLab.png)
+![hunt-lab-workbench.png](/img/workbench/JupyterLab.png)
 
 ## About
 
