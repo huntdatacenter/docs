@@ -30,18 +30,20 @@ You will need the conda-forge channel to install Singularity. If you have not se
 conda config --add channels conda-forge
 ```
 
-**Install singularity in conda base**
+**Install singularity in conda environment**
 
-Activate your base environment
+Create environment and install Singularity:
 
 ```bash
-conda activate base
+conda create -n singularity -c conda-forge "singularity>=3.0.0"
 ```
 
-Install Singularity
+Activate your singularity environment and try running Singularity:
 
 ```bash
-conda install -n base -c conda-forge "singularity>=3.0.0"
+conda activate singularity
+
+singularity --help
 ```
 
 ## Common practices and commands
@@ -74,10 +76,10 @@ singularity pull library://alpine
 To start an instance, you should follow below pattern:
 
 ```
-[command]                                    [image]        [name of instance]
+singularity instance start -B $TMPDIR      <image>    <instance-name>
 ```
 ```bash
-$ singularity instance start -B $TMPDIR   alpine_latest.sif     instance1
+singularity instance start -B $TMPDIR alpine_latest.sif instance1
 ```
 
 This command causes Singularity to create an isolated environment for the container services to live inside. 
@@ -100,7 +102,7 @@ instance1        12715    /home/ysub/alpine_latest.sif
 When you are finished with your instance you can clean it up with the `instance stop` command as follows:
 
 ```bash
- singularity instance stop instance1
+singularity instance stop instance1
 ```
 
 ### Where are the images stored ?

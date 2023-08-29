@@ -18,6 +18,13 @@ Once you have configured access to Workbench and you want to learn more about th
 
 -->
 
+<a href="https://jupyter.org/" target="_blank"><img src="./images/jupyter.png" style="max-height: 60px; padding: 10px;" /></a>
+<a href="https://pandas.pydata.org/" target="_blank"><img src="./images/pandas.png" style="max-height: 80px;" /></a>
+<a href="https://www.python.org/" target="_blank"><img src="./images/python.png" style="max-height: 40px; padding: 20px;" /></a>
+<a href="https://mathworks.com/" target="_blank"><img src="./images/matlab.png" style="max-height: 80px; padding: 0px;" /></a>
+<a href="https://posit.co/products/open-source/rstudio-server/" target="_blank"><img src="./images/rstudio.png" style="max-height: 40px; padding: 20px;" /></a>
+
+
 ## Essential reading
 
 Most important parts of Workbench that you need to know:

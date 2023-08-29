@@ -77,7 +77,7 @@ export default {
       sshConfId: 5,
       workbenchId: 6,
       cmdPrompt: `<code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>`,
-      openvpnName: `OpenVPN-<version-number>-I001-amd64.msi`,
+      openvpnInstallerName: `OpenVPN-<version-number>-I001-amd64.msi`,
       sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
       passExpired: `WARNING: Your password has expired.
 You must change your password now and login again!
@@ -201,7 +201,7 @@ Connection to home closed.`,
 
               <ol>
                 <li>Click on the filesender link in the email to download the file and save this on your local computer.</li>
-                <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#install-7z-on-your-local-computer" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
+                <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#detail-2-windows" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
                 <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
               </ol>
 
@@ -209,13 +209,13 @@ Connection to home closed.`,
             </v-expansion-panel-content>
         </v-expansion-panel>
 
-        <!-- 2. VPN Configuration -->
+        <!-- 2. VPN Access -->
         <v-expansion-panel>
           <v-expansion-panel-header>
-            <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Configuration</h3>
+            <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Access</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="vpn-config" ref="#vpn-config" class="mt-2">
-            If you have not setup <b>HUNT Cloud VPN</b> yet follow <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
+            If you have not setup access to <strong>HUNT Cloud VPN</strong> yet, follow both <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
 
             <TotpGuide />
 
@@ -270,7 +270,7 @@ Connection to home closed.`,
                         <a href="https://openvpn.net/community-downloads/" target="_blank">Download and install <b>OpenVPN</b> using the latest stable Windows Installer (Avoid beta versions)</a>
                         <br /><br />
 
-                        Click on the link above, scroll down to the file named <code>{{ openvpnName }}</code> (Windows 10 users),
+                        Click on the link above, scroll down to the file named <code style="font-weight: bold;">{{ openvpnInstallerName }}</code>,
                         download the file and follow the on-screen installation instructions until finished.
                         <br /><br />
 
@@ -283,7 +283,7 @@ Connection to home closed.`,
                           <b>NTNU users should use NTNU Software center.</b>
                           <hr class="mt-1 mb-2" />
                           Windows users from NTNU can install OpenVPN community edition
-                          using NTNU Software Center even without administrative rights.
+                          using <a href="https://i.ntnu.no/wiki/-/wiki/English/OpenVPN" target="_blank">NTNU Software Center</a> even without administrative rights.
                         </v-alert>
 
                         <v-alert
@@ -294,30 +294,34 @@ Connection to home closed.`,
                         >
                           <b>You will need administrative rights on your local computer to successfully install OpenVPN.</b>
                           <hr class="mt-1 mb-2" />
-                          Click on the link below if you do not hold administrative rights on your local computer, or don't know if you have such rights.
+                          Click on the link below if you do not hold administrative rights on your local computer, or don't know if you have such rights.<br /><br />
+
+                          <details style="font-size: 14px"><summary style="cursor: pointer;"><b>Installing OpenVPN without administrative rights</b></summary>
+
+                            <div class="pl-4 pr-16 py-0">
+                              <br />
+                              You can check if you have administrative rights in the Command prompt (<span v-html="cmdPrompt"></span>) on your local computer
+                              by running a command below. See if your local username is listed.
+                              <CopyTextField
+                                :value='`net localgroup "Administrators"`'
+                                class="my-1"
+                                label=""
+                                prefix=""
+                                placeholder=""
+                              />
+
+                              <div class="mt-2 mb-1"><strong>Request assistance from your local IT personnel if you do not hold administrative rights on your local computer and request that they:</strong></div>
+
+                              (1) assist you in the OpenVPN installation, or<br />
+
+                              (2) grant you administrative rights on your local computer so you can install OpenVPN yourself.<br />
+
+                              <div class="mt-2 mb-1"><strong>For simplicity, we have outlined the steps they need to perform, which you can attach to your request:</strong></div>
+                              <a href="/do-science/guides/openvpn-admin-group/" target="_blank">https://docs.hdc.ntnu.no/do-science/guides/openvpn-admin-group/</a>
+                            </div>
+                          </details>
                         </v-alert>
 
-                        <details><summary style="cursor: pointer;"><b>Installing OpenVPN without administrative rights</b></summary>
-
-                          <div class="pl-4 pr-16 py-0">
-                            <br />
-                            You can check if you have administrative rights on your local computer by running
-                            <code>net localgroup "Administrators"</code> in a Command prompt (<span v-html="cmdPrompt"></span>)
-                            and see if your username is listed.
-                            <br /><br />
-
-                            <b>Request assistance from your local IT personnel if you do not hold administrative rights on your local computer and request that they:</b>
-                            <br /><br />
-
-                            (1) assist you in the OpenVPN installation, or<br /><br />
-
-                            (2) grant you administrative rights on your local computer so you can install OpenVPN yourself.<br /><br />
-
-                            <b>For simplicity, we have outlined the steps they need to perform, which you can attach to your request:</b>
-                            <a href="/do-science/guides/openvpn-admin-group/" target="_blank">https://docs.hdc.ntnu.no/do-science/guides/openvpn-admin-group/</a>
-                          </div>
-
-                        </details>
                       </v-card>
                       <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
                       <!-- <v-btn color="link" class="mx-2 mb-1" @click="vpnDialog = false">Close</v-btn> -->
@@ -338,20 +342,20 @@ Connection to home closed.`,
                         <ol>
                           <li>
                             Start the OpenVPN client (if it is not running already) <br />
-                            <img alt="OpenVPN-icon" src="/img/vpn/1.OpenVPN-guide.png" />
+                            <img alt="1-openvpn-icon" src="/img/vpn/1-openvpn-icon.png" style="max-width: 80px;" />
                           </li>
                           <li>
-                            Expand pane on taskbar <br />
-                            <img alt="OpenVPN-icon" src="/img/vpn/3.OpenVPN-guide.png" />
+                            Click to expand pane on Windows taskbar <br />
+                            <img alt="2-openvpn-expandable-pane-guide" src="/img/vpn/2-openvpn-expandable-pane-guide.png" style="max-width: 140px;" />
                           </li>
                           <li>
-                            Select <code>Import file...</code> <br />
-                            <img alt="OpenVPN-icon" src="/img/vpn/4.OpenVPN-guide.png" />
+                            Right click on the OpenVPN notification icon on the taskbar, <br />
+                            then through <code>Import</code> select <code style="font-weight: bold;">Import file...</code> <br />
+                            <img alt="4-openvpn-import-guide" src="/img/vpn/4-openvpn-import-guide.png" style="max-width: 380px;" />
                           </li>
                           <li>
-                            Click on Import file and select OpenVPN profile file <code>{{ username }}.ovpn</code> that you extracted from 7-ZIP archive. <br />
-                            <img alt="OpenVPN-icon" src="/img/vpn/5.OpenVPN-guide.png" /> <br />
-                            <img alt="OpenVPN-icon" src="/img/vpn/6.OpenVPN-guide.png" />
+                            Select OpenVPN (OVPN) profile: <code style="font-weight: bold;">{{ username }}.ovpn</code> that you extracted from 7-ZIP archive. <br />
+                            <img alt="5-openvpn-open-file-guide" src="/img/vpn/5-openvpn-open-file-guide.png" style="max-width: 500px;" />
                           </li>
                         </ol>
                       </v-card>
@@ -363,7 +367,7 @@ Connection to home closed.`,
                       :complete="vpnStepper > 3"
                       step="3"
                     >
-                      Connect to the VPN
+                      Connect to HUNT Cloud VPN
                     </v-stepper-step>
 
                     <v-stepper-content step="3">
@@ -377,22 +381,33 @@ Connection to home closed.`,
                           </li>
                           <li>
                             Select <i>Connect</i>. <br />
-                            <img alt="OpenVPN-icon" src="/img/vpn/7.OpenVPN-guide.png" />
+                            <img alt="7-openvpn-click-connect" src="/img/vpn/7-openvpn-click-connect.png" style="max-width: 240px;" />
                           </li>
                           <li>
-                            Enter your user name (same as the OpenVPN profile file name).
+                            Enter your username:
+                            <CopyTextField
+                              :value="username"
+                              class="my-1"
+                              label=""
+                              prefix=""
+                              placeholder="Your link is missing access token"
+                            />
                           </li>
                           <li>
-                            Enter a rotating <code>verification code</code> from Google Authenticator as your password. <br />
-                            <img alt="OpenVPN-icon" src="/img/vpn/9.OpenVPN-guide.png" />
+                            Enter a rotating 6-digit <code style="font-weight: bold;">verification code</code> from Google Authenticator as your password. <br />
+                            <strong>Do not save rotating password.</strong> Make sure that save password box is empty and then click OK.
+                            <br />
+                            <img alt="8-openvpn-totp-fill-guide" src="/img/vpn/8-openvpn-totp-fill-guide.png" style="max-width: 280px;" />
                           </li>
                           <li>
-                            When prompted for a Private Key Password, insert the <code>VPN passphrase</code> that your collected in Step 1. Your authentication will fail when you complete your passphrase below. 
-                            This is expected since your verification code timed out while you typed your passphrase. <br />
-                            <img alt="OpenVPN-icon" src="/img/vpn/8.OpenVPN-guide.png" />
+                            When prompted for a Private Key Password, insert the <code style="font-weight: bold;">VPN passphrase</code> from Signal. <br />
+                            Make sure to save this long password and then click OK. <br />
+                            Your authentication will fail when you complete your passphrase below.
+                            This is expected since your <code style="font-weight: bold;">verification code</code> timed out while you typed your passphrase. <br />
+                            <img alt="9-openvpn-passphrase-fill-guide" src="/img/vpn/9-openvpn-passphrase-fill-guide.png" style="max-width: 280px;" />
                           </li>
                           <li>
-                            Now try again to connect with a fresh verfication code from Google Authenticator.
+                            If the same window as in step 4 pops up try to connect again with a fresh <code style="font-weight: bold;">verification code</code> from Google Authenticator app.
                           </li>
                         </ol>
                         <br /><br />
@@ -956,7 +971,7 @@ Connection to home closed.`,
                           <li>
                             Select <code>File</code> > <code>Save</code> to save your changes and close the <code>Notepad</code> application.
                           </li>
-                          <li>
+                          <!-- <li>
                             Confirm your settings with a quick test:
                             <br />
                             <v-btn class="my-2" :color="hostsChangeColor" :loading="hostsChangeLoading" @click.stop="testHosts()">Test hosts record</v-btn>
@@ -964,7 +979,7 @@ Connection to home closed.`,
                             If a button turned red you should try to repeat this guide to make sure all the steps were followed.<br />
                             Then you can try to click the button again.
                             <br />
-                          </li>
+                          </li> -->
                         </ol>
                         <br />
 
