@@ -295,7 +295,7 @@ Ensure that the **`Remember this decision`** box is checked, and click **`OK`**.
 
 4. With a little bit of luck you should now see your new HUNT Workbench. **Click around and explore your new world!**
 
-![hunt-lab-workbench.png](./images/hunt-workbench-screenshot.png)
+![hunt-lab-workbench.png](./images/JupyterLab.png)
 
 ::: tip Further reading
 
