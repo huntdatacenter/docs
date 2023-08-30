@@ -931,29 +931,41 @@ Connection to home closed.`,
                         <br /><br />
                         <ol>
                           <li>Press the Windows key.</li>
-                          <li>Type <code>Notepad</code> in the search field.</li>
+                          <li>Type <code style="font-weight: bold;">Notepad</code> in the search field.</li>
                           <li>
-                            In the search results, <strong>right-click</strong> Notepad and select <code>Run as administrator</code>.
+                            In the search results, <strong>right-click</strong> Notepad and select <code style="font-weight: bold;">Run as administrator</code>.
                             <br />
                             <img class="pa-2" alt="notepad-administrator" src="/img/workbench/notepad-administrator.png" style="max-width: 600px;" />
                           </li>
                           <li>
-                            Confirm administrator permissions by clicking on <code>Yes</code>.
+                            Confirm <strong>administrator permissions</strong> by clicking on <code style="font-weight: bold;">Yes</code>.
                             <br />
                             <img class="pa-2" alt="notepad-admin-confirm" src="/img/workbench/notepad-admin-confirm.png" style="max-width: 350px;" />
                           </li>
                           <li>
-                            From Notepad, open the following file: <code>C:\Windows\System32\Drivers\etc\hosts</code>.
-                            <br />
-                            Start by selecting <code>File</code> > <code>Open</code>.
+                            In Notepad, start by selecting <code style="font-weight: bold;">File</code> > <code style="font-weight: bold;">Open</code> (<code>CTRL + O</code>).
                             <br />
                             <img class="pa-2" alt="notepad-open-file" src="/img/workbench/notepad-open-file.png" style="max-width: 450px;" />
-                            <br />
-                            (1) Find the directory.<br />
-                            (2) Change Text documents to view <strong>All files</strong>.<br />
-                            (3) When a file named <strong>hosts</strong> appears in the list select it.<br />
-                            (4) Click <strong>Open</strong>: <br />
-                            <img class="pa-2" alt="notepad-open-hosts-steps" src="/img/workbench/notepad-open-hosts-steps.png" style="max-width: 500px;" />
+                          </li>
+                          <li>
+                            Find the directory below:<br />
+                            <CopyTextField
+                              :value="`C:\\Windows\\System32\\Drivers\\etc`"
+                              class="my-2"
+                              label="Directory"
+                              prefix=""
+                              placeholder="Your link is missing access token"
+                            />
+                            <img class="pa-2" alt="notepad-hosts-base-directory" src="/img/workbench/notepad-hosts-base-directory.png" style="max-width: 500px;" /><br />
+                          </li>
+                          <li>
+                            Show hidden files by changing type from <strong>Text documents (*.txt)</strong> to view <strong>All files</strong>.<br />
+                            <img class="pa-2" alt="notepad-all-files" src="/img/workbench/notepad-all-files.png" style="max-width: 500px;" /><br />
+                          </li>
+                          <li>
+                            When a file named <strong>hosts</strong> appears in the list select it and click <strong>Open</strong>: <br />
+                            <img class="pa-2" alt="notepad-selected-hosts" src="/img/workbench/notepad-selected-hosts.png" style="max-width: 500px;" />
+                            <!-- <img class="pa-2" alt="notepad-open-hosts-steps" src="/img/workbench/notepad-open-hosts-steps.png" style="max-width: 500px;" /> -->
                             <br />
                           </li>
                           <li>
@@ -965,9 +977,9 @@ Connection to home closed.`,
                               prefix=""
                               placeholder="Your link is missing access token"
                             />
-                            <br />
                             Make sure to avoid duplicate records.
                           </li>
+                          <br />
                           <li>
                             Select <code>File</code> > <code>Save</code> to save your changes and close the <code>Notepad</code> application.
                           </li>
