@@ -14,6 +14,7 @@ import {
   VStepperStep,
   VStepperItems,
   VIcon,
+  VTextField
 } from "vuetify/lib";
 
 export default {
@@ -33,6 +34,7 @@ export default {
     VStepperStep,
     VStepperItems,
     VIcon,
+    VTextField
   },
   props: {},
   data() {
@@ -121,13 +123,108 @@ export default {
               elevation="0"
             >
               <ol>
-                <li>Start the Google Authenticator app.</li>
-                <li>Tap <i>Begin setup</i> (first time setup) or <i>Add an account</i> (additional accounts).</li>
-                <li>Select Enter a provided key.</li>
-                <li>Enter <code>HUNT CLOUD VPN</code> as the account name.</li>
-                <li>Enter the <code>Google Authenticator</code> key sent to you over Signal.</li>
-                <li>Make sure <i>Time based</i> is selected.</li>
-                <li>Tap <i>Add</i> to finish the setup of the new account.</li>
+                <li>Start the Google Authenticator app and follow these steps.</li>
+                <li>If you are using the app for the first time and screen saying <i>"Welcome to Google Authenticator"</i> appears, just tap <code>Use google authenticator without an account</code>.</li>
+                <li>
+                  Click on the <img alt="google-auth-plus-icon" src="/img/totp/google-auth-plus-icon.png" style="height: 2.5em; margin-bottom: -0.5em" /> <code>plus button</code> in the bottom right corner <v-icon>south_east</v-icon> of your phone screen.<br />
+                  <!-- <img alt="google-auth-plus-icon" src="/img/totp/google-auth-plus-icon.png" style="max-width: 75px;" /> -->
+                </li>
+                <li>
+                  Select option <code>Enter a setup key <v-icon>keyboard</v-icon></code>.
+                </li>
+                <li>
+                  A form called <i>"Enter account details"</i> appears.<br />
+                  <v-row style="max-width: 400px" justify="start" dense no-gutters>
+                    <v-col class="my-1" cols="12">
+                      <v-text-field
+                        outlined
+                        label="Account name"
+                        readonly
+                        disabled
+                        dense
+                        hide-details
+                      ></v-text-field>
+                    </v-col>
+                    <v-col class="my-1" cols="12">
+                      <v-text-field
+                        outlined
+                        label="Your key"
+                        readonly
+                        disabled
+                        dense
+                        hide-details
+                      ></v-text-field>
+                    </v-col>
+                    <v-col class="my-1" cols="8">
+                      <v-text-field
+                        value="Time based"
+                        outlined
+                        label="Type of key"
+                        placeholder=""
+                        readonly
+                        disabled
+                        dense
+                        persistent-placeholder
+                        hide-details
+                      ></v-text-field>
+                    </v-col>
+                  </v-row>
+                </li>
+                <li>
+                  Enter <code style="font-weight: bold;">HUNT CLOUD VPN</code> as <i>"Account name"</i> because you will have only one HUNT Cloud VPN.
+                  <v-row style="max-width: 400px" justify="start" dense no-gutters>
+                    <v-col class="my-1" cols="12">
+                      <v-text-field
+                        value="HUNT CLOUD VPN"
+                        outlined
+                        label="Account name"
+                        placeholder=""
+                        readonly
+                        disabled
+                        dense
+                        persistent-placeholder
+                        hide-details
+                      ></v-text-field>
+                    </v-col>
+                  </v-row>
+                </li>
+                <li>
+                  Enter the <code>Google Authenticator</code> key sent to you over Signal.
+                  <v-row style="max-width: 400px" justify="start" dense no-gutters>
+                    <v-col class="my-1" cols="12">
+                      <v-text-field
+                        value=""
+                        outlined
+                        label="Your key"
+                        placeholder="****************"
+                        readonly
+                        disabled
+                        dense
+                        persistent-placeholder
+                        hide-details
+                      ></v-text-field>
+                    </v-col>
+                  </v-row>
+                </li>
+                <li>
+                  Make sure <code style="font-weight: bold;">Time based</code> is selected.
+                  <v-row style="max-width: 400px" justify="start" dense no-gutters>
+                    <v-col class="my-1" cols="12">
+                      <v-text-field
+                        value="Time based"
+                        outlined
+                        label="Type of key"
+                        placeholder=""
+                        readonly
+                        disabled
+                        dense
+                        persistent-placeholder
+                        hide-details
+                      ></v-text-field>
+                    </v-col>
+                  </v-row>
+                </li>
+                <li>Tap on <code style="font-weight: bold;">Add</code> button to finish the setup of the new account.</li>
               </ol>
             </v-card>
             <v-btn color="primary" class="mx-2" @click="totpStepper = 3">Continue</v-btn>
