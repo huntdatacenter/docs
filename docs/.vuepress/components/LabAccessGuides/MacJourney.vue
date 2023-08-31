@@ -1393,9 +1393,12 @@ ${this.ipAddress}    ${this.labName}-entry
           <v-expansion-panel-content id="troubleshooting" ref="#troubleshooting" class="mt-2">
 
             <v-col cols="12">
-              WIP
+              <h3>Keka cannot open 7-zip archive</h3>
+              <img alt="tunnelblick-login" src="/img/7-zip/keka2.png" /> <br />
+              Make sure to allow Keka access to your home folder in <b>File Access</b> section of Keka.
+              <img alt="tunnelblick-login" src="/img/7-zip/keka1.png" /> <br />
             </v-col>
-
+            
           </v-expansion-panel-content>
         </v-expansion-panel>
 
