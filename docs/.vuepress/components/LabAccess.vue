@@ -335,6 +335,10 @@ Host {lab_name}
     // reset full view - no scroll bars, no full view
     overflow: inherit
 
+    .v-application
+      code
+        font-size: 100% !important
+
     .v-application--wrap
       display: block
       flex: inherit
