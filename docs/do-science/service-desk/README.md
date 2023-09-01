@@ -25,6 +25,11 @@ Try our service desk in the [administer science](/administer-science/service-des
 Send us a [general service request](#general-service-request) if you can not find what you are looking for on this page.
 
 
+<Product title="Order Import Kista" subtitle="Import data to HUNT Cloud" subtitle-icon="" :description="``" :details="`Showing extra details...`" image="https://cdn.vuetifyjs.com/images/cards/cooking.png" />
+
+<Product title="Order Export Kista" subtitle="Export data from HUNT Cloud" subtitle-icon="" :description="``" :details="``" image="https://cdn.vuetifyjs.com/images/cards/cooking.png" />
+
+
 ## Lab access
 
 ::: warning New users

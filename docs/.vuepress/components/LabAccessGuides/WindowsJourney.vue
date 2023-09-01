@@ -1198,7 +1198,9 @@ Connection to home closed.`,
 
                         <details class="my-2"><summary style="cursor: pointer;"><strong>This site can't be reached</strong></summary>
                           <div class="pl-4 pr-16 py-2">
-                            If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <a @click="workbenchStepper = 2">Step 2 (Edit your hosts file)</a> of this guide.
+                            1. If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <a @click="workbenchStepper = 2">Step 2 (Edit your hosts file)</a> of this guide.
+                            <br/>
+                            2. If you are getting <code>ERR_CONNECTION_TIMED_OUT</code> error you need to make sure that you are connected to VPN.
                           </div>
                         </details>
 
