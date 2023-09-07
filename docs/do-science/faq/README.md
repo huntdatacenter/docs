@@ -9,7 +9,7 @@ description: Frequently asked questions
 
 This FAQ is intended for lab users that do science in labs:
 
-- [Users](/do-science/faq/users)
+- [Access](/do-science/faq/access/)
 - [Storage](/do-science/faq/storage)
 - [Compute](/do-science/faq/compute)
 - [Internal transfers](/do-science/faq/internal-transfer)
