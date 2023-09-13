@@ -473,30 +473,9 @@ your-username@`your-labname`-home~$
 :::
 
 
-<!-- 
-## Lab deactivation order
 
-[HUNT Cloud Lab Deactivation Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-deactivation-order.pdf) (pdf)
 
-Data space leaders can request deactivation of labs under their data space. We use the deactivation order that is co-signed by the data space leader and lab leader do document such requests.
 
-::: details Clarification of the form fields
-
-The following form fields are included in the "HUNT Cloud Lab Deactivation Order" version 1.0.
-
-**Data space**
-
-- *Name*. This is the short name for the data space where the lab is attached.
-- *Leader*. This is the full name of the data space leader. 
-
-**Lab**
-
-- *Name*. This is the short name for the lab that is authorized for deletion.
-- *Leader*. This is the full name of the lab leader. 
-
-:::
-
--->
 
 ## Lab deletion order
 
@@ -506,7 +485,7 @@ Your data space leader can request irrevocable destruction (deletion) of labs un
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud Lab Deletion Order" version 1.3.
+The following form fields are included in the "HUNT Cloud Lab Deletion Order" version 1.4.
 
 **Data space**
 
