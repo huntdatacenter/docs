@@ -98,9 +98,9 @@ Click button below if you need your `ssh_config.txt` file to be resent to you (a
 
 Head over to the [lab orders page](/administer-science/service-desk/lab-orders#deactivate-lab-user) to deactivate your lab access.
 
-### Request Lab Access reissue
+### Request lab access link reissue
 
-Lost lab access link from your onboarding email ? Here you can order a reissue.
+Lost the lab access link from your onboarding email? No worries, order a new one here.
 
 <SDButton form="request_lab_access_link" />
 
