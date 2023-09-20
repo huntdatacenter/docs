@@ -67,24 +67,30 @@ You can indirectly reduce the size of your storage volume by moving data to a ne
 
 ## Billing 
 
-### Can we have several invoice profiles under our data space? 
-
-Yes, you may add separate invoice profiles for individual labs under your data space in the data space management section of our [service desk](/administer-science/service-desk/data-space-orders/#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile. 
-
-### How can we update the account information on the invoice profile? 
-
-You may update existing invoice profiles in the data space management section of our [service desk](/administer-science/service-desk/data-space-orders/#update-existing-invoice-profile)
 
 ### When should we expect our invoices? 
 
-We aim to ship invoices after each quarter. The first invoices under the new services model is planned shipped in the last week of October 2022.
+We have a clear intention to ship quarterly invoices with shipments approximately two weeks after the quarter ends. We hope to be able to start this practice from 2023-Q3.
 
-### When should we expect commit services to be invoices? 
+### Can we have several invoice profiles under our data space? 
 
-You should expect the initial invoice for data space subscriptions, lab subscriptions and 1Y/3Y commitments of machines and storage to be in the next quarter after your lab deployment. Usage of various services will be combined into one invoice expected to be sent quarterly. Invoice details for each service is specified in the [services specification](/administer-science/services/specifications/) under the "Billing" sections. 
+Yes, you can add separate invoice profiles for individual labs under your data space in the data space management section of our administrative [service desk](/administer-science/service-desk/data-space-orders/#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile.
 
-### I am invoiced too much, now what? 
+### How can we update the account information on the invoice profile? 
 
-Oh, we are truly sorry. This may happen from time to time. Our invoice process automatically process services orders. From time to time, this may lead to discrepancies between expected and invoice amount. [Contact us](/contact) for a review. For inaccuracies attributable to us, we will issue a credit memo specifying the incorrect amount in the affected invoice. The process is specified in the HUNT Cloud Services Agreement that we are holding with your service center.
+You may update existing invoice profiles in the data space management section of our [service desk](/administer-science/service-desk/data-space-orders/#update-existing-invoice-profile).
+
+### We are invoiced too much, now what? 
+
+Although we are doing over very best to ensure accurate amounts on the invoices, we are aware that the amounts may sometimes be inaccurate. [Contact us](/contact) if you expect that you are invoice the wrong amount. For inaccuracies attributable to us, we will issue a credit memo specifying the incorrect amount in the affected invoice.
+
+### Why do the storage description holds so many lines? 
+
+Your storage price is calculated per day based on the total volume of all storage attached to all labs under your data space (volume discount). Therefore, the price will change if the total storage volume of your data space change during the quarter or if the price list change during the quarter. Each volume may therefore be listed several times with varying number of "unit days". 
+
+### When should we expect "commit services" to be invoices? 
+
+Commit services are those your commit to 1 or 3 years. 
+You should expect the next invoice after you order the service to include the full commit price for data space subscriptions, lab subscriptions and 1Y/3Y commitments of machines and storage. Usage of various services will be combined into one invoice expected to be sent quarterly. Invoice details for each service is specified in the [services specification](/administer-science/services/specifications/) under the "Billing" sections. 
 
 
