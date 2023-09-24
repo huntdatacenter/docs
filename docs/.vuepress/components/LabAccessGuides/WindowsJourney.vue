@@ -55,6 +55,7 @@ export default {
     VSheet,
     CopyTextField: () => import('../generic/CopyTextField.vue'),
     TotpGuide: () => import('../LabAccessGuides/TotpGuide.vue'),
+    DesignNewPassphrase: () => import('../LabAccessGuides/DesignNewPassphrase.vue'),
   },
   props: {
     username: { type: String, default: null },
@@ -523,7 +524,7 @@ Connection to home closed.`,
           <v-expansion-panel-content id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
 
             <v-col cols="12">
-              {{ passChangeId }}.1. Design <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a>.
+              {{ passChangeId }}.1. Design <DesignNewPassphrase />.
             </v-col>
             <v-col cols="12">
               {{ passChangeId }}.2. To start Command Prompt press <code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
@@ -550,7 +551,7 @@ Connection to home closed.`,
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.6. Enter <a href="/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase" target="_blank">your new passphrase</a> and retype for verification. You will be kicked off the entry machine right after your password is changed.
+              {{ passChangeId }}.6. Enter your new passphrase and retype for verification. You will be kicked off the entry machine right after your password is changed.
               <div class="language- extra-class"><pre class="language-text">
               <code v-text="passSetNew"></code>
               </pre></div>
