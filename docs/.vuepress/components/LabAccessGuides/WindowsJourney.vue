@@ -1398,23 +1398,12 @@ Connection to home closed.`,
             </v-col>
             <v-col cols="10">
               2. Run this command to copy SSH Public key into clipboard.
-              <v-text-field
-              :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | clip`"
-              ref="winCopyPubKeyCmd"
-              label=""
-              placeholder=""
-              persistent-placeholder
-              prefix="C:\Users\User>"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('winCopyPubKeyCmd')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | clip`"
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               3. Paste (CTRL+V) your SSH Public key where needed.
@@ -1431,23 +1420,12 @@ Connection to home closed.`,
 
             <v-col cols="12">
               Removing saved OpenVPN passphrases and metadata
-              <v-text-field
-              :value="`REG DELETE HKEY_CURRENT_USER\\SOFTWARE\\OpenVPN-GUI\\configs\\${username}`"
-              ref="troubleshooting-remove-ovpn-passphrase"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              prefix="C:\Users\User>"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('troubleshooting-remove-ovpn-passphrase')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="`REG DELETE HKEY_CURRENT_USER\\SOFTWARE\\OpenVPN-GUI\\configs\\${username}`"
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               Confirm deletion with by typing <code>Yes</code> and then press <code>Enter</code>:
@@ -1457,23 +1435,12 @@ Connection to home closed.`,
             </v-col>
             <v-col cols="12">
               Deleting OpenVPN config
-              <v-text-field
-              :value="`del %USERPROFILE%\\OpenVPN\\config\\${username}`"
-              ref="troubleshooting-remove-ovpn-config"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              prefix="C:\Users\User>"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('troubleshooting-remove-ovpn-config')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="`del %USERPROFILE%\\OpenVPN\\config\\${username}`"
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               Confirm deletion with by pressing <code>Y</code> and then <code>Enter</code>:

@@ -1326,23 +1326,12 @@ ${this.ipAddress}    ${this.labName}-entry
             </v-col>
             <v-col cols="10">
               2. Run this command to copy SSH Public key created in Step 3 into clipboard.
-              <v-text-field
-              :value="`pbcopy < ~/.ssh/id_rsa.pub`"
-              ref="macCopyPubKeyCmd"
-              label=""
-              placeholder=""
-              persistent-placeholder
-              prefix="~"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('macCopyPubKeyCmd')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="`pbcopy < ~/.ssh/id_rsa.pub`"
+                label=""
+                prefix="~"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               3. Paste (CMD+V) your SSH Public key where needed.
