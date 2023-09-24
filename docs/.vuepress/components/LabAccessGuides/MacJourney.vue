@@ -1271,8 +1271,8 @@ ${this.ipAddress}    ${this.labName}-entry
     </v-card>
 
     <v-card elevation="1" class="mt-4">
-      <v-card-title>
-        Additional guides
+      <v-card-title class="pt-3 pb-2" style="font-weight: 400;">
+        Optional guides
       </v-card-title>
       <v-expansion-panels accordion v-model="extrasExpansionPanel" elevation="0">
 
