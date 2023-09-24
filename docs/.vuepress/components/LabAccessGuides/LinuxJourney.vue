@@ -616,103 +616,65 @@ Connection to home closed.`,
 
             <v-col cols="12">
               {{ passLessId }}.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
-              <v-text-field
+              <CopyTextField
                 :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
-                ref="linuxStep13"
+                class="my-0"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="$"
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('linuxStep13')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.2. Start ssh-agent.
-              <v-text-field
+              <CopyTextField
                 :value='`eval "$(ssh-agent -s)"`'
-                ref="linuxStep14"
+                class="my-0"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="$"
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('linuxStep14')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.3. Add your public key to the ssh agent.
-              <v-text-field
+              <CopyTextField
                 :value="`ssh-add ~/.ssh/id_rsa`"
-                ref="linuxStep15"
+                class="my-0"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="$"
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('linuxStep15')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.4. Place your public key into the lab.
-              <v-text-field
+              <CopyTextField
                 :value="`ssh-copy-id -i ~/.ssh/id_rsa ${username}@${ipAddress}`"
-                ref="linuxStep16"
+                class="my-0"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="$"
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('linuxStep16')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col cols="12">
+              You will be asked for your SSH passphrase:
+              <div class="language- extra-class"><pre class="language-text">
+                <code v-text="`${username}@${ipAddress}'s password:`"></code>
+              </pre></div>
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.5. Confirm passwordless access.
-              <v-text-field
+              <CopyTextField
                 :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${username}@${ipAddress}`"
-                ref="linuxStep17"
+                class="my-0"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="$"
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('linuxStep17')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col cols="12">
+              Expected result:
+              <div class="language- extra-class"><pre class="language-text">
+                <code v-text="`${username}@${labName}-entry:~$`"></code>
+              </pre></div>
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.6. Close Terminal window to make sure you are disconnected from your lab.

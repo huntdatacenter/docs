@@ -663,63 +663,45 @@ Connection to home closed.`,
 
             <v-col cols="12">
               {{ passLessId }}.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
-              <v-text-field
-              :value="sshKeygenWin"
-              ref="winStep13"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              prefix="C:\Users\User>"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                <a class="material-icons content_copy" @click="copyText('winStep13')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="sshKeygenWin"
+                class="my-2"
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
-              {{ passLessId }}.2. Place your public key into the lab.
-              <v-text-field
-              :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${username}@${ipAddress} add-public-key`"
-              ref="winStep14"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              prefix="C:\Users\User>"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('winStep14')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              {{ passLessId }}.2. Place your public key into the lab. You will be asked for your SSH passphrase.
+              <CopyTextField
+                :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${username}@${ipAddress} add-public-key`"
+                class="my-2"
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col cols="12">
+              You will be asked for your SSH passphrase:
+              <div class="language- extra-class"><pre class="language-text">
+                <code v-text="`${username}@${ipAddress}'s password:`"></code>
+              </pre></div>
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.3. Confirm passwordless access.
-              <v-text-field
-              :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${username}@${ipAddress}`"
-              ref="winStep15"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              prefix="C:\Users\User>"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('winStep15')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${username}@${ipAddress}`"
+                class="my-2"
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col cols="12">
+              Expected result:
+              <div class="language- extra-class"><pre class="language-text">
+                <code v-text="`${username}@${labName}-entry:~$`"></code>
+              </pre></div>
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.4. Close Command prompt window to make sure you are disconnected from your lab.

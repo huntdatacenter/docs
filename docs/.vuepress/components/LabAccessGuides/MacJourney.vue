@@ -613,104 +613,68 @@ ${this.ipAddress}    ${this.labName}-entry
           <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
 
             <v-col cols="12">
-              {{ passLessId }}.1. Open new Terminal window and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
-              <v-text-field
+              {{ passLessId }}.1. Open new Terminal window and generate ssh key. 
+              If command reports that id_rsa key already exists, 
+              to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+              <CopyTextField
                 :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
-                ref="macStep13"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="~"
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('macStep13')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.2. Start ssh-agent. Note: Output of this command is only informational.
-              <v-text-field
+              <CopyTextField
                 :value='`eval "$(ssh-agent -s)"`'
-                ref="macStep14"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="~"
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('macStep14')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.3. Add your public key to the ssh agent.
-              <v-text-field
+              <CopyTextField
                 :value="`ssh-add --apple-use-keychain ~/.ssh/id_rsa`"
-                ref="macStep15"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="~"
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('macStep15')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.4. Place your public key into the lab.
-              <v-text-field
+              <CopyTextField
                 :value="`ssh-copy-id -i ~/.ssh/id_rsa ${username}@${ipAddress}`"
-                ref="macStep16"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="~"
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('macStep16')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col cols="12">
+              You will be asked for your SSH passphrase:
+              <div class="language- extra-class"><pre class="language-text">
+                <code v-text="`${username}@${ipAddress}'s password:`"></code>
+              </pre></div>
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.5. Confirm passwordless access.
-              <v-text-field
+              <CopyTextField
                 :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${username}@${ipAddress}`"
-                ref="macStep17"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="~"
-                outlined
-                dense
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('macStep17')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col cols="12">
+              Expected result:
+              <div class="language- extra-class"><pre class="language-text">
+                <code v-text="`${username}@${labName}-entry:~$`"></code>
+              </pre></div>
             </v-col>
             <v-col cols="12">
               {{ passLessId }}.6. Close Terminal window to make sure you are disconnected from your lab.
