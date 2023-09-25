@@ -558,23 +558,12 @@ Connection to home closed.`,
             </v-col>
             <v-col cols="12">
               {{ passChangeId }}.7. Reconnect to entry using your new passphrase.
-              <v-text-field
-              :value="`ssh ${username}@${ipAddress}`"
-              ref="winStep7"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              prefix="C:\Users\User>"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('winStep7')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="`ssh ${username}@${ipAddress}`"
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               Expected result:
@@ -584,23 +573,12 @@ Connection to home closed.`,
             </v-col>
             <v-col cols="12">
               {{ passChangeId }}.8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
-              <v-text-field
-              :value="`ssh -o StrictHostKeyChecking=accept-new home`"
-              ref="winStep8"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              :prefix="`${username}@${labName}-entry:~$`"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('winStep8')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="`ssh -o StrictHostKeyChecking=accept-new home`"
+                label=""
+                :prefix="`${username}@${labName}-entry:~$`"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ passChangeId }}.9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
@@ -623,23 +601,12 @@ Connection to home closed.`,
             </v-col>
             <v-col cols="12">
               {{ passChangeId }}.11. Verify a successful passphrase update by logging into your home machine.
-              <v-text-field
-              :value="`ssh home`"
-              ref="winStep11"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              :prefix="`${username}@${labName}-entry:~$`"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('winStep11')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="`ssh home`"
+                label=""
+                :prefix="`${username}@${labName}-entry:~$`"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               Expected result:
@@ -720,83 +687,50 @@ Connection to home closed.`,
           <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
             <v-col cols="12">
               {{ sshConfId }}.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists. No output is expected.
-              <v-text-field
-              :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
-              ref="winSshConfig1"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              prefix="C:\Users\User>"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('winSshConfig1')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ sshConfId }}.2. Open SSH Config file.
-              <v-text-field
-              :value='`Notepad.exe "%USERPROFILE%\\.ssh\\config"`'
-              ref="winSshConfig2"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              prefix="C:\Users\User>"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('winSshConfig2')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value='`Notepad.exe "%USERPROFILE%\\.ssh\\config"`'
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ sshConfId }}.3. Add lab configuration into SSH Config opened in Notepad.
               <v-textarea
-              v-model.trim="configText"
-              ref="ssh-config-win"
-              label="SSH Config file"
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              class="py-2 mt-2"
-              outlined
-              readonly
-              rows="11"
-              hide-details
-              @focus="$event.target.select()"
+                v-model.trim="configText"
+                ref="ssh-config-win"
+                label="SSH Config file"
+                placeholder="Your link is missing access token"
+                persistent-placeholder
+                class="py-2 mt-2"
+                outlined
+                readonly
+                rows="11"
+                hide-details
+                @focus="$event.target.select()"
               >
-              <template v-slot:append>
+                <template v-slot:append>
                   <a class="material-icons content_copy" @click="copyTextArea('ssh-config-win')">&#xe14d;</a>
-              </template>
+                </template>
               </v-textarea>
             </v-col>
             <v-col cols="12">
               {{ sshConfId }}.4. Test by connecting straight into home machine.
-              <v-text-field
-              :value="`ssh -o StrictHostKeyChecking=accept-new ${labName}`"
-              ref="ssh-config-lab-win"
-              label=""
-              placeholder="Your link is missing access token"
-              persistent-placeholder
-              prefix="C:\Users\User>"
-              outlined
-              dense
-              readonly
-              hide-details
-              @focus="$event.target.select()"
-              >
-              <template v-slot:append>
-                  <a class="material-icons content_copy" @click="copyText('ssh-config-lab-win')">&#xe14d;</a>
-              </template>
-              </v-text-field>
+              <CopyTextField
+                :value="`ssh -o StrictHostKeyChecking=accept-new ${labName}`"
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
