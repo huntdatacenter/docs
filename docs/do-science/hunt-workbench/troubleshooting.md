@@ -75,6 +75,8 @@ Try reloading the page (**`Ctrl + R`** / **`CMD + R`**) to reconnect with your _
 
 ### 504: Gateway Timeout Error
 
+#### Solution 1
+
 The **`504 error`** may be shown when you access **`/user/<username>/rstudio/`** but _RStudio_ fails to start. If you were previously able to access your _RStudio_ in HUNT Workbench it is possible that _RStudio_ saved more data in your environment files than it is able to load into memory. 
 
 One potential approach is to (1) first utilize your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) to manually resetting your _RStudio_ settings:
@@ -84,6 +86,16 @@ mv "/mnt/work/workbench/${USER}/.local/share/rstudio" "/mnt/work/workbench/${USE
 ```
 
 And then (2) [restart your HUNT Workbench environment](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). If the error still persists, don't hesitate to reach out in your lab channel on Slack or [contact us](/contact) for further assistance.
+
+#### Solution 2 
+
+Other potential issue might be full disk space in your `work` directory. You can check your disk space using following command:  
+
+```bash
+df -h /mnt/work
+```
+
+If your disk space is full, discuss with your lab leader/coordinator if you should cleanup your disk space, or order a volume extension in [Service Desk](/administer-science/service-desk/lab-orders/#expand-existing-volume)
 
 ## MATLAB
 
