@@ -23,9 +23,15 @@ See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq/) for general questi
 
 ### Unable to access HUNT Workbench applications
 
-If you were previously able to access your applications (such as _RStudio_), and then the application suddenly stopped working, one quick approach is to try restarting your HUNT Workbench environment. Follow this guide to [restart your workbench](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment). 
+If you were previously able to access your applications (such as _RStudio_), and then the application suddenly stopped working, one quick approach is to check your available diskspace with following command:
 
-If this do not help, you may have a look at our [FAQ](/do-science/hunt-workbench/faq/) or [Troubleshooting](/do-science/hunt-workbench/troubleshooting/) sections.  [Contact us](/contact) on email or reach out in your lab channel on Slack for further investigation if this does not help.
+```bash
+df -h /mnt/work
+```
+
+If you have enough resources, try restarting your HUNT Workbench environment. Follow this guide to [restart your workbench](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment). 
+
+If this does not help, you may have a look at our [FAQ](/do-science/hunt-workbench/faq/) or [Troubleshooting](/do-science/hunt-workbench/troubleshooting/) sections.  [Contact us](/contact) on email or reach out in your lab channel on Slack for further investigation if this does not help.
 
 
 ### 403: Forbidden - Expired client certificate
@@ -44,25 +50,7 @@ Try to logout and login again. If logging in does not help, try different browse
 
 Your workbench stopped working for no apparent reason and you are printed the NTNU logo with error **`404 error`**? Follow the link to your control panel. Click on the red button to stop your sever, this may take some time. Click on the green/blue button to launch your server again, this may also take some time. Reach out to us on [Slack or email](/contact) if the problem is not resolved.
 
-### 502: Bad gateway
-
-Reach out to us on [Slack or email](/contact) if you get the **`502 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
-
-### 504: Gateway Timeout Error
-
-Reach out to us on [Slack or email](/contact) if you get the **`504 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
-
-Note. This does not apply if you are able to open your HUNT Workbench, but get a _504 error_ when your try to access specific applications, such as _RStudio_ below (see solution below).
-
-### Your connection is not private
-
-If you were previously able to access your HUNT Workbench and your browser suddenly reports expired/unsafe certificates, e.g.: **`Your connection is not private`** or **`ERR_CERT_DATE_INVALID`**, [contact us](/contact) in your lab channel on Slack or contact us on email. We need to sign a new lab certificate and update the service.
-
-![expired_server_cert.png](./images/expired_server_cert.png)
-
-## RStudio
-
-### 500: Internal Server Error
+### 500: Internal Server Error - RStudio
 
 If you are a fast clicker and get to an app before it's initialized in the background you might get the following error message:
 
@@ -73,7 +61,12 @@ Could not start rstudio in time
 
 Try reloading the page (**`Ctrl + R`** / **`CMD + R`**) to reconnect with your _RStudio_ session. [Contact us](/contact) if the error message persists.
 
-### 504: Gateway Timeout Error
+### 502: Bad gateway
+
+Reach out to us on [Slack or email](/contact) if you get the **`502 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
+
+
+### 504: Gateway Timeout Error - RStudio
 
 #### Solution 1
 
@@ -94,6 +87,18 @@ Other potential issue might be full disk space in your `work` directory. You can
 ```bash
 df -h /mnt/work
 ```
+
+### 504: Gateway Timeout Error
+
+Reach out to us on [Slack or email](/contact) if you get the **`504 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
+
+### Your connection is not private
+
+If you were previously able to access your HUNT Workbench and your browser suddenly reports expired/unsafe certificates, e.g.: **`Your connection is not private`** or **`ERR_CERT_DATE_INVALID`**, [contact us](/contact) in your lab channel on Slack or contact us on email. We need to sign a new lab certificate and update the service.
+
+![expired_server_cert.png](./images/expired_server_cert.png)
+
+
 
 If your disk space is full, discuss with your lab leader/coordinator if you should cleanup your disk space, or order a volume extension in [Service Desk](/administer-science/service-desk/lab-orders/#expand-existing-volume)
 
