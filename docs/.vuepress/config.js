@@ -86,15 +86,6 @@ module.exports = {
         text: "About",
         link: "/about/",
       },
-      // {
-      //   text: "About",
-      //   items: [
-      //     { text: "HUNT Cloud", link: "/about/" },
-      //     { text: "System status", link: "/system-status.md" },
-      //     { text: "Contact", link: "/contact.md" },
-      //     { text: "Contribute", link: "/contribute.md" }
-      //   ]
-      // }
     ],
     navbar: [
       {
@@ -126,6 +117,10 @@ module.exports = {
             {
               title: "Patch notes",
               path: "/do-science/patch-notes.md",
+            },
+            {
+              title: "Privacy statement",
+              path: "/do-science/privacy-statement.md",
             },
             {
               title: "Contribute",
@@ -369,6 +364,10 @@ module.exports = {
               path: "/administer-science/patch-notes.md",
             },
             {
+              title: "Privacy statement",
+              path: "/administer-science/privacy-statement.md",
+            },
+            {
               title: "Contribute",
               path: "/administer-science/contribute.md",
             },
@@ -543,6 +542,10 @@ module.exports = {
             {
               title: "Patch notes",
               path: "/govern-science/patch-notes.md",
+            },
+            {
+              title: "Privacy statement",
+              path: "/govern-science/privacy-statement.md",
             },
             {
               title: "Contribute",
