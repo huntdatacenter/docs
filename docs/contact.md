@@ -11,7 +11,7 @@ If you run into any issue, please send us an email or chat with us on Slack.
 
 
 - **Email:** [cloud@hunt.ntnu.no](mailto:cloud@hunt.ntnu.no)
-- **Slack:** [hunt-genes.slack.com](https://hunt-genes.slack.com)
+- **Slack:** [hunt-cloud.slack.com](https://hunt-cloud.slack.com)
 
 ::: tip Service desk
 

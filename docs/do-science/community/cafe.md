@@ -27,7 +27,7 @@ Scientists and scientific administrators in HUNT Cloud gets an invitation to our
 
 ## Location
 
-Our community cafe is located at [Slack](https://slack.com/) under the name space [hunt-genes.slack.com](hunt-genes.slack.com).
+Our community cafe is located at [Slack](https://slack.com/) under the name space [hunt-cloud.slack.com](hunt-cloud.slack.com).
 
 
 ## Pre-arranged tables
