@@ -9,7 +9,7 @@ description: This page contain HUNT Cloud's privacy statement for web and servic
 
 **We care about privacy.**
 
-It is important for us at HUNT Cloud to protect both the privacy of research participants that donate data to science, scientists and scientific administrators that use our services to extract knowledge for a better world, and collaborators and visitors that communicate with us and uses our web pages.
+It is important for us at HUNT Cloud and NTNU to protect both the privacy of research participants that donate data to science, scientists and scientific administrators that use our services to extract knowledge for a better world, and collaborators and visitors that communicate with us and uses our web pages.
 
 This page contains information on how we protect your privacy.
 
