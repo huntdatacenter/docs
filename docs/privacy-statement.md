@@ -24,7 +24,7 @@ Last update: 2023-10-10.
 
 **This privacy statement describes how we process and store your personal data as a users of our services, and the rights you might be entitled to exercise.**
 
-### Current
+### Current version
 
 ::: tip CURRENT PRIVACY STATEMENT
 
