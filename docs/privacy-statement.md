@@ -7,14 +7,53 @@ description: This page contain HUNT Cloud's privacy statement for web and servic
 
 # Privacy statement
 
-**We care about privacy.**
+**We care about your privacy.**
 
-It is important for us at HUNT Cloud and NTNU to protect both the privacy of research participants that donate data to science, scientists and scientific administrators that use our services to extract knowledge for a better world, and collaborators and visitors that communicate with us and uses our web pages.
+It is important for us to ensure the privacy for your personal data both as a users of our cloud services, a research participants and a visitor to our web pages.
 
-This page contains information on how we protect your privacy.
+This page contains information on how we work to ensure your privacy.
 
 
 [[toc]]
+
+
+
+## Privacy statement for cloud services users
+
+Last update: 2023-10-10.
+
+**This privacy statement describes how we process and store your personal data as a users of our services, and the rights you might be entitled to exercise.**
+
+### Current
+
+::: tip CURRENT PRIVACY STATEMENT
+
+[HUNT Cloud Privacy Statement v1.1](https://assets.hdc.ntnu.no/assets/privacy/hunt-cloud-privacy-statement-1-1.pdf) (PDF)
+
+:::
+
+
+### Updates
+
+HUNT Cloud will from time to time update the privacy statement for cloud services users. 
+
+**Major updates.** Major updates affect users privacy. Major updates are specified by increasing numbers (v1, v2, v3, etc.). Such updates becomes effective ninety days after they are announced to active users on email. The new version is immediately effective for new users.
+
+**Minor updates.** Major updates do -not- affect users privacy. Minor updates are specified by increasing decimals (v2.1, v2.2, v2.3, etc).  These updates are noe announced directly to users. Minor updates follow the effective date of major updates and take precedence of previous versions when they are published on this page.
+
+### Archive
+
+| Version | Announced | Effective | 
+| ------- | --------- | --------- |
+| [HUNT Cloud Privacy Statement v1.1](https://assets.hdc.ntnu.no/assets/privacy/hunt-cloud-privacy-statement-1-1.pdf) (PDF) | 2023-10-10 | 2023-10-10 | 
+
+### Changes
+
+**HUNT Cloud Privacy Statement v1.1 (MAJOR)**
+
+* First version published. Announced under Ting#10.
+* Written as an amendment to NTNU's main privacy policy prior to the ISO/IEC 27701 certification to clarify our processingz personal data for cloud services users in HUNT Cloud.
+
 
 
 ## Privacy statement for research participants
@@ -40,60 +79,26 @@ Read more:
 
  
 
-## Privacy statement for cloud services users
-
-Last update: 2023-10-08.
-
-**This privacy statement describes how we process and store your personal data as a users of our services, and the rights you might be entitled to exercise.**
-
-The statement applies to any processing of personally identifiable information for the following contractual roles in HUNT Cloud: 
-
-* Data processor agreements: administrative contact, scientific contact, data protection officer and information security office, signatory official.
-* Services agreements: services center leader, administartive coordinator, lagtun invites, signatory official, invoice contact.
-* Data space orders: data space leader, compliance administrator, data administrator, technical administrator, training administrator, financial administrator.
-* Lab orders: Lab leader, lab coordinator, lab users.
-* External kista orders: Uploader and downloader from external party.
-
-### Current
-
-::: tip CURRENT PRIVACY STATEMENT
-
-HUNT Cloud Privacy Statement (v1.0 PDF)
-
-:::
-
-
-### Updates
-
-HUNT Cloud may change or update the privacy statement for cloud services users. 
-
-**Major updates.** Major updates affect users privacy. Major updates are specified by increasing numbers (v1, v2, v3, etc.). Such updates becomes effective ninety days after they are announced to active users on email. The new version is immediately effective for new users.
-
-**Minor updates.** Major updates do -not- affect users privacy. Minor updates are specified by increasing decimals (v2.1, v2.2, v2.3, etc).  These updates are noe announced directly to users. Minor updates follow the effective date of major updates and take precedence of previous versions when they are published on this page.
-
-### Archive
-
-| Version | Announced | Effective | 
-| ------- | --------- | --------- |
-| HUNT Cloud Privacy Statement v1.0 (PDF) | 2023-10-10 | 2023-11-01 | 
-
-### Changes
-
-**HUNT Cloud Privacy Statement v1.0 (MAJOR)**
-
-* First version with effective date for the ISO/IEC 27701 certification audit.
-* Announced under Ting #10.
 
 ## Privacy statement for web visitors
 
 Last update: 2023-10-08.
 
-[NTNU's central privacy policy](https://www.ntnu.edu/privacy) and [NTNU's cookies policy](https://www.ntnu.edu/cookies) apply for any processing of personal data on the following pages: 
+[NTNU's central privacy policy](https://www.ntnu.edu/privacy) apply for any processing of personal data on our web pages: 
 
-* [docs.hdc.ntnu.no](https://docs.hdc.ntnu.no) (english users documentation)
-* [ntnu.edu/mh/huntcloud](https://ntnu.no/mh/huntcloud) (english information)
-* [ntnu.no/mh/huntcloud](https://ntnu.no/mh/huntcloud) (norwegian information)
+* [docs.hdc.ntnu.no](https://docs.hdc.ntnu.no)
+* [ntnu.edu/mh/huntcloud](https://ntnu.no/mh/huntcloud)
+* [ntnu.no/mh/huntcloud](https://ntnu.no/mh/huntcloud)
 
-HUNT Cloud may change or update the privacy statement for web visitors without notice. All such changes will take effect once they have been posted on this page. It is your responsibility to monitor such updates. 
+[NTNU's cookies policy](https://www.ntnu.edu/cookies) apply for any procesing of personal data on the following pages: 
+
+* [ntnu.edu/mh/huntcloud](https://ntnu.no/mh/huntcloud)
+* [ntnu.no/mh/huntcloud](https://ntnu.no/mh/huntcloud)
+
+The following pages do not use cookies: 
+
+* [docs.hdc.ntnu.no](https://docs.hdc.ntnu.no)
+
+Our privacy statement for web visitors may change without notice. Changes will take effect once they have been posted on this page. It is your responsibility to monitor such updates. 
 
 
