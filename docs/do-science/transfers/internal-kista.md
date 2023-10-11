@@ -223,10 +223,10 @@ For large downloads, [terminal multiplexers](/do-science/tools/technical/termina
 
 ```bash
 # -- Principal example
-lftp -e "mirror -cR /upload <download_to_directory>; bye" sftp://<username>-<role>:@<ip-address>
+lftp -e "mirror -c /upload <download_to_directory>; bye" sftp://<username>-<role>:@<ip-address>
 
 # -- Demo example downloader
-lftp -e "mirror -cR /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
+lftp -e "mirror -c /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
 ```
 :::
 
