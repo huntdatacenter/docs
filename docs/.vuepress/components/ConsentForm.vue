@@ -114,21 +114,26 @@ export default {
         })
     },
     handleResponse(data) {
-      this.consentVersion = data['item']['version']
-      if (this.consentVersion) {
-        this.loadCurrentVersionOfTexts(this.consentVersion)
-        console.log(`Consent version: v${this.consentVersion}`)
-      }
       if (data['status'] === 'error') {
         if (data['item'] === 'Consent not found') {
           this.isWarning = true
         }
         console.log(data['item'])
       } else if (data['status'] === 'success' && data['item'] && data['item']['items'].length > 0) {
+        // Store a current consent version and load texts based on the version
+        if (data && 'item' in data && 'version' in data['item'] && data['item']['version']) {
+          this.consentVersion = data['item']['version']
+          this.loadCurrentVersionOfTexts(this.consentVersion)
+          console.log(`Consent version: v${this.consentVersion}`)
+        } else {
+          console.log(data)
+        }
+        // Load consent value for each item
         data['item']['items'].forEach((item) => {
           console.log(item)
           // -- NOTE
-          //  - load data from api into form variables based on main status (if PENDING keep true)
+          //  - load data from api into form variables based on main status
+          //  - (if PENDING it means it is first time == keep true)
           if (item['status'] === 'PENDING') {
             this.form[item['type']] = true
           } else if (item['status'] === 'ACTIVE') {
