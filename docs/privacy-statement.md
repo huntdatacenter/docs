@@ -9,22 +9,20 @@ description: This page contain HUNT Cloud's privacy statement for web and servic
 
 **We care about your privacy.**
 
-It is important for us to ensure the privacy for your personal data both as a users of our cloud services, a research participants and a visitor to our web pages.
+It is important for us at HUNT Cloud to ensure the privacy for your personal data - both when you use our services as a scientist or scientific administrator, when you donate your data as a research participants and when you visit our web pages.
 
-This page contains information on how we work to ensure your privacy.
+This page contains information on how we work to ensure your privacy in our services.
 
 
 [[toc]]
 
 
 
-## Privacy statement for cloud services users
+## Privacy statement for services users
 
 Last update: 2023-10-10.
 
-**This privacy statement describes how we process and store your personal data as a users of our services, and the rights you might be entitled to exercise.**
-
-### Current version
+**This privacy statement describes how we process and store your personal data as a users of our cloud services, and the rights that you might be entitled to exercise on these data.**
 
 ::: tip CURRENT PRIVACY STATEMENT
 
@@ -35,7 +33,7 @@ Last update: 2023-10-10.
 
 ### Updates
 
-HUNT Cloud will from time to time update the privacy statement for cloud services users. 
+HUNT Cloud will from time to time update this privacy statement. 
 
 **Major updates.** Major updates affect users privacy. Major updates are specified by increasing numbers (v1, v2, v3, etc.). Such updates becomes effective ninety days after they are announced to active users on email. The new version is immediately effective for new users.
 
