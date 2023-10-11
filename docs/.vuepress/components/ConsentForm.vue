@@ -111,9 +111,11 @@ export default {
       this.consentVersion = data['item']['version']
       if (this.consentVersion) {
         this.loadCurrentVersionOfTexts(this.consentVersion)
+        console.log(`Consent version: v${this.consentVersion}`)
       }
-      console.log(`Consent version: v${this.consentVersion}`)
-      if (data['status'] === 'success' && data['item'] && data['item']['items'].length > 0) {
+      if (data['status'] === 'error') {
+        console.log(data['item'])
+      } else if (data['status'] === 'success' && data['item'] && data['item']['items'].length > 0) {
         data['item']['items'].forEach((item) => {
           console.log(item)
           // -- NOTE
@@ -191,8 +193,17 @@ export default {
         </v-col>
       </v-row>
       <v-row v-if="!isLoading && !showConsent" justify="center">
-        <v-col cols="8">
-          If you do not have your Consent link request one in Service desk.
+        <v-col cols="12">
+          <v-alert
+            border="left"
+            colored-border
+            type="warning"
+            elevation="2"
+          >
+            <strong>You link appears to be wrong.</strong>
+            <hr class="mt-1 mb-2" />
+            If you do not have your own Consent link order one in Service desk.
+          </v-alert>
         </v-col>
       </v-row>
       <v-sheet v-if="showConsent" class="pa-4">
