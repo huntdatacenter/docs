@@ -42,6 +42,7 @@ export default {
       isLoadingTexts: true,
       isSaving: false,
       isError: false,
+      isWarning: false,
       consentToken: null,
       form: {},
       textData: {},
@@ -58,9 +59,14 @@ export default {
   },
   mounted() {},
   created() {
-    this.isLoading = true
-    this.consentToken = this.$route.query.token ? atob(this.$route.query.token) : null
-    // console.log(this.consentToken)
+    try {
+      this.isLoading = true
+      this.consentToken = this.$route.query.token ? atob(this.$route.query.token) : null
+      // console.log(this.consentToken)
+    } catch(error) {
+      this.isWarning = true
+      this.isLoading = false
+    }
 
     if (this.consentToken) {
       this.getConsentData()
@@ -114,6 +120,9 @@ export default {
         console.log(`Consent version: v${this.consentVersion}`)
       }
       if (data['status'] === 'error') {
+        if (data['item'] === 'Consent not found') {
+          this.isWarning = true
+        }
         console.log(data['item'])
       } else if (data['status'] === 'success' && data['item'] && data['item']['items'].length > 0) {
         data['item']['items'].forEach((item) => {
@@ -192,7 +201,7 @@ export default {
           </v-alert>
         </v-col>
       </v-row>
-      <v-row v-if="!isLoading && !showConsent" justify="center">
+      <v-row v-if="!isLoading && !showConsent && isWarning" justify="center">
         <v-col cols="12">
           <v-alert
             border="left"
