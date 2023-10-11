@@ -6,6 +6,6 @@ sidebarDepth: 1
 description: Community Consent
 ---
 
-# Community Consent
+# HUNT Cloud Community consent
 
 <ConsentForm />

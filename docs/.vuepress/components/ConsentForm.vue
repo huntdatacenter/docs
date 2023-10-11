@@ -1,4 +1,7 @@
 <script>
+const yaml = require("js-yaml");
+import fetch from 'node-fetch';
+
 import {
   VApp,
   VBtn,
@@ -9,6 +12,7 @@ import {
   VCardText,
   VCardActions,
   VSwitch,
+  VAlert,
 } from "vuetify/lib";
 
 export default {
@@ -23,6 +27,7 @@ export default {
     VCardText,
     VCardActions,
     VSwitch,
+    VAlert,
   },
   props: {
     id: { type: String, default: "applet" },
@@ -32,68 +37,137 @@ export default {
   data() {
     return {
       domain: 'hdc.ntnu.no',
+      consentVersion: null,
       isLoading: true,
+      isLoadingTexts: true,
+      isSaving: false,
+      isError: false,
       consentToken: null,
-      form: {
-        slack: true,
-        tingweek: true,
-      },
+      form: {},
+      textData: {},
+      consentItems: [],
     };
   },
   computed: {
     showConsent() {
-      return !this.isLoading && this.consentToken ? true : false
+      return !this.isLoading && !this.isLoadingTexts && !this.isError && this.consentToken && this.form && this.consentItems.length > 0 ? true : false
     },
     url() {
       return `https://${this.service}-api.${this.domain}/api/${this.apiVersion}/consent/${this.consentToken}`
     },
   },
-  mounted() {
-    this.isLoading = false
-  },
+  mounted() {},
   created() {
     this.isLoading = true
     this.consentToken = this.$route.query.token ? atob(this.$route.query.token) : null
     // console.log(this.consentToken)
-    // TODO fetch data of consent from API
+
     if (this.consentToken) {
       this.getConsentData()
     }
-    // TODO load data from api into form variables based on main status (if PENDING keep true)
   },
   methods: {
     getConsentData() {
       fetch(this.url, {
         method: "GET",
+        mode: "cors",
         cache: "no-cache",
         headers: {
           "Content-Type": "application/json; charset=utf-8",
         },
       }).then(
         (response) => {
-          return response.text()
+          return response.json()
         }
       ).then((data) => {
-        console.log(data)
-        // this.data = data
+        // console.log(data)
+        this.handleResponse(data)
+      }).catch((err) => {
+        console.error(err)
+        this.isError = true
       })
+      .finally(() => {
+        this.isLoading = false
+      });
+    },
+    loadCurrentVersionOfTexts(version) {
+      // console.log('load text data')
+      fetch("/cfg/consent_texts.yml")
+        .then((response) => response.text())
+        .then((data) => {
+          // console.log(data);
+          const cfg = yaml.load(data)
+          // console.log(cfg);
+          this.textData = cfg[`v${version}`]
+        }).catch((err) => {
+          console.error(err)
+          this.isError = true
+        })
+        .finally(() => {
+          this.isLoadingTexts = false
+        })
+    },
+    handleResponse(data) {
+      this.consentVersion = data['item']['version']
+      if (this.consentVersion) {
+        this.loadCurrentVersionOfTexts(this.consentVersion)
+      }
+      console.log(`Consent version: v${this.consentVersion}`)
+      if (data['status'] === 'success' && data['item'] && data['item']['items'].length > 0) {
+        data['item']['items'].forEach((item) => {
+          console.log(item)
+          // -- NOTE
+          //  - load data from api into form variables based on main status (if PENDING keep true)
+          if (item['status'] === 'PENDING') {
+            this.form[item['type']] = true
+          } else if (item['status'] === 'ACTIVE') {
+            this.form[item['type']] = true
+          } else {
+            this.form[item['type']] = false
+          }
+          this.consentItems.push(item['type'])
+        })
+        // console.log(this.consentItems)
+        // console.log(data['item']['items'])
+      }
+    },
+    showType(consentType) {
+      return this.textData && 'items' in this.textData && consentType in this.textData['items'] && this.textData['items'][consentType] && this.consentItems.includes(consentType)
     },
     submit() {
-      console.log(this.form)
-      fetch(this.url, {
-        method: "PUT",
-        cache: "no-cache",
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-        },
-      }).then(
-        (response) => {
-          return response.text()
-        }
-      ).then((data) => {
-        console.log(data)
-        // this.data = data
+      this.isSaving = true
+      // console.log('submit')
+      // console.log(this.form)
+      const items = this.consentItems.map((item) => {
+        return this.form[item] ? { "type": item, "status": "ACTIVE" } : { "type": item, "status": "REVOKED" }
       })
+      // console.log(items)
+
+      try {
+        fetch(this.url, {
+          method: "PUT",
+          mode: "cors",
+          cache: "no-cache",
+          headers: {
+            "Content-Type": "application/json; charset=utf-8",
+          },
+          body: JSON.stringify({
+            "items": items
+          }),
+        }).then(
+          (response) => {
+            return response.text()
+          }
+        ).then((data) => {
+          this.handleResponse(data)
+        })
+      } catch (error) {
+        console.error(error)
+        this.isError = true
+      } finally {
+        this.isSaving = false
+      }
+      
     },
   },
 };
@@ -102,9 +176,18 @@ export default {
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
-      <v-row v-if="isLoading" justify="center">
-        <v-col cols="8">
-          Loading...
+      <v-row v-if="isError" justify="center">
+        <v-col cols="12">
+          <v-alert
+            border="left"
+            colored-border
+            type="error"
+            elevation="2"
+          >
+            <strong>Error occured while processing your consent.</strong>
+            <hr class="mt-1 mb-2" />
+            Please contact us on <a href="/about/contact/" target="_blank">email</a> or try again later.
+          </v-alert>
         </v-col>
       </v-row>
       <v-row v-if="!isLoading && !showConsent" justify="center">
@@ -112,30 +195,17 @@ export default {
           If you do not have your Consent link request one in Service desk.
         </v-col>
       </v-row>
-      <v-sheet class="pa-4">
-        <form v-if="showConsent" ref="form" @submit.prevent="submit">
+      <v-sheet v-if="showConsent" class="pa-4">
+        <form ref="form" @submit.prevent="submit">
           <v-row>
-            <v-col>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae lorem fermentum, 
-              ultrices metus non, sagittis est. Pellentesque habitant morbi tristique senectus et netus 
-              et malesuada fames ac turpis egestas. Phasellus vitae porta dolor. Pellentesque feugiat quis 
-              sapien et tincidunt. Nam pellentesque quam eget augue finibus pharetra. 
-              Nunc eget tortor eu libero porttitor venenatis. Nulla vehicula mollis massa. 
-              Sed dignissim mauris ac odio porttitor pulvinar.
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
-              Proin rhoncus eros purus, vel dapibus nisi euismod at. Donec viverra elementum vestibulum. 
-              Fusce tristique at enim quis semper. Duis vel rutrum augue. Maecenas ultricies ipsum ex, 
-              eu tristique ipsum cursus in. Pellentesque ac dictum libero. Vivamus finibus rhoncus neque non 
-              tristique. Proin volutpat purus ipsum, sed vehicula felis egestas sed.
+            <v-col v-for="item in textData['paragraphs']" cols="12">
+              {{ item }}
             </v-col>
           </v-row>
           <v-row justify="center">
             <v-col cols="4">
               <v-btn
-                href="#"
+                :href="`https://assets.hdc.ntnu.no/assets/consent/v${consentVersion}/privacy-statement-v${consentVersion}.pdf`"
                 target="_blank"
                 color="link"
                 block
@@ -144,31 +214,31 @@ export default {
               </v-btn>
             </v-col>
           </v-row>
-          <v-row>
-            <v-col cols="12">
+          <v-row v-if="form ? true : false">
+            <v-col v-if="showType('slack')" cols="12">
               <v-switch
                 v-model="form['slack']"
-                :disabled="isLoading"
+                :disabled="isLoading || isSaving"
                 class="mt-0"
                 color="green lighten-1"
                 inset
                 hide-details
                 name="slack"
-                label="Slack: Donec at metus suscipit nunc placerat ornare egestas venenatis metus. Cras pretium urna justo, a auctor enim sodales ut."
+                :label="textData['items']['slack']"
               ></v-switch>
             </v-col>
           </v-row>
-          <v-row>
-            <v-col cols="12">
+          <v-row v-if="form ? true : false">
+            <v-col v-if="showType('tingweek')" cols="12">
               <v-switch
                 v-model="form['tingweek']"
-                :disabled="isLoading"
+                :disabled="isLoading || isSaving"
                 class="mt-0"
                 color="green lighten-1"
                 inset
                 hide-details
                 name="tingweek"
-                label="Tingweek: Duis vel rutrum augue. Maecenas ultricies ipsum ex, eu tristique ipsum cursus in."
+                :label="textData['items']['tingweek']"
               ></v-switch>
             </v-col>
           </v-row>
@@ -177,6 +247,8 @@ export default {
               <v-btn
                 type="submit"
                 color="success"
+                :disabled="isError"
+                :loading="isSaving || isLoading"
                 block
               >
                 Submit consent
