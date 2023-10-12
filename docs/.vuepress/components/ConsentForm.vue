@@ -40,10 +40,12 @@ export default {
       consentVersion: null,
       isLoading: true,
       isLoadingTexts: true,
+      isReadonly: false,
       isSaving: false,
       isError: false,
       isWarning: false,
       consentToken: null,
+      submittedAs: [],
       form: {},
       textData: {},
       consentItems: [],
@@ -152,6 +154,7 @@ export default {
     },
     submit() {
       this.isSaving = true
+      this.isReadonly = true
       // console.log('submit')
       // console.log(this.form)
       const items = this.consentItems.map((item) => {
@@ -181,9 +184,34 @@ export default {
         console.error(error)
         this.isError = true
       } finally {
-        this.isSaving = false
+        setTimeout(() => {
+          this.isSaving = false
+          this.submittedAs = this.getSubmitMessage()
+        }, "600")
+        setTimeout(() => {
+          this.isReadonly = false
+        }, "1000")
       }
-      
+    },
+    getSubmitMessage() {
+      if (this.form['slack'] && this.form['tingweek']) {
+        return ["Once again welcome to our community.", "If we have not sent you a slack invitation yet we will send you one as soon as we process this consent."]
+      } else if (!this.form['slack'] && this.form['tingweek']) {
+        return ["Sorry to see you go!", "Your slack account will be deactivated and then deleted as soon as we process this withdrawal."]
+      } else if (this.form['slack'] && !this.form['tingweek']) {
+        return ["Sorry to see you go!", "If we have not sent you a slack invitation yet we will send you one as soon as we process this consent. Although we will miss you in our Ting week discussions."]
+      } else if (!this.form['slack'] && !this.form['tingweek']) {
+        return ["Sorry to see you go!", "Your slack account will be deactivated and then deleted as soon as we process this withdrawal."]
+      }
+    },
+    withdrawConsent() {
+      this.isSaving = true
+      this.isReadonly = true
+      console.log('withdraw consent')
+      this.consentItems.forEach((item) => {
+        this.form[item] = false
+      })
+      this.submit()
     },
   },
 };
@@ -214,7 +242,7 @@ export default {
             type="warning"
             elevation="2"
           >
-            <strong>You link appears to be wrong.</strong>
+            <strong>Your link appears to be wrong.</strong>
             <hr class="mt-1 mb-2" />
             If you do not have your own Consent link order one in Service desk.
           </v-alert>
@@ -243,7 +271,7 @@ export default {
             <v-col v-if="showType('slack')" cols="12">
               <v-switch
                 v-model="form['slack']"
-                :disabled="isLoading || isSaving"
+                :readonly="isLoading || isSaving || isReadonly"
                 class="mt-0"
                 color="green lighten-1"
                 inset
@@ -257,7 +285,7 @@ export default {
             <v-col v-if="showType('tingweek')" cols="12">
               <v-switch
                 v-model="form['tingweek']"
-                :disabled="isLoading || isSaving"
+                :readonly="isLoading || isSaving || isReadonly"
                 class="mt-0"
                 color="green lighten-1"
                 inset
@@ -279,9 +307,31 @@ export default {
                 Submit consent
               </v-btn>
             </v-col>
+            <v-col cols="3">
+              <v-btn
+                color="error"
+                :disabled="isError"
+                :loading="isSaving || isLoading"
+                block
+                @click="withdrawConsent()"
+              >
+                Withdraw consent
+              </v-btn>
+            </v-col>
           </v-row>
         </form>
       </v-sheet>
+      <v-row v-if="submittedAs && submittedAs.length == 2 ? true : false" justify="center">
+        <v-col cols="10">
+          <v-alert
+            type="info"
+          >
+            <strong>{{ submittedAs[0] }}</strong>
+            <hr class="mt-1 mb-2" />
+            {{ submittedAs[1] }}
+          </v-alert>
+        </v-col>
+      </v-row>
     </v-app>
   </div>
 </template>
