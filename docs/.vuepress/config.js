@@ -300,7 +300,14 @@ module.exports = {
           text: "Community",
           collapsable: true,
           isGroup: true,
-          children: ["/do-science/community/cafe.md", "/do-science/community/labting.md"],
+          children: [
+            {
+              title: "Introduction",
+              path: "/do-science/community/",
+            },
+            "/do-science/community/chat.md", 
+            "/do-science/community/consent.md", 
+            "/do-science/community/labting.md"],
         },
         "/do-science/service-desk/",
         {

@@ -1,7 +1,7 @@
 ---
-title: Community cafe
+title: Community chat
 category: Community
-permalink: /do-science/community/digital-cafe
+permalink: /do-science/community/chat
 sidebarDepth: 1
 tags:
   - slack

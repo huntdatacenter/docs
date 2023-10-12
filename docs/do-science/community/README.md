@@ -8,16 +8,13 @@ tags:
 description: This page holds information on communication within the HUNT Cloud community.
 ---
 
-# Community introduction
+# HUNT Cloud community
 
-**Everyone in HUNT Cloud is invited to our cloud community.**
+**Collabortions elevate science.**
+
+All lab users in HUNT Cloud are invited to join our HUNT Cloud community. 
 
 
 
-We aim to enable scientists on all levels with a place to say hello to each other, ask for help when needed, and provide help to others when they can.
-
-## Labting
-
-## Digital cafe
 
 
