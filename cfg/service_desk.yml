@@ -1687,6 +1687,42 @@ request_lab_access_link:
   ]
   attachments: []
 
+
+request_community_membership:
+  title: "Request community membership"
+  template:
+    subject: "Request community membership"
+    body: |
+      Hi HUNT Cloud team,
+
+      ---
+      full_name="{fullname}"  
+      ---
+
+      Kind regards,
+  fields: [
+    { label: "Full name", key: "fullname", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+  ]
+  requirements: []
+  attachments: []
+
+request_consent_link:
+  title: "Request consent link"
+  body: |
+      Hi HUNT Cloud team,
+
+      ---
+      full_name="{fullname}"  
+      ---
+
+      Kind regards,
+  fields: [
+    { label: "Full name", key: "fullname", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+  ]
+  requirements: []
+  attachments: []
+
+
 request_template:
   title: "Button title text"
   template:
