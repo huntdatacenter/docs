@@ -8,6 +8,12 @@ description: Guide on VPN installation and configuration. Make sure you have suc
 
 # Step 2. Configure your VPN
 
+::: danger Use Lab access link instead
+
+If you are configuring access to your lab use Lab access link sent to you in onboarding email with other credentials. You can also request Lab access link in [Service desk](/do-science/service-desk/#request-lab-access-link-reissue)
+
+:::
+
 **This step configure an encrypted connection between your local computer and HUNT Cloud. The specific steps are dependent on the operating system on your local computer.**
 
 [[toc]]

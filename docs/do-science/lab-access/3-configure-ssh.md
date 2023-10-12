@@ -9,6 +9,12 @@ description: Guide on SSH configuration, requires a working VPN connection.
 
 # Step 3. Configure your SSH
 
+::: danger Use Lab access link instead
+
+If you are configuring access to your lab use Lab access link sent to you in onboarding email with other credentials. You can also request Lab access link in [Service desk](/do-science/service-desk/#request-lab-access-link-reissue)
+
+:::
+
 **These steps will configure your SSH connection to and from your local computer and your lab.** 
 
 You will first configure a machine used for security purposes that we call **`entry`**, and then one machine that we call **`home`** were you will do your scientific explorations.
