@@ -1708,7 +1708,9 @@ request_community_membership:
 
 request_consent_link:
   title: "Request consent link"
-  body: |
+  template:
+    subject: "Request consent link"
+    body: |
       Hi HUNT Cloud team,
 
       ---
