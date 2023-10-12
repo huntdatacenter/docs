@@ -20,7 +20,7 @@ This page contains information on how we work to ensure your privacy in our serv
 
 ## Privacy statement for services users
 
-Last update: 2023-10-10.
+Last update: 2023-10-12.
 
 **This privacy statement describes how we process and store your personal data as a users of our cloud services, and the rights that you might be entitled to exercise on these data.**
 
@@ -43,7 +43,7 @@ HUNT Cloud will from time to time update this privacy statement.
 
 | Version | Announced | Effective | 
 | ------- | --------- | --------- |
-| [HUNT Cloud Privacy Statement v1.1](https://assets.hdc.ntnu.no/assets/privacy/hunt-cloud-privacy-statement-1-1.pdf) (PDF) | 2023-10-10 | 2023-10-10 | 
+| [HUNT Cloud Privacy Statement v1.1](https://assets.hdc.ntnu.no/assets/privacy/hunt-cloud-privacy-statement-1-0.pdf) (PDF) | 2023-10-12 | 2023-10-12 | 
 
 ### Changes
 

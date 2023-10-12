@@ -144,8 +144,6 @@ You may need to reset your VPN certificate when you get a new local computer or 
 * **Next step:** [Guide on the VPN reset](/do-science/guides/vpn-certificate-reset/).
 * **Cost:** Included in the lab subscription.
 
-
-
 ### Google authenticator key reset  
 
 You need the [Google Authenticator key](/do-science/guides/google-authenticator-reset/) to access the HUNT Cloud VPN. Click the button below to request a new key (f.e. when you change your phone).
@@ -158,6 +156,24 @@ You need the [Google Authenticator key](/do-science/guides/google-authenticator-
 * **Requirement:** Active Signal app on your phone.
 * **Next step:** [Guide on the key reset](/do-science/guides/google-authenticator-reset/).
 * **Cost:** Included in the lab subscription.
+
+
+## Community access
+
+### Request consent link
+
+Membership in our [HUNT Cloud community](/do-science/community/) is voluntary. You can update your consent to join or leave the community when you like. You can either use the consent link that you got under your onboarding or order a new one here.
+
+<SDButton form="request_consent_link" />
+
+* **Who can order:** Existing HUNT Cloud community members and active lab users that wants to join.
+* **Expected response time:** Days.
+* **Expected delivery:** Link to the community consent forwarded on email.
+* **Requirement:** Active lab agreement signed less than two years ago.
+* **Cost:** Included in the lab subscription.
+
+
+
 
 ## Applications
 

@@ -393,7 +393,22 @@ Head over to the [data space orders](/administer-science/service-desk/data-space
 * **Expected delivery:** Access information communicated in your Slack lab channel.
 * **Cost:** Included in your lab subscription.
 
-## General requests
+## Community membership
+
+### Add a new community member
+
+Labs under a BLUE data space subscription levels may invite collaborators to their [HUNT Cloud community](/do-science/community/) channels that are not active users in their lab. Membership is voluntary, and new members will be asked to consent to our data processing for the service.
+
+<SDButton form="request_community_membership" />
+
+* **Who can order:** Lab leaders and lab coordinators on BLUE data space subscription levels.
+* **Expected response time:** Days.
+* **Expected delivery:** Link to the community consent forwarded to your collaborator on email.
+* **Required information:** Contact information and affiliation for your collaborator.
+* **Required action for new member:** Read and consent to the data processing terms of the service.
+* **Cost:** Included in the data space subscription.
+
+## General request
 
 If you have not found a button for your type of request you can use this general request. This is typically slower than structured requests, but you will get same tracking.
 

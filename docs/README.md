@@ -67,7 +67,7 @@ footerHtml: false
     </div>
     <div class="hc-row">
         <center>
-            <i>These pages contain the official user documentation for HUNT Cloud. <br>HUNT Cloud is a scientific infrastructure for data explorations at <a href="https://www.ntnu.edu/">NTNU</a> in Norway.<br>We adhere to NTNU's central <a href="https://www.ntnu.edu/privacy/">privacy policy</a>.</i>
+            <i>These pages contain the official user documentation for HUNT Cloud. <br>HUNT Cloud is a scientific infrastructure for data explorations at <a href="https://www.ntnu.edu/">NTNU</a>, Norway.<br><a href="/govern-science/privacy-statement">Privacy statement</a>.</i><br>
         </center>
     </div>
   </div>
