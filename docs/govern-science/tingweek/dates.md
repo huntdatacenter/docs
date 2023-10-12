@@ -30,7 +30,7 @@ description: This page lists information and questions about our Tingweeks.
 
 ### Tingweek #10 (2023-10)
 
-- **Labting**: Tuesday 17 October 2023 - 2 to 4 p.m. CET
+- **Labting**: Tuesday 17 October 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek10-labting-agenda.pdf))
 - **Data space ting**: Wednesday 18 October 2023 - 9 to 11 a.m. CET
 - **Data controller ting**: Wednesday 18 October 2023 - 1 to 3 p.m. CET
 - **Lagtun**: Thursday 19 October 2023 - 9 to 11 a.m. CET
