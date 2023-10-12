@@ -13,6 +13,7 @@ import {
   VCardActions,
   VSwitch,
   VAlert,
+  VIcon,
 } from "vuetify/lib";
 
 export default {
@@ -28,6 +29,7 @@ export default {
     VCardActions,
     VSwitch,
     VAlert,
+    VIcon,
   },
   props: {
     id: { type: String, default: "applet" },
@@ -304,17 +306,31 @@ export default {
                 :loading="isSaving || isLoading"
                 block
               >
+                <v-icon
+                  left
+                  dark
+                >
+                  check
+                </v-icon>
                 Submit consent
               </v-btn>
             </v-col>
             <v-col cols="3">
               <v-btn
-                color="error"
+                color="blue-grey-darken-4"
                 :disabled="isError"
                 :loading="isSaving || isLoading"
                 block
+                outlined
+                elevation="1"
                 @click="withdrawConsent()"
               >
+                <v-icon
+                  left
+                  dark
+                >
+                  cancel
+                </v-icon>
                 Withdraw consent
               </v-btn>
             </v-col>
