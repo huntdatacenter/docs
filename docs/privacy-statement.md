@@ -26,7 +26,7 @@ Last update: 2023-10-12.
 
 ::: tip CURRENT PRIVACY STATEMENT
 
-[HUNT Cloud Privacy Statement v1.1](https://assets.hdc.ntnu.no/assets/privacy/hunt-cloud-privacy-statement-1-1.pdf) (PDF)
+[HUNT Cloud Privacy Statement v1.0](https://assets.hdc.ntnu.no/assets/privacy/hunt-cloud-privacy-statement-1-0.pdf) (PDF)
 
 :::
 
@@ -43,11 +43,11 @@ HUNT Cloud will from time to time update this privacy statement.
 
 | Version | Announced | Effective | 
 | ------- | --------- | --------- |
-| [HUNT Cloud Privacy Statement v1.1](https://assets.hdc.ntnu.no/assets/privacy/hunt-cloud-privacy-statement-1-0.pdf) (PDF) | 2023-10-12 | 2023-10-12 | 
+| [HUNT Cloud Privacy Statement v1.0](https://assets.hdc.ntnu.no/assets/privacy/hunt-cloud-privacy-statement-1-0.pdf) (PDF) | 2023-10-12 | 2023-10-12 | 
 
 ### Changes
 
-**HUNT Cloud Privacy Statement v1.1 (MAJOR)**
+**HUNT Cloud Privacy Statement v1.0 (MAJOR)**
 
 * First version published. Announced under Ting#10.
 * Written as an amendment to NTNU's main privacy policy prior to the ISO/IEC 27701 certification to clarify our processingz personal data for cloud services users in HUNT Cloud.
