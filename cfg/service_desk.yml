@@ -1,4 +1,19 @@
 ########################### this is the beginning of file ###########################
+general_contact_request:
+  title: "Contact HUNT Cloud"
+  template:
+    subject: "General request - {topic}"
+    body: |
+      Hi HUNT Cloud team,
+
+      <your-text>
+
+      Best regards,
+
+  fields: [{ label: "Request topic", key: "topic", field: "textfield" }]
+  requirements: ["<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."]
+  attachments: []
+
 general_lab_user_request:
   title: "General lab user request"
   template:
@@ -1777,12 +1792,4 @@ request_consent_link:
   attachments: []
 
 
-request_template:
-  title: "Button title text"
-  template:
-    subject: "Email subject text"
-    body: |
-      Sample text
-  fields: []
-  requirements: []
-  attachments: []
+
