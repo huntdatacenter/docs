@@ -33,4 +33,4 @@ Report ongoing data breach or data loss to [soc@ntnu.no](mailto:soc@ntnu.no) and
 
 ### <font color="#bc463e">Threats and vulnerabilities</font>
 
-Report potential threats, vulnerabilities and adverse security and privacy events by clicking the blue "Contact HUNT Cloud" button above.
+Report potential threats, vulnerabilities and adverse events by clicking the blue "Contact HUNT Cloud" button above.
