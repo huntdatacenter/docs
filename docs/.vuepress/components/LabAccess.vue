@@ -214,11 +214,11 @@ Host {lab_name}
               type="warning"
               elevation="2"
             >
-              <strong>{{ access && access.length > 0 ? `Your link appears to be wrong.` : `Request your Lab access link.` }}</strong>
-              <hr class="mt-1 mb-2" />
-              We are sending Lab access links as part of onboarding email.
+              <strong>{{ access && access.length > 0 ? `Your link appears to be wrong.` : `You need your Lab access link to continue.` }}</strong>
+              <hr class="mt-1 mb-2" /><br>
+              You will get your Lab access links as part of your onboarding email.
               <br /><br />
-              If you do not have your own Lab access link click on the button below to order one.
+              If you lost the link, clik on the blue button below to request a new.
               <br /><br />
               <SDButton form="request_lab_access_link" />
             </v-alert>

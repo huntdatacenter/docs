@@ -1672,7 +1672,12 @@ request_lab_access_link:
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request Lab access link for my lab {labname}.
+      I would like to request a copy of my Lab access link for the following lab:
+      
+      ```
+      username={username}
+      labname={labname}
+      ```
 
       Kind regards,  
       {full_name}
@@ -1682,7 +1687,7 @@ request_lab_access_link:
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
-    "<b>Who can order:</b> Lab user.",
+    "<b>Who can order:</b> Lab users.",
     "<b>Required information:</b> Your username and lab name.",
     "<b>Expected response time:</b> Days.",
     "<b>Cost:</b> Included in the lab subscription.",
