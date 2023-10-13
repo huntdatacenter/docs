@@ -410,7 +410,23 @@ Labs under a BLUE data space subscription levels may invite collaborators to the
 
 ## General request
 
-If you have not found a button for your type of request you can use this general request. This is typically slower than structured requests, but you will get same tracking.
+Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request. 
 
-<SDButton form="general_lab_user_request" />
+<SDButton form="general_lab_request" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Expected response time:** Days.
+
+::: warning General responses are slower
+
+Note that a general request has slower response time than a predefined order. If you don't find what you are looking for here, it might be good to invest some time investigating options in our [do science](/do-science/service-desk/) and [govern science](/govern-science/service-desk/) service desk.
+
+:::
+
+::: tip Not an active user? 
+
+[Contact us](/contact) on email for general questions and information on our scientific services and activities.
+
+:::
+
 
