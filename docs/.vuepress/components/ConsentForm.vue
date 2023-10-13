@@ -139,7 +139,7 @@ export default {
           //  - load data from api into form variables based on main status
           //  - (if PENDING it means it is first time == keep true)
           if (item['status'] === 'PENDING') {
-            this.form[item['type']] = true
+            this.form[item['type']] = false
           } else if (item['status'] === 'ACTIVE') {
             this.form[item['type']] = true
           } else {
@@ -196,15 +196,29 @@ export default {
       }
     },
     getSubmitMessage() {
-      if (this.form['slack'] && this.form['tingweek']) {
+      if (this.form['slack']) {
         return ["Once again welcome to our community.", "If we have not sent you a slack invitation yet we will send you one as soon as we process this consent."]
-      } else if (!this.form['slack'] && this.form['tingweek']) {
-        return ["Sorry to see you go!", "Your slack account will be deactivated and then deleted as soon as we process this withdrawal."]
-      } else if (this.form['slack'] && !this.form['tingweek']) {
-        return ["Sorry to see you go!", "If we have not sent you a slack invitation yet we will send you one as soon as we process this consent. Although we will miss you in our Ting week discussions."]
-      } else if (!this.form['slack'] && !this.form['tingweek']) {
+      } else {
         return ["Sorry to see you go!", "Your slack account will be deactivated and then deleted as soon as we process this withdrawal."]
       }
+      // if (this.form['slack'] && this.form['tingweek']) {
+      //   return ["Once again welcome to our community.", "If we have not sent you a slack invitation yet we will send you one as soon as we process this consent."]
+      // } else if (!this.form['slack'] && this.form['tingweek']) {
+      //   return ["Sorry to see you go!", "Your slack account will be deactivated and then deleted as soon as we process this withdrawal."]
+      // } else if (this.form['slack'] && !this.form['tingweek']) {
+      //   return ["Sorry to see you go!", "If we have not sent you a slack invitation yet we will send you one as soon as we process this consent. Although we will miss you in our Ting week discussions."]
+      // } else if (!this.form['slack'] && !this.form['tingweek']) {
+      //   return ["Sorry to see you go!", "Your slack account will be deactivated and then deleted as soon as we process this withdrawal."]
+      // }
+    },
+    giveConsent() {
+      this.isSaving = true
+      this.isReadonly = true
+      console.log('give consent')
+      this.consentItems.forEach((item) => {
+        this.form[item] = true
+      })
+      this.submit()
     },
     withdrawConsent() {
       this.isSaving = true
@@ -222,132 +236,153 @@ export default {
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
-      <v-row v-if="isError" justify="center">
-        <v-col cols="12">
-          <v-alert
-            border="left"
-            colored-border
-            type="error"
-            elevation="2"
-          >
-            <strong>Error occured while processing your consent.</strong>
-            <hr class="mt-1 mb-2" />
-            Please contact us on <a href="/about/contact/" target="_blank">email</a> or try again later.
-          </v-alert>
-        </v-col>
-      </v-row>
-      <v-row v-if="!isLoading && !showConsent && isWarning" justify="center">
-        <v-col cols="12">
-          <v-alert
-            border="left"
-            colored-border
-            type="warning"
-            elevation="2"
-          >
-            <strong>Your link appears to be wrong.</strong>
-            <hr class="mt-1 mb-2" />
-            If you do not have your own Consent link order one in Service desk.
-          </v-alert>
-        </v-col>
-      </v-row>
-      <v-sheet v-if="showConsent" class="pa-4">
-        <form ref="form" @submit.prevent="submit">
-          <v-row>
-            <v-col v-for="item in textData['paragraphs']" cols="12">
-              {{ item }}
-            </v-col>
-          </v-row>
-          <v-row justify="center">
-            <v-col cols="4">
-              <v-btn
-                :href="`https://assets.hdc.ntnu.no/assets/consent/v${consentVersion}/privacy-statement-v${consentVersion}.pdf`"
-                target="_blank"
-                color="link"
-                block
-              >
-                Privacy statement (PDF)
-              </v-btn>
-            </v-col>
-          </v-row>
-          <v-row v-if="form ? true : false">
-            <v-col v-if="showType('slack')" cols="12">
-              <v-switch
-                v-model="form['slack']"
-                :readonly="isLoading || isSaving || isReadonly"
-                class="mt-0"
-                color="green lighten-1"
-                inset
-                hide-details
-                name="slack"
-                :label="textData['items']['slack']"
-              ></v-switch>
-            </v-col>
-          </v-row>
-          <v-row v-if="form ? true : false">
-            <v-col v-if="showType('tingweek')" cols="12">
-              <v-switch
-                v-model="form['tingweek']"
-                :readonly="isLoading || isSaving || isReadonly"
-                class="mt-0"
-                color="green lighten-1"
-                inset
-                hide-details
-                name="tingweek"
-                :label="textData['items']['tingweek']"
-              ></v-switch>
-            </v-col>
-          </v-row>
-          <v-row class="mb-2" justify="center">
-            <v-col cols="3">
-              <v-btn
-                type="submit"
-                color="success"
-                :disabled="isError"
-                :loading="isSaving || isLoading"
-                block
-              >
-                <v-icon
-                  left
-                  dark
+      <v-sheet class="ma-4">
+        <v-row v-if="isError" justify="center">
+          <v-col cols="12">
+            <v-alert
+              border="left"
+              colored-border
+              type="error"
+              elevation="2"
+            >
+              <strong>Error occured while processing your consent.</strong>
+              <hr class="mt-1 mb-2" />
+              Please contact us on <a href="/about/contact/" target="_blank">email</a> or try again later.
+            </v-alert>
+          </v-col>
+        </v-row>
+        <v-row v-if="!isLoading && !showConsent && isWarning" justify="center">
+          <v-col cols="12">
+            <v-alert
+              border="left"
+              colored-border
+              type="warning"
+              elevation="2"
+            >
+              <strong>Your link appears to be wrong.</strong>
+              <hr class="mt-1 mb-2" />
+              If you do not have your own Consent link order one in Service desk.
+            </v-alert>
+          </v-col>
+        </v-row>
+        <v-sheet v-if="showConsent">
+          <form ref="form" @submit.prevent="submit">
+            <v-row>
+              <v-col v-for="item in textData['paragraphs']" cols="12">
+                {{ item }}
+              </v-col>
+            </v-row>
+            <v-row justify="center">
+              <v-col cols="4">
+                <v-btn
+                  :href="`https://assets.hdc.ntnu.no/assets/consent/v${consentVersion}/privacy-statement-v${consentVersion}.pdf`"
+                  target="_blank"
+                  color="link"
+                  block
                 >
-                  check
-                </v-icon>
-                Submit consent
-              </v-btn>
-            </v-col>
-            <v-col cols="3">
-              <v-btn
-                color="blue-grey-darken-4"
-                :disabled="isError"
-                :loading="isSaving || isLoading"
-                block
-                outlined
-                elevation="1"
-                @click="withdrawConsent()"
-              >
-                <v-icon
-                  left
-                  dark
+                  Privacy statement (PDF)
+                </v-btn>
+              </v-col>
+            </v-row>
+            <v-row v-if="form ? true : false">
+              <v-col v-if="showType('slack')" cols="12">
+                <!-- :readonly="isLoading || isSaving || isReadonly" -->
+                <v-switch
+                  v-model="form['slack']"
+                  class="mt-0"
+                  color="green lighten-1"
+                  readonly
+                  inset
+                  hide-details
+                  name="slack"
+                  :label="textData['items']['slack']"
+                ></v-switch>
+              </v-col>
+            </v-row>
+            <v-row v-if="form ? true : false">
+              <v-col v-if="showType('tingweek')" cols="12">
+                <!-- :readonly="isLoading || isSaving || isReadonly" -->
+                <v-switch
+                  v-model="form['tingweek']"
+                  class="mt-0"
+                  color="green lighten-1"
+                  readonly
+                  inset
+                  hide-details
+                  name="tingweek"
+                  :label="textData['items']['tingweek']"
+                ></v-switch>
+              </v-col>
+            </v-row>
+            <v-row class="mb-2" justify="center">
+              <!-- <v-col cols="3">
+                <v-btn
+                  type="submit"
+                  color="success"
+                  :disabled="isError"
+                  :loading="isSaving || isLoading"
+                  block
                 >
-                  cancel
-                </v-icon>
-                Withdraw consent
-              </v-btn>
-            </v-col>
-          </v-row>
-        </form>
+                  <v-icon
+                    left
+                    dark
+                  >
+                    check
+                  </v-icon>
+                  Submit consent
+                </v-btn>
+              </v-col> -->
+              <v-col cols="3">
+                <v-btn
+                  color="success"
+                  :disabled="isError"
+                  :loading="isSaving || isLoading"
+                  block
+                  @click="giveConsent()"
+                >
+                  <v-icon
+                    left
+                    dark
+                  >
+                    check
+                  </v-icon>
+                  Give consent
+                </v-btn>
+              </v-col>
+              <v-col cols="3">
+                <v-btn
+                  color="blue-grey-darken-4"
+                  :disabled="isError"
+                  :loading="isSaving || isLoading"
+                  block
+                  outlined
+                  elevation="1"
+                  @click="withdrawConsent()"
+                >
+                  <v-icon
+                    left
+                    dark
+                  >
+                    cancel
+                  </v-icon>
+                  Withdraw consent
+                </v-btn>
+              </v-col>
+            </v-row>
+          </form>
+        </v-sheet>
+        <v-row v-if="submittedAs && submittedAs.length == 2 ? true : false" justify="center">
+          <v-col cols="10">
+            <v-alert
+              type="info"
+            >
+              <strong>{{ submittedAs[0] }}</strong>
+              <hr class="mt-1 mb-2" />
+              {{ submittedAs[1] }}
+            </v-alert>
+          </v-col>
+        </v-row>
       </v-sheet>
-      <v-row v-if="submittedAs && submittedAs.length == 2 ? true : false" justify="center">
-        <v-col cols="10">
-          <v-alert
-            type="info"
-          >
-            <strong>{{ submittedAs[0] }}</strong>
-            <hr class="mt-1 mb-2" />
-            {{ submittedAs[1] }}
-          </v-alert>
-        </v-col>
-      </v-row>
     </v-app>
   </div>
 </template>
