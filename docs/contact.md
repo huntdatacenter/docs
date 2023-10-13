@@ -11,7 +11,7 @@ description: If you run into any issues, please send us an email or chat with us
 
 ### General requests
 
-Feel free to contact us for information, dialogues on how your science may prosper from our services, how to establish your first lab, how we protect your data etc - or just to share the joy and excitement of data-driven science!
+Click the blue button to contact us for information, dialogues on how your science may prosper from our services, how to establish your first lab, how we protect your data etc. - or just to share the joy and excitement of data-driven science!
 
 <GRButton form="general_contact_request" />
 
