@@ -19,7 +19,7 @@ Click the blue button to contact us for information, dialogues on how your scien
 
 ::: tip Faster response
 
-To speed up your answers and deliveries, check if your order is predefined in our service desks for [do science](/do-science/service-desk), [administer science](/administer-science/service-desk) and [govern science](/govern-science/service-desk).
+To speed up your answers and deliveries, check if your request is predefined in our service desks for [do science](/do-science/service-desk), [administer science](/administer-science/service-desk) and [govern science](/govern-science/service-desk).
 
 :::
 
