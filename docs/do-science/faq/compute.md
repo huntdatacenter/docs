@@ -201,7 +201,7 @@ sudo reboot
 ```
 
 ::: warning
-Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/do-science/faq/users/#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
+Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/do-science/faq/access/#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
 :::
 
 ### What privileges does my account have?
