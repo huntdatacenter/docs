@@ -42,7 +42,7 @@ The actual consent will be sent to you on email as a web link together with your
 
 **You are hereby cordially invited to join our HUNT Cloud community!** 
 
-This is a place where lab users or lab coordinators can meet to advance science and to chat with us at HUNT Cloud.
+This is a place where lab users and scientific administrators can meet to advance science and to chat with us at HUNT Cloud.
 
 If you consent to the terms on this page, click the **"SUBMIT CONSENT"**-button at the bottom to get your Slack setup information. 
 
