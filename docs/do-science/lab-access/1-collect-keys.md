@@ -151,7 +151,7 @@ Without these, it will be impossible to complete the remaining steps.
 
 ::: tip Time for coffee!
 
-If you successfully completed this step, celebrate with fresh coffee and head over to the [VPN configuration](/do-science/lab-access/configure-vpn). If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+If you successfully completed this step, celebrate with fresh coffee and head over to the Lab access link in your onboarding email, or order one in [Service desk](/do-science/service-desk/#request-lab-access-link-reissue). If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 

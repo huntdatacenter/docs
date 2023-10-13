@@ -1693,14 +1693,14 @@ request_lab_access_link:
 request_community_membership:
   title: "Request community membership"
   template:
-    subject: "Request community membership"
+    subject: "Request community membership - {full_name}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a HUNT Cloud community membership for our collaborator:  
 
       ---
-      Name and Surname: {name}  
+      Name and Surname: {full_name}  
       Department: {department}  
       Faculty: {faculty}  
       Institution: {institution}  
@@ -1711,14 +1711,14 @@ request_community_membership:
       
       Kind regards,
   fields: [
-    { label: "Name and Surname", key: "name", field: "textfield" },
+    { label: "Name and Surname", key: "full_name", field: "textfield" },
     { label: "Department", key: "department", field: "textfield" },
     { label: "Faculty", key: "faculty", field: "textfield" },
     { label: "Institution", key: "institution", field: "textfield" },
     { label: "Email", key: "email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
   ]
   requirements: [
-      "<b>Who can order:</b> Lab leaders and lab coordinators on the BLUE Data space subscription level.",
+    "<b>Who can order:</b> Lab leaders and lab coordinators on the BLUE Data space subscription level.",
     "<b>Required attachment</b>: None.",
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b>  Included in your data space subscription.",
@@ -1729,19 +1729,20 @@ request_community_membership:
 request_consent_link:
   title: "Request consent link"
   template:
-    subject: "Request consent link"
+    subject: "Request consent link - {full_name}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to get my consent link so I can update my consent for the HUNT Cloud community. 
 
       ---
-      name="{name}"  
+      name="{full_name}"  
       ---
 
       Kind regards,
+      {full_name}
   fields: [
-    { label: "Full name", key: "name", field: "textfield" },
+    { label: "Full name", key: "full_name", field: "textfield" },
   ]
   requirements: []
   attachments: []
