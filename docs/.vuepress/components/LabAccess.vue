@@ -16,6 +16,8 @@ import {
   VTabItem,
   VTabsItems,
   VContainer,
+  VAlert,
+  VSheet,
 } from "vuetify/lib";
 
 
@@ -38,10 +40,13 @@ export default {
     VTabItem,
     VTabsItems,
     VContainer,
+    VAlert,
+    VSheet,
     AccessIntro: () => import('./LabAccessGuides/AccessIntro.vue'),
     WindowsJourney: () => import('./LabAccessGuides/WindowsJourney.vue'),
     MacJourney: () => import('./LabAccessGuides/MacJourney.vue'),
     LinuxJourney: () => import('./LabAccessGuides/LinuxJourney.vue'),
+    // SDButton: () => import('./SDButton.vue'),
   },
   props: {
     id: { type: String, default: "applet" },
@@ -200,6 +205,26 @@ Host {lab_name}
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
+      <v-sheet v-show="!cfgShow" class="ma-4">
+        <v-row justify="center">
+          <v-col cols="12">
+            <v-alert
+              border="left"
+              colored-border
+              type="warning"
+              elevation="2"
+            >
+              <strong>{{ access && access.length > 0 ? `Your link appears to be wrong.` : `Request your Lab access link.` }}</strong>
+              <hr class="mt-1 mb-2" />
+              We are sending Lab access links as part of onboarding email.
+              <br /><br />
+              If you do not have your own Lab access link click on the button below to order one.
+              <br /><br />
+              <SDButton form="request_lab_access_link" />
+            </v-alert>
+          </v-col>
+        </v-row>
+      </v-sheet>
       <v-card v-show="cfgShow" class="pt-4">
 
         <v-card elevation="1">
@@ -320,9 +345,6 @@ Host {lab_name}
             </v-tab-item>
           </v-tabs-items>
         </v-card>
-      </v-card>
-      <v-card v-show="!cfgShow" class="pt-4">
-        Invalid link. Please check your emails to find the full link.
       </v-card>
     </v-app>
   </div>

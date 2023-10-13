@@ -25,164 +25,61 @@ export default ({
     // this.name = to.params.name
     const to_path = to.fullPath;
     try {
+      [
+        ["/do-science/getting-started/", "/do-science/lab-access/"],
+        ["/getting-started/", "/do-science/lab-access/"],
+        ["/lab-access/", "/do-science/lab-access/"],
+        ["/service-desk/user-orders/", "/do-science/service-desk/"],
+        ["/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders/"],
+        ["/service-desk/data-space-orders/", "/administer-science/service-desk/data-space-orders/"],
+        ["/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders/"],
+        ["/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders/"],
+        ["/working-in-your-lab/technical-tools/", "/do-science/tools/technical/"],
+        ["/working-in-your-lab/analytical-tools/", "/do-science/tools/analytical/"],
+        ["/working-in-your-lab/transfer-tools/", "/do-science/tools/transfer/"],
+        ["/working-in-your-lab/workbench/", "/do-science/hunt-workbench/"],
+        ["/community/", "/do-science/community/"],
+        ["/troubleshooting/", "/do-science/troubleshooting/"],
+        ["/faq/", "/do-science/faq/"],
+        ["/certificates/", "/govern-science/compliance/certificates/"],
+        ["/policies/", "/govern-science/policies/"],
+        ["/subcontractors/", "/govern-science/compliance/subcontractors/"],
+        ["/responsibilities/", "/govern-science/risk-management/#clarification-of-responsibilities"],
+        ["/service-desk/", "/administer-science/service-desk/"],
+        ["/data-transfers/internal-kista/", "/do-science/data-transfers/internal-kista/"],
+        ["/data-transfers/external-kista/", "/do-science/data-transfers/external-kista/"],
+        ["/agreements/", "/administer-science/agreements/"],
+        ["/do-science/lab-access/configure-vpn/", "/do-science/lab/"],
+        ["/do-science/lab-access/configure-ssh/", "/do-science/lab/"],
+        ["/do-science/lab-access/configure-access/", "/do-science/lab/"],
+        // ['', ''],
+      ].every((pair) => {
+        if (pair[0] && pair[1] && to_path.startsWith(pair[0])) {
+          // Rewrite the link to correct path
+          console.log(`Redirect: ${pair[0]} -> ${pair[1]}`)
+          window.location.href = to_path.replace(pair[0], pair[1]);
+          return false;
+        } else {
+          return true;
+        }
+      })
       if (to.path.startsWith("/assets/") && to.path.endsWith(".pdf")) {
         // NOTE Redirect PDF assets if not found - fails to redirect existing
         window.location.href = "https://assets.hdc.ntnu.no" + to.path;
-        next();
       } else if (
         to_path.startsWith("/tingweek/") || to_path === "/tingweek"
       ) {
         // NOTE Correct wrong link
         window.location.href = to_path.replace("/tingweek", "/govern-science/tingweek");
-        next();
       } else if (
         to_path.startsWith("/tingweeks/") || to_path === "/tingweeks"
       ) {
         // NOTE Correct wrong link
         window.location.href = to_path.replace("/tingweeks", "/govern-science/tingweek");
-        next();
-      } else if (
-        to_path.startsWith("/do-science/getting-started/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/do-science/getting-started/", "/do-science/lab-access/");
-        next();
-      } else if (
-        to_path.startsWith("/getting-started/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/getting-started/", "/do-science/lab-access/");
-        next();
-      } else if (
-        to_path.startsWith("/lab-access/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/lab-access/", "/do-science/lab-access/");
-        next();
-      } else if (
-        to_path.startsWith("/service-desk/user-orders/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/service-desk/user-orders/", "/do-science/service-desk/");
-        next();
-      } else if (
-        to_path.startsWith("/service-desk/lab-orders/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders/");
-        next();
-      } else if (
-        to_path.startsWith("/service-desk/data-space-orders/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/service-desk/data-space-orders/", "/administer-science/service-desk/data-space-orders/");
-        next();
-      } else if (
-        to_path.startsWith("/service-desk/service-center-orders/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders/");
-        next();
-      } else if (
-        to_path.startsWith("/service-desk/data-controller-orders/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders/");
-        next();
-      } else if (
-        to_path.startsWith("/working-in-your-lab/technical-tools/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/working-in-your-lab/technical-tools/", "/do-science/tools/technical/");
-        next();
-      } else if (
-        to_path.startsWith("/working-in-your-lab/analytical-tools/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/working-in-your-lab/analytical-tools/", "/do-science/tools/analytical/");
-        next();
-      } else if (
-        to_path.startsWith("/working-in-your-lab/transfer-tools/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/working-in-your-lab/transfer-tools/", "/do-science/tools/transfer/");
-        next();
-      } else if (
-        to_path.startsWith("/working-in-your-lab/workbench/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/working-in-your-lab/workbench/", "/do-science/hunt-workbench/");
-        next();
-      } else if (
-        to_path.startsWith("/community/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/community/", "/do-science/community/");
-        next();
-      } else if (
-        to_path.startsWith("/troubleshooting/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/troubleshooting/", "/do-science/troubleshooting/");
-        next();
-      } else if (
-        to_path.startsWith("/faq/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/faq/", "/do-science/faq/");
-        next();
-      } else if (
-        to_path.startsWith("/certificates/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/certificates/", "/govern-science/compliance/certificates/");
-        next();
-      } else if (
-        to_path.startsWith("/policies/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/policies/", "/govern-science/policies/");
-        next();
-      } else if (
-        to_path.startsWith("/subcontractors/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/subcontractors/", "/govern-science/compliance/subcontractors/");
-        next();
-      } else if (
-        to_path.startsWith("/responsibilities/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/responsibilities/", "/govern-science/risk-management/#clarification-of-responsibilities");
-        next();
-      } else if (
-        to_path.startsWith("/service-desk/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/service-desk/", "/administer-science/service-desk/");
-        next();
-      } else if (
-        to_path.startsWith("/data-transfers/internal-kista/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/data-transfers/internal-kista/", "/do-science/data-transfers/internal-kista/");
-        next();
-      } else if (
-        to_path.startsWith("/data-transfers/external-kista/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/data-transfers/external-kista/", "/do-science/data-transfers/external-kista/");
-        next();
-      } else if (
-        to_path.startsWith("/agreements/")
-      ) {
-        // Rewrite the link to correct path
-        window.location.href = to_path.replace("/agreements/", "/administer-science/agreements/");
-        next();
-      } else {
-        next();
       }
     } catch (err) {
+      console.log(err);
+    } finally {
       next();
     }
   });

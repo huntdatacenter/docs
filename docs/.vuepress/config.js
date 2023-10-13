@@ -139,8 +139,9 @@ module.exports = {
               path: "/do-science/lab-access/",
             },
             "/do-science/lab-access/1-collect-keys.md",
-            "/do-science/lab-access/2-configure-vpn.md",
-            "/do-science/lab-access/3-configure-ssh.md",
+            "/do-science/lab-access/2-configure-access.md",
+            // "/do-science/lab-access/2-configure-vpn.md",
+            // "/do-science/lab-access/3-configure-ssh.md",
           ],
         },
         {
