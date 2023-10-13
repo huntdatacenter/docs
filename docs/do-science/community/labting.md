@@ -25,7 +25,7 @@ Read more about the [Tingweek](/govern-science/tingweek/) in our govern-science 
 
 Join the Labting to voice your hard earned expertise, and to help us to evolve the user experience in HUNT Cloud for both yourself and others.
 
-We will cover a set of topcis for each meeting that are related to your user experince, such as the HUNT Workbench, lab environments, service desk, web documentation, community, communication and similar.
+We will cover a set of topics for each meeting that are related to your user experience, such as the HUNT Workbench, lab environments, service desk, web documentation, community, communication and similar.
 
 **Most products and services that you use in HUNT Cloud have come together as a collaborative effort between members of the cloud community and our HUNT Cloud team, and may have been discussed and developed with input from our Labting.**
 
@@ -33,9 +33,9 @@ We will cover a set of topcis for each meeting that are related to your user exp
 
 All active lab users, lab leaders and lab coordinators will get an invitation on the organizational email that you specified in your user agreement.
 
-Participation in Labting is voluntary. Contact us in the [service desk](/do-science/service-desk/#general-service-request) if you want to reserve yourself from recieving future Ting invitations.
+Participation in Labting is voluntary. Contact us in the [service desk](/do-science/service-desk/#general-service-request) if you want to reserve yourself from receiving future Ting invitations.
 
-### Labting takes place on Zoom
+### Labting take place on Zoom
 
 Labtings takes place on NTNU's Zoom subscription. Links are shared in the email invitation and will be shared on the `cloud-community` channel in Slack on the same days as the meeting. 
 

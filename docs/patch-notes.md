@@ -46,15 +46,15 @@ We have added a guide on [how to run Singularity](/do-science/tools/technical/si
 
 RStudio is updated to version 2023.06.1 in HUNT Workbench.
 
-**Updatad Jupyterhub in HUNT Workbench**
+**Updated JupyterHub in HUNT Workbench**
 
-Jupyterhub4 is now running on all Workbench sessions.
+JupyterHub4 is now running on all Workbench sessions.
 
 **Lab Access link update**
 
 We keep improving onboarding experience for new users.
 
-* Users are now guided on how to setup VPN and TOTP (Time-based One-Time Password) in more convenient fasion with trackable progress of your onboarding.
+* Users are now guided on how to setup VPN and TOTP (Time-based One-Time Password) in more convenient fashion with trackable progress of your onboarding.
 
 **Extended X2Go guide**
 

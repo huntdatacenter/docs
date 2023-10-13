@@ -37,7 +37,7 @@ HUNT Cloud will from time to time update this privacy statement.
 
 **Major updates.** Major updates affect users privacy. Major updates are specified by increasing numbers (v1, v2, v3, etc.). Such updates becomes effective ninety days after they are announced to active users on email. The new version is immediately effective for new users.
 
-**Minor updates.** Major updates do -not- affect users privacy. Minor updates are specified by increasing decimals (v2.1, v2.2, v2.3, etc).  These updates are noe announced directly to users. Minor updates follow the effective date of major updates and take precedence of previous versions when they are published on this page.
+**Minor updates.** Major updates do -not- affect users privacy. Minor updates are specified by increasing decimals (v2.1, v2.2, v2.3, etc).  These updates are now announced directly to users. Minor updates follow the effective date of major updates and take precedence of previous versions when they are published on this page.
 
 ### Archive
 
@@ -50,7 +50,7 @@ HUNT Cloud will from time to time update this privacy statement.
 **HUNT Cloud Privacy Statement v1.0 (MAJOR)**
 
 * First version published. Announced under Ting#10.
-* Written as an amendment to NTNU's main privacy policy prior to the ISO/IEC 27701 certification to clarify our processingz personal data for cloud services users in HUNT Cloud.
+* Written as an amendment to NTNU's main privacy policy prior to the ISO/IEC 27701 certification to clarify our processing personal data for cloud services users in HUNT Cloud.
 
 
 
@@ -62,7 +62,7 @@ Last update: 2023-10-08.
 
 As a research participants, you have rights under the European privacy regulation (GDPR) when your information is collected and used. 
 
-**Contact the organzation that collected or control your information to invoke these rights.** 
+**Contact the organization that collected or control your information to invoke these rights.** 
 
 For example, organizations that collect your information for research have a duty to information you about how they use this information in an easy-to-understand manner, to provide you with a mechanisms so you can modify or withdraw your consent, object to their processing, access your information, and to provide you with a copy of the information they hold if you request this. 
 
@@ -88,7 +88,7 @@ Last update: 2023-10-08.
 * [ntnu.edu/mh/huntcloud](https://ntnu.no/mh/huntcloud)
 * [ntnu.no/mh/huntcloud](https://ntnu.no/mh/huntcloud)
 
-[NTNU's cookies policy](https://www.ntnu.edu/cookies) apply for any procesing of personal data on the following pages: 
+[NTNU's cookies policy](https://www.ntnu.edu/cookies) apply for any processing of personal data on the following pages: 
 
 * [ntnu.edu/mh/huntcloud](https://ntnu.no/mh/huntcloud)
 * [ntnu.no/mh/huntcloud](https://ntnu.no/mh/huntcloud)
