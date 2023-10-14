@@ -410,19 +410,17 @@ Labs under a BLUE data space subscription levels may invite collaborators to the
 
 ## Tingweek
 
-### Unsubscribe to Tingweek invitations
+### Deregister to future Tingweek invitations
 
-All activite HUNT Cloud users will be invited to individual Tings in our Tingweeks. Participation is voluntary and you can unsubscribe from future Ting invitations here. 
+All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here. 
 
-<SDButton form="unsubscribe_ting_invitations" />
+<SDButton form="deregister_tingweek_invitations" />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected delivery time:** Days.
-* **Expected response time:** Confirmation that you are unsubscribed to future Ting invitations.
+* **Expected response time:** Confirmation of deregistration.
 * **Cost:** Included in your data space subscription.
 	
-
-
 ## General request
 
 Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request. 

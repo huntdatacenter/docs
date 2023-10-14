@@ -70,16 +70,16 @@ Click the button below to order a new service center.
 
 ## Tingweek
 
-### Update Data controller ting representative
+### Deregister to future Tingweek invitations
 
-Data controller ting is the Ting for cross-organizational dialogue on privacy, security and ethics within HUNT Cloud. Privacy contacts, security contacts and data space compliance administrators are invited. Data controller administrators may appoint representatives that receive invitations and meeting information on behalf of their organization.
+All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here. 
 
-<SDButton form="request_update_data_rep" />
+<SDButton form="deregister_tingweek_invitations" />
 
-* **Who can order:** Data controller administrators.
-* **Required attachment:** None.
+* **Who can order:** All data controller administrators.
 * **Expected delivery time:** Days.
-* **Cost:** None.
+* **Expected response time:** Confirmation of deregistration.
+* **Cost:** Included in your data space subscription.
 
 ### Unsubscribe to Tingweek invitations
 

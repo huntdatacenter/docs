@@ -51,15 +51,14 @@ Lagtun members may appoint representatives that receive invitations and meeting 
 * **Expected delivery time:** Days.
 * **Cost:** None.
 
-### Unsubscribe to Tingweek invitations
+### Deregister to future Tingweek invitations
 
-All activite HUNT Cloud users will be invited to individual Tings in our Tingweeks. Participation is voluntary and you can unsubscribe from future Ting invitations here. 
+All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here. 
 
-<SDButton form="unsubscribe_ting_invitations" />
+<SDButton form="deregister_tingweek_invitations" />
 
-* **Who can order:** Lab leaders, lab coordinators and lab users.
+* **Who can order:** All service center administrators.
 * **Expected delivery time:** Days.
-* **Expected response time:** Confirmation that you are unsubscribed to future Ting invitations.
+* **Expected response time:** Confirmation of deregistration.
 * **Cost:** Included in your data space subscription.
-	
 
