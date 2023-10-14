@@ -159,11 +159,11 @@ Note that time to successful transfer depends on access to SFTP software and pot
 
 ## Data space management
 
-### Update data space coordinator roles
+### Update data space administrator roles
 
-Click the button below to update your [data space coordinator roles](/administer-science/roles/) under your existing data space.
+Click the button below to update your [data space administrator](/administer-science/roles/) under your existing data space.
 
-<SDButton form="update_data_space_coordinator_role" />
+<SDButton form="update_data_space_administrator_role" />
 
 * **Who can order:** Data space leaders or Data space compliance administrators in active data spaces.
 * **Required attachment**: None.
@@ -205,6 +205,20 @@ Click the button below to update an existing invoice profile to your data space.
 * **Required attachment**: A new [signed invoice profile](/administer-science/agreements/downloads/#invoice-profile).
 * **Expected delivery time:** Days.
 * **Cost:** Included in your data space subscription.
+
+## Tingweek
+
+### Unsubscribe to Tingweek invitations
+
+All activite HUNT Cloud users will be invited to individual Tings in our Tingweeks. Participation is voluntary and you can unsubscribe from future Ting invitations here. 
+
+<SDButton form="unsubscribe_ting_invitations" />
+
+* **Who can order:** Data space leaders and data space administrators.
+* **Expected delivery time:** Days.
+* **Expected response time:** Confirmation that you are unsubscribed to future Ting invitations.
+* **Cost:** Included in your data space subscription.
+	
 
 ## General request
 

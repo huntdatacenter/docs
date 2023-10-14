@@ -191,6 +191,20 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 * **Cost:** Included in the lab subscription.
 
 
+## Tingweek
+
+### Unsubscribe to Tingweek invitations
+
+All activite HUNT Cloud users will be invited to individual Tings in our Tingweeks. Participation is voluntary and you can unsubscribe from future Ting invitations here. 
+
+<SDButton form="unsubscribe_ting_invitations" />
+
+* **Who can order:** Lab users.
+* **Expected delivery time:** Days.
+* **Expected response time:** Confirmation that you are unsubscribed to future Ting invitations.
+* **Cost:** Included in your data space subscription.
+	
+
 ## General service request
 
 Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request. 

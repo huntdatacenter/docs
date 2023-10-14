@@ -67,6 +67,9 @@ Click the button below to order a new service center.
 * **Next step:** [Scientific access](/administer-science/scientific-access/)
 * **Cost:** There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
+
+## Tingweek
+
 ### Update Data controller ting representative
 
 Data controller ting is the Ting for cross-organizational dialogue on privacy, security and ethics within HUNT Cloud. Privacy contacts, security contacts and data space compliance administrators are invited. Data controller administrators may appoint representatives that receive invitations and meeting information on behalf of their organization.
@@ -77,3 +80,16 @@ Data controller ting is the Ting for cross-organizational dialogue on privacy, s
 * **Required attachment:** None.
 * **Expected delivery time:** Days.
 * **Cost:** None.
+
+### Unsubscribe to Tingweek invitations
+
+All activite HUNT Cloud users will be invited to individual Tings in our Tingweeks. Participation is voluntary and you can unsubscribe from future Ting invitations here. 
+
+<SDButton form="unsubscribe_ting_invitations" />
+
+* **Who can order:** Lab leaders, lab coordinators and lab users.
+* **Expected delivery time:** Days.
+* **Expected response time:** Confirmation that you are unsubscribed to future Ting invitations.
+* **Cost:** Included in your data space subscription.
+	
+

@@ -37,7 +37,9 @@ Click the button below to order a new data space under your existing service cen
 * **Next step:** [Add a new lab user](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) by Lab leaders.
 * **Cost:** There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
-### Update Lagtun ting representative
+## Tingweek
+
+### Update Lagtun representative
 
 Lagtun is the body that appoints time to govern the scientific developments of HUNT Cloud. 
 Lagtun members may appoint representatives that receive invitations and meeting information on behalf of their organization.
@@ -49,4 +51,15 @@ Lagtun members may appoint representatives that receive invitations and meeting 
 * **Expected delivery time:** Days.
 * **Cost:** None.
 
+### Unsubscribe to Tingweek invitations
+
+All activite HUNT Cloud users will be invited to individual Tings in our Tingweeks. Participation is voluntary and you can unsubscribe from future Ting invitations here. 
+
+<SDButton form="unsubscribe_ting_invitations" />
+
+* **Who can order:** Lab leaders, lab coordinators and lab users.
+* **Expected delivery time:** Days.
+* **Expected response time:** Confirmation that you are unsubscribed to future Ting invitations.
+* **Cost:** Included in your data space subscription.
+	
 

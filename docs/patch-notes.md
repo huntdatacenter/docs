@@ -12,6 +12,83 @@ description: Minor and major updates to our services.
 
 This page holds some of the descriptions on how we take care of HUNT Cloud's services. All with the aim of providing the best possible conditions for your scientific explorations.
 
+## Patch note 2.9.2
+
+*2023-10-16*
+
+::: details Do science
+
+<h3>Major changes</h3>
+
+**New community consent**
+
+We have introduced a new consent for our HUNT Cloud community. The intention is to ensure that you know and agree to how we processed your personal data in Slack. 
+
+We will forward a consent link on email to all active users. Users that do not consent will be deactivated from Slack.
+
+This is part of our wider effort to strengthen our protection of your personal data as a user of HUNT Cloud.
+
+* [Read a copy of the new community consent](/do-science/community/current-consent/)
+* [Read about our HUNT Cloud community](/do-science/community/)
+
+**Lab Access configuration**
+
+We have removed the old onboarding guide, so your initial [lab access](/do-science/lab-access/) setup will from now on require your `Lab access link` that we send you in the initial onboarding email. The new [configure access](/do-science/lab/) page will show you a service desk button to request a new link if you don't have yours at hand. 
+
+<h3>Minor changes</h3>
+
+**New Slack URL**
+
+Our Slack URL is updated to [hunt-cloud.slack.com](https://hunt-cloud.slack.com). You may need to update the URL in your web browser, while apps on phones should automatically register the change.
+
+
+**Automatic replys in Slack**
+
+We have introduced custom Slackbots for common troubleshooting requests. To illustrate, type `403` in your lab channel to give it a try. 
+
+:::
+
+
+
+
+
+
+::: details Govern science
+
+<h3>Major changes</h3>
+
+**New privacy statement**
+
+We have introduced our own [privacy statement](/do-science/privacy-statement.html) that described how we process data for scientists and scientific administrators that users our services. A link to the privacy statement is included in all web pages and before individual service desk requests.
+
+**New community consent**
+
+We are introducing a new consent for the data processing in our HUNT Cloud community Slack chat. See our "Do science" patch note above for more information.
+
+
+<h3>Minor changes</h3>
+
+**Threats and vulnerabilities**
+
+We have included the ability to report threats and vulnerabilities on our [contact](/contact) page.
+
+**Unsubscribe to Ting invitations**
+
+We have introducted a new service desk button where all users can reserve their email from future Tingweek invitations.
+
+
+<h3>Upcoming features</h3>
+
+* New version of HUNT Cloud Security and privacy policies and Statement of Applicability with ISO/IEC 27001:2022 version control references. 
+
+:::
+
+
+
+
+
+<!-- ================== -->
+
 ## Patch note 2.9.1
 
 *2023-08-21*

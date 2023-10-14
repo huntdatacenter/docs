@@ -408,6 +408,21 @@ Labs under a BLUE data space subscription levels may invite collaborators to the
 * **Required action for new member:** Read and consent to the data processing terms of the service.
 * **Cost:** Included in the data space subscription.
 
+## Tingweek
+
+### Unsubscribe to Tingweek invitations
+
+All activite HUNT Cloud users will be invited to individual Tings in our Tingweeks. Participation is voluntary and you can unsubscribe from future Ting invitations here. 
+
+<SDButton form="unsubscribe_ting_invitations" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Expected delivery time:** Days.
+* **Expected response time:** Confirmation that you are unsubscribed to future Ting invitations.
+* **Cost:** Included in your data space subscription.
+	
+
+
 ## General request
 
 Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request. 
