@@ -82,7 +82,7 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun/) and the use of [resol
 
 #### [Clarification of resource consumption reporting intervals](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=5)
 
-- TOPIC: Reporting
+- TOPIC: Communication
 - ID: R5/LT5/T5/22
 
 #### [Establishing a Ting dedicated to data privacy, security and ethics](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek5-resolutions.pdf#page=4)
@@ -107,7 +107,7 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun/) and the use of [resol
 
 #### [Enhance user experiences for data producers](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=6)
 
-- TOPIC: Community
+- TOPIC: Community, data
 - ID: R8/LT4/T4/21
 
 #### [Clarification of Lagtun membership](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-resolutions.pdf#page=5)
