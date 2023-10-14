@@ -1827,20 +1827,20 @@ request_consent_link:
 
 
 
-unsubscribe_ting_invitations:
-  title: "Unsubscribe to Tingweek invitations"
+deregister_tingweek_invitations:
+  title: "Deregister for future Tingweek invitations"
   template:
-    subject: "Unsubscribe to Tingweek invitations - {full_name}"
+    subject: "Deregister for future Tingweek invitations - {full_name}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to unsubscribe to future Tingweek invitations. 
+      I would like to deregister for all future Tingweek invitations. 
 
       ---
       name="{full_name}"  
       ---
 
-      I will send a general service desk request if I want to resubscribe to the invitations in the future. 
+      I am aware that I can send a general service desk request to register again if I want to recieve future invitations. 
 
       Kind regards,
       {full_name}
