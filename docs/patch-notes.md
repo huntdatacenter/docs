@@ -22,7 +22,7 @@ This page holds some of the descriptions on how we take care of HUNT Cloud's ser
 
 **New community consent**
 
-We have introduced a new consent for our HUNT Cloud community. The intention is to ensure that you know and agree to how we processed your personal data in Slack. 
+We will introduce a new consent for our HUNT Cloud community during Tingweek #10 next week. The intention is to ensure that you know and agree to how we processed your personal data in Slack. 
 
 We will forward a consent link on email to all active users. Users that do not consent will be deactivated from Slack.
 
@@ -33,7 +33,7 @@ This is part of our wider effort to strengthen our protection of your personal d
 
 **Lab Access configuration**
 
-We have removed the old onboarding guide, so your initial [lab access](/do-science/lab-access/) setup will from now on require your `Lab access link` that we send you in the initial onboarding email. The new [configure access](/do-science/lab/) page will show you a service desk button to request a new link if you don't have yours at hand. 
+We have removed the old onboarding guide, and new lab users will do their initial [lab access](/do-science/lab-access/) setup by clicking a `Lab access link` that we send in the initial onboarding email. The new ["Configure access](/do-science/lab/)-page will point you a service desk button where you can request a lab access link if you don't have yours at hand. 
 
 <h3>Minor changes</h3>
 
