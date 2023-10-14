@@ -1,5 +1,6 @@
 ########################### this is the beginning of file ###########################
 general_contact_request:
+  recipient: "cloud@hunt.ntnu.no"
   title: "Contact HUNT Cloud"
   template:
     subject: "General request - {topic}"
