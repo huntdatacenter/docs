@@ -70,6 +70,18 @@ Click the button below to order a new service center.
 
 ## Tingweek
 
+
+### Update Lagtun representative
+
+Lagtun is the body that appoints time to govern the scientific developments of HUNT Cloud. Lagtun members may appoint representatives that receive invitations and meeting information on behalf of their organization.
+
+<SDButton form="request_update_lagtun_rep" />
+
+* **Who can order:** Data controller administrators, Service center administrators, Data space leaders and compliance administrators on the BLUE subscription level.
+* **Required attachment:** None.
+* **Expected delivery time:** Days.
+* **Cost:** None.
+
 ### Deregister to future Tingweek invitations
 
 All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here. 
@@ -81,15 +93,4 @@ All active HUNT Cloud users will be invited to individual Tings three times per 
 * **Expected response time:** Confirmation of deregistration.
 * **Cost:** Included in your data space subscription.
 
-### Unsubscribe to Tingweek invitations
-
-All activite HUNT Cloud users will be invited to individual Tings in our Tingweeks. Participation is voluntary and you can unsubscribe from future Ting invitations here. 
-
-<SDButton form="unsubscribe_ting_invitations" />
-
-* **Who can order:** Lab leaders, lab coordinators and lab users.
-* **Expected delivery time:** Days.
-* **Expected response time:** Confirmation that you are unsubscribed to future Ting invitations.
-* **Cost:** Included in your data space subscription.
-	
 

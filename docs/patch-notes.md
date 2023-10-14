@@ -44,11 +44,30 @@ Our Slack URL is updated to [hunt-cloud.slack.com](https://hunt-cloud.slack.com)
 
 **Automatic replys in Slack**
 
-We have introduced custom Slackbots for common troubleshooting requests. To illustrate, type `403` in your lab channel to give it a try. 
+We have introduced custom Slackbots for common troubleshooting requests. For example, type `403` in your lab channel to give it a try. 
 
 :::
 
 
+::: details Administer science
+
+<h3>Major changes</h3>
+
+No updates.
+
+<h3>Minor changes</h3>
+
+**Add a new community member**
+
+Labs under a BLUE data space subscription may now invite persons that are not lab users to their HUNT Cloud community lab channel. [Click here](/administer-science/service-desk/lab-orders/#community-membership) to request memberships. 
+
+Membership is voluntary, and new members will be asked to consent to our data processing for the service. See our [community section](/do-science/community/) to learn more about our community and the new community consent.
+
+<h3>Upcoming features</h3>
+
+Improved granularity for individual lab costs on future invoices.
+
+:::
 
 
 
@@ -63,7 +82,7 @@ We have introduced our own [privacy statement](/do-science/privacy-statement.htm
 
 **New community consent**
 
-We are introducing a new consent for the data processing in our HUNT Cloud community Slack chat. See our "Do science" patch note above for more information.
+We are introducing a new consent for the data processing in our HUNT Cloud community Slack chat. We will forward a consent link to all members. See our "Do science" patch note above for more information.
 
 
 <h3>Minor changes</h3>
@@ -72,14 +91,15 @@ We are introducing a new consent for the data processing in our HUNT Cloud commu
 
 We have included the ability to report threats and vulnerabilities on our [contact](/contact) page.
 
-**Unsubscribe to Ting invitations**
+**Deregister to future Tingweek invitations**
 
-We have introducted a new service desk button where all users can reserve their email from future Tingweek invitations.
-
+We have introducted a new service desk button where all users can deregister to future Tingweek invitations.
 
 <h3>Upcoming features</h3>
 
-* New version of HUNT Cloud Security and privacy policies and Statement of Applicability with ISO/IEC 27001:2022 version control references. 
+**New policies and statement of applicability**
+
+We will welcome DNV for a joint ISO 27001 and 27701 certiication audit in the first week of November. We plan to upgrade our Security and privacy policies and Statement of Applicability with new ISO/IEC 27001:2022 control set before the audit. 
 
 :::
 

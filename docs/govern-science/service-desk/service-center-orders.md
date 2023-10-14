@@ -41,8 +41,7 @@ Click the button below to order a new data space under your existing service cen
 
 ### Update Lagtun representative
 
-Lagtun is the body that appoints time to govern the scientific developments of HUNT Cloud. 
-Lagtun members may appoint representatives that receive invitations and meeting information on behalf of their organization.
+Lagtun is the body that appoints time to govern the scientific developments of HUNT Cloud. Lagtun members may appoint representatives that receive invitations and meeting information on behalf of their organization.
 
 <SDButton form="request_update_lagtun_rep" />
 
