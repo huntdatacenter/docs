@@ -328,17 +328,17 @@ request_network_opening:
   attachments: []
 
 
-update_data_space_coordinator_role:
-  title: "Request update of data space coordinator role"
+update_data_space_administrator_role:
+  title: "Request update of data space administrator role"
   template:
-    subject: "Update data space coordinator role - {labname}"
+    subject: "Update data space administrator role - {labname}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to update the following coordinator role(s) in our data space:
+      I would like to update the following administrator role(s) in our data space:
 
       ---
-      Role: {role} coordinator  
+      Role: {role} administrator  
       Name and Surname: {name}  
       Department: {department}  
       Faculty: {faculty}  
@@ -347,7 +347,7 @@ update_data_space_coordinator_role:
       Phone: {phone}  
       ---
 
-      I am looking forward to receive an email acknowledging that you have updated our coordinator roles.
+      I am looking forward to receive an email acknowledging that you have updated our administrator roles.
 
 
       Best regards,
@@ -373,7 +373,7 @@ update_data_space_coordinator_role:
     { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
   ]
   requirements: [
-    "<b>Who can order:</b> Data space leaders or Data space compliance coordinators in active data spaces.",
+    "<b>Who can order:</b> Data space leaders or Data space compliance administrators in active data spaces.",
     "<b>Required attachment</b>: None.",
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b>  Included in your data space subscription.",
