@@ -531,7 +531,7 @@ request_new_service_center:
   attachments: []
 
 
-request__dp_agreement_version_upgrade:
+request_dp_agreement_version_upgrade:
   title: "Request a data processor agreement version upgrade"
   template:
     subject: "Data processor agreement upgrade - {organization}"

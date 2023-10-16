@@ -41,7 +41,7 @@ Click on the blue button below to order a HUNT Cloud data processor agreement.
 
 Our HUNT Cloud data processor agreement version gets updated from time to time. As an active data controller you may request upgrades to newer versions in between the regular agreement upgrades.
 
-<SDButton form="request__dp_agreement_version_upgrade" />
+<SDButton form="request_dp_agreement_version_upgrade" />
 
 * **Guide:** [Organizational access](/govern-science/organizational-access/)
 * **Who can request:** Data controller administrators.
