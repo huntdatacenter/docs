@@ -1,6 +1,9 @@
 <script>
 const yaml = require("js-yaml");
 import fetch from 'node-fetch';
+var MarkdownIt = require('markdown-it');
+
+let md = new MarkdownIt();
 
 import {
   VApp,
@@ -59,6 +62,12 @@ export default {
     },
     url() {
       return `https://${this.service}-api.${this.domain}/api/${this.apiVersion}/consent/${this.consentToken}`
+    },
+    // getParagraphs() {
+    //   return 'paragraphs' in this.textData && this.textData['paragraphs'] ? this.textData['paragraphs'].replace('\n\n', '\n').replace('\n\n', '\n').split('\n') : []
+    // },
+    getParagraphs() {
+      return 'paragraphs' in this.textData && this.textData['paragraphs'] ? md.render(this.textData['paragraphs']).replace('\n\n', '\n').replace('\n\n', '\n').split('\n') : []
     },
   },
   mounted() {},
@@ -267,15 +276,19 @@ export default {
         </v-row>
         <v-sheet v-if="showConsent">
           <form ref="form" @submit.prevent="submit">
-            <v-row>
-              <v-col v-for="item in textData['paragraphs']" cols="12">
-                {{ item }}
-              </v-col>
-            </v-row>
+            <v-card class="mb-6">
+              <v-card-text id="consent-text" class="px-8">
+                <v-row>
+                  <v-col v-for="item in getParagraphs" class="pa-1 mt-1" cols="12">
+                    <span id="consent-text-item" v-html="item"></span>
+                  </v-col>
+                </v-row>
+              </v-card-text>
+            </v-card>
             <v-row justify="center">
               <v-col cols="4">
                 <v-btn
-                  :href="`https://assets.hdc.ntnu.no/assets/consent/v${consentVersion}/privacy-statement-v${consentVersion}.pdf`"
+                  :href="textData['link']"
                   target="_blank"
                   color="link"
                   block
@@ -295,7 +308,7 @@ export default {
                   inset
                   hide-details
                   name="slack"
-                  :label="textData['items']['slack']"
+                  :label="form['slack'] ? 'Consent for community membership given' : 'No consent for community membership was given or it was withdrawn'"
                 ></v-switch>
               </v-col>
             </v-row>
@@ -411,5 +424,12 @@ export default {
 
 .last-updated
   display: none
+
+#consent-text
+  overflow-y: scroll
+  height: 600px
+
+#consent-text-item p
+  margin-bottom: 0px
 
 </style>
