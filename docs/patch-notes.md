@@ -31,6 +31,11 @@ This is part of our wider effort to strengthen our protection of your personal d
 * [Read a copy of the new community consent](/do-science/community/current-consent/)
 * [Read about our HUNT Cloud community](/do-science/community/)
 
+**Workbench certificate expiration reminder**
+
+We have started to forward reminders on email to renew your workbench certificate before expiration. The aim is to send you the notification roughly one week before you need to install the new certificates.
+
+
 **Lab Access configuration**
 
 We have removed the old onboarding guide, and new lab users will do their initial [lab access](/do-science/lab-access/) setup by clicking a `Lab access link` that we send in the initial onboarding email. The new ["Configure access](/do-science/lab/)-page will point you a service desk button where you can request a lab access link if you don't have yours at hand. 
