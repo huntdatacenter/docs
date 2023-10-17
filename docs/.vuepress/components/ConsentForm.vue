@@ -293,13 +293,19 @@ export default {
                   color="link"
                   block
                 >
-                  Privacy statement (PDF)
+                  <v-icon
+                    left
+                    dark
+                  >
+                  picture_as_pdf
+                  </v-icon>
+                  Privacy statement
                 </v-btn>
               </v-col>
             </v-row>
-            <v-row v-if="form ? true : false">
+            <!-- :readonly="isLoading || isSaving || isReadonly" -->
+            <v-row v-if="form ? true : false" class="px-4">
               <v-col v-if="showType('slack')" cols="12">
-                <!-- :readonly="isLoading || isSaving || isReadonly" -->
                 <v-switch
                   v-model="form['slack']"
                   class="mt-0"
@@ -312,9 +318,9 @@ export default {
                 ></v-switch>
               </v-col>
             </v-row>
-            <v-row v-if="form ? true : false">
+            <!-- :readonly="isLoading || isSaving || isReadonly" -->
+            <!-- <v-row v-if="form ? true : false">
               <v-col v-if="showType('tingweek')" cols="12">
-                <!-- :readonly="isLoading || isSaving || isReadonly" -->
                 <v-switch
                   v-model="form['tingweek']"
                   class="mt-0"
@@ -326,25 +332,8 @@ export default {
                   :label="textData['items']['tingweek']"
                 ></v-switch>
               </v-col>
-            </v-row>
+            </v-row> -->
             <v-row class="mb-2" justify="center">
-              <!-- <v-col cols="3">
-                <v-btn
-                  type="submit"
-                  color="success"
-                  :disabled="isError"
-                  :loading="isSaving || isLoading"
-                  block
-                >
-                  <v-icon
-                    left
-                    dark
-                  >
-                    check
-                  </v-icon>
-                  Submit consent
-                </v-btn>
-              </v-col> -->
               <v-col cols="3">
                 <v-btn
                   color="success"
@@ -418,6 +407,9 @@ export default {
   a.v-btn
     border: inherit
 
+  a.v-btn:hover
+    text-decoration: none !important
+
 .v-chip.v-size--small
     margin-top: 8px !important
     margin-bottom: 5px !important
@@ -431,5 +423,19 @@ export default {
 
 #consent-text-item p
   margin-bottom: 0px
+
+.page-edit
+  display: none
+  padding: 0px !important
+  margin: 0px !important
+
+
+.theme-default-content
+  padding-bottom: 0px !important
+  padding-bottom: 0 !important
+
+.page
+  padding-bottom: 0px !important
+  margin-bottom: 0px !important  
 
 </style>
