@@ -44,7 +44,7 @@ The actual consent will be sent to you on email as a web link together with your
 
 This is a place where lab users and scientific administrators can meet to advance science and to chat with us at HUNT Cloud.
 
-If you consent to the terms on this page, click the **"SUBMIT CONSENT"**-button at the bottom to get your Slack setup information. 
+If you consent to the terms on this page, click the **"GIVE CONSENT"**-button at the bottom to get your Slack setup information. 
 
 ### It is voluntary to join 
 
@@ -141,9 +141,9 @@ Read more about our efforts to preserve your privacy as a user of HUNT Cloud, an
 
 ### Consent
 
-Consent to the membership conditions stated on this page by clicking the **SUBMIT CONSENT**-button below. 
+Consent to the membership conditions stated on this page by clicking the **GIVE CONSENT**-button below. 
 
-[BUTTON: SUBMIT CONSENT]
+[BUTTON: GIVE CONSENT]
 
 [BUTTON: WITHDRAW CONSENT]
 
