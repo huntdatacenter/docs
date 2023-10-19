@@ -15,6 +15,11 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun/) and the use of [resol
 
 :::
 
+#### [Explore data administration services](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek10-resolutions.pdf#page=3)
+
+- TOPIC: Data
+- ID: R7/LT10/T10/23
+
 #### [Enable reductions of inactive compute resources](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek9-resolutions.pdf#page=5)
 
 - TOPIC: Finance
