@@ -148,7 +148,7 @@ export default {
           //  - load data from api into form variables based on main status
           //  - (if PENDING it means it is first time == keep true)
           if (item['status'] === 'PENDING') {
-            this.form[item['type']] = false
+            this.form[item['type']] = null
           } else if (item['status'] === 'ACTIVE') {
             this.form[item['type']] = true
           } else {
@@ -198,6 +198,9 @@ export default {
         setTimeout(() => {
           this.isSaving = false
           this.submittedAs = this.getSubmitMessage()
+          this.$nextTick(() => {
+            document.getElementById('actionalert').scrollIntoView()
+          })
         }, "600")
         setTimeout(() => {
           this.isReadonly = false
@@ -206,9 +209,15 @@ export default {
     },
     getSubmitMessage() {
       if (this.form['slack']) {
-        return ["Once again welcome to our community.", "If we have not sent you a slack invitation yet we will send you one as soon as we process this consent."]
+        return [
+          "Once again welcome to our community.",
+          "If we have not sent you a slack invitation yet we will send you one as soon as we process this consent. You can now close the window."
+        ]
       } else {
-        return ["Sorry to see you go!", "Your slack account will be deactivated and then deleted as soon as we process this withdrawal."]
+        return [
+          "Sorry to see you go!",
+          "Your slack account will be deactivated and then deleted as soon as we process this withdrawal. You can now close the window."
+        ]
       }
       // if (this.form['slack'] && this.form['tingweek']) {
       //   return ["Once again welcome to our community.", "If we have not sent you a slack invitation yet we will send you one as soon as we process this consent."]
@@ -237,6 +246,13 @@ export default {
         this.form[item] = false
       })
       this.submit()
+    },
+    getSlackStatus(item) {
+      // form['slack']
+      if (item == null) {
+        return 'No consent for community membership was given yet'
+      }
+      return item ? 'Consent for community membership has been given' : 'Consent for community membership has been withdrawn'
     },
   },
 };
@@ -314,7 +330,7 @@ export default {
                   inset
                   hide-details
                   name="slack"
-                  :label="form['slack'] ? 'Consent for community membership given' : 'No consent for community membership was given or it was withdrawn'"
+                  :label="getSlackStatus(form['slack'])"
                 ></v-switch>
               </v-col>
             </v-row>
@@ -376,6 +392,7 @@ export default {
         <v-row v-if="submittedAs && submittedAs.length == 2 ? true : false" justify="center">
           <v-col cols="10">
             <v-alert
+              id="actionalert"
               type="info"
             >
               <strong>{{ submittedAs[0] }}</strong>
