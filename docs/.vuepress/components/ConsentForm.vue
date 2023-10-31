@@ -292,7 +292,7 @@ export default {
         </v-row>
         <v-sheet v-if="showConsent">
           <form ref="form" @submit.prevent="submit">
-            <v-card class="mb-6">
+            <v-card id="consent-container" class="mb-6">
               <v-card-text id="consent-text" class="px-8">
                 <v-row>
                   <v-col v-for="item in getParagraphs" class="pa-1 mt-1" cols="12">
@@ -301,92 +301,94 @@ export default {
                 </v-row>
               </v-card-text>
             </v-card>
-            <v-row justify="center">
-              <v-col cols="4">
-                <v-btn
-                  :href="textData['link']"
-                  target="_blank"
-                  color="link"
-                  block
-                >
-                  <v-icon
-                    left
-                    dark
+            <v-sheet>
+              <v-row justify="center">
+                <v-col cols="4" style="min-width: 240px">
+                  <v-btn
+                    :href="textData['link']"
+                    target="_blank"
+                    color="link"
+                    block
                   >
-                  picture_as_pdf
-                  </v-icon>
-                  Privacy statement
-                </v-btn>
-              </v-col>
-            </v-row>
-            <!-- :readonly="isLoading || isSaving || isReadonly" -->
-            <v-row v-if="form ? true : false" class="px-4">
-              <v-col v-if="showType('slack')" cols="12">
-                <v-switch
-                  v-model="form['slack']"
-                  class="mt-0"
-                  color="green lighten-1"
-                  readonly
-                  inset
-                  hide-details
-                  name="slack"
-                  :label="getSlackStatus(form['slack'])"
-                ></v-switch>
-              </v-col>
-            </v-row>
-            <!-- :readonly="isLoading || isSaving || isReadonly" -->
-            <!-- <v-row v-if="form ? true : false">
-              <v-col v-if="showType('tingweek')" cols="12">
-                <v-switch
-                  v-model="form['tingweek']"
-                  class="mt-0"
-                  color="green lighten-1"
-                  readonly
-                  inset
-                  hide-details
-                  name="tingweek"
-                  :label="textData['items']['tingweek']"
-                ></v-switch>
-              </v-col>
-            </v-row> -->
-            <v-row class="mb-2" justify="center">
-              <v-col cols="3">
-                <v-btn
-                  color="success"
-                  :disabled="isError"
-                  :loading="isSaving || isLoading"
-                  block
-                  @click="giveConsent()"
-                >
-                  <v-icon
-                    left
-                    dark
+                    <v-icon
+                      left
+                      dark
+                    >
+                    picture_as_pdf
+                    </v-icon>
+                    Privacy statement
+                  </v-btn>
+                </v-col>
+              </v-row>
+              <!-- :readonly="isLoading || isSaving || isReadonly" -->
+              <v-row v-if="form ? true : false" class="px-4">
+                <v-col v-if="showType('slack')" cols="12">
+                  <v-switch
+                    v-model="form['slack']"
+                    class="mt-0"
+                    color="green lighten-1"
+                    readonly
+                    inset
+                    hide-details
+                    name="slack"
+                    :label="getSlackStatus(form['slack'])"
+                  ></v-switch>
+                </v-col>
+              </v-row>
+              <!-- :readonly="isLoading || isSaving || isReadonly" -->
+              <!-- <v-row v-if="form ? true : false">
+                <v-col v-if="showType('tingweek')" cols="12">
+                  <v-switch
+                    v-model="form['tingweek']"
+                    class="mt-0"
+                    color="green lighten-1"
+                    readonly
+                    inset
+                    hide-details
+                    name="tingweek"
+                    :label="textData['items']['tingweek']"
+                  ></v-switch>
+                </v-col>
+              </v-row> -->
+              <v-row class="mb-2" justify="center">
+                <v-col cols="3" style="min-width: 240px">
+                  <v-btn
+                    color="success"
+                    :disabled="isError"
+                    :loading="isSaving || isLoading"
+                    block
+                    @click="giveConsent()"
                   >
-                    check
-                  </v-icon>
-                  Give consent
-                </v-btn>
-              </v-col>
-              <v-col cols="3">
-                <v-btn
-                  color="blue-grey-darken-4"
-                  :disabled="isError"
-                  :loading="isSaving || isLoading"
-                  block
-                  outlined
-                  elevation="1"
-                  @click="withdrawConsent()"
-                >
-                  <v-icon
-                    left
-                    dark
+                    <v-icon
+                      left
+                      dark
+                    >
+                      check
+                    </v-icon>
+                    Give consent
+                  </v-btn>
+                </v-col>
+                <v-col cols="3" style="min-width: 240px">
+                  <v-btn
+                    color="blue-grey-darken-4"
+                    :disabled="isError"
+                    :loading="isSaving || isLoading"
+                    block
+                    outlined
+                    elevation="1"
+                    @click="withdrawConsent()"
                   >
-                    cancel
-                  </v-icon>
-                  Withdraw consent
-                </v-btn>
-              </v-col>
-            </v-row>
+                    <v-icon
+                      left
+                      dark
+                    >
+                      cancel
+                    </v-icon>
+                    Withdraw consent
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-sheet>
           </form>
         </v-sheet>
         <v-row v-if="submittedAs && submittedAs.length == 2 ? true : false" justify="center">
@@ -412,14 +414,19 @@ export default {
   &.vuewrapper
     // reset full view - no scroll bars, no full view
     overflow: inherit
+    height: 100%
 
-    .v-application--wrap
-      display: block
-      flex: inherit
-      min-height: initial
-      min-width: inherit
-      width: 100%
-      overflow-x: hidden
+    .v-application
+      height: 100%
+
+      .v-application--wrap
+        display: block
+        flex: inherit
+        min-height: initial
+        min-width: inherit
+        width: 100%
+        height: 100%
+        overflow-x: hidden
 
   a.v-btn
     border: inherit
@@ -434,9 +441,13 @@ export default {
 .last-updated
   display: none
 
+//#consent-container
+
 #consent-text
   overflow-y: scroll
-  height: 600px
+  // height: 600px
+  min-height: 260px
+  height: calc(100vh - 360px)
 
 #consent-text-item p
   margin-bottom: 0px
