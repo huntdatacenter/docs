@@ -447,7 +447,7 @@ export default {
   overflow-y: scroll
   // height: 600px
   min-height: 260px
-  height: calc(100vh - 360px)
+  height: calc(100vh - 400px)
 
 #consent-text-item p
   margin-bottom: 0px
