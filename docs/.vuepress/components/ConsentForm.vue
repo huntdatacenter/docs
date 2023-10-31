@@ -210,13 +210,13 @@ export default {
     getSubmitMessage() {
       if (this.form['slack']) {
         return [
-          "Once again welcome to our community.",
-          "If we have not sent you a slack invitation yet we will send you one as soon as we process this consent. You can now close the window."
+          "Thanks, your consent is registered.",
+          "Welcome! If you are a new user, we will send you an invitation to our HUNT Cloud community on Slack as soon as we process your consent. You can now close the window."
         ]
       } else {
         return [
-          "Sorry to see you go!",
-          "Your slack account will be deactivated and then deleted as soon as we process this withdrawal. You can now close the window."
+          "Thanks, your withdrawal is registered.",
+          "Sorry to see you go! We will deactivate and delete your Slack account as soon as we process your withdrawal. You can now close the window."
         ]
       }
       // if (this.form['slack'] && this.form['tingweek']) {
@@ -250,9 +250,9 @@ export default {
     getSlackStatus(item) {
       // form['slack']
       if (item == null) {
-        return 'No consent for community membership was given yet'
+        return 'Your consent status is not yet registered.'
       }
-      return item ? 'Consent for community membership has been given' : 'Consent for community membership has been withdrawn'
+      return item ? 'Your consent for HUNT Cloud community membership is active' : 'Your consent for HUNT Cloud community membership has been withdrawn'
     },
   },
 };
