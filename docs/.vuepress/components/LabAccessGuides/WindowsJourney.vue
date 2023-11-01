@@ -704,7 +704,7 @@ Connection to home closed.`,
               />
             </v-col>
             <v-col cols="12">
-              {{ sshConfId }}.3. Add lab configuration into SSH Config opened in Notepad.
+              {{ sshConfId }}.3. Add lab configuration into SSH Config opened in Notepad and then save changes.
               <v-textarea
                 v-model.trim="configText"
                 ref="ssh-config-win"
