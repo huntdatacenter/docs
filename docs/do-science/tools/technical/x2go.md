@@ -410,4 +410,12 @@ sudo apt install -y sshfs
 
 :::
 
+#### MacOS Ventura - black screen in x2go
+
+::: details Read more
+Run below command for possible resolution of wrong colour display.  
+```
+defaults write org.xquartz.X11 enable_render_extension 0
+```
+::: 
 
