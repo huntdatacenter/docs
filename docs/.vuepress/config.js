@@ -729,14 +729,14 @@ module.exports = {
         //   ]
         // },
         {
-          title: "Illustrations",
-          text: "Illustrations",
+          title: "Artworks",
+          text: "Artworks",
           collapsable: true,
           isGroup: true,
           children: [
             {
               title: "Introduction",
-              path: "/about/illustrations/",
+              path: "/about/artworks/",
             },
           ],
         },
