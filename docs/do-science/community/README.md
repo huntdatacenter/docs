@@ -18,7 +18,7 @@ All lab users in HUNT Cloud are invited to join our HUNT Cloud community as part
 
 ### Come join us at Slack 
 
-Our community cafe is located at [Slack](https://slack.com/) under the name space [hunt-cloud.slack.com](hunt-cloud.slack.com).
+Our community cafe is located at [Slack](https://slack.com/) under the name space [hunt-cloud.slack.com](https://hunt-cloud.slack.com).
 
 This is a place where lab users and lab coordinators meet to advance science and to chat with us at HUNT Cloud.
 
