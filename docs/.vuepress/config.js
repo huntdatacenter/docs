@@ -678,16 +678,8 @@ module.exports = {
               path: "/about/affiliation.md",
             },
             {
-              title: "System status",
-              path: "/about/system-status.md",
-            },
-            {
               title: "Contact",
               path: "/about/contact.md",
-            },
-            {
-              title: "Contribute",
-              path: "/about/contribute.md",
             },
           ],
         },
@@ -729,14 +721,30 @@ module.exports = {
         //   ]
         // },
         {
-          title: "Artworks",
-          text: "Artworks",
+          title: "Illustrations",
+          text: "Illustrations",
           collapsable: true,
           isGroup: true,
           children: [
             {
               title: "Introduction",
-              path: "/about/artworks/",
+              path: "/about/illustrations/",
+            },
+            {
+              title: "Scenery",
+              path: "/about/illustrations/scenery.md",
+            },
+            {
+              title: "Objects",
+              path: "/about/illustrations/objects.md",
+            },
+            {
+              title: "Characters",
+              path: "/about/illustrations/characters.md",
+            },
+            {
+              title: "FAQ",
+              path: "/about/illustrations/faq.md",
             },
           ],
         },
