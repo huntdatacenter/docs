@@ -30,10 +30,10 @@ You will find the following storage volumes inside your [home](compute/#what-is-
 
 ### How can I see the sizes of my lab volumes?
 
-Log into your [home](compute/#what-is-a-home-machine) machine in your lab with your favorite terminal and type: **`df -h --type=ext4'`**. This will give you an overview of the storage resources (volumes) that are allocated to your lab machine. Example output that list attached volumes:
+Log into your [home](compute/#what-is-a-home-machine) machine in your lab with your favorite terminal and type: **`df -h --type=ext4`**. This will give you an overview of the storage resources (volumes) that are allocated to your lab machine. Example output that list attached volumes:
 
 ```bash
-$ df -h --type=ext4'
+$ df -h --type=ext4
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/vda1       9.7G  7.2G  2.6G  74% /
 /dev/vdb1        99G   60M   94G   1% /home
