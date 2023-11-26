@@ -8,7 +8,7 @@ description: Updates will be posted here if there is any service or performance 
 
 
 ::: warning Selected labs
-**2023-11-26 21:48** - Failure on a physical machine reported. No access to labs located on this physical machines. We will start to migrate labs to new physical machines Monday morning. Contact us if you need priority.
+**2023-11-26 21:48** - Failure on a physical compute machine reported. Labs located on this physical machine are currently inaccessible. We will start to migrate lab machines over to a new physical machines Monday morning. Contact us if you need priority. New update 2023-11-27 10:00.
 :::
 
 
