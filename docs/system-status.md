@@ -7,11 +7,10 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 
-::: tip All systems
-
-Operational
-
+::: warning Selected labs
+**2023-11-26 21:48** - Failure on a physical machine reported. No access to labs located on this physical machines. We will start to migrate labs to new physical machines Monday morning. Contact us if you need priority.
 :::
+
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
 
