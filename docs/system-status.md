@@ -7,14 +7,21 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 
-::: warning Access to selected labs affected
-**2023-11-26 21:48** - Failure on a physical compute machine reported. Labs located on this physical machine are currently inaccessible. We will start to migrate lab machines over to a new physical machines Monday morning. Contact us if you need priority. New update 2023-11-27 10:00.
+::: danger High risk for service outtake
+
+**2023-12-01 10:26** - UPS failure reported for  Location1. All labs in Cloud1 will be affected if we experience a power drop while the UPS is not working. Services might be offline for one to several days in such scenario. Mitigation has the higest priority from the vendor and a technician is already on the plane from Oslo. We are following in the situation closely and will have hightened monitoring over the weekend. 
+
 :::
 
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
 
-### Latest system updates:
+### Latest system updates
+
+
+[..]
+
+**2023-11-26 21:48** - Failure on a physical compute machine reported. Labs located on this physical machine are currently inaccessible. We will start to migrate lab machines over to a new physical machines Monday morning. Contact us if you need priority. New update 2023-11-27 10:00.
 
 [..]
 
