@@ -33,12 +33,12 @@ psql -c "\password"
 Once you have configured your password you can also login from [Workbench Terminal](/do-science/hunt-workbench/faq/#can-i-use-a-terminal-from-my-workbench):
 
 ```bash
-psql --host=172.18.0.1 --port=5432
+psql --host=/var/run/postgresql --port=5432
 ```
 
 ## Connecting through pgweb in Workbench
 
-- Host: `172.18.0.1`
+- Host: `/var/run/postgresql`
 - Port: `5432`
 - Username: use your username
 - Password: use password configured in the beggining of the guide
