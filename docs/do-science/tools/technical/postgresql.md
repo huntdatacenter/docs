@@ -44,6 +44,12 @@ psql --host=/var/run/postgresql
 - Password: use password configured in the beggining of the guide
 - Database: same as username
 
+Easiest way is to connect with Scheme URL:
+
+```
+postgresql:///?host=/var/run/postgresql
+```
+
 ## Installing Python connectors in Workbench
 
 You can install `psycopg2` using conda into [py310 environment](/do-science/hunt-workbench/faq/#how-can-i-change-a-conda-environment-for-my-notebook):
