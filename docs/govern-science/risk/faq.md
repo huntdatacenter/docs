@@ -33,18 +33,6 @@ Yes! As science develop, so do our need to evolve environments that give your sc
 
 
 
-
-## Documentation
-
-### Do you have additional security documentation? 
-
-Yes. We hold an extensive collection of security documentation that is not available on these pages. These are available for data controllers on requests under some conditions. [Contact us](/contact) if you need additional information for your assessments.
-
-
-
-
-
-
 ## Risk assessments
 
 ### Do you have standardized text that we can use? 
@@ -54,6 +42,32 @@ No. You will need to make your own assessment of risks that you find relevant in
 ### Can we review your internal risk assessments? 
 
 Yes. We share our internal Risk Assessment Report (RAR) with data controllers on request. This is a summary of our current risk evaluation of organizational environments, technical environments and services environments. Data controllers are also welcome to see our full risk management assessments under some conditions. [Contact us](/contact) for such arrangements.
+
+
+
+
+
+## Documentation
+
+### Do you have additional security documentation? 
+
+Yes. We hold an extensive collection of security documentation that is not available on these pages. These are available for data controllers on requests under some conditions. [Contact us](/contact) if you need additional information for your assessments.
+
+
+### Which clock synchronization do you apply? 
+
+We use the [European NTP pool](https://www.ntppool.org/zone/europe) for clock synchronization on our underlying infrastructure.
+
+::: details on the pool zone
+
+We use the following pool zones for clock synchronization: 
+
+0.europe.pool.ntp.org
+1.europe.pool.ntp.org
+2.europe.pool.ntp.org
+3.europe.pool.ntp.org
+
+:::
 
 
 
