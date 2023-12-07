@@ -58,14 +58,16 @@ Yes. We hold an extensive collection of security documentation that is not avail
 
 We use the [European NTP pool](https://www.ntppool.org/zone/europe) for clock synchronization on our underlying infrastructure.
 
-::: details on the pool zone
+::: details Details on the pool zone
 
 We use the following pool zones for clock synchronization: 
 
+```
 0.europe.pool.ntp.org
 1.europe.pool.ntp.org
 2.europe.pool.ntp.org
 3.europe.pool.ntp.org
+```
 
 :::
 
