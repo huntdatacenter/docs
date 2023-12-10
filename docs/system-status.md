@@ -17,7 +17,7 @@ We monitor HUNT Cloud. Updates will be posted here if there is any service or pe
 
 **2023-12-01 17:00** - UPS is operational.
 
-**2023-12-01 10:26** - UPS failure reported for  Location1. All labs in Cloud1 will be affected if we experience a power drop while the UPS is not working. Services might be offline for one to several days in such scenario. Mitigation has the higest priority from the vendor and a technician is already on the plane from Oslo. We are following in the situation closely and will have hightened monitoring over the weekend. 
+**2023-12-01 10:26** - UPS failure reported for  Location1. All labs in Cloud1 will be affected if we experience a power drop while the UPS is not working. Services might be offline for one to several days in such scenario. Mitigation has the higest priority from the vendor and a technician is already on the plane from Oslo. We are following the situation closely and will have hightened monitoring over the weekend. 
 
 [..]
 
