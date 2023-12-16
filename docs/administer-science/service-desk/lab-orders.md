@@ -3,7 +3,7 @@ title: Lab orders
 category: Service desk
 permalink: /administer-science/service-desk/lab-orders
 description: HUNT Cloud service desk orders for labs.
-sidebarDepth: 2
+sidebarDepth: 1
 ---
 
 # Service desk orders for labs

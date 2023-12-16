@@ -3,7 +3,7 @@ title: Data controllers
 category: Service desk
 permalink: /govern-science/service-desk/data-controller-orders
 description: HUNT Cloud service desk orders for data controllers.
-sidebarDepth: 2
+sidebarDepth: 1
 ---
 
 # Service desk orders for data controllers
