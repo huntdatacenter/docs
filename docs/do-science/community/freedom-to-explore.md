@@ -25,20 +25,20 @@ We aim to translate our tagline «Freedom to explore» into every language that 
 
 We see scientists as explorers. The kind of explorers that seeks towards the unknown, similar to our old [explorers](https://en.wikipedia.org/wiki/Fridtjof_Nansen). The kind of individuals that gaze at the stars, imagines new ways, and follow their own paths - not because they are easy, but preciesly because they are hard. 
 
-In these circumstances, and in the highly regulated field of data-driven science, HUNT Cloud's aim is to ensure as much freedom as possible for our explorers. 
+In these circumstances, and in the highly regulated field of data-driven science, we aim is to ensure as much freedom as possible for our explorers. And, we want to be held accountable towards this bar whenever we meet to discuss improvements to your lab environments. 
 
 
 **About the illustration**
 
-The «Freedom to explore» universe illustration is made by Ingunn B Ferstad at our HUNT Cloud team and published under an open license. [Click here](/about/illustrations/) to see more illustrations and read about the license and how you can freely use the illustrations.
+The «Freedom to explore» universe illustrations are made by Ingunn B Ferstad in our HUNT Cloud team. They are published under an open license. [Click here](/about/illustrations/) to read about conditions for us and to see more of our illustrations. See our [FAQ section](/do-science/community/freedom-to-explore/#faq) at the bottom of the page for more information.
 
-**One PDF with all languages**
+**One PDF to see them all**
 
 We have collected individual languages in a low resolution PDF-file with "cheat codes" at the bottom if you want browse them all for fun: [Freedom to explore - all languages (lowres)](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-all-72dpi-screen.pdf) (PDF, 72 DPI)
 
 ::: tip Submit your language
 
-This list is made by current and past community members. Can't find your language or a language that your care passionately about? [Send us](/contact) your translation in a general contact request, and we will add it to the list.
+This list is made by current and past community members. Can't find your language or a language that you care deeply about? Or do you see room for improved translations? Great! Send us your translation or update in a [general contact request](/contact).
 
 :::
 
@@ -70,7 +70,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -95,7 +95,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -120,7 +120,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -145,7 +145,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -170,7 +170,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -195,7 +195,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -220,7 +220,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -245,7 +245,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -270,7 +270,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -295,7 +295,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -320,7 +320,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -345,7 +345,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -370,7 +370,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -395,7 +395,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -420,7 +420,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -445,7 +445,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -470,7 +470,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -495,7 +495,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -520,7 +520,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -545,7 +545,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -570,7 +570,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -595,7 +595,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -620,7 +620,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -645,7 +645,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -670,7 +670,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -695,7 +695,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -720,7 +720,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -745,7 +745,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -770,7 +770,32 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
+### Sanskrit (san)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Sanskrit."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-san-banner.jpg)
+
+::: details Full Sanskrit version
+
+**Download**: [Freedom to explore - Sanskrit](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-san-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Sanskrit."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-san-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Sanskrit ([san](https://iso639-3.sil.org/code/san))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.0  
+**ArtworkID:** hcc-artwork26  
+
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -795,7 +820,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -820,7 +845,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -845,7 +870,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -870,7 +895,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -895,7 +920,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -920,7 +945,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -945,7 +970,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -970,7 +995,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -995,7 +1020,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1020,7 +1045,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1045,7 +1070,7 @@ This list is made by current and past community members. Can't find your languag
 **Version:** 1.0  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1063,9 +1088,13 @@ Absolutely! We are aware that «Freedom to explore» can be translated in severa
 
 ### Can I submit more than one language? 
 
-Yes.  The intention is to collect languages that reflect individual members of our community. You may submit any language that you care passionately about even if this is not your first language. Send us your translations in a [general contact request](/contact)
+Yes.  The intention is to collect languages that reflect individual members of our community. You may submit any language that you deeply care about, even if this is not your first language. For example, we have versions both for Latin and Sanskrit.
 
 ### What is the three letter language identifiers? 
 
 They are ISO abbreviations. We use the three letter identifiers from [ISO 639-3](https://iso639-3.sil.org/) to include and name individual languages.
+
+### The list don't seem to be in alphabetical order 
+
+Correct. The list is sorted by the three letter language identifiers from [ISO 639-3](https://iso639-3.sil.org/). These letters may sometimes diverge from the official language name. To illustrate, Persian use the "fas" identifier (Farsi).
 
