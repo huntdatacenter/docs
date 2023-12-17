@@ -306,6 +306,7 @@ module.exports = {
               title: "Introduction",
               path: "/do-science/community/",
             },
+            "/do-science/community/freedom-to-explore.md",
             "/do-science/community/labting.md",
             "/do-science/community/current-consent.md", 
             "/do-science/community/consent-information.md", 
