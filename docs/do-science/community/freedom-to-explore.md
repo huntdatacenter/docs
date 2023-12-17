@@ -1065,7 +1065,7 @@ Absolutely! We are aware that «Freedom to explore» can be translated in severa
 
 Yes.  The intention is to collect languages that reflect individual members of our community. You may submit any language that you care passionately about even if this is not your first language. Send us your translations in a [general contact request](/contact)
 
-### What is the three letter language identifier? 
+### What is the three letter language identifiers? 
 
-We use the three letter identifiers from [ISO 639-3](https://iso639-3.sil.org/) to include and name individual languages.
+They are ISO abbreviations. We use the three letter identifiers from [ISO 639-3](https://iso639-3.sil.org/) to include and name individual languages.
 
