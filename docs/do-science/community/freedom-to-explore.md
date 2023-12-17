@@ -32,7 +32,7 @@ In these circumstances, and in the highly regulated field of data-driven science
 
 The «Freedom to explore» universe illustration is made by Ingunn B Ferstad at our HUNT Cloud team and published under an open license. [Click here](/about/illustrations/) to see more illustrations and read about the license and how you can freely use the illustrations.
 
-**Overview PDF with all languages**
+**One PDF with all languages**
 
 We have collected individual languages in a low resolution PDF-file with "cheat codes" at the bottom if you want browse them all for fun: [Freedom to explore - all languages (lowres)](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-all-72dpi-screen.pdf) (PDF, 72 DPI)
 
