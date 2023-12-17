@@ -23,14 +23,14 @@ We aim to translate our tagline «Freedom to explore» into every language that 
 
 **«Freedom to explore»**
 
-We see scientists as explorers. The kind of explorers that seeks towards the unknown, similar to our old [explorers](https://en.wikipedia.org/wiki/Fridtjof_Nansen). The kind of individuals that gaze at the stars, imagines new ways, and follow their own paths - not because they are easy, but preciesly because they are hard. 
+We see scientists as explorers. The kind of explorers that seeks towards the unknown, similar to our old [explorers](https://en.wikipedia.org/wiki/Fridtjof_Nansen). The kind of individuals that gaze at the stars, imagines new ways, and follow their own paths - not because it's are easy, but preciesly because it's hard. 
 
-In these circumstances, and in the highly regulated field of data-driven science, we aim is to ensure as much freedom as possible for our explorers. And, we want to be held accountable towards this bar whenever we meet to discuss improvements to your lab environments. 
+In these circumstances, and in the highly regulated field of data-driven science, we aim to ensure as much freedom as possible for our explorers. And, we want to be held accountable towards this bar whenever we meet to discuss improvements to your lab environments. 
 
 
 **About the illustration**
 
-The «Freedom to explore» universe illustrations are made by Ingunn B Ferstad in our HUNT Cloud team. They are published under an open license. [Click here](/about/illustrations/) to read about conditions for us and to see more of our illustrations. See our [FAQ section](/do-science/community/freedom-to-explore/#faq) at the bottom of the page for more information.
+The «Freedom to explore» universe illustrations are made by Ingunn B Ferstad in our HUNT Cloud team. They are published under an open license. See our [FAQ section](/do-science/community/freedom-to-explore/#faq) at the bottom for more information of these illustrations. [Click here](/about/illustrations/) to read about conditions for us and to see other illustrations. 
 
 **One PDF to see them all**
 
@@ -164,6 +164,31 @@ This list is made by current and past community members. Can't find your languag
 
 **Title:** Freedom to explore  
 **Language:** Czech ([ces](https://iso639-3.sil.org/code/ces))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.0  
+**ArtworkID:** hcc-artwork26  
+
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
+### Mandarin (cmn)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Mandarin."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-cmn-banner.jpg)
+
+::: details Full Mandarin version
+
+**Download**: [Freedom to explore - Mandarin](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-cmn-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Mandarin."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-cmn-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Mandarin ([cmn](https://iso639-3.sil.org/code/cmn))  
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
@@ -1039,31 +1064,6 @@ This list is made by current and past community members. Can't find your languag
 
 **Title:** Freedom to explore  
 **Language:** Urdu ([urd](https://iso639-3.sil.org/code/urd))  
-**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
-**License:** CC BY­-NC-­ND 4.0  
-**Year:** 2023  
-**Version:** 1.0  
-**ArtworkID:** hcc-artwork26  
-
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
-
-:::
-
-  
-
-
-### Chinese (zho)
-
-!["Blue banner with the slogan Freedom to explore in white letters written in Chinese."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-zho-banner.jpg)
-
-::: details Full Chinese version
-
-**Download**: [Freedom to explore - Chinese](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-zho-300dpi.pdf) - PDF - 300 DPI - 1,7M.
-
-!["Blue banner with the slogan Freedom to explore in white letters written in Chinese."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-zho-400px.jpg)
-
-**Title:** Freedom to explore  
-**Language:** Chinese ([zho](https://iso639-3.sil.org/code/zho))  
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
