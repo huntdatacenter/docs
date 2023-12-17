@@ -23,7 +23,7 @@ We aim to translate our tagline «Freedom to explore» into every language that 
 
 **«Freedom to explore»**
 
-We see scientists as explorers. The kind of explorers that seeks towards the unknown, similar to our old [explorers](https://en.wikipedia.org/wiki/Fridtjof_Nansen). The kind of individuals that gaze at the stars, imagines new ways, and follows their own paths - not because they are easy, but preciesly because they are hard. 
+We see scientists as explorers. The kind of explorers that seeks towards the unknown, similar to our old [explorers](https://en.wikipedia.org/wiki/Fridtjof_Nansen). The kind of individuals that gaze at the stars, imagines new ways, and follow their own paths - not because they are easy, but preciesly because they are hard. 
 
 In these circumstances, and in the highly regulated field of data-driven science, HUNT Cloud's aim is to ensure as much freedom as possible for our explorers. 
 
