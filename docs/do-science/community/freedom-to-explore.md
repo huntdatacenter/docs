@@ -1055,11 +1055,11 @@ This list is made by current and past community members. Can't find your languag
 
 ### My language is missing!
 
-Let's add it to the list! Send us your translation in a [general contact request](/contact). We will update update this page and notify you when your new version is in place.
+Let's add it to the list! Send us your translation in a [general contact request](/contact). We will update this page and notify you when your new version is in place.
 
 ### Can I suggest an improved translation?  
 
-Absolutely! We are aware that «Freedom to explore» can be translated in several ways. We have recieved up to five translations for individual languages, and would love to hear your take. Send us your translation in a [general contact request](/contact). 
+Absolutely! We are aware that «Freedom to explore» can be translated in several ways. We have received up to five translations for individual languages, and would love to hear your take. Send us your translation in a [general contact request](/contact). 
 
 ### Can I submit more than one language? 
 
