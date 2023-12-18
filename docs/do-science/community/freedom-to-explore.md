@@ -67,7 +67,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -92,7 +92,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -117,7 +117,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -142,7 +142,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -167,7 +167,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -192,7 +192,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -217,7 +217,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -242,7 +242,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -267,7 +267,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -292,7 +292,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -317,7 +317,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -342,7 +342,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -367,7 +367,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -392,7 +392,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -417,7 +417,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -442,7 +442,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -467,7 +467,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -492,7 +492,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -517,7 +517,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -542,7 +542,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -567,7 +567,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -592,7 +592,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -617,7 +617,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -642,7 +642,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -667,7 +667,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -692,7 +692,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -717,7 +717,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -742,7 +742,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -767,7 +767,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -792,7 +792,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -817,7 +817,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -842,7 +842,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -867,7 +867,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -892,7 +892,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -917,7 +917,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -942,7 +942,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -967,7 +967,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -992,7 +992,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -1017,7 +1017,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -1042,7 +1042,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
@@ -1067,7 +1067,7 @@ This list is made by current and past community members. Can't find your languag
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
-**Version:** 1.0  
+**Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
 **Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
