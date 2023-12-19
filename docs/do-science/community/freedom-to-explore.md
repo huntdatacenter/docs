@@ -17,24 +17,24 @@ directly in docs.
 
 **Science is global, and so is our HUNT Cloud community. This page celebrates the global aspects and collaborative nature of data-driven science!**
 
-We aim to translate our tagline «Freedom to explore» into every language that our community members speaks or care deeply about. We are humble and proud of the current list, and we are eager to see it grow further.
+We aim to translate our tagline «Freedom to explore» into every language that our community members speak or care deeply about. We are humble and proud of the current list, and we are eager to see it grow further.
 
 !["Description."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-eng-400px.jpg)
 
 **«Freedom to explore»**
 
-We see scientists as explorers. The kind of explorers that seeks towards the unknown, similar to our old [explorers](https://en.wikipedia.org/wiki/Fridtjof_Nansen). The kind of individuals that gaze at the stars, imagines new ways, and follow their own paths - not because it's are easy, but preciesly because it's hard. 
+We see scientists as explorers. The kind of explorers that seek towards the unknown, similar to our old [explorers](https://en.wikipedia.org/wiki/Fridtjof_Nansen). The kind of individuals that gaze at the stars, imagine new ways, and follow their own paths - not because it's easy, but precisely because it's hard. 
 
 In these circumstances, and in the highly regulated field of data-driven science, we aim to ensure as much freedom as possible for our explorers. And, we want to be held accountable towards this bar whenever we meet to discuss improvements to your lab environments. 
 
 
 **About the illustration**
 
-The «Freedom to explore» universe illustrations are made by Ingunn B Ferstad in our HUNT Cloud team. They are published under an open license. See our [FAQ section](/do-science/community/freedom-to-explore/#faq) at the bottom for more information of these illustrations. [Click here](/about/illustrations/) to read about conditions for us and to see other illustrations. 
+The «Freedom to explore» universe illustrations are made by Ingunn B Ferstad in our HUNT Cloud team. They are published under an open license. See our [FAQ section](/do-science/community/freedom-to-explore/#faq) at the bottom for more information about these illustrations. [Click here](/about/illustrations/) to read about conditions for use and to see other illustrations. 
 
 **One PDF to see them all**
 
-We have collected individual languages in a low resolution PDF-file with "cheat codes" at the bottom if you want browse them all for fun: [Freedom to explore - all languages (lowres)](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-all-72dpi-screen.pdf) (PDF, 72 DPI)
+We have collected individual languages in a low resolution PDF-file with "cheat codes" at the bottom if you want to browse them all for fun: [Freedom to explore - all languages (lowres)](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-all-72dpi-screen.pdf) (PDF, 72 DPI)
 
 ::: tip Submit your language
 
@@ -539,6 +539,31 @@ This list is made by current and past community members. Can't find your languag
 
 **Title:** Freedom to explore  
 **Language:** Latin ([lat](https://iso639-3.sil.org/code/lat))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.1  
+**ArtworkID:** hcc-artwork26  
+
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
+### Lithuanian (lit)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Lithuanian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-lit-banner.jpg)
+
+::: details Full Lithuanian version
+
+**Download**: [Freedom to explore - Lithuanian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-lit-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Lithuanian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-lit-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Lithuanian ([lit](https://iso639-3.sil.org/code/lit))  
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
