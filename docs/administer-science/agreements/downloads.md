@@ -156,7 +156,7 @@ This form defined the invoice profile for your cloud services fees. One invoice 
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.2.
+The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.3.
 
 **Data space**
 
@@ -187,21 +187,6 @@ Specify "K.STED" and "PROJECT NUMBER" for your data space. These fields are mand
 - *PEPPOL BIS*: This is the international identification number for your organization. [Click the link](https://directory.peppol.eu/public/locale-en_US/menuitem-search) to find your id. 
 - *REFERENCE NUMBER*: This is your order number with HUNT Cloud that ensures that the invoice is reaching you inside your organization. The format varies between organizations.
 
-
-**Pilot period** 
-
-New labs may for testing purposes by entitled to a pilot period before the lab is metered is accordance with the services specifications. If applicable, this is included in dialogue with representatives from HUNT Cloud. 
-
-- *SERVICES*: Specify one or more services included in the pilot period.
-- *END OF PILOT PERIOD*: Specify the date from where the specified services are metered in accordance with the services specifications.
-
-**Free quote**
-
-If certain cloud services are to be provided without charge (free quote). If applicable, this is included in dialogue with representatives from HUNT Cloud. 
-
-- *FREE QUOTA*: Specify the quota that is provided without charge.
-- *END OF FREE QUOTA*: Specify the date from where the free quota period will end and the services will be metered in accordance with the Services Specification.
-
 **Advanced payment**
 
 You may make an advance payment to your invoice profile. The payment is applied to the accrued costs. If the payment is larger than the amount currently owed, it will reduce the next automatic charge. For clarification, a positive account balance due to advance payments will not be refunded at the end of services.
@@ -218,7 +203,7 @@ A monetary spending limit may be specified for the invoice profile.
 
 **Signatures**
 
-Invoice profiles are signed by Account signatory. This is the individual that is authorized to operate the account information specified in the invoice profile on behalf of their organization. Co-signature from HUNT Cloud is required to effectuate i Pilot period and/or Free quota.
+Invoice profiles are signed by Account signatory. This is the individual that is authorized to operate the account information specified in the invoice profile on behalf of their organization. 
 
 **Activation**
 
