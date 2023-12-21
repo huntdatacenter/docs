@@ -12,12 +12,12 @@ description: This section list information and questions for the HUNT Cloud Ting
 
 We arrange a layered set of Tings for distinct groups in our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Tingweeks".
 
-::: tip Next Tingweek (Ting #10)
+::: tip Next Tingweek (Ting #11)
 
-- **Labting**: Tuesday 17 October 2023 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 18 October 2023 - 9 to 11 a.m. CET
-- **Data controller ting**: Wednesday 18 October 2023 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 19 October 2023 - 9 to 11 a.m. CET
+- **Labting**: Tuesday 13 February 2023 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 14 February 2023 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 14 February 2023 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 15 February 2023 - 9 to 11 a.m. CET
 
 :::
 

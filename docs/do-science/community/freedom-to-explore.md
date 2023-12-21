@@ -19,7 +19,7 @@ directly in docs.
 
 We aim to translate our tagline «Freedom to explore» into every language that our community members speak or care deeply about. We are humble and proud of the current list, and we are eager to see it grow further.
 
-!["Description."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-eng-400px.jpg)
+!["Blue banner with the slogan Freedom to explore in white letters written in English."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-eng-400px.jpg)
 
 **«Freedom to explore»**
 

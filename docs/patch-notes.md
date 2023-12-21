@@ -10,7 +10,7 @@ description: Minor and major updates to our services.
 
 [[toc]]
 
-This page holds some of the descriptions on how we take care of HUNT Cloud's services. All with the aim of providing the best possible conditions for your scientific explorations.
+This page contains descriptions of updates to HUNT Cloud's services. All with the aim to provide the best possible conditions for your scientific explorations.
 
 ## Patch note 2.11.1
 
@@ -20,34 +20,26 @@ This page holds some of the descriptions on how we take care of HUNT Cloud's ser
 
 <h3>Major changes</h3>
 
-**Remote Desktop in Workbench**
+**Remote desktop in Workbench**
 
-We have added new icon to Workbench called Remote Desktop. By opening this application, a new window will open in your browser, allowing you to use labs services in Graphical interface where you can run your favorite tools while being very responsive and easy to use.  
+We have added new icon to Workbench called "Remote desktop". By opening this application, a new window will open in your browser with a graphical interface where you can run your favorite tools over VNC. The new application is developed based on user feedback in an attempt to limit the use of tools such as x2go.
 
-We put effort into this based on user feedback, trying to eliminate the need to install tools such as x2go.  
-
-- This feature is available only in labs running Ubuntu 22.04 operating system. If you cannot see this icon in your lab, you are probably running on an older Ubuntu version. In this case, Remote Desktop will become available in your Workbench after migration to our new Cloud.
-
+Note that this feature is available for labs running Ubuntu 22.04 operating system. If you don't the see VNC icon, you are probably on an older Ubuntu version. If so, Remote Desktop will become available in your Workbench as soon as your lab migrate to Cloud2.
 
 **End of support for SPSS**
 
-IBM decided to end support/licensing for SPSS on Linux. Therefore NTNU users will no longer have access to this tool in our labs by default. We are looking at open-source alternatives to this tool, specifically [jamovi](https://www.jamovi.org/).  
-
-Let us know in your lab channel on Slack if we should priorize adding this tool to Workbench.
+IBM decided to end their support and licensing for SPSS on Linux. This means that NTNU users will no longer have access to this tool in our labs. We are exploring open-source alternatives such as [jamovi](https://www.jamovi.org/). Let us know in your lab channel on Slack if this is something you would like to see priorized in HUNT Workbench.
 
 
 <h3>Minor changes</h3>
 
 **Latest version of MATLAB 2023b in Workbench**
 
-All Workbench sessions are running on latest version of MATLAB 2023b.
+All Workbench sessions are running on the latest MATLAB 2023b version.
 
 **Freedom to explore**
 
-We have new been collecting phrases [*Freedom to Explore*](https://docs.hdc.ntnu.no/do-science/community/freedom-to-explore/#%C2%ABfreedom-to-explore%C2%BB) from our lab users in different languages.  
-So far, we have managed to collect *number* different languages, proving that science at HUNT Cloud is global and on the right direction to creating a strong scientific community.  
-
-
+We humbled and proud of your response to help us translate our tagline «Freedom to explore» into languages among our community members. So far we have register 42 translations! [Click here](/do-science/community/freedom-to-explore/) to see the results and to read more about he project.
 
 :::
 
@@ -58,22 +50,22 @@ So far, we have managed to collect *number* different languages, proving that sc
 
 **Fire safe for the off-site tape archive**
 
-We have improved the fire safety of our off-site tape archive with an new safe that aim to withstand fires for up to 60 minutes. 
+We have improved the fire safety of our off-site tape archive with an new safe that will withstand fire for up to 60 minutes. 
 
 <h3>Minor changes</h3>
 
+**Services specifications**
+
+We have made two minor updates to the [Services specifications](/administer-science/services/specifications/) since the last patch notes.
+
 **Updated invoice profile**
 
-We have simplified invoice profiles by moving Free quota and Pilot periods into separate agreements. 
-
-
+We have simplified the [Invoice profile](/administer-science/agreements/downloads/#invoice-profile) by moving Free quota and Pilot periods into separate agreements. 
 
 <h3>Upcoming features</h3>
 
-
-
-
-Improved granularity for individual lab costs on future invoices.
+* We aim to improve the granularity of lab costs in the upcoming invoice cycle.
+* We aim to propose major changes to our Services descriptions during the upcoming [Tingweek](/govern-science/tingweek/).
 
 :::
 
@@ -82,9 +74,21 @@ Improved granularity for individual lab costs on future invoices.
 
 <h3>Major changes</h3>
 
-**Remote Desktop in Workbench**
+**External audit from DNV**
+
+DNV audited us towards ISO/IEC 27001, 27017 and 27701 in November. The result was 0 major nonconformaties (CAT2), 5 minor nonconformaties (CAT1), 15 observations and 6 opportunities. We are currently working on the mitigations. The report from DNV is available for data controllers [on request](/contact). 
+
+<h3>Upcoming features</h3>
+
+* We aim to update governing documents based on suggestions from DNV over the next months.
+* We aim to propose major changes to our Services descriptions during the upcoming [Tingweek](/govern-science/tingweek/).
 
 :::
+
+
+
+<!-- ================== -->
+
 
 
 ## Patch note 2.9.2
