@@ -12,7 +12,7 @@ description: Minor and major updates to our services.
 
 This page holds some of the descriptions on how we take care of HUNT Cloud's services. All with the aim of providing the best possible conditions for your scientific explorations.
 
-## Patch note 2.9.3
+## Patch note 2.11.1
 
 *2023-12-21*
 
@@ -56,23 +56,36 @@ So far, we have managed to collect *number* different languages, proving that sc
 
 <h3>Major changes</h3>
 
-**Tape archive - fire safe**
+**Fire safe for the off-site tape archive**
 
-We have been developing our tape archive service further, offering cheap off-site tape service for long term archving. Our latest addition is a certified fire/burglar resistant safe from Franz Jager.  
+We have improved the fire safety of our off-site tape archive with an new safe that aim to withstand fires for up to 60 minutes. 
 
-This safe should protect your long term stored data even in case of fire and fall (wink, wink).  
-We are also working on reducing current cost of tape service, this will be updated in Q1 2024.
+<h3>Minor changes</h3>
 
 **Updated invoice profile**
 
-Removed pilot period and free quota
+We have simplified invoice profiles by moving Free quota and Pilot periods into separate agreements. 
+
 
 
 <h3>Upcoming features</h3>
 
+
+
+
 Improved granularity for individual lab costs on future invoices.
 
 :::
+
+
+::: details Govern science
+
+<h3>Major changes</h3>
+
+**Remote Desktop in Workbench**
+
+:::
+
 
 ## Patch note 2.9.2
 
