@@ -12,6 +12,68 @@ description: Minor and major updates to our services.
 
 This page holds some of the descriptions on how we take care of HUNT Cloud's services. All with the aim of providing the best possible conditions for your scientific explorations.
 
+## Patch note 2.9.3
+
+*2023-12-21*
+
+::: details Do science
+
+<h3>Major changes</h3>
+
+**Remote Desktop in Workbench**
+
+We have added new icon to Workbench called Remote Desktop. By opening this application, a new window will open in your browser, allowing you to use labs services in Graphical interface where you can run your favorite tools while being very responsive and easy to use.  
+
+We put effort into this based on user feedback, trying to eliminate the need to install tools such as x2go.  
+
+- This feature is available only in labs running Ubuntu 22.04 operating system. If you cannot see this icon in your lab, you are probably running on an older Ubuntu version. In this case, Remote Desktop will become available in your Workbench after migration to our new Cloud.
+
+
+**End of support for SPSS**
+
+IBM decided to end support/licensing for SPSS on Linux. Therefore NTNU users will no longer have access to this tool in our labs by default. We are looking at open-source alternatives to this tool, specifically [jamovi](https://www.jamovi.org/).  
+
+Let us know in your lab channel on Slack if we should priorize adding this tool to Workbench.
+
+
+<h3>Minor changes</h3>
+
+**Latest version of MATLAB 2023b in Workbench**
+
+All Workbench sessions are running on latest version of MATLAB 2023b.
+
+**Freedom to explore**
+
+We have new been collecting phrases [*Freedom to Explore*](https://docs.hdc.ntnu.no/do-science/community/freedom-to-explore/#%C2%ABfreedom-to-explore%C2%BB) from our lab users in different languages.  
+So far, we have managed to collect *number* different languages, proving that science at HUNT Cloud is global and on the right direction to creating a strong scientific community.  
+
+
+
+:::
+
+
+::: details Administer science
+
+<h3>Major changes</h3>
+
+**Tape archive - fire safe**
+
+We have been developing our tape archive service further, offering cheap off-site tape service for long term archving. Our latest addition is a certified fire/burglar resistant safe from Franz Jager.  
+
+This safe should protect your long term stored data even in case of fire and fall (wink, wink).  
+We are also working on reducing current cost of tape service, this will be updated in Q1 2024.
+
+**Updated invoice profile**
+
+Removed pilot period and free quota
+
+
+<h3>Upcoming features</h3>
+
+Improved granularity for individual lab costs on future invoices.
+
+:::
+
 ## Patch note 2.9.2
 
 *2023-10-16*
