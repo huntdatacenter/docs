@@ -6,14 +6,19 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: warning Reduced access to lab storage
-**2023-12-10 14:45** - Recovery from a failed raid card have caused some storage volumes in labs to be available in read-only mode. This will affect the ability to operate inside these lab. Affected labs will be notified, and we will start to update storage volumes to read-write first thing Monday morning. Contact us if you need priority. 
+::: tip All systems
+Operational
 :::
+
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
 
 ### Latest system updates
 
+
+**2023-12-10 14:45** - Recovery from a failed raid card have caused some storage volumes in labs to be available in read-only mode. This will affect the ability to operate inside these lab. Affected labs will be notified. We will start to update storage volumes to read-write first thing Monday morning. Contact us if you need priority. 
+
+[..]
 
 **2023-12-01 17:00** - UPS is operational.
 
