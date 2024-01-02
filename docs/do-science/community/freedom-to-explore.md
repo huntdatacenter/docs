@@ -19,7 +19,7 @@ directly in docs.
 
 We aim to translate our tagline «Freedom to explore» into every language that our community members speak or care deeply about. We are humble and proud of the current list, and we are eager to see it grow further.
 
-!["Blue banner with the slogan Freedom to explore in white letters written in English."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-eng-400px.jpg)
+!["Description."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-eng-400px.jpg)
 
 **«Freedom to explore»**
 
@@ -964,6 +964,31 @@ This list is made by current and past community members. Can't find your languag
 
 **Title:** Freedom to explore  
 **Language:** Spanish ([spa](https://iso639-3.sil.org/code/spa))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.1  
+**ArtworkID:** hcc-artwork26  
+
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
+### Serbian (srp)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Serbian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-srp-banner.jpg)
+
+::: details Full Serbian version
+
+**Download**: [Freedom to explore - Serbian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-srp-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Serbian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-srp-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Serbian ([srp](https://iso639-3.sil.org/code/srp))  
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
