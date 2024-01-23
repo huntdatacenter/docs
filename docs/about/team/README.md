@@ -42,7 +42,4 @@ Jakub holds the role as system operator. He is responsible for our day-to-day op
 
 Ingunn is our illustrator and marketing manager. She is responsible for our illustrations of sensitive data identity, and the guidance of our brand identities and for our marketing. You will indirectly meet Ingunn via her illustrations that we publish on these pages, and through the ideas and data philosophies that we talk about and evolve around.
 
-### Diepiriye Deinma Okujagu
-
-Diepiryie is our data engineer. Her responsibilities includes explorations of tools for improved data management, data administration and data handling,  with a focus on enhanced biomedical and biobank operations. You may also meet Diepiryie in our service desk and other aspects of our day-to-day operations.
 
