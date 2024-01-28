@@ -87,7 +87,7 @@ Our Statement of Applicability, often referred to as "SoA", states which ISO con
 
 SoA is a central document in our certification audits, and it guides Data controllers to quickly asses which controls they should expect to be in place to safeguard their data. 
 
-In short, we state applicability for a total of 148 controls derived from [ISO 27002](https://www.iso.org/standard/54533.html) (general information security), [ISO 27017](https://www.iso.org/standard/43757.html) (cloud security), and [ISO 27701](https://www.iso.org/standard/71670.html) (privacy information management system).
+In short, we state applicability for a total of 149 controls derived from [ISO 27002](https://www.iso.org/standard/54533.html) (general information security), [ISO 27017](https://www.iso.org/standard/43757.html) (cloud security), and [ISO 27701](https://www.iso.org/standard/71670.html) (privacy information management system).
 
 To ease the readability, we have included the control's implementation status and a comment where applicable.
 
