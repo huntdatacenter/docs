@@ -268,7 +268,7 @@ Connection to home closed.`,
                       >
                         We use the open-source application <b>OpenVPN GUI</b> to ensure encrypted communication between your local computer and us.<br /><br />
 
-                        <a href="https://openvpn.net/community-downloads/" target="_blank">Download and install <b>OpenVPN</b> using the latest stable Windows Installer (Avoid beta versions)</a>
+                        If you are not an NTNU user <a href="https://openvpn.net/community-downloads/" target="_blank">download and install <b>OpenVPN</b> using the latest stable Windows Installer (Avoid beta versions)</a>
                         <br /><br />
 
                         Click on the link above, scroll down to the file named <code style="font-weight: bold;">{{ openvpnInstallerName }}</code>,
