@@ -43,6 +43,7 @@ Read more about the tools before diving into work:
 - [STATA](/do-science/hunt-workbench/getting-started/stata)
 - [Julia](/do-science/hunt-workbench/getting-started/julia)
 - [Visual Studio Code (VS Code)](/do-science/hunt-workbench/getting-started/vscode)
+- [Remote Desktop](/do-science/hunt-workbench/getting-started/remote-desktop)
 
 
 <!--

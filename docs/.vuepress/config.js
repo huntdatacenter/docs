@@ -179,6 +179,7 @@ module.exports = {
                     "/do-science/hunt-workbench/getting-started/7-stata.md",
                     "/do-science/hunt-workbench/getting-started/8-julia.md",
                     "/do-science/hunt-workbench/getting-started/9-vscode.md",
+                    "/do-science/hunt-workbench/getting-started/10-remote-desktop.md",
                   ],
                 },
               ],
