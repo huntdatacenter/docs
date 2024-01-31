@@ -10,7 +10,7 @@ description: How to start using your HUNT Workbench.
 
 Once you have configured access to Workbench and you want to learn more about the environment follow these guides.
 
-<!-- 
+<!--
 
 - Explain main concepts and phylosophy here
 - What is Jupyterlab
@@ -23,6 +23,7 @@ Once you have configured access to Workbench and you want to learn more about th
 <a href="https://www.python.org/" target="_blank"><img src="./images/python.png" style="max-height: 40px; padding: 20px;" /></a>
 <a href="https://mathworks.com/" target="_blank"><img src="./images/matlab.png" style="max-height: 80px; padding: 0px;" /></a>
 <a href="https://posit.co/products/open-source/rstudio-server/" target="_blank"><img src="./images/rstudio.png" style="max-height: 40px; padding: 20px;" /></a>
+<a href="https://code.visualstudio.com/" target="_blank"><img src="./images/vscode.png" style="max-height: 50px; padding-bottom: 20px;" /></a>
 
 
 ## Essential reading
@@ -43,7 +44,7 @@ Read more about the tools before diving into work:
 - [Julia](/do-science/hunt-workbench/getting-started/julia)
 
 
-<!-- 
+<!--
 Your Jupyter Notebooks and code files are stored in the following shared **`work`**-volume on your home machine:
 
 ```bash
