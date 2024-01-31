@@ -2,7 +2,7 @@
 title: Visual Studio Code (Workbench)
 category: Getting started
 sidebarDepth: 0
-permalink: /do-science/hunt-workbench/getting-started/code-server
+permalink: /do-science/hunt-workbench/getting-started/vscode
 description: How to use VS Code
 tags:
   - vscode
