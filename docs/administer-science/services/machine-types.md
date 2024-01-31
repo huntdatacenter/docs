@@ -44,7 +44,7 @@ These machines are optimized for computation with 2GB, 4GB or 8GB for memory per
 | default.c3  | 8        | 32              |
 | default.c4  | 16       | 64              |
 | default.c5  | 32       | 128             |
-| default.c6  | 48       | 196             |
+| default.c6  | 48       | 192             |
 | default.c7* | 64       | 256             |
 | default.c8* | 80       | 320             |
 
@@ -57,7 +57,7 @@ These machines are optimized for computation with 2GB, 4GB or 8GB for memory per
 | default.d2  | 4        | 32              |
 | default.d3  | 8        | 64              |
 | default.d4  | 16       | 128             |
-| default.d5  | 24       | 194             |
+| default.d5  | 24       | 192             |
 | default.d6* | 48       | 384             |
 | default.d7* | 64       | 512             |
 | default.d8* | 80       | 640             |
