@@ -281,9 +281,9 @@ Connection to home closed.`,
                           type="info"
                           elevation="2"
                         >
-                          <b>NTNU users should use NTNU Software center.</b>
+                          <b><img alt="1-openvpn-icon" src="/img/vpn/ntnu-icon-25.svg" style="height: 1.2em; margin-bottom: -3px;" /> NTNU Software center</b>
                           <hr class="mt-1 mb-2" />
-                          Windows users from NTNU can install OpenVPN community edition
+                          Windows <b>users from NTNU</b> can install OpenVPN community edition
                           using <a href="https://i.ntnu.no/wiki/-/wiki/English/OpenVPN" target="_blank">NTNU Software Center</a> even without administrative rights.
                         </v-alert>
 
@@ -293,7 +293,7 @@ Connection to home closed.`,
                           type="warning"
                           elevation="2"
                         >
-                          <b>You will need administrative rights on your local computer to successfully install OpenVPN.</b>
+                          <b>You will need administrative rights on your local computer to successfully install OpenVPN</b>
                           <hr class="mt-1 mb-2" />
                           Click on the link below if you do not hold administrative rights on your local computer, or don't know if you have such rights.<br /><br />
 
@@ -933,7 +933,7 @@ Connection to home closed.`,
                         <br /><br />
                         <ol>
                           <li>
-                            Open your <code>.p12 certificate</code> that you downloaded from FileSender. 
+                            Open your <code>.p12 certificate</code> that you downloaded from FileSender.
                             Make sure the store location is set to <code>Current User</code> and click <code>Next</code>:
                             <br />
                             <img class="pa-2" alt="1_cert_p12" src="/img/workbench/1_cert_p12.png" style="max-width: 500px;" />
@@ -967,10 +967,10 @@ Connection to home closed.`,
                             <br />
                           </li>
                           <li>
-                            The wizard will require a confirmation to install a certificate from us: HCTS CA 1 (HUNT Cloud Trust Services). 
+                            The wizard will require a confirmation to install a certificate from us: HCTS CA 1 (HUNT Cloud Trust Services).
                             Our certificate is required to safely access your workbench environment.
                             <br /><br />
-                            You will normally be asked to confirm our certificate only when you set up the HUNT Workbench for the first time. 
+                            You will normally be asked to confirm our certificate only when you set up the HUNT Workbench for the first time.
                             Thus, if you see <code>LAB</code> instead of <code>HCTS CA 1</code> skip to step 7.
                             <br /><br />
                             Before clicking <code>YES</code>, confirm that you see our thumbprint (fingerprint):
