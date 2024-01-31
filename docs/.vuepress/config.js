@@ -178,6 +178,7 @@ module.exports = {
                     "/do-science/hunt-workbench/getting-started/6-matlab.md",
                     "/do-science/hunt-workbench/getting-started/7-stata.md",
                     "/do-science/hunt-workbench/getting-started/8-julia.md",
+                    "/do-science/hunt-workbench/getting-started/9-vscode.md",
                   ],
                 },
               ],
@@ -308,8 +309,8 @@ module.exports = {
             },
             "/do-science/community/freedom-to-explore.md",
             "/do-science/community/labting.md",
-            "/do-science/community/current-consent.md", 
-            "/do-science/community/consent-information.md", 
+            "/do-science/community/current-consent.md",
+            "/do-science/community/consent-information.md",
             ]
         },
         "/do-science/service-desk/",
