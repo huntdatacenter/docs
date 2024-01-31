@@ -42,6 +42,7 @@ Read more about the tools before diving into work:
 - [MATLAB](/do-science/hunt-workbench/getting-started/matlab)
 - [STATA](/do-science/hunt-workbench/getting-started/stata)
 - [Julia](/do-science/hunt-workbench/getting-started/julia)
+- [Visual Studio Code (VS Code)](/do-science/hunt-workbench/getting-started/vscode)
 
 
 <!--
