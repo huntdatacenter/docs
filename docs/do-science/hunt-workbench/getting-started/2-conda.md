@@ -1,14 +1,21 @@
 ---
-title: Conda
+title: Conda (Workbench)
 category: Getting started
 sidebarDepth: 0
 permalink: /do-science/hunt-workbench/getting-started/conda
 description: How to use Conda and Mamba
+tags:
+  - conda
+  - anaconda
+  - miniconda
+  - bioconda
+  - mamba
+  - micromamba
 ---
 
 # Conda
 
-<!-- 
+<!--
 
 - why do we recommend using conda
 - what is the difference between mamba and conda
