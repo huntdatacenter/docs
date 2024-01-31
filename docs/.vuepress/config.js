@@ -61,7 +61,7 @@ module.exports = {
     // https://vuepress.vuejs.org/theme/default-theme-config.html#navbar-logo
     logo: "/img/hunt-cloud-logo.svg",
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#built-in-search
-    searchMaxSuggestions: 6,
+    searchMaxSuggestions: 8,
     // searchPlaceholder: 'Search...',
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#navbar
     // TODO remove nav key in vuepress 2
