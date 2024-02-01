@@ -6,8 +6,8 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: danger System access
-**2024-02-01 14:54** - Connectivity issues are reported. Access to all labs are affected. We are actively investigated. Next update 15.30.
+::: tip All systems
+Operational
 :::
 
 
@@ -15,6 +15,11 @@ We monitor HUNT Cloud. Updates will be posted here if there is any service or pe
 
 ### Latest system updates
 
+**2024-01-02 15:30** - Connectivity restored. Expected to be caused by a high-volume download that bypassed our traffic filters and caused queuing of in/out traffic. We will monitoring closely and investigate root causes. 
+
+**2024-02-01 14:54** - Connectivity issues are reported. Access to all labs are affected. We are actively investigated. Next update 15.30.
+
+[..]
 
 **2023-12-10 14:45** - Recovery from a failed raid card have caused some storage volumes in labs to be available in read-only mode. This will affect the ability to operate inside these lab. Affected labs will be notified. We will start to update storage volumes to read-write first thing Monday morning. Contact us if you need priority. 
 
