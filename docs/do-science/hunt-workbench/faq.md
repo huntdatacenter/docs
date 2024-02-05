@@ -286,12 +286,12 @@ Sometimes you may get errors about the **`GLIBCXX`** library not being found and
 1. Open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) and run the following code to reset your **`r-base`** environment:
 
 ```bash
-mamba create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
+mamba create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'r-languageserver' 'r-lintr'
 ```
 
 If you have older setup without mamba, use Conda command instead:
 ```bash
-conda create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
+conda create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'r-languageserver' 'r-lintr'
 ```
 
 ::: warning
@@ -321,7 +321,7 @@ When you [restart your HUNT Workbench](/do-science/hunt-workbench/faq/#how-can-i
 
 VSCode in Workbench comes with jupyter and python extension.
 
-### Can I install my own extensions? 
+### Can I install my own extensions?
 
 No. This option is not available to user. If you need additional extensions [contact us](/contact).
 
@@ -337,5 +337,3 @@ Yes. You can find your **`Workbench Terminal`** in the main view of applications
 ### When do I need to use a terminal?
 
 **`Workbench Terminal`** can be handy when it comes to managing [Conda packages](/do-science/tools/analytical/conda/), monitoring resources (**`htop`**), or handling other tasks.
-
-
