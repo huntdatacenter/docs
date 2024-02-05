@@ -11,10 +11,6 @@ tags:
   - code
 ---
 
-# Visual Studio Code
-
-in progress...
-
 <!--
 
 TODO
@@ -26,3 +22,17 @@ TODO
 4. Try and add a section on R if possible to run R code with R kernel (e.g. if selecting r-base environment)
 
 -->
+
+# Visual Studio Code
+
+### Create Jupyter notebook in VS Code
+
+Requirements 
+
+#### How to choose Kernel
+
+####  
+
+### Setup R kernel
+
+Requirements: 
