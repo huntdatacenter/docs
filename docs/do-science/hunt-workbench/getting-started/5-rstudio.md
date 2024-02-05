@@ -8,7 +8,7 @@ description: How to use RStudio and R
 
 # RStudio and R
 
-<!-- 
+<!--
 
 - What is the default environment for rstudio (r-base) and why do we use it
 - Which packages are preinstalled in r-base environment
@@ -23,12 +23,12 @@ description: How to use RStudio and R
 Here's an example on how to create a Conda environment with _R_ and _R-IRkernel_ kernel and commonly used packages:
 
 ```bash
-mamba create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'cmake' 'compilers' 'cmake' 'gmp'
+mamba create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'r-languageserver' 'r-lintr' 'cmake' 'compilers' 'cmake' 'gmp'
 ```
 
 ## Rstudio
 
-RStudio is configured to use packages installed in the conda environment named **`r-base`**. 
+RStudio is configured to use packages installed in the conda environment named **`r-base`**.
 
 ### R packages
 
@@ -121,12 +121,12 @@ Sometimes you may get errors about the **`GLIBCXX`** library not being found and
 1. Open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) and run the following code to reset your **`r-base`** environment:
 
 ```bash
-mamba create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
+mamba create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'r-languageserver' 'r-lintr'
 ```
 
 If you have older setup without mamba, use conda command instead:
 ```bash
-conda create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven'
+conda create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'r-languageserver' 'r-lintr'
 ```
 
 ::: warning
