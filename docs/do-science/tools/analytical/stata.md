@@ -20,7 +20,7 @@ description: Installation guide for Stata.
 
 ## Installation in HUNT Workbench
 
-You may request Stata in your HUNT Workbench as a Jupyter notebook. This means that you can write known Stata commands and that you can view plots on your screen. See our [Stata guide](/do-science/guides/stata/) for more details and request HUNT Workbench Stata access in our do-science [service desk](/do-science/do-science/service-desk/#workbench-access).
+You may request Stata in your HUNT Workbench as a Jupyter notebook. This means that you can write known Stata commands and that you can view plots on your screen. See our [Stata guide](/do-science/guides/stata/) for more details and request HUNT Workbench Stata access in our do-science [service desk](/do-science/service-desk/#general-service-request).
 
 ## Installation on home machines
 
@@ -54,5 +54,3 @@ There is a [known issue](https://www.statalist.org/forums/filedata/fetch?id=1351
 #### My file consume all of the machine memory
 
 You might need to consider the memory consumption of Stata when you work with files close to your machine memory. [Click here](/do-science/faq/compute/#is-my-process-hitting-memory-issues) to learn how to assess if you are hitting memory issues on your machines. If so, the University of Wisconsin has written up a guide on [how to reduce Stata's memory consumption](https://www.ssc.wisc.edu/sscc/pubs/stata_memory.htm). [Contact us](/contact) for a memory upgrade if necessary.
-
-
