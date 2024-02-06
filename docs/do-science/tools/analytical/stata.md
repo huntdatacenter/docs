@@ -20,11 +20,7 @@ description: Installation guide for Stata.
 
 ## Installation in HUNT Workbench
 
-<<<<<<< HEAD
 You may request Stata in your HUNT Workbench as a Jupyter notebook. This means that you can write known Stata commands and that you can view plots on your screen. See our [Stata guide](/do-science/guides/stata/) for more details and request HUNT Workbench Stata access in our do-science [service desk](/do-science/service-desk/#general-service-request).
-=======
-You may request Stata in your HUNT Workbench as a Jupyter notebook. This means that you can write known Stata commands and that you can view plots on your screen. See our [Stata guide](/do-science/guides/stata/) for more details and request HUNT Workbench Stata access in our do-science [service desk](/do-science/service-desk/#workbench-access).
->>>>>>> 3471f0eb7f950b6de71d8883769791ceb89e4abe
 
 ## Installation on home machines
 
