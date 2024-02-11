@@ -19,10 +19,8 @@ See our [scientific access](/administer-science/scientific-access) section for g
 
 ::: tip Next Tingweek (Ting #11)
 
-- **Labting**: Tuesday 13 February 2023 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 14 February 2023 - 9 to 11 a.m. CET
-
-[Read more about our Tingweeks](/govern-science/tingweek/)
+- **Labting**: Tuesday 13 February 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-labting-agenda.pdf))
+- **Data space ting**: Wednesday 14 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-dataspaceting-agenda.pdf))
 
 :::
 
