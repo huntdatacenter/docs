@@ -112,6 +112,9 @@ The current schedule is as follows: Labting is held on Tuesdays 2-4 pm CET, Data
 !["Tingweek schedule"](./images/tingweek-schedule-times.png)
 
 
+## Past Tingweeks dates with agenda
+
+[Click here](/govern-science/tingweek/dates) to see past Ting dates and their agendas. 
 
 
 ## Reports
