@@ -10,6 +10,12 @@ description: How to use JupyterLab and Jupyter notebooks
 
 > [JupyterLab](https://jupyter.org/) is the latest web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning.
 
+## The path to solving outstanding problems
+
+If you are starting with Jupyter or your research track in general we highly recommend [Keynote from Juan Klopper: Jupyter - The path to solving outstanding problems](https://www.youtube.com/watch?v=gmBRzi6hjhI).
+
+<iframe width="768" height="432" src="https://www.youtube-nocookie.com/embed/gmBRzi6hjhI?si=Mm4HbAsFEEfg5x-G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Here we try to summarize basics of what you should know when starting with Jupyter.
 
 We recommend official JupyterLab guides to get familiar with the interface:
@@ -20,13 +26,6 @@ We recommend official JupyterLab guides to get familiar with the interface:
 > Jupyter notebooks are documents that combine live runnable code with narrative text (Markdown), equations (LaTeX), images, interactive visualizations and other rich output.
 
 ![notebook_ui.png](./images/notebook-ui.png)
-
-
-## The path to solving outstanding problems
-
-If you are starting with Jupyter or your research track in general we highly recommend [Keynote from Juan Klopper: Jupyter - The path to solving outstanding problems](https://www.youtube.com/watch?v=gmBRzi6hjhI).
-
-<iframe width="768" height="432" src="https://www.youtube-nocookie.com/embed/gmBRzi6hjhI?si=Mm4HbAsFEEfg5x-G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ## Working with Notebooks
