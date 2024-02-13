@@ -107,6 +107,7 @@ export default {
       return this.recipient ? this.recipient.replace('+', '%2B') : this.recipient;
     },
     wrapRecipient() {
+      // Problematic for outlook web
       return `HUNT Cloud - Service Desk <${this.encodedRecipient}>`.replace('<', '%3C').replace('>', '%3E');
     },
     mailto() {
@@ -114,7 +115,7 @@ export default {
     },
     deeplinkUrl() {
       const url = 'https://outlook.office.com/mail/deeplink/compose'
-      return `${url}?to=${this.wrapRecipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      return `${url}?to=${this.encodedRecipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
     },
   },
   mounted() {},
