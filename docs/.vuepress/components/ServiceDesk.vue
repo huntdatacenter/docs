@@ -441,7 +441,8 @@ export default {
                       </v-btn>
                     </v-col>
                     <v-col cols="4">
-                      <v-btn color="primary" block :loading="loadingEmailButtons" :disabled="loadingEmailButtons" @click="actionSendOutlookPopup">
+                      <!-- <v-btn color="primary" block :loading="loadingEmailButtons" :disabled="loadingEmailButtons" @click="actionSendOutlookPopup"> -->
+                      <v-btn color="primary" block :loading="loadingEmailButtons" disabled @click="actionSendOutlookPopup">
                         Open in Outlook Web
                       </v-btn>
                     </v-col>
