@@ -1840,7 +1840,7 @@ deregister_tingweek_invitations:
       name="{full_name}"  
       ---
 
-      I am aware that I can send a general service desk request to register again if I want to recieve future invitations. 
+      I am aware that I can send a general service desk request to register again if I want to receive future invitations. 
 
       Kind regards,
       {full_name}
