@@ -21,6 +21,14 @@ We recommend official JupyterLab guides to get familiar with the interface:
 
 ![notebook_ui.png](./images/notebook-ui.png)
 
+
+## The path to solving outstanding problems
+
+If you are starting with Jupyter or your research track in general we highly recommend [Keynote from Juan Klopper: Jupyter - The path to solving outstanding problems](https://www.youtube.com/watch?v=gmBRzi6hjhI).
+
+<iframe width="768" height="432" src="https://www.youtube-nocookie.com/embed/gmBRzi6hjhI?si=Mm4HbAsFEEfg5x-G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 ## Working with Notebooks
 
 You can find useful explanations and video guides in official documentation:
@@ -33,7 +41,7 @@ You can find useful explanations and video guides in official documentation:
 
 ## Working with lab mates
 
-Typically your lab has more users and you all are sharing [compute](https://docs.hdc.ntnu.no/do-science/faq/compute/) and [storage resources](/do-science/faq/storage/). 
+Typically your lab has more users and you all are sharing [compute](https://docs.hdc.ntnu.no/do-science/faq/compute/) and [storage resources](/do-science/faq/storage/).
 For this to work efficiently you will need to know how to check your resource usage and free up resources if needed.
 
 ### Monitoring resources

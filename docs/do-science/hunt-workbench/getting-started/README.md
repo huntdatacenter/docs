@@ -28,7 +28,7 @@ Once you have configured access to Workbench and you want to learn more about th
 
 ## Essential reading
 
-Most important parts of Workbench that you need to know:
+Most important parts of Workbench that you need to know in general:
 - [JupyterLab](/do-science/hunt-workbench/getting-started/jupyterlab)
 - [Conda](/do-science/hunt-workbench/getting-started/conda)
 - [Data](/do-science/hunt-workbench/getting-started/data)
@@ -36,7 +36,7 @@ Most important parts of Workbench that you need to know:
 
 ## Tooling
 
-Read more about the tools before diving into work:
+Read more about the tools that you plan to use:
 - [Python](/do-science/hunt-workbench/getting-started/python)
 - [RStudio](/do-science/hunt-workbench/getting-started/rstudio)
 - [MATLAB](/do-science/hunt-workbench/getting-started/matlab)
@@ -45,6 +45,15 @@ Read more about the tools before diving into work:
 - [Visual Studio Code (VS Code)](/do-science/hunt-workbench/getting-started/vscode)
 - [Remote Desktop](/do-science/hunt-workbench/getting-started/remote-desktop)
 
+
+## Backgrounds
+
+Check more specific tips based on your background before diving into work:
+
+- [Statistics](/do-science/hunt-workbench/getting-started/backgrounds/statistics)
+- [Genomics](/do-science/hunt-workbench/getting-started/backgrounds/genomics)
+- [Annotations](/do-science/hunt-workbench/getting-started/backgrounds/annotations)
+- [Engineering](/do-science/hunt-workbench/getting-started/backgrounds/engineering)
 
 <!--
 Your Jupyter Notebooks and code files are stored in the following shared **`work`**-volume on your home machine:

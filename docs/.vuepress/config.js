@@ -182,6 +182,18 @@ module.exports = {
                     "/do-science/hunt-workbench/getting-started/10-remote-desktop.md",
                   ],
                 },
+                {
+                  title: "Backgrounds",
+                  text: "Backgrounds",
+                  collapsable: true,
+                  isGroup: true,
+                  children: [
+                    "/do-science/hunt-workbench/getting-started/backgrounds/statistics.md",
+                    "/do-science/hunt-workbench/getting-started/backgrounds/genomics.md",
+                    "/do-science/hunt-workbench/getting-started/backgrounds/annotations.md",
+                    "/do-science/hunt-workbench/getting-started/backgrounds/engineering.md",
+                  ],
+                },
               ],
             },
             "/do-science/hunt-workbench/troubleshooting.md",
