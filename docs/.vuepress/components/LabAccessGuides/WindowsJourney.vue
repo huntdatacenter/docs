@@ -479,6 +479,15 @@ Connection to home closed.`,
                         </p>
 
                         <br />
+                        <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
+                        <p>
+                          If you received an error "wrong credentials" after using your TOTP authenticator:
+                          <ul>
+                            <li>Make sure your phone is connected to internet for time synchronization.</li>
+                          </ul>
+                        </p>
+
+                        <br />
                         <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
                         <p>
                           The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.

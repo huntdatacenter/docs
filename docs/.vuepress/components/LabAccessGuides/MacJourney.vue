@@ -430,6 +430,15 @@ ${this.ipAddress}    ${this.labName}-entry
                         </p>
 
                         <br />
+                        <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
+                        <p>
+                          If you received an error "wrong credentials" after using your TOTP authenticator:
+                          <ul>
+                            <li>Make sure your phone is connected to internet for time synchronization.</li>
+                          </ul>
+                        </p>
+
+                        <br />
                         <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
                         <p>
                           The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
@@ -614,8 +623,8 @@ ${this.ipAddress}    ${this.labName}-entry
           <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
 
             <v-col cols="12">
-              {{ passLessId }}.1. Open new Terminal window and generate ssh key. 
-              If command reports that id_rsa key already exists, 
+              {{ passLessId }}.1. Open new Terminal window and generate ssh key.
+              If command reports that id_rsa key already exists,
               to avoid overwriting your existing keys press <code>n</code> and skip to next step.
               <CopyTextField
                 :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
@@ -976,7 +985,7 @@ ${this.ipAddress}    ${this.labName}-entry
                             and restart it for the certificate to get recognized.
                           </li>
                           <li>
-                            When you open your HUNT Workbench for the first time you will be asked for your local macOS password. 
+                            When you open your HUNT Workbench for the first time you will be asked for your local macOS password.
                             This allows the browser to access your client certificate stored in your local Keychain. <br />
                             After filling in the password, confirm by clicking <code style="font-weight: bold;">Always allow</code> / <code style="font-weight: bold;">Tillat alltid</code>.
                             <br />
@@ -1352,7 +1361,7 @@ ${this.ipAddress}    ${this.labName}-entry
               Make sure to allow Keka access to your home folder in <b>File Access</b> section of Keka.
               <img alt="tunnelblick-login" src="/img/7-zip/keka1.png" /> <br />
             </v-col>
-            
+
           </v-expansion-panel-content>
         </v-expansion-panel>
 

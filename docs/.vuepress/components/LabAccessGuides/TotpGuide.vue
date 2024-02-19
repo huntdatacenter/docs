@@ -252,6 +252,8 @@ export default {
                 with name <code>HUNT CLOUD VPN</code> showing <b>6 digit verification code</b>.
                 <br /><br />
                 This code refreshes every 30 seconds.
+                <br /><br />
+                Phone might need to be connected to internet to assure precise synchronization of time.
               </v-card>
               <v-btn color="primary" class="mx-2 mb-1" @click="totpStepper = 1">Start again</v-btn>
               <v-btn color="link" class="mx-2 mb-1" @click="totpStepper = 2">Back</v-btn>

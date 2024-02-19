@@ -258,7 +258,7 @@ Connection to home closed.`,
                         <br />
 
                         <details><summary style="cursor: pointer;"><b>Other linux distributions</b></summary>
-                        
+
                           <br />You have a few options on how to install OpenVPN clients in other distributions:<br /><br />
 
                           <ul>
@@ -422,6 +422,15 @@ Connection to home closed.`,
                           <ul>
                             <li>Verify that you have an active internet connection.</li>
                             <li>Verify that the Private Key Password is correct.</li>
+                          </ul>
+                        </p>
+
+                        <br />
+                        <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
+                        <p>
+                          If you received an error "wrong credentials" after using your TOTP authenticator:
+                          <ul>
+                            <li>Make sure your phone is connected to internet for time synchronization.</li>
                           </ul>
                         </p>
 
