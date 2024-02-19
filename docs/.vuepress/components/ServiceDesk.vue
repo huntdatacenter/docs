@@ -104,18 +104,24 @@ export default {
       return this.bodyTemplate ? this.encode(this.bodyTemplate) : null;
     },
     encodedRecipient() {
-      return this.recipient ? this.recipient.replace('+', '%2B') : this.recipient;
-    },
-    wrapRecipient() {
-      // Problematic for outlook web
-      return `HUNT Cloud - Service Desk <${this.encodedRecipient}>`.replace('<', '%3C').replace('>', '%3E');
+      return this.recipient ? this.encode(this.recipient) : this.recipient;
     },
     mailto() {
       return `mailto:${this.encodedRecipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`;
     },
+    outlookDoubleEncodedTo() {
+      // Outlook does not seem to follow RFCs for mailto with deeplinks - they are double decoding TO field
+      // https://www.rfc-editor.org/rfc/rfc6068#:~:text=double%2Descape%20or%20double%2Dunescape%20%27mailto%27%20URIs
+      return this.recipient ? this.encode(this.encode(this.recipient)) : this.recipient;
+    },
+    wrapRecipient() {
+      // Same as outlookDoubleEncodedTo works only if double encoded
+      return this.recipient ? this.encode(this.encode(`HUNT Cloud - Service Desk <${this.recipient}>`)) : this.recipient;
+    },
     deeplinkUrl() {
       const url = 'https://outlook.office.com/mail/deeplink/compose'
-      return `${url}?to=${this.encodedRecipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      // return `${url}?to=${this.outlookDoubleEncodedTo}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      return `${url}?to=${this.wrapRecipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
     },
   },
   mounted() {},
@@ -441,8 +447,8 @@ export default {
                       </v-btn>
                     </v-col>
                     <v-col cols="4">
-                      <!-- <v-btn color="primary" block :loading="loadingEmailButtons" :disabled="loadingEmailButtons" @click="actionSendOutlookPopup"> -->
-                      <v-btn color="primary" block :loading="loadingEmailButtons" disabled @click="actionSendOutlookPopup">
+                      <v-btn color="primary" block :loading="loadingEmailButtons" :disabled="loadingEmailButtons" @click="actionSendOutlookPopup">
+                      <!-- <v-btn color="primary" block :loading="loadingEmailButtons" disabled @click="actionSendOutlookPopup"> -->
                         Open in Outlook Web
                       </v-btn>
                     </v-col>
