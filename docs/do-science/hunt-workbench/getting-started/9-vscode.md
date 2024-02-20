@@ -25,14 +25,31 @@ TODO
 
 # Visual Studio Code
 
-### Create Jupyter notebook in VS Code
+### Creating Jupyter Notebook in VS Code
+To create a Jupyter notebook in Visual Studio Code:
+- Open VS Code via button found in your Workbench
+- Click on the "View" menu, then "Command Palette" (or press `Ctrl+Shift+P`).
+- Type "Jupyter: Create New Blank Notebook" and hit Enter.
+- A new untitled notebook will be created where you can start writing your code.
 
-Requirements 
+### Creating Python Conda environment
+To create a basic python Conda environment, follow this [link](/do-science/hunt-workbench/getting-started/python/) for further instructions. 
 
-#### How to choose Kernel
+### Selecting Python Kernel from Conda Installation
+To select a Python kernel from the same Conda installation as used by JupyterLab:
+- Open the notebook you created.
+- At the top right corner, click on the kernel dropdown menu.
+- Choose the kernel corresponding to the Conda environment you want to use (e.g., `py310`).
 
-####  
+### Running Code in Cells
+To run code in cells:
+- Simply click on the cell you want to run.
+- Press `Shift+Enter`, or click the "Run" button in the cell toolbar.
+- The code in the cell will execute, and the output (if any) will be displayed below the cell.
 
-### Setup R kernel
 
-Requirements: 
+### Running R Code with R Kernel
+To run R code with an R kernel. Basic R env is offered as default in your Workbench. For more detailed setup, follow this [link](/do-science/hunt-workbench/getting-started/rstudio/#how-to-create-r-environment)
+- Open a new or existing notebook.
+- Choose the R kernel from the kernel dropdown menu.
+- You can now write and execute R code in the notebook.
