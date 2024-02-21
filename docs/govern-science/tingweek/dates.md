@@ -21,12 +21,33 @@ description: This page lists information and questions about our Tingweeks.
 
 :::
 
+### Tingweek #14 (2025-02)
+
+- **Labting**: Tuesday 11 February 2025 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 12 February 2025 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 12 February 2025 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 13 February 2025 - 9 to 11 a.m. CET
+
+### Tingweek #13 (2024-10)
+
+- **Labting**: Tuesday 15 October 2024 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 16 October 2024 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 16 October 2024 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 17 October 2024 - 9 to 11 a.m. CET
+
+### Tingweek #12 (2024-05)
+
+- **Labting**: Tuesday 28 May 2024 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 29 May 2024 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 29 May 2024 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 30 May 2024 - 9 to 11 a.m. CET
+
 ### Tingweek #11 (2024-02)
 
-- **Labting**: Tuesday 13 February 2023 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-labting-agenda.pdf))
-- **Data space ting**: Wednesday 14 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-dataspaceting-agenda.pdf))
-- **Data controller ting**: Wednesday 14 February 2023 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-datacontrollerting-agenda.pdf))
-- **Lagtun**: Thursday 15 February 2023 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-lagtun-agenda.pdf))
+- **Labting**: Tuesday 13 February 2024 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-labting-agenda.pdf))
+- **Data space ting**: Wednesday 14 February 2024 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-dataspaceting-agenda.pdf))
+- **Data controller ting**: Wednesday 14 February 2024 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-datacontrollerting-agenda.pdf))
+- **Lagtun**: Thursday 15 February 2024 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-lagtun-agenda.pdf))
 
 ### Tingweek #10 (2023-10)
 
