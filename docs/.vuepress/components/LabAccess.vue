@@ -144,6 +144,10 @@ Host {lab_name}
     }
   },
   mounted() {
+    if (localStorage.hasOwnProperty('migrated') && localStorage.migrated === '1') {
+      this.migrated = true
+      localStorage.migrated = null
+    }
     this.migrationMapping()
     // Open accordion if hash parameter is defined
     if (window.location.hash !== null && window.location.hash !== "") {
@@ -190,10 +194,6 @@ Host {lab_name}
     this.access = this.$route.query.access ? atob(this.$route.query.access).split('|') : []
     // this.access = this.$route.query.access ? window.atob(this.$route.query.access).split('|') : []
     // console.log(this.query)
-    if (localStorage.hasOwnProperty('migrated') && localStorage.migrated === '1') {
-      this.migrated = true
-      localStorage.migrated = null
-    }
   },
   methods: {
     migrationMapping() {
