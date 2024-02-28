@@ -29,7 +29,7 @@ Yes. The IP address of entry machine and passwords will change. We will send you
 
 Yes. We will schedule migrations with each lab. We can try to prioritize or postpone if needed due to running analysis.
 
-### I am supposed to receive a big dataset, should I ask for a priority?
+### I am supposed to receive a big dataset, should I ask for a prioritization?
 
 Yes.
 
@@ -37,7 +37,7 @@ Yes.
 
 In cloud2 we will have different GPU models. TBA
 
-<!-- add details on recommended mapping -->
+<!-- add details on recommended mappingg -->
 
 ### Are there any changes to storage?
 
