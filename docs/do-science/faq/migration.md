@@ -35,9 +35,9 @@ Yes.
 
 ### What about my GPU?
 
-In cloud2 we will have different GPU models.
+In cloud2 we will have different GPU models. TBA
 
-...details...
+<!-- add details on recommended mapping -->
 
 ### Are there any changes to storage?
 
