@@ -1,4 +1,6 @@
 <script>
+const yaml = require("js-yaml");
+import fetch from 'node-fetch'
 import {
   VApp,
   VCol,
@@ -42,6 +44,7 @@ export default {
     VContainer,
     VAlert,
     VSheet,
+    CopyTextField: () => import('./generic/CopyTextField.vue'),
     AccessIntro: () => import('./LabAccessGuides/AccessIntro.vue'),
     WindowsJourney: () => import('./LabAccessGuides/WindowsJourney.vue'),
     MacJourney: () => import('./LabAccessGuides/MacJourney.vue'),
@@ -55,6 +58,8 @@ export default {
     return {
       tab: null,
       access: null,
+      migMap: null,
+      migrated: false,
       query: {
         ipAddress: null,
         // homeIpAddress: null,
@@ -128,6 +133,10 @@ Host {lab_name}
       // return '10.5.5.12'.replace('.', '%2E');
       return 'home';
     },
+    getCurrentUrl() {
+      const url = window.location.href;
+      return url;
+    },
   },
   watch: {
     tab(val) {
@@ -135,6 +144,7 @@ Host {lab_name}
     }
   },
   mounted() {
+    this.migrationMapping()
     // Open accordion if hash parameter is defined
     if (window.location.hash !== null && window.location.hash !== "") {
       if (window.location.hash in this.$refs) {
@@ -171,15 +181,55 @@ Host {lab_name}
     if (localStorage.osTab) {
       this.tab = localStorage.osTab
     }
+    this.checkIfMappingRedirect('mounted');
   },
   created() {
     // console.log(this.$route.query)
     // /do-science/lab/?access=MTAuNDIuMS4xMzB8ZGVtb2xhYnxqb2V0ZXN0ZXI%3D
     // access = $(echo -n "${ip_address}|${lab_name}|${username}" | base64 | sed 's|=|%3D|g' )
     this.access = this.$route.query.access ? atob(this.$route.query.access).split('|') : []
+    // this.access = this.$route.query.access ? window.atob(this.$route.query.access).split('|') : []
     // console.log(this.query)
+    if (localStorage.hasOwnProperty('migrated') && localStorage.migrated === '1') {
+      this.migrated = true
+      localStorage.migrated = null
+    }
   },
   methods: {
+    migrationMapping() {
+      fetch("/cfg/migmap.yml")
+        .then((response) => response.text())
+        .then((data) => {
+          // console.log(data);
+          const cfg = yaml.load(data);
+          // console.log(cfg);
+          this.migMap = cfg;
+          // console.log(this.migMap);
+          this.checkIfMappingRedirect('migrationMapping');
+        });
+    },
+    checkIfMappingRedirect(src = null) {
+      if (this.migMap && this.query.ipAddress) {
+        if (this.migMap.hasOwnProperty(this.query.ipAddress) && this.migMap[this.query.ipAddress]) {
+          // console.log(src);
+          const newIp = this.migMap[this.query.ipAddress];
+          this.query.ipAddress = newIp;
+          localStorage.ipAddress = newIp;
+          // console.log(newIp);
+          // Simple check for recursive loops
+          if (!this.migMap.hasOwnProperty(newIp)) {
+            const query = btoa(`${newIp}|${this.query.labName}|${this.query.username}`);
+            // console.log(`${this.$route.query.access} -> ${query}`);
+            let search = window.location.search;
+
+            localStorage.migrated = '1';
+            window.location.search = search.replace(this.$route.query.access, query);
+            // search = search.replace(this.$route.query.access, query);
+            // window.location.search = `${search}&migrated=1`;
+          };
+        }
+      }
+    },
     wrap(template) {
       let text = template
       text = text.replaceAll('{ip_address}', this.query.ipAddress)
@@ -228,6 +278,23 @@ Host {lab_name}
       <v-card v-show="cfgShow" class="pt-4">
 
         <v-card elevation="1">
+          <v-alert
+            v-if="migrated"
+            border="left"
+            colored-border
+            type="warning"
+            elevation="2"
+          >
+            <strong>Your Lab access link has changed after <a href="/do-science/faq/migration/" target="_blank">Lab migration (FAQ)</a>.</strong>
+            <hr class="mt-1 mb-2" />
+            Make sure to use this new link next time:<br />
+            <CopyTextField
+              :value="getCurrentUrl"
+              label=""
+              prefix=""
+              placeholder=""
+            />
+          </v-alert>
           <v-tabs
             v-model="tab"
             centered
@@ -268,7 +335,7 @@ Host {lab_name}
 
                     <v-row justify="center" style="margin-left: 16px; margin-right: 16px;">
                       <v-col cols="10" align="center">
-                        Whether you're using Windows, macOS, or Linux, this guide accommodates your operating system preference. 
+                        Whether you're using Windows, macOS, or Linux, this guide accommodates your operating system preference.
                         So go ahead, choose your OS, and embark on your journey with confidence.
                       </v-col>
                     </v-row>
