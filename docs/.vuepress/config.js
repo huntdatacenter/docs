@@ -357,6 +357,7 @@ module.exports = {
             "/do-science/faq/internal-transfer.md",
             "/do-science/faq/external-transfer.md",
             "/do-science/faq/security.md",
+            "/do-science/faq/migration.md",
           ],
         },
       ],
