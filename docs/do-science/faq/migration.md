@@ -42,3 +42,11 @@ In cloud2 we will have different GPU models. TBA
 ### Are there any changes to storage?
 
 Work and scratch are replicated for better speeds. Archive is erasure coded for better long term storage.
+
+### Are there any changes to lab setup?
+
+We will setup new machines in cloud2 with latest Ubuntu (22.04 LTS). You should check if you need apt packages that require older version than 22.04.
+
+### Will I have all my apt packages installed?
+
+We will install clean setup, transfer your data and configure lab users. If there are specific apt packages you will be able to install them yourself, but you need to double check that they support Ubuntu 22.04 (https://packages.ubuntu.com/).
