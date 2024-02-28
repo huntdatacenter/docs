@@ -285,7 +285,7 @@ Host {lab_name}
             type="warning"
             elevation="2"
           >
-            <strong>Your Lab access link has changed after <a href="/do-science/faq/migration/" target="_blank">Lab migration</a>.</strong>
+            <strong>Your Lab access link has changed after <a href="/do-science/faq/migration/" target="_blank">Lab migration (FAQ)</a>.</strong>
             <hr class="mt-1 mb-2" />
             Make sure to use this new link next time:<br />
             <CopyTextField
