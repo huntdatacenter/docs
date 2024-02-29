@@ -15,6 +15,7 @@ This FAQ is intended for lab users that do science in labs:
 - [Internal transfers](/do-science/faq/internal-transfer)
 - [External transfers](/do-science/faq/external-transfer)
 - [Security](/do-science/faq/security)
+- [Migration](/do-science/faq/migration)
 
 ::: tip
 

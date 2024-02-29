@@ -17,31 +17,53 @@ description: This page lists frequently asked questions related to migration of 
 
 Migration of labs from cloud1 to cloud2.
 
-### Is my lab going to be unavailable during migration?
+### Why?
 
-Yes. This is to avoid inconsistency in your data.
+We have a new shiny server room with new machines.
+Don't worry the old machines will move to a farm just out of town where they will live happily ever after.
 
-### Do I need to change anything regarding my lab user setup?
+<!-- before migration -->
+## Schedule and preparations
 
-Yes. The IP address of entry machine and passwords will change. We will send you reset with all the details in Lab access link.
+### What does it cost?
+
+There is no cost related to Lab migration.
 
 ### Can I schedule my lab migration?
 
-Yes. We will schedule migrations with each lab. We can try to prioritize or postpone if needed due to running analysis.
+Yes. We will reach out to schedule migrations with each lab. We can try to prioritize or postpone if needed due to running analysis.
 
 ### I am supposed to receive a big dataset, should I ask for a prioritization?
 
 Yes.
 
+### Are there going to be any changes to storage?
+
+Work and scratch are replicated for better speeds. Archive is erasure coded for better long term storage.
+
 ### What about my GPU?
 
 In cloud2 we will have different GPU models. TBA
 
-<!-- add details on recommended mappingg -->
+<!-- TODO: add details on recommended mapping (gitlab issue) -->
 
-### Are there any changes to storage?
+<!-- during migration -->
+## During migration
 
-Work and scratch are replicated for better speeds. Archive is erasure coded for better long term storage.
+### Will I be notified about migration?
+
+Yes. We will notify before... <!-- TODO -->
+
+### Is my lab going to be unavailable during migration?
+
+Yes. This is to avoid inconsistency in your data.
+
+<!-- after migration: access, ... -->
+## After migration
+
+### Do I need to change anything regarding my lab user setup?
+
+Yes. The IP address of entry machine and passwords will change. We will send you reset with all the details in Lab access link.
 
 ### Are there any changes to lab setup?
 
