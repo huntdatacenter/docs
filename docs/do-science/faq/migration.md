@@ -13,11 +13,7 @@ description: This page lists frequently asked questions related to migration of 
 
 [[toc]]
 
-## Migration
-
-Migration of labs from cloud1 to cloud2.
-
-### Why?
+## Why
 
 We have a new shiny server room with new machines.
 Don't worry the old machines will move to a farm just out of town where they will live happily ever after.
