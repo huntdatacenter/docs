@@ -15,11 +15,14 @@ We monitor HUNT Cloud. Updates will be posted here if there is any service or pe
 
 ### Latest system updates
 
-**2024-01-05 12:12** - Connectivity restored. Expected to be caused by a high-volume download that bypassed our traffic filters and caused queuing of in/out traffic. We will monitoring closely and investigate root causes. 
+**2024-02-05 12:12** - Connectivity restored. Expected to be caused by a high-volume download that bypassed our traffic filters and caused queuing of in/out traffic. We will monitoring closely and investigate root causes. 
 
 **2024-02-05 11:53** Connectivity issues reported. Access to all labs affected. We are investigating.
 
-**2024-01-02 15:30** - Connectivity restored. Expected to be caused by a high-volume download that bypassed our traffic filters and caused queuing of in/out traffic. We will monitoring closely and investigate root causes. 
+[..]
+
+
+**2024-02-01 15:30** - Connectivity restored. Expected to be caused by a high-volume download that bypassed our traffic filters and caused queuing of in/out traffic. We will monitoring closely and investigate root causes. 
 
 **2024-02-01 14:54** - Connectivity issues are reported. Access to all labs are affected. We are actively investigated. Next update 15.30.
 
