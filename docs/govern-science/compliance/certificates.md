@@ -8,11 +8,13 @@ description: This page list compliance certificates for HUNT Cloud.
 
 # Certificates
 
-**HUNT Cloud comply with two international management systems, one for quality management (ISO 9001) and one for information security and privacy (ISO 27001).** 
+**HUNT Cloud comply with three international management systems, one for quality management (ISO 9001), one for information security (ISO 27001), and one for information privacy (ISO 27701).** 
 
-Both certificates have been issued since 2017. For each certificate, independent auditors examines our governance, management, infrastructure, services and operations. Reports from these audits are available to data controllers on request.
+For each certificate, independent auditors examines our governance, management, infrastructure, services and operations. Reports from these audits are available to data controllers on request.
 
+Our ISO 9001 and ISO 27001 certificates have been issued since 2017, while our ISO 27701 certificate has been issued since 2024. 
 
+[[toc]]
 
 ## ISO 9001
 
@@ -102,13 +104,15 @@ Our compliance with the international standard for privacy information managemen
 :::
 
 
-## Scoping document
+## Supporting documents
+
+### Scoping document
 
 [Security and privacy scope](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-security-and-privacy-scope.pdf) (PDF)
 
 This document describes the security and privacy scope of our information management system.
 
-## Statement of Applicability (SoA)
+### Statement of Applicability (SoA)
 
 [ISO 27001 Statement of Applicability](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-soa-iso27001.pdf) (PDF)
 
