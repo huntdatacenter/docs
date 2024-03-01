@@ -13,6 +13,7 @@ description: This page list compliance certificates for HUNT Cloud.
 Both certificates have been issued since 2017. For each certificate, independent auditors examines our governance, management, infrastructure, services and operations. Reports from these audits are available to data controllers on request.
 
 
+
 ## ISO 9001
 
 [NS-EN ISO 9001:2015 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso9001-2023.pdf) (PDF)
@@ -49,15 +50,23 @@ Our compliance with the international standard in quality management «ISO 9001�
 
 ## ISO 27001
 
-[NS-EN ISO 27001:2017 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27001-2020.pdf) (PDF)
+[NS-EN ISO 27001:2022 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27001-2024.pdf) (PDF)
 
-Our compliance with the international standard in information security and privacy management «[ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)» is certified in accordance with our Statement of Applicability (SoA) by Kiwa, Norway. 
+Our compliance with the international standard in information security management «[ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)» is certified in accordance with our Statement of Applicability (SoA) by DNV, Norway. 
 
 ::: details List of issued certificates
 
-**Period #2: 2020-2023**
+**Period #3: 2024-2027**
 
-* [Download certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27001-2020.pdf) (PDF)
+* [Download certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27001-2024.pdf) (PDF)
+* ISO version: NS-EN ISO 27001:2022
+* Issued by: [DNV](https://www.dnv.com/), Norway
+* Certificate ID: C624087
+* Issued: 2024-02-14
+
+**Period #2: 2021-2024**
+
+* [Download certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27001-2021.pdf) (PDF)
 * ISO version: NS-EN ISO 27001:2017
 * Issued by: [Kiwa](https://www.kiwa.com/en/), Norway
 * Certificate ID: 2189
@@ -73,6 +82,26 @@ Our compliance with the international standard in information security and priva
 
 :::
 
+
+## ISO 27701
+
+[NS-EN ISO 27701:2019 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27701-2024.pdf) (PDF)
+
+Our compliance with the international standard for privacy information management «[ISO 27701](https://www.iso.org/standard/71670.html)» is certified in accordance with our Statement of Applicability (SoA) by DNV, Norway. 
+
+::: details List of issued certificates
+
+**Period #1: 2024-2027**
+
+* [Download certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27701-2024.pdf) (PDF)
+* ISO version: NS-EN ISO 27701:2022
+* Issued by: [DNV](https://www.dnv.com/), Norway
+* Certificate ID: C624086
+* Issued: 2024-02-14
+
+:::
+
+
 ## Scoping document
 
 [Security and privacy scope](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-security-and-privacy-scope.pdf) (PDF)
@@ -87,7 +116,7 @@ Our Statement of Applicability, often referred to as "SoA", states which ISO con
 
 SoA is a central document in our certification audits, and it guides Data controllers to quickly asses which controls they should expect to be in place to safeguard their data. 
 
-In short, we state applicability for a total of 149 controls derived from [ISO 27002](https://www.iso.org/standard/54533.html) (general information security), [ISO 27017](https://www.iso.org/standard/43757.html) (cloud security), and [ISO 27701](https://www.iso.org/standard/71670.html) (privacy information management system).
+In short, we state applicability for controls derived from [ISO 27002](https://www.iso.org/standard/54533.html) (general information security), [ISO 27017](https://www.iso.org/standard/43757.html) (cloud security), and [ISO 27701](https://www.iso.org/standard/71670.html) (privacy information management system).
 
-To ease the readability, we have included the control's implementation status and a comment where applicable.
+To ease the readability, we have included the control's implementation status and comments where applicable.
 
