@@ -58,7 +58,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Arabic version
 
-**Download**: [Freedom to explore - Arabic](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ara-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Arabic](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ara-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Arabic](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ara-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Arabic."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ara-400px.jpg)
 
@@ -83,7 +85,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Bengali version
 
-**Download**: [Freedom to explore - Bengali](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ben-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Bengali](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ben-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Bengali](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ben-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Bengali."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ben-400px.jpg)
 
@@ -108,12 +112,41 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Bosnian version
 
-**Download**: [Freedom to explore - Bosnian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-bos-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Bosnian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-bos-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Bosnian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-bos-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Bosnian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-bos-400px.jpg)
 
 **Title:** Freedom to explore  
 **Language:** Bosnian ([bos](https://iso639-3.sil.org/code/bos))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.1  
+**ArtworkID:** hcc-artwork26  
+
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
+### Bulgarian (bul)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Bulgarian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-bul-banner.jpg)
+
+::: details Full Bulgarian version
+
+**Download**:  
+PDF - [Freedom to explore - Bulgarian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-bul-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Bulgarian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-bul-2160px.jpg) - 2160px
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Bulgarian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-bul-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Bulgarian ([bul](https://iso639-3.sil.org/code/bul))  
 **Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
 **License:** CC BY­-NC-­ND 4.0  
 **Year:** 2023  
@@ -133,7 +166,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Catalan version
 
-**Download**: [Freedom to explore - Catalan](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-cat-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Catalan](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-cat-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Catalan](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-cat-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Catalan."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-cat-400px.jpg)
 
@@ -158,7 +193,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Czech version
 
-**Download**: [Freedom to explore - Czech](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ces-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Czech](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ces-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Czech](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ces-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Czech."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ces-400px.jpg)
 
@@ -183,7 +220,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Mandarin version
 
-**Download**: [Freedom to explore - Mandarin](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-cmn-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Mandarin](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-cmn-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Mandarin](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-cmn-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Mandarin."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-cmn-400px.jpg)
 
@@ -208,7 +247,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Danish version
 
-**Download**: [Freedom to explore - Danish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-dan-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Danish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-dan-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Danish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-dan-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Danish."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-dan-400px.jpg)
 
@@ -233,7 +274,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full German version
 
-**Download**: [Freedom to explore - German](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-deu-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - German](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-deu-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - German](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-deu-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in German."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-deu-400px.jpg)
 
@@ -258,7 +301,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Greek version
 
-**Download**: [Freedom to explore - Greek](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ell-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Greek](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ell-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Greek](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ell-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Greek."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ell-400px.jpg)
 
@@ -283,7 +328,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full English version
 
-**Download**: [Freedom to explore - English](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-eng-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - English](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-eng-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - English](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-eng-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in English."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-eng-400px.jpg)
 
@@ -308,7 +355,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Persian version
 
-**Download**: [Freedom to explore - Persian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-fas-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Persian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-fas-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Persian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-fas-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Persian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-fas-400px.jpg)
 
@@ -333,7 +382,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Finnish version
 
-**Download**: [Freedom to explore - Finnish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-fin-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Finnish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-fin-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Finnish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-fin-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Finnish."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-fin-400px.jpg)
 
@@ -358,7 +409,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full French version
 
-**Download**: [Freedom to explore - French](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-fra-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - French](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-fra-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - French](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-fra-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in French."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-fra-400px.jpg)
 
@@ -383,7 +436,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Hindi version
 
-**Download**: [Freedom to explore - Hindi](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-hin-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Hindi](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-hin-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Hindi](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-hin-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Hindi."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-hin-400px.jpg)
 
@@ -408,7 +463,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Igbo version
 
-**Download**: [Freedom to explore - Igbo](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ibo-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Igbo](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ibo-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Igbo](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ibo-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Igbo."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ibo-400px.jpg)
 
@@ -433,7 +490,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Icelandic version
 
-**Download**: [Freedom to explore - Icelandic](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-isl-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Icelandic](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-isl-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Icelandic](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-isl-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Icelandic."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-isl-400px.jpg)
 
@@ -458,7 +517,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Italian version
 
-**Download**: [Freedom to explore - Italian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ita-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Italian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ita-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Italian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ita-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Italian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ita-400px.jpg)
 
@@ -483,7 +544,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Javanese version
 
-**Download**: [Freedom to explore - Javanese](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-jav-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Javanese](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-jav-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Javanese](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-jav-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Javanese."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-jav-400px.jpg)
 
@@ -508,7 +571,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Korean version
 
-**Download**: [Freedom to explore - Korean](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-kor-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Korean](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-kor-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Korean](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-kor-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Korean."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-kor-400px.jpg)
 
@@ -533,7 +598,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Latin version
 
-**Download**: [Freedom to explore - Latin](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-lat-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Latin](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-lat-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Latin](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-lat-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Latin."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-lat-400px.jpg)
 
@@ -558,7 +625,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Lithuanian version
 
-**Download**: [Freedom to explore - Lithuanian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-lit-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Lithuanian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-lit-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Lithuanian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-lit-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Lithuanian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-lit-400px.jpg)
 
@@ -583,7 +652,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Nepali version
 
-**Download**: [Freedom to explore - Nepali](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nep-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Nepali](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nep-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Nepali](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nep-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Nepali."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-nep-400px.jpg)
 
@@ -608,7 +679,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Dutch version
 
-**Download**: [Freedom to explore - Dutch](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nld-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Dutch](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nld-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Dutch](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nld-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Dutch."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-nld-400px.jpg)
 
@@ -633,7 +706,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Norwegian nynorsk version
 
-**Download**: [Freedom to explore - Norwegian nynorsk](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nno-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Norwegian nynorsk](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nno-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Norwegian nynorsk](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nno-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Norwegian nynorsk."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-nno-400px.jpg)
 
@@ -658,7 +733,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Norwegian bokmål version
 
-**Download**: [Freedom to explore - Norwegian bokmål](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nob-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Norwegian bokmål](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nob-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Norwegian bokmål](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-nob-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Norwegian bokmål."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-nob-400px.jpg)
 
@@ -683,7 +760,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Kirike version
 
-**Download**: [Freedom to explore - Kirike](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-okr-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Kirike](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-okr-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Kirike](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-okr-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Kirike."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-okr-400px.jpg)
 
@@ -708,7 +787,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Panjabi version
 
-**Download**: [Freedom to explore - Panjabi](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-pan-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Panjabi](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-pan-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Panjabi](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-pan-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Panjabi."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-pan-400px.jpg)
 
@@ -733,7 +814,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Polish version
 
-**Download**: [Freedom to explore - Polish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-pol-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Polish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-pol-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Polish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-pol-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Polish."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-pol-400px.jpg)
 
@@ -758,7 +841,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Portuguese version
 
-**Download**: [Freedom to explore - Portuguese](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-por-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Portuguese](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-por-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Portuguese](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-por-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Portuguese."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-por-400px.jpg)
 
@@ -783,7 +868,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Romanian version
 
-**Download**: [Freedom to explore - Romanian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ron-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Romanian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ron-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Romanian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ron-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Romanian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ron-400px.jpg)
 
@@ -808,7 +895,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Russian version
 
-**Download**: [Freedom to explore - Russian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-rus-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Russian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-rus-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Russian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-rus-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Russian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-rus-400px.jpg)
 
@@ -833,7 +922,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Sanskrit version
 
-**Download**: [Freedom to explore - Sanskrit](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-san-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Sanskrit](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-san-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Sanskrit](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-san-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Sanskrit."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-san-400px.jpg)
 
@@ -858,7 +949,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Slovak version
 
-**Download**: [Freedom to explore - Slovak](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-slk-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Slovak](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-slk-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Slovak](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-slk-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Slovak."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-slk-400px.jpg)
 
@@ -883,7 +976,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Slovenian version
 
-**Download**: [Freedom to explore - Slovenian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-slv-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Slovenian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-slv-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Slovenian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-slv-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Slovenian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-slv-400px.jpg)
 
@@ -908,7 +1003,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Southern sami version
 
-**Download**: [Freedom to explore - Southern sami](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-sma-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Southern sami](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-sma-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Southern sami](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-sma-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Southern sami."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-sma-400px.jpg)
 
@@ -933,7 +1030,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Northern sami version
 
-**Download**: [Freedom to explore - Northern sami](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-sme-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Northern sami](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-sme-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Northern sami](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-sme-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Northern sami."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-sme-400px.jpg)
 
@@ -958,7 +1057,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Spanish version
 
-**Download**: [Freedom to explore - Spanish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-spa-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Spanish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-spa-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Spanish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-spa-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Spanish."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-spa-400px.jpg)
 
@@ -983,7 +1084,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Serbian version
 
-**Download**: [Freedom to explore - Serbian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-srp-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Serbian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-srp-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Serbian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-srp-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Serbian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-srp-400px.jpg)
 
@@ -1008,7 +1111,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Swedish version
 
-**Download**: [Freedom to explore - Swedish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-swe-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Swedish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-swe-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Swedish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-swe-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Swedish."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-swe-400px.jpg)
 
@@ -1033,7 +1138,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Tamil version
 
-**Download**: [Freedom to explore - Tamil](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-tam-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Tamil](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-tam-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Tamil](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-tam-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Tamil."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-tam-400px.jpg)
 
@@ -1058,7 +1165,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Turkish version
 
-**Download**: [Freedom to explore - Turkish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-tur-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Turkish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-tur-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Turkish](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-tur-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Turkish."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-tur-400px.jpg)
 
@@ -1083,7 +1192,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Ukrainian version
 
-**Download**: [Freedom to explore - Ukrainian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ukr-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Ukrainian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ukr-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Ukrainian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ukr-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Ukrainian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ukr-400px.jpg)
 
@@ -1108,7 +1219,9 @@ This list is made by current and past community members. Can't find your languag
 
 ::: details Full Urdu version
 
-**Download**: [Freedom to explore - Urdu](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-urd-300dpi.pdf) - PDF - 300 DPI - 1,7M.
+**Download**:  
+PDF - [Freedom to explore - Urdu](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-urd-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Urdu](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-urd-2160px.jpg) - 2160px
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Urdu."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-urd-400px.jpg)
 
