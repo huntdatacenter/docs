@@ -6,6 +6,7 @@ import {
   VCol,
   VRow,
   VTextField,
+  VTextarea,
   VSelect,
   VAutocomplete,
   VIcon,
@@ -33,6 +34,7 @@ export default {
     VCol,
     VRow,
     VTextField,
+    VTextarea,
     VSelect,
     VAutocomplete,
     VIcon,
@@ -315,6 +317,27 @@ export default {
                           @focus="$event.target.select()"
                           @change="setValue($event, item.key)"
                         ></v-text-field>
+                        <v-textarea
+                          v-else-if="item.field === 'textarea'"
+                          v-model="formData[item.key]"
+                          autocomplete="ignore-field"
+                          :label="item.label"
+                          :title="item.hint ? item.hint : null"
+                          :hint="item.hint ? item.hint : null"
+                          :suffix="item.suffix ? item.suffix : null"
+                          :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
+                          :rows="item.rows ? item.rows : 3"
+                          :persistent-hint="
+                            item.hint && formData[item.key] ? true : false
+                          "
+                          placeholder=""
+                          persistent-placeholder
+                          outlined
+                          dense
+                          :hide-details="formData[item.key] ? false : 'auto'"
+                          @focus="$event.target.select()"
+                          @change="setValue($event, item.key)"
+                        ></v-textarea>
                         <v-select
                           v-else-if="item.field === 'selector'"
                           :items="item.options"
@@ -352,7 +375,7 @@ export default {
                           hide-details
                         ></v-autocomplete>
                         <v-text-field
-                          v-if="item.field === 'number'"
+                          v-else-if="item.field === 'number'"
                           v-model="formData[item.key]"
                           autocomplete="ignore-field"
                           type="number"

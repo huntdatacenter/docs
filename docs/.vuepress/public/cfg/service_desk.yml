@@ -1454,6 +1454,50 @@ request_workbench_reissue:
   attachments: []
 
 
+request_workbench_troubleshooting:
+  title: "Request Workbench troubleshooting"
+  template:
+    subject: "Workbench troubleshooting - {username} @ {labname}"
+    body: |
+      Hi HUNT Cloud team,
+
+      I would like to request help with Workbench in my lab: {labname}.
+
+      ---
+      Operating system: {operating_system}  
+      Web browser: {web_browser}  
+      ---
+
+      Problem description:
+
+      ---
+      {problem_description}  
+      ---
+
+
+      Kind regards,  
+      {full_name}  
+
+  fields: [
+    { label: "Your full name", key: "full_name", field: "textfield" },
+    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Operating system", key: "operating_system", field: "textfield", hint: "Windows, MacOS, or Linux (e.g. Ubuntu)" },
+    { label: "Web browser", key: "web_browser", field: "textfield", hint: "Google Chrome or Mozilla Firefox?" },
+    { label: "Problem description", key: "problem_description", field: "textarea", autocapitalize: "off" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> All active lab users.",
+    "<b>Expected response time:</b> Days/Weeks.",
+    "<b>Recommendations:</b> Attach screenshots to your email request or any error logs that might be useful for investigation of the issue.",
+    "<b>Cost:</b> Included in the lab subscription.",
+    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
+  ]
+  attachments: [
+    "Screenshots or any error logs that might be useful for investigation of the issue."
+  ]
+
+
 request_ssh_pass_reset:
   title: "Request SSH passphrase reset"
   template:

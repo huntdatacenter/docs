@@ -158,3 +158,9 @@ One way to check your resource consumption is to log into your lab **`home`**-ma
 :::
 
 [Contact us](/contact) for further investigation if none of these works.
+
+## Need help
+
+Did not find a solution to your problem?
+
+<SDButton form="request_workbench_troubleshooting" />
