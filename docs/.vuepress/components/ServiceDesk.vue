@@ -109,7 +109,9 @@ export default {
       return this.recipient ? this.encode(this.recipient) : this.recipient;
     },
     mailto() {
-      return `mailto:${this.encodedRecipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      const redir = `mailto:${this.encodedRecipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      console.log(redir);
+      return redir;
     },
     outlookDoubleEncodedTo() {
       // Outlook does not seem to follow RFCs for mailto with deeplinks - they are double decoding TO field
@@ -121,9 +123,11 @@ export default {
       return this.recipient ? this.encode(this.encode(`HUNT Cloud - Service Desk <${this.recipient}>`)) : this.recipient;
     },
     deeplinkUrl() {
-      const url = 'https://outlook.office.com/mail/deeplink/compose'
+      const url = 'https://outlook.office.com/mail/deeplink/compose';
       // return `${url}?to=${this.outlookDoubleEncodedTo}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
-      return `${url}?to=${this.wrapRecipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      const redir = `${url}?to=${this.wrapRecipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      console.log(redir);
+      return redir;
     },
   },
   mounted() {},
