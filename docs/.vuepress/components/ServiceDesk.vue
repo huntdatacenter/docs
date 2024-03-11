@@ -6,6 +6,7 @@ import {
   VCol,
   VRow,
   VTextField,
+  VTextarea,
   VSelect,
   VAutocomplete,
   VIcon,
@@ -33,6 +34,7 @@ export default {
     VCol,
     VRow,
     VTextField,
+    VTextarea,
     VSelect,
     VAutocomplete,
     VIcon,
@@ -107,7 +109,9 @@ export default {
       return this.recipient ? this.encode(this.recipient) : this.recipient;
     },
     mailto() {
-      return `mailto:${this.encodedRecipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      const redir = `mailto:${this.encodedRecipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      console.log(redir);
+      return redir;
     },
     outlookDoubleEncodedTo() {
       // Outlook does not seem to follow RFCs for mailto with deeplinks - they are double decoding TO field
@@ -119,9 +123,11 @@ export default {
       return this.recipient ? this.encode(this.encode(`HUNT Cloud - Service Desk <${this.recipient}>`)) : this.recipient;
     },
     deeplinkUrl() {
-      const url = 'https://outlook.office.com/mail/deeplink/compose'
+      const url = 'https://outlook.office.com/mail/deeplink/compose';
       // return `${url}?to=${this.outlookDoubleEncodedTo}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
-      return `${url}?to=${this.wrapRecipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      const redir = `${url}?to=${this.wrapRecipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
+      console.log(redir);
+      return redir;
     },
   },
   mounted() {},
@@ -315,6 +321,27 @@ export default {
                           @focus="$event.target.select()"
                           @change="setValue($event, item.key)"
                         ></v-text-field>
+                        <v-textarea
+                          v-else-if="item.field === 'textarea'"
+                          v-model="formData[item.key]"
+                          autocomplete="ignore-field"
+                          :label="item.label"
+                          :title="item.hint ? item.hint : null"
+                          :hint="item.hint ? item.hint : null"
+                          :suffix="item.suffix ? item.suffix : null"
+                          :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
+                          :rows="item.rows ? item.rows : 3"
+                          :persistent-hint="
+                            item.hint && formData[item.key] ? true : false
+                          "
+                          placeholder=""
+                          persistent-placeholder
+                          outlined
+                          dense
+                          :hide-details="formData[item.key] ? false : 'auto'"
+                          @focus="$event.target.select()"
+                          @change="setValue($event, item.key)"
+                        ></v-textarea>
                         <v-select
                           v-else-if="item.field === 'selector'"
                           :items="item.options"
@@ -352,7 +379,7 @@ export default {
                           hide-details
                         ></v-autocomplete>
                         <v-text-field
-                          v-if="item.field === 'number'"
+                          v-else-if="item.field === 'number'"
                           v-model="formData[item.key]"
                           autocomplete="ignore-field"
                           type="number"

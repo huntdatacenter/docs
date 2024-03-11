@@ -14,7 +14,7 @@ description: HUNT Workbench troubleshooting.
 
 ::: tip
 
-See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq/) for general questions, and our [Immediate troubleshooting](/do-science/hunt-workbench/installation/#immediate-troubleshooting) for issues during your first installation. 
+See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq/) for general questions, and our [Immediate troubleshooting](/do-science/hunt-workbench/installation/#immediate-troubleshooting) for issues during your first installation.
 
 :::
 
@@ -29,10 +29,14 @@ If you were previously able to access your applications (such as _RStudio_), and
 df -h /mnt/work
 ```
 
-If you have enough resources, try restarting your HUNT Workbench environment. Follow this guide to [restart your workbench](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment). 
+If you have enough resources, try restarting your HUNT Workbench environment. Follow this guide to [restart your workbench](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment).
 
 If this does not help, you may have a look at our [FAQ](/do-science/hunt-workbench/faq/) or [Troubleshooting](/do-science/hunt-workbench/troubleshooting/) sections.  [Contact us](/contact) on email or reach out in your lab channel on Slack for further investigation if this does not help.
 
+
+### 400: Bad request - Firefox
+
+Try with Chrome or check troubleshooting guide for Firefox in your Lab access link to install HUNT Cloud CA certificate.
 
 ### 403: Forbidden - Expired client certificate
 
@@ -70,7 +74,7 @@ Reach out to us on [Slack or email](/contact) if you get the **`502 error`** whi
 
 #### Solution 1
 
-The **`504 error`** may be shown when you access **`/user/<username>/rstudio/`** but _RStudio_ fails to start. If you were previously able to access your _RStudio_ in HUNT Workbench it is possible that _RStudio_ saved more data in your environment files than it is able to load into memory. 
+The **`504 error`** may be shown when you access **`/user/<username>/rstudio/`** but _RStudio_ fails to start. If you were previously able to access your _RStudio_ in HUNT Workbench it is possible that _RStudio_ saved more data in your environment files than it is able to load into memory.
 
 One potential approach is to (1) first utilize your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) to manually resetting your _RStudio_ settings:
 
@@ -80,9 +84,9 @@ mv "/mnt/work/workbench/${USER}/.local/share/rstudio" "/mnt/work/workbench/${USE
 
 And then (2) [restart your HUNT Workbench environment](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). If the error still persists, don't hesitate to reach out in your lab channel on Slack or [contact us](/contact) for further assistance.
 
-#### Solution 2 
+#### Solution 2
 
-Other potential issue might be full disk space in your `work` directory. You can check your disk space using following command:  
+Other potential issue might be full disk space in your `work` directory. You can check your disk space using following command:
 
 ```bash
 df -h /mnt/work
@@ -108,7 +112,7 @@ If your disk space is full, discuss with your lab leader/coordinator if you shou
 
 Access to MATLAB requires the application to be installed and activated in your lab.
 
-If you click on the MATLAB icon and the application is missing you will meet a red error box stating that "_matlab executable not found in PATH_". 
+If you click on the MATLAB icon and the application is missing you will meet a red error box stating that "_matlab executable not found in PATH_".
 
 Contact your lab coordinator to investigate your licensing options and [contact us](/contact) in Slack or email us with your installation request.
 
@@ -155,4 +159,8 @@ One way to check your resource consumption is to log into your lab **`home`**-ma
 
 [Contact us](/contact) for further investigation if none of these works.
 
+## Need help
 
+Did not find a solution to your problem?
+
+<SDButton form="request_workbench_troubleshooting" />

@@ -11,6 +11,10 @@ This repository holds HUNT Cloud Documentation source.
 - [Node.js v14.x:](https://nodejs.org)
 - [Yarn](https://yarnpkg.com)
 
+```bash
+mamba create -n node14 -c conda-forge -y "python==3.8.*" "nodejs==14.*" "node-gyp" "yarn==1.22.*" "compilers"
+```
+
 #### How to run VuePress
 
 Install the dependencies of project with:
