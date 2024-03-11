@@ -484,6 +484,33 @@ JPG - [Freedom to explore - Igbo](https://assets.hdc.ntnu.no/assets/artworks/fre
   
 
 
+### Indonesian (ind)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Indonesian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ind-banner.jpg)
+
+::: details Full Indonesian version
+
+**Download**:  
+PDF - [Freedom to explore - Indonesian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ind-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Indonesian](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ind-2160px.jpg) - 2160px
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Indonesian."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ind-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Indonesian ([ind](https://iso639-3.sil.org/code/ind))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.1  
+**ArtworkID:** hcc-artwork26  
+
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
 ### Icelandic (isl)
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Icelandic."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-isl-banner.jpg)
