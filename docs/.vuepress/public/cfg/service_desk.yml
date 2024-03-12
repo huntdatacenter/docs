@@ -144,10 +144,7 @@ request_new_lab:
     {
       label: "Machine type",
       key: "machine_type",
-      # default: "default.b2",
-      # pattern: "(default).[a-z][0-9]",
-      # hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.",
-      # field: "textfield",
+      default: "default.c1",
       field: "autocompleteone",
       options: [
         { header: "B - Series machine types: 2 GB of RAM per CPU core" },
