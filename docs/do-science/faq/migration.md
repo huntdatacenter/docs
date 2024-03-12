@@ -15,7 +15,7 @@ description: This page lists frequently asked questions related to migration of 
 
 ## Why do we need to migrate? 
 
-We have a new shiny server room with new and upgraded equipment. This means more flexibility and capacity for your scientific experiments. At the same time this means more space for us in our original location to start planning the next generation of services.
+We have a shiny, new server room with new and upgraded equipment. This means more flexibility and capacity for your scientific experiments. At the same time this means more space for us in our original location to start planning the next generation of services.
 
 <!-- before migration -->
 
@@ -29,12 +29,12 @@ We plan to migrate most labs in 2024 starting in Q2.
 
 ### Can we schedule our lab migration?
 
-Yes. The migration wil be sceduled on a per lab basis. We will reach out to schedule your migration. We aim to avoid conflicts with your internal deadline such as papers, conferences, grants etc. to the extend possible. 
+Yes. The migration wil be scheduled on a per lab basis and we will reach out to schedule your migration. We aim to avoid conflicts with your internal deadline such as papers, conferences, grants etc. to the extend possible. 
 
 
 ### Is there any cost involved with the migration? 
 
-Not directly. The migration is included in your lab subscription. However, the GPU availability will differ slighlty. Such, those that utilize P100 and V100(s) GPU cards might be asked to migrate to a newer generation such as A30, A40 and A100.
+Not directly, the migration is included in your lab subscription. However, the GPU availability will differ slightly in Cloud2. Those that utilize P100 and V100(s) GPU cards might be asked to migrate to a newer generation such as A30, A40 and A100.
 
 
 ### I am supposed to receive a big dataset, should I ask for a prioritization?
@@ -43,12 +43,12 @@ Yes. The available storage capacity in the new location is larger. Please reach 
 
 ### Will our home be the same?
 
-We will make available a new installation for your home machine. You will be asked to update your lab passwords and install new workbench certificates. Also, the operating system will be a fresh install. Such you do need to update software that you have installed in your current location.
+A new installation for your home machine will be available. You will be asked to update your lab passwords and install new workbench certificates. The operating system will be a fresh install and you will need to update software that you have installed in your current location.
 
 
 ### Will our CPU machines be the same?
 
-Yes. We aim to move you to a new compute machine with the same machine type that you have today. However, they will be fresh intallation, so software and other adaptations that you have done to your current environment will need to be reinstalled.
+Yes. We aim to move you to a new compute machine with the same machine type that you have today. However, they the operating system will be fresh intallation, so software and other adaptations that you have done to your current environment must be reinstalled.
 
 
 ### Will our storage volumes be the same?
@@ -57,7 +57,7 @@ Yes. We will migrate your storage volumes to the new location.
 
 ### Will our GPU machines be the same?
 
-No. The GPU availability will differ slighlty. Such, those that utilize P100 and V100(s) GPU cards might be asked to migrate to a newer generation such as A30, A40 and A100.
+No. The GPU availability will differ slightly. Those that utilize P100 and V100(s) GPU cards might be asked to migrate to a newer generation such as A30, A40 and A100.
 
 
 <!-- TODO: add details on recommended mapping (gitlab issue) -->
