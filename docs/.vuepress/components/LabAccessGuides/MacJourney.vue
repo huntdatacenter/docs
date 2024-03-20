@@ -237,20 +237,20 @@ ${this.ipAddress}    ${this.labName}-entry
 
         <!-- 1. Fetch secrets -->
         <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset'].includes(filterGuidesByType) ? false : true">
-            <v-expansion-panel-header>
-              <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ fetchSecretsId }}. Fetch secrets</h3>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content id="fetch-secrets" ref="#fetch-secrets" class="mt-2">
-              You have received a link to an encrypted file archive (7-ZIP file).
+          <v-expansion-panel-header>
+            <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ fetchSecretsId }}. Fetch secrets</h3>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content id="fetch-secrets" ref="#fetch-secrets" class="mt-2">
+            You have received a link to an encrypted file archive (7-ZIP file).
 
-              <ol>
-                <li>Click on the filesender link in the email to download the file and save this on your local computer.</li>
-                <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#detail-2-macos" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
-                <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
-              </ol>
+            <ol>
+              <li>Click on the filesender link in the email to download the file and save this on your local computer.</li>
+              <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#detail-2-macos" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
+              <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
+            </ol>
 
-              <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
-            </v-expansion-panel-content>
+            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+          </v-expansion-panel-content>
         </v-expansion-panel>
 
         <!-- 2. VPN Access -->
