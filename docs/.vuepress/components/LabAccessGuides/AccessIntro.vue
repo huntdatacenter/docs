@@ -35,7 +35,7 @@ export default {
 
 
 <template>
-  <v-row justify="center" class="pt-4 pb-4">
+  <v-row justify="center" class="pt-4 pb-4 pr-1 pl-1">
     <v-col cols="10">
       These are the essential access credentials. Follow the guides below to configure your access.
     </v-col>
@@ -63,6 +63,6 @@ export default {
         prefix=""
       />
     </v-col>
-  </v-row >
+  </v-row>
 
 </template>
