@@ -78,7 +78,8 @@ export default {
       passChangeId: 3,
       passLessId: 4,
       sshConfId: 5,
-      workbenchId: 6,
+      hostsFileId: 6,
+      workbenchId: 7,
       sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
       passExpired: `WARNING: Your password has expired.
 You must change your password now and login again!
@@ -96,6 +97,8 @@ Connection to home closed.`,
         { text: 'New computer', value: 'new_computer' },
         { text: 'SSH reset', value: 'ssh_reset' },
         { text: 'VPN reset', value: 'vpn_reset' },
+        // { text: 'TOTP reset (Google authenticator)', value: 'totp_reset' },
+        { text: 'Workbench reissue', value: 'workbench_reissue' },
         { text: 'Lab Migration', value: 'lab_migration' },
       ],
       filterGuidesByType: null,
@@ -169,8 +172,8 @@ ${this.ipAddress}    ${this.labName}-entry
       textToCopy.select()
       document.execCommand("copy");
     },
-    nextPanel() {
-      this.mainExpansionPanel = this.mainExpansionPanel ? this.mainExpansionPanel + 1 : 1
+    nextPanel(inc = 1) {
+      this.mainExpansionPanel = this.mainExpansionPanel ? this.mainExpansionPanel + inc : 1
     },
     setHostsChangeSuccess() {
       this.hostsChangeSuccess = true
@@ -236,7 +239,7 @@ ${this.ipAddress}    ${this.labName}-entry
       <v-expansion-panels accordion v-model="mainExpansionPanel" elevation="0">
 
         <!-- 1. Fetch secrets -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset', 'workbench_reissue'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ fetchSecretsId }}. Fetch secrets</h3>
           </v-expansion-panel-header>
@@ -863,10 +866,79 @@ ${this.ipAddress}    ${this.labName}-entry
           </v-expansion-panel-content>
         </v-expansion-panel>
 
-        <!-- 6. Workbench -->
+        <!-- 6. Hosts file -->
         <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
-            <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench</h3>
+            <h3><a href="#hosts-file" class="header-anchor">#</a> {{ hostsFileId }}. Workbench - hosts file</h3>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content id="hosts-file" ref="#hosts-file" class="mt-2">
+            Let's set up your hosts file on your local computer. <br />
+            This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
+            <br /><br />
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId, true) }} On your local computer, open your /etc/hosts file in your preferred text editor.
+              <br /><br />
+              Use this command if prefer graphical <strong>Text editor</strong> app:
+              <CopyTextField
+                :value="`EDITOR='open -Wne' sudo -e /etc/hosts`"
+                class="my-2"
+                label=""
+                prefix="$"
+                placeholder=""
+              />
+              If you prefer terminal editor <strong>vim</strong> simply run:
+              <CopyTextField
+                :value="`sudo vim /etc/hosts`"
+                class="my-2"
+                label=""
+                prefix="$"
+                placeholder=""
+              />
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(hostsFileId) }} Make sure the line with the old hosts record is removed. <strong>Search and remove lines</strong> containing domain name:<br />
+                <CopyTextField
+                  :value="fqdn"
+                  class="my-2"
+                  label=""
+                  prefix=""
+                  placeholder="Your link is missing access token"
+                />
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(hostsFileId) }} Add (append) the new <strong>hosts record</strong> below to the text file:<br />
+                <CopyTextField
+                  :value="hostsWorkbench"
+                  class="my-2"
+                  label=""
+                  prefix=""
+                  placeholder="Your link is missing access token"
+                />
+                Make sure to avoid duplicate records.
+            </v-col>
+            <v-col v-else cols="12">
+              {{ getNextItem(hostsFileId) }} Add (append) the <strong>hosts record</strong> below to the text file:<br />
+                <CopyTextField
+                  :value="hostsWorkbench"
+                  class="my-2"
+                  label=""
+                  prefix=""
+                  placeholder="Your link is missing access token"
+                />
+                Make sure to avoid duplicate records.
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} Save the changes and close your text editor.
+            </v-col>
+            <v-btn v-if="['lab_migration'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" small @click="nextPanel(2)">Next</v-btn>
+            <v-btn v-else color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+
+        <!-- 7. Workbench -->
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'workbench_reissue'].includes(filterGuidesByType) ? false : true">
+          <v-expansion-panel-header>
+            <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench - certificate</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
 
@@ -940,79 +1012,19 @@ ${this.ipAddress}    ${this.labName}-entry
                           Assure working VPN connection.
                         </v-alert>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 2">Continue</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
                       <!-- <v-btn color="link" class="mx-2 mb-1" @click="workbenchDialog = false">Close</v-btn> -->
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 5">Skip to Troubleshooting</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 4">Skip to Troubleshooting</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step
                       :complete="workbenchStepper > 2"
                       step="2"
                     >
-                      Edit your hosts file
-                    </v-stepper-step>
-
-                    <v-stepper-content step="2">
-                      <v-card
-                        class="mb-8 pr-4"
-                        elevation="0"
-                      >
-                        First, let's set up your hosts file on your local computer. <br />
-                        This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
-                        <br /><br />
-                        <ol>
-                          <li>
-                            On your local computer, open your /etc/hosts file in your preferred text editor.
-                            <br /><br />
-                            Use this command if prefer graphical <strong>Text editor</strong> app:
-                            <CopyTextField
-                              :value="`EDITOR='open -Wne' sudo -e /etc/hosts`"
-                              class="my-2"
-                              label=""
-                              prefix="$"
-                              placeholder=""
-                            />
-                            If you prefer terminal editor <strong>vim</strong> simply run:
-                            <CopyTextField
-                              :value="`sudo vim /etc/hosts`"
-                              class="my-2"
-                              label=""
-                              prefix="$"
-                              placeholder=""
-                            />
-                          </li>
-                          <br />
-                          <li>
-                            Add (append) the <strong>hosts record</strong> below to the text file:<br />
-                            <CopyTextField
-                              :value="hostsWorkbench"
-                              class="my-2"
-                              label=""
-                              prefix=""
-                              placeholder="Your link is missing access token"
-                            />
-                            Make sure to avoid duplicate records.
-                          </li>
-                          <br />
-                          <li>
-                            Save the changes and close your text editor.
-                          </li>
-                        </ol>
-                        <br />
-
-                      </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 3">Continue</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 1">Back</v-btn>
-                    </v-stepper-content>
-
-                    <v-stepper-step
-                      :complete="workbenchStepper > 3"
-                      step="3"
-                    >
                       Install your certificates
                     </v-stepper-step>
 
-                    <v-stepper-content step="3">
+                    <v-stepper-content step="2">
                       <v-card
                         class="mb-8 pr-4"
                         elevation="0"
@@ -1070,18 +1082,18 @@ ${this.ipAddress}    ${this.labName}-entry
                           </li>
                         </ol>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 4">Continue</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 2">Back</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step
-                      :complete="workbenchStepper > 4"
-                      step="4"
+                      :complete="workbenchStepper > 3"
+                      step="3"
                     >
                       Login to Workbench
                     </v-stepper-step>
 
-                    <v-stepper-content step="4">
+                    <v-stepper-content step="3">
                       <v-card
                         class="mb-8 pr-16"
                         elevation="0"
@@ -1165,19 +1177,19 @@ ${this.ipAddress}    ${this.labName}-entry
                       </v-card>
                       <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper = 5">Troubleshooting</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 3">Back</v-btn>
+                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper++">Troubleshooting</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step
-                      :complete="workbenchStepper > 5"
+                      :complete="workbenchStepper > 4"
                       step="?"
                     >
                       Troubleshooting
                       <small>Optional tips to try in case of issues</small>
                     </v-stepper-step>
 
-                    <v-stepper-content step="5">
+                    <v-stepper-content step="4">
                       <v-card
                         class="mb-8 pr-4 ml-0 pl-0"
                         elevation="0"
@@ -1275,7 +1287,7 @@ ${this.ipAddress}    ${this.labName}-entry
                         </details> -->
                       </v-card>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 4">Back</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
                       <v-btn color="link" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Close</v-btn>
                     </v-stepper-content>
 
@@ -1295,11 +1307,11 @@ ${this.ipAddress}    ${this.labName}-entry
               /> -->
             </v-col>
 
-            <v-col cols="12">
+            <!-- <v-col cols="12">
               <details class="my-2"><summary style="cursor: pointer;"><strong>Hosts record</strong></summary>
                 <div class="pl-4 pr-16 py-2">
                   Below you can find <strong>hosts record</strong> for quick copying.
-                  If you need to configure your access step by step use Workbench Access guide above.
+                  If you need to configure your access step by step use <code style="font-size: 90% !important;">{{ hostsFileId }}. Workbench - hosts file</code> guide above.
                   <CopyTextField
                     :value="hostsWorkbench"
                     class="my-2"
@@ -1309,7 +1321,7 @@ ${this.ipAddress}    ${this.labName}-entry
                   />
                 </div>
               </details>
-            </v-col>
+            </v-col> -->
 
             <v-col cols="12">
               <details class="my-2"><summary style="cursor: pointer;"><strong>Workbench Control panel</strong></summary>
@@ -1325,7 +1337,7 @@ ${this.ipAddress}    ${this.labName}-entry
         </v-expansion-panel>
 
         <!-- Where to go next -->
-        <v-expansion-panel v-if="mainExpansionPanel && mainExpansionPanel == 6">
+        <v-expansion-panel v-if="mainExpansionPanel && mainExpansionPanel == 7">
           <v-expansion-panel-header>
             <h3><a href="#where-to-go-next" class="header-anchor">#</a> Where to go next</h3>
           </v-expansion-panel-header>
@@ -1349,6 +1361,12 @@ ${this.ipAddress}    ${this.labName}-entry
 
                 Otherwise, you're done!
               </p>
+              <v-row>
+                <v-col cols="12">
+                  <v-btn color="success" class="mx-2 mb-1" :href="`https://${fqdn}`" target="_blank" elevation="3">Open Workbench</v-btn>
+                  <v-btn color="primary" class="mx-2 mb-1" :href="`https://${fqdn}/hub/home`" target="_blank" elevation="3">Control panel</v-btn>
+                </v-col>
+              </v-row>
             </v-sheet>
           </v-expansion-panel-content>
         </v-expansion-panel>

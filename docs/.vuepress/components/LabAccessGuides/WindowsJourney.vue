@@ -101,6 +101,7 @@ Connection to home closed.`,
         { text: 'New computer', value: 'new_computer' },
         { text: 'SSH reset', value: 'ssh_reset' },
         { text: 'VPN reset', value: 'vpn_reset' },
+        // { text: 'TOTP reset (Google authenticator)', value: 'totp_reset' },
         { text: 'Workbench reissue', value: 'workbench_reissue' },
         { text: 'Lab migration', value: 'lab_migration' },
       ],
@@ -887,7 +888,7 @@ Connection to home closed.`,
               <br />
             </v-col>
             <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
-              {{ getNextItem(hostsFileId) }} Make sure the line with the old hosts record is removed. <strong></strong>Search and remove lines</strong> containing domain name:<br />
+              {{ getNextItem(hostsFileId) }} Make sure the line with the old hosts record is removed. <strong>Search and remove lines</strong> containing domain name:<br />
               <CopyTextField
                 :value="fqdn"
                 class="my-2"
@@ -1326,7 +1327,7 @@ Connection to home closed.`,
               /> -->
             </v-col>
 
-            <v-col cols="12">
+            <!-- <v-col cols="12">
               <details class="my-2"><summary style="cursor: pointer;"><strong>Hosts record</strong></summary>
                 <div class="pl-4 pr-16 py-2">
                   Below you can find <strong>hosts record</strong> for quick copying.
@@ -1340,7 +1341,7 @@ Connection to home closed.`,
                   />
                 </div>
               </details>
-            </v-col>
+            </v-col> -->
 
             <v-col cols="12">
               <details class="my-2"><summary style="cursor: pointer;"><strong>Workbench Control panel</strong></summary>
