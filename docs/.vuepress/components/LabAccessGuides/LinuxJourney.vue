@@ -1016,80 +1016,19 @@ Connection to home closed.`,
                           Assure working VPN connection.
                         </v-alert>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 2">Continue</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
                       <!-- <v-btn color="link" class="mx-2 mb-1" @click="workbenchDialog = false">Close</v-btn> -->
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 5">Skip to Troubleshooting</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 4">Skip to Troubleshooting</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step
                       :complete="workbenchStepper > 2"
                       step="2"
                     >
-                      Edit your hosts file
-                    </v-stepper-step>
-
-                    <v-stepper-content step="2">
-                      <v-card
-                        class="mb-8 pr-4"
-                        elevation="0"
-                      >
-                        ...
-                        <!-- First, let's set up your hosts file on your local computer. <br />
-                        This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
-                        <br /><br />
-                        <ol>
-                          <li>
-                            On your local computer, open your /etc/hosts file in your preferred text editor.
-                            <br /><br />
-                            Use this command if prefer graphical editor <strong>Gedit</strong>:
-                            <CopyTextField
-                              :value="`sudo gedit /etc/hosts`"
-                              class="my-2"
-                              label=""
-                              prefix="$"
-                              placeholder=""
-                            />
-                            If you prefer terminal editor <strong>vim</strong> simply run:
-                            <CopyTextField
-                              :value="`sudo vim /etc/hosts`"
-                              class="my-2"
-                              label=""
-                              prefix="$"
-                              placeholder=""
-                            />
-                          </li>
-                          <br />
-                          <li>
-                            Add (append) the <strong>hosts record</strong> below to the text file:<br />
-                            <CopyTextField
-                              :value="hostsWorkbench"
-                              class="my-2"
-                              label=""
-                              prefix=""
-                              placeholder="Your link is missing access token"
-                            />
-                            Make sure to avoid duplicate records.
-                          </li>
-                          <br />
-                          <li>
-                            Save the changes and close your text editor.
-                          </li>
-                        </ol>
-                        <br /> -->
-
-                      </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 3">Continue</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 1">Back</v-btn>
-                    </v-stepper-content>
-
-                    <v-stepper-step
-                      :complete="workbenchStepper > 3"
-                      step="3"
-                    >
                       Install your certificates
                     </v-stepper-step>
 
-                    <v-stepper-content step="3">
+                    <v-stepper-content step="2">
                       <v-card
                         class="mb-8 pr-4"
                         elevation="0"
@@ -1135,18 +1074,18 @@ Connection to home closed.`,
                           </li>
                         </ol>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 4">Continue</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 2">Back</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step
-                      :complete="workbenchStepper > 4"
-                      step="4"
+                      :complete="workbenchStepper > 3"
+                      step="3"
                     >
                       Login to Workbench
                     </v-stepper-step>
 
-                    <v-stepper-content step="4">
+                    <v-stepper-content step="3">
                       <v-card
                         class="mb-8 pr-16"
                         elevation="0"
@@ -1230,19 +1169,19 @@ Connection to home closed.`,
                       </v-card>
                       <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper = 5">Troubleshooting</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 3">Back</v-btn>
+                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper++">Troubleshooting</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step
-                      :complete="workbenchStepper > 5"
+                      :complete="workbenchStepper > 4"
                       step="?"
                     >
                       Troubleshooting
                       <small>Optional tips to try in case of issues</small>
                     </v-stepper-step>
 
-                    <v-stepper-content step="5">
+                    <v-stepper-content step="4">
                       <v-card
                         class="mb-8 pr-4 ml-0 pl-0"
                         elevation="0"
@@ -1252,7 +1191,9 @@ Connection to home closed.`,
 
                         <details class="my-2"><summary style="cursor: pointer;"><strong>This site can't be reached</strong></summary>
                           <div class="pl-4 pr-16 py-2">
-                            If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <a @click="workbenchStepper = 2">Step 2 (Edit your hosts file)</a> of this guide.
+                            1. If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <code style="font-size: 90% !important;">{{ hostsFileId }}. Workbench - hosts file</code> guide.
+                            <br/>
+                            2. If you are getting <code>ERR_CONNECTION_TIMED_OUT</code> error you need to make sure that you are connected to VPN.
                           </div>
                         </details>
 
@@ -1340,7 +1281,7 @@ Connection to home closed.`,
                         </details> -->
                       </v-card>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 4">Back</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
                       <v-btn color="link" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Close</v-btn>
                     </v-stepper-content>
 
@@ -1360,11 +1301,11 @@ Connection to home closed.`,
               /> -->
             </v-col>
 
-            <v-col cols="12">
+            <!-- <v-col cols="12">
               <details class="my-2"><summary style="cursor: pointer;"><strong>Hosts record</strong></summary>
                 <div class="pl-4 pr-16 py-2">
                   Below you can find <strong>hosts record</strong> for quick copying.
-                  If you need to configure your access step by step use Workbench Access guide above.
+                  If you need to configure your access step by step use <code style="font-size: 90% !important;">{{ hostsFileId }}. Workbench - hosts file</code> guide above.
                   <CopyTextField
                     :value="hostsWorkbench"
                     class="my-2"
@@ -1374,7 +1315,7 @@ Connection to home closed.`,
                   />
                 </div>
               </details>
-            </v-col>
+            </v-col> -->
 
             <v-col cols="12">
               <details class="my-2"><summary style="cursor: pointer;"><strong>Workbench Control panel</strong></summary>
