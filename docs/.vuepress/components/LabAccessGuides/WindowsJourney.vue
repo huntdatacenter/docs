@@ -5,6 +5,7 @@ import {
   VBtn,
   VTextField,
   VTextarea,
+  VAutocomplete,
   VExpansionPanel,
   VExpansionPanels,
   VExpansionPanelHeader,
@@ -34,6 +35,7 @@ export default {
     VBtn,
     VTextField,
     VTextarea,
+    VAutocomplete,
     VExpansionPanel,
     VExpansionPanels,
     VExpansionPanelHeader,
@@ -92,6 +94,15 @@ Connection to {ip_address} closed.`,
 Connection to home closed.`,
       hostsChangeSuccess: null,
       hostsChangeLoading: false,
+      guidingOptions: [
+        { text: 'New user', value: 'new_user' },
+        { text: 'User to new lab', value: 'new_lab' },
+        { text: 'New computer', value: 'new_computer' },
+        { text: 'SSH reset', value: 'ssh_reset' },
+        { text: 'VPN reset', value: 'vpn_reset' },
+        { text: 'Lab Migration', value: 'lab_migration' },
+      ],
+      filterGuidesByType: null,
     }
   },
   computed: {
@@ -135,8 +146,23 @@ Connection to home closed.`,
     },
   },
   // watch: {},
-  created() {},
+  mounted() {
+    if (!this.filterGuidesByType && localStorage.hasOwnProperty('labAccessGuideFilter') && localStorage.labAccessGuideFilter) {
+      this.updateFilter(localStorage.labAccessGuideFilter, true)
+    }
+  },
+  created() {
+    const labAccessGuideFilter = this.$route.query.filter ? this.$route.query.filter : null
+    if (!this.filterGuidesByType && labAccessGuideFilter) {
+      this.updateFilter(labAccessGuideFilter, true)
+    }
+  },
   methods: {
+    updateFilter(value, update = false) {
+      const val = this.guidingOptions.find(item => item.value === value)
+      this.filterGuidesByType = update && val && val.value ? val.value : this.filterGuidesByType
+      localStorage.labAccessGuideFilter = val && val.value ? val.value : null
+    },
     wrap(template) {
       let text = template
       text = text.replaceAll('{ip_address}', this.ipAddress)
@@ -189,11 +215,32 @@ Connection to home closed.`,
 
 <template>
   <v-sheet class="pa-1">
-    <v-card elevation="1">
+    <v-row>
+      <v-col cols="12">
+        <v-autocomplete
+          v-model="filterGuidesByType"
+          :items="guidingOptions"
+          label="Filter steps"
+          placeholder="Showing all steps"
+          persistent-placeholder
+          small-chips
+          deletable-chips
+          chips
+          item-color="green"
+          outlined
+          dense
+          clearable
+          clear-icon="close"
+          hide-details
+          @input="event => updateFilter(event)"
+        ></v-autocomplete>
+      </v-col>
+    </v-row>
+    <v-card class="mt-6" elevation="1">
       <v-expansion-panels accordion v-model="mainExpansionPanel" elevation="0">
 
         <!-- 1. Fetch secrets -->
-        <v-expansion-panel>
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset'].includes(filterGuidesByType) ? false : true">
             <v-expansion-panel-header>
               <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ fetchSecretsId }}. Fetch secrets</h3>
             </v-expansion-panel-header>
@@ -211,7 +258,7 @@ Connection to home closed.`,
         </v-expansion-panel>
 
         <!-- 2. VPN Access -->
-        <v-expansion-panel>
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'vpn_reset'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Access</h3>
           </v-expansion-panel-header>
@@ -526,7 +573,7 @@ Connection to home closed.`,
         </v-expansion-panel>
 
         <!-- 3. SSH Passphrase change -->
-        <v-expansion-panel>
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_lab', 'ssh_reset', 'lab_migration'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#ssh-passphrase" class="header-anchor">#</a> {{ passChangeId }}. SSH Passphrase change</h3>
           </v-expansion-panel-header>
@@ -632,7 +679,7 @@ Connection to home closed.`,
         </v-expansion-panel>
 
         <!-- 4. SSH Passwordless access -->
-        <v-expansion-panel>
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#passwordless-access" class="header-anchor">#</a> {{ passLessId }}. SSH Passwordless access</h3>
           </v-expansion-panel-header>
@@ -689,7 +736,7 @@ Connection to home closed.`,
         </v-expansion-panel>
 
         <!-- 5. SSH Config file -->
-        <v-expansion-panel>
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
               <h3><a href="#ssh-config" class="header-anchor">#</a> {{ sshConfId }}. SSH Config file</h3>
           </v-expansion-panel-header>
@@ -747,7 +794,7 @@ Connection to home closed.`,
         </v-expansion-panel>
 
         <!-- 6. Workbench -->
-        <v-expansion-panel>
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench</h3>
           </v-expansion-panel-header>

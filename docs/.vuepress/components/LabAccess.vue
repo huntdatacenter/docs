@@ -436,6 +436,9 @@ Host {lab_name}
       width: 100%
       overflow-x: hidden
 
+    .v-chip--removable
+      background-color: #97d2d4 !important
+
 .last-updated
   display: none
 
