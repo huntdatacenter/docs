@@ -103,6 +103,7 @@ Connection to home closed.`,
         { text: 'Lab Migration', value: 'lab_migration' },
       ],
       filterGuidesByType: null,
+      incIndices: {},
     }
   },
   computed: {
@@ -207,6 +208,15 @@ Connection to home closed.`,
         setTimeout(this.setHostsChangeError, 500)
         // console.log(err)
       })
+    },
+    getNextItem(groupId, reset = false) {
+      const groupKey = `group-${groupId}`
+      if (reset || !this.incIndices || !this.incIndices[groupKey]) {
+        this.incIndices[groupKey] = 0
+      }
+      const itemId = ++this.incIndices[groupKey]
+      // console.log(`${groupKey} -- ${groupId}.${this.incIndices[groupKey]}.`)
+      return `${groupId}.${itemId}.`
     },
   },
 };
@@ -580,13 +590,22 @@ Connection to home closed.`,
           <v-expansion-panel-content id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
 
             <v-col cols="12">
-              {{ passChangeId }}.1. Design <DesignNewPassphrase />.
+              {{ getNextItem(passChangeId, true) }} Design <DesignNewPassphrase />.
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.2. To start Command Prompt press <code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
+              {{ getNextItem(passChangeId) }} To start Command Prompt press <code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(passChangeId) }} Remove old fingerprint.
+              <CopyTextField
+                :value="`ssh-keygen -R ${labName}`"
+                label=""
+                prefix="C:\Users\User>"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.3. Login to entry machine.
+              {{ getNextItem(passChangeId) }} Login to entry machine.
               <CopyTextField
                 :value="`ssh -o StrictHostKeyChecking=accept-new ${username}@${ipAddress}`"
                 label=""
@@ -595,25 +614,25 @@ Connection to home closed.`,
               />
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
+              {{ getNextItem(passChangeId) }} You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
               <div class="language- extra-class"><pre class="language-text">
               <code v-text="`${username}@${ipAddress}'s password:`"></code>
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
+              {{ getNextItem(passChangeId) }} When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
               <div class="language- extra-class"><pre class="language-text">
               <code v-text="passExpiredText"></code>
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.6. Enter your new passphrase and retype for verification. You will be kicked off the entry machine right after your password is changed.
+              {{ getNextItem(passChangeId) }} Enter your new passphrase and retype for verification. You will be kicked off the entry machine right after your password is changed.
               <div class="language- extra-class"><pre class="language-text">
               <code v-text="passSetNew"></code>
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.7. Reconnect to entry using your new passphrase.
+              {{ getNextItem(passChangeId) }} Reconnect to entry using your new passphrase.
               <CopyTextField
                 :value="`ssh ${username}@${ipAddress}`"
                 label=""
@@ -628,7 +647,7 @@ Connection to home closed.`,
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
+              {{ getNextItem(passChangeId) }} When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
               <CopyTextField
                 :value="`ssh -o StrictHostKeyChecking=accept-new home`"
                 label=""
@@ -637,7 +656,7 @@ Connection to home closed.`,
               />
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+              {{ getNextItem(passChangeId) }} You will be prompted to type your <code>SSH temporary key</code> from Signal message.
               <!-- <div class="language- extra-class"><pre class="language-text">
                   <code v-text="`${username}@home's password:`"></code>
               </pre></div> -->
@@ -646,7 +665,7 @@ Connection to home closed.`,
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
+              {{ getNextItem(passChangeId) }} Similar to above, you will be asked for a new password. Type your new passphrase two times.
               <div class="language- extra-class"><pre class="language-text">
               <code v-text="passSetNew"></code>
               </pre></div>
@@ -656,7 +675,7 @@ Connection to home closed.`,
               </pre></div> -->
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.11. Verify a successful passphrase update by logging into your home machine.
+              {{ getNextItem(passChangeId) }} Verify a successful passphrase update by logging into your home machine.
               <CopyTextField
                 :value="`ssh home`"
                 label=""
@@ -671,7 +690,7 @@ Connection to home closed.`,
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.12. Close Command Prompt window to make sure you are disconnected from your lab.
+              {{ getNextItem(passChangeId) }} Close Command Prompt window to make sure you are disconnected from your lab.
             </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
@@ -686,7 +705,7 @@ Connection to home closed.`,
           <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
 
             <v-col cols="12">
-              {{ passLessId }}.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+              {{ getNextItem(passLessId, true) }}  Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
               <CopyTextField
                 :value="sshKeygenWin"
                 class="my-2"
@@ -696,7 +715,7 @@ Connection to home closed.`,
               />
             </v-col>
             <v-col cols="12">
-              {{ passLessId }}.2. Place your public key into the lab. You will be asked for your SSH passphrase.
+              {{ getNextItem(passLessId) }} Place your public key into the lab. You will be asked for your SSH passphrase.
               <CopyTextField
                 :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${username}@${ipAddress} add-public-key`"
                 class="my-2"
@@ -712,7 +731,7 @@ Connection to home closed.`,
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passLessId }}.3. Confirm passwordless access.
+              {{ getNextItem(passLessId) }} Confirm passwordless access.
               <CopyTextField
                 :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${username}@${ipAddress}`"
                 class="my-2"
@@ -728,7 +747,7 @@ Connection to home closed.`,
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passLessId }}.4. Close Command prompt window to make sure you are disconnected from your lab.
+              {{ getNextItem(passLessId) }} Close Command prompt window to make sure you are disconnected from your lab.
             </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
@@ -742,7 +761,7 @@ Connection to home closed.`,
           </v-expansion-panel-header>
           <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
             <v-col cols="12">
-              {{ sshConfId }}.1. Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists. No output is expected.
+              {{ getNextItem(sshConfId, true) }} Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists. No output is expected.
               <CopyTextField
                 :value='`type nul >> "%USERPROFILE%\\.ssh\\config"`'
                 label=""
@@ -751,7 +770,7 @@ Connection to home closed.`,
               />
             </v-col>
             <v-col cols="12">
-              {{ sshConfId }}.2. Open SSH Config file.
+              {{ getNextItem(sshConfId) }} Open SSH Config file.
               <CopyTextField
                 :value='`Notepad.exe "%USERPROFILE%\\.ssh\\config"`'
                 label=""
@@ -760,7 +779,7 @@ Connection to home closed.`,
               />
             </v-col>
             <v-col cols="12">
-              {{ sshConfId }}.3. Add lab configuration into SSH Config opened in Notepad and then save changes.
+              {{ getNextItem(sshConfId) }} Add lab configuration into SSH Config opened in Notepad and then save changes.
               <v-textarea
                 v-model.trim="configText"
                 ref="ssh-config-win"
@@ -780,7 +799,7 @@ Connection to home closed.`,
               </v-textarea>
             </v-col>
             <v-col cols="12">
-              {{ sshConfId }}.4. Test by connecting straight into home machine.
+              {{ getNextItem(sshConfId) }} Test by connecting straight into home machine.
               <CopyTextField
                 :value="`ssh -o StrictHostKeyChecking=accept-new ${labName}`"
                 label=""

@@ -99,6 +99,7 @@ Connection to home closed.`,
         { text: 'Lab Migration', value: 'lab_migration' },
       ],
       filterGuidesByType: null,
+      incIndices: {},
     }
   },
   computed: {
@@ -193,6 +194,15 @@ ${this.ipAddress}    ${this.labName}-entry
         setTimeout(this.setHostsChangeError, 500)
         // console.log(err)
       })
+    },
+    getNextItem(groupId, reset = false) {
+      const groupKey = `group-${groupId}`
+      if (reset || !this.incIndices || !this.incIndices[groupKey]) {
+        this.incIndices[groupKey] = 0
+      }
+      const itemId = ++this.incIndices[groupKey]
+      // console.log(`${groupKey} -- ${groupId}.${this.incIndices[groupKey]}.`)
+      return `${groupId}.${itemId}.`
     },
   },
 };
@@ -532,13 +542,22 @@ ${this.ipAddress}    ${this.labName}-entry
           <v-expansion-panel-content id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
 
             <v-col cols="12">
-              {{ passChangeId }}.1. Design <DesignNewPassphrase />.
+              {{ getNextItem(passChangeId, true) }} Design <DesignNewPassphrase />.
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.2. Start Terminal application.
+              {{ getNextItem(passChangeId) }} Start Terminal application.
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(passChangeId) }} Remove old fingerprint.
+              <CopyTextField
+                :value="`ssh-keygen -R ${labName}`"
+                label=""
+                prefix="~"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.3. Login to entry machine.
+              {{ getNextItem(passChangeId) }} Login to entry machine.
               <CopyTextField
                 :value="`ssh -o StrictHostKeyChecking=accept-new ${username}@${ipAddress}`"
                 label=""
@@ -547,25 +566,25 @@ ${this.ipAddress}    ${this.labName}-entry
               />
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.4. You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
+              {{ getNextItem(passChangeId) }} You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
               <div class="language- extra-class"><pre class="language-text">
                 <code v-text="`${username}@${ipAddress}'s password:`"></code>
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.5. When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
+              {{ getNextItem(passChangeId) }} When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
               <div class="language- extra-class"><pre class="language-text">
                 <code v-text="passExpiredText"></code>
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.6. Enter your new passphrase and retype for verification. You will be kicked off the entry machine right after your password is changed.
+              {{ getNextItem(passChangeId) }} Enter your new passphrase and retype for verification. You will be kicked off the entry machine right after your password is changed.
               <div class="language- extra-class"><pre class="language-text">
                 <code v-text="passSetNew"></code>
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.7. Reconnect to entry using your new passphrase.
+              {{ getNextItem(passChangeId) }} Reconnect to entry using your new passphrase.
               <v-text-field
                 :value="`ssh ${username}@${ipAddress}`"
                 ref="macStep7"
@@ -591,7 +610,7 @@ ${this.ipAddress}    ${this.labName}-entry
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.8. When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
+              {{ getNextItem(passChangeId) }} When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
               <v-text-field
                 :value="`ssh -o StrictHostKeyChecking=accept-new home`"
                 ref="macStep8"
@@ -611,7 +630,7 @@ ${this.ipAddress}    ${this.labName}-entry
               </v-text-field>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.9. You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+              {{ getNextItem(passChangeId) }} You will be prompted to type your <code>SSH temporary key</code> from Signal message.
               <!-- <div class="language- extra-class"><pre class="language-text">
                   <code v-text="`${username}@home's password:`"></code>
               </pre></div> -->
@@ -620,7 +639,7 @@ ${this.ipAddress}    ${this.labName}-entry
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.10. Similar to above, you will be asked for a new password. Type your new passphrase two times.
+              {{ getNextItem(passChangeId) }} Similar to above, you will be asked for a new password. Type your new passphrase two times.
               <div class="language- extra-class"><pre class="language-text">
                 <code v-text="passSetNew"></code>
               </pre></div>
@@ -630,7 +649,7 @@ ${this.ipAddress}    ${this.labName}-entry
               </pre></div> -->
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.11. Verify a successful passphrase update by logging into your home machine.
+              {{ getNextItem(passChangeId) }} Verify a successful passphrase update by logging into your home machine.
               <v-text-field
                 :value="`ssh home`"
                 ref="macStep11"
@@ -656,7 +675,7 @@ ${this.ipAddress}    ${this.labName}-entry
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passChangeId }}.12. Close Terminal window to make sure you are disconnected from your lab.
+              {{ getNextItem(passChangeId) }} Close Terminal window to make sure you are disconnected from your lab.
             </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
