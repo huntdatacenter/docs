@@ -60,6 +60,7 @@ export default {
       access: null,
       migMap: null,
       migrated: false,
+      filterLabMigration: false,
       query: {
         ipAddress: null,
         // homeIpAddress: null,
@@ -194,6 +195,7 @@ Host {lab_name}
     this.access = this.$route.query.access ? atob(this.$route.query.access).split('|') : []
     // this.access = this.$route.query.access ? window.atob(this.$route.query.access).split('|') : []
     // console.log(this.query)
+    this.filterLabMigration = this.$route.query.filter && this.$route.query.filter === 'lab_migration' ? true : false
   },
   methods: {
     migrationMapping() {
@@ -316,7 +318,10 @@ Host {lab_name}
                 <v-col cols="10">
                   <v-container class="introblock">
                     <v-row justify="center" style="margin-left: 16px; margin-right: 16px;">
-                      <v-col cols="10" align="center">
+                      <v-col v-if="filterLabMigration" cols="10" align="center">
+                        <b>First time setting up access to your lab after migration?</b>
+                      </v-col>
+                      <v-col v-else cols="10" align="center">
                         <b>First time setting up access to your lab?</b>
                       </v-col>
                     </v-row>
