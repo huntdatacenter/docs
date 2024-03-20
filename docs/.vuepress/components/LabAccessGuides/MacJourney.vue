@@ -813,8 +813,28 @@ ${this.ipAddress}    ${this.labName}-entry
                 </template>
               </v-text-field>
             </v-col>
-            <v-col cols="12">
-              {{ getNextItem(sshConfId) }} Add lab configuration into SSH Config opened in Text Editor.
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(sshConfId) }} Replace old lab configuration in SSH Config opened in Text Editor and then save changes.
+              <v-textarea
+                v-model.trim="configText"
+                ref="ssh-config-mac"
+                label="SSH Config file"
+                placeholder="Your link is missing access token"
+                persistent-placeholder
+                class="py-2 mt-2"
+                outlined
+                readonly
+                rows="11"
+                hide-details
+                @focus="$event.target.select()"
+              >
+                <template v-slot:append>
+                  <a class="material-icons content_copy" @click="copyTextArea('ssh-config-mac')">&#xe14d;</a>
+                </template>
+              </v-textarea>
+            </v-col>
+            <v-col v-else cols="12">
+              {{ getNextItem(sshConfId) }} Add lab configuration into SSH Config opened in Text Editor and then save changes.
               <v-textarea
                 v-model.trim="configText"
                 ref="ssh-config-mac"
