@@ -692,7 +692,7 @@ Connection to home closed.`,
           <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
 
             <v-col cols="12">
-              {{ passLessId }}.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+              {{ getNextItem(passLessId, true) }} Open new Terminal window (<code>CTRL + ALT + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
               <CopyTextField
                 :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
                 class="my-0"
@@ -702,7 +702,7 @@ Connection to home closed.`,
               />
             </v-col>
             <v-col cols="12">
-              {{ passLessId }}.2. Start ssh-agent.
+              {{ getNextItem(passLessId) }} Start ssh-agent.
               <CopyTextField
                 :value='`eval "$(ssh-agent -s)"`'
                 class="my-0"
@@ -712,7 +712,7 @@ Connection to home closed.`,
               />
             </v-col>
             <v-col cols="12">
-              {{ passLessId }}.3. Add your public key to the ssh agent.
+              {{ getNextItem(passLessId) }} Add your public key to the ssh agent.
               <CopyTextField
                 :value="`ssh-add ~/.ssh/id_rsa`"
                 class="my-0"
@@ -722,7 +722,7 @@ Connection to home closed.`,
               />
             </v-col>
             <v-col cols="12">
-              {{ passLessId }}.4. Place your public key into the lab.
+              {{ getNextItem(passLessId) }} Place your public key into the lab.
               <CopyTextField
                 :value="`ssh-copy-id -i ~/.ssh/id_rsa ${username}@${ipAddress}`"
                 class="my-0"
@@ -738,7 +738,7 @@ Connection to home closed.`,
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passLessId }}.5. Confirm passwordless access.
+              {{ getNextItem(passLessId) }} Confirm passwordless access.
               <CopyTextField
                 :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${username}@${ipAddress}`"
                 class="my-0"
@@ -754,7 +754,7 @@ Connection to home closed.`,
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ passLessId }}.6. Close Terminal window to make sure you are disconnected from your lab.
+              {{ getNextItem(passLessId) }} Close Terminal window to make sure you are disconnected from your lab.
             </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
@@ -770,7 +770,7 @@ Connection to home closed.`,
 
             <!-- Place in <code>~/.ssh/config</code>. -->
             <v-col cols="12">
-              {{ sshConfId }}.1. Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists. No output is expected.
+              {{ getNextItem(sshConfId, true) }} Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists. No output is expected.
               <v-text-field
                 :value="`touch ~/.ssh/config`"
                 ref="linuxSshConfig1"
@@ -790,7 +790,7 @@ Connection to home closed.`,
               </v-text-field>
             </v-col>
             <v-col cols="12">
-              {{ sshConfId }}.2. Open SSH Config file.
+              {{ getNextItem(sshConfId) }} Open SSH Config file.
               <v-text-field
                 :value="`gedit ~/.ssh/config`"
                 ref="linuxSshConfig2"
@@ -810,7 +810,7 @@ Connection to home closed.`,
               </v-text-field>
             </v-col>
             <v-col cols="12">
-              {{ sshConfId }}.3. Add lab configuration into SSH Config opened in Text Editor.
+              {{ getNextItem(sshConfId) }} Add lab configuration into SSH Config opened in Text Editor.
               <v-textarea
                 v-model.trim="configText"
                 ref="ssh-config-linux"
@@ -830,7 +830,7 @@ Connection to home closed.`,
               </v-textarea>
             </v-col>
             <v-col cols="12">
-              {{ sshConfId }}.4. Test by connecting straight into home machine.
+              {{ getNextItem(sshConfId) }} Test by connecting straight into home machine.
               <v-text-field
                 :value="`ssh -o StrictHostKeyChecking=accept-new ${labName}`"
                 ref="ssh-config-lab-linux"
