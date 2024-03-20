@@ -550,7 +550,7 @@ ${this.ipAddress}    ${this.labName}-entry
             <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
               {{ getNextItem(passChangeId) }} Remove old fingerprint.
               <CopyTextField
-                :value="`ssh-keygen -R ${labName}`"
+                :value="`ssh-keygen -R ${ipAddress}`"
                 label=""
                 prefix="~"
                 placeholder="Your link is missing access token"
@@ -828,6 +828,15 @@ ${this.ipAddress}    ${this.labName}-entry
                   <a class="material-icons content_copy" @click="copyTextArea('ssh-config-mac')">&#xe14d;</a>
                 </template>
               </v-textarea>
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(sshConfId) }} Remove old fingerprint.
+              <CopyTextField
+                :value="`ssh-keygen -R ${labName}`"
+                label=""
+                prefix="~"
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ getNextItem(sshConfId) }} Test by connecting straight into home machine.
