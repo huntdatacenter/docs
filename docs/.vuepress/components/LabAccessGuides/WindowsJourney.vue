@@ -78,7 +78,8 @@ export default {
       passChangeId: 3,
       passLessId: 4,
       sshConfId: 5,
-      workbenchId: 6,
+      hostsFileId: 6,
+      workbenchId: 7,
       cmdPrompt: `<code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>`,
       openvpnInstallerName: `OpenVPN-<version-number>-I001-amd64.msi`,
       sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
@@ -100,7 +101,8 @@ Connection to home closed.`,
         { text: 'New computer', value: 'new_computer' },
         { text: 'SSH reset', value: 'ssh_reset' },
         { text: 'VPN reset', value: 'vpn_reset' },
-        { text: 'Lab Migration', value: 'lab_migration' },
+        { text: 'Workbench reissue', value: 'workbench_reissue' },
+        { text: 'Lab migration', value: 'lab_migration' },
       ],
       filterGuidesByType: null,
       incIndices: {},
@@ -183,8 +185,8 @@ Connection to home closed.`,
       // TODO: change to https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API
       document.execCommand("copy");
     },
-    nextPanel() {
-      this.mainExpansionPanel = this.mainExpansionPanel ? this.mainExpansionPanel + 1 : 1
+    nextPanel(inc = 1) {
+      this.mainExpansionPanel = this.mainExpansionPanel ? this.mainExpansionPanel + inc : 1
     },
     setHostsChangeSuccess() {
       this.hostsChangeSuccess = true
@@ -236,7 +238,6 @@ Connection to home closed.`,
           small-chips
           deletable-chips
           chips
-          item-color="green"
           outlined
           dense
           clearable
@@ -250,7 +251,7 @@ Connection to home closed.`,
       <v-expansion-panels accordion v-model="mainExpansionPanel" elevation="0">
 
         <!-- 1. Fetch secrets -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset', 'workbench_reissue'].includes(filterGuidesByType) ? false : true">
             <v-expansion-panel-header>
               <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ fetchSecretsId }}. Fetch secrets</h3>
             </v-expansion-panel-header>
@@ -693,7 +694,8 @@ Connection to home closed.`,
               {{ getNextItem(passChangeId) }} Close Command Prompt window to make sure you are disconnected from your lab.
             </v-col>
 
-            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+            <v-btn v-if="['lab_migration'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" small @click="nextPanel(2)">Next</v-btn>
+            <v-btn v-else color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -821,10 +823,123 @@ Connection to home closed.`,
           </v-expansion-panel-content>
         </v-expansion-panel>
 
-        <!-- 6. Workbench -->
+        <!-- 6. Hosts file -->
         <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
-            <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench</h3>
+            <h3><a href="#hosts-file" class="header-anchor">#</a> {{ hostsFileId }}. Workbench - hosts file</h3>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content id="hosts-file" ref="#hosts-file" class="mt-2">
+            <v-alert
+              border="left"
+              colored-border
+              type="warning"
+              elevation="2"
+            >
+              <strong>Administrator permissions are required.</strong>
+              <hr class="mt-1 mb-2" />
+              If you do not have Administrator permissions on your local workstation make sure to ask
+              IT department in your organization for assistance or permissions.
+            </v-alert>
+
+            Let's set up your hosts file on your local computer. <br />
+            This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
+            <br /><br />
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId, true) }} Press the Windows key.
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} Type <code style="font-weight: bold;">Notepad</code> in the search field.
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} In the search results, <strong>right-click</strong> Notepad and select <code style="font-weight: bold;">Run as administrator</code>.
+              <br />
+              <img class="pa-2" alt="notepad-administrator" src="/img/workbench/notepad-administrator.png" style="max-width: 600px;" />
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} Confirm <strong>administrator permissions</strong> by clicking on <code style="font-weight: bold;">Yes</code>.
+              <br />
+              <img class="pa-2" alt="notepad-admin-confirm" src="/img/workbench/notepad-admin-confirm.png" style="max-width: 350px;" />
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} In Notepad, start by selecting <code style="font-weight: bold;">File</code> > <code style="font-weight: bold;">Open</code> (<code>CTRL + O</code>).
+              <br />
+              <img class="pa-2" alt="notepad-open-file" src="/img/workbench/notepad-open-file.png" style="max-width: 450px;" />
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} Find the directory below:<br />
+              <CopyTextField
+                :value="`C:\\Windows\\System32\\Drivers\\etc`"
+                class="my-2"
+                label="Directory"
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
+              <img class="pa-2" alt="notepad-hosts-base-directory" src="/img/workbench/notepad-hosts-base-directory.png" style="max-width: 500px;" /><br />
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} Show hidden files by changing type from <strong>Text documents (*.txt)</strong> to view <strong>All files</strong>.<br />
+              <img class="pa-2" alt="notepad-all-files" src="/img/workbench/notepad-all-files.png" style="max-width: 500px;" /><br />
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} When a file named <strong>hosts</strong> appears in the list select it and click <strong>Open</strong>: <br />
+              <img class="pa-2" alt="notepad-selected-hosts" src="/img/workbench/notepad-selected-hosts.png" style="max-width: 500px;" />
+              <!-- <img class="pa-2" alt="notepad-open-hosts-steps" src="/img/workbench/notepad-open-hosts-steps.png" style="max-width: 500px;" /> -->
+              <br />
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(hostsFileId) }} Make sure the line with the old hosts record is removed. <strong></strong>Search and remove lines</strong> containing domain name:<br />
+              <CopyTextField
+                :value="fqdn"
+                class="my-2"
+                label=""
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(hostsFileId) }} Add (append) the new <strong>hosts record</strong> below to the text file:<br />
+              <CopyTextField
+                :value="hostsWorkbench"
+                class="my-2"
+                label=""
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
+              Make sure to avoid duplicate records.
+            </v-col>
+            <v-col v-else cols="12">
+              {{ getNextItem(hostsFileId) }} Add (append) the <strong>hosts record</strong> below to the text file:<br />
+              <CopyTextField
+                :value="hostsWorkbench"
+                class="my-2"
+                label=""
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
+              Make sure to avoid duplicate records.
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} Select <code>File</code> > <code>Save</code> to save your changes and close the <code>Notepad</code> application.
+            </v-col>
+            <!-- <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} Confirm your settings with a quick test:
+                <br />
+                <v-btn class="my-2" :color="hostsChangeColor" :loading="hostsChangeLoading" @click.stop="testHosts()">Test hosts record</v-btn>
+                <br />
+                If a button turned red you should try to repeat this guide to make sure all the steps were followed.<br />
+                Then you can try to click the button again.
+                <br />
+            </v-col> -->
+            <v-btn v-if="['lab_migration'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" small @click="nextPanel(2)">Next</v-btn>
+            <v-btn v-else color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+
+
+        <!-- 7. Workbench -->
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'workbench_reissue'].includes(filterGuidesByType) ? false : true">
+          <v-expansion-panel-header>
+            <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench - certificate</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
 
@@ -898,117 +1013,19 @@ Connection to home closed.`,
                           Assure working VPN connection.
                         </v-alert>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 2">Continue</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
                       <!-- <v-btn color="link" class="mx-2 mb-1" @click="workbenchDialog = false">Close</v-btn> -->
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 5">Skip to Troubleshooting</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 4">Skip to Troubleshooting</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step
                       :complete="workbenchStepper > 2"
                       step="2"
                     >
-                      Edit your hosts file
-                    </v-stepper-step>
-
-                    <v-stepper-content step="2">
-                      <v-card
-                        class="mb-8 pr-4"
-                        elevation="0"
-                      >
-                        <v-alert
-                          border="left"
-                          colored-border
-                          type="warning"
-                          elevation="2"
-                        >
-                          <strong>Administrator permissions are required.</strong>
-                          <hr class="mt-1 mb-2" />
-                          If you do not have Administrator permissions on your local workstation make sure to ask
-                          IT department in your organization for assistance or permissions.
-                        </v-alert>
-
-                        First, let's set up your hosts file on your local computer. <br />
-                        This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
-                        <br /><br />
-                        <ol>
-                          <li>Press the Windows key.</li>
-                          <li>Type <code style="font-weight: bold;">Notepad</code> in the search field.</li>
-                          <li>
-                            In the search results, <strong>right-click</strong> Notepad and select <code style="font-weight: bold;">Run as administrator</code>.
-                            <br />
-                            <img class="pa-2" alt="notepad-administrator" src="/img/workbench/notepad-administrator.png" style="max-width: 600px;" />
-                          </li>
-                          <li>
-                            Confirm <strong>administrator permissions</strong> by clicking on <code style="font-weight: bold;">Yes</code>.
-                            <br />
-                            <img class="pa-2" alt="notepad-admin-confirm" src="/img/workbench/notepad-admin-confirm.png" style="max-width: 350px;" />
-                          </li>
-                          <li>
-                            In Notepad, start by selecting <code style="font-weight: bold;">File</code> > <code style="font-weight: bold;">Open</code> (<code>CTRL + O</code>).
-                            <br />
-                            <img class="pa-2" alt="notepad-open-file" src="/img/workbench/notepad-open-file.png" style="max-width: 450px;" />
-                          </li>
-                          <li>
-                            Find the directory below:<br />
-                            <CopyTextField
-                              :value="`C:\\Windows\\System32\\Drivers\\etc`"
-                              class="my-2"
-                              label="Directory"
-                              prefix=""
-                              placeholder="Your link is missing access token"
-                            />
-                            <img class="pa-2" alt="notepad-hosts-base-directory" src="/img/workbench/notepad-hosts-base-directory.png" style="max-width: 500px;" /><br />
-                          </li>
-                          <li>
-                            Show hidden files by changing type from <strong>Text documents (*.txt)</strong> to view <strong>All files</strong>.<br />
-                            <img class="pa-2" alt="notepad-all-files" src="/img/workbench/notepad-all-files.png" style="max-width: 500px;" /><br />
-                          </li>
-                          <li>
-                            When a file named <strong>hosts</strong> appears in the list select it and click <strong>Open</strong>: <br />
-                            <img class="pa-2" alt="notepad-selected-hosts" src="/img/workbench/notepad-selected-hosts.png" style="max-width: 500px;" />
-                            <!-- <img class="pa-2" alt="notepad-open-hosts-steps" src="/img/workbench/notepad-open-hosts-steps.png" style="max-width: 500px;" /> -->
-                            <br />
-                          </li>
-                          <li>
-                            Add (append) the <strong>hosts record</strong> below to the text file:<br />
-                            <CopyTextField
-                              :value="hostsWorkbench"
-                              class="my-2"
-                              label=""
-                              prefix=""
-                              placeholder="Your link is missing access token"
-                            />
-                            Make sure to avoid duplicate records.
-                          </li>
-                          <br />
-                          <li>
-                            Select <code>File</code> > <code>Save</code> to save your changes and close the <code>Notepad</code> application.
-                          </li>
-                          <!-- <li>
-                            Confirm your settings with a quick test:
-                            <br />
-                            <v-btn class="my-2" :color="hostsChangeColor" :loading="hostsChangeLoading" @click.stop="testHosts()">Test hosts record</v-btn>
-                            <br />
-                            If a button turned red you should try to repeat this guide to make sure all the steps were followed.<br />
-                            Then you can try to click the button again.
-                            <br />
-                          </li> -->
-                        </ol>
-                        <br />
-
-                      </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 3">Continue</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 1">Back</v-btn>
-                    </v-stepper-content>
-
-                    <v-stepper-step
-                      :complete="workbenchStepper > 3"
-                      step="3"
-                    >
                       Install your certificates
                     </v-stepper-step>
 
-                    <v-stepper-content step="3">
+                    <v-stepper-content step="2">
                       <v-card
                         class="mb-8 pr-4"
                         elevation="0"
@@ -1082,18 +1099,18 @@ Connection to home closed.`,
                           </li>
                         </ol>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 4">Continue</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 2">Back</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step
-                      :complete="workbenchStepper > 4"
-                      step="4"
+                      :complete="workbenchStepper > 3"
+                      step="3"
                     >
                       Login to Workbench
                     </v-stepper-step>
 
-                    <v-stepper-content step="4">
+                    <v-stepper-content step="3">
                       <v-card
                         class="mb-8 pr-16"
                         elevation="0"
@@ -1177,19 +1194,19 @@ Connection to home closed.`,
                       </v-card>
                       <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper = 5">Troubleshooting</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 3">Back</v-btn>
+                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper++">Troubleshooting</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step
-                      :complete="workbenchStepper > 5"
+                      :complete="workbenchStepper > 4"
                       step="?"
                     >
                       Troubleshooting
                       <small>Optional tips to try in case of issues</small>
                     </v-stepper-step>
 
-                    <v-stepper-content step="5">
+                    <v-stepper-content step="4">
                       <v-card
                         class="mb-8 pr-4 ml-0 pl-0"
                         elevation="0"
@@ -1289,7 +1306,7 @@ Connection to home closed.`,
                         </details> -->
                       </v-card>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 4">Back</v-btn>
+                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
                       <v-btn color="link" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Close</v-btn>
                     </v-stepper-content>
 
@@ -1313,7 +1330,7 @@ Connection to home closed.`,
               <details class="my-2"><summary style="cursor: pointer;"><strong>Hosts record</strong></summary>
                 <div class="pl-4 pr-16 py-2">
                   Below you can find <strong>hosts record</strong> for quick copying.
-                  If you need to configure your access step by step use Workbench Access guide above.
+                  If you need to configure your access step by step use <code style="font-size: 90% !important;">{{ hostsFileId }}. Workbench - hosts file</code> guide above.
                   <CopyTextField
                     :value="hostsWorkbench"
                     class="my-2"
@@ -1339,7 +1356,7 @@ Connection to home closed.`,
         </v-expansion-panel>
 
         <!-- Where to go next -->
-        <v-expansion-panel v-if="mainExpansionPanel && mainExpansionPanel == 6">
+        <v-expansion-panel v-if="mainExpansionPanel && mainExpansionPanel == 7">
           <v-expansion-panel-header>
             <h3><a href="#where-to-go-next" class="header-anchor">#</a> Where to go next</h3>
           </v-expansion-panel-header>
@@ -1363,6 +1380,12 @@ Connection to home closed.`,
 
                 Otherwise, you're done!
               </p>
+              <v-row>
+                <v-col cols="12">
+                  <v-btn color="success" class="mx-2 mb-1" :href="`https://${fqdn}`" target="_blank" elevation="3">Open Workbench</v-btn>
+                  <v-btn color="primary" class="mx-2 mb-1" :href="`https://${fqdn}/hub/home`" target="_blank" elevation="3">Control panel</v-btn>
+                </v-col>
+              </v-row>
             </v-sheet>
           </v-expansion-panel-content>
         </v-expansion-panel>
