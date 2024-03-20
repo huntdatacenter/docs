@@ -681,7 +681,8 @@ ${this.ipAddress}    ${this.labName}-entry
               {{ getNextItem(passChangeId) }} Close Terminal window to make sure you are disconnected from your lab.
             </v-col>
 
-            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+            <v-btn v-if="['lab_migration'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" small @click="nextPanel(2)">Next</v-btn>
+            <v-btn v-else color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 

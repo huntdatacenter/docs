@@ -78,7 +78,9 @@ export default {
       passChangeId: 3,
       passLessId: 4,
       sshConfId: 5,
-      workbenchId: 6,
+      hostsFileId: 6,
+      workbenchId: 7,
+      lastPanelId: 7,
       sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
       passExpired: `WARNING: Your password has expired.
 You must change your password now and login again!
@@ -96,6 +98,8 @@ Connection to home closed.`,
         { text: 'New computer', value: 'new_computer' },
         { text: 'SSH reset', value: 'ssh_reset' },
         { text: 'VPN reset', value: 'vpn_reset' },
+        // { text: 'TOTP reset (Google authenticator)', value: 'totp_reset' },
+        { text: 'Workbench reissue', value: 'workbench_reissue' },
         { text: 'Lab Migration', value: 'lab_migration' },
       ],
       filterGuidesByType: null,
@@ -164,8 +168,8 @@ Connection to home closed.`,
       textToCopy.select()
       document.execCommand("copy");
     },
-    nextPanel() {
-      this.mainExpansionPanel = this.mainExpansionPanel ? this.mainExpansionPanel + 1 : 1
+    nextPanel(inc = 1) {
+      this.mainExpansionPanel = this.mainExpansionPanel ? this.mainExpansionPanel + inc : 1
     },
     setHostsChangeSuccess() {
       this.hostsChangeSuccess = true
@@ -231,7 +235,7 @@ Connection to home closed.`,
       <v-expansion-panels accordion v-model="mainExpansionPanel" elevation="0">
 
         <!-- 1. Fetch secrets -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset', 'workbench_reissue'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ fetchSecretsId }}. Fetch secrets</h3>
           </v-expansion-panel-header>
@@ -681,7 +685,8 @@ Connection to home closed.`,
               {{ getNextItem(passChangeId) }} Close Terminal window to make sure you are disconnected from your lab.
             </v-col>
 
-            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+            <v-btn v-if="['lab_migration'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" small @click="nextPanel(2)">Next</v-btn>
+            <v-btn v-else color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
 
@@ -865,10 +870,79 @@ Connection to home closed.`,
           </v-expansion-panel-content>
         </v-expansion-panel>
 
-        <!-- 6. Workbench -->
+        <!-- 6. Hosts file -->
         <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
-            <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench</h3>
+            <h3><a href="#hosts-file" class="header-anchor">#</a> {{ hostsFileId }}. Workbench - hosts file</h3>
+          </v-expansion-panel-header>
+          <v-expansion-panel-content id="hosts-file" ref="#hosts-file" class="mt-2">
+            Let's set up your hosts file on your local computer. <br />
+            This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
+            <br /><br />
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId, true) }} On your local computer, open your /etc/hosts file in your preferred text editor.
+              <br /><br />
+              Use this command if prefer graphical editor <strong>Gedit</strong>:
+              <CopyTextField
+                :value="`sudo gedit /etc/hosts`"
+                class="my-2"
+                label=""
+                prefix="$"
+                placeholder=""
+              />
+              If you prefer terminal editor <strong>vim</strong> simply run:
+              <CopyTextField
+                :value="`sudo vim /etc/hosts`"
+                class="my-2"
+                label=""
+                prefix="$"
+                placeholder=""
+              />
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(hostsFileId) }} Make sure the line with the old hosts record is removed. <strong>Search and remove lines</strong> containing domain name:<br />
+              <CopyTextField
+                :value="fqdn"
+                class="my-2"
+                label=""
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(hostsFileId) }} Add (append) the new <strong>hosts record</strong> below to the text file:<br />
+              <CopyTextField
+                :value="hostsWorkbench"
+                class="my-2"
+                label=""
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
+              Make sure to avoid duplicate records.
+            </v-col>
+            <v-col v-else cols="12">
+              {{ getNextItem(hostsFileId) }} Add (append) the <strong>hosts record</strong> below to the text file:<br />
+              <CopyTextField
+                :value="hostsWorkbench"
+                class="my-2"
+                label=""
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
+              Make sure to avoid duplicate records.
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} Save the changes and close your text editor.
+            </v-col>
+            <v-btn v-if="['lab_migration'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" small @click="nextPanel(2)">Next</v-btn>
+            <v-btn v-else color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+
+        <!-- 7. Workbench -->
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'workbench_reissue'].includes(filterGuidesByType) ? false : true">
+          <v-expansion-panel-header>
+            <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench - certificate</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
 
@@ -959,7 +1033,8 @@ Connection to home closed.`,
                         class="mb-8 pr-4"
                         elevation="0"
                       >
-                        First, let's set up your hosts file on your local computer. <br />
+                        ...
+                        <!-- First, let's set up your hosts file on your local computer. <br />
                         This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
                         <br /><br />
                         <ol>
@@ -1000,7 +1075,7 @@ Connection to home closed.`,
                             Save the changes and close your text editor.
                           </li>
                         </ol>
-                        <br />
+                        <br /> -->
 
                       </v-card>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 3">Continue</v-btn>
@@ -1315,7 +1390,7 @@ Connection to home closed.`,
         </v-expansion-panel>
 
         <!-- Where to go next -->
-        <v-expansion-panel v-if="mainExpansionPanel && mainExpansionPanel == 6">
+        <v-expansion-panel v-if="mainExpansionPanel && mainExpansionPanel == lastPanelId">
           <v-expansion-panel-header>
             <h3><a href="#where-to-go-next" class="header-anchor">#</a> Where to go next</h3>
           </v-expansion-panel-header>
@@ -1339,6 +1414,12 @@ Connection to home closed.`,
 
                 Otherwise, you're done!
               </p>
+              <v-row>
+                <v-col cols="12">
+                  <v-btn color="success" class="mx-2 mb-1" :href="`https://${fqdn}`" target="_blank" elevation="3">Open Workbench</v-btn>
+                  <v-btn color="primary" class="mx-2 mb-1" :href="`https://${fqdn}/hub/home`" target="_blank" elevation="3">Control panel</v-btn>
+                </v-col>
+              </v-row>
             </v-sheet>
           </v-expansion-panel-content>
         </v-expansion-panel>
