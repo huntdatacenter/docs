@@ -156,7 +156,7 @@ This form defined the invoice profile for your cloud services fees. One invoice 
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.3.
+The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.4.
 
 **Data space**
 
@@ -186,6 +186,10 @@ Specify "K.STED" and "PROJECT NUMBER" for your data space. These fields are mand
 
 - *PEPPOL BIS*: This is the international identification number for your organization. [Click the link](https://directory.peppol.eu/public/locale-en_US/menuitem-search) to find your id. 
 - *REFERENCE NUMBER*: This is your order number with HUNT Cloud that ensures that the invoice is reaching you inside your organization. The format varies between organizations.
+
+**Value added tax (outside NTNU)**
+
+As default, all invoices to Data spaces and Labs outside NTNU will include value added tax (VAT). Documented collaborations with partners from NTNU may be exempted from VAT if they specify trusted research environments as part of the collaboration agreement. If relevant, send us the collaboration agreement for evaluation.
 
 **Advanced payment**
 
