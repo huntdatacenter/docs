@@ -25,9 +25,9 @@ Head over to our [pricing calculator](/administer-science/prices/calculator) to 
 
 Let's start with a few examples of prices for individual labs configured for common experiments. Depending on your data space subscription and cost optimization configuration, the listed prices may be reduced. 
 
-### Explore
+### Explore basic
 
-This is our default lab for sensitive data discoveries. The lab is tailored for data analysis of structured data such as health registries and survey data that you collect. 
+Let's start with our default lab for sensitive data discoveries for teams of 2-3 scientists. The lab size is tailored for data analysis of structured data such as health registries and survey data that you collect. 
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
@@ -37,22 +37,22 @@ This is our default lab for sensitive data discoveries. The lab is tailored for 
 | Store | 1 terabyte | 1 year | 2376 | 1 | 2376 |
 | **PER YEAR** |  | | |  | **11752** |
 
-The above example establishes your own lab with HUNT Workbench. The machine holds sufficient resources for epidemiology analysis for a small team. Both compute and storage can easily be upgraded in line with your scientific growth.
+The above example establishes your own lab in HUNT Cloud with access to commonly used tools in HUNT Workbench. You lab holds sufficient resources for analysis for a small team. Both compute and store can easily be upgraded as your experiments grow.
 
 
 ### Genomics
 
-Next up is a typical lab for genomics analysis. Let's assume you need a lab to storage and analyze genomics data from several sources for your team. 
+Next up is a typical lab for genomics analysis. Let's assume you need a lab to store and analyze genomics data from several sources with a varied set of tools. 
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
 | Data space | WHITE | 1 year | 0 | 1 | 0 |
-| Lab | | 1 year | 5785 | 1 | 5785 |
-| Compute | default.b5 | 1 year | 30976 | 1 | 30976 |
-| Store | 10 terabytes | 1 year | 2331 | 10 | 23310 |
-| **PER YEAR** |  | | |  | **60071** |
+| Lab | | 1 year | 5823 | 1 | 5823 |
+| Compute | default.b5 | 1 year | 29829 | 1 | 29829 |
+| Store | 10 terabytes | 1 year | 2376 | 10 | 23760 |
+| **PER YEAR** |  | | |  | **59412** |
 
-The above example gives you a free data space and one lab, a machine with computational power for many analysis, and storage capacity to both experiment and archive larger data sets. The cost may be reduced by for example reducing the compute size in day-to-day activities and then upgrade to larger on-demand machines in analysis intensive periods. 
+The above example gives you a free data space and one lab, a powerful machine fit for many analysis, and storage capacity to both experiment and archive larger data sets. The cost can be reduced by for example reducing the compute size in day-to-day activities and then upgrade to larger on-demand machines in analysis intensive periods. 
 
 ### Machine learning
 
