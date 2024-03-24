@@ -8,31 +8,37 @@ description: This page list examples of yearly cost for selected use cases in HU
 
 # Price examples
 
-**We know, the complexity of flexible cloud prices is demanding. Bare with us, because the flexibility opens opportunities.** 
-
-Below are a few examples to guide you on a pricing direction. Head over to our [pricing calculator](/administer-science/prices/calculator) to estimate the cost for your specific scientific environment, and to not hesitate to [contact us](/contact) for assistance in your estimations.
+**We know, the complexity of flexible cloud prices is demanding. Bare with us, because the flexibility opens opportunities. Here are a few examples to give you a pricing direction.** 
 
 [[toc]]
 
-For the record, all prices in the examples are listed as VAT exclusive NOK from the [price list](/administer-science/prices/pricelist/). The prices are provided for guidance and may contain both errors and outdated information.
+For the record, all prices in the examples are listed as VAT exclusive in NOK from the [price list](/administer-science/prices/pricelist/). The prices are provided for guidance and may contain both errors and outdated information.
+
+::: tip Estimate your specific cost
+
+Head over to our [pricing calculator](/administer-science/prices/calculator) to estimate the cost for your specific scientific environment, and do not hesitate to [contact us](/contact) for assistance.
+
+:::
+
 
 ## Individual labs
 
-Let's start with a few examples of crude prices for individual labs configured for common experiments. Depending on your data space subscription and cost optimization techniques, the listed prices may be reduced. 
+Let's start with a few examples of prices for individual labs configured for common experiments. Depending on your data space subscription and cost optimization configuration, the listed prices may be reduced. 
 
-### Epidemiology
+### Explore
 
-Let's assume you need a lab to store and work with structured data, such as health registries and health study data using software such as RStudio or Stata in a small team. 
+This is our default lab for data discoveries. The lab is tailored for data analysis of structured data such as health registries and survey data that you collect. 
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
 | Data space | WHITE | 1 year | 0 | 1 | 0 |
-| Lab | | 1 year | 5785 | 1 | 5785 |
-| Compute | default.b2 | 1 year | 4646 | 1 | 4646 |
-| Store | 1 terabyte | 1 year | 2331 | 1 | 2331 |
-| **PER YEAR** |  | | |  | **12762** |
+| Lab | | 1 year | 5823 | 1 | 5823 |
+| Compute | default.c1 | 1 year | 3553 | 1 | 3553 |
+| Store | 1 terabyte | 1 year | 2376 | 1 | 2376 |
+| **PER YEAR** |  | | |  | **11752** |
 
-The above example gives you a free data space subscription, the lab subscription, one machine sufficient for regular epidemiology, the minimum storage allocation and the ability to bring software licenses for your analytical tools from your host organization into your lab. The compute cost may be slightly reduced if a smaller machine type is sufficient (default.b1).
+The above example establishes your own lab with HUNT Workbench. The machine holds sufficient resources for epidemiology analysis for a small team. Both compute and storage can easily be upgraded in line with your scientific growth.
+
 
 ### Genomics
 
