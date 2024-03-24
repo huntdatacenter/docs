@@ -27,7 +27,7 @@ Let's start with a few examples of prices for individual labs configured for com
 
 ### Explore
 
-This is our default lab for data discoveries. The lab is tailored for data analysis of structured data such as health registries and survey data that you collect. 
+This is our default lab for sensitive data discoveries. The lab is tailored for data analysis of structured data such as health registries and survey data that you collect. 
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
