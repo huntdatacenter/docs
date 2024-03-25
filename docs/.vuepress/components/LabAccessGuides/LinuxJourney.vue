@@ -885,6 +885,9 @@ Connection to home closed.`,
                 </template>
               </v-text-field>
             </v-col>
+            <v-col cols="12">
+              {{ getNextItem(sshConfId) }} Close Terminal window to make sure you are disconnected from your lab.
+            </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
@@ -901,6 +904,7 @@ Connection to home closed.`,
             <br /><br />
             <v-col cols="12">
               {{ getNextItem(hostsFileId, true) }} On your local computer, open your /etc/hosts file in your preferred text editor.
+              You will be asked for administrator password of your local computer.
               <br /><br />
               Use this command if prefer graphical editor <strong>Gedit</strong>:
               <CopyTextField

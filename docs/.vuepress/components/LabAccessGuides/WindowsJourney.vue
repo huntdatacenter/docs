@@ -839,6 +839,9 @@ Connection to home closed.`,
                 placeholder="Your link is missing access token"
               />
             </v-col>
+            <v-col cols="12">
+              {{ getNextItem(sshConfId) }} Close Command Prompt to make sure you are disconnected from your lab.
+            </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>

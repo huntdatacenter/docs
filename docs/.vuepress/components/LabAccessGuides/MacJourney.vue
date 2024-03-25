@@ -85,6 +85,10 @@ export default {
 You must change your password now and login again!
 Changing password for {username}.
 (current) UNIX password:`,
+//       passExpired: `WARNING: Your password has expired.
+// You must change your password now and login again!
+// Changing password for {username}.
+// Current password:`,
       passSetNew: `New password:
 Retype new password:`,
       passChangedEntry: `passwd: Password updated successfully
@@ -882,6 +886,9 @@ ${this.ipAddress}    ${this.labName}-entry
                 </template>
               </v-text-field>
             </v-col>
+            <v-col cols="12">
+              {{ getNextItem(sshConfId) }} Close Terminal window to make sure you are disconnected from your lab.
+            </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
@@ -898,6 +905,7 @@ ${this.ipAddress}    ${this.labName}-entry
             <br /><br />
             <v-col cols="12">
               {{ getNextItem(hostsFileId, true) }} On your local computer, open your /etc/hosts file in your preferred text editor.
+              You will be asked for password that you use to login into your MacOS account.
               <br /><br />
               Use this command if prefer graphical <strong>Text editor</strong> app:
               <CopyTextField
