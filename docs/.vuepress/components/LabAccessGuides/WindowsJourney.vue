@@ -598,7 +598,7 @@ Connection to home closed.`,
               type="warning"
               elevation="2"
             >
-              Remember to connect to VPN.
+              Ensure that you are logged into VPN.
             </v-alert>
 
             <v-col cols="12">
