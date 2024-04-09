@@ -591,21 +591,32 @@ Connection to home closed.`,
           </v-expansion-panel-header>
           <v-expansion-panel-content id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
 
+            <v-alert
+              v-show="filterGuidesByType && ['new_lab', 'ssh_reset', 'lab_migration'].includes(filterGuidesByType)"
+              border="left"
+              colored-border
+              type="warning"
+              elevation="2"
+            >
+              Remember to connect to VPN.
+            </v-alert>
+
             <v-col cols="12">
               {{ getNextItem(passChangeId, true) }} Design <DesignNewPassphrase />.
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} To start Command Prompt press <code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>.
             </v-col>
-            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+            <!-- Only show for lab migration scenarios -->
+            <!-- <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
               {{ getNextItem(passChangeId) }} Remove old fingerprint.
               <CopyTextField
-                :value="`ssh-keygen -R ${ipAddress}`"
+                :value="`ssh-keygen -R ${labName}-entry`"
                 label=""
                 prefix="C:\Users\User>"
                 placeholder="Your link is missing access token"
               />
-            </v-col>
+            </v-col> -->
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} Login to entry machine.
               <CopyTextField
