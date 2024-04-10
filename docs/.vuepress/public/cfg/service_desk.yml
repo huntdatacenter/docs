@@ -254,7 +254,7 @@ request_external_import_kista:
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "External organization", key: "external_organization", field: "textfield" },
-    { label: "Public IPv4 address of external organization (only if outside of NTNU)", key: "ipaddress", pattern: '^\s*((?!169\.254\.|10\.|0\.|127\.|255\.255\.255\.255|192\.168\.)(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization", optional: true, field: "textfield" },
+    { label: "Public IPv4 address of external organization (only if outside of NTNU)", key: "ipaddress", pattern: '^\s*((?!169\.254\.|10\.|0\.|127\.|255\.255\.255\.255|192\.168\.)(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization. Public IP address should not start with prefixes 10., 127., 192.168., or 169.254. Try to lookup your public IP with https://ip4.me.", optional: true, field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
@@ -290,7 +290,7 @@ request_external_export_kista:
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "External organization", key: "external_organization", field: "textfield" },
-    { label: "Public IPv4 address of external organization (only if outside of NTNU)", key: "ipaddress", pattern: '^\s*((?!169\.254\.|10\.|0\.|127\.|255\.255\.255\.255|192\.168\.)(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization", optional: true, field: "textfield" },
+    { label: "Public IPv4 address of external organization (only if outside of NTNU)", key: "ipaddress", pattern: '^\s*((?!169\.254\.|10\.|0\.|127\.|255\.255\.255\.255|192\.168\.)(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization. Public IP address should not start with prefixes 10., 127., 192.168., or 169.254. Try to lookup your public IP with https://ip4.me.", optional: true, field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
