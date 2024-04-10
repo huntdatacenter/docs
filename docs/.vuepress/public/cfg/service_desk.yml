@@ -240,6 +240,8 @@ request_external_import_kista:
 
       I would like to request an external import kista from {external_organization} to {labname}.
 
+      public IPv4 of external organization: {ipaddress}
+
       I have attached two files: (1) the signed external import kista order, and (2) the public SSH key from the external uploader.
 
       We are looking forward to receive access information en email.
@@ -250,6 +252,7 @@ request_external_import_kista:
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "External organization", key: "external_organization", field: "textfield" },
+    { label: "External organization IPv4 address", key: "ipaddress", pattern: '^\s*((?!169\.254\.|10\.|0\.|127\.|255\.255\.255\.255|192\.168\.)(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
@@ -271,6 +274,8 @@ request_external_export_kista:
 
       I would like to request an external export kista from {labname} to {external_organization}.
 
+      External organization public IPv4 address: {ipaddress}
+
       I have attached two files: (1) the signed external export kista order, and (2) the public SSH key from the external uploader.
 
       We are looking forward to receive access information en email.
@@ -281,6 +286,7 @@ request_external_export_kista:
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "External organization", key: "external_organization", field: "textfield" },
+    { label: "External organization IPv4 address", key: "ipaddress", pattern: '^\s*((?!169\.254\.|10\.|0\.|127\.|255\.255\.255\.255|192\.168\.)(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
@@ -1891,5 +1897,3 @@ deregister_tingweek_invitations:
   ]
   requirements: ["<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."]
   attachments: []
-
-
