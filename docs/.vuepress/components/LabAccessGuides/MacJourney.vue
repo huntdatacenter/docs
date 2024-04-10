@@ -256,6 +256,11 @@ ${this.ipAddress}    ${this.labName}-entry
               <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
             </ol>
 
+            <video width="100%" height="auto" controls>
+              <source src="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-fetch-secrets-v1.mp4/c175ee37-e953-4608-74f0-b4f854889cda?t=1712660229596" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
@@ -536,6 +541,11 @@ ${this.ipAddress}    ${this.labName}-entry
                 </v-card-text>
               </v-card>
             </v-dialog>
+
+            <video width="100%" height="auto" controls>
+              <source src="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-vpn-access-v1.mp4/2c3680a8-0b48-ac22-df2e-0a71a8b699e0?t=1712660241045" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
