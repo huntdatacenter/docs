@@ -1196,6 +1196,7 @@ request_new_storage_volume:
       machine_name="{vm_name}"  
       volume_name="{volume_name}"  
       storage_size_tb="{storage_size_tb}"  
+      enable_restore_option="{restore}"  
       ---
 
       I am aware that the expansion will require a machine restart. So, let us touch base in our Slack lab channel to schedule a time for the restart that fits our scientific activities.
@@ -1217,6 +1218,15 @@ request_new_storage_volume:
       ]
     },
     { label: "Size (in terabytes)", key: "storage_size_tb", hint: "Field should include only numbers. Maximum size per volume is 20 TB", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
+    {
+      label: "Enable restore option",
+      key: "restore",
+      field: "autocompleteone",
+      options: [
+        { text: "Yes", value: "yes" },
+        { text: "No", value: "no" },
+      ]
+    },
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
