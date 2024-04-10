@@ -38,6 +38,34 @@ You can find useful explanations and video guides in official documentation:
 - [Documents and kernels](https://jupyterlab.readthedocs.io/en/latest/user/documents_kernels.html)
 - [Text editor](https://jupyterlab.readthedocs.io/en/latest/user/file_editor.html)
 
+## Logging out and stopping the server
+
+When you are ready to stop working inside Workbench, please stop your server in control panel and logout.
+
+Stopping your Workbench is the same as shutting down your computer. If you stop your Workbench environment and come back the next day (or even the next week), all your files will still be there and you can resume processing your data.
+
+### Why stop the server?
+
+Do your part to reduce resource use and ease the burden on the environment by stopping your Workbench server when you are finished working for the day. This will also allow your lab mates to use those compute resources while you are away.
+
+**In some cases, you may need to leave your Workbench server running.** For example, you have a notebook performing a very time intensive analysis and wish to let it run overnight. It is acceptable for you to keep your Workbench running in cases like this.
+
+> Summary:
+>
+> Unless you intend to run your analysis for a long period of time, make sure to stop the server before you leave.
+
+### How can I stop the server and log out?
+
+1. While logged in Workbench select **`Control panel`** in top right corner.
+
+![wb_topbar_cp.png](../images/wb_topbar_cp.png)
+
+2. Then in the Control panel hit **`Stop My Server`** button.
+
+![wb_cp_stopserver.png](../images/wb_cp_stopserver.png)
+
+3. In the top right corner click on the **`Logout`** button.
+
 ## Working with lab mates
 
 Typically your lab has more users and you all are sharing [compute](https://docs.hdc.ntnu.no/do-science/faq/compute/) and [storage resources](/do-science/faq/storage/).
