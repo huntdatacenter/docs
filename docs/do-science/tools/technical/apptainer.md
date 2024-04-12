@@ -1,7 +1,7 @@
 ---
 title: Apptainer (Singularity)
 category: Technical tools
-permalink: /do-science/tools/technical/singularity
+permalink: /do-science/tools/technical/apptainer-singularity
 sidebarDepth: 0
 description: Installation guide for Apptainer (Singularity)
 tags:
@@ -13,7 +13,7 @@ tags:
 
 # Apptainer (Singularity)
 
-**[Apptainer](https://docs.sylabs.io/guides/latest/user-guide/index.html), previously known as Singularity, provides application containers for Linux that is also compatible with Docker.**
+**[Apptainer](https://apptainer.org/docs/user/latest/), previously known as Singularity, provides application containers for Linux that is also compatible with Docker.**
 
 [[toc]]
 
@@ -52,7 +52,7 @@ apptainer --help
 
 ## Common practices and commands
 
-All information is collected from [the official Apptainer documentation](https://docs.sylabs.io/guides/latest/user-guide/index.html).
+All information is collected from [the official Apptainer documentation](https://apptainer.org/docs/user/latest/).
 
 ### Pull Docker image
 
