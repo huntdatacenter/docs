@@ -260,7 +260,7 @@ ${this.ipAddress}    ${this.labName}-entry
             <VideoGuide
               v-model="mainExpansionPanel"
               title="Fetch secrets"
-              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-fetch-secrets-v1.mp4/c175ee37-e953-4608-74f0-b4f854889cda?t=1712660229596"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-fetch-secrets-v1.mp4/f0358961-6e4d-c415-8643-39212a0e19d7?t=1712929989690"
               poster="/img/video-covers/user-onboarding-fetch-secrets-video-cover.jpeg"
             />
 
@@ -548,7 +548,7 @@ ${this.ipAddress}    ${this.labName}-entry
             <VideoGuide
               v-model="mainExpansionPanel"
               title="VPN access"
-              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-vpn-access-v1.mp4/2c3680a8-0b48-ac22-df2e-0a71a8b699e0?t=1712660241045"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-vpn-access-v1.mp4/72993cbe-8e1f-3b3f-9f96-6b4d75016b17?t=1712930006465"
               poster="/img/video-covers/user-onboarding-vpn-access-video-cover.jpeg"
             />
 
