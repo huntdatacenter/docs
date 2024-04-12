@@ -20,9 +20,9 @@ This page describes the practical aspects of kista transfers. Head over to our [
 
 ## Order
 
-Lab leaders and lab coordinators can order internal kistas in our administer-science [service desk](/administer-science/service-desk/lab-orders/#internal-kista). 
+Lab leaders and lab coordinators can order internal kistas in our administer-science [service desk](/administer-science/service-desk/lab-orders/#internal-kista).
 
-## Roles 
+## Roles
 
 The kista order defines two roles that we will use in this document:
 
@@ -67,7 +67,7 @@ Username: <username>-<role>
 This section is aimed at the lab user that will **upload** data to a kista. See the [download section](#download) if you plan to download data to your lab.
 :::
 
-SFTP method allows you to connect to a remote kista through your home machine and safely transfer your data. 
+SFTP method allows you to connect to a remote kista through your home machine and safely transfer your data.
 
 ::: expander "SFTP" id="upload-sftp"
 
@@ -146,7 +146,7 @@ LFTP method works in similar fashion, except it offers you more reliable transfe
 lftp -e "mirror -cR <upload_directory> /upload; bye" sftp://<username>-upload:@<ip-address>
 
 # -- Demo example
-lftp -e "mirror -cR /mnt/archive/example_archive/ /upload; bye" sftp://demouser-upload:@10.42.132.118
+lftp -e "mirror --parallel 10 -cR /mnt/archive/example_archive/ /upload; bye" sftp://demouser-upload:@10.42.132.118
 ```
 You can read more about LFTP [here](/do-science/tools/transfer/lftp/)
 
@@ -226,7 +226,7 @@ For large downloads, [terminal multiplexers](/do-science/tools/technical/termina
 lftp -e "mirror -c /upload <download_to_directory>; bye" sftp://<username>-<role>:@<ip-address>
 
 # -- Demo example downloader
-lftp -e "mirror -c /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
+lftp -e "mirror --parallel 10 -c /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
 ```
 :::
 
@@ -245,7 +245,7 @@ You might see this warning message when you log into a kista that has been rebui
 
 ::: details Solution
 
-[Click here](/do-science/troubleshooting/connection.html#warning-remote-host-identification-has-changed) to see the full message and explanation in our main troubleshooting section. You may ignore this message if you connect to a kista inside your lab. 
+[Click here](/do-science/troubleshooting/connection.html#warning-remote-host-identification-has-changed) to see the full message and explanation in our main troubleshooting section. You may ignore this message if you connect to a kista inside your lab.
 
 
 
@@ -255,4 +255,3 @@ You can remove the message and proceed with the login by running the command tha
 ssh-keygen -f "/home/<username>/.ssh/known_hosts" -R "10.42.<number>.<number>"
 ```
 :::
-

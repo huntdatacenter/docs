@@ -1,15 +1,19 @@
 ---
-title: Singularity
+title: Apptainer (Singularity)
 category: Technical tools
-permalink: /do-science/tools/technical/singularity
+permalink: /do-science/tools/technical/apptainer-singularity
 sidebarDepth: 0
-description: Installation guide for Singularity
+description: Installation guide for Apptainer (Singularity)
+tags:
+  - docker
+  - apptainer
+  - singularity
 ---
 
 
-# Singularity
+# Apptainer (Singularity)
 
-**[Singularity](https://sylabs.io/guides/latest/user-guide/index.html) provides application containers for Linux that is also compatible with Docker.**
+**[Apptainer](https://apptainer.org/docs/user/latest/), previously known as Singularity, provides application containers for Linux that is also compatible with Docker.**
 
 [[toc]]
 
@@ -30,25 +34,25 @@ You will need the conda-forge channel to install Singularity. If you have not se
 conda config --add channels conda-forge
 ```
 
-**Install singularity in conda environment**
+**Install Apptainer (Singularity) in conda environment**
 
-Create environment and install Singularity:
+Create environment and install Apptainer (Singularity):
 
 ```bash
-conda create -n singularity -c conda-forge "singularity>=3.0.0"
+conda create -n apptainer -c conda-forge "apptainer"
 ```
 
-Activate your singularity environment and try running Singularity:
+Activate your apptainer environment and try running Apptainer:
 
 ```bash
-conda activate singularity
+conda activate apptainer
 
-singularity --help
+apptainer --help
 ```
 
 ## Common practices and commands
 
-All information is collected from official Singularity documentation (link above).
+All information is collected from [the official Apptainer documentation](https://apptainer.org/docs/user/latest/).
 
 ### Pull Docker image
 
@@ -82,7 +86,7 @@ singularity instance start -B $TMPDIR      <image>    <instance-name>
 singularity instance start -B $TMPDIR alpine_latest.sif instance1
 ```
 
-This command causes Singularity to create an isolated environment for the container services to live inside. 
+This command causes Singularity to create an isolated environment for the container services to live inside.
 
 
 
