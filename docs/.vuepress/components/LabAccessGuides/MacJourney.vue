@@ -57,6 +57,7 @@ export default {
     VSheet,
     CopyTextField: () => import('../generic/CopyTextField.vue'),
     TotpGuide: () => import('../LabAccessGuides/TotpGuide.vue'),
+    VideoGuide: () => import('../LabAccessGuides/VideoGuide.vue'),
     DesignNewPassphrase: () => import('../LabAccessGuides/DesignNewPassphrase.vue'),
   },
   props: {
@@ -255,6 +256,13 @@ ${this.ipAddress}    ${this.labName}-entry
               <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#detail-2-macos" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
               <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
             </ol>
+
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="Fetch secrets"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-fetch-secrets-v1.mp4/f0358961-6e4d-c415-8643-39212a0e19d7?t=1712929989690"
+              poster="/img/video-covers/user-onboarding-fetch-secrets-video-cover.jpeg"
+            />
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
@@ -536,6 +544,13 @@ ${this.ipAddress}    ${this.labName}-entry
                 </v-card-text>
               </v-card>
             </v-dialog>
+
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="VPN access"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-vpn-access-v1.mp4/72993cbe-8e1f-3b3f-9f96-6b4d75016b17?t=1712930006465"
+              poster="/img/video-covers/user-onboarding-vpn-access-video-cover.jpeg"
+            />
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
