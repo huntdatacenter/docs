@@ -222,7 +222,7 @@ module.exports = {
                 "/do-science/tools/technical/mobaxterm.md",
                 "/do-science/tools/technical/ncdu.md",
                 "/do-science/tools/technical/postgresql.md",
-                "/do-science/tools/technical/singularity.md",
+                "/do-science/tools/technical/apptainer.md",
                 "/do-science/tools/technical/terminal-multiplexers.md",
                 "/do-science/tools/technical/vnc.md",
                 "/do-science/tools/technical/x2go.md",
