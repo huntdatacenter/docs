@@ -6,6 +6,7 @@ import {
   VCard,
   VCardTitle,
   VCardText,
+  VCardActions,
   VToolbar,
   VToolbarTitle,
   VToolbarItems,
@@ -23,6 +24,7 @@ export default {
     VCard,
     VCardTitle,
     VCardText,
+    VCardActions,
     VToolbar,
     VToolbarTitle,
     VToolbarItems,
@@ -78,6 +80,7 @@ export default {
     <v-dialog
       v-model="videoDialog"
       persistent
+      scrollable
       max-width="1280px"
       @keydown.esc="videoDialog = false"
     >
@@ -97,8 +100,8 @@ export default {
         <v-card-text class="pa-0 ma-0">
           <video
             v-if="preload"
+            class="video-card-block"
             width="100%"
-            height="auto"
             :poster="poster"
             preload="auto"
             controls
@@ -109,9 +112,19 @@ export default {
             >
             Your browser does not support the video tag.
           </video>
-          <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
         </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn outlined color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+        </v-card-actions>
       </v-card>
     </v-dialog>
   </section>
 </template>
+
+<style lang="sass">
+
+.video-card-block
+  height: 99% !important
+
+</style>
