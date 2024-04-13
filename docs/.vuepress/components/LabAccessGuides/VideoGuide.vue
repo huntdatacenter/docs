@@ -115,7 +115,8 @@ export default {
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn outlined color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+          <v-btn outlined color="link" class="mx-2 my-2" small @click="videoDialog = false">Close</v-btn>
+          <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
