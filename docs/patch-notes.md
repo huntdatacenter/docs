@@ -12,6 +12,66 @@ description: Minor and major updates to our services.
 
 This page contains descriptions of updates to HUNT Cloud's services. All with the aim to provide the best possible conditions for your scientific explorations.
 
+## Patch note 2.11.2
+
+*2024-04-15*
+
+::: details Do science
+
+<h3>Major changes</h3>
+
+**Lab Access link**  
+New option available in lab access guide which will filter the guide according to your need.  
+For example:  
+- New user tag - will receive full guide  
+- Reissue of Workbench certificate tag - only steps which are relevant to this reissue will be available  
+And more... 
+
+**Onboarding video guide**  
+In lab access link, a new icon has appeard which will allow you to watch a video guide where we walk you through our onboarding process. Our aim is to fully cover onboarding procedure before the end of April. 
+:::
+
+
+::: details Administer science
+
+<h3>Major changes</h3>
+
+**Migration of labs to Cloud 2**  
+We are excited to announce that migration to our new cloud will start soon ! We have created an FAQ pages for this where we answer most anticipated questions.  
+Take a look: https://docs.hdc.ntnu.no/do-science/faq/migration/
+
+
+**New invoice profiles**  
+fill.
+
+
+<h3>Minor changes</h3>
+
+**Internal kista**  
+We are calculating FS overhead automatically now. This means that you should enter raw size of kista when you request it via service desk.
+- Kista below 1TB receives 100GB buffer
+- Kista over 1TB receives 10% buffer to compensate for File System overhead  
+This is not implemented for permanent kista
+
+**External kista**  
+- Added public IP validation (NTNU transfers are exception - leave empty field). User will not be allowed to continue if IP address is private.
+
+**New storage volume**  
+- Added option to choose if user wants restore option enabled or not. This was not clear before and could result in increased risk of data loss.
+
+:::
+
+::: details Govern science
+
+<h3>Major changes</h3>
+
+**Certified by DNV**  
+We have successfully completed last years audit and received certifications.
+
+:::
+
+<!-- ================== -->
+
 ## Patch note 2.11.1
 
 *2023-12-21*
