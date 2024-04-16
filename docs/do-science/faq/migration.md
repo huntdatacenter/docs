@@ -4,68 +4,98 @@ category: FAQ
 # Permalink '/do-science/faq/migration/' is being used in Lab Access link
 permalink: /do-science/faq/migration/
 sidebarDepth: 1
-description: This page lists frequently asked questions related to migration of labs to new cloud location.
+description: This page lists frequently asked questions related to the 2024 migration of labs to their new cloud location.
 ---
 
 # FAQ on migration
 
-**This page lists frequently asked questions related to the migration of labs to our new cloud location in 2024.**
+**This page lists frequently asked questions related to the migration of labs to their new cloud location in 2024. [Contact us](/contact) with questions to help us grow this FAQ.**
+
+
 
 [[toc]]
 
-## Why do we need to migrate?
+::: tip Skip to the chase 
 
-We have a shiny, new server room with new and upgraded equipment. This means more flexibility and capacity for your scientific experiments. At the same time this means more space for us in our original location to start planning the next generation of services.
+We have a new location with upgraded equipment. All labs will be migrated over here in 2024. You should plan for few days of downtime. We will schedule the migration with individual labs to avoid conflicts with scientific deadlines. Data on home machines will be migrated automaticall, and on a case-by-case basis for unamanged machines. You will need to reconfigure custom software installation and reset your lab password. 
+
+:::
+
+## General
+
+### Why do we need to migrate?
+
+We have a shiny new server room with new and upgraded equipment. This means more flexibility and capacity for your scientific experiments. At the same time this means more space for us in our original location to start planning the next generation of services.
+
+
+
+## Timing
+
+### When will our lab migration happen?
+
+We plan to migrate most labs in 2024 starting in Q2. Lab leaders in BLUE and ORANGE data spaces will be contacted for schedule preferences.
+
+### Can we schedule our lab migration?
+
+Yes. We aim to avoid conflicts with your internal deadline such as papers, conferences, grants etc. to the extend possible. We will reach out to BLUE AND ORANGE data spcaes to schedule the migration accordance to their preferences. We will also try to accomodate requests for labs in WHITE data spaces to the extend possible.
+
+### We am supposed to receive a big dataset, should we ask for a prioritization?
+
+Yes! The available storage capacity in the new location is larger. Please reach out if you plan to import more than 10 terabytes of data.
+
+### When is the last date we can schedule our migration? 
+
+Honestly, we don't know. Ideally, we would like all labs to be scheduled for migration during 2024.
+
+## Cost
+
+### Is there any cost involved with the migration?
+
+Not directly, the migration is included in your lab subscription. However, be aware that the GPU availability differ slightly in the new location. We will migrate most P100 and V100S users to A30 or A40 GPUs. 
+
+
 
 <!-- before migration -->
 
 ## Before migration
 
+### Do we need to prepare something before the migration? 
 
-### When will our lab migration happen?
+Yes, if you have `cargo`-volumes and unamanged machines in your lab. Worry not, we will contact your lab leader will further details if this is the case. In short, you will need to remove data from your cargo-volumes as these will be discontinued, and decide if you want storage volumes for unmanged machines to be migrated or not. 
 
-We plan to migrate most labs in 2024 starting in Q2.
+### Will our home machine be the same after the migration?
 
+No. You will get a new home machine with a new Ubuntu operating system (22.04 LTS). You will need to install and configure software that you have installed on your current home machine.
 
-### Can we schedule our lab migration?
+### Will our Conda environments on our home machine work after the new migration? 
 
-Yes. The migration wil be scheduled on a per lab basis and we will reach out to schedule your migration. We aim to avoid conflicts with your internal deadline such as papers, conferences, grants etc. to the extend possible.
+Yes, we expect that the Conda environments will work. We will migrate the storage volume on your home machine where these are stored. 
 
+### Will our apt and snap packages on home be migrated?
 
-### Is there any cost involved with the migration?
-
-Not directly, the migration is included in your lab subscription. However, the GPU availability will differ slightly in Cloud2. Those that utilize P100 and V100(s) GPU cards might be asked to migrate to a newer generation such as A30, A40 and A100.
-
-
-### I am supposed to receive a big dataset, should I ask for a prioritization?
-
-Yes. The available storage capacity in the new location is larger. Please reach out if you plan for imports above 10 terabytes.
-
-### Will our home be the same?
-
-A new installation for your home machine will be available. You will be asked to update your lab passwords and install new workbench certificates. The operating system will be a fresh install of latest Ubuntu (22.04 LTS) and you will need to install software that you have installed in your current location.
-
-### Will I have all my apt packages installed?
-
-We will install a clean operating system, transfer your data and configure your current lab users. You need to install specific apt packages yourself.
+No. We will install a clean operating system, transfer your data and configure your current lab users. You need to install your preferred apt and snap packages yourself.
 
 ### How do I know if my apt-packages are suppoerted in Ubuntu 22.04?
 
-We recommend that you if you need apt packages that require older version than 22.04. It might be good to sanity-check that they support Ubuntu 22.04 (https://packages.ubuntu.com/).
+Some of your current apt-packages may depend on older Linux version. You can check the current pacakges that are supported by Ubuntu 22.04 here: [https://packages.ubuntu.com/](https://packages.ubuntu.com/).
 
 
-### Will our CPU machines be the same?
-
-Yes. We aim to move you to a new compute machine with the same machine type that you have today. However, the operating system will be fresh intallation, so software and other adaptations that you have done to your current environment must be reinstalled.
+You will need to update your lab passwords and install new workbench certificates.
 
 
-### Will our storage volumes be the same?
 
-Yes. We will migrate your storage volumes to the new location.
+
+### Will you migrate our storage volumes?
+
+Yes. We will migrate your storage volumes to the new location. This means that your data should be the same. For unamanged machines, you will be asked to choose if you want data to be migrated or if you want a fresh storage volume.
+
+### Will our CPU machine types be the same?
+
+Yes. We aim to move you to a new compute machine with the same machine type that you have today. However, the operating system will be fresh intallation. Therefore, you will need to install and configure software that you have previously installed in your current lab.
 
 ### Will our GPU machines be the same?
 
-No. The GPU availability will differ slightly. Those that utilize P100 and V100(s) GPU cards might be asked to migrate to a newer generation such as A30, A40 and A100.
+No. The GPU availability differ slightly between the two locations. Labs with P100 and V100(s) GPU accelerators may be asked to migrate to a newer generation such as A30 or A40.
 
 | Current GPU model  | Recommended model |
 |--------------------|-------------------|
@@ -86,26 +116,28 @@ Yes. Your migration will be scheduled. We will notify you over email in advance 
 
 ### Will our lab be unavailable during our migration?
 
-Yes. Your lab will be unavailable while data are migration to avoid inconsistency in your data.
+Yes and no. We will start the migration of your storage volumes and other configurations while you work in your current lab. When these initial transfers and configurations are completed, we will finalize your installation. Both your old and new lab will be unavailable during this step to avoid inconsistency in your data.
 
 ### How long will the migration last?
 
-The duration of the migration depends on the size of your storage volumes. We will reach our to larger environments with migraton time estimates before we start.
+We expect your lab to be unavailable for about 1 day while we finalize your migration. 
 
 
 <!-- after migration: access, ... -->
 ## After migration
 
-### Do I need to change anything regarding my lab user setup?
+### Can we log directly into our migrated lab?
 
-Yes. The IP address of your entry machine and passwords will change. We will send you information with necessary onboarding details in a new Lab access link.
+No. All lab users need to update their lab IP, reset their SSH passphrase and install a new Workbench certificate. We will send guides on how to do this during the migration (lab access link). 
 
 ### Do I need update my X2go session preferences?
 
-Yes. Update the IP address of entry machine. You will find the updated IP address in Lab access link once your lab is migrated.
+Yes. You need to update your IP address in your setup configuration. You will find the updated IP address in Lab access link once your lab is migrated.
 
 ### How can I easily update my Mobaxterm session?
 
-Follow the Mobaxterm session in Lab access link and use the button to create new session.
+Follow the Mobaxterm session in Lab access link and use the blue button to create new session.
 
 <!-- TODO I am missing an apt package, how can I install -->
+
+
