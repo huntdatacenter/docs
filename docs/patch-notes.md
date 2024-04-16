@@ -29,6 +29,12 @@ And more...
 
 **Onboarding video guide**  
 In lab access link, a new icon has appeard which will allow you to watch a video guide where we walk you through our onboarding process. Our aim is to fully cover onboarding procedure before the end of April. 
+
+<h3>Minor changes</h3>
+
+**Apptainer (Singularity)** 
+A containerization tool Singularity was renamed to Apptainer as it was moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/).  
+We have made changes to our documentation to reflect this change. 
 :::
 
 
