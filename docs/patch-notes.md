@@ -32,7 +32,7 @@ In lab access link, a new icon has appeard which will allow you to watch a video
 
 <h3>Minor changes</h3>
 
-**Apptainer (Singularity)** 
+**Apptainer (Singularity)**  
 A containerization tool Singularity was renamed to Apptainer as it was moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/).  
 We have made changes to our documentation to reflect this change. 
 :::
