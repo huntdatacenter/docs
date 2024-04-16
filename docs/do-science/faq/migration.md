@@ -17,7 +17,7 @@ description: This page lists frequently asked questions related to the 2024 migr
 
 ::: tip Skip to the chase 
 
-We have a new location with upgraded equipment. All labs will be migrated over here in 2024. You should plan for few days of downtime. We will schedule the migration with individual labs to avoid conflicts with scientific deadlines. Data on home machines will be migrated automaticall, and on a case-by-case basis for unamanged machines. You will need to reconfigure custom software installation and reset your lab password. 
+We have a new location with upgraded equipment. All labs will be migrated over here in 2024. You should plan for few days of downtime. We will schedule the migration with individual labs to avoid conflicts with scientific deadlines. Data on home machines will be migrated automatically, and on a case-by-case basis for unmanaged machines. You will need to reconfigure custom software installation and reset your lab password. 
 
 :::
 
@@ -37,7 +37,7 @@ We plan to migrate most labs in 2024 starting in Q2. Lab leaders in BLUE and ORA
 
 ### Can we schedule our lab migration?
 
-Yes. We aim to avoid conflicts with your internal deadline such as papers, conferences, grants etc. to the extend possible. We will reach out to BLUE AND ORANGE data spcaes to schedule the migration accordance to their preferences. We will also try to accomodate requests for labs in WHITE data spaces to the extend possible.
+Yes. We aim to avoid conflicts with your internal deadline such as papers, conferences, grants etc. to the extend possible. We will reach out to BLUE AND ORANGE data spaces to schedule the migration accordance to their preferences. We will also try to accommodate requests for labs in WHITE data spaces to the extend possible.
 
 ### We am supposed to receive a big dataset, should we ask for a prioritization?
 
@@ -61,7 +61,7 @@ Not directly, the migration is included in your lab subscription. However, be aw
 
 ### Do we need to prepare something before the migration? 
 
-Yes, if you have `cargo`-volumes and unamanged machines in your lab. Worry not, we will contact your lab leader will further details if this is the case. In short, you will need to remove data from your cargo-volumes as these will be discontinued, and decide if you want storage volumes for unmanged machines to be migrated or not. 
+Yes, if you have `cargo`-volumes and unmanaged machines in your lab. Worry not, we will contact your lab leader will further details if this is the case. In short, you will need to remove data from your cargo-volumes as these will be discontinued, and decide if you want storage volumes for unmanaged machines to be migrated or not. 
 
 ### Will our home machine be the same after the migration?
 
@@ -75,9 +75,9 @@ Yes, we expect that the Conda environments will work. We will migrate the storag
 
 No. We will install a clean operating system, transfer your data and configure your current lab users. You need to install your preferred apt and snap packages yourself.
 
-### How do I know if my apt-packages are suppoerted in Ubuntu 22.04?
+### How do I know if my apt-packages are supported in Ubuntu 22.04?
 
-Some of your current apt-packages may depend on older Linux version. You can check the current pacakges that are supported by Ubuntu 22.04 here: [https://packages.ubuntu.com/](https://packages.ubuntu.com/).
+Some of your current apt-packages may depend on older Linux version. You can check the current packages that are supported by Ubuntu 22.04 here: [https://packages.ubuntu.com/](https://packages.ubuntu.com/).
 
 
 You will need to update your lab passwords and install new workbench certificates.
@@ -87,11 +87,11 @@ You will need to update your lab passwords and install new workbench certificate
 
 ### Will you migrate our storage volumes?
 
-Yes. We will migrate your storage volumes to the new location. This means that your data should be the same. For unamanged machines, you will be asked to choose if you want data to be migrated or if you want a fresh storage volume.
+Yes. We will migrate your storage volumes to the new location. This means that your data should be the same. For unmanaged machines, you will be asked to choose if you want data to be migrated or if you want a fresh storage volume.
 
 ### Will our CPU machine types be the same?
 
-Yes. We aim to move you to a new compute machine with the same machine type that you have today. However, the operating system will be fresh intallation. Therefore, you will need to install and configure software that you have previously installed in your current lab.
+Yes. We aim to move you to a new compute machine with the same machine type that you have today. However, the operating system will be fresh installation. Therefore, you will need to install and configure software that you have previously installed in your current lab.
 
 ### Will our GPU machines be the same?
 
@@ -99,10 +99,10 @@ No. The GPU availability differ slightly between the two locations. Labs with P1
 
 | Current GPU model  | Recommended model |
 |--------------------|-------------------|
-| p100 (16 GB VRAM)  | a30 (24 GB VRAM)  |
-| v100s (32 GB VRAM) | a40 (48 GB VRAM)  |
-| v100 (32 GB VRAM)  | a40 (48 GB VRAM)  |
-| a100 (40 GB VRAM)  | a40 (48 GB VRAM)  |
+| P100 (16 GB vRAM)  | A30 (24 GB vRAM)  |
+| V100s (32 GB vRAM) | A40 (48 GB vRAM)  |
+| A100 (32 GB vRAM)  | A40 (48 GB vRAM)  |
+| A100 (40 GB vRAM)  | A40 (48 GB vRAM)  |
 
 <!-- TODO: add info on cargo volume -->
 
@@ -134,9 +134,9 @@ No. All lab users need to update their lab IP, reset their SSH passphrase and in
 
 Yes. You need to update your IP address in your setup configuration. You will find the updated IP address in Lab access link once your lab is migrated.
 
-### How can I easily update my Mobaxterm session?
+### How can I easily update my MobaXterm session?
 
-Follow the Mobaxterm session in Lab access link and use the blue button to create new session.
+Follow the MobaXterm session in Lab access link and use the blue button to create new session.
 
 <!-- TODO I am missing an apt package, how can I install -->
 
