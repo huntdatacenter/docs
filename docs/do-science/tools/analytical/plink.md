@@ -30,20 +30,37 @@ plink1 --noweb
 
 Install [PLINK 1.9](https://www.cog-genomics.org/plink/1.9/) with the following commands:
 
+Make sure you have your personal bin directory in place:
 ```bash
-sudo apt install plink1.9
+mkdir -p ~/bin && source ~/.profile
 ```
 
-And use the following executable:
-
+Download the latest binary release of PLINK 1.9:
 ```bash
-plink1.9
+wget -P ~/bin/ https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20231211.zip
+```
+
+Unpack the archive:
+```bash
+unzip  ~/bin/plink_linux_x86_64_20231211.zip -d ~/bin/
+```
+
+Remove archive:
+```bash
+rm -v ~/bin/plink_linux_x86_64_20231211.zip
+```
+
+Test by printing the version:
+```bash
+plink --version
 ```
 
 You can also install PLINK 1.9 with Bioconda.
 See our [Anaconda and Bioconda](conda) tutorial for more details.
 
 ## How to install PLINK 2
+
+### Using conda
 
 Installing [PLINK 2](https://www.cog-genomics.org/plink/2.0/) is a little more cumbersome
 as it is not available in Ubuntu's package repositories.
@@ -57,27 +74,38 @@ environment use this command:
 conda install -c bioconda plink2
 ```
 
-To download and unpack the binary for PLINK 2 follow these steps:
+### Using binary release
 
+To download and unpack the binary for PLINK 2 follow these steps.
+
+Make sure you have your personal bin directory in place:
 ```bash
-# Create a local binary directory in your home directory
-mkdir ~/bin
+mkdir -p ~/bin && source ~/.profile
+```
 
-# Download the latest binary of PLINK 2.
+Download the latest binary release of PLINK 2:
+```bash
 wget -P ~/bin/ http://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_latest.zip
+```
 
-# Install unzip
-sudo apt install unzip
-
-# Unzip the archive
+Unzip the archive:
+```bash
 unzip ~/bin/plink2_linux_x86_64_latest.zip -d ~/bin/
+```
 
-# Remove archive
-rm ~/bin/plink2_linux_x86_64_latest.zip
+Remove archive:
+```bash
+rm -v ~/bin/plink2_linux_x86_64_latest.zip
 ```
 
 You can now use the following executable:
-
 ```bash
 plink2
+```
+
+## Troubleshooting
+
+Install unzip if missing:
+```bash
+sudo apt install -y unzip
 ```
