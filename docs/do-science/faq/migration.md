@@ -27,7 +27,9 @@ We have a new location with upgraded equipment. All labs will be migrated over h
 
 We have a shiny new server room with new and upgraded equipment. This means more flexibility and capacity for your scientific experiments. At the same time this means more space for us in our original location to start planning the next generation of services.
 
+### Can we migrate part of the lab?
 
+Unfortunately not. The lab has to migrated as a whole.
 
 ## Timing
 
@@ -73,14 +75,12 @@ Yes, we expect that the Conda environments will work. We will migrate the storag
 
 ### Will our apt and snap packages on home be migrated?
 
-No. We will install a clean operating system, transfer your data and configure your current lab users. You need to install your preferred apt and snap packages yourself.
+No. We will install a clean operating system, transfer your data and configure your current lab users. You need to install your preferred apt and snap packages yourself. We can send you a list of apt and snap packages installed after migration if you ask us on slack or email.
 
 ### How do I know if my apt-packages are supported in Ubuntu 22.04?
 
-Some of your current apt-packages may depend on older Linux version. You can check the current packages that are supported by Ubuntu 22.04 here: [https://packages.ubuntu.com/](https://packages.ubuntu.com/).
+Some of your current apt-packages may depend on older Linux version. You can check the current packages that are supported by Ubuntu 22.04 (**Jammy**) here: [https://packages.ubuntu.com/](https://packages.ubuntu.com/).
 
-
-You will need to update your lab passwords and install new workbench certificates.
 
 
 
@@ -130,9 +130,10 @@ We expect your lab to be unavailable for about 1 day while we finalize your migr
 
 No. All lab users need to update their lab IP, reset their SSH passphrase and install a new Workbench certificate. We will send guides on how to do this during the migration (lab access link).
 
+
 ### Do I need update my X2go session preferences?
 
-Yes. You need to update your IP address in your setup configuration. You will find the updated IP address in Lab access link once your lab is migrated.
+Yes. You need to update your IP address in your session preferences. You will find the updated IP address in Lab access link once your lab is migrated.
 
 ### How can I easily update my MobaXterm session?
 
