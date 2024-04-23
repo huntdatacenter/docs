@@ -12,7 +12,7 @@ description: Guide to pick up the thread after being away for several months.
 
 We know, science has its natural cycles and seasons for courses, grants, supervision, publishing, celebrations and so forth. We have our seasons too, with time for breaks, work sprints, parental leaves, caring for family members etc. 
 
-It's normal to not remember where you left off, and quickly picking up the threads when you get back is important. Our aim for this page is to get you back in your lab so you can quickly click around to get reaquinted with your data, scripts and thinking again.
+It's normal to not remember where you left off, and quickly picking up the threads when you get back is important. Our aim for this page is to get you back in your lab so you can quickly click around to get reacquainted with your data, scripts and thinking again.
 
 [[toc]]
 
@@ -27,7 +27,7 @@ Worry not, let's get you in. Lab users that are inactive for 180 days will autom
 
 [Service desk - User reactivation](/administer-science/service-desk/lab-orders/#reactivate-lab-user)
 
-Ask your lab leader or lab coordinator to send us a new user agreement. [Contact us](/contact) on email or Slack if you don't remember who's your lab leader or lab coordinator. You will get new keys and further guides on how to get in once the request is regsitered and your new keys are ready. 
+Ask your lab leader or lab coordinator to send us a new user agreement. [Contact us](/contact) on email or Slack if you don't remember who's your lab leader or lab coordinator. You will get new keys and further guides on how to get in once the request is registered and your new keys are ready. 
 
 ### Yes, but I forgot everything
 
@@ -69,7 +69,7 @@ You will get the certificate on email and guidance in your access link on how to
 
 ## Remind me
 
-### Organisation at a glance
+### Organization at a glance
 
 **Located in Norway**
 
@@ -77,7 +77,7 @@ Your lab is hosted on a virtual machine that is located on a physical machine lo
 
 **Shared resources**
 
-Inside your lab you share storage and resources with your lab team. You have your own Workbench where you can install your own package, preferrably with Conda.
+Inside your lab you share storage and resources with your lab team. You have your own Workbench where you can install your own package, preferably with Conda.
 
 **Storage folders**
 
@@ -85,7 +85,7 @@ Your Workbench and lab is set up with default storage folders `work`, `archive` 
 
 ### What's new since last time
 
-We continously update our services, and your Workbenh or other things may look a bit different from last time. 
+We continuously update our services, and your Workbench or other things may look a bit different from last time. 
 
 **Updates in Patch notes**
 
