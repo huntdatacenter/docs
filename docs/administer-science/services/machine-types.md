@@ -83,21 +83,21 @@ These machines are optimized for computation with 2 GB, 4 GB, 8 GB or 16 GB of m
 | default.e6* | 32       | 512             |
 | default.e7* | 48       | 768             |
 
-## GPU accelerator machine types
+## GPU accelerator types
 
-All the above machine types may be deployed with _1_ or _2_ of the following GPU accelerators if available:
+All the above machine types may be deployed with one or two GPU accelerators:
 
 | **Type** | **Model** | **Architecture** | **Memory** | **Interface**  |
 | ------------ | ----------- | ------------ | --------- | ---------- |
-| nvidia.p100  | Tesla P100  | Pascal       | 16GB HBM2 | PCIe Gen3  |
-| nvidia.v100  | Tesla V100  | Volta        | 32GB HBM2 | PCIe Gen3  |
-| nvidia.v100s | Tesla V100S | Volta        | 32GB HBM2 | PCIe Gen3  |
-| nvidia.a30*  | Tesla A30  | Ampere       | 24GB HBM2 | PCIe Gen3  |
-| nvidia.a40*  | Tesla A40  | Ampere       | 48GB HBM2 | PCIe Gen3  |
-| nvidia.a100* | Tesla A100 | Ampere        | 40GB HBM2 | PCIe Gen3  |
-| nvidia.a100* | Tesla A100 | Ampere       | 80GB HBM2 | PCIe Gen3  |
+| nvidia.p100  | NVIDIA P100  | Pascal       | 16GB HBM2 | PCIe Gen3  |
+| nvidia.v100  | NVIDIA  V100  | Volta        | 32GB HBM2 | PCIe Gen3  |
+| nvidia.v100s | NVIDIA  V100S | Volta        | 32GB HBM2 | PCIe Gen3  |
+| nvidia.a30*  | NVIDIA  A30  | Ampere       | 24GB HBM2 | PCIe Gen3  |
+| nvidia.a40*  | NVIDIA  A40  | Ampere       | 48GB HBM2 | PCIe Gen3  |
+| nvidia.a100* | NVIDIA  A100 | Ampere        | 40GB HBM2 | PCIe Gen3  |
+| nvidia.a100* | NVIDIA  A100 | Ampere       | 80GB HBM2 | PCIe Gen3  |
 
-Manufacturer = NVIDIA. See the [GPU on HUNT Cloud](/do-science/tools/technical/gpu/) documentation for more information. Availability will vary between locations.
+Note that availability vary between locations. See the [GPU on HUNT Cloud](/do-science/tools/technical/gpu/) documentation for more information. 
 
 ## Custom machine types
 

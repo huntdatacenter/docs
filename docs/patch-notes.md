@@ -32,6 +32,11 @@ We have updated your lab access links so it tailor the guides you see for your s
 
 Based on requests, we have updated our default machine series with a [new E-series](/administer-science/services/machine-types/#e-series) that holds 16 GB ram per CPU. These can be ordered by [Requesting a machine size update](/administer-science/service-desk/lab-orders/#update-cpu-machine-size) in our administer science service desk. 
 
+**New GPU type (A40)**
+
+NVIDIA A40 GPUs with 48 GB of memory are now available as [GPU accelerator types](/administer-science/services/machine-types/#gpu-accelerator-types) in Cloud2. [Contact us](/contact) for prioritized migration if you want to give it a try.
+
+
 <h3>Minor changes</h3>
 
 **Apptainer (Singularity)**
@@ -58,29 +63,33 @@ Our community translation of [Freedom to explore](/do-science/community/freedom-
 
 <h3>Major changes</h3>
 
-**Migration of labs to Cloud 2**  
-We are excited to announce that migration to our new cloud will start soon ! We have created an FAQ pages for this where we answer most anticipated questions.  
-Take a look: https://docs.hdc.ntnu.no/do-science/faq/migration/
+**Migration to the new location has started**
 
+After years in the making, we are excited to finally announce that the migration to our new location and cloud installation has started! We have a new server-room with upgraded equipment and more flexibility ready for your as soon as you complete your migration. We are reaching out to labs to schedule the migration with the aim to avoid conflicts with deadlines and other important work. See our [FAQ pages for migration](/do-science/faq/migration/) for more information. 
 
+**New price list (v4.1)**
 
-**Price list updates**
+We have updated our [price list](/administer-science/prices/pricelist/#current) with a new version (v4.1) that includes the new E-series machine types and the new NVIDIA A40 GPU type. The [price calculator](/administer-science/prices/calculator/) is updated accordingly also.
 
-* Gpu and new machine types
-* Price calculator is updated to reflect the changes. 
+**Invoice updates**
 
-**New invoice profile form**  
-fill. More details. VAT for collaborations with NTNU. 
-
-**New invoice version**
-
-- More details.
-- Limit amounts per year (from quarter) - will reach out for all to update.
+We updated our supportive invoicing information from 2023-Q4 with additional informaiton. The new versions combine all costs under one invoice profile with listings per lab and resource type. The aim is to increase the transparency and overview of your costs. [Contact us](/contact) with suggestions of how we can further improve your invoice.
 
 **Dataspace reports**
 
+We have created and shipped the first Data space reports. These aims to summarize information and resource consumption across one to several invoice profiles that are attached to a data space. The aim is to increase control and const control across your entire scientific portfolio. [Contact us](/contact) with suggestions of how we can further improve your report.
+
+
 
 <h3>Minor changes</h3>
+
+**New invoice profile form**  
+
+We added 
+
+fill. More details. VAT for collaborations with NTNU. 
+
+- Limit amounts per year (from quarter) - will reach out for all to update.
 
 
 **Internal kista**  
