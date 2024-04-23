@@ -57,7 +57,7 @@ The price list will be updated from time to time.
 
 *Compute updates*
 
-* The new E-series machine type (default.e) is included with 32 GB RAM per vCPU.
+* The new E-series machine type (default.e) is included with 16 GB of memory per vCPU.
 * A new GPU accelerator (NVIDIA A40) is included.
 
 #### HUNT Cloud Price list v4.0 (MAJOR)

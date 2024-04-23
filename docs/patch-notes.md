@@ -1,7 +1,7 @@
 ---
 title: Patch notes
 category: HUNT Cloud
-description: Minor and major updates to our services.
+description: Patch notes list major and minor updates to HUNT Cloud's services.
 ---
 
 # Patch notes
@@ -20,21 +20,37 @@ This page contains descriptions of updates to HUNT Cloud's services. All with th
 
 <h3>Major changes</h3>
 
-**Lab Access link**  
-New option available in lab access guide which will filter the guide according to your need.  
-For example:  
-- New user tag - will receive full guide  
-- Reissue of Workbench certificate tag - only steps which are relevant to this reissue will be available  
-And more... 
+**Onboarding video guides**
 
-**Onboarding video guide**  
-In lab access link, a new icon has appeard which will allow you to watch a video guide where we walk you through our onboarding process. Our aim is to fully cover onboarding procedure before the end of April. 
+We have added video guides for the most common steps in your lab onboarding. When you get your lab access link, you will see a new icon that allows you to watch a guide where we walk you through specific steps in your onboarding process to support the written access link guide. [Let us know](/contact) if you would like us to expand the video guides into other topics. 
+
+**Tailored lab access links**
+
+We have updated your lab access links so it tailor the guides you see for your specific request. For example, if you request a Workbench ceritficate you will now only see the sections that are relevant for this configuration.
+
+**New machine type (E-series)**
+
+Based on requests, we have updated our default machine series with a [new E-series](/administer-science/services/machine-types/#e-series) that holds 16 GB ram per CPU. These can be ordered by [Requesting a machine size update](/administer-science/service-desk/lab-orders/#update-cpu-machine-size) in our administer science service desk. 
 
 <h3>Minor changes</h3>
 
-**Apptainer (Singularity)**  
-A containerization tool Singularity was renamed to Apptainer as it was moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/).  
-We have made changes to our documentation to reflect this change. 
+**Apptainer (Singularity)**
+
+The containerization tool Singularity was renamed to Apptainer when it moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/). [Our documentation](/do-science/tools/technical/apptainer-singularity/) is updated accordingly. 
+
+**Gude for VS Code in Workbench**
+
+We have added a Workbench [guide for VS Code](/do-science/hunt-workbench/getting-started/vscode/) with information on how to create a Jupyter notbook or Python environment, how to run R code with r kernel and similar. 
+
+**BRAT annotation tool in Workbench**
+
+We have added [BRAT rapid annotation](https://brat.nlplab.org/) tools to Workbench. This is a tool for collaborative text annotation.
+
+**Freedom to explore in new languages**
+
+Our community translation of [Freedom to explore](/do-science/community/freedom-to-explore/) continue to grow, and we have added [Bulgarian](/do-science/community/freedom-to-explore/#bulgarian-bul), [Serbian](/do-science/community/freedom-to-explore/#serbian-srp) and [Indonesian](/do-science/community/freedom-to-explore/#indonesian-ind) since the last patch note - now counting an impressive 44 translations! Help us grow the list and [send us your translation](/do-science/community/freedom-to-explore/#my-language-is-missing) if your language is missing!
+
+
 :::
 
 
@@ -47,11 +63,25 @@ We are excited to announce that migration to our new cloud will start soon ! We 
 Take a look: https://docs.hdc.ntnu.no/do-science/faq/migration/
 
 
-**New invoice profiles**  
-fill.
+
+**Price list updates**
+
+* Gpu and new machine types
+* Price calculator is updated to reflect the changes. 
+
+**New invoice profile form**  
+fill. More details. VAT for collaborations with NTNU. 
+
+**New invoice version**
+
+- More details.
+- Limit amounts per year (from quarter) - will reach out for all to update.
+
+**Dataspace reports**
 
 
 <h3>Minor changes</h3>
+
 
 **Internal kista**  
 We are calculating FS overhead automatically now. This means that you should enter raw size of kista when you request it via service desk.
@@ -73,6 +103,18 @@ This is not implemented for permanent kista
 
 **Certified by DNV**  
 We have successfully completed last years audit and received certifications.
+
+**Slack deletion policy eforced**
+
+Form Ting... from 2024-01-01, deletion of older messages than 1y enforced.
+
+<h3>Minor changes</h3>
+
+**Lagtun resolution on reports**
+
+
+**Service center reports**
+
 
 :::
 

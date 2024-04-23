@@ -14,15 +14,17 @@ description: This page list default machine types in HUNT Cloud.
 
 ::: tip Pending activation
 
-Machine types marked with a star (`*`) in the tables below are expected to be available during 2023-Q2. 
+Machine types marked with a star (`*`) in the tables below are available in location 2. 
 
 :::
 
 ## Compute optimized machine types
 
-These machines are optimized for computation with 2GB, 4GB or 8GB for memory per vCPU respectively.
+These machines are optimized for computation with 2 GB, 4 GB, 8 GB or 16 GB of memory per vCPU respectively.
 
 ### B-series
+
+2 GB of memory per vCPU. 
 
 | **Type**    | **vCPU** | **Memory (GB)** |
 | ----------- | -------- | --------------- |
@@ -36,6 +38,8 @@ These machines are optimized for computation with 2GB, 4GB or 8GB for memory per
 | default.b8* | 80       | 160             |
 
 ### C-series
+
+4 GB of memory per vCPU. 
 
 | **Type**    | **vCPU** | **Memory (GB)** |
 | ----------  | -------- | --------------- |
@@ -51,6 +55,8 @@ These machines are optimized for computation with 2GB, 4GB or 8GB for memory per
 
 ### D-series
 
+8 GB of memory per vCPU. 
+
 | **Type**    | **vCPU** | **Memory (GB)** |
 | ----------- | -------- | --------------- |
 | default.d1  | 2        | 16              |
@@ -63,6 +69,20 @@ These machines are optimized for computation with 2GB, 4GB or 8GB for memory per
 | default.d8* | 80       | 640             |
 
 
+### E-series
+
+16 GB of memory per vCPU. 
+
+| **Type**    | **vCPU** | **Memory (GB)** |
+| ----------- | -------- | --------------- |
+| default.e1  | 2        | 32              |
+| default.e2  | 4        | 64              |
+| default.e3  | 8        | 128             |
+| default.e4  | 16       | 256             |
+| default.e5* | 24       | 384             |
+| default.e6* | 32       | 512             |
+| default.e7* | 48       | 768             |
+
 ## GPU accelerator machine types
 
 All the above machine types may be deployed with _1_ or _2_ of the following GPU accelerators if available:
@@ -70,13 +90,14 @@ All the above machine types may be deployed with _1_ or _2_ of the following GPU
 | **Type** | **Model** | **Architecture** | **Memory** | **Interface**  |
 | ------------ | ----------- | ------------ | --------- | ---------- |
 | nvidia.p100  | Tesla P100  | Pascal       | 16GB HBM2 | PCIe Gen3  |
-| nvidia.a30*  | Tesla A30  | Pascal       | 24GB HBM2 | PCIe Gen3  |
 | nvidia.v100  | Tesla V100  | Volta        | 32GB HBM2 | PCIe Gen3  |
 | nvidia.v100s | Tesla V100S | Volta        | 32GB HBM2 | PCIe Gen3  |
-| nvidia.a100* | Tesla A40 | Volta        | 40GB HBM2 | PCIe Gen3  |
-| nvidia.a100* | Tesla A80 | Volta        | 80GB HBM2 | PCIe Gen3  |
+| nvidia.a30*  | Tesla A30  | Ampere       | 24GB HBM2 | PCIe Gen3  |
+| nvidia.a40*  | Tesla A40  | Ampere       | 48GB HBM2 | PCIe Gen3  |
+| nvidia.a100* | Tesla A100 | Ampere        | 40GB HBM2 | PCIe Gen3  |
+| nvidia.a100* | Tesla A100 | Ampere       | 80GB HBM2 | PCIe Gen3  |
 
-Manufacturer = NVIDIA. See the [GPU on HUNT Cloud](/do-science/tools/technical/gpu/) documentation for more information.
+Manufacturer = NVIDIA. See the [GPU on HUNT Cloud](/do-science/tools/technical/gpu/) documentation for more information. Availability will vary between locations.
 
 ## Custom machine types
 
