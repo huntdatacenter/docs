@@ -19,14 +19,14 @@ This is for you who are ready to come back.
 Users who have been inactive for more than 180 days are automatically deactivated. We do that to make sure that people who have left are taken off a lab, even if the lab leader forgets to inform us.
 
 If your user is deactivated, your lab leader or coordinator need to request reactivation of your user through this link:
-https://docs.hdc.ntnu.no/administer-science/service-desk/lab-orders/#reactivate-lab-user
+[User reactivation](/administer-science/service-desk/lab-orders/#reactivate-lab-user)
 
-Both you and either the lab leader or coordinator will need to sign the new user agreement. Contact us on slack or email if you don't know who your lab leader or coordinator is.
+Both you and either the lab leader or coordinator will need to sign the new user agreement. Contact us on slack or [email](/about/contact/) if you don't know who your lab leader or coordinator is.
 
 ### My user is active but I forgot everything
 
 If you can't remember the link to access your lab, you order a new link here: 
-https://docs.hdc.ntnu.no/do-science/service-desk/#request-lab-access-link-reissue
+[Lab access link](/do-science/service-desk/#request-lab-access-link-reissue)
 
 On our documentations pages there are no buttons named "I forgot my password".
 Rather, you need to do one of two things (or both):
@@ -34,11 +34,11 @@ Rather, you need to do one of two things (or both):
 **Reset your SSH passphrase**
 This is essentially resetting your password. 
 SSH is a secure way to access a server and since the passphrases also expire, you need to create a new one. 
-To to do that, order SSH passphrase reset here: https://docs.hdc.ntnu.no/do-science/service-desk/#lab-access
+To to do that, order a reset here: [SSH passphrase reset](/do-science/service-desk/#lab-access)
 
 **Get a new certificate for your Workbench**
 This only means that your access expired, nothing changed or was removed from your Workbench.
-You order a new certificate here: https://docs.hdc.ntnu.no/do-science/service-desk/#lab-access
+You order a new certificate here: [Workbench certificate](/do-science/service-desk/#lab-access)
 
 ### Organisation at a glance
 Your lab is hosted on a server located in our data rooms. Inside the lab, you have your own Workbench where you have your folders, data and tools. Your Workbench is automatically set up with the folders Work, Archive and Scratch. We recommend that people use Archive to store their data and Scratch for temporary files. Work is where you do your actual work. 
@@ -50,23 +50,15 @@ If you are unsure about what is going on in the lab, grab a coffee with your lab
 
 ### What happened since last time
 We continously update our services. Workbench, the documentation pages and other parts of the service might look different when you return after after a while.
-Take a look at our patch notes to get a glimpse of the last updates: https://docs.hdc.ntnu.no/administer-science/patch-notes/#patch-notes
+Take a look at our [patch notes](/administer-science/patch-notes/#patch-notes) to get a glimpse of the last updates. 
 
 ### Where can get more information?
-Our documentation pages can help you get started with HUNT Cloud again. Take a look at our "Do science" pages:
-https://docs.hdc.ntnu.no/do-science/
-
-and our FAQs: 
-https://docs.hdc.ntnu.no/do-science/faq/
+Our documentation pages can help you get started with HUNT Cloud again. Take a look at our [Do science](/do-science) pages and our [FAQs](/do-science/faq)
 
 ### Where can I get help?
-We are always happy to get in touch and hear what is going on. The best way to reach us is through our Service desk and Slack.
+We are always happy to get in touch and hear what is going on. The best way to reach us is through our [Service desk](/do-science/service-desk/#service-desk-for-lab-users) and Slack.
 
-We have Service Desk for the most common orders:
-https://docs.hdc.ntnu.no/do-science/service-desk/
-
-If none of these fit, you can reach us in your lab channel on Slack or place a general request in Service Desk:
-https://docs.hdc.ntnu.no/do-science/service-desk/#general-service-request
+We have Service Desk for the most common orders, but if none of these fit, you can reach us in your lab channel on Slack or place a general request [here](/do-science/service-desk/#general-service-request)
 
 ### Be generously impatient
 It's  normal to not remember where you left off and to feel both frustrated and overwhelmed as you start picking up the threads. But give yourself enough patience to figure it out. 
