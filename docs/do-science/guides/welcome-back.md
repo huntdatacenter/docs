@@ -7,63 +7,115 @@ description: Guide to pick up the thread after being away for several months.
 ---
 
 # Welcome back
-Science has natural cycles and seasons for courses, writing grants, publishing and supervising students. The human has it's seasons too, with time for breaks, work sprints, parental leave or caring for family members. 
-Picking up the thread is probably one of the most important skills you can learn. 
 
-We fully understand and support that you don't use your digital lab every day, and that sometimes you need to do something else for a while.
-This is for you who are ready to come back.
+**This page is aimed at lab users that needs to pick up their thread after some time away from their lab.**
 
-### First thing first, are you able to log in at all?
+We know, science has its natural cycles and seasons for courses, grants, supervision, publishing, celebrations and so forth. We have our seasons too, with time for breaks, work sprints, parental leaves, caring for family members etc. 
 
-### No I'm not able to get in
-Users who have been inactive for more than 180 days are automatically deactivated. We do that to make sure that people who have left are taken off a lab, even if the lab leader forgets to inform us.
+It's normal to not remember where you left off, and quickly picking up the threads when you get back is important. Our aim for this page is to get you back in your lab so you can quickly click around to get reaquinted with your data, scripts and thinking again.
 
-If your user is deactivated, your lab leader or coordinator need to request reactivation of your user through this link:
-[User reactivation](/administer-science/service-desk/lab-orders/#reactivate-lab-user)
+[[toc]]
 
-Both you and either the lab leader or coordinator will need to sign the new user agreement. Contact us on slack or [email](/about/contact/) if you don't know who your lab leader or coordinator is.
 
-### My user is active but I forgot everything
+## Are you able to access your lab?
 
-If you can't remember the link to access your lab, you order a new link here: 
-[Lab access link](/do-science/service-desk/#request-lab-access-link-reissue)
+First thing first, we need to get your into your lab so you can do your science. 
 
-On our documentations pages there are no buttons named "I forgot my password".
-Rather, you need to do one of two things (or both):
+### No, I'm not able to get in
 
-**Reset your SSH passphrase**
-This is essentially resetting your password. 
-SSH is a secure way to access a server and since the passphrases also expire, you need to create a new one. 
-To to do that, order a reset here: [SSH passphrase reset](/do-science/service-desk/#lab-access)
+Worry not, let's get you in. Lab users that are inactive for 180 days will automatically be deactivated for security reasons. If so, we will need a lab user reactivation request from your lab leader or lab coordinator in our service desk:
 
-**Get a new certificate for your Workbench**
-This only means that your access expired, nothing changed or was removed from your Workbench.
-You order a new certificate here: [Workbench certificate](/do-science/service-desk/#lab-access)
+[Service desk - User reactivation](/administer-science/service-desk/lab-orders/#reactivate-lab-user)
+
+Ask your lab leader or lab coordinator to send us a new user agreement. [Contact us](/contact) on email or Slack if you don't remember who's your lab leader or lab coordinator. You will get new keys and further guides on how to get in once the request is regsitered and your new keys are ready. 
+
+### Yes, but I forgot everything
+
+Worry not if your account is active but you have forgotten your passwords and/or how to log in. 
+
+**New computer**
+
+If you have a new local computer since your last visit, click on the link below to get going:
+
+[Guides - New computer](/do-science/guides/new-computer/) 
+
+You will need to order VPN and Workbench certificates as well a SSH passphrase reset if you don't remember your lab password.
+
+**New location**
+
+If you are abroad and accessing your lab from a for us new location, you may need to request access from your network here: 
+
+[Service desk - Request VPN access link opening](/do-science/service-desk/#vpn-access-list)
+
+
+**New password**
+
+Passwords are easy to forget when you have been away for a while. Note that there is no button named "I forgot my password" in service desk. Rather, you will need to request a new SSH passphrase: 
+
+[Service desk - SSH passphrase reset](/do-science/service-desk/#ssh-passphrase-reset)
+
+
+This will reset your lab password that you use both in Workbench and when your log in over SSH. You will get your new temporary passphrase on Signal and guidance in your access link over email. 
+
+
+**New Workbench certificate**
+
+Your Workbench certificate expire after some time, and then you will need to install a new one. You can order a new one here: 
+
+[Service desk - Workbench certificate](/do-science/service-desk/#hunt-workbench-reissue)
+
+You will get the certificate on email and guidance in your access link on how to replace your old one.
+
+
+## Remind me
 
 ### Organisation at a glance
-Your lab is hosted on a server located in our data rooms. Inside the lab, you have your own Workbench where you have your folders, data and tools. Your Workbench is automatically set up with the folders Work, Archive and Scratch. We recommend that people use Archive to store their data and Scratch for temporary files. Work is where you do your actual work. 
 
-We continously improve our services, so Workbench might look a bit different from the last time you saw it. 
-Rest assured that we never move or interfere with the "inside" of you digital lab (i.e. your data and files) without your consent and clear communication first.
+**Located in Norway**
 
-If you are unsure about what is going on in the lab, grab a coffee with your lab mates or lab coordinator. 
+Your lab is hosted on a virtual machine that is located on a physical machine located in one of HUNT Cloud's data centers in Norway. 
 
-### What happened since last time
-We continously update our services. Workbench, the documentation pages and other parts of the service might look different when you return after after a while.
-Take a look at our [patch notes](/administer-science/patch-notes/#patch-notes) to get a glimpse of the last updates. 
+**Shared resources**
 
-### Where can get more information?
-Our documentation pages can help you get started with HUNT Cloud again. Take a look at our [Do science](/do-science) pages and our [FAQs](/do-science/faq)
+Inside your lab you share storage and resources with your lab team. You have your own Workbench where you can install your own package, preferrably with Conda.
+
+**Storage folders**
+
+Your Workbench and lab is set up with default storage folders `work`, `archive` and `scratch`. Data here is shared among your team. We recommend that you use `scratch` for your temporary files, `archive` for your long term data storage, and `work` for your day-to-day activities. Note that `scratch` and your `home` folder -do not- have restore (backup). 
+
+### What's new since last time
+
+We continously update our services, and your Workbenh or other things may look a bit different from last time. 
+
+**Updates in Patch notes**
+
+If publish our updates in patch notes. This is a handy way to see what's changed. The "Do science" section is a good place to start for scientific work.
+
+[Patch notes](/administer-science/patch-notes/#patch-notes)
+
+Rest assured that we never move or interfere with data inside your lab without your consent and clear communication first.
+
+**Ask around**
+
+If you are unsure about what is going on in your lab, grab a coffee with your lab team or lab coordinator for an update. And feel free to [contact us](/contact) for an update or chat about on improvements since last time.
+
+
+### Where can I get more information?
+
+Our documentation pages (these web page) is a good place to get started. Start in our [Do science](/do-science) section and in our [FAQs](/do-science/faq).
 
 ### Where can I get help?
-We are always happy to get in touch and hear what is going on. The best way to reach us is through our [Service desk](/do-science/service-desk/#service-desk-for-lab-users) and Slack.
 
-We have Service Desk for the most common orders, but if none of these fit, you can reach us in your lab channel on Slack or place a general request [here](/do-science/service-desk/#general-service-request)
+We are always happy to get in touch and hear what is going on your side. The best way to reach us is through our [Service desk](/do-science/service-desk/#service-desk-for-lab-users) and Slack.
 
-### Be generously impatient
-It's  normal to not remember where you left off and to feel both frustrated and overwhelmed as you start picking up the threads. But give yourself enough patience to figure it out. 
+**Service desk**
 
-Spend a little time clicking around and get to know your digital lab again, getting reaquinted with your data, scripts and thinking.
+We have Service Desk for the most common orders. This is the quickest way 
 
-If you feel that your past self was a messy idiot, that is fine too - we have all been there. Approach your mess with the same curiousity as you would any scientific problem and carefully untagle each knot. 
- Reach out to us and your lab coordinator if you get lost.
+
+ but if none of these fit, you can reach us in your lab channel on Slack or place a general request [here](/do-science/service-desk/#general-service-request)
+
+
+
+
+
