@@ -278,6 +278,7 @@ module.exports = {
               path: "/do-science/guides/",
             },
             "/do-science/guides/workbench-stata.md",
+            "/do-science/guides/welcome-back.md",
             {
               title: "Access guides",
               text: "Access guides",
