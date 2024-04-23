@@ -21,7 +21,7 @@ Users who have been inactive for more than 180 days are automatically deactivate
 If your user is deactivated, your lab leader or coordinator need to request reactivation of your user through this link:
 https://docs.hdc.ntnu.no/administer-science/service-desk/lab-orders/#reactivate-lab-user
 
-Both you and either the lab leader or coordinator will need to sign the new user agreement. Contact us (email link) if you don't know who your lab leader or coordinator is.
+Both you and either the lab leader or coordinator will need to sign the new user agreement. Contact us on slack or email if you don't know who your lab leader or coordinator is.
 
 ### My user is active but I forgot everything
 
