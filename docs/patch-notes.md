@@ -83,26 +83,24 @@ We have created and shipped the first Data space reports. These aims to summariz
 
 <h3>Minor changes</h3>
 
-**New invoice profile form**  
+**VAT extemption outside NTNU**
 
-We added 
+We updated the [invoice profile form](/administer-science/agreements/downloads/#invoice-profile) with a section on possible extemptions from value added tax. Documented collaborations with partners from NTNU may be exempted from VAT if delivery of trusted research environments is part of the collaboration agreement. [Contact us](/contact) is this is relevant for you.
 
-fill. More details. VAT for collaborations with NTNU. 
+**Automatic overhead estimates for temporary internal kistas**
 
-- Limit amounts per year (from quarter) - will reach out for all to update.
+We are now automatically calculating file system overhead in internal kista orders. This means that you order a size that is equal to the amount of data that you plan to transfer. In short, kistas with a size below 1TB receives 100GB additional buffer size, and kistas above 1TB recieves 10 percent buffer to compensate for the file system. 
+
+**Restore option for new storage volumes**
+
+We have added an option to select if you want restore to be anabled when you order new storage volumes. Previously such volumes was deployed without restore by default.
 
 
-**Internal kista**  
-We are calculating FS overhead automatically now. This means that you should enter raw size of kista when you request it via service desk.
-- Kista below 1TB receives 100GB buffer
-- Kista over 1TB receives 10% buffer to compensate for File System overhead  
-This is not implemented for permanent kista
+<h3>Upcoming features</h3>
 
-**External kista**  
-- Added public IP validation (NTNU transfers are exception - leave empty field). User will not be allowed to continue if IP address is private.
+**Spending limits**
 
-**New storage volume**  
-- Added option to choose if user wants restore option enabled or not. This was not clear before and could result in increased risk of data loss.
+We see a need to increase the spending limit intervals on invoice profiles from quarters to yearly amounts. The aim is to improve our reporting when you close in on the thresholds. We plan to reach out to invoice profile contacts before the 2024-Q2 invoice.
 
 :::
 
