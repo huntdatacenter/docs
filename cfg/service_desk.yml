@@ -1296,7 +1296,7 @@ request_volume_deletion:
       ---
       lab_name="{lab_name}"  
       machine_name="{vm_name}"  
-      volume_name="{volume_name}"  
+      volume_name="{volume_name}{volume_number}"  
       ---
 
       I am aware that this process is irreversible and all data stored on this volume will be permanently deleted.
@@ -1311,13 +1311,33 @@ request_volume_deletion:
     {
       label: "Volume name",
       key: "volume_name",
-      field: "selectone",
+      field: "autocompleteone",
       options: [
         "archive",
         "work",
         "scratch",
         "cargo",
       ]
+    },
+    {
+      label: "Volume number (optional)",
+      key: "volume_number",
+      field: "autocompleteone",
+      hint: "If no number in volume name use 1.",
+      default: '',
+      options: [
+        { text: "No number", value: "" },
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+      ],
+      optional: true
     },
   ]
   requirements: [
