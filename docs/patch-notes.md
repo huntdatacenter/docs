@@ -26,7 +26,7 @@ We have added video guides for the most common steps in your lab onboarding. Whe
 
 **Tailored lab access links**
 
-We have updated your lab access links so it tailor the guides you see for your specific request. For example, if you request a Workbench ceritficate you will now only see the sections that are relevant for this configuration.
+We have updated your lab access links so it is tailored for your specific request. For example, if you request a Workbench ceritficate you will now only see the sections that are relevant for this configuration.
 
 **New machine type (E-series)**
 
@@ -43,7 +43,7 @@ NVIDIA A40 GPUs with 48 GB of memory are now available as [GPU accelerator types
 
 The containerization tool Singularity was renamed to Apptainer when it moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/). [Our documentation](/do-science/tools/technical/apptainer-singularity/) is updated accordingly. 
 
-**Gude for VS Code in Workbench**
+**Guide for VS Code in Workbench**
 
 We have added a Workbench [guide for VS Code](/do-science/hunt-workbench/getting-started/vscode/) with information on how to create a Jupyter notbook or Python environment, how to run R code with r kernel and similar. 
 
@@ -53,7 +53,7 @@ We have added [BRAT rapid annotation](https://brat.nlplab.org/) tools to Workben
 
 **Freedom to explore in new languages**
 
-Our community translation of [Freedom to explore](/do-science/community/freedom-to-explore/) continue to grow, and we have added [Bulgarian](/do-science/community/freedom-to-explore/#bulgarian-bul), [Serbian](/do-science/community/freedom-to-explore/#serbian-srp) and [Indonesian](/do-science/community/freedom-to-explore/#indonesian-ind) since the last patch note - now counting an impressive 44 translations! Help us grow the list and [send us your translation](/do-science/community/freedom-to-explore/#my-language-is-missing) if your language is missing!
+Our community translation of [Freedom to explore](/do-science/community/freedom-to-explore/) continues to grow, and we have added [Bulgarian](/do-science/community/freedom-to-explore/#bulgarian-bul), [Serbian](/do-science/community/freedom-to-explore/#serbian-srp) and [Indonesian](/do-science/community/freedom-to-explore/#indonesian-ind) since the last patch note - now counting an impressive 44 translations! Help us grow the list and [send us your translation](/do-science/community/freedom-to-explore/#my-language-is-missing) if your language is missing!
 
 
 :::
@@ -73,7 +73,7 @@ We have updated our [price list](/administer-science/prices/pricelist/#current) 
 
 **Invoice updates**
 
-We updated our supportive invoicing information from 2023-Q4 with additional informaiton. The new versions combine all costs under one invoice profile with listings per lab and resource type. The aim is to increase the transparency and overview of your costs. [Contact us](/contact) with suggestions of how we can further improve your invoice.
+We have updated our supportive invoicing information from 2023-Q4 with additional information. The new versions combine all costs under one invoice profile with listings per lab and resource type. The aim is to increase the transparency and overview of your costs. [Contact us](/contact) with suggestions of how we can further improve your invoice.
 
 **Dataspace reports**
 
@@ -87,13 +87,17 @@ We have created and shipped the first Data space reports. These aims to summariz
 
 We updated the [invoice profile form](/administer-science/agreements/downloads/#invoice-profile) with a section on possible extemptions from value added tax. Documented collaborations with partners from NTNU may be exempted from VAT if delivery of trusted research environments is part of the collaboration agreement. [Contact us](/contact) is this is relevant for you.
 
-**Automatic overhead estimates for temporary internal kistas**
+**Automatic overhead estimates for temporary Internal kistas**
 
 We are now automatically calculating file system overhead in internal kista orders. This means that you order a size that is equal to the amount of data that you plan to transfer. In short, kistas with a size below 1TB receives 100GB additional buffer size, and kistas above 1TB recieves 10 percent buffer to compensate for the file system. 
 
 **Restore option for new storage volumes**
 
 We have added an option to select if you want restore to be anabled when you order new storage volumes. Previously such volumes was deployed without restore by default.
+
+**External kista IPv4 validation**
+
+Added a new field which will prompt user to validate their public IPv4 address. If IPv4 address is private, user will not be allowed to continue and should double check validity of their IPv4 address.
 
 
 <h3>Upcoming features</h3>
@@ -124,7 +128,7 @@ Based on the last Tingweek resolution ([R10/LT11/T11/24]((/govern-science/tingwe
 
 **Community deletion policy enforced**
 
-Community messages in Slack is from 2024-01-01 stored for 1Y only. Older messages automatically deleted in accordance with our [community contsent](/do-science/community/current-consent/#you-messages-are-kept-for-one-year). Read more about the consent history [here](/do-science/community/consent-information/).
+Community messages in Slack is from 2024-01-01 stored for 1Y only. Older messages automatically deleted in accordance with our [community consent](/do-science/community/current-consent/#you-messages-are-kept-for-one-year). Read more about the consent history [here](/do-science/community/consent-information/).
 
 **Security and privacy policies with new privacy controls**
 
@@ -138,8 +142,8 @@ Community messages in Slack is from 2024-01-01 stored for 1Y only. Older message
 
 **Agreement updates**
 
-* The data encryption section in the Security measures appendix to our Data processor agreements is updated to reflect that data is encrypted at rest for regular hard drives at the new location (Site 2). 
-* The [Price list appendix](/administer-science/prices/pricelist/) to the service center agreement is updated with a new machine series and a new GPU accelerator choice. The changes is directly implemented since they affect new services. 
+* The data encryption section in the Security measures appendix to our Data processor agreements is updated to reflect that data is encrypted for regular hard drives at the new location (Site 2). 
+* The [Price list appendix](/administer-science/prices/pricelist/) to the service center agreement is updated with a new machine series and a new GPU accelerator choice. The change is directly implemented since they affect new services. 
 
 <h3>Upcoming features</h3>
 
