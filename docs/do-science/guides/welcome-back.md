@@ -19,7 +19,7 @@ It's normal to not remember where you left off, and quickly picking up the threa
 
 ## Are you able to access your lab?
 
-First thing first, we need to get your into your lab so you can do your science. 
+First thing first, we need to get you into your lab so you can do your science. 
 
 ### No, I'm not able to get in
 
@@ -39,11 +39,11 @@ If you have a new local computer since your last visit, click on the link below 
 
 [Guides - New computer](/do-science/guides/new-computer/) 
 
-You will need to order VPN and Workbench certificates as well a SSH passphrase reset if you don't remember your lab password.
+You will need to order VPN and Workbench certificates and a SSH passphrase reset if you don't remember your lab password.
 
 **New location**
 
-If you are abroad and accessing your lab from a for us new location, you may need to request access from your network here: 
+If you are abroad and accessing your lab from a new location, you may need to request access for your network here: 
 
 [Service desk - Request VPN access link opening](/do-science/service-desk/#vpn-access-list)
 
@@ -89,7 +89,7 @@ We continuously update our services, and your Workbench or other things may look
 
 **Updates in Patch notes**
 
-If publish our updates in patch notes. This is a handy way to see what's changed. The "Do science" section is a good place to start for scientific work.
+We publish our updates in patch notes. This is a handy way to see what's changed. The "Do science" section is a good place to start for scientific work.
 
 [Patch notes](/administer-science/patch-notes/#patch-notes)
 
@@ -102,11 +102,11 @@ If you are unsure about what is going on in your lab, grab a coffee with your la
 
 ### Where can I get more information?
 
-Our documentation pages (these web page) is a good place to get started. Start in our [Do science](/do-science) section and in our [FAQs](/do-science/faq).
+Our documentation pages (these web pages) is a good place to get started. Start in our [Do science](/do-science) section and in our [FAQs](/do-science/faq).
 
 ### Where can I get help?
 
-We are always happy to get in touch and hear what is going on your side. The best way to reach us is through our [Service desk](/do-science/service-desk/#service-desk-for-lab-users) and Slack.
+We are always happy to get in touch and hear what is going on. The best way to reach us is through our [Service desk](/do-science/service-desk/#service-desk-for-lab-users) and Slack.
 
 **Service desk**
 
