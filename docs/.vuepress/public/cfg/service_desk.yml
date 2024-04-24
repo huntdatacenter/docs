@@ -1188,7 +1188,7 @@ request_expand_existing_volume:
       ---
       lab_name="{lab_name}"  
       machine_name="{vm_name}"  
-      volume_name="{volume_name}"  
+      volume_name="{volume_name}{volume_number}"  
       current_size_tb="{current_size}"  
       new_size_tb="{target_size}"  
       ---
@@ -1212,6 +1212,26 @@ request_expand_existing_volume:
         { text: "Work", value: "work" },
         { text: "Scratch", value: "scratch" },
       ]
+    },
+    {
+      label: "Volume number (optional)",
+      key: "volume_number",
+      field: "autocompleteone",
+      hint: "If no number in volume name use 1.",
+      default: '',
+      options: [
+        { text: "No number", value: "" },
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+      ],
+      optional: true
     },
     { label: "Current size (in terabytes)", key: "current_size", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
     { label: "New size (in terabytes)", key: "target_size", hint: "Field should include only numbers. Maximum size per volume is 20 TB", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
@@ -1239,7 +1259,7 @@ request_new_storage_volume:
       ---
       lab_name="{lab_name}"  
       machine_name="{vm_name}"  
-      volume_name="{volume_name}"  
+      volume_name="{volume_name}{volume_number}"  
       storage_size_tb="{storage_size_tb}"  
       enable_restore_option="{restore}"  
       ---
@@ -1261,6 +1281,26 @@ request_new_storage_volume:
         { text: "Work", value: "work" },
         { text: "Scratch", value: "scratch" },
       ]
+    },
+    {
+      label: "Volume number (optional)",
+      key: "volume_number",
+      field: "autocompleteone",
+      hint: "If no number in volume name use 1.",
+      default: '',
+      options: [
+        { text: "No number", value: "" },
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+      ],
+      optional: true
     },
     { label: "Size (in terabytes)", key: "storage_size_tb", hint: "Field should include only numbers. Maximum size per volume is 20 TB", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
     {
