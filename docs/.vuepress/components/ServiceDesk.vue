@@ -140,7 +140,7 @@ export default {
     for (const item of this.fields) {
       if (item && item.key) {
         formFields.push(item.key)
-        if (item.default) {
+        if (item.default || item.default === '') {
           const defValue = item.default;
           this.formData[item.key] = defValue;
         }
@@ -214,7 +214,7 @@ export default {
     wrap(template) {
       let text = template;
       for (const [key, value] of Object.entries(this.formData)) {
-        if (value) {
+        if (value || value === '') {
           if (Array.isArray(value)) {
             text = text.replaceAll(`{${key}}`, value.join(", "));
           } else {
