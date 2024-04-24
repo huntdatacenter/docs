@@ -65,11 +65,11 @@ Our community translation of [Freedom to explore](/do-science/community/freedom-
 
 **Migration to the new location has started**
 
-After years in the making, we are excited to finally announce that the migration to our new location and cloud installation has started! We have a new server-room with upgraded equipment and more flexibility ready for your as soon as you complete your migration. We are reaching out to labs to schedule the migration with the aim to avoid conflicts with deadlines and other important work. See our [FAQ pages for migration](/do-science/faq/migration/) for more information. 
+After years in the making, we are excited to announce that the migration to our new location and cloud installation has started! We have a new server-room with upgraded equipment and more flexibility ready for your as soon as you complete your migration. We are reaching out to labs to schedule the migration with the aim to avoid conflicts with deadlines and other important work. See our [FAQ pages for migration](/do-science/faq/migration/) for more information. 
 
 **New price list (v4.1)**
 
-We have updated our [price list](/administer-science/prices/pricelist/#current) with a new version (v4.1) that includes the new E-series machine types and the new NVIDIA A40 GPU type. The [price calculator](/administer-science/prices/calculator/) is updated accordingly also.
+We have updated our [price list](/administer-science/prices/pricelist/#current) with a new version (v4.1) that includes the new E-series machine types and the new NVIDIA A40 GPU type. The [price calculator](/administer-science/prices/calculator/) is updated accordingly.
 
 **Invoice updates**
 
@@ -102,26 +102,50 @@ We have added an option to select if you want restore to be anabled when you ord
 
 We see a need to increase the spending limit intervals on invoice profiles from quarters to yearly amounts. The aim is to improve our reporting when you close in on the thresholds. We plan to reach out to invoice profile contacts before the 2024-Q2 invoice.
 
+**Service descriptions**
+
+We plan to introdue the new Services descriptions for Explore, Evolve and Scientific suite during the during the upcoming [Tingweek](/govern-science/tingweek/).
+
 :::
+
+
 
 ::: details Govern science
 
 <h3>Major changes</h3>
 
-**Certified by DNV**  
-We have successfully completed last years audit and received certifications.
+**New ISO certificates available**
 
-**Slack deletion policy eforced**
+The new certificates for ISO/IEC 27001 and ISO/IEC 27701 from DNV is now available from our [compliance section](/govern-science/compliance/certificates/). 
 
-Form Ting... from 2024-01-01, deletion of older messages than 1y enforced.
+**New service center reports**
+
+Based on the last Tingweek resolution ([R10/LT11/T11/24]((/govern-science/tingweek/resolutions/#improve-resource-and-compliance-reporting))), we have made a new service center report that summarize resources, activities and costs inside all data spaces and labs under your center. The intention is that this will increase transparency and enhance dialogues on how to improve our systems and advance your science. We will forward the first version on email with the aim to automate shipments from 2024-Q2.
+
+**Community deletion policy enforced**
+
+Community messages in Slack is from 2024-01-01 stored for 1Y only. Older messages automatically deleted in accordance with our [community contsent](/do-science/community/current-consent/#you-messages-are-kept-for-one-year). Read more about the consent history [here](/do-science/community/consent-information/).
+
+**Security and privacy policies with new privacy controls**
+
+[Security and privacy policies](/govern-science/policies/#security-and-privacy-policies) are updated with additional privacy controls from ISO/IEC 27017 and with updated sections on roles and definitions. The updates are based on findings from DNV in November.
 
 <h3>Minor changes</h3>
 
-**Lagtun resolution on reports**
+**Updated Statement of applicability**
 
+[Statement of Applicability (SoA)](/govern-science/compliance/certificates/#statement-of-applicability-soa) is the document where we state which ISO control objectves we have applied in our certificate. We have updated the document with new roles and comments for our privacy controls. 
 
-**Service center reports**
+**Agreement updates**
 
+* The data encryption section in the Security measures appendix to our Data processor agreements is updated to reflect that data is encrypted at rest for regular hard drives at the new location (Site 2). 
+* The [Price list appendix](/administer-science/prices/pricelist/) to the service center agreement is updated with a new machine series and a new GPU accelerator choice. The changes is directly implemented since they affect new services. 
+
+<h3>Upcoming features</h3>
+
+**Next Tingweek**
+
+The [next Tingweek](/govern-science/tingweek/) is held from May 28 to 30. Now is the time to [contact us](/contact) with suggestions and dialogues on new resolutions.
 
 :::
 

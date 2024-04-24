@@ -17,7 +17,7 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun/) and the use of [resol
 
 #### [Improve resource and compliance reporting](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-resolutions.pdf#page=3)
 
-- TOPIC: Reporting
+- TOPIC: Communication
 - ID: R10/LT11/T11/24
 
 #### [Explore data administration services](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek10-resolutions.pdf#page=3)
