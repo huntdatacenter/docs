@@ -33,69 +33,55 @@ Ask your lab leader or lab coordinator to send us a new user agreement. [Contact
 
 Worry not if your account is active but you have forgotten your passwords and/or how to log in. 
 
-**New computer**
+#### New computer
 
-If you have a new local computer since your last visit, click on the link below to get going:
+If you have a new local computer since your last visit, see our [new computer](/do-science/guides/new-computer/) guide to get going.
 
-[Guides - New computer](/do-science/guides/new-computer/) 
+#### New location
 
-You will need to order VPN and Workbench certificates and a SSH passphrase reset if you don't remember your lab password.
+If you are abroad and accessing your lab from a new location, you may need to [request VPN access link opening](/do-science/service-desk/#vpn-access-list) in our Service desk.
 
-**New location**
+#### New password
 
-If you are abroad and accessing your lab from a new location, you may need to request access for your network here: 
+Passwords are easy to forget when you have been away for a while. Note that there is no button named "I forgot my password" in service desk. Rather, you will need to request a [SSH passphrase reset](/do-science/service-desk/#ssh-passphrase-reset) in Service desk. This will reset your lab password that you use both in Workbench and when your log in over SSH.
 
-[Service desk - Request VPN access link opening](/do-science/service-desk/#vpn-access-list)
+#### New Workbench certificate
 
-
-**New password**
-
-Passwords are easy to forget when you have been away for a while. Note that there is no button named "I forgot my password" in service desk. Rather, you will need to request a new SSH passphrase: 
-
-[Service desk - SSH passphrase reset](/do-science/service-desk/#ssh-passphrase-reset)
-
-
-This will reset your lab password that you use both in Workbench and when your log in over SSH. You will get your new temporary passphrase on Signal and guidance in your access link over email. 
-
-
-**New Workbench certificate**
-
-Your Workbench certificate expire after some time, and then you will need to install a new one. You can order a new one here: 
-
-[Service desk - Workbench certificate](/do-science/service-desk/#hunt-workbench-reissue)
-
-You will get the certificate on email and guidance in your access link on how to replace your old one.
-
+Your Workbench certificate expire after some time, and then you will need to install a new one. You can request a [Workbench certificate reissue](/do-science/service-desk/#hunt-workbench-reissue) in Service desk. You will get a tailored access link with information on how to get up and running. 
 
 ## Remind me
 
 ### Organization at a glance
 
-**Located in Norway**
+#### Located in Norway
 
 Your lab is hosted on a virtual machine that is located on a physical machine located in one of HUNT Cloud's data centers in Norway. 
 
-**Shared resources**
+#### Shared resources
 
-Inside your lab you share storage and resources with your lab team. You have your own Workbench where you can install your own package, preferably with Conda.
+Inside your lab you share storage and resources with your lab team.
 
-**Storage folders**
+#### Tailor your tools
 
-Your Workbench and lab is set up with default storage folders `work`, `archive` and `scratch`. Data here is shared among your team. We recommend that you use `scratch` for your temporary files, `archive` for your long term data storage, and `work` for your day-to-day activities. Note that `scratch` and your `home` folder -do not- have restore (backup). 
+You have your own Workbench where you can install your own software package, preferably with Conda. See our [Getting started with Workbench](/do-science/hunt-workbench/getting-started/)-guide.
+
+#### Storage folders
+
+Your Workbench and lab is set up with three default storage folders: `work`, `archive` and `scratch`. Data here is shared among your team. Use `scratch` for temporary files, `archive` for long term data, and `work` for your day-to-day activities. Note that `scratch` and your `home` folder -do not- have restore (backup). 
 
 ### What's new since last time
 
-We continuously update our services, and your Workbench or other things may look a bit different from last time. 
+We continuously update our services. So, your Workbench or other things in your lab may look and feel a bit different since last time. 
 
-**Updates in Patch notes**
+#### Find new features in Patch notes
 
-We publish our updates in patch notes. This is a handy way to see what's changed. The "Do science" section is a good place to start for scientific work.
+We publish our updates in [Patch notes](/administer-science/patch-notes/#patch-notes). This is a handy way to see what's changed.
 
-[Patch notes](/administer-science/patch-notes/#patch-notes)
+#### Your data should be the same
 
-Rest assured that we never move or interfere with data inside your lab without your consent and clear communication first.
+Rest assured that we never move or interfere with data inside your lab without the consent of your and/or your lab leader.
 
-**Ask around**
+#### Ask around
 
 If you are unsure about what is going on in your lab, grab a coffee with your lab team or lab coordinator for an update. And feel free to [contact us](/contact) for an update or chat about on improvements since last time.
 
@@ -108,7 +94,7 @@ Our documentation pages (these web pages) is a good place to get started. Start 
 
 We are always happy to get in touch and hear what is going on. The best way to reach us is through our [Service desk](/do-science/service-desk/#service-desk-for-lab-users) and Slack.
 
-**Service desk**
+#### Service desk
 
 We have Service Desk for the most common orders. This is the quickest way, but if none of these fit you can reach us in your lab channel on Slack or place a general request [here](/do-science/service-desk/#general-service-request)
 
