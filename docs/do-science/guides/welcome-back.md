@@ -110,10 +110,7 @@ We are always happy to get in touch and hear what is going on. The best way to r
 
 **Service desk**
 
-We have Service Desk for the most common orders. This is the quickest way 
-
-
- but if none of these fit, you can reach us in your lab channel on Slack or place a general request [here](/do-science/service-desk/#general-service-request)
+We have Service Desk for the most common orders. This is the quickest way, but if none of these fit you can reach us in your lab channel on Slack or place a general request [here](/do-science/service-desk/#general-service-request)
 
 
 
