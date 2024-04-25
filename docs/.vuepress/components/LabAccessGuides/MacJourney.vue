@@ -1056,7 +1056,7 @@ ${this.ipAddress}    ${this.labName}-entry
                           type="warning"
                           elevation="2"
                         >
-                          Make sure you have received your Workbench certificate (<code>.p12</code>).
+                          Make sure you have received your Workbench certificate (<code>.mobileconfig</code>).
                         </v-alert>
                         <v-alert
                           border="left"
