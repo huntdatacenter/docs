@@ -6,14 +6,16 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: tip All systems
-Operational
+::: warning External kista service
+**2024-05-02 08:12** - External kistas might be unstable as we are getting alerts from a physical machine that hosts part of the service. We will investigate.
 :::
 
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
 
 ### Latest system updates
+
+[..]
 
 **2024-02-05 12:12** - Connectivity restored. Expected to be caused by a new high-volume download that bypassed our traffic filters. We will tune our filters and start to work on long-term corrections. 
 
