@@ -573,6 +573,13 @@ ${this.ipAddress}    ${this.labName}-entry
               Ensure that you are logged into VPN.
             </v-alert>
 
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="SSH Passphrase change"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-ssh-passphrase-v1.mp4/db6118da-a8ff-837f-8b49-b99510161a45?t=1715087073596"
+              poster="/img/video-covers/lab-access-macOS-ssh-passphrase-v1.jpg"
+            />
+
             <v-col cols="12">
               {{ getNextItem(passChangeId, true) }} Design <DesignNewPassphrase />.
             </v-col>
@@ -723,6 +730,13 @@ ${this.ipAddress}    ${this.labName}-entry
           </v-expansion-panel-header>
           <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
 
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="SSH Passwordless access"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-ssh-keys-v1.mp4/3dbb4fbb-3e2e-21f8-4543-e86d31df7624?t=1715087057373"
+              poster="/img/video-covers/lab-access-macOS-ssh-keys-v1.jpg"
+            />
+
             <v-col cols="12">
               {{ getNextItem(passLessId, true) }} Open new Terminal window and generate ssh key.
               If command reports that id_rsa key already exists,
@@ -801,6 +815,13 @@ ${this.ipAddress}    ${this.labName}-entry
             <h3><a href="#ssh-config" class="header-anchor">#</a> {{ sshConfId }}. SSH Config file</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
+
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="SSH Config file"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-ssh-config-v1.mp4/1701d076-b83e-cee7-86cc-b763bad31531?t=1715087051308&download=true"
+              poster="/img/video-covers/lab-access-macOS-ssh-config-v1.jpg"
+            />
 
             <!-- Place in <code>~/.ssh/config</code>. -->
             <v-col cols="12">
