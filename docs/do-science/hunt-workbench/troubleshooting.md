@@ -159,6 +159,14 @@ One way to check your resource consumption is to log into your lab **`home`**-ma
 
 [Contact us](/contact) for further investigation if none of these works.
 
+### Workbench is missing features or does not respond after restart  
+
+If your Workbench doesn't want to start up even after [restart](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment) or is missing features, you can run following command to clear your environment
+
+```bash
+rm -vf /mnt/work/workbench/${USER}/.jupyter/lab/workspaces/*.jupyterlab-workspace
+```
+
 ## Need help
 
 Did not find a solution to your problem?
