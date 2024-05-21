@@ -140,6 +140,16 @@ rm -r /mnt/work/workbench/$USER/.matlab
 You will most likely not be able to install these yourself. [Contact us](/contact) on Slack or email if you need new toolboxes in your MATLAB installation.
 
 
+## LibreOffice
+
+### Stuck while loading the LibreOffice application
+
+If stuck while loading the LibreOffice application, try to restart Workbench to make sure that all instances of LibreOffice are stopped.
+Then open Workbench Terminal and remove lock files from past sessions using this command:
+
+```bash
+find ~/.local/config/libreoffice -type f -name ".lock" -print -delete
+```
 
 ## Experience
 
@@ -159,13 +169,15 @@ One way to check your resource consumption is to log into your lab **`home`**-ma
 
 [Contact us](/contact) for further investigation if none of these works.
 
-### Workbench is missing features or does not respond after restart  
+### Workbench is missing features or does not respond after restart
 
-If your Workbench doesn't want to start up even after [restart](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment) or is missing features, you can run following command to clear your environment
+If your Workbench doesn't want to start up even after [restart](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment) or is missing features that worked before, you can run following command to clear your environment:
 
 ```bash
 rm -vf /mnt/work/workbench/${USER}/.jupyter/lab/workspaces/*.jupyterlab-workspace
 ```
+
+If you are logging in first time and you miss some icons or menus you need to update your internet browser (e.g. Google Chrome).
 
 ## Need help
 
