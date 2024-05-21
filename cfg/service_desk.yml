@@ -279,7 +279,7 @@ request_external_import_kista:
 request_external_export_kista:
   title: "Request an external export kista"
   template:
-    subject: External import kista order - {labname} to {external_organization}
+    subject: External export kista order - {labname} to {external_organization}
     body: |
       Hi HUNT Cloud team,
 
