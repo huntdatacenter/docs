@@ -819,7 +819,7 @@ ${this.ipAddress}    ${this.labName}-entry
             <VideoGuide
               v-model="mainExpansionPanel"
               title="SSH Config file"
-              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-ssh-config-v1.mp4/1701d076-b83e-cee7-86cc-b763bad31531?t=1715087051308&download=true"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-ssh-config-v1.mp4/1701d076-b83e-cee7-86cc-b763bad31531?t=1715087051308"
               poster="/img/video-covers/lab-access-macOS-ssh-config-v1.jpg"
             />
 
@@ -949,6 +949,14 @@ ${this.ipAddress}    ${this.labName}-entry
           <v-expansion-panel-content id="hosts-file" ref="#hosts-file" class="mt-2">
             Let's set up your hosts file on your local computer. <br />
             This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
+
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="Workbench - Hosts file"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-workbench-certificate-v1.mp4/f7c17ea5-9c0f-2f3b-9905-bd3618bab685?t=1716815389835"
+              poster="/img/video-covers/lab-access-macOS-workbench-hosts-v1.jpg"
+            />
+
             <br /><br />
             <v-col cols="12">
               {{ getNextItem(hostsFileId, true) }} On your local computer, open your /etc/hosts file in your preferred text editor.
@@ -1017,6 +1025,13 @@ ${this.ipAddress}    ${this.labName}-entry
             <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench - certificate</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
+
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="Workbench - Client certificate"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-workbench-hosts-v1.mp4/91354bdb-7e24-6300-5fab-38a3b58a003e?t=1716815396032"
+              poster="/img/video-covers/lab-access-macOS-workbench-certificate-v1.jpg"
+            />
 
             <v-col cols="12">
               <a href="/do-science/hunt-workbench/" target="_blank">HUNT Workbench</a> provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
