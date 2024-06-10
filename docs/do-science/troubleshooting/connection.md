@@ -59,7 +59,7 @@ Your VPN session will reset after 12 hours. This will cause your connection to b
 
 ### Conflict with existing VPN
 
-Already running VPN services on your local computer may cause conflicts when connecting to our HUNT Cloud VPN. Try to disconnect the already running VPN service and reconnect to the HUNT Cloud VPN. 
+Already running VPN services on your local computer may cause conflicts when connecting to our HUNT Cloud VPN. Try to disconnect the already running VPN service and reconnect to the HUNT Cloud VPN.
 
 ::: details For NTNU users
 
@@ -96,7 +96,7 @@ When you got your new VPN certificate, head over to our [VPN certificate reset g
 
 ### Failed to negotiate cipher
 
-You will need an updated VPN configuration when you see the `Failed to negotiate cipher with server`-error while connecting to the VPN. Order a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) in our do science service desk. 
+You will need an updated VPN configuration when you see the `Failed to negotiate cipher with server`-error while connecting to the VPN. Order a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) in our do science service desk.
 
 > **Full message**: Failed to negotiate cipher with server.  Add the server's cipher ('AES-256-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM') if you want to connect to this server.
 
@@ -118,6 +118,13 @@ You will need to connect your phone to the internet to install Signal, Google au
 ### Signal is unavailable for my phone
 
 We are aware that Signal may be unavailable on some phones. Steps to resolve this will vary by phone model and OS. Start with this [troubleshooting guide](https://support.signal.org/hc/en-us/articles/360007318711-Troubleshooting-Notifications) on the official Signal pages as a starting point. [Contact us](/contact) if this do not resolve your issue.
+
+### Signal privacy settings
+
+To be able to ship credentials to you we need to see your phone number as registered in Signal.
+You can allow finding your account in Signal app settings:
+
+![signal-phone-number](./images/signal-phone-number.png)
 
 ## SSH
 
@@ -174,7 +181,3 @@ If you see this message any other time, please [contact us](/contact) for furthe
 ## HUNT Workbench
 
 See our [HUNT Workbench troubleshooting](/do-science/hunt-workbench/troubleshooting/) section.
-
-
-
-
