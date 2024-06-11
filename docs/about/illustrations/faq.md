@@ -14,7 +14,7 @@ description: This page contain FAQ on HUNT Cloud's illustrations where we imagin
 
 ### Who are the illustrator? 
 
-These illustrations are created by HUNT Cloud imagineer  [Ingunn B. Ferstad](https://www.ingunn.design/) in collaboration with the HUNT Cloud team.
+These illustrations are created by HUNT Cloud imagineer  [Ingunn B. Ferstad](https://www.ingunn.design/) at the HUNT Cloud team.
 
 ### Can I use the illustrations? 
 
