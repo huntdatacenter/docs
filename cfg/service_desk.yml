@@ -1904,7 +1904,7 @@ request_tape_archive:
 
 
 request_lab_access_link:
-  title: "Request Lab access link"
+  title: "Request Lab access link reissue"
   template:
     subject: "Lab access link reissue - {username} @ {labname}"
     body: |
@@ -1925,7 +1925,7 @@ request_lab_access_link:
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
-    "<b>Who can order:</b> Lab users.",
+    "<b>Who can order:</b> Active lab users.",
     "<b>Required information:</b> Your username and lab name.",
     "<b>Expected response time:</b> Days.",
     "<b>Cost:</b> Included in the lab subscription.",
