@@ -41,10 +41,15 @@ You need to activate your Signal account before we can ship you keys.
 
 - Open the Signal application
 - **Activate your Signal account** using the phone number attached in your user agreement.
+- To be able to receive your credentials we need to see your phone number as registered in Signal.
+Make sure you allow us to find your account in the settings:
+
+![signal-phone-number](./images/signal-phone-number.png)
+
 - Check if you have any received messages.
 
 ::: tip
-Notify us when your Signal account is activated by replying to your service desk request for onboarding. This allows us to quickly forward your lab keys when they are ready. 
+Notify us when your Signal account is activated by replying to your service desk request for onboarding. This allows us to quickly forward your lab keys when they are ready.
 
 Example message:
 
@@ -59,7 +64,7 @@ As soon as your account is set up on our side, we will forward your lab keys ove
 
 ::: tip Time estimate
 
-Allow for a week to pass before your lab send us your user agreement and you need the keys. 
+Allow for a week to pass before your lab send us your user agreement and you need the keys.
 
 :::
 
@@ -173,12 +178,12 @@ If the [decryption guides](/do-science/lab-access/collect-your-keys/#_1-2-secret
 
 #### OS X, macOS: The 7z archive password do not seem to work?
 
-The default archive utility will give you an error message when unpacking the `7z-format` locked with a passphrase. You need to download and unpack with the 
+The default archive utility will give you an error message when unpacking the `7z-format` locked with a passphrase. You need to download and unpack with the
 `7z software` or `Keka` described in [the 7z installation guide](/do-science/tools/transfer/7z/). [Contact us](/about/contact) if this does not work.
 
 #### Debian Linux (Ubuntu): I am unable to unpack the 7z archive file forwarded on email
 
-The default archive utility may give you an error message when unpacking the `7z-format` locked with a passphrase. Try to download and unpack with the 
+The default archive utility may give you an error message when unpacking the `7z-format` locked with a passphrase. Try to download and unpack with the
 `7z software` described in [the 7z guide](/do-science/tools/transfer/7z/). [Contact us](/about/contact) if this does not work.
 
 ### More information
