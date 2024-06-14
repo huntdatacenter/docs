@@ -260,18 +260,36 @@ Host {lab_name}
       <v-sheet v-show="!cfgShow" class="ma-4">
         <v-row justify="center">
           <v-col cols="12">
+            You should receive your Lab access links as part of your onboarding email.
+          </v-col>
+          <v-col cols="12">
             <v-alert
               border="left"
               colored-border
               type="warning"
               elevation="2"
             >
-              <strong>{{ access && access.length > 0 ? `Your link appears to be wrong.` : `You need your Lab access link to continue.` }}</strong>
-              <hr class="mt-1 mb-2" /><br>
-              You will get your Lab access links as part of your onboarding email.
-              <br /><br />
-              If you lost the link, clik on the blue button below to request a new.
-              <br /><br />
+              <strong>Haven't signed a user agreement yet?</strong>
+              <hr class="mt-1 mb-2" />
+              You need to follow up on user onboarding
+              with your lab leader or lab coordinator in
+              <a href="https://docs.hdc.ntnu.no/administer-science/service-desk/lab-orders/#user-management">
+                Service desk > User management
+              </a>
+              <br />
+            </v-alert>
+          </v-col>
+          <v-col cols="12">
+            <v-alert
+              border="left"
+              colored-border
+              type="warning"
+              elevation="2"
+            >
+              <strong>{{ access && access.length > 0 ? `Your link appears to be wrong.` : `Have you lost your access link?` }}</strong>
+              <hr class="mt-1 mb-2" />
+              If you lost your access link, click on the blue button below to request a new one.
+              <br />
               <SDButton form="request_lab_access_link" />
             </v-alert>
           </v-col>
