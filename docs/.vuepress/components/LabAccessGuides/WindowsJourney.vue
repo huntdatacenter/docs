@@ -590,6 +590,26 @@ Connection to home closed.`,
                           </pre></div>
                         </p>
 
+                        <br />
+                        <h3 id="tls-key-negotiation-timeout"><a href="#tls-key-negotiation-timeout" class="header-anchor">#</a> TLS handshake failed</h3>
+                        <p>
+                          If you see the error below the problem might be with your current network (e.g. institution is blocking VPN connections).
+                          <div class="language- extra-class"><pre class="language-text">
+                            <code v-text="`TLS Error: TLS key negotiation failed to occur within 60 seconds (check your network connectivity)`"></code>
+                          </pre></div>
+
+                          <ul>
+                            <li>
+                              Make sure your IP address is in our <a href="https://docs.hdc.ntnu.no/do-science/troubleshooting/connection/#access-list">Access list</a>.
+                            </li>
+                            <li>
+                              Confirm that your local institution is blocking VPN connecting by connecting from different network (e.g. mobile internet or from home).
+                              For more details see our troubleshooting guide
+                              <a href="https://docs.hdc.ntnu.no/do-science/troubleshooting/connection/#cannot-connect-due-to-local-firewalls">Cannot connect due to local firewalls</a>.
+                            </li>
+                          </ul>
+                        </p>
+
                         <v-alert
                           border="left"
                           colored-border
