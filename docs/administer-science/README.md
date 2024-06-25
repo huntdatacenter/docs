@@ -16,12 +16,9 @@ See our [scientific access](/administer-science/scientific-access) section for g
 !["Illustration of decorative hand-made golden key with purple gem stones."](../images/hunt-cloud_key_250.png)
 
 
+::: tip Next Tingweek #13 (2024-10)
 
-::: tip Next Tingweek (Ting #11)
-
-- **Labting**: Tuesday 28 May 2024 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 29 May 2024 - 9 to 11 a.m. CET
+- **Data space ting**: Wednesday 16 October 2024 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 16 October 2024 - 1 to 3 p.m. CET
 
 :::
-
-

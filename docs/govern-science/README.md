@@ -15,16 +15,13 @@ See our [organizational access](/govern-science/organizational-access) section f
 
 !["Illustration of sundial compass in brass."](../images/hunt-cloud_compass_250.png)
 
-::: tip Next Tingweek (Ting #12)
+::: tip Next Tingweek #13 (2024-10)
 
-- **Labting**: Tuesday 28 May 2024 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 29 May 2024 - 9 to 11 a.m. CET
-- **Data controller ting**: Wednesday 29 May 2024 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 30 May 2024 - 9 to 11 a.m. CET
-
-[Read more about HUNT Cloud Tingweeks](/govern-science/tingweek/)
+- **Labting**: Tuesday 15 October 2024 - 2 to 4 p.m. CET
+- **Data space ting**: Wednesday 16 October 2024 - 9 to 11 a.m. CET
+- **Data controller ting**: Wednesday 16 October 2024 - 1 to 3 p.m. CET
+- **Lagtun**: Thursday 17 October 2024 - 9 to 11 a.m. CET
 
 :::
-
 
 

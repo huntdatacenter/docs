@@ -17,11 +17,9 @@ This section is aimed at lab users. It contains practical information on how to 
 
 See our [main documentation page](/) for other sections.
 
-::: tip Next Tingweek (Ting #11)
+::: tip Next Tingweek #13 (2024-10)
 
-- **Labting**: Tuesday 28 May 2024 - 2 to 4 p.m. CET
-
-[Read more about Labting](/do-science/community/labting/)
+- **Labting**: Tuesday 15 October 2024 - 2 to 4 p.m. CET
 
 :::
 

@@ -37,10 +37,10 @@ description: This page lists information and questions about our Tingweeks.
 
 ### Tingweek #12 (2024-05)
 
-- **Labting**: Tuesday 28 May 2024 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 29 May 2024 - 9 to 11 a.m. CET
-- **Data controller ting**: Wednesday 29 May 2024 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 30 May 2024 - 9 to 11 a.m. CET
+- **Labting**: Tuesday 28 May 2024 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek12-labting-agenda.pdf))
+- **Data space ting**: Wednesday 29 May 2024 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek12-dataspaceting-agenda.pdf))
+- **Data controller ting**: Wednesday 29 May 2024 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek12-datacontrollerting-agenda.pdf))
+- **Lagtun**: Thursday 30 May 2024 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek12-lagtun-agenda.pdf))
 
 ### Tingweek #11 (2024-02)
 
