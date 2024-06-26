@@ -37,21 +37,23 @@ Required units:
 * A dedicated local computer with updated operating system from Windows, Mac OS or Ubuntu Linux.
 * A personal smart phone for one-time passwords and key transfers. 
 
-On personal phones: 
+Software on personal phone: 
 
 * Signal 
 * Google authenticator or Microsoft authenticator
 
-On local computer:
+Software on local computer:
 
 * 7z (Windows/Linux) or Keka (Mac) on their local computer
 * OpenVPN (Windows/Linux) or Tunnelblick (Mac) on their local computer
 * Updated Chrome web-browser on their local computer
 
-Administrator privileges will also be needed for the following actions: 
+Installation actions that will need administrator privileges: 
 
 * Install the VPN-certificate in OpenVPN/Tunnelblick
 * Install the TLS-certificate in Chrome
+
+Network connectivity:
 
 The VPN will need to connect with us on the following address that might require organizational openings: 
 
