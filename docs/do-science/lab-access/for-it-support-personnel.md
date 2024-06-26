@@ -28,7 +28,37 @@ Our secure processing environments are named 'labs' and users inside a lab are n
 
 In slightly more technical terms, a lab is one or more virtual machines with Linux operating system and  attached storage located inside a dedicated private network.
 
-## Information to users
+## Technical requirements
+
+Lab users will need the following units: 
+
+* A dedicated local computer with updated operating system from Windows, Mac OS or Ubuntu Linux.
+* A personal smart phone for one-time passwords and key transfers. 
+
+Lab users will need to following software on their units: 
+
+* Signal on their phone
+* Google authenticator on their phone
+* 7z (Windows/Linux) or Keka (Mac) on their local computer
+* OpenVPN (Windows/Linux) or Tunnelblick (Mac) on their local computer
+* Updated Chrome web-browser on their local computer
+
+Administrator privileges will also be needed for the following actions: 
+
+* Install the VPN-certificate in OpenVPN/Tunnelblick
+* Install the TLS-certificate in Chrome
+
+The VPN will need to connect with us on the following address that might require organizational openings: 
+
+```
+IP: 129.241.176.121
+Port: 1194
+Protocol: UDP
+```
+
+This may require local firewall configurations. Blocked network connections will typically give errors such as `LS Error: TLS key negotiation failed to occur within 60 seconds` or `The VPN failed because the connection attempt timed out`.
+
+## Information forwarded to lab users
 
 We will send lab users an email on their organizational email address with access information as soon as their lab access is finalized on our side. The email includes:
 
@@ -45,29 +75,6 @@ The keys over Signal and the link to the compressed file are open for ten (10) d
 :::
 
 
-## Technical requirements
-
-Lab users needs to download and install to the following software: 
-
-* Signal on their phone
-* 7z (Windows/Linux) or Keka (Mac) on their local computer
-* OpenVPN (Windows/Linux) or Tunnelblick (Mac) on their local computer
-* Chrome web-browser on their local computer
-
-Administrator privileges will also be needed for the following actions: 
-
-* Install the VPN-certificate in OpenVPN/Tunnelblick
-* Install the TLS-certificate in Chrome
-
-The VPN will need to connect with us on the following address: 
-
-```
-IP: 129.241.176.121
-Port: 1194
-Protocol: UDP
-```
-
-This may require local firewall configurations. Blocked network connections will typically give errors such as `LS Error: TLS key negotiation failed to occur within 60 seconds` or `The VPN failed because the connection attempt timed out`.
 
 ## Principal access steps
 
@@ -94,7 +101,7 @@ Lab users will need to install OpenVPN (Windows/Linux) or Tunnelblick (Mac) and 
 
 Lab access requires a reset of the temporary passphrase over Secure Shell (SSH).
 
-Lab users needs to reset their passphrase in two step following the guide in their lab access link. 
+Lab users needs to reset their passphrase in two steps following the guide in their lab access link. 
 
 Their first step is to reset the passphrase on a virtual machine that we have named 'entry'. This is the first machine (jump-host) into their lab that we fully control for security and logging purposes.
 
@@ -110,7 +117,7 @@ The access requires access to Chrome browser on their local computer. The proces
 ## Software licenses
 
 HUNT Cloud utilizes open-source software for default application that are made available inside labs. 
-
+|
 Lab users have the ability to bring their own license for other application that they need for their work such as Stata, MATLAB and others. Lab users can forward their licenses in our Service desk.
 
 ## Security and privacy
