@@ -30,15 +30,20 @@ In slightly more technical terms, a lab is one or more virtual machines with Lin
 
 ## Technical requirements
 
-Lab users will need the following units: 
+Lab users will need the following:
+
+Required units:
 
 * A dedicated local computer with updated operating system from Windows, Mac OS or Ubuntu Linux.
 * A personal smart phone for one-time passwords and key transfers. 
 
-Lab users will need to following software on their units: 
+On personal phones: 
 
-* Signal on their phone
-* Google authenticator on their phone
+* Signal 
+* Google authenticator or Microsoft authenticator
+
+On local computer:
+
 * 7z (Windows/Linux) or Keka (Mac) on their local computer
 * OpenVPN (Windows/Linux) or Tunnelblick (Mac) on their local computer
 * Updated Chrome web-browser on their local computer
