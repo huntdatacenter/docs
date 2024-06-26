@@ -22,7 +22,7 @@ Don't hesitate to [contact us](/contact) for technical follow-ups and questions 
 
 HUNT Cloud is a scientific cloud solution that provide secure processing environments for scientists.
 
-HUNT Cloud is fully owned by Norwegian University of Science and Technology (NTNU), Norway, and affiliated to the Department of Public Health and Nursing at the Faculty for Medicine and Health Sciences. Our data centers are located in Trondheim, Norway.
+HUNT Cloud is fully owned by the Norwegian University of Science and Technology (NTNU), Norway, and affiliated to the Department of Public Health and Nursing at the Faculty for Medicine and Health Sciences. Our data centers are located in Trondheim, Norway.
 
 Our secure processing environments are named 'labs', and users inside a lab are named 'lab users'. In short, a lab gives a defined team of scientists access to a private space where they can upload, store and analyze data.
 
