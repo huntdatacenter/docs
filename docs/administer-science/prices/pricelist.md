@@ -19,7 +19,7 @@ Head over to our [price calculator](/administer-science/prices/calculator) to ta
 
 ::: tip CURRENT PRICE LIST
 
-[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-1.pdf) (v4.1 PDF)
+[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-2.pdf) (v4.2 PDF)
 
 :::
 
@@ -27,8 +27,8 @@ Head over to our [price calculator](/administer-science/prices/calculator) to ta
 
 | **Content** | **Type** | **File** |
 | ---- | ---- | ---- |
-| HUNT Cloud Price List (v4.1) | PDF | [hunt-cloud-price-list-4-1.pdf](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-1.pdf) |
-| HUNT Cloud Price List (v4.1) | CSV* | [hunt-cloud-price-list-4-1.csv](https://assets.hdc.ntnu.no/assets/prices/v4/hunt-cloud-price-list-4-1.csv) |
+| HUNT Cloud Price List (v4.2) | PDF | [hunt-cloud-price-list-4-2.pdf](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-2.pdf) |
+| HUNT Cloud Price List (v4.2) | CSV* | [hunt-cloud-price-list-4-2.csv](https://assets.hdc.ntnu.no/assets/prices/v4/hunt-cloud-price-list-4-2.csv) |
 
 *) The current CSV version do not contain prices for transport services, hourly based services and tape services.
 
@@ -45,6 +45,7 @@ The price list will be updated from time to time.
 
 | **Version** | **Announced** | **Effective** |
 | - | - | - |
+| [HUNT Cloud Price List v4.2](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-2.pdf) (PDF) | 2024-06-26 | 2024-06-26 |
 | [HUNT Cloud Price List v4.1](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-1.pdf) (PDF) | 2024-04-23 | 2024-04-23 |
 | [HUNT Cloud Price List v4.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-0.pdf) (PDF) | 2022-10-10 | 2023-01-10 |
 | [HUNT Cloud Price List v3.2](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-2.pdf) (PDF) | 2022-02-22 | 2022-02-22 |
@@ -52,6 +53,12 @@ The price list will be updated from time to time.
 | [HUNT Cloud Price List v3.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-0.pdf) (PDF) | 2021-07-01 | 2021-10-01 |
 
 ## Changes
+
+#### HUNT Cloud Price list v4.2 (minor) 
+
+*Store update*
+
+* Legend of block storage table updated to reflect that prices in the table are for one terabyte.
 
 #### HUNT Cloud Price list v4.1 (minor) 
 
