@@ -14,7 +14,7 @@ description: Access information for IT support personnel.
 
 ::: tip Contact us
 
-Don't hesitate to [contact us](/contact) for technical follow-ups and questions to assists the onboarding of your employees.
+Don't hesitate to [contact us](/contact) for technical follow-ups and questions to may help the onboarding of your employees.
 
 :::
 
@@ -24,7 +24,7 @@ HUNT Cloud is a scientific cloud solution that provide secure processing environ
 
 HUNT Cloud is fully owned by Norwegian University of Science and Technology (NTNU), Norway, and affiliated to the Department of Public Health and Nursing at the Faculty for Medicine and Health Sciences. Our data centers are located in Trondheim, Norway.
 
-Our secure processing environments are named 'labs' and users inside a lab are named 'lab users'. In short, a lab gives a defined team of scientists access to a private space where they can upload, store and analyze data.
+Our secure processing environments are named 'labs', and users inside a lab are named 'lab users'. In short, a lab gives a defined team of scientists access to a private space where they can upload, store and analyze data.
 
 In slightly more technical terms, a lab is one or more virtual machines with Linux operating system and  attached storage located inside a dedicated private network.
 
@@ -32,28 +32,28 @@ In slightly more technical terms, a lab is one or more virtual machines with Lin
 
 Lab users will need the following to be able to access their labs.
 
-**Equipment units:**
+**Equipment units**
 
 * A dedicated local computer with updated operating system from Windows, Mac OS or Ubuntu Linux.
 * A personal smart phone for one-time passwords and key transfers. 
 
-**Software on the personal phone:** 
+**Software on the personal phone** 
 
 * Signal 
 * Google authenticator or Microsoft authenticator
 
 **Software on the local computer**
 
-* 7z (Windows/Linux) or Keka (Mac) on their local computer
-* OpenVPN (Windows/Linux) or Tunnelblick (Mac) on their local computer
-* Updated Chrome web-browser on their local computer
+* 7z (Windows/Linux) or Keka (Mac)
+* OpenVPN (Windows/Linux) or Tunnelblick (Mac)
+* Updated Chrome web-browser
 
-**Installation actions that may need administrator privileges:** 
+**Installation actions that may need administrator privileges** 
 
 * Install the VPN-certificate in OpenVPN/Tunnelblick
 * Install the TLS-certificate in Chrome
 
-**Network openings:**
+**Network openings**
 
 The VPN will need to connect with us on the following address that might require network openings at your organization: 
 
@@ -67,13 +67,13 @@ Blocked network connections will typically give errors such as `LS Error: TLS ke
 
 ## Information forwarded to lab users
 
-We will send lab users an email on their organizational email address with access information as soon as their lab access is finalized on our side. The email includes:
+We will send lab users an email on their organizational email address with access information as soon as their user agreements are processed on our side. This email includes:
 
 
-* A link to an encrypted and compressed 7z-file with certificates. Lab users needs to download this file to their local computer.
-* A link to their personalized 'Lab access link'. Lab users needs to click this link to see their step-by-step access guide.
+* A link to an encrypted and compressed 7z-file with access certificates. Lab users needs to download this file to their local computer.
+* A link to their 'Lab access link'. Lab users needs to click this link to see their personalized step-by-step access guide.
 
-In addition, lab users gets an image on the phone application Signal forwarded to their personal phone. This includes keys to the compressed 7z-file and temporary lab access keys. 
+In addition, lab users gets an image on their phone over Signal that includes keys to the compressed 7z-file and temporary lab access keys. 
 
 ::: tip Expiration
 
