@@ -30,32 +30,32 @@ In slightly more technical terms, a lab is one or more virtual machines with Lin
 
 ## Technical requirements
 
-Lab users will need the following:
+Lab users will need the following to be able to access their labs.
 
-Required units:
+**Equipment units:**
 
 * A dedicated local computer with updated operating system from Windows, Mac OS or Ubuntu Linux.
 * A personal smart phone for one-time passwords and key transfers. 
 
-Software on personal phone: 
+**Software on the personal phone:** 
 
 * Signal 
 * Google authenticator or Microsoft authenticator
 
-Software on local computer:
+**Software on the local computer**
 
 * 7z (Windows/Linux) or Keka (Mac) on their local computer
 * OpenVPN (Windows/Linux) or Tunnelblick (Mac) on their local computer
 * Updated Chrome web-browser on their local computer
 
-Installation actions that will need administrator privileges: 
+**Installation actions that may need administrator privileges:** 
 
 * Install the VPN-certificate in OpenVPN/Tunnelblick
 * Install the TLS-certificate in Chrome
 
-Network connectivity:
+**Network openings:**
 
-The VPN will need to connect with us on the following address that might require organizational openings: 
+The VPN will need to connect with us on the following address that might require network openings at your organization: 
 
 ```
 IP: 129.241.176.121
@@ -63,7 +63,7 @@ Port: 1194
 Protocol: UDP
 ```
 
-This may require local firewall configurations. Blocked network connections will typically give errors such as `LS Error: TLS key negotiation failed to occur within 60 seconds` or `The VPN failed because the connection attempt timed out`.
+Blocked network connections will typically give errors such as `LS Error: TLS key negotiation failed to occur within 60 seconds` or `The VPN failed because the connection attempt timed out`.
 
 ## Information forwarded to lab users
 
