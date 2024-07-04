@@ -156,7 +156,7 @@ This form defined the invoice profile for your cloud services fees. One invoice 
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.4.
+The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.5.
 
 **Data space**
 
@@ -199,11 +199,10 @@ You may make an advance payment to your invoice profile. The payment is applied 
 
 **Spending limit**
 
-A monetary spending limit may be specified for the invoice profile. 
+A monetary spending limit per calendar year may be specified for the invoice profile. 
 
-- *LIMIT*: If applicable, specify a maximum spending limit in NOK that can be consumed over the spending period (see below). 
+- *LIMIT*: If applicable, specify a maximum spending limit in NOK per calendar year that can be consumed. 
 - *TYPE*: For the soft and hard limit type, notifications will be sent to the Invoice Contact and Data Space Leader at consumption of approximately 50%, 90% and 100%. For the hard limit type, services will be temporarily deactivated if consumption exceeds the limit.
-- *PERIOD*: This is the period in days for which the limit is applied. The default is per ninety days.
 
 **Signatures**
 
