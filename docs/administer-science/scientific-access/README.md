@@ -7,11 +7,11 @@ description: This page provides a guide for scientific centers and groups that w
 
 # Scientific access
 
-**This page provides a guide for scientific centers and groups that want to enable HUNT Cloud resources for their data scientists.**
+**This page describes required agreements for scientific centers and groups that want to enable HUNT Cloud resources for their scientists and data explorers.**
 
 ::: tip Cut to the chase
 
-[Click here](#order-scientific-access) to jump directly to the service orders that need to be in place before you can onboard your scientists to HUNT Cloud.
+[Contact us](/contact) to order your scientific access to HUNT Cloud. We will guide you through the necessary agreements.
 
 :::
 
@@ -25,7 +25,7 @@ We have five agreement layers in HUNT Cloud (illustration below). This guide cov
 
 ::: warning Organizational access
 
-You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/administer-science/contact/) if need guidance on how to start your organizational onboarding. 
+You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/administer-science/contact/) if you need to start an organizational onboarding. 
 
 :::
 
@@ -71,32 +71,22 @@ Your lab leader or lab coordinator chooses the initial size of the home machine 
 
 ## Decision support
 
-**There are a set of small decisions that needs to be made to get the first lab up and running.** 
+**There are a set of small decisions that needs to be made to get your first lab up and running. We are more than happy to help and guide in this process.** 
 
-We recommend that you set aside 30 minutes to fill out the for fields in the "HUNT Cloud Scientific Access Bundle" below. The bundle contains the following elements:
-
-1. Data space order
-2. Invoice profile
-3. Lab order
-
-::: tip Attach a Lab to an already active Data space 
-
-If you already have an active Data space, you can skip this section and request your new lab directly in our [administer science service desk](/administer-science/service-desk/data-space-orders/#new-lab).
-
-:::
+Skip this step if you already have an active Data space in place and order your new lab directly in our [administer science service desk](/administer-science/service-desk/data-space-orders/#new-lab).
 
 
 ::: details Data space order decision support
 
 **Service center** 
 
-*Find your Service center name*
+*Define your Service center short name*
 
-[Contact us](/administer-science/contact/) for a quick clarification if you are unsure of your Service center name. For NTNU, your service center name is the acronym of your Department, such as `ntnu-ism`, `ntnu-idi` etc.
+We aim to use the acronym of your organization and/or department/division. To illustrate for NTNU departments, your service center name will be `ntnu-ism`, `ntnu-idi` etc. We use this in day-to-day communication, on reports that we send you and such.
 
 *Identify your Service center leader*
 
-[Contact us](/administer-science/contact/) for a quick clarification if you are unsure of your Service center leader. For NTNU, your service center leader is the Deputy head of Research (Nestleder forskning) of your Department.
+We aim to use an individual that is responsible for the scientific activities under your service center. To illustrate for NTNU departments, your service center leader will be the Deputy head of Research (Nestleder forskning) at your Department.
 
 **Data space name**
 
@@ -189,7 +179,6 @@ You may add a monetary spending limit to your account.
 
 * LIMIT: If applicable, specify a maximum spending limit in NOK that can be consumed over the spending period (see below).
 * TYPE: For the soft and hard limit type, notifications will be sent to the Invoice Contact and Data Space Leader at consumption of approximately 50%, 90% and 100%. For the hard limit type, services will be temporarily deactivated if consumption exceeds the limit.
-* PERIOD: This is the period in days for which the limit is applied. The default is per ninety days.
 
 **Signatures**
 
@@ -248,25 +237,9 @@ You need to get a signature from your Lab leader, typically by saving the PDF an
 
 ## Order scientific access
 
-::: tip First time scientific access:
+::: tip Get started
 
-[HUNT Cloud Scientific Access Bundle](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-scientific-access-bundle.pdf) (PDF)
-
-Use this PDF to activate your first Data space and Lab in HUNT Cloud.
-
-:::
-
-**Steps:**
-
-1. Click on the PDF-link above: This file contains three order forms: a (i) Data space order, an (ii) invoice profile, and a (iii) Lab order. 
-2. Fill out the needed information in your web-browser and save the PDF to your local computer.
-3. Send us the saved PDF as an attachment on [email](/administer-science/contact/). Expect an email confirmation for the received order. 
-
-**Allow for a few days in processing time from your order is sent until you can order onboard of your first lab user.**
-
-::: danger Next: Add your first lab user
-
-It's important that your lab leader order lab access for each scientist (lab user) that will work in your lab as soon as you send us the PDF bundle above. [Click on this link to get going](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
+[Contact us](/contact) to order your scientific access to HUNT Cloud. We will guide you through the necessary agreements based on your scientific needs.
 
 :::
 

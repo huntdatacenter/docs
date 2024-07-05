@@ -509,7 +509,7 @@ We are changing the way we approach onboarding of new users. This approach allow
 We are simplifying [Scientific access](/administer-science/scientific-access/) for new scientific centers and scientific groups and have updated the initial onboarding process: 
 
 * [New section](/administer-science/scientific-access/) that describes the scientific onboarding.
-* [New scientific access bundle](/administer-science/scientific-access/#order-scientific-access) that combines information needed to add your first Data space and Lab. 
+* New scientific access bundle that combines information needed to add your first Data space and Lab. 
 * [FAQ section](/administer-science/scientific-access/faq/) dedicated to scientific access.
 
 <h3>Minor changes</h3>

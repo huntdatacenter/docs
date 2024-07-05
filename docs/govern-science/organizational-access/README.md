@@ -7,13 +7,14 @@ description: Enable organizational access to HUNT Cloud for your scientists and 
 
 # Organizational access
 
-**This pages provides a guide for organizations that wants to enable HUNT Cloud resources for their scientists and data explorers.**
+**This pages describes required agreements for organizations that wants to enable HUNT Cloud resources for their scientists and data explorers.**
 
 ::: tip Cut to the chase
 
-[Click here](#request-organizational-agreements) to request the organizational agreements that we need before you can onboard your scientists to HUNT Cloud.
+[Contact us](/contact) to order organiational access to HUNT Cloud. We will guide you through the necessary agreements.
 
 :::
+
 
 [[toc]]
 
@@ -68,21 +69,11 @@ The form below contains several small decision points that organizations outside
 
 ## Request organizational agreements
 
-::: tip For NTNU departments
-Send us the name of the administrative contact person at your Department that will coordinate the agreement process on [email](/contact). We will generate the additional agreement information and guide in the next steps.
-:::
+Send us the name of the administrative contact person at your Department that will coordinate the agreement process on [email](/contact). We will generate the required agreements and guide you through the process.
 
-::: tip For all other institutions
+## Next step
 
-[HUNT Cloud organizational agreement information form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-organizational-agreement-information.pdf) (PDF)
-
-1. Click on the PDF-link above.
-2. Fill out the needed information, and save the PDF on your local computer. 
-3. Send us the saved PDF as an [email](/contact) attachment.
-
-:::
-
-Your scientific centers and groups may start their [scientific access](/administer-science/scientific-access/) process as soon as these organizational agreements are signed, sealed and delivered. 
+Your scientific centers and groups may start their [scientific access](/administer-science/scientific-access/) process as soon as your organizational agreements are signed, sealed and delivered. 
 
 ## FAQ
 
