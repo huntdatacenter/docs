@@ -6,8 +6,8 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: tip System stats
-System is available
+::: warning Selected storage volumes
+**2024-07-06 08:26** - Selected storage volumes went into read-only state last night. We will contact affected labs and start the revert to read-write state first thing Monday morning. No data is lost.
 :::
 
 
