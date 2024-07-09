@@ -24,7 +24,7 @@ Our passion is to inspire scientists to elevate data for a better world. To do s
 
 ### Total cost
 
-Your total cost will include a combination of fixed subscription costs and running costs for the resources your attached to your labs. The fees across all labs inside one data space are summarized and billed to the data spaces' billing accounts. You may choose to split the total cost into individual invoice profiles, for example per lab.
+Your total cost will include a combination of fixed subscription costs and running costs for the resources attached to your labs. The fees across all labs inside one data space are summarized and billed to the data spaces' billing accounts. You may choose to split the total cost into individual invoice profiles, for example per lab.
 
 ### Supporting documents
 
