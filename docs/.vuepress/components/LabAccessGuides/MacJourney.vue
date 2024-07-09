@@ -1292,7 +1292,7 @@ ${this.ipAddress}    ${this.labName}-entry
                           <div class="pl-4 pr-16 py-2">
                             1. If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <code style="font-size: 90% !important;">{{ hostsFileId }}. Workbench - hosts file</code> guide.
                             <br/>
-                            2. If you are getting <code>ERR_CONNECTION_TIMED_OUT</code> error you need to make sure that you are connected to VPN.
+                            2. If you are getting <code>ERR_CONNECTION_TIMED_OUT</code> error you need to make sure that you are connected to VPN. If you are able to ssh into lab your VPN is fine, and you need to repeat the <code>6. Workbench - hosts file</code> guide.
                           </div>
                         </details>
 
