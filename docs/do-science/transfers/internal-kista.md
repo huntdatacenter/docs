@@ -146,7 +146,7 @@ LFTP method works in similar fashion, except it offers you more reliable transfe
 lftp -e "mirror -cR <upload_directory> /upload; bye" sftp://<username>-upload:@<ip-address>
 
 # -- Demo example
-lftp -e "mirror --parallel 10 -cR /mnt/archive/example_archive/ /upload; bye" sftp://demouser-upload:@10.42.132.118
+lftp -e "mirror --parallel=10 -cR /mnt/archive/example_archive/ /upload; bye" sftp://demouser-upload:@10.42.132.118
 ```
 You can read more about LFTP [here](/do-science/tools/transfer/lftp/)
 
@@ -226,7 +226,7 @@ For large downloads, [terminal multiplexers](/do-science/tools/technical/termina
 lftp -e "mirror -c /upload <download_to_directory>; bye" sftp://<username>-<role>:@<ip-address>
 
 # -- Demo example downloader
-lftp -e "mirror --parallel 10 -c /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
+lftp -e "mirror --parallel=10 -c /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
 ```
 :::
 
