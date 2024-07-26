@@ -616,11 +616,7 @@ module.exports = {
           collapsable: true,
           isGroup: true,
           children: [
-            {
-              title: "Security and privacy policies",
-              path: "/govern-science/policies/",
-            },
-            "/govern-science/policies/faq.md",
+            "/govern-science/policies/",
           ],
         },
         {
