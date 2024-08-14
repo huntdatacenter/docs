@@ -100,6 +100,10 @@ You will need an updated VPN configuration when you see the `Failed to negotiate
 
 > **Full message**: Failed to negotiate cipher with server.  Add the server's cipher ('AES-256-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM') if you want to connect to this server.
 
+### Conflict with local network
+
+In rare cases if your local network is using 10.8.0.0/16 or overlapping with it you might be having issues connecting to VPN or further, [contact us](/contact) for further investigation.
+
 
 ## Phone
 
