@@ -74,7 +74,7 @@ Create activation script for setting the variables:
 vim ~/activate-cuda-11.8.sh
 ```
 
-Paste in the contents. We have use the cude installation directory from our example above (`/home/ubuntu/cuda-11.8.0`):
+Paste in the contents. We have used the CUDA installation directory from our example above (`/home/ubuntu/cuda-11.8.0`):
 ```
 export CUDA_HOME=/home/ubuntu/cuda-11.8.0
 
