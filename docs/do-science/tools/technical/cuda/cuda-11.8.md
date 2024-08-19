@@ -43,7 +43,7 @@ Run the installation (takes a few quiet minutes):
   --installpath=/home/ubuntu/cuda-11.8.0 \
   --no-opengl-libs \
   --no-drm \
-  --no-man-page
+  --no-man-page && echo Success || echo Fail
 ```
 
 Cleanup installation files:

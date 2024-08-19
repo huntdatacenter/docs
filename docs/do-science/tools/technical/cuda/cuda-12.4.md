@@ -43,7 +43,7 @@ Run the installation (takes a few quiet minutes):
   --installpath=/home/ubuntu/cuda-12.4.0 \
   --no-opengl-libs \
   --no-drm \
-  --no-man-page
+  --no-man-page && echo Success || echo Fail
 ```
 
 Cleanup installation files:
@@ -119,4 +119,15 @@ which nvcc
 
 ```bash
 nvcc --version
+```
+
+The expected output:
+```
+/home/ubuntu/cuda-12.4.0/bin/nvcc
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Tue_Feb_27_16:19:38_PST_2024
+Cuda compilation tools, release 12.4, V12.4.99
+Build cuda_12.4.r12.4/compiler.33961263_0
 ```
