@@ -28,6 +28,12 @@ Download CUDA installer:
 wget https://developer.download.nvidia.com/compute/cuda/12.4.0/local_installers/cuda_12.4.0_550.54.14_linux.run
 ```
 
+Update permissiongs:
+
+```bash
+chmod +x ./cuda_12.4.0_550.54.14_linux.run
+```
+
 Run the installation (takes a few quiet minutes):
 
 ```bash
