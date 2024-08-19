@@ -28,7 +28,7 @@ Download CUDA installer:
 wget https://developer.download.nvidia.com/compute/cuda/12.4.0/local_installers/cuda_12.4.0_550.54.14_linux.run
 ```
 
-Update permissiongs:
+Update permissions:
 
 ```bash
 chmod +x ./cuda_12.4.0_550.54.14_linux.run
@@ -101,4 +101,14 @@ Save the file.
 From now one you can easily load your cuda variables by running this command:
 ```bash
 source ~/activate-cuda-12.4.sh
+```
+
+## Test commands
+
+```bash
+which nvcc
+```
+
+```bash
+nvcc --version
 ```

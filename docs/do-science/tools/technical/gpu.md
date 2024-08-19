@@ -4,6 +4,11 @@ category: Technical tools
 sidebarDepth: 1
 permalink: /do-science/tools/technical/gpu
 description: HUNT Cloud offers GPU machines for your AI/ML workloads.
+tags:
+  - nvidia
+  - gpu
+  - nvidia-drivers
+  - gpu-drivers
 ---
 
 # GPU on HUNT Cloud

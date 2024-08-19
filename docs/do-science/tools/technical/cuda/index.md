@@ -4,6 +4,13 @@ category: Technical tools
 sidebarDepth: 1
 permalink: /do-science/tools/technical/cuda
 description: Installing CUDA and cuDNN on GPU machines.
+tags:
+  - cuda
+  - cudnn
+  - nvcc
+  - cuda-toolkit
+  - toolkit
+  - nvidia
 ---
 
 # Cuda
