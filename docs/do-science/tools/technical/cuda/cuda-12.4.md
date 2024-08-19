@@ -16,11 +16,7 @@ You don’t need to use `sudo` to install **[CUDA Toolkit](https://docs.nvidia.c
 
 ## Cuda 12.4
 
-In this example we will use `/home/ubuntu/cuda-12.4.0` as our installation path:
-
-```bash
-mkdir -v /home/ubuntu/cuda-12.4.0
-```
+In this example we will use `${HOME}/cuda-12.4.0` as our installation path.
 
 Download CUDA installer:
 
@@ -40,7 +36,7 @@ Run the installation (takes a few quiet minutes):
 ./cuda_12.4.0_550.54.14_linux.run \
   --silent \
   --toolkit \
-  --installpath=/home/ubuntu/cuda-12.4.0 \
+  --installpath=${HOME}/cuda-12.4.0 \
   --no-opengl-libs \
   --no-drm \
   --no-man-page && echo Success || echo Fail
@@ -63,7 +59,7 @@ wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_
 Extract the package into our cuda installation:
 
 ```bash
-tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz --strip-components=1 -C /home/ubuntu/cuda-12.4.0
+tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz --strip-components=1 -C ${HOME}/cuda-12.4.0
 ```
 
 After extraction, remove the package:
@@ -74,15 +70,18 @@ rm -v cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz
 
 ## Create activation script for CUDA 12.4
 
-Create activation script for setting the variables:
+::: tip
+
+In the activation script have used the CUDA installation directory from our example above (`${HOME}/cuda-12.4.0`)
+
+:::
+
+Create activation script by running the code below:
 
 ```bash
-vim ~/activate-cuda-12.4.sh
-```
+cat <<\EOF > ~/activate-cuda-12.4.sh
 
-Paste in the contents. We have used the CUDA installation directory from our example above (`/home/ubuntu/cuda-12.4.0`):
-```
-export CUDA_HOME=/home/ubuntu/cuda-12.4.0
+export CUDA_HOME=${HOME}/cuda-12.4.0
 
 export PATH=$CUDA_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
@@ -98,13 +97,15 @@ export CUDA_PATH=$CUDA_HOME
 export CUDA_INC_PATH=$CUDA_HOME/targets/x86_64-linux
 export CFLAGS=-I$CUDA_HOME/targets/x86_64-linux/include:$CFLAGS
 export CUDAToolkit_TARGET_DIR=$CUDA_HOME/targets/x86_64-linux
-```
 
-Save the file.
+EOF
+
+```
 
 ## Set environment variables for CUDA 12.4
 
-From now one you can easily load your cuda variables by running this command:
+From now one you can easily load your cuda variables by sourcing activation script:
+
 ```bash
 source ~/activate-cuda-12.4.sh
 ```
@@ -115,9 +116,7 @@ Run test commands to confirm that your installation was successful:
 
 ```bash
 which nvcc
-```
 
-```bash
 nvcc --version
 ```
 
