@@ -1,12 +1,12 @@
 ---
-title: Cuda 12.4
-category: Cuda
+title: CUDA 12.4
+category: CUDA
 sidebarDepth: 1
 permalink: /do-science/tools/technical/cuda/cuda-12.4
 description: Installing CUDA and cuDNN on GPU machines.
 ---
 
-# Cuda installation
+# CUDA installation
 
 ::: tip
 
@@ -14,7 +14,7 @@ You don’t need to use `sudo` to install **[CUDA Toolkit](https://docs.nvidia.c
 
 :::
 
-## Cuda 12.4
+## CUDA 12.4
 
 In this example we will use `${HOME}/cuda-12.4.0` as our installation path.
 
@@ -56,7 +56,7 @@ Download [cuDNN](https://docs.nvidia.com/cudnn/index.html) package:
 wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz
 ```
 
-Extract the package into our cuda installation:
+Extract the cuDNN package into our cuda installation:
 
 ```bash
 tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz --strip-components=1 -C ${HOME}/cuda-12.4.0

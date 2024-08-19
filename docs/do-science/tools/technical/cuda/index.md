@@ -3,7 +3,7 @@ title: Introduction
 category: Technical tools
 sidebarDepth: 1
 permalink: /do-science/tools/technical/cuda
-description: Installing CUDA and cuDNN on GPU machines.
+description: Installing Nvidia CUDA toolkit and cuDNN on GPU machines.
 tags:
   - cuda
   - cudnn
@@ -13,7 +13,7 @@ tags:
   - nvidia
 ---
 
-# Cuda
+# CUDA
 
 Have you already got access to your [GPU machine](/do-science/tools/technical/gpu/#gpu-models)?
 
