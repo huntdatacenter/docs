@@ -66,6 +66,12 @@ Extract the package into our cuda installation:
 tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz --strip-components=1 -C /home/ubuntu/cuda-12.4.0
 ```
 
+After extraction, remove the package:
+
+```bash
+rm -v cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz
+```
+
 ## Create activation script for CUDA 12.4
 
 Create activation script for setting the variables:
