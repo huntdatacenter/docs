@@ -21,11 +21,11 @@ See our [GPU accelerator machine types](/administer-science/services/machine-typ
 
 ## Software
 
-We pre-install the machines with with the folloing software to get you started: 
+We pre-install the machines with with the following software to get you started:
 
 - Ubuntu 22.04 LTS
 - Docker
-- NVIDIA 550 drivers or later (from the [`graphics-drivers` repository](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa?field.series_filter=jammy))
+- NVIDIA 550 drivers or later <!-- (from the [`graphics-drivers` repository](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa?field.series_filter=jammy)) -->
 - NVIDIA Container Toolkit (also known as **`nvidia-docker`**)
 
 You may install other tools and versions.
@@ -51,6 +51,8 @@ sudo docker run --rm --runtime=nvidia nvidia/cuda:12.0.0-base-ubuntu22.04 nvidia
 ```
 
 More versions of CUDA base image can be found in [Docker Hub](https://hub.docker.com/r/nvidia/cuda/tags?page=1&name=base-ubuntu22.04).
+
+If you do not want to use Docker, you can also try our [CUDA installation guides](/do-science/tools/technical/cuda/).
 
 ### Jupyter in Nvidia Docker
 

@@ -218,6 +218,17 @@ module.exports = {
                 "/do-science/tools/technical/docker.md",
                 "/do-science/tools/technical/git.md",
                 "/do-science/tools/technical/gpu.md",
+                {
+                  title: "Cuda",
+                  text: "Cuda",
+                  path: "/do-science/tools/technical/cuda/",
+                  isGroup: true,
+                  children: [
+                    "/do-science/tools/technical/cuda/",
+                    "/do-science/tools/technical/cuda/cuda-11.8.md",
+                    "/do-science/tools/technical/cuda/cuda-12.4.md",
+                  ],
+                },
                 "/do-science/tools/technical/htop.md",
                 "/do-science/tools/technical/mobaxterm.md",
                 "/do-science/tools/technical/ncdu.md",
