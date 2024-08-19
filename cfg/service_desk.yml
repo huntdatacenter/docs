@@ -947,7 +947,7 @@ request_new_gpu:
 
       ---
       lab_name="{lab_name}"  
-      gpu_alias="{gpu_type}""  
+      gpu_alias="{gpu_type}"  
       machine_type="{machine_type}"  
       storage_size="{terabytes} TB"  
       subscription="{subscription}"  
