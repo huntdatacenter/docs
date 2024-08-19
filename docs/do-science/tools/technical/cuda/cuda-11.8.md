@@ -105,6 +105,8 @@ source ~/activate-cuda-11.8.sh
 
 ## Test commands
 
+Run test commands to confirm that your installation was successful:
+
 ```bash
 which nvcc
 ```
