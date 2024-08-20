@@ -326,7 +326,10 @@ ${this.ipAddress}    ${this.labName}-entry
                       >
                         We use <code>Tunnelblick</code> to ensure encrypted communication between your local computer and HUNT Cloud.<br /><br />
 
-                        <a href="https://tunnelblick.net/downloads.html" target="_blank">Download and install the latest 'stable release' from this page(opens new window).</a>
+                        <a href="https://tunnelblick.net/iprelease/Latest_Tunnelblick_Stable.dmg" target="_blank">Download and install Tunnelblick from this page.</a>
+                        <br /><br />
+                        In case the link above does not start download <a href="https://tunnelblick.net/downloads.html#:~:text=GnuPG%20v2%20signature-,Stable,-Tunnelblick" target="_blank">lookup the 'Stable' release from this download page (opens new window).</a> -->
+                        <!-- <a href="https://tunnelblick.net/downloads.html" target="_blank">Download and install the latest 'stable release' from this page(opens new window).</a> -->
                         <br /><br />
 
                       </v-card>

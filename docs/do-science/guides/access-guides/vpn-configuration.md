@@ -70,7 +70,9 @@ You can check if you have administrative rights on your local computer by runnin
 
 We use Tunnelblick to ensure encrypted communication between your local computer and HUNT Cloud.
 
-[Download and install the latest **'stable release'** from this page](https://tunnelblick.net/downloads.html)
+[Download and install the latest **'stable release'** from this page](https://tunnelblick.net/iprelease/Latest_Tunnelblick_Stable.dmg)
+
+<!-- https://tunnelblick.net/downloads.html -->
 
 :::
 
