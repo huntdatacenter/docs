@@ -53,19 +53,19 @@ rm -v cuda_12.4.0_550.54.14_linux.run
 Download [cuDNN](https://docs.nvidia.com/cudnn/index.html) package:
 
 ```bash
-wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz
+wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-8.9.0.131_cuda12-archive.tar.xz
 ```
 
 Extract the cuDNN package into our cuda installation:
 
 ```bash
-tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz --strip-components=1 -C ${HOME}/cuda-12.4.0
+tar -xvf cudnn-linux-x86_64-8.9.0.131_cuda12-archive.tar.xz --strip-components=1 -C ${HOME}/cuda-12.4.0
 ```
 
 After extraction, remove the package:
 
 ```bash
-rm -v cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz
+rm -v cudnn-linux-x86_64-8.9.0.131_cuda12-archive.tar.xz
 ```
 
 ## Create activation script for CUDA 12.4
