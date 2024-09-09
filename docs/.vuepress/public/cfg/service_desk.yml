@@ -1102,7 +1102,7 @@ request_machine_shelving:
 
   fields: [
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*', hint: "Machine name only allows blue and iaas machines, you can get machine name by running hostname command on the machine", autocapitalize: "off", field: "textfield" },
+    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*', hint: "Machine name only allows blue, gpu and iaas machines, you can get machine name by running hostname command on the machine", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Required information</b>: lab name and machine name.",
@@ -1132,7 +1132,7 @@ request_machine_unshelving:
 
   fields: [
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*', hint: "Machine name only allows blue and iaas machines", autocapitalize: "off", field: "textfield" },
+    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*', hint: "Machine name only allows blue, gpu and iaas machines", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
