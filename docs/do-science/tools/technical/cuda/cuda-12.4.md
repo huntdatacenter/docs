@@ -59,7 +59,7 @@ wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_
 Extract the cuDNN package into our cuda installation:
 
 ```bash
-tar -xvf cudnn-linux-x86_64-8.9.0.131_cuda12-archive.tar.xz --strip-components=1 -C ${HOME}/cuda-12.4.0
+tar -xvf cudnn-linux-x86_64-8.9.0.131_cuda12-archive.tar.xz --strip-components=1 -C ${HOME}/cuda-12.4.0 && echo Success || echo Fail
 ```
 
 After extraction, remove the package:

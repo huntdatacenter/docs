@@ -55,19 +55,19 @@ rm -v cuda_12.1.0_530.30.02_linux.run
 Download [cuDNN](https://docs.nvidia.com/cudnn/index.html) package:
 
 ```bash
-wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz
+wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-8.9.0.131_cuda12-archive.tar.xz
 ```
 
 Extract the cuDNN package into our cuda installation:
 
 ```bash
-tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz --strip-components=1 -C ${HOME}/cuda-12.1.0
+tar -xvf cudnn-linux-x86_64-8.9.0.131_cuda12-archive.tar.xz --strip-components=1 -C ${HOME}/cuda-12.1.0 && echo Success || echo Fail
 ```
 
 After extraction, remove the package:
 
 ```bash
-rm -v cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz
+rm -v cudnn-linux-x86_64-8.9.0.131_cuda12-archive.tar.xz
 ```
 
 ## Create activation script for CUDA 12.1
@@ -127,8 +127,8 @@ The expected output:
 /home/ubuntu/cuda-12.1.0/bin/nvcc
 
 nvcc: NVIDIA (R) Cuda compiler driver
-Copyright (c) 2005-2024 NVIDIA Corporation
-Built on Tue_Feb_27_16:19:38_PST_2024
-Cuda compilation tools, release 12.1, V12.1.99
-Build cuda_12.1.r12.1/compiler.33961263_0
+Copyright (c) 2005-2023 NVIDIA Corporation
+Built on Tue_Feb__7_19:32:13_PST_2023
+Cuda compilation tools, release 12.1, V12.1.66
+Build cuda_12.1.r12.1/compiler.32415258_0
 ```
