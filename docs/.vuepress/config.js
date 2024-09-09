@@ -221,11 +221,12 @@ module.exports = {
                 {
                   title: "Cuda",
                   text: "Cuda",
-                  path: "/do-science/tools/technical/cuda/",
+                  // path: "/do-science/tools/technical/cuda/",
                   isGroup: true,
                   children: [
                     "/do-science/tools/technical/cuda/",
                     "/do-science/tools/technical/cuda/cuda-11.8.md",
+                    "/do-science/tools/technical/cuda/cuda-12.1.md",
                     "/do-science/tools/technical/cuda/cuda-12.4.md",
                   ],
                 },
