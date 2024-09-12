@@ -102,8 +102,9 @@ Connection to home closed.`,
         { text: 'New computer', value: 'new_computer' },
         { text: 'SSH reset', value: 'ssh_reset' },
         { text: 'VPN reset', value: 'vpn_reset' },
-        // { text: 'TOTP reset (Google authenticator)', value: 'totp_reset' },
+        { text: 'TOTP reset (Google authenticator)', value: 'totp_reset' },
         { text: 'Workbench reissue', value: 'workbench_reissue' },
+        { text: 'Reissue all', value: 'reissue_all' },
         { text: 'Lab Migration', value: 'lab_migration' },
       ],
       filterGuidesByType: null,
@@ -244,7 +245,7 @@ ${this.ipAddress}    ${this.labName}-entry
       <v-expansion-panels accordion v-model="mainExpansionPanel" elevation="0">
 
         <!-- 1. Fetch secrets -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset', 'workbench_reissue'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset', 'workbench_reissue', 'reissue_all'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ fetchSecretsId }}. Fetch secrets</h3>
           </v-expansion-panel-header>
@@ -269,7 +270,7 @@ ${this.ipAddress}    ${this.labName}-entry
         </v-expansion-panel>
 
         <!-- 2. VPN Access -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'vpn_reset'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'vpn_reset', 'totp_reset', 'reissue_all'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Access</h3>
           </v-expansion-panel-header>
@@ -560,7 +561,7 @@ ${this.ipAddress}    ${this.labName}-entry
         </v-expansion-panel>
 
         <!-- 3. SSH Passphrase change -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_lab', 'ssh_reset', 'lab_migration'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_lab', 'ssh_reset', 'lab_migration', 'reissue_all'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
               <h3><a href="#ssh-passphrase" class="header-anchor">#</a> {{ passChangeId }}. SSH Passphrase change</h3>
           </v-expansion-panel-header>
@@ -727,7 +728,7 @@ ${this.ipAddress}    ${this.labName}-entry
         </v-expansion-panel>
 
         <!-- 4. SSH Passwordless access -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'reissue_all', 'reissue_all'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#passwordless-access" class="header-anchor">#</a> {{ passLessId }}. SSH Passwordless access</h3>
           </v-expansion-panel-header>
@@ -813,7 +814,7 @@ ${this.ipAddress}    ${this.labName}-entry
         </v-expansion-panel>
 
         <!-- 5. SSH Config file -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration', 'reissue_all'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#ssh-config" class="header-anchor">#</a> {{ sshConfId }}. SSH Config file</h3>
           </v-expansion-panel-header>
@@ -945,7 +946,7 @@ ${this.ipAddress}    ${this.labName}-entry
         </v-expansion-panel>
 
         <!-- 6. Hosts file -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration', 'reissue_all'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#hosts-file" class="header-anchor">#</a> {{ hostsFileId }}. Workbench - hosts file</h3>
           </v-expansion-panel-header>
@@ -1023,7 +1024,7 @@ ${this.ipAddress}    ${this.labName}-entry
         </v-expansion-panel>
 
         <!-- 7. Workbench -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'workbench_reissue'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'workbench_reissue', 'reissue_all'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-header>
             <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench - certificate</h3>
           </v-expansion-panel-header>
