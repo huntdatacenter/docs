@@ -7,7 +7,7 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 ::: warning Selected storage volumes
-**2024-09-16 11:30** - Selected storage volumes on Cloud2 are experiencing long latency and unpredictable performance. This might unresponsive labs. We are investigating.
+**2024-09-16 11:30** - Selected storage volumes on Cloud2 are experiencing long latency and unpredictable performance. This might render individual labs unresponsive. We are investigating.
 :::
 
 
