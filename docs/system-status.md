@@ -6,14 +6,19 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: warning Selected storage volumes
-**2024-09-16 11:30** - Selected storage volumes on Cloud2 are experiencing long latency and unpredictable performance. This might render individual labs unresponsive. We are investigating.
+
+::: tip All systems
+Operational
 :::
 
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
 
 ### Latest system updates
+
+**2024-09-16 15:56** - The storage responsiveness are restored. Root cause identified. 
+
+**2024-09-16 11:30** - Selected storage volumes on Cloud2 are experiencing long latency and unpredictable performance. This might render individual labs unresponsive. We are investigating.
 
 [..]
 
