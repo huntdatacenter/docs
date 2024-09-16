@@ -7,13 +7,17 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 ::: warning Selected storage volumes
-**2024-07-06 08:26** - Selected storage volumes went into read-only state last night. We will contact affected labs and start the revert to read-write state first thing Monday morning. No data is lost.
+**2024-09-16 11:30** - Selected storage volumes on Cloud2 are experiencing long latency and unpredictable performance. This might unresponsive labs. We are investigating.
 :::
 
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
 
 ### Latest system updates
+
+[..]
+
+**2024-07-06 08:26** - Selected storage volumes went into read-only state last night. We will contact affected labs and start the revert to read-write state first thing Monday morning. No data is lost.
 
 [..]
 
