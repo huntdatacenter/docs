@@ -89,7 +89,7 @@ Unable to connect service (1)
 
 Clicking on Retry button should resolve the problem.
 
-![rstudio-cannot-connect-R-session](images/rstudio-cannot-connect-R-session.png)
+![rstudio-cannot-connect-R-session](./images/rstudio-cannot-connect-R-session.png)
 
 If the Rstudio does not start after clicking on Retry button, don't hesitate to reach out in your lab channel on Slack or [contact us](/contact) for further assistance.
 
