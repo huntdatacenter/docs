@@ -54,6 +54,45 @@ Try to logout and login again. If logging in does not help, try different browse
 
 Your workbench stopped working for no apparent reason and you are printed the NTNU logo with error **`404 error`**? Follow the link to your control panel. Click on the red button to stop your sever, this may take some time. Click on the green/blue button to launch your server again, this may also take some time. Reach out to us on [Slack or email](/contact) if the problem is not resolved.
 
+### 502: Bad gateway
+
+Reach out to us on [Slack or email](/contact) if you get the **`502 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
+
+
+### 504: Gateway Timeout Error
+
+Reach out to us on [Slack or email](/contact) if you get the **`504 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
+
+### Your connection is not private
+
+If you were previously able to access your HUNT Workbench and your browser suddenly reports expired/unsafe certificates, e.g.: **`Your connection is not private`** or **`ERR_CERT_DATE_INVALID`**, [contact us](/contact) in your lab channel on Slack or contact us on email. We need to sign a new lab certificate and update the service.
+
+![expired_server_cert.png](./images/expired_server_cert.png)
+
+
+
+If your disk space is full, discuss with your lab leader/coordinator if you should cleanup your disk space, or order a volume extension in [Service Desk](/administer-science/service-desk/lab-orders/#expand-existing-volume)
+
+## RStudio
+
+### Cannot connect to R session
+
+This warning popup usually appears after the change of R version.
+
+```
+Could not connect to the R session on RStudio Server.
+
+Unable to connect service (1)
+
+[Retry]
+```
+
+Clicking on Retry button should resolve the problem.
+
+![rstudio-cannot-connect-R-session](images/rstudio-cannot-connect-R-session.png)
+
+If the Rstudio does not start after clicking on Retry button, don't hesitate to reach out in your lab channel on Slack or [contact us](/contact) for further assistance.
+
 ### 500: Internal Server Error - RStudio
 
 If you are a fast clicker and get to an app before it's initialized in the background you might get the following error message:
@@ -64,11 +103,6 @@ Could not start rstudio in time
 ```
 
 Try reloading the page (**`Ctrl + R`** / **`CMD + R`**) to reconnect with your _RStudio_ session. [Contact us](/contact) if the error message persists.
-
-### 502: Bad gateway
-
-Reach out to us on [Slack or email](/contact) if you get the **`502 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
-
 
 ### 504: Gateway Timeout Error - RStudio
 
@@ -91,20 +125,6 @@ Other potential issue might be full disk space in your `work` directory. You can
 ```bash
 df -h /mnt/work
 ```
-
-### 504: Gateway Timeout Error
-
-Reach out to us on [Slack or email](/contact) if you get the **`504 error`** while trying to login to your HUNT Workbench. In such a case we may need to investigate potential causes on our end.
-
-### Your connection is not private
-
-If you were previously able to access your HUNT Workbench and your browser suddenly reports expired/unsafe certificates, e.g.: **`Your connection is not private`** or **`ERR_CERT_DATE_INVALID`**, [contact us](/contact) in your lab channel on Slack or contact us on email. We need to sign a new lab certificate and update the service.
-
-![expired_server_cert.png](./images/expired_server_cert.png)
-
-
-
-If your disk space is full, discuss with your lab leader/coordinator if you should cleanup your disk space, or order a volume extension in [Service Desk](/administer-science/service-desk/lab-orders/#expand-existing-volume)
 
 ## MATLAB
 
