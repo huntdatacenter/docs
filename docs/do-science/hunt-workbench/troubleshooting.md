@@ -34,6 +34,10 @@ If you have enough resources, try restarting your HUNT Workbench environment. Fo
 If this does not help, you may have a look at our [FAQ](/do-science/hunt-workbench/faq/) or [Troubleshooting](/do-science/hunt-workbench/troubleshooting/) sections.  [Contact us](/contact) on email or reach out in your lab channel on Slack for further investigation if this does not help.
 
 
+### 400: Bad request
+
+Try to restart your browser. If the error changes to 403 after restart head over to service desk and [request Workbench reissue](/do-science/service-desk#hunt-workbench-reissue).
+
 ### 400: Bad request - Firefox
 
 Try with Chrome or check troubleshooting guide for Firefox in your Lab access link to install HUNT Cloud CA certificate.
