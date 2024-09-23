@@ -85,7 +85,9 @@ Order a [SSH passphrase reset](/do-science/guides/configure-ssh/) that you may n
 ### SSH configuration
 
 You can find SSH configuration in Lab access link. If you lost your Lab access link you can [Request reissue of Lab access link](/do-science/service-desk/#request-lab-access-link-reissue).
+
 <!--
+
 Click button below if you need your `ssh_config.txt` file to be resent to you (accidental loss, new computer, etc.)
 
 <SDButton form="request_ssh_config" />
