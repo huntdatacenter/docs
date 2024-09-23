@@ -12,7 +12,7 @@ sidebarDepth: 1
 
 ::: tip Save time
 
-Speed up your delivery by (1) send the request from your **organizational email**; and (2) send **one request per email**. 
+Speed up your delivery by (1) sending the request from your **organizational email**; and (2) sending **one request per email**.
 
 :::
 
@@ -67,7 +67,7 @@ Request a new certificate if you have an existing HUNT Workbench and your previo
 * **Cost:** Included in the lab subscription.
 
 
-### SSH passphrase reset  
+### SSH passphrase reset
 
 Order a [SSH passphrase reset](/do-science/guides/configure-ssh/) that you may need to access your workbench and install software on your home machine.
 
@@ -81,8 +81,11 @@ Order a [SSH passphrase reset](/do-science/guides/configure-ssh/) that you may n
 * **Next step:** [Guide on the passphrase reset](/do-science/guides/configure-ssh/).
 * **Cost:** Included in the lab subscription.
 
+<!-- DEPRECATED - SSH configuration -->
 ### SSH configuration
 
+You can find SSH configuration in Lab access link. If you lost your Lab access link you can [Request reissue of Lab access link](/do-science/service-desk/#request-lab-access-link-reissue).
+<!--
 Click button below if you need your `ssh_config.txt` file to be resent to you (accidental loss, new computer, etc.)
 
 <SDButton form="request_ssh_config" />
@@ -94,6 +97,8 @@ Click button below if you need your `ssh_config.txt` file to be resent to you (a
 * **Next step:** [Guide on the passphrase reset](/do-science/guides/configure-ssh/).
 * **Cost:** Included in the lab subscription.
 
+-->
+
 ### Deactivate lab access
 
 Head over to the [lab orders page](/administer-science/service-desk/lab-orders#deactivate-lab-user) to deactivate your lab access.
@@ -104,7 +109,7 @@ Lost the lab access link from your onboarding email? No worries, order a new one
 
 <SDButton form="request_lab_access_link" />
 
-* **Who can order:**</b> Lab user.
+* **Who can order:** All active lab users.
 * **Required information:** Your username and lab name.
 * **Expected response time:** Days.
 * **Cost:** Included in the lab subscription.
@@ -131,7 +136,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 :::
 
-### VPN certificate reset  
+### VPN certificate reset
 
 You may need to reset your VPN certificate when you get a new local computer or if you need a new VPN passphrase.
 
@@ -144,7 +149,7 @@ You may need to reset your VPN certificate when you get a new local computer or 
 * **Next step:** [Guide on the VPN reset](/do-science/guides/vpn-certificate-reset/).
 * **Cost:** Included in the lab subscription.
 
-### Google authenticator key reset  
+### Google authenticator key reset
 
 You need the [Google Authenticator key](/do-science/guides/google-authenticator-reset/) to access the HUNT Cloud VPN. Click the button below to request a new key (f.e. when you change your phone).
 
@@ -195,7 +200,7 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 
 ### Deregister to future Tingweek invitations
 
-All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here. 
+All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here.
 
 <SDButton form="deregister_tingweek_invitations" />
 
@@ -203,11 +208,11 @@ All active HUNT Cloud users will be invited to individual Tings three times per 
 * **Expected delivery time:** Days.
 * **Expected response time:** Confirmation of deregistration.
 * **Cost:** Included in your data space subscription.
-	
+
 
 ## General service request
 
-Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request. 
+Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request.
 
 <SDButton form="general_lab_user_request" />
 
@@ -220,7 +225,7 @@ Note that a general lab user request has slower response time than a predefined 
 
 :::
 
-::: tip Not an active user? 
+::: tip Not an active user?
 
 [Contact us](/contact) on email for general questions and information on our scientific services and activities.
 
@@ -230,7 +235,7 @@ Note that a general lab user request has slower response time than a predefined 
 
 ## FAQ
 
-#### I have not heard back within the expected delivery time, now what? 
+#### I have not heard back within the expected delivery time, now what?
 
 ::: details Read more
 
@@ -238,7 +243,7 @@ Poke us on [email](/contact) or in your lab channel in Slack if you have not hea
 
 :::
 
-#### Why do I need to ship one email per request? 
+#### Why do I need to ship one email per request?
 
 ::: details Read more
 
@@ -246,12 +251,10 @@ We use your pre-filled email to start predefined workflows on our side. The auto
 
 :::
 
-#### Why do I need to ship the email from my organizational email? 
+#### Why do I need to ship the email from my organizational email?
 
 ::: details Read more
 
-We use your organizational email for identification and to ensure that you are authorized to make the order. Therefore, you will be asked to reship requests from private emails that is not verified by your organization. 
+We use your organizational email for identification and to ensure that you are authorized to make the order. Therefore, you will be asked to reship requests from private emails that is not verified by your organization.
 
 :::
-
-
