@@ -16,7 +16,7 @@ description: Troubleshooting activities in your HUNT Cloud lab.
 
 ### Full system volume
 
-Lab machines becomes unresponsive if system volumes get filled up. [Click here](/do-science/faq/storage/#how-can-i-see-the-sizes-of-my-lab-volumes) to learn how to check the size and utilization of your volumes. 
+Lab machines becomes unresponsive if system volumes get filled up. [Click here](/do-science/faq/storage/#how-can-i-see-the-sizes-of-my-lab-volumes) to learn how to check the size and utilization of your volumes.
 
 Your system disk is full if **`/dev/vda1`** states 100 percent use:
 
@@ -25,7 +25,7 @@ Filesystem   Size Used Avail Use% Mounted on
 /dev/vda1    9.7G 9.7G   0 100% /
 ```
 
-We recommend that you run [ncdu](/do-science/faq/storage/#how-can-i-find-out-what-is-taking-the-most-space-on-volume) to get an overview over what's taking up space in your volume. For example, you may consider to [move your tmp folder](/do-science/faq/storage/#how-can-i-move-my-tmp-out-of-the-root) away from your system disk 
+We recommend that you run [ncdu](/do-science/faq/storage/#how-can-i-find-out-what-is-taking-the-most-space-on-volume) to get an overview over what's taking up space in your volume. For example, you may consider to [move your tmp folder](/do-science/faq/storage/#how-can-i-move-my-tmp-out-of-the-root) away from your system disk
 
 ### Full data volumes
 
@@ -35,7 +35,7 @@ Data volumes are unable to store data when they fill up. [Click here](/do-scienc
 
 We recommend that you [expand your volumes](/administer-science/service-desk/lab-orders/#store), or compress and/or clean up your data when your volume utilization reach 85% (Use%). Above this threshold it will become increasingly complex to do work and data cleanups.
 
-::: 
+:::
 
 ### Accidentally deleted or overwritten files
 
@@ -74,7 +74,17 @@ See our [R and RStudio troubleshooting section](/do-science/tools/analytical/r-s
 
 See our [Stata troubleshooting section](/do-science/tools/analytical/stata/#troubleshooting).
 
+### GUI Applications
 
+#### No X11 display variable was set
+
+Make sure you are connected into a graphical environment such as:
+- [Remote desktop in Workbench](/do-science/hunt-workbench/getting-started/remote-desktop/) - recommended
+- X2Go
+- VNC
+
+Alternatives:
+- MobaXterm - make sure X Forwarding is enabled to allow GUI applications to run.
 
 ## General configuration
 
@@ -94,7 +104,7 @@ During startup - Warning message:Setting LC_CTYPE failed, using "C"
 locale
 ```
 
-Example of output of missing locale: 
+Example of output of missing locale:
 
 ```
 LANG=
@@ -125,9 +135,9 @@ export LC_ALL=en_US.UTF-8
 
 ```
 locale
-``` 
+```
 
-Example of output with locale set: 
+Example of output with locale set:
 
 ```
 LANG="en_US.UTF-8"
@@ -141,5 +151,3 @@ LC_ALL="en_US.UTF-8"
 ```
 
 :::
-
-
