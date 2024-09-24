@@ -13,6 +13,8 @@ tags:
 
 Remote desktop (VNC) is now included in Workbench so you can more easily browse directories, move data within the lab by drag-and-drop and use apps with graphical interface.
 
+![remote desktop icon](./images/remote-desktop-icon.png)
+
 ![remote desktop](./images/remote-desktop.png)
 
 Tools that come bundled with remote desktop in Workbench:
