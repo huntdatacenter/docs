@@ -47,6 +47,14 @@ Protocol: UDP
 
 Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/do-science/lab-access/configure-vpn/#_2-1-install-the-vpn-software).
 
+You should reinstall your OpenVPN with administrative rights if you already installed OpenVPN and are getting errors below:
+
+```
+ERROR: route addition failed using CreateIpForwardEntry: Ingen tilgang.
+ERROR: Windows route add command failed [adaptive]: returned error code 1
+ERROR: Some routes were not successfully added. The connection may not function correctly
+```
+
 ### Lost or missing VPN passphrase
 
 Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password Keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/do-science/lab-access/configure-vpn/#_2-2-setup-the-vpn-profile)  if this happens. Order your VPN certificate reset in our [service desk](/do-science/service-desk/#vpn-certificate-reset).

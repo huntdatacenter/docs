@@ -592,6 +592,23 @@ Connection to home closed.`,
                         </p>
 
                         <br />
+                        <h3 id="route-addition-failed"><a href="#route-addition-failed" class="header-anchor">#</a> Route addition failed </h3>
+                        <p>
+                          You should reinstall your OpenVPN with administrative rights if you already installed OpenVPN and are getting errors below:
+                          <div class="language- extra-class"><pre class="language-text">
+                            <code v-text="`ERROR: route addition failed using CreateIpForwardEntry: Ingen tilgang.`"></code>
+                          </pre></div>
+
+                          <div class="language- extra-class"><pre class="language-text">
+                            <code v-text="`ERROR: Windows route add command failed [adaptive]: returned error code 1`"></code>
+                          </pre></div>
+
+                          <div class="language- extra-class"><pre class="language-text">
+                            <code v-text="`ERROR: Some routes were not successfully added. The connection may not function correctly`"></code>
+                          </pre></div>
+                        </p>
+
+                        <br />
                         <h3 id="tls-key-negotiation-timeout"><a href="#tls-key-negotiation-timeout" class="header-anchor">#</a> TLS handshake failed</h3>
                         <p>
                           If you see the error below the problem might be with your current network (e.g. institution is blocking VPN connections).
