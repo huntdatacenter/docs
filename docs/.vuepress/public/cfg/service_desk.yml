@@ -966,8 +966,6 @@ request_new_gpu:
       key: "gpu_type",
       field: "autocompleteone",
       options: [
-        { text: "NVIDIA p100 16G", value: "p100.16g" },
-        { text: "NVIDIA v100 32G", value: "v100.32g" },
         { text: "NVIDIA v100s 32G", value: "v100s.32g" },
         { text: "NVIDIA a30 24G (cloud2)", value: "a30.24g" },
         { text: "NVIDIA a40 48G (cloud2)", value: "a40.48g" },
