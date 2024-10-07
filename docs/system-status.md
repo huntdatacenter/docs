@@ -7,8 +7,8 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 
-::: tip All systems
-Operational
+::: warning All systems
+Unavailable. Caused by ntnu.no network being down
 :::
 
 
