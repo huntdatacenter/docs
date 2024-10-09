@@ -12,6 +12,45 @@ description: Patch notes list major and minor updates to HUNT Cloud's services.
 
 This page contains descriptions of updates to HUNT Cloud's services. All with the aim to provide the best possible conditions for your scientific explorations.
 
+
+## Patch note 2.11.3
+
+*2024-10-09*
+
+::: details do science
+
+<h3>Major changes</h3>
+
+**Onboarding video guides - Windows**
+
+We have added video guides to lab access link for windows to support written guide.  
+[Let us know](/contact) if you would like us to expand the video guides into other topics.  
+
+
+<h3>Minor changes</h3>  
+
+- Matlab - currently upgrading to v2024b (NTNU users only)
+- RStudio - upgraded from v2023 to v2024
+- Workbench integration for Rstudio - spawning performance patches
+- VS Code (code server) - upgraded (2024/8)
+- VS Code (code server) - added snakemake language support
+- Workbench - extended user environment timeout from 3 to 10 days. When no activity for 10 days, environment shuts down. 
+::: 
+
+::: details Administer science
+
+<h3>Major changes</h3>
+
+**Migration to cloud2** 
+
+Migration continues smoothly. We now have over 50% of labs running on our new cloud.
+
+**Cloud2 storage performance** 
+
+We have registered noticably decreased storage performance. This is related to Cephs erasure coding method of storing the data. On top of our preventive measures to increase speed, we are also retyping some lab volumes to replication method of storing data which has been used on cloud1 and offer superior performance. We will assess erasure coding further to find suitable use case. 
+::: 
+
+
 ## Patch note 2.11.2
 
 *2024-04-15*
