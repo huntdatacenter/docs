@@ -57,6 +57,7 @@ export default {
     VSheet,
     CopyTextField: () => import('../generic/CopyTextField.vue'),
     TotpGuide: () => import('../LabAccessGuides/TotpGuide.vue'),
+    VideoGuide: () => import('../LabAccessGuides/VideoGuide.vue'),
     DesignNewPassphrase: () => import('../LabAccessGuides/DesignNewPassphrase.vue'),
   },
   props: {
@@ -265,6 +266,13 @@ Connection to home closed.`,
               <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#detail-2-windows" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
               <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
             </ol>
+
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="Fetch secrets"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-win-fetch-secrets-v1.mp4/3e139ecf-193c-3eee-0d2e-e5e5c296e759?t=1728710988779"
+              poster="/img/video-covers/user-onboarding-fetch-secrets-video-cover.jpeg"
+            />
 
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
@@ -649,6 +657,13 @@ Connection to home closed.`,
               </v-card>
             </v-dialog>
 
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="VPN access"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-win-vpn-access-v1.mp4/3719140a-745a-fabf-0959-9ee83a4155b6?t=1728711018006"
+              poster="/img/video-covers/user-onboarding-vpn-access-video-cover.jpeg"
+            />
+
             <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-content>
         </v-expansion-panel>
@@ -669,6 +684,13 @@ Connection to home closed.`,
             >
               Ensure that you are logged into VPN.
             </v-alert>
+
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="SSH Passphrase change"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-win-ssh-passphrase-change-v1.mp4/d59555f9-027c-ad16-e989-0443bb6e4355?t=1728711001208"
+              poster="/img/video-covers/lab-access-macOS-ssh-passphrase-v1.jpg"
+            />
 
             <v-col cols="12">
               {{ getNextItem(passChangeId, true) }} Design <DesignNewPassphrase />.
@@ -787,6 +809,13 @@ Connection to home closed.`,
           </v-expansion-panel-header>
           <v-expansion-panel-content id="passwordless-access" ref="#passwordless-access" class="mt-2">
 
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="SSH Passwordless access"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-win-ssh-passwordless-access-v1.mp4/1eb5ede3-95e6-8425-5cf2-eb05930484e1?t=1728711005994"
+              poster="/img/video-covers/lab-access-macOS-ssh-keys-v1.jpg"
+            />
+
             <v-col cols="12">
               {{ getNextItem(passLessId, true) }}  Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
               <CopyTextField
@@ -843,6 +872,14 @@ Connection to home closed.`,
               <h3><a href="#ssh-config" class="header-anchor">#</a> {{ sshConfId }}. SSH Config file</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="ssh-config" ref="#ssh-config" class="mt-2">
+
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="SSH Config file"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-win-ssh-config-file-v1.mp4/6bef3c72-c979-65ab-1ae0-5aac8c8ea218?t=1728710993297"
+              poster="/img/video-covers/lab-access-macOS-ssh-config-v1.jpg"
+            />
+
             <v-col cols="12">
               {{ getNextItem(sshConfId, true) }} Open new Command Prompt window (<code>WIN + R</code> and type <code>cmd.exe</code> then hit <code>Enter</code>) and assure SSH Config file exists. No output is expected.
               <CopyTextField
@@ -947,6 +984,14 @@ Connection to home closed.`,
 
             Let's set up your hosts file on your local computer. <br />
             This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
+
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="Workbench - Hosts file"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-win-workbench-hosts-file-v1.mp4/2bc0d8da-0672-94e0-b075-8cfbe3c99eb3?t=1728711036239"
+              poster="/img/video-covers/lab-access-macOS-workbench-hosts-v1.jpg"
+            />
+
             <br /><br />
             <v-col cols="12">
               {{ getNextItem(hostsFileId, true) }} Press the Windows key.
@@ -1046,6 +1091,13 @@ Connection to home closed.`,
             <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench - certificate</h3>
           </v-expansion-panel-header>
           <v-expansion-panel-content id="workbench" ref="#workbench" class="mt-2">
+
+            <VideoGuide
+              v-model="mainExpansionPanel"
+              title="Workbench - Client certificate"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-win-workbench-certificate-v1.mp4/a303cd49-43ac-9501-498b-c3fcab27e5a8?t=1728711028658"
+              poster="/img/video-covers/lab-access-macOS-workbench-certificate-v1.jpg"
+            />
 
             <v-col cols="12">
               <a href="/do-science/hunt-workbench/" target="_blank">HUNT Workbench</a> provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
