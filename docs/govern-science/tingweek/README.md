@@ -14,10 +14,10 @@ We arrange a layered set of Tings for distinct groups in our community. The meet
 
 ::: tip Next Tingweek #13 (2024-10)
 
-- **Labting**: Tuesday 15 October 2024 - 2 to 4 p.m. CET
-- **Data space ting**: Wednesday 16 October 2024 - 9 to 11 a.m. CET
-- **Data controller ting**: Wednesday 16 October 2024 - 1 to 3 p.m. CET
-- **Lagtun**: Thursday 17 October 2024 - 9 to 11 a.m. CET
+- **Labting**: Tuesday 15 October 2024 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek13-labting-agenda.pdf))
+- **Data space ting**: Wednesday 16 October 2024 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek13-dataspaceting-agenda.pdf))
+- **Data controller ting**: Wednesday 16 October 2024 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek13-datacontrollerting-agenda.pdf))
+- **Lagtun**: Thursday 17 October 2024 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek13-lagtun-agenda.pdf))
 
 :::
 
