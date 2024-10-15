@@ -10,45 +10,76 @@ description: Patch notes list major and minor updates to HUNT Cloud's services.
 
 [[toc]]
 
-This page contains descriptions of updates to HUNT Cloud's services. All with the aim to provide the best possible conditions for your scientific explorations.
+This page contains descriptions of updates (patches) to HUNT Cloud's services. All with the aim to provide the best possible conditions scientific explorations.
 
 
 ## Patch note 2.11.3
 
 *2024-10-09*
 
-::: details do science
+::: details Do science
 
 <h3>Major changes</h3>
 
-**Onboarding video guides - Windows**
+**Onboarding video guides for Windows users**
 
-We have added video guides to lab access link for windows to support written guide.  
-[Let us know](/contact) if you would like us to expand the video guides into other topics.  
+We have added video guides for Windows users to the lab access links. The aim is to ease the onboarding and support the written information. The videos supplement the video guides for Mac that was published earlier this year.
 
+As a next step we are thinking about how to expand the video guides into other topics. Feel free to [contact us](/contact) with suggestions and ideas.
 
 <h3>Minor changes</h3>  
 
-- Matlab - currently upgrading to v2024b (NTNU users only)
-- RStudio - upgraded from v2023 to v2024
-- Workbench integration for Rstudio - spawning performance patches
-- VS Code (code server) - upgraded (2024/8)
-- VS Code (code server) - added snakemake language support
-- Workbench - extended user environment timeout from 3 to 10 days. When no activity for 10 days, environment shuts down. 
+- MATLAB: We have started upgrades to v2024b for NTNU users.
+- RStudio: Upgraded from v2023 to v2024, and improved the start-up time in Workbench. 
+- Visual Studio Code: Version upgrade (2024/8) and included support for Snakemake.
+- Workbench environment: Extended the environment timeout from 3 to 10 days. This means that environments that are inactive for more than 10 days will be shut down. 
+
 ::: 
 
 ::: details Administer science
 
 <h3>Major changes</h3>
 
-**Migration to cloud2** 
+**Storage performance configuration** 
 
-Migration continues smoothly. We now have over 50% of labs running on our new cloud.
+We noticed substantial performance reduction on our  block storage configuration in Cloud2 as the usage increased over the summer. 
 
-**Cloud2 storage performance** 
+After spending a significant amount of time identifying the root cause, we are now adding several measure to increase the system predictability. 
 
-We have registered noticably decreased storage performance. This is related to Cephs erasure coding method of storing the data. On top of our preventive measures to increase speed, we are also retyping some lab volumes to replication method of storing data which has been used on cloud1 and offer superior performance. We will assess erasure coding further to find suitable use case. 
+As part of this, we have started to move current storage volumes over to new configurations. Labs will be contacted to schedule such updates with approximately one day downtime during implementation.
+
+As a next step we plan to differentiate on different storage types/performance in our services specification and price list.
+
+<h3>Minor changes</h3>
+
+**Migration milestone** 
+
+More than half of all labs are now migrated from Cloud1 to Cloud2. After a small pause due to the storage performance issues, we have now resumed the migration. Remaining labs will be contacted to schedule their move to limit the downtime of scientific activities.
+
 ::: 
+
+
+::: details Govern science
+
+<h3>Major changes</h3>
+
+**Updated policy ownership** 
+
+The ownership of our [Security and privacy management policy](/govern-science/policies/#security-and-privacy-management-policy) is moved from the Head of HUNT Research Centre to the Head of HUNT Cloud as part of an internal reorganization. 
+
+**New quality policy**
+
+We have established a new [Quality policy](/govern-science/policies/#quality-policy) independent from HUNT Research Centre as part of the effort towards our own ISO/IEC 9001 certificate in Quality management. The document outlines the quality measures that we strive towards for our services.
+
+
+<h3>Minor changes</h3>
+
+**New Lab transfer order** 
+
+To simplify the movement of Labs between different Data spaces (administrative units), we have added a "Lab transfer order" that define the process. The order is signed by the Data space leader of the current and destination Data space and specify the date when the costs will be moved.
+
+::: 
+
 
 
 ## Patch note 2.11.2
