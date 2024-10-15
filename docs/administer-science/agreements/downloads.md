@@ -462,7 +462,40 @@ your-username@`your-labname`-home~$
 
 
 
+## Lab transfer order
 
+[HUNT Cloud Transfer Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-transfer-order.pdf) (pdf)
+
+Two data space leaders can agree to transfer the administrative responsibility for a lab between their data spaces. We use the lab transfer order that is co-signed by the two data space leaders and the involved lab leader do document such requests and to specify the date for the transfer or responsibilities.
+
+::: details Clarification of the form fields
+
+The following form fields are included in the "HUNT Cloud Lab Transfer Order" version 1.1.
+
+**Lab**
+
+- *Name*. This is the short name for the lab that is to be transfered.
+- *Leader*. This is the full name of the lab leader. 
+
+**Current Data space**
+
+- *Name*. This is the short name for the data space where the lab is current located.
+- *Leader*. This is the full name of the data space leader. 
+
+**Destination Data space**
+
+- *Name*. This is the short name for the data space where the lab is are to be transferred (destination).
+- *Leader*. This is the full name of the data space leader. 
+
+**Invoice profile**
+
+This field specify the invoice preferences that comes into effect when the lab is confirmed transferred.
+
+- *SAME: This the default. The Lab will be invoiced under its current invoice profile (no change).
+- *NEW*: This specify that the Lab will be invoiced under a NEW invoice profile after the transfer is completed. NOTE. You will need to attach a new invoice profile to the Transfer order to activate this option.
+- *MOVE*: This specify that the Lab will be moved under an Invoice profile that already exists under the destination Data space. This requires that you specify the Invoice profile ID in the field above. You can find the ID on your invoices or in your Data space reports.  [Contact us](/contact) if you need help with the identification.
+
+:::
 
 
 ## Lab deletion order
