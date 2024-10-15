@@ -464,7 +464,7 @@ your-username@`your-labname`-home~$
 
 ## Lab transfer order
 
-[HUNT Cloud Transfer Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-transfer-order.pdf) (pdf)
+[HUNT Cloud Lab Transfer Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-transfer-order.pdf) (pdf)
 
 Two data space leaders can agree to transfer the administrative responsibility for a lab between their data spaces. We use the lab transfer order that is co-signed by the two data space leaders and the involved lab leader do document such requests and to specify the date for the transfer or responsibilities.
 
