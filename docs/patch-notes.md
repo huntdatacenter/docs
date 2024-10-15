@@ -76,7 +76,7 @@ We have established a new [Quality policy](/govern-science/policies/#quality-pol
 
 **New Lab transfer order** 
 
-To simplify the movement of Labs between different Data spaces (administrative units), we have added a "Lab transfer order" that define the process. The order is signed by the Data space leader of the current and destination Data space and specify the date when the costs will be moved.
+To simplify the movement of Labs between different Data spaces (administrative units), we have added a new "[Lab transfer order](administer-science/agreements/downloads/#lab-transfer-order)" that define the process. The order is signed by the Data space leader of the current and destination Data space and specify the date when the costs will be moved.
 
 ::: 
 
