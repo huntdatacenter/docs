@@ -63,7 +63,7 @@ More than half of all labs are now migrated from Cloud1 to Cloud2. After a small
 
 <h3>Major changes</h3>
 
-**Updated policy ownership** 
+**Policy ownership** 
 
 The ownership of our [Security and privacy management policy](/govern-science/policies/#security-and-privacy-management-policy) is moved from the Head of HUNT Research Centre to the Head of HUNT Cloud as part of an internal reorganization. 
 
