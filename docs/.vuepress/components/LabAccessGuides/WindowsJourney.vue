@@ -829,7 +829,7 @@ Connection to home closed.`,
             <v-col cols="12">
               {{ getNextItem(passLessId) }} Place your public key into the lab. You will be asked for your SSH passphrase.
               <CopyTextField
-                :value="`type %USERPROFILE%\\.ssh\\id_rsa.pub | ssh ${username}@${ipAddress} add-public-key`"
+                :value='`type "%USERPROFILE%\\.ssh\\id_rsa.pub" | ssh ${username}@${ipAddress} add-public-key`'
                 class="my-2"
                 label=""
                 prefix="C:\Users\User>"
