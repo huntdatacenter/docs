@@ -33,6 +33,7 @@ As a next step we are thinking about how to expand the video guides into other t
 - RStudio: Upgraded from v2023 to v2024, and improved the start-up time in Workbench. 
 - Visual Studio Code: Version upgrade (2024/8) and included support for Snakemake.
 - Workbench environment: Extended the environment timeout from 3 to 10 days. This means that environments that are inactive for more than 10 days will be shut down. 
+- fixed issue in Windows lab access link where commands would not work if you have space in your user directory structure
 
 ::: 
 
