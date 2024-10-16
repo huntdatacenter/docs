@@ -83,7 +83,7 @@ export default {
       workbenchId: 7,
       cmdPrompt: `<code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>`,
       openvpnInstallerName: `OpenVPN-<version-number>-I001-amd64.msi`,
-      sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`,
+      sshKeygenWin: `ssh-keygen -q -t rsa -b 4096 -f "%USERPROFILE%\\.ssh\\id_rsa" -N ""`,
       passExpired: `WARNING: Your password has expired.
 You must change your password now and login again!
 Changing password for {username}.
