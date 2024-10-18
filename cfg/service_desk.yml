@@ -509,7 +509,8 @@ request_lab_transfer:
     ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and compliance adminsitrators",
-    "<b>Required attachment</b>: A <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice agreemnent</a> and <a href='/administer-science/agreements/downloads/#lab-transfer-order' target='blank'> signed lab transfer agreement</a>.",
+    "<b>Required attachment</b>: A <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice agreemnent</a> ",
+    "<b>Optional attachment</b>: A <a href='/administer-science/agreements/downloads/#lab-transfer-order' target='blank'> signed lab transfer agreement</a>.",
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your data space subscription.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
