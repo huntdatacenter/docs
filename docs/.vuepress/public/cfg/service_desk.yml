@@ -503,8 +503,8 @@ request_lab_transfer:
       Best regards,
 
   fields: [
-    { label: "Current data space", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Current data space", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "New data space", key: "new_dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     ]
   requirements: [
