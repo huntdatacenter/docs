@@ -106,7 +106,8 @@ You can transfer a lab to a new data space by filling form below.
 <SDButton form="request_lab_transfer" />
 
 * **Who can order:** Data space leaders and compliance adminsitrators
-* **Required attachment**:  A [signed invoice agreemnent](/administer-science/agreements/downloads/#invoice-profile) and [signed lab transfer agreement](/administer-science/agreements/downloads/#lab-transfer-order).
+* **Required attachment**: A [signed lab transfer agreement](/administer-science/agreements/downloads/#lab-transfer-order).
+* **Optional attachment**: A [signed invoice agreemnent](/administer-science/agreements/downloads/#invoice-profile)
 * **Expected response time:** Days.
 * **Expected delivery:** A lab transferred to a new data space with updated inovice profile.
 * **Cost:** Included in your lab subscription.
