@@ -70,7 +70,7 @@ general_dataspace_request:
       Best regards,
 
   fields: [
-    { label: "Dataspace name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Dataspace name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space coordinators.",
@@ -414,7 +414,7 @@ request_lab_leader_role:
       Best regards,
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space compliance officers.",
@@ -443,7 +443,7 @@ request_new_invoice_profile:
       Best regards,
 
   fields: [
-    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space financial officers.",
@@ -472,11 +472,44 @@ request_update_of_existing_invoice:
       Best regards,
 
   fields: [
-    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and data space financial officers.",
     "<b>Required attachment</b>: A new <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice agreemnent</a>.",
+    "<b>Expected delivery time:</b> Days.",
+    "<b>Cost:</b> Included in your data space subscription.",
+    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
+  ]
+  attachments: []
+
+request_lab_transfer:
+  title: "Request lab transfer"
+  template:
+    subject: "Lab transfer to a new data space - {labname}"
+    body: |
+      Hi HUNT Cloud team,
+
+      I would like to transfer my lab {labname} to a new data space.  
+
+      current data space:{dataspace}  
+      new dataspace:{new_dataspace}
+
+      I have attached a signed agreement for this transfer and a new invoice profile.  
+
+      I am looking forward to receive an email acknowledging that you have transferred lab to a new data space.  
+
+
+      Best regards,
+
+  fields: [
+    { label: "Current data space", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "New data space", key: "new_dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    ]
+  requirements: [
+    "<b>Who can order:</b> Data space leaders and compliance adminsitrators",
+    "<b>Required attachment</b>: A <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice agreemnent</a> and <a href='/administer-science/agreements/downloads/#lab-transfer-order' target='blank'> signed lab transfer agreement</a>.",
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your data space subscription.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
@@ -1833,7 +1866,7 @@ request_update_lagtun_rep:
   
   fields: [
     { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Data Space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Data Space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
   ]
   requirements: [
@@ -1863,7 +1896,7 @@ request_update_data_rep:
   
   fields: [
     { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Data Controller name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Data Controller name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
   ]
   requirements: [
