@@ -99,6 +99,18 @@ Once your lab data is deleted it can not be recreated. You must ensure that you 
 
 :::
 
+### Transfer lab
+
+You can transfer a lab to a new data space by filling form below.
+
+<SDButton form="request_lab_transfer" />
+
+* **Who can order:** Data space leaders and compliance adminsitrators
+* **Required attachment**:  A [signed invoice agreemnent](/administer-science/agreements/downloads/#invoice-profile) and [signed lab transfer agreement](/administer-science/agreements/downloads/#lab-transfer-order).
+* **Expected response time:** Days.
+* **Expected delivery:** A lab transferred to a new data space with updated inovice profile.
+* **Cost:** Included in your lab subscription.
+
 
 ## Transfers
 
@@ -239,5 +251,3 @@ Note that a general request has slower response time than a predefined order. If
 [Contact us](/contact) on email for general questions and information on our scientific services and activities.
 
 :::
-
-
