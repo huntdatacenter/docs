@@ -16,7 +16,7 @@ Our ISO 9001 and ISO 27001 certificates have been issued since 2017, while our I
 
 [[toc]]
 
-## ISO 9001
+## ISO/IEC 9001 certificate
 
 [NS-EN ISO 9001:2015 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso9001-2023.pdf) (PDF)
 
@@ -50,7 +50,7 @@ Our compliance with the international standard in quality management Â«ISO 9001Â
 
 :::
 
-## ISO 27001
+## ISO/IEC 27001 certificate
 
 [NS-EN ISO 27001:2022 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27001-2024.pdf) (PDF)
 
@@ -85,7 +85,7 @@ Our compliance with the international standard in information security managemen
 :::
 
 
-## ISO 27701
+## ISO/IEC 27701 certificate
 
 [NS-EN ISO 27701:2019 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27701-2024.pdf) (PDF)
 
@@ -104,23 +104,23 @@ Our compliance with the international standard for privacy information managemen
 :::
 
 
-## Supporting documents
+## Scoping documents
 
-### Scoping document
+[Quality scope](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-quality-scope.pdf) (PDF)
+
+This document describes the scope of our quality management system.
 
 [Security and privacy scope](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-security-and-privacy-scope.pdf) (PDF)
 
-This document describes the security and privacy scope of our information management system.
+This document describes the scope of our information security and privacy management system.
 
-### Statement of Applicability (SoA)
-
-[ISO 27001 Statement of Applicability](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-soa-iso27001.pdf) (PDF)
+## Statement of Applicability (SoA)
 
 Our Statement of Applicability, often referred to as "SoA", states which ISO control objectives we have applied in our ISO 27001 certificate. 
 
-SoA is a central document in our certification audits, and it guides Data controllers to quickly asses which controls they should expect to be in place to safeguard their data. 
+[ISO 27001 Statement of Applicability](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-soa-iso27001.pdf) (PDF)
 
-In short, we state applicability for controls derived from [ISO 27002](https://www.iso.org/standard/54533.html) (general information security), [ISO 27017](https://www.iso.org/standard/43757.html) (cloud security), and [ISO 27701](https://www.iso.org/standard/71670.html) (privacy information management system).
+The SoA is a central document in our certification audits, and it guides Data controllers to quickly asses which controls they should expect to be in place to safeguard their data. 
 
 To ease the readability, we have included the control's implementation status and comments where applicable.
 
