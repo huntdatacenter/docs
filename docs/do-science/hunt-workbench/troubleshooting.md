@@ -175,6 +175,19 @@ Then open Workbench Terminal and remove lock files from past sessions using this
 find ~/.local/config/libreoffice -type f -name ".lock" -print -delete
 ```
 
+## Remote desktop
+
+### Accidentally disabled mouse/touchbar
+
+1. Open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal).
+
+2. Copy paste this command to your terminal to reenable the mouse pointer device:
+```bash
+export $(dbus-launch); xfconf-query -c pointers -p /TigerVNC_pointer/Properties/Device_Enabled -s 1
+```
+
+3. Follow the guide to [Restart your Workbench environment](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment).
+
 ## Experience
 
 ### Unresponsive environment
