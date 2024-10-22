@@ -68,7 +68,7 @@ All HUNT Cloud coordinators and users are welcome to propose resolutions for the
 
 ### Consideration
 
-For clarity, NTNU and HUNT Research Centre are legally responsible for the activities at HUNT Cloud, including aspects related to privacy, security and finance.
+For clarity, NTNU is legally responsible for the activities at HUNT Cloud, including aspects related to privacy, security and finance.
 
 Lagtun resolutions are therefore formally expressed as recommendations for consideration to the Head of HUNT Cloud at NTNU that may: (i) adopt the resolution, meaning that HUNT Cloud will incorporate the recommendations directly; or (ii) take the resolution into consideration, meaning that we need more time to investigation options before decisions can be made.
 

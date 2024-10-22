@@ -17,8 +17,6 @@ HUNT Cloud is owned by the [Norwegian University of Science and Technology (NTNU
 
 ### Governance
 
-The Head of HUNT Research Centre, [Marit Næss](https://www.ntnu.edu/employees/marit.nass), holds the direct responsibility for the governance of HUNT Cloud, including financial aspects and compliance.
-
 The Head of Department at the Department of Public Health and Nursing at the Faculty of Medicine and Health Sciences, NTNU, [Solveig Kirsti Grudt](https://www.ntnu.edu/ism/contact) is responsible for our contractual obligations.
 
 ### Operations
@@ -31,6 +29,6 @@ The Head of HUNT Cloud, [Oddgeir Lingaas Holmen](https://www.ntnu.edu/employees/
 
 ### Affiliation 
 
-HUNT Cloud is affiliated with [HUNT Research Centre](https://www.ntnu.edu/hunt), [Department of Public Health and Nursing](https://www.ntnu.edu/ism), [Faculty of Medicine and Health Sciences](https://www.ntnu.edu/mh), [Norwegian University of Science and Technology (NTNU)](https://www.ntnu.edu), Trondheim, Norway.
+HUNT Cloud is affiliated with the [Department of Public Health and Nursing](https://www.ntnu.edu/ism), [Faculty of Medicine and Health Sciences](https://www.ntnu.edu/mh), [Norwegian University of Science and Technology (NTNU)](https://www.ntnu.edu), Trondheim, Norway.
 
 
