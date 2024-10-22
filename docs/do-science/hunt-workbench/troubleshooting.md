@@ -183,7 +183,7 @@ find ~/.local/config/libreoffice -type f -name ".lock" -print -delete
 
 2. Copy paste this command to your terminal to reenable the mouse pointer device:
 ```bash
-export $(dbus-launch); xfconf-query -c pointers -p /TigerVNC_pointer/Properties/Device_Enabled -s 1
+DISPLAY=0 dbus-run-session xfconf-query -c pointers -p /TigerVNC_pointer/Properties/Device_Enabled -s 1
 ```
 
 3. Follow the guide to [Restart your Workbench environment](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment).
