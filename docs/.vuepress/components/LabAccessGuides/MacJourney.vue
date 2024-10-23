@@ -1143,9 +1143,16 @@ ${this.ipAddress}    ${this.labName}-entry
                             Open your system profile config file that you got from FileSender (<code>{{ labName }}-{{ username }}.mobileconfig</code>).
                           </li>
                           <li>
-                            In <code style="font-weight: bold;">System settings</code> open section <code style="font-weight: bold;">Privacy & Security</code>, scroll to the bottom of the page and select <code>Profiles</code>.
+                            Open <code style="font-weight: bold;">System settings</code>
+                          </li>
+                          <li>
+                            Open section <code style="font-weight: bold;">General</code>, scroll to the bottom of the section and select subsection <code style="font-weight: bold;">Device management</code>.
                             <br />
-                            <img class="pa-2" alt="macventura1" src="/img/workbench/macventura1.png" style="max-width: 500px;" />
+                            <img class="pa-2" alt="device-management" src="/img/workbench/macos-device-management.png" style="max-width: 500px;" />
+                            <br />
+                            (On MacOS Sonoma or older open section <code style="font-weight: bold;">Privacy & Security</code>, scroll to the bottom of the section and select <code style="font-weight: bold;">Profiles</code>)
+                            <br />
+                            <img class="pa-2" alt="system-profiles" src="/img/workbench/macventura1.png" style="max-width: 500px;" />
                             <br />
                           </li>
                           <li>
