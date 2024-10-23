@@ -484,7 +484,7 @@ request_update_of_existing_invoice:
   attachments: []
 
 request_lab_transfer:
-  title: "Request lab transfer"
+  title: "Request lab transfer between data spaces"
   template:
     subject: "Lab transfer between data spaces - {labname}"
     body: |
@@ -511,13 +511,16 @@ request_lab_transfer:
     ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and compliance adminsitrators",
-    "<b>Required attachment</b>: A <a href='/administer-science/agreements/downloads/#lab-transfer-order' target='blank'> signed lab transfer agreement</a>.",
-    "<b>Optional attachment</b>: A <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'> signed invoice agreemnent</a> ",
+    "<b>Required attachment</b>: A <a href='/administer-science/agreements/downloads/#lab-transfer-order' target='blank'> signed lab transfer order</a>.",
+    "<b>Optional attachment</b>: A <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'> signed invoice profile</a> ",
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your data space subscription.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
   ]
-  attachments: []
+  attachments: [
+    "Required: Signed lab transfer order (.pdf)",
+    "Optional: Signed invoice profile (.pdf)",
+  ]
 
 ### Data Controller Orders
 
