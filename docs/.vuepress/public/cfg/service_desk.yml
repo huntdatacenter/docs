@@ -486,31 +486,33 @@ request_update_of_existing_invoice:
 request_lab_transfer:
   title: "Request lab transfer"
   template:
-    subject: "Lab transfer to a new data space - {labname}"
+    subject: "Lab transfer between data spaces - {labname}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to transfer my lab {labname} to a new data space.  
+      I would like to transfer my lab {labname}:  
 
-      current data space:{dataspace}  
-      new dataspace:{new_dataspace}
+      ---
+      current data space: {current_dataspace}  
+      destination data space: {destination_dataspace}  
+      ---
 
       I have attached a signed agreement for this transfer and a new invoice profile.  
 
-      I am looking forward to receive an email acknowledging that you have transferred lab to a new data space.  
+      I am looking forward to receive an email acknowledging that you have transferred lab to a destination data space.  
 
 
       Best regards,
 
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Current data space", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "New data space", key: "new_dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Current data space", key: "current_dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Destination data space", key: "destination_dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     ]
   requirements: [
     "<b>Who can order:</b> Data space leaders and compliance adminsitrators",
-    "<b>Required attachment</b>: A <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice agreemnent</a> ",
-    "<b>Optional attachment</b>: A <a href='/administer-science/agreements/downloads/#lab-transfer-order' target='blank'> signed lab transfer agreement</a>.",
+    "<b>Required attachment</b>: A <a href='/administer-science/agreements/downloads/#lab-transfer-order' target='blank'> signed lab transfer agreement</a>.",
+    "<b>Optional attachment</b>: A <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'> signed invoice agreemnent</a> ",
     "<b>Expected delivery time:</b> Days.",
     "<b>Cost:</b> Included in your data space subscription.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
