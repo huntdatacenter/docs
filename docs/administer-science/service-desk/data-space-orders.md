@@ -99,13 +99,13 @@ Once your lab data is deleted it can not be recreated. You must ensure that you 
 
 :::
 
-### Transfer lab
+### Transfer lab between data spaces
 
-You can transfer a lab to a new data space by filling form below.
+You can transfer a lab between two data spaces by filling form below.
 
 <SDButton form="request_lab_transfer" />
 
-* **Who can order:** Data space leaders and compliance adminsitrators
+* **Who can order:** Data space leaders and compliance administrators
 * **Required attachment**: A [signed lab transfer agreement](/administer-science/agreements/downloads/#lab-transfer-order).
 * **Optional attachment**: A [signed invoice agreemnent](/administer-science/agreements/downloads/#invoice-profile)
 * **Expected response time:** Days.
