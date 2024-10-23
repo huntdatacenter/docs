@@ -1714,7 +1714,7 @@ request_ssh_config:
   attachments: []
 
 request_vpn_link:
-  title: "Request VPN access link opening"
+  title: "Request VPN access list opening"
   template:
     subject: "VPN access opening request - {username}"
     body: |
