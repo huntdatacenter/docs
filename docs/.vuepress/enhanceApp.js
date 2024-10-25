@@ -1,6 +1,10 @@
 import Vuetify from "vuetify/lib";
 import "./sass/index.scss";
+import '@fortawesome/fontawesome-free/css/all.css';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -10,12 +14,15 @@ export default ({
 }) => {
   Vue.use(Vuetify);
 
+  Vue.component('font-awesome-icon', FontAwesomeIcon)
+  library.add(fas)
+
   // Material icons: https://fonts.google.com/icons
   const opts = {
     theme: { dark: false },
     // theme: { disable: true, dark: false },
     icons: {
-      iconfont: "md",
+      iconfont: "faSvg",
     },
   };
   options.vuetify = new Vuetify(opts);
