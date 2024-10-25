@@ -35,7 +35,7 @@
     "vuepress-plugin-clean-urls": "^1.1.2",
     "vuepress-plugin-reading-time": "^0.1.1",
     "vuepress-plugin-seo": "^0.1.4",
-    "vuetify-loader": "^1.7.3"
+    "vuetify-loader": "^1.9.2"
   },
   "dependencies": {
     "country-list-json": "^1.1.0",
@@ -45,7 +45,7 @@
     "pdf-lib": "^1.17.1",
     "signature_pad": "^4.1.5",
     "vue-pdf-embed": "^1.1.6",
-    "vuetify": "^2.6.10",
+    "vuetify": "^2.7.2",
     "ws": "^8.4.2"
   },
   "resolutions": {
