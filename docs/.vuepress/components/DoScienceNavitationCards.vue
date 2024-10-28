@@ -46,18 +46,18 @@ export default {
       avatarcolor: '#9db7e1',
       iconcolor: 'rgb(72 84 104)',
       data: [
-        {
-          title: 'Order new lab',
-          subtitle: 'Data space leaders, and compliance administrators can order a new lab.',
-          href: '/administer-science/service-desk/data-space-orders/',
-          icon: ['fas', 'flask'],
-        },
-        {
-          title: 'Request new lab user',
-          subtitle: 'Lab leader, and coordinator can request adding new users.',
-          href: '/administer-science/service-desk/lab-orders/#add-a-new-lab-user',
-          icon: ['fas', 'person-circle-plus'],
-        },
+        // {
+        //   title: 'Order new lab',
+        //   subtitle: 'Data space leaders, and compliance administrators can order a new lab.',
+        //   href: '/administer-science/service-desk/data-space-orders/',
+        //   icon: ['fas', 'flask'],
+        // },
+        // {
+        //   title: 'Request new lab user',
+        //   subtitle: 'Lab leader, and coordinator can request adding new users.',
+        //   href: '/administer-science/service-desk/lab-orders/#add-a-new-lab-user',
+        //   icon: ['fas', 'person-circle-plus'],
+        // },
         {
           title: 'Service desk',
           subtitle: 'Service orders that you can request as an active lab user in HUNT Cloud.',
