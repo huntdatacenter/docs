@@ -11,6 +11,7 @@ description: These pages contains user documentation aimed at scientists that co
 
 **Welcome to our official user documentation for scientists in HUNT Cloud.**
 
+This section is for active lab users. It contains practical information on how to do science in HUNT Cloud.
 
 <DoScienceNavitationCards />
 
