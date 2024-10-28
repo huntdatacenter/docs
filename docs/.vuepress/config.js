@@ -128,6 +128,7 @@ module.exports = {
             },
           ],
         },
+        "/do-science/service-desk/",
         {
           title: "Lab access",
           text: "Lab access",
@@ -339,7 +340,6 @@ module.exports = {
             "/do-science/community/consent-information.md",
             ]
         },
-        "/do-science/service-desk/",
         {
           title: "Troubleshooting",
           text: "Troubleshooting",
@@ -409,6 +409,20 @@ module.exports = {
               title: "Contribute",
               path: "/administer-science/contribute.md",
             },
+          ],
+        },
+        {
+          title: "Service desk",
+          text: "Service desk",
+          collapsable: true,
+          isGroup: true,
+          children: [
+            {
+              title: "Introduction",
+              path: "/administer-science/service-desk/",
+            },
+            "/administer-science/service-desk/lab-orders.md",
+            "/administer-science/service-desk/data-space-orders.md",
           ],
         },
         // {
@@ -515,20 +529,6 @@ module.exports = {
               ],
             },
             "/administer-science/data/faq.md",
-          ],
-        },
-        {
-          title: "Service desk",
-          text: "Service desk",
-          collapsable: true,
-          isGroup: true,
-          children: [
-            {
-              title: "Introduction",
-              path: "/administer-science/service-desk/",
-            },
-            "/administer-science/service-desk/lab-orders.md",
-            "/administer-science/service-desk/data-space-orders.md",
           ],
         },
         {
