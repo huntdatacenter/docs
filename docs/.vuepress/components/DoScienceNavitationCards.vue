@@ -153,6 +153,7 @@ export default {
               </v-list-item-content>
 
               <v-list-item-avatar
+                v-if="item.icon ? true : false"
                 size="80"
                 rounded
                 :color="avatarcolor"
