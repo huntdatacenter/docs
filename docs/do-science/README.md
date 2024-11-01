@@ -13,6 +13,8 @@ description: These pages contains user documentation aimed at scientists that co
 
 This section is for active lab users. It contains practical information on how to do science in HUNT Cloud.
 
+!["Illustration of laboratory glass bottle with yellow shimmery substance."](../images/hunt-cloud_bottle_250.png)
+
 <DoScienceNavitationCards />
 
 <br/>
