@@ -26,7 +26,7 @@ Last update: 2024-11-02.
 
 ::: tip CURRENT PRIVACY STATEMENT
 
-[HUNT Cloud Privacy Statement v1.1](https://assets.hdc.ntnu.no/assets/privacy/hunt-cloud-privacy-statement-1-2.pdf) (PDF)
+[HUNT Cloud Privacy Statement v1.2](https://assets.hdc.ntnu.no/assets/privacy/hunt-cloud-privacy-statement-1-2.pdf) (PDF)
 
 :::
 
