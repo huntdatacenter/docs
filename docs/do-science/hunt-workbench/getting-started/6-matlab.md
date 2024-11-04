@@ -8,7 +8,7 @@ description: How to use MATLAB
 
 # MATLAB
 
-**You can run MATLAB both from Jupyterlab or from the remote desktop (VNC).**
+**You can run MATLAB both from Jupyterlab or from the remote desktop (VNC) in your Workbench.**
 
 To be able to run MATLAB in Workbench you need to bring your own license. In most cases such license is already provided by your institution and you can request it from your IT department.
 
@@ -20,7 +20,7 @@ We already have the license for NTNU employees, so you can just request MATLAB i
 
 ### In JupyterLab
 
-MATLAB installation in Workbench comes with the MATLAB kernel, you can read about it [https://blogs.mathworks.com/matlab/2023/01/30/official-mathworks-matlab-kernel-for-jupyter-released/](on this page).
+MATLAB installation in Workbench comes with the MATLAB kernel, you can read about it [on this page](https://blogs.mathworks.com/matlab/2023/01/30/official-mathworks-matlab-kernel-for-jupyter-released/).
 
 ### In Remote desktop
 
