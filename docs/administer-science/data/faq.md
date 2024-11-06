@@ -225,8 +225,20 @@ cd /mnt/archive/.restore/
 Celebrate the success if you are able to successfully export a file, or [contact us](/contact) if you think something is wrong with your restore.
 
 
+## Deletions
+
+### Lab deletions
+
+When you end your lab subscription, all machine and data stored in your lab will be deleted. This includes backups that we hold on our systems. You will receive a written confirmation when all your data is gone from our systems. [Order a lab deletion](/administer-science/service-desk/data-space-orders/#delete-lab
+) under "Data space order" in the administer data service desk. 
+
+### Machine deletions
+
+You may order deletion of unmanaged iaas machines inside your lab. We will then delete your machine, including the data volumes that are attached to your machine. [Order a machine deletion](/administer-science/service-desk/lab-orders/#delete-a-machine) under "Lab orders" in the administer data service desk.
 
 
+### Volume deletions
 
+You may order deletion of specific data volumes that are attached to one or more of your lab machines. Note that this is restricted to additional volumes that you have attached to your home machines and/or to your unmanaged iaas machines. You can not order deletion of `/mnt/work`, `/mnt/archive`, `/mnt/scratch` or `/home` volumes on your home machine. [Order a volume deletion](/administer-science/service-desk/lab-orders/#volume-deletion) under "Lab orders" in the administer data service desk.
 
 
