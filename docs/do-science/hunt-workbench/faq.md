@@ -251,10 +251,8 @@ You can defer to alternative methods such as `install.packages()` when the packa
 
 ### How do I install R packages not found in Conda?
 
-::: warning
-
-Never install R / Bioconductor packages from inside RStudio
-
+::: warning Never install R / Bioconductor packages from inside RStudio
+<br />
 :::
 
 If you don't find a _R package_ in Conda as described above, you may need to defer to running the **`install.packages()`** or **`BiocManager::install()`** commands inside **`R`**. We recommend to use **`R`** in your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) for such installations (instead of installing directly in RStudio) to avoid broken environment states in RStudio.
