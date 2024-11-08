@@ -291,7 +291,7 @@ Enjoy!
 
 ### How can I recover my R environment in case of broken package installation?
 
-Sometimes you may get errors about the **`GLIBCXX`** library not being found and/or essential R packages are not working. This happens typically after installation of custom package. In such cases, you might consider to recreate your **`r-base`** environment from scratch:
+Sometimes you may get errors about the a library not being found (e.g. **`GLIBCXX`**, **`OPENSSL`**) and/or essential R packages are not working. This happens typically after installation of custom package. In such cases, you might consider to recreate your **`r-base`** environment from scratch:
 
 1. Open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) and run the following code to reset your **`r-base`** environment:
 
