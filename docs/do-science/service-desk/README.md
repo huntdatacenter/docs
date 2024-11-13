@@ -186,6 +186,9 @@ Membership in our [HUNT Cloud community](/do-science/community/) is voluntary. Y
 
 ### MobaXterm configuration file
 
+You can find MobaXterm configuration in Lab access link (Windows section). If you lost your Lab access link you can [Request reissue of Lab access link](/do-science/service-desk/#request-lab-access-link-reissue).
+
+<!-- DEPRECATED
 You may simplify your MobaXterm configuration using a predefined file with credentials and configuration during setup.
 
 <SDButton form="request_mobaxterm_file" />
@@ -195,7 +198,7 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 * **Expected delivery:** File as email attachment.
 * **Requirement:** Active SSH connection.
 * **Next step:** [MobaXterm configuration guide](/do-science/tools/technical/mobaxterm/).
-* **Cost:** Included in the lab subscription.
+* **Cost:** Included in the lab subscription. -->
 
 
 ## Tingweek
