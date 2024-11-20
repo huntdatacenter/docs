@@ -673,6 +673,33 @@ JPG - [Freedom to explore - Lithuanian](https://assets.hdc.ntnu.no/assets/artwor
   
 
 
+### Malayalam (mal)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Malayalam."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-mal-banner.jpg)
+
+::: details Full Malayalam version
+
+**Download**:  
+PDF - [Freedom to explore - Malayalam](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-mal-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Malayalam](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-mal-2160px.jpg) - 2160px
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Malayalam."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-mal-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Malayalam ([mal](https://iso639-3.sil.org/code/mal))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.1  
+**ArtworkID:** hcc-artwork26  
+
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
 ### Nepali (nep)
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Nepali."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-nep-banner.jpg)
