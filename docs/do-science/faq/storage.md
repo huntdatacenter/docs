@@ -59,7 +59,7 @@ mkdir -p $TMPDIR
 
 ::: details Move tmp on blue and IaaS machines
 
-To move tmp for the default Ubuntu user on blue and IaaS machines: 
+To move tmp for the default Ubuntu user on blue and IaaS machines:
 
 ```bash
 # Move tmp folder out of the system disk
@@ -137,7 +137,7 @@ ls -lh test.txt
 ```
 :::
 
-::: warning 
+::: warning
 
 We do -not- recommend using `chmod` to restrict access to data within your lab for confidentiality purposes. All data within a lab will principally be accessible for all lab users in our agreement framework. [Contact us](/contact) for a dialogue on heightened security measures if you need increased data confidentiality.
 
@@ -146,7 +146,7 @@ We do -not- recommend using `chmod` to restrict access to data within your lab f
 
 ## Restore
 
-::: tip 
+::: tip
 
 See our [Data administrator FAQ](/administer-science/data/faq/#restore) for questions regarding backup and restore.
 
@@ -199,7 +199,7 @@ rsync -avhP /mnt/scratch/data/ ubuntu@demolab-blue-sarga:~/data/
 
 ### Where should I store my data on IaaS and blue machines?
 
-You are free to create the directory structure that fits your needs under the **`/home`** folder in your IaaS and blue machines. For example, under the default login folder (**`/mnt/ubuntu/`**):
+You are free to create the directory structure that fits your needs under the **`/home`** folder in your IaaS and blue machines. For example, under the default login folder (**`/home/ubuntu/`**):
 
 ```bash
 mkdir data
@@ -234,3 +234,22 @@ sudo mkdir -p /mnt/work/workflow
 sudo mount --bind /home/ubuntu/workflow /mnt/work/workflow
 ls /mnt/work/workflow
 ```
+
+## Storage retype
+
+Migrating data between different types of storage. Typically between regular and fast storage systems.
+
+### Stages of retyping
+
+1. Premigration - the work we do in the background that does not require any downtime.
+2. Migration - final synchronization of data that requires downtime
+
+### Time estimate
+
+We typically prepare the premigration within 1 to 14 days, for storages between 1 TB to 25 TB respectively.
+
+The downtime estimate that you care about the most usually take around 2 ~ 4 hours depending on the size of storage and amount of daily changes in data.
+
+### Will my data be placed in different directories?
+
+No. Data paths will not change.
