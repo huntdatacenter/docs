@@ -989,6 +989,7 @@ request_new_gpu:
       gpu_alias="{gpu_type}"  
       machine_type="{machine_type}"  
       storage_size="{terabytes} TB"  
+      storage_type="{storage_type}"  
       subscription="{subscription}"  
       ---
 
@@ -1062,6 +1063,15 @@ request_new_gpu:
       ]
     },
     { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
+    {
+      label: "Storage type",
+      key: "storage_type",
+      field: "autocompleteone",
+      options: [
+        { text: "Regular", value: "regular" },
+        { text: "Fast storage (NVME)", value: "nvme" },
+      ]
+    },
     {
       label: "Subscription",
       key: "subscription",
@@ -1318,6 +1328,7 @@ request_new_storage_volume:
         { text: "Archive", value: "archive" },
         { text: "Work", value: "work" },
         { text: "Scratch", value: "scratch" },
+        { text: "Scratch (NVME)", value: "scratch (nvme)" },
       ]
     },
     {
@@ -1342,7 +1353,7 @@ request_new_storage_volume:
     },
     { label: "Size (in terabytes)", key: "storage_size_tb", hint: "Field should include only numbers. Maximum size per volume is 20 TB", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
     {
-      label: "Enable restore option",
+      label: "Enable restore service (optional)",
       key: "restore",
       field: "autocompleteone",
       options: [
