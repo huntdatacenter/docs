@@ -16,9 +16,9 @@ If you are connecting to the **`home`** machine in your lab, you are good to go 
 
 - [Set up your local computer](#set-up-your-local-machine)
 
-If you want to connet to an unmanaged machine in your lab (On-demand or BLUE machines) you will need to install the X2Go server before you set up your local computer:
+If you want to connet to an unmanaged machine in your lab (On-demand or Spot machines) you will need to install the X2Go server before you set up your local computer:
 
-- [Set up your unmanaged lab machine (On-demand and BLUE)](#install-x2go-server-on-unmanaged-lab-machine-iaas)
+- [Set up your unmanaged lab machine (On-demand and Spot)](#install-x2go-server-on-unmanaged-lab-machine-iaas)
 
 ## Set up your local computer
 
@@ -73,7 +73,7 @@ sudo apt-get update -y && sudo apt install -y x2goclient
 Once installed, open the X2Go client and click **`New session`** and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
 ::: warning NOTE
-The configuration below will work on **`home`** machines. This configuration will -not- work on unmanaged On-demand and BLUE machines.
+The configuration below will work on **`home`** machines. This configuration will -not- work on unmanaged On-demand and Spot machines.
 :::
 
 #### 2.1 Create session
@@ -120,11 +120,16 @@ For your home machine, [RStudio](/do-science/tools/analytical/r-studio/#install-
 
 Once installed, open X2Go and click **`New session`** and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
-The configuration below will only work on **`On-demand`** and **`BLUE`** machines, and not on home machines. 
+The configuration below will only work on **`On-demand`** and **`Spot`** machines, and not on home machines. 
 
 ::: warning NOTE
 
-This setup require that someone in your lab already have installed X2Go server and your software of choice on the particular machine you will be connecting to.
+This setup requires that someone in your lab already have installed X2Go server and your software of choice on the particular machine you will be connecting to.
+:::
+
+::: warning NOTE
+
+This setup requires working SSH Configuration as instructed in Lab access link.
 :::
 
 
@@ -265,7 +270,7 @@ Connection to X2Go require the application **`x2goserver`** to run for connectio
 You may install this on iaas and blue machines as follows:
 
 ::: tip NOTE
-This section is those of you that want to set up an unmanaged On-demand or BLUE machines for GUI access.
+This section is those of you that want to set up an unmanaged On-demand or Spot machines for GUI access.
 :::
 
 ::: warning REQUIREMENTS
