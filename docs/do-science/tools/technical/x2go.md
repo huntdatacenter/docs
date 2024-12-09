@@ -139,8 +139,8 @@ Click **`Create new session`**.
 
 ::: details Server section
 
-- _Host_: **`10.5.5.<something>`**
-  - You need to type in the IP address for the machine that is set up for X2Go. You will fine the IP by logging into the iaas machine on ssh and type **`ifconfig | grep 10.5.5.`**
+- _Host_: **`<iaas-machine>`**
+  - You need to use hostname of the machine. You cannot type in the IP address for the machine because direct connections from entry are not allowed. You will find the hostname by logging into the iaas machine on ssh and type **`hostname`**
 - _Login/username_: **`<iaas-machine-username>`**
   - The default user name of iaas and blue machines is **`ubuntu`**. It may be good to confer with your lab coordinator to learn their specific setup for the machine you plan to access.
 - _SSH port_: **`22`**
