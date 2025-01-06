@@ -7,8 +7,8 @@ description: Updates will be posted here if there is any service or performance 
 # System status
 
 
-::: tip All systems
-Operational
+::: warning Some labs unreachable
+**2025-01-06 10:55** - Failed network card on a physical machine make labs on this machine unavailable. We are investigating and will start to migrate labs to new  machines.
 :::
 
 
