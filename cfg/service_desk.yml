@@ -1007,10 +1007,10 @@ request_new_gpu:
       field: "autocompleteone",
       options: [
         { text: "NVIDIA v100s 32G", value: "v100s.32g" },
-        { text: "NVIDIA a30 24G (cloud2)", value: "a30.24g" },
-        { text: "NVIDIA a40 48G (cloud2)", value: "a40.48g" },
+        { text: "NVIDIA a30 24G", value: "a30.24g" },
+        { text: "NVIDIA a40 48G", value: "a40.48g" },
         { text: "NVIDIA a100 40G", value: "a100.40g" },
-        { text: "NVIDIA a100 80G (cloud2)", value: "a100.80g" },
+        { text: "NVIDIA a100 80G", value: "a100.80g" },
       ]
     },
     {
