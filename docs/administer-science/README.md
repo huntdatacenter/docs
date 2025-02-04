@@ -16,9 +16,11 @@ See our [scientific access](/administer-science/scientific-access) section for g
 !["Illustration of decorative hand-made golden key with purple gem stones."](../images/hunt-cloud_key_250.png)
 
 
-::: tip Next Tingweek #13 (2024-10)
+::: tip Next Tingweek #14 (2025-02)
 
-- **Data space ting**: Wednesday 16 October 2024 - 9 to 11 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek13-dataspaceting-agenda.pdf))
-- **Data controller ting**: Wednesday 16 October 2024 - 1 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek13-datacontrollerting-agenda.pdf))
+- **Labting**: Tuesday 11 February 2025 - 2 to 3 p.m. CET
+- **Admin ting**: Wednesday 12 February 2025 - 9 to 10 a.m. CET
+- **Data controller ting**: Wednesday 12 February 2025 - 1 to 2 p.m. CET
+- **Financial ting**: Thursday 13 February 2025 - 9 to 10 a.m. CET
 
 :::
