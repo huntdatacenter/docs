@@ -19,8 +19,6 @@ We arrange a layered set of Tings for distinct groups in our community. The meet
 - **Data controller ting**: Wednesday 12 February 2025 - 1 to 2 p.m. CET
 - **Financial ting**: Thursday 13 February 2025 - 9 to 10 a.m. CET
 
-[Read more](/govern-science/tingweek/)
-
 :::
 
 [[toc]]
