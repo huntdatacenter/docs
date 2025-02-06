@@ -14,7 +14,7 @@ description: Connection guide for PostgreSQL.
 
 ::: warning Requirement
 
-This guide is for the managed PostgreSQL pilot service on home machines. 
+This guide is for the managed PostgreSQL pilot service on home machines.
 
 You can use this guide to connect to your installation if you have requested the setup and received a confirmation that the setup is completed.
 
@@ -49,6 +49,20 @@ Easiest way is to connect with Scheme URL:
 ```
 postgresql:///?host=/var/run/postgresql
 ```
+
+## Installing psql client in Workbench
+
+You can install `psql` using conda into default environment:
+
+```bash
+mamba install -c conda-forge -n default -y postgresql
+```
+
+Then connect:
+```bash
+psql --host=/var/run/postgresql
+```
+
 
 ## Installing Python connectors in Workbench
 
