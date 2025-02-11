@@ -1260,6 +1260,7 @@ request_expand_existing_volume:
         { text: "Archive", value: "archive" },
         { text: "Work", value: "work" },
         { text: "Scratch", value: "scratch" },
+        { text: "Backup", value: "backup" },
       ]
     },
     {
@@ -1330,6 +1331,7 @@ request_new_storage_volume:
         { text: "Work", value: "work" },
         { text: "Scratch", value: "scratch" },
         { text: "Scratch (NVME)", value: "scratch (nvme)" },
+        { text: "Backup", value: "backup" },
       ]
     },
     {
@@ -1406,7 +1408,7 @@ request_volume_deletion:
         "archive",
         "work",
         "scratch",
-        "cargo",
+        "backup",
       ]
     },
     {
