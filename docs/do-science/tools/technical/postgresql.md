@@ -71,3 +71,21 @@ You can install `psycopg2` using conda into [py310 environment](/do-science/hunt
 ```bash
 conda install -c conda-forge -n py310 psycopg2
 ```
+
+Example of connecting to database named with username:
+```python
+import os
+import psycopg2
+print(f"Connecting to dbname={os.getenv('USER')} as user={os.getenv('USER')}")
+conn = psycopg2.connect(f"host=/var/run/postgresql dbname={os.getenv('USER')} user={os.getenv('USER')}")
+```
+
+Test connection by listing pg_tables records fron pg_catalog:
+
+```python
+with conn:
+    with conn.cursor() as curs:
+        curs.execute('SELECT * FROM pg_catalog.pg_tables;')
+        for table in curs.fetchall():
+            print(table)
+```
