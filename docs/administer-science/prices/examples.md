@@ -31,8 +31,7 @@ Let's start with our default lab for sensitive data discoveries for teams of 2-3
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- | 
-| Data space | WHITE | 1 year | 0 | 1 | 0 |
-| Lab | | 1 year | 5823 | 1 | 5823 |
+| Lab | subscription | 1 year | 5823 | 1 | 5823 |
 | Compute | default.c1 | 1 year | 3553 | 1 | 3553 |
 | Store | 1 terabyte | 1 year | 2376 | 1 | 2376 |
 | **PER YEAR** |  | | |  | **11752** |
