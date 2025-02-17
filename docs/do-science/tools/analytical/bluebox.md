@@ -23,9 +23,11 @@ Visit our [BlueBox Guide](https://github.com/huntdatacenter/BlueBox/blob/master/
 
 ## 1. Order a fleet of machines
 
-The installation of BlueBox requires access to a fleet of On-demand or BLUE machines. 
+The installation of BlueBox requires access to a fleet of machines. 
 
+<!--
 1.1 Order a fleet of machines for your BlueBox in our [administer science service desk](/administer-science/service-desk/lab-orders/#fleet-of-blue-machines). 
+-->
 
 We will set up your machines and provide you with a list of machine names that you can utilize.
 

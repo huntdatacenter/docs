@@ -139,6 +139,8 @@ Add a new [GPU machine](/administer-science/services/machine-types/#gpu-accelera
 * **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
 
 
+<!--
+
 ### Fleet of blue machines
 
 Add a fleet of blue machines to distribute analysis for large scale analysis, for example by utilizing tools such as our [BlueBox](/do-science/tools/analytical/bluebox/).
@@ -149,7 +151,7 @@ Add a fleet of blue machines to distribute analysis for large scale analysis, fo
 * **Expected response time:** Days (subject to availability).
 * **Expected delivery:** Multiple blue machines accessible from your home machine.
 * **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
-
+-->
 
 ### Shelve machine order
 
