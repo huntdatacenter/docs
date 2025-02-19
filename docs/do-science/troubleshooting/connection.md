@@ -22,7 +22,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 ::: tip For NTNU users
 
-You can access your lab over the Cisco AnyConnect VPN from NTNU worldwide on Windows and Linux: (1) Connect the NTNU VPN using this address: **`vpn.ntnu.no`**, (2) connect the HUNT Cloud VPN, (3) connect to your lab, and (4) do cool science!
+You can access your lab over the Cisco AnyConnect VPN from NTNU worldwide: (1) Connect the NTNU VPN using this address: **`vpn.ntnu.no`**, (2) connect the HUNT Cloud VPN, (3) connect to your lab, and (4) do cool science!
 
 :::
 
@@ -71,7 +71,7 @@ Already running VPN services on your local computer may cause conflicts when con
 
 ::: details For NTNU users
 
-NTNU users on Windows and Linux operating systems may connect to both NTNU VPN and the HUNT Cloud VPN using a [tailored NTNU VPN address](#access-list).
+NTNU users on all operating systems may connect to both NTNU VPN and the HUNT Cloud VPN using a [tailored NTNU VPN address](#access-list).
 
 :::
 
