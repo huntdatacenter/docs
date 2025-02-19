@@ -1006,7 +1006,7 @@ request_new_gpu:
       key: "gpu_type",
       field: "autocompleteone",
       options: [
-        { text: "NVIDIA a16 16G", value: "a100.80g" },
+        { text: "NVIDIA a16 16G", value: "a16.16g" },
         { text: "NVIDIA v100s 32G", value: "v100s.32g" },
         { text: "NVIDIA a30 24G", value: "a30.24g" },
         { text: "NVIDIA a40 48G", value: "a40.48g" },
