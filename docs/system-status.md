@@ -6,8 +6,8 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: tip All systems
-Operational
+::: warning All systems
+**2025-02-25 16:14** - We have registered a drop in VPN connectivity and are actively investigating.
 :::
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.
