@@ -316,13 +316,8 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
    ssh <iaas-node>
    ```
 
-4. Get the IP for your IAAS machine
+<!-- DO NOT GUIDE TO IP ADDRESS - does not work for IAAS - there is no way to configure double proxy jump -->
 
-   Inside your IAAS node, list the IP address for the node with **`ifconfig`**. The IP address is listed after **`inet addr:`** and start with 10.5. Note this as you will use this for the X2Go setup on your local computer (steps above).
-
-   ```bash
-   hostname -I
-   ```
 
 :::
 
