@@ -298,7 +298,7 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
 1. From your local computer, log into your lab's entry machine:
 
    ```bash
-   ssh <labname>-entry
+   ssh <labname>
    ```
 
 2. Form your entry machine, copy your machine key to your iaas-machine with the running X2Go server:
