@@ -16,8 +16,13 @@ See our [System status](/govern-science/system-status) page for current status. 
 
 ### Past updates
 
-[..] 
+[..]
 
+**2025-02-25 16:34** - Connectivity is restored. Expected cause is a data transfer that escaped our traffic shaping. 
+
+**2025-02-25 16:14** - A drop in system connectivity is registered. We are investigating.
+
+[..] 
 
 **2025-01-06 10:55** - Failed network card on a physical machine make labs on this machine unavailable. We are investigating and will start to migrate labs to new  machines.
 
