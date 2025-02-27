@@ -89,6 +89,7 @@ All the above machine types may be deployed with one or two GPU accelerators:
 
 | **Type** | **Model** | **Architecture** | **Memory** | **Interface**  |
 | ------------ | ----------- | ------------ | --------- | ---------- |
+| nvidia.a16   | NVIDIA A16   | Ampere       | 16GB HMB2 | PCIe Gen3  |
 | nvidia.p100  | NVIDIA P100  | Pascal       | 16GB HBM2 | PCIe Gen3  |
 | nvidia.v100  | NVIDIA  V100  | Volta        | 32GB HBM2 | PCIe Gen3  |
 | nvidia.v100s | NVIDIA  V100S | Volta        | 32GB HBM2 | PCIe Gen3  |
