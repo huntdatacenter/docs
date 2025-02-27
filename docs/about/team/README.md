@@ -18,13 +18,9 @@ Our team consist of eight full time employees with a background from medicine, b
 
 Oddgeir holds the overall responsibility of activities in HUNT Cloud, including the role of *Chief Information Security Officer* in our management system. You may meet Oddgeir in all types of discussions, especially those related to long-term development, digital asset management, scientific growth strategies and trust management.
 
-### Tom-Erik Røberg
-
-Tom-Erik is leading our technology strategies and technical operations. This includes activities from translation of high-level missions to technical tooling and deelopments to principles for data center orchestration. You may meet Tom-Erik in all levels of technological activities and strategic discussions. 
-
 ### Matúš Košút
 
-Matúš is leading our product development. This includes the direction, prototyping and development of new services. Matúš do also lead the development of user documention and our internal analytics. You will meet Matúš both in dicussions on pilot services and during advanced support. 
+Matúš holds the responsibility for our technologies and product development, including the roles of *Chief Technology Officer* in our management system. You may meet Matúš in all levels of technological, product and advanced product discussions.
  
 ### Qussay Ghazeia
 
