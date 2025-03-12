@@ -34,6 +34,29 @@ You can download free version of Cyberduck through their main [webpage](https://
 You can confirm correct setup by checking if your `archive` and `work` directory are avialable in Cyberduck. 
 Then, you are able to download/upload file by simple drag-n-drop or right clicking on your files and selecting *Download to*.
 
+## Recommended settings
+### Setting for limiting bandwith 
+
+1. Click settings under Cyberduck in the toolbar on top of the screen
+
+<img src="./images/Cyberduck-step1.png" width="400px">
+
+2. Click the bandwith icon and change both options to 10MB/s
+
+<img src="./images/Cyberduck-step2.png" width="700px">
+
+### Settings during transfer
+
+Setting for limiting transfer connections to fairly share bandwith with others. 
+
+1. Click the connection icon in the top right corner 
+
+<img src="./images/cyberduck-limit-transfer-connections-1.png" width="600px">
+
+2. Select the option for 2 connections
+
+<img src="./images/cyberduck-limit-transfer-connections-2.png" width="400px">
+
 ## Immediate troubleshooting
 
 ### What is my lab IP address ?
