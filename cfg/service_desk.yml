@@ -552,7 +552,9 @@ request_new_dp_agreement:
     "<b>Cost:</b> There is no direct cost for data controllers establishing data processor agreements. Resource consumptions are billed to attached data spaces and labs.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
   ]
-  attachments: []
+  attachments: [
+     HUNT Cloud organizational agreement information form. (.pdf)
+  ]
 
 
 request_new_service_center:
@@ -583,7 +585,9 @@ request_new_service_center:
     "<b>Cost:</b> There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
   ]
-  attachments: []
+  attachments: [
+     HUNT Cloud organizational agreement information form. (.pdf)
+  ]
 
 
 request_dp_agreement_version_upgrade:
@@ -612,7 +616,9 @@ request_dp_agreement_version_upgrade:
     "<b>Cost:</b> There is no direct cost upgrading data processor agreements.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
   ]
-  attachments: []
+  attachments: [
+    "Optional: attach a new HUNT Cloud organizational agreement information (.pdf)"
+  ]
 
 
 ### Lab orders
@@ -645,7 +651,9 @@ request_access_new_user:
     "<b>Cost:</b> Included in your lab subscription.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
   ]
-  attachments: []
+  attachments: [
+    A signed user agreement. (.pdf)
+  ]
 
 
 request_lab_user_deactivation:
@@ -709,7 +717,9 @@ reactivate_lab_user:
     "<b>Cost:</b> Included in your lab subscription.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
   ]
-  attachments: []
+  attachments: [
+    A new user agreement. (.pdf)
+  ]
 
 
 request_renew_user_agreement:
@@ -740,7 +750,9 @@ request_renew_user_agreement:
     "<b>Cost:</b> Included in your lab subscription.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
   ]
-  attachments: []
+  attachments: [
+    A signed user agreement (.pdf).
+  ]
 
 
 request_machine_size_update:
@@ -1550,7 +1562,9 @@ new_data_space:
     "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
   ]
-  attachments: []
+  attachments: [
+    A signed data space order. (pdf)
+  ]
 
 
 ### User orders
