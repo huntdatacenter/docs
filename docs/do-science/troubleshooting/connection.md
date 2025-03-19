@@ -138,6 +138,12 @@ You can allow finding your account in Signal app settings:
 
 ![signal-phone-number](./images/signal-phone-number.png)
 
+### Signal cannot find HUNT Cloud phone number
+
+None of the recommendations above helped, even though you have the latest version of Signal app active?
+
+Try to uninstall Signal, and then configure it again from the start. This seems to solve the issue with corrupted metadata after some of the Signal updates.
+
 ## SSH
 
 ### Connection timeout
