@@ -18,7 +18,7 @@ import {
 } from "vuetify/lib";
 
 export default {
-  name: "DoScienceNavitationCards",
+  name: "NavigationCards",
   components: {
     VApp,
     VDialog,
