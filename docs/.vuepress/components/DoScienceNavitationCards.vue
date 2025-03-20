@@ -38,6 +38,7 @@ export default {
   },
   props: {
     id: { type: String, default: "applet" },
+    buttons: { type: Array, default: [] },
   },
   data() {
     return {
@@ -45,80 +46,80 @@ export default {
       cardcolor: '#cfdaf1',
       avatarcolor: '#9db7e1',
       iconcolor: 'rgb(72 84 104)',
-      data: [
-        // {
-        //   title: 'Order new lab',
-        //   subtitle: 'Data space leaders, and compliance administrators can order a new lab.',
-        //   href: '/administer-science/service-desk/data-space-orders/',
-        //   icon: ['fas', 'flask'],
-        // },
-        // {
-        //   title: 'Request new lab user',
-        //   subtitle: 'Lab leader, and coordinator can request adding new users.',
-        //   href: '/administer-science/service-desk/lab-orders/#add-a-new-lab-user',
-        //   icon: ['fas', 'person-circle-plus'],
-        // },
-        {
-          title: 'Service desk',
-          subtitle: 'Service orders that you can request as an active lab user in HUNT Cloud.',
-          href: '/do-science/service-desk/',
-          icon: ['fas', 'envelope'],
-        },
-        {
-          title: 'Workbench',
-          subtitle: 'Getting started with Workbench',
-          href: '/do-science/hunt-workbench/getting-started/',
-          icon: ['fas', 'code'],
-        },
-        {
-          title: 'Technical tools',
-          subtitle: 'Technical guides for Git, Docker, GPUs, Cuda, and other tools.',
-          href: '/do-science/tools/technical/',
-          icon: ['fas', 'toolbox'],
-        },
-        {
-          title: 'Analytical tools',
-          subtitle: 'Guides for analytical tools like RStudio, MATLAB, or Stata.',
-          href: '/do-science/tools/analytical/',
-          icon: ['fas', 'vials'],
-        },
-        {
-          title: 'AI / ML',
-          subtitle: 'GPUs for sensitive AI / ML models.',
-          href: '/do-science/tools/technical/gpu/',
-          icon: ['fas', 'brain'],
-        },
-        // {
-        //   title: 'Video guides',
-        //   subtitle: 'Learn how to work in your lab.',
-        //   href: '',  // TODO -- add link
-        //   icon: ['fas', 'video'],
-        // },
-        {
-          title: 'Data transfers',
-          subtitle: 'How to transfer data between labs, import and export data.',
-          href: '/do-science/data-transfers/',
-          icon: ['fas', 'arrow-down-up-across-line'],
-        },
-        {
-          title: 'FAQ',
-          subtitle: 'Frequently asked questions',
-          href: '/do-science/faq/',
-          icon: ['fas', 'circle-question'],
-        },
-        {
-          title: 'Troubleshooting',
-          subtitle: 'Solutions to some of the common issues that you might encounter.',
-          href: '/do-science/troubleshooting/',
-          icon: ['fas', 'bug'],
-        },
-        // {
-        //   title: '07',
-        //   subtitle: '',
-        //   href: '',
-        //   icon: ['fas', 'flask'],
-        // },
-      ],
+      // data: [
+      //   // {
+      //   //   title: 'Order new lab',
+      //   //   subtitle: 'Data space leaders, and compliance administrators can order a new lab.',
+      //   //   href: '/administer-science/service-desk/data-space-orders/',
+      //   //   icon: ['fas', 'flask'],
+      //   // },
+      //   // {
+      //   //   title: 'Request new lab user',
+      //   //   subtitle: 'Lab leader, and coordinator can request adding new users.',
+      //   //   href: '/administer-science/service-desk/lab-orders/#add-a-new-lab-user',
+      //   //   icon: ['fas', 'person-circle-plus'],
+      //   // },
+      //   {
+      //     title: 'Service desk',
+      //     subtitle: 'Service orders that you can request as an active lab user in HUNT Cloud.',
+      //     href: '/do-science/service-desk/',
+      //     icon: ['fas', 'envelope'],
+      //   },
+      //   {
+      //     title: 'Workbench',
+      //     subtitle: 'Getting started with Workbench',
+      //     href: '/do-science/hunt-workbench/getting-started/',
+      //     icon: ['fas', 'code'],
+      //   },
+      //   {
+      //     title: 'Technical tools',
+      //     subtitle: 'Technical guides for Git, Docker, GPUs, Cuda, and other tools.',
+      //     href: '/do-science/tools/technical/',
+      //     icon: ['fas', 'toolbox'],
+      //   },
+      //   {
+      //     title: 'Analytical tools',
+      //     subtitle: 'Guides for analytical tools like RStudio, MATLAB, or Stata.',
+      //     href: '/do-science/tools/analytical/',
+      //     icon: ['fas', 'vials'],
+      //   },
+      //   {
+      //     title: 'AI / ML',
+      //     subtitle: 'GPUs for sensitive AI / ML models.',
+      //     href: '/do-science/tools/technical/gpu/',
+      //     icon: ['fas', 'brain'],
+      //   },
+      //   // {
+      //   //   title: 'Video guides',
+      //   //   subtitle: 'Learn how to work in your lab.',
+      //   //   href: '',  // TODO -- add link
+      //   //   icon: ['fas', 'video'],
+      //   // },
+      //   {
+      //     title: 'Data transfers',
+      //     subtitle: 'How to transfer data between labs, import and export data.',
+      //     href: '/do-science/data-transfers/',
+      //     icon: ['fas', 'arrow-down-up-across-line'],
+      //   },
+      //   {
+      //     title: 'FAQ',
+      //     subtitle: 'Frequently asked questions',
+      //     href: '/do-science/faq/',
+      //     icon: ['fas', 'circle-question'],
+      //   },
+      //   {
+      //     title: 'Troubleshooting',
+      //     subtitle: 'Solutions to some of the common issues that you might encounter.',
+      //     href: '/do-science/troubleshooting/',
+      //     icon: ['fas', 'bug'],
+      //   },
+      //   // {
+      //   //   title: '07',
+      //   //   subtitle: '',
+      //   //   href: '',
+      //   //   icon: ['fas', 'flask'],
+      //   // },
+      // ],
     };
   },
   computed: {},
@@ -133,7 +134,7 @@ export default {
     <v-app :id="id">
       <v-row class="my-2" dense>
         <!-- columns -->
-        <v-col v-for="item in data" cols="12" sm="6" md="6" :key="item.title">
+        <v-col v-for="item in buttons" cols="12" sm="6" md="6" :key="item.title">
           <v-card
             :color="cardcolor"
             height="100%"
