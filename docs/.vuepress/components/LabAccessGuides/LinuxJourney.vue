@@ -489,6 +489,12 @@ Connection to home closed.`,
                         </p>
 
                         <br />
+                        <h3 id="unable-to-apply-changes"><a href="#unable-to-apply-changes" class="header-anchor">#</a> Unable to apply changes</h3>
+                        <p>
+                          If you are unable to click <i>Apply</i> after your changes, try to re-enter your <code>Private Key Password</code> using your VPN passphrase that you received in Signal message.
+                        </p>
+
+                        <br />
                         <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
                         <p>
                           If you received an error "wrong credentials" after using your TOTP authenticator:
@@ -498,9 +504,14 @@ Connection to home closed.`,
                         </p>
 
                         <br />
-                        <h3 id="unable-to-apply-changes"><a href="#unable-to-apply-changes" class="header-anchor">#</a> Unable to apply changes</h3>
+                        <h3 id="could-not-read-auth-error"><a href="#could-not-read-auth-error" class="header-anchor">#</a> Could not read Auth error</h3>
                         <p>
-                          If you are unable to click <i>Apply</i> after your changes, try to re-enter your <code>Private Key Password</code> using your VPN passphrase that you received in Signal message.
+                          The error messages below indicates that TOTP (Google Auth) code is not accepted.
+                          You should try to setup your TOTP one more time or request a TOTP reset in Service desk.
+                          <div class="language- extra-class"><pre class="language-text">
+                            <code v-text="`ERROR: could not read Auth username/password/ok/string from management interface`"></code>
+                          </pre></div>
+
                         </p>
 
                         <br />
