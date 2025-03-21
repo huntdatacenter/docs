@@ -516,6 +516,17 @@ ${this.ipAddress}    ${this.labName}-entry
                         </p>
 
                         <br />
+                        <h3 id="could-not-read-auth"><a href="#could-not-read-auth" class="header-anchor">#</a> Could not read Auth error</h3>
+                        <p>
+                          The error messages below indicates that TOTP (Google Auth) code is not accepted.
+                          You should try to setup your TOTP one more time or request a TOTP reset in Service desk.
+                          <div class="language- extra-class"><pre class="language-text">
+                            <code v-text="`ERROR: could not read Auth username/password/ok/string from management interface`"></code>
+                          </pre></div>
+
+                        </p>
+
+                        <br />
                         <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
                         <p>
                           The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
