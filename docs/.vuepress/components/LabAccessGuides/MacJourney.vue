@@ -516,7 +516,7 @@ ${this.ipAddress}    ${this.labName}-entry
                         </p>
 
                         <br />
-                        <h3 id="could-not-read-auth"><a href="#could-not-read-auth" class="header-anchor">#</a> Could not read Auth error</h3>
+                        <h3 id="could-not-read-auth-error"><a href="#could-not-read-auth-error" class="header-anchor">#</a> Could not read Auth error</h3>
                         <p>
                           The error messages below indicates that TOTP (Google Auth) code is not accepted.
                           You should try to setup your TOTP one more time or request a TOTP reset in Service desk.
