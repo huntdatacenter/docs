@@ -84,7 +84,7 @@ Click **`Create new session`**.
 
 #### 2.2 In the `Session` tab
 
-2.1 Follow instructions below 
+2.1 Follow instructions below
 
 ![x2go_session_image](./images/x2go_session.png)
 
@@ -120,7 +120,7 @@ For your home machine, [RStudio](/do-science/tools/analytical/r-studio/#install-
 
 Once installed, open X2Go and click **`New session`** and enter a _Session name_ that you will use to identify this connection later, e.g. _demolab - rstudio_
 
-The configuration below will only work on **`On-demand`** and **`Spot`** machines, and not on home machines. 
+The configuration below will only work on **`On-demand`** and **`Spot`** machines, and not on home machines.
 
 ::: warning NOTE
 
@@ -194,6 +194,24 @@ Click **`Create new session`**.
 #### 3.3 Remaining configuration
 
 Follow the setups outlines in the **`Configure the X2Go client for home machines`** for further setup, including **`In the connection tab`**, **`In the media tab`**, **`connecting to the X2Go server`** and **`Connect to other software`**: [Start here](#_2-configure-the-x2go-client-for-your-home-machine).
+
+::: warning Check SSH config for IAAS machine
+
+Make sure that your SSH config (`~/.ssh/config`) is not using `ProxyJump` options. X2go does not seem to support these yet.
+
+```
+    ProxyJump <hostname>
+```
+
+Instead `ProxyCommand` should be used, example:
+
+```
+    ProxyCommand ssh -W %h:%p <hostname>
+```
+
+This requirement applies to both IAAS machine and home machine.
+
+:::
 
 ## Install a desktop environment
 
@@ -323,7 +341,7 @@ You need to make sure you and your lab colleagues can log in to the x2go machine
 
 ## Troubleshooting
 
-#### Password prompts during login 
+#### Password prompts during login
 
 ::: details Read more
 
@@ -403,7 +421,7 @@ Since version 47 Firefox became slow when using x11 rendering. Current versions 
 
 X2Go requires sshfs to be installed in the lab in order to use Shared folders feature.
 
-```
+```bash
 sudo apt update
 sudo apt install -y sshfs
 ```
@@ -413,9 +431,10 @@ sudo apt install -y sshfs
 #### MacOS Ventura - black screen in x2go
 
 ::: details Read more
-Run below command in your Mac terminal for possible resolution of wrong colour display.  
+
+Run below command in your Mac terminal for possible resolution of wrong colour display.
 ```
 defaults write org.xquartz.X11 enable_render_extension 0
 ```
-::: 
 
+:::
