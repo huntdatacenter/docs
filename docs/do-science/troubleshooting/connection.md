@@ -18,7 +18,9 @@ Your lab connection is encrypted over a virtual private network (VPN) to ensure 
 
 ### Access list
 
-We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. We are happy to open for new connections. Copy your IP address: <MyIPAddress /> and request your VPN access list opening in our [service desk](/do-science/service-desk/#vpn-access-list).
+We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. We are happy to open for new connections. Copy your IP address and request your VPN access list opening in our [service desk](/do-science/service-desk/#vpn-access-list).
+
+<MyIPAddress />
 
 ::: tip For NTNU users
 

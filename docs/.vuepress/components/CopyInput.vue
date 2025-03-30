@@ -1,41 +1,30 @@
 <script>
 import {
-  VCol,
-  VRow,
-  VTextField,
+  VApp,
 } from "vuetify/lib";
 
 export default {
   name: "CopyInput",
   components: {
-    VCol,
-    VRow,
-    VTextField,
+    VApp,
+    CopyInputField: () => import('./CopyInputField.vue'),
   },
   props: {
+    id: { type: String, default: "applet" },
     value: { type: [Object, String], default: null },
     label: { type: String, default: "" },
     placeholder: { type: String, default: null },
     prefix: { type: String, default: null },
     suffix: { type: String, default: null },
     prependInnerIcon: { type: String, default: null },
+    loading: { type: Boolean, default: false },
   },
   data() {
     return {}
   },
-  computed: {
-    getRef() {
-      return Math.random().toString(20).slice(2, 6)
-    }
-  },
+  computed: {},
   created() {},
-  methods: {
-    copyText(key) {
-      let textToCopy = this.$refs[key].$el.querySelector('input')
-      textToCopy.select()
-      document.execCommand("copy");
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -43,27 +32,15 @@ export default {
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
-      <v-text-field
+      <CopyInputField
         :value="value"
-        :ref="getRef"
-        autocomplete="ignore-field"
         :label="label"
         :placeholder="placeholder"
-        persistent-placeholder
         :prefix="prefix"
         :suffix="suffix"
         :prepend-inner-icon="prependInnerIcon"
-        outlined
-        dense
-        readonly
-        hide-details
-        @input="$emit('input', $event.target.value)"
-        @focus="$event.target.select()"
-      >
-        <template v-slot:append>
-          <a class="material-icons content_copy" style="cursor: pointer;" @click="copyText(getRef)">&#xe14d;</a>
-        </template>
-      </v-text-field>
+        :loading="loading"
+      />
     </v-app>
   </div>
 </template>
@@ -89,5 +66,16 @@ export default {
 .v-chip.v-size--small
     margin-top: 8px !important
     margin-bottom: 5px !important
+
+.v-text-field--outlined .v-text-field__prefix
+    margin-right: 5px !important
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    font-size: 0.9em
+    color: #787878
 
 </style>
