@@ -87,6 +87,13 @@ module.exports = {
         link: "/about/",
       },
     ],
+    // Necessary for lab access redirect
+    navbar: [
+      {
+        text: "Lab access",
+        link: "/lab-access/",
+      },
+    ],
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
     sidebar: {
       "/do-science/": [
