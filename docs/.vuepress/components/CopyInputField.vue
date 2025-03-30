@@ -49,7 +49,7 @@ export default {
     :label="label"
     :placeholder="placeholder"
     persistent-placeholder
-    :prefix="`${prefix} `"
+    :prefix="prefix ? `${prefix} ` : ``"
     :suffix="suffix"
     :prepend-inner-icon="prependInnerIcon"
     :loading="loading"
