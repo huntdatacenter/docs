@@ -87,12 +87,6 @@ module.exports = {
         link: "/about/",
       },
     ],
-    navbar: [
-      {
-        text: "Lab access",
-        link: "/lab-access/",
-      },
-    ],
     // https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
     sidebar: {
       "/do-science/": [
@@ -798,6 +792,12 @@ module.exports = {
         //     },
         //   ]
         // },
+      ],
+      "/ipv4/": [
+        {
+          title: "IP Address",
+          path: "/ipv4/README.md",
+        },
       ],
       "/": [
         {
