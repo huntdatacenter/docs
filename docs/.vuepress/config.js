@@ -803,7 +803,7 @@ module.exports = {
       "/ipv4/": [
         {
           title: "IP Address",
-          path: "/ipv4/README.md",
+          path: "/ipv4/",
         },
       ],
       "/": [

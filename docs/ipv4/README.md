@@ -9,10 +9,10 @@ editLink: false
 lastUpdated: false
 readingTime: null
 tagline: null
+footerHtml: false
 ---
 
 <!--
-footerHtml: false
 navbar: false
 -->
 
