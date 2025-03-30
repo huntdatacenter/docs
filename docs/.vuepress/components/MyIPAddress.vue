@@ -18,6 +18,7 @@ export default {
   data() {
     return {
       ipAddress: null,
+      loading: true,
     }
   },
   computed: {
@@ -40,8 +41,12 @@ export default {
       (response) => {
         return response.text()
       }
-    ).then((data) => {
-      this.ipAddress = data
+    ).then(
+      (data) => {
+        this.ipAddress = data
+      }
+    ).finally(() => {
+      this.loading = false
     })
   },
 };
@@ -53,7 +58,7 @@ export default {
       <CopyInputField
         :value="getMyIpaddress"
         :prefix="hidePrefix ? `` : `Your IP address:`"
-        :loading="!show"
+        :loading="loading"
       />
     </v-app>
   </div>

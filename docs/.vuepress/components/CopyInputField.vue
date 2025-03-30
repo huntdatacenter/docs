@@ -3,6 +3,7 @@ import {
   VCol,
   VRow,
   VTextField,
+  VProgressCircular,
 } from "vuetify/lib";
 
 export default {
@@ -11,6 +12,7 @@ export default {
     VCol,
     VRow,
     VTextField,
+    VProgressCircular,
   },
   props: {
     value: { type: [Object, String], default: null },
@@ -61,7 +63,8 @@ export default {
     @focus="$event.target.select()"
   >
     <template v-slot:append>
-      <a class="material-icons content_copy" style="cursor: pointer;" @click="copyText(getRef)">&#xe14d;</a>
+      <a v-if="!loading" class="material-icons content_copy" style="cursor: pointer;" @click="copyText(getRef)">&#xe14d;</a>
+      <v-progress-circular v-else indeterminate></v-progress-circular>
     </template>
   </v-text-field>
 </template>
