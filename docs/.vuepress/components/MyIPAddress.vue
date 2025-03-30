@@ -13,6 +13,7 @@ export default {
   },
   props: {
     id: { type: String, default: "applet" },
+    hidePrefix: { type: Boolean, default: false },
   },
   data() {
     return {
@@ -51,7 +52,7 @@ export default {
     <v-app :id="id">
       <CopyInputField
         :value="getMyIpaddress"
-        prefix="Your IP address:"
+        :prefix="hidePrefix ? `` : `Your IP address:`"
         :loading="!show"
       />
     </v-app>
