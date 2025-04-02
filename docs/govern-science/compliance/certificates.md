@@ -126,7 +126,7 @@ This document describes the scope of our information security and privacy manage
 
 Our Statement of Applicability, often referred to as "SoA", states which ISO control objectives we have applied in our ISO 27001 certificate. 
 
-[ISO 27001 Statement of Applicability](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-soa-iso27001.pdf) (PDF)
+[ISO 27001 Statement of Applicability](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-soa-iso27001-and-iso27701.pdf) (PDF)
 
 The SoA is a central document in our certification audits, and it guides Data controllers to quickly asses which controls they should expect to be in place to safeguard their data. 
 
