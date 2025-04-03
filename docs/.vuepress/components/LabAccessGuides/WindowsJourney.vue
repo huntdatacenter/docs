@@ -1370,7 +1370,7 @@ Connection to home closed.`,
                       step="?"
                     >
                       Troubleshooting
-                      <small>Optional tips to try in case of issues</small>
+                      <small>Optional tips to try in case of issues when configuring access</small>
                     </v-stepper-step>
 
                     <v-stepper-content step="4">
@@ -1392,6 +1392,27 @@ Connection to home closed.`,
                         <details class="my-2"><summary style="cursor: pointer;"><strong>I don't remember my passphrase</strong></summary>
                           <div class="pl-4 pr-16 py-2">
                             Don't worry. Request a <a href="/do-science/service-desk/#ssh-passphrase-reset" target="_blank">reset of SSH passphrase</a> in our "do-science" Service desk.
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Nginx error - 403 Forbidden</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            This error means that you are attempting to connect without client certificate.
+                            <br /><br/>
+                            There are 3 different causes each requires a different approach
+                            <ol>
+                              <li>
+                                If you have just installed a fresh client certificate, <strong>restart your computer</strong> to make sure certificates are applied.
+                              </li>
+                              <br />
+                              <li>
+                                If you have not yet installed a fresh client certificate on this computer, review the section <strong>Install your certificates</strong> above. Start by click on blue button <code>Start again</code>.
+                              </li>
+                              <br />
+                              <li>
+                                If you have used Workbench in {{ labName }} lab before, this error means that your certificate expired and you can follow this link to <a href="/do-science/service-desk/#hunt-workbench-reissue" target="_blank">request Workbench reissue</a>. Once your request is processed we will send you a fresh certificate.
+                              </li>
+                            </ol>
                           </div>
                         </details>
 
