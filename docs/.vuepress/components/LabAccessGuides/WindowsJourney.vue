@@ -1395,7 +1395,25 @@ Connection to home closed.`,
                           </div>
                         </details>
 
-                        <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Did Not Connect</strong></summary>
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Warning: Potential security risk ahead</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            Click on the button <code style="font-weight: bold;">Advanced</code> button to find the <strong>Error code</strong> (Feilkode).
+                            <br/><br/>
+                            Continue based on the error code:
+                            <ul>
+                              <li>
+                                If you see error code: <code style="font-size: 90% !important;">SEC_ERROR_UNKNOWN_ISSUER</code> continue with the next step below.
+                              </li>
+                              <li>
+                                If you see any other error code contacts us on Slack or send us <a href="https://docs.hdc.ntnu.no/do-science/service-desk/#general-service-request" target="_blank">general Service desk request</a>.
+                                <br />
+                                Remember to include the error code and screenshot.
+                              </li>
+                            </ul>
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Did Not Connect (SEC_ERROR_UNKNOWN_ISSUER)</strong></summary>
                           <div class="pl-4 pr-16 py-2">
                             <v-alert
                               border="left"
@@ -1415,7 +1433,13 @@ Connection to home closed.`,
                                 Download our public CA certificate from <a href="https://pki.hdc.ntnu.no/hctsca1.crt" target="_blank">https://pki.hdc.ntnu.no/hctsca1.crt</a>
                               </li>
                               <li>
-                                Open the following Firefox URL: <code>about:preferences#privacy</code>.
+                                Open the following Firefox URL: <!-- <code>about:preferences#privacy</code>. -->
+                                <CopyTextField
+                                  :value="`about:preferences#privacy`"
+                                  label=""
+                                  prefix=""
+                                  placeholder=""
+                                />
                               </li>
                               <li>
                                 Scroll down to section <code>Certificates</code> and click on <code>View Certificates</code>.
