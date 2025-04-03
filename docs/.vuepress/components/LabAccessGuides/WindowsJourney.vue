@@ -1397,7 +1397,7 @@ Connection to home closed.`,
 
                         <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Warning: Potential security risk ahead</strong></summary>
                           <div class="pl-4 pr-16 py-2">
-                            Click on the button <code style="font-weight: bold;">Advanced</code> button to find the <strong>Error code</strong> (Feilkode).
+                            Click on the <code style="font-weight: bold;">Advanced</code> button to find the <strong>Error code</strong> (Feilkode).
                             <br/><br/>
                             Continue based on the error code:
                             <ul>
