@@ -1081,8 +1081,8 @@ request_new_gpu:
       key: "storage_type",
       field: "autocompleteone",
       options: [
-        { text: "Regular", value: "regular" },
         { text: "Fast storage (NVME)", value: "nvme" },
+        { text: "Regular", value: "regular" },
       ]
     },
     {
@@ -1129,7 +1129,7 @@ request_blue_fleet:
 
   fields: [
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 1, max: 100, step: 1, field: "number", default: 1 },
+    { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 2, max: 100, step: 1, field: "number", default: 2 },
     { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
     { label: "Storage size per machine (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
   ]
