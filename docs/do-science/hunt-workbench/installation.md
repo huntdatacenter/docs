@@ -68,7 +68,7 @@ Select steps for your operating system:
 
    ![notepad-open-hosts-steps.png](./images/notepad-open-hosts-steps.png)
 
-5. Add your **`hosts record`** to the text file. This is the line that you received from us in your HUNT Workbench onboarding email (look for Lab access link).
+5. Add your **`hosts record`** to the text file. This is the line that you received from us in your HUNT Workbench onboarding email (look for Lab access link, the line is under point 6.9).
 
 6. Select **`File`** > **`Save`** to save your changes and close the **`Notepad`** application.
 
