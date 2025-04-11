@@ -87,6 +87,7 @@ module.exports = {
         link: "/about/",
       },
     ],
+    // Necessary for lab access redirect
     navbar: [
       {
         text: "Lab access",
@@ -798,6 +799,12 @@ module.exports = {
         //     },
         //   ]
         // },
+      ],
+      "/ipv4/": [
+        {
+          title: "IP Address",
+          path: "/ipv4/",
+        },
       ],
       "/": [
         {

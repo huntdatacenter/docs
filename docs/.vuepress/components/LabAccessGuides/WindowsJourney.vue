@@ -1370,7 +1370,7 @@ Connection to home closed.`,
                       step="?"
                     >
                       Troubleshooting
-                      <small>Optional tips to try in case of issues</small>
+                      <small>Optional tips to try in case of issues when configuring access</small>
                     </v-stepper-step>
 
                     <v-stepper-content step="4">
@@ -1395,7 +1395,46 @@ Connection to home closed.`,
                           </div>
                         </details>
 
-                        <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Did Not Connect</strong></summary>
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Nginx error - 403 Forbidden</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            This error means that you are attempting to connect without client certificate.
+                            <br /><br/>
+                            There are 3 different causes each requires a different approach
+                            <ol>
+                              <li>
+                                If you have just installed a fresh client certificate, <strong>restart your computer</strong> to make sure certificates are applied.
+                              </li>
+                              <br />
+                              <li>
+                                If you have not yet installed a fresh client certificate on this computer, review the section <strong>Install your certificates</strong> above. Start by click on blue button <code>Start again</code>.
+                              </li>
+                              <br />
+                              <li>
+                                If you have used Workbench in {{ labName }} lab before, this error means that your certificate expired and you can follow this link to <a href="/do-science/service-desk/#hunt-workbench-reissue" target="_blank">request Workbench reissue</a>. Once your request is processed we will send you a fresh certificate.
+                              </li>
+                            </ol>
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Warning: Potential security risk ahead</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            Click on the <code style="font-weight: bold;">Advanced</code> button to find the <strong>Error code</strong> (Feilkode).
+                            <br/><br/>
+                            Continue based on the error code:
+                            <ul>
+                              <li>
+                                If you see error code: <code style="font-size: 90% !important;">SEC_ERROR_UNKNOWN_ISSUER</code> continue with the next step below.
+                              </li>
+                              <li>
+                                If you see any other error code contacts us on Slack or send us <a href="https://docs.hdc.ntnu.no/do-science/service-desk/#general-service-request" target="_blank">general Service desk request</a>.
+                                <br />
+                                Remember to include the error code and screenshot.
+                              </li>
+                            </ul>
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Did Not Connect (SEC_ERROR_UNKNOWN_ISSUER)</strong></summary>
                           <div class="pl-4 pr-16 py-2">
                             <v-alert
                               border="left"
@@ -1415,7 +1454,13 @@ Connection to home closed.`,
                                 Download our public CA certificate from <a href="https://pki.hdc.ntnu.no/hctsca1.crt" target="_blank">https://pki.hdc.ntnu.no/hctsca1.crt</a>
                               </li>
                               <li>
-                                Open the following Firefox URL: <code>about:preferences#privacy</code>.
+                                Open the following Firefox URL: <!-- <code>about:preferences#privacy</code>. -->
+                                <CopyTextField
+                                  :value="`about:preferences#privacy`"
+                                  label=""
+                                  prefix=""
+                                  placeholder=""
+                                />
                               </li>
                               <li>
                                 Scroll down to section <code>Certificates</code> and click on <code>View Certificates</code>.

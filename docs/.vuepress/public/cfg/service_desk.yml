@@ -263,7 +263,7 @@ request_external_import_kista:
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "External organization", key: "external_organization", field: "textfield" },
-    { label: "Public IPv4 address of external organization (only if outside of NTNU)", key: "ipaddress", pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization. Public IP address should not start with prefixes 10., 127., 192.168., or 169.254. Try to lookup your public IP with https://ip4.me.", optional: true, field: "textfield" },
+    { label: "Public IPv4 address of external organization (only if outside of NTNU)", key: "ipaddress", pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization. Public IP address should not start with prefixes 10., 127., 192.168., or 169.254. Try to lookup your public IP with https://docs.hdc.ntnu.no/ipv4/.", optional: true, field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
@@ -299,7 +299,7 @@ request_external_export_kista:
   fields: [
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "External organization", key: "external_organization", field: "textfield" },
-    { label: "Public IPv4 address of external organization (only if outside of NTNU)", key: "ipaddress", pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization. Public IP address should not start with prefixes 10., 127., 192.168., or 169.254. Try to lookup your public IP with https://ip4.me.", optional: true, field: "textfield" },
+    { label: "Public IPv4 address of external organization (only if outside of NTNU)", key: "ipaddress", pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization. Public IP address should not start with prefixes 10., 127., 192.168., or 169.254. Try to lookup your public IP with https://docs.hdc.ntnu.no/ipv4/.", optional: true, field: "textfield" },
   ]
   requirements: [
     "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
@@ -1081,8 +1081,8 @@ request_new_gpu:
       key: "storage_type",
       field: "autocompleteone",
       options: [
-        { text: "Regular", value: "regular" },
         { text: "Fast storage (NVME)", value: "nvme" },
+        { text: "Regular", value: "regular" },
       ]
     },
     {
@@ -1129,7 +1129,7 @@ request_blue_fleet:
 
   fields: [
     { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 1, max: 100, step: 1, field: "number", default: 1 },
+    { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 2, max: 100, step: 1, field: "number", default: 2 },
     { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
     { label: "Storage size per machine (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
   ]
@@ -1763,7 +1763,7 @@ request_vpn_link:
 
   fields: [
     { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Public IP4 address", key: "ipaddress", pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Get your IP address here: http://ip4.me", field: "textfield" },
+    { label: "Public IP4 address", key: "ipaddress", pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Get your IP address here: https://docs.hdc.ntnu.no/ipv4/", field: "textfield" },
     {
       label: "Access duration",
       key: "access_duration",
@@ -1778,7 +1778,7 @@ request_vpn_link:
   ]
   requirements: [
     "<b>Who can order:</b> All active lab users.",
-    "<b>Required information</b>: <a href='http://ip4.me' target='_blank'>Your IP4 address</a>, location and purpose (see below).",
+    "<b>Required information</b>: <a href='https://docs.hdc.ntnu.no/ipv4/' target='_blank'>Your IP4 address</a>, location and purpose (see below).",
     "<b>Expected response time:</b> One day.",
     "<b>Expected delivery:</b> Opening communicated on email.",
     "<b>Cost:</b> Included in the lab subscription.",

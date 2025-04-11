@@ -27,7 +27,7 @@ External kista is our service for controlled data transfers between your lab and
 
 Data space leaders and Data space compliance administrators can order [external import kistas](/administer-science/service-desk/data-space-orders/#external-import-kista) and [external export kistas](/administer-science/service-desk/data-space-orders/#external-export-kista) in our service desk.
 
-### Is there any technical requirements for the external party? 
+### Is there any technical requirements for the external party?
 
 Yes. Your external party must meet a few [technical requirements](/do-science/data-transfers/external-kista) to be able to use the external kista service.
 
@@ -46,13 +46,15 @@ You may need to communicate with the Uploader if you do not know the size of you
 
 ### How do I know the IP of my external party?
 
-You need to communicate with the external party to get the IPv4 address for the machine they will use to connect to your external kista. We use this information to restrict access to your external kista for other machines. A quick way for your external party to identify their IPv4 address is via [ip4.me](http://ip4.me/).
+You need to communicate with the external party to get the IPv4 address for the machine they will use to connect to your external kista. We use this information to restrict access to your external kista for other machines. A quick way for your external party to identify their IPv4 address is via [docs.hdc.ntnu.no/ipv4/](https://docs.hdc.ntnu.no/ipv4/).
+
+<MyIPAddress />
 
 ::: warning Note on IP addresses
 
 IP addresses that starts with `10.`, `172.` and `192.` are internal addresses. We are not able to open our firewalls for these IPs. You may kindly ask your external party to request their public IPv4 if you are provided one of the above internal IP ranges for your ordering form.
 
-::: 
+:::
 
 ### How do I access my external kista?
 
@@ -68,7 +70,7 @@ Most likely. However, this is decided by the data controller. Feel free to [cont
 
 ### Is external kistas secure enough for my data?
 
-Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/govern-science/compliance/certificates/). However, the decision of whether you can use this service is decided by your data controller. Feel free to [contact us](/contact) for service descriptions aimed at risk assessment of the service. 
+Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/govern-science/compliance/certificates/). However, the decision of whether you can use this service is decided by your data controller. Feel free to [contact us](/contact) for service descriptions aimed at risk assessment of the service.
 
 ### Where can I get additional security information on the external kistas?
 
@@ -93,7 +95,7 @@ Yes. We do allow two-way data transactions between your lab and machines outside
 
 Data space leaders and data space compliance administrators can order network openings in our [service desk](/administer-science/service-desk/data-space-orders/#network-opening). We use this order to document outbound traffic from your lab.
 
-### Why do I need authorization from my data space leader? 
+### Why do I need authorization from my data space leader?
 
 Network openings allow lab users to initiate data transactions outside your data space and outside HUNT Cloud. For transparency, data space leaders are asked to authorize transfers when data moves outside your data space. They are also asked to confirm that your lab holds necessary approvals for the requested transfer.
 

@@ -41,7 +41,7 @@ We plan to migrate most labs in 2024 starting in Q2. Lab leaders in BLUE and ORA
 
 Yes. We aim to avoid conflicts with your internal deadline such as papers, conferences, grants etc. to the extent possible. We will reach out to BLUE and ORANGE data spaces to schedule the migration accordance to their preferences. We will also try to accommodate requests for labs in WHITE data spaces to the extent possible.
 
-### We am supposed to receive a big dataset, should we ask for a prioritization?
+### We are supposed to receive a big dataset, should we ask for a prioritization?
 
 Yes! The available storage capacity in the new location is larger. Please reach out if you plan to import more than 10 terabytes of data.
 

@@ -122,17 +122,19 @@ Lost the lab access link from your onboarding email? No worries, order a new one
 
 We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. Request access from networks outside Norway can be requested here.
 
+<MyIPAddress />
+
 <SDButton form="request_vpn_link" />
 
 * **Who can order:** All active lab users.
-* **Required information**: [Your IP4 address](http://ip4.me), location and purpose (see below).
+* **Required information**: [Your IP4 address](https://docs.hdc.ntnu.no/ipv4/), location and purpose (see below).
 * **Expected response time:** One day.
 * **Expected delivery:** Opening communicated on email.
 * **Cost:** Included in the lab subscription.
 
 ::: details About the required information
 
-* **access_ip**. This is the external IP from your local computer that is visible for us when you connect. [Click here](http://ip4.me) to locate your address. Note that IPs that starts with "10.", "192." and "172." are internal addresses that will not work.
+* **access_ip**. This is the external IP from your local computer that is visible for us when you connect. [Click here](https://docs.hdc.ntnu.no/ipv4/) to locate your address. Note that IPs that starts with "10.", "192." and "172." are internal addresses that will not work.
 * **access_duration**. State if you request a "permanent" or "temporary" access from the address. Permanent openings will follow your user duration. If you need temporary access during travels or similar, state the desired duration of the opening.
 * **access_country**. State from which country you will be connecting.
 
