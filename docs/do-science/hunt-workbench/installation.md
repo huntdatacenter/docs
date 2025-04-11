@@ -92,7 +92,7 @@ Example with vim:
 sudo vim /etc/hosts
 ```
 
-2. Add (append) the **`hosts record`** line that you received from us on email (look for Lab access link).
+2. Add (append) the **`hosts record`** line that you received from us on email (look for Lab access link, the line is under point 6.2).
 
 3. Close your text editor.
 
@@ -116,7 +116,7 @@ Example with vim:
 sudo vim /etc/hosts
 ```
 
-2. Add (append) the **`hosts record`** line that you received from us on email (look for Lab access link).
+2. Add (append) the **`hosts record`** line that you received from us on email (look for Lab access link, the line is under point 6.2).
 
 3. Close your text editor.
 
