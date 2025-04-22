@@ -382,7 +382,7 @@ If you are getting `ERR_CERT_AUTHORITY_INVALID` error:
 
 ::: details Read more
 
-A **`502 Bad gateway`** error is an indication that something is wrong with the configuration on the server side. [Contact us](/contact) in your lab channel on Slack or email further investigations.
+A **`502 Bad gateway`** error is an indication that something is wrong with the configuration on the server side. [Contact us](/contact) in your lab channel on Slack or email for further investigations.
 
 :::
 
