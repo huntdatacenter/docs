@@ -281,13 +281,14 @@ https://demolab.lab.hdc.ntnu.no
 ```
 
 You may get a **`User Identification Request`** for your new certificate. Verify that the certificates are issued by:
+(Click Certificate information > Details and look for names given under)
 
 ```bash
 Organization: "HUNT Cloud"
 Issued Under: "HUNT Cloud Trust Services"
 ```
 
-Ensure that the **`Remember this decision`** box is checked, and click **`OK`**.
+If given the option, ensure that the **`Remember this decision`** box is checked, and click **`OK`**.
 
 ![chrome_select_certificate_confirm.png](./images/chrome_select_certificate_confirm.png)
 
