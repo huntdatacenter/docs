@@ -60,11 +60,13 @@ Do your part to reduce resource use and ease the burden on the environment by st
 
 ![wb_topbar_cp.png](../images/wb_topbar_cp.png)
 
-2. Then in the Control panel hit **`Stop My Server`** button.
+2. In the Control panel hit **`Stop My Server`** button.
 
 ![wb_cp_stopserver.png](../images/wb_cp_stopserver.png)
 
-3. In the top right corner click on the **`Logout`** button.
+3.  Then click on the **`Logout`** button in the top right corner.
+    
+    The next time you log in to your Workbench, click start my server from control panel
 
 ## Working with lab mates
 
