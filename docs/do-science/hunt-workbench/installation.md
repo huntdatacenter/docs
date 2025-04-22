@@ -135,7 +135,7 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 <!-- Tested version: Windows 10 -->
 
-1. Open your **`p12 certificate`** that you downloaded from FileSender (the file will be called `<username-labname>` for example **`user-testlab`**). Make sure the store location is set to **`Current User`** and click **`Next`**:
+1. Open your **`p12 certificate`** that you downloaded from FileSender (the file will be called `<username-labname>` for example **`user-demolab`**). Make sure the store location is set to **`Current User`** and click **`Next`**:
 
    ![1_cert_p12.png](./images/1_cert_p12.png)
 
@@ -248,7 +248,7 @@ We recommend that you use the [Google Chrome browser](https://www.google.com/chr
 
 4. Within **`chrome://settings/certificates`** navigate to section **`Your certificates`** and click the **`Import`** button on the right side of the screen.
 
-5. Browse and select your **`.p12`** file that you downloaded to your local computer (the file will be called `<username-labname>` for example **`user-testlab`**), and enter the **`TLS passphrase`** that we sent you on Signal.
+5. Browse and select your **`.p12`** file that you downloaded to your local computer (the file will be called `<username-labname>` for example **`user-demolab`**), and enter the **`TLS passphrase`** that we sent you on Signal.
 
 6. Restart Chrome.
 
