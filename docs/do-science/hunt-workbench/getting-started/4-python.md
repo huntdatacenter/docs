@@ -21,8 +21,8 @@ Below is an example on how you create a Conda environment with _Python_ and _IPy
 
 ```bash
 # -- Principal example 
-mamba create -n <name> 'python~=3.10.*' 'ipykernel' 'pip' 'ipywidgets>=8.0.2,<9.0.0'
+mamba create -n <name> 'python==3.12.*' 'ipykernel' 'pip' 'ipywidgets>=8.0.2,<9.0.0'
 
 # -- Demo example
-mamba create -n python 'python~=3.10.17' 'ipykernel' 'pip' 'ipywidgets>=8.0.2,<9.0.0'
+mamba create -n py312env 'python~=3.12.*' 'ipykernel' 'pip' 'ipywidgets>=8.0.2,<9.0.0'
 ```
