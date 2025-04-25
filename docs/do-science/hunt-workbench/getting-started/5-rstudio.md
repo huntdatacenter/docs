@@ -21,7 +21,7 @@ We recommend using R via Conda, as its much more stable in your lab. This page c
 
 ### How to create R environment
 
-Here's an example on how to create a Conda environment with _R_ and _R-IRkernel_ kernel and commonly used packages, paste this into your terminal in workbench. Feel free to remove or add other packages if you wish:
+Here's an example on how to create a Conda environment with _R_ and _R-IRkernel_ kernel and commonly used packages, paste this into your [terminal](/do-science/hunt-workbench/faq/#terminal) in workbench. Feel free to remove or add other packages if you wish:
 
 ```bash
 mamba create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'r-languageserver' 'r-lintr' 'cmake' 'compilers' 'cmake' 'gmp'
@@ -73,7 +73,7 @@ conda install -n r-base -c conda-forge r-dplyr
 
 For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr).
 
-3. When the installation is complete, open _RStudio_ or _R_ in your workbench and load your new package:
+3. When the installation is complete, open _RStudio_ or _R_ in your workbench (look further down for guide on [how to use R in terminal](https://docs.hdc.ntnu.no/do-science/hunt-workbench/getting-started/rstudio/#:~:text=activate%20r%2Dbase-,%23,-How%20can%20I)) and load your new package:
 
 ```bash
 # -- Principal example
