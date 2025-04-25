@@ -14,7 +14,7 @@ To be able to run MATLAB in Workbench you need to bring your own license. In mos
 
 ::: tip NTNU employees
 
-We already have the license for NTNU employees, so you can just request MATLAB in Workbench from the do science Service desk.
+We already have the license for NTNU employees and it should already be in your workbench, if you can't find it, send us a message through general service request in [do science Service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#tingweek:~:text=data%20space%20subscription.-,%23,-General%20service%20request).
 
 :::
 
