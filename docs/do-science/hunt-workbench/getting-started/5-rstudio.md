@@ -17,7 +17,7 @@ description: How to use RStudio and R
 -->
 
 ## R
-We recommend using R via conda, as its much more stable in your lab. This page contains guides on how you can setup R through Conda in your workbench
+We recommend using R via Conda, as its much more stable in your lab. This page contains guides on how you can setup R through Conda in your workbench
 
 ### How to create R environment
 
