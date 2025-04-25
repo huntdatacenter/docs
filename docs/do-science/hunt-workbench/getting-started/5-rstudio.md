@@ -68,7 +68,7 @@ conda activate r-base
 conda install -n r-base -c conda-forge r-'<package-name>' r-'<another-package-name>'
 
 # -- Practical example*
-mamba install -n r-base -c conda-forge r-dplyr
+conda install -n r-base -c conda-forge r-dplyr
 ```
 
 For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr).
