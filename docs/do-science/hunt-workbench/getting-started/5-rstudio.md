@@ -21,7 +21,7 @@ We recommend using R via Conda, as its much more stable in your lab. This page c
 
 ### How to create R environment
 
-Here's an example on how to create a Conda environment with _R_ and _R-IRkernel_ kernel and commonly used packages:
+Here's an example on how to create a Conda environment with _R_ and _R-IRkernel_ kernel and commonly used packages, paste this into your terminal in workbench. Feel free to remove or add other packages if you wish:
 
 ```bash
 mamba create -n <name> 'r-base>=4.0,<5.0' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'r-languageserver' 'r-lintr' 'cmake' 'compilers' 'cmake' 'gmp'
