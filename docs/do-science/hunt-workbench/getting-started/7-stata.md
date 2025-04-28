@@ -19,7 +19,7 @@ description: How to use Stata
 
 Running Stata in Workbench requires a license. In most cases such license is already provided by your institution and you can request it from your IT.
 
-We are part of NTNU which means that NTNU employees do not have to bring in the license. You can just request Stata in Workbench.
+We are part of NTNU which means that NTNU employees do not have to bring in the license. You can just request Stata in Workbench. Send request through [general service request](/do-science/service-desk/#tingweek:~:text=data%20space%20subscription.-,%23,-General%20service%20request)
 
 ## Limitations
 
