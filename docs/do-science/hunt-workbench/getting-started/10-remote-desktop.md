@@ -25,7 +25,7 @@ Tools that come bundled with remote desktop in Workbench:
 - Image viewer
 
 Tools that you can request:
-- STATA
+- STATA, Send request through [general service request](/do-science/service-desk/#tingweek:~:text=data%20space%20subscription.-,%23,-General%20service%20request)
 
 Tools that you can download yourself:
 - ITKsnap (version 4.2.0 or higher)
