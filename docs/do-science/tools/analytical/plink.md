@@ -70,7 +70,7 @@ to install [Plink2 package](https://anaconda.org/bioconda/plink2) or follow with
 
 To install package into your [Conda](/do-science/tools/analytical/conda/)
 environment use this command:
-```
+```bash
 conda install -c bioconda plink2
 ```
 

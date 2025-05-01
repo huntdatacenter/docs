@@ -61,8 +61,9 @@ We recommend to start with [bioconda](https://anaconda.org/bioconda) and [conda-
 
 2.1 A quick way to make sure your channels are added correctly is to (re)add them in this order:
 
-```
-conda config --add channels defaults
+```bash
+conda config --remove channels defaults
+conda config --add channels nodefaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
