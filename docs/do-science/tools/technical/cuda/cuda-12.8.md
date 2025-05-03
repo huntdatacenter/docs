@@ -131,8 +131,8 @@ The expected output:
 /home/ubuntu/cuda-12.8.1/bin/nvcc
 
 nvcc: NVIDIA (R) Cuda compiler driver
-Copyright (c) 2005-2024 NVIDIA Corporation
-Built on Tue_Feb_27_16:19:38_PST_2024
-Cuda compilation tools, release 12.8, V12.8.99
-Build cuda_12.8.r12.8/compiler.33961263_0
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Fri_Feb_21_20:23:50_PST_2025
+Cuda compilation tools, release 12.8, V12.8.93
+Build cuda_12.8.r12.8/compiler.35583870_0
 ```
