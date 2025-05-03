@@ -230,6 +230,7 @@ module.exports = {
                     "/do-science/tools/technical/cuda/cuda-11.8.md",
                     "/do-science/tools/technical/cuda/cuda-12.1.md",
                     "/do-science/tools/technical/cuda/cuda-12.4.md",
+                    "/do-science/tools/technical/cuda/cuda-12.8.md",
                   ],
                 },
                 "/do-science/tools/technical/htop.md",
