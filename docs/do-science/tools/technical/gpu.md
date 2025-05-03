@@ -28,7 +28,7 @@ See our [GPU accelerator machine types](/administer-science/services/machine-typ
 
 We pre-install the machines with with the following software to get you started:
 
-- Ubuntu 22.04 LTS
+- Ubuntu 24.04 LTS
 - Docker
 - NVIDIA 550 drivers or later <!-- (from the [`graphics-drivers` repository](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa?field.series_filter=jammy)) -->
 - NVIDIA Container Toolkit (also known as **`nvidia-docker`**)
@@ -49,13 +49,13 @@ nvidia-smi
 
 ### Specify CUDA version
 
-If you wish to use a specific version of CUDA, we recommend that you use the NVIDIA Container Toolkit to run a container of your choosing. Here is an example for CUDA version **`12.0`**:
+If you wish to use a specific version of CUDA, we recommend that you use the NVIDIA Container Toolkit to run a container of your choosing. Here is an example for CUDA version **`12.8`**:
 
 ```bash
-sudo docker run --rm --runtime=nvidia nvidia/cuda:12.0.0-base-ubuntu22.04 nvidia-smi
+sudo docker run --rm --runtime=nvidia nvidia/cuda:12.8.1-base-ubuntu24.04 nvidia-smi
 ```
 
-More versions of CUDA base image can be found in [Docker Hub](https://hub.docker.com/r/nvidia/cuda/tags?page=1&name=base-ubuntu22.04).
+More versions of CUDA base image can be found in [Docker Hub](https://hub.docker.com/r/nvidia/cuda/tags?page=1&name=base-ubuntu24.04).
 
 If you do not want to use Docker, you can also try our [CUDA installation guides](/do-science/tools/technical/cuda/).
 
@@ -66,19 +66,19 @@ If you want to use Jupyterlab on your GPU machine we recommend the [iot-salzburg
 This project uses the NVIDIA CUDA image as the base image and installs their toolstack on top of it to enable GPU calculations in the Jupyter notebooks. Python packages Tensorflow and Pytorch are preinstalled to match the Cuda version (GPU drivers).
 
 ```bash
-docker pull cschranz/gpu-jupyter:v1.4_cuda-11.6_ubuntu-20.04_python-only
+docker pull cschranz/gpu-jupyter:v1.9_cuda-12.6_ubuntu-24.04_python-only
 
-docker run --rm -d --runtime=nvidia -v ${HOME}:${HOME} --workdir ${HOME} -e HOME=${HOME} -e GRANT_SUDO=yes -e JUPYTER_ENABLE_LAB=yes -p 8888:8888 --user root --name gpu-jupyter cschranz/gpu-jupyter:v1.4_cuda-11.6_ubuntu-20.04_python-only
+docker run --rm -d --runtime=nvidia -v ${HOME}:${HOME} --workdir ${HOME} -e HOME=${HOME} -e GRANT_SUDO=yes -e JUPYTER_ENABLE_LAB=yes -p 8888:8888 --user root --name gpu-jupyter cschranz/gpu-jupyter:v1.9_cuda-12.6_ubuntu-24.04_python-only
 
 docker ps
 ```
 
-The commands above starts an instance of GPU-Jupyter with the tag **`v1.4_cuda-11.6_ubuntu-20.04_python-only`** at **`http://localhost:8888`** (port _8888_). The default password is **`gpu-jupyter`**.
+The commands above starts an instance of GPU-Jupyter with the tag **`v1.9_cuda-12.6_ubuntu-24.04_python-only`** at **`http://localhost:8888`** (port _8888_). The default password is **`gpu-jupyter`**.
 
 It is also possible to start an interactive bash session and run scripts inside:
 
 ```bash
-docker run --rm --runtime=nvidia -v ${HOME}:${HOME} --workdir ${HOME} -e HOME=${HOME} -v /etc/passwd:/etc/passwd -v /etc/group:/etc/group --user "1000" --entrypoint bash -ti cschranz/gpu-jupyter:v1.4_cuda-11.6_ubuntu-20.04_python-only
+docker run --rm --runtime=nvidia -v ${HOME}:${HOME} --workdir ${HOME} -e HOME=${HOME} -v /etc/passwd:/etc/passwd -v /etc/group:/etc/group --user "1000" --entrypoint bash -ti cschranz/gpu-jupyter:v1.9_cuda-12.6_ubuntu-24.04_python-only
 ```
 
 More details about this docker image can be found on [docker hub](https://hub.docker.com/r/cschranz/gpu-jupyter).

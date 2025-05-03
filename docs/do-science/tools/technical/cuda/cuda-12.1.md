@@ -18,7 +18,7 @@ You don’t need to use `sudo` to install **[CUDA Toolkit](https://docs.nvidia.c
 
 In this example we will use `${HOME}/cuda-12.1.0` as our installation path.
 
-Download CUDA installer:
+Download CUDA runfile installer:
 
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/12.1.0/local_installers/cuda_12.1.0_530.30.02_linux.run
