@@ -309,6 +309,7 @@ module.exports = {
                 "/do-science/guides/access-guides/reset-ssh-workbench.md",
                 "/do-science/guides/access-guides/vpn-configuration.md",
                 "/do-science/guides/access-guides/ssh-configuration.md",
+                "/do-science/guides/access-guides/keka.md",
               ],
             },
           ],
