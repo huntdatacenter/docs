@@ -19,9 +19,11 @@ tags:
 
 [[toc]]
 
-::: tip Conda for HUNT Workbench
+::: tip Conda in Workbench
 
-This guide is for the installation of Conda directly on your lab machines. Head over to our [Reproducibility](/do-science/hunt-workbench/faq/#reproducibility) FAQ in the HUNT Workbench section to learn more about Conda in your workbench environment.
+This guide is for the installation of Conda on your lab machines when connecting over SSH.
+
+Head over to our [Getting started with Conda in Workbench](/do-science/hunt-workbench/getting-started/conda/) section to learn more about Conda in your Workbench environment.
 
 :::
 

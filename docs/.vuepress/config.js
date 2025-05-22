@@ -216,6 +216,7 @@ module.exports = {
               title: "Technical tools",
               text: "Technical tools",
               isGroup: true,
+              path: "/do-science/tools/technical/",
               children: [
                 "/do-science/tools/technical/docker.md",
                 "/do-science/tools/technical/git.md",
@@ -247,8 +248,9 @@ module.exports = {
             },
             {
               title: "Analytical tools",
-              text: "Analytical  tools",
+              text: "Analytical tools",
               isGroup: true,
+              path: "/do-science/tools/analytical/",
               children: [
                 "/do-science/tools/analytical/bluebox.md",
                 "/do-science/tools/analytical/conda.md",
@@ -271,6 +273,7 @@ module.exports = {
               title: "Transfer tools",
               text: "Transfer tools",
               isGroup: true,
+              path: "/do-science/tools/transfer/",
               children: [
                 "/do-science/tools/transfer/7z.md",
                 "/do-science/tools/transfer/lftp.md",
