@@ -264,6 +264,7 @@ module.exports = {
                 "/do-science/tools/analytical/saige.md",
                 "/do-science/tools/analytical/spyder-ide.md",
                 "/do-science/tools/analytical/stata.md",
+                "/do-science/tools/analytical/itksnap.md",
               ],
             },
             {
