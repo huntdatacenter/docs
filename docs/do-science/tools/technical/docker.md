@@ -21,7 +21,7 @@ Docker will fail on your **`home`** machine due to security restrictions. We rec
 
 ## Installation
 
-Follow the official [Docker installation guide](https://docs.docker.com/engine/install/ubuntu/) to install Docker on unmanaged machines (On-demand and BLUE machines). [GPU machines](/do-science/tools/technical/gpu/) come with nvidia-docker preinstalled.
+Follow the official [Docker installation guide](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) to install Docker on unmanaged machines (On-demand and BLUE machines). [GPU machines](/do-science/tools/technical/gpu/) come with nvidia-docker preinstalled.
 
 
 

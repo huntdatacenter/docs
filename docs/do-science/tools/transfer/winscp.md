@@ -48,7 +48,7 @@ Click **`Advanced`** and select **`Tunnel`**:
 In the **`Tunnel tab`** insert:
 
 - Connect through SSH tunnel: **`Check`**
-- Host name: **`<your-lab-IP>`** (usually starts with 10.42.130-something)
+- Host name: **`<your-lab-IP>`** (You can find your lab ip in your lab access link, if you don't have access to the link any more, request a new one through [here](https://docs.hdc.ntnu.no/do-science/service-desk/#request-lab-access-link-reissue)) 
 - Protocol: **`22`**
 - User name: **`<your-username>`**
 - Password: **`<your-ssh-password>`**

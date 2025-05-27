@@ -60,5 +60,5 @@ Setting for limiting transfer connections to fairly share bandwith with others.
 ## Immediate troubleshooting
 
 ### What is my lab IP address ?
-You can find you lab IP address in config.txt file sent over to your email or via access link which you were provided during initial onboarding. Cannot find lab access link ? Request your lab access link [here](/do-science/service-desk/#request-lab-access-reissue)
+You can find you lab IP address in config.txt file sent over to your email or via access link which you were provided during initial onboarding. Cannot find lab access link ? Request your lab access link [here](https://docs.hdc.ntnu.no/do-science/service-desk/#request-lab-access-link-reissue)
 
