@@ -53,7 +53,7 @@ This is an example of data transfers from your local computer to your lab.
 
 ```bash
 # -- Principal example
-rsync -avuz path/to/your/local/directory <username>@<labname>:/mnt/cargo/
+rsync -avuz path/to/your/local/directory <username>@<labname>:/mnt/scratch/
 
 # -- Practical example
 rsync -avuz path/to/your/local/directory demouser@demolab:/mnt/scratch/

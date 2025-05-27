@@ -216,6 +216,7 @@ module.exports = {
               title: "Technical tools",
               text: "Technical tools",
               isGroup: true,
+              path: "/do-science/tools/technical/",
               children: [
                 "/do-science/tools/technical/docker.md",
                 "/do-science/tools/technical/git.md",
@@ -230,6 +231,7 @@ module.exports = {
                     "/do-science/tools/technical/cuda/cuda-11.8.md",
                     "/do-science/tools/technical/cuda/cuda-12.1.md",
                     "/do-science/tools/technical/cuda/cuda-12.4.md",
+                    "/do-science/tools/technical/cuda/cuda-12.8.md",
                   ],
                 },
                 "/do-science/tools/technical/htop.md",
@@ -246,8 +248,9 @@ module.exports = {
             },
             {
               title: "Analytical tools",
-              text: "Analytical  tools",
+              text: "Analytical tools",
               isGroup: true,
+              path: "/do-science/tools/analytical/",
               children: [
                 "/do-science/tools/analytical/bluebox.md",
                 "/do-science/tools/analytical/conda.md",
@@ -263,12 +266,14 @@ module.exports = {
                 "/do-science/tools/analytical/saige.md",
                 "/do-science/tools/analytical/spyder-ide.md",
                 "/do-science/tools/analytical/stata.md",
+                "/do-science/tools/analytical/itksnap.md",
               ],
             },
             {
               title: "Transfer tools",
               text: "Transfer tools",
               isGroup: true,
+              path: "/do-science/tools/transfer/",
               children: [
                 "/do-science/tools/transfer/7z.md",
                 "/do-science/tools/transfer/lftp.md",
@@ -308,6 +313,7 @@ module.exports = {
                 "/do-science/guides/access-guides/reset-ssh-workbench.md",
                 "/do-science/guides/access-guides/vpn-configuration.md",
                 "/do-science/guides/access-guides/ssh-configuration.md",
+                "/do-science/guides/access-guides/keka.md",
               ],
             },
           ],

@@ -21,6 +21,13 @@ description: This page lists information and questions about our Tingweeks.
 
 :::
 
+### Tingweek #15 (2025-06)
+
+- **Labting**: Tuesday 3 June 2025 - 2 to 3 p.m. CET
+- **Admin ting**: Wednesday 4 June 2025 - 9 to 10 a.m. CET
+- **Data controller ting**: Wednesday 4 June 2025 - 1 to 2 p.m. CET
+- **Financial ting**: Thursday 5 June 2025 - 9 to 10 a.m. CET
+
 ### Tingweek #14 (2025-02)
 
 - **Labting**: Tuesday 11 February 2025 - 2 to 3 p.m. CET
