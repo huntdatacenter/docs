@@ -13,6 +13,62 @@ description: Patch notes list major and minor updates to HUNT Cloud's services.
 This page contains descriptions of updates (patches) to HUNT Cloud's services. All with the aim to provide the best possible conditions scientific explorations.
 
 
+## Patch note 2.11.4
+
+*2025-05-28*
+
+::: details Do science
+
+<h3>Major changes</h3>
+
+**Documentation updates** 
+
+We are updating our technical, analytical and transfer guides and removing those that do not seem relevant anymore. 
+
+If you think we are missing an important guide or a guide is not working as expected, please give us feedback via this [contact form](/about/contact/).
+
+<h3>Minor changes</h3>  
+
+- added automatic IPv4 checking https://docs.hdc.ntnu.no/ipv4/
+- 
+
+::: 
+
+::: details Administer science 
+
+<h3>Major changes</h3>
+
+**New GPUs on offer**
+
+Introduced two new GPU series from NVIDIA in 2025-Q1. 
+
+**NVIDIA A16** - cheapest card on offer. Providing 16GB of VRAM while giving strong performance. We can utilise up to 12x cards in a single lab gpu node, offering up to 192GB of VRAM.
+
+**NVIDIA L40S** - New series from NVIDIA aiming for fast AI, image and ML processing. This is a new gen of A40 cards, offering 48GB of VRAM in a single card. Up to 2x cards available in a single gpu node.  
+
+You can review price on both GPU cards [here](/administer-science/prices/pricelist/).  
+
+<h3>Minor changes</h3>
+
+- Cleaned up inconsistencies in price lists
+
+:::
+
+::: details Govern science
+
+<h3>Major changes</h3>
+
+**Updated ISO certifcation** 
+
+New certificate are uploaded under [certificates](/govern-science/compliance/certificates/#iso-iec-27001-certificate)
+
+
+<h3>Minor changes</h3>
+
+
+::: 
+
+
 ## Patch note 2.11.3
 
 *2024-10-09*
@@ -33,7 +89,7 @@ As a next step we are thinking about how to expand the video guides into other t
 - RStudio: Upgraded from v2023 to v2024, and improved the start-up time in Workbench. 
 - Visual Studio Code: Version upgrade (2024/8) and included support for Snakemake.
 - Workbench environment: Extended the environment timeout from 3 to 10 days. This means that environments that are inactive for more than 10 days will be shut down. 
-- fixed issue in Windows lab access link where commands would not work if you have space in your user directory structure
+- Fixed issue in Windows lab access link where commands would not work if you have space in your user directory structure
 
 ::: 
 
