@@ -249,7 +249,7 @@ nmap -Pn --traceroute -p <port number>  ekista.hdc.ntnu.no
 ```
 traceroute -P TCP -p <port number> ekista.hdc.ntnu.no
 ```
-*Note* on linux or macOS machines, you might need sudo permission
+*Note*: on linux or macOS machines, you might need sudo permission.
 
 2. Share output in communication email with HUNT Cloud.
 
