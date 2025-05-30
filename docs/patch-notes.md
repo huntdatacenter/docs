@@ -23,7 +23,7 @@ This page contains descriptions of updates (patches) to HUNT Cloud's services. A
 
 **Documentation updates** 
 
-We are updating our technical, analytical and transfer guides and removing those that do not seem relevant anymore. 
+We are updating our [tools](/tools/) section in do science guides.
 
 If you think we are missing an important guide or a guide is not working as expected, please give us feedback via this [contact form](/about/contact/).
 
