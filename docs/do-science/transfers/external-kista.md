@@ -54,118 +54,43 @@ You will use a `SSH public key` to authenticate and access your kista instead of
 
 We recommend that you create a dedicated SSH key pair for each kista transfer. Click on the section below for a step wise guide on how to generate a new key pair in Windows that you can use for your kista access.
 
-::: details How to generate a RSA SSH key pair on Windows with WinSCP
+::: details How to generate a RSA SSH key pair on Windows 10 or higher using Open SSH
 
-[WinSCP](https://winscp.net/) is an open source data transfer client for Windows that we recommend for SFTP transfers. Download WinSCP from [winscp.net](https://winscp.net/eng/download.php) and install the software. Follow these steps to generate a RSA SSH key pair:
+1. Open new Command Prompt window (WIN + R and type cmd.exe then hit Enter).
 
-1. In `WinSCP`:
-   - Click `New Session`
-   - Click `Tools`
-   - Click `Run PuTTYgen`
+2. Generate rsa key pair in default location.
 
-![winscp_sshkey_1](./images/winscp_sshkey_1.png "winscp_sshkey_1")
+```
+ssh-keygen -q -t rsa -b 4096 -f "%USERPROFILE%\.ssh\ekista" -N ""
+```
 
-2. In `PuTTY Key Generator`:
-   - Click `Generate` to generate a new RSA key pair.
+3. Copy public key. This command will save it to a new text file and place it on your desktop.
 
-![winscp_sshkey_2](./images/winscp_sshkey_2.png "winscp_sshkey_2")
+```
+type %USERPROFILE%\.ssh\ekista.pub > %USERPROFILE%\Desktop\ekista_pubkey.txt
+```
 
-3. In `PuTTY Key Generator`:
-   - Enter `ekista` in `Key comment`
-   - Enter a passphrase in `Key passphrase`
-   - Enter the same passphrase in `Confirm passphrase`
-   - Note. You will use this passphrase when you use the SSH key during the kista connection, so please make sure to remember it or store it in a suitable password manager.
-   - Click `Save private key`
-
-![winscp_sshkey_3](./images/winscp_sshkey_3.png "winscp_sshkey_3")
-
-4. In `Save private key as` window:
-   - Select a place to store the private key
-   - Enter `ekista` as the filename
-   - Click `Save`
-
-![winscp_sshkey_4](./images/winscp_sshkey_4.png "winscp_sshkey_4")
-
-5. In `PuTTY Key Generator`:
-   - Click `Save public key`
-
-![winscp_sshkey_5](./images/winscp_sshkey_5.png "winscp_sshkey_5")
-
-6. In `Save public key as` window:
-   - Select a place to store the public key
-   - Enter `ekista.pub` as the filename
-   - Click `Save`
-
-![winscp_sshkey_6](./images/winscp_sshkey_6.png "winscp_sshkey_6")
-
-You should now have a SSH key pair consisting of the following files:
-
-- The private key `ekista.ppk`
-- The public key `ekista.pub`
+4. Share the `ekista_pubkey.txt` to your HUNT Cloud contact. 
 
 :::
 
 ::: details How to generate a RSA SSH key pair on OS X, macOS and Ubuntu
 
-**1. Generate a new dedicated public/private RSA key pair.**
+1. Open new Terminal
+
+2. Generate a new dedicated RSA key pair.
 
 ```bash 
-cd ~/.ssh
-ssh-keygen
+ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/ekista -N ""
 ```
 
-You should see the following output: 
+3. Copy the id_rsa key to your downloads directory.
 
-```
-Generating public/private rsa key pair.
-Enter file in which to save the key (/your_home/.ssh/id_rsa):
-```
-
-**2. Name the key.**
-
-Name your key `ekista` and press enter.
-
-```
-Enter file in which to save the key (/your_home/.ssh/id_rsa): ekista
+```bash
+cat ~/.ssh/ekista.pub > ~/Downloads/ekista_pubkey.txt
 ```
 
-**3. Add a passphrase for you key.**
-
-```
-Enter passphrase (empty for no passphrase):
-```
-
-We recommend that you add a passphrase on your key. You will use this passphrase when you use the SSH key during the kista connection, so please make sure to remember it or store it in a suitable password manager.
-
-The key should not be generated with the expected output: 
-
-```
-Your identification has been saved in ekista
-Your public key has been saved in ekista.pub
-The key fingerprint is:
-SHA256:<long textstring>
-
-The key's randomart image is:
-+---[RSA 3072]----+
-|       ....      |
-|       +.=       |
-|      o O .      |
-|     o + *       |
-|    . OoS.=.     |
-| o . =o=o*oo     |
-|. B ..+.o.E o    |
-| + = ..ooo =     |
-|  o   oo o=      |
-+----[SHA256]-----+
-```
-
-4. **Send us your public key.**
-
-See your new key files: 
-
-```
-ls | grep eksita
-```
+4. Share the `ekista_pubkey.txt` to your HUNT Cloud contact. 
 
 :::
 
@@ -179,7 +104,7 @@ We accept the following public key types:
 
 **2. Share public SSH key with HUNT Cloud**
 
-After generating the SSH key pair, please share the **public key** (not the private one) with us. Send your new public key (`ekista.pub`) as an email attachment to your HUNT Cloud contact that can forward your key to us as an attachment in their service order.
+After generating the SSH key pair, please share the **public key** (not the private one) with us. Send your new public key `ekista_pubkey.txt` as an email attachment to your HUNT Cloud contact that can forward your key to us as an attachment in their service order.
 
 
 ### SFTP client
@@ -216,7 +141,7 @@ Below is a guide on how to connect using the WinSCP SFTP client on Windows.
 3. In the `Advanced Site Settings` window:
    - Select the `Authentication` page in the sidebar
    - Uncheck the `Attempt 'keyboard-interactive' authentication` checkbox
-   - Enter the location of the `Private key file`. If you followed the previous guide, then this should be the location of the `ekista.ppk` private key file.
+   - Enter the location of the `Private key file`. If you followed the previous guide, then this should be the location of the `ekista` private key file.
    - Click `OK`
 
 ![ekista_8](./images/ekista_3.png "ekista_8")
@@ -285,3 +210,47 @@ Once logged in you can follow the examples from our [internal kista guide](/do-s
 
 Follow the examples from our [internal kista guide](/do-science/data-transfers/internal-kista/).
 
+## Troubleshooting
+
+#### Cannot connect to external kista
+
+1. Confirm that you are using correct key to authenticate (based on guide above). 
+
+2. If correct key is used, there are few things that could be an issue. 
+
+- connection is blocked by firewalls (organisational or on your local computer/virtual machine)
+
+- misconfiguration on HUNT Cloud side
+
+3. To get the correct idea on what could be an issue, you can share `nmap` or `traceroute` logs to be shared with HUNT Cloud
+
+::: details Nmap
+
+This is a faster way to get results out of traceroute. 
+
+1. Download and install nmap from official website.
+
+https://nmap.org/download.html  
+
+2. Run below code in command prompt or terminal (change port to match the one for your ekista transfer).
+
+```
+nmap -Pn --traceroute -p <port number>  ekista.hdc.ntnu.no
+```
+
+3. Share output in communication email with HUNT Cloud.
+
+::: 
+
+::: details Traceroute
+
+1. Run below code in command prompt or terminal (this might take a while)
+
+```
+traceroute -P TCP -p <port number> ekista.hdc.ntnu.no
+```
+*Note* on linux or macOS machines, you might need sudo permission
+
+2. Share output in communication email with HUNT Cloud.
+
+:::
