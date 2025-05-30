@@ -222,7 +222,7 @@ Follow the examples from our [internal kista guide](/do-science/data-transfers/i
 
 - misconfiguration on HUNT Cloud side
 
-3. To get the correct idea on what could be an issue, you can share `nmap` or `traceroute` logs to be shared with HUNT Cloud
+3. To get the correct idea on what could be an issue, you can share `nmap` or `traceroute` logs with HUNT Cloud in communication email
 
 ::: details Nmap
 
