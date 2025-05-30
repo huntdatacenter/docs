@@ -230,7 +230,7 @@ This is a faster way to get results out of traceroute.
 
 1. Download and install nmap from official website.
 
-https://nmap.org/download.html  
+[https://nmap.org/download.html](https://nmap.org/download.html)
 
 2. Run below code in command prompt or terminal (change port to match the one for your ekista transfer).
 
