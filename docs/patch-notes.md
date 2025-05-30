@@ -29,8 +29,7 @@ If you think we are missing an important guide or a guide is not working as expe
 
 <h3>Minor changes</h3>  
 
-- added automatic IPv4 checking https://docs.hdc.ntnu.no/ipv4/
-- 
+- added automatic IPv4 checking [here](/ipv4/)
 
 ::: 
 
