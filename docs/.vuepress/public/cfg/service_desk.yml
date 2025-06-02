@@ -971,9 +971,8 @@ request_new_cpu:
       key: "subscription",
       field: "autocompleteone",
       options: [
-        { text: "Commitment", value: "commitment" },
         { text: "On-demand", value: "ondemand" },
-        { text: "Blue", value: "blue" },
+        { text: "Spot", value: "spot" },
       ]
     },
   ]
@@ -1090,9 +1089,8 @@ request_new_gpu:
       key: "subscription",
       field: "autocompleteone",
       options: [
-        { text: "Commitment", value: "commitment" },
         { text: "On-demand", value: "ondemand" },
-        { text: "Blue", value: "blue" },
+        { text: "Spot", value: "spot" },
       ]
     },
   ]
