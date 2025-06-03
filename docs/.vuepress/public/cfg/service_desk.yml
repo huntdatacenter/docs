@@ -1989,9 +1989,9 @@ request_tape_archive:
 
   requirements: [
     "<b>Who can order:</b> Lab leader or coordiator.",
-    "<b>Required information: size of dataset and retention period</b> .",
+    "<b>Required information:</b> Size of dataset and retention period.",
     "<b>Expected response time:</b> Weeks.",
-    "<b>Cost:</b> As per our <a href='https://docs.hdc.ntnu.no/administer-science/prices/pricelist/#current' target='_blank'>price list</a> .",
+    "<b>Cost:</b> As per our <a href='https://docs.hdc.ntnu.no/administer-science/prices/pricelist/#current' target='_blank'>price list</a>.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
   ]
   attachments: []
