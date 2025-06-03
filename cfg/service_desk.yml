@@ -1956,22 +1956,42 @@ request_tape_archive:
   template:
     subject: "Tape archive {username} @ {labname}"
     body: |
-      Hi HUNT Cloud team,
+      Hi HUNT Cloud team,  
 
-      I would like to order a tape archive for my lab {labname}.
+      I would like to order a tape archive for my dataset.
 
-      Let us touch base on Slack to schedule a time to discuss the details.
+      Labname = {labname}
+      Type of tape write = {tapewrite_type}
+      Size of dataset: {data_size}
+      Description of dataset = {data_desc}
+      Retenation period: {retention}  
+
+
+      Let us touch base on Slack to discuss the details.
 
       Kind regards,
   fields: [
     { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
     { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    {
+      label: "Type of tape write",
+      key: "tapewrite_type",
+      field: "autocompleteone",
+      options: [
+        { text: "Full volume backup", value: "full_vol" },
+        { text: "Selected dataset backup", value: "selected_set" },
+      ]
+    },
+    { label: "Size of dataset (in terabytes)", key: "data_size", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 100, step: 1, field: "number", default: 1 },
+    { label: "Data set description (optional)", key: "data_desc", pattern: "[-a-z0-9]{3,}", hint: "You can describe type of data and how it is currently stored.", autocapitalize: "off", field: "textfield" },
+    { label: "Retention period", key: "retention", pattern: "[-a-z0-9]{3,}", hint: "How long should we store the data on tape (max 10 years for single tape write)", suffix: "Years", min: 1, max: 10, step: 1, field: "n_years", default: 5 },
   ]
+
   requirements: [
-    "<b>Who can order:</b> Lab coordiators.",
-    "<b>Required information:</b> .",
-    "<b>Expected response time:</b> Days.",
-    "<b>Cost:</b> Can be found is costs section.",
+    "<b>Who can order:</b> Lab leader or coordiator.",
+    "<b>Required information: size of dataset and retention period</b> .",
+    "<b>Expected response time:</b> Weeks.",
+    "<b>Cost:</b> As per our <a href='https://docs.hdc.ntnu.no/administer-science/prices/pricelist/#current' target='_blank'>price list</a> .",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
   ]
   attachments: []
