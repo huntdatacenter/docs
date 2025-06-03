@@ -39,20 +39,6 @@ The service orders below are aimed at active lab users. Lab access for new users
 :::
 
 
-### HUNT Workbench access
-
-[HUNT Workbench](/do-science/hunt-workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
-
-<SDButton form="request_workbench_access" />
-
-* **Who can order:** All active lab users.
-* **Expected response time:** Days.
-* **Expected delivery:** HUNT Workbench access key and certificate.
-* **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.
-* **Next step:** [Prepare your key transfer](/do-science/guides/hunt-workbench-request/).
-* **Cost:** Included in the lab subscription.
-
-
 ### HUNT Workbench reissue
 
 Request a new certificate if you have an existing HUNT Workbench and your previous [certificate expired](/do-science/hunt-workbench/troubleshooting/#_403-forbidden-expired-client-certificate).
@@ -114,6 +100,19 @@ Lost the lab access link from your onboarding email? No worries, order a new one
 * **Who can order:** All active lab users.
 * **Required information:** Your username and lab name.
 * **Expected response time:** Days.
+* **Cost:** Included in the lab subscription.
+
+### HUNT Workbench
+
+[HUNT Workbench](/do-science/hunt-workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
+
+<SDButton form="request_workbench_access" />
+
+* **Who can order:** All active lab users.
+* **Expected response time:** Days.
+* **Expected delivery:** HUNT Workbench access key and certificate.
+* **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.
+* **Next step:** [Prepare your key transfer](/do-science/guides/hunt-workbench-request/).
 * **Cost:** Included in the lab subscription.
 
 ## System access
