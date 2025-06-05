@@ -1958,13 +1958,13 @@ request_tape_archive:
     body: |
       Hi HUNT Cloud team,  
 
-      I would like to order a tape archive for my dataset.
+      I would like to order a tape archive for my dataset.  
 
-      Labname = {labname}
-      Type of tape write = {tapewrite_type}
-      Size of dataset: {data_size}
-      Description of dataset = {data_desc}
-      Retenation period: {retention}  
+      Labname = {labname}  
+      Type of tape write = {tapewrite_type}  
+      Size of dataset: {data_size}  
+      Description of dataset = {data_desc}  
+      Retention period: {retention}  
 
 
       Let us touch base on Slack to discuss the details.
