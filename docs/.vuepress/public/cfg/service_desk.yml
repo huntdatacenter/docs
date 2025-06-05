@@ -1954,7 +1954,7 @@ request_update_data_rep:
 request_tape_archive:
   title: "Order tape archive"
   template:
-    subject: "Tape write - {{ lab_name }}"
+    subject: "Tape write - {labname}"
     body: |
       Hi HUNT Cloud team,  
 
