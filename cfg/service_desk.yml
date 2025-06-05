@@ -1978,8 +1978,8 @@ request_tape_archive:
       key: "tapewrite_type",
       field: "autocompleteone",
       options: [
-        { text: "Full volume backup", value: "full_vol" },
-        { text: "Selected dataset backup", value: "selected_set" },
+        { text: "Full volume backup", value: "Full volume" },
+        { text: "Selected dataset backup", value: "Selected Dataset" },
       ]
     },
     { label: "Size of dataset (in terabytes)", key: "data_size", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 100, step: 1, field: "number", default: 1 },
