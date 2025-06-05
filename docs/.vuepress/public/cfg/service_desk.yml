@@ -1961,9 +1961,9 @@ request_tape_archive:
       I would like to order a tape archive for my dataset.  
 
       Labname = {labname}  
-      Type of tape write = {tapewrite_type}  
+      Type of tape write: {tapewrite_type}  
       Size of dataset: {data_size}  
-      Description of dataset = {data_desc}  
+      Description of dataset: {data_desc}  
       Retention period: {retention}  
 
 
