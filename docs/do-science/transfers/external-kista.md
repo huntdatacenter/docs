@@ -61,13 +61,13 @@ We recommend that you create a dedicated SSH key pair for each kista transfer. C
 2. Generate rsa key pair in default location.
 
 ```
-ssh-keygen -q -t rsa -b 4096 -f "%USERPROFILE%\.ssh\ekista" -N ""
+ssh-keygen -q -t rsa -b 4096 -f "%USERPROFILE%\.ssh\id_rsa" -N ""
 ```
 
 3. Copy public key. This command will save it to a new text file and place it on your desktop.
 
 ```
-type %USERPROFILE%\.ssh\ekista.pub > %USERPROFILE%\Desktop\ekista_pubkey.txt
+type %USERPROFILE%\.ssh\id_rsa.pub > %USERPROFILE%\Desktop\ekista_pubkey.txt
 ```
 
 4. Share the `ekista_pubkey.txt` to your HUNT Cloud contact. 
@@ -81,7 +81,7 @@ type %USERPROFILE%\.ssh\ekista.pub > %USERPROFILE%\Desktop\ekista_pubkey.txt
 2. Generate a new dedicated RSA key pair.
 
 ```bash 
-ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/ekista -N ""
+ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
 ```
 
 3. Copy the id_rsa key to your downloads directory.
