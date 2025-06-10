@@ -1962,8 +1962,8 @@ request_tape_archive:
       
       ---
       Labname: {labname}  
-      Type of tape write: {tapewrite_type}  
-      Size of dataset: {data_size}  
+      Type of tape write: {tapewrite_type}
+      Size of dataset: {data_size} TB  
       Description of dataset: {data_desc}  
       Retention period: {retention}  
       ---
@@ -1983,7 +1983,7 @@ request_tape_archive:
         { text: "Selected dataset backup", value: "Selected Dataset" },
       ]
     },
-    { label: "Size of dataset (in terabytes)", key: "data_size", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 100, step: 1, field: "number", default: 1 },
+    { label: "Size of dataset (in terabytes)", key: "data_size", hint: "Field should include only numbers", suffix: "TB", min: 0.1, max: 25, step: 0.1, field: "number", default: 1 },
     { label: "Data set description (optional)", key: "data_desc", pattern: "^$|[-a-z0-9]{3,}", default: " ", hint: "You can describe type of data and how it is currently stored.", autocapitalize: "off", field: "textfield" },
     { label: "Retention period", key: "retention", pattern: "[-a-z0-9]{3,}", hint: "How long should we store the data on tape (max 10 years for single tape write)", suffix: "Years", min: 1, max: 10, step: 1, field: "number", default: 5 },
   ]
