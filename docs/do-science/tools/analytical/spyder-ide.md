@@ -18,15 +18,26 @@ Spyder offers a unique combination of the advanced editing, analysis, debugging,
 
 ## Installation
 
+Install spyder inside it's own conda environment:
 ```bash
-conda install -c conda-forge spyder
+mamba create -n spyder -c conda-forge "spyder==6.*"
 ```
 
-Or
-
+Activate environment:
 ```bash
-mamba install -c conda-forge spyder
+mamba activate spyder
 ```
 
-
+Create desktop icon by running this command in your [Workbench Terminal](/do-science/hunt-workbench/faq/#can-i-use-a-terminal-from-my-workbench) to be able to see it in [Remote desktop](/do-science/hunt-workbench/getting-started/remote-desktop/):
+```bash
+cat <<EOF | tee ~/Desktop/Spyder.desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Spyder
+Exec=$(which spyder) -w ${HOME} -p ${HOME}/spyder --no-web-widgets
+Icon=/usr/local/share/icons/spyder.svg
+Path=${HOME}/Desktop
+EOF
+```
 
