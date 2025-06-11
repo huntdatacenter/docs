@@ -18,8 +18,15 @@ Spyder offers a unique combination of the advanced editing, analysis, debugging,
 
 ## Installation
 
+```bash
+conda install -c conda-forge spyder
 ```
-conda install -c spyder
+
+Or
+
+```bash
+mamba install -c conda-forge spyder
 ```
+
 
 
