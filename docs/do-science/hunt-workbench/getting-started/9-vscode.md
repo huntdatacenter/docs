@@ -27,8 +27,8 @@ TODO
 
 ### Creating Jupyter Notebook in VS Code
 To create a Jupyter notebook in Visual Studio Code:
-- Open VS Code via button found in your Workbench
-- Click on the "View" menu, then "Command Palette" (or press `Ctrl+Shift+P`).
+- Open VS Code via button found in your Workbench (It might load for a few minutes when you open the first time)
+- Click on the "View" menu, you will find it by clicking the button that show three lines on the left side of the screen, then press "Command Palette".
 - Type "Jupyter: Create New Blank Notebook" and hit Enter.
 - A new untitled notebook will be created where you can start writing your code.
 
