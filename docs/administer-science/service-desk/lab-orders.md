@@ -353,10 +353,10 @@ Click button below to order a long term archiving of your data
 
 <SDButton form="request_tape_archive" />
 
-* **Who can order:** Lab coordinators.
-* **Required information**: .
-* **Expected response time:** Days
-* **Cost:** Can be found is costs section.
+* **Who can order:** Lab leader and coordinator.
+* **Required information:** size of dataset and retention period.
+* **Expected response time:** Weeks.
+* **Cost:** Can be found in our [price list](/administer-science/prices/pricelist/#current)
 
 
 ## Data transfers
@@ -443,5 +443,3 @@ Note that a general request has slower response time than a predefined order. If
 [Contact us](/contact) on email for general questions and information on our scientific services and activities.
 
 :::
-
-

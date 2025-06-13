@@ -611,6 +611,14 @@ Connection to home closed.`,
               <div class="language- extra-class"><pre class="language-text">
                 <code v-text="passSetNew"></code>
               </pre></div>
+              <v-alert
+                border="left"
+                colored-border
+                type="warning"
+                elevation="2"
+              >
+                If you are getting an <code>Authentication token manipulation error</code> check strength requirements for passphrase in step {{ passChangeId }}.1.
+              </v-alert>
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} Reconnect to entry using your new passphrase.
