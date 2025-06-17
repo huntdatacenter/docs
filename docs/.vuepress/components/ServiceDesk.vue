@@ -370,6 +370,7 @@ export default {
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
+                          :item-value="item => Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : value"
                           placeholder=""
                           persistent-placeholder
                           small-chips
