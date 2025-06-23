@@ -1387,7 +1387,7 @@ request_new_storage_volume:
   requirements: [
     "<b>Who can order:</b> Lab leaders and lab coordinators.",
     "<b>Required information</b>: lab name, machine name, volume name and total size in terabytes.",
-    "<b>Expected response time:</b> One week. The volume expansion requires a machine restart that needs to be scheduled 9-11 am CET on a workday.",
+    "<b>Expected response time:</b> One week.",
     "<b>Expected delivery:</b> New storage volume attached (mounted) to your lab machine.",
     "<b>Cost:</b> New storage is included in your total storage plan.",
     "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
