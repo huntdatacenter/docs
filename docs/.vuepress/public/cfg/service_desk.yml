@@ -1325,8 +1325,6 @@ request_new_storage_volume:
       enable_restore_option="{restore}"  
       ---
 
-      I am aware that the expansion will require a machine restart. So, let us touch base in our Slack lab channel to schedule a time for the restart that fits our scientific activities.
-
 
       Best regards,
 
