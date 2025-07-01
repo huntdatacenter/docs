@@ -10,7 +10,8 @@ description: This page gives an introduction to the pricing of services in HUNT 
 
 **Read more about the pricing of clouds services that can be made available in your lab.**
 
-* [Price list](/administer-science/prices/pricelist) - Price list for a detailed overview of prices.
+* [Price overview](/administer-science/prices/overview) - Get an overview of the price components.
+* [Price list](/administer-science/prices/pricelist) - Get a detailed overview of prices.
 * [Price calculator](/administer-science/prices/calculator) - Estimate your own prices.
 * [Price examples](/administer-science/prices/examples) - See examples of prices for various lab types.
 * [Price FAQ](/administer-science/prices/faq) - Frequently asked questions related to pricing.
