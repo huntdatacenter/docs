@@ -1,7 +1,7 @@
 ---
 title: Introduction
 category: HUNT Cloud
-permalink: /administer-science/prices/introduction
+permalink: /administer-science/prices/
 sidebarDepth: 1
 description: This page gives an introduction to the pricing of services in HUNT Cloud.
 ---
