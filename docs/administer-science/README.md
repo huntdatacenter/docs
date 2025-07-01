@@ -18,11 +18,11 @@ buttons:
       icon: ['fas', 'handshake']
     - title: 'Services'
       subtitle: 'This page gives you an overview of our cloud services.'
-      href: '/administer-science/services/overview/'
+      href: '/administer-science/services/'
       icon: ['fas', 'cloud']
     - title: 'Prices'
       subtitle: 'This page gives you an introduction to our prices.'
-      href: '/administer-science/prices/introduction/'
+      href: '/administer-science/prices/'
       icon: ['fas', 'tag']
     - title: 'Price calculator'
       subtitle: 'Calculate your labs cost.'
