@@ -19,16 +19,16 @@ Head over to our [price calculator](/administer-science/prices/calculator) to ta
 
 ::: tip CURRENT PRICE LIST
 
-[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-5.pdf) (v4.5 PDF)
+[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-0.pdf) (v5.0 PDF)
 
 :::
 
-**Machine readable version of current price list:** The table below include a machine readable CSV of the current price list (v4). The PDF version holds precedence if discrepancies occur.
+**Machine readable version of current price list:** The table below include a machine readable CSV of the current price list (v5). The PDF version holds precedence if discrepancies occur.
 
 | **Content** | **Type** | **File** |
 | ---- | ---- | ---- |
-| HUNT Cloud Price List (v4.5) | PDF | [hunt-cloud-price-list-4-5.pdf](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-5.pdf) |
-| HUNT Cloud Price List (v4.5) | CSV* | [hunt-cloud-price-list-4-5.csv](https://assets.hdc.ntnu.no/assets/prices/v4/hunt-cloud-price-list-4-5.csv) |
+| HUNT Cloud Price List (v5.0) | PDF | [hunt-cloud-price-list-5-0.pdf](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-0.pdf) |
+| HUNT Cloud Price List (v5.0) | CSV* | [hunt-cloud-price-list-5-0.csv](https://assets.hdc.ntnu.no/assets/prices/v5/hunt-cloud-price-list-5-0.csv) |
 
 *) The current CSV version do not contain prices for transport services, hourly based services and tape services.
 
@@ -45,6 +45,7 @@ The price list will be updated from time to time.
 
 | **Version** | **Type** | **Announced** | **Effective** |
 | - | - | - | - |
+| [HUNT Cloud Price List v5.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-0.pdf) (PDF) | Minor | 2025-07-01 | 2025-10-01 |
 | [HUNT Cloud Price List v4.5](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-5.pdf) (PDF) | Minor | 2025-05-08 | 2025-05-08 |
 | [HUNT Cloud Price List v4.4](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-4.pdf) (PDF) | Minor | 2025-02-15 | 2025-02-15 |
 | [HUNT Cloud Price List v4.3](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-3.pdf) (PDF) | Minor | 2025-02-11 | 2025-02-11 |
@@ -56,6 +57,36 @@ The price list will be updated from time to time.
 | [HUNT Cloud Price List v3.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-0.pdf) (PDF) | MAJOR | 2021-07-01 | 2021-10-01 |
 
 ## Changes
+
+#### HUNT Cloud Price list v5.0 (MAJOR) 
+
+New prices are adjusted based on updated equipment and operational costs since the last price adjustments in 2022. Percentages below are approximations for comparison. Accompanying services updates are described under [HUNT Cloud Services Specification v3.0](/administer-science/services/#hunt-cloud-services-specification-v3-0-major) (MAJOR).
+
+*Data space subscriptions*
+
+* Costs are removed for all data space subscription levels.
+* EXPLORE and EVOLVE are introduced as new data space subscription levels for improved lab portfolio management for departments and to encourage growth of emerging data spaces. 
+* WHITE, BLUE and ORANGE subscription levels are removed.
+
+*Lab subscriptions*
+
+* Subscription prices are increased with 60%.
+* Changes reflect operational costs previously incorporated into data space subscriptions.
+
+*Compute*
+
+* COMMITMENT prices are increased with 30-40%.
+* ON-DEMAND prices are increased with 5% and are now at a similar levels as COMMITMENT prices.
+* SPOT prices are introduced as the new cost effective machine alternative. These prices are 30-40% increased compared to BLUE prices, and kept at 50% of COMMITMENT and ON-DEMAND.
+* BLUE prices are removed.
+* GPU pricing is simplified to ON-DEMAND only.
+* GPU NVIDIA P100 is phased out and removed from the selection. 
+
+*Store*
+
+* Regular storage price is increased with 20-30%.
+* NVMe is introduced as an speed-optimized storage option. 
+* Tape prices is now prices per pair regardless of volume.
 
 #### HUNT Cloud Price list v4.5 (minor) 
 

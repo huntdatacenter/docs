@@ -495,6 +495,7 @@ module.exports = {
             //   title: "Introduction",
             //   path: "/administer-science/services/"
             // },
+            "/administer-science/services/",
             "/administer-science/services/overview.md",
             "/administer-science/services/specifications.md",
             "/administer-science/services/machine-types.md",
@@ -507,10 +508,8 @@ module.exports = {
           collapsable: true,
           isGroup: true,
           children: [
-            {
-              title: "Introduction",
-              path: "/administer-science/prices/",
-            },
+            "/administer-science/prices/",
+            "/administer-science/prices/overview.md",
             "/administer-science/prices/pricelist.md",
             "/administer-science/prices/calculator.md",
             "/administer-science/prices/examples.md",

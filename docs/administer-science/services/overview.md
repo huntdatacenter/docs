@@ -6,87 +6,87 @@ permalink: /administer-science/services/overview
 description: This page gives an overview of the HUNT Cloud services.
 ---
 
-# Services overview
+# Services
 
-**This page gives a brief overview of our cloud services. See the [Services specifications](/administer-science/services/specifications) for detailed documentation.**
+**Get a quick overview below of the services components that makes up your lab.**
 
 [[toc]]
 
-## Subscriptions
+::: tip 
+See the [Services specifications](/administer-science/services/specifications) for detailed documentation.
+:::
 
-We have two type of subscriptions in HUNT Cloud: (1) Data space subscription and (2) Lab subscription. You will need both.
 
+## Data space subscriptions
 
-### Data space subscription
+Data spaces establishes a management account (data space) in HUNT Cloud where individual labs are attached and their resources managed, controlled and billed.
 
-**This is the subscription that establishes a management account (data space) in HUNT Cloud where individual labs are attached and their resources managed, controlled and billed.**
+We have established two subscription levels, EXPLORE and EVOLVE. Both are free of charge. They differ in our internal follow-up as EXPLORE are aimed at larger units and EVOLVE are aimed at scientific groups and centers.
 
-We have established three subscription levels that differs in the individual service availability, resource prioritization, ting membership and costs for individual resources: 
-
-| Subscription levels: | WHITE | ORANGE | BLUE |
-| ---- | ---- | ---- | ---- | 
-| Subscription type | Basic | Standard | Premium | 
-| Maximum attached labs | 2 | 10 | 20 |
+| Subscription levels: | EXPLORE | EVOLVE |
+| ---- | ---- | ---- | 
+| Cost | Free | Free |
+| Maximum attached labs | Unlimited | Unlimited |
 | Maximum commitment length | 3 YEARS | 3 YEARS | 3 YEAR |
-| Deploy COMMITMENT machines | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Deploy ON-DEMAND machines | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Deploy BLUE machines | ![no](./images/no-30.png "no") | ![yes](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
-| Deploy custom machines types | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Expandable storage | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Restore* | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Volume discount** | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Free internal transfers | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Free external imports | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Free external exports | ![yes](./images/no-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Access to new pilot services | ![no](./images/no-30.png "no") | ![yes](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
-| Multiple billing accounts | ![no](./images/no-30.png "no") | ![yes](./images/no-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Labting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Coordinator ting invites | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Lagtun membership | ![no](./images/no-30.png "no") | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
+| Storage volume discount* | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
+| Multiple billing accounts | ![no](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 
-*) Restore against accidental deletion is activate for work and archive volumes on home machines.
-
-**) Volume discounts for storage is calculated across all resources attached to one data space. 
-
+*) Volume discounts for storage is calculated across all resources attached to one data space. 
 
 
 ### Lab subscription
 
 **This is the subscription that gives to access to one digital laboratory where you add resources for computation and storage.**
 
-One to many labs can be organized under one data space. The availability of certain resources are defined by the subscription level of the data space for which the lab is attached (see above). See the [Services specifications](/administer-science/services/specifications) for detailed information.
+One to many labs can be organized under one data space. 
 
 | Subscription level: | LAB |
 | ---- | ---- |
 | Commitment length | 1 or 3 YEARS |
+| Number of users per lab   | Unlimited |
+| Secure processing environment | ![yes](./images/yes-30.png "yes") | 
+| Web-based Workbench | ![yes](./images/yes-30.png "yes") | 
+| SSH connection | ![yes](./images/yes-30.png "yes") | 
+| Desktop service | ![yes](./images/yes-30.png "yes") | 
+| Default scientific tools | ![yes](./images/yes-30.png "yes") | 
+| Bring your own tools | ![yes](./images/yes-30.png "yes") | 
+| Bring your own data | ![yes](./images/yes-30.png "yes") | 
+| Expandable compute services | ![yes](./images/yes-30.png "yes") | 
+| Compute COMMITMENT machines | ![yes](./images/yes-30.png "yes") | 
+| Compute ON-DEMAND machines | ![yes](./images/yes-30.png "yes") | 
+| Compute SPOT machines | ![yes](./images/yes-30.png "yes") | 
+| GPU accelerators | ![yes](./images/yes-30.png "yes") | 
+| Expandable storage | ![yes](./images/yes-30.png "yes") | 
+| Regular storage | ![yes](./images/yes-30.png "yes") | 
+| NVMe storage | ![yes](./images/yes-30.png "yes") | 
+| Tape storage | ![yes](./images/yes-30.png "yes") | 
+| Restore functionality* | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | 
+| Free internal transfers | ![yes](./images/yes-30.png "yes") | 
+| Free external imports | ![yes](./images/yes-30.png "yes") | 
+| Free external exports | ![yes](./images/yes-30.png "yes") | 
+| Access to new pilot services | ![yes](./images/yes-30.png "yes") | 
+
+*) Restore against accidental deletion is activate for work and archive volumes on home machines.
 
 ## Individual services
-
-### Secure
-
-This is the default service that deploys the security and compliance framework for your lab. The default configuration is tailored for processing of sensitive research information. Adjustments may be made to further strengthen the security.
 
 ### Compute
 
 This is the service that deploys one to many virtual machines for data analysis in labs. The service allows you to deploy both short term and long term [machine types](/administer-science/services/machine-types) of various sizes.
 
-| Subscription levels: | WHITE | ORANGE | BLUE |
-| ---- | ---- | ---- | ---- | 
-| Deploy COMMITMENT machines | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Deploy ON-DEMAND machines | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Deploy BLUE machines | ![no](./images/no-30.png "no") | ![yes](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") |
-| Deploy custom machines types | ![no](./images/no-30.png "no") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 
-
-### Store
+### Storage
 
 This is the service that deploy storage resources to virtual machines in labs. The default service allows you to attach one to many storage volumes (disks) to your lab machines.
 
-| Subscription levels: | WHITE | ORANGE | BLUE |
-| ---- | ---- | ---- | ---- | 
-| Restore* | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Expandable storage | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Volume discount** | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
+| Subscription levels: | LAB | 
+| ---- | ---- |
+| Restore* | ![yes](./images/yes-30.png "yes") | 
+| Expandable storage | ![yes](./images/yes-30.png "yes") | 
+| Regular storage (hard drives) | ![yes](./images/yes-30.png "yes") | 
+| Speed-optimized storage (NVMe) | ![yes](./images/yes-30.png "yes") | 
+| Tape storage | ![yes](./images/yes-30.png "yes") | 
+| Volume discount** | ![yes](./images/yes-30.png "yes") | 
 
 *) Restore against accidental deletion is activate for work and archive volumes on home machines.
 
@@ -98,21 +98,12 @@ This is the service that deploy storage resources to virtual machines in labs. T
 
 This is the service that enables compliant data transfers to and from labs, both between labs inside HUNT Cloud and to and from parties outside HUNT Cloud.
 
-| Subscription levels: | WHITE | ORANGE | BLUE |
-| ---- | ---- | ---- | ---- | 
-| Free internal transfers | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Free external imports | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
-| Free external exports | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
+| Subscription levels: | LAB| 
+| ---- | ---- | 
+| Free internal transfers | ![yes](./images/yes-30.png "yes") |
+| Free external imports | ![yes](./images/yes-30.png "yes") |
+| Free external exports | ![yes](./images/yes-30.png "yes") |
+| Free network openings | ![yes](./images/yes-30.png "yes") |
 
-
-
-
-### Others
-
-So far, this is the Tape service that allow you to write encrypted tapes for offline and offsite preservation of your high value data.
-
-| Subscription levels: | WHITE | ORANGE | BLUE |
-| ---- | ---- | ---- | ---- | 
-| Tape service availability | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") | ![yes](./images/yes-30.png "yes") |
 
 
