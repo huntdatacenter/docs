@@ -9,7 +9,7 @@ description: Usage guide for Htop.
 # Htop
 
 **[Htop](https://en.wikipedia.org/wiki/Htop) a top-like tool that can display information
-about the resource utilization in your lab machine.**
+about the resource utilization in your lab machine. You can use this to check wether its time for a clean up or upgrade in your lab**
 
 [[toc]]
 
