@@ -40,6 +40,8 @@ Depending on your volume sizes and number of files, the initial scanning may las
 
 This is an example of a scan of a **`/mnt/work`** volume where the software (46GB) and workbench (23GB) folders take up most of your space.
 
+If you see that your folders are nearing full, we would recommend either a clean up of files in the lab or an expansion request
+
 ### Analyse your root volume
 
 To find what's taking space on your root volume (/), use the **`-x`** paramter. This excludes other volumes mounted on your machine (such as /mnt/work):
