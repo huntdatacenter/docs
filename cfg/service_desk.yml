@@ -1321,7 +1321,6 @@ request_new_storage_volume:
       machine_name="{vm_name}"  
       volume_name="{volume_name}{volume_number}"  
       storage_size_tb="{storage_size_tb}"  
-      storage_type="{storage_type}"  
       enable_restore_option="{restore}"  
       ---
 
@@ -1338,8 +1337,8 @@ request_new_storage_volume:
       options: [
         { text: "Archive", value: "archive" },
         { text: "Work", value: "work" },
-        { text: "Scratch", value: "scratch" },
-        { text: "Scratch (NVME)", value: "scratch (nvme)" },
+        { text: "Scratch (regular storage - HDD)", value: "scratch" },
+        { text: "Scratch (fast storage - NVME)", value: "scratch (nvme)" },
         { text: "Backup", value: "backup" },
       ]
     },
@@ -1364,16 +1363,6 @@ request_new_storage_volume:
       optional: true
     },
     { label: "Size (in terabytes)", key: "storage_size_tb", hint: "Field should include only numbers. Maximum size per volume is 20 TB", suffix: "TB", min: 0.1, max: 25, step: 0.1, field: "number", default: 1 },
-    {
-      label: "Storage type",
-      key: "storage_type",
-      field: "autocompleteone",
-      options: [
-        { text: "Regular", value: "regular" },
-        { text: "Fast storage (NVME)", value: "nvme" },
-      ],
-      default: { text: "Regular", value: "regular" },
-    },
     {
       label: "Enable restore service (optional)",
       key: "restore",
