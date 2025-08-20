@@ -23,7 +23,7 @@ This mobaXterm session is preconfigured with [Stata](/do-science/tools/analytica
 
 ## How do I order a mobaxterm RDP ? 
 
-You can find your preconfigured RDP MobaXterm session in your access link which you received in your onboarding email.
+You can find your preconfigured RDP MobaXterm session in your access link which you received in your onboarding email. If you need a new link you can request one trough here [Lab access link](https://docs.hdc.ntnu.no/do-science/service-desk/#request-lab-access-link-reissue)
 
 
 ![image_rdp1](./images/create_rdp.png)
