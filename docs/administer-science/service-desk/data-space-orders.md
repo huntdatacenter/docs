@@ -30,7 +30,7 @@ Click the button below to order a new lab under your existing data space.
 
 <SDButton form="request_new_lab" />
 
-* **Who can order:** Data space leaders and data space compliance administrators in active data spaces.
+* **Who can order:** Data space leaders and data space compliance administrators in active data spaces, and lab leader for new labs.
 * **Required attachment**: [A signed lab order](/administer-science/agreements/downloads/#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
 * **Expected delivery time:** One week.
 * **Next step**: [Add your first lab users](/administer-science/service-desk/lab-orders.html#add-a-new-lab-user).
