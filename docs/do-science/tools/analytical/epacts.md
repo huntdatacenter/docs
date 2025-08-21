@@ -49,7 +49,7 @@ softwaredir="/mnt/work/software/epacts/"
 mkdir -p $softwaredir
 ```
 
-The above path is a suggestion that you may change.
+The above path is a suggestion that you could change to another directory if you prefer
 
 ## 4. Download the code, unpack and clean up
 
