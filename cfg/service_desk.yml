@@ -9,9 +9,16 @@ general_contact_request:
 
       <your-text>
 
+      Lab: {lab_name}  
+      Data Space: {data_space}  
+
       Best regards,
 
-  fields: [{ label: "Request topic", key: "topic", field: "textfield" }]
+  fields: [
+    { label: "Request topic", key: "topic", field: "textfield" },
+    { label: "Lab (Optional)", key: "lab_name", field: "textfield", optional: true },
+    { label: "Data Space (Optional)", key: "data_space", field: "textfield", optional: true },
+    ]
   requirements: ["<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."]
   attachments: []
 
