@@ -2,7 +2,7 @@
 title: Price list
 category: HUNT Cloud
 permalink: /administer-science/prices/pricelist
-sidebarDepth: 1
+outline: 1
 description: This page holds the current price list for HUNT Cloud.
 ---
 

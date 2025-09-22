@@ -3,7 +3,7 @@ title: Introduction
 category: Service desk
 permalink: /administer-science/service-desk/
 description: Introductory page for predefined HUNT Cloud service desk orders.
-sidebarDepth: 2
+outline: 2
 ---
 
 # Service desk orders for administrators

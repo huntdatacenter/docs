@@ -2,7 +2,7 @@
 title: FSL
 category: Analytical tools
 permalink: /do-science/tools/analytical/fsl
-sidebarDepth: 1
+outline: 1
 description: Installation guide for FSL in HUNT Cloud.
 tags:
   - fsl

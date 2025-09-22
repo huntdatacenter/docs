@@ -2,7 +2,7 @@
 title: Visual Studio Code (remote)
 category: Technical tools
 permalink: /do-science/tools/technical/vscode
-sidebarDepth: 1
+outline: 1
 description: Usege guide for VSCode.
 tags:
   - vscode

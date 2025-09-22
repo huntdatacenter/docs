@@ -2,7 +2,7 @@
 title: Spyder IDE
 category: Analytical tools
 permalink: /do-science/tools/analytical/spyder-ide
-sidebarDepth: 0
+outline: 0
 description: Installation guide for Spyder-IDE.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: FAQ
 category: HUNT Cloud
-sidebarDepth: 1
+outline: 1
 permalink: /administer-science/agreements/faq
 description: Frequently asked questions related to agreements in HUNT Cloud.
 ---

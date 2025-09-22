@@ -2,7 +2,7 @@
 title: Service center agreement
 category: HUNT Cloud
 permalink: /govern-science/organizational-access/service-center-agreement
-sidebarDepth: 1
+outline: 1
 description: This page helps you to get going with administrative agreements in HUNT Cloud.
 ---
 

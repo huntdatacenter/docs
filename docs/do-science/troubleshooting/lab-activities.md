@@ -1,7 +1,7 @@
 ---
 title: Lab activities
 category: Troubleshooting
-sidebarDepth: 1
+outline: 1
 permalink: /do-science/troubleshooting/lab-activities
 description: Troubleshooting activities in your HUNT Cloud lab.
 ---

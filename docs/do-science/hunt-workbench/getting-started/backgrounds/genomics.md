@@ -1,7 +1,7 @@
 ---
 title: Genomics
 category: Backgrounds
-sidebarDepth: 2
+outline: 2
 permalink: /do-science/hunt-workbench/getting-started/backgrounds/genomics
 description: How to use Workbench in genomics
 ---

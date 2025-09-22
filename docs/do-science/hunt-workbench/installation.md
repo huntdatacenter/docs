@@ -2,7 +2,7 @@
 title: Installation
 category: HUNT Workbench
 permalink: /do-science/hunt-workbench/installation
-sidebarDepth: 1
+outline: 1
 description: Installation guide for HUNT Workbench.
 ---
 

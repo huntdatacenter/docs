@@ -1,7 +1,7 @@
 ---
 title: CUDA 13.0
 category: CUDA
-sidebarDepth: 1
+outline: 1
 permalink: /do-science/tools/technical/cuda/cuda-13.0
 description: Installing Nvidia CUDA toolkit and cuDNN on GPU machines.
 ---

@@ -2,7 +2,7 @@
 title: VPN configuration
 category: Lab access
 permalink: /do-science/guides/vpn-configuration
-sidebarDepth: 1
+outline: 1
 description: Guide on VPN installation and configuration. Make sure you have successfully collected your keys before proceeding with this guide.
 ---
 

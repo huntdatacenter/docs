@@ -1,7 +1,7 @@
 ---
 title: Downloads
 category: HUNT Cloud
-sidebarDepth: 1
+outline: 1
 permalink: /administer-science/agreements/downloads
 description: This page list agreements that may be relevant for you as a lab user. Contact your lab leader for more details on other agreement types.
 tags:

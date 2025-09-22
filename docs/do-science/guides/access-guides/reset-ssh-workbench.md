@@ -2,7 +2,7 @@
 title: SSH passphrase reset in Workbench
 category: Guides
 permalink: /do-science/guides/configure-ssh-workbench
-sidebarDepth: 1
+outline: 1
 description: Guide on SSH passphrase reset in workbench.
 ---
 # SSH passphrase reset in Workbench

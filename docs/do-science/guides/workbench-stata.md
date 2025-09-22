@@ -2,7 +2,7 @@
 title: Stata guide
 category: Guides
 permalink: /do-science/guides/stata
-sidebarDepth: 1
+outline: 1
 description: Guide to get going with Stata in your HUNT Workbench.
 ---
 

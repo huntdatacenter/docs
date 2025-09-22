@@ -2,7 +2,7 @@
 title: Community
 category: Community
 permalink: /do-science/community
-sidebarDepth: 0
+outline: 0
 tags:
   - slack
 description: This page holds information on the HUNT Cloud community.

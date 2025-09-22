@@ -1,7 +1,7 @@
 ---
 title: Specifications
 category: Services
-sidebarDepth: 1
+outline: 1
 permalink: /administer-science/services/specifications
 description: This page gives the official Cloud services specifications.
 ---

@@ -2,7 +2,7 @@
 title: BlueBox
 category: Analytical tools
 permalink: /do-science/tools/analytical/bluebox
-sidebarDepth: 1
+outline: 1
 description: BlueBox is a tool for distributed analysis across a fleet of cloud machines inside your lab.
 ---
 

@@ -2,7 +2,7 @@
 title: External transfer
 category: FAQ
 permalink: /do-science/faq/external-transfer
-sidebarDepth: 1
+outline: 1
 description: This page lists frequently asked questions related to external transfers in labs.
 ---
 

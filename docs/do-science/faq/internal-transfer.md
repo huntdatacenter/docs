@@ -2,7 +2,7 @@
 title: Internal transfer
 category: FAQ
 permalink: /do-science/faq/internal-transfer
-sidebarDepth: 1
+outline: 1
 description: This page lists frequently asked questions related to internal transfers and network openings in labs.
 ---
 

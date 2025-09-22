@@ -2,7 +2,7 @@
 title: FAQ
 category: HUNT Workbench
 permalink: /do-science/hunt-workbench/faq
-sidebarDepth: 1
+outline: 1
 description: Frequently asked questions about HUNT Workbench.
 ---
 

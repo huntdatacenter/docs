@@ -1,7 +1,7 @@
 ---
 title: Getting started
 category: Getting started
-sidebarDepth: 0
+outline: 0
 permalink: /do-science/hunt-workbench/getting-started
 description: How to start using your HUNT Workbench.
 ---

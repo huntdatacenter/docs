@@ -1,7 +1,7 @@
 ---
 title: Remote desktop
 category: Getting started
-sidebarDepth: 0
+outline: 0
 permalink: /do-science/hunt-workbench/getting-started/remote-desktop
 description: How to use VS Code
 tags:

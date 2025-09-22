@@ -2,7 +2,7 @@
 title: X2Go
 category: Technical tools
 permalink: /do-science/tools/technical/x2go
-sidebarDepth: 1
+outline: 1
 description: Usage guide for X2go.
 ---
 

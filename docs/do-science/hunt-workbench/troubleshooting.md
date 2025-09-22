@@ -2,7 +2,7 @@
 title: Troubleshooting
 category: HUNT Workbench
 permalink: /do-science/hunt-workbench/troubleshooting
-sidebarDepth: 1
+outline: 1
 description: HUNT Workbench troubleshooting.
 ---
 

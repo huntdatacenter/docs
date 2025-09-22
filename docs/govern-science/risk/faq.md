@@ -2,7 +2,7 @@
 title: FAQ
 category: Govern science
 permalink: /govern-science/risk-management/faq
-sidebarDepth: 0
+outline: 0
 description: This page cover risk management within HUNT Cloud.
 ---
 

@@ -2,7 +2,7 @@
 title: HUNT Workbench reissue certificate
 category: Guides
 permalink: /do-science/guides/hunt-workbench-reissue-certificate
-sidebarDepth: 1
+outline: 1
 description: Guide on how to install a new certificate for your HUNT Workbench.
 ---
 

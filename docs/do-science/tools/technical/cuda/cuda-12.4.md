@@ -1,7 +1,7 @@
 ---
 title: CUDA 12.4
 category: CUDA
-sidebarDepth: 1
+outline: 1
 permalink: /do-science/tools/technical/cuda/cuda-12.4
 description: Installing Nvidia CUDA toolkit and cuDNN on GPU machines.
 ---

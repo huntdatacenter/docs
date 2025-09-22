@@ -2,7 +2,7 @@
 title: 2. Configure access
 category: Lab access
 permalink: /do-science/lab-access/configure-access
-sidebarDepth: 1
+outline: 1
 description: Configure access.
 ---
 

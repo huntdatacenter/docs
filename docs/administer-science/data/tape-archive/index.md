@@ -1,7 +1,7 @@
 ---
 title: Tape archive
 category: Data
-sidebarDepth: 1
+outline: 1
 description: This page gives the official Cloud tape archive specification.
 ---
 

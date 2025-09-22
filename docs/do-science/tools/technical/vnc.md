@@ -2,7 +2,7 @@
 title: VNC
 category: Technical tools
 permalink: /do-science/tools/technical/vnc
-sidebarDepth: 1
+outline: 1
 description: Usage guide for VNC.
 ---
 

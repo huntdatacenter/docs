@@ -1,7 +1,7 @@
 ---
 title: Python
 category: Getting started
-sidebarDepth: 0
+outline: 0
 permalink: /do-science/hunt-workbench/getting-started/python
 description: How to use Python
 ---

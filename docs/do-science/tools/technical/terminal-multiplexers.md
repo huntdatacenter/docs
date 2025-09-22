@@ -2,7 +2,7 @@
 title: Terminal multiplexers
 category: Technical tools
 permalink: /do-science/tools/technical/terminal-multiplexers
-sidebarDepth: 1
+outline: 1
 description: Usage guide for terminal multiplexers, tmux and screen.
 ---
 

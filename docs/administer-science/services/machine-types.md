@@ -1,7 +1,7 @@
 ---
 title: Machine types
 category: Services
-sidebarDepth: 1
+outline: 1
 permalink: /administer-science/services/machine-types
 description: This page list default machine types in HUNT Cloud.
 ---

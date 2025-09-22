@@ -2,7 +2,7 @@
 title: JupyterLab
 category: Analytical tools
 permalink: /do-science/tools/analytical/jupyter-lab
-sidebarDepth: 0
+outline: 0
 description: Installation guide for Jupyter Lab.
 ---
 

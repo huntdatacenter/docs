@@ -1,7 +1,7 @@
 ---
 title: Overview
 category: Services
-sidebarDepth: 1
+outline: 1
 permalink: /administer-science/services/overview
 description: This page gives an overview of the HUNT Cloud services.
 ---

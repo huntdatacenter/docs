@@ -1,7 +1,7 @@
 ---
 title: HUNT Workbench
 category: HUNT Workbench
-sidebarDepth: 0
+outline: 0
 permalink: /do-science/hunt-workbench
 description: Guides to your HUNT Workbench setup.
 ---

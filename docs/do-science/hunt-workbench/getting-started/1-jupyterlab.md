@@ -1,7 +1,7 @@
 ---
 title: JupyterLab
 category: Getting started
-sidebarDepth: 0
+outline: 0
 permalink: /do-science/hunt-workbench/getting-started/jupyterlab
 description: How to use JupyterLab and Jupyter notebooks
 ---

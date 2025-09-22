@@ -2,7 +2,7 @@
 title: SSH passphrase reset
 category: Guides
 permalink: /do-science/guides/configure-ssh
-sidebarDepth: 1
+outline: 1
 description: Guide on SSH passphrase reset.
 ---
 

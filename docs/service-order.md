@@ -2,7 +2,7 @@
 title: HUNT Cloud | Service order
 category: HUNT Cloud
 permalink: /-/service-order/
-# sidebarDepth: 0
+# outline: 0
 pageClass: custom-page-class
 sidebar: false
 next: false

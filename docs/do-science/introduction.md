@@ -1,7 +1,7 @@
 ---
 title: Introduction
 category: Do science
-sidebarDepth: 1
+outline: 1
 permalink: /do-science/introduction
 description: Introduction to HUNT Cloud's do science documentation.
 ---

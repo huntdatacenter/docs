@@ -2,7 +2,7 @@
 title: «Freedom to explore»
 category: Community
 permalink: /do-science/community/freedom-to-explore/
-sidebarDepth: 1
+outline: 1
 description: This page list community translations of HUNT Cloud's tagline «Freedom to explore».
 ---
 

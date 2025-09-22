@@ -2,7 +2,7 @@
 title: Policies
 category: Govern science
 permalink: /govern-science/policies
-sidebarDepth: 0
+outline: 0
 description: This page list security and privacy policies for HUNT Cloud.
 ---
 

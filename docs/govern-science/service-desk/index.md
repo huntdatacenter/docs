@@ -3,7 +3,7 @@ title: Introduction
 category: Service desk
 permalink: /govern-science/service-desk/
 description: Introductory page for predefined HUNT Cloud service desk orders.
-sidebarDepth: 2
+outline: 2
 ---
 
 # Govern science service desk

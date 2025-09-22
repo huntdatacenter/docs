@@ -48,6 +48,10 @@ export default defineConfig({
     siteTitle: false,
     logo: "/img/hunt-cloud-logo.svg",
 
+    outline: {
+      level: 2,
+    },
+
     // https://vitepress.dev/reference/default-theme-config
     nav: navigationMenu(),
 

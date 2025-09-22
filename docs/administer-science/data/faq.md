@@ -2,7 +2,7 @@
 title: FAQ
 category: HUNT Cloud
 permalink: /administer-science/data/faq
-sidebarDepth: 1
+outline: 1
 description: This page list frequently asked questions about data coordination in HUNT Cloud.
 ---
 

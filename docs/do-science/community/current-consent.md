@@ -2,7 +2,7 @@
 title: Current consent
 category: Community
 permalink: /do-science/community/current-consent
-sidebarDepth: 0
+outline: 0
 tags: 
   - slack
 description: This page holds a version of the current consent for our HUNT Cloud community.

@@ -1,7 +1,7 @@
 ---
 title: Stata
 category: Getting started
-sidebarDepth: 0
+outline: 0
 permalink: /do-science/hunt-workbench/getting-started/stata
 description: How to use Stata
 ---

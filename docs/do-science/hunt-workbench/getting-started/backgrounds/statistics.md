@@ -1,7 +1,7 @@
 ---
 title: Statistics
 category: Backgrounds
-sidebarDepth: 2
+outline: 2
 permalink: /do-science/hunt-workbench/getting-started/backgrounds/statistics
 description: How to use Workbench for statistics
 tags:

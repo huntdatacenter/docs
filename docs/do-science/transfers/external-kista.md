@@ -2,7 +2,7 @@
 title: External kista
 category: Data transfers
 permalink: /do-science/data-transfers/external-kista
-sidebarDepth: 2
+outline: 2
 description: External kistas support labs with a simple and secure way to transfer data from an external user located outside HUNT Cloud and into a lab in HUNT Cloud.
 ---
 

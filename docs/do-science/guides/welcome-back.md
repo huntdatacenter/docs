@@ -2,7 +2,7 @@
 title: Welcome back
 category: Guides
 permalink: /do-science/guides/welcome-back
-sidebarDepth: 1
+outline: 1
 description: Guide to pick up the thread after being away for several months.
 ---
 

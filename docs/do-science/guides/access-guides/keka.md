@@ -2,7 +2,7 @@
 title: Keka
 category: Guides
 permalink: /do-science/guides/keka
-sidebarDepth: 1
+outline: 1
 tags:
   - keka
 description: How to use Keka on MacOS

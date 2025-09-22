@@ -2,7 +2,7 @@
 title: Price examples
 category: HUNT Cloud
 permalink: /administer-science/prices/examples
-sidebarDepth: 1
+outline: 1
 description: This page list examples of yearly cost for selected use cases in HUNT Cloud.
 ---
 

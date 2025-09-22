@@ -2,7 +2,7 @@
 title: Conda (Lab)
 category: Analytical tools
 permalink: /do-science/tools/analytical/conda
-sidebarDepth: 1
+outline: 1
 description: Installation guide for Conda, including installation of R packages using Conda.
 tags:
   - conda

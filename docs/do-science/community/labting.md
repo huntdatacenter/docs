@@ -2,7 +2,7 @@
 title: Labting
 category: Tingweek
 permalink: /do-science/community/labting/
-sidebarDepth: 1
+outline: 1
 description: This page list information and questions about our Labting.
 ---
 

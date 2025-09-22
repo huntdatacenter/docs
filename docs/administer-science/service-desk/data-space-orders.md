@@ -3,7 +3,7 @@ title: Data space orders
 category: Service desk
 permalink: /administer-science/service-desk/data-space-orders
 description: HUNT Cloud service desk orders for data spaces.
-sidebarDepth: 1
+outline: 1
 ---
 
 # Service desk orders for data spaces

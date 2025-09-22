@@ -1,7 +1,7 @@
 ---
 title: RStudio and R
 category: Getting started
-sidebarDepth: 0
+outline: 0
 permalink: /do-science/hunt-workbench/getting-started/rstudio
 description: How to use RStudio and R
 ---

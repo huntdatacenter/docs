@@ -1,7 +1,7 @@
 ---
 title: Privacy statement
 category: HUNT Cloud
-sidebarDepth: 0
+outline: 0
 description: This page contain HUNT Cloud's privacy statement for web and services.
 ---
 

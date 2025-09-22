@@ -2,7 +2,7 @@
 title: Principles
 category: HUNT Workbench
 permalink: /do-science/hunt-workbench/principles
-sidebarDepth: 1
+outline: 1
 description: Principles of HUNT Workbench use.
 ---
 

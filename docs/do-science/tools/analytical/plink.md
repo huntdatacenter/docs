@@ -2,7 +2,7 @@
 title: PLINK
 category: Analytical tools
 permalink: /do-science/tools/analytical/plink
-sidebarDepth: 1
+outline: 1
 description: Installation guide for Plink.
 ---
 

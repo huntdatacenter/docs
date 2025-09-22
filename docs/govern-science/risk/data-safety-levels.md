@@ -2,7 +2,7 @@
 title: Resources
 category: HUNT Cloud
 permalink: /riskmanagement/data-safety-levels
-sidebarDepth: 1
+outline: 1
 description: This page holds information on data safety levels in HUNT Cloud.
 ---
 

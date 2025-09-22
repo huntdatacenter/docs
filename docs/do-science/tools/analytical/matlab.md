@@ -2,7 +2,7 @@
 title: MATLAB
 category: Analytical tools
 permalink: /do-science/tools/analytical/MATLAB
-sidebarDepth: 1
+outline: 1
 description: Installation guide for MATLAB.
 ---
 

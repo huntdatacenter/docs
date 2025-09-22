@@ -2,7 +2,7 @@
 title: Introduction
 category: HUNT Cloud
 permalink: /administer-science/data/
-sidebarDepth: 1
+outline: 1
 description: This page gives an introduction to data administration in HUNT Cloud.
 ---
 

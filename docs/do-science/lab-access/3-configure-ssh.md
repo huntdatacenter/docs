@@ -2,7 +2,7 @@
 title: 3. SSH configuration
 category: Lab access
 permalink: /do-science/lab-access/configure-ssh
-sidebarDepth: 1
+outline: 1
 description: Guide on SSH configuration, requires a working VPN connection.
 ---
 

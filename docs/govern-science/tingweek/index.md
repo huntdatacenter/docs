@@ -2,7 +2,7 @@
 title: Introduction
 category: Tingweek
 permalink: /govern-science/tingweek/
-sidebarDepth: 1
+outline: 1
 description: This section list information and questions for the HUNT Cloud Tingweek.
 ---
 

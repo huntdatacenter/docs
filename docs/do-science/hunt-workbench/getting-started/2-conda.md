@@ -1,7 +1,7 @@
 ---
 title: Conda (Workbench)
 category: Getting started
-sidebarDepth: 0
+outline: 0
 permalink: /do-science/hunt-workbench/getting-started/conda
 description: How to use Conda and Mamba
 tags:

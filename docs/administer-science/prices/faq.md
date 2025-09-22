@@ -2,7 +2,7 @@
 title: FAQ
 category: HUNT Cloud
 permalink: /administer-science/prices/faq
-sidebarDepth: 1
+outline: 1
 description: This page list frequently asked questions related to the pricing of services in HUNT Cloud.
 ---
 

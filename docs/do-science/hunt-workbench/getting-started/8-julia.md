@@ -1,7 +1,7 @@
 ---
 title: Julia
 category: Getting started
-sidebarDepth: 0
+outline: 0
 permalink: /do-science/hunt-workbench/getting-started/julia
 description: How to use Julia
 ---

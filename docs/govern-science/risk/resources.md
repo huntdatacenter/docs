@@ -2,7 +2,7 @@
 title: Resources
 category: HUNT Cloud
 permalink: /govern-science/risk-management/resources
-sidebarDepth: 1
+outline: 1
 description: This page list risk management resources for HUNT Cloud.
 ---
 

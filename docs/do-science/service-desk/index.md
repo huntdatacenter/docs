@@ -3,7 +3,7 @@ title: Service desk
 category: Service desk
 permalink: /do-science/service-desk/
 description: This page list predefined HUNT Cloud service orders for active lab users.
-sidebarDepth: 1
+outline: 2
 ---
 
 # Service desk for lab users
@@ -24,11 +24,9 @@ Try our service desk in the [administer science](/administer-science/service-des
 
 Send us a [general service request](#general-service-request) if you can not find what you are looking for on this page.
 
-
 <Product title="Order Import Kista" subtitle="Import data to HUNT Cloud" subtitle-icon="" :description="``" :details="`Showing extra details...`" image="https://cdn.vuetifyjs.com/images/cards/cooking.png" />
 
 <Product title="Order Export Kista" subtitle="Export data from HUNT Cloud" subtitle-icon="" :description="``" :details="``" image="https://cdn.vuetifyjs.com/images/cards/cooking.png" />
-
 
 ## Lab access
 
@@ -38,36 +36,34 @@ The service orders below are aimed at active lab users. Lab access for new users
 
 :::
 
-
 ### HUNT Workbench reissue
 
 Request a new certificate if you have an existing HUNT Workbench and your previous [certificate expired](/do-science/hunt-workbench/troubleshooting/#_403-forbidden-expired-client-certificate).
 
 <SDButton form="request_workbench_reissue" />
 
-* **Who can order:** All active lab users.
-* **Expected response time:** Days.
-* **Expected delivery:** Workbench certificate.
-* **Requirement:** (1) Active Signal app on phone.
-* **Next step:** [Guide on Workbench reissue](/do-science/guides/hunt-workbench-reissue-certificate/).
-* **Cost:** Included in the lab subscription.
-
+- **Who can order:** All active lab users.
+- **Expected response time:** Days.
+- **Expected delivery:** Workbench certificate.
+- **Requirement:** (1) Active Signal app on phone.
+- **Next step:** [Guide on Workbench reissue](/do-science/guides/hunt-workbench-reissue-certificate/).
+- **Cost:** Included in the lab subscription.
 
 ### SSH passphrase reset
 
 Order a [SSH passphrase reset](/do-science/guides/configure-ssh/) that you may need to access your workbench and install software on your home machine.
 
-
 <SDButton form="request_ssh_pass_reset" />
 
-* **Who can order:** All active lab users.
-* **Expected response time:** Days.
-* **Expected delivery:** Temporary passphrase on Signal.
-* **Requirement:** Active Signal app on your phone.
-* **Next step:** [Guide on the passphrase reset](/do-science/guides/configure-ssh/).
-* **Cost:** Included in the lab subscription.
+- **Who can order:** All active lab users.
+- **Expected response time:** Days.
+- **Expected delivery:** Temporary passphrase on Signal.
+- **Requirement:** Active Signal app on your phone.
+- **Next step:** [Guide on the passphrase reset](/do-science/guides/configure-ssh/).
+- **Cost:** Included in the lab subscription.
 
 <!-- DEPRECATED - SSH configuration -->
+
 ### SSH configuration
 
 You can find SSH configuration in Lab access link. If you lost your Lab access link you can [Request reissue of Lab access link](/do-science/service-desk/#request-lab-access-link-reissue).
@@ -97,10 +93,10 @@ Lost the lab access link from your onboarding email? No worries, order a new one
 
 <SDButton form="request_lab_access_link" />
 
-* **Who can order:** All active lab users.
-* **Required information:** Your username and lab name.
-* **Expected response time:** Days.
-* **Cost:** Included in the lab subscription.
+- **Who can order:** All active lab users.
+- **Required information:** Your username and lab name.
+- **Expected response time:** Days.
+- **Cost:** Included in the lab subscription.
 
 ### HUNT Workbench
 
@@ -108,12 +104,12 @@ Lost the lab access link from your onboarding email? No worries, order a new one
 
 <SDButton form="request_workbench_access" />
 
-* **Who can order:** All active lab users.
-* **Expected response time:** Days.
-* **Expected delivery:** HUNT Workbench access key and certificate.
-* **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.
-* **Next step:** [Prepare your key transfer](/do-science/guides/hunt-workbench-request/).
-* **Cost:** Included in the lab subscription.
+- **Who can order:** All active lab users.
+- **Expected response time:** Days.
+- **Expected delivery:** HUNT Workbench access key and certificate.
+- **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.
+- **Next step:** [Prepare your key transfer](/do-science/guides/hunt-workbench-request/).
+- **Cost:** Included in the lab subscription.
 
 ## System access
 
@@ -125,17 +121,17 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 <SDButton form="request_vpn_link" />
 
-* **Who can order:** All active lab users.
-* **Required information**: [Your IP4 address](https://docs.hdc.ntnu.no/ipv4/), location and purpose (see below).
-* **Expected response time:** One day.
-* **Expected delivery:** Opening communicated on email.
-* **Cost:** Included in the lab subscription.
+- **Who can order:** All active lab users.
+- **Required information**: [Your IP4 address](https://docs.hdc.ntnu.no/ipv4/), location and purpose (see below).
+- **Expected response time:** One day.
+- **Expected delivery:** Opening communicated on email.
+- **Cost:** Included in the lab subscription.
 
 ::: details About the required information
 
-* **access_ip**. This is the external IP from your local computer that is visible for us when you connect. [Click here](https://docs.hdc.ntnu.no/ipv4/) to locate your address. Note that IPs that starts with "10.", "192." and "172." are internal addresses that will not work.
-* **access_duration**. State if you request a "permanent" or "temporary" access from the address. Permanent openings will follow your user duration. If you need temporary access during travels or similar, state the desired duration of the opening.
-* **access_country**. State from which country you will be connecting.
+- **access_ip**. This is the external IP from your local computer that is visible for us when you connect. [Click here](https://docs.hdc.ntnu.no/ipv4/) to locate your address. Note that IPs that starts with "10.", "192." and "172." are internal addresses that will not work.
+- **access_duration**. State if you request a "permanent" or "temporary" access from the address. Permanent openings will follow your user duration. If you need temporary access during travels or similar, state the desired duration of the opening.
+- **access_country**. State from which country you will be connecting.
 
 :::
 
@@ -145,12 +141,12 @@ You may need to reset your VPN certificate when you get a new local computer or 
 
 <SDButton form="request_vpn_reset" />
 
-* **Who can order:** All active lab users.
-* **Expected response time:** Days.
-* **Expected delivery:** VPN passphrase on Signal, link to VPN certificate on email.
-* **Requirement:** Active Signal app on your phone.
-* **Next step:** [Guide on the VPN reset](/do-science/guides/vpn-certificate-reset/).
-* **Cost:** Included in the lab subscription.
+- **Who can order:** All active lab users.
+- **Expected response time:** Days.
+- **Expected delivery:** VPN passphrase on Signal, link to VPN certificate on email.
+- **Requirement:** Active Signal app on your phone.
+- **Next step:** [Guide on the VPN reset](/do-science/guides/vpn-certificate-reset/).
+- **Cost:** Included in the lab subscription.
 
 ### Google authenticator key reset
 
@@ -158,13 +154,12 @@ You need the [Google Authenticator key](/do-science/guides/google-authenticator-
 
 <SDButton form="request_google_auth" />
 
-* **Who can order:** All active lab users.
-* **Expected response time:** Days.
-* **Expected delivery:** New key on Signal.
-* **Requirement:** Active Signal app on your phone.
-* **Next step:** [Guide on the key reset](/do-science/guides/google-authenticator-reset/).
-* **Cost:** Included in the lab subscription.
-
+- **Who can order:** All active lab users.
+- **Expected response time:** Days.
+- **Expected delivery:** New key on Signal.
+- **Requirement:** Active Signal app on your phone.
+- **Next step:** [Guide on the key reset](/do-science/guides/google-authenticator-reset/).
+- **Cost:** Included in the lab subscription.
 
 ## Community access
 
@@ -174,14 +169,11 @@ Membership in our [HUNT Cloud community](/do-science/community/) is voluntary. Y
 
 <SDButton form="request_consent_link" />
 
-* **Who can order:** Existing HUNT Cloud community members and active lab users that wants to join.
-* **Expected response time:** Days.
-* **Expected delivery:** Link to the community consent forwarded on email.
-* **Requirement:** Active lab agreement signed less than two years ago.
-* **Cost:** Included in the lab subscription.
-
-
-
+- **Who can order:** Existing HUNT Cloud community members and active lab users that wants to join.
+- **Expected response time:** Days.
+- **Expected delivery:** Link to the community consent forwarded on email.
+- **Requirement:** Active lab agreement signed less than two years ago.
+- **Cost:** Included in the lab subscription.
 
 ## Applications
 
@@ -201,7 +193,6 @@ You may simplify your MobaXterm configuration using a predefined file with crede
 * **Next step:** [MobaXterm configuration guide](/do-science/tools/technical/mobaxterm/).
 * **Cost:** Included in the lab subscription. -->
 
-
 ## Tingweek
 
 ### Deregister to future Tingweek invitations
@@ -210,11 +201,10 @@ All active HUNT Cloud users will be invited to individual Tings three times per 
 
 <SDButton form="deregister_tingweek_invitations" />
 
-* **Who can order:** Lab users.
-* **Expected delivery time:** Days.
-* **Expected response time:** Confirmation of deregistration.
-* **Cost:** Included in your data space subscription.
-
+- **Who can order:** Lab users.
+- **Expected delivery time:** Days.
+- **Expected response time:** Confirmation of deregistration.
+- **Cost:** Included in your data space subscription.
 
 ## General service request
 
@@ -222,8 +212,8 @@ Don't find what you are looking for on the predefined orders above? Don't you wo
 
 <SDButton form="general_lab_user_request" />
 
-* **Who can order:** All active lab users.
-* **Expected response time:** Days.
+- **Who can order:** All active lab users.
+- **Expected response time:** Days.
 
 ::: warning General responses are slower
 
@@ -236,8 +226,6 @@ Note that a general lab user request has slower response time than a predefined 
 [Contact us](/contact) on email for general questions and information on our scientific services and activities.
 
 :::
-
-
 
 ## FAQ
 

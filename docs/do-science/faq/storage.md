@@ -2,7 +2,7 @@
 title: Storage
 category: FAQ
 permalink: /do-science/faq/storage
-sidebarDepth: 1
+outline: 1
 description: This page lists frequently asked questions related to lab storage.
 ---
 

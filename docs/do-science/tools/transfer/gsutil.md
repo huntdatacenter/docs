@@ -2,7 +2,7 @@
 title: Gsutil
 category: Transfer tools
 permalink: /do-science/tools/transfer/gsutil
-sidebarDepth: 1
+outline: 1
 description: Usage guide for gsutil.
 ---
 

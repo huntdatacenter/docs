@@ -2,7 +2,7 @@
 title: HUNT Workbench certificate request
 category: Guides
 permalink: /do-science/guides/hunt-workbench-request
-sidebarDepth: 1
+outline: 1
 description: Guide on the certificate request for your HUNT Workbench.
 ---
 

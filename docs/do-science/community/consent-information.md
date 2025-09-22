@@ -2,7 +2,7 @@
 title: Consent information
 category: Community
 permalink: /do-science/community/consent-information
-sidebarDepth: 0
+outline: 0
 tags: 
   - slack
 description: This page holds information on the consent for HUNT Cloud's user community.

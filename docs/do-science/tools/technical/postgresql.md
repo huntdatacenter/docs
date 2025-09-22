@@ -2,7 +2,7 @@
 title: PostgreSQL
 category: Technical tools
 permalink: /do-science/tools/technical/postgresql
-sidebarDepth: 1
+outline: 1
 description: Connection guide for PostgreSQL.
 ---
 

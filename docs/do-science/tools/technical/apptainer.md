@@ -2,7 +2,7 @@
 title: Apptainer (Singularity)
 category: Technical tools
 permalink: /do-science/tools/technical/apptainer-singularity
-sidebarDepth: 0
+outline: 0
 description: Installation guide for Apptainer (Singularity)
 tags:
   - docker
