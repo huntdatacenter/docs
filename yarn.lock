@@ -527,6 +527,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fortawesome/fontawesome-common-types@npm:7.0.1":
+  version: 7.0.1
+  resolution: "@fortawesome/fontawesome-common-types@npm:7.0.1"
+  checksum: 10c0/1cebe9727950f8fcea581e115ed91f9b2bf287114077adde0cc1fb32d25c2c2ec282a8cff291b22ca558cbb1264af7fad04b85c5afcb899745584b2874df4151
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-svg-core@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "@fortawesome/fontawesome-svg-core@npm:7.0.1"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": "npm:7.0.1"
+  checksum: 10c0/adf72373e45ec0b81e9a60e74a6aeadd70cd7da31ecf37736e6288ef956148699272155935d97d7bf02f37e2fefd8f9b8c34b626e59fcca54a5947be46ff06fe
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-solid-svg-icons@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "@fortawesome/free-solid-svg-icons@npm:7.0.1"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": "npm:7.0.1"
+  checksum: 10c0/25e579f3e6504982884a1231f74125efdad70e3fde3bc8ca657a28d55a80ac4ddf6d5530c5cfd93292dbb702957bb4b91b8488865a934da1e09304a7e2a07a72
+  languageName: node
+  linkType: hard
+
+"@fortawesome/vue-fontawesome@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "@fortawesome/vue-fontawesome@npm:3.1.2"
+  peerDependencies:
+    "@fortawesome/fontawesome-svg-core": ~1 || ~6 || ~7
+    vue: ">= 3.0.0 < 4"
+  checksum: 10c0/bce79543821d0cdd966b10a1003a0080418340cfa894c02a275c85a2fd8a2fa908eab908e937e6b4977bf0394162f62f4b39c7522930f63a41fc47a9d75fe3b4
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -2731,6 +2766,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    "@fortawesome/fontawesome-svg-core": "npm:^7.0.1"
+    "@fortawesome/free-solid-svg-icons": "npm:^7.0.1"
+    "@fortawesome/vue-fontawesome": "npm:^3.1.2"
     "@mdi/font": "npm:^7.4.47"
     eslint: "npm:^9.35.0"
     prettier: "npm:^3.6.2"

@@ -1,83 +1,79 @@
-<script>
-import {
-  VApp,
-} from "vuetify/lib";
+<script setup>
+import { ref, computed, onMounted, defineAsyncComponent } from "vue"
 
-import fetch from 'node-fetch';
-
-export default {
+defineOptions({
   name: "MyIPAddress",
-  components: {
-    VApp,
-    CopyInputField: () => import('./CopyInputField.vue'),
-  },
-  props: {
-    id: { type: String, default: "applet" },
-    hidePrefix: { type: Boolean, default: false },
-  },
-  data() {
-    return {
-      ipAddress: null,
-      loading: true,
-    }
-  },
-  computed: {
-    getMyIpaddress() {
-      return this.ipAddress ? this.ipAddress : null
-    },
-    show() {
-      return this.ipAddress && this.ipAddress.length > 3 ? true : false
-    },
-  },
-  mounted() {},
-  created() {
-    fetch('https://consent-api.hdc.ntnu.no/ip4', {
+})
+
+// Async component import (Vue 3 style)
+const CopyInputField = defineAsyncComponent(() => import("../generic/CopyInputField.vue"))
+
+// Props definition
+const props = defineProps({
+  id: { type: String, default: "applet" },
+  hidePrefix: { type: Boolean, default: false },
+})
+
+// Reactive data
+const ipAddress = ref(null)
+const loading = ref(true)
+
+// Computed properties
+const getMyIpaddress = computed(() => {
+  return ipAddress.value ? ipAddress.value : null
+})
+
+const show = computed(() => {
+  return ipAddress.value && ipAddress.value.length > 3 ? true : false
+})
+
+// Fetch IP address function
+const fetchIpAddress = async () => {
+  try {
+    const response = await fetch("https://consent-api.hdc.ntnu.no/ip4", {
       method: "GET",
       cache: "no-cache",
       headers: {
         "Content-Type": "text/plain",
       },
-    }).then(
-      (response) => {
-        return response.text()
-      }
-    ).then(
-      (data) => {
-        this.ipAddress = data
-      }
-    ).finally(() => {
-      this.loading = false
     })
-  },
-};
+
+    const data = await response.text()
+    ipAddress.value = data
+  } catch (error) {
+    console.error("Failed to fetch IP address:", error)
+    ipAddress.value = null
+  } finally {
+    loading.value = false
+  }
+}
+
+// Lifecycle hook
+onMounted(() => {
+  fetchIpAddress()
+})
 </script>
 
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
-      <CopyInputField
-        :value="getMyIpaddress"
-        :prefix="hidePrefix ? `` : `Your IP address:`"
-        :loading="loading"
-      />
+      <CopyInputField :model-value="getMyIpaddress" :prefix="hidePrefix ? `` : `Your IP address:`" :loading="loading" />
     </v-app>
   </div>
 </template>
 
-<style lang="sass">
+<style>
+.vuewidget.vuewrapper {
+  /* reset full view - no scroll bars, no full view */
+  overflow: inherit;
+}
 
-.vuewidget
-
-  &.vuewrapper
-    // reset full view - no scroll bars, no full view
-    overflow: inherit
-
-    .v-application--wrap
-      display: block
-      flex: inherit
-      min-height: initial
-      min-width: inherit
-      width: 100%
-      overflow-x: hidden
-
+.vuewidget.vuewrapper .v-application--wrap {
+  display: block;
+  flex: inherit;
+  min-height: initial;
+  min-width: inherit;
+  width: 100%;
+  overflow-x: hidden;
+}
 </style>
