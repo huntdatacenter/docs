@@ -2,13 +2,16 @@
 import { h } from "vue"
 import type { Theme } from "vitepress"
 import DefaultTheme from "vitepress/theme"
+
+import VuetifyButton from "./components/legacy/VuetifyButton.vue"
+
 import "./style.css"
 
 import "@mdi/font/css/materialdesignicons.css"
 
 import "vuetify/styles"
 
-import { vuetify } from "../plugins/vuetify"
+import { vuetify } from "./plugins/vuetify"
 
 export default {
   extends: DefaultTheme,
@@ -19,5 +22,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     app.use(vuetify)
+    app.component("VuetifyButton", VuetifyButton)
   },
 } satisfies Theme

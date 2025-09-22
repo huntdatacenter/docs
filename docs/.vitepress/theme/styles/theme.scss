@@ -1,0 +1,73 @@
+/* Theme */
+
+/* Default style for tags */
+p,
+ul,
+ol {
+  line-height: 1.7;
+}
+
+.material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+.page {
+  padding-bottom: 2rem;
+  display: block;
+  padding-left: 20rem;
+}
+
+.custom-homepage {
+  .page {
+    // display: flex !important;
+    height: 100%;
+    padding-bottom: 0px !important;
+  }
+}
+
+/* Hide external repository in regular navbar */
+.nav-links .repo-link {
+  display: none;
+}
+
+/* TODO attempt to fix vuetify messing CSS: https://github.com/vuetifyjs/vuetify/issues/8530#issuecomment-680942337 */
+.theme-default-content:not(.custom) {
+  max-width: 820px !important;
+}
+
+/* Hide navbar in sidebar. Only works in build, https://github.com/vuejs/vuepress/issues/1099 */
+.sidebar .nav-links {
+  display: none;
+}
+
+.customiframe {
+  position: absolute;
+  overflow: hidden;
+  overflow-y: hidden;
+  height: 110%;
+  width: 100%;
+  width: 860px;
+  top: 150px;
+  left: 0px;
+  right: 0px;
+  bottom: 50px;
+  margin: 0 auto;
+  padding-left: 320px;
+}
+
+/* Render code blocks better with line breaks. See https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break */
+code {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+@media (max-width: 719px) {
+  .logo {
+    height: auto;
+    width: 70%;
+  }
+  .customiframe {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}

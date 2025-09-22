@@ -92,18 +92,14 @@
 
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 30%,
-    #41d1ff
-  );
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
 
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #bd34fe 50%,
-    #47caff 50%
-  );
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
   --vp-home-hero-image-filter: blur(44px);
+
+  --mq-narrow: 959px;
+  --mq-mobile: 719px;
+  --mq-mobile-narrow: 419px;
 }
 
 @media (min-width: 640px) {
@@ -137,3 +133,340 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * Custom
+ * -------------------------------------------------------------------------- */
+
+/* Theme */
+
+/* Default style for tags */
+p,
+ul,
+ol {
+  line-height: 1.7;
+}
+
+.material-icons {
+  font-family: "Material Icons" !important;
+}
+
+.page {
+  padding-bottom: 2rem;
+  display: block;
+  padding-left: 20rem;
+}
+
+.custom-homepage {
+  .page {
+    /* display: flex !important; */
+    height: 100%;
+    padding-bottom: 0px !important;
+  }
+}
+
+/* Hide external repository in regular navbar */
+.nav-links .repo-link {
+  display: none;
+}
+
+/* TODO attempt to fix vuetify messing CSS: https://github.com/vuetifyjs/vuetify/issues/8530#issuecomment-680942337 */
+.theme-default-content:not(.custom) {
+  max-width: 820px !important;
+}
+
+/* Hide navbar in sidebar. Only works in build, https://github.com/vuejs/vuepress/issues/1099 */
+.sidebar .nav-links {
+  display: none;
+}
+
+.customiframe {
+  position: absolute;
+  overflow: hidden;
+  overflow-y: hidden;
+  height: 110%;
+  width: 100%;
+  width: 860px;
+  top: 150px;
+  left: 0px;
+  right: 0px;
+  bottom: 50px;
+  margin: 0 auto;
+  padding-left: 320px;
+}
+
+/* Render code blocks better with line breaks. See https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break */
+code {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+@media (max-width: 719px) {
+  .logo {
+    height: auto;
+    width: 70%;
+  }
+  .customiframe {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* Hide external repository in regular navbar */
+.nav-links .repo-link {
+  display: none;
+}
+
+/* Hide navbar in sidebar. Only works in build, https://github.com/vuejs/vuepress/issues/1099 */
+.sidebar .nav-links {
+  display: none;
+}
+
+.custom-homepage {
+  .last-updated {
+    display: none !important;
+  }
+}
+
+.theme-container.custom-page-class {
+  height: calc(100dvh - 3.6rem) !important;
+
+  .page {
+    padding-bottom: 0px !important;
+    height: 100%;
+
+    .theme-default-content {
+      height: 100%;
+    }
+  }
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.custom-block.details {
+  display: block;
+  position: relative;
+  border-radius: 2px;
+  margin: 1.6em 0;
+  padding: 1.6em;
+  background-color: #eee;
+}
+.custom-block.details h4 {
+  margin-top: 0;
+}
+.custom-block.details figure:last-child {
+  padding-bottom: 0;
+}
+.custom-block.details p:last-child {
+  padding-bottom: 0;
+}
+.custom-block.details summary {
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+.customiframe {
+  position: absolute;
+  overflow: hidden;
+  overflow-y: hidden;
+  height: 110%;
+  width: 100%;
+  width: 860px;
+  top: 150px;
+  left: 0px;
+  right: 0px;
+  bottom: 50px;
+  margin: 0 auto;
+  padding-left: 320px;
+}
+/*
+.custom-block.tip {
+  border-color: #2e7578;
+}
+.custom-block.warning {
+  border-color: #f4ac67
+  background-color: #fdd9b5
+}
+*/
+
+.custom-block
+  &.expander
+  display
+  block
+  position
+  relative
+  border-radius
+  2px
+  margin
+  1.6em
+  0
+  padding
+  1.6em
+  background-color
+  #eee
+  h3
+  margin-top
+  0
+  h4
+  margin-top
+  0
+  figure,
+p
+  &:last-child
+  margin-bottom
+  0
+  padding-bottom
+  0
+  summary
+  font-weight
+  bold
+  outline
+  none
+  cursor
+  pointer
+  .custom-block.expander {
+  summary:hover .header-anchor {
+    opacity: 1;
+  }
+}
+
+.glow {
+  animation: highlight 3s;
+}
+
+@keyframes highlight {
+  0% {
+    box-shadow: 0 0 10px -7px rgba(235, 240, 196, 0);
+  }
+  20% {
+    box-shadow: 0 0 10px -7px rgba(235, 240, 196, 0);
+  }
+  30% {
+    box-shadow: 0 0 10px 7px rgba(235, 240, 196, 0.9);
+  }
+  40% {
+    box-shadow: 0 0 10px 7px rgba(235, 240, 196, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px 7px rgba(235, 240, 196, 0.9);
+  }
+  60% {
+    box-shadow: 0 0 10px 7px rgba(235, 240, 196, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px -7px rgba(235, 240, 196, 0);
+  }
+}
+
+/* Render code blocks better with line breaks. See https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break */
+code {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* set logo width on widescreen mode of phones */
+@media (max-width: --mq-narrow) {
+  .customiframe {
+    padding-left: 270px !important;
+    padding-right: 20px !important;
+  }
+}
+@media (max-width: --mq-mobile) {
+  .logo {
+    height: auto;
+    width: 80%;
+  }
+  .customiframe {
+    padding-left: 270px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* set logo width on phones */
+@media (max-width: --mq-mobile-narrow) {
+  .logo {
+    height: auto;
+    width: 70%;
+  }
+  .customiframe {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 719px) {
+  .logo {
+    height: auto;
+    width: 70%;
+  }
+  .customiframe {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* Vuetify - standard xs/sm/md/lg/xl sizing */
+
+/* xs	- Extra small - Small to large phone */
+@media only screen and (max-width: 600px) {
+  .h-xs-auto {
+    height: auto !important;
+  }
+
+  .pdf-min-height {
+    min-heigh: 100%;
+  }
+
+  .flex-xs-wrap {
+    flex-wrap: wrap !important;
+  }
+}
+
+/* sm	- Small - Small to medium tablet */
+@media only screen and (max-width: 960px) and (min-width: 600px) {
+  .h-sm-auto {
+    height: auto !important;
+  }
+
+  .pdf-min-height {
+    min-heigh: 100%;
+  }
+}
+
+/* md	- Medium - Large tablet to laptop */
+@media only screen and (max-width: 1264px) and (min-width: 600px) {
+  .h-md-auto {
+    height: auto !important;
+  }
+}
+
+/* lg	- Large - Desktop */
+@media only screen and (max-width: 1904px) and (min-width: 1264px) {
+  .h-lg-auto {
+    height: auto !important;
+  }
+}
+
+/* xl	- Extra large - 4k and ultra-wide */
+@media only screen and (min-width: 1904px) {
+  .h-xl-auto {
+    height: auto !important;
+  }
+}
+
+.mascot {
+  background-image: url("/img/hunt-cloud_bot_250_2.png");
+  background-position: 50% 50%;
+  /* //background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
+  object-fit: scale-down;
+  height: 100%;
+  width: 100%;
+}

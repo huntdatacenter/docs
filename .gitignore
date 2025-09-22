@@ -1,5 +1,6 @@
 .tox
 
+
 pids
 logs
 node_modules
@@ -12,6 +13,9 @@ build/
 !docs/.vuepress/public
 docs/.vuepress/.cache
 docs/.vuepress/.temp
+docs/.vitepress/cache
+docs/.vitepress/.temp
+
 .DS_Store
 .nyc_output
 .basement
