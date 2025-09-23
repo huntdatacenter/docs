@@ -15,6 +15,7 @@ import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
 import ConsentForm from "./components/legacy/ConsentForm.vue"
 import SDButton from "./components/legacy/SDButton.vue"
 import ServiceDesk from "./components/legacy/ServiceDesk.vue"
+import LabAccess from "./components/lab-access/LabAccess.vue"
 
 import "./style.css"
 
@@ -109,5 +110,6 @@ export default {
     app.component("ConsentForm", ConsentForm)
     app.component("SDButton", SDButton)
     app.component("ServiceDesk", ServiceDesk)
+    app.component("LabAccess", LabAccess)
   },
 } satisfies Theme
