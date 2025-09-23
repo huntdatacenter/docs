@@ -12,6 +12,7 @@ import VuetifyButton from "./components/legacy/VuetifyButton.vue"
 import MyIPAddress from "./components/legacy/MyIPAddress.vue"
 import NavitationCards from "./components/legacy/NavitationCards.vue"
 import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
+import ConsentForm from "./components/legacy/ConsentForm.vue"
 
 import "./style.css"
 
@@ -103,5 +104,6 @@ export default {
     app.component("MyIPAddress", MyIPAddress)
     app.component("NavitationCards", NavitationCards)
     app.component("HideLastUpdated", HideLastUpdated)
+    app.component("ConsentForm", ConsentForm)
   },
 } satisfies Theme
