@@ -1,18 +1,8 @@
-<script>
-
-export default {
+<script setup>
+defineOptions({
   name: "HideLastUpdated",
-  components: {},
-  props: {},
-  data() {
-    return {}
-  },
-  computed: {},
-  created() {},
-  methods: {},
-};
+})
 </script>
-
 
 <template>
   <div>
@@ -20,10 +10,8 @@ export default {
   </div>
 </template>
 
-
-<style lang="sass">
-
-.last-updated
-  display: none !important
-
+<style>
+.last-updated {
+  display: none !important;
+}
 </style>

@@ -11,6 +11,7 @@ import CopyTextField from "./components/generic/CopyTextField.vue"
 import VuetifyButton from "./components/legacy/VuetifyButton.vue"
 import MyIPAddress from "./components/legacy/MyIPAddress.vue"
 import NavitationCards from "./components/legacy/NavitationCards.vue"
+import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
 
 import "./style.css"
 
@@ -101,5 +102,6 @@ export default {
     app.component("VuetifyButton", VuetifyButton)
     app.component("MyIPAddress", MyIPAddress)
     app.component("NavitationCards", NavitationCards)
+    app.component("HideLastUpdated", HideLastUpdated)
   },
 } satisfies Theme
