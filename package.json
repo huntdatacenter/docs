@@ -18,7 +18,10 @@
     "@fortawesome/free-solid-svg-icons": "^7.0.1",
     "@fortawesome/vue-fontawesome": "^3.1.2",
     "@mdi/font": "^7.4.47",
+    "country-list-json": "^1.1.0",
     "markdown-it": "^14.1.0",
+    "pdf-lib": "^1.17.1",
+    "signature_pad": "^5.1.1",
     "yaml": "^2.8.1"
   }
 }

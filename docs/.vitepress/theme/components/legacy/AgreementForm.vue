@@ -1,109 +1,78 @@
-<script>
-const yaml = require("js-yaml");
-// const fs = require("fs");
-import fetch from 'node-fetch';
+<script setup>
+import { ref, computed, watch, onMounted, nextTick } from "vue"
+import { useRoute } from "vue-router"
+import YAML from "yaml"
 
-import {
-  VApp,
-  VAppBar,
-  VAppBarNavIcon,
-  VToolbarTitle,
-  VCol,
-  VRow,
-  VCard,
-  VForm,
-  VBtn,
-  VSheet,
-  VLayout,
-  VTextField,
-  VAutocomplete,
-  VCardTitle,
-  VCardText,
-} from "vuetify/lib"
+// Dynamic import for PdfForm component
+// const PdfForm = defineAsyncComponent(() => import("./PdfForm.vue"))
 
-export default {
-  name: "AgreementForm",
-  components: {
-    PdfForm: () => import('./PdfForm.vue'),
-    VApp,
-    VAppBar,
-    VAppBarNavIcon,
-    VToolbarTitle,
-    VCol,
-    VRow,
-    VCard,
-    VForm,
-    VSheet,
-    VLayout,
-    VBtn,
-    VTextField,
-    VAutocomplete,
-    VCardTitle,
-    VCardText,
+// Props
+const props = defineProps({
+  id: { type: String, default: "applet" },
+})
+
+// Route
+const route = useRoute()
+
+// Reactive data
+const agreements = ref([])
+const forms = ref({})
+const selected = ref(null)
+const expandForm = ref(false)
+
+// Computed properties
+const showForm = computed(() => {
+  return selected.value ? true : false
+})
+
+const getFields = computed(() => {
+  return selected.value && forms.value && forms.value[selected.value.value]
+    ? forms.value[selected.value.value].fields
+    : []
+})
+
+// Methods
+const loadSelectedFromUri = () => {
+  selected.value =
+    route.query && route.query.open ? agreements.value.find(item => item.value == route.query.open) : null
+}
+
+const updateUrl = event => {
+  const state = window.history.state
+  window.history.pushState(state, "", "?open=")
+
+  nextTick(() => {
+    const state2 = window.history.state
+    const searchURL = new URL(window.location)
+    searchURL.searchParams.set("open", event.value)
+    window.history.pushState(state2, "", searchURL)
+  })
+}
+
+// Watchers
+watch(
+  () => route.query.open,
+  (to, from) => {
+    // console.log(`changed uri: ${from} -> ${to}`)
+    loadSelectedFromUri()
   },
-  props: {
-    // form: { type: String, default: null },
-    id: { type: String, default: "applet" },
-  },
-  data() {
-    return {
-      agreements: [],
-      forms: {},
-      selected: null,
-      expandForm: false,
-    };
-  },
-  computed: {
-    showForm() {
-      return this.selected ? true : false
-    },
-    getFields() {
-      return this.selected && this.forms && this.forms[this.selected.value] ? this.forms[this.selected.value].fields : []
-    },
-  },
-  watch: {
-    '$route.query.open': {
-      handler(to, from) {
-        // console.log(`changed uri: ${from} -> ${to}`)
-        this.loadSelectedFromUri()
+)
+
+// Lifecycle hooks
+onMounted(() => {
+  fetch("/cfg/agreements.yml")
+    .then(response => response.text())
+    .then(data => {
+      // console.log(data);
+      const cfg = YAML.parse(data)
+      console.log(cfg)
+      agreements.value = cfg.agreements
+      forms.value = cfg.forms
+      if (route.query.open) {
+        loadSelectedFromUri()
       }
-    },
-    // selected(val) {
-    //   console.log(val)
-    // },
-  },
-  mounted() {},
-  created() {
-    fetch("/cfg/agreements.yml")
-      .then((response) => response.text())
-      .then((data) => {
-        // console.log(data);
-        const cfg = yaml.load(data);
-        console.log(cfg);
-        this.agreements = cfg.agreements
-        this.forms = cfg.forms
-        if (this.$route.query.open) {
-          this.loadSelectedFromUri()
-        }
-      });
-  },
-  methods: {
-    loadSelectedFromUri() {
-      this.selected = this.$route.query && this.$route.query.open ? this.agreements.find((item) => item.value == this.$route.query.open) : null
-    },
-    updateUrl(event) {
-      const state = window.history.state
-      window.history.pushState(state, '', '?open=')
-
-      this.$nextTick(() => {
-        const state2 = window.history.state
-        const searchURL = new URL(window.location)
-        searchURL.searchParams.set('open', event.value)
-        window.history.pushState(state2, '', searchURL)
-      })
-    }
-  },
-};
+    })
+})
 </script>
 
 <template>
@@ -124,27 +93,27 @@ export default {
         />
         <!-- :expand-form="expandForm" -->
       </v-layout>
-      <v-row v-else align="center" justify="center" style="margin-top: 24px;">
+      <v-row v-else align="center" justify="center" style="margin-top: 24px">
         <v-col class="mx-2" style="max-width: 900px">
           <v-card class="mb-4">
             <v-card-title>Select Agreement Form</v-card-title>
             <v-card-text>
-            <v-row class="ml-3 mb-2" style="padding-left: 24px; padding-right:24px;">
-              <v-col cols="12">
-                <v-autocomplete
-                  v-model="selected"
-                  ref="agreement_field"
-                  autocomplete="ignore-field"
-                  label="Agreement type"
-                  placeholder=""
-                  :items="agreements"
-                  :item-value="item => item"
-                  persistent-placeholder
-                  outlined
-                  dense
-                  hide-details
-                  @focus="$event.target.select()"
-                  @change="updateUrl($event)"
+              <v-row class="ml-3 mb-2" style="padding-left: 24px; padding-right: 24px">
+                <v-col cols="12">
+                  <v-autocomplete
+                    v-model="selected"
+                    ref="agreement_field"
+                    autocomplete="ignore-field"
+                    label="Agreement type"
+                    placeholder=""
+                    :items="agreements"
+                    :item-value="item => item"
+                    persistent-placeholder
+                    outlined
+                    dense
+                    hide-details
+                    @focus="$event.target.select()"
+                    @change="updateUrl($event)"
                   ></v-autocomplete>
                 </v-col>
               </v-row>
@@ -156,34 +125,34 @@ export default {
   </div>
 </template>
 
+<style>
+.vuewidget.vuewrapper {
+  /* reset full view - no scroll bars, no full view */
+  overflow: inherit;
+  height: 100%;
+}
 
-<!-- SASS is auto-translated in CSS style -->
-<style lang="sass">
-.vuewidget
+.vuewidget.vuewrapper .v-application {
+  height: 100%;
+}
 
-  &.vuewrapper
-    // reset full view - no scroll bars, no full view
-    overflow: inherit
-    height: 100%
+.vuewidget.vuewrapper .v-application .v-application--wrap {
+  display: block;
+  flex: inherit;
+  min-height: initial;
+  min-width: inherit;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
 
-    .v-application
-      height: 100%
+.page-edit {
+  display: none;
+}
 
-      .v-application--wrap
-        display: block
-        flex: inherit
-        min-height: initial
-        min-width: inherit
-        width: 100%
-        height: 100%
-        overflow-x: hidden
-
-.page-edit
-  display: none
-
-.language-text
-  display: flex
-  padding-top: 8px !important
-  padding-bottom: 8px !important
-
+.language-text {
+  display: flex;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
 </style>

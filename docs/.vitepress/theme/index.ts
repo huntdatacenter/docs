@@ -15,7 +15,18 @@ import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
 import ConsentForm from "./components/legacy/ConsentForm.vue"
 import SDButton from "./components/legacy/SDButton.vue"
 import ServiceDesk from "./components/legacy/ServiceDesk.vue"
+import AgreementForm from "./components/legacy/AgreementForm.vue"
+import EmbedPdfViewer from "./components/legacy/EmbedPdfViewer.vue"
+import PdfForm from "./components/legacy/PdfForm.vue"
 import LabAccess from "./components/lab-access/LabAccess.vue"
+import LinuxJourney from "./components/lab-access/LinuxJourney.vue"
+import WindowsJourney from "./components/lab-access/WindowsJourney.vue"
+import MacJourney from "./components/lab-access/MacJourney.vue"
+import TotpGuide from "./components/lab-access/TotpGuide.vue"
+import VideoGuide from "./components/lab-access/VideoGuide.vue"
+import AccessIntro from "./components/lab-access/AccessIntro.vue"
+import IaasAccess from "./components/lab-access/IaasAccess.vue"
+import DesignNewPassphrase from "./components/lab-access/DesignNewPassphrase.vue"
 
 import "./style.css"
 
@@ -110,6 +121,17 @@ export default {
     app.component("ConsentForm", ConsentForm)
     app.component("SDButton", SDButton)
     app.component("ServiceDesk", ServiceDesk)
+    app.component("AgreementForm", AgreementForm)
+    app.component("EmbedPdfViewer", EmbedPdfViewer)
+    app.component("PdfForm", PdfForm)
     app.component("LabAccess", LabAccess)
+    app.component("LinuxJourney", LinuxJourney)
+    app.component("WindowsJourney", WindowsJourney)
+    app.component("MacJourney", MacJourney)
+    app.component("TotpGuide", TotpGuide)
+    app.component("VideoGuide", VideoGuide)
+    app.component("AccessIntro", AccessIntro)
+    app.component("IaasAccess", IaasAccess)
+    app.component("DesignNewPassphrase", DesignNewPassphrase)
   },
 } satisfies Theme
