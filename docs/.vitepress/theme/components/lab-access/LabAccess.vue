@@ -1,6 +1,10 @@
 <script setup>
-import { ref, computed, onMounted, watch, defineAsyncComponent, getCurrentInstance } from "vue"
+import { ref, computed, onMounted, watch, getCurrentInstance } from "vue"
 import YAML from "yaml"
+
+// Dynamic import for components
+// import { defineAsyncComponent } from "vue"
+// const TotpGuide = defineAsyncComponent(() => import("./TotpGuide.vue"))
 
 defineOptions({
   name: "LabAccess",
@@ -434,6 +438,19 @@ filterLabMigration.value = routeQuery.filter && routeQuery.filter === "lab_migra
 
 .vuewidget.vuewrapper .v-chip--removable {
   background-color: #97d2d4 !important;
+}
+
+.vuewidget.vuewrapper .v-application a {
+  color: #1976d2;
+}
+
+.vuewidget.vuewrapper a.header-anchor {
+  font-size: 0.85em;
+  float: left;
+  margin-left: -0.87em;
+  padding-right: 0.23em;
+  margin-top: 0.125em;
+  opacity: 0;
 }
 
 .last-updated {
