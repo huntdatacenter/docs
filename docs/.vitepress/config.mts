@@ -317,6 +317,7 @@ function sidebarDoScience() {
         {
           text: "Technical tools",
           link: "/do-science/tools/technical/",
+          collapsed: true,
           items: [
             {
               text: "Docker",
@@ -406,6 +407,7 @@ function sidebarDoScience() {
         {
           text: "Analytical tools",
           link: "/do-science/tools/analytical/",
+          collapsed: true,
           items: [
             {
               text: "BlueBox",
@@ -472,6 +474,7 @@ function sidebarDoScience() {
         {
           text: "Transfer tools",
           link: "/do-science/tools/transfer/",
+          collapsed: true,
           items: [
             {
               text: "7z",

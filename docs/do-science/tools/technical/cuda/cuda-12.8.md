@@ -1,7 +1,7 @@
 ---
 title: CUDA 12.8
 category: CUDA
-outline: 1
+outline: 2
 permalink: /do-science/tools/technical/cuda/cuda-12.8
 description: Installing Nvidia CUDA toolkit and cuDNN on GPU machines.
 ---
@@ -127,6 +127,7 @@ nvcc --version
 ```
 
 The expected output:
+
 ```
 /home/ubuntu/cuda-12.8.1/bin/nvcc
 

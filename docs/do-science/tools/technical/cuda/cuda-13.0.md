@@ -1,7 +1,7 @@
 ---
 title: CUDA 13.0
 category: CUDA
-outline: 1
+outline: 2
 permalink: /do-science/tools/technical/cuda/cuda-13.0
 description: Installing Nvidia CUDA toolkit and cuDNN on GPU machines.
 ---
@@ -127,6 +127,7 @@ nvcc --version
 ```
 
 The expected output:
+
 ```
 /home/ubuntu/cuda-13.0.1/bin/nvcc
 
