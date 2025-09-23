@@ -81,7 +81,7 @@ const handleFocus = event => {
   </v-text-field>
 
   <!-- style="background-color: #0d1117; color: #e6edf3" -->
-  <!-- <div class="vuewidget vuewrapper" data-vuetify> -->
+  <!-- <div class="vuewidget vuewrapper copy-text-field" data-vuetify> -->
   <!-- <div :class="`language-${language} vp-adaptive-theme`">
       <button title="Copy Code" class="copy"></button>
       <span class="lang">{{ language }}</span>
@@ -96,7 +96,7 @@ const handleFocus = event => {
   <!-- <div class="vp-code-group"> -->
 
   <!-- NOTE: below is the new variant <====================== -->
-  <!-- <div :class="`language-${language} vp-adaptive-theme vuewidget vuewrapper`">
+  <!-- <div :class="`language-${language} vp-adaptive-theme vuewidget vuewrapper copy-text-field`">
     <button title="Copy Code" class="copy"></button>
     <span class="lang">{{ language }}</span>
     <pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0">
@@ -113,6 +113,9 @@ const handleFocus = event => {
 .vuewidget.vuewrapper {
   /* reset full view - no scroll bars, no full view */
   overflow: inherit;
+}
+
+.vuewidget.vuewrapper .copy-text-field {
   line-height: 0%;
 }
 
