@@ -286,158 +286,159 @@ onMounted(() => {
                 </v-toolbar>
 
                 <v-card-text class="pa-0">
-                  <v-stepper v-model="vpnStepper" orientation="vertical">
-                    <v-stepper-header class="elevation-0">
-                      <v-stepper-item
-                        :complete="vpnStepper > 1"
-                        step="1"
-                        title="Install OpenVPN"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        :complete="vpnStepper > 2"
-                        step="2"
-                        title="Setup the VPN profile"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        :complete="vpnStepper > 3"
-                        step="3"
-                        title="Connect to the VPN"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        :complete="vpnStepper > 4"
-                        step="4"
-                        title="Verify your VPN connection"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        step="?"
-                        title="Troubleshooting"
-                        subtitle="Optional tips to try in case of issues"
-                      />
-                    </v-stepper-header>
+                  <v-stepper-vertical v-model="vpnStepper">
+                    <v-stepper-vertical-item
+                      title="Install OpenVPN"
+                      value="1"
+                      :complete="vpnStepper > 1"
+                    >
+                      <v-card class="mb-8 pr-4" elevation="0">
+                        We use OpenVPN to ensure encrypted communication between your local computer and HUNT Cloud.<br /><br />
 
-                    <v-stepper-window>
-                      <v-stepper-window-item value="1">
-                        <v-card class="mb-8 pr-4" elevation="0">
-                          We use OpenVPN to ensure encrypted communication between your local computer and HUNT Cloud.<br /><br />
+                        Install the openvpn and network-manager-openvpn-gnome packages from the standard repositories:<br />
 
-                          Install the openvpn and network-manager-openvpn-gnome packages from the standard repositories:<br />
+                        <CopyTextField
+                          :model-value="`sudo apt update && sudo apt install openvpn network-manager-openvpn-gnome`"
+                          label=""
+                          prefix="$"
+                        />
+                        <br />
 
-                          <CopyTextField
-                            :model-value="`sudo apt update && sudo apt install openvpn network-manager-openvpn-gnome`"
-                            label=""
-                            prefix="$"
-                          />
+                        <details><summary style="cursor: pointer;"><b>Other linux distributions</b></summary>
+                          <br />You have a few options on how to install OpenVPN clients in other distributions:<br /><br />
+                          <ul>
+                            <li>Install the <code>openvpn</code> package from the official distribution repository.</li>
+                            <li>Add the <a href="https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos" target="_blank">OpenVPN community repository</a> and install the <code>openvpn</code> package.</li>
+                            <li>Download the latest <a href="https://openvpn.net/index.php/open-source/downloads.html" target="_blank">source tarball</a> from OpenVPN and install.</li>
+                          </ul>
                           <br />
+                          After the installation, follow the "Ubuntu Linux" guides below on how to setup and connect.
+                        </details>
+                      </v-card>
 
-                          <details><summary style="cursor: pointer;"><b>Other linux distributions</b></summary>
-                            <br />You have a few options on how to install OpenVPN clients in other distributions:<br /><br />
-                            <ul>
-                              <li>Install the <code>openvpn</code> package from the official distribution repository.</li>
-                              <li>Add the <a href="https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos" target="_blank">OpenVPN community repository</a> and install the <code>openvpn</code> package.</li>
-                              <li>Download the latest <a href="https://openvpn.net/index.php/open-source/downloads.html" target="_blank">source tarball</a> from OpenVPN and install.</li>
-                            </ul>
-                            <br />
-                            After the installation, follow the "Ubuntu Linux" guides below on how to setup and connect.
-                          </details>
-                        </v-card>
+                      <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
-                      </v-stepper-window-item>
+                      </template>
+                    </v-stepper-vertical-item>
 
-                      <v-stepper-window-item value="2">
-                        <v-card class="mb-8 pr-4" elevation="0">
-                          <ol>
-                            <li>Click on the <i>Network Manager icon</i> in the task bar.</li>
-                            <li>Select <i>Edit Connections...</i></li>
-                            <li>Click <i>Add</i>.</li>
-                            <li>Choose <i>Import a saved VPN configuration</i> and click <i>Create</i>.</li>
-                            <li>Select the OpenVPN profile named <code>{{ username }}.ovpn</code> that you collected in Step 1.</li>
-                            <li>Enter your user name (same as the OpenVPN profile file name).</li>
-                            <li>Click on the person icon in the Password field and select <code>Ask for this password every time</code>.</li>
-                            <li>Enter the <i>Private Key Password</i> with the <code>VPN passphrase</code> sent to you from HUNT over Signal.</li>
-                            <li>Click on the IPv4 Settings tab.</li>
-                            <li>Click <i>Routes...</i></li>
-                            <li>Select the <i>Use this connection only for resources on its network</i> and click OK.</li>
-                            <li>Click <i>Apply</i>.</li>
-                          </ol>
-                        </v-card>
+                    <v-stepper-vertical-item
+                      title="Setup the VPN profile"
+                      value="2"
+                      :complete="vpnStepper > 2"
+                    >
+                      <v-card class="mb-8 pr-4" elevation="0">
+                        <ol>
+                          <li>Click on the <i>Network Manager icon</i> in the task bar.</li>
+                          <li>Select <i>Edit Connections...</i></li>
+                          <li>Click <i>Add</i>.</li>
+                          <li>Choose <i>Import a saved VPN configuration</i> and click <i>Create</i>.</li>
+                          <li>Select the OpenVPN profile named <code>{{ username }}.ovpn</code> that you collected in Step 1.</li>
+                          <li>Enter your user name (same as the OpenVPN profile file name).</li>
+                          <li>Click on the person icon in the Password field and select <code>Ask for this password every time</code>.</li>
+                          <li>Enter the <i>Private Key Password</i> with the <code>VPN passphrase</code> sent to you from HUNT over Signal.</li>
+                          <li>Click on the IPv4 Settings tab.</li>
+                          <li>Click <i>Routes...</i></li>
+                          <li>Select the <i>Use this connection only for resources on its network</i> and click OK.</li>
+                          <li>Click <i>Apply</i>.</li>
+                        </ol>
+                      </v-card>
+
+                      <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 3">Continue</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 1">Back</v-btn>
-                      </v-stepper-window-item>
+                      </template>
+                    </v-stepper-vertical-item>
 
-                      <v-stepper-window-item value="3">
-                        <v-card class="mb-8 pr-4" elevation="0">
-                          <ol>
-                            <li>Click on the <i>Network Manager</i> icon in the task bar.</li>
-                            <li>Choose <i>VPN Connections</i> and select the name of your profile.</li>
-                            <li>In the Authenticate VPN window, enter the <code>verification code</code> from TOTP (Google Authenticator) app into the Password field.</li>
-                            <li>Click <i>OK</i> to connect.</li>
-                          </ol>
-                          <br /><br />
-                          You should now be connected to the VPN.
-                        </v-card>
+                    <v-stepper-vertical-item
+                      title="Connect to the VPN"
+                      value="3"
+                      :complete="vpnStepper > 3"
+                    >
+                      <v-card class="mb-8 pr-4" elevation="0">
+                        <ol>
+                          <li>Click on the <i>Network Manager</i> icon in the task bar.</li>
+                          <li>Choose <i>VPN Connections</i> and select the name of your profile.</li>
+                          <li>In the Authenticate VPN window, enter the <code>verification code</code> from TOTP (Google Authenticator) app into the Password field.</li>
+                          <li>Click <i>OK</i> to connect.</li>
+                        </ol>
+                        <br /><br />
+                        You should now be connected to the VPN.
+                      </v-card>
+
+                      <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 4">Continue</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 2">Back</v-btn>
-                      </v-stepper-window-item>
+                      </template>
+                    </v-stepper-vertical-item>
 
-                      <v-stepper-window-item value="4">
-                        <v-card class="mb-8 pr-4" elevation="0">
-                          <v-alert
-                            type="success"
-                            variant="tonal"
-                            border="start"
-                            elevation="2"
-                          >
-                            <template v-slot:prepend>
-                              <v-icon>mdi-chevron-right</v-icon>
-                            </template>
-                            <b>Status notification.</b>
-                            <hr class="mt-1 mb-2" />
-                            If you received the notification that <code>VPN connection has been successfully established</code>,<br />
-                            then you are good to go.
-                          </v-alert>
-                        </v-card>
+                    <v-stepper-vertical-item
+                      title="Verify your VPN connection"
+                      value="4"
+                      :complete="vpnStepper > 4"
+                    >
+                      <v-card class="mb-8 pr-4" elevation="0">
+                        <v-alert
+                          type="success"
+                          variant="tonal"
+                          border="start"
+                          elevation="2"
+                        >
+                          <template v-slot:prepend>
+                            <v-icon>mdi-chevron-right</v-icon>
+                          </template>
+                          <b>Status notification.</b>
+                          <hr class="mt-1 mb-2" />
+                          If you received the notification that <code>VPN connection has been successfully established</code>,<br />
+                          then you are good to go.
+                        </v-alert>
+                      </v-card>
+
+                      <template v-slot:actions>
                         <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
                         <v-btn color="warning" class="mx-2 mb-1" @click="vpnStepper = 5">Troubleshooting</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
-                      </v-stepper-window-item>
+                      </template>
+                    </v-stepper-vertical-item>
 
-                      <v-stepper-window-item value="5">
-                        <v-card class="mb-8 pr-4" elevation="0">
-                          <br />
-                          <h3 id="authenticate-vpn"><a href="#authenticate-vpn" class="header-anchor">#</a> Authenticate VPN</h3>
-                          <p>If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.</p>
+                    <v-stepper-vertical-item
+                      title="Troubleshooting"
+                      subtitle="Optional tips to try in case of issues"
+                      value="5"
+                    >
+                      <v-card class="mb-8 pr-4" elevation="0">
+                        <br />
+                        <h3 id="authenticate-vpn"><a href="#authenticate-vpn" class="header-anchor">#</a> Authenticate VPN</h3>
+                        <p>If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.</p>
 
-                          <br />
-                          <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
-                          <p>
-                            If you received the notification VPN Connection Failed after 60 seconds, please check the following:
-                            <ul>
-                              <li>Verify that you have an active internet connection.</li>
-                              <li>Verify that the Private Key Password is correct.</li>
-                            </ul>
-                          </p>
+                        <br />
+                        <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
+                        <p>
+                          If you received the notification VPN Connection Failed after 60 seconds, please check the following:
+                          <ul>
+                            <li>Verify that you have an active internet connection.</li>
+                            <li>Verify that the Private Key Password is correct.</li>
+                          </ul>
+                        </p>
 
-                          <v-alert
-                            type="info"
-                            variant="tonal"
-                            border="start"
-                            elevation="2"
-                          >
-                            <b>TIP</b>
-                            <hr class="mt-1 mb-2" />
-                            If nothing works, please head over to our main <a href="/do-science/troubleshooting/connection/#vpn" target="_blank">troubleshooting section</a> for more information on how to troubleshoot connections.
-                          </v-alert>
-                        </v-card>
+                        <v-alert
+                          type="info"
+                          variant="tonal"
+                          border="start"
+                          elevation="2"
+                        >
+                          <b>TIP</b>
+                          <hr class="mt-1 mb-2" />
+                          If nothing works, please head over to our main <a href="/do-science/troubleshooting/connection/#vpn" target="_blank">troubleshooting section</a> for more information on how to troubleshoot connections.
+                        </v-alert>
+                      </v-card>
+
+                      <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 4">Back</v-btn>
-                      </v-stepper-window-item>
-                    </v-stepper-window>
-                  </v-stepper>
+                      </template>
+                    </v-stepper-vertical-item>
+                  </v-stepper-vertical>
                 </v-card-text>
               </v-card>
             </v-dialog>
