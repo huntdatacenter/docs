@@ -13,6 +13,8 @@ import MyIPAddress from "./components/legacy/MyIPAddress.vue"
 import NavitationCards from "./components/legacy/NavitationCards.vue"
 import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
 import ConsentForm from "./components/legacy/ConsentForm.vue"
+import SDButton from "./components/legacy/SDButton.vue"
+import ServiceDesk from "./components/legacy/ServiceDesk.vue"
 
 import "./style.css"
 
@@ -105,5 +107,7 @@ export default {
     app.component("NavitationCards", NavitationCards)
     app.component("HideLastUpdated", HideLastUpdated)
     app.component("ConsentForm", ConsentForm)
+    app.component("SDButton", SDButton)
+    app.component("ServiceDesk", ServiceDesk)
   },
 } satisfies Theme

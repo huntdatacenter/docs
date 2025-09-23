@@ -1,305 +1,258 @@
-<script>
-import {
-  VApp,
-  VDialog,
-  VBtn,
-  VCol,
-  VRow,
-  VTextField,
-  VTextarea,
-  VSelect,
-  VAutocomplete,
-  VIcon,
-  VToolbar,
-  VToolbarTitle,
-  VCard,
-  VCardText,
-  VCardActions,
-  VSubheader,
-  VSpacer,
-  VDivider,
-  VToolbarItems,
-  VExpansionPanel,
-  VExpansionPanels,
-  VExpansionPanelHeader,
-  VExpansionPanelContent,
-} from "vuetify/lib";
+<script setup>
+import { ref, computed, onMounted } from "vue"
 
-export default {
+defineOptions({
   name: "ServiceDesk",
-  components: {
-    VApp,
-    VDialog,
-    VBtn,
-    VCol,
-    VRow,
-    VTextField,
-    VTextarea,
-    VSelect,
-    VAutocomplete,
-    VIcon,
-    VToolbar,
-    VToolbarTitle,
-    VCard,
-    VCardText,
-    VCardActions,
-    VSubheader,
-    VSpacer,
-    VDivider,
-    VToolbarItems,
-    VExpansionPanel,
-    VExpansionPanels,
-    VExpansionPanelHeader,
-    VExpansionPanelContent,
-    CopyTextField: () => import('./generic/CopyTextField.vue'),
-    CopyTextArea: () => import('./generic/CopyTextArea.vue'),
+})
+
+// Emits definition
+const emit = defineEmits(["update:modelValue"])
+
+// Props definition
+const props = defineProps({
+  id: { type: String, default: "applet" },
+  modelValue: { type: Boolean, default: false }, // Changed from 'value' to 'modelValue'
+  title: { type: String, default: null },
+  fields: { type: Array, default: () => [] },
+  template: { type: Object, default: () => ({}) },
+  requirements: { type: Array, default: () => [] },
+  attachments: { type: Array, default: () => [] },
+  recipient: {
+    type: String,
+    default: "cloud.support+hunt-cloud-request@hunt.ntnu.no",
   },
-  emits: [
-    'input',  // used to update value prop assigned from parent using v-model
-  ],
-  props: {
-    id: { type: String, default: "applet" },
-    value: { type: Boolean, default: false },
-    title: { type: String, default: null },
-    fields: { type: Array, default: null },
-    template: { type: Object, default: null },
-    requirements: { type: Array, default: null },
-    attachments: { type: Array, default: null },
-    recipient: {
-      type: String,
-      default: "cloud.support+hunt-cloud-request@hunt.ntnu.no",
-    },
-    cacheKey: { type: String, default: null },
-    fullscreen: { type: Boolean, default: false },
-  },
-  data() {
-    return {
-      subjectTemplate: null,
-      bodyTemplate: null,
-      formData: {},
-      message: {
-        subject: null,
-        body: null,
-      },
-      loadingEmailButtons: true,
-      sendClicked: false,
-      finalizeClicked: false,
-      panel: 0,
-    };
-  },
-  computed: {
-    messageSubject() {
-      return this.subjectTemplate ? this.wrap(this.subjectTemplate) : null;
-    },
-    messageBody() {
-      return this.bodyTemplate ? this.wrap(this.bodyTemplate) : null;
-    },
-    formFilled() {
-      return this.fields.every((item) =>
-        this.formData[item.key] || item.optional ? true : false
-      );
-    },
-    encodedSubject() {
-      return this.subjectTemplate ? this.encode(this.subjectTemplate) : null;
-    },
-    encodedBody() {
-      return this.bodyTemplate ? this.encode(this.bodyTemplate) : null;
-    },
-    encodedRecipient() {
-      return this.recipient ? this.encode(this.recipient) : this.recipient;
-    },
-    mailto() {
-      const redir = `mailto:${this.encodedRecipient}?subject=${this.encodedSubject}&body=${this.encodedBody}`;
-      console.log(redir);
-      return redir;
-    },
-    outlookDoubleEncodedTo() {
-      // Outlook does not seem to follow RFCs for mailto with deeplinks - they are double decoding TO field
-      // https://www.rfc-editor.org/rfc/rfc6068#:~:text=double%2Descape%20or%20double%2Dunescape%20%27mailto%27%20URIs
-      return this.recipient ? this.encode(this.encode(this.recipient)) : this.recipient;
-    },
-    wrapRecipient() {
-      // Same as outlookDoubleEncodedTo works only if double encoded
-      return this.recipient ? this.encode(this.encode(`HUNT Cloud - Service Desk <${this.recipient}>`)) : this.recipient;
-    },
-    deeplinkUrl() {
-      const url = 'https://outlook.office.com/mail/deeplink/compose';
-      // return `${url}?to=${this.outlookDoubleEncodedTo}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
-      const redir = `${url}?to=${this.wrapRecipient}&subject=${this.encodedSubject}&body=${this.encodedBody}`;
-      console.log(redir);
-      return redir;
-    },
-  },
-  mounted() {},
-  created() {
-    this.panel = 0;
-    this.loadingEmailButtons = true;
-    this.subjectTemplate = this.template ? this.template.subject : null;
-    this.bodyTemplate = this.template ? this.template.body : null;
-    var formFields = []
-    for (const item of this.fields) {
-      if (item && item.key) {
-        formFields.push(item.key)
-        if (item.default || item.default === '') {
-          const defValue = item.default;
-          this.formData[item.key] = defValue;
-        }
+  cacheKey: { type: String, default: null },
+  fullscreen: { type: Boolean, default: false },
+})
+
+// Reactive data
+const subjectTemplate = ref(null)
+const bodyTemplate = ref(null)
+const formData = ref({})
+const message = ref({
+  subject: null,
+  body: null,
+})
+const loadingEmailButtons = ref(true)
+const sendClicked = ref(false)
+const finalizeClicked = ref(false)
+const panel = ref(0)
+
+// Computed properties
+const messageSubject = computed(() => {
+  return subjectTemplate.value ? wrap(subjectTemplate.value) : null
+})
+
+const messageBody = computed(() => {
+  return bodyTemplate.value ? wrap(bodyTemplate.value) : null
+})
+
+const formFilled = computed(() => {
+  return props.fields.every(item => (formData.value[item.key] || item.optional ? true : false))
+})
+
+const encodedSubject = computed(() => {
+  return subjectTemplate.value ? encode(subjectTemplate.value) : null
+})
+
+const encodedBody = computed(() => {
+  return bodyTemplate.value ? encode(bodyTemplate.value) : null
+})
+
+const encodedRecipient = computed(() => {
+  return props.recipient ? encode(props.recipient) : props.recipient
+})
+
+const mailto = computed(() => {
+  const redir = `mailto:${encodedRecipient.value}?subject=${encodedSubject.value}&body=${encodedBody.value}`
+  console.log(redir)
+  return redir
+})
+
+const outlookDoubleEncodedTo = computed(() => {
+  // Outlook does not seem to follow RFCs for mailto with deeplinks - they are double decoding TO field
+  return props.recipient ? encode(encode(props.recipient)) : props.recipient
+})
+
+const wrapRecipient = computed(() => {
+  // Same as outlookDoubleEncodedTo works only if double encoded
+  return props.recipient ? encode(encode(`HUNT Cloud - Service Desk <${props.recipient}>`)) : props.recipient
+})
+
+const deeplinkUrl = computed(() => {
+  const url = "https://outlook.office.com/mail/deeplink/compose"
+  const redir = `${url}?to=${wrapRecipient.value}&subject=${encodedSubject.value}&body=${encodedBody.value}`
+  console.log(redir)
+  return redir
+})
+
+// Methods
+const close = () => {
+  finalizeClicked.value = true
+  sendClicked.value = true
+  panel.value = 0
+  emit("update:modelValue", false)
+}
+
+const closeBtn = () => {
+  panel.value = 0
+  emit("update:modelValue", false)
+}
+
+const activateSendButtons = () => {
+  loadingEmailButtons.value = false
+}
+
+const submit = () => {
+  panel.value = 2
+  setTimeout(activateSendButtons, 1200)
+}
+
+const review = () => {
+  finalizeClicked.value = true
+  panel.value = 2
+}
+
+const actionSend = () => {
+  sendClicked.value = true
+  panel.value = 3
+  window.location.href = mailto.value
+}
+
+const actionSendOutlook = () => {
+  sendClicked.value = true
+  panel.value = 3
+  window.location.href = deeplinkUrl.value
+}
+
+const actionSendOutlookPopup = () => {
+  sendClicked.value = true
+  panel.value = 3
+  window.open(deeplinkUrl.value, "_blank")
+}
+
+const encode = template => {
+  return template ? encodeURIComponent(wrap(template)) : null
+}
+
+const setValue = (value, key) => {
+  // NOTE: enforce reactivity to data change - re-rendering the template
+  const updates = {}
+  updates[key] = value ? value.trim() : value
+  formData.value = Object.assign({}, formData.value, updates)
+}
+
+const wrap = template => {
+  let text = template
+  for (const [key, value] of Object.entries(formData.value)) {
+    if (value || value === "") {
+      if (Array.isArray(value)) {
+        text = text.replaceAll(`{${key}}`, value.join(", "))
+      } else {
+        text = text.replaceAll(`{${key}}`, value)
       }
     }
-    // console.log(formFields)
-    let cache = this.fetchAgreementFormCache(this.cacheKey)
-    if (cache) {
-      try {
-        for (const [key, value] of Object.entries(cache)) {
-          if (key !== "open") {
-            if (formFields.includes(key)) {
-              console.log(`Prefill from cache: ${key} = ${value}`)
-              this.setValue(value, key)
-              // console.log(this.formData[key])
-            }
-          }
-        }
-      } catch (ex) {
-        console.log("Failed to load form fields from cache")
+  }
+  text = text.replaceAll("\n---\n", "\n```\n")
+  return text
+}
+
+const fetchAgreementFormCache = key => {
+  let fields = {}
+  const jsonData = key ? localStorage.getItem(key) : null
+  try {
+    fields = jsonData ? JSON.parse(jsonData) : {}
+  } catch (ex) {
+    console.log("Failed to fetch data from cache")
+  }
+  return fields
+}
+
+// Lifecycle
+onMounted(() => {
+  panel.value = 0
+  loadingEmailButtons.value = true
+  subjectTemplate.value = props.template ? props.template.subject : null
+  bodyTemplate.value = props.template ? props.template.body : null
+
+  var formFields = []
+  for (const item of props.fields) {
+    if (item && item.key) {
+      formFields.push(item.key)
+      if (item.default || item.default === "") {
+        const defValue = item.default
+        formData.value[item.key] = defValue
       }
     }
-  },
-  methods: {
-    close() {
-      this.finalizeClicked = true;
-      this.sendClicked = true;
-      this.panel = 0;
-      this.$emit('input', false);
-    },
-    closeBtn() {
-      this.panel = 0;
-      this.$emit('input', false);
-    },
-    activateSendButtons() {
-      this.loadingEmailButtons = false
-    },
-    submit() {
-      this.panel = 2
-      setTimeout(this.activateSendButtons, 1200)
-    },
-    review() {
-      this.finalizeClicked = true;
-      this.panel = 2;
-    },
-    actionSend() {
-      this.sendClicked = true;
-      this.panel = 3;
-      window.location.href = this.mailto;
-    },
-    actionSendOutlook() {
-      this.sendClicked = true;
-      this.panel = 3;
-      window.location.href = this.deeplinkUrl;
-    },
-    actionSendOutlookPopup() {
-      this.sendClicked = true;
-      this.panel = 3;
-      // window.location.href = this.deeplinkUrl;
-      window.open(this.deeplinkUrl, '_blank');
-    },
-    encode(template) {
-      return template ? encodeURIComponent(this.wrap(template)) : null;
-    },
-    setValue(value, key) {
-      // NOTE: enforce reactivity to data change - re-rendering the template
-      const updates = {};
-      updates[key] = value ? value.trim() : value;
-      this.formData = Object.assign({}, this.formData, updates);
-    },
-    wrap(template) {
-      let text = template;
-      for (const [key, value] of Object.entries(this.formData)) {
-        if (value || value === '') {
-          if (Array.isArray(value)) {
-            text = text.replaceAll(`{${key}}`, value.join(", "));
-          } else {
-            text = text.replaceAll(`{${key}}`, value);
+  }
+
+  let cache = fetchAgreementFormCache(props.cacheKey)
+  if (cache) {
+    try {
+      for (const [key, value] of Object.entries(cache)) {
+        if (key !== "open") {
+          if (formFields.includes(key)) {
+            console.log(`Prefill from cache: ${key} = ${value}`)
+            setValue(value, key)
           }
         }
       }
-      text = text.replaceAll('\n---\n', '\n```\n');
-      return text;
-    },
-    fetchAgreementFormCache(key) {
-      let fields = {}
-      const jsonData = key ? localStorage.getItem(key) : null
-      try {
-        fields = jsonData ? JSON.parse(jsonData) : {}
-      } catch (ex) {
-        console.log("Failed to fetch data from cache")
-      }
-      return fields
-    },
-  },
-};
+    } catch (ex) {
+      console.log("Failed to load form fields from cache")
+    }
+  }
+})
 </script>
 
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
       <v-dialog
-        v-model="value"
-        hide-overlay
+        :model-value="modelValue"
         transition="dialog-bottom-transition"
         max-width="960px"
         :fullscreen="fullscreen"
+        @update:model-value="emit('update:modelValue', $event)"
         @click:outside="closeBtn"
       >
         <v-card>
-          <v-toolbar dark color="#00509e">
+          <v-toolbar color="#00509e" theme="dark">
             <v-toolbar-title>Service desk - {{ title }}</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-toolbar-items>
-              <v-btn icon fab @click="closeBtn">
-                <v-icon>close</v-icon>
-              </v-btn>
-            </v-toolbar-items>
+            <v-spacer />
+            <template v-slot:append>
+              <v-btn icon="mdi-close" @click="closeBtn" />
+            </template>
           </v-toolbar>
 
           <v-card-text class="pt-6">
             <v-expansion-panels v-model="panel">
               <v-expansion-panel>
-                <v-expansion-panel-header :disable-icon-rotate="formFilled">
-                  Request details
-                  <!-- <template v-if="formFilled" v-slot:actions>
-                    <v-icon color="teal">done</v-icon>
-                  </template> -->
-                </v-expansion-panel-header>
-                <v-expansion-panel-content class="mt-2">
+                <v-expansion-panel-title> Request details </v-expansion-panel-title>
+                <v-expansion-panel-text class="mt-2">
                   <v-row justify="center">
-                    <v-col v-for="item in requirements" class="pb-0 pt-0" cols="12" :key="item.key" dense>
+                    <v-col v-for="(item, index) in requirements" :key="index" class="pb-0 pt-0" cols="12">
                       <p class="mb-2" v-html="item"></p>
                     </v-col>
                   </v-row>
                   <v-row justify="center">
-                      <v-col cols="6">
-                        <v-btn
-                          color="success"
-                          block
-                          @click="panel = panel + 1"
-                        >
-                          Continue
-                        </v-btn>
-                      </v-col>
-                    </v-row>
-                </v-expansion-panel-content>
+                    <v-col cols="6">
+                      <v-btn color="success" block @click="panel = panel + 1"> Continue </v-btn>
+                    </v-col>
+                  </v-row>
+                </v-expansion-panel-text>
               </v-expansion-panel>
+
               <v-expansion-panel>
-                <v-expansion-panel-header :disable-icon-rotate="formFilled">
+                <v-expansion-panel-title>
                   Form
                   <template v-if="formFilled" v-slot:actions>
-                    <v-icon color="teal">done</v-icon>
+                    <v-icon color="teal">mdi-check</v-icon>
                   </template>
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                  <form ref="form" @submit.prevent="submit">
+                </v-expansion-panel-title>
+                <v-expansion-panel-text>
+                  <form @submit.prevent="submit">
                     <v-row justify="center">
-                      <v-col v-for="item in fields" cols="8" :key="item.key">
+                      <v-col v-for="item in fields" :key="item.key" cols="8">
                         <v-text-field
                           v-if="item.field === 'textfield'"
                           v-model="formData[item.key]"
@@ -310,17 +263,16 @@ export default {
                           :hint="item.hint ? item.hint : null"
                           :suffix="item.suffix ? item.suffix : null"
                           :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
-                          :persistent-hint="
-                            item.hint && formData[item.key] ? true : false
-                          "
+                          :persistent-hint="item.hint && formData[item.key] ? true : false"
                           placeholder=""
                           persistent-placeholder
-                          outlined
-                          dense
+                          variant="outlined"
+                          density="compact"
                           :hide-details="formData[item.key] ? false : 'auto'"
                           @focus="$event.target.select()"
-                          @change="setValue($event, item.key)"
-                        ></v-text-field>
+                          @update:model-value="setValue($event, item.key)"
+                        />
+
                         <v-textarea
                           v-else-if="item.field === 'textarea'"
                           v-model="formData[item.key]"
@@ -331,17 +283,16 @@ export default {
                           :suffix="item.suffix ? item.suffix : null"
                           :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
                           :rows="item.rows ? item.rows : 3"
-                          :persistent-hint="
-                            item.hint && formData[item.key] ? true : false
-                          "
+                          :persistent-hint="item.hint && formData[item.key] ? true : false"
                           placeholder=""
                           persistent-placeholder
-                          outlined
-                          dense
+                          variant="outlined"
+                          density="compact"
                           :hide-details="formData[item.key] ? false : 'auto'"
                           @focus="$event.target.select()"
-                          @change="setValue($event, item.key)"
-                        ></v-textarea>
+                          @update:model-value="setValue($event, item.key)"
+                        />
+
                         <v-select
                           v-else-if="item.field === 'selector'"
                           :items="item.options"
@@ -351,9 +302,10 @@ export default {
                           persistent-placeholder
                           chips
                           multiple
-                          outlined
+                          variant="outlined"
                           hide-details
-                        ></v-select>
+                        />
+
                         <v-select
                           v-else-if="item.field === 'selectone'"
                           :items="item.options"
@@ -362,23 +314,27 @@ export default {
                           placeholder=""
                           persistent-placeholder
                           chips
-                          outlined
+                          variant="outlined"
                           hide-details
-                        ></v-select>
+                        />
+
                         <v-autocomplete
                           v-else-if="item.field === 'autocompleteone'"
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
-                          :item-value="item => Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : value"
+                          :item-value="
+                            item => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : value)
+                          "
                           placeholder=""
                           persistent-placeholder
-                          small-chips
-                          outlined
-                          dense
-                          clear-icon="close"
+                          chips
+                          variant="outlined"
+                          density="compact"
+                          clearable
                           hide-details
-                        ></v-autocomplete>
+                        />
+
                         <v-text-field
                           v-else-if="item.field === 'number'"
                           v-model="formData[item.key]"
@@ -391,77 +347,60 @@ export default {
                           :min="item.min ? item.min : null"
                           :max="item.max ? item.max : null"
                           :step="item.step ? item.step : null"
-                          :persistent-hint="
-                            item.hint && formData[item.key] ? true : false
-                          "
+                          :persistent-hint="item.hint && formData[item.key] ? true : false"
                           placeholder=""
                           persistent-placeholder
-                          outlined
-                          dense
+                          variant="outlined"
+                          density="compact"
                           :hide-details="formData[item.key] ? false : 'auto'"
                           @focus="$event.target.select()"
-                          @change="setValue($event, item.key)"
-                        ></v-text-field>
+                          @update:model-value="setValue($event, item.key)"
+                        />
                       </v-col>
                     </v-row>
                     <v-row justify="center">
                       <v-col cols="6">
-                        <v-btn
-                          color="success"
-                          block
-                          type="submit"
-                          :disabled="!formFilled"
-                        >
-                          Continue
-                        </v-btn>
+                        <v-btn color="success" block type="submit" :disabled="!formFilled"> Continue </v-btn>
                       </v-col>
                     </v-row>
                   </form>
-                </v-expansion-panel-content>
+                </v-expansion-panel-text>
               </v-expansion-panel>
+
               <v-expansion-panel :disabled="!formFilled">
-                <v-expansion-panel-header :disable-icon-rotate="sendClicked">
+                <v-expansion-panel-title>
                   Email request
                   <template v-if="sendClicked" v-slot:actions>
-                    <v-icon color="teal"> done </v-icon>
+                    <v-icon color="teal">mdi-check</v-icon>
                   </template>
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
+                </v-expansion-panel-title>
+                <v-expansion-panel-text>
                   <v-row justify="center">
                     <v-col cols="10">
                       <CopyTextField
-                        :value="recipient"
+                        :model-value="recipient"
                         label="Email recipient (TO)"
                         class="py-2"
-                        prepend-inner-icon="mail"
+                        prepend-inner-icon="mdi-email"
                       />
-                      <CopyTextField
-                        :value="messageSubject"
-                        label="Email subject"
-                        class="py-2"
-                      />
-                      <CopyTextArea
-                        :value="messageBody"
-                        label="Body"
-                        class="py-2"
-                        rows="8"
-                      />
+                      <CopyTextField :model-value="messageSubject" label="Email subject" class="py-2" />
+                      <CopyTextArea :model-value="messageBody" label="Body" class="py-2" rows="8" />
                     </v-col>
                   </v-row>
 
                   <!-- Attachments reminder -->
                   <v-row v-if="attachments && attachments.length > 0" justify="center">
-                    <v-col class="pb-0 pt-0 px-4" cols="10" dense>
+                    <v-col class="pb-0 pt-0 px-4" cols="10">
                       <b><p class="mb-2">Remember to attach these documents in the email request:</p></b>
                     </v-col>
                   </v-row>
                   <v-row v-if="attachments && attachments.length > 0" class="mb-6" justify="center">
-                    <v-col class="pb-0 pt-0" cols="1" align="center" dense>
-                      <v-icon>attach_file</v-icon>
+                    <v-col class="pb-0 pt-0" cols="1" align="center">
+                      <v-icon>mdi-attachment</v-icon>
                     </v-col>
-                    <v-col class="pb-0 pt-0" cols="9" dense>
+                    <v-col class="pb-0 pt-0" cols="9">
                       <ul>
-                        <li v-for="item in attachments" class="pb-0 pt-0" :key="item.key" dense>
+                        <li v-for="(item, index) in attachments" :key="index" class="pb-0 pt-0">
                           <p class="mb-2" v-html="item"></p>
                         </li>
                       </ul>
@@ -470,86 +409,89 @@ export default {
 
                   <v-row justify="center">
                     <v-col cols="4">
-                      <v-btn color="success" block :loading="loadingEmailButtons" :disabled="loadingEmailButtons" @click="actionSend">
+                      <v-btn
+                        color="success"
+                        block
+                        :loading="loadingEmailButtons"
+                        :disabled="loadingEmailButtons"
+                        @click="actionSend"
+                      >
                         Open in Email Client
                       </v-btn>
                     </v-col>
                     <v-col cols="4">
-                      <v-btn color="primary" block :loading="loadingEmailButtons" :disabled="loadingEmailButtons" @click="actionSendOutlookPopup">
-                      <!-- <v-btn color="primary" block :loading="loadingEmailButtons" disabled @click="actionSendOutlookPopup"> -->
+                      <v-btn
+                        color="primary"
+                        block
+                        :loading="loadingEmailButtons"
+                        :disabled="loadingEmailButtons"
+                        @click="actionSendOutlookPopup"
+                      >
                         Open in Outlook Web
                       </v-btn>
                     </v-col>
                   </v-row>
-                </v-expansion-panel-content>
+                </v-expansion-panel-text>
               </v-expansion-panel>
+
               <v-expansion-panel v-if="sendClicked" :disabled="!formFilled">
-                <v-expansion-panel-header
-                  :disable-icon-rotate="finalizeClicked"
-                >
+                <v-expansion-panel-title>
                   Finalize request
                   <template v-if="finalizeClicked" v-slot:actions>
-                    <v-icon color="teal"> done </v-icon>
+                    <v-icon color="teal">mdi-check</v-icon>
                   </template>
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
+                </v-expansion-panel-title>
+                <v-expansion-panel-text>
                   <v-row justify="center">
                     <v-col cols="10"> </v-col>
                   </v-row>
                   <v-row class="mb-6" justify="center">
                     <v-col cols="10">
                       <p class="text-center body-1">
-                        Now your Email client should open and you can follow up
-                        sending Service desk request there.
+                        Now your Email client should open and you can follow up sending Service desk request there.
                       </p>
                     </v-col>
                     <v-col cols="10">
                       <p class="text-center body-1">
-                        In case your <b>Email client did not open</b> and you want to
-                        send email manually feel free to hit Review button and
-                        copy the message contents and use our service desk email
-                        address.
+                        In case your <b>Email client did not open</b> and you want to send email manually feel free to
+                        hit Review button and copy the message contents and use our service desk email address.
                       </p>
                     </v-col>
                   </v-row>
 
                   <!-- Attachments reminder -->
                   <v-row v-if="attachments && attachments.length > 0" class="mb-6" justify="center">
-                    <v-col class="pb-0 pt-0 px-4" cols="1" align="center" dense>
-                      <v-icon>attach_file</v-icon>
+                    <v-col class="pb-0 pt-0 px-4" cols="1" align="center">
+                      <v-icon>mdi-attachment</v-icon>
                     </v-col>
-                    <v-col class="pb-0 pt-0 px-4" cols="9" dense>
+                    <v-col class="pb-0 pt-0 px-4" cols="9">
                       <v-row>
                         <b><p class="mb-2">Remember to attach these documents in the email request:</p></b>
                       </v-row>
                       <v-row>
                         <ul>
-                          <li v-for="item in attachments" class="pb-0 pt-0" :key="item.key" dense>
+                          <li v-for="(item, index) in attachments" :key="index" class="pb-0 pt-0">
                             <p class="mb-2" v-html="item"></p>
                           </li>
                         </ul>
                       </v-row>
                     </v-col>
                   </v-row>
-
-                </v-expansion-panel-content>
+                </v-expansion-panel-text>
               </v-expansion-panel>
             </v-expansion-panels>
           </v-card-text>
+
           <v-card-actions v-if="sendClicked">
             <v-row class="mb-2" justify="center">
               <v-col cols="4">
-                <v-btn color="success" block outlined @click="review">
-                  Review email
-                </v-btn>
+                <v-btn color="success" variant="outlined" block @click="review"> Review email </v-btn>
               </v-col>
               <v-col cols="4">
-                <v-btn color="primary" block outlined @click="actionSendOutlook">
-                  Open in Outlook Web
-                </v-btn>
+                <v-btn color="primary" variant="outlined" block @click="actionSendOutlook"> Open in Outlook Web </v-btn>
               </v-col>
               <v-col cols="4">
-                <v-btn color="link" block @click="close"> Close </v-btn>
+                <v-btn color="primary" block @click="close"> Close </v-btn>
               </v-col>
             </v-row>
           </v-card-actions>
@@ -559,26 +501,27 @@ export default {
   </div>
 </template>
 
-<style lang="sass">
-.vuewidget
+<style>
+.vuewidget.vuewrapper {
+  /* reset full view - no scroll bars, no full view */
+  overflow: inherit;
+}
 
-  &.vuewrapper
-    // reset full view - no scroll bars, no full view
-    overflow: inherit
+.vuewidget.vuewrapper .v-application--wrap {
+  display: block;
+  flex: inherit;
+  min-height: initial;
+  min-width: inherit;
+  width: 100%;
+  overflow-x: hidden;
+}
 
-    .v-application--wrap
-      display: block
-      flex: inherit
-      min-height: initial
-      min-width: inherit
-      width: 100%
-      overflow-x: hidden
+.vuewidget a.v-btn {
+  border: inherit;
+}
 
-  a.v-btn
-    border: inherit
-
-.v-chip.v-size--small
-    margin-top: 8px !important
-    margin-bottom: 5px !important
-
+.v-chip.v-size--small {
+  margin-top: 8px !important;
+  margin-bottom: 5px !important;
+}
 </style>
