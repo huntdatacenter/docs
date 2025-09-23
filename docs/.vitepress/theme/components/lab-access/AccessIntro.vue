@@ -1,38 +1,28 @@
-<script>
-import {
-  VCol,
-  VRow,
-  VTextField,
-} from "vuetify/lib";
-
-export default {
+<script setup>
+defineOptions({
   name: "AccessIntro",
-  components: {
-    VCol,
-    VRow,
-    VTextField,
-    CopyTextField: () => import('../generic/CopyTextField.vue'),
-  },
-  props: {
-    username: { type: String, default: null },
-    labName: { type: String, default: null },
-    ipAddress: { type: String, default: null },
-  },
-  data() {
-    return {}
-  },
-  computed: {},
-  created() {},
-  methods: {
-    copyText(key) {
-      let textToCopy = this.$refs[key].$el.querySelector('input')
-      textToCopy.select()
-      document.execCommand("copy");
-    },
-  },
-};
-</script>
+})
 
+// Props definition
+const props = defineProps({
+  username: { type: String, default: null },
+  labName: { type: String, default: null },
+  ipAddress: { type: String, default: null },
+})
+
+// Methods (though copyText isn't used in the template, keeping for compatibility)
+const copyText = async text => {
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text || "")
+    } else {
+      console.warn("Clipboard API not available")
+    }
+  } catch (error) {
+    console.error("Failed to copy text:", error)
+  }
+}
+</script>
 
 <template>
   <v-row justify="center" class="pt-4 pb-4 pr-1 pl-1">
@@ -40,29 +30,18 @@ export default {
       These are the essential access credentials. Follow the guides below to configure your access.
     </v-col>
     <v-col cols="4">
-      <CopyTextField
-        v-model="username"
-        label="Username"
-        placeholder="Your link is missing access token"
-        prefix=""
-      />
+      <CopyTextField :v-model="username" label="Username" placeholder="Your link is missing access token" prefix="" />
+    </v-col>
+    <v-col cols="4">
+      <CopyTextField :v-model="labName" label="Lab name" placeholder="Your link is missing access token" prefix="" />
     </v-col>
     <v-col cols="4">
       <CopyTextField
-        v-model="labName"
-        label="Lab name"
-        placeholder="Your link is missing access token"
-        prefix=""
-      />
-    </v-col>
-    <v-col cols="4">
-      <CopyTextField
-        v-model="ipAddress"
+        :v-model="ipAddress"
         label="Lab IP Address"
         placeholder="Your link is missing access token"
         prefix=""
       />
     </v-col>
   </v-row>
-
 </template>

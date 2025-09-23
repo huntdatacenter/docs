@@ -6,13 +6,6 @@ defineOptions({
   name: "LabAccess",
 })
 
-// Async component imports - CopyTextField is global, others are imported
-const AccessIntro = defineAsyncComponent(() => import("./LabAccessGuides/AccessIntro.vue"))
-const WindowsJourney = defineAsyncComponent(() => import("./LabAccessGuides/WindowsJourney.vue"))
-const MacJourney = defineAsyncComponent(() => import("./LabAccessGuides/MacJourney.vue"))
-const LinuxJourney = defineAsyncComponent(() => import("./LabAccessGuides/LinuxJourney.vue"))
-// const SDButton = defineAsyncComponent(() => import("./SDButton.vue"))
-
 // Props definition
 const props = defineProps({
   id: { type: String, default: "applet" },
