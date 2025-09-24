@@ -565,33 +565,6 @@ JPG - [Freedom to explore - Italian](https://assets.hdc.ntnu.no/assets/artworks/
   
 
 
-### jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;; (jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;)
-
-!["Blue banner with the slogan Freedom to explore in white letters written in jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;-banner.jpg)
-
-::: details Full jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;; version
-
-**Download**:  
-PDF - [Freedom to explore - jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;-300dpi.pdf) - 300 DPI  
-JPG - [Freedom to explore - jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;-2160px.jpg) - 2160px
-
-!["Blue banner with the slogan Freedom to explore in white letters written in jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;-400px.jpg)
-
-**Title:** Freedom to explore  
-**Language:** jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;; ([jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;](https://iso639-3.sil.org/code/jav;Javanese;ꦏꦼꦧꦺꦧꦱꦤ꧀ꦏꦁꦒꦺꦴꦔꦼꦭ꧀ꦩꦸꦭꦤ꧀ꦔ꧀ꦭꦼꦩꦫꦶ;NotoSansJavanese;NotoSansJavanese-Regular.ttf;22;12.8cm;;))  
-**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
-**License:** CC BY­-NC-­ND 4.0  
-**Year:** 2023  
-**Version:** 1.1  
-**ArtworkID:** hcc-artwork26  
-
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
-
-:::
-
-  
-
-
 ### Javanese (jav)
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Javanese."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-jav-banner.jpg)
