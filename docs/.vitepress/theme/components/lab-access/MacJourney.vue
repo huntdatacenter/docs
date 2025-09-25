@@ -175,6 +175,8 @@ onMounted(() => {
         <v-autocomplete
           v-model="filterGuidesByType"
           :items="guidingOptions"
+          item-title="text"
+          item-value="value"
           label="Filter steps"
           placeholder="Showing all steps"
           persistent-placeholder
@@ -1395,3 +1397,14 @@ onMounted(() => {
     </v-card>
   </v-sheet>
 </template>
+
+<style>
+
+pre code {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+</style>

@@ -16,14 +16,15 @@ const customHead: HeadConfig[] = [
   ["meta", { name: "msapplication-TileColor", content: "#00509e" }],
 
   // ["meta", { rel: "stylesheet", type: "text/css", href: "/css/custom.css", sizes: "any" }],
-  // [
-  //   "meta",
-  //   {
-  //     rel: "stylesheet",
-  //     href: "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons",
-  //     sizes: "any",
-  //   },
-  // ],
+  // NOTE -- roboto font is used in custom components
+  [
+    "meta",
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons",
+      sizes: "any",
+    },
+  ],
 
   ["link", { rel: "icon", type: "image/svg+xml", href: "/img/hunt-cloud-logo.svg", sizes: "any" }],
   ["link", { rel: "mask-icon", type: "image/svg+xml", href: "/img/hunt-cloud-logo.svg", color: "#00509e" }],

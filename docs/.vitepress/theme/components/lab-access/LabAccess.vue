@@ -36,7 +36,7 @@ const getRouteQuery = () => {
 
 // Reactive data
 const tab = ref(null)
-const access = ref(null)
+const access = ref([])
 const migMap = ref(null)
 const migrated = ref(false)
 const filterLabMigration = ref(false)
@@ -151,7 +151,7 @@ const checkIfMappingRedirect = (src = null) => {
 
       // Simple check for recursive loops
       if (!migMap.value.hasOwnProperty(newIp)) {
-        const queryString = btoa(`${newIp}|${query.value.labName}|${query.value.username}`)
+        const queryString = window.btoa(`${newIp}|${query.value.labName}|${query.value.username}`)
         let search = window.location.search
         const routeQuery = getRouteQuery()
 
@@ -272,12 +272,13 @@ onMounted(() => {
 
 // Initialize data from route
 const routeQuery = getRouteQuery()
-access.value = routeQuery.access ? atob(routeQuery.access).split("|") : []
+access.value = routeQuery.access ? window.atob(routeQuery.access).split("|") : []
+console.log(access.value)
 filterLabMigration.value = routeQuery.filter && routeQuery.filter === "lab_migration" ? true : false
 </script>
 
 <template>
-  <div class="vuewidget vuewrapper" data-vuetify>
+  <div class="vuewidget vuewrapper mt-n4" data-vuetify>
     <v-app :id="id">
       <v-sheet v-show="!cfgShow" class="ma-4">
         <v-row justify="center">
@@ -422,6 +423,9 @@ filterLabMigration.value = routeQuery.filter && routeQuery.filter === "lab_migra
 }
 
 .vuewidget.vuewrapper .v-application {
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+
   code {
     font-size: 100% !important;
   }
@@ -488,5 +492,9 @@ filterLabMigration.value = routeQuery.filter && routeQuery.filter === "lab_migra
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;
+}
+
+.v-expansion-panel-title h3 {
+  margin-top: 0px !important;
 }
 </style>

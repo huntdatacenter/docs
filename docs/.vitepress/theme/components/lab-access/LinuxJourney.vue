@@ -125,31 +125,31 @@ const wrap = (template) => {
   return text
 }
 
-const copyText = async (key) => {
-  try {
-    const element = document.querySelector(`[ref="${key}"]`)
-    const input = element?.querySelector('input')
-    if (input) {
-      input.select()
-      await navigator.clipboard.writeText(input.value)
-    }
-  } catch (error) {
-    console.error('Failed to copy text:', error)
-  }
-}
+// const copyText = async (key) => {
+//   try {
+//     const element = document.querySelector(`[ref="${key}"]`)
+//     const input = element?.querySelector('input')
+//     if (input) {
+//       input.select()
+//       await navigator.clipboard.writeText(input.value)
+//     }
+//   } catch (error) {
+//     console.error('Failed to copy text:', error)
+//   }
+// }
 
-const copyTextArea = async (key) => {
-  try {
-    const element = document.querySelector(`[ref="${key}"]`)
-    const textarea = element?.querySelector('textarea')
-    if (textarea) {
-      textarea.select()
-      await navigator.clipboard.writeText(textarea.value)
-    }
-  } catch (error) {
-    console.error('Failed to copy text:', error)
-  }
-}
+// const copyTextArea = async (key) => {
+//   try {
+//     const element = document.querySelector(`[ref="${key}"]`)
+//     const textarea = element?.querySelector('textarea')
+//     if (textarea) {
+//       textarea.select()
+//       await navigator.clipboard.writeText(textarea.value)
+//     }
+//   } catch (error) {
+//     console.error('Failed to copy text:', error)
+//   }
+// }
 
 const nextPanel = (inc = 1) => {
   mainExpansionPanel.value = mainExpansionPanel.value ? mainExpansionPanel.value + inc : 1
@@ -211,6 +211,8 @@ onMounted(() => {
         <v-autocomplete
           v-model="filterGuidesByType"
           :items="guidingOptions"
+          item-title="text"
+          item-value="value"
           label="Filter steps"
           placeholder="Showing all steps"
           persistent-placeholder
@@ -680,3 +682,14 @@ onMounted(() => {
     </v-card>
   </v-sheet>
 </template>
+
+<style>
+
+pre code {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+</style>

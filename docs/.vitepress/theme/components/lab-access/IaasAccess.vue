@@ -193,21 +193,29 @@ onMounted(() => {
       <v-card v-show="isDataComplete" class="pt-4">
         <v-row class="ml-3 mb-2" justify="center">
           <v-col cols="6">
-            <CopyTextField v-model="query.username" label="Username" placeholder="Your link is missing access token" />
-          </v-col>
-          <v-col cols="6">
-            <CopyTextField v-model="query.labName" label="Lab name" placeholder="Your link is missing access token" />
+            <CopyTextField
+              :model-value="query.username"
+              label="Username"
+              placeholder="Your link is missing access token"
+            />
           </v-col>
           <v-col cols="6">
             <CopyTextField
-              v-model="query.ipAddress"
+              :model-value="query.labName"
+              label="Lab name"
+              placeholder="Your link is missing access token"
+            />
+          </v-col>
+          <v-col cols="6">
+            <CopyTextField
+              :model-value="query.ipAddress"
               label="Lab IP Address"
               placeholder="Your link is missing access token"
             />
           </v-col>
           <v-col cols="6">
             <CopyTextField
-              v-model="query.iaasName"
+              :model-value="query.iaasName"
               label="IAAS machine name"
               placeholder="Your link is missing access token"
             />
