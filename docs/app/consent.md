@@ -1,6 +1,6 @@
 ---
 pageClass: custom-homepage
-title: HUNT Cloud Community Consent
+title: Community Consent
 category: HUNT Cloud
 permalink: /-/consent
 sidebarDepth: 0
@@ -9,6 +9,6 @@ next: false
 description: Community Consent
 ---
 
-# Community consent
+# {{ $frontmatter.title }}
 
 <ConsentForm />
