@@ -288,7 +288,7 @@ onMounted(() => {
                 </v-toolbar>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="vpnStepper">
+                  <v-stepper-vertical v-model="vpnStepper" hide-actions>
                     <v-stepper-vertical-item
                       title="Install OpenVPN"
                       value="1"

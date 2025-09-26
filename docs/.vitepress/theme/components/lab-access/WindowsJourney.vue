@@ -236,10 +236,10 @@ onMounted(() => {
           <v-expansion-panel-title>
             <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ fetchSecretsId }}. Fetch secrets</h3>
           </v-expansion-panel-title>
-          <v-expansion-panel-text id="fetch-secrets" ref="#fetch-secrets" class="mt-2">
+          <v-expansion-panel-text id="fetch-secrets" ref="#fetch-secrets">
             You have received a link to an encrypted file archive (7-ZIP file).
 
-            <ol>
+            <ol class="mt-2">
               <li>Click on the filesender link in the email to download the file and save this on your local computer.</li>
               <li>Unpack (extract) the file only with <a href="/do-science/tools/transfer/7z/#detail-2-windows" target="_blank">software that supports the 7-ZIP archive format</a>.</li>
               <li>Use the key named 7-ZIP file key from your Signal transfer to decrypt the 7z archive.</li>
@@ -252,7 +252,7 @@ onMounted(() => {
               poster="/img/video-covers/user-onboarding-fetch-secrets-video-cover.jpeg"
             />
 
-            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+            <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-text>
         </v-expansion-panel>
 
@@ -297,7 +297,7 @@ onMounted(() => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="vpnStepper">
+                  <v-stepper-vertical v-model="vpnStepper" hide-actions>
                     <v-stepper-vertical-item
                       :complete="vpnStepper > 1"
                       value="1"
@@ -638,7 +638,7 @@ onMounted(() => {
               poster="/img/video-covers/user-onboarding-vpn-access-video-cover.jpeg"
             />
 
-            <v-btn color="primary" class="mx-2 my-2" small @click="nextPanel()">Next</v-btn>
+            <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-text>
         </v-expansion-panel>
 
@@ -647,7 +647,7 @@ onMounted(() => {
           <v-expansion-panel-title>
             <h3><a href="#ssh-passphrase" class="header-anchor">#</a> {{ passChangeId }}. SSH Passphrase change</h3>
           </v-expansion-panel-title>
-          <v-expansion-panel-text id="ssh-passphrase" ref="#ssh-passphrase" class="mt-2">
+          <v-expansion-panel-text id="ssh-passphrase" ref="#ssh-passphrase">
 
             <v-alert
               v-show="filterGuidesByType && ['new_lab', 'ssh_reset', 'lab_migration'].includes(filterGuidesByType)"
@@ -949,11 +949,12 @@ onMounted(() => {
           <v-expansion-panel-title>
             <h3><a href="#hosts-file" class="header-anchor">#</a> {{ hostsFileId }}. Workbench - hosts file</h3>
           </v-expansion-panel-title>
-          <v-expansion-panel-text id="hosts-file" ref="#hosts-file" class="mt-2">
+          <v-expansion-panel-text id="hosts-file" ref="#hosts-file">
             <v-alert
               border="start"
               type="warning"
               elevation="2"
+              class="mb-2"
             >
               <template v-slot:title><strong>Administrator permissions are required.</strong></template>
               If you do not have Administrator permissions on your local workstation make sure to ask
@@ -970,7 +971,6 @@ onMounted(() => {
               poster="/img/video-covers/lab-access-macOS-workbench-hosts-v1.jpg"
             />
 
-            <br /><br />
             <v-col cols="12">
               {{ getNextItem(hostsFileId, true) }} Press the Windows key.
             </v-col>
@@ -1106,7 +1106,7 @@ onMounted(() => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="workbenchStepper">
+                  <v-stepper-vertical v-model="workbenchStepper" hide-actions>
                     <v-stepper-vertical-item
                       :complete="workbenchStepper > 1"
                       value="1"

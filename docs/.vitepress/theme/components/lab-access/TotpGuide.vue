@@ -33,7 +33,7 @@ const totpStepper = ref("1")
         </v-card-title>
 
         <v-card-text class="pa-0">
-          <v-stepper-vertical v-model="totpStepper" class="mt-16">
+          <v-stepper-vertical v-model="totpStepper" class="mt-16" hide-actions>
             <v-stepper-vertical-item :complete="totpStepper > 1" value="1">
               <template v-slot:title> Install TOTP application on your phone </template>
 
@@ -77,10 +77,11 @@ const totpStepper = ref("1")
                     <img
                       alt="google-auth-plus-icon"
                       src="/img/totp/google-auth-plus-icon.png"
-                      style="height: 2.5em; margin-bottom: -0.5em"
+                      style="display: inline-block; height: 2.5em; margin-bottom: -0.5em"
                     />
-                    <code>plus button</code> in the bottom right corner <v-icon>mdi-south-east</v-icon> of your phone
-                    screen.<br />
+                    <code>plus button</code> in the bottom right corner
+                    <v-icon icon="mdi-arrow-bottom-right"></v-icon> of your phone screen.<br />
+
                     <!-- <img alt="google-auth-plus-icon" src="/img/totp/google-auth-plus-icon.png" style="max-width: 75px;" /> -->
                   </li>
                   <li>
@@ -215,3 +216,16 @@ const totpStepper = ref("1")
     </v-dialog>
   </section>
 </template>
+
+<style scoped>
+/* TODO -- adjust so we can avoid using scoped style */
+code {
+  font-size: 100% !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  padding: 0.2em 0.4em;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+</style>

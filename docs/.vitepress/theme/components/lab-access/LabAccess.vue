@@ -35,6 +35,7 @@ const getRouteQuery = () => {
 }
 
 // Reactive data
+const anchor = ref("&ZeroWidthSpace;")
 const tab = ref(null)
 const access = ref([])
 const migMap = ref(null)
@@ -273,12 +274,22 @@ onMounted(() => {
 // Initialize data from route
 const routeQuery = getRouteQuery()
 access.value = routeQuery.access ? window.atob(routeQuery.access).split("|") : []
-console.log(access.value)
 filterLabMigration.value = routeQuery.filter && routeQuery.filter === "lab_migration" ? true : false
+
+const onAnchorHover = async value => {
+  anchor.value = value
+  // console.log(anchor)
+}
 </script>
 
 <template>
-  <div class="vuewidget vuewrapper mt-n4" data-vuetify>
+  <div class="vuewidget vuewrapper mt-n6" data-vuetify>
+    <h1 id="lab-access" tabindex="-1" @mouseover="onAnchorHover('#')" @mouseleave="onAnchorHover('&ZeroWidthSpace;')">
+      Lab Access
+      <a class="header-anchor" href="#lab-access" aria-label='Permalink to "Lab Access"'>
+        {{ anchor }}
+      </a>
+    </h1>
     <v-app :id="id">
       <v-sheet v-show="!cfgShow" class="ma-4">
         <v-row justify="center">
@@ -420,15 +431,22 @@ filterLabMigration.value = routeQuery.filter && routeQuery.filter === "lab_migra
 .vuewidget.vuewrapper {
   /* reset full view - no scroll bars, no full view */
   overflow: inherit;
+  max-width: 820px !important;
+  margin: auto;
 }
 
 .vuewidget.vuewrapper .v-application {
   font-family: Roboto, sans-serif;
   line-height: 1.5;
+}
 
-  code {
-    font-size: 100% !important;
-  }
+.vuewidget.vuewrapper code {
+  font-size: 100% !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.vuewidget.vuewrapper li + li {
+  margin-top: 0px;
 }
 
 .vuewidget.vuewrapper .v-application--wrap {

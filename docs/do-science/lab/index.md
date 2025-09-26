@@ -5,9 +5,8 @@ permalink: /do-science/lab
 outline: 0
 prev: false
 next: false
+aside: false
 description: Lab Access details with customized guiding.
 ---
-
-# Lab Access
 
 <LabAccess />
