@@ -369,6 +369,7 @@ onMounted(() => {
                       <v-stepper-window-item value="4">
                         <v-card class="mb-8 pr-16" elevation="0">
                           <v-card-text>
+                            <!-- border-color -->
                             <v-alert
                               type="success"
                               variant="tonal"

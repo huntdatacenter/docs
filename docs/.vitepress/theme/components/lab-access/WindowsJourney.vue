@@ -384,7 +384,7 @@ onMounted(() => {
                         <v-alert
                           v-show="filterGuidesByType && ['vpn_reset', 'reissue_all'].includes(filterGuidesByType)"
                           border="start"
-                          type="warning"
+                          border-color="warning"
                           elevation="2"
                         >
                           <template v-slot:title><b>Remove old VPN Configuration</b></template>
@@ -568,28 +568,32 @@ onMounted(() => {
                         <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
                         <p>
                           The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
-                          <div class="language- extra-class"><pre class="language-text">
-                            <code v-text="`ERROR: could not read Private Key username/password/ok/string from management interface`"></code>
-                          </pre></div>
-
-                          <div class="language- extra-class"><pre class="language-text">
-                            <code v-text="`Cannot load private key file`"></code>
-                          </pre></div>
                         </p>
+                        <div class="language- extra-class mb-2" style="user-select: none">
+                          <pre class="language-text">
+                            <code>ERROR: could not read Private Key username/password/ok/string from management interface</code>
+                          </pre>
+                        </div>
+
+                        <div class="language- extra-class mb-2" style="user-select: none">
+                          <pre class="language-text">
+                            <code>Cannot load private key file</code>
+                          </pre>
+                        </div>
 
                         <br />
                         <h3 id="route-addition-failed"><a href="#route-addition-failed" class="header-anchor">#</a> Route addition failed </h3>
                         <p>
                           You should reinstall your OpenVPN with administrative rights if you already installed OpenVPN and are getting errors below:
-                          <div class="language- extra-class"><pre class="language-text">
+                          <div class="language- extra-class mb-2"><pre class="language-text">
                             <code v-text="`ERROR: route addition failed using CreateIpForwardEntry: Ingen tilgang.`"></code>
                           </pre></div>
 
-                          <div class="language- extra-class"><pre class="language-text">
+                          <div class="language- extra-class mb-2"><pre class="language-text">
                             <code v-text="`ERROR: Windows route add command failed [adaptive]: returned error code 1`"></code>
                           </pre></div>
 
-                          <div class="language- extra-class"><pre class="language-text">
+                          <div class="language- extra-class mb-2"><pre class="language-text">
                             <code v-text="`ERROR: Some routes were not successfully added. The connection may not function correctly`"></code>
                           </pre></div>
                         </p>
@@ -598,7 +602,7 @@ onMounted(() => {
                         <h3 id="tls-key-negotiation-timeout"><a href="#tls-key-negotiation-timeout" class="header-anchor">#</a> TLS handshake failed</h3>
                         <p>
                           If you see the error below the problem might be with your current network (e.g. institution is blocking VPN connections).
-                          <div class="language- extra-class"><pre class="language-text">
+                          <div class="language- extra-class mb-2"><pre class="language-text">
                             <code v-text="`TLS Error: TLS key negotiation failed to occur within 60 seconds (check your network connectivity)`"></code>
                           </pre></div>
 
@@ -655,7 +659,7 @@ onMounted(() => {
             <v-alert
               v-show="filterGuidesByType && ['new_lab', 'ssh_reset', 'lab_migration'].includes(filterGuidesByType)"
               border="start"
-              type="warning"
+              border-color="warning"
               elevation="2"
             >
               Ensure that you are logged into VPN.
@@ -712,7 +716,7 @@ onMounted(() => {
               </pre></div>
               <v-alert
                 border="start"
-                type="warning"
+                border-color="warning"
                 elevation="2"
               >
                 If you are getting an <code>Authentication token manipulation error</code> check strength requirements for passphrase in step {{ passChangeId }}.1.
@@ -955,7 +959,7 @@ onMounted(() => {
           <v-expansion-panel-text id="hosts-file" ref="#hosts-file">
             <v-alert
               border="start"
-              type="warning"
+              border-color="warning"
               elevation="2"
               class="mb-2"
             >
@@ -1124,14 +1128,14 @@ onMounted(() => {
                       >
                         <v-alert
                           border="start"
-                          type="warning"
+                          border-color="warning"
                           elevation="2"
                         >
                           Make sure you have received your Workbench certificate (<code>{{ labName }}-{{ username }}.p12</code>).
                         </v-alert>
                         <v-alert
                           border="start"
-                          type="warning"
+                          border-color="warning"
                           elevation="2"
                         >
                           Assure working VPN connection.
@@ -1240,14 +1244,14 @@ onMounted(() => {
                       >
                         <v-alert
                           border="start"
-                          type="warning"
+                          border-color="warning"
                           elevation="2"
                         >
                           <template v-slot:title><strong>Make sure you are connected to the VPN before you access your HUNT Workbench.</strong></template>
                         </v-alert>
                         <v-alert
                           border="start"
-                          type="info"
+                          border-color="info"
                           elevation="2"
                         >
                           <template v-slot:title>We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.</template>
@@ -1303,7 +1307,7 @@ onMounted(() => {
 
                         <v-alert
                           border="start"
-                          type="info"
+                          border-color="info"
                           elevation="2"
                         >
                           <template v-slot:title><b>Remember to bookmark your Lab address</b></template>
@@ -1392,7 +1396,7 @@ onMounted(() => {
                           <div class="pl-4 pr-16 py-2">
                             <v-alert
                               border="start"
-                              type="info"
+                              border-color="info"
                               elevation="2"
                             >
                               <template v-slot:title>We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.</template>
@@ -1663,7 +1667,7 @@ pre code {
   padding-top: 2px !important;
   padding-bottom: 2px !important;
   background-color: unset;
-  color: rgb(204, 204, 204);
+  color: rgba(204, 204, 204, 1) !important;
 }
 
 pre[class*=language-] {

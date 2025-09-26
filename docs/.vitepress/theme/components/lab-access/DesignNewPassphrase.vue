@@ -54,9 +54,8 @@ const totpStepper = ref(1)
 
             <div class="language- extra-class" style="user-select: none">
               <pre class="language-text">
-              <code>AnalysingPokemon4FunInTheMorning</code>
-            </pre
-              >
+                <code>AnalysingPokemon4FunInTheMorning</code>
+              </pre>
             </div>
 
             <br />Go ahead and create one for yourself to use in the next steps of the guide.
@@ -70,3 +69,40 @@ const totpStepper = ref(1)
     </v-dialog>
   </span>
 </template>
+
+<style scoped>
+ul {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+
+pre code {
+  font-size: 14px !important;
+  /* padding: 0 !important; */
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  background-color: unset;
+  color: rgba(204, 204, 204, 1) !important;
+}
+
+/* pre[class*="language-"] {
+  margin: 0.85rem 0;
+} */
+
+div[class*="language-"] {
+  position: relative;
+  background-color: #282c34;
+  border-radius: 6px;
+}
+
+div[class*="language-"]:before {
+  position: absolute;
+  z-index: 3;
+  top: 0.8em;
+  right: 1em;
+  font-size: 0.75rem;
+  color: hsla(0, 0%, 100%, 0.4);
+}
+</style>
