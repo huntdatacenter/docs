@@ -228,4 +228,8 @@ ul {
   list-style-type: disc;
   padding-left: 24px;
 }
+
+a {
+  color: #1976d2;
+}
 </style>

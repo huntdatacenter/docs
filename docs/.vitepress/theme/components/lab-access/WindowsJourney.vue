@@ -208,7 +208,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-sheet class="pa-1">
+  <v-sheet class="windows-journey pa-1">
     <v-row>
       <v-col cols="12">
         <v-autocomplete
@@ -297,7 +297,7 @@ onMounted(() => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="vpnStepper" hide-actions>
+                  <v-stepper-vertical v-model="vpnStepper" class="mt-16" hide-actions>
                     <v-stepper-vertical-item
                       :complete="vpnStepper > 1"
                       value="1"
@@ -321,17 +321,19 @@ onMounted(() => {
 
                         <v-alert
                           border="start"
-                          type="info"
+                          border-color="info"
+                          class="v-alert-custom mb-4"
                           elevation="2"
                         >
-                          <template v-slot:title><b><img alt="1-openvpn-icon" src="/img/vpn/ntnu-icon-25.svg" style="height: 1.2em; margin-bottom: -3px;" /> NTNU Software center</b></template>
+                          <template v-slot:title><b><img alt="1-openvpn-icon" src="/img/vpn/ntnu-icon-25.svg" style="display: inline-block; height: 1.2em; margin-bottom: -3px;" /> NTNU Software center</b></template>
                           Windows <b>users from NTNU</b> can install OpenVPN community edition
                           using <a href="https://i.ntnu.no/wiki/-/wiki/English/OpenVPN" target="_blank">NTNU Software Center</a> even without administrative rights.
                         </v-alert>
 
                         <v-alert
                           border="start"
-                          type="warning"
+                          border-color="warning"
+                          class="v-alert-custom"
                           elevation="2"
                         >
                           <template v-slot:title><b>You will need administrative rights on your local computer to successfully install OpenVPN</b></template>
@@ -364,7 +366,7 @@ onMounted(() => {
                         </v-alert>
 
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = '2'">Continue</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -427,8 +429,8 @@ onMounted(() => {
                           </li>
                         </ol>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = '3'">Continue</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = '1'">Back</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 3">Continue</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 1">Back</v-btn>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -481,8 +483,8 @@ onMounted(() => {
                         <br /><br />
                         You should now be connected to the VPN.
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = '4'">Continue</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = '2'">Back</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 4">Continue</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 2">Back</v-btn>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -499,18 +501,18 @@ onMounted(() => {
                       >
                         <v-alert
                           border="start"
-                          type="success"
+                          border-color="success"
                           elevation="2"
                           icon="mdi-chevron-right"
                         >
-                          <template v-slot:title><b>The OpenVPN notification icon on the taskbar should be green.</b></template>
+                          <template v-slot:title><div class="mb-2">The OpenVPN notification icon on the taskbar should be green.</div></template>
                           <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" />
                         </v-alert>
                       </v-card>
-                      <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = '1';">Finish</v-btn>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = '1'">Start again</v-btn>
-                      <v-btn color="warning" class="mx-2 mb-1" @click="vpnStepper = '5'">Troubleshooting</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = '3'">Back</v-btn>
+                      <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
+                      <v-btn color="warning" class="mx-2 mb-1" @click="vpnStepper = 5">Troubleshooting</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -614,7 +616,8 @@ onMounted(() => {
 
                         <v-alert
                           border="start"
-                          type="info"
+                          border-color="info"
+                          class="mt-4"
                           elevation="2"
                         >
                           <template v-slot:title><b>TIP</b></template>
@@ -622,8 +625,8 @@ onMounted(() => {
                         </v-alert>
 
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = '1'">Start again</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = '4'">Back</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 4">Back</v-btn>
                     </v-stepper-vertical-item>
 
                   </v-stepper-vertical>
@@ -1106,7 +1109,7 @@ onMounted(() => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="workbenchStepper" hide-actions>
+                  <v-stepper-vertical v-model="workbenchStepper" class="mt-16" hide-actions>
                     <v-stepper-vertical-item
                       :complete="workbenchStepper > 1"
                       value="1"
@@ -1134,8 +1137,8 @@ onMounted(() => {
                           Assure working VPN connection.
                         </v-alert>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = '2'">Continue</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = '4'">Skip to Troubleshooting</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 2">Continue</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 4">Skip to Troubleshooting</v-btn>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -1219,8 +1222,8 @@ onMounted(() => {
                           </li>
                         </ol>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = '3'">Continue</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = '1'">Back</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 3">Continue</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 1">Back</v-btn>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -1308,10 +1311,10 @@ onMounted(() => {
                         </v-alert>
 
                       </v-card>
-                      <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = '1';">Finish</v-btn>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = '1'">Start again</v-btn>
-                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper = '4'">Troubleshooting</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = '2'">Back</v-btn>
+                      <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
+                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper = 4">Troubleshooting</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 2">Back</v-btn>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -1461,9 +1464,9 @@ onMounted(() => {
                           </div>
                         </details>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = '1'">Start again</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = '3'">Back</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = '1';">Close</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 3">Back</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Close</v-btn>
                     </v-stepper-vertical-item>
 
                   </v-stepper-vertical>
@@ -1630,3 +1633,55 @@ onMounted(() => {
     </v-card>
   </v-sheet>
 </template>
+
+<style scoped>
+.v-alert-custom .v-alert-title {
+  font-size: 16px;
+}
+.v-alert a {
+  color: #1976d2;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 24px !important;
+}
+code {
+  font-size: 100% !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  padding: 0.2em 0.4em;
+}
+
+pre code {
+  font-size: 14px !important;
+  /* padding: 0 !important; */
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  background-color: unset;
+  color: rgb(204, 204, 204);
+}
+
+pre[class*=language-] {
+  margin: .85rem 0;
+}
+
+div[class*=language-] {
+  position: relative;
+  background-color: #282c34;
+  border-radius: 6px;
+}
+
+div[class*=language-]:before {
+  position: absolute;
+  z-index: 3;
+  top: .8em;
+  right: 1em;
+  font-size: .75rem;
+  color: hsla(0, 0%, 100%, .4);
+}
+</style>

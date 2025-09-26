@@ -3,6 +3,8 @@ import { h } from "vue"
 import type { Theme } from "vitepress"
 import DefaultTheme from "vitepress/theme"
 
+// import { VStepperVertical } from "vuetify/labs/VStepperVertical"
+
 import CopyInput from "./components/generic/CopyInput.vue"
 import CopyInputField from "./components/generic/CopyInputField.vue"
 import CopyTextArea from "./components/generic/CopyTextArea.vue"

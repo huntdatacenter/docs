@@ -443,6 +443,12 @@ const onAnchorHover = async value => {
 .vuewidget.vuewrapper code {
   font-size: 100% !important;
   background-color: rgba(0, 0, 0, 0.05) !important;
+  padding: 0.2em 0.4em;
+}
+
+.vuewidget.vuewrapper ul {
+  list-style-type: disc;
+  padding-left: 24px;
 }
 
 .vuewidget.vuewrapper li + li {
