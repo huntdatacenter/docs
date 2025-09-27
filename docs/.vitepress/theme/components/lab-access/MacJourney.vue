@@ -261,172 +261,172 @@ onMounted(() => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper v-model="vpnStepper" orientation="vertical">
-                    <v-stepper-header>
-                      <v-stepper-item
-                        :complete="vpnStepper > 1"
-                        step="1"
-                        title="Install Tunnelblick"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        :complete="vpnStepper > 2"
-                        step="2"
-                        title="Setup the VPN profile"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        :complete="vpnStepper > 3"
-                        step="3"
-                        title="Connect to the VPN"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        :complete="vpnStepper > 4"
-                        step="4"
-                        title="Verify your VPN connection"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        step="?"
-                        title="Troubleshooting"
-                      />
-                    </v-stepper-header>
+                  <v-stepper-vertical v-model="vpnStepper" hide-actions>
+                    <v-stepper-vertical-item
+                      :complete="vpnStepper > 1"
+                      value="1"
+                      title="Install Tunnelblick"
+                    >
+                      <v-card class="mb-8 pr-4" elevation="0">
+                        <v-card-text>
+                          We use <code>Tunnelblick</code> to ensure encrypted communication between your local computer and HUNT Cloud.<br /><br />
 
-                    <v-stepper-window>
-                      <v-stepper-window-item value="1">
-                        <v-card class="mb-8 pr-4" elevation="0">
-                          <v-card-text>
-                            We use <code>Tunnelblick</code> to ensure encrypted communication between your local computer and HUNT Cloud.<br /><br />
+                          <a href="https://tunnelblick.net/iprelease/Latest_Tunnelblick_Stable.dmg" target="_blank">Download and install Tunnelblick from this page.</a>
+                          <br /><br />
+                          In case the link above does not start download <a href="https://tunnelblick.net/downloads.html#:~:text=GnuPG%20v2%20signature-,Stable,-Tunnelblick" target="_blank">lookup the 'Stable' release from this download page (opens new window).</a>
+                          <br /><br />
+                        </v-card-text>
+                      </v-card>
 
-                            <a href="https://tunnelblick.net/iprelease/Latest_Tunnelblick_Stable.dmg" target="_blank">Download and install Tunnelblick from this page.</a>
-                            <br /><br />
-                            In case the link above does not start download <a href="https://tunnelblick.net/downloads.html#:~:text=GnuPG%20v2%20signature-,Stable,-Tunnelblick" target="_blank">lookup the 'Stable' release from this download page (opens new window).</a>
-                            <br /><br />
-                          </v-card-text>
-                        </v-card>
+                      <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
-                      </v-stepper-window-item>
+                      </template>
+                    </v-stepper-vertical-item>
 
-                      <v-stepper-window-item value="2">
-                        <v-card class="mb-8 pr-4" elevation="0">
-                          <v-card-text>
-                            <b>If you 'do' get prompted with the Welcome to Tunnelblick message, follow these steps:</b>
+                    <v-stepper-vertical-item
+                      :complete="vpnStepper > 2"
+                      value="2"
+                      title="Setup the VPN profile"
+                    >
+                      <v-card class="mb-8 pr-4" elevation="0">
+                        <v-card-text>
+                          <b>If you 'do' get prompted with the Welcome to Tunnelblick message, follow these steps:</b>
 
-                            <ol>
-                              <li>Select I have configuration files.</li>
-                              <li>In the Welcome to Tunnelblick prompt, select I have configuration files.</li>
-                              <li>When prompted for which type of configuration you have, select OpenVPN Configurations.</li>
-                              <li>Select the OpenVPN profile named <code>{{ username }}.ovpn</code> in the collection of credentials given from HUNT Cloud.</li>
-                              <li>Continue with the Connecting to the VPN section below.</li>
-                            </ol>
+                          <ol>
+                            <li>Select I have configuration files.</li>
+                            <li>In the Welcome to Tunnelblick prompt, select I have configuration files.</li>
+                            <li>When prompted for which type of configuration you have, select OpenVPN Configurations.</li>
+                            <li>Select the OpenVPN profile named <code>{{ username }}.ovpn</code> in the collection of credentials given from HUNT Cloud.</li>
+                            <li>Continue with the Connecting to the VPN section below.</li>
+                          </ol>
 
-                            <br />
-                            <b>If you 'do not' get prompted with the Welcome to Tunnelblick message, follow these steps:</b>
+                          <br />
+                          <b>If you 'do not' get prompted with the Welcome to Tunnelblick message, follow these steps:</b>
 
-                            <ol>
-                              <li>Find the OpenVPN profile named <code>{{ username }}.ovpn</code> that you collected in Step 1.</li>
-                              <li>Right-click the file OpenVPN profile named <code>{{ username }}.ovpn</code>.</li>
-                              <li>Select <code>Open With</code> -> <code>Tunnelblick</code>.</li>
-                              <li>When prompted for <code>Install Configuration For All Users</code>, select <code>Only Me</code>.</li>
-                              <li>Enter your macOS password to allow Tunnelblick to install the OpenVPN configuration.</li>
-                              <li>Continue with the <code>Connecting to the VPN section</code> below.</li>
-                            </ol>
-                          </v-card-text>
-                        </v-card>
+                          <ol>
+                            <li>Find the OpenVPN profile named <code>{{ username }}.ovpn</code> that you collected in Step 1.</li>
+                            <li>Right-click the file OpenVPN profile named <code>{{ username }}.ovpn</code>.</li>
+                            <li>Select <code>Open With</code> -> <code>Tunnelblick</code>.</li>
+                            <li>When prompted for <code>Install Configuration For All Users</code>, select <code>Only Me</code>.</li>
+                            <li>Enter your macOS password to allow Tunnelblick to install the OpenVPN configuration.</li>
+                            <li>Continue with the <code>Connecting to the VPN section</code> below.</li>
+                          </ol>
+                        </v-card-text>
+                      </v-card>
+
+                      <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 3">Continue</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 1">Back</v-btn>
-                      </v-stepper-window-item>
+                      </template>
+                    </v-stepper-vertical-item>
 
-                      <v-stepper-window-item value="3">
-                        <v-card class="mb-8 pr-4" elevation="0">
-                          <v-card-text>
-                            <ol>
-                              <li>Start Tunnelblick and Connect.</li>
-                              <li>Enter your user name (same as the OpenVPN profile file name).</li>
-                              <li>
-                                Enter the verification code from Google Authenticator as your password. <br />
-                                <img alt="tunnelblick-login" src="/img/vpn/tunnelblick-login.png" /> <br />
-                                Make sure that the Save password checkbox is <b>unchecked</b>.
-                              </li>
-                              <li>
-                                When prompted for a Private Key Password or Passphrase, insert the VPN passphrase from Signal message.
-                                <br /><br />
-                                Your authentication will fail when you complete your passphrase above.<br />
-                                This is expected since your verification code timed out while you typed your passphrase.
-                                <br /><br />
-                              </li>
-                              <li>Now try again to connect with a fresh verification code from Google Authenticator.</li>
-                            </ol>
-                            <br /><br />
-                            You should now be connected to the VPN.
-                          </v-card-text>
-                        </v-card>
+                    <v-stepper-vertical-item
+                      :complete="vpnStepper > 3"
+                      value="3"
+                      title="Connect to the VPN"
+                    >
+                      <v-card class="mb-8 pr-4" elevation="0">
+                        <v-card-text>
+                          <ol>
+                            <li>Start Tunnelblick and Connect.</li>
+                            <li>Enter your user name (same as the OpenVPN profile file name).</li>
+                            <li>
+                              Enter the verification code from Google Authenticator as your password. <br />
+                              <img alt="tunnelblick-login" src="/img/vpn/tunnelblick-login.png" /> <br />
+                              Make sure that the Save password checkbox is <b>unchecked</b>.
+                            </li>
+                            <li>
+                              When prompted for a Private Key Password or Passphrase, insert the VPN passphrase from Signal message.
+                              <br /><br />
+                              Your authentication will fail when you complete your passphrase above.<br />
+                              This is expected since your verification code timed out while you typed your passphrase.
+                              <br /><br />
+                            </li>
+                            <li>Now try again to connect with a fresh verification code from Google Authenticator.</li>
+                          </ol>
+                          <br /><br />
+                          You should now be connected to the VPN.
+                        </v-card-text>
+                      </v-card>
+
+                      <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 4">Continue</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 2">Back</v-btn>
-                      </v-stepper-window-item>
+                      </template>
+                    </v-stepper-vertical-item>
 
-                      <v-stepper-window-item value="4">
-                        <v-card class="mb-8 pr-16" elevation="0">
-                          <v-card-text>
-                            <!-- border-color -->
-                            <v-alert
-                              type="success"
-                              variant="tonal"
-                              border="start"
-                              elevation="2"
-                              icon="mdi-chevron-right"
-                            >
-                              <b>Tunnelblick window should state "Connected".</b>
-                              <hr class="mt-1 mb-2" />
-                              A small Tunnelblick window should state <b>"Connected"</b> in green letters
-                              with a timer that count the connection length.
-                              <br /><br />
-                              You should also see it by hovering your mouse over Tunnelblick icon
-                              in <a href="https://support.apple.com/en-ie/guide/mac-help/mchlp1446/mac" target="_blank">the menu bar</a>.
-                            </v-alert>
-                          </v-card-text>
-                        </v-card>
+                    <v-stepper-vertical-item
+                      :complete="vpnStepper > 4"
+                      value="4"
+                      title="Verify your VPN connection"
+                    >
+                      <v-card class="mb-8 pr-16" elevation="0">
+                        <v-card-text>
+                          <v-alert
+                            type="success"
+                            variant="tonal"
+                            border="start"
+                            elevation="2"
+                            icon="mdi-chevron-right"
+                          >
+                            <b>Tunnelblick window should state "Connected".</b>
+                            <hr class="mt-1 mb-2" />
+                            A small Tunnelblick window should state <b>"Connected"</b> in green letters
+                            with a timer that count the connection length.
+                            <br /><br />
+                            You should also see it by hovering your mouse over Tunnelblick icon
+                            in <a href="https://support.apple.com/en-ie/guide/mac-help/mchlp1446/mac" target="_blank">the menu bar</a>.
+                          </v-alert>
+                        </v-card-text>
+                      </v-card>
+
+                      <template v-slot:actions>
                         <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
                         <v-btn color="warning" class="mx-2 mb-1" @click="vpnStepper = 5">Troubleshooting</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
-                      </v-stepper-window-item>
+                      </template>
+                    </v-stepper-vertical-item>
 
-                      <v-stepper-window-item value="5">
-                        <v-card class="mb-8 pr-4" elevation="0">
-                          <v-card-text>
-                            <br />
-                            <h3 id="authenticate-vpn"><a href="#authenticate-vpn" class="header-anchor">#</a> Authenticate VPN</h3>
-                            <p>If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.</p>
+                    <v-stepper-vertical-item
+                      value="5"
+                      title="Troubleshooting"
+                    >
+                      <v-card class="mb-8 pr-4" elevation="0">
+                        <v-card-text>
+                          <br />
+                          <h3 id="authenticate-vpn"><a href="#authenticate-vpn" class="header-anchor">#</a> Authenticate VPN</h3>
+                          <p>If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.</p>
 
-                            <br />
-                            <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
-                            <p>
-                              If you received the notification VPN Connection Failed after 60 seconds, please check the following:
-                              <ul>
-                                <li>Verify that you have an active internet connection.</li>
-                                <li>Verify that the Private Key Password is correct.</li>
-                              </ul>
-                            </p>
+                          <br />
+                          <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
+                          <p>
+                            If you received the notification VPN Connection Failed after 60 seconds, please check the following:
+                            <ul>
+                              <li>Verify that you have an active internet connection.</li>
+                              <li>Verify that the Private Key Password is correct.</li>
+                            </ul>
+                          </p>
 
-                            <v-alert
-                              type="info"
-                              variant="tonal"
-                              border="start"
-                              elevation="2"
-                            >
-                              <b>TIP</b>
-                              <hr class="mt-1 mb-2" />
-                              If nothing works, please head over to our main <a href="/do-science/troubleshooting/connection/#vpn" target="_blank">troubleshooting section</a> for more information on how to troubleshoot connections.
-                            </v-alert>
-                          </v-card-text>
-                        </v-card>
+                          <v-alert
+                            type="info"
+                            variant="tonal"
+                            border="start"
+                            elevation="2"
+                          >
+                            <b>TIP</b>
+                            <hr class="mt-1 mb-2" />
+                            If nothing works, please head over to our main <a href="/do-science/troubleshooting/connection/#vpn" target="_blank">troubleshooting section</a> for more information on how to troubleshoot connections.
+                          </v-alert>
+                        </v-card-text>
+                      </v-card>
+
+                      <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 4">Back</v-btn>
-                      </v-stepper-window-item>
-                    </v-stepper-window>
-                  </v-stepper>
+                      </template>
+                    </v-stepper-vertical-item>
+                  </v-stepper-vertical>
                 </v-card-text>
               </v-card>
             </v-dialog>
