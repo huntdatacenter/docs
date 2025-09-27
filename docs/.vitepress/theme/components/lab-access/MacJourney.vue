@@ -169,7 +169,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-sheet class="pa-1">
+  <v-sheet class="macos-journey pa-1">
     <v-row>
       <v-col cols="12">
         <v-autocomplete
@@ -391,6 +391,7 @@ onMounted(() => {
                     <v-stepper-vertical-item
                       value="5"
                       title="Troubleshooting"
+                      subtitle="Optional tips to try in case of issues"
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         <v-card-text>
@@ -406,6 +407,39 @@ onMounted(() => {
                               <li>Verify that you have an active internet connection.</li>
                               <li>Verify that the Private Key Password is correct.</li>
                             </ul>
+                          </p>
+
+                          <br />
+                          <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
+                          <p>
+                            If you received an error "wrong credentials" after using your TOTP authenticator:
+                            <ul>
+                              <li>Make sure your phone is connected to internet for time synchronization.</li>
+                            </ul>
+                          </p>
+
+                          <br />
+                          <h3 id="could-not-read-auth-error"><a href="#could-not-read-auth-error" class="header-anchor">#</a> Could not read Auth error</h3>
+                          <p>
+                            The error messages below indicates that TOTP (Google Auth) code is not accepted.
+                            You should try to setup your TOTP one more time or request a TOTP reset in Service desk.
+                            <div class="language- extra-class"><pre class="language-text">
+                              <code v-text="`ERROR: could not read Auth username/password/ok/string from management interface`"></code>
+                            </pre></div>
+
+                          </p>
+
+                          <br />
+                          <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
+                          <p>
+                            The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
+                            <div class="language- extra-class"><pre class="language-text">
+                              <code v-text="`ERROR: could not read Private Key username/password/ok/string from management interface`"></code>
+                            </pre></div>
+
+                            <div class="language- extra-class"><pre class="language-text">
+                              <code v-text="`Cannot load private key file`"></code>
+                            </pre></div>
                           </p>
 
                           <v-alert
@@ -1400,7 +1434,22 @@ onMounted(() => {
 </template>
 
 <style>
-
+a {
+    color: #1976d2;
+}
+.v-overlay__content ul {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+.v-overlay__content ol {
+  list-style-type: decimal;
+  padding-left: 24px !important;
+}
+.v-overlay__content code {
+  font-size: 100% !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  padding: 0.2em 0.4em;
+}
 pre code {
   padding-left: 12px !important;
   padding-right: 12px !important;
