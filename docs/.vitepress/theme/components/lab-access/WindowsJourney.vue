@@ -366,7 +366,10 @@ onMounted(() => {
                         </v-alert>
 
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
+                      <template v-slot:actions>
+                        <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
+                        <v-btn color="" class="mx-2 mb-1" @click="vpnStepper = 5">Skip to troubleshooting</v-btn>
+                      </template>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -429,8 +432,10 @@ onMounted(() => {
                           </li>
                         </ol>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 3">Continue</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 1">Back</v-btn>
+                      <template v-slot:actions>
+                        <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 3">Continue</v-btn>
+                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 1">Back</v-btn>
+                      </template>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -1650,8 +1655,14 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.v-alert-custom .v-alert-title {
-  font-size: 16px;
+a {
+  color: #1976d2;
+  text-decoration-line: none !important;
+  text-underline-offset: unset !important;
+  font-weight: 600 !important;
+}
+.v-alert-title {
+  font-size: 16px !important;
 }
 .v-alert a {
   color: #1976d2;
@@ -1698,5 +1709,23 @@ div[class*=language-]:before {
   right: 1em;
   font-size: .75rem;
   color: hsla(0, 0%, 100%, .4);
+}
+
+.v-overlay__content ul {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+.v-overlay__content ol {
+  list-style-type: decimal;
+  padding-left: 24px !important;
+}
+.v-overlay__content code {
+  font-size: 90% !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  padding: 0.2em 0.4em;
+}
+.v-overlay__content pre[class*=language-] {
+  padding-bottom: 8px !important;
+  padding-top: 8px !important;
 }
 </style>

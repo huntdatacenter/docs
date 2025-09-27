@@ -1487,7 +1487,7 @@ div[class*=language-]:before {
   padding-left: 24px !important;
 }
 .v-overlay__content code {
-  font-size: 100% !important;
+  font-size: 90% !important;
   background-color: rgba(0, 0, 0, 0.05) !important;
   padding: 0.2em 0.4em;
 }

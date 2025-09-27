@@ -320,6 +320,7 @@ onMounted(() => {
 
                       <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
+                        <v-btn color="" class="mx-2 mb-1" @click="vpnStepper = 5">Skip to troubleshooting</v-btn>
                       </template>
                     </v-stepper-vertical-item>
 
@@ -380,9 +381,8 @@ onMounted(() => {
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         <v-alert
-                          type="success"
-                          variant="tonal"
                           border="start"
+                          border-color="success"
                           elevation="2"
                         >
                           <template v-slot:prepend>
@@ -423,9 +423,47 @@ onMounted(() => {
                           </ul>
                         </p>
 
+                        <br />
+                        <h3 id="unable-to-apply-changes"><a href="#unable-to-apply-changes" class="header-anchor">#</a> Unable to apply changes</h3>
+                        <p>
+                          If you are unable to click <i>Apply</i> after your changes, try to re-enter your <code>Private Key Password</code> using your VPN passphrase that you received in Signal message.
+                        </p>
+
+                        <br />
+                        <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
+                        <p>
+                          If you received an error "wrong credentials" after using your TOTP authenticator:
+                          <ul>
+                            <li>Make sure your phone is connected to internet for time synchronization.</li>
+                          </ul>
+                        </p>
+
+                        <br />
+                        <h3 id="could-not-read-auth-error"><a href="#could-not-read-auth-error" class="header-anchor">#</a> Could not read Auth error</h3>
+                        <p>
+                          The error messages below indicates that TOTP (Google Auth) code is not accepted.
+                          You should try to setup your TOTP one more time or request a TOTP reset in Service desk.
+                          <div class="language- extra-class"><pre class="language-text">
+                            <code v-text="`ERROR: could not read Auth username/password/ok/string from management interface`"></code>
+                          </pre></div>
+
+                        </p>
+
+                        <br />
+                        <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
+                        <p>
+                          The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
+                          <div class="language- extra-class"><pre class="language-text">
+                            <code v-text="`ERROR: could not read Private Key username/password/ok/string from management interface`"></code>
+                          </pre></div>
+
+                          <div class="language- extra-class"><pre class="language-text">
+                            <code v-text="`Cannot load private key file`"></code>
+                          </pre></div>
+                        </p>
+
                         <v-alert
-                          type="info"
-                          variant="tonal"
+                          border-color="info"
                           border="start"
                           elevation="2"
                         >
@@ -437,6 +475,7 @@ onMounted(() => {
 
                       <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
+                        <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 4">Back</v-btn>
                       </template>
                     </v-stepper-vertical-item>
@@ -457,9 +496,8 @@ onMounted(() => {
           <v-expansion-panel-text id="ssh-passphrase" class="mt-2">
             <v-alert
               v-show="filterGuidesByType && ['new_lab', 'ssh_reset', 'lab_migration'].includes(filterGuidesByType)"
-              type="warning"
-              variant="tonal"
               border="start"
+              border-color="warning"
               elevation="2"
             >
               Ensure that you are logged into VPN.
@@ -498,9 +536,8 @@ onMounted(() => {
                 <code v-text="passSetNew"></code>
               </pre></div>
               <v-alert
-                type="warning"
-                variant="tonal"
                 border="start"
+                border-color="warning"
                 elevation="2"
               >
                 If you are getting an <code>Authentication token manipulation error</code> check strength requirements for passphrase in step {{ passChangeId }}.1.
@@ -683,13 +720,64 @@ onMounted(() => {
   </v-sheet>
 </template>
 
-<style>
+<style scoped>
+a {
+  color: #1976d2;
+  text-decoration-line: none !important;
+  text-underline-offset: unset !important;
+  font-weight: 600 !important;
+}
 
+code {
+  font-size: 100% !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  padding: 0.2em 0.4em;
+}
 pre code {
+  font-size: 14px !important;
+  /* padding: 0 !important; */
   padding-left: 12px !important;
   padding-right: 12px !important;
   padding-top: 2px !important;
   padding-bottom: 2px !important;
+  background-color: unset;
+  color: rgba(204, 204, 204, 1) !important;
+}
+pre[class*=language-] {
+  margin: .85rem 0;
+  padding-bottom: 4px !important;
+  padding-top: 4px !important;
+}
+div[class*=language-] {
+  position: relative;
+  background-color: #282c34;
+  border-radius: 6px;
+  overflow-x: unset;
+}
+div[class*=language-]:before {
+  position: absolute;
+  z-index: 3;
+  top: .8em;
+  right: 1em;
+  font-size: .75rem;
+  color: hsla(0, 0%, 100%, .4);
 }
 
+.v-overlay__content ul {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+.v-overlay__content ol {
+  list-style-type: decimal;
+  padding-left: 24px !important;
+}
+.v-overlay__content code {
+  font-size: 90% !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  padding: 0.2em 0.4em;
+}
+.v-overlay__content pre[class*=language-] {
+  padding-bottom: 8px !important;
+  padding-top: 8px !important;
+}
 </style>

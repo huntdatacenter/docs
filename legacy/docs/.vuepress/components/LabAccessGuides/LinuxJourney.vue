@@ -1072,7 +1072,6 @@ Connection to home closed.`,
                       </v-card>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
                       <!-- <v-btn color="link" class="mx-2 mb-1" @click="workbenchDialog = false">Close</v-btn> -->
-                      <v-btn color="link" class="mx-2 mb-1" @click="workbenchStepper = 4">Skip to Troubleshooting</v-btn>
                     </v-stepper-content>
 
                     <v-stepper-step

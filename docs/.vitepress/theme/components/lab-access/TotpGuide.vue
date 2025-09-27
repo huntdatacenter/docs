@@ -198,10 +198,12 @@ const totpStepper = ref("1")
                 with name <code>HUNT CLOUD VPN</code> showing <b>6 digit verification code</b>. <br /><br />
                 This code refreshes every 30 seconds.
                 <br /><br />
-                Phone might need to be connected to internet to assure precise synchronization of time.
+
+                <v-alert border="start" border-color="info" elevation="2">
+                  Phone might need to be connected to internet to assure precise synchronization of time.
+                </v-alert>
               </v-card>
               <v-btn color="primary" class="mx-2 mb-1" @click="totpStepper = 1">Start again</v-btn>
-              <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="totpStepper = 2">Back</v-btn>
               <!-- prettier-ignore -->
               <v-btn
                 color="success"
@@ -209,6 +211,7 @@ const totpStepper = ref("1")
                 @click="totpDialog = false; totpStepper = 1"
                 >Finish</v-btn
               >
+              <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="totpStepper = 2">Back</v-btn>
             </v-stepper-vertical-item>
           </v-stepper-vertical>
         </v-card-text>
@@ -231,5 +234,18 @@ ul {
 
 a {
   color: #1976d2;
+}
+
+pre code {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+.v-overlay__content code {
+  font-size: 95% !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  padding: 0.4em 0.4em;
 }
 </style>
