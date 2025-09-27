@@ -280,6 +280,7 @@ onMounted(() => {
 
                       <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
+                        <v-btn color="warning" class="mx-2 mb-1" @click="vpnStepper = 5">Skip to troubleshooting</v-btn>
                       </template>
                     </v-stepper-vertical-item>
 
@@ -363,9 +364,8 @@ onMounted(() => {
                       <v-card class="mb-8 pr-16" elevation="0">
                         <v-card-text>
                           <v-alert
-                            type="success"
-                            variant="tonal"
                             border="start"
+                            border-color="success"
                             elevation="2"
                             icon="mdi-chevron-right"
                           >
@@ -443,9 +443,8 @@ onMounted(() => {
                           </p>
 
                           <v-alert
-                            type="info"
-                            variant="tonal"
                             border="start"
+                            border-color="info"
                             elevation="2"
                           >
                             <b>TIP</b>
@@ -457,6 +456,7 @@ onMounted(() => {
 
                       <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
+                        <v-btn color="success" class="mx-2 mb-1" @click="vpnDialog = false; vpnStepper = 1;">Finish</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 4">Back</v-btn>
                       </template>
                     </v-stepper-vertical-item>
@@ -485,9 +485,8 @@ onMounted(() => {
 
             <v-alert
               v-show="filterGuidesByType && ['new_lab', 'ssh_reset', 'lab_migration'].includes(filterGuidesByType)"
-              type="warning"
-              variant="tonal"
               border="start"
+              border-color="warning"
               elevation="2"
             >
               Ensure that you are logged into VPN.
@@ -517,9 +516,11 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
-              <div class="language- extra-class"><pre class="language-text">
-                <code v-text="`${username}@${ipAddress}'s password:`"></code>
-              </pre></div>
+              <div class="language- extra-class">
+                <pre class="language-text">
+                  <code v-text="`${username}@${ipAddress}'s password:`"></code>
+                </pre>
+              </div>
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
@@ -533,12 +534,11 @@ onMounted(() => {
                 <code v-text="passSetNew"></code>
               </pre></div>
               <v-alert
-                type="warning"
-                variant="tonal"
                 border="start"
+                border-color="warning"
                 elevation="2"
               >
-                If you are getting an <code>Authentication token manipulation error</code> check strength requirements for passphrase in step {{ passChangeId }}.1.
+                If you are getting an <code>Authentication token manipulation error</code> check strength requirements for passphrase in <b>Step {{ passChangeId }}.1</b>.
               </v-alert>
             </v-col>
             <v-col cols="12">
@@ -873,22 +873,25 @@ onMounted(() => {
               {{ getNextItem(hostsFileId, true) }} On your local computer, open your /etc/hosts file in your preferred text editor.
               You will be asked for password that you use to login into your MacOS account.
               <br /><br />
-              Use this command if prefer graphical <strong>Text editor</strong> app:
-              <CopyTextField
-                :model-value="`EDITOR='open -Wne' sudo -e /etc/hosts`"
-                class="my-2"
-                label=""
-                prefix="$"
-                placeholder=""
-              />
-              If you prefer terminal editor <strong>vim</strong> simply run:
-              <CopyTextField
-                :model-value="`sudo vim /etc/hosts`"
-                class="my-2"
-                label=""
-                prefix="$"
-                placeholder=""
-              />
+              <div class="pl-8">
+                Use this command if you prefer graphical <strong>Text editor</strong> app,
+                and remeber to close the editor for the change to come into effect:
+                <CopyTextField
+                  :model-value="`EDITOR='open -Wne' sudo -e /etc/hosts`"
+                  class="my-2"
+                  label=""
+                  prefix="$"
+                  placeholder=""
+                />
+                If you prefer terminal editor <strong>vim</strong>, simply run:
+                <CopyTextField
+                  :model-value="`sudo vim /etc/hosts`"
+                  class="my-2"
+                  label=""
+                  prefix="$"
+                  placeholder=""
+                />
+              </div>
             </v-col>
             <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
               {{ getNextItem(hostsFileId) }} Make sure the line with the old hosts record is removed. <strong>Search and remove lines</strong> containing domain name:<br />
@@ -901,7 +904,9 @@ onMounted(() => {
                 />
             </v-col>
             <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
-              {{ getNextItem(hostsFileId) }} Add (append) the new <strong>hosts record</strong> below to the text file:<br />
+              {{ getNextItem(hostsFileId) }} Add (append) the new <strong>hosts record</strong> below to the text file:
+              <br />
+              <div class="pl-8">
                 <CopyTextField
                   :model-value="hostsWorkbench"
                   class="my-2"
@@ -910,9 +915,12 @@ onMounted(() => {
                   placeholder="Your link is missing access token"
                 />
                 Make sure to avoid duplicate records.
+              </div>
             </v-col>
             <v-col v-else cols="12">
-              {{ getNextItem(hostsFileId) }} Add (append) the <strong>hosts record</strong> below to the text file:<br />
+              {{ getNextItem(hostsFileId) }} Add (append) the <strong>hosts record</strong> below to the text file:
+              <br />
+              <div class="pl-8">
                 <CopyTextField
                   :model-value="hostsWorkbench"
                   class="my-2"
@@ -921,6 +929,7 @@ onMounted(() => {
                   placeholder="Your link is missing access token"
                 />
                 Make sure to avoid duplicate records.
+              </div>
             </v-col>
             <v-col cols="12">
               {{ getNextItem(hostsFileId) }} Save the changes and close your text editor.
@@ -1015,17 +1024,15 @@ onMounted(() => {
                         <v-card class="mb-12 pr-4" elevation="0">
                           <v-card-text>
                             <v-alert
-                              type="warning"
-                              variant="tonal"
                               border="start"
+                              border-color="warning"
                               elevation="2"
                             >
                               Make sure you have received your Workbench certificate (<code>.mobileconfig</code>).
                             </v-alert>
                             <v-alert
-                              type="warning"
-                              variant="tonal"
                               border="start"
+                              border-color="warning"
                               elevation="2"
                             >
                               Assure working VPN connection.
@@ -1040,9 +1047,8 @@ onMounted(() => {
                         <v-card class="mb-8 pr-4" elevation="0">
                           <v-card-text>
                             <v-alert
-                              type="warning"
-                              variant="tonal"
                               border="start"
+                              border-color="warning"
                               elevation="2"
                             >
                               <strong>Permissions to add system profiles required.</strong>
@@ -1105,17 +1111,15 @@ onMounted(() => {
                         <v-card class="mb-8 pr-16" elevation="0">
                           <v-card-text>
                             <v-alert
-                              type="warning"
-                              variant="tonal"
                               border="start"
+                              border-color="warning"
                               elevation="2"
                             >
                               <strong>Make sure you are connected to the VPN before you access your HUNT Workbench.</strong>
                             </v-alert>
                             <v-alert
-                              type="info"
-                              variant="tonal"
                               border="start"
+                              border-color="info"
                               elevation="2"
                             >
                               We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
@@ -1168,9 +1172,8 @@ onMounted(() => {
                             <img class="pa-2" alt="JupyterLab" src="/img/workbench/JupyterLab.png" />
 
                             <v-alert
-                              type="info"
-                              variant="tonal"
                               border="start"
+                              border-color="info"
                               elevation="2"
                             >
                               <b>Remember to bookmark your Lab address</b>
@@ -1229,9 +1232,8 @@ onMounted(() => {
                             <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Did Not Connect</strong></summary>
                               <div class="pl-4 pr-16 py-2">
                                 <v-alert
-                                  type="info"
-                                  variant="tonal"
                                   border="start"
+                                  border-color="info"
                                   elevation="2"
                                 >
                                   We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
@@ -1433,10 +1435,49 @@ onMounted(() => {
   </v-sheet>
 </template>
 
-<style>
+<style scoped>
 a {
-    color: #1976d2;
+  color: #1976d2;
+  text-decoration-line: none !important;
+  text-underline-offset: unset !important;
+  font-weight: 600 !important;
 }
+
+code {
+  font-size: 100% !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  padding: 0.2em 0.4em;
+}
+pre code {
+  font-size: 14px !important;
+  /* padding: 0 !important; */
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  background-color: unset;
+  color: rgba(204, 204, 204, 1) !important;
+}
+pre[class*=language-] {
+  margin: .85rem 0;
+  padding-bottom: 4px !important;
+  padding-top: 4px !important;
+}
+div[class*=language-] {
+  position: relative;
+  background-color: #282c34;
+  border-radius: 6px;
+  overflow-x: unset;
+}
+div[class*=language-]:before {
+  position: absolute;
+  z-index: 3;
+  top: .8em;
+  right: 1em;
+  font-size: .75rem;
+  color: hsla(0, 0%, 100%, .4);
+}
+
 .v-overlay__content ul {
   list-style-type: disc;
   padding-left: 24px;
@@ -1450,11 +1491,8 @@ a {
   background-color: rgba(0, 0, 0, 0.05) !important;
   padding: 0.2em 0.4em;
 }
-pre code {
-  padding-left: 12px !important;
-  padding-right: 12px !important;
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
+.v-overlay__content pre[class*=language-] {
+  padding-bottom: 8px !important;
+  padding-top: 8px !important;
 }
-
 </style>
