@@ -699,21 +699,27 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} You should then be prompted to enter a password. Enter your <code>SSH temporary key</code> from Signal message.
-              <div class="language- extra-class"><pre class="language-text">
-              <code v-text="`${username}@${ipAddress}'s password:`"></code>
-              </pre></div>
+              <div class="language- extra-class">
+                <pre class="language-text pa-0">
+                  <code v-text="`${username}@${ipAddress}'s password:`"></code>
+                </pre>
+              </div>
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} When asked for current UNIX password type in your <code>SSH temporary key</code> from Signal message.
-              <div class="language- extra-class"><pre class="language-text">
-              <code v-text="passExpiredText"></code>
-              </pre></div>
+              <div class="language- extra-class">
+                <pre class="language-text pa-0">
+                  <code v-text="passExpiredText"></code>
+                </pre>
+              </div>
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} Enter your new passphrase and retype for verification. You will be kicked off the entry machine right after your password is changed.
-              <div class="language- extra-class"><pre class="language-text">
-              <code v-text="passSetNew"></code>
-              </pre></div>
+              <div class="language- extra-class">
+                <pre class="language-text pa-0">
+                  <code v-text="passSetNew"></code>
+                </pre>
+              </div>
               <v-alert
                 border="start"
                 border-color="warning"
@@ -733,9 +739,11 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               Expected result:
-              <div class="language- extra-class"><pre class="language-text">
+              <div class="language- extra-class">
+                <pre class="language-text pa-0">
                   <code v-text="`${username}@${labName}-entry:~$`"></code>
-              </pre></div>
+                </pre>
+              </div>
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
@@ -748,20 +756,20 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} You will be prompted to type your <code>SSH temporary key</code> from Signal message.
-              <!-- <div class="language- extra-class"><pre class="language-text">
+              <!-- <div class="language- extra-class"><pre class="language-text pa-0">
                   <code v-text="`${username}@home's password:`"></code>
               </pre></div> -->
-              <div class="language- extra-class"><pre class="language-text">
+              <div class="language- extra-class"><pre class="language-text pa-0">
               <code v-text="passExpiredText"></code>
               </pre></div>
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} Similar to above, you will be asked for a new password. Type your new passphrase two times.
-              <div class="language- extra-class"><pre class="language-text">
+              <div class="language- extra-class"><pre class="language-text pa-0">
               <code v-text="passSetNew"></code>
               </pre></div>
               <!-- Expected result:
-              <div class="language- extra-class"><pre class="language-text">
+              <div class="language- extra-class"><pre class="language-text pa-0">
               <code v-text="passChangedHome"></code>
               </pre></div> -->
             </v-col>
@@ -776,7 +784,7 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               Expected result:
-              <div class="language- extra-class"><pre class="language-text">
+              <div class="language- extra-class"><pre class="language-text pa-0">
                   <code v-text="`${username}@${labName}-home:~$`"></code>
               </pre></div>
             </v-col>
@@ -825,7 +833,7 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               You will be asked for your SSH passphrase:
-              <div class="language- extra-class"><pre class="language-text">
+              <div class="language- extra-class"><pre class="language-text pa-0">
                 <code v-text="`${username}@${ipAddress}'s password:`"></code>
               </pre></div>
             </v-col>
@@ -841,7 +849,7 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               Expected result:
-              <div class="language- extra-class"><pre class="language-text">
+              <div class="language- extra-class"><pre class="language-text pa-0">
                 <code v-text="`${username}@${labName}-entry:~$`"></code>
               </pre></div>
             </v-col>
@@ -1311,7 +1319,10 @@ onMounted(() => {
                           elevation="2"
                         >
                           <template v-slot:title><b>Remember to bookmark your Lab address</b></template>
-                          <code>https://{{fqdn}}</code>
+                          <!-- <code>https://{{fqdn}}</code> -->
+                          <div class="language- extra-class"><pre class="language-text">
+                            <code v-text="`https://${fqdn}`"></code>
+                          </pre></div>
                         </v-alert>
 
                       </v-card>
@@ -1610,7 +1621,7 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               Confirm deletion with by typing <code>Yes</code> and then press <code>Enter</code>:
-              <div class="language- extra-class"><pre class="language-text">
+              <div class="language- extra-class"><pre class="language-text pa-0">
                   <code v-text="`Permanently delete the registry key\nHKEY_CURRENT_USER\\SOFTWARE\\OpenVPN-GUI\\configs\\${username} (Yes/No)? Yes\n\nThe operation completed successfully.`"></code>
               </pre></div>
             </v-col>
@@ -1625,7 +1636,7 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               Confirm deletion with by pressing <code>Y</code> and then <code>Enter</code>:
-              <div class="language- extra-class"><pre class="language-text">
+              <div class="language- extra-class"><pre class="language-text pa-0">
                   <code v-text="`C:\\Users\\User\\OpenVPN\\config\\${username}\\*, Are you sure (Y/N)? Y`"></code>
               </pre></div>
             </v-col>
