@@ -280,7 +280,7 @@ onMounted(() => {
 
                       <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 2">Continue</v-btn>
-                        <v-btn color="warning" class="mx-2 mb-1" @click="vpnStepper = 5">Skip to troubleshooting</v-btn>
+                        <v-btn color="" class="mx-2 mb-1" @click="vpnStepper = 5">Skip to troubleshooting</v-btn>
                       </template>
                     </v-stepper-vertical-item>
 

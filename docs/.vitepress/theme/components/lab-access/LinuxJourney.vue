@@ -558,6 +558,52 @@ onMounted(() => {
                   <code v-text="`${username}@${labName}-entry:~$`"></code>
               </pre></div>
             </v-col>
+            <v-col cols="12">
+              {{ getNextItem(passChangeId) }} When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
+              <CopyTextField
+                :model-value="`ssh -o StrictHostKeyChecking=accept-new home`"
+                label=""
+                :prefix="`${username}@${labName}-entry:~$`"
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(passChangeId) }} You will be prompted to type your <code>SSH temporary key</code> from Signal message.
+              <!-- <div class="language- extra-class"><pre class="language-text">
+                  <code v-text="`${username}@home's password:`"></code>
+              </pre></div> -->
+              <div class="language- extra-class"><pre class="language-text">
+                <code v-text="passExpiredText"></code>
+              </pre></div>
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(passChangeId) }} Similar to above, you will be asked for a new password. Type your new passphrase two times.
+              <div class="language- extra-class"><pre class="language-text">
+                <code v-text="passSetNew"></code>
+              </pre></div>
+              <!-- Expected result:
+              <div class="language- extra-class"><pre class="language-text">
+                <code v-text="passChangedHome"></code>
+              </pre></div> -->
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(passChangeId) }} Verify a successful passphrase update by logging into your home machine.
+              <CopyTextField
+                :model-value="`ssh home`"
+                label=""
+                :prefix="`${username}@${labName}-entry:~$`"
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col cols="12">
+              Expected result:
+              <div class="language- extra-class"><pre class="language-text">
+                  <code v-text="`${username}@${labName}-home:~$`"></code>
+              </pre></div>
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(passChangeId) }} Close Terminal window to make sure you are disconnected from your lab.
+            </v-col>
 
             <v-btn v-if="['lab_migration'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" size="small" @click="nextPanel(2)">Next</v-btn>
             <v-btn v-else color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
@@ -572,20 +618,280 @@ onMounted(() => {
           <v-expansion-panel-title>
             <h3><a href="#passwordless-access" class="header-anchor">#</a> {{ passLessId }}. SSH Passwordless access</h3>
           </v-expansion-panel-title>
-          <v-expansion-panel-text id="passwordless-access" class="mt-2">
+
+          <v-expansion-panel-text id="passwordless-access" ref="passwordlessAccessRef" class="mt-2">
+            <v-row>
+              <v-col cols="12">
+                {{ getNextItem(passLessId, true) }} Open new Terminal window (<code>CTRL + ALT + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+                <CopyTextField
+                  :value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
+                  class="my-0"
+                  label=""
+                  prefix="$"
+                  placeholder="Your link is missing access token"
+                />
+              </v-col>
+
+              <v-col cols="12">
+                {{ getNextItem(passLessId) }} Start ssh-agent.
+                <CopyTextField
+                  :value='`eval "$(ssh-agent -s)"`'
+                  class="my-0"
+                  label=""
+                  prefix="$"
+                  placeholder="Your link is missing access token"
+                />
+              </v-col>
+
+              <v-col cols="12">
+                {{ getNextItem(passLessId) }} Add your public key to the ssh agent.
+                <CopyTextField
+                  :value="`ssh-add ~/.ssh/id_rsa`"
+                  class="my-0"
+                  label=""
+                  prefix="$"
+                  placeholder="Your link is missing access token"
+                />
+              </v-col>
+
+              <v-col cols="12">
+                {{ getNextItem(passLessId) }} Place your public key into the lab.
+                <CopyTextField
+                  :value="`ssh-copy-id -i ~/.ssh/id_rsa ${username}@${ipAddress}`"
+                  class="my-0"
+                  label=""
+                  prefix="$"
+                  placeholder="Your link is missing access token"
+                />
+              </v-col>
+
+              <v-col cols="12">
+                You will be asked for your SSH passphrase:
+                <div class="language- extra-class">
+                  <pre class="language-text"><code v-text="`${username}@${ipAddress}'s password:`"></code></pre>
+                </div>
+              </v-col>
+
+              <v-col cols="12">
+                {{ getNextItem(passLessId) }} Confirm passwordless access.
+                <CopyTextField
+                  :value="`ssh -o PasswordAuthentication=no -o PreferredAuthentications=publickey ${username}@${ipAddress}`"
+                  class="my-0"
+                  label=""
+                  prefix="$"
+                  placeholder="Your link is missing access token"
+                />
+              </v-col>
+
+              <v-col cols="12">
+                Expected result:
+                <div class="language- extra-class">
+                  <pre class="language-text"><code v-text="`${username}@${labName}-entry:~$`"></code></pre>
+                </div>
+              </v-col>
+
+              <v-col cols="12">
+                {{ getNextItem(passLessId) }} Close Terminal window to make sure you are disconnected from your lab.
+              </v-col>
+            </v-row>
+
+            <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+
+        <!-- 5. SSH Config file -->
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration', 'reissue_all'].includes(filterGuidesByType) ? false : true">
+          <v-expansion-panel-title>
+            <h3><a href="#ssh-config" class="header-anchor">#</a> {{ sshConfId }}. SSH Config file</h3>
+          </v-expansion-panel-title>
+          <v-expansion-panel-text id="ssh-config" ref="sshConfigRef" class="mt-2">
+
+            <!-- Place in <code>~/.ssh/config</code>. -->
             <v-col cols="12">
-              {{ getNextItem(passLessId, true) }} Open new Terminal window (<code>CTRL + ALT + T</code>) and generate ssh key. If command reports that id_rsa key already exists, to avoid overwriting your existing keys press <code>n</code> and skip to next step.
+              {{ getNextItem(sshConfId, true) }} Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists. No output is expected.
+              <v-text-field
+                :model-value="`touch ~/.ssh/config`"
+                ref="linuxSshConfig1"
+                label=""
+                placeholder="Your link is missing access token"
+                persistent-placeholder
+                prefix="$"
+                variant="outlined"
+                density="compact"
+                readonly
+                hide-details
+                @focus="$event.target.select()"
+              >
+                <template v-slot:append-inner>
+                  <a class="material-icons content_copy" @click="copyText('linuxSshConfig1')">&#xe14d;</a>
+                </template>
+              </v-text-field>
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(sshConfId) }} Open SSH Config file.
+              <v-text-field
+                :model-value="`gedit ~/.ssh/config`"
+                ref="linuxSshConfig2"
+                label=""
+                placeholder="Your link is missing access token"
+                persistent-placeholder
+                prefix="$"
+                variant="outlined"
+                density="compact"
+                readonly
+                hide-details
+                @focus="$event.target.select()"
+              >
+                <template v-slot:append-inner>
+                  <a class="material-icons content_copy" @click="copyText('linuxSshConfig2')">&#xe14d;</a>
+                </template>
+              </v-text-field>
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(sshConfId) }} Replace old lab configuration in SSH Config opened in Text Editor and then save changes.
+              <v-textarea
+                v-model.trim="configText"
+                ref="ssh-config-linux"
+                label="SSH Config file"
+                placeholder="Your link is missing access token"
+                persistent-placeholder
+                class="py-2 mt-2"
+                variant="outlined"
+                readonly
+                rows="11"
+                hide-details
+                @focus="$event.target.select()"
+              >
+                <template v-slot:append-inner>
+                  <a class="material-icons content_copy" @click="copyTextArea('ssh-config-linux')">&#xe14d;</a>
+                </template>
+              </v-textarea>
+            </v-col>
+            <v-col v-else cols="12">
+              {{ getNextItem(sshConfId) }} Add lab configuration into SSH Config opened in Text Editor and then save changes.
+              <v-textarea
+                v-model.trim="configText"
+                ref="ssh-config-linux"
+                label="SSH Config file"
+                placeholder="Your link is missing access token"
+                persistent-placeholder
+                class="py-2 mt-2"
+                variant="outlined"
+                readonly
+                rows="11"
+                hide-details
+                @focus="$event.target.select()"
+              >
+                <template v-slot:append-inner>
+                  <a class="material-icons content_copy" @click="copyTextArea('ssh-config-linux')">&#xe14d;</a>
+                </template>
+              </v-textarea>
+            </v-col>
+            <!-- Only show for lab migration scenarios -->
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(sshConfId) }} Remove old fingerprint.
               <CopyTextField
-                :model-value='`ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""`'
-                class="my-0"
+                :value="`ssh-keygen -R ${labName}`"
                 label=""
                 prefix="$"
                 placeholder="Your link is missing access token"
               />
             </v-col>
-            <!-- Additional steps would continue here... -->
+            <v-col cols="12">
+              {{ getNextItem(sshConfId) }} Test by connecting straight into home machine.
+              <v-text-field
+                :model-value="`ssh -o StrictHostKeyChecking=accept-new ${labName}`"
+                ref="ssh-config-lab-linux"
+                label=""
+                placeholder="Your link is missing access token"
+                persistent-placeholder
+                prefix="$"
+                variant="outlined"
+                density="compact"
+                readonly
+                hide-details
+                @focus="$event.target.select()"
+              >
+                <template v-slot:append-inner>
+                  <a class="material-icons content_copy" @click="copyText('ssh-config-lab-linux')">&#xe14d;</a>
+                </template>
+              </v-text-field>
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(sshConfId) }} Close Terminal window to make sure you are disconnected from your lab.
+            </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+
+        <!-- 6. Hosts file -->
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration', 'reissue_all'].includes(filterGuidesByType) ? false : true">
+          <v-expansion-panel-title>
+            <h3><a href="#hosts-file" class="header-anchor">#</a> {{ hostsFileId }}. Workbench - hosts file</h3>
+          </v-expansion-panel-title>
+          <v-expansion-panel-text id="hosts-file" ref="hostsFileRef" class="mt-2">
+            Let's set up your hosts file on your local computer. <br />
+            This allows you to connect to HUNT Workbench in your lab using a domain name {{ fqdn }}.
+            <br /><br />
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId, true) }} On your local computer, open your /etc/hosts file in your preferred text editor.
+              You will be asked for administrator password of your local computer.
+              <br /><br />
+              Use this command if prefer graphical editor <strong>Gedit</strong>:
+              <CopyTextField
+                :value="`sudo gedit /etc/hosts`"
+                class="my-2"
+                label=""
+                prefix="$"
+                placeholder=""
+              />
+              If you prefer terminal editor <strong>vim</strong> simply run:
+              <CopyTextField
+                :value="`sudo vim /etc/hosts`"
+                class="my-2"
+                label=""
+                prefix="$"
+                placeholder=""
+              />
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(hostsFileId) }} Make sure the line with the old hosts record is removed. <strong>Search and remove lines</strong> containing domain name:<br />
+              <CopyTextField
+                :value="fqdn"
+                class="my-2"
+                label=""
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
+            </v-col>
+            <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
+              {{ getNextItem(hostsFileId) }} Add (append) the new <strong>hosts record</strong> below to the text file:<br />
+              <CopyTextField
+                :value="hostsWorkbench"
+                class="my-2"
+                label=""
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
+              Make sure to avoid duplicate records.
+            </v-col>
+            <v-col v-else cols="12">
+              {{ getNextItem(hostsFileId) }} Add (append) the <strong>hosts record</strong> below to the text file:<br />
+              <CopyTextField
+                :value="hostsWorkbench"
+                class="my-2"
+                label=""
+                prefix=""
+                placeholder="Your link is missing access token"
+              />
+              Make sure to avoid duplicate records.
+            </v-col>
+            <v-col cols="12">
+              {{ getNextItem(hostsFileId) }} Save the changes and close your text editor.
+            </v-col>
+            <v-btn v-if="['lab_migration'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" size="small" @click="nextPanel(2)">Next</v-btn>
+            <v-btn v-else color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-text>
         </v-expansion-panel>
 
@@ -616,10 +922,355 @@ onMounted(() => {
               </v-col>
             </v-row>
 
-            <!-- Workbench dialog would be implemented similarly to VPN dialog -->
+            <v-dialog
+              v-model="workbenchDialog"
+              persistent
+              scrollable
+              max-width="960px"
+              @keydown.esc="workbenchDialog = false"
+            >
+              <v-card elevation="0">
+                <v-card-title class="pa-0">
+                  <v-toolbar theme="dark" color="#00509e" flat>
+                    <v-toolbar-title>Workbench Access Configuration</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <template v-slot:append>
+                      <v-btn icon="mdi-close" @click="workbenchDialog = false" />
+                    </template>
+                  </v-toolbar>
+                </v-card-title>
+
+                <v-card-text class="pa-0">
+                  <v-stepper-vertical v-model="workbenchStepper">
+                    <v-stepper-vertical-item
+                      :complete="workbenchStepper > 1"
+                      value="1"
+                      title="Checks"
+                    >
+                      <v-card
+                        class="mb-12 pr-4"
+                        elevation="0"
+                      >
+                        <v-alert
+                          border="start"
+                          border-color="warning"
+                          elevation="2"
+                          class="mb-4"
+                        >
+                          Make sure you have received your Workbench certificate (<code>{{ labName }}-{{ username }}.p12</code>).
+                        </v-alert>
+                        <v-alert
+                          border="start"
+                          border-color="warning"
+                          elevation="2"
+                        >
+                          Assure working VPN connection.
+                        </v-alert>
+                      </v-card>
+
+                      <template v-slot:actions>
+                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
+                        <v-btn color="" class="mx-2 mb-1" @click="workbenchStepper = 4">Skip to troubleshooting</v-btn>
+                      </template>
+                    </v-stepper-vertical-item>
+
+                    <v-stepper-vertical-item
+                      :complete="workbenchStepper > 2"
+                      value="2"
+                      title="Install your certificates"
+                    >
+                      <v-card
+                        class="mb-8 pr-4"
+                        elevation="0"
+                      >
+                        <v-alert
+                          border="start"
+                          border-color="info"
+                          elevation="2"
+                        >
+                          We recommend that you use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
+                        </v-alert>
+
+                        <ol>
+                          <li>
+                            Open <strong>Google Chrome</strong> on your local computer.
+                          </li>
+                          <li>
+                            Download our public CA certificate from <a href="https://pki.hdc.ntnu.no/hctsca1.crt" target="_blank">https://pki.hdc.ntnu.no/hctsca1.crt</a>
+                          </li>
+                          <li>
+                            In Google Chrome, open the URL <a href="chrome://settings/certificates" target="_blank">chrome://settings/certificates</a> and navigate to section <code>Authorities</code>.
+                          </li>
+                          <li>
+                            Click the <strong>Import</strong> button on the right side of the screen to import <code>hctsca1.crt</code> certificate file.
+                          </li>
+                          <li>
+                            Select first option Trust this certificate for identifying websites.
+                            <br />
+                            <img class="pa-2" alt="import-ca-trust-websites" src="/img/workbench/import-ca-trust-websites.png" style="max-width: 500px;" />
+                            <br />
+                          </li>
+                          <li>
+                            Within <a href="chrome://settings/certificates" target="_blank">chrome://settings/certificates</a> navigate to section <code>Your certificates</code>
+                            and click the <strong>Import</strong> button on the right side of the screen.
+                          </li>
+                          <li>
+                            Browse and select your <code style="font-weight: bold;">{{ labName}}-{{ username }}.p12</code> file that you downloaded to your local computer,
+                            and enter the <strong>TLS passphrase</strong> that we sent you on Signal.
+                          </li>
+                          <li>
+                            Restart <strong>Google Chrome</strong>.
+                          </li>
+                        </ol>
+                      </v-card>
+
+                      <template v-slot:actions>
+                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
+                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
+                      </template>
+                    </v-stepper-vertical-item>
+
+                    <v-stepper-vertical-item
+                      :complete="workbenchStepper > 3"
+                      value="3"
+                      title="Login to Workbench"
+                    >
+                      <v-card
+                        class="mb-8 pr-16"
+                        elevation="0"
+                      >
+                        <v-alert
+                          border="start"
+                          border-color="warning"
+                          elevation="2"
+                          class="mb-4"
+                        >
+                          <strong>Make sure you are connected to the VPN before you access your HUNT Workbench.</strong>
+                        </v-alert>
+                        <v-alert
+                          border="start"
+                          border-color="info"
+                          elevation="2"
+                        >
+                          We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
+                        </v-alert>
+
+                        <ol>
+                          <li>
+                            Open your web browser.
+                          </li>
+                          <li>
+                            Open the URL address below to access your lab in your web browser:
+                            <br />
+                            <strong><a :href="`https://${fqdn}`" target="_blank">https://{{ fqdn }}</a></strong>
+                            <br /><br />
+                            You may get a User Identification Request for your new certificate.<br />
+                            Verify that the certificates are issued by HUNT Cloud:
+                            <br />
+                            <div class="language- extra-class"><pre class="language-text">
+                              <code v-html='`Issuer: "${tlsClientIssuer}"\nOrganization: "HUNT Cloud"\nIssued Under: "HUNT Cloud Trust Services"`'></code>
+                            </pre></div>
+                            <br />
+                            Ensure that the <code>Remember this decision</code> box is checked, and click <code>OK</code>.
+                            <br />
+                            <img class="pa-2" alt="chrome_select_certificate_confirm" src="/img/workbench/chrome_select_certificate_confirm.png" style="max-width: 300px;" />
+                            <br />
+                          </li>
+                          <li class="mb-2">
+                            Sign in with your HUNT Cloud <strong>username</strong> and <strong>lab passphrase</strong>.<br />
+                            Lab passphrase is the same passphrase that you created yourself on your first SSH login.<br />
+                            <CopyTextField
+                              :value="username"
+                              class="my-2"
+                              label="Username"
+                              prefix=""
+                              placeholder="Your link is missing access token"
+                            />
+                            If you did not create a lab passphrase yet use a temporary SSH passphrase that you received
+                            from us on Signal message to login and then follow passphrase change flow.
+                            <br />
+                            <img class="pa-2" alt="workbench-login-form" src="/img/workbench/workbench-login-form.png" style="max-width: 250px;" />
+                            <br />
+                          </li>
+                          <li>
+                            With a little bit of luck you should now see your new HUNT Workbench.
+                            Feel free to read our <a href="/do-science/hunt-workbench/getting-started/" target="_blank">getting started guide</a>.
+                            <br />
+                            <strong>Click around and explore your new world!</strong>
+                          </li>
+                        </ol>
+                        <br />
+
+                        <img class="pa-2" alt="JupyterLab" src="/img/workbench/JupyterLab.png" />
+
+                        <v-alert
+                          border="start"
+                          border-color="info"
+                          elevation="2"
+                        >
+                          <b>Remember to bookmark your Lab address</b>
+                          <hr class="mt-1 mb-2" />
+                          <code>https://{{fqdn}}</code>
+                        </v-alert>
+
+                      </v-card>
+
+                      <template v-slot:actions>
+                        <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
+                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
+                        <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper++">Troubleshooting</v-btn>
+                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
+                      </template>
+                    </v-stepper-vertical-item>
+
+                    <v-stepper-vertical-item
+                      :complete="workbenchStepper > 4"
+                      value="4"
+                      title="Troubleshooting"
+                      subtitle="Optional tips to try in case of issues"
+                    >
+                      <v-card
+                        class="mb-8 pr-4 ml-0 pl-0"
+                        elevation="0"
+                      >
+                      This section includes issues that you might encounter during your first setup.
+                      See our <a href="/do-science/hunt-workbench/faq/" target="_blank">HUNT Workbench FAQ</a> and <a href="/do-science/hunt-workbench/troubleshooting/" target="_blank">HUNT Workbench Troubleshooting</a> if you do not find your answers below.
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>This site can't be reached</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            1. If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <code style="font-size: 90% !important;">{{ hostsFileId }}. Workbench - hosts file</code> guide.
+                            <br/>
+                            2. If you are getting <code>ERR_CONNECTION_TIMED_OUT</code> error you need to make sure that you are connected to VPN. If you are able to ssh into lab your VPN is fine, and you need to repeat the <code>6. Workbench - hosts file</code> guide.
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>I don't remember my passphrase</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            Don't worry. Request a <a href="/do-science/service-desk/#ssh-passphrase-reset" target="_blank">reset of SSH passphrase</a> in our "do-science" Service desk.
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Nginx error - 403 Forbidden</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            This error means that you are attempting to connect without client certificate.
+                            <br /><br/>
+                            There are 3 different causes each requires a different approach
+                            <ol>
+                              <li>
+                                If you have just installed a fresh client certificate, <strong>restart your computer</strong> to make sure certificates are applied.
+                              </li>
+                              <br />
+                              <li>
+                                If you have not yet installed a fresh client certificate on this computer, review the section <strong>Install your certificates</strong> above. Start by click on blue button <code>Start again</code>.
+                              </li>
+                              <br />
+                              <li>
+                                If you have used Workbench in {{ labName }} lab before, this error means that your certificate expired and you can follow this link to <a href="/do-science/service-desk/#hunt-workbench-reissue" target="_blank">request Workbench reissue</a>. Once your request is processed we will send you a fresh certificate.
+                              </li>
+                            </ol>
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Did Not Connect</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            <v-alert
+                              border="start"
+                              border-color="info"
+                              elevation="2"
+                            >
+                              We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
+                            </v-alert>
+
+                            Firefox may require that you manually import the HUNT Cloud Certificate Authority to consider it trusted.
+
+                            If you see Error code: <code>SEC_ERROR_UNKNOWN_ISSUER</code> when accessing Workbench follow these steps:
+
+                            <ol>
+                              <li>
+                                Download our public CA certificate from <a href="https://pki.hdc.ntnu.no/hctsca1.crt" target="_blank">https://pki.hdc.ntnu.no/hctsca1.crt</a>
+                              </li>
+                              <li>
+                                Open the following Firefox URL: <code>about:preferences#privacy</code>.
+                              </li>
+                              <li>
+                                Scroll down to section <code>Certificates</code> and click on <code>View Certificates</code>.
+                                <br />
+                                <img class="pa-2" alt="mac-firefox-certificates" src="/img/workbench/mac-firefox-certificates.png" />
+                                <br />
+                              </li>
+                              <li>
+                                Switch to tab <code>Authorities</code> and click on <code>Import</code>.
+                                <br />
+                                <img class="pa-2" alt="mac-firefox-import-cert" src="/img/workbench/mac-firefox-import-cert.png" />
+                                <br />
+                              </li>
+                              <li>
+                                Select <code>hctsca1.crt</code> and check option <code>Trust this CA to identify websites</code>.
+                                <br />
+                                <img class="pa-2" alt="mac-firefox-trust-ca" src="/img/workbench/mac-firefox-trust-ca.png" />
+                                <br />
+                              </li>
+                            </ol>
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>Chrome on Ubuntu</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            <ol>
+                              <li>
+                                In Google Chrome, open the URL <a href="chrome://settings/certificates" target="_blank">chrome://settings/certificates</a> and navigate to section <code>Authorities</code>.
+                              </li>
+                              <li>
+                                Search for HUNT Cloud certificates (<code>org-HUNT Cloud Trust Services</code>).
+                              </li>
+                              <li>
+                                Edit the HCTS CA 1 certificate and select first option <code>Trust this certificate for identifying websites</code>.
+                                <br />
+                                <img class="pa-2" alt="import-ca-trust-websites" src="/img/workbench/import-ca-trust-websites.png" />
+                                <br />
+                              </li>
+                            </ol>
+                          </div>
+                        </details>
+
+                        <details class="my-2"><summary style="cursor: pointer;"><strong>502 Bad gateway</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            A 502 Bad gateway error when accessing <a :href="`https://${fqdn}/hub/home`" target="_blank">https://{{ fqdn }}/hub/home</a>
+                            is an indication that something is wrong with the configuration on the server side.<br />
+                            Contact us in your lab channel on Slack (#lab-{{ labName }}) or <a href="/do-science/service-desk/#general-service-request" target="_blank">Service desk email</a> further investigations.
+                          </div>
+                        </details>
+
+                        <!-- <details class="my-2"><summary style="cursor: pointer;"><strong>Title</strong></summary>
+                          <div class="pl-4 pr-16 py-2">
+                            text
+                          </div>
+                        </details> -->
+                      </v-card>
+
+                      <template v-slot:actions>
+                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
+                        <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
+                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
+                      </template>
+                    </v-stepper-vertical-item>
+
+                  </v-stepper-vertical>
+                </v-card-text>
+              </v-card>
+            </v-dialog>
 
             <v-col cols="12">
               After you have successfully completed all the steps, you can start using your Workbench environment by opening this URL address: <a :href="`https://${fqdn}`" target="_blank">https://{{ fqdn }}</a>
+            </v-col>
+
+            <v-col cols="12">
+              <details class="my-2"><summary style="cursor: pointer;"><strong>Workbench Control panel</strong></summary>
+                <div class="pl-4 pr-16 py-2">
+                  You can access Control panel on this URL address:
+                  <a :href="`https://${fqdn}/hub/home`" target="_blank">https://{{ fqdn }}/hub/home</a>
+                </div>
+              </details>
             </v-col>
 
             <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>

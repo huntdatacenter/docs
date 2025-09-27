@@ -1019,6 +1019,7 @@ Connection to home closed.`,
                 </v-btn>
               </v-col>
             </v-row>
+
             <v-dialog
               v-model="workbenchDialog"
               persistent
