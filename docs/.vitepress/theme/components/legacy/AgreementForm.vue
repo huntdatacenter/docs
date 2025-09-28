@@ -1,6 +1,6 @@
 <script setup>
-import { ref, computed, watch, onMounted, nextTick } from "vue"
-import { useRoute } from "vue-router"
+import { ref, computed, watch, onMounted, nextTick, getCurrentInstance } from "vue"
+
 import YAML from "yaml"
 
 // Dynamic import for PdfForm component
@@ -11,8 +11,27 @@ const props = defineProps({
   id: { type: String, default: "applet" },
 })
 
-// Route
-const route = useRoute()
+// Get route information safely
+const instance = getCurrentInstance()
+const getRouteQuery = () => {
+  try {
+    if (instance && instance.appContext.app.config.globalProperties.$route) {
+      return instance.appContext.app.config.globalProperties.$route.query
+    }
+  } catch (error) {
+    console.warn("Vue Router not available, checking URL parameters directly")
+  }
+
+  const urlParams = new URLSearchParams(window.location.search)
+  const query = {}
+  for (const [key, value] of urlParams) {
+    query[key] = value
+  }
+  return query
+}
+
+// Initialize data from route
+const routeQuery = getRouteQuery()
 
 // Reactive data
 const agreements = ref([])
@@ -33,8 +52,7 @@ const getFields = computed(() => {
 
 // Methods
 const loadSelectedFromUri = () => {
-  selected.value =
-    route.query && route.query.open ? agreements.value.find(item => item.value == route.query.open) : null
+  selected.value = routeQuery && routeQuery.open ? agreements.value.find(item => item.value == routeQuery.open) : null
 }
 
 const updateUrl = event => {
@@ -51,7 +69,7 @@ const updateUrl = event => {
 
 // Watchers
 watch(
-  () => route.query.open,
+  () => routeQuery.open,
   (to, from) => {
     // console.log(`changed uri: ${from} -> ${to}`)
     loadSelectedFromUri()
@@ -68,7 +86,7 @@ onMounted(() => {
       console.log(cfg)
       agreements.value = cfg.agreements
       forms.value = cfg.forms
-      if (route.query.open) {
+      if (routeQuery.open) {
         loadSelectedFromUri()
       }
     })
@@ -107,10 +125,10 @@ onMounted(() => {
                     label="Agreement type"
                     placeholder=""
                     :items="agreements"
+                    :item-title="item => item.text"
                     :item-value="item => item"
                     persistent-placeholder
-                    outlined
-                    dense
+                    variant="outlined"
                     hide-details
                     @focus="$event.target.select()"
                     @change="updateUrl($event)"

@@ -371,21 +371,7 @@ Head over to the [data space orders](/administer-science/service-desk/data-space
 
 [Internal kista](/do-science/data-transfers/internal-kista/) is the best way to transfer data between two labs in HUNT Cloud.
 
-<div class="home" style="padding: 0px">
-    <div class="hero">
-        <p class="action">
-            <a href="/-/service-order/?open=internal_kista">
-                <input
-                    value="Prepare internal kista order"
-                    class="nav-link external action-button"
-                    color="deeppink"
-                    type="button"
-                    style="padding: 18px; cursor:pointer; background-color: rgb(0, 150, 136); border-color: rgb(0, 150, 136); border-bottom: 1px solid rgb(0, 50, 45);"
-                />
-            </a>
-        </p>
-    </div>
-</div>
+<SOButton title="Prepare internal kista order" order="internal_kista" />
 
 <SDButton form="request_internal_kista" />
 
@@ -414,7 +400,7 @@ Labs under a BLUE data space subscription levels may invite collaborators to the
 
 ### Deregister to future Tingweek invitations
 
-All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here. 
+All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here.
 
 <SDButton form="deregister_tingweek_invitations" />
 
@@ -422,10 +408,10 @@ All active HUNT Cloud users will be invited to individual Tings three times per 
 * **Expected delivery time:** Days.
 * **Expected response time:** Confirmation of deregistration.
 * **Cost:** Included in your data space subscription.
-	
+
 ## General request
 
-Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request. 
+Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request.
 
 <SDButton form="general_lab_request" />
 
@@ -438,7 +424,7 @@ Note that a general request has slower response time than a predefined order. If
 
 :::
 
-::: tip Not an active user? 
+::: tip Not an active user?
 
 [Contact us](/contact) on email for general questions and information on our scientific services and activities.
 

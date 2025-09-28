@@ -16,6 +16,7 @@ import NavitationCards from "./components/legacy/NavitationCards.vue"
 import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
 import ConsentForm from "./components/legacy/ConsentForm.vue"
 import SDButton from "./components/legacy/SDButton.vue"
+import SOButton from "./components/legacy/SOButton.vue"
 import ServiceDesk from "./components/legacy/ServiceDesk.vue"
 import AgreementForm from "./components/legacy/AgreementForm.vue"
 import EmbedPdfViewer from "./components/legacy/EmbedPdfViewer.vue"
@@ -122,6 +123,7 @@ export default {
     app.component("HideLastUpdated", HideLastUpdated)
     app.component("ConsentForm", ConsentForm)
     app.component("SDButton", SDButton)
+    app.component("SOButton", SOButton)
     app.component("ServiceDesk", ServiceDesk)
     app.component("AgreementForm", AgreementForm)
     app.component("EmbedPdfViewer", EmbedPdfViewer)
