@@ -176,15 +176,15 @@ onMounted(() => {
   if (localStorage.osTab) {
     tab.value = localStorage.osTab
   }
-
-  // Parse route query
-  const routeQuery = getRouteQuery()
-  console.log(routeQuery)
-
-  // Parse access token
-  access.value = routeQuery.access ? atob(routeQuery.access).split("|") : []
-  console.log(query.value)
 })
+
+// Parse route query
+const routeQuery = getRouteQuery()
+console.log(routeQuery)
+
+// Parse access token
+access.value = routeQuery.access ? window.atob(routeQuery.access).split("|") : []
+console.log(query.value)
 </script>
 
 <template>
