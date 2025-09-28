@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, useTemplateRef } from "vue"
+import { computed, ref, useTemplateRef, nextTick } from "vue"
 
 defineOptions({
   name: "CopyTextArea",
@@ -18,13 +18,15 @@ const props = defineProps({
 // Emits definition
 const emit = defineEmits(["update:modelValue"])
 
-// Template ref
-const textFieldRef = ref(null)
-
 // Computed properties
 const getRef = computed(() => {
-  return Math.random().toString(20).slice(2, 6)
+  return `textarea-${Math.random().toString(20).slice(2, 8)}`
 })
+
+// Template ref
+const textareaRef = ref(getRef)
+
+const textarea = useTemplateRef(getRef)
 
 // Methods
 const copyText = async () => {
@@ -34,9 +36,9 @@ const copyText = async () => {
       await navigator.clipboard.writeText(props.modelValue?.toString() || "")
     } else {
       // Fallback for older browsers
-      const textField = useTemplateRef(getRef)
-      if (textField) {
-        textField.select()
+      // const textarea = useTemplateRef(getRef)
+      if (textarea) {
+        textarea.select()
         document.execCommand("copy")
       }
     }
@@ -51,7 +53,11 @@ const handleInput = event => {
 
 const handleFocus = event => {
   event.target.select()
+  // nextTick(() => {
+  //   event.target.select()
+  // })
 }
+// @focus="$event.target.select()"
 
 // <a class="material-icons content_copy" style="cursor: pointer" @click="copyText(getRef)">&#xe14d;</a>
 </script>
@@ -59,20 +65,20 @@ const handleFocus = event => {
 <template>
   <v-textarea
     :value="modelValue"
-    :ref="getRef"
+    ref="textareaRef"
     autocomplete="ignore-field"
     :label="label"
     :placeholder="placeholder"
     persistent-placeholder
     :rows="rows"
-    outlined
-    dense
+    variant="outlined"
+    density="compact"
     readonly
     hide-details
     @input="$emit('input', $event.target.value)"
-    @focus="$event.target.select()"
+    @focus="handleFocus"
   >
-    <template v-slot:append>
+    <template v-slot:append-inner>
       <a style="cursor: pointer" @click="copyText(getRef)"
         ><v-icon icon="mdi mdi-content-copy" size="small"></v-icon
       ></a>

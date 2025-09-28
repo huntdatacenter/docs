@@ -24,7 +24,7 @@ const textFieldRef = ref(null)
 
 // Computed properties
 const getRef = computed(() => {
-  return Math.random().toString(20).slice(2, 6)
+  return `textfield-${Math.random().toString(20).slice(2, 8)}`
 })
 
 // Methods

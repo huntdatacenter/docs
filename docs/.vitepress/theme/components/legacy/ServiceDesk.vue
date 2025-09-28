@@ -131,17 +131,6 @@ const actionSendOutlookPopup = () => {
   window.open(deeplinkUrl.value, "_blank")
 }
 
-const encode = template => {
-  return template ? encodeURIComponent(wrap(template)) : null
-}
-
-const setValue = (value, key) => {
-  // NOTE: enforce reactivity to data change - re-rendering the template
-  const updates = {}
-  updates[key] = value ? value.trim() : value
-  formData.value = Object.assign({}, formData.value, updates)
-}
-
 const wrap = template => {
   let text = template
   for (const [key, value] of Object.entries(formData.value)) {
@@ -155,6 +144,17 @@ const wrap = template => {
   }
   text = text.replaceAll("\n---\n", "\n```\n")
   return text
+}
+
+const encode = template => {
+  return template ? encodeURIComponent(wrap(template)) : null
+}
+
+const setValue = (value, key) => {
+  // NOTE: enforce reactivity to data change - re-rendering the template
+  const updates = {}
+  updates[key] = value ? value.trim() : value
+  formData.value = Object.assign({}, formData.value, updates)
 }
 
 const fetchAgreementFormCache = key => {
@@ -215,7 +215,7 @@ onMounted(() => {
         @update:model-value="emit('update:modelValue', $event)"
         @click:outside="closeBtn"
       >
-        <v-card>
+        <v-card class="service-desk-card">
           <v-toolbar color="#00509e" theme="dark">
             <v-toolbar-title>Service desk - {{ title }}</v-toolbar-title>
             <v-spacer />
@@ -518,6 +518,10 @@ onMounted(() => {
 
 .vuewidget a.v-btn {
   border: inherit;
+}
+
+.service-desk-card {
+  font-size: 14px !important;
 }
 
 .v-chip.v-size--small {
