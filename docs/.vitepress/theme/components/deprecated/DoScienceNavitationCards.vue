@@ -15,7 +15,7 @@ import {
   VListItemSubtitle,
   VListItemAvatar,
   VListItemContent,
-} from "vuetify/lib";
+} from "vuetify/lib"
 
 export default {
   name: "DoScienceNavitationCards",
@@ -43,9 +43,9 @@ export default {
   data() {
     return {
       // dialog: false,
-      cardcolor: '#cfdaf1',
-      avatarcolor: '#9db7e1',
-      iconcolor: 'rgb(72 84 104)',
+      cardcolor: "#cfdaf1",
+      avatarcolor: "#9db7e1",
+      iconcolor: "rgb(72 84 104)",
       // data: [
       //   // {
       //   //   title: 'Order new lab',
@@ -120,13 +120,13 @@ export default {
       //   //   icon: ['fas', 'flask'],
       //   // },
       // ],
-    };
+    }
   },
   computed: {},
   mounted() {},
   created() {},
   methods: {},
-};
+}
 </script>
 
 <template>
@@ -135,13 +135,7 @@ export default {
       <v-row class="my-2" dense>
         <!-- columns -->
         <v-col v-for="item in buttons" cols="12" sm="6" md="6" :key="item.title">
-          <v-card
-            :color="cardcolor"
-            height="100%"
-            light
-            elevation="2"
-            :href="item.href"
-          >
+          <v-card :color="cardcolor" height="100%" light elevation="2" :href="item.href">
             <v-list-item three-line>
               <v-list-item-content>
                 <!-- <div class="text-overline mb-2">
@@ -170,33 +164,35 @@ export default {
   </div>
 </template>
 
-<style lang="sass">
-.vuewidget
+<style>
+.vuewidget.vuewrapper {
+  /* reset full view - no scroll bars, no full view */
+  overflow: inherit;
+}
 
-  &.vuewrapper
-    // reset full view - no scroll bars, no full view
-    overflow: inherit
+.vuewidget.vuewrapper .v-application--wrap {
+  display: block;
+  flex: inherit;
+  min-height: initial;
+  min-width: inherit;
+  width: 100%;
+  overflow-x: hidden;
+}
 
-    .v-application--wrap
-      display: block
-      flex: inherit
-      min-height: initial
-      min-width: inherit
-      width: 100%
-      overflow-x: hidden
+.vuewidget a.v-btn {
+  border: inherit;
+}
 
-  a.v-btn
-    border: inherit
+.v-chip.v-size--small {
+  margin-top: 8px !important;
+  margin-bottom: 5px !important;
+}
 
-.v-chip.v-size--small
-  margin-top: 8px !important
-  margin-bottom: 5px !important
+.last-updated {
+  display: none;
+}
 
-.last-updated
-  display: none
-
-a
-  &.v-card
-    text-decoration: none !important
-
+a.v-card {
+  text-decoration: none !important;
+}
 </style>
