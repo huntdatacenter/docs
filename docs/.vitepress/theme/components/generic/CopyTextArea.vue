@@ -52,6 +52,8 @@ const handleInput = event => {
 const handleFocus = event => {
   event.target.select()
 }
+
+// <a class="material-icons content_copy" style="cursor: pointer" @click="copyText(getRef)">&#xe14d;</a>
 </script>
 
 <template>
@@ -71,7 +73,9 @@ const handleFocus = event => {
     @focus="$event.target.select()"
   >
     <template v-slot:append>
-      <a class="material-icons content_copy" style="cursor: pointer" @click="copyText(getRef)">&#xe14d;</a>
+      <a style="cursor: pointer" @click="copyText(getRef)"
+        ><v-icon icon="mdi mdi-content-copy" size="small"></v-icon
+      ></a>
     </template>
   </v-textarea>
 </template>
