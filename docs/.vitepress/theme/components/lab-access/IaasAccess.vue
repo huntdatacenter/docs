@@ -328,85 +328,24 @@ console.log(query.value)
                   <v-expansion-panel-text id="ssh-config" class="mt-2">
                     <v-col cols="12">
                       1.1. Open new Terminal window and assure SSH Config file exists.
-                      <v-text-field
-                        :model-value="`touch ~/.ssh/config`"
-                        ref="macSshConfig1"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        variant="outlined"
-                        density="compact"
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append-inner>
-                          <a class="material-icons content_copy" @click="copyText('touch ~/.ssh/config')">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
+                      <CopyTextField :model-value="`touch ~/.ssh/config`" label="" prefix="~" />
                     </v-col>
                     <v-col cols="12">
                       1.2. Open SSH Config file.
-                      <v-text-field
-                        :model-value="`open -Wne ~/.ssh/config`"
-                        ref="macSshConfig2"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        variant="outlined"
-                        density="compact"
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append-inner>
-                          <a class="material-icons content_copy" @click="copyText('open -Wne ~/.ssh/config')"
-                            >&#xe14d;</a
-                          >
-                        </template>
-                      </v-text-field>
+                      <CopyTextField :model-value="`open -Wne ~/.ssh/config`" label="" prefix="~" />
                     </v-col>
                     <v-col cols="12">
                       1.3. Copy and paste configuration into SSH Config opened in Text Editor.
-                      <v-textarea
+                      <CopyTextArea
                         :model-value="configText"
-                        ref="ssh-config-mac"
                         label="SSH Config file"
                         placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        class="py-2 mt-2"
-                        variant="outlined"
-                        readonly
                         rows="16"
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append-inner>
-                          <a class="material-icons content_copy" @click="copyTextArea(configText)">&#xe14d;</a>
-                        </template>
-                      </v-textarea>
+                      />
                     </v-col>
                     <v-col cols="12">
                       1.4 Test by connecting straight into IAAS machine.
-                      <v-text-field
-                        :model-value="`ssh ${query.iaasName}`"
-                        ref="ssh-config-lab-mac"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="~"
-                        variant="outlined"
-                        density="compact"
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append-inner>
-                          <a class="material-icons content_copy" @click="copyText(`ssh ${query.iaasName}`)">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
+                      <CopyTextField :model-value="`ssh ${query.iaasName}`" label="" prefix="~" />
                     </v-col>
                   </v-expansion-panel-text>
                 </v-expansion-panel>
@@ -472,23 +411,12 @@ console.log(query.value)
                     </v-col>
                     <v-col cols="12">
                       1.3. Copy and paste configuration into SSH Config opened in Text Editor.
-                      <v-textarea
+                      <CopyTextArea
                         :model-value="configText"
-                        ref="ssh-config-linux"
                         label="SSH Config file"
                         placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        class="py-2 mt-2"
-                        variant="outlined"
-                        readonly
                         rows="16"
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append-inner>
-                          <a class="material-icons content_copy" @click="copyTextArea(configText)">&#xe14d;</a>
-                        </template>
-                      </v-textarea>
+                      />
                     </v-col>
                     <v-col cols="12">
                       1.4. Test by connecting straight into IAAS machine.
