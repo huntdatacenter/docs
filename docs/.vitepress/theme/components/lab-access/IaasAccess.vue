@@ -189,6 +189,12 @@ console.log(query.value)
 
 <template>
   <div class="vuewidget vuewrapper" data-vuetify>
+    <h1 id="iaas-access" tabindex="-1" @mouseover="onAnchorHover('#')" @mouseleave="onAnchorHover('&ZeroWidthSpace;')">
+      IAAS Access
+      <a class="header-anchor" href="#iaas-access" aria-label='Permalink to "IAAS Access"'>
+        {{ anchor }}
+      </a>
+    </h1>
     <v-app :id="id">
       <v-card v-show="isDataComplete" class="pt-4">
         <v-row class="ml-3 mb-2" justify="center">
@@ -256,7 +262,13 @@ console.log(query.value)
                     </v-col>
                     <v-col cols="12">
                       1.3. Copy and paste configuration into SSH Config opened in Notepad.
-                      <v-textarea
+                      <CopyTextArea
+                        :model-value="configText"
+                        label="SSH Config file"
+                        placeholder="Your link is missing access token"
+                        rows="16"
+                      />
+                      <!-- <v-textarea
                         :model-value="configText"
                         ref="ssh-config-win"
                         label="SSH Config file"
@@ -272,27 +284,11 @@ console.log(query.value)
                         <template v-slot:append-inner>
                           <a class="material-icons content_copy" @click="copyTextArea(configText)">&#xe14d;</a>
                         </template>
-                      </v-textarea>
+                      </v-textarea> -->
                     </v-col>
                     <v-col cols="12">
                       1.4. Test by connecting straight into IAAS machine.
-                      <v-text-field
-                        :model-value="`ssh ${query.iaasName}`"
-                        ref="ssh-config-lab-win"
-                        label=""
-                        placeholder="Your link is missing access token"
-                        persistent-placeholder
-                        prefix="C:\Users\User>"
-                        variant="outlined"
-                        density="compact"
-                        readonly
-                        hide-details
-                        @focus="$event.target.select()"
-                      >
-                        <template v-slot:append-inner>
-                          <a class="material-icons content_copy" @click="copyText(`ssh ${query.iaasName}`)">&#xe14d;</a>
-                        </template>
-                      </v-text-field>
+                      <CopyTextField :model-value="`ssh ${query.iaasName}`" label="" prefix="C:\Users\User>" />
                     </v-col>
                   </v-expansion-panel-text>
                 </v-expansion-panel>
