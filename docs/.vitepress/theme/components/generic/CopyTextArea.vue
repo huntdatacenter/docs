@@ -79,9 +79,13 @@ const handleFocus = event => {
     @focus="handleFocus"
   >
     <template v-slot:append-inner>
-      <a style="cursor: pointer" @click="copyText(getRef)"
-        ><v-icon icon="mdi mdi-content-copy" size="small"></v-icon
-      ></a>
+      <v-tooltip text="Copy" location="bottom">
+        <template v-slot:activator="{ props }">
+          <a v-bind="props" style="cursor: pointer" @click="copyText(getRef)"
+            ><v-icon icon="mdi mdi-content-copy" size="small"></v-icon
+          ></a>
+        </template>
+      </v-tooltip>
     </template>
   </v-textarea>
 </template>

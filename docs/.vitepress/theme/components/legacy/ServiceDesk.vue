@@ -409,15 +409,20 @@ onMounted(() => {
 
                   <v-row justify="center">
                     <v-col cols="4">
-                      <v-btn
-                        color="success"
-                        block
-                        :loading="loadingEmailButtons"
-                        :disabled="loadingEmailButtons"
-                        @click="actionSend"
-                      >
-                        Open in Email Client
-                      </v-btn>
+                      <v-tooltip text="Default email client" location="bottom">
+                        <template v-slot:activator="{ props }">
+                          <v-btn
+                            v-bind="props"
+                            color="success"
+                            block
+                            :loading="loadingEmailButtons"
+                            :disabled="loadingEmailButtons"
+                            @click="actionSend"
+                          >
+                            Open in Email Client
+                          </v-btn>
+                        </template>
+                      </v-tooltip>
                     </v-col>
                     <v-col cols="4">
                       <v-btn
