@@ -2,7 +2,7 @@
 title: Introduction
 category: HUNT Cloud
 permalink: /administer-science/services
-outline: 1
+outline: 0
 description: This page gives an introduction to the cloud services in HUNT Cloud.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Machine types
 category: Services
-outline: 1
+outline: 2-3
 permalink: /administer-science/services/machine-types
 description: This page list default machine types in HUNT Cloud.
 ---
@@ -14,7 +14,7 @@ description: This page list default machine types in HUNT Cloud.
 
 ::: tip Pending activation
 
-Machine types marked with a star (`*`) in the tables below are available in location 2. 
+Machine types marked with a star (`*`) in the tables below are available in location 2.
 
 :::
 
@@ -24,7 +24,7 @@ These machines are optimized for computation with 2 GB, 4 GB, 8 GB or 16 GB of m
 
 ### B-series
 
-2 GB of memory per vCPU. 
+2 GB of memory per vCPU.
 
 | **Type**    | **vCPU** | **Memory (GB)** |
 | ----------- | -------- | --------------- |
@@ -39,7 +39,7 @@ These machines are optimized for computation with 2 GB, 4 GB, 8 GB or 16 GB of m
 
 ### C-series
 
-4 GB of memory per vCPU. 
+4 GB of memory per vCPU.
 
 | **Type**    | **vCPU** | **Memory (GB)** |
 | ----------  | -------- | --------------- |
@@ -55,7 +55,7 @@ These machines are optimized for computation with 2 GB, 4 GB, 8 GB or 16 GB of m
 
 ### D-series
 
-8 GB of memory per vCPU. 
+8 GB of memory per vCPU.
 
 | **Type**    | **vCPU** | **Memory (GB)** |
 | ----------- | -------- | --------------- |
@@ -71,7 +71,7 @@ These machines are optimized for computation with 2 GB, 4 GB, 8 GB or 16 GB of m
 
 ### E-series
 
-16 GB of memory per vCPU. 
+16 GB of memory per vCPU.
 
 | **Type**    | **vCPU** | **Memory (GB)** |
 | ----------- | -------- | --------------- |
@@ -94,11 +94,11 @@ All the above machine types may be deployed with one or two GPU accelerators:
 | nvidia.a40   | NVIDIA  A40   | Ampere       | 48GB HBM2 | PCIe Gen3  |
 | nvidia.l40s  | NVIDIA  A40   | Lovelace     | 48GB HBM2 | PCIe Gen3  |
 | nvidia.a100  | NVIDIA  A100  | Ampere       | 40GB HBM2 | PCIe Gen3  |
-| nvidia.a100  | NVIDIA  A100  | Ampere       | 80GB HBM2 | PCIe Gen3  | 
-| nvidia.v100  | NVIDIA  V100  | Volta        | 32GB HBM2 | PCIe Gen3  | 
-| nvidia.v100s | NVIDIA  V100S | Volta        | 32GB HBM2 | PCIe Gen3  | 
+| nvidia.a100  | NVIDIA  A100  | Ampere       | 80GB HBM2 | PCIe Gen3  |
+| nvidia.v100  | NVIDIA  V100  | Volta        | 32GB HBM2 | PCIe Gen3  |
+| nvidia.v100s | NVIDIA  V100S | Volta        | 32GB HBM2 | PCIe Gen3  |
 
-Note that availability vary between locations. See the [GPU on HUNT Cloud](/do-science/tools/technical/gpu/) documentation for more information. 
+Note that availability vary between locations. See the [GPU on HUNT Cloud](/do-science/tools/technical/gpu/) documentation for more information.
 
 ## Custom machine types
 
