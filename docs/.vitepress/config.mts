@@ -87,6 +87,7 @@ export default defineConfig({
   },
   rewrites: {
     "administer-science/prices/calculator.md": "administer-science/prices/estimator.md",
+    // "do-science/lab-access/2-configure-access.md": "do-science/lab/index.md",
   },
 })
 

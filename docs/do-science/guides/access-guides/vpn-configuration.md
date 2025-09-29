@@ -20,9 +20,9 @@ If you are configuring access to your lab use Lab access link sent to you in onb
 
 ## Requirements
 
-1. Confirmed [collection of secret keys](/do-science/lab-access/collect-your-keys#step-1-collect-your-keys) in Step 1 of onboarding process.
+1. Confirmed [collection of secret keys](/do-science/lab-access/1-collect-keys#step-1-collect-your-keys) in Step 1 of onboarding process.
 
-2. Successful setup of [Google authenticator](/do-science/lab-access/collect-your-keys#_1-3-one-time-verification-codes) app. 
+2. Successful setup of [Google authenticator](/do-science/lab-access/1-collect-keys#_1-3-one-time-verification-codes) app. 
 
 
 ## 2.1 Install the VPN software

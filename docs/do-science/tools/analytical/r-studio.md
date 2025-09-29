@@ -296,7 +296,7 @@ sudo apt install tcl tcl8.6 tk tk-table tk8.6
 
 ### RStudio or R becomes unresponsive when I run my code
 
-It might be good to check the resource consumption on your lab machine. The response may be reduced if you or your lab mates consume all memory and/or CPU. A quick way to do this is via [HTOP and time](/do-sciencefaq/compute#can-i-monitor-my-resource-consumption). 
+It might be good to check the resource consumption on your lab machine. The response may be reduced if you or your lab mates consume all memory and/or CPU. A quick way to do this is via [HTOP and time](/do-science/faq/compute#can-i-monitor-my-resource-consumption).
 
 For example, if you use all your memory you might need to reduce your table sizes or upgrade your machine size. If your lab mates consume all your resources you may want to ask them to spare some for you.
 
