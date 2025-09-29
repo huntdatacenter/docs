@@ -10,7 +10,7 @@ description: Installation guide for MATLAB.
 
 **[MATLAB](https://www.mathworks.com/) is a computing environment developed by MatWorks for efficient matrix manipulations and other handy computing tools.**
 
-This guide covers the installation of MATLAB on unmanaged On-demand and BLUE machines. [Contact us](/contat/) for installations on your [home machine](/do-science/faq/compute#machine-types).
+This guide covers the installation of MATLAB on unmanaged On-demand and BLUE machines. [Contact us](/do-science/contact) for installations on your [home machine](/do-science/faq/compute#machine-types).
 
 ::: tip MATLAB in HUNT Workbench
 
@@ -36,10 +36,10 @@ Head over to the [MATLAB FAQ](/do-science/hunt-workbench/faq#matlab) in our HUNT
 1.1 Download the MATLAB software for Linux on your local computer (client). We recommend that you choose a stable `beta` version (for example, 2022b) to ensure a reliable installation.
 
    ::: tip For NTNU users
-   
+
    Log into [NTNU's software repository for MATLAB](https://software.ntnu.no/ntnu/MATLAB),
    choose your desired version in the top right corner and download on your local computer.
-   
+
    :::
 
 1.2. Transfer MATLAB to your preferred folder in your lab machine (for example `/mnt/scratch/MATLAB/`)
@@ -62,13 +62,13 @@ Head over to the [MATLAB FAQ](/do-science/hunt-workbench/faq#matlab) in our HUNT
 
 ## 2. Activate the license
 
-2.1 Identify the required license information from your host organization. The content is dependent on your organizations license. 
+2.1 Identify the required license information from your host organization. The content is dependent on your organizations license.
 
 ::: tip For NTNU users
 The exact content of this files is described in [NTNU's repository for MATLAB](https://software.ntnu.no/ntnu/MATLAB).
 :::
 
-2.2 Create a file named `license.dat` with your license information in your `<MATLAB-folder>`. 
+2.2 Create a file named `license.dat` with your license information in your `<MATLAB-folder>`.
 
 In the principal example below, you will need you to replace `<license-server-address>`, `<key1>` and `<key2>` with an URL-address and strings provided by your host institutions license:
 
@@ -100,7 +100,7 @@ The below steps require the code to be run in `xterm` started from X2GO on the m
    ```bash
    bash ./install -downloadFolder /mnt/scratch/software/matlab_r2022b -tmpdir /mnt/scratch/tmp -destinationFolder /mnt/work/software/matlab_r2022b
    ```
-   
+
    Note that you will need to update the MATLAB version in the above code to the version your are installing.
 
 3.3 During the installation choose: `Use a File Installation Key`
@@ -128,7 +128,7 @@ Open X2Go, connect to your lab machine where you installed MATLAB and run the fo
   ```bash
   /usr/bin/xterm -e matlab
   ```
-  
+
   or with full path e.g.:
 
   ```bash
@@ -146,7 +146,7 @@ Here are are collection of known issues.
 
 ::: details Read more
 
-One known issue is that sometimes the latest MATLAB version compiled by some universities do miss some packages. Try to install a slightly older version. [Contact us](/contact) for assistance if this do not work.
+One known issue is that sometimes the latest MATLAB version compiled by some universities do miss some packages. Try to install a slightly older version. [Contact us](/do-science/contact) for assistance if this do not work.
 
 :::
 
@@ -154,7 +154,7 @@ One known issue is that sometimes the latest MATLAB version compiled by some uni
 
 ::: details Read more
 
-No, not in an easy way. Thus, either we have to install on `home` machines, or your can install these yourself on unmanaged iaas and blue machines where you get root. [Contact us](/contact) if you need MATLAB on your home machine.
+No, not in an easy way. Thus, either we have to install on `home` machines, or your can install these yourself on unmanaged iaas and blue machines where you get root. [Contact us](/do-science/contact) if you need MATLAB on your home machine.
 
 :::
 
@@ -162,7 +162,7 @@ No, not in an easy way. Thus, either we have to install on `home` machines, or y
 
 ::: details Read more
 
-We need to open for traffic from your lab to your organization's license server. [Contact us](/contact) for network openings.
+We need to open for traffic from your lab to your organization's license server. [Contact us](/do-science/contact) for network openings.
 
 :::
 
