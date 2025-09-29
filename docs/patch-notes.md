@@ -21,31 +21,31 @@ This page contains descriptions of updates (patches) to HUNT Cloud's services. A
 
 <h3>Major changes</h3>
 
-**Documentation updates** 
+**Documentation updates**
 
 We are updating our [tools](/tools) section in do science guides. These updates can range from simple text adjustments to updating code and removing those that are irrelevant.
 
 If you think we are missing an important guide or a guide is not working as expected, please give us feedback via this [contact form](/about/contact).
 
-<h3>Minor changes</h3>  
+<h3>Minor changes</h3>
 
 - Added automatic IPv4 checking [here](/ipv4/)
 
-::: 
+:::
 
-::: details Administer science 
+::: details Administer science
 
 <h3>Major changes</h3>
 
 **New GPUs on offer**
 
-Introduced two new GPU series from NVIDIA in 2025-Q1. 
+Introduced two new GPU series from NVIDIA in 2025-Q1.
 
 **NVIDIA A16** - cheapest card on offer. Providing 16GB of VRAM while giving strong performance. We can utilise up to 12x cards in a single lab gpu node, offering up to 192GB of VRAM.
 
-**NVIDIA L40S** - New series from NVIDIA aiming for fast AI, image and ML processing. This is a new gen of A40 cards, offering 48GB of VRAM in a single card. Up to 2x cards available in a single gpu node.  
+**NVIDIA L40S** - New series from NVIDIA aiming for fast AI, image and ML processing. This is a new gen of A40 cards, offering 48GB of VRAM in a single card. Up to 2x cards available in a single gpu node.
 
-You can review price on both GPU cards [here](/administer-science/prices/pricelist).  
+You can review price on both GPU cards [here](/administer-science/prices/pricelist).
 
 <h3>Minor changes</h3>
 
@@ -57,7 +57,7 @@ You can review price on both GPU cards [here](/administer-science/prices/priceli
 
 <h3>Major changes</h3>
 
-**Updated ISO certifcation** 
+**Updated ISO certifcation**
 
 New certificate are uploaded under [certificates](/govern-science/compliance/certificates#iso-iec-27001-certificate)
 
@@ -65,7 +65,7 @@ New certificate are uploaded under [certificates](/govern-science/compliance/cer
 <h3>Minor changes</h3>
 
 
-::: 
+:::
 
 
 ## Patch note 2.11.3
@@ -82,25 +82,25 @@ We have added video guides for Windows users to the lab access links. The aim is
 
 As a next step we are thinking about how to expand the video guides into other topics. Feel free to [contact us](/contact) with suggestions and ideas.
 
-<h3>Minor changes</h3>  
+<h3>Minor changes</h3>
 
 - MATLAB: We have started upgrades to v2024b for NTNU users.
-- RStudio: Upgraded from v2023 to v2024, and improved the start-up time in Workbench. 
+- RStudio: Upgraded from v2023 to v2024, and improved the start-up time in Workbench.
 - Visual Studio Code: Version upgrade (2024/8) and included support for Snakemake.
-- Workbench environment: Extended the environment timeout from 3 to 10 days. This means that environments that are inactive for more than 10 days will be shut down. 
+- Workbench environment: Extended the environment timeout from 3 to 10 days. This means that environments that are inactive for more than 10 days will be shut down.
 - Fixed issue in Windows lab access link where commands would not work if you have space in your user directory structure
 
-::: 
+:::
 
 ::: details Administer science
 
 <h3>Major changes</h3>
 
-**Storage performance configuration** 
+**Storage performance configuration**
 
-We noticed substantial performance reduction on our  block storage configuration in Cloud2 as the usage increased over the summer. 
+We noticed substantial performance reduction on our  block storage configuration in Cloud2 as the usage increased over the summer.
 
-After spending a significant amount of time identifying the root cause, we are now adding several measure to increase the system predictability. 
+After spending a significant amount of time identifying the root cause, we are now adding several measure to increase the system predictability.
 
 As part of this, we have started to move current storage volumes over to new configurations. Labs will be contacted to schedule such updates with approximately one day downtime during implementation.
 
@@ -108,20 +108,20 @@ As a next step we plan to differentiate on different storage types/performance i
 
 <h3>Minor changes</h3>
 
-**Migration milestone** 
+**Migration milestone**
 
 More than half of all labs are now migrated from Cloud1 to Cloud2. After a small pause due to the storage performance issues, we have now resumed the migration. Remaining labs will be contacted to schedule their move to limit the downtime of scientific activities.
 
-::: 
+:::
 
 
 ::: details Govern science
 
 <h3>Major changes</h3>
 
-**Policy ownership** 
+**Policy ownership**
 
-The ownership of our [Security and privacy management policy](/govern-science/policies/#security-and-privacy-management-policy) is moved from the Head of HUNT Research Centre to the Head of HUNT Cloud as part of an internal reorganization. 
+The ownership of our [Security and privacy management policy](/govern-science/policies/#security-and-privacy-management-policy) is moved from the Head of HUNT Research Centre to the Head of HUNT Cloud as part of an internal reorganization.
 
 **New quality policy**
 
@@ -130,11 +130,11 @@ We have established a new [Quality policy](/govern-science/policies/#quality-pol
 
 <h3>Minor changes</h3>
 
-**New Lab transfer order** 
+**New Lab transfer order**
 
 To simplify the movement of Labs between different Data spaces (administrative units), we have added a new "[Lab transfer order](administer-science/agreements/downloads/#lab-transfer-order)" that define the process. The order is signed by the Data space leader of the current and destination Data space and specify the date when the costs will be moved.
 
-::: 
+:::
 
 
 
@@ -148,7 +148,7 @@ To simplify the movement of Labs between different Data spaces (administrative u
 
 **Onboarding video guides**
 
-We have added video guides for the most common steps in your lab onboarding. When you get your lab access link, you will see a new icon that allows you to watch a guide where we walk you through specific steps in your onboarding process to support the written access link guide. [Let us know](/contact) if you would like us to expand the video guides into other topics. 
+We have added video guides for the most common steps in your lab onboarding. When you get your lab access link, you will see a new icon that allows you to watch a guide where we walk you through specific steps in your onboarding process to support the written access link guide. [Let us know](/contact) if you would like us to expand the video guides into other topics.
 
 **Tailored lab access links**
 
@@ -156,7 +156,7 @@ We have updated your lab access links so it is tailored for your specific reques
 
 **New machine type (E-series)**
 
-Based on requests, we have updated our default machine series with a [new E-series](/administer-science/services/machine-types#e-series) that holds 16 GB ram per CPU. These can be ordered by [Requesting a machine size update](/administer-science/service-desk/lab-orders#update-cpu-machine-size) in our administer science service desk. 
+Based on requests, we have updated our default machine series with a [new E-series](/administer-science/services/machine-types#e-series) that holds 16 GB ram per CPU. These can be ordered by [Requesting a machine size update](/administer-science/service-desk/lab-orders#update-cpu-machine-size) in our administer science service desk.
 
 **New GPU type (A40)**
 
@@ -167,11 +167,11 @@ NVIDIA A40 GPUs with 48 GB of memory are now available as [GPU accelerator types
 
 **Apptainer (Singularity)**
 
-The containerization tool Singularity was renamed to Apptainer when it moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/). [Our documentation](/do-science/tools/technical/apptainer-singularity) is updated accordingly. 
+The containerization tool Singularity was renamed to Apptainer when it moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/). [Our documentation](/do-science/tools/technical/apptainer-singularity) is updated accordingly.
 
 **Guide for VS Code in Workbench**
 
-We have added a Workbench [guide for VS Code](/do-science/hunt-workbench/getting-started/vscode) with information on how to create a Jupyter notbook or Python environment, how to run R code with r kernel and similar. 
+We have added a Workbench [guide for VS Code](/do-science/hunt-workbench/getting-started/vscode) with information on how to create a Jupyter notbook or Python environment, how to run R code with r kernel and similar.
 
 **BRAT annotation tool in Workbench**
 
@@ -191,7 +191,7 @@ Our community translation of [Freedom to explore](/do-science/community/freedom-
 
 **Migration to the new location has started**
 
-After years in the making, we are excited to announce that the migration to our new location and cloud installation has started! We have a new server-room with upgraded equipment and more flexibility ready for your as soon as you complete your migration. We are reaching out to labs to schedule the migration with the aim to avoid conflicts with deadlines and other important work. See our [FAQ pages for migration](/do-science/faq/migration) for more information. 
+After years in the making, we are excited to announce that the migration to our new location and cloud installation has started! We have a new server-room with upgraded equipment and more flexibility ready for your as soon as you complete your migration. We are reaching out to labs to schedule the migration with the aim to avoid conflicts with deadlines and other important work. See our [FAQ pages for migration](/do-science/faq/migration) for more information.
 
 **New price list (v4.1)**
 
@@ -215,7 +215,7 @@ We updated the [invoice profile form](/administer-science/agreements/downloads#i
 
 **Automatic overhead estimates for temporary Internal kistas**
 
-We are now automatically calculating file system overhead in internal kista orders. This means that you order a size that is equal to the amount of data that you plan to transfer. In short, kistas with a size below 1TB receives 100GB additional buffer size, and kistas above 1TB recieves 10 percent buffer to compensate for the file system. 
+We are now automatically calculating file system overhead in internal kista orders. This means that you order a size that is equal to the amount of data that you plan to transfer. In short, kistas with a size below 1TB receives 100GB additional buffer size, and kistas above 1TB recieves 10 percent buffer to compensate for the file system.
 
 **Restore option for new storage volumes**
 
@@ -246,11 +246,11 @@ We plan to introdue the new Services descriptions for Explore, Evolve and Scient
 
 **New ISO certificates available**
 
-The new certificates for ISO/IEC 27001 and ISO/IEC 27701 from DNV is now available from our [compliance section](/govern-science/compliance/certificates). 
+The new certificates for ISO/IEC 27001 and ISO/IEC 27701 from DNV is now available from our [compliance section](/govern-science/compliance/certificates).
 
 **New service center reports**
 
-Based on the last Tingweek resolution ([R10/LT11/T11/24]((/govern-science/tingweek/resolutions#improve-resource-and-compliance-reporting))), we have made a new service center report that summarize resources, activities and costs inside all data spaces and labs under your center. The intention is that this will increase transparency and enhance dialogues on how to improve our systems and advance your science. We will forward the first version on email with the aim to automate shipments from 2024-Q2.
+Based on the last Tingweek resolution ([R10/LT11/T11/24](/govern-science/tingweek/resolutions#improve-resource-and-compliance-reporting)), we have made a new service center report that summarize resources, activities and costs inside all data spaces and labs under your center. The intention is that this will increase transparency and enhance dialogues on how to improve our systems and advance your science. We will forward the first version on email with the aim to automate shipments from 2024-Q2.
 
 **Community deletion policy enforced**
 
@@ -264,12 +264,12 @@ Community messages in Slack is from 2024-01-01 stored for 1Y only. Older message
 
 **Updated Statement of applicability**
 
-[Statement of Applicability (SoA)](/govern-science/compliance/certificates#statement-of-applicability-soa) is the document where we state which ISO control objectves we have applied in our certificate. We have updated the document with new roles and comments for our privacy controls. 
+[Statement of Applicability (SoA)](/govern-science/compliance/certificates#statement-of-applicability-soa) is the document where we state which ISO control objectves we have applied in our certificate. We have updated the document with new roles and comments for our privacy controls.
 
 **Agreement updates**
 
-* The data encryption section in the Security measures appendix to our Data processor agreements is updated to reflect that data is encrypted for regular hard drives at the new location (Site 2). 
-* The [Price list appendix](/administer-science/prices/pricelist) to the service center agreement is updated with a new machine series and a new GPU accelerator choice. The change is directly implemented since they affect new services. 
+* The data encryption section in the Security measures appendix to our Data processor agreements is updated to reflect that data is encrypted for regular hard drives at the new location (Site 2).
+* The [Price list appendix](/administer-science/prices/pricelist) to the service center agreement is updated with a new machine series and a new GPU accelerator choice. The change is directly implemented since they affect new services.
 
 <h3>Upcoming features</h3>
 
@@ -319,7 +319,7 @@ We humbled and proud of your response to help us translate our tagline «Freedom
 
 **Fire safe for the off-site tape archive**
 
-We have improved the fire safety of our off-site tape archive with an new safe that will withstand fire for up to 60 minutes. 
+We have improved the fire safety of our off-site tape archive with an new safe that will withstand fire for up to 60 minutes.
 
 <h3>Minor changes</h3>
 
@@ -329,7 +329,7 @@ We have made two minor updates to the [Services specifications](/administer-scie
 
 **Updated invoice profile**
 
-We have simplified the [Invoice profile](/administer-science/agreements/downloads#invoice-profile) by moving Free quota and Pilot periods into separate agreements. 
+We have simplified the [Invoice profile](/administer-science/agreements/downloads#invoice-profile) by moving Free quota and Pilot periods into separate agreements.
 
 <h3>Upcoming features</h3>
 
@@ -345,7 +345,7 @@ We have simplified the [Invoice profile](/administer-science/agreements/download
 
 **External audit from DNV**
 
-DNV audited us towards ISO/IEC 27001, 27017 and 27701 in November. The result was 0 major nonconformaties (CAT2), 5 minor nonconformaties (CAT1), 15 observations and 6 opportunities. We are currently working on the mitigations. The report from DNV is available for data controllers [on request](/contact). 
+DNV audited us towards ISO/IEC 27001, 27017 and 27701 in November. The result was 0 major nonconformaties (CAT2), 5 minor nonconformaties (CAT1), 15 observations and 6 opportunities. We are currently working on the mitigations. The report from DNV is available for data controllers [on request](/contact).
 
 <h3>Upcoming features</h3>
 
@@ -370,7 +370,7 @@ DNV audited us towards ISO/IEC 27001, 27017 and 27701 in November. The result wa
 
 **New community consent**
 
-We will introduce a new consent for our HUNT Cloud community during Tingweek #10 next week. The intention is to ensure that you know and agree to how we processed your personal data in Slack. 
+We will introduce a new consent for our HUNT Cloud community during Tingweek #10 next week. The intention is to ensure that you know and agree to how we processed your personal data in Slack.
 
 We will forward a consent link on email to all active users. Users that do not consent will be deactivated from Slack.
 
@@ -386,7 +386,7 @@ We have started to forward reminders on email to renew your workbench certificat
 
 **Lab Access configuration**
 
-We have removed the old onboarding guide, and new lab users will do their initial [lab access](/do-science/lab-access/) setup by clicking a `Lab access link` that we send in the initial onboarding email. The new ["Configure access](/do-science/lab/)-page will point you a service desk button where you can request a lab access link if you don't have yours at hand. 
+We have removed the old onboarding guide, and new lab users will do their initial [lab access](/do-science/lab-access/) setup by clicking a `Lab access link` that we send in the initial onboarding email. The new ["Configure access](/do-science/lab/)-page will point you a service desk button where you can request a lab access link if you don't have yours at hand.
 
 <h3>Minor changes</h3>
 
@@ -397,7 +397,7 @@ Our Slack URL is updated to [hunt-cloud.slack.com](https://hunt-cloud.slack.com)
 
 **Automatic replys in Slack**
 
-We have introduced custom Slackbots for common troubleshooting requests. For example, type `403` in your lab channel to give it a try. 
+We have introduced custom Slackbots for common troubleshooting requests. For example, type `403` in your lab channel to give it a try.
 
 :::
 
@@ -412,7 +412,7 @@ No updates.
 
 **Add a new community member**
 
-Labs under a BLUE data space subscription may now invite persons that are not lab users to their HUNT Cloud community lab channel. [Click here](/administer-science/service-desk/lab-orders#community-membership) to request memberships. 
+Labs under a BLUE data space subscription may now invite persons that are not lab users to their HUNT Cloud community lab channel. [Click here](/administer-science/service-desk/lab-orders#community-membership) to request memberships.
 
 Membership is voluntary, and new members will be asked to consent to our data processing for the service. See our [community section](/do-science/community/) to learn more about our community and the new community consent.
 
@@ -452,7 +452,7 @@ We have introducted a new service desk button where all users can deregister to 
 
 **New policies and statement of applicability**
 
-We will welcome DNV for a joint ISO 27001 and 27701 certiication audit in the first week of November. We plan to upgrade our Security and privacy policies and Statement of Applicability with new ISO/IEC 27001:2022 control set before the audit. 
+We will welcome DNV for a joint ISO 27001 and 27701 certiication audit in the first week of November. We plan to upgrade our Security and privacy policies and Statement of Applicability with new ISO/IEC 27001:2022 control set before the audit.
 
 :::
 
@@ -482,7 +482,7 @@ New access guides tailored for individual lab users are added for unmanaged IaaS
 
 **Extended Singularity guide**
 
-We have added a guide on [how to run Singularity](/do-science/tools/technical/singularity) in your lab environment using Conda. The guide covers: 
+We have added a guide on [how to run Singularity](/do-science/tools/technical/singularity) in your lab environment using Conda. The guide covers:
 
 * Installation
 * Common practices and commands
@@ -537,7 +537,7 @@ We have updated the link to the service desk buttons at the bottom of all [servi
 
 * Invoices are planned shipped in the first week of September.
 * Community membership consent.
-* We have been piloting a service to fill out PDF orders in your local browser. You can see an experimental version for our [Internal kista orders](/administer-science/service-desk/lab-orders#internal-kista). 
+* We have been piloting a service to fill out PDF orders in your local browser. You can see an experimental version for our [Internal kista orders](/administer-science/service-desk/lab-orders#internal-kista).
 
 
 :::
@@ -549,15 +549,15 @@ We have updated the link to the service desk buttons at the bottom of all [servi
 
 <h3>Major changes</h3>
 
-We have started the implementation of [ISO/IEC 27701:2019](https://www.iso.org/standard/71670.html) for the planned certification audit with DNV later this year. This first step updates our policies and statement of applicability. 
+We have started the implementation of [ISO/IEC 27701:2019](https://www.iso.org/standard/71670.html) for the planned certification audit with DNV later this year. This first step updates our policies and statement of applicability.
 
 **Updated Security and and privacy management policy**
 
-We have included 'privacy' in our updated [Security and privacy management policy](/govern-science/policies/#security-and-privacy-management-policy) (v2.4). This document sets the direction for all our security and privacy work. 
+We have included 'privacy' in our updated [Security and privacy management policy](/govern-science/policies/#security-and-privacy-management-policy) (v2.4). This document sets the direction for all our security and privacy work.
 
 **Updated Security and privacy policies**
 
-Our new [Security and privacy policies](https://docs.hdc.ntnu.no/govern-science/policies/#security-and-privacy-policies) version (v4.4) includes 119 new privacy controls from ISO/IEC 27701:2019. The aim is to clarify control objectives aimed to protect information that we control or process on behalf of scientific institutions. 
+Our new [Security and privacy policies](https://docs.hdc.ntnu.no/govern-science/policies/#security-and-privacy-policies) version (v4.4) includes 119 new privacy controls from ISO/IEC 27701:2019. The aim is to clarify control objectives aimed to protect information that we control or process on behalf of scientific institutions.
 
 **Updated Statement of applicability (SoA)**
 
@@ -565,7 +565,7 @@ Our new [Security and privacy policies](https://docs.hdc.ntnu.no/govern-science/
 
 <h3>Upcoming features</h3>
 
-* Planning of [Ting #10](/govern-science/tingweek/#tings) agenda and resolutions. [Contact us](/contact) if you have topics that you would like us to include. 
+* Planning of [Ting #10](/govern-science/tingweek/#tings) agenda and resolutions. [Contact us](/contact) if you have topics that you would like us to include.
 * Including justifications, comments and implementation status for new and merged privacy controls in SoA after on internal audits.
 * General updates to our privacy practices related to the ISO/IEC 27701:2019 implementation.
 
@@ -579,13 +579,13 @@ Our new [Security and privacy policies](https://docs.hdc.ntnu.no/govern-science/
 
 *2023-06-27*
 
-Dear cloud community, 
+Dear cloud community,
 
 Welcome to our first patch note!
 
 We created this page to keep you informed about our activities and progress here at HUNT Cloud. In the below notes, you will read about what is new, what we are currently working on, known issues and more.
 
-For the HUNT Cloud team  
+For the HUNT Cloud team
 *Jakub*
 
 
@@ -597,8 +597,8 @@ For the HUNT Cloud team
 
 We are introducing the ability for users to reset passphrase directly in Workbench.
 
-* This method works for *new* and *existing* users. 
-* Once you request SSH passphrase reset, head over to your Workbench to easily reset your passphrase in a familiar manner. 
+* This method works for *new* and *existing* users.
+* Once you request SSH passphrase reset, head over to your Workbench to easily reset your passphrase in a familiar manner.
 * You can find further details in this [guide](/do-science/guides/configure-ssh-workbench#ssh-passphrase-reset-in-workbench).
 
 
@@ -632,17 +632,17 @@ We are changing the way we approach onboarding of new users. This approach allow
 
 **Scientific access**
 
-We are simplifying [Scientific access](/administer-science/scientific-access/) for new scientific centers and scientific groups and have updated the initial onboarding process: 
+We are simplifying [Scientific access](/administer-science/scientific-access/) for new scientific centers and scientific groups and have updated the initial onboarding process:
 
 * [New section](/administer-science/scientific-access/) that describes the scientific onboarding.
-* New scientific access bundle that combines information needed to add your first Data space and Lab. 
+* New scientific access bundle that combines information needed to add your first Data space and Lab.
 * [FAQ section](/administer-science/scientific-access/faq) dedicated to scientific access.
 
 <h3>Minor changes</h3>
 
 **Agreement updates**
- 
-We updated the agreements for [External kista import order](/administer-science/agreements/downloads#external-kista-import-order) (v2.1) and [External kista export order](/administer-science/agreements/downloads#external-kista-export-order) (v1.4): 
+
+We updated the agreements for [External kista import order](/administer-science/agreements/downloads#external-kista-import-order) (v2.1) and [External kista export order](/administer-science/agreements/downloads#external-kista-export-order) (v1.4):
 
 * Naming of "Internal lab user" included in separate header to improve differentiation from lab leader.
 
@@ -659,7 +659,7 @@ We updated the agreements for [External kista import order](/administer-science/
 We are simplifying [Organizational access](/govern-science/organizational-access/) and have updated the initial onboarding process:
 
 * [New section](/govern-science/organizational-access/) that describes the organizational onboarding.
-* [New organizational agreement information form](/govern-science/organizational-access/#request-organizational-agreements) that combines information needed to generate your first data processor agreement and services center agreements. 
+* [New organizational agreement information form](/govern-science/organizational-access/#request-organizational-agreements) that combines information needed to generate your first data processor agreement and services center agreements.
 * [FAQ section](/govern-science/organizational-access/faq) dedicated to organizational access.
 
 **Lagtun resolutions**
@@ -668,7 +668,7 @@ The new [resolutions from Tingweek #9](/govern-science/tingweek/resolutions) are
 
 * Enable reduction of inactive compute resources
 * Clarify costs for migration to new systems
-* Explore data provider initiated data deliveries 
+* Explore data provider initiated data deliveries
 
 
 <h3>Minor changes</h3>
@@ -697,23 +697,23 @@ There are no fixed publication schedule for the next Patch note. The intention i
 
 #### Numbering
 
-We use a three digit numbering system on our Patch notes, for example version `2.8.3`. 
+We use a three digit numbering system on our Patch notes, for example version `2.8.3`.
 
-| Number | Description | 
-| ---- | ---- | 
-| 2 | Major services specification update | 
+| Number | Description |
+| ---- | ---- |
+| 2 | Major services specification update |
 | 8 | Minor services specification update |
-| 3 | Patch notes number | 
+| 3 | Patch notes number |
 
 ::: details Click here for details on the numbering
 
 .
 
-#### Major services agreement update 
+#### Major services agreement update
 
-The first number indicates which major [Services specification](/administer-science/services/specifications) version the Patch notes are attached to. 
+The first number indicates which major [Services specification](/administer-science/services/specifications) version the Patch notes are attached to.
 
-The number references the first digit of the current Services specification version. For example, Services specification version `2.8` will be listed as `2`. 
+The number references the first digit of the current Services specification version. For example, Services specification version `2.8` will be listed as `2`.
 
 A major services agreement update indicates that services are changes in a way that need major agreement updates. Such updates are forwarded to all contractual partners on email, and major changes on existing services take effect 90 days after the announcement.
 
@@ -721,7 +721,7 @@ A major services agreement update indicates that services are changes in a way t
 
 The second number indicates which minor [Services specification](/administer-science/services/specifications) version the Patch note are attached to.
 
-The number references the second digit of the current Services specification version. For example, Services specification version `2.8` will be listed as `8`. 
+The number references the second digit of the current Services specification version. For example, Services specification version `2.8` will be listed as `8`.
 
 A minor services agreement update indicate a change in the agreement text, such as clarifications, syntax updates and similar. These changes takes effect when they are communicated on these docs pages, and are not forwarded to contractual partners on email.
 
@@ -731,7 +731,7 @@ The third number indicates which patch version the current note is attached to. 
 
 **Major updates**
 
-Major updates indicates what we think are a substantial update in your user experience of our services. 
+Major updates indicates what we think are a substantial update in your user experience of our services.
 Such improvements may not always need updates in legal documents.
 
 **Minor updates**
@@ -740,6 +740,6 @@ Minor Patch notes indicates what we think are small (but often important) user e
 
 **Upcoming features**
 
-These are features that we have planned to move forward by the time of the notes publication, although they are not always the features that we end up prioritizing over the next period. 
+These are features that we have planned to move forward by the time of the notes publication, although they are not always the features that we end up prioritizing over the next period.
 
 :::
