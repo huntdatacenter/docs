@@ -16,7 +16,7 @@ This page lists frequently asked questions related to lab storage.
 
 ### What storage does my lab have?
 
-You will find the following storage volumes inside your [home](compute/#what-is-a-home-machine) machine in your lab:
+You will find the following storage volumes inside your [home](/do-science/faq/compute/#what-is-a-home-machine) machine in your lab:
 
 | **Name** | **Location** | **Recommended use** | **Restore** |
 | - | - | - | - |
@@ -30,7 +30,7 @@ You will find the following storage volumes inside your [home](compute/#what-is-
 
 ### How can I see the sizes of my lab volumes?
 
-Log into your [home](compute/#what-is-a-home-machine) machine in your lab with your favorite terminal and type: **`df -h --type=ext4`**. This will give you an overview of the storage resources (volumes) that are allocated to your lab machine. Example output that list attached volumes:
+Log into your [home](/do-science/faq/compute/#what-is-a-home-machine) machine in your lab with your favorite terminal and type: **`df -h --type=ext4`**. This will give you an overview of the storage resources (volumes) that are allocated to your lab machine. Example output that list attached volumes:
 
 ```bash
 $ df -h --type=ext4

@@ -36,7 +36,7 @@ If this does not help, you may have a look at our [FAQ](/do-science/hunt-workben
 
 ### 400: Bad request
 
-Try to restart your browser. If the error changes to 403 after restart head over to service desk and [request Workbench reissue](/do-science/service-desk#hunt-workbench-reissue).
+Try to restart your browser. If the error changes to 403 after restart head over to service desk and [request Workbench reissue](/do-science/service-desk/#hunt-workbench-reissue).
 
 ### 400: Bad request - Firefox
 
@@ -44,7 +44,7 @@ Try with Chrome or check troubleshooting guide for Firefox in your Lab access li
 
 ### 403: Forbidden - Expired client certificate
 
-Your HUNT Workbench certificate is time limited. You will meet the **`403 Forbidden`** message when your certificate expire (example image below). Head over our do science [service desk](/do-science/service-desk#hunt-workbench-reissue) to order a certificate reissue.
+Your HUNT Workbench certificate is time limited. You will meet the **`403 Forbidden`** message when your certificate expire (example image below). Head over our do science [service desk](/do-science/service-desk/#hunt-workbench-reissue) to order a certificate reissue.
 
 ![expired_certificate.png](./images/expired_certificate.png)
 
