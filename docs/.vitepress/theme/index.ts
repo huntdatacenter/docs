@@ -145,7 +145,18 @@ const redirectPrefixes: Array<[string, string]> = [
   ["/do-science/lab-access/configure-access/", "/do-science/lab/"] as const,
   ["/do-science/lab-access/2-configure-access", "/do-science/lab/"] as const,
   ["/do-science/guides/configure-ssh", "/do-science/guides/access-guides/reset-ssh"] as const,
-  // ["", ""] as const,
+  [
+    "/do-science/guides/hunt-workbench-reissue-certificate",
+    "/do-science/guides/access-guides/workbench-reissue",
+  ] as const,
+  ["/do-science/guides/hunt-workbench-request", "/do-science/guides/access-guides/workbench-request"] as const,
+  ["/do-science/guides/vpn-certificate-reset", "/do-science/guides/access-guides/reset-vpn"] as const,
+  ["/do-science/guides/google-authenticator-reset", "/do-science/guides/access-guides/reset-gauth"] as const,
+  ["/do-science/hunt-workbench/getting-started/conda", "/do-science/hunt-workbench/getting-started/2-conda"] as const,
+  [
+    "/do-science/hunt-workbench/getting-started/remote-desktop",
+    "/do-science/hunt-workbench/getting-started/10-remote-desktop",
+  ] as const,
   // ["", ""] as const,
 ].filter(
   item =>

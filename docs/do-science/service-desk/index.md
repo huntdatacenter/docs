@@ -46,7 +46,7 @@ Request a new certificate if you have an existing HUNT Workbench and your previo
 - **Expected response time:** Days.
 - **Expected delivery:** Workbench certificate.
 - **Requirement:** (1) Active Signal app on phone.
-- **Next step:** [Guide on Workbench reissue](/do-science/guides/hunt-workbench-reissue-certificate).
+- **Next step:** [Guide on Workbench reissue](/do-science/guides/access-guides/workbench-reissue).
 - **Cost:** Included in the lab subscription.
 
 ### SSH passphrase reset
@@ -108,7 +108,7 @@ Lost the lab access link from your onboarding email? No worries, order a new one
 - **Expected response time:** Days.
 - **Expected delivery:** HUNT Workbench access key and certificate.
 - **Requirement:** (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.
-- **Next step:** [Prepare your key transfer](/do-science/guides/hunt-workbench-request).
+- **Next step:** [Prepare your key transfer](/do-science/guides/access-guides/workbench-request).
 - **Cost:** Included in the lab subscription.
 
 ## System access
@@ -145,12 +145,12 @@ You may need to reset your VPN certificate when you get a new local computer or 
 - **Expected response time:** Days.
 - **Expected delivery:** VPN passphrase on Signal, link to VPN certificate on email.
 - **Requirement:** Active Signal app on your phone.
-- **Next step:** [Guide on the VPN reset](/do-science/guides/vpn-certificate-reset).
+- **Next step:** [Guide on the VPN reset](/do-science/guides/access-guides/reset-vpn).
 - **Cost:** Included in the lab subscription.
 
 ### Google authenticator key reset
 
-You need the [Google Authenticator key](/do-science/guides/google-authenticator-reset) to access the HUNT Cloud VPN. Click the button below to request a new key (f.e. when you change your phone).
+You need the [Google Authenticator key](/do-science/guides/access-guides/reset-gauth) to access the HUNT Cloud VPN. Click the button below to request a new key (f.e. when you change your phone).
 
 <SDButton form="request_google_auth" />
 
@@ -158,7 +158,7 @@ You need the [Google Authenticator key](/do-science/guides/google-authenticator-
 - **Expected response time:** Days.
 - **Expected delivery:** New key on Signal.
 - **Requirement:** Active Signal app on your phone.
-- **Next step:** [Guide on the key reset](/do-science/guides/google-authenticator-reset).
+- **Next step:** [Guide on the key reset](/do-science/guides/access-guides/reset-gauth).
 - **Cost:** Included in the lab subscription.
 
 ## Community access
