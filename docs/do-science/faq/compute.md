@@ -85,9 +85,9 @@ When your command or script finishes, `time` writes a message to standard error 
 
 ## Access
 
-### How can I access our IaaS and blue machines?
+### How can I access our IaaS and SPOT machines?
 
-In your home machine, type **`ssh `** (ssh and space) and hit the **`Tab`** button twice. This will give you a list of the available IaaS and blue machines in your lab. The default user will be **`ubuntu`** and the default password will be **`ubuntu`**.
+In your home machine, type **`ssh `** (ssh and space) and hit the **`Tab`** button twice. This will give you a list of the available IaaS and SPOT machines in your lab. The default user will be **`ubuntu`** and the default password will be **`ubuntu`**.
 
 ```bash
 ssh ubuntu@<machine-name>
@@ -95,7 +95,7 @@ ssh ubuntu@<machine-name>
 
 ### How can I make the login 'passwordless'?
 
-You can add your keys to the IaaS and blue machines or 'passwordless' logins. In your home machine:
+You can add your keys to the IaaS and SPOT machines or 'passwordless' logins. In your home machine:
 
 ```bash
 # -- Add keys
@@ -104,7 +104,7 @@ You can add your keys to the IaaS and blue machines or 'passwordless' logins. In
 ssh-copy-id ubuntu@<machine-name>
 
 # practical example
-ssh-copy-id ubuntu@demolab-blue-sagal
+ssh-copy-id ubuntu@demolab-iaas-sagal
 
 # -- Add certificate to ssh-agent
 ssh-add
@@ -150,7 +150,7 @@ Most likely. Many commonly used software in scientific computing can be run from
 
 ### Can I run Docker containers?
 
-Yes. You can run [Docker images](https://www.docker.com/) on both [IaaS](/do-science/faq/compute#what-is-an-iaas-machine) and [blue](/do-science/faq/compute#what-is-a-blue-machine) machines. Docker images can not be run from home machines due to security reasons.
+Yes. You can run [Docker images](https://www.docker.com/) on both [IaaS](/do-science/faq/compute#what-is-an-iaas-machine) and [SPOT](/do-science/faq/compute#what-is-a-spot-machine) machines. Docker images can not be run from home machines due to security reasons.
 
 ::: tip
 
@@ -160,7 +160,7 @@ If you need to run docker images on home machine try using Apptainer instead (pr
 
 ### Can I run Apptainer (Singularity) containers?
 
-Yes, you can run your Apptainer (Singularity) containers on both home, IaaS and blue machines. Follow our quick
+Yes, you can run your Apptainer (Singularity) containers on both home, IaaS and SPOT machines. Follow our quick
 [Apptainer installation guide](/do-science/tools/technical/apptainer-singularity). For simplicity, we strongly recommend to install Apptainer via Conda.
 
 ## Workflow
@@ -194,7 +194,7 @@ Examples of R profilers:
 
 ### Can I restart our lab machines?
 
-Yes. You can restart your home, IaaS and blue machines by running the **`reboot`** command. We have enabled this command so that you can schedule restarts in according with computational workflows.
+Yes. You can restart your home, IaaS and spot machines by running the **`reboot`** command. We have enabled this command so that you can schedule restarts in according with computational workflows.
 
 ```bash
 sudo reboot
@@ -206,19 +206,19 @@ Please be aware that restarts will affect all of your lab colleagues working on 
 
 ### What privileges does my account have?
 
-You have [sudo](https://en.wikipedia.org/wiki/Sudo) rights in home machines for application installation (apt) and machine restart (reboot). You have full administrator privileges on other machine types in your lab ([IaaS and blue](faq/compute/#machine-types)).
+You have [sudo](https://en.wikipedia.org/wiki/Sudo) rights in home machines for application installation (apt) and machine restart (reboot). You have full administrator privileges on other machine types in your lab ([IaaS and SPOT](/do-science/faq/compute#machine-types)).
 
 ### Can I get additional administrator privileges?
 
-We fully understand that you might need to tune your lab. Thus, you get full administrator privileges on other machine types than home in your lab ([IaaS and blue](faq/compute/#machine-types)). [Contact us](/contact) if you would like try one of these. Privileges on home machines are restricted to allow us to be responsible for data and user management.
+We fully understand that you might need to tune your lab. Thus, you get full administrator privileges on other machine types than home in your lab ([IaaS and SPOT](/do-science/faq/compute#machine-types)). [Contact us](/contact) if you would like try one of these. Privileges on home machines are restricted to allow us to be responsible for data and user management.
 
 ### Can I update our operating system on home?
 
-No. Your home machine is configured for reliability. We have therefore chosen to run long term support versions of your operating systems here. Your home machine will therefore typically run one version behind the latest release. We understand that your workflow sometimes require newer versions. Therefore, [contact us](/contact) for deployment of IaaS and blue machines that comes with the latest LTS Ubuntu release as default.
+No. Your home machine is configured for reliability. We have therefore chosen to run long term support versions of your operating systems here. Your home machine will therefore typically run one version behind the latest release. We understand that your workflow sometimes require newer versions. Therefore, [contact us](/contact) for deployment of IaaS and SPOT machines that comes with the latest LTS Ubuntu release as default.
 
 ### Can I get a machine with the latest Ubuntu release?
 
-Yes. Both [IaaS](/do-science/faq/compute#what-is-an-iaas-machine) and [blue](/do-science/faq/compute#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other Linux operating systems.
+Yes. Both [IaaS](/do-science/faq/compute#what-is-an-iaas-machine) and [spot](/do-science/faq/compute#what-is-a-spot-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other Linux operating systems.
 
 ### When do you plan to upgrade our home operating system?
 
@@ -239,7 +239,7 @@ Entry and home machines runs on Ubuntu 18.04. The next cycle will upgrade Ubuntu
 
 ### Why not upgrade to the latest version?
 
-For reliability, we aim to run one OS version below the latest Ubuntu long term release. That said, we do recognize the need to utilize newer OS versions to keep your science flying. These are available on IAAS and Blue machines.
+For reliability, we aim to run one OS version below the latest Ubuntu long term release. That said, we do recognize the need to utilize newer OS versions to keep your science flying. These are available on IAAS and spot machines.
 
 ### When will you do the upgrade?
 
@@ -251,7 +251,7 @@ We expect the upgrade to take up to two hours including one restart for each lab
 
 ### Will my running jobs be affected?
 
-Yes. We need to restart your home machines and all running jobs on this machine will be stopped during upgrades. Jobs running on IAAS and Blue machines will not be affected.
+Yes. We need to restart your home machines and all running jobs on this machine will be stopped during upgrades. Jobs running on IAAS and spot machines will not be affected.
 
 ### Will I be notified?
 
@@ -288,7 +288,7 @@ You will loose possibility to install packages. Many tools like Python are progr
 
 ## Machine types
 
-You will meet four principal machine types in your lab. You may choose to deploy home, IaaS and blue machines in [various sizes](/administer-science/services/machine-types).
+You will meet four principal machine types in your lab. You may choose to deploy home, IaaS and SPOT machines in [various sizes](/administer-science/services/machine-types).
 
 ### What is a "home" machine?
 
@@ -298,9 +298,9 @@ This is a managed machine type. All labs have one "home" machine that is pre-con
 
 In addition to the home machine, lab leaders and lab coordinators may request new "IaaS" (infrastructure as a service) machines to be deployed in your lab. This is an unmanaged machine type where you as a lab user get full administrator privileges (root access). We expect you to configure and maintain these machines yourself. We usually deploy these machines with vanilla Ubuntu 20.04 operating system, 1TB of storage and the machine size of your choice. IaaS machines are deployed for a minimum of 30 days.
 
-### What is a "blue" machine?
+### What is a "SPOT" machine?
 
-Blue machines are identical to IaaS machine with one exceptions: they are deployed for a maximum of 30 days. The machine type is introduced to allow for flexible deployments of short-lived high capacity environments.
+Spot machines are identical to IaaS machine with one exceptions: they are deployed for a maximum of 30 days. The machine type is introduced to allow for flexible deployments of short-lived high capacity environments.
 
 ### What is an "entry" machine?
 
