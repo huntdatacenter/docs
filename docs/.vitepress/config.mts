@@ -1000,6 +1000,10 @@ function sidebarGovernScience() {
           text: "Introduction",
           link: "/govern-science/policies/",
         },
+        {
+          text: "FAQ",
+          link: "/govern-science/policies/faq",
+        },
       ],
     },
     {

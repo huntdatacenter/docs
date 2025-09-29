@@ -1,7 +1,6 @@
 ---
 title: Service centers
 category: Service desk
-permalink: /govern-science/service-desk/service-center-orders
 description: HUNT Cloud service desk orders for service centers.
 outline: 1
 ---
@@ -52,7 +51,7 @@ Lagtun is the body that appoints time to govern the scientific developments of H
 
 ### Deregister to future Tingweek invitations
 
-All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here. 
+All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here.
 
 <SDButton form="deregister_tingweek_invitations" />
 

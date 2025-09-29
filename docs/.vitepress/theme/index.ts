@@ -123,6 +123,8 @@ const redirectPrefixes: Array<[string, string]> = [
   ["/service-desk/data-space-orders/", "/administer-science/service-desk/data-space-orders/"] as const,
   ["/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders/"] as const,
   ["/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders/"] as const,
+  ["/service-desk/service-centers/", "/govern-science/service-desk/service-center-orders/"] as const,
+  ["/service-desk/data-controllers/", "/govern-science/service-desk/data-controller-orders/"] as const,
   ["/working-in-your-lab/technical-tools/", "/do-science/tools/technical/"] as const,
   ["/working-in-your-lab/analytical-tools/", "/do-science/tools/analytical/"] as const,
   ["/working-in-your-lab/transfer-tools/", "/do-science/tools/transfer/"] as const,
