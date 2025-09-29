@@ -294,7 +294,7 @@ code {
 }
 */
 
-.custom-block
+/* .custom-block
   &.expander
   display
   block
@@ -333,7 +333,7 @@ p
   summary:hover .header-anchor {
     opacity: 1;
   }
-}
+} */
 
 .glow {
   animation: highlight 3s;
