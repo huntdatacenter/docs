@@ -1,11 +1,10 @@
 ---
-title: Price calculator
+title: Price estiamtor
 layout: page
 category: HUNT Cloud
-permalink: /administer-science/prices/calculator
 outline: 0
 editLink: false
-description: HUNT Cloud price calculator.
+description: HUNT Cloud price estiamtor.
 ---
 
 <!-- # Price calculator -->

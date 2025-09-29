@@ -85,6 +85,9 @@ export default defineConfig({
       preserveSymlinks: true,
     },
   },
+  rewrites: {
+    "administer-science/prices/calculator.md": "administer-science/prices/estimator.md",
+  },
 })
 
 function navigationMenu() {
@@ -827,9 +830,13 @@ function sidebarAdministerScience() {
           text: "Pricelist",
           link: "/administer-science/prices/pricelist",
         },
+        // {
+        //   text: "Calculator",
+        //   link: "/administer-science/prices/calculator",
+        // },
         {
-          text: "Calculator",
-          link: "/administer-science/prices/calculator",
+          text: "Estimator",
+          link: "/administer-science/prices/estimator",
         },
         {
           text: "Examples",

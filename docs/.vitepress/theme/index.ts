@@ -31,6 +31,12 @@ import AccessIntro from "./components/lab-access/AccessIntro.vue"
 import IaasAccess from "./components/lab-access/IaasAccess.vue"
 import DesignNewPassphrase from "./components/lab-access/DesignNewPassphrase.vue"
 
+import PriceEstimator from "./components/price-estimator/PriceEstimator.vue"
+import LabCard from "./components/price-estimator/LabCard.vue"
+import Machine from "./components/price-estimator/Machine.vue"
+import Storage from "./components/price-estimator/Storage.vue"
+import TotalBlock from "./components/price-estimator/TotalBlock.vue"
+
 import "./style.css"
 
 import "@mdi/font/css/materialdesignicons.css"
@@ -137,5 +143,11 @@ export default {
     app.component("AccessIntro", AccessIntro)
     app.component("IaasAccess", IaasAccess)
     app.component("DesignNewPassphrase", DesignNewPassphrase)
+    // Price estimator
+    app.component("PriceEstimator", PriceEstimator)
+    app.component("LabCard", LabCard)
+    app.component("Machine", Machine)
+    app.component("Storage", Storage)
+    app.component("TotalBlock", TotalBlock)
   },
 } satisfies Theme
