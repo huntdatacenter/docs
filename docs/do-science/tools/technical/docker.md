@@ -14,7 +14,7 @@ description: Usage guide for Docker
 
 ::: warning Singularity on home machines
 
-Docker will fail on your **`home`** machine due to security restrictions. We recommend that you run Singularity on your home machine. Read more in our [Singularity installation guide](/do-science/tools/technical/singularity).
+Docker will fail on your **`home`** machine due to security restrictions. We recommend that you run Singularity on your home machine. Read more in our [Singularity installation guide](/do-science/tools/technical/apptainer).
 
 :::
 

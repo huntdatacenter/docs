@@ -102,7 +102,7 @@ We are happy to hear that! If you have a new local computer you will need to ins
 
 ### New VPN certificate
 
-When you got your new VPN certificate, head over to our [VPN certificate reset guide](/do-science/guides/vpn-certificate-reset) to get going.
+When you got your new VPN certificate, head over to our [VPN certificate reset guide](/do-science/guides/access-guides/workbench-request) to get going.
 
 ### Failed to negotiate cipher
 

@@ -64,7 +64,7 @@ Rerun your command with sudo. [Contact us](/contact) if this doesn't solve your 
 
 ### MATLAB
 
-See our [MATLAB troubleshooting section](/do-science/tools/analytical/Matlab#activate-license).
+See our [MATLAB troubleshooting section](/do-science/tools/analytical/matlab#activate-license).
 
 ### R and RStudio
 
@@ -79,7 +79,7 @@ See our [Stata troubleshooting section](/do-science/tools/analytical/stata#troub
 #### No X11 display variable was set
 
 Make sure you are connected into a graphical environment such as:
-- [Remote desktop in Workbench](/do-science/hunt-workbench/getting-started/remote-desktop) - recommended
+- [Remote desktop in Workbench](/do-science/hunt-workbench/getting-started/10-remote-desktop) - recommended
 - X2Go
 - VNC
 

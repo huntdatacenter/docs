@@ -158,6 +158,8 @@ const redirectPrefixes: Array<[string, string]> = [
     "/do-science/hunt-workbench/getting-started/10-remote-desktop",
   ] as const,
   // ["", ""] as const,
+  // ["", ""] as const,
+  // ["", ""] as const,
 ].filter(
   item =>
     item && Array.isArray(item) && item[0] && item[1] && typeof item[0] === "string" && typeof item[1] === "string",
