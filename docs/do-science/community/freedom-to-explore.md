@@ -592,6 +592,33 @@ JPG - [Freedom to explore - Javanese](https://assets.hdc.ntnu.no/assets/artworks
   
 
 
+### Japanese (jpn)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Japanese."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-jpn-banner.jpg)
+
+::: details Full Japanese version
+
+**Download**:  
+PDF - [Freedom to explore - Japanese](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-jpn-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Japanese](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-jpn-2160px.jpg) - 2160px
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Japanese."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-jpn-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Japanese ([jpn](https://iso639-3.sil.org/code/jpn))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.1  
+**ArtworkID:** hcc-artwork26  
+
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
 ### Korean (kor)
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Korean."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-kor-banner.jpg)
