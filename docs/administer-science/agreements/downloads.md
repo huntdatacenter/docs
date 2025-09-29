@@ -54,7 +54,7 @@ The following form fields are included in the "HUNT Cloud Lab Order" version 3.9
 
 **Subscription**
 
-This field specify the length of the prepaid subscription length. The default is one (1) year. See our [Price list](/administer-science/prices/pricelist/) and [Services specification](/administer-science/services/specifications/) for more information, or [contact us](/contact) for guidance.
+This field specify the length of the prepaid subscription length. The default is one (1) year. See our [Price list](/administer-science/prices/pricelist) and [Services specification](/administer-science/services/specifications) for more information, or [contact us](/contact) for guidance.
 
 **Lab leader**
 
@@ -133,8 +133,8 @@ The following individual is the point of contact for financial discussions, incl
 
 **Subscription level**
 
-* *Subscription level*. This field specify the subscription level for the Data space. The default is WHITE.. See our [Services specification](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/) for more information, or [contact us](/contact) for guidance.
-* *Subscription length*. This field specify the length of the prepaid subscription period. The default is one (1) year. See our [Price list](/administer-science/prices/pricelist/) and [Services specification](/administer-science/services/specifications/) for more information, or [contact us](/contact) for guidance.
+* *Subscription level*. This field specify the subscription level for the Data space. The default is WHITE.. See our [Services specification](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist) for more information, or [contact us](/contact) for guidance.
+* *Subscription length*. This field specify the length of the prepaid subscription period. The default is one (1) year. See our [Price list](/administer-science/prices/pricelist) and [Services specification](/administer-science/services/specifications) for more information, or [contact us](/contact) for guidance.
 
 **Signatories**
 
