@@ -88,7 +88,7 @@ If you are unsure about what is going on in your lab, grab a coffee with your la
 
 ### Where can I get more information?
 
-Our documentation pages (these web pages) is a good place to get started. Start in our [Do science](/do-science) section and in our [FAQs](/do-science/faq).
+Our documentation pages (these web pages) is a good place to get started. Start in our [Do science](/do-science/) section and in our [FAQs](/do-science/faq/).
 
 ### Where can I get help?
 

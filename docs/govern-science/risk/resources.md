@@ -12,7 +12,7 @@ description: This page list risk management resources for HUNT Cloud.
 
 [[toc]]
 
-### [Security and privacy policies](/govern-science/policies)
+### [Security and privacy policies](/govern-science/policies/)
 
 These are the documents that we build our security and privacy framework on. "Security and privacy policies" provides a list of individual security controls that should be implemented in HUNT Cloud.
 

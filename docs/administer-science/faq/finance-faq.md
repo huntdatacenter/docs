@@ -13,7 +13,7 @@ description: This page contains common questions on scientific administration in
 
 ::: tip 
 
-See our [Administer science FAQ](/administer-science/faq) for supplemental administrative FAQ topics.
+See our [Administer science FAQ](/administer-science/faq/) for supplemental administrative FAQ topics.
 
 :::
 

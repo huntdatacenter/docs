@@ -20,7 +20,7 @@ You can request the following service orders as a lab user in HUNT Cloud:
 
 [[toc]]
 
-Try our service desk in the [administer science](/administer-science/service-desk) section aimed at lab leaders, lab coordinators and data spaces if you can't find what you are looking for.
+Try our service desk in the [administer science](/administer-science/service-desk/) section aimed at lab leaders, lab coordinators and data spaces if you can't find what you are looking for.
 
 Send us a [general service request](#general-service-request) if you can not find what you are looking for on this page.
 

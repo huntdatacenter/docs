@@ -19,6 +19,6 @@ This FAQ is intended for lab users that do science in labs:
 
 ::: tip
 
-Head over to our [Administer science FAQ](/administer-science/faq) for questions on how to organize your sciences in a data space.
+Head over to our [Administer science FAQ](/administer-science/faq/) for questions on how to organize your sciences in a data space.
 
 :::

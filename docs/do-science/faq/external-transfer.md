@@ -29,7 +29,7 @@ Data space leaders and Data space compliance administrators can order [external 
 
 ### Is there any technical requirements for the external party?
 
-Yes. Your external party must meet a few [technical requirements](/do-science/data-transfers/external-kista) to be able to use the external kista service.
+Yes. Your external party must meet a few [technical requirements](/do-science/data-transfers/external-kista/) to be able to use the external kista service.
 
 
 ### How quickly can I get access to an external kista?

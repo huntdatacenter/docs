@@ -275,7 +275,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 ::: tip Next step
 
-If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/lab-access/configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/lab-access/configure-ssh/) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 

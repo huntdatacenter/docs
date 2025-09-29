@@ -13,7 +13,7 @@ description: This page contains common questions on scientific administration in
 
 ::: tip
 
-Head over to our [Do science FAQ](/do-science/faq) for questions on how to do science in a lab.
+Head over to our [Do science FAQ](/do-science/faq/) for questions on how to do science in a lab.
 
 :::
 

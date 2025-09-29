@@ -35,6 +35,6 @@ Use this button to query about costs related to your active data space and/or la
 
 ### Other service desks
 
-* [Do science service desk](/do-science/service-desk). This service desk lists service orders that can be requested by lab users.
+* [Do science service desk](/do-science/service-desk/). This service desk lists service orders that can be requested by lab users.
 * [Govern science service desk](/govern-science/service-desk/). This service desk lists service orders that can be requested by data controllers and service center leaders, such as adding new data spaces.
 

@@ -25,7 +25,7 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 ::: warning Active lab users
 
-Orders for active lab users, such as workbench access and password resets, are listed in our [user orders page](/do-science/service-desk).
+Orders for active lab users, such as workbench access and password resets, are listed in our [user orders page](/do-science/service-desk/).
 
 :::
 

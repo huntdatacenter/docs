@@ -25,7 +25,7 @@ We have five agreement layers in HUNT Cloud (illustration below). This guide cov
 
 ::: warning Organizational access
 
-You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/administer-science/contact) if you need to start an organizational onboarding. 
+You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access/) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/administer-science/contact) if you need to start an organizational onboarding. 
 
 :::
 

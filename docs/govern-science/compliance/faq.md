@@ -13,7 +13,7 @@ description: This page contains common questions on compliance in HUNT Cloud.
 
 ::: tip 
 
-See our [Govern science FAQ](/administer-science/faq) for other FAQ topics.
+See our [Govern science FAQ](/administer-science/faq/) for other FAQ topics.
 
 :::
 

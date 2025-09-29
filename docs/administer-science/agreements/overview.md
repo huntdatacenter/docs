@@ -31,7 +31,7 @@ Our activities are organized in five agreement layers:
 
 ::: tip Get going
 
-The Data processor agreement and Service center agreement is part of our [Organizational access](/govern-science/organizational-access) procedure, while the Data space order and Lab order is part of our [Scientific access](/administer-science/scientific-access) procedures The Lab user agreement is part of our [user management](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) procedures.
+The Data processor agreement and Service center agreement is part of our [Organizational access](/govern-science/organizational-access/) procedure, while the Data space order and Lab order is part of our [Scientific access](/administer-science/scientific-access/) procedures The Lab user agreement is part of our [user management](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) procedures.
 
 :::
 

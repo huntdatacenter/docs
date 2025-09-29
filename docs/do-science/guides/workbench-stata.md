@@ -235,7 +235,7 @@ If you want to learn more about the Stata kernel, head over to Kayle Barron's [E
 
 #### Community discussions
 
-Head over to our **`#community-stata`** channel in Slack to chat with other Stata users from the [cloud community](/community) or  ask questions directly to us.
+Head over to our **`#community-stata`** channel in Slack to chat with other Stata users from the [cloud community](/community/) or  ask questions directly to us.
 
 #### Help us improve this page
 
