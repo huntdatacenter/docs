@@ -3,7 +3,7 @@ title: Data space orders
 category: Service desk
 permalink: /administer-science/service-desk/data-space-orders
 description: HUNT Cloud service desk orders for data spaces.
-outline: 1
+outline: 2
 ---
 
 # Service desk orders for data spaces
@@ -38,7 +38,7 @@ Click the button below to order a new lab under your existing data space.
 
 ::: warning Next: Add your first lab user(s)
 
-It's important that you order lab access for each scientist (lab user) that will work in your lab as soon as you send us the above Lab order. Without these, your scientists will not be able to access your new lab. 
+It's important that you order lab access for each scientist (lab user) that will work in your lab as soon as you send us the above Lab order. Without these, your scientists will not be able to access your new lab.
 
 [Click on this link to get going](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
 
@@ -223,7 +223,7 @@ Click the button below to update an existing invoice profile to your data space.
 
 ### Deregister to future Tingweek invitations
 
-All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here. 
+All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here.
 
 <SDButton form="deregister_tingweek_invitations" />
 
@@ -234,7 +234,7 @@ All active HUNT Cloud users will be invited to individual Tings three times per 
 
 ## General request
 
-Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request. 
+Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request.
 
 <SDButton form="general_dataspace_request" />
 
@@ -247,7 +247,7 @@ Note that a general request has slower response time than a predefined order. If
 
 :::
 
-::: tip Not an active user? 
+::: tip Not an active user?
 
 [Contact us](/contact) on email for general questions and information on our scientific services and activities.
 
