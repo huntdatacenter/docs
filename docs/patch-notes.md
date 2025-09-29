@@ -167,7 +167,7 @@ NVIDIA A40 GPUs with 48 GB of memory are now available as [GPU accelerator types
 
 **Apptainer (Singularity)**
 
-The containerization tool Singularity was renamed to Apptainer when it moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/). [Our documentation](/do-science/tools/technical/apptainer-singularity) is updated accordingly.
+The containerization tool Singularity was renamed to Apptainer when it moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/). [Our documentation](/do-science/tools/technical/apptainer) is updated accordingly.
 
 **Guide for VS Code in Workbench**
 
@@ -482,7 +482,7 @@ New access guides tailored for individual lab users are added for unmanaged IaaS
 
 **Extended Singularity guide**
 
-We have added a guide on [how to run Singularity](/do-science/tools/technical/singularity) in your lab environment using Conda. The guide covers:
+We have added a guide on [how to run Singularity](/do-science/tools/technical/apptainer) in your lab environment using Conda. The guide covers:
 
 * Installation
 * Common practices and commands
