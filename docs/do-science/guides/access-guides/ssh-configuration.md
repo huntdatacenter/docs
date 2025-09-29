@@ -20,7 +20,7 @@ If you are configuring access to your lab use Lab access link sent to you in onb
 You will first configure a machine used for security purposes that we call **`entry`**, and then one machine that we call **`home`** were you will do your scientific explorations.
 
 ::: warning Requirement
-- A running VPN connection (successful implementation of [Step 2](/do-science/guides/access-guides/configure-vpn#_2-4-verify-your-vpn-connection)).
+- A running VPN connection (successful implementation of [Step 2](/do-science/guides/access-guides/vpn-configuration#_2-4-verify-your-vpn-connection)).
 :::
 
 
@@ -361,5 +361,5 @@ If you are getting `Authentication token manipulation error` make sure you follo
 
 ### Unable to connect with Putty
 
-Ensure that you did download **`putty.exe`** from the [link above](/do-science/guides/access-guides/configure-ssh#_3-3-configure-entry). We have experienced issues with preinstalled versions that connects from for us unknown locations.
+Ensure that you did download **`putty.exe`** from the [link above](/do-science/guides/access-guides/ssh-configuration#_3-3-configure-entry). We have experienced issues with preinstalled versions that connects from for us unknown locations.
 

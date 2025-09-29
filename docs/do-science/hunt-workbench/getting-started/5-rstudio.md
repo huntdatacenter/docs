@@ -89,7 +89,7 @@ You can defer to alternative methods such as `install.packages()` when the packa
 
 If you don't find a _R package_ in Conda as described above, you may need to defer to running the **`install.packages()`** command inside R. We recommend to use **`R`** in your [workbench terminal](/do-science/hunt-workbench/faq#terminal) for such installations (instead of installing directly in RStudio) to avoid broken environment states in RStudio. Packages installed into your **`r-base`** environment through _R_ in terminal should be available in _RStudio_.
 
-Packages installed into `r-base` environment through **R** in [terminal](/working-in-your-lab/workbench/faq#terminal) will be available in **RStudio**.
+Packages installed into `r-base` environment through **R** in [terminal](/do-science/hunt-workbench/faq#terminal) will be available in **RStudio**.
 
 Make sure to activate the `r-base` environment before running **R** command.
 

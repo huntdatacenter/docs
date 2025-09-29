@@ -27,13 +27,13 @@ You will need the following to complete this guide:
 ::: warning Requirements
 
 - A working VPN and SSH configuration as described in our [Getting started](/do-science/lab-access/) guide.
-- A HUNT Workbench TLS certificate as described in the [HUNT Workbench certificate request](/do-science/guides/hunt-workbench-request#_3-verify-your-certificate).
+- A HUNT Workbench TLS certificate as described in the [HUNT Workbench certificate request](/do-science/guides/access-guides/workbench-request#_3-verify-your-certificate).
 
-Without these it's impossible to complete this guide. 
+Without these it's impossible to complete this guide.
 
 :::
 
-::: tip Time 
+::: tip Time
 
 Allow for **30 minutes** to complete this installation and some playtime in your new environment.
 
@@ -129,7 +129,7 @@ sudo vim /etc/hosts
 
 ## 3. Install your certificates
 
-Let's install the certificates that is required to allow traffic with your HUNT Workbench that is located in your lab. 
+Let's install the certificates that is required to allow traffic with your HUNT Workbench that is located in your lab.
 
 ::: expander "Windows" id="3-windows"
 
@@ -158,9 +158,9 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 6. The wizard will require a confirmation to install a certification from us: **`HCTS CA 1`** (_HUNT Cloud Trust Services_). Our certificate is required to safely access your workbench environment.
 
    You will normally be asked to confirm our certificate only when you set up the HUNT Workbench for the first time. Thus, if you see **`LAB`** instead of **`HCTS CA 1`** skip to step 7.
-   
+
    Before clicking **`YES`**, confirm that you see our thumbprint (fingerprint):
-   
+
    ```
    ADD9DFEC C998BE44 AC2F254E 75E5EB98 D91879A6
    ```
@@ -351,7 +351,7 @@ If you see Error code: **`SEC_ERROR_UNKNOWN_ISSUER`** when accessing Workbench f
 3. Scroll down to section **`Certificates`** and click on **`View Certificates`**.
 
    ![mac-firefox-certificates.png](./images/mac-firefox-certificates.png)
-   
+
 4. Switch to tab **`Authorities`** and click on **`Import`**.
 
    ![mac-firefox-import-cert.png](./images/mac-firefox-import-cert.png)

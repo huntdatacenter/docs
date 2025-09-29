@@ -29,21 +29,21 @@ Once you have configured access to Workbench and you want to learn more about th
 ## Essential reading
 
 Most important parts of Workbench that you need to know in general:
-- [JupyterLab](/do-science/hunt-workbench/getting-started/jupyterlab/)
-- [Conda](/do-science/hunt-workbench/getting-started/2-conda/)
-- [Data](/do-science/hunt-workbench/getting-started/3-data/)
+- [JupyterLab](/do-science/hunt-workbench/getting-started/1-jupyterlab)
+- [Conda](/do-science/hunt-workbench/getting-started/2-conda)
+- [Data](/do-science/hunt-workbench/getting-started/3-data)
 
 
 ## Tooling
 
 Read more about the tools that you plan to use:
-- [Python](/do-science/hunt-workbench/getting-started/4-python/)
-- [RStudio](/do-science/hunt-workbench/getting-started/5-rstudio/)
-- [MATLAB](/do-science/hunt-workbench/getting-started/6-matlab/)
+- [Python](/do-science/hunt-workbench/getting-started/4-python)
+- [RStudio](/do-science/hunt-workbench/getting-started/5-rstudio)
+- [MATLAB](/do-science/hunt-workbench/getting-started/6-matlab)
 - [STATA](/do-science/hunt-workbench/getting-started/stata)
-- [Julia](/do-science/hunt-workbench/getting-started/8-julia/)
-- [Visual Studio Code (VS Code)](/do-science/hunt-workbench/getting-started/9-vscode/)
-- [Remote Desktop](/do-science/hunt-workbench/getting-started/10-remote-desktop/)
+- [Julia](/do-science/hunt-workbench/getting-started/8-julia)
+- [Visual Studio Code (VS Code)](/do-science/hunt-workbench/getting-started/9-vscode)
+- [Remote Desktop](/do-science/hunt-workbench/getting-started/10-remote-desktop)
 
 
 ## Backgrounds

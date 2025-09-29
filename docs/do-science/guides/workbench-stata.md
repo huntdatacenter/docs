@@ -14,13 +14,13 @@ description: Guide to get going with Stata in your HUNT Workbench.
 
 ## Introduction
 
-Stata in your HUNT Workbench runs in a Jupyter notebook. This means that you can write known Stata commands and that you can view your plots directly on your screen. 
+Stata in your HUNT Workbench runs in a Jupyter notebook. This means that you can write known Stata commands and that you can view your plots directly on your screen.
 
 On the technical side, Stata runs on your lab home machine and connect with your workbench via [stata_kernel](https://kylebarron.dev/stata_kernel/) developed by Kyle Barron.
 
 ::: tip Recommended browser
 
-We recommend that you open your workbench in the **`Google Chrome`** browser for this guide to ensure predictable results. 
+We recommend that you open your workbench in the **`Google Chrome`** browser for this guide to ensure predictable results.
 
 :::
 
@@ -35,7 +35,7 @@ To get going, open your workbench and click on the Stata icon. This opens a new 
 Look at the bottom of your screen to verify that Stata is loaded (`conda-stata`) and that your notebook is in an `Idle` state, meaning that it's ready to process your Stata commands.
 
 ![Notebook status](./images/stata_idle.png)
- 
+
 ::: details More on notebook states
 
 * **Idle**. This means that your kernel is loaded and that your notebook is ready to process your commands.
@@ -69,17 +69,17 @@ Now click on the cell and hit `shift+enter` on your keyboard, or click the `play
 
 ::: details Load data from your lab
 
-You may load data that's stored in your lab with the following command: 
+You may load data that's stored in your lab with the following command:
 
 ```python
 // principal example
 use "/mnt/archive/<folder>/<file>.dta"
 
-// practical example 
+// practical example
 use "/mnt/archive/data/test.dta"
 ```
 
-Note that you need to add the path to your own data in the example above to make it work. 
+Note that you need to add the path to your own data in the example above to make it work.
 
 **TIP**. To ease the navigation, start writing **`/mnt/`** and then double click on your "tab" key to autocomplete your paths.
 
@@ -87,17 +87,17 @@ Note that you need to add the path to your own data in the example above to make
 
 ::: details Save data to your lab
 
-You may save your data with the following command: 
+You may save your data with the following command:
 
 ```python
 // principal example
 save "/mnt/archive/<folder>/<filename>"
 
-// practical example 
+// practical example
 save "/mnt/archive/stata-auto-testfile"
 ```
 
-We recommend that you store your dta-files outside  your workbench folder so it becomes accessible for all your lab colleagues. One good option is to store your data some place in the **`/mnt/archive/`**-folder. 
+We recommend that you store your dta-files outside  your workbench folder so it becomes accessible for all your lab colleagues. One good option is to store your data some place in the **`/mnt/archive/`**-folder.
 
 **TIP**. To ease the navigation, start writing **`/mnt/`** and then double click on your "tab" key to autocomplete your paths.
 
@@ -106,42 +106,42 @@ We recommend that you store your dta-files outside  your workbench folder so it 
 
 ### Describe data
 
-The `auto` data set is now available in your notebook for further investigation. Let's run a few examples to get us going. 
+The `auto` data set is now available in your notebook for further investigation. Let's run a few examples to get us going.
 
-First, let's cut and paste the following text and hit `shift+enter` to describe your data variables: 
+First, let's cut and paste the following text and hit `shift+enter` to describe your data variables:
 
 ```python
 // describe your variables
 describe
 ```
 
-This should return a description of data variables: 
+This should return a description of data variables:
 
 ![Stata describe](./images/stata_describe.png)
 
-Then, let's try the `summarize` command to describe your data: 
+Then, let's try the `summarize` command to describe your data:
 
 ```python
 // summarize your data
 summarize
 ```
 
-This should return a summary of your data: 
+This should return a summary of your data:
 
 ![Stata summarize](./images/stata_summarize.png)
 
-## Graphs 
+## Graphs
 
 ### View graphs
 
-The Stata graph functions are similar, you run them in a cell and view the output in your notebook. To illustrate, let's test with a few plots from UCLA's great [introduction to Stata plotting](https://stats.oarc.ucla.edu/stata/modules/graph8/intro/introduction-to-graphs-in-stata/): 
+The Stata graph functions are similar, you run them in a cell and view the output in your notebook. To illustrate, let's test with a few plots from UCLA's great [introduction to Stata plotting](https://stats.oarc.ucla.edu/stata/modules/graph8/intro/introduction-to-graphs-in-stata/):
 
 ```python
 // make a scatter plot
 scatter price mpg
 ```
 
-This should print a scatter plot on your screen: 
+This should print a scatter plot on your screen:
 
 ![Stata scatter](./images/stata_scatter.png)
 
@@ -151,7 +151,7 @@ This should print a scatter plot on your screen:
 
 :::
 
-Next, let's do a histogram: 
+Next, let's do a histogram:
 
 ```python
 // make a histogram
@@ -164,7 +164,7 @@ And before we head to the next section, a slightly more advanced graph example:
 twoway (scatter mpg weight) (lfitci mpg weight), by(foreign)
 ```
 
-You output should look similar to this: 
+You output should look similar to this:
 
 ![Stata twoway](./images/stata_twoway.png)
 
@@ -172,23 +172,23 @@ The generation of this plot uses a tiny bit more compute resources than the prev
 
 ### Save graphs
 
-You may save your graphs on your lab home machine with the `export` command: 
+You may save your graphs on your lab home machine with the `export` command:
 
 ```python
 // save your latest graph
 graph export mygraph.svg
 ```
 
-The above command will save the latest graph that you viewed in your notebook in your workbench folder (red arrow on the new file). 
+The above command will save the latest graph that you viewed in your notebook in your workbench folder (red arrow on the new file).
 
 ![Stata graph save 1](./images/stata_graph_export1.png)
 
-Click on the `mygraph.svg` file to view the graph in your workbench, or right click on the file and select `Download` to export the graph to your local computer. 
+Click on the `mygraph.svg` file to view the graph in your workbench, or right click on the file and select `Download` to export the graph to your local computer.
 
 You may also save your graphs in other folders on your lab machine to make them accessible for your lab colleagues:
 
 ```python
-// Principal example of code that saves your 
+// Principal example of code that saves your
 // latest graph in a lab folder:
 graph export /mnt/work/<folder>/mygraph.svg
 
@@ -200,18 +200,18 @@ graph export /mnt/work/graphs/mygraph.svg
 
 ## Analysis
 
-We will not dive into data analytics in this guide since there are so many other great guides out there, for example the once from [UCLA Advanced Research Computing](https://stats.oarc.ucla.edu/?s=stata)). Although, let's do two quick examples for fun: 
+We will not dive into data analytics in this guide since there are so many other great guides out there, for example the once from [UCLA Advanced Research Computing](https://stats.oarc.ucla.edu/?s=stata)). Although, let's do two quick examples for fun:
 
 ```python
 // get mean value from a variable
 mean mpg
 ```
 
-The expected output should be like this: 
+The expected output should be like this:
 
 ![Stata mean](./images/stata_mean.png)
 
-And let's end the guide with a regression example from [Statology](https://www.statology.org/multiple-linear-regression-stata/): 
+And let's end the guide with a regression example from [Statology](https://www.statology.org/multiple-linear-regression-stata/):
 
 ```python
 // run multiple linear regression with mpg and
@@ -231,11 +231,11 @@ It's great to see that you followed the guide all the way to the end. Time to ce
 
 ## Going further
 
-If you want to learn more about the Stata kernel, head over to Kayle Barron's [Example stata_kernel Jupyter notebook](https://nbviewer.org/github/kylebarron/stata_kernel/blob/master/examples/Example.ipynb). The notebook includes more examples, including the `magics` commands that gives you special powers. Cut and paste the text from the cells into your current stata_kernel workbench notebook to get going. 
+If you want to learn more about the Stata kernel, head over to Kayle Barron's [Example stata_kernel Jupyter notebook](https://nbviewer.org/github/kylebarron/stata_kernel/blob/master/examples/Example.ipynb). The notebook includes more examples, including the `magics` commands that gives you special powers. Cut and paste the text from the cells into your current stata_kernel workbench notebook to get going.
 
 #### Community discussions
 
-Head over to our **`#community-stata`** channel in Slack to chat with other Stata users from the [cloud community](/community/) or  ask questions directly to us.
+Head over to our **`#community-stata`** channel in Slack to chat with other Stata users from the [cloud community](/do-science/community/) or  ask questions directly to us.
 
 #### Help us improve this page
 
@@ -252,9 +252,9 @@ If you miss something, please [contact us](/contact) so we can improve this Stat
 version
 ```
 
-#### The notebook is unresponsive when I run a cell 
+#### The notebook is unresponsive when I run a cell
 
-If you are unable to run any Stata commands, check that your notebook is in an [Idle state](/do-science/guides/stata#open-a-stata-notebook). If not try to [restart your workbench environment](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment), and [contact us](/contact) if it persist after the restart.
+If you are unable to run any Stata commands, check that your notebook is in an [Idle state](/do-science/guides/workbench-stata#open-a-stata-notebook). If not try to [restart your workbench environment](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment), and [contact us](/contact) if it persist after the restart.
 
 
 
