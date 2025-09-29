@@ -28,4 +28,4 @@ Access requires that you consent to our data processing in the service. Read mor
 
 All lab users are invited to join our Labting three times per year. This is the place where we meet to discuss and develop your user experience in HUNT Cloud.
 
-[Read more about our Labting here](/do-science/community/labting/#you-should-participate).
+[Read more about our Labting here](/do-science/community/labting#you-should-participate).

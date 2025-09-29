@@ -37,7 +37,7 @@ Probably. We do keep records of broad processing purposed for each data controll
 
 ### How can I update contact persons?
 
-**Data processor and services agreements**: Forward your new contact information on email. We will use this information to update the appendix and return on email. **Data spaces**: Update your coordinator roles via our [service desk](/administer-science/service-desk/data-space-orders/#update-data-space-coordinator-roles). Fill in and forward a new data space order for updates of data space leaders. **Labs**: Fill in and forward a [new lab order](/administer-science/service-desk/data-space-orders/#new-lab) to update the lab leader and lab coordinator roles.
+**Data processor and services agreements**: Forward your new contact information on email. We will use this information to update the appendix and return on email. **Data spaces**: Update your coordinator roles via our [service desk](/administer-science/service-desk/data-space-orders#update-data-space-coordinator-roles). Fill in and forward a new data space order for updates of data space leaders. **Labs**: Fill in and forward a [new lab order](/administer-science/service-desk/data-space-orders#new-lab) to update the lab leader and lab coordinator roles.
 
 ### How often do I need to update our running agreements?
 

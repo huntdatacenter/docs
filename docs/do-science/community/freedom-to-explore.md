@@ -30,7 +30,7 @@ In these circumstances, and in the highly regulated field of data-driven science
 
 **About the illustration**
 
-The «Freedom to explore» universe illustrations are made by Ingunn B Ferstad in our HUNT Cloud team. They are published under an open license. See our [FAQ section](/do-science/community/freedom-to-explore/#faq) at the bottom for more information about these illustrations. [Click here](/about/illustrations/) to read about conditions for use and to see other illustrations. 
+The «Freedom to explore» universe illustrations are made by Ingunn B Ferstad in our HUNT Cloud team. They are published under an open license. See our [FAQ section](/do-science/community/freedom-to-explore#faq) at the bottom for more information about these illustrations. [Click here](/about/illustrations/) to read about conditions for use and to see other illustrations. 
 
 **One PDF to see them all**
 
@@ -72,7 +72,7 @@ JPG - [Freedom to explore - Arabic](https://assets.hdc.ntnu.no/assets/artworks/f
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -99,7 +99,7 @@ JPG - [Freedom to explore - Bengali](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -126,7 +126,7 @@ JPG - [Freedom to explore - Bosnian](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -153,7 +153,7 @@ JPG - [Freedom to explore - Bulgarian](https://assets.hdc.ntnu.no/assets/artwork
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -180,7 +180,7 @@ JPG - [Freedom to explore - Catalan](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -207,7 +207,7 @@ JPG - [Freedom to explore - Czech](https://assets.hdc.ntnu.no/assets/artworks/fr
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -234,7 +234,7 @@ JPG - [Freedom to explore - Mandarin](https://assets.hdc.ntnu.no/assets/artworks
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -261,7 +261,7 @@ JPG - [Freedom to explore - Danish](https://assets.hdc.ntnu.no/assets/artworks/f
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -288,7 +288,7 @@ JPG - [Freedom to explore - German](https://assets.hdc.ntnu.no/assets/artworks/f
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -315,7 +315,7 @@ JPG - [Freedom to explore - Greek](https://assets.hdc.ntnu.no/assets/artworks/fr
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -342,7 +342,7 @@ JPG - [Freedom to explore - English](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -369,7 +369,7 @@ JPG - [Freedom to explore - Persian](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -396,7 +396,7 @@ JPG - [Freedom to explore - Finnish](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -423,7 +423,7 @@ JPG - [Freedom to explore - French](https://assets.hdc.ntnu.no/assets/artworks/f
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -450,7 +450,7 @@ JPG - [Freedom to explore - Hindi](https://assets.hdc.ntnu.no/assets/artworks/fr
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -477,7 +477,7 @@ JPG - [Freedom to explore - Igbo](https://assets.hdc.ntnu.no/assets/artworks/fre
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -504,7 +504,7 @@ JPG - [Freedom to explore - Indonesian](https://assets.hdc.ntnu.no/assets/artwor
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -531,7 +531,7 @@ JPG - [Freedom to explore - Icelandic](https://assets.hdc.ntnu.no/assets/artwork
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -558,7 +558,7 @@ JPG - [Freedom to explore - Italian](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -585,7 +585,7 @@ JPG - [Freedom to explore - Javanese](https://assets.hdc.ntnu.no/assets/artworks
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -612,7 +612,7 @@ JPG - [Freedom to explore - Japanese](https://assets.hdc.ntnu.no/assets/artworks
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -639,7 +639,7 @@ JPG - [Freedom to explore - Korean](https://assets.hdc.ntnu.no/assets/artworks/f
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -666,7 +666,7 @@ JPG - [Freedom to explore - Latin](https://assets.hdc.ntnu.no/assets/artworks/fr
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -693,7 +693,7 @@ JPG - [Freedom to explore - Lithuanian](https://assets.hdc.ntnu.no/assets/artwor
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -720,7 +720,7 @@ JPG - [Freedom to explore - Malayalam](https://assets.hdc.ntnu.no/assets/artwork
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -747,7 +747,7 @@ JPG - [Freedom to explore - Nepali](https://assets.hdc.ntnu.no/assets/artworks/f
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -774,7 +774,7 @@ JPG - [Freedom to explore - Dutch](https://assets.hdc.ntnu.no/assets/artworks/fr
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -801,7 +801,7 @@ JPG - [Freedom to explore - Norwegian nynorsk](https://assets.hdc.ntnu.no/assets
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -828,7 +828,7 @@ JPG - [Freedom to explore - Norwegian bokmål](https://assets.hdc.ntnu.no/assets
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -855,7 +855,7 @@ JPG - [Freedom to explore - Kirike](https://assets.hdc.ntnu.no/assets/artworks/f
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -882,7 +882,7 @@ JPG - [Freedom to explore - Panjabi](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -909,7 +909,7 @@ JPG - [Freedom to explore - Polish](https://assets.hdc.ntnu.no/assets/artworks/f
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -936,7 +936,7 @@ JPG - [Freedom to explore - Portuguese](https://assets.hdc.ntnu.no/assets/artwor
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -963,7 +963,7 @@ JPG - [Freedom to explore - Romanian](https://assets.hdc.ntnu.no/assets/artworks
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -990,7 +990,7 @@ JPG - [Freedom to explore - Russian](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1017,7 +1017,7 @@ JPG - [Freedom to explore - Sanskrit](https://assets.hdc.ntnu.no/assets/artworks
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1044,7 +1044,7 @@ JPG - [Freedom to explore - Slovak](https://assets.hdc.ntnu.no/assets/artworks/f
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1071,7 +1071,7 @@ JPG - [Freedom to explore - Slovenian](https://assets.hdc.ntnu.no/assets/artwork
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1098,7 +1098,7 @@ JPG - [Freedom to explore - Southern sami](https://assets.hdc.ntnu.no/assets/art
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1125,7 +1125,7 @@ JPG - [Freedom to explore - Northern sami](https://assets.hdc.ntnu.no/assets/art
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1152,7 +1152,7 @@ JPG - [Freedom to explore - Spanish](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1179,7 +1179,7 @@ JPG - [Freedom to explore - Serbian](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1206,7 +1206,7 @@ JPG - [Freedom to explore - Swedish](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1233,7 +1233,7 @@ JPG - [Freedom to explore - Tamil](https://assets.hdc.ntnu.no/assets/artworks/fr
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1260,7 +1260,7 @@ JPG - [Freedom to explore - Turkish](https://assets.hdc.ntnu.no/assets/artworks/
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1287,7 +1287,7 @@ JPG - [Freedom to explore - Ukrainian](https://assets.hdc.ntnu.no/assets/artwork
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 
@@ -1314,7 +1314,7 @@ JPG - [Freedom to explore - Urdu](https://assets.hdc.ntnu.no/assets/artworks/fre
 **Version:** 1.1  
 **ArtworkID:** hcc-artwork26  
 
-**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore/#can-i-suggest-an-improved-translation) to suggest an upgrade.
+**Unsatisfied with the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
 
 :::
 

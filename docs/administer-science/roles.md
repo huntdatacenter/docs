@@ -13,7 +13,7 @@ description: This page contains information on the administrator roles in HUNT C
 
 The goals for the development of these roles are to simplify knowledge transfers for key areas between labs within one data space, to bridge knowledge transfers between scientific administrators across data spaces, to structure feedback on our administrative activities, and to jointly develop and identity and champion the importance of scientific administrators in high-impact data-driven science.
 
-Your scientific administrators are named in your [data space order](/administer-science/agreements/overview/#data-space-order). All administrators are invited to the [data space ting](/govern-science/tingweek/).
+Your scientific administrators are named in your [data space order](/administer-science/agreements/overview#data-space-order). All administrators are invited to the [data space ting](/govern-science/tingweek/).
 
 ## Data space roles
 

@@ -25,7 +25,7 @@ First thing first, we need to get you into your lab so you can do your science.
 
 Worry not, let's get you in. Lab users that are inactive for 180 days will automatically be deactivated for security reasons. If so, we will need a lab user reactivation request from your lab leader or lab coordinator in our service desk:
 
-[Service desk - User reactivation](/administer-science/service-desk/lab-orders/#reactivate-lab-user)
+[Service desk - User reactivation](/administer-science/service-desk/lab-orders#reactivate-lab-user)
 
 Ask your lab leader or lab coordinator to send us a new user agreement. [Contact us](/contact) on email or Slack if you don't remember who's your lab leader or lab coordinator. You will get new keys and further guides on how to get in once the request is registered and your new keys are ready. 
 
@@ -75,7 +75,7 @@ We continuously update our services. So, your Workbench or other things in your 
 
 #### Find new features in Patch notes
 
-We publish our updates in [Patch notes](/administer-science/patch-notes/#patch-notes). This is a handy way to see what's changed.
+We publish our updates in [Patch notes](/administer-science/patch-notes#patch-notes). This is a handy way to see what's changed.
 
 #### Your data should be the same
 

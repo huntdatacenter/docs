@@ -20,7 +20,7 @@ This page describes the practical aspects of kista transfers. Head over to our [
 
 ## Order
 
-Lab leaders and lab coordinators can order internal kistas in our administer-science [service desk](/administer-science/service-desk/lab-orders/#internal-kista).
+Lab leaders and lab coordinators can order internal kistas in our administer-science [service desk](/administer-science/service-desk/lab-orders#internal-kista).
 
 ## Roles
 
@@ -208,7 +208,7 @@ get -r example-directory /mnt/cargo/
 quit
 ```
 
-For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 You can resume a download with this command:
 
@@ -219,7 +219,7 @@ reget /mnt/cargo/example-file1.txt
 
 ::: expander "LFTP" id="download-lftp"
 
-For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 ```bash
 # -- Principal example

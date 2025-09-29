@@ -95,7 +95,7 @@ See the official [RSync](https://linux.die.net/man/1/rsync) documentation for fu
 
 ### Could not resolve hostname
 
-This error typically happens if you did not complete the onboarding guides and you need to go back to step [3.5 SSH Configuration - Final steps](/do-science/lab-access/configure-ssh/#_3-5-final-steps).
+This error typically happens if you did not complete the onboarding guides and you need to go back to step [3.5 SSH Configuration - Final steps](/do-science/lab-access/configure-ssh#_3-5-final-steps).
 
 ```
 ssh: Could not resolve hostname <labname>: nodename nor servname provided, or not known

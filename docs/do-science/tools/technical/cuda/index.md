@@ -15,7 +15,7 @@ tags:
 
 # CUDA
 
-Have you already got access to your [GPU machine](/do-science/tools/technical/gpu/#gpu-models)?
+Have you already got access to your [GPU machine](/do-science/tools/technical/gpu#gpu-models)?
 
 Following this guide you can install multiple [CUDA](https://docs.nvidia.com/cuda/doc/index.html) versions at the same time. Each version will be installed in the separate directory.
 

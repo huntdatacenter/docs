@@ -77,9 +77,9 @@ For this to work efficiently you will need to know how to check your resource us
 
 One way to monitor resources is using Glances. We have included [Glances proxy extension](https://github.com/huntdatacenter/jupyter-glances-proxy) in JupyterLab installation.
 
-You can also you Terminal app inside your Workbench and run standard commands like [HTOP](https://docs.hdc.ntnu.no/do-science/tools/technical/htop/) and [others](/do-science/faq/compute/#can-i-monitor-my-resource-consumption)
+You can also you Terminal app inside your Workbench and run standard commands like [HTOP](https://docs.hdc.ntnu.no/do-science/tools/technical/htop/) and [others](/do-science/faq/compute#can-i-monitor-my-resource-consumption)
 
-For checking storage capacity and how much data are written on disk have a look at [df -h --type=ext4](/do-science/faq/storage/#resources) and [ncdu](/do-science/tools/technical/ncdu).
+For checking storage capacity and how much data are written on disk have a look at [df -h --type=ext4](/do-science/faq/storage#resources) and [ncdu](/do-science/tools/technical/ncdu).
 
 ### Managing resources
 

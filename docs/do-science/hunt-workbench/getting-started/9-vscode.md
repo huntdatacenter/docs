@@ -49,7 +49,7 @@ To run code in cells:
 
 
 ### Running R Code with R Kernel
-To run R code with an R kernel. Basic R env is offered as default in your Workbench. For more detailed setup, follow this [link](/do-science/hunt-workbench/getting-started/rstudio/#how-to-create-r-environment)
+To run R code with an R kernel. Basic R env is offered as default in your Workbench. For more detailed setup, follow this [link](/do-science/hunt-workbench/getting-started/rstudio#how-to-create-r-environment)
 - Open a new or existing notebook.
 - Choose the R kernel from the kernel dropdown menu.
 - You can now write and execute R code in the notebook.

@@ -37,7 +37,7 @@ The following Lagtun membership tickets are issued to contracting parties from p
 
 :::
 
-The membership criteria was clarified in [R6/LT4/T4/21](/govern-science/tingweek/resolutions/#clarification-of-lagtun-membership). Lagtun is chaired by the Head of HUNT Cloud. HUNT Cloud employees participate as observers.
+The membership criteria was clarified in [R6/LT4/T4/21](/govern-science/tingweek/resolutions#clarification-of-lagtun-membership). Lagtun is chaired by the Head of HUNT Cloud. HUNT Cloud employees participate as observers.
 
 ### Invitations
 
@@ -47,7 +47,7 @@ Invitations are forwarded on email to leaders and administrators for data proces
 Invitation recipients may [contact us](/contact) for direct calendar bookings for themselves or their chosen representative for future Lagtuns.
 :::
 
-The invitation criteria was clarified in [R2/LT5/T5/22](/govern-science/tingweek/resolutions/#clarification-of-ting-week-invitations).
+The invitation criteria was clarified in [R2/LT5/T5/22](/govern-science/tingweek/resolutions#clarification-of-ting-week-invitations).
 
 ## Resolutions
 
@@ -64,7 +64,7 @@ Resolutions from previous Lagtuns are available in our [resolutions](/govern-sci
 
 ### New resolutions
 
-All HUNT Cloud coordinators and users are welcome to propose resolutions for the next meeting through their representatives. You can find the representative list in the [resolution documents](/govern-science/tingweek/resolutions), or you can [contact us](/contact) if you need help identifying your Lagtun representative. See the [agenda](/govern-science/tingweek/lagtun/#agenda) section for more details.
+All HUNT Cloud coordinators and users are welcome to propose resolutions for the next meeting through their representatives. You can find the representative list in the [resolution documents](/govern-science/tingweek/resolutions), or you can [contact us](/contact) if you need help identifying your Lagtun representative. See the [agenda](/govern-science/tingweek/lagtun#agenda) section for more details.
 
 ### Consideration
 

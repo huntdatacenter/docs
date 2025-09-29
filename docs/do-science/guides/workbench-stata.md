@@ -254,7 +254,7 @@ version
 
 #### The notebook is unresponsive when I run a cell 
 
-If you are unable to run any Stata commands, check that your notebook is in an [Idle state](/do-science/guides/stata/#open-a-stata-notebook). If not try to [restart your workbench environment](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment), and [contact us](contact) if it persist after the restart.
+If you are unable to run any Stata commands, check that your notebook is in an [Idle state](/do-science/guides/stata#open-a-stata-notebook). If not try to [restart your workbench environment](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment), and [contact us](contact) if it persist after the restart.
 
 
 

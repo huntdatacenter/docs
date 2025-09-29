@@ -24,7 +24,7 @@ You may request Stata in your HUNT Workbench as a Jupyter notebook. This means t
 
 ## Installation on home machines
 
-[Contact us](/contact) for assistance on installations on your [home machine](/do-science/faq/compute/#machine-types) and discussions on licenses types tailored for your lab work.
+[Contact us](/contact) for assistance on installations on your [home machine](/do-science/faq/compute#machine-types) and discussions on licenses types tailored for your lab work.
 
 ::: tip NTNU license
 All NTNU employees are covered by the NTNU license which allow for quick installations. Lab users that are not affiliated with NTNU will need to either bring their own license or ask their lab leader to buy a license from StataCorp.
@@ -53,4 +53,4 @@ There is a [known issue](https://www.statalist.org/forums/filedata/fetch?id=1351
 
 #### My file consume all of the machine memory
 
-You might need to consider the memory consumption of Stata when you work with files close to your machine memory. [Click here](/do-science/faq/compute/#is-my-process-hitting-memory-issues) to learn how to assess if you are hitting memory issues on your machines. If so, the University of Wisconsin has written up a guide on [how to reduce Stata's memory consumption](https://www.ssc.wisc.edu/sscc/pubs/stata_memory.htm). [Contact us](/contact) for a memory upgrade if necessary.
+You might need to consider the memory consumption of Stata when you work with files close to your machine memory. [Click here](/do-science/faq/compute#is-my-process-hitting-memory-issues) to learn how to assess if you are hitting memory issues on your machines. If so, the University of Wisconsin has written up a guide on [how to reduce Stata's memory consumption](https://www.ssc.wisc.edu/sscc/pubs/stata_memory.htm). [Contact us](/contact) for a memory upgrade if necessary.

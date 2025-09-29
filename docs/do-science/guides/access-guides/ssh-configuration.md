@@ -20,7 +20,7 @@ If you are configuring access to your lab use Lab access link sent to you in onb
 You will first configure a machine used for security purposes that we call **`entry`**, and then one machine that we call **`home`** were you will do your scientific explorations.
 
 ::: warning Requirement
-- A running VPN connection (successful implementation of [Step 2](/do-science/guides/configure-vpn/#_2-4-verify-your-vpn-connection)).
+- A running VPN connection (successful implementation of [Step 2](/do-science/guides/configure-vpn#_2-4-verify-your-vpn-connection)).
 :::
 
 
@@ -270,7 +270,7 @@ ssh your-lab-name
 
 This will allow you to log directly into your lab without the need to remember your user name or your lab's IP address:
 
-1. On your local computer, open the **`ssh-config.txt`** file from [Step 1.2](/do-science/lab-access/collect-your-keys/#_1-2-secrets-on-your-email).
+1. On your local computer, open the **`ssh-config.txt`** file from [Step 1.2](/do-science/lab-access/collect-your-keys#_1-2-secrets-on-your-email).
 
 2. On your local computer, add the content from the **`ssh-config.txt`** to the file named **`config`** in the hidden ssh-folder in your home directory (**`~/.ssh/config`**) using your favorite file editor. You may need to generate this file if it is your first ssh-configuration.
 
@@ -361,5 +361,5 @@ If you are getting `Authentication token manipulation error` make sure you follo
 
 ### Unable to connect with Putty
 
-Ensure that you did download **`putty.exe`** from the [link above](/do-science/guides/configure-ssh/#_3-3-configure-entry). We have experienced issues with preinstalled versions that connects from for us unknown locations.
+Ensure that you did download **`putty.exe`** from the [link above](/do-science/guides/configure-ssh#_3-3-configure-entry). We have experienced issues with preinstalled versions that connects from for us unknown locations.
 

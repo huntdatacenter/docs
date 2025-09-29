@@ -93,7 +93,7 @@ We will communicate your VPN certificate and SSH configuration over your organiz
 
 ::: tip Decryption guides
 
-Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](/do-science/tools/transfer/7z/#windows), [mac](/do-science/tools/transfer/7z/#mac-os-x), [Linux](https://www.google.no/search?q=unpack+7z+linux).
+Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](/do-science/tools/transfer/7z#windows), [mac](/do-science/tools/transfer/7z#mac-os-x), [Linux](https://www.google.no/search?q=unpack+7z+linux).
 
 :::
 
@@ -174,7 +174,7 @@ Steps to resolve issues with Signal may vary by phone model and OS. Signal has a
 
 #### Windows: I am unable to unpack the 7z-file forwarded on email
 
-If the [decryption guides](/do-science/lab-access/collect-your-keys/#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
+If the [decryption guides](/do-science/lab-access/collect-your-keys#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
 
 #### OS X, macOS: The 7z archive password do not seem to work?
 

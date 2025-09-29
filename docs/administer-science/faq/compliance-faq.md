@@ -21,7 +21,7 @@ See our [Administer science FAQ](/administer-science/faq/) for supplemental admi
 
 ### How can we add a new lab to our existing data space? 
 
-In short, the compliance administrator sends us a signed lab order and coordinate signed user agreements between your lab leader and your individual lab users. Head over to our [administrative service desk](/administer-science/service-desk/data-space-orders/#new-lab)-pages for more information on the process.
+In short, the compliance administrator sends us a signed lab order and coordinate signed user agreements between your lab leader and your individual lab users. Head over to our [administrative service desk](/administer-science/service-desk/data-space-orders#new-lab)-pages for more information on the process.
 
 ### How can we split one lab into two labs? 
 
@@ -29,7 +29,7 @@ As science grows inside your individual labs you may see the need to move part o
 
 - send us a [new lab order](/administer-science/service-desk/data-space-orders.html#new-lab) and coordinate new lab user agreements between your lab leader and individual lab users in the new lab;
 - evaluate if you need to deactivate some users in your original lab after the move, and [request user deactivation](/administer-science/service-desk/lab-orders.html#deactivate-lab-user) in your original lab if relevant.
-- consider how you will transfer data into your new lab, for example by ordering an [internal kista](/administer-science/agreements/downloads/#external-kista-import-order) from your original to your new lab.
+- consider how you will transfer data into your new lab, for example by ordering an [internal kista](/administer-science/agreements/downloads#external-kista-import-order) from your original to your new lab.
 
 ### How can we move a lab to a different data space? 
 
@@ -49,7 +49,7 @@ No. We would like our lab name spaces to be unique. This is both to help your la
 
 ### How can we delete one of our labs? 
 
-Lab deletions are authorized by Data space leaders and documented in a [lab deletion order](/administer-science/agreements/downloads/#lab-deletion-order) that is co-signed by both the data space leader and respective lab leader. All data and machines in the lab will be irrevocably destroyed in this process, and neither data nor machines can be recreated. 
+Lab deletions are authorized by Data space leaders and documented in a [lab deletion order](/administer-science/agreements/downloads#lab-deletion-order) that is co-signed by both the data space leader and respective lab leader. All data and machines in the lab will be irrevocably destroyed in this process, and neither data nor machines can be recreated. 
 
 
 

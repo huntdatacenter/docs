@@ -31,7 +31,7 @@ Click the button below to order a new lab under your existing data space.
 <SDButton form="request_new_lab" />
 
 * **Who can order:** Data space leaders and data space compliance administrators in active data spaces, and lab leader for new labs.
-* **Required attachment**: [A signed lab order](/administer-science/agreements/downloads/#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
+* **Required attachment**: [A signed lab order](/administer-science/agreements/downloads#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
 * **Expected delivery time:** One week.
 * **Next step**: [Add your first lab users](/administer-science/service-desk/lab-orders.html#add-a-new-lab-user).
 * **Cost:** One lab subscription as specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
@@ -40,7 +40,7 @@ Click the button below to order a new lab under your existing data space.
 
 It's important that you order lab access for each scientist (lab user) that will work in your lab as soon as you send us the above Lab order. Without these, your scientists will not be able to access your new lab.
 
-[Click on this link to get going](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
+[Click on this link to get going](/administer-science/service-desk/lab-orders#add-a-new-lab-user).
 
 :::
 
@@ -88,7 +88,7 @@ Click the button below to order a lab deletion of an active lab under your data 
 <SDButton form="request_lab_deletion" />
 
 * **Who can order:** Data space leaders and Lab leaders in collaboration.
-* **Required attachment**: [A signed lab deletion order](/administer-science/agreements/downloads/#lab-deletion-order).
+* **Required attachment**: [A signed lab deletion order](/administer-science/agreements/downloads#lab-deletion-order).
 * **Expected response time:** Weeks.
 * **Expected delivery:** Countersignature from HUNT Cloud on your lab deletion order confirming that lab data, including online and offline duplicate copies, are deleted.
 * **Cost:** Included in your lab subscription.
@@ -106,8 +106,8 @@ You can transfer a lab between two data spaces by filling form below.
 <SDButton form="request_lab_transfer" />
 
 * **Who can order:** Data space leaders and compliance administrators
-* **Required attachment**: A [signed lab transfer agreement](/administer-science/agreements/downloads/#lab-transfer-order).
-* **Optional attachment**: A [signed invoice agreemnent](/administer-science/agreements/downloads/#invoice-profile)
+* **Required attachment**: A [signed lab transfer agreement](/administer-science/agreements/downloads#lab-transfer-order).
+* **Optional attachment**: A [signed invoice agreemnent](/administer-science/agreements/downloads#invoice-profile)
 * **Expected response time:** Days.
 * **Expected delivery:** A lab transferred to a new data space with updated inovice profile.
 * **Cost:** Included in your lab subscription.
@@ -125,12 +125,12 @@ Data transfers between labs inside HUNT Cloud can be requested from our [lab ord
 
 ### External import kista
 
-The [external import kista](/do-science/faq/external-transfer/#faq-on-external-data-transfer) allows external parties outside HUNT Cloud to transfer data directly to a lab inside HUNT Cloud in a compliant manner.
+The [external import kista](/do-science/faq/external-transfer#faq-on-external-data-transfer) allows external parties outside HUNT Cloud to transfer data directly to a lab inside HUNT Cloud in a compliant manner.
 
 <SDButton form="request_external_import_kista" />
 
 * **Who can order:** Data space leaders or Data space compliance administrators.
-* **Required attachments**: (1) [A signed external kista import order](/administer-science/agreements/downloads/#external-kista-import-order), and (2) one [SSH public key](/do-science/data-transfers/external-kista/#ssh-key-pair) from the external uploader.
+* **Required attachments**: (1) [A signed external kista import order](/administer-science/agreements/downloads#external-kista-import-order), and (2) one [SSH public key](/do-science/data-transfers/external-kista#ssh-key-pair) from the external uploader.
 * **Expected response time:** Days.
 * **Expected delivery:** Kista access information sent to the lab user that will import the data.
 * **Cost:** Included in your data space subscription.
@@ -141,12 +141,12 @@ Note that time to successful transfer depend on access to SFTP software and pote
 
 ### External export kista
 
-The [external export kista](/do-science/faq/external-transfer/#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner.
+The [external export kista](/do-science/faq/external-transfer#faq-on-external-data-transfer) allows labs to make data available for external parties outside HUNT Cloud in a compliant manner.
 
 <SDButton form="request_external_export_kista" />
 
 * **Who can order:** Data space leaders or Data space compliance administrators.
-* **Required attachments**: (1) [A signed external kista export order](/administer-science/agreements/downloads/#external-kista-export-order), and (2) one [SSH public key](/do-science/data-transfers/external-kista/#ssh-key-pair) from the external downloader.
+* **Required attachments**: (1) [A signed external kista export order](/administer-science/agreements/downloads#external-kista-export-order), and (2) one [SSH public key](/do-science/data-transfers/external-kista#ssh-key-pair) from the external downloader.
 * **Expected response time:** Days.
 * **Expected delivery:** Access information sent to the lab user that will make data available for export.
 * **Cost:** Included in your data space subscription.
@@ -158,13 +158,13 @@ Note that time to successful transfer depends on access to SFTP software and pot
 
 ### Network opening
 
-[Network opening orders](/do-science/faq/external-transfer/#direct-external-transfers) allows data transfers directly to and from parties outside HUNT Cloud.
+[Network opening orders](/do-science/faq/external-transfer#direct-external-transfers) allows data transfers directly to and from parties outside HUNT Cloud.
 
 <SDButton form="request_network_opening" />
 
 * **Who can order:** Data space leaders or Data space compliance administrators.
 * **Required information**: IPv4 address and port number for the external party.
-* **Required attachments**: [A signed network opening order](/administer-science/agreements/downloads/#network-opening-order).
+* **Required attachments**: [A signed network opening order](/administer-science/agreements/downloads#network-opening-order).
 * **Expected response time:** Days.
 * **Expected delivery:** Network opening communicated in your Slack lab channel.
 * **Cost:** Included in your data space subscription.
@@ -191,7 +191,7 @@ Click the button below to update lab leader roles for labs attached to your data
 <SDButton form="request_lab_leader_role" />
 
 * **Who can order:** Data space leaders and data space compliance officers.
-* **Required attachment**: A new [signed lab order](/administer-science/agreements/downloads/#lab-order).
+* **Required attachment**: A new [signed lab order](/administer-science/agreements/downloads#lab-order).
 * **Expected delivery time:** Days.
 * **Cost:** Included in your data space subscription.
 
@@ -203,7 +203,7 @@ Click the button below to add a new invoice profile to your data space. Use this
 <SDButton form="request_new_invoice_profile" />
 
 * **Who can order:** Data space leaders and data space financial officers.
-* **Required attachment**: A new [signed invoice profile](/administer-science/agreements/downloads/#invoice-profile).
+* **Required attachment**: A new [signed invoice profile](/administer-science/agreements/downloads#invoice-profile).
 * **Expected delivery time:** Days.
 * **Cost:** Included in your data space subscription.
 
@@ -215,7 +215,7 @@ Click the button below to update an existing invoice profile to your data space.
 <SDButton form="request_update_of_existing_invoice" />
 
 * **Who can order:** Data space leaders and data space financial officers.
-* **Required attachment**: A new [signed invoice profile](/administer-science/agreements/downloads/#invoice-profile).
+* **Required attachment**: A new [signed invoice profile](/administer-science/agreements/downloads#invoice-profile).
 * **Expected delivery time:** Days.
 * **Cost:** Included in your data space subscription.
 

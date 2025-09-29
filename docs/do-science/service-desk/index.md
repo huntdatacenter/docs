@@ -32,13 +32,13 @@ Send us a [general service request](#general-service-request) if you can not fin
 
 ::: warning New users
 
-The service orders below are aimed at active lab users. Lab access for new users are ordered by lab leaders or lab coordinators from our [administer science service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
+The service orders below are aimed at active lab users. Lab access for new users are ordered by lab leaders or lab coordinators from our [administer science service desk](/administer-science/service-desk/lab-orders#add-a-new-lab-user).
 
 :::
 
 ### HUNT Workbench reissue
 
-Request a new certificate if you have an existing HUNT Workbench and your previous [certificate expired](/do-science/hunt-workbench/troubleshooting/#_403-forbidden-expired-client-certificate).
+Request a new certificate if you have an existing HUNT Workbench and your previous [certificate expired](/do-science/hunt-workbench/troubleshooting#_403-forbidden-expired-client-certificate).
 
 <SDButton form="request_workbench_reissue" />
 

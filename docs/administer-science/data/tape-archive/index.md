@@ -7,7 +7,7 @@ description: This page gives the official Cloud tape archive specification.
 
 # Tape Archive
 
-Following guide is meant to help you archive your data using simple bash commands and afterwards send it to us using internal [kista](/administer-science/service-desk/lab-orders/#internal-kista) where we can collect the data and store it on a long term tape medium.
+Following guide is meant to help you archive your data using simple bash commands and afterwards send it to us using internal [kista](/administer-science/service-desk/lab-orders#internal-kista) where we can collect the data and store it on a long term tape medium.
 
 ::: warning Attention
 This is a pilot service for tape archiving. [Contact us](https://docs.hdc.ntnu.no/about/contact/) for further information.
@@ -83,6 +83,6 @@ single hash:
 sha256sum your_archive.tar.gz > hash_archive.txt
 ```
 
-4. Upload compressed data, hash file and file_list.txt to [kista](/administer-science/service-desk/lab-orders/#internal-kista).
+4. Upload compressed data, hash file and file_list.txt to [kista](/administer-science/service-desk/lab-orders#internal-kista).
 
 5. Notify us

@@ -16,12 +16,12 @@ This page lists frequently asked questions related to computation and analysis i
 
 ### Can I update my compute resources?
 
-Yes. Your lab leader and lab coordinator can order machine updates] and order new lab machines in our [service desk](/administer-science/service-desk/lab-orders/#compute) in accordance with our default [machine types](/administer-science/services/machine-types).
+Yes. Your lab leader and lab coordinator can order machine updates] and order new lab machines in our [service desk](/administer-science/service-desk/lab-orders#compute) in accordance with our default [machine types](/administer-science/services/machine-types).
 
 
 ### Can I have custom machine types?
 
-Yes. Don't find what you are looking for among our default [machine types](/administer-science/services/machine-types)? Labs in a data space on the [blue subscription](/administer-science/services/overview/#subscriptions) level can request machines types with tailored memory and CPU resources. [Contact us](/contact) on email to get started.
+Yes. Don't find what you are looking for among our default [machine types](/administer-science/services/machine-types)? Labs in a data space on the [blue subscription](/administer-science/services/overview#subscriptions) level can request machines types with tailored memory and CPU resources. [Contact us](/contact) on email to get started.
 
 ### Is my process hitting memory issues?
 
@@ -150,7 +150,7 @@ Most likely. Many commonly used software in scientific computing can be run from
 
 ### Can I run Docker containers?
 
-Yes. You can run [Docker images](https://www.docker.com/) on both [IaaS](/do-science/faq/compute/#what-is-an-iaas-machine) and [blue](/do-science/faq/compute/#what-is-a-blue-machine) machines. Docker images can not be run from home machines due to security reasons.
+Yes. You can run [Docker images](https://www.docker.com/) on both [IaaS](/do-science/faq/compute#what-is-an-iaas-machine) and [blue](/do-science/faq/compute#what-is-a-blue-machine) machines. Docker images can not be run from home machines due to security reasons.
 
 ::: tip
 
@@ -167,7 +167,7 @@ Yes, you can run your Apptainer (Singularity) containers on both home, IaaS and 
 
 ### How can I keep my jobs running when I disconnect?
 
-You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/do-science/tools/technical/terminal-multiplexers) to get started. Your jobs over [X2Go](/do-science/tools/technical/x2go/#set-up-your-local-machine), such as RStudio and Stata, should be kept alive between your logins by default.
+You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/do-science/tools/technical/terminal-multiplexers) to get started. Your jobs over [X2Go](/do-science/tools/technical/x2go#set-up-your-local-machine), such as RStudio and Stata, should be kept alive between your logins by default.
 
 ### How can I profile the resources needed in my workflow?
 
@@ -201,7 +201,7 @@ sudo reboot
 ```
 
 ::: warning
-Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/do-science/faq/access/#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
+Please be aware that restarts will affect all of your lab colleagues working on your machine. Our advice is to carefully plan restarts with your lab colleagues and announce such restarts in advance so no one looses their valuable work. [Click here](/do-science/faq/access#how-can-i-see-users-currently-logged-into-a-machine) to see which users that are currently logged into your machines.
 :::
 
 ### What privileges does my account have?
@@ -218,7 +218,7 @@ No. Your home machine is configured for reliability. We have therefore chosen to
 
 ### Can I get a machine with the latest Ubuntu release?
 
-Yes. Both [IaaS](/do-science/faq/compute/#what-is-an-iaas-machine) and [blue](/do-science/faq/compute/#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other Linux operating systems.
+Yes. Both [IaaS](/do-science/faq/compute#what-is-an-iaas-machine) and [blue](/do-science/faq/compute#what-is-a-blue-machine) machines are deployed with the latest long term support Ubuntu version. From there, you can upgrade to your version of choice.  [Contact us](/contact) if your workflow require other Linux operating systems.
 
 ### When do you plan to upgrade our home operating system?
 
@@ -292,7 +292,7 @@ You will meet four principal machine types in your lab. You may choose to deploy
 
 ### What is a "home" machine?
 
-This is a managed machine type. All labs have one "home" machine that is pre-configured with user accounts, [attached storage](/do-science/faq/storage/#resources) and some analytical software. Users may download their own software using the **`apt`** package manager and reboot their machine when needed. Further configurations has to be guided by us. Home machines run Ubuntu 16.04 operating systems.
+This is a managed machine type. All labs have one "home" machine that is pre-configured with user accounts, [attached storage](/do-science/faq/storage#resources) and some analytical software. Users may download their own software using the **`apt`** package manager and reboot their machine when needed. Further configurations has to be guided by us. Home machines run Ubuntu 16.04 operating systems.
 
 ### What is an "IaaS" machine?
 

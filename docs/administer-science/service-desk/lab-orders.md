@@ -36,7 +36,7 @@ Click the button below to order access for a new user to your lab.
 <SDButton form="request_access_new_user" />
 
 * **Who can order:** Lab leaders and lab coordinators.
-* **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads/#user-agreement).
+* **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads#user-agreement).
 * **Expected response time:** Days.
 * **Expected delivery:** Lab keys and VPN certificate.
 * **Next step:** [Prepare your key transfer](/do-science/lab-access/).
@@ -62,7 +62,7 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 <SDButton form="reactivate_lab_user" />
 
 * **Who can order:** Lab leaders and lab coordinators.
-* **Required attachment**: [A new user agreement](/administer-science/agreements/downloads/#user-agreement).
+* **Required attachment**: [A new user agreement](/administer-science/agreements/downloads#user-agreement).
 * **Expected response time:** Days.
 * **Expected delivery:** Lab keys and VPN certificate.
 * **Next step:** [Prepare your key transfer](/do-science/lab-access/).
@@ -70,7 +70,7 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 
 ### Update lab coordinator role
 
-Click the button below to update the [lab coordinator](/administer-science/roles/#lab-coordinator) role for a lab attached to your data space.
+Click the button below to update the [lab coordinator](/administer-science/roles#lab-coordinator) role for a lab attached to your data space.
 
 <SDButton form="request_coordinator_update" />
 
@@ -87,7 +87,7 @@ Lab user agreements needs to be renewed approximately every two years for accoun
 <SDButton form="request_renew_user_agreement" />
 
 * **Who can order:** Lab leaders and lab coordinators.
-* **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads/#user-agreement).
+* **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads#user-agreement).
 * **Expected response time:** Days.
 * **Expected delivery:** Email acknowledgment.
 * **Cost:** Included in your lab subscription.
@@ -129,7 +129,7 @@ Add a [new machine](/administer-science/services/machine-types) to your lab. A C
 
 ### New GPU machine
 
-Add a new [GPU machine](/administer-science/services/machine-types/#gpu-accelerator-machine-types) to your lab.
+Add a new [GPU machine](/administer-science/services/machine-types#gpu-accelerator-machine-types) to your lab.
 
 <SDButton form="request_new_gpu" />
 
@@ -162,7 +162,7 @@ Instance shelving allows you to stop an instance without having it consume compu
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required information**: lab name and machine name.
 * **Expected response time:** Days.
-* **Cost:** During unshelving a machine will be started with same [machine type](/administer-science/services/machine-types/#compute-optimized-machine-types) as before shelving
+* **Cost:** During unshelving a machine will be started with same [machine type](/administer-science/services/machine-types#compute-optimized-machine-types) as before shelving
 
 ### Unshelve machine order
 
@@ -192,7 +192,7 @@ Once data on your machine is deleted, it can not be recreated. You must ensure t
 
 ### Expand existing volume
 
-You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand. Read more in our [data FAQ](/administer-science/data/faq/#volumes).
+You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand. Read more in our [data FAQ](/administer-science/data/faq#volumes).
 
 <SDButton form="request_expand_existing_volume" />
 
@@ -264,7 +264,7 @@ The above example shows for example that `/mnt/archive` has a current `Size` of 
 
 ### New volume
 
-You may add new volumes to your lab machines. We will need separate orders for each individual volume you plan to add.  Read more in our [coordinator FAQ](/administer-science/data/faq/#volumes).
+You may add new volumes to your lab machines. We will need separate orders for each individual volume you plan to add.  Read more in our [coordinator FAQ](/administer-science/data/faq#volumes).
 
 <SDButton form="request_new_storage_volume" />
 
@@ -356,7 +356,7 @@ Click button below to order a long term archiving of your data
 * **Who can order:** Lab leader and coordinator.
 * **Required information:** size of dataset and retention period.
 * **Expected response time:** Weeks.
-* **Cost:** Can be found in our [price list](/administer-science/prices/pricelist/#current)
+* **Cost:** Can be found in our [price list](/administer-science/prices/pricelist#current)
 
 
 ## Data transfers
@@ -376,7 +376,7 @@ Head over to the [data space orders](/administer-science/service-desk/data-space
 <SDButton form="request_internal_kista" />
 
 * **Who can order:** Lab leaders or lab coordinators from the uploader lab.
-* **Required attachment**: [A signed internal kista order](/administer-science/agreements/downloads/#internal-kista-order).
+* **Required attachment**: [A signed internal kista order](/administer-science/agreements/downloads#internal-kista-order).
 * **Expected response time:** Days.
 * **Expected delivery:** Access information communicated in your Slack lab channel.
 * **Cost:** Included in your lab subscription.

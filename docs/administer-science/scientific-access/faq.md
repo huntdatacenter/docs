@@ -22,15 +22,15 @@ This section prosper on questions. [Contact us](/contact) with your wonders and 
 
 ### Where do we start? 
 
-Welcome! The starting point for access to HUNT Cloud depends on your role: Organizations starts with [organizational access](/govern-science/organizational-access/), scientific centers and groups start with [scientific access](/administer-science/scientific-access/) and scientists starts with [lab access](/administer-science/service-desk/lab-orders/#add-a-new-lab-user). [Contact us](/contact) if you need guidance. 
+Welcome! The starting point for access to HUNT Cloud depends on your role: Organizations starts with [organizational access](/govern-science/organizational-access/), scientific centers and groups start with [scientific access](/administer-science/scientific-access/) and scientists starts with [lab access](/administer-science/service-desk/lab-orders#add-a-new-lab-user). [Contact us](/contact) if you need guidance. 
 
 ### Do we need all agreement layers? 
 
-Yes. All labs needs to run under a complete [agreement layer](/administer-science/agreements/overview/#overview) so we can ensure compliance with relevant laws, regulations and certificates. We know, this is slightly complex. On the bright side, the agreements create a solid base to organize and expand your scientific activities.
+Yes. All labs needs to run under a complete [agreement layer](/administer-science/agreements/overview#overview) so we can ensure compliance with relevant laws, regulations and certificates. We know, this is slightly complex. On the bright side, the agreements create a solid base to organize and expand your scientific activities.
 
 ### Why do we need these agreement layers? 
 
-Our [agreement structure](/administer-science/agreements/overview/#overview) has evolved over time to allow high variability in activities and preferences among our member organizations. We know, this is a mouthful if you need access to one lab only. However, once you get going with the terminology and structure we hope you will enjoy the flexibility. The layered structure is utilized both for governance, reporting, incentives and to comply with laws and regulations.
+Our [agreement structure](/administer-science/agreements/overview#overview) has evolved over time to allow high variability in activities and preferences among our member organizations. We know, this is a mouthful if you need access to one lab only. However, once you get going with the terminology and structure we hope you will enjoy the flexibility. The layered structure is utilized both for governance, reporting, incentives and to comply with laws and regulations.
 
 ## Data space agreement
 

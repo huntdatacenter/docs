@@ -25,7 +25,7 @@ Help us expand this page. [Contact us](/contact) with your burning topics.
 
 ### Who decide which subscription level we can utilize?
 
-You. The decision to choose a WHITE, ORANGE or BLUE subscription level is fully up to you and your data space leader. Head over to the [services overview](/administer-science/services/overview/#data-space-subscription) to see the differences between them.
+You. The decision to choose a WHITE, ORANGE or BLUE subscription level is fully up to you and your data space leader. Head over to the [services overview](/administer-science/services/overview#data-space-subscription) to see the differences between them.
 
 
 
@@ -58,11 +58,11 @@ We try ensure a consistent storage performance by linking usage to the overall s
 
 ### Why to we see less storage on our machines that we pay for?
 
-The volumes sizes that you see on your machines are slightly less that the volume sizes that you claim. This is expected. [Read why here](/administer-science/data/faq/#why-is-volume-sizes-less-than-claimed).
+The volumes sizes that you see on your machines are slightly less that the volume sizes that you claim. This is expected. [Read why here](/administer-science/data/faq#why-is-volume-sizes-less-than-claimed).
 
 ### How is storage reduction metered?
 
-You can indirectly reduce the size of your storage volume by moving data to a new smaller volume ([see the steps here](/administer-science/data/faq/#can-we-reduce-the-size-of-existing-volumes)). During such procedures, both volumes are metered until you request deletion of the original volume in the service desk.
+You can indirectly reduce the size of your storage volume by moving data to a new smaller volume ([see the steps here](/administer-science/data/faq#can-we-reduce-the-size-of-existing-volumes)). During such procedures, both volumes are metered until you request deletion of the original volume in the service desk.
 
 
 ## Billing
@@ -74,11 +74,11 @@ We have a clear intention to ship quarterly invoices with shipments approximatel
 
 ### Can we have several invoice profiles under our data space?
 
-Yes, you can add separate invoice profiles for individual labs under your data space in the data space management section of our administrative [service desk](/administer-science/service-desk/data-space-orders/#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile.
+Yes, you can add separate invoice profiles for individual labs under your data space in the data space management section of our administrative [service desk](/administer-science/service-desk/data-space-orders#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile.
 
 ### How can we update the account information on the invoice profile?
 
-You may update existing invoice profiles in the data space management section of our [service desk](/administer-science/service-desk/data-space-orders/#update-existing-invoice-profile).
+You may update existing invoice profiles in the data space management section of our [service desk](/administer-science/service-desk/data-space-orders#update-existing-invoice-profile).
 
 ### We are invoiced too much, now what?
 

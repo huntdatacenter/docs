@@ -27,7 +27,7 @@ You will need the following to complete this guide:
 ::: warning Requirements
 
 - A working VPN and SSH configuration as described in our [Getting started](/do-science/lab-access/) guide.
-- A HUNT Workbench TLS certificate as described in the [HUNT Workbench certificate request](/do-science/guides/hunt-workbench-request/#_3-verify-your-certificate).
+- A HUNT Workbench TLS certificate as described in the [HUNT Workbench certificate request](/do-science/guides/hunt-workbench-request#_3-verify-your-certificate).
 
 Without these it's impossible to complete this guide. 
 

@@ -83,7 +83,7 @@ groups
 
 ### I have moved to a new institution, now what? 
 
-Your lab leader or lab coordinator will need to send us a [new user agreement](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
+Your lab leader or lab coordinator will need to send us a [new user agreement](/administer-science/service-desk/lab-orders#add-a-new-lab-user) when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
 
 
 ### What is Lab Access link ? 
@@ -101,15 +101,15 @@ If you cannot find your lab access link or did not receive it, you can order one
 
 ### Can I get access to several labs?
 
-Yes. You can access more than one lab. We encourage data spaces to separate data in labs and bring top expertise into their lab to do analysis there. You will need to send us one user agreement for each lab your want to access. Lab leaders and lab coordinators may order your access in our [service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
+Yes. You can access more than one lab. We encourage data spaces to separate data in labs and bring top expertise into their lab to do analysis there. You will need to send us one user agreement for each lab your want to access. Lab leaders and lab coordinators may order your access in our [service desk](/administer-science/service-desk/lab-orders#add-a-new-lab-user).
 
 ### How do I get started with my second lab?
 
-We will ship SSH configuration and keys after your lab leader or lab coordinator have order your lab access in the [service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user). When you get your keys, head to [Step 3. Configure your SSH](/do-science/lab-access/configure-ssh) in our onboarding guide to get started.
+We will ship SSH configuration and keys after your lab leader or lab coordinator have order your lab access in the [service desk](/administer-science/service-desk/lab-orders#add-a-new-lab-user). When you get your keys, head to [Step 3. Configure your SSH](/do-science/lab-access/configure-ssh) in our onboarding guide to get started.
 
 ### Can I transfer and merge data between my labs?
 
-Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. When this is in place, order an [internal kista](/administer-science/service-desk/lab-orders/#internal-kista) for compliant transfers between your labs.
+Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. When this is in place, order an [internal kista](/administer-science/service-desk/lab-orders#internal-kista) for compliant transfers between your labs.
 
 
 
@@ -134,7 +134,7 @@ No, not as long as your lab is active. We will deactivate your account, although
 
 ### Can I reactivate my old account?
 
-Yes. Lab leaders and lab coordinators can order reactivations in our [service desk](/administer-science/service-desk/lab-orders/#reactivate-lab-user). Reactivation requires a new user agreement if it is more than two years since your first user agreement was signed. You will need to reconfigure VPN and SSH to get up and running.
+Yes. Lab leaders and lab coordinators can order reactivations in our [service desk](/administer-science/service-desk/lab-orders#reactivate-lab-user). Reactivation requires a new user agreement if it is more than two years since your first user agreement was signed. You will need to reconfigure VPN and SSH to get up and running.
 
 
 

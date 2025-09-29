@@ -11,7 +11,7 @@ description: This page list Lagtun resolutions that govern the scientific develo
 
 ::: tip
 
-Read more about [Lagtun](/govern-science/tingweek/lagtun) and the use of [resolutions](/govern-science/tingweek/lagtun/#resolutions).
+Read more about [Lagtun](/govern-science/tingweek/lagtun) and the use of [resolutions](/govern-science/tingweek/lagtun#resolutions).
 
 :::
 

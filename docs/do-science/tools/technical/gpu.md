@@ -21,7 +21,7 @@ tags:
 
 ## GPU Models
 
-See our [GPU accelerator machine types](/administer-science/services/machine-types/#gpu-accelerator-machine-types) for more details on the specific GPU models we offer.
+See our [GPU accelerator machine types](/administer-science/services/machine-types#gpu-accelerator-machine-types) for more details on the specific GPU models we offer.
 
 
 ## Software
@@ -37,7 +37,7 @@ You may install other tools and versions.
 
 ## How to order
 
-You can order your GPU machines in our [administer science service desk](/administer-science/service-desk/lab-orders/#new-gpu-machine).
+You can order your GPU machines in our [administer science service desk](/administer-science/service-desk/lab-orders#new-gpu-machine).
 
 ## How to use
 

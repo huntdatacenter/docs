@@ -26,7 +26,7 @@ Internal kista is our service for simple and secure data transfers between two l
 
 ### How do I order an internal kista?
 
-Lab leader or lab coordinator can order internal kistas in our [service desk](/administer-science/service-desk/lab-orders/#internal-kista).
+Lab leader or lab coordinator can order internal kistas in our [service desk](/administer-science/service-desk/lab-orders#internal-kista).
 
 ### How long does it take to get access to an internal kista?
 

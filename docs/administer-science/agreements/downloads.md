@@ -80,7 +80,7 @@ This agreements are to be signed by the Data space leader or Data space complian
 
 **Request a lab**
 
-Send us your signed agreement utilizing the blue button in the data space section of our [service desk](/administer-science/service-desk/data-space-orders/#new-lab).
+Send us your signed agreement utilizing the blue button in the data space section of our [service desk](/administer-science/service-desk/data-space-orders#new-lab).
 
 :::
 
@@ -142,7 +142,7 @@ This agreements are to be signed by the Service center leader or Service center 
 
 **Request a data space**
 
-Send us your signed agreement utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders/#new-data-space).
+Send us your signed agreement utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders#new-data-space).
 
 :::
 
@@ -210,7 +210,7 @@ Invoice profiles are signed by Account signatory. This is the individual that is
 
 **Activation**
 
-Send us your signed invoice profile together with your data space order utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders/#new-data-space).
+Send us your signed invoice profile together with your data space order utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders#new-data-space).
 
 :::
 
@@ -220,7 +220,7 @@ Send us your signed invoice profile together with your data space order utilizin
 
 [HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf) (PDF)
 
-Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab. You can order Internal kista order in [Service Desk](/administer-science/service-desk/lab-orders/#internal-kista)
+Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab. You can order Internal kista order in [Service Desk](/administer-science/service-desk/lab-orders#internal-kista)
 
 ::: details Clarification of the form fields
 
@@ -268,7 +268,7 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud - External Kista Import Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-import-order.pdf) (PDF)
 
-Data space leaders and Data space compliance administrators can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from a lab. The order is co-signed by the uploader outside HUNT Cloud. You can order external kista import in [Service Desk](/administer-science/service-desk/data-space-orders/#external-import-kista)
+Data space leaders and Data space compliance administrators can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from a lab. The order is co-signed by the uploader outside HUNT Cloud. You can order external kista import in [Service Desk](/administer-science/service-desk/data-space-orders#external-import-kista)
 
 ::: details Clarification of the form fields
 
@@ -341,7 +341,7 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud - External Kista Export Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-export-order.pdf) (PDF)
 
-Data space leaders and Data space compliance officers can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. The order is co-signed by downloader outside HUNT Cloud. You can order external kista export in [Service Desk](/administer-science/service-desk/data-space-orders/#external-export-kista)
+Data space leaders and Data space compliance officers can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. The order is co-signed by downloader outside HUNT Cloud. You can order external kista export in [Service Desk](/administer-science/service-desk/data-space-orders#external-export-kista)
 
 ::: details Clarification of the form fields
 
@@ -414,7 +414,7 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud Network Opening Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-network-opening-order.pdf) (PDF)
 
-Your data space leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab. Afterwards, send us filled network opening order in [Service Desk](/administer-science/service-desk/data-space-orders/#network-opening)
+Your data space leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab. Afterwards, send us filled network opening order in [Service Desk](/administer-science/service-desk/data-space-orders#network-opening)
 
 
 ::: details Clarification of the form fields

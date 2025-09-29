@@ -74,7 +74,7 @@ Memberships to the Tings are derived from the following registered roles in cont
 | **Labting**              | Active lab users.                                                                                                                                                 |
 | **Data space ting**      | Data space administrators.                                                                                                                                        |
 | **Data controller ting** | Data space compliance administrators, Privacy and security officers from Data controllers.                                                                        |
-| **Lagtun**               | Representatives from Data controllers, Service centers and Data spaces on the BLUE subscription level ([read more](/govern-science/tingweek/lagtun/#attendance)). |
+| **Lagtun**               | Representatives from Data controllers, Service centers and Data spaces on the BLUE subscription level ([read more](/govern-science/tingweek/lagtun#attendance)). |
 
 ## Schedule
 

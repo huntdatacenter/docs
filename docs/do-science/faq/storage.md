@@ -72,11 +72,11 @@ mkdir -p $TMPDIR
 
 ### Why is home only 100G?
 
-The intention behind HUNT Cloud is to establish collaborative lab environments where people become stronger together by sharing data, code, results and knowledge. We have therefore kept the private **`home`** volume to a minimum to encourage lab users to move their activities into collaborative volumes such as work, archive and scratch. Order a volume expansion in our [service desk](/administer-science/service-desk/lab-orders/#expand-existing-volume) of these volumes if you are in need of space.
+The intention behind HUNT Cloud is to establish collaborative lab environments where people become stronger together by sharing data, code, results and knowledge. We have therefore kept the private **`home`** volume to a minimum to encourage lab users to move their activities into collaborative volumes such as work, archive and scratch. Order a volume expansion in our [service desk](/administer-science/service-desk/lab-orders#expand-existing-volume) of these volumes if you are in need of space.
 
 ::: danger WARNING
 
-There is -no- restore (backup) on your home-folder. All data in **`home`** may be lost in case of unexpected events. We strongly recommend that you keep the scientific data that your care about on the **`work`** or **`archive`** folders. [Click here](/administer-science/data/faq/#restore) to read more about restore.
+There is -no- restore (backup) on your home-folder. All data in **`home`** may be lost in case of unexpected events. We strongly recommend that you keep the scientific data that your care about on the **`work`** or **`archive`** folders. [Click here](/administer-science/data/faq#restore) to read more about restore.
 
 :::
 
@@ -94,11 +94,11 @@ Yes. HUNT Cloud is a collaborative computing platform where mutually trusted peo
 
 ### Can anyone access my home folder?
 
-Yes. More precise, other lab users will not be able do access data in your home folder directly. However, data in your lab is under the control of your data controller. This includes data that you upload and generate, also data in your private home folder. This is stated in our [user agreement](/administer-science/agreements/downloads/#user-agreement). Thus, your data controller or lab leader may request us to transfer data from your home folder into other folders that are accessible for other lab users or for compliance archiving, for example if you leave your lab. We will not expose your system keys during such moves.
+Yes. More precise, other lab users will not be able do access data in your home folder directly. However, data in your lab is under the control of your data controller. This includes data that you upload and generate, also data in your private home folder. This is stated in our [user agreement](/administer-science/agreements/downloads#user-agreement). Thus, your data controller or lab leader may request us to transfer data from your home folder into other folders that are accessible for other lab users or for compliance archiving, for example if you leave your lab. We will not expose your system keys during such moves.
 
 ### How can other lab users edit my files by default?
 
-Depending on your lab configuration, the files you generate may be read-only for other users. You may relax these permissions to read-write for any new files you create by adding **`umask 002`** to your **`~/.profile`** file ([more on umask](https://en.wikipedia.org/wiki/Umask)), for example by running this snippet in the command line inside your [home](/do-science/faq/compute/#what-is-a-home-machine) machine:
+Depending on your lab configuration, the files you generate may be read-only for other users. You may relax these permissions to read-write for any new files you create by adding **`umask 002`** to your **`~/.profile`** file ([more on umask](https://en.wikipedia.org/wiki/Umask)), for example by running this snippet in the command line inside your [home](/do-science/faq/compute#what-is-a-home-machine) machine:
 
 ```bash
 echo "
@@ -148,7 +148,7 @@ We do -not- recommend using `chmod` to restrict access to data within your lab f
 
 ::: tip
 
-See our [Data administrator FAQ](/administer-science/data/faq/#restore) for questions regarding backup and restore.
+See our [Data administrator FAQ](/administer-science/data/faq#restore) for questions regarding backup and restore.
 
 :::
 
@@ -170,7 +170,7 @@ We recommend using the 7z software to compress and decompress files and folders.
 
 ## IaaS and blue storage
 
-This section list commonly asked questions for storage our unmanaged [IaaS and blue machine types](/do-science/faq/compute/#machine-types) that you maintain yourself.
+This section list commonly asked questions for storage our unmanaged [IaaS and blue machine types](/do-science/faq/compute#machine-types) that you maintain yourself.
 
 ### What storage do I get on IaaS and blue machines?
 
@@ -178,7 +178,7 @@ Default IaaS and blue machines comes with a 1TB empty volume attached to your **
 
 ### Where is my data?
 
-Your data is located on your [home](/do-science/faq/compute/#machine-types) machine. You will need to (1) transfer data to your IaaS and blue machine for analysis, and (2) transfer your your results back to your home machine for long term preservation afterwards.
+Your data is located on your [home](/do-science/faq/compute#machine-types) machine. You will need to (1) transfer data to your IaaS and blue machine for analysis, and (2) transfer your your results back to your home machine for long term preservation afterwards.
 
 
 ### How can I transfer data to my IaaS and blue machines?

@@ -47,7 +47,7 @@ Protocol: UDP
 
 ### Administrator rights
 
-Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/do-science/lab-access/configure-vpn/#_2-1-install-the-vpn-software).
+Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/do-science/lab-access/configure-vpn#_2-1-install-the-vpn-software).
 
 You should reinstall your OpenVPN with administrative rights if you already installed OpenVPN and are getting errors below:
 
@@ -59,7 +59,7 @@ ERROR: Some routes were not successfully added. The connection may not function 
 
 ### Lost or missing VPN passphrase
 
-Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password Keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/do-science/lab-access/configure-vpn/#_2-2-setup-the-vpn-profile)  if this happens. Order your VPN certificate reset in our [service desk](/do-science/service-desk/#vpn-certificate-reset).
+Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password Keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/do-science/lab-access/configure-vpn#_2-2-setup-the-vpn-profile)  if this happens. Order your VPN certificate reset in our [service desk](/do-science/service-desk/#vpn-certificate-reset).
 
 
 
@@ -85,7 +85,7 @@ You cannot access your HUNT Cloud lab while using the default Cisco AnyConnect V
 
 ### No internet while connected to VPN
 
-If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check that you selected the **`Use this connection only for resources on its network`** in the final steps of [Setup the VPN profile](/do-science/lab-access/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
+If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check that you selected the **`Use this connection only for resources on its network`** in the final steps of [Setup the VPN profile](/do-science/lab-access/configure-vpn#_2-2-setup-the-vpn-profile) in the Getting Started section.
 
 ### Wrong password
 
@@ -93,7 +93,7 @@ If your VPN login suddenly stops working, and you are pretty sure your user name
 
 ### Deactivated account
 
-Inactive accounts will be deactivated after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. Your lab leader or lab coordinator may order your user reactivation in our [service desk](/administer-science/service-desk/lab-orders/#reactivate-lab-user).
+Inactive accounts will be deactivated after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. Your lab leader or lab coordinator may order your user reactivation in our [service desk](/administer-science/service-desk/lab-orders#reactivate-lab-user).
 
 ### New local computer
 
@@ -162,7 +162,7 @@ Your SSH connection is transferred inside your VPN connection. You will therefor
 
 ### Unresponsive machine (OOM Killer)
 
-Your lab machines may become unresponsive. You will notice this as a lost connection. A typical reason for this is that one or more a processes inside your machine consumed all the memory, initiating a Out Of Memory Killer (OOM Killer). You will be unable to log onto your lab if an OOM Killer is triggered on your **`home`** machine. You will be able to log into your lab, although unable to log into the affected **`iaas`** or **`blue`** machines, if an OOfM Killer is triggered on other machines in your lab. Your data will not be affected of OOM Killers. [Contact us](/contact) us for a machine restart and consider to update your machine type in our [service desk](/administer-science/service-desk/lab-orders/#update-machine-size).
+Your lab machines may become unresponsive. You will notice this as a lost connection. A typical reason for this is that one or more a processes inside your machine consumed all the memory, initiating a Out Of Memory Killer (OOM Killer). You will be unable to log onto your lab if an OOM Killer is triggered on your **`home`** machine. You will be able to log into your lab, although unable to log into the affected **`iaas`** or **`blue`** machines, if an OOfM Killer is triggered on other machines in your lab. Your data will not be affected of OOM Killers. [Contact us](/contact) us for a machine restart and consider to update your machine type in our [service desk](/administer-science/service-desk/lab-orders#update-machine-size).
 
 ### WARNING: Remote host identification has changed
 

@@ -46,7 +46,7 @@ Your Jupyter Notebooks and code files are stored in the following shared **`work
 
 Yes. This allows you to install packages and package versions of your choice.
 
-Below is an example on how you create a Conda environments with _Python_ and _IPython_ kernel from your [workbench terminal](/do-science/hunt-workbench/faq/#terminal)::
+Below is an example on how you create a Conda environments with _Python_ and _IPython_ kernel from your [workbench terminal](/do-science/hunt-workbench/faq#terminal)::
 
 ```bash
 mamba create -n <name> 'python~=3.10.*' 'ipykernel'
@@ -91,7 +91,7 @@ It might be handy to share your exact setup with your lab colleagues when you ha
 
 The packages that you have installed in your HUNT Workbench environment are usually not shared. The separation prevent others from breaking your packages and it allows you to explore packages without breaking the workflows of others.
 
-So, to share environments you will need to export your environments definition to your colleagues so they can reuse them. Read more on how to [share](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment) and manage Code environments on [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Below is a principle guide run in your [Workbench terminal](/do-science/hunt-workbench/faq/#terminal):
+So, to share environments you will need to export your environments definition to your colleagues so they can reuse them. Read more on how to [share](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment) and manage Code environments on [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Below is a principle guide run in your [Workbench terminal](/do-science/hunt-workbench/faq#terminal):
 
 1. In your Workbench:
 
@@ -183,7 +183,7 @@ We need to initiate such installation. [Contact us](/contact) on email if you ne
 
 ### Which R version is available in RStudio?
 
-RStudio is configured to use packages installed in the Conda environment named **`r-base`**. You can identify your current _R version_ packages in your [Workbench Terminal](/do-science/hunt-workbench/faq/#terminal) following these steps:
+RStudio is configured to use packages installed in the Conda environment named **`r-base`**. You can identify your current _R version_ packages in your [Workbench Terminal](/do-science/hunt-workbench/faq#terminal) following these steps:
 
 1. Open your Workbench Terminal.
 
@@ -215,7 +215,7 @@ If you have older setup and missing some of these packages you can follow the "_
 
 If you want to install your own R packages, we recommend that you use [Conda](/do-science/tools/analytical/conda) where ever possible:
 
-1. Open [Workbench Terminal](/do-science/hunt-workbench/faq/#terminal):
+1. Open [Workbench Terminal](/do-science/hunt-workbench/faq#terminal):
 
 ![workbench_terminal.png](./images/workbench_terminal.png)
 
@@ -255,9 +255,9 @@ You can defer to alternative methods such as `install.packages()` when the packa
 <br />
 :::
 
-If you don't find a _R package_ in Conda as described above, you may need to defer to running the **`install.packages()`** or **`BiocManager::install()`** commands inside **`R`**. We recommend to use **`R`** in your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) for such installations (instead of installing directly in RStudio) to avoid broken environment states in RStudio.
+If you don't find a _R package_ in Conda as described above, you may need to defer to running the **`install.packages()`** or **`BiocManager::install()`** commands inside **`R`**. We recommend to use **`R`** in your [workbench terminal](/do-science/hunt-workbench/faq#terminal) for such installations (instead of installing directly in RStudio) to avoid broken environment states in RStudio.
 
-Packages installed into your **`r-base`** environment through **R** in [terminal](/working-in-your-lab/workbench/faq/#terminal) will be available in **RStudio**.
+Packages installed into your **`r-base`** environment through **R** in [terminal](/working-in-your-lab/workbench/faq#terminal) will be available in **RStudio**.
 
 Make sure to activate the `r-base` environment before running **R** command.
 
@@ -271,7 +271,7 @@ R
 
 ### How can I use R in my Workbench Terminal?
 
-First, open your [Workbench Terminal](/do-science/hunt-workbench/faq/#terminal).
+First, open your [Workbench Terminal](/do-science/hunt-workbench/faq#terminal).
 
 Start by activating `r-base` environment:
 
@@ -291,7 +291,7 @@ Enjoy!
 
 Sometimes you may get errors about the a library not being found (e.g. **`GLIBCXX`**, **`OPENSSL`**) and/or essential R packages are not working. This happens typically after installation of custom package. In such cases, you might consider to recreate your **`r-base`** environment from scratch:
 
-1. Open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) and run the following code to reset your **`r-base`** environment:
+1. Open your [workbench terminal](/do-science/hunt-workbench/faq#terminal) and run the following code to reset your **`r-base`** environment:
 
 ```bash
 mamba create --yes -n r-base 'r-base>=4.0,<5.0' 'compilers' 'cmake' 'gmp' 'r-irkernel' 'r-devtools' 'r-remotes' 'r-dplyr' 'r-tidyverse' 'r-haven' 'r-languageserver' 'r-lintr'
@@ -320,7 +320,7 @@ Learn how to manage environments on [docs.conda.io](https://docs.conda.io/projec
 
 ### How do I reset my user state in RStudio?
 
-When you [restart your HUNT Workbench](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment), your _RStudio_ user state might still be preserved. Read the _RStudio_ support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server) to achieve a complete reset.
+When you [restart your HUNT Workbench](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment), your _RStudio_ user state might still be preserved. Read the _RStudio_ support pages about how you can [manually remove your user state](https://support.rstudio.com/hc/en-us/articles/218730228-Resetting-a-user-s-state-on-RStudio-Workbench-RStudio-Server) to achieve a complete reset.
 
 
 ## Visual Studio Code

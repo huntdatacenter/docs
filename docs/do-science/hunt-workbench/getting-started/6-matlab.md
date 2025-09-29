@@ -31,9 +31,9 @@ MATLAB is available in your Workbench VNC desktop under the "Education" tab.
 
 ## Managing resources
 
-Read more in our guide about [parallel computing settings](/do-science/hunt-workbench/faq/#how-can-i-increase-the-number-of-parallel-workers) in MATLAB.
+Read more in our guide about [parallel computing settings](/do-science/hunt-workbench/faq#how-can-i-increase-the-number-of-parallel-workers) in MATLAB.
 
 ## FAQ
 
-See our dedicated [MATLAB FAQ](/do-science/hunt-workbench/faq/#matlab).
+See our dedicated [MATLAB FAQ](/do-science/hunt-workbench/faq#matlab).
 

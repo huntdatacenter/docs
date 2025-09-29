@@ -26,7 +26,7 @@ On your local computer, download WinSCP from [winscp.net](https://winscp.net/eng
 ## Configure
 
 ::: tip
-This section configures WinSCP to connect your local computer to your [home machine](/do-science/faq/compute/#machine-types). Additional configurations will be needed for connections to iaas and blue machines.
+This section configures WinSCP to connect your local computer to your [home machine](/do-science/faq/compute#machine-types). Additional configurations will be needed for connections to iaas and blue machines.
 :::
 
 You will see the **`Login`** screen when you start WinSCP for the first time.

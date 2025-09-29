@@ -20,9 +20,9 @@ If you are configuring access to your lab use Lab access link sent to you in onb
 
 ## Requirements
 
-1. Confirmed [collection of secret keys](/do-science/lab-access/collect-your-keys/#step-1-collect-your-keys) in Step 1 of onboarding process.
+1. Confirmed [collection of secret keys](/do-science/lab-access/collect-your-keys#step-1-collect-your-keys) in Step 1 of onboarding process.
 
-2. Successful setup of [Google authenticator](/do-science/lab-access/collect-your-keys/#_1-3-one-time-verification-codes) app. 
+2. Successful setup of [Google authenticator](/do-science/lab-access/collect-your-keys#_1-3-one-time-verification-codes) app. 
 
 
 ## 2.1 Install the VPN software
@@ -306,7 +306,7 @@ Cannot load private key file
 If you are unable to click _Apply_ after your changes, try to re-enter your _Private Key Password_ using your **`VPN passphrase`** that you collected in Step 1.
 
 ::: tip
-If nothing works, please head over to our main [troubleshooting](/do-science/troubleshooting/connection/#vpn) section for more information on how to troubleshoot connections.
+If nothing works, please head over to our main [troubleshooting](/do-science/troubleshooting/connection#vpn) section for more information on how to troubleshoot connections.
 :::
 
 

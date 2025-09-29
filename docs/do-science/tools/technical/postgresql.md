@@ -30,7 +30,7 @@ psql -c "\password"
 
 ## Connecting from Workbench
 
-Once you have configured your password you can also login from [Workbench Terminal](/do-science/hunt-workbench/faq/#can-i-use-a-terminal-from-my-workbench):
+Once you have configured your password you can also login from [Workbench Terminal](/do-science/hunt-workbench/faq#can-i-use-a-terminal-from-my-workbench):
 
 ```bash
 psql --host=/var/run/postgresql
@@ -66,7 +66,7 @@ psql --host=/var/run/postgresql
 
 ## Installing Python connectors in Workbench
 
-You can install `psycopg2` using conda into [py310 environment](/do-science/hunt-workbench/faq/#how-can-i-change-a-conda-environment-for-my-notebook):
+You can install `psycopg2` using conda into [py310 environment](/do-science/hunt-workbench/faq#how-can-i-change-a-conda-environment-for-my-notebook):
 
 ```bash
 conda install -c conda-forge -n py310 psycopg2

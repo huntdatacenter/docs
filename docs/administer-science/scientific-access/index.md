@@ -46,8 +46,8 @@ Your Data space does also identify your management team that we interact with to
 
 * [HUNT Cloud Services specification](/administer-science/services/specifications) specifies the Data spaces services details. 
 * [HUNT Cloud Price list](/administer-science/prices/pricelist) specifies the Data space subscription cost. 
-* [HUNT Cloud Data space order](/administer-science/agreements/downloads/#data-space-order)
-* [HUNT Cloud Invoice profile](/administer-science/agreements/downloads/#invoice-profile)
+* [HUNT Cloud Data space order](/administer-science/agreements/downloads#data-space-order)
+* [HUNT Cloud Invoice profile](/administer-science/agreements/downloads#invoice-profile)
 :::
 
 ### Lab order
@@ -64,7 +64,7 @@ Your lab leader or lab coordinator chooses the initial size of the home machine 
 * [HUNT Cloud Price calculator](/administer-science/prices/calculator) exemplifies the Lab subscription cost and the cost for individual services. 
 * [HUNT Cloud Price list](/administer-science/prices/pricelist) specifies individual prices for the Lab subscription and individual services. 
 * [HUNT Cloud Machine types](/administer-science/services/machine-types) lists available machine types that can be deployed either as home machines or additional machines to the lab. 
-* [HUNT Cloud Lab order](/administer-science/agreements/downloads/#lab-order)
+* [HUNT Cloud Lab order](/administer-science/agreements/downloads#lab-order)
 :::
 
 
@@ -73,7 +73,7 @@ Your lab leader or lab coordinator chooses the initial size of the home machine 
 
 **There are a set of small decisions that needs to be made to get your first lab up and running. We are more than happy to help and guide in this process.** 
 
-Skip this step if you already have an active Data space in place and order your new lab directly in our [administer science service desk](/administer-science/service-desk/data-space-orders/#new-lab).
+Skip this step if you already have an active Data space in place and order your new lab directly in our [administer science service desk](/administer-science/service-desk/data-space-orders#new-lab).
 
 
 ::: details Data space order decision support
@@ -114,7 +114,7 @@ For larger center and groups, we see these roles as senior positions that admini
 
 *Subscription level*
 
-Your Data space subscription level decide the degrees of freedom for your scientists. Our [services overview](/administer-science/services/overview/#data-space) provides a summary of different features, the [services specifications](/administer-science/services/specifications) holds the detailed description, and the [price list](/administer-science/prices/pricelist) specify the yearly cost.
+Your Data space subscription level decide the degrees of freedom for your scientists. Our [services overview](/administer-science/services/overview#data-space) provides a summary of different features, the [services specifications](/administer-science/services/specifications) holds the detailed description, and the [price list](/administer-science/prices/pricelist) specify the yearly cost.
 
 We recommend that you start with the free-of-charge WHITE subscription level if you are unsure of which level you should choose as you may easily upgrade this later. [Contact us](/administer-science/contact) if you need guidance in your selection process.
 

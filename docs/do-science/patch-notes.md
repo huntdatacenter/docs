@@ -59,7 +59,7 @@ You can review price on both GPU cards [here](/administer-science/prices/priceli
 
 **Updated ISO certifcation** 
 
-New certificate are uploaded under [certificates](/govern-science/compliance/certificates/#iso-iec-27001-certificate)
+New certificate are uploaded under [certificates](/govern-science/compliance/certificates#iso-iec-27001-certificate)
 
 
 <h3>Minor changes</h3>
@@ -156,11 +156,11 @@ We have updated your lab access links so it is tailored for your specific reques
 
 **New machine type (E-series)**
 
-Based on requests, we have updated our default machine series with a [new E-series](/administer-science/services/machine-types/#e-series) that holds 16 GB ram per CPU. These can be ordered by [Requesting a machine size update](/administer-science/service-desk/lab-orders/#update-cpu-machine-size) in our administer science service desk. 
+Based on requests, we have updated our default machine series with a [new E-series](/administer-science/services/machine-types#e-series) that holds 16 GB ram per CPU. These can be ordered by [Requesting a machine size update](/administer-science/service-desk/lab-orders#update-cpu-machine-size) in our administer science service desk. 
 
 **New GPU type (A40)**
 
-NVIDIA A40 GPUs with 48 GB of memory are now available as [GPU accelerator types](/administer-science/services/machine-types/#gpu-accelerator-types) in Cloud2. [Contact us](/contact) for prioritized migration if you want to give it a try.
+NVIDIA A40 GPUs with 48 GB of memory are now available as [GPU accelerator types](/administer-science/services/machine-types#gpu-accelerator-types) in Cloud2. [Contact us](/contact) for prioritized migration if you want to give it a try.
 
 
 <h3>Minor changes</h3>
@@ -179,7 +179,7 @@ We have added [BRAT rapid annotation](https://brat.nlplab.org/) tools to Workben
 
 **Freedom to explore in new languages**
 
-Our community translation of [Freedom to explore](/do-science/community/freedom-to-explore) continues to grow, and we have added [Bulgarian](/do-science/community/freedom-to-explore/#bulgarian-bul), [Serbian](/do-science/community/freedom-to-explore/#serbian-srp) and [Indonesian](/do-science/community/freedom-to-explore/#indonesian-ind) since the last patch note - now counting an impressive 44 translations! Help us grow the list and [send us your translation](/do-science/community/freedom-to-explore/#my-language-is-missing) if your language is missing!
+Our community translation of [Freedom to explore](/do-science/community/freedom-to-explore) continues to grow, and we have added [Bulgarian](/do-science/community/freedom-to-explore#bulgarian-bul), [Serbian](/do-science/community/freedom-to-explore#serbian-srp) and [Indonesian](/do-science/community/freedom-to-explore#indonesian-ind) since the last patch note - now counting an impressive 44 translations! Help us grow the list and [send us your translation](/do-science/community/freedom-to-explore#my-language-is-missing) if your language is missing!
 
 
 :::
@@ -195,7 +195,7 @@ After years in the making, we are excited to announce that the migration to our 
 
 **New price list (v4.1)**
 
-We have updated our [price list](/administer-science/prices/pricelist/#current) with a new version (v4.1) that includes the new E-series machine types and the new NVIDIA A40 GPU type. The [price calculator](/administer-science/prices/calculator) is updated accordingly.
+We have updated our [price list](/administer-science/prices/pricelist#current) with a new version (v4.1) that includes the new E-series machine types and the new NVIDIA A40 GPU type. The [price calculator](/administer-science/prices/calculator) is updated accordingly.
 
 **Invoice updates**
 
@@ -211,7 +211,7 @@ We have created and shipped the first Data space reports. These aims to summariz
 
 **VAT extemption outside NTNU**
 
-We updated the [invoice profile form](/administer-science/agreements/downloads/#invoice-profile) with a section on possible extemptions from value added tax. Documented collaborations with partners from NTNU may be exempted from VAT if delivery of trusted research environments is part of the collaboration agreement. [Contact us](/contact) is this is relevant for you.
+We updated the [invoice profile form](/administer-science/agreements/downloads#invoice-profile) with a section on possible extemptions from value added tax. Documented collaborations with partners from NTNU may be exempted from VAT if delivery of trusted research environments is part of the collaboration agreement. [Contact us](/contact) is this is relevant for you.
 
 **Automatic overhead estimates for temporary Internal kistas**
 
@@ -250,11 +250,11 @@ The new certificates for ISO/IEC 27001 and ISO/IEC 27701 from DNV is now availab
 
 **New service center reports**
 
-Based on the last Tingweek resolution ([R10/LT11/T11/24]((/govern-science/tingweek/resolutions/#improve-resource-and-compliance-reporting))), we have made a new service center report that summarize resources, activities and costs inside all data spaces and labs under your center. The intention is that this will increase transparency and enhance dialogues on how to improve our systems and advance your science. We will forward the first version on email with the aim to automate shipments from 2024-Q2.
+Based on the last Tingweek resolution ([R10/LT11/T11/24]((/govern-science/tingweek/resolutions#improve-resource-and-compliance-reporting))), we have made a new service center report that summarize resources, activities and costs inside all data spaces and labs under your center. The intention is that this will increase transparency and enhance dialogues on how to improve our systems and advance your science. We will forward the first version on email with the aim to automate shipments from 2024-Q2.
 
 **Community deletion policy enforced**
 
-Community messages in Slack is from 2024-01-01 stored for 1Y only. Older messages automatically deleted in accordance with our [community consent](/do-science/community/current-consent/#you-messages-are-kept-for-one-year). Read more about the consent history [here](/do-science/community/consent-information).
+Community messages in Slack is from 2024-01-01 stored for 1Y only. Older messages automatically deleted in accordance with our [community consent](/do-science/community/current-consent#you-messages-are-kept-for-one-year). Read more about the consent history [here](/do-science/community/consent-information).
 
 **Security and privacy policies with new privacy controls**
 
@@ -264,7 +264,7 @@ Community messages in Slack is from 2024-01-01 stored for 1Y only. Older message
 
 **Updated Statement of applicability**
 
-[Statement of Applicability (SoA)](/govern-science/compliance/certificates/#statement-of-applicability-soa) is the document where we state which ISO control objectves we have applied in our certificate. We have updated the document with new roles and comments for our privacy controls. 
+[Statement of Applicability (SoA)](/govern-science/compliance/certificates#statement-of-applicability-soa) is the document where we state which ISO control objectves we have applied in our certificate. We have updated the document with new roles and comments for our privacy controls. 
 
 **Agreement updates**
 
@@ -329,7 +329,7 @@ We have made two minor updates to the [Services specifications](/administer-scie
 
 **Updated invoice profile**
 
-We have simplified the [Invoice profile](/administer-science/agreements/downloads/#invoice-profile) by moving Free quota and Pilot periods into separate agreements. 
+We have simplified the [Invoice profile](/administer-science/agreements/downloads#invoice-profile) by moving Free quota and Pilot periods into separate agreements. 
 
 <h3>Upcoming features</h3>
 
@@ -412,7 +412,7 @@ No updates.
 
 **Add a new community member**
 
-Labs under a BLUE data space subscription may now invite persons that are not lab users to their HUNT Cloud community lab channel. [Click here](/administer-science/service-desk/lab-orders/#community-membership) to request memberships. 
+Labs under a BLUE data space subscription may now invite persons that are not lab users to their HUNT Cloud community lab channel. [Click here](/administer-science/service-desk/lab-orders#community-membership) to request memberships. 
 
 Membership is voluntary, and new members will be asked to consent to our data processing for the service. See our [community section](/do-science/community/) to learn more about our community and the new community consent.
 
@@ -537,7 +537,7 @@ We have updated the link to the service desk buttons at the bottom of all [servi
 
 * Invoices are planned shipped in the first week of September.
 * Community membership consent.
-* We have been piloting a service to fill out PDF orders in your local browser. You can see an experimental version for our [Internal kista orders](/administer-science/service-desk/lab-orders/#internal-kista). 
+* We have been piloting a service to fill out PDF orders in your local browser. You can see an experimental version for our [Internal kista orders](/administer-science/service-desk/lab-orders#internal-kista). 
 
 
 :::
@@ -561,7 +561,7 @@ Our new [Security and privacy policies](https://docs.hdc.ntnu.no/govern-science/
 
 **Updated Statement of applicability (SoA)**
 
-[The new SoA](/govern-science/compliance/certificates/#statement-of-applicability-soa) includes 85 additional control objectives from ISO/IEC 27701:2019. New objectives are included as 'Planned, not implemented', and objectives that are merged with existing ISO/IEC 27002:2013 controls are adjusted from 'Fully implemented ' to 'Partly implemented' pending internal audits.
+[The new SoA](/govern-science/compliance/certificates#statement-of-applicability-soa) includes 85 additional control objectives from ISO/IEC 27701:2019. New objectives are included as 'Planned, not implemented', and objectives that are merged with existing ISO/IEC 27002:2013 controls are adjusted from 'Fully implemented ' to 'Partly implemented' pending internal audits.
 
 <h3>Upcoming features</h3>
 
@@ -599,7 +599,7 @@ We are introducing the ability for users to reset passphrase directly in Workben
 
 * This method works for *new* and *existing* users. 
 * Once you request SSH passphrase reset, head over to your Workbench to easily reset your passphrase in a familiar manner. 
-* You can find further details in this [guide](/do-science/guides/configure-ssh-workbench/#ssh-passphrase-reset-in-workbench).
+* You can find further details in this [guide](/do-science/guides/configure-ssh-workbench#ssh-passphrase-reset-in-workbench).
 
 
 **Lab access link**
@@ -642,7 +642,7 @@ We are simplifying [Scientific access](/administer-science/scientific-access/) f
 
 **Agreement updates**
  
-We updated the agreements for [External kista import order](/administer-science/agreements/downloads/#external-kista-import-order) (v2.1) and [External kista export order](/administer-science/agreements/downloads/#external-kista-export-order) (v1.4): 
+We updated the agreements for [External kista import order](/administer-science/agreements/downloads#external-kista-import-order) (v2.1) and [External kista export order](/administer-science/agreements/downloads#external-kista-export-order) (v1.4): 
 
 * Naming of "Internal lab user" included in separate header to improve differentiation from lab leader.
 

@@ -100,7 +100,7 @@ The default version in Ubuntu is usually a few versions behind the newest R vers
 
 ::: warning Please note
 Running upgrade affects versions of all packages on your machine. This may break your or others environments.
-We recommend installing new R version using [Conda](/do-science/tools/analytical/r-studio/#install-using-conda) instead.
+We recommend installing new R version using [Conda](/do-science/tools/analytical/r-studio#install-using-conda) instead.
 :::
 
 
@@ -262,7 +262,7 @@ sudo vim /etc/x2go/x2goagent.options
 
 ### I cannot create R_TempDir
 
-If your system disk is full, R will not be able to store temporary files used for computation. You may see the error message **`Fatal error: cannot create 'R_TempDir'`**. [Click here](/do-science/faq/storage/#how-can-i-see-the-sizes-of-my-lab-volumes) to verify if the disk disk is full, and this guide to change your temp folder to a larger volume.
+If your system disk is full, R will not be able to store temporary files used for computation. You may see the error message **`Fatal error: cannot create 'R_TempDir'`**. [Click here](/do-science/faq/storage#how-can-i-see-the-sizes-of-my-lab-volumes) to verify if the disk disk is full, and this guide to change your temp folder to a larger volume.
 
 ### Installation of devtools
 
@@ -296,7 +296,7 @@ sudo apt install tcl tcl8.6 tk tk-table tk8.6
 
 ### RStudio or R becomes unresponsive when I run my code
 
-It might be good to check the resource consumption on your lab machine. The response may be reduced if you or your lab mates consume all memory and/or CPU. A quick way to do this is via [HTOP and time](/do-sciencefaq/compute/#can-i-monitor-my-resource-consumption). 
+It might be good to check the resource consumption on your lab machine. The response may be reduced if you or your lab mates consume all memory and/or CPU. A quick way to do this is via [HTOP and time](/do-sciencefaq/compute#can-i-monitor-my-resource-consumption). 
 
 For example, if you use all your memory you might need to reduce your table sizes or upgrade your machine size. If your lab mates consume all your resources you may want to ask them to spare some for you.
 

@@ -13,7 +13,7 @@ description: External kistas support labs with a simple and secure way to transf
 [[toc]]
 
 ::: tip Note
-This page describes the practical aspects of external kista transfers. Head over to our [External kista FAQ](/do-science/faq/external-transfer/#external-kista) for more information on the service itself.
+This page describes the practical aspects of external kista transfers. Head over to our [External kista FAQ](/do-science/faq/external-transfer#external-kista) for more information on the service itself.
 :::
 
 ## For external users
@@ -201,7 +201,7 @@ sftp -oPort=<port-number> <username>@ekista.hdc.ntnu.no
 sftp -oPort=2124 johndoe-importer@ekista.hdc.ntnu.no
 ```
 
-Once logged in you can follow the examples from our [internal kista guide](/do-science/data-transfers/internal-kista) for [upload](/do-science/data-transfers/internal-kista/#upload) or [download](/do-science/data-transfers/internal-kista/#download) of data.
+Once logged in you can follow the examples from our [internal kista guide](/do-science/data-transfers/internal-kista) for [upload](/do-science/data-transfers/internal-kista#upload) or [download](/do-science/data-transfers/internal-kista#download) of data.
 
 :::
 

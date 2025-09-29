@@ -23,7 +23,7 @@ We are part of NTNU which means that NTNU employees do not have to bring in the 
 
 ## Limitations
 
-You can only run Stata in [workbench terminal](/do-science/hunt-workbench/faq/#terminal) or as unofficial [Jupyter Kernel](https://kylebarron.dev/stata_kernel/).
+You can only run Stata in [workbench terminal](/do-science/hunt-workbench/faq#terminal) or as unofficial [Jupyter Kernel](https://kylebarron.dev/stata_kernel/).
 
 You can also call Stata commands from python using an official solution [pystata](https://www.stata.com/python/pystata18/).
 

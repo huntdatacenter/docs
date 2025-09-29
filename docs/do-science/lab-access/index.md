@@ -11,7 +11,7 @@ description: This guide will help you to access to your HUNT Cloud lab.
 
 ::: tip Save time
 
-[Install Signal](/do-science/lab-access/collect-your-keys/#_1-1-secrets-to-your-phone) as soon as your lab has sent us your signed user agreement. This allows us to quickly forward you the lab keys when they are ready.
+[Install Signal](/do-science/lab-access/collect-your-keys#_1-1-secrets-to-your-phone) as soon as your lab has sent us your signed user agreement. This allows us to quickly forward you the lab keys when they are ready.
 
 :::
 
