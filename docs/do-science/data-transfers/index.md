@@ -10,7 +10,7 @@ permalink: /do-science/data-transfers/
 
 ### Transfers inside HUNT Cloud 
 
-[Internal kistas](/do-science/transfers/internal-kista.md) ensures controlled transfers between labs inside HUNT Cloud.
+[Internal kistas](/do-science/data-transfers/internal-kista.md) ensures controlled transfers between labs inside HUNT Cloud.
 
 ### Transfers with partners outside HUNT Cloud
 

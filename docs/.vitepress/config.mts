@@ -593,7 +593,7 @@ function sidebarDoScience() {
         },
         {
           text: "Internal kista",
-          link: "/do-science/transfers/internal-kista",
+          link: "/do-science/data-transfers/internal-kista",
         },
         {
           text: "External kista",
