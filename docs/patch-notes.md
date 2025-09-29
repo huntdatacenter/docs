@@ -599,7 +599,7 @@ We are introducing the ability for users to reset passphrase directly in Workben
 
 * This method works for *new* and *existing* users.
 * Once you request SSH passphrase reset, head over to your Workbench to easily reset your passphrase in a familiar manner.
-* You can find further details in this [guide](/do-science/guides/configure-ssh-workbench#ssh-passphrase-reset-in-workbench).
+* You can find further details in this [guide](/do-science/guides/access-guides/reset-ssh-workbench#ssh-passphrase-reset-in-workbench).
 
 
 **Lab access link**
