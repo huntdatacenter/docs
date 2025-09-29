@@ -84,6 +84,11 @@ export default defineConfig({
     resolve: {
       preserveSymlinks: true,
     },
+    ssr: {
+      // Build vuetify as part of the project
+      // to avoid TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension ".css"
+      noExternal: ["vuetify"],
+    },
   },
 })
 

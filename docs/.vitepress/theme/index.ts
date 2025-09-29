@@ -3,6 +3,8 @@ import { h } from "vue"
 import type { Theme } from "vitepress"
 import DefaultTheme from "vitepress/theme"
 
+import "./style.css"
+
 // import { VStepperVertical } from "vuetify/labs/VStepperVertical"
 
 import CopyInput from "./components/generic/CopyInput.vue"
@@ -15,12 +17,12 @@ import MyIPAddress from "./components/legacy/MyIPAddress.vue"
 import NavitationCards from "./components/legacy/NavitationCards.vue"
 import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
 import ConsentForm from "./components/legacy/ConsentForm.vue"
+// import EmbedPdfViewer from "./components/legacy/EmbedPdfViewer.vue"
+// import PdfForm from "./components/legacy/PdfForm.vue"
+// import SOButton from "./components/legacy/SOButton.vue"
 import SDButton from "./components/legacy/SDButton.vue"
-import SOButton from "./components/legacy/SOButton.vue"
 import ServiceDesk from "./components/legacy/ServiceDesk.vue"
 import AgreementForm from "./components/legacy/AgreementForm.vue"
-import EmbedPdfViewer from "./components/legacy/EmbedPdfViewer.vue"
-import PdfForm from "./components/legacy/PdfForm.vue"
 import LabAccess from "./components/lab-access/LabAccess.vue"
 import LinuxJourney from "./components/lab-access/LinuxJourney.vue"
 import WindowsJourney from "./components/lab-access/WindowsJourney.vue"
@@ -36,8 +38,6 @@ import LabCard from "./components/price-estimator/LabCard.vue"
 import Machine from "./components/price-estimator/Machine.vue"
 import Storage from "./components/price-estimator/Storage.vue"
 import TotalBlock from "./components/price-estimator/TotalBlock.vue"
-
-import "./style.css"
 
 import "@mdi/font/css/materialdesignicons.css"
 
@@ -177,10 +177,12 @@ export default {
   enhanceApp({ app, router, siteData }) {
     router.onBeforeRouteChange = to => {
       // Redirect PDFs into assets to assure uploads of PDFs into assets repository
-      if (to.startsWith("/assets/") && to.endsWith(".pdf")) {
-        // NOTE Redirect PDF assets if not found - fails to redirect existing
-        window.location.href = "https://assets.hdc.ntnu.no" + to
-        return false // prevent the original navigation
+      if (typeof window !== "undefined") {
+        if (to.startsWith("/assets/") && to.endsWith(".pdf")) {
+          // NOTE Redirect PDF assets if not found - fails to redirect existing
+          window.location.href = "https://assets.hdc.ntnu.no" + to
+          return false // prevent the original navigation
+        }
       }
 
       // Redirect everytevery URIs that start with key (first item in the pair)
@@ -188,7 +190,11 @@ export default {
         if (to.startsWith(pair[0])) {
           // Rewrite the link to correct path
           console.log(`Redirect: ${pair[0]} -> ${pair[1]}`)
-          window.location.href = to.replace(pair[0], pair[1])
+          if (typeof window !== "undefined") {
+            window.location.href = to.replace(pair[0], pair[1])
+          } else {
+            router.go(to.replace(pair[0], pair[1]))
+          }
           return false
         } else {
           return true
@@ -224,12 +230,12 @@ export default {
     app.component("NavitationCards", NavitationCards)
     app.component("HideLastUpdated", HideLastUpdated)
     app.component("ConsentForm", ConsentForm)
+    // app.component("EmbedPdfViewer", EmbedPdfViewer)
+    // app.component("PdfForm", PdfForm)
+    // app.component("SOButton", SOButton)
     app.component("SDButton", SDButton)
-    app.component("SOButton", SOButton)
     app.component("ServiceDesk", ServiceDesk)
     app.component("AgreementForm", AgreementForm)
-    app.component("EmbedPdfViewer", EmbedPdfViewer)
-    app.component("PdfForm", PdfForm)
     app.component("LabAccess", LabAccess)
     app.component("LinuxJourney", LinuxJourney)
     app.component("WindowsJourney", WindowsJourney)
