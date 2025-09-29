@@ -10,7 +10,7 @@ description: This page gives an overview of the backstage activities that make H
 **There are few blue-prints and how-to guides on the activities that are needed to develop digital laboratories. This makes for a fun quest filled with challenges.**
 
 
-This page contains information on some of the backstage activities that we do in HUNT Cloud to provide your cloud experiences. Jump over to our [services overview](/administer-science/services/overview/) to see the front stage activities that are seen by our cloud community.
+This page contains information on some of the backstage activities that we do in HUNT Cloud to provide your cloud experiences. Jump over to our [services overview]((/administer-science/services/overview)) to see the front stage activities that are seen by our cloud community.
 
 In short, we aim to blend humanities, technologies, data and administrative ideas into our day-to-day activities. 
 
@@ -144,6 +144,6 @@ When that is said, we are custodians for large amounts of personal and high-valu
 
 Even though we are part of a public university and run these services with zero profit, we are constantly investing time on how to best reduce cost, how to ensure funds to increase capacity, and how to secure long-term salaries. 
 
-One key in this activity is the continuous development of our financial model that guide our cloud prices. The [current services model](/administer-science/services/services-model/) mixes long-term subscriptions with an option for on-demand scalability. We are constantly thinking about ways to improve the financial predictability and scientific flexibility for our users so we get more data and science done.
+One key in this activity is the continuous development of our financial model that guide our cloud prices. The [current services model](/administer-science/services/services-model) mixes long-term subscriptions with an option for on-demand scalability. We are constantly thinking about ways to improve the financial predictability and scientific flexibility for our users so we get more data and science done.
 
 Our financial work also includes modeling and reporting, accounting strategies and invoice management, as well as negotiation of frame agreements and equipment procurements.

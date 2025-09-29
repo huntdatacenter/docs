@@ -37,7 +37,7 @@ This is our allting were we focuses on **user experience inside labs**, and comm
 
 All active lab users, lab leaders and lab coordinators are invited for information, feedback and discussions on all aspects of existing, planned and future services.
 
-[Read more the Labting](/do-science/community/labting/) in our do science section.
+[Read more about the Labting](/do-science/community/labting) in our do science section.
 
 ### Data space ting
 
