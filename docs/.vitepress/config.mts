@@ -835,7 +835,7 @@ function sidebarAdministerScience() {
         //   link: "/administer-science/prices/calculator",
         // },
         {
-          text: "Estimator",
+          text: "Price estimator",
           link: "/administer-science/prices/estimator",
         },
         {
