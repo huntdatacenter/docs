@@ -9,12 +9,12 @@ description: This page contains common questions on scientific administration in
 
 **This FAQ is intended for scientific administrators that administer science in data spaces and labs.**
 
-* [Lab management FAQ](/administer-science/faq/lab-management/)
-* [Compliance administration FAQ](/administer-science/faq/compliance-administration/)
-* [Financial administration FAQ](/administer-science/faq/financial-administration/)
-* [Data administration FAQ](/administer-science/faq/data-administration/)
-* [Technical administration FAQ](/administer-science/faq/technical-administration/)
-* [Training administration FAQ](/training-science/faq/training-administration/)
+* [Lab management FAQ](/administer-science/faq/lab-management)
+* [Compliance administration FAQ](/administer-science/faq/compliance-administration)
+* [Financial administration FAQ](/administer-science/faq/financial-administration)
+* [Data administration FAQ](/administer-science/faq/data-administration)
+* [Technical administration FAQ](/administer-science/faq/technical-administration)
+* [Training administration FAQ](/administer-science/faq/training-administration)
 
 ::: tip
 

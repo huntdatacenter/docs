@@ -880,27 +880,27 @@ function sidebarAdministerScience() {
         },
         {
           text: "Lab FAQ",
-          link: "/administer-science/faq/lab-faq",
+          link: "/administer-science/faq/lab-management",
         },
         {
           text: "Compliance FAQ",
-          link: "/administer-science/faq/compliance-faq",
+          link: "/administer-science/faq/compliance-administration",
         },
         {
           text: "Finance FAQ",
-          link: "/administer-science/faq/finance-faq",
+          link: "/administer-science/faq/financial-administration",
         },
         {
           text: "Data FAQ",
-          link: "/administer-science/faq/data-faq",
+          link: "/administer-science/faq/data-administration",
         },
         {
           text: "Tech FAQ",
-          link: "/administer-science/faq/tech-faq",
+          link: "/administer-science/faq/technical-administration",
         },
         {
           text: "Training FAQ",
-          link: "/administer-science/faq/training-faq",
+          link: "/administer-science/faq/training-administration",
         },
       ],
     },
