@@ -1,5 +1,6 @@
 <script setup>
-import { ref, computed, watch, onMounted, nextTick, defineAsyncComponent } from "vue"
+import { ref, computed, watch, onMounted, nextTick } from "vue"
+// import { defineAsyncComponent } from "vue"
 import YAML from "yaml"
 import { PDFDocument } from "pdf-lib"
 import { countries } from "country-list-json"
@@ -7,6 +8,10 @@ import SignaturePad from "signature_pad"
 
 // Dynamic / Async component import (Vue 3 style)
 // const CustomComponent = defineAsyncComponent(() => import("./CustomComponent.vue"))
+
+defineOptions({
+  name: "PdfForm",
+})
 
 // Props
 const props = defineProps({

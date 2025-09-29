@@ -1,5 +1,6 @@
 <script setup>
-import { ref, computed, onMounted, defineAsyncComponent } from "vue"
+import { ref, computed, onMounted } from "vue"
+// import { defineAsyncComponent } from "vue"
 import YAML from "yaml"
 
 defineOptions({
