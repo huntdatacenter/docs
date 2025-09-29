@@ -1032,19 +1032,19 @@ function sidebarGovernScience() {
     {
       text: "Risk management",
       collapsed: true,
-      link: "/govern-science/risk/",
+      link: "/govern-science/risk-management/",
       items: [
         {
           text: "Introduction",
-          link: "/govern-science/risk/",
+          link: "/govern-science/risk-management/",
         },
         {
           text: "Resources",
-          link: "/govern-science/risk/resources",
+          link: "/govern-science/risk-management/resources",
         },
         {
           text: "FAQ",
-          link: "/govern-science/risk/faq",
+          link: "/govern-science/risk-management/faq",
         },
       ],
     },

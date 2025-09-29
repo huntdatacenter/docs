@@ -154,14 +154,14 @@ Yes. You can run [Docker images](https://www.docker.com/) on both [IaaS](/do-sci
 
 ::: tip
 
-If you need to run docker images on home machine try using Apptainer instead (previously known as Singularity). Read more in our [Apptainer installation guide](/do-science/tools/technical/apptainer-singularity).
+If you need to run docker images on home machine try using Apptainer instead (previously known as Singularity). Read more in our [Apptainer installation guide](/do-science/tools/technical/apptainer).
 
 :::
 
 ### Can I run Apptainer (Singularity) containers?
 
 Yes, you can run your Apptainer (Singularity) containers on both home, IaaS and SPOT machines. Follow our quick
-[Apptainer installation guide](/do-science/tools/technical/apptainer-singularity). For simplicity, we strongly recommend to install Apptainer via Conda.
+[Apptainer installation guide](/do-science/tools/technical/apptainer). For simplicity, we strongly recommend to install Apptainer via Conda.
 
 ## Workflow
 

@@ -144,6 +144,6 @@ When that is said, we are custodians for large amounts of personal and high-valu
 
 Even though we are part of a public university and run these services with zero profit, we are constantly investing time on how to best reduce cost, how to ensure funds to increase capacity, and how to secure long-term salaries.
 
-One key in this activity is the continuous development of our financial model that guide our cloud prices. The [current services model](/administer-science/services/services-model) mixes long-term subscriptions with an option for on-demand scalability. We are constantly thinking about ways to improve the financial predictability and scientific flexibility for our users so we get more data and science done.
+One key in this activity is the continuous development of our financial model that guide our cloud prices. The [current services model](/administer-science/services-model) mixes long-term subscriptions with an option for on-demand scalability. We are constantly thinking about ways to improve the financial predictability and scientific flexibility for our users so we get more data and science done.
 
 Our financial work also includes modeling and reporting, accounting strategies and invoice management, as well as negotiation of frame agreements and equipment procurements.
