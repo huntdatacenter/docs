@@ -14,7 +14,7 @@ permalink: /do-science/data-transfers/
 
 ### Transfers with partners outside HUNT Cloud
 
-[External kistas](/do-science/transfers/external-kista.md) ensures controlled transfers between external parties outside HUNT Cloud and labs inside HUNT Cloud.
+[External kistas](/do-science/data-transfers/external-kista.md) ensures controlled transfers between external parties outside HUNT Cloud and labs inside HUNT Cloud.
 
 ### General transfer resources
 

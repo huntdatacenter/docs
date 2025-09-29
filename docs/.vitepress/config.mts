@@ -585,11 +585,11 @@ function sidebarDoScience() {
     {
       text: "Data transfers",
       collapsed: true,
-      link: "/do-science/transfers/",
+      link: "/do-science/data-transfers/",
       items: [
         {
           text: "Introduction",
-          link: "/do-science/transfers/",
+          link: "/do-science/data-transfers/",
         },
         {
           text: "Internal kista",
@@ -597,7 +597,7 @@ function sidebarDoScience() {
         },
         {
           text: "External kista",
-          link: "/do-science/transfers/external-kista",
+          link: "/do-science/data-transfers/external-kista",
         },
       ],
     },
