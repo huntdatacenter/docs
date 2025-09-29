@@ -5,8 +5,8 @@ import { PDFDocument } from "pdf-lib"
 import { countries } from "country-list-json"
 import SignaturePad from "signature_pad"
 
-// Dynamic import for components
-const EmbedPdfViewer = defineAsyncComponent(() => import("./EmbedPdfViewer.vue"))
+// Dynamic / Async component import (Vue 3 style)
+// const CustomComponent = defineAsyncComponent(() => import("./CustomComponent.vue"))
 
 // Props
 const props = defineProps({

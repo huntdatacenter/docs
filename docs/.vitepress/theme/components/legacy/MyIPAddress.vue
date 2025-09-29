@@ -5,9 +5,6 @@ defineOptions({
   name: "MyIPAddress",
 })
 
-// Async component import (Vue 3 style)
-const CopyInputField = defineAsyncComponent(() => import("../generic/CopyInputField.vue"))
-
 // Props definition
 const props = defineProps({
   id: { type: String, default: "applet" },
