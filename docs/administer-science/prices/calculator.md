@@ -2,7 +2,7 @@
 title: Price calculator
 category: HUNT Cloud
 permalink: /administer-science/prices/calculator
-outline: 1
+outline: 0
 editLink: false
 description: HUNT Cloud price calculator.
 ---

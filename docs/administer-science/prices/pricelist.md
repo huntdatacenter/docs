@@ -2,7 +2,7 @@
 title: Price list
 category: HUNT Cloud
 permalink: /administer-science/prices/pricelist
-outline: 1
+outline: 2
 description: This page holds the current price list for HUNT Cloud.
 ---
 
@@ -15,7 +15,7 @@ description: This page holds the current price list for HUNT Cloud.
 Head over to our [price calculator](/administer-science/prices/calculator) to tailor cost estimates for you desired configuration, or visit our [price examples](/administer-science/prices/examples/) for commonly used configurations.
 
 
-## Current 
+## Current
 
 ::: tip CURRENT PRICE LIST
 
@@ -34,9 +34,9 @@ Head over to our [price calculator](/administer-science/prices/calculator) to ta
 
 ## Updates
 
-The price list will be updated from time to time. 
+The price list will be updated from time to time.
 
-**Major updates**. Major updates affect prices and/or available services. Major updates are specified by increasing numbers (v1, v2, v3, etc.). These become effective ninety days after they are announcement to service centers and data spaces on email. The new version is immediately effective for new service centers. 
+**Major updates**. Major updates affect prices and/or available services. Major updates are specified by increasing numbers (v1, v2, v3, etc.). These become effective ninety days after they are announcement to service centers and data spaces on email. The new version is immediately effective for new service centers.
 
 **Minor updates**. Major updates do -not- affect prices and/or available services. Minor updates are specified by increasing decimals (v2.1, v2.2, v2.3, etc). Minor updates follow the effective date of major updates and take precedence of previous versions when they are published on this page.
 
@@ -58,14 +58,14 @@ The price list will be updated from time to time.
 
 ## Changes
 
-#### HUNT Cloud Price list v5.0 (MAJOR) 
+#### HUNT Cloud Price list v5.0 (MAJOR)
 
 New prices are adjusted based on updated equipment and operational costs since the last price adjustments in 2022. Percentages below are approximations for comparison. Accompanying services updates are described under [HUNT Cloud Services Specification v3.0](/administer-science/services/#hunt-cloud-services-specification-v3-0-major) (MAJOR).
 
 *Data space subscriptions*
 
 * Costs are removed for all data space subscription levels.
-* EXPLORE and EVOLVE are introduced as new data space subscription levels for improved lab portfolio management for departments and to encourage growth of emerging data spaces. 
+* EXPLORE and EVOLVE are introduced as new data space subscription levels for improved lab portfolio management for departments and to encourage growth of emerging data spaces.
 * WHITE, BLUE and ORANGE subscription levels are removed.
 
 *Lab subscriptions*
@@ -80,39 +80,39 @@ New prices are adjusted based on updated equipment and operational costs since t
 * SPOT prices are introduced as the new cost effective machine alternative. These prices are 30-40% increased compared to BLUE prices, and kept at 50% of COMMITMENT and ON-DEMAND.
 * BLUE prices are removed.
 * GPU pricing is simplified to ON-DEMAND only.
-* GPU NVIDIA P100 is phased out and removed from the selection. 
+* GPU NVIDIA P100 is phased out and removed from the selection.
 
 *Store*
 
 * Regular storage price is increased with 20-30%.
-* NVMe is introduced as an speed-optimized storage option. 
+* NVMe is introduced as an speed-optimized storage option.
 * Tape prices is now prices per pair regardless of volume.
 
-#### HUNT Cloud Price list v4.5 (minor) 
+#### HUNT Cloud Price list v4.5 (minor)
 
 *Compute updates*
 
 * A new GPU accelerator (NVIDIA L40S) is included.
 
-#### HUNT Cloud Price list v4.4 (minor) 
+#### HUNT Cloud Price list v4.4 (minor)
 
 *Compute updates*
 
 * Memory corrected for one GPU accelerator (NVIDIA V100) from 16G to 32g.
 
-#### HUNT Cloud Price list v4.3 (minor) 
+#### HUNT Cloud Price list v4.3 (minor)
 
 *Compute updates*
 
 * A new GPU accelerator (NVIDIA A16) is included.
 
-#### HUNT Cloud Price list v4.2 (minor) 
+#### HUNT Cloud Price list v4.2 (minor)
 
 *Store update*
 
 * Legend of block storage table updated to reflect that prices in the table are for one terabyte.
 
-#### HUNT Cloud Price list v4.1 (minor) 
+#### HUNT Cloud Price list v4.1 (minor)
 
 *Compute updates*
 
@@ -121,11 +121,11 @@ New prices are adjusted based on updated equipment and operational costs since t
 
 #### HUNT Cloud Price list v4.0 (MAJOR)
 
-The new prices are adjusted based on updated equipment cost, and evaluations of 2022 usage and rates for Q2-Q3 towards our initial cost-recovery estimates for our v3 price list. 
+The new prices are adjusted based on updated equipment cost, and evaluations of 2022 usage and rates for Q2-Q3 towards our initial cost-recovery estimates for our v3 price list.
 
 *Services updates*
 
-* BLUE data space subscription open for 3Y commitment. 
+* BLUE data space subscription open for 3Y commitment.
 * Compute CPU default machine types expanded with larger machine types.
 * Compute GPU types expanded with A100 40GB, A100 80GB and A30 24GB accelerators.
 
@@ -134,7 +134,7 @@ The new prices are adjusted based on updated equipment cost, and evaluations of 
 * Storage prices are increased with 1-2%.
 * Services subscriptions are increased about 4%.
 * Compute default machine type prices for COMMIT and ONDEMAND service levels are reduced compared to the v3 price list, up to 30% for memory intensive machine types.
-* Compute default machine types for the BLUE service level are increased up to 30% (mean 50% of 1Y COMMIT prices in v4 compared to 35% in v3). 
+* Compute default machine types for the BLUE service level are increased up to 30% (mean 50% of 1Y COMMIT prices in v4 compared to 35% in v3).
 * Prices for external transport on WHITE subscription level removed.
 
 #### HUNT Cloud Price list v3.2 (minor)
