@@ -10,7 +10,7 @@ description: Guide to pick up the thread after being away for several months.
 
 **This page is aimed at lab users that needs to pick up their thread after some time away from their lab.**
 
-We know, science has its natural cycles and seasons for courses, grants, supervision, publishing, celebrations and so forth. We have our seasons too, with time for breaks, work sprints, parental leaves, caring for family members etc. 
+We know, science has its natural cycles and seasons for courses, grants, supervision, publishing, celebrations and so forth. We have our seasons too, with time for breaks, work sprints, parental leaves, caring for family members etc.
 
 It's normal to not remember where you left off, and quickly picking up the threads when you get back is important. Our aim for this page is to get you back in your lab so you can quickly click around to get reacquainted with your data, scripts and thinking again.
 
@@ -19,7 +19,7 @@ It's normal to not remember where you left off, and quickly picking up the threa
 
 ## Are you able to access your lab?
 
-First thing first, we need to get you into your lab so you can do your science. 
+First thing first, we need to get you into your lab so you can do your science.
 
 ### No, I'm not able to get in
 
@@ -27,15 +27,15 @@ Worry not, let's get you in. Lab users that are inactive for 180 days will autom
 
 [Service desk - User reactivation](/administer-science/service-desk/lab-orders#reactivate-lab-user)
 
-Ask your lab leader or lab coordinator to send us a new user agreement. [Contact us](/contact) on email or Slack if you don't remember who's your lab leader or lab coordinator. You will get new keys and further guides on how to get in once the request is registered and your new keys are ready. 
+Ask your lab leader or lab coordinator to send us a new user agreement. [Contact us](/contact) on email or Slack if you don't remember who's your lab leader or lab coordinator. You will get new keys and further guides on how to get in once the request is registered and your new keys are ready.
 
 ### Yes, but I forgot everything
 
-Worry not if your account is active but you have forgotten your passwords and/or how to log in. 
+Worry not if your account is active but you have forgotten your passwords and/or how to log in.
 
 #### New computer
 
-If you have a new local computer since your last visit, see our [new computer](/do-science/guides/new-computer) guide to get going.
+If you have a new local computer since your last visit, see our [new computer](/do-science/guides/access-guides/new-computer) guide to get going.
 
 #### New location
 
@@ -47,7 +47,7 @@ Passwords are easy to forget when you have been away for a while. Note that ther
 
 #### New Workbench certificate
 
-Your Workbench certificate expire after some time, and then you will need to install a new one. You can request a [Workbench certificate reissue](/do-science/service-desk/#hunt-workbench-reissue) in Service desk. You will get a tailored access link with information on how to get up and running. 
+Your Workbench certificate expire after some time, and then you will need to install a new one. You can request a [Workbench certificate reissue](/do-science/service-desk/#hunt-workbench-reissue) in Service desk. You will get a tailored access link with information on how to get up and running.
 
 ## Remind me
 
@@ -55,7 +55,7 @@ Your Workbench certificate expire after some time, and then you will need to ins
 
 #### Located in Norway
 
-Your lab is hosted on a virtual machine that is located on a physical machine located in one of HUNT Cloud's data centers in Norway. 
+Your lab is hosted on a virtual machine that is located on a physical machine located in one of HUNT Cloud's data centers in Norway.
 
 #### Shared resources
 
@@ -67,11 +67,11 @@ You have your own Workbench where you can install your own software package, pre
 
 #### Storage folders
 
-Your Workbench and lab is set up with three default storage folders: `work`, `archive` and `scratch`. Data here is shared among your team. Use `scratch` for temporary files, `archive` for long term data, and `work` for your day-to-day activities. Note that `scratch` and your `home` folder -do not- have restore (backup). 
+Your Workbench and lab is set up with three default storage folders: `work`, `archive` and `scratch`. Data here is shared among your team. Use `scratch` for temporary files, `archive` for long term data, and `work` for your day-to-day activities. Note that `scratch` and your `home` folder -do not- have restore (backup).
 
 ### What's new since last time
 
-We continuously update our services. So, your Workbench or other things in your lab may look and feel a bit different since last time. 
+We continuously update our services. So, your Workbench or other things in your lab may look and feel a bit different since last time.
 
 #### Find new features in Patch notes
 
