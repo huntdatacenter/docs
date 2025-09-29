@@ -2,7 +2,7 @@
 title: Python
 category: Getting started
 outline: 0
-permalink: /do-science/hunt-workbench/getting-started/python
+permalink: /do-science/hunt-workbench/getting-started/4-python
 description: How to use Python
 ---
 

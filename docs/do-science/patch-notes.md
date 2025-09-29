@@ -171,7 +171,7 @@ The containerization tool Singularity was renamed to Apptainer when it moved int
 
 **Guide for VS Code in Workbench**
 
-We have added a Workbench [guide for VS Code](/do-science/hunt-workbench/getting-started/vscode) with information on how to create a Jupyter notbook or Python environment, how to run R code with r kernel and similar.
+We have added a Workbench [guide for VS Code](/do-science/hunt-workbench/getting-started/9-vscode) with information on how to create a Jupyter notbook or Python environment, how to run R code with r kernel and similar.
 
 **BRAT annotation tool in Workbench**
 
@@ -599,7 +599,7 @@ We are introducing the ability for users to reset passphrase directly in Workben
 
 * This method works for *new* and *existing* users.
 * Once you request SSH passphrase reset, head over to your Workbench to easily reset your passphrase in a familiar manner.
-* You can find further details in this [guide](/do-science/guides/configure-ssh-workbench#ssh-passphrase-reset-in-workbench).
+* You can find further details in this [guide](/do-science/guides/access-guides/reset-ssh-workbench).
 
 
 **Lab access link**

@@ -171,7 +171,7 @@ The containerization tool Singularity was renamed to Apptainer when it moved int
 
 **Guide for VS Code in Workbench**
 
-We have added a Workbench [guide for VS Code](/do-science/hunt-workbench/getting-started/vscode) with information on how to create a Jupyter notbook or Python environment, how to run R code with r kernel and similar.
+We have added a Workbench [guide for VS Code](/do-science/hunt-workbench/getting-started/9-vscode) with information on how to create a Jupyter notbook or Python environment, how to run R code with r kernel and similar.
 
 **BRAT annotation tool in Workbench**
 

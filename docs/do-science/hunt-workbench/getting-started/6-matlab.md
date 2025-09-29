@@ -2,7 +2,7 @@
 title: MATLAB
 category: Getting started
 outline: 0
-permalink: /do-science/hunt-workbench/getting-started/matlab
+permalink: /do-science/hunt-workbench/getting-started/6-matlab
 description: How to use MATLAB
 ---
 

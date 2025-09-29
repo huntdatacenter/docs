@@ -2,7 +2,7 @@
 title: RStudio and R
 category: Getting started
 outline: 0
-permalink: /do-science/hunt-workbench/getting-started/rstudio
+permalink: /do-science/hunt-workbench/getting-started/5-rstudio
 description: How to use RStudio and R
 ---
 
@@ -73,7 +73,7 @@ conda install -n r-base -c conda-forge r-dplyr
 
 For example, the above example installs the [dplyr package](https://anaconda.org/conda-forge/r-dplyr).
 
-3. When the installation is complete, open _RStudio_ or _R_ in your workbench (look further down for guide on [how to use R in terminal](https://docs.hdc.ntnu.no/do-science/hunt-workbench/getting-started/rstudio/#:~:text=activate%20r%2Dbase-,%23,-How%20can%20I)) and load your new package:
+3. When the installation is complete, open _RStudio_ or _R_ in your workbench (look further down for guide on [how to use R in terminal](https://docs.hdc.ntnu.no/do-science/hunt-workbench/getting-started/5-rstudio/#:~:text=activate%20r%2Dbase-,%23,-How%20can%20I)) and load your new package:
 
 ```bash
 # -- Principal example

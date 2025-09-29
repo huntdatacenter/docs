@@ -2,7 +2,7 @@
 title: Julia
 category: Getting started
 outline: 0
-permalink: /do-science/hunt-workbench/getting-started/julia
+permalink: /do-science/hunt-workbench/getting-started/8-julia
 description: How to use Julia
 ---
 
