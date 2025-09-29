@@ -20,4 +20,4 @@ permalink: /do-science/data-transfers/
 
 The [Data transfer tools section](/do-science/tools/) covers commonly used tools for transfers.
 
-See our Frequently asked questions on [internal](/do-science/faq/internal-transfer/) and [external](/do-science/faq/external-transfer/) transfers.
+See our Frequently asked questions on [internal](/do-science/faq/internal-transfer) and [external](/do-science/faq/external-transfer) transfers.

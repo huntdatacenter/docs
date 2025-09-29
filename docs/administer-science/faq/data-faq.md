@@ -20,7 +20,7 @@ See our [Administer science FAQ](/administer-science/faq) for supplemental admin
 
 ## Data administration
 
-Head over to our dedicated [FAQ on data](/administer-science/data/faq/).
+Head over to our dedicated [FAQ on data](/administer-science/data/faq).
 
 
 

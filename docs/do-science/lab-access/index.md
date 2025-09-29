@@ -17,9 +17,9 @@ description: This guide will help you to access to your HUNT Cloud lab.
 
 The following steps will help you to invest time in your lab setup, all so you can enjoy simple and secure access for all your future connections:
 
-1. [Collect your keys](/do-science/lab-access/collect-your-keys/). This step ensures that you have all your keys and configuration files before your start to spend time on the setup.
-2. [Configure your VPN connection](/do-science/lab-access/configure-vpn/). This step ensures an encrypted system connection to HUNT Cloud.
-3. [Configure your SSH connection](/do-science/lab-access/configure-ssh/). This step ensures a connection to your lab.
+1. [Collect your keys](/do-science/lab-access/collect-your-keys). This step ensures that you have all your keys and configuration files before your start to spend time on the setup.
+2. [Configure your VPN connection](/do-science/lab-access/configure-vpn). This step ensures an encrypted system connection to HUNT Cloud.
+3. [Configure your SSH connection](/do-science/lab-access/configure-ssh). This step ensures a connection to your lab.
 
 
 ::: tip Connecting from outside Norway?

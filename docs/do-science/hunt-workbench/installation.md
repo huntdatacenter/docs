@@ -300,7 +300,7 @@ If given the option, ensure that the **`Remember this decision`** box is checked
 
 ::: tip Further reading
 
-See our [HUNT Workbench principles](/do-science/hunt-workbench/principles/) section to learn more about your new environment. For more practical advises on how to install your Python/R packages head over to [Workbench FAQ](/do-science/hunt-workbench/faq/).
+See our [HUNT Workbench principles](/do-science/hunt-workbench/principles) section to learn more about your new environment. For more practical advises on how to install your Python/R packages head over to [Workbench FAQ](/do-science/hunt-workbench/faq).
 
 :::
 
@@ -308,7 +308,7 @@ See our [HUNT Workbench principles](/do-science/hunt-workbench/principles/) sect
 
 ## Immediate troubleshooting
 
-This section includes issues that you might encounter during your first setup. See our HUNT Workbench [FAQ](/do-science/hunt-workbench/faq/) and HUNT Workbench [Troubleshooting](/do-science/hunt-workbench/troubleshooting/) if you do not find your answers below.
+This section includes issues that you might encounter during your first setup. See our HUNT Workbench [FAQ](/do-science/hunt-workbench/faq) and HUNT Workbench [Troubleshooting](/do-science/hunt-workbench/troubleshooting) if you do not find your answers below.
 
 #### This site can't be reached
 

@@ -31,7 +31,7 @@ See below for descriptions on how to monitor your memory consumption using the `
 
 Yes. You have several options:
 
-(1) A quick way is to use [HTOP](/do-science/tools/technical/htop/) for interactive monitoring of CPU and memory inside individual machines.
+(1) A quick way is to use [HTOP](/do-science/tools/technical/htop) for interactive monitoring of CPU and memory inside individual machines.
 
 (2) The [time](http://man7.org/linux/man-pages/man1/time.1.html) command is a quick way to determine the duration of execution of a particular command. For example add `/usr/bin/time -v` before your command to get going:
 
@@ -130,7 +130,7 @@ sudo apt install <packagename>
 
 ::: warning WARNING
 
-Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](/do-science/tools/analytical/conda/). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.
+Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](/do-science/tools/analytical/conda). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.
 
 :::
 
@@ -154,20 +154,20 @@ Yes. You can run [Docker images](https://www.docker.com/) on both [IaaS](/do-sci
 
 ::: tip
 
-If you need to run docker images on home machine try using Apptainer instead (previously known as Singularity). Read more in our [Apptainer installation guide](/do-science/tools/technical/apptainer-singularity/).
+If you need to run docker images on home machine try using Apptainer instead (previously known as Singularity). Read more in our [Apptainer installation guide](/do-science/tools/technical/apptainer-singularity).
 
 :::
 
 ### Can I run Apptainer (Singularity) containers?
 
 Yes, you can run your Apptainer (Singularity) containers on both home, IaaS and blue machines. Follow our quick
-[Apptainer installation guide](/do-science/tools/technical/apptainer-singularity/). For simplicity, we strongly recommend to install Apptainer via Conda.
+[Apptainer installation guide](/do-science/tools/technical/apptainer-singularity). For simplicity, we strongly recommend to install Apptainer via Conda.
 
 ## Workflow
 
 ### How can I keep my jobs running when I disconnect?
 
-You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/do-science/tools/technical/terminal-multiplexers/) to get started. Your jobs over [X2Go](/do-science/tools/technical/x2go/#set-up-your-local-machine), such as RStudio and Stata, should be kept alive between your logins by default.
+You can keep your terminal jobs and sessions running by using something called a terminal multiplexer. See our [terminal multiplexers guide](/do-science/tools/technical/terminal-multiplexers) to get started. Your jobs over [X2Go](/do-science/tools/technical/x2go/#set-up-your-local-machine), such as RStudio and Stata, should be kept alive between your logins by default.
 
 ### How can I profile the resources needed in my workflow?
 

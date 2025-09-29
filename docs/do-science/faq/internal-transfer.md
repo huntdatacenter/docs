@@ -42,7 +42,7 @@ Yes. You may specify up to three uploaders and/or downloaders per kista in your 
 
 ### How do I access my internal kista?
 
-See our [internal kista transfer guide](/do-science/data-transfers/internal-kista/) for instruction on how to access and upload or download data in internal kista.
+See our [internal kista transfer guide](/do-science/data-transfers/internal-kista) for instruction on how to access and upload or download data in internal kista.
 
 ### What is the size and utilization of my internal kista?
 

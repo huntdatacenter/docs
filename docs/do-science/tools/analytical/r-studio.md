@@ -18,10 +18,10 @@ For those of you running unmanaged machines on our security tier 2 may want to u
 
 ### Install using Conda
 
-We recommend using [Conda](/do-science/tools/analytical/conda/) to install R packages. Conda gives you better flexibility when choosing versions, which will not affect other researchers in your lab.
+We recommend using [Conda](/do-science/tools/analytical/conda) to install R packages. Conda gives you better flexibility when choosing versions, which will not affect other researchers in your lab.
 
 ::: tip
-We have very easy guide on how to get [Saige](/do-science/tools/analytical/saige/) running in Conda environment.
+We have very easy guide on how to get [Saige](/do-science/tools/analytical/saige) running in Conda environment.
 :::
 
 If you have a conda setup based on the guide above you will need some additional channels to install the packages.
@@ -215,7 +215,7 @@ The below guide will therefore not work on home-machines.
 `Without these, it will be impossible to get RStudio to work.`
 
 - R (installed as above)
-- A machine prepared for a [graphical interface (X2Go)](/do-science/tools/technical/x2go/)
+- A machine prepared for a [graphical interface (X2Go)](/do-science/tools/technical/x2go)
 - An IAAS-machine or BLUE-machine with administrator access
 
 :::
@@ -246,7 +246,7 @@ or setup environment variable as mentioned in [Troubleshooting RStudio Rendering
 
 ### Configure X2Go
 
-To automatically start RStudio, revisit your _Session preferences_ in the [X2Go setup](/do-science/tools/technical/x2go/) and update your _Single application command path_ to `/usr/bin/rstudio`and _Create a session icon on the desktop..._.
+To automatically start RStudio, revisit your _Session preferences_ in the [X2Go setup](/do-science/tools/technical/x2go) and update your _Single application command path_ to `/usr/bin/rstudio`and _Create a session icon on the desktop..._.
 
 ::: tip NOTE
 There is a known bug in x2go `1.1.456` that will go away if you comment out (add # before) a line in the x2goagent.options:

@@ -63,7 +63,7 @@ Lagtun is the Ting where we appoint time to evolve data-driven science and the s
 
 Lagtun gives direct advice on our strategic and tactical development to the HUNT Cloud management in the form of resolutions.
 
-[Read more about Lagtun](/govern-science/tingweek/lagtun/).
+[Read more about Lagtun](/govern-science/tingweek/lagtun).
 
 ## Memberships
 

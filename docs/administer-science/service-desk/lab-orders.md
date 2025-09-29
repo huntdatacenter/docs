@@ -97,7 +97,7 @@ Lab user agreements needs to be renewed approximately every two years for accoun
 
 ### Update CPU machine size
 
-Increase or decrease the computational power of one of your existing lab machines to a new [machine type](/administer-science/services/machine-types/).
+Increase or decrease the computational power of one of your existing lab machines to a new [machine type](/administer-science/services/machine-types).
 
 <SDButton form="request_machine_size_update" />
 
@@ -105,7 +105,7 @@ Increase or decrease the computational power of one of your existing lab machine
 * **Expected response time:** Days.
 * **Expected delivery:** Lab machine with updated size.
 * **Requirement:** The procedure require a machine restart that needs to be scheduled with your lab users.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 
 
 ::: warning GPU machines
@@ -117,14 +117,14 @@ Machine types deployed with GPU (GPU machines) can not be updated after deployme
 
 ### New CPU machine
 
-Add a [new machine](/administer-science/services/machine-types/) to your lab. A CPU machine is the default lab machine with CPU and memory aimed at data analysis.
+Add a [new machine](/administer-science/services/machine-types) to your lab. A CPU machine is the default lab machine with CPU and memory aimed at data analysis.
 
 <SDButton form="request_new_cpu" />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days.
 * **Expected delivery:** New lab machine accessible from your home machine.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 
 
 ### New GPU machine
@@ -136,7 +136,7 @@ Add a new [GPU machine](/administer-science/services/machine-types/#gpu-accelera
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days (subject to availability).
 * **Expected delivery:** New lab machine with GPU accelerator accessible from your home machine.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 
 
 <!--
@@ -150,7 +150,7 @@ Add a fleet of blue machines to distribute analysis for large scale analysis, fo
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days (subject to availability).
 * **Expected delivery:** Multiple blue machines accessible from your home machine.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 -->
 
 ### Shelve machine order
@@ -369,7 +369,7 @@ Head over to the [data space orders](/administer-science/service-desk/data-space
 
 ### Internal kista
 
-[Internal kista](/do-science/data-transfers/internal-kista/) is the best way to transfer data between two labs in HUNT Cloud.
+[Internal kista](/do-science/data-transfers/internal-kista) is the best way to transfer data between two labs in HUNT Cloud.
 
 <!-- <SOButton title="Prepare internal kista order" order="internal_kista" /> -->
 

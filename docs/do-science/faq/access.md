@@ -22,11 +22,11 @@ Most likely. We allow connections both from organizations and private network. H
 
 ### Can I connect from more than one local computer?
 
-Yes. We allow you to configure several local computers to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/do-science/lab-access/configure-vpn/) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to request a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) in the service desk to get going.
+Yes. We allow you to configure several local computers to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/do-science/lab-access/configure-vpn) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to request a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) in the service desk to get going.
 
 ### Can I have multiple connections at the same time?
 
-No. For security reasons we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local computer. Check our [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/) guide for how to instantly get back to your work when your connect from multiple local computers.
+No. For security reasons we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local computer. Check our [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers) guide for how to instantly get back to your work when your connect from multiple local computers.
 
 ### Can I connect from my private machine?
 
@@ -105,7 +105,7 @@ Yes. You can access more than one lab. We encourage data spaces to separate data
 
 ### How do I get started with my second lab?
 
-We will ship SSH configuration and keys after your lab leader or lab coordinator have order your lab access in the [service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user). When you get your keys, head to [Step 3. Configure your SSH](/do-science/lab-access/configure-ssh/) in our onboarding guide to get started.
+We will ship SSH configuration and keys after your lab leader or lab coordinator have order your lab access in the [service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user). When you get your keys, head to [Step 3. Configure your SSH](/do-science/lab-access/configure-ssh) in our onboarding guide to get started.
 
 ### Can I transfer and merge data between my labs?
 

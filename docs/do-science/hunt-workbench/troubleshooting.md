@@ -14,7 +14,7 @@ description: HUNT Workbench troubleshooting.
 
 ::: tip
 
-See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq/) for general questions, and our [Immediate troubleshooting](/do-science/hunt-workbench/installation/#immediate-troubleshooting) for issues during your first installation.
+See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq) for general questions, and our [Immediate troubleshooting](/do-science/hunt-workbench/installation/#immediate-troubleshooting) for issues during your first installation.
 
 :::
 
@@ -31,7 +31,7 @@ df -h /mnt/work
 
 If you have enough resources, try restarting your HUNT Workbench environment. Follow this guide to [restart your workbench](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment).
 
-If this does not help, you may have a look at our [FAQ](/do-science/hunt-workbench/faq/) or [Troubleshooting](/do-science/hunt-workbench/troubleshooting/) sections.  [Contact us](/contact) on email or reach out in your lab channel on Slack for further investigation if this does not help.
+If this does not help, you may have a look at our [FAQ](/do-science/hunt-workbench/faq) or [Troubleshooting](/do-science/hunt-workbench/troubleshooting) sections.  [Contact us](/contact) on email or reach out in your lab channel on Slack for further investigation if this does not help.
 
 
 ### 400: Bad request
@@ -196,11 +196,11 @@ An unresponsive or slow HUNT Workbench may be caused by several things. Here's a
 
 - Use Google Chrome as your browser. Other browsers don't support all features and might cause potential silent failures.
 - Restart your HUNT Workbench environment to start fresh in the case something got hung up. [Click here](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment) to see how.
-- Check the resource consumption on your **`home`**-machine to ensure that you have available free CPU and memory resources, for example in [HTOP](/do-science/tools/technical/htop/) (see below).
+- Check the resource consumption on your **`home`**-machine to ensure that you have available free CPU and memory resources, for example in [HTOP](/do-science/tools/technical/htop) (see below).
 
 ::: expander Check your resources
 
-One way to check your resource consumption is to log into your lab **`home`**-machine and run [HTOP](/do-science/tools/technical/htop/). Consider to upgrade the machine size in the administer science [Service desk](/administer-science/service-desk/lab-orders/#update-cpu-machine-size) if you are low on free resources.
+One way to check your resource consumption is to log into your lab **`home`**-machine and run [HTOP](/do-science/tools/technical/htop). Consider to upgrade the machine size in the administer science [Service desk](/administer-science/service-desk/lab-orders/#update-cpu-machine-size) if you are low on free resources.
 
 :::
 

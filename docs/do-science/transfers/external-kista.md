@@ -201,14 +201,14 @@ sftp -oPort=<port-number> <username>@ekista.hdc.ntnu.no
 sftp -oPort=2124 johndoe-importer@ekista.hdc.ntnu.no
 ```
 
-Once logged in you can follow the examples from our [internal kista guide](/do-science/data-transfers/internal-kista/) for [upload](/do-science/data-transfers/internal-kista/#upload) or [download](/do-science/data-transfers/internal-kista/#download) of data.
+Once logged in you can follow the examples from our [internal kista guide](/do-science/data-transfers/internal-kista) for [upload](/do-science/data-transfers/internal-kista/#upload) or [download](/do-science/data-transfers/internal-kista/#download) of data.
 
 :::
 
 
 ## For internal users
 
-Follow the examples from our [internal kista guide](/do-science/data-transfers/internal-kista/).
+Follow the examples from our [internal kista guide](/do-science/data-transfers/internal-kista).
 
 ## Troubleshooting
 

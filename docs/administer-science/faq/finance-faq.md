@@ -19,6 +19,6 @@ See our [Administer science FAQ](/administer-science/faq) for supplemental admin
 
 ## Prices
 
-Head over to our dedicated [FAQ on prices](/administer-science/prices/faq/).
+Head over to our dedicated [FAQ on prices](/administer-science/prices/faq).
 
 

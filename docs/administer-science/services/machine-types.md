@@ -98,7 +98,7 @@ All the above machine types may be deployed with one or two GPU accelerators:
 | nvidia.v100  | NVIDIA  V100  | Volta        | 32GB HBM2 | PCIe Gen3  |
 | nvidia.v100s | NVIDIA  V100S | Volta        | 32GB HBM2 | PCIe Gen3  |
 
-Note that availability vary between locations. See the [GPU on HUNT Cloud](/do-science/tools/technical/gpu/) documentation for more information.
+Note that availability vary between locations. See the [GPU on HUNT Cloud](/do-science/tools/technical/gpu) documentation for more information.
 
 ## Custom machine types
 

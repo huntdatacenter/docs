@@ -22,7 +22,7 @@ Our community cafe is located at [Slack](https://slack.com/) under the name spac
 
 This is a place where lab users and lab coordinators meet to advance science and to chat with us at HUNT Cloud.
 
-Access requires that you consent to our data processing in the service. Read more about our [community consent](/do-science/community/consent-information/) here.
+Access requires that you consent to our data processing in the service. Read more about our [community consent](/do-science/community/consent-information) here.
 
 ### Join Labting for improved user experience
 

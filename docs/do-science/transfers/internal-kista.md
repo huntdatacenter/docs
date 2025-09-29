@@ -13,7 +13,7 @@ description: Internal kistas provide labs with a simple and controlled way to tr
 [[toc]]
 
 ::: tip Note
-This page describes the practical aspects of kista transfers. Head over to our [internal transfer](/do-science/faq/internal-transfer/) section in the FAQ for more information on the service itself.
+This page describes the practical aspects of kista transfers. Head over to our [internal transfer](/do-science/faq/internal-transfer) section in the FAQ for more information on the service itself.
 :::
 
 
@@ -122,7 +122,7 @@ ls -lah
 quit
 ```
 
-For large uploads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers/) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
+For large uploads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
 You can resume an upload with this command:
 
@@ -138,7 +138,7 @@ LFTP method works in similar fashion, except it offers you more reliable transfe
 
 **Connect and upload**
 
-1. From your home machine, using command below you will be able to connect to remote kista and specify **directories** for transfer. Ideally you should run your command in [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/).
+1. From your home machine, using command below you will be able to connect to remote kista and specify **directories** for transfer. Ideally you should run your command in [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers).
 
 
 ```bash
@@ -148,7 +148,7 @@ lftp -e "mirror -cR <upload_directory> /upload; bye" sftp://<username>-upload:@<
 # -- Demo example
 lftp -e "mirror --parallel=10 -cR /mnt/archive/example_archive/ /upload; bye" sftp://demouser-upload:@10.42.132.118
 ```
-You can read more about LFTP [here](/do-science/tools/transfer/lftp/)
+You can read more about LFTP [here](/do-science/tools/transfer/lftp)
 
 :::
 

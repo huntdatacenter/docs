@@ -33,7 +33,7 @@ You. The decision to choose a WHITE, ORANGE or BLUE subscription level is fully 
 
 ### Are entry machines metered?
 
-No. Entry machines are the machines we use to control the user management and security updates in individual labs. These are mandatory and the cost is included in lab subscription fees. You should -not- include the cost for these machines in your [price calculator](/administer-science/prices/calculator/) estimates.
+No. Entry machines are the machines we use to control the user management and security updates in individual labs. These are mandatory and the cost is included in lab subscription fees. You should -not- include the cost for these machines in your [price calculator](/administer-science/prices/calculator) estimates.
 
 ### Can we upsize a commitment machine with on-demand resources?
 
@@ -50,7 +50,7 @@ On-demand resources runs until a deactivation notice from the a lab user. To sav
 
 ### Which terabyte price will each lab pay for their storage?
 
-Each lab pay the mean terabyte price for your data space. We automatically calculate the volume discount for your data space and use this set the mean terabyte price for your data space. For details, see the meter, cost and billing section under the Store chapter in the [services specification](/administer-science/services/specifications/) and the Store section in the [price list](/administer-science/prices/pricelist/), or test for yourself in the [price calculator](/administer-science/prices/calculator/).
+Each lab pay the mean terabyte price for your data space. We automatically calculate the volume discount for your data space and use this set the mean terabyte price for your data space. For details, see the meter, cost and billing section under the Store chapter in the [services specification](/administer-science/services/specifications) and the Store section in the [price list](/administer-science/prices/pricelist), or test for yourself in the [price calculator](/administer-science/prices/calculator).
 
 ### Why is one terabyte the minimum storage allocation?
 
@@ -91,6 +91,6 @@ Your storage price is calculated per day based on the total volume of all storag
 ### When should we expect "commit services" to be invoices?
 
 Commit services are those your commit to 1 or 3 years.
-You should expect the next invoice after you order the service to include the full commit price for data space subscriptions, lab subscriptions and 1Y/3Y commitments of machines and storage. Usage of various services will be combined into one invoice expected to be sent quarterly. Invoice details for each service is specified in the [services specification](/administer-science/services/specifications/) under the "Billing" sections.
+You should expect the next invoice after you order the service to include the full commit price for data space subscriptions, lab subscriptions and 1Y/3Y commitments of machines and storage. Usage of various services will be combined into one invoice expected to be sent quarterly. Invoice details for each service is specified in the [services specification](/administer-science/services/specifications) under the "Billing" sections.
 
 

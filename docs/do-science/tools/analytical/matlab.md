@@ -25,7 +25,7 @@ Head over to the [MATLAB FAQ](/do-science/hunt-workbench/faq/#matlab) in our HUN
 ::: warning Requirements
 
 - An unmanaged On-demand or BLUE machine where you have root access.
-- A working [X2Go server](/do-science/tools/technical/x2go/) installation on this on this machine.
+- A working [X2Go server](/do-science/tools/technical/x2go) installation on this on this machine.
 - Access to the MATLAB software binaries for Linux from your organizaton.
 - Access to a MATLAB license for the users in your lab.
 
@@ -121,7 +121,7 @@ If you're fine with command lines, run `MATLAB` directly in your shell. Read mor
 
 **Run in the graphical interface**
 
-If you prefer MATLAB's graphical interface, run `MATLAB` in your terminal (`xterm`) started in [X2GO](/do-science/tools/technical/x2go/).
+If you prefer MATLAB's graphical interface, run `MATLAB` in your terminal (`xterm`) started in [X2GO](/do-science/tools/technical/x2go).
 
 Open X2Go, connect to your lab machine where you installed MATLAB and run the following command in `xterm`:
 

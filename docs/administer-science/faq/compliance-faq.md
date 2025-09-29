@@ -58,11 +58,11 @@ Lab deletions are authorized by Data space leaders and documented in a [lab dele
 
 ## Contract management
 
-Head over to our dedicated [FAQ on agreements](/administer-science/agreements/faq/).
+Head over to our dedicated [FAQ on agreements](/administer-science/agreements/faq).
 
 ## Risk management
 
-Head over to our dedicated [FAQ on risk management](/govern-science/risk-management/faq/).
+Head over to our dedicated [FAQ on risk management](/govern-science/risk-management/faq).
 
 
 

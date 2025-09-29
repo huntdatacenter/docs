@@ -21,7 +21,7 @@ Head over to our [Do science FAQ](/do-science/faq) for questions on how to do sc
 
 ### What can I order as a lab coordinator? 
 
-Head over to our service desk for [lab orders](/administer-science/service-desk/lab-orders/) to get an overview of the pre-defined orders that you can manage as a lab coordinator or lab leaders. 
+Head over to our service desk for [lab orders](/administer-science/service-desk/lab-orders) to get an overview of the pre-defined orders that you can manage as a lab coordinator or lab leaders. 
 
 ## User management
 

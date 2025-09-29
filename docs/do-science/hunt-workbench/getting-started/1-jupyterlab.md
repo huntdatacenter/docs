@@ -70,7 +70,7 @@ Do your part to reduce resource use and ease the burden on the environment by st
 
 ## Working with lab mates
 
-Typically your lab has more users and you all are sharing [compute](https://docs.hdc.ntnu.no/do-science/faq/compute/) and [storage resources](/do-science/faq/storage/).
+Typically your lab has more users and you all are sharing [compute](https://docs.hdc.ntnu.no/do-science/faq/compute/) and [storage resources](/do-science/faq/storage).
 For this to work efficiently you will need to know how to check your resource usage and free up resources if needed.
 
 ### Monitoring resources
@@ -79,7 +79,7 @@ One way to monitor resources is using Glances. We have included [Glances proxy e
 
 You can also you Terminal app inside your Workbench and run standard commands like [HTOP](https://docs.hdc.ntnu.no/do-science/tools/technical/htop/) and [others](/do-science/faq/compute/#can-i-monitor-my-resource-consumption)
 
-For checking storage capacity and how much data are written on disk have a look at [df -h --type=ext4](/do-science/faq/storage/#resources) and [ncdu](/do-science/tools/technical/ncdu/).
+For checking storage capacity and how much data are written on disk have a look at [df -h --type=ext4](/do-science/faq/storage/#resources) and [ncdu](/do-science/tools/technical/ncdu).
 
 ### Managing resources
 

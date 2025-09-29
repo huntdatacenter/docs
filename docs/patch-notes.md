@@ -23,9 +23,9 @@ This page contains descriptions of updates (patches) to HUNT Cloud's services. A
 
 **Documentation updates** 
 
-We are updating our [tools](/tools/) section in do science guides. These updates can range from simple text adjustments to updating code and removing those that are irrelevant.
+We are updating our [tools](/tools) section in do science guides. These updates can range from simple text adjustments to updating code and removing those that are irrelevant.
 
-If you think we are missing an important guide or a guide is not working as expected, please give us feedback via this [contact form](/about/contact/).
+If you think we are missing an important guide or a guide is not working as expected, please give us feedback via this [contact form](/about/contact).
 
 <h3>Minor changes</h3>  
 
@@ -45,7 +45,7 @@ Introduced two new GPU series from NVIDIA in 2025-Q1.
 
 **NVIDIA L40S** - New series from NVIDIA aiming for fast AI, image and ML processing. This is a new gen of A40 cards, offering 48GB of VRAM in a single card. Up to 2x cards available in a single gpu node.  
 
-You can review price on both GPU cards [here](/administer-science/prices/pricelist/).  
+You can review price on both GPU cards [here](/administer-science/prices/pricelist).  
 
 <h3>Minor changes</h3>
 
@@ -167,11 +167,11 @@ NVIDIA A40 GPUs with 48 GB of memory are now available as [GPU accelerator types
 
 **Apptainer (Singularity)**
 
-The containerization tool Singularity was renamed to Apptainer when it moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/). [Our documentation](/do-science/tools/technical/apptainer-singularity/) is updated accordingly. 
+The containerization tool Singularity was renamed to Apptainer when it moved into [Linux Foundation](https://apptainer.org/news/community-announcement-20211130/). [Our documentation](/do-science/tools/technical/apptainer-singularity) is updated accordingly. 
 
 **Guide for VS Code in Workbench**
 
-We have added a Workbench [guide for VS Code](/do-science/hunt-workbench/getting-started/vscode/) with information on how to create a Jupyter notbook or Python environment, how to run R code with r kernel and similar. 
+We have added a Workbench [guide for VS Code](/do-science/hunt-workbench/getting-started/vscode) with information on how to create a Jupyter notbook or Python environment, how to run R code with r kernel and similar. 
 
 **BRAT annotation tool in Workbench**
 
@@ -179,7 +179,7 @@ We have added [BRAT rapid annotation](https://brat.nlplab.org/) tools to Workben
 
 **Freedom to explore in new languages**
 
-Our community translation of [Freedom to explore](/do-science/community/freedom-to-explore/) continues to grow, and we have added [Bulgarian](/do-science/community/freedom-to-explore/#bulgarian-bul), [Serbian](/do-science/community/freedom-to-explore/#serbian-srp) and [Indonesian](/do-science/community/freedom-to-explore/#indonesian-ind) since the last patch note - now counting an impressive 44 translations! Help us grow the list and [send us your translation](/do-science/community/freedom-to-explore/#my-language-is-missing) if your language is missing!
+Our community translation of [Freedom to explore](/do-science/community/freedom-to-explore) continues to grow, and we have added [Bulgarian](/do-science/community/freedom-to-explore/#bulgarian-bul), [Serbian](/do-science/community/freedom-to-explore/#serbian-srp) and [Indonesian](/do-science/community/freedom-to-explore/#indonesian-ind) since the last patch note - now counting an impressive 44 translations! Help us grow the list and [send us your translation](/do-science/community/freedom-to-explore/#my-language-is-missing) if your language is missing!
 
 
 :::
@@ -191,11 +191,11 @@ Our community translation of [Freedom to explore](/do-science/community/freedom-
 
 **Migration to the new location has started**
 
-After years in the making, we are excited to announce that the migration to our new location and cloud installation has started! We have a new server-room with upgraded equipment and more flexibility ready for your as soon as you complete your migration. We are reaching out to labs to schedule the migration with the aim to avoid conflicts with deadlines and other important work. See our [FAQ pages for migration](/do-science/faq/migration/) for more information. 
+After years in the making, we are excited to announce that the migration to our new location and cloud installation has started! We have a new server-room with upgraded equipment and more flexibility ready for your as soon as you complete your migration. We are reaching out to labs to schedule the migration with the aim to avoid conflicts with deadlines and other important work. See our [FAQ pages for migration](/do-science/faq/migration) for more information. 
 
 **New price list (v4.1)**
 
-We have updated our [price list](/administer-science/prices/pricelist/#current) with a new version (v4.1) that includes the new E-series machine types and the new NVIDIA A40 GPU type. The [price calculator](/administer-science/prices/calculator/) is updated accordingly.
+We have updated our [price list](/administer-science/prices/pricelist/#current) with a new version (v4.1) that includes the new E-series machine types and the new NVIDIA A40 GPU type. The [price calculator](/administer-science/prices/calculator) is updated accordingly.
 
 **Invoice updates**
 
@@ -246,7 +246,7 @@ We plan to introdue the new Services descriptions for Explore, Evolve and Scient
 
 **New ISO certificates available**
 
-The new certificates for ISO/IEC 27001 and ISO/IEC 27701 from DNV is now available from our [compliance section](/govern-science/compliance/certificates/). 
+The new certificates for ISO/IEC 27001 and ISO/IEC 27701 from DNV is now available from our [compliance section](/govern-science/compliance/certificates). 
 
 **New service center reports**
 
@@ -254,7 +254,7 @@ Based on the last Tingweek resolution ([R10/LT11/T11/24]((/govern-science/tingwe
 
 **Community deletion policy enforced**
 
-Community messages in Slack is from 2024-01-01 stored for 1Y only. Older messages automatically deleted in accordance with our [community consent](/do-science/community/current-consent/#you-messages-are-kept-for-one-year). Read more about the consent history [here](/do-science/community/consent-information/).
+Community messages in Slack is from 2024-01-01 stored for 1Y only. Older messages automatically deleted in accordance with our [community consent](/do-science/community/current-consent/#you-messages-are-kept-for-one-year). Read more about the consent history [here](/do-science/community/consent-information).
 
 **Security and privacy policies with new privacy controls**
 
@@ -269,7 +269,7 @@ Community messages in Slack is from 2024-01-01 stored for 1Y only. Older message
 **Agreement updates**
 
 * The data encryption section in the Security measures appendix to our Data processor agreements is updated to reflect that data is encrypted for regular hard drives at the new location (Site 2). 
-* The [Price list appendix](/administer-science/prices/pricelist/) to the service center agreement is updated with a new machine series and a new GPU accelerator choice. The change is directly implemented since they affect new services. 
+* The [Price list appendix](/administer-science/prices/pricelist) to the service center agreement is updated with a new machine series and a new GPU accelerator choice. The change is directly implemented since they affect new services. 
 
 <h3>Upcoming features</h3>
 
@@ -308,7 +308,7 @@ All Workbench sessions are running on the latest MATLAB 2023b version.
 
 **Freedom to explore**
 
-We humbled and proud of your response to help us translate our tagline «Freedom to explore» into languages among our community members. So far we have register 42 translations! [Click here](/do-science/community/freedom-to-explore/) to see the results and to read more about he project.
+We humbled and proud of your response to help us translate our tagline «Freedom to explore» into languages among our community members. So far we have register 42 translations! [Click here](/do-science/community/freedom-to-explore) to see the results and to read more about he project.
 
 :::
 
@@ -325,7 +325,7 @@ We have improved the fire safety of our off-site tape archive with an new safe t
 
 **Services specifications**
 
-We have made two minor updates to the [Services specifications](/administer-science/services/specifications/) since the last patch notes.
+We have made two minor updates to the [Services specifications](/administer-science/services/specifications) since the last patch notes.
 
 **Updated invoice profile**
 
@@ -376,7 +376,7 @@ We will forward a consent link on email to all active users. Users that do not c
 
 This is part of our wider effort to strengthen our protection of your personal data as a user of HUNT Cloud.
 
-* [Read a copy of the new community consent](/do-science/community/current-consent/)
+* [Read a copy of the new community consent](/do-science/community/current-consent)
 * [Read about our HUNT Cloud community](/do-science/community/)
 
 **Workbench certificate expiration reminder**
@@ -482,7 +482,7 @@ New access guides tailored for individual lab users are added for unmanaged IaaS
 
 **Extended Singularity guide**
 
-We have added a guide on [how to run Singularity](/do-science/tools/technical/singularity/) in your lab environment using Conda. The guide covers: 
+We have added a guide on [how to run Singularity](/do-science/tools/technical/singularity) in your lab environment using Conda. The guide covers: 
 
 * Installation
 * Common practices and commands
@@ -508,7 +508,7 @@ We keep improving onboarding experience for new users.
 
 **Extended X2Go guide**
 
-We have updated the [X2Go guide](/do-science/tools/technical/x2go/) with screenshots and tried to clarify how you best can setup your lab session.
+We have updated the [X2Go guide](/do-science/tools/technical/x2go) with screenshots and tried to clarify how you best can setup your lab session.
 
 
 <h3>Upcoming features</h3>
@@ -527,11 +527,11 @@ We have updated the [X2Go guide](/do-science/tools/technical/x2go/) with screens
 
 **Services specification**
 
-Update to the [Services specification](/administer-science/services/specifications/) (2.9) where references to "security" is extended to "security and privacy" as a preparation for the upcoming ISO/IEC 27701-certification.
+Update to the [Services specification](/administer-science/services/specifications) (2.9) where references to "security" is extended to "security and privacy" as a preparation for the upcoming ISO/IEC 27701-certification.
 
 **Agreement updates**
 
-We have updated the link to the service desk buttons at the bottom of all [service orders](/administer-science/agreements/downloads/).
+We have updated the link to the service desk buttons at the bottom of all [service orders](/administer-science/agreements/downloads).
 
 <h3>Upcoming features</h3>
 
@@ -636,7 +636,7 @@ We are simplifying [Scientific access](/administer-science/scientific-access/) f
 
 * [New section](/administer-science/scientific-access/) that describes the scientific onboarding.
 * New scientific access bundle that combines information needed to add your first Data space and Lab. 
-* [FAQ section](/administer-science/scientific-access/faq/) dedicated to scientific access.
+* [FAQ section](/administer-science/scientific-access/faq) dedicated to scientific access.
 
 <h3>Minor changes</h3>
 
@@ -660,11 +660,11 @@ We are simplifying [Organizational access](/govern-science/organizational-access
 
 * [New section](/govern-science/organizational-access/) that describes the organizational onboarding.
 * [New organizational agreement information form](/govern-science/organizational-access/#request-organizational-agreements) that combines information needed to generate your first data processor agreement and services center agreements. 
-* [FAQ section](/govern-science/organizational-access/faq/) dedicated to organizational access.
+* [FAQ section](/govern-science/organizational-access/faq) dedicated to organizational access.
 
 **Lagtun resolutions**
 
-The new [resolutions from Tingweek #9](/govern-science/tingweek/resolutions/) are adopted:
+The new [resolutions from Tingweek #9](/govern-science/tingweek/resolutions) are adopted:
 
 * Enable reduction of inactive compute resources
 * Clarify costs for migration to new systems
@@ -675,7 +675,7 @@ The new [resolutions from Tingweek #9](/govern-science/tingweek/resolutions/) ar
 
 **New Tingweek dates**
 
-[Dates for upcoming Tingweeks](/govern-science/tingweek/dates/): Tingweek #10 (2023-10) and Tingweek #11 (2024-02) are published in the Tingweek section.
+[Dates for upcoming Tingweeks](/govern-science/tingweek/dates): Tingweek #10 (2023-10) and Tingweek #11 (2024-02) are published in the Tingweek section.
 
 :::
 
@@ -711,7 +711,7 @@ We use a three digit numbering system on our Patch notes, for example version `2
 
 #### Major services agreement update 
 
-The first number indicates which major [Services specification](/administer-science/services/specifications/) version the Patch notes are attached to. 
+The first number indicates which major [Services specification](/administer-science/services/specifications) version the Patch notes are attached to. 
 
 The number references the first digit of the current Services specification version. For example, Services specification version `2.8` will be listed as `2`. 
 
@@ -719,7 +719,7 @@ A major services agreement update indicates that services are changes in a way t
 
 #### Minor services agreement update
 
-The second number indicates which minor [Services specification](/administer-science/services/specifications/) version the Patch note are attached to.
+The second number indicates which minor [Services specification](/administer-science/services/specifications) version the Patch note are attached to.
 
 The number references the second digit of the current Services specification version. For example, Services specification version `2.8` will be listed as `8`. 
 

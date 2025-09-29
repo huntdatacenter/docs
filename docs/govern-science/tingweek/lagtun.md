@@ -121,7 +121,7 @@ Lagtun meets digitally utilizing NTNU's Zoom subscription.
 
 After each Tingweek, we start to identify and allocate new topics for consideration on the next Lagtun. Items are typically identified through dialogues among community members and our cloud team.
 
-All users are welcome to propose agenda items for the next meeting through their representatives. You can find the representative list in the [resolution document](/govern-science/tingweek/resolutions), or you may [contact us](/contact/) if you need help identifying your Lagtun representative. 
+All users are welcome to propose agenda items for the next meeting through their representatives. You can find the representative list in the [resolution document](/govern-science/tingweek/resolutions), or you may [contact us](/contact) if you need help identifying your Lagtun representative. 
 
 Items will be floated to members of Lagtun, and one or more resolutions will be added on the topic based on discussions and negotiations. A draft resolution will be tabled in the agenda. 
 

@@ -54,7 +54,7 @@ This is the first major services specification change since 2021. The changes in
 
 The changes may be read with the accompanying adjustment of the [HUNT Cloud pricelist v5.0](/administer-science/prices/pricelist#hunt-cloud-price-list-v5-0-major) (MAJOR).
 
-[Contact us](/contact/) for questions related to the services changes or price adjustements.
+[Contact us](/contact) for questions related to the services changes or price adjustements.
 
 List of individual changes:
 

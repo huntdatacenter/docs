@@ -78,7 +78,7 @@ One intention with data spaces is to simplify coordination and knowledge transfe
 
 * The **knowledge coordinator** is the new point of contact for knowledge transfers between lab users across labs under the data space, including know-hows related to user onboardings, common tasks, practical analytical setups, documentation etc.
 
-A second goal of this setup is to enhance exchanges of scientific coordination expertise between data spaces within similar roles. We are already looking forward to [Tingweek #4](/tingweek/) in October!
+A second goal of this setup is to enhance exchanges of scientific coordination expertise between data spaces within similar roles. We are already looking forward to [Tingweek #4](/tingweek) in October!
 
 
 
@@ -92,7 +92,7 @@ A second goal of this setup is to enhance exchanges of scientific coordination e
 
 ### New services model
 
-We are introducing new [services specifications](/administer-science/services/specifications/) with the intention to increase the predictability and to tune expectations of available services. The document is attached to the services agreement and includes the following service categories:
+We are introducing new [services specifications](/administer-science/services/specifications) with the intention to increase the predictability and to tune expectations of available services. The document is attached to the services agreement and includes the following service categories:
 
 ![HUNT Cloud services](./services/images/hunt-cloud-services.png "HUNT Cloud services")
 
@@ -151,14 +151,14 @@ Three notes on the transition to new price model:
 
 * Prepayments made between 1 January 2020 and 1 July 2021 will be forwarded as Free Quota for the remaining of their project period.
 
-We expect prices and services specifications to be adjusted three times per year based on discussions in our [Tingweeks](/tingweek/).
+We expect prices and services specifications to be adjusted three times per year based on discussions in our [Tingweeks](/tingweek).
 
 
 ### Continuous development
 
 For the record, making a new model for how to organize digital laboratories and digital science is hard. We have given this our best shot in a direction that we think will elevate the scientific significance of our community. However, this is by no means perfect. 
 
-The current model must be seen as work in progress under our continuous development principle. We have already allocated time in our next [Tingweek](/tingweek/) so we together can think up how to further improve the model and advance our common quest to elevate data for a better world! 
+The current model must be seen as work in progress under our continuous development principle. We have already allocated time in our next [Tingweek](/tingweek) so we together can think up how to further improve the model and advance our common quest to elevate data for a better world! 
 
 
 ## Timeline

@@ -45,7 +45,7 @@ It's frustrating to accidentally delete or overwrite data that you care about. F
 
 ## HUNT Workbench
 
-See our [Workbench troubleshooting section](/do-science/hunt-workbench/troubleshooting/).
+See our [Workbench troubleshooting section](/do-science/hunt-workbench/troubleshooting).
 
 
 
@@ -79,7 +79,7 @@ See our [Stata troubleshooting section](/do-science/tools/analytical/stata/#trou
 #### No X11 display variable was set
 
 Make sure you are connected into a graphical environment such as:
-- [Remote desktop in Workbench](/do-science/hunt-workbench/getting-started/remote-desktop/) - recommended
+- [Remote desktop in Workbench](/do-science/hunt-workbench/getting-started/remote-desktop) - recommended
 - X2Go
 - VNC
 

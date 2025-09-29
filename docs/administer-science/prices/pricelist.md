@@ -12,7 +12,7 @@ description: This page holds the current price list for HUNT Cloud.
 
 [[toc]]
 
-Head over to our [price calculator](/administer-science/prices/calculator) to tailor cost estimates for you desired configuration, or visit our [price examples](/administer-science/prices/examples/) for commonly used configurations.
+Head over to our [price calculator](/administer-science/prices/calculator) to tailor cost estimates for you desired configuration, or visit our [price examples](/administer-science/prices/examples) for commonly used configurations.
 
 
 ## Current

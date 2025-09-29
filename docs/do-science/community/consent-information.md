@@ -26,7 +26,7 @@ The community membership is for you, so you don't need to reconsent for each lab
 
 ::: tip Current consent
 
-[Click here](/do-science/community/current-consent/) to see the current version in web format, or see the official PDF version under the "Consent archive" section below.
+[Click here](/do-science/community/current-consent) to see the current version in web format, or see the official PDF version under the "Consent archive" section below.
 
 :::
 

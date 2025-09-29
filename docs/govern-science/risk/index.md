@@ -14,7 +14,7 @@ description: This page cover risk management within HUNT Cloud.
 
 ::: tip
 
-See our [FAQ on risk management](/govern-science/risk-management/faq/) for a collection of frequently asked questions on risk management. 
+See our [FAQ on risk management](/govern-science/risk-management/faq) for a collection of frequently asked questions on risk management. 
 
 :::
 

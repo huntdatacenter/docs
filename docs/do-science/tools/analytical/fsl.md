@@ -23,12 +23,12 @@ Among others, FSL offers implementations of standard GLM analysis, white matter 
 (1) Use [HTCondor](https://neuro.debian.net/blog/2012/2012-03-09_parallelize_fsl_with_condor.html)
 with FSL to speed up analysis by running the tasks in parallel.
 
-(2) [Bedpostx](https://users.fmrib.ox.ac.uk/~moisesf/Bedpostx_GPU/Installation.html) also supports [GPU](/do-science/tools/technical/gpu/), which provides significantly faster results on large datasets.
+(2) [Bedpostx](https://users.fmrib.ox.ac.uk/~moisesf/Bedpostx_GPU/Installation.html) also supports [GPU](/do-science/tools/technical/gpu), which provides significantly faster results on large datasets.
 :::
 
 ## Installation using Conda
 
-A simple way if you manage your dependencies with [Conda](/do-science/tools/analytical/conda/) is to install the [FSLpy package](https://anaconda.org/conda-forge/fslpy) in your environment:
+A simple way if you manage your dependencies with [Conda](/do-science/tools/analytical/conda) is to install the [FSLpy package](https://anaconda.org/conda-forge/fslpy) in your environment:
 
 ```bash
 conda install -c conda-forge fslpy

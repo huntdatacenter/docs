@@ -35,7 +35,7 @@ Click the button below to order a new data space under your existing service cen
 * **Required attachment**: [A signed Scientific Access Order](/administer-science/scientific-access/#order-scientific-access).
 * **Expected delivery time:** Days.
 * **Next step:** [Add a new lab user](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) by Lab leaders.
-* **Cost:** There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 
 ## Tingweek
 

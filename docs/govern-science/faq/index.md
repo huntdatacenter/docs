@@ -10,7 +10,7 @@ description: This page contains common questions on scientific governance in HUN
 
 **This FAQ is intended for individuals that govern science in HUNT Cloud.**
 
-* [Tingweek FAQ](/govern-science/tingweek/faq/)
+* [Tingweek FAQ](/govern-science/tingweek/faq)
 * [Policies FAQ](/govern-science/policies/faq)
 * [Compliance FAQ](/govern-science/compliance/faq)
 * [Risk management FAQ](/govern-science/risk-management/faq)

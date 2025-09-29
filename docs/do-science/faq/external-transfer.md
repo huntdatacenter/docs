@@ -70,7 +70,7 @@ Most likely. However, this is decided by the data controller. Feel free to [cont
 
 ### Is external kistas secure enough for my data?
 
-Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/govern-science/compliance/certificates/). However, the decision of whether you can use this service is decided by your data controller. Feel free to [contact us](/contact) for service descriptions aimed at risk assessment of the service.
+Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/govern-science/compliance/certificates). However, the decision of whether you can use this service is decided by your data controller. Feel free to [contact us](/contact) for service descriptions aimed at risk assessment of the service.
 
 ### Where can I get additional security information on the external kistas?
 

@@ -34,7 +34,7 @@ Click the button below to order a new lab under your existing data space.
 * **Required attachment**: [A signed lab order](/administer-science/agreements/downloads/#lab-order) and information on storage volume sizes and machine type for the home machine (see below).
 * **Expected delivery time:** One week.
 * **Next step**: [Add your first lab users](/administer-science/service-desk/lab-orders.html#add-a-new-lab-user).
-* **Cost:** One lab subscription as specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** One lab subscription as specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 
 ::: warning Next: Add your first lab user(s)
 
@@ -50,7 +50,7 @@ Your lab comes with one (1) machine with computational resources and attached st
 
 **Machine type**
 
-For cost savings, we recommend that you start with the **`default.b2`** machine type. And if needed, upgrade to larger machine types when your scientists are well onboard in your new lab and ready to explore. You may specify [alternative machines types](/administer-science/services/machine-types/) in the order if you know you need other sizes right away.
+For cost savings, we recommend that you start with the **`default.b2`** machine type. And if needed, upgrade to larger machine types when your scientists are well onboard in your new lab and ready to explore. You may specify [alternative machines types](/administer-science/services/machine-types) in the order if you know you need other sizes right away.
 
 **Storage volumes**
 
@@ -73,7 +73,7 @@ The above numbers are in Gigabytes (1000 Gigabytes = 1 Terabyte). To illustrate,
 
 **More information**
 
-See the "Lab" section in our [Services specifications](/administer-science/services/specifications/) for more information on the lab service and default configuration. [Contact us](/contact) if you need guidance on the size selection.
+See the "Lab" section in our [Services specifications](/administer-science/services/specifications) for more information on the lab service and default configuration. [Contact us](/contact) if you need guidance on the size selection.
 
 :::
 
@@ -174,7 +174,7 @@ Note that time to successful transfer depends on access to SFTP software and pot
 
 ### Update data space administrator roles
 
-Click the button below to update your [data space administrator](/administer-science/roles/) under your existing data space.
+Click the button below to update your [data space administrator](/administer-science/roles) under your existing data space.
 
 <SDButton form="update_data_space_administrator_role" />
 

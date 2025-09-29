@@ -14,6 +14,6 @@ description: Collection of installation and usage guides for common tools.
 
 ::: tip HUNT Workbench tools
 
-See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq/) for available workbench tools. 
+See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq) for available workbench tools. 
 
 ::: 

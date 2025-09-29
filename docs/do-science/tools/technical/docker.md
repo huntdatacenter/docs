@@ -14,14 +14,14 @@ description: Usage guide for Docker
 
 ::: warning Singularity on home machines
 
-Docker will fail on your **`home`** machine due to security restrictions. We recommend that you run Singularity on your home machine. Read more in our [Singularity installation guide](/do-science/tools/technical/singularity/).
+Docker will fail on your **`home`** machine due to security restrictions. We recommend that you run Singularity on your home machine. Read more in our [Singularity installation guide](/do-science/tools/technical/singularity).
 
 :::
 
 
 ## Installation
 
-Follow the official [Docker installation guide](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) to install Docker on unmanaged machines (On-demand and BLUE machines). [GPU machines](/do-science/tools/technical/gpu/) come with nvidia-docker preinstalled.
+Follow the official [Docker installation guide](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) to install Docker on unmanaged machines (On-demand and BLUE machines). [GPU machines](/do-science/tools/technical/gpu) come with nvidia-docker preinstalled.
 
 
 

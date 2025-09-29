@@ -25,7 +25,7 @@ We have five agreement layers in HUNT Cloud (illustration below). This guide cov
 
 ::: warning Organizational access
 
-You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/administer-science/contact/) if you need to start an organizational onboarding. 
+You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/administer-science/contact) if you need to start an organizational onboarding. 
 
 :::
 
@@ -44,8 +44,8 @@ Your Data space does also identify your management team that we interact with to
 
 ::: details Data space order resources
 
-* [HUNT Cloud Services specification](/administer-science/services/specifications/) specifies the Data spaces services details. 
-* [HUNT Cloud Price list](/administer-science/prices/pricelist/) specifies the Data space subscription cost. 
+* [HUNT Cloud Services specification](/administer-science/services/specifications) specifies the Data spaces services details. 
+* [HUNT Cloud Price list](/administer-science/prices/pricelist) specifies the Data space subscription cost. 
 * [HUNT Cloud Data space order](/administer-science/agreements/downloads/#data-space-order)
 * [HUNT Cloud Invoice profile](/administer-science/agreements/downloads/#invoice-profile)
 :::
@@ -60,10 +60,10 @@ Your lab leader or lab coordinator chooses the initial size of the home machine 
 
 ::: details Lab order resources
 
-* [HUNT Cloud Services Specification](/administer-science/services/specifications/) specifies the Lab services and individual resource services details. 
-* [HUNT Cloud Price calculator](/administer-science/prices/calculator/) exemplifies the Lab subscription cost and the cost for individual services. 
-* [HUNT Cloud Price list](/administer-science/prices/pricelist/) specifies individual prices for the Lab subscription and individual services. 
-* [HUNT Cloud Machine types](/administer-science/services/machine-types/) lists available machine types that can be deployed either as home machines or additional machines to the lab. 
+* [HUNT Cloud Services Specification](/administer-science/services/specifications) specifies the Lab services and individual resource services details. 
+* [HUNT Cloud Price calculator](/administer-science/prices/calculator) exemplifies the Lab subscription cost and the cost for individual services. 
+* [HUNT Cloud Price list](/administer-science/prices/pricelist) specifies individual prices for the Lab subscription and individual services. 
+* [HUNT Cloud Machine types](/administer-science/services/machine-types) lists available machine types that can be deployed either as home machines or additional machines to the lab. 
 * [HUNT Cloud Lab order](/administer-science/agreements/downloads/#lab-order)
 :::
 
@@ -108,15 +108,15 @@ This is the individual that is authorized to make decisions for all labs in the 
 
 You have the option to list specific individuals as our point-of-contact for dialogues on agreements, data, technologies, training of new users and financial aspects. Leave this field BLANK if you would like the Data space leader to hold this role.
  
-For larger center and groups, we see these roles as senior positions that administer and ensures a common practice for e.g. your data handling across your many labs and collaborations. [Click here](/administer-science/roles/) to read more about the different roles.
+For larger center and groups, we see these roles as senior positions that administer and ensures a common practice for e.g. your data handling across your many labs and collaborations. [Click here](/administer-science/roles) to read more about the different roles.
 
 **Subscription level**
 
 *Subscription level*
 
-Your Data space subscription level decide the degrees of freedom for your scientists. Our [services overview](/administer-science/services/overview/#data-space) provides a summary of different features, the [services specifications](/administer-science/services/specifications/) holds the detailed description, and the [price list](/administer-science/prices/pricelist/) specify the yearly cost.
+Your Data space subscription level decide the degrees of freedom for your scientists. Our [services overview](/administer-science/services/overview/#data-space) provides a summary of different features, the [services specifications](/administer-science/services/specifications) holds the detailed description, and the [price list](/administer-science/prices/pricelist) specify the yearly cost.
 
-We recommend that you start with the free-of-charge WHITE subscription level if you are unsure of which level you should choose as you may easily upgrade this later. [Contact us](/administer-science/contact/) if you need guidance in your selection process.
+We recommend that you start with the free-of-charge WHITE subscription level if you are unsure of which level you should choose as you may easily upgrade this later. [Contact us](/administer-science/contact) if you need guidance in your selection process.
 
 *Subscription length*
 
@@ -225,7 +225,7 @@ We use the Lab order to document activities in the lab on behalf of your host or
 
 **Signatures**
 
-You need to get a signature from your Lab leader, typically by saving the PDF and forwarding it on email, and then add the signature of the Data space leader before you submit the final agreement to HUNT Cloud on [email](/administer-science/contact/) for Lab activation.
+You need to get a signature from your Lab leader, typically by saving the PDF and forwarding it on email, and then add the signature of the Data space leader before you submit the final agreement to HUNT Cloud on [email](/administer-science/contact) for Lab activation.
 
 :::
 
@@ -233,7 +233,7 @@ You need to get a signature from your Lab leader, typically by saving the PDF an
 
 
 
-[Contact us](/administer-science/contact/) if you think we can provide additional guidance. We are more than happy to help!
+[Contact us](/administer-science/contact) if you think we can provide additional guidance. We are more than happy to help!
 
 ## Order scientific access
 
@@ -245,6 +245,6 @@ You need to get a signature from your Lab leader, typically by saving the PDF an
 
 ## FAQ
 
-See our [Scientific access FAQ](/administer-science/scientific-access/faq/) for frequently asked questions about scientific access to HUNT Cloud.
+See our [Scientific access FAQ](/administer-science/scientific-access/faq) for frequently asked questions about scientific access to HUNT Cloud.
 
 

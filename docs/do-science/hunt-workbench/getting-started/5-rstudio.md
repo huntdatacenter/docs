@@ -49,7 +49,7 @@ conda list -n r-base
 
 
 
-If you want to install your own R packages, we recommend that you use [Conda](/do-science/tools/analytical/conda/) where ever possible:
+If you want to install your own R packages, we recommend that you use [Conda](/do-science/tools/analytical/conda) where ever possible:
 
 1. Open [Workbench Terminal](/do-science/hunt-workbench/faq/#terminal):
 

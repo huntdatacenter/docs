@@ -12,7 +12,7 @@ description: This page list examples of yearly cost for selected use cases in HU
 
 [[toc]]
 
-For the record, all prices in the examples are listed as VAT exclusive in NOK from the [price list](/administer-science/prices/pricelist/). The prices are provided for guidance and may contain both errors and outdated information.
+For the record, all prices in the examples are listed as VAT exclusive in NOK from the [price list](/administer-science/prices/pricelist). The prices are provided for guidance and may contain both errors and outdated information.
 
 ::: tip Estimate your specific cost
 

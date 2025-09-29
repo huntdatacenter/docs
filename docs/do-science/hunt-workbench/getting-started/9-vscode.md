@@ -33,7 +33,7 @@ To create a Jupyter notebook in Visual Studio Code:
 - A new untitled notebook will be created where you can start writing your code.
 
 ### Creating Python Conda environment
-To create a basic python Conda environment, follow this [link](/do-science/hunt-workbench/getting-started/python/) for further instructions. 
+To create a basic python Conda environment, follow this [link](/do-science/hunt-workbench/getting-started/python) for further instructions. 
 
 ### Selecting Python Kernel from Conda Installation
 To select a Python kernel from the same Conda installation as used by JupyterLab:

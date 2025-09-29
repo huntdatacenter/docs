@@ -35,7 +35,7 @@ Worry not if your account is active but you have forgotten your passwords and/or
 
 #### New computer
 
-If you have a new local computer since your last visit, see our [new computer](/do-science/guides/new-computer/) guide to get going.
+If you have a new local computer since your last visit, see our [new computer](/do-science/guides/new-computer) guide to get going.
 
 #### New location
 

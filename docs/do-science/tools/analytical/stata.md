@@ -20,7 +20,7 @@ description: Installation guide for Stata.
 
 ## Installation in HUNT Workbench
 
-You may request Stata in your HUNT Workbench as a Jupyter notebook. This means that you can write known Stata commands and that you can view plots on your screen. See our [Stata guide](/do-science/guides/stata/) for more details and request HUNT Workbench Stata access in our do-science [service desk](/do-science/service-desk/#general-service-request).
+You may request Stata in your HUNT Workbench as a Jupyter notebook. This means that you can write known Stata commands and that you can view plots on your screen. See our [Stata guide](/do-science/guides/stata) for more details and request HUNT Workbench Stata access in our do-science [service desk](/do-science/service-desk/#general-service-request).
 
 ## Installation on home machines
 
@@ -32,7 +32,7 @@ All NTNU employees are covered by the NTNU license which allow for quick install
 
 ## Running Stata over X2Go
 
-After our installation, you can access Stata over [X2Go](/do-science/tools/technical/x2go/) with this **`Single application`** address in the X2Go configuration (or similar provided by us):
+After our installation, you can access Stata over [X2Go](/do-science/tools/technical/x2go) with this **`Single application`** address in the X2Go configuration (or similar provided by us):
 
 ```bash
 /usr/bin/xterm -e /mnt/work/software/stata170/xstata-mp -f0

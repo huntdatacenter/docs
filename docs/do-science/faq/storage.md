@@ -45,7 +45,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 ### How can I find out what is taking the most space on volume?
 
-We recommend using `ncdu` to get better overview of how the space on a specific volume is used. You can find more details in our [ncdu installation guide](/do-science/tools/technical/ncdu/).
+We recommend using `ncdu` to get better overview of how the space on a specific volume is used. You can find more details in our [ncdu installation guide](/do-science/tools/technical/ncdu).
 
 ### How can I move my tmp out of the root?
 
@@ -83,7 +83,7 @@ There is -no- restore (backup) on your home-folder. All data in **`home`** may b
 ## Expansions
 
 ::: tip Data coordination
-See our [data management FAQ](/administer-science/data/faq/) in our Coordination section for information on volume expansions.
+See our [data management FAQ](/administer-science/data/faq) in our Coordination section for information on volume expansions.
 :::
 
 ## Permissions
@@ -158,7 +158,7 @@ See our [Data administrator FAQ](/administer-science/data/faq/#restore) for ques
 
 ### How do I zip and unzip files in my lab?
 
-We recommend using the 7z software to compress and decompress files and folders. Read our [7z guide](/do-science/tools/transfer/7z/) to get going.
+We recommend using the 7z software to compress and decompress files and folders. Read our [7z guide](/do-science/tools/transfer/7z) to get going.
 
 
 

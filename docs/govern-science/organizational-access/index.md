@@ -37,7 +37,7 @@ We use data processor agreement templates that is accepted by many organizations
 
 There is no direct cost for your organization associated with signing the data processor agreement with HUNT Cloud. 
 
-[Read more about our data processor agreement](/govern-science/organizational-access/data-processor-agreement/)
+[Read more about our data processor agreement](/govern-science/organizational-access/data-processor-agreement)
 
 ### Service center agreement
 
@@ -47,7 +47,7 @@ The service center agreement simplify the process for your scientific centers, g
 
 There is no direct cost for the organizational unit that sign the service center agreement, for example Departments at universities. However, all Data spaces and Labs under your organizational unit that are attached to this agreement will be invoiced for their resource consumption in accordance with specifications defined here.
 
-[Read more about our service center agreement](/govern-science/organizational-access/service-center-agreement/)
+[Read more about our service center agreement](/govern-science/organizational-access/service-center-agreement)
 
 
 ## Process overview
@@ -77,4 +77,4 @@ Your scientific centers and groups may start their [scientific access](/administ
 
 ## FAQ
 
-See our [Organizational access FAQ](/govern-science/organizational-access/faq/) for frequently asked questions about organizational access to HUNT Cloud.
+See our [Organizational access FAQ](/govern-science/organizational-access/faq) for frequently asked questions about organizational access to HUNT Cloud.

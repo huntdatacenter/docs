@@ -25,7 +25,7 @@ Order a SSH passphrase reset in our do-science [service desk](/do-science/servic
 
 ## 1. Requirements
 
-1.1 A running VPN connection to HUNT Cloud as described in our [Configure your VPN](/do-science/lab-access/configure-vpn/) guide.
+1.1 A running VPN connection to HUNT Cloud as described in our [Configure your VPN](/do-science/lab-access/configure-vpn) guide.
 
 1.2 An established connection to [Workbench](/do-science/hunt-workbench/principles). If you have not used Workbench before, order your certificate [here](/do-science/service-desk/#hunt-workbench-access)
 

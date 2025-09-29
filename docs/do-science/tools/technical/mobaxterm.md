@@ -16,7 +16,7 @@ description: Usage guide for MobaXterm.
 
 (1) A Windows operating system on your local computer.
 
-(2) A working connection to your lab over SSH as described in the [Configure SSH](/do-science/lab-access/configure-ssh/) guide section of the _How to connect to your lab_ guide.
+(2) A working connection to your lab over SSH as described in the [Configure SSH](/do-science/lab-access/configure-ssh) guide section of the _How to connect to your lab_ guide.
 
 (3) The IP address to your lab. This was included in your [SSH configuration file](/do-science/lab-access/configure-ssh/#_3-1-identify-required-info) that you got on email during your initial onboarding.
 

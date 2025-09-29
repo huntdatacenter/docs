@@ -34,7 +34,7 @@ Yes. However, please note that you will need written approval of such testing *b
 
 ### Can we view your third-party audit results? 
 
-Yes. Data controllers may [contact us](/contact) for copies of our yearly third-party [certification](/certificates/) reports. 
+Yes. Data controllers may [contact us](/contact) for copies of our yearly third-party [certification](/certificates) reports. 
 
 ### Can we view your internal audit results? 
 

@@ -25,7 +25,7 @@ The Head of HUNT Cloud, [Oddgeir Lingaas Holmen](https://www.ntnu.edu/employees/
 
 ### Scientific development
 
-[Lagtun](/govern-science/tingweek/lagtun/) holds an indirect responsibility for the scientific development of HUNT Cloud as member representatives express recommendations for the scientific governance directly to the Head of HUNT Research Centre in the form of resolutions.
+[Lagtun](/govern-science/tingweek/lagtun) holds an indirect responsibility for the scientific development of HUNT Cloud as member representatives express recommendations for the scientific governance directly to the Head of HUNT Research Centre in the form of resolutions.
 
 ### Affiliation 
 

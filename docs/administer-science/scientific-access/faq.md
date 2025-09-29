@@ -45,7 +45,7 @@ Our [agreement structure](/administer-science/agreements/overview/#overview) has
 
 ### Can we list the same individual in all Data space roles? 
 
-Yes. We use the [roles](/administer-science/roles/) in the data space orders for targeted communication for the specific responsibility areas. Thus, they can be assigned to one or several individual. 
+Yes. We use the [roles](/administer-science/roles) in the data space orders for targeted communication for the specific responsibility areas. Thus, they can be assigned to one or several individual. 
 
 ### Can we leave the coordinator roles empty? 
 

@@ -17,9 +17,9 @@ description: This page gives an introduction to data administration in HUNT Clou
 
 ### Data transfers
 
-* [Internal kista](/do-science/data-transfers/internal-kista/) for data transfers between labs inside HUNT Cloud.
-* [External kista](/do-science/data-transfers/external-kista/) for data transfers to and from external users outside HUNT Cloud.
-* See our [internal](/do-science/faq/internal-transfer/) and [external](/do-science/faq/external-transfer/) pages in the do science FAQ for general information on the services.
+* [Internal kista](/do-science/data-transfers/internal-kista) for data transfers between labs inside HUNT Cloud.
+* [External kista](/do-science/data-transfers/external-kista) for data transfers to and from external users outside HUNT Cloud.
+* See our [internal](/do-science/faq/internal-transfer) and [external](/do-science/faq/external-transfer) pages in the do science FAQ for general information on the services.
 
 ::: tip
 This section thrives on ideas and feedback. [Contact us](/contact) with things that you would like so see included.

@@ -14,7 +14,7 @@ description: Frequently asked questions about HUNT Workbench.
 
 ::: tip Troubleshooting
 
-Head over to our [HUNT Workbench troubleshooting](/do-science/hunt-workbench/troubleshooting/) section if something is not working as expected.
+Head over to our [HUNT Workbench troubleshooting](/do-science/hunt-workbench/troubleshooting) section if something is not working as expected.
 
 :::
 
@@ -213,7 +213,7 @@ If you have older setup and missing some of these packages you can follow the "_
 
 ### How do I install additional R packages?
 
-If you want to install your own R packages, we recommend that you use [Conda](/do-science/tools/analytical/conda/) where ever possible:
+If you want to install your own R packages, we recommend that you use [Conda](/do-science/tools/analytical/conda) where ever possible:
 
 1. Open [Workbench Terminal](/do-science/hunt-workbench/faq/#terminal):
 
@@ -344,4 +344,4 @@ Yes. You can find your **`Workbench Terminal`** in the main view of applications
 
 ### When do I need to use a terminal?
 
-**`Workbench Terminal`** can be handy when it comes to managing [Conda packages](/do-science/tools/analytical/conda/), monitoring resources (**`htop`**), or handling other tasks.
+**`Workbench Terminal`** can be handy when it comes to managing [Conda packages](/do-science/tools/analytical/conda), monitoring resources (**`htop`**), or handling other tasks.

@@ -14,7 +14,7 @@ description: This page holds information on data safety levels in HUNT Cloud.
 
 ::: tip Note
 
-The DSL program will be discussed (and this page expanded) during the upcoming [Tingweek #7](/tingweek/) in October 2022.
+The DSL program will be discussed (and this page expanded) during the upcoming [Tingweek #7](/tingweek) in October 2022.
 
 :::
 
@@ -32,7 +32,7 @@ We aim to evolve a set of predictable information security and privacy controls 
 
 ### How?
 
-We plan to discuss the implementation plans and further details on the control sets during [Tingweek #7](/tingweek/) in October 2022. 
+We plan to discuss the implementation plans and further details on the control sets during [Tingweek #7](/tingweek) in October 2022. 
 
 Default lab configurations are of 1 August 2022 defined to be on DSL-2.
 
