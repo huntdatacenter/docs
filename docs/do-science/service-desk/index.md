@@ -51,7 +51,7 @@ Request a new certificate if you have an existing HUNT Workbench and your previo
 
 ### SSH passphrase reset
 
-Order a [SSH passphrase reset](/do-science/guides/configure-ssh) that you may need to access your workbench and install software on your home machine.
+Order a [SSH passphrase reset](/do-science/guides/access-guides/reset-ssh) that you may need to access your workbench and install software on your home machine.
 
 <SDButton form="request_ssh_pass_reset" />
 
@@ -59,7 +59,7 @@ Order a [SSH passphrase reset](/do-science/guides/configure-ssh) that you may ne
 - **Expected response time:** Days.
 - **Expected delivery:** Temporary passphrase on Signal.
 - **Requirement:** Active Signal app on your phone.
-- **Next step:** [Guide on the passphrase reset](/do-science/guides/configure-ssh).
+- **Next step:** [Guide on the passphrase reset](/do-science/guides/access-guides/reset-ssh).
 - **Cost:** Included in the lab subscription.
 
 <!-- DEPRECATED - SSH configuration -->
@@ -78,7 +78,7 @@ Click button below if you need your `ssh_config.txt` file to be resent to you (a
 * **Expected response time:** Days.
 * **Expected delivery:** Temporary passphrase on Signal.
 * **Requirement:** Active Signal app on your phone.
-* **Next step:** [Guide on the passphrase reset](/do-science/guides/configure-ssh).
+* **Next step:** [Guide on the passphrase reset](/do-science/guides/access-guides/reset-ssh).
 * **Cost:** Included in the lab subscription.
 
 -->

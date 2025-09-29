@@ -139,8 +139,13 @@ const redirectPrefixes: Array<[string, string]> = [
   ["/data-transfers/external-kista/", "/do-science/data-transfers/external-kista"] as const,
   ["/agreements/", "/administer-science/agreements/overview"] as const,
   ["/do-science/lab-access/configure-vpn/", "/do-science/lab/"] as const,
+  ["/do-science/lab-access/2-configure-vpn/", "/do-science/lab/"] as const,
   ["/do-science/lab-access/configure-ssh/", "/do-science/lab/"] as const,
+  ["/do-science/lab-access/3-configure-ssh/", "/do-science/lab/"] as const,
   ["/do-science/lab-access/configure-access/", "/do-science/lab/"] as const,
+  ["/do-science/lab-access/2-configure-access", "/do-science/lab/"] as const,
+  ["/do-science/guides/configure-ssh", "/do-science/guides/access-guides/reset-ssh"] as const,
+  // ["", ""] as const,
   // ["", ""] as const,
 ].filter(
   item =>

@@ -40,7 +40,7 @@ Read more about the tools that you plan to use:
 - [Python](/do-science/hunt-workbench/getting-started/4-python)
 - [RStudio](/do-science/hunt-workbench/getting-started/5-rstudio)
 - [MATLAB](/do-science/hunt-workbench/getting-started/6-matlab)
-- [STATA](/do-science/hunt-workbench/getting-started/stata)
+- [STATA](/do-science/hunt-workbench/getting-started/7-stata)
 - [Julia](/do-science/hunt-workbench/getting-started/8-julia)
 - [Visual Studio Code (VS Code)](/do-science/hunt-workbench/getting-started/9-vscode)
 - [Remote Desktop](/do-science/hunt-workbench/getting-started/10-remote-desktop)
