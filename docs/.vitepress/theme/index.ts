@@ -106,6 +106,47 @@ library.add(faUserGear)
 library.add(faPalette)
 library.add(faPeopleGroup)
 
+const redirects: Record<string, string> = {
+  "/do-science/lab-access/collect-your-keys": "/do-science/lab-access/1-collect-keys",
+  "/administer-science/agreements/": "/administer-science/agreements/overview",
+  "/administer-science/prices/calculator": "/administer-science/prices/estimator",
+  // "/legacy/path": "/current/path",
+  // add your redirects here
+}
+
+const redirectPrefixes: Array<[string, string]> = [
+  ["/do-science/getting-started/", "/do-science/lab-access/"] as const,
+  ["/getting-started/", "/do-science/lab-access/"] as const,
+  ["/lab-access/", "/do-science/lab-access/"] as const,
+  ["/service-desk/user-orders/", "/do-science/service-desk/"] as const,
+  ["/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders/"] as const,
+  ["/service-desk/data-space-orders/", "/administer-science/service-desk/data-space-orders/"] as const,
+  ["/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders/"] as const,
+  ["/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders/"] as const,
+  ["/working-in-your-lab/technical-tools/", "/do-science/tools/technical/"] as const,
+  ["/working-in-your-lab/analytical-tools/", "/do-science/tools/analytical/"] as const,
+  ["/working-in-your-lab/transfer-tools/", "/do-science/tools/transfer/"] as const,
+  ["/working-in-your-lab/workbench/", "/do-science/hunt-workbench/"] as const,
+  ["/community/", "/do-science/community/"] as const,
+  ["/troubleshooting/", "/do-science/troubleshooting/"] as const,
+  ["/faq/", "/do-science/faq/"] as const,
+  ["/certificates/", "/govern-science/compliance/certificates"] as const,
+  ["/policies/", "/govern-science/policies/"] as const,
+  ["/subcontractors/", "/govern-science/compliance/subcontractors"] as const,
+  ["/responsibilities/", "/govern-science/risk-management/#clarification-of-responsibilities"] as const,
+  ["/service-desk/", "/administer-science/service-desk/"] as const,
+  ["/data-transfers/internal-kista/", "/do-science/data-transfers/internal-kista"] as const,
+  ["/data-transfers/external-kista/", "/do-science/data-transfers/external-kista"] as const,
+  ["/agreements/", "/administer-science/agreements/overview"] as const,
+  ["/do-science/lab-access/configure-vpn/", "/do-science/lab/"] as const,
+  ["/do-science/lab-access/configure-ssh/", "/do-science/lab/"] as const,
+  ["/do-science/lab-access/configure-access/", "/do-science/lab/"] as const,
+  // ["", ""] as const,
+].filter(
+  item =>
+    item && Array.isArray(item) && item[0] && item[1] && typeof item[0] === "string" && typeof item[1] === "string",
+) // Filter assures there is 2 strings in each item in the array
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -114,6 +155,41 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    router.onBeforeRouteChange = to => {
+      // Redirect PDFs into assets to assure uploads of PDFs into assets repository
+      if (to.startsWith("/assets/") && to.endsWith(".pdf")) {
+        // NOTE Redirect PDF assets if not found - fails to redirect existing
+        window.location.href = "https://assets.hdc.ntnu.no" + to
+        return false // prevent the original navigation
+      }
+
+      // Redirect everytevery URIs that start with key (first item in the pair)
+      redirectPrefixes.every(pair => {
+        if (to.startsWith(pair[0])) {
+          // Rewrite the link to correct path
+          console.log(`Redirect: ${pair[0]} -> ${pair[1]}`)
+          window.location.href = to.replace(pair[0], pair[1])
+          return false
+        } else {
+          return true
+        }
+      })
+
+      // Redirect specific URIs
+      if (redirects[to]) {
+        router.go(redirects[to])
+        return false // prevent the original navigation
+      }
+    }
+
+    // Handle redirects on initial page load
+    if (typeof window !== "undefined") {
+      const currentPath = window.location.pathname
+      if (redirects[currentPath]) {
+        window.location.pathname = redirects[currentPath]
+      }
+    }
+
     app.use(vuetify)
 
     // Search for FREE icons: https://fontawesome.com/search?o=r&m=free
