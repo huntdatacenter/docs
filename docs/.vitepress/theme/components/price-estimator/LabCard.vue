@@ -187,7 +187,7 @@ export default {
     closeStorageModal(payload: any) {
       if (payload) {
         this.storageId = this.storageId + 1
-        let price = this.calculateStoragePriceForVolume(payload.size, true)
+        let price = this.calculateStoragePriceForVolume(payload.size)
         this.datasetStorage.push({
           id: this.storageId,
           name: payload.name,
