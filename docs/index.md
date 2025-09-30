@@ -110,7 +110,6 @@ h1 {
 .hc-header-img {
   background-image: url("https://assets.hdc.ntnu.no/assets/static/banner_640.jpg");
   background-position: 50% 50%;
-  //background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #004c7b;
