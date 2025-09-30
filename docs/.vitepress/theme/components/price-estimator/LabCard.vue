@@ -350,7 +350,7 @@ export default {
 
       if (gpuFlavor) {
         const gpuPrice = this.gpuPrices.find(
-          // GPU is always ONDEMAND
+          // GPU service level must always be ONDEMAND
           p => p["service.unit"] === gpuFlavor && p["service.level"] === "ONDEMAND",
         )
         if (gpuPrice) {
