@@ -178,9 +178,9 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     router.onBeforeRouteChange = to => {
-      // Redirect PDFs into assets to assure uploads of PDFs into assets repository
+      // NOTE - Redirect PDFs into assets to assure uploads of PDFs into assets repository
       if (!ISSERVER) {
-        if (to.startsWith("/assets/") && to.endsWith(".pdf")) {
+        if (to && to.startsWith("/assets/") && to.endsWith(".pdf")) {
           // NOTE Redirect PDF assets if not found - fails to redirect existing
           window.location.href = "https://assets.hdc.ntnu.no" + to
           return false // prevent the original navigation
@@ -189,7 +189,7 @@ export default {
 
       // Redirect everytevery URIs that start with key (first item in the pair)
       redirectPrefixes.every(pair => {
-        if (to.startsWith(pair[0])) {
+        if (to && to.startsWith(pair[0])) {
           // Rewrite the link to correct path
           console.log(`Redirect: ${pair[0]} -> ${pair[1]}`)
           if (!ISSERVER) {
