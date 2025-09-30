@@ -1,11 +1,11 @@
 <script setup>
 import { ref, computed, onMounted } from "vue"
 
+const ISSERVER = typeof window === "undefined"
+
 defineOptions({
   name: "ServiceDesk",
 })
-
-const ISSERVER = typeof window === "undefined"
 
 // Emits definition
 const emit = defineEmits(["update:modelValue"])

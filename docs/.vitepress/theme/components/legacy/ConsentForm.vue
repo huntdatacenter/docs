@@ -4,6 +4,8 @@ import { ref, computed, onMounted, nextTick, getCurrentInstance } from "vue"
 import YAML from "yaml"
 import MarkdownIt from "markdown-it"
 
+const ISSERVER = typeof window === "undefined"
+
 const md = new MarkdownIt()
 
 defineOptions({
@@ -31,7 +33,10 @@ const getRouteQuery = () => {
   }
 
   // Fallback: parse URL parameters directly
-  const urlParams = new URLSearchParams(window.location.search)
+  let urlParams = []
+  if (!ISSERVER) {
+    urlParams = new URLSearchParams(window.location.search)
+  }
   const query = {}
   for (const [key, value] of urlParams) {
     query[key] = value

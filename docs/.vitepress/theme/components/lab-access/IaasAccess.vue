@@ -1,6 +1,8 @@
 <script setup>
 import { ref, computed, onMounted, watch, getCurrentInstance } from "vue"
 
+const ISSERVER = typeof window === "undefined"
+
 defineOptions({
   name: "IaasAccess",
 })
@@ -21,7 +23,10 @@ const getRouteQuery = () => {
     console.warn("Vue Router not available, checking URL parameters directly")
   }
 
-  const urlParams = new URLSearchParams(window.location.search)
+  let urlParams = []
+  if (!ISSERVER) {
+    urlParams = new URLSearchParams(window.location.search)
+  }
   const query = {}
   for (const [key, value] of urlParams) {
     query[key] = value

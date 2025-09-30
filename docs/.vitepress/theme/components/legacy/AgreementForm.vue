@@ -6,6 +6,8 @@ import YAML from "yaml"
 // Dynamic import for PdfForm component
 // const PdfForm = defineAsyncComponent(() => import("./PdfForm.vue"))
 
+const ISSERVER = typeof window === "undefined"
+
 // Props
 const props = defineProps({
   id: { type: String, default: "applet" },
@@ -22,7 +24,10 @@ const getRouteQuery = () => {
     console.warn("Vue Router not available, checking URL parameters directly")
   }
 
-  const urlParams = new URLSearchParams(window.location.search)
+  let urlParams = []
+  if (!ISSERVER) {
+    urlParams = new URLSearchParams(window.location.search)
+  }
   const query = {}
   for (const [key, value] of urlParams) {
     query[key] = value

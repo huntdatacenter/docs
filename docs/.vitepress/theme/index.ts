@@ -106,6 +106,8 @@ library.add(faUserGear)
 library.add(faPalette)
 library.add(faPeopleGroup)
 
+const ISSERVER = typeof window === "undefined"
+
 const redirects: Record<string, string> = {
   "/do-science/lab-access/collect-your-keys": "/do-science/lab-access/1-collect-keys",
   "/administer-science/agreements/": "/administer-science/agreements/overview",
@@ -177,7 +179,7 @@ export default {
   enhanceApp({ app, router, siteData }) {
     router.onBeforeRouteChange = to => {
       // Redirect PDFs into assets to assure uploads of PDFs into assets repository
-      if (typeof window !== "undefined") {
+      if (!ISSERVER) {
         if (to.startsWith("/assets/") && to.endsWith(".pdf")) {
           // NOTE Redirect PDF assets if not found - fails to redirect existing
           window.location.href = "https://assets.hdc.ntnu.no" + to
@@ -190,7 +192,7 @@ export default {
         if (to.startsWith(pair[0])) {
           // Rewrite the link to correct path
           console.log(`Redirect: ${pair[0]} -> ${pair[1]}`)
-          if (typeof window !== "undefined") {
+          if (!ISSERVER) {
             window.location.href = to.replace(pair[0], pair[1])
           } else {
             router.go(to.replace(pair[0], pair[1]))
@@ -209,7 +211,7 @@ export default {
     }
 
     // Handle redirects on initial page load
-    if (typeof window !== "undefined") {
+    if (!ISSERVER) {
       const currentPath = window.location.pathname
       if (redirects[currentPath]) {
         window.location.pathname = redirects[currentPath]

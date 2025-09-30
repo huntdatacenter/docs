@@ -6,7 +6,7 @@ defineOptions({
 })
 
 // Async component import (Vue 3 style)
-const CopyInputField = defineAsyncComponent(() => import("./CopyInputField.vue"))
+// const CopyInputField = defineAsyncComponent(() => import("./CopyInputField.vue"))
 
 // Props definition
 const props = defineProps({

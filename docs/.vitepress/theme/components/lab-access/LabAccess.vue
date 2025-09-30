@@ -6,6 +6,8 @@ import YAML from "yaml"
 // import { defineAsyncComponent } from "vue"
 // const TotpGuide = defineAsyncComponent(() => import("./TotpGuide.vue"))
 
+const ISSERVER = typeof window === "undefined"
+
 defineOptions({
   name: "LabAccess",
 })
@@ -26,7 +28,10 @@ const getRouteQuery = () => {
     console.warn("Vue Router not available, checking URL parameters directly")
   }
 
-  const urlParams = new URLSearchParams(window.location.search)
+  let urlParams = []
+  if (!ISSERVER) {
+    urlParams = new URLSearchParams(window.location.search)
+  }
   const query = {}
   for (const [key, value] of urlParams) {
     query[key] = value
@@ -127,7 +132,7 @@ const homeIpUrl = computed(() => {
 })
 
 const getCurrentUrl = computed(() => {
-  return window.location.href
+  return !ISSERVER ? window.location.href : ""
 })
 
 // Methods

@@ -110,7 +110,10 @@ export default defineComponent({
     loadState() {
       //Add some try catch here, if it fails just give them an empty state
       try {
-        const savedState = localStorage.getItem("priceEstimatorState")
+        let savedState
+        if (!ISSERVER) {
+          savedState = localStorage.getItem("priceEstimatorState")
+        }
         if (savedState) {
           const state = JSON.parse(savedState)
           this.labCards = state.labCards || []
