@@ -74,7 +74,9 @@ const guidingOptions = ref([
   { text: 'Lab Migration', value: 'lab_migration' },
 ])
 const filterGuidesByType = ref(null)
-const incIndices = ref({})
+
+// incIndices is not a reactive variable so no need to use ref()
+let incIndices = {}
 
 // Computed properties
 const cfgShow = computed(() => {
@@ -152,10 +154,10 @@ const nextPanel = (inc = 1) => {
 
 const getNextItem = (groupId, reset = false) => {
   const groupKey = `group-${groupId}`
-  if (reset || !incIndices.value || !incIndices.value[groupKey]) {
-    incIndices.value[groupKey] = 0
+  if (reset || !incIndices[groupKey]) {
+    incIndices[groupKey] = 0
   }
-  const itemId = ++incIndices.value[groupKey]
+  const itemId = ++incIndices[groupKey]
   return `${groupId}.${itemId}.`
 }
 
