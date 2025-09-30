@@ -1,0 +1,157 @@
+agreements:
+  - value: test_agreement
+    text: "Test Agreement"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf
+  - value: lab_user_agreement
+    text: "Lab User Agreement"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-user-agreement.pdf
+  - value: lab_agreement
+    text: "Lab Agreement"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-lab-order.pdf
+  - value: invoice_profile
+    text: "Invoice Profile"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-invoice-profile.pdf
+  - value: internal_kista
+    text: "Internal Kista Order"
+    url: https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf
+    servicedesk: request_internal_kista
+
+forms:
+  test_agreement:
+    fields: [
+      { key: null, label: "Lab", field: "section" },
+      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", tooltip: "Lab name in the lowercase letters", autocapitalize: "off", field: "textfield" },
+      { key: null, label: "Lab user", field: "section" },
+      { key: "labuserfullname", label: "Lab User (Full name)", field: "textfield" },
+      { key: "labuseremail", label: "Email", minlength: 3, specialType: "email", field: "textfield" },
+      { key: "labuserphone", label: "Phone", minlength: 3, specialType: "tel", field: "textfield" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "labusersignatureplaceanddate", label: "Place and date", field: "textfield" },
+      { key: "lab_user_signature", label: "Lab User signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.185 },
+      { key: "lab_leader_signature", label: "Lab Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.135 },
+    ]
+
+  lab_user_agreement:
+    fields: [
+      { key: null, label: "Lab", field: "section" },
+      { key: "labnameshort", label: "Lab Name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
+      { key: "lableadernamefull", label: "Lab Leader", field: "textfield", required: "true" },
+      { key: null, label: "Lab user", field: "section" },
+      { key: "labuserfullname", label: "Lab User (Full name)", field: "textfield", required: "true" },
+      { key: "labuserposition", label: "Position", field: "textfield", required: "true" },
+      { key: "labuserdepartment", label: "Department", field: "textfield" },
+      { key: "labuserfaculty", label: "Faculty", field: "textfield" },
+      { key: "labuserinstitution", label: "Institution", field: "textfield", required: "true" },
+      { key: "labusercountry", label: "Country", field: "countries", required: "true" },
+      { key: "labuseremail", label: "Email", minlength: 3, specialType: "email", field: "textfield", required: "true" },
+      { key: "labuserphone", label: "Phone", minlength: 3, specialType: "tel", field: "textfield", required: "true" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "labusersignatureplaceanddate", label: "Place and date", field: "textfield", required: "true"},
+      { key: "lab_user_signature", label: "Lab User signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.185 },
+      { key: "lab_leader_signature", label: "Lab Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.135 },
+    ]
+
+  lab_agreement:
+    fields: [
+      { key: null, label: "Data space", field: "section" },
+      { key: "dataspacenameshort", label: "Data Space name", field: "textfield", required: "true" },
+      { key: "dataspaceleaderfullname", label: "Data Space leader full name", field: "textfield" },
+      { key: null, label: "Lab", field: "section" },
+      { key: "labnameshort", label: "Lab name (short name)", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
+      { key: "labnamefull", label: "Lab name (full name)", field: "textfield" },
+      { key: "labsubscriptionlength", label: "Subscription length", field: "textfield", required: "true" },
+      { key: null, label: "Lab leader", field: "section" },
+      { key: "lableaderfullname", label: "Lab leader (Full name)", field: "textfield", required: "true" },
+      { key: "lableaderinstitution", label: "Institution", field: "textfield", required: "true" },
+      { key: "lableaderfaculty", label: "Faculty", field: "textfield" },
+      { key: "lableaderdepartment", label: "Department", field: "textfield" },
+      { key: "lableaderemail", label: "Lab leader email", minlength: 3, specialType: "email", field: "textfield", required: "true" },
+      { key: "lableaderphone", label: "Lab leader phone number", minlength: 3, specialType: "tel", field: "textfield", required: "true" },
+      { key: null, label: "Lab coordinator", field: "section" },
+      { key: "labcoordinatorfullname", label: "Lab Coordinator (Full name)", field: "textfield", required: "true" },
+      { key: "labcoordinatorinstitution", label: "Institution", field: "textfield", required: "true" },
+      { key: "labcoordinatorfaculty", label: "Faculty", field: "textfield" },
+      { key: "labcoordinatordepartment", label: "Department", field: "textfield" },
+      { key: "labcoordinatoremail", label: "Lab coordinator email", minlength: 3, specialType: "email", field: "textfield", required: "true" },
+      { key: "labcoordinatorphone", label: "Lab coordinator phone number", minlength: 3, specialType: "tel", field: "textfield", required: "true" },
+      { key: null, label: "Lawfull processing", field: "section" },
+      { key: "labethicalapproval", label: "Ethical approval", field: "textfield" },
+      { key: "labprivacyjustification", label: "Privacy justification", field: "textfield" },
+      { key: "labprocessingpurpose", label: "Purpose of the processing", field: "textfield" },
+      { key: "labcategoriesdatasubjects1", label: "Categories of data subjects", field: "textarea" },
+      { key: "labpersonaldatacontent1", label: "Personal data content", field: "textfield" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "labsignatureplaceanddate", label: "Place and date", field: "textfield" },
+      { key: "lab_leader_signature", label: "Lab Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.185 },
+      { key: "data_space_leader_signature", label: "Data Space Leader signature", field: "signature", page: 1, xpos: 0.28, ypos: 0.135 },
+    ]
+
+  invoice_profile:
+    fields: [
+      { key: null, label: "Data space", field: "section" },
+      { key: "dataspacename", label: "Data Space name", field: "textfield", autocapitalize: "off", required: "true" },
+      { key: "dataspaceleaderfullname", label: "Data Space leader (full name)", field: "textfield" },
+      { key: null, label: "Invoice unit", field: "section" },
+      { key: "invoiceunit", label: "Invoice unit", hint: "Data space is a default. Lab names can be included.", autocapitalize: "off", field: "textfield" },
+      { key: null, label: "Invoice contact", field: "section" },
+      { key: "invoicecontactfullname", label: "Full name", field: "textfield", required: "true" },
+      { key: "invoicecontactrole", label: "Role", field: "textfield" },
+      { key: "invoicecontactemail", label: "Email", minlength: 3, specialType: "email", field: "textfield", required: "true" },
+      { key: "invoicecontactphone", label: "Phone", specialType: "tel", field: "textfield" },
+      { key: null, label: "Invoice address (Outside NTNU)", field: "section" },
+      { key: "invoiceaddressexternaladdress1", label: "Address", field: "textfield" },
+      { key: "invoiceaddressexternaladdress2", label: "Address", field: "textfield" },
+      { key: "invoiceaddressexternalzipcode", label: "ZIP Code", field: "textfield" },
+      { key: "invoiceaddressexternalcity", label: "City", field: "textfield" },
+      { key: "invoiceaddressexternalcountry", label: "Country", field: "countries" },
+      { key: null, label: "Account information (Inside NTNU)", field: "section" },
+      { key: "accountinfoksted", label: "K. sted", hint: "Kostnadsted", field: "textfield" },
+      { key: "accountinfopnumber", label: "Project number", field: "textfield" },
+      { key: null, label: "Billing information (Outside NTNU)", field: "section" },
+      { key: "accountinfopeppolbis", label: "Peppol BIS", hint: "Specify the Participant ID in the 0000:00000000 (reference) format.", field: "textfield" },
+      { key: "accountinforeferencenumber", label: "Reference number", hint: "This is your internal reference number for the order.", field: "textfield" },
+      { key: null, label: "Pilot period", field: "section" },
+      { key: "pilotperiodservices", label: "Service(s)", hint: "Specify subscription and/or individual services that are included in the pilot period.", field: "textfield" },
+      { key: "pilotperiodend", label: "End of pilot period", hint: "Date in YYYY-MM-DD format", field: "textfield" },
+      { key: null, label: "Free quota", field: "section" },
+      { key: "freequotaquota", label: "Free quota", field: "textfield" },
+      { key: "freequotaperiod", label: "End of quota period", hint: "Date in YYYY-MM-DD format", field: "textfield" },
+      { key: null, label: "Advance payment", field: "section" },
+      { key: "advancepaynok", label: "Advance payment", suffix: "NOK", field: "textfield" },
+      { key: null, label: "Spending limit", field: "section" },
+      { key: "spendinglimitnok", label: "Spending limit", suffix: "NOK", field: "textfield" },
+      {
+        key: "spendinglimittype",
+        label: "Limit type",
+        field: "autocompleteone",
+        clearable: "true",
+        options: [
+          { text: 'Hard limit', value: 'hard limit'},
+          { text: 'Soft limit', value: 'soft limit'},
+        ]
+      },
+      { key: "spendinglimitperiod", label: "Spending limit period", hint: "Default is per ninety (90) days. Specify other intervals if required.", field: "textfield" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "signaturedatedataspaceleader", label: "Place and date", field: "textfield", required: "true" },
+      { key: "data_space_leader_signature", label: "Data Space Leader signature", field: "signature", page: 2, xpos: 0.28, ypos: 0.335 },
+      # { key: "signaturedatedataspaceleader", label: "signaturedatedataspaceleader", field: "textfield" },
+      # { key: "signaturedatehuntcloud", label: "signaturedatehuntcloud", field: "textfield" },
+    ]
+
+  internal_kista:
+    fields: [
+      { key: null, label: "Uploader Lab", field: "section" },
+      { key: "labname", label: "Lab name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
+      { key: "uploaderlabresponsiblefullname", label: "Lab leader / Lab coordinator", hint: "Lab leader or Lab coordinator responsible for upload of data from the Lab to the internal kista.", field: "textfield", required: "true" },
+      { key: "uploaderlabuploaderfullname", label: "Uploading users", hint: "Comma separated list of internal Lab users that will copy data from the Lab to the internal kista (Maximum 3 users).", field: "textfield", required: "true" },
+      { key: "kistasizegb", label: "Size", default: "100", suffix: "GB", specialType: "number", min: 1, max: 25000, hint: "Specify the kista size in gigabytes (1,000 GB = 1 TB).", field: "textfield", required: "true" },
+      { key: "kistaduration", label: "Duration", default: "30", suffix: "days", specialType: "number", min: 1, max: 90, hint: "Default is 30 days. Specify number of days if shorter or longer duration is required (max is 90 days).", field: "textfield", required: "true" },
+      { key: null, label: "Downloader Lab", field: "section" },
+      { key: "downloaderlabname", label: "Lab name", pattern: "[-a-z0-9]+", minlength: 3, hint: "Lab name should include only lowercase letters a-z, 0-9, or dash (-).", autocapitalize: "off", field: "textfield", required: "true" },
+      { key: "downloaderresponsiblefullname", label: "Lab leader / Lab coordinator", hint: "Lab leader or Lab coordinator responsible for download of data from the internal kista into the Downloader lab.", field: "textfield", required: "true" },
+      { key: "downloaderlabuserfullname", label: "Downloading users", hint: "Comma separated list of Lab users in the Downloader lab that will download data from the internal kista into the Downloader lab (Maximum 3 users).", field: "textfield", required: "true" },
+      { key: null, label: "Signatures", field: "section" },
+      { key: "signaturedate", label: "Date", field: "date", required: "true" },
+      { key: "signatureplaceanddate", joinkey: "signaturedate", label: "Place", field: "textfield", required: "true" },
+      { key: "lab_leader_signature", label: "Signature from Lab leader or Lab coordinator of the Uploader lab", field: "signature", page: 0, xpos: 0.28, ypos: 0.115 },
+    ]
