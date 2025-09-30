@@ -161,10 +161,9 @@ const setValue = (value, key) => {
 
 const fetchAgreementFormCache = key => {
   let fields = {}
+  let jsonData = null
   if (!ISSERVER) {
-    const jsonData = key ? localStorage.getItem(key) : null
-  } else {
-    const jsonData = null
+    jsonData = key ? localStorage.getItem(key) : null
   }
   try {
     fields = jsonData ? JSON.parse(jsonData) : {}
