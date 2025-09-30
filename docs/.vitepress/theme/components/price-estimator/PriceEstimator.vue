@@ -1,6 +1,8 @@
 <script lang="ts">
 import { defineComponent, nextTick } from "vue"
-import csvApi from "./api/pricesApi.js"
+import pricesApi from "./api/pricesApi.js"
+
+const ISSERVER = typeof window === "undefined"
 
 // Define the labCard interface for type safety
 interface labCard {
@@ -99,7 +101,9 @@ export default defineComponent({
         delete lab.storageDataset
       })
 
-      localStorage.setItem("priceEstimatorState", JSON.stringify(stateToSave))
+      if (!ISSERVER) {
+        localStorage.setItem("priceEstimatorState", JSON.stringify(stateToSave))
+      }
     },
 
     // Method to load the state from localStorage
@@ -137,18 +141,18 @@ export default defineComponent({
       this.isInitializingMachines = true
       this.isInitializingAvailableGpus = true
 
-      const priceListPromise = csvApi.getPriceList().then(json => {
+      const priceListPromise = pricesApi.getPriceList().then(json => {
         this.computePrices = json.filter(item => item["service.group"] === "cpu").map(this.preparePricesToYearly)
         this.storagePrices = json.filter(item => item["service.family"] === "store")
         this.gpuPrices = json.filter(item => item["service.group"] === "gpu").map(this.preparePricesToYearly)
         this.labPrices = json.filter(item => item["service.group"] === "lab")
       })
 
-      const gpusPromise = csvApi.getAvailableGPUS().then(gpus => {
+      const gpusPromise = pricesApi.getAvailableGPUS().then(gpus => {
         this.availableGpus = gpus
       })
 
-      const machinesPromise = csvApi.getMachineFlavors().then(machine => {
+      const machinesPromise = pricesApi.getMachineFlavors().then(machine => {
         this.machines = machine
       })
 
@@ -164,7 +168,7 @@ export default defineComponent({
     // Initialize available GPUs
     initializeAvailableGpus() {
       this.isInitializingAvailableGpus = true
-      const uponGpus = csvApi.getAvailableGPUS()
+      const uponGpus = pricesApi.getAvailableGPUS()
       uponGpus.then(gpus => {
         this.availableGpus = gpus
         this.isInitializingAvailableGpus = false
@@ -173,7 +177,7 @@ export default defineComponent({
     // Initialize available machines
     initializeMachines() {
       this.isInitializingMachines = true
-      const machines = csvApi.getMachineFlavors()
+      const machines = pricesApi.getMachineFlavors()
       machines.then(machine => {
         this.machines = machine
         this.isInitializingMachines = false
@@ -261,7 +265,9 @@ export default defineComponent({
       this.nextLabId = 1
       this.setPriceItems()
       // Remove the saved state from local storage
-      localStorage.removeItem("priceEstimatorState")
+      if (!ISSERVER) {
+        localStorage.removeItem("priceEstimatorState")
+      }
     },
 
     // Set the price items and calculate the total sum
