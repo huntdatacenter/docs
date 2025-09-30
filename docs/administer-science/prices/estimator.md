@@ -1,10 +1,10 @@
 ---
-title: Price estiamtor
+title: Price estimator
 layout: page
 category: HUNT Cloud
 outline: 0
 editLink: false
-description: HUNT Cloud price estiamtor.
+description: HUNT Cloud price estimator.
 ---
 
 <!-- # Price calculator -->
