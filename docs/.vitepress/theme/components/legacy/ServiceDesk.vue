@@ -5,6 +5,8 @@ defineOptions({
   name: "ServiceDesk",
 })
 
+const ISSERVER = typeof window === "undefined"
+
 // Emits definition
 const emit = defineEmits(["update:modelValue"])
 
@@ -159,7 +161,11 @@ const setValue = (value, key) => {
 
 const fetchAgreementFormCache = key => {
   let fields = {}
-  const jsonData = key ? localStorage.getItem(key) : null
+  if (!ISSERVER) {
+    const jsonData = key ? localStorage.getItem(key) : null
+  } else {
+    const jsonData = null
+  }
   try {
     fields = jsonData ? JSON.parse(jsonData) : {}
   } catch (ex) {
