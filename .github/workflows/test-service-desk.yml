@@ -1,4 +1,4 @@
-name: test
+name: test-service-desk
 on:
   push:
     branches: master
@@ -17,4 +17,5 @@ jobs:
           cache-dependency-path: "**/tox.ini"
       - name: Install dependencies
         run: python3 -m pip install tox
-      - run: tox -e test
+      - name: Test Service desk config
+        run: tox -e test
