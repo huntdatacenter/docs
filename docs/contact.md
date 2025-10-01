@@ -1,7 +1,7 @@
 ---
 title: Contact us
 category: HUNT Cloud
-sidebarDepth: 0
+outline: 0
 description: If you run into any issues, please send us an email or chat with us on Slack.
 ---
 
@@ -19,7 +19,7 @@ Click the blue button to contact us for information, dialogues on how your scien
 
 ::: tip Faster response
 
-To speed up your answers and deliveries, check if your request is predefined in our service desks for [do science](/do-science/service-desk), [administer science](/administer-science/service-desk) and [govern science](/govern-science/service-desk).
+To speed up your answers and deliveries, check if your request is predefined in our service desks for [do science](/do-science/service-desk/), [administer science](/administer-science/service-desk/) and [govern science](/govern-science/service-desk/).
 
 :::
 

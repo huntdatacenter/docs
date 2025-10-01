@@ -2,7 +2,7 @@
 title: MobaXterm
 category: Technical tools
 permalink: /do-science/tools/technical/mobaxterm
-sidebarDepth: 1
+outline: 1
 description: Usage guide for MobaXterm.
 ---
 
@@ -16,11 +16,11 @@ description: Usage guide for MobaXterm.
 
 (1) A Windows operating system on your local computer.
 
-(2) A working connection to your lab over SSH as described in the [Configure SSH](/do-science/lab-access/configure-ssh/) guide section of the _How to connect to your lab_ guide.
+(2) A working connection to your lab over SSH as described in the [Configure SSH](/do-science/lab/) guide section of the _How to connect to your lab_ guide.
 
-(3) The IP address to your lab. This was included in your [SSH configuration file](/do-science/lab-access/configure-ssh/#_3-1-identify-required-info) that you got on email during your initial onboarding.
+(3) The IP address to your lab. This was included in your [SSH configuration file](/do-science/lab/#_3-1-identify-required-info) that you got on email during your initial onboarding.
 
-(4) The [MobaXterm configuration file](/do-science/lab-access/collect-your-keys/#_1-2-secrets-on-your-email) that your that you got on email during your initial onboarding.
+(4) The [MobaXterm configuration file](/do-science/lab-access/1-collect-keys#_1-2-secrets-on-your-email) that your that you got on email during your initial onboarding.
 
 **Missing the files?** Worry not. You can order a new [SSH configuration](/do-science/service-desk/#ssh-configuration) file and a new [MobaXterm](/do-science/service-desk/#mobaxterm-configuration-file) configuration file in our do science service desk.
 
@@ -92,11 +92,11 @@ ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" <username>@<entry-IP>
 
 **Note. You need to add your username and lab IP in the above command**.
 
-Replace **`<username>`** with your username, and replace **`<entry-IP>`** with your lab IP address that was included in your [ssh-config.txt file](/do-science/lab-access/configure-ssh/#_3-1-identify-required-info). A (non-working) example of the would be: **`joedeomuser@10.42.2.32`**.
+Replace **`<username>`** with your username, and replace **`<entry-IP>`** with your lab IP address that was included in your [ssh-config.txt file](/do-science/lab/#_3-1-identify-required-info). A (non-working) example of the would be: **`joedeomuser@10.42.2.32`**.
 
 **Note. Do -not- save your passphrase**.
 
-You will be asked to type in your [SSH passphrase](/do-science/lab-access/configure-ssh/#_3-2-design-a-passphrase) that you made during your initial lab onboarding.
+You will be asked to type in your [SSH passphrase](/do-science/lab/#_3-2-design-a-passphrase) that you made during your initial lab onboarding.
 
 If you get asked to save your password, refuse by clicking on **`No`** to make sure that MobaXterm will authenticate with your SSH keys instead of your passphrase.
 

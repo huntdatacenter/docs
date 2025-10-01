@@ -2,7 +2,7 @@
 title: HUNT Workbench certificate request
 category: Guides
 permalink: /do-science/guides/hunt-workbench-request
-sidebarDepth: 1
+outline: 1
 description: Guide on the certificate request for your HUNT Workbench.
 ---
 
@@ -14,7 +14,7 @@ description: Guide on the certificate request for your HUNT Workbench.
 
 ::: tip
 
-[Click here](/do-science/hunt-workbench/installation/) for the main HUNT Workbench installation guide.
+[Click here](/do-science/hunt-workbench/installation) for the main HUNT Workbench installation guide.
 
 :::
 
@@ -48,4 +48,4 @@ A successful opening of the 7z-file file should include two (2) files related to
 
 ## 4. Start your installation
 
-When you have successfully received your certificate, head over to our main [HUNT Workbench installation guide](/do-science/hunt-workbench/installation/) to finalize your setup.
+When you have successfully received your certificate, head over to our main [HUNT Workbench installation guide](/do-science/hunt-workbench/installation) to finalize your setup.

@@ -2,7 +2,7 @@
 title: New computer
 category: Guides
 permalink: /do-science/guides/new-computer
-sidebarDepth: 1
+outline: 1
 tags:
   - laptop
   - workstation

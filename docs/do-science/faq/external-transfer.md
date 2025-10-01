@@ -2,7 +2,7 @@
 title: External transfer
 category: FAQ
 permalink: /do-science/faq/external-transfer
-sidebarDepth: 1
+outline: 1
 description: This page lists frequently asked questions related to external transfers in labs.
 ---
 
@@ -17,7 +17,7 @@ This page lists frequently asked questions related to external transfers in labs
 
 ### Can parties outside HUNT Cloud upload data to my lab?
 
-Yes. Parties outside HUNT Cloud can upload data to your lab utilizing our [external kista import service](/administer-science/service-desk/data-space-orders/#external-import-kista). You can also make data available for parties outside HUNT Cloud via the [external kista export service](/administer-science/service-desk/data-space-orders/#external-export-kista).
+Yes. Parties outside HUNT Cloud can upload data to your lab utilizing our [external kista import service](/administer-science/service-desk/data-space-orders#external-import-kista). You can also make data available for parties outside HUNT Cloud via the [external kista export service](/administer-science/service-desk/data-space-orders#external-export-kista).
 
 ### What is an external kista?
 
@@ -25,7 +25,7 @@ External kista is our service for controlled data transfers between your lab and
 
 ### How do I order an external kista?
 
-Data space leaders and Data space compliance administrators can order [external import kistas](/administer-science/service-desk/data-space-orders/#external-import-kista) and [external export kistas](/administer-science/service-desk/data-space-orders/#external-export-kista) in our service desk.
+Data space leaders and Data space compliance administrators can order [external import kistas](/administer-science/service-desk/data-space-orders#external-import-kista) and [external export kistas](/administer-science/service-desk/data-space-orders#external-export-kista) in our service desk.
 
 ### Is there any technical requirements for the external party?
 
@@ -58,7 +58,7 @@ IP addresses that starts with `10.`, `172.` and `192.` are internal addresses. W
 
 ### How do I access my external kista?
 
-See our [external kista transfer guide](/do-science/data-transfers/external-kista/#for-external-users) for instruction on how to access and upload or download data for an internal kista.
+See our [external kista transfer guide](/do-science/data-transfers/external-kista#for-external-users) for instruction on how to access and upload or download data for an internal kista.
 
 ### Can I import and export data in the same external kista?
 
@@ -70,7 +70,7 @@ Most likely. However, this is decided by the data controller. Feel free to [cont
 
 ### Is external kistas secure enough for my data?
 
-Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/govern-science/compliance/certificates/). However, the decision of whether you can use this service is decided by your data controller. Feel free to [contact us](/contact) for service descriptions aimed at risk assessment of the service.
+Most likely. The service allows you to be compliant with common acts and regulations such as GDPR and Helsenormen. And the management and operations comply with our [certificates](/govern-science/compliance/certificates). However, the decision of whether you can use this service is decided by your data controller. Feel free to [contact us](/contact) for service descriptions aimed at risk assessment of the service.
 
 ### Where can I get additional security information on the external kistas?
 
@@ -89,11 +89,11 @@ Yes and no. Direct transfers via SSH are blocked. However, your data space leade
 
 ### Can I have permanent openings to machines outside my lab?
 
-Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be authorized by your data space leader, documented in our [network opening order](/administer-science/agreements/downloads/#network-opening-order), and the traffic needs to be initiated from inside your lab.
+Yes. We do allow two-way data transactions between your lab and machines outside HUNT Cloud. Such openings needs to be authorized by your data space leader, documented in our [network opening order](/administer-science/agreements/downloads#network-opening-order), and the traffic needs to be initiated from inside your lab.
 
 ### How do I request a network opening?
 
-Data space leaders and data space compliance administrators can order network openings in our [service desk](/administer-science/service-desk/data-space-orders/#network-opening). We use this order to document outbound traffic from your lab.
+Data space leaders and data space compliance administrators can order network openings in our [service desk](/administer-science/service-desk/data-space-orders#network-opening). We use this order to document outbound traffic from your lab.
 
 ### Why do I need authorization from my data space leader?
 
@@ -121,4 +121,4 @@ For transfers from TSD to HUNT Cloud: On TSD, put your data in the **`file-expor
 
 ### Do I need to encrypt data for external transfers?
 
-Most likely. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data on the receiving end. Read our [7z guide](/do-science/tools/transfer/7z/#install-the-software) on how encrypt and compress files for large transfers. [Contact us](/contact) if you wonder if your your data needs to be encrypted or not. We are more than happy to help with evaluations.
+Most likely. It is your responsibility to ensure that the data maintain its confidentiality during the transfer. Even when you use an encrypted transport layer, encrypted data is a good way to ensure that only the indented receiver are able to access your data on the receiving end. Read our [7z guide](/do-science/tools/transfer/7z#install-the-software) on how encrypt and compress files for large transfers. [Contact us](/contact) if you wonder if your your data needs to be encrypted or not. We are more than happy to help with evaluations.

@@ -1,7 +1,7 @@
 ---
 title: Overview
 category: HUNT Cloud
-sidebarDepth: 1
+outline: 2
 permalink: /administer-science/agreements/
 description: This page gives an overview of administrative agreements in HUNT Cloud.
 tags:
@@ -14,7 +14,7 @@ tags:
 
 # Administrative agreements
 
-**We believe a solid framework of documented responsibilities is a key success factor to enable your scientists with the freedom to explore. This page holds an overview of the administrative agreements in HUNT Cloud.** 
+**We believe a solid framework of documented responsibilities is a key success factor to enable your scientists with the freedom to explore. This page holds an overview of the administrative agreements in HUNT Cloud.**
 
 
 As a coordinator you will balance a backstage agreement framework that is somewhat complex. Bear with us, once up and running it will provide you with significant powers.
@@ -25,13 +25,13 @@ As a coordinator you will balance a backstage agreement framework that is somewh
 ## Overview
 
 
-Our activities are organized in five agreement layers: 
+Our activities are organized in five agreement layers:
 
 !["Illustration of five agreement layers in HUNT Cloud: data processor agreement, service center agreement, data space order, lab order and lab user agreement."](./images/hunt-cloud-agreement-layers.png "HUNT Cloud agreement hierarchy")
 
 ::: tip Get going
 
-The Data processor agreement and Service center agreement is part of our [Organizational access](/govern-science/organizational-access) procedure, while the Data space order and Lab order is part of our [Scientific access](/administer-science/scientific-access) procedures The Lab user agreement is part of our [user management](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) procedures.
+The Data processor agreement and Service center agreement is part of our [Organizational access](/govern-science/organizational-access/) procedure, while the Data space order and Lab order is part of our [Scientific access](/administer-science/scientific-access/) procedures The Lab user agreement is part of our [user management](/administer-science/service-desk/lab-orders#add-a-new-lab-user) procedures.
 
 :::
 
@@ -42,7 +42,7 @@ The **Data controller** is your organizational unit that control your data owner
 
 ## Service center agreement
 
-The **Services center** is your organizational unit that control the cloud services that you consume. The *Services agreement* details our services specifications and conditions for resource consumption, cost and billing. One or many services centers can be attached to a data processor agreement. 
+The **Services center** is your organizational unit that control the cloud services that you consume. The *Services agreement* details our services specifications and conditions for resource consumption, cost and billing. One or many services centers can be attached to a data processor agreement.
 
 ## Data space order
 

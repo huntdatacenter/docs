@@ -1,7 +1,7 @@
 ---
 title: CUDA 11.8
 category: CUDA
-sidebarDepth: 1
+outline: 2
 permalink: /do-science/tools/technical/cuda/cuda-11.8
 description: Installing Nvidia CUDA toolkit and cuDNN on GPU machines.
 ---
@@ -102,10 +102,10 @@ EOF
 
 ```
 
-
 ## Set environment variables for CUDA 11.8
 
 From now one you can easily load your cuda variables by running this command:
+
 ```bash
 source ~/activate-cuda-11.8.sh
 ```
@@ -121,6 +121,7 @@ nvcc --version
 ```
 
 The expected output:
+
 ```
 /home/ubuntu/cuda-11.8.0/bin/nvcc
 

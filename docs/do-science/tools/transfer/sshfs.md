@@ -2,7 +2,7 @@
 title: SSHFS
 category: Transfer tools
 permalink: /do-science/tools/transfer/sshfs
-sidebarDepth: 1
+outline: 1
 description: Installation and usage guide for sshfs.
 ---
 

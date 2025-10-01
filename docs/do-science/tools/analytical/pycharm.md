@@ -2,7 +2,7 @@
 title: PyCharm
 category: Analytical tools
 permalink: /do-science/tools/analytical/pycharm
-sidebarDepth: 2
+outline: 2
 description: Installation guide for PyCharm (unmanaged machine).
 ---
 

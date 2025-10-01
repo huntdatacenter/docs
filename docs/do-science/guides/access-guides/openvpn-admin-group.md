@@ -2,7 +2,7 @@
 title: OpenVPN administrators group
 category: Guides
 permalink: /do-science/guides/openvpn-admin-group
-sidebarDepth: 1
+outline: 1
 description: How to setup OpenVPN group
 ---
 

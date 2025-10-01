@@ -1,8 +1,7 @@
 ---
 title: 1. Collect your keys
 category: Lab access
-permalink: /do-science/lab-access/collect-your-keys
-sidebarDepth: 1
+outline: 1
 description: Guide on how to request and receive your keys. Note requirements before proceeding with the guide.
 ---
 
@@ -74,7 +73,7 @@ We are aware that science never sleeps, so your lab leader may request immediate
 
 A successful transfer to your phone should include four (4) keys:
 
-- **`7-ZIP file key`** - your key for unlocking [the 7z archive file](/do-science/tools/transfer/7z/) sent on email.
+- **`7-ZIP file key`** - your key for unlocking [the 7z archive file](/do-science/tools/transfer/7z) sent on email.
 - **`Google Authenticator key`** - your key for generating Google Authenticator verification codes.
 - **`VPN passphrase`** - your passphrase for unlocking your OpenVPN certificate.
 - **`SSH temporary key`** - your temporary passphrase when logging in to your lab with SSH for the first time.
@@ -88,12 +87,12 @@ A successful transfer to your phone should include four (4) keys:
 We will communicate your VPN certificate and SSH configuration over your organizational email. You will receive a link to an encrypted file archive (7z-file).
 
 - 1.2.1. Click on the link in the email to download the file and save this on your local computer.
-- 1.2.2. Unpack (extract) the file with software that recognizes [the 7z archive format](/do-science/tools/transfer/7z/) (see below).
-- 1.2.3. Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt [the 7z archive](/do-science/tools/transfer/7z/).
+- 1.2.2. Unpack (extract) the file with software that recognizes [the 7z archive format](/do-science/tools/transfer/7z) (see below).
+- 1.2.3. Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt [the 7z archive](/do-science/tools/transfer/7z).
 
 ::: tip Decryption guides
 
-Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](/do-science/tools/transfer/7z/#windows), [mac](/do-science/tools/transfer/7z/#mac-os-x), [Linux](https://www.google.no/search?q=unpack+7z+linux).
+Click on these links for installation guidance if your current software don't recognize the 7z-format: [Windows](/do-science/tools/transfer/7z#windows), [mac](/do-science/tools/transfer/7z#mac-os-x), [Linux](https://www.google.no/search?q=unpack+7z+linux).
 
 :::
 
@@ -174,18 +173,18 @@ Steps to resolve issues with Signal may vary by phone model and OS. Signal has a
 
 #### Windows: I am unable to unpack the 7z-file forwarded on email
 
-If the [decryption guides](/do-science/lab-access/collect-your-keys/#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
+If the [decryption guides](/do-science/lab-access/1-collect-keys#_1-2-secrets-on-your-email) above did solve the issue at hand, this is the time to reach out to your local IT support for help.
 
 #### OS X, macOS: The 7z archive password do not seem to work?
 
 The default archive utility will give you an error message when unpacking the `7z-format` locked with a passphrase. You need to download and unpack with the
-`7z software` or `Keka` described in [the 7z installation guide](/do-science/tools/transfer/7z/). [Contact us](/about/contact) if this does not work.
+`7z software` or `Keka` described in [the 7z installation guide](/do-science/tools/transfer/7z). [Contact us](/about/contact) if this does not work.
 
 #### Debian Linux (Ubuntu): I am unable to unpack the 7z archive file forwarded on email
 
 The default archive utility may give you an error message when unpacking the `7z-format` locked with a passphrase. Try to download and unpack with the
-`7z software` described in [the 7z guide](/do-science/tools/transfer/7z/). [Contact us](/about/contact) if this does not work.
+`7z software` described in [the 7z guide](/do-science/tools/transfer/7z). [Contact us](/about/contact) if this does not work.
 
 ### More information
 
-See our main [troubleshooting](/do-science/troubleshooting/connection/) section for more information. Please [contact us](/about/contact) if you encounter issues that we have not yet documented.
+See our main [troubleshooting](/do-science/troubleshooting/connection) section for more information. Please [contact us](/about/contact) if you encounter issues that we have not yet documented.

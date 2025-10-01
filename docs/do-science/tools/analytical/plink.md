@@ -2,7 +2,7 @@
 title: PLINK
 category: Analytical tools
 permalink: /do-science/tools/analytical/plink
-sidebarDepth: 1
+outline: 1
 description: Installation guide for Plink.
 ---
 
@@ -65,10 +65,10 @@ See our [Anaconda and Bioconda](conda) tutorial for more details.
 Installing [PLINK 2](https://www.cog-genomics.org/plink/2.0/) is a little more cumbersome
 as it is not available in Ubuntu's package repositories.
 
-You can either use [Conda](/do-science/tools/analytical/conda/)
+You can either use [Conda](/do-science/tools/analytical/conda)
 to install [Plink2 package](https://anaconda.org/bioconda/plink2) or follow with binary release below.
 
-To install package into your [Conda](/do-science/tools/analytical/conda/)
+To install package into your [Conda](/do-science/tools/analytical/conda)
 environment use this command:
 ```bash
 conda install -c bioconda plink2

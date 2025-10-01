@@ -2,7 +2,7 @@
 title: Consent information
 category: Community
 permalink: /do-science/community/consent-information
-sidebarDepth: 0
+outline: 0
 tags: 
   - slack
 description: This page holds information on the consent for HUNT Cloud's user community.
@@ -26,7 +26,7 @@ The community membership is for you, so you don't need to reconsent for each lab
 
 ::: tip Current consent
 
-[Click here](/do-science/community/current-consent/) to see the current version in web format, or see the official PDF version under the "Consent archive" section below.
+[Click here](/do-science/community/current-consent) to see the current version in web format, or see the official PDF version under the "Consent archive" section below.
 
 :::
 

@@ -2,7 +2,7 @@
 title: Labting
 category: Tingweek
 permalink: /do-science/community/labting/
-sidebarDepth: 1
+outline: 1
 description: This page list information and questions about our Labting.
 ---
 
@@ -49,6 +49,6 @@ You may choose to join and leave when you want. Some prefer to stay for fixed ag
 
 ### See when the next Labting is held
 
-[Dates for upcoming Tingweeks](/govern-science/tingweek/dates/)
+[Dates for upcoming Tingweeks](/govern-science/tingweek/dates)
 
 

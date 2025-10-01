@@ -1,7 +1,7 @@
 ---
 title: Connection
 category: Troubleshooting
-sidebarDepth: 1
+outline: 1
 permalink: /do-science/troubleshooting/connection
 description: Your lab connection is encrypted over a virtual private network (VPN) to ensure the confidentiality of the information. We have listed some of the solutions in case you meet any troubles connecting.
 ---
@@ -47,7 +47,7 @@ Protocol: UDP
 
 ### Administrator rights
 
-Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/do-science/lab-access/configure-vpn/#_2-1-install-the-vpn-software).
+Windows users needs administrator rights on their local computer to successfully install OpenVPN. You will need to contact your local IT personnel for this installation if you do not hold such rights. See this page for details: [Installing OpenVPN on Windows without administrator rights](/do-science/lab/#_2-1-install-the-vpn-software).
 
 You should reinstall your OpenVPN with administrative rights if you already installed OpenVPN and are getting errors below:
 
@@ -59,7 +59,7 @@ ERROR: Some routes were not successfully added. The connection may not function 
 
 ### Lost or missing VPN passphrase
 
-Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password Keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/do-science/lab-access/configure-vpn/#_2-2-setup-the-vpn-profile)  if this happens. Order your VPN certificate reset in our [service desk](/do-science/service-desk/#vpn-certificate-reset).
+Your **`VPN passphrase`** is stored on your local computer and used to decrypt your VPN certificate before connection. From time to time your local password Keychain may update or otherwise render this passphrase inaccessible. You will need a new VPN certificate from us and then [reconfigure your VPN](/do-science/lab/#_2-2-setup-the-vpn-profile)  if this happens. Order your VPN certificate reset in our [service desk](/do-science/service-desk/#vpn-certificate-reset).
 
 
 
@@ -85,7 +85,7 @@ You cannot access your HUNT Cloud lab while using the default Cisco AnyConnect V
 
 ### No internet while connected to VPN
 
-If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check that you selected the **`Use this connection only for resources on its network`** in the final steps of [Setup the VPN profile](/do-science/lab-access/configure-vpn/#_2-2-setup-the-vpn-profile) in the Getting Started section.
+If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check that you selected the **`Use this connection only for resources on its network`** in the final steps of [Setup the VPN profile](/do-science/lab/#_2-2-setup-the-vpn-profile) in the Getting Started section.
 
 ### Wrong password
 
@@ -93,7 +93,7 @@ If your VPN login suddenly stops working, and you are pretty sure your user name
 
 ### Deactivated account
 
-Inactive accounts will be deactivated after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. Your lab leader or lab coordinator may order your user reactivation in our [service desk](/administer-science/service-desk/lab-orders/#reactivate-lab-user).
+Inactive accounts will be deactivated after about 180 days. This will cause your login to fail if you have not visited your lab in such a time frame. Your lab leader or lab coordinator may order your user reactivation in our [service desk](/administer-science/service-desk/lab-orders#reactivate-lab-user).
 
 ### New local computer
 
@@ -102,7 +102,7 @@ We are happy to hear that! If you have a new local computer you will need to ins
 
 ### New VPN certificate
 
-When you got your new VPN certificate, head over to our [VPN certificate reset guide](/do-science/guides/vpn-certificate-reset/) to get going.
+When you got your new VPN certificate, head over to our [VPN certificate reset guide](/do-science/guides/access-guides/workbench-request) to get going.
 
 ### Failed to negotiate cipher
 
@@ -154,15 +154,15 @@ The most common causes of **`Connection timed out`** responses are: (1) that you
 
 ### Forgotten passwords
 
-After the initial onboarding, you will need your passphrase to install software using the **`sudo apt install <software>`** command and when you connect to your workbench. If you have forgotten your passphrase, worry not. Order a SSH passphrase reset in our [service desk](/do-science/service-desk/#ssh-passphrase-reset). If you need to install software sooner than we can ship, we recommend that you try [Conda](/do-science/tools/analytical/conda/) or ask some of your lab colleagues to install the software.
+After the initial onboarding, you will need your passphrase to install software using the **`sudo apt install <software>`** command and when you connect to your workbench. If you have forgotten your passphrase, worry not. Order a SSH passphrase reset in our [service desk](/do-science/service-desk/#ssh-passphrase-reset). If you need to install software sooner than we can ship, we recommend that you try [Conda](/do-science/tools/analytical/conda) or ask some of your lab colleagues to install the software.
 
 ### Broken connection
 
-Your SSH connection is transferred inside your VPN connection. You will therefore experience a sudden drop in your SSH connection if your VPN connection break, for example due to our [12 hour timeout](#broken-vpn-connection), a [broken internet connection](#broken-vpn-connection) etc. You will also experience a broken connection if your lab machine becomes unresponsive, for example due to an [out of memory killer](#unresponsive-machine-oom-killer) or other related issues (see below), and when your internet connection temporarily drops. For such cases, see our [terminal multiplexer guide](/do-science/tools/technical/terminal-multiplexers/) on how to keep your environment stable during broken connections.
+Your SSH connection is transferred inside your VPN connection. You will therefore experience a sudden drop in your SSH connection if your VPN connection break, for example due to our [12 hour timeout](#broken-vpn-connection), a [broken internet connection](#broken-vpn-connection) etc. You will also experience a broken connection if your lab machine becomes unresponsive, for example due to an [out of memory killer](#unresponsive-machine-oom-killer) or other related issues (see below), and when your internet connection temporarily drops. For such cases, see our [terminal multiplexer guide](/do-science/tools/technical/terminal-multiplexers) on how to keep your environment stable during broken connections.
 
 ### Unresponsive machine (OOM Killer)
 
-Your lab machines may become unresponsive. You will notice this as a lost connection. A typical reason for this is that one or more a processes inside your machine consumed all the memory, initiating a Out Of Memory Killer (OOM Killer). You will be unable to log onto your lab if an OOM Killer is triggered on your **`home`** machine. You will be able to log into your lab, although unable to log into the affected **`iaas`** or **`blue`** machines, if an OOfM Killer is triggered on other machines in your lab. Your data will not be affected of OOM Killers. [Contact us](/contact) us for a machine restart and consider to update your machine type in our [service desk](/administer-science/service-desk/lab-orders/#update-machine-size).
+Your lab machines may become unresponsive. You will notice this as a lost connection. A typical reason for this is that one or more a processes inside your machine consumed all the memory, initiating a Out Of Memory Killer (OOM Killer). You will be unable to log onto your lab if an OOM Killer is triggered on your **`home`** machine. You will be able to log into your lab, although unable to log into the affected **`iaas`** or **`blue`** machines, if an OOfM Killer is triggered on other machines in your lab. Your data will not be affected of OOM Killers. [Contact us](/contact) us for a machine restart and consider to update your machine type in our [service desk](/administer-science/service-desk/lab-orders#update-machine-size).
 
 ### WARNING: Remote host identification has changed
 
@@ -200,4 +200,4 @@ If you see this message any other time, please [contact us](/contact) for furthe
 
 ## HUNT Workbench
 
-See our [HUNT Workbench troubleshooting](/do-science/hunt-workbench/troubleshooting/) section.
+See our [HUNT Workbench troubleshooting](/do-science/hunt-workbench/troubleshooting) section.

@@ -2,7 +2,7 @@
 title: For IT support
 category: Lab access
 permalink: /do-science/lab-access/for-it-support
-sidebarDepth: 1
+outline: 1
 description: Access information for IT support personnel.
 ---
 

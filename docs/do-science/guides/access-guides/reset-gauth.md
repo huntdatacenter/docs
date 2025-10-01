@@ -2,7 +2,7 @@
 title: Google Authenticator reset
 category: Guides
 permalink: /do-science/guides/google-authenticator-reset
-sidebarDepth: 1
+outline: 1
 description: Guide on Google Authenticator key reset.
 ---
 

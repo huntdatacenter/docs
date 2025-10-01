@@ -2,7 +2,7 @@
 title: Data processor agreement
 category: HUNT Cloud
 permalink: /govern-science/organizational-access/data-processor-agreement
-sidebarDepth: 1
+outline: 1
 description: This page contain information of the data processor agreement between your organization and HUNT Cloud.
 ---
 

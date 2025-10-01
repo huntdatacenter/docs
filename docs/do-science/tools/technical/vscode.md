@@ -2,7 +2,7 @@
 title: Visual Studio Code (remote)
 category: Technical tools
 permalink: /do-science/tools/technical/vscode
-sidebarDepth: 1
+outline: 1
 description: Usege guide for VSCode.
 tags:
   - vscode
@@ -26,7 +26,7 @@ This guide describes a setup where you use VSCode installed on your local comput
 
 ::: warning Requirements
 
-To complete this guide, you will need (1) [VS Code](https://code.visualstudio.com/) installed on your local computer, and (2) a running [IAAS](/do-science/faq/compute/#what-is-an-IAAS-machine) machine inside your lab, your local (3) [SSH configuration file](/do-science/service-desk/#ssh-configuration).
+To complete this guide, you will need (1) [VS Code](https://code.visualstudio.com/) installed on your local computer, and (2) a running [IAAS](/do-science/faq/compute#what-is-an-IAAS-machine) machine inside your lab, your local (3) [SSH configuration file](/do-science/service-desk/#ssh-configuration).
 
 **Without these your will not be able to complete this guide.**
 
@@ -78,7 +78,7 @@ This step configures the .ssh configuration file on your local computer.
 
 ![mvscode4](./images/vscode4.png)
 
-5. In the new window, paste your IAAS [ssh-config.txt](/do-science/lab-access/configure-ssh/#_3-1-identify-required-info) file which you have received from us. You can order a new SSH configuration file in the [service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#ssh-configuration).
+5. In the new window, paste your IAAS [ssh-config.txt](/do-science/lab/#_3-1-identify-required-info) file which you have received from us. You can order a new SSH configuration file in the [service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#ssh-configuration).
 
 4. Save your changes before you continue to the next step.
 
@@ -103,7 +103,7 @@ This step configures the .ssh configuration file on your local computer.
 
 4. With a little bit of luck, a window with your local ssh configuration file should open in VScode.
 
-5. In the new window, paste your IAAS [ssh-config.txt](/do-science/lab-access/configure-ssh/#_3-1-identify-required-info) file which you have received from us. You can order a new SSH configuration file in the [service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#ssh-configuration).
+5. In the new window, paste your IAAS [ssh-config.txt](/do-science/lab/#_3-1-identify-required-info) file which you have received from us. You can order a new SSH configuration file in the [service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#ssh-configuration).
 
 ![mvscode4](./images/vscode4.png)
 

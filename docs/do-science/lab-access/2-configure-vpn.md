@@ -1,8 +1,8 @@
 ---
 title: 2. VPN configuration
 category: Lab access
-permalink: /do-science/lab-access/configure-vpn
-sidebarDepth: 1
+permalink: /do-science/lab/
+outline: 1
 description: Guide on VPN installation and configuration. Make sure you have successfully collected your keys before proceeding with this guide.
 ---
 
@@ -20,9 +20,9 @@ If you are configuring access to your lab use Lab access link sent to you in onb
 
 ## Requirements
 
-1. Confirmed [collection of secret keys](/do-science/lab-access/collect-your-keys/#step-1-collect-your-keys) in Step 1 of onboarding process.
+1. Confirmed [collection of secret keys](/do-science/lab-access/1-collect-keys#step-1-collect-your-keys) in Step 1 of onboarding process.
 
-2. Successful setup of [Google authenticator](/do-science/lab-access/collect-your-keys/#_1-3-one-time-verification-codes) app. 
+2. Successful setup of [Google authenticator](/do-science/lab-access/1-collect-keys#_1-3-one-time-verification-codes) app. 
 
 
 ## 2.1 Install the VPN software
@@ -275,7 +275,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 ::: tip Next step
 
-If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/lab-access/configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/lab/) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 
@@ -314,7 +314,7 @@ Cannot load private key file
 If you are unable to click _Apply_ after your changes, try to re-enter your _Private Key Password_ using your **`VPN passphrase`** that you collected in Step 1.
 
 ::: tip
-If nothing works, please head over to our main [troubleshooting](/do-science/troubleshooting/connection/#vpn) section for more information on how to troubleshoot connections.
+If nothing works, please head over to our main [troubleshooting](/do-science/troubleshooting/connection#vpn) section for more information on how to troubleshoot connections.
 :::
 
 

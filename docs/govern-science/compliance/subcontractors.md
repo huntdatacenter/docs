@@ -2,7 +2,7 @@
 title: Subcontractors
 category: HUNT Cloud
 permalink: /govern-science/compliance/subcontractors
-sidebarDepth: 1
+outline: 1
 description: HUNT Cloud uses the following subcontractors.
 ---
 

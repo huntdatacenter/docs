@@ -1,7 +1,7 @@
 ---
 title: Downloads
 category: HUNT Cloud
-sidebarDepth: 1
+outline: 2
 permalink: /administer-science/agreements/downloads
 description: This page list agreements that may be relevant for you as a lab user. Contact your lab leader for more details on other agreement types.
 tags:
@@ -20,7 +20,7 @@ tags:
 
 ::: tip Service desk
 
-Head over to our [administer science service desk](/administer-science/service-desk/) to place orders using the agreements listed on this page. 
+Head over to our [administer science service desk](/administer-science/service-desk/) to place orders using the agreements listed on this page.
 
 :::
 
@@ -44,17 +44,17 @@ The following form fields are included in the "HUNT Cloud Lab Order" version 3.9
 
 **Data space**
 
-- *Name*. This is the full or short name of the data space for which this lab will be attached. 
-- *Leader*. This is the full name of your data space leader. 
+- *Name*. This is the full or short name of the data space for which this lab will be attached.
+- *Leader*. This is the full name of your data space leader.
 
 **Lab name**
 
 - *Short name*. This is the short name or abbreviation for your lab. We will use this name in day to day communication.
-- *Full name*. This is the full name of your new lab. 
+- *Full name*. This is the full name of your new lab.
 
 **Subscription**
 
-This field specify the length of the prepaid subscription length. The default is one (1) year. See our [Price list](/administer-science/prices/pricelist/) and [Services specification](/administer-science/services/specifications/) for more information, or [contact us](/contact) for guidance.
+This field specify the length of the prepaid subscription length. The default is one (1) year. See our [Price list](/administer-science/prices/pricelist) and [Services specification](/administer-science/services/specifications) for more information, or [contact us](/contact) for guidance.
 
 **Lab leader**
 
@@ -66,21 +66,21 @@ This individual is authorized by the data space leader to place individual Cloud
 
 **Lawful processing**
 
-We use this to document activities in the lab, for example in reporting to your data controller, services center and data space leaders. 
+We use this to document activities in the lab, for example in reporting to your data controller, services center and data space leaders.
 
-- *Ethical approval*. If applicable, specify relevant ethical approvals that governs your processing. 
-- *Privacy justification*. If applicable, specify the legal ground for the processing under GDPR, such as Article 6 or 9. 
-- *Purpose of the processing*. If applicable, specify the purpose of the processing such as research, health service, innovation etc 
-- *Categories of data subjects*. If applicable, specify the broad categories of data subjects such as research participants, patients etc. 
+- *Ethical approval*. If applicable, specify relevant ethical approvals that governs your processing.
+- *Privacy justification*. If applicable, specify the legal ground for the processing under GDPR, such as Article 6 or 9.
+- *Purpose of the processing*. If applicable, specify the purpose of the processing such as research, health service, innovation etc
+- *Categories of data subjects*. If applicable, specify the broad categories of data subjects such as research participants, patients etc.
 - *Personal data content*. If applicable, specify the personal data content included in the processing such as "self reported health information, genomics information, medical images, information from medical records" etc.
 
 **Signatories**
 
-This agreements are to be signed by the Data space leader or Data space compliance coordinator and the Lab leader. 
+This agreements are to be signed by the Data space leader or Data space compliance coordinator and the Lab leader.
 
 **Request a lab**
 
-Send us your signed agreement utilizing the blue button in the data space section of our [service desk](/administer-science/service-desk/data-space-orders/#new-lab).
+Send us your signed agreement utilizing the blue button in the data space section of our [service desk](/administer-science/service-desk/data-space-orders#new-lab).
 
 :::
 
@@ -89,7 +89,7 @@ Send us your signed agreement utilizing the blue button in the data space sectio
 
 [HUNT Cloud Data Space Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-data-space-order.pdf) (PDF)
 
-Your services center leader or services center administrator can use this order to attach new data spaces to their service center. The order is co-signed by both the services center leader and data space leader. 
+Your services center leader or services center administrator can use this order to attach new data spaces to their service center. The order is co-signed by both the services center leader and data space leader.
 
 ::: details Clarification of the form fields
 
@@ -97,15 +97,15 @@ The following form fields are including in the "HUNT Cloud Data Space Order" ver
 
 **Services center**
 
-Attach your new data space to the following established services center: 
+Attach your new data space to the following established services center:
 
-- *Name*. This is the full or short name of your services center. 
-- *Leader*. This is the full name of your services center leader. 
+- *Name*. This is the full or short name of your services center.
+- *Leader*. This is the full name of your services center leader.
 
 **Data space name**
 
 - *Short name*. This is the short name or abbreviation for your data space. We use this name in day to day communication.
-- *Full name*. This is the full name of your data space. 
+- *Full name*. This is the full name of your data space.
 
 **Data space leader**
 
@@ -121,7 +121,7 @@ This individual is our contact point for data coordination for labs attached to 
 
 **Technical administrator**
 
-This individual is our contact point for technical configuration for labs attached to your data space. This includes configuration and adaptation of analytical tools, including distributed computing and graphical interfaces. 
+This individual is our contact point for technical configuration for labs attached to your data space. This includes configuration and adaptation of analytical tools, including distributed computing and graphical interfaces.
 
 **Training administrator**
 
@@ -133,16 +133,16 @@ The following individual is the point of contact for financial discussions, incl
 
 **Subscription level**
 
-* *Subscription level*. This field specify the subscription level for the Data space. The default is WHITE.. See our [Services specification](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/) for more information, or [contact us](/contact) for guidance.
-* *Subscription length*. This field specify the length of the prepaid subscription period. The default is one (1) year. See our [Price list](/administer-science/prices/pricelist/) and [Services specification](/administer-science/services/specifications/) for more information, or [contact us](/contact) for guidance.
+* *Subscription level*. This field specify the subscription level for the Data space. The default is WHITE.. See our [Services specification](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist) for more information, or [contact us](/contact) for guidance.
+* *Subscription length*. This field specify the length of the prepaid subscription period. The default is one (1) year. See our [Price list](/administer-science/prices/pricelist) and [Services specification](/administer-science/services/specifications) for more information, or [contact us](/contact) for guidance.
 
 **Signatories**
 
-This agreements are to be signed by the Service center leader or Service center administrator and the Data space leader. 
+This agreements are to be signed by the Service center leader or Service center administrator and the Data space leader.
 
 **Request a data space**
 
-Send us your signed agreement utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders/#new-data-space).
+Send us your signed agreement utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders#new-data-space).
 
 :::
 
@@ -165,7 +165,7 @@ The following form fields are including in the "HUNT Cloud Invoice Profile" vers
 
 **Invoice unit**
 
-*DATA SPACE* is default. This means that the Invoice profile will cover accrued costs for all labs attached to your data space. 
+*DATA SPACE* is default. This means that the Invoice profile will cover accrued costs for all labs attached to your data space.
 
 You may register additional invoice profiles if you want to separate lab costs in individual bills. To do so, register one new invoice profile per lab and add your LAB NAME as the invoice unit. Note that you are required to already have registered one invoice profile with DATA SPACE as invoice unit before you can add individual invoice profiles for your labs.
 
@@ -184,7 +184,7 @@ Specify "K.STED" and "PROJECT NUMBER" for your data space. These fields are mand
 
 **Billing information (outside NTNU)**
 
-- *PEPPOL BIS*: This is the international identification number for your organization. [Click the link](https://directory.peppol.eu/public/locale-en_US/menuitem-search) to find your id. 
+- *PEPPOL BIS*: This is the international identification number for your organization. [Click the link](https://directory.peppol.eu/public/locale-en_US/menuitem-search) to find your id.
 - *REFERENCE NUMBER*: This is your order number with HUNT Cloud that ensures that the invoice is reaching you inside your organization. The format varies between organizations.
 
 **Value added tax (outside NTNU)**
@@ -195,22 +195,22 @@ As default, all invoices to Data spaces and Labs outside NTNU will include value
 
 You may make an advance payment to your invoice profile. The payment is applied to the accrued costs. If the payment is larger than the amount currently owed, it will reduce the next automatic charge. For clarification, a positive account balance due to advance payments will not be refunded at the end of services.
 
-- *AMOUNT*: This is the optional amount in NOK that will be payed at the initiation of the invoice profile. 
+- *AMOUNT*: This is the optional amount in NOK that will be payed at the initiation of the invoice profile.
 
 **Spending limit**
 
-A monetary spending limit per calendar year may be specified for the invoice profile. 
+A monetary spending limit per calendar year may be specified for the invoice profile.
 
-- *LIMIT*: If applicable, specify a maximum spending limit in NOK per calendar year that can be consumed. 
+- *LIMIT*: If applicable, specify a maximum spending limit in NOK per calendar year that can be consumed.
 - *TYPE*: For the soft and hard limit type, notifications will be sent to the Invoice Contact and Data Space Leader at consumption of approximately 50%, 90% and 100%. For the hard limit type, services will be temporarily deactivated if consumption exceeds the limit.
 
 **Signatures**
 
-Invoice profiles are signed by Account signatory. This is the individual that is authorized to operate the account information specified in the invoice profile on behalf of their organization. 
+Invoice profiles are signed by Account signatory. This is the individual that is authorized to operate the account information specified in the invoice profile on behalf of their organization.
 
 **Activation**
 
-Send us your signed invoice profile together with your data space order utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders/#new-data-space).
+Send us your signed invoice profile together with your data space order utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders#new-data-space).
 
 :::
 
@@ -220,7 +220,7 @@ Send us your signed invoice profile together with your data space order utilizin
 
 [HUNT Cloud - Internal Kista Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-internal-kista-order.pdf) (PDF)
 
-Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab. You can order Internal kista order in [Service Desk](/administer-science/service-desk/lab-orders/#internal-kista)
+Lab leaders and lab coordinators from labs that will upload data can order internal kistas for data transfers between two labs in HUNT Cloud. We use this order to document internal traffic from your lab. You can order Internal kista order in [Service Desk](/administer-science/service-desk/lab-orders#internal-kista)
 
 ::: details Clarification of the form fields
 
@@ -244,21 +244,21 @@ your-username@`your-labname`-home~$
 
 - **Uploader:** This is the name of the lab user that will copy date from your lab and to the internal kista.
 
-- **Data size**: This is the size in gigabytes of the storage area in the kista. You can for example use [NCDU](/do-science/tools/technical/ncdu/) to estimate the size of your data.
+- **Data size**: This is the size in gigabytes of the storage area in the kista. You can for example use [NCDU](/do-science/tools/technical/ncdu) to estimate the size of your data.
 
 - **Kista duration**: Specify the number of days that you need the kista. Default is 30 days, maximum is 90 days.
 
 **Downloader Lab**
 
-- **Uploader Lab:** This is the name of the lab that will download the data that you upload. If you are uncertain about the lab name, contact their lab coordinator or downloader. We need a correct Lab name to proceed your order. 
+- **Uploader Lab:** This is the name of the lab that will download the data that you upload. If you are uncertain about the lab name, contact their lab coordinator or downloader. We need a correct Lab name to proceed your order.
 
-- **Lab leader / Lab coordinator:** This is the name of the lab leader or lab coordinator in the downloader lab. 
+- **Lab leader / Lab coordinator:** This is the name of the lab leader or lab coordinator in the downloader lab.
 
 - **Downloader:** This is the name of the lab user that will copy date from your kista and into the downloader lab.
 
 - **Place/date**: State the place where your lab leader signed the order and the date when the order was signed.
 
-- **Lab leader**: This is the field for the signature of the lab leader or lab coordinator for your lab (the uploader lab). 
+- **Lab leader**: This is the field for the signature of the lab leader or lab coordinator for your lab (the uploader lab).
 
 :::
 
@@ -268,7 +268,7 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud - External Kista Import Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-import-order.pdf) (PDF)
 
-Data space leaders and Data space compliance administrators can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from a lab. The order is co-signed by the uploader outside HUNT Cloud. You can order external kista import in [Service Desk](/administer-science/service-desk/data-space-orders/#external-import-kista)
+Data space leaders and Data space compliance administrators can request external kistas where collaborators outside HUNT Cloud can upload data to a kista reachable from a lab. The order is co-signed by the uploader outside HUNT Cloud. You can order external kista import in [Service Desk](/administer-science/service-desk/data-space-orders#external-import-kista)
 
 ::: details Clarification of the form fields
 
@@ -310,7 +310,7 @@ your-username@`your-labname`-home~$
 
 - **Coordinator:** This is the name of the individual from the external party that will coordinate the transfer if this differ from the individual doing the technical upload (uploader). We use this for communication of issues related to data, agreements etc.
 
-- **Institution:** This is the institution of the external party that is responsible for the transfer. 
+- **Institution:** This is the institution of the external party that is responsible for the transfer.
 
 - **Country:** This is the country where the uploader institution is located.
 
@@ -328,7 +328,7 @@ your-username@`your-labname`-home~$
 
 - **Data space leader**: This is the field for the signature of your lab leader. Data space compliance officers may sign this field as well.
 
-- **Place/date**: State the place where your uploader signed the order and the date when the order was signed. 
+- **Place/date**: State the place where your uploader signed the order and the date when the order was signed.
 
 *Uploader (external party)*
 
@@ -341,7 +341,7 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud - External Kista Export Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-external-kista-export-order.pdf) (PDF)
 
-Data space leaders and Data space compliance officers can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. The order is co-signed by downloader outside HUNT Cloud. You can order external kista export in [Service Desk](/administer-science/service-desk/data-space-orders/#external-export-kista)
+Data space leaders and Data space compliance officers can request external kistas where collaborators outside HUNT Cloud can download data made available directly from your lab. The order is co-signed by downloader outside HUNT Cloud. You can order external kista export in [Service Desk](/administer-science/service-desk/data-space-orders#external-export-kista)
 
 ::: details Clarification of the form fields
 
@@ -375,15 +375,15 @@ your-username@`your-labname`-home~$
 
 *External party*
 
-- **Downloader name:** This is the name of the individual that is authorized to do the technical transfer from your external kista to the external party (downloader). 
+- **Downloader name:** This is the name of the individual that is authorized to do the technical transfer from your external kista to the external party (downloader).
 
-- **Downloader email:** This is organizational email that we use to communicate with the downloader. List their organizational email as we use this for part of the identification process. We use this to communicate configuration information, and we expect the public key to be sent from this address. 
+- **Downloader email:** This is organizational email that we use to communicate with the downloader. List their organizational email as we use this for part of the identification process. We use this to communicate configuration information, and we expect the public key to be sent from this address.
 
 - **Downloader IP:** This is the IP address for the external machine that will connect to the external kista. We use this for access whitelisting.
 
 - **Coordinator:** This is the name of the individual from the external party that will coordinate the transfer if this differ from the individual doing the technical upload (uploader). We use this for communication of issues related to data, agreements etc.
 
-- **Institution:** This is the institution of the external party that is responsible for the transfer. 
+- **Institution:** This is the institution of the external party that is responsible for the transfer.
 
 - **Country:** This is the country where the uploader institution is located.
 
@@ -404,7 +404,7 @@ your-username@`your-labname`-home~$
 
 *Downloader (external party)
 
-- **Place/date**: State the place where your downloader signed the order and the date when the order was signed. 
+- **Place/date**: State the place where your downloader signed the order and the date when the order was signed.
 
 - **Uploader**: This is the field for the signature of your external downloader. For compliance purposes, we need the downloader to accept our use policy of the service before we grant access into our systems.
 
@@ -414,7 +414,7 @@ your-username@`your-labname`-home~$
 
 [HUNT Cloud Network Opening Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-network-opening-order.pdf) (PDF)
 
-Your data space leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab. Afterwards, send us filled network opening order in [Service Desk](/administer-science/service-desk/data-space-orders/#network-opening)
+Your data space leader can request external network openings through our network opening order. We use this to document outbound traffic from your lab. Afterwards, send us filled network opening order in [Service Desk](/administer-science/service-desk/data-space-orders#network-opening)
 
 
 ::: details Clarification of the form fields
@@ -440,7 +440,7 @@ your-username@`your-labname`-home~$
 
 - **Lab leader:** This is the name of the individual that is the contracting party of your lab agreement with HUNT Cloud, typically your principal investigator or center leader.
 
-- **Organization**: This is the external institution outside your lab that your will transfer data to and from. We use this information to sanity check your network address. 
+- **Organization**: This is the external institution outside your lab that your will transfer data to and from. We use this information to sanity check your network address.
 
 - **Country**: This is the country where the external machine reside. We use this information for reporting to your data controller.
 
@@ -475,17 +475,17 @@ The following form fields are included in the "HUNT Cloud Lab Transfer Order" ve
 **Lab**
 
 - *Name*. This is the short name for the lab that is to be transfered.
-- *Leader*. This is the full name of the lab leader. 
+- *Leader*. This is the full name of the lab leader.
 
 **Current Data space**
 
 - *Name*. This is the short name for the data space where the lab is current located.
-- *Leader*. This is the full name of the data space leader. 
+- *Leader*. This is the full name of the data space leader.
 
 **Destination Data space**
 
 - *Name*. This is the short name for the data space where the lab is are to be transferred (destination).
-- *Leader*. This is the full name of the data space leader. 
+- *Leader*. This is the full name of the data space leader.
 
 **Invoice profile**
 
@@ -511,12 +511,12 @@ The following form fields are included in the "HUNT Cloud Lab Deletion Order" ve
 **Data space**
 
 - *Name*. This is the short name for the data space where the lab is attached.
-- *Leader*. This is the full name of the data space leader. 
+- *Leader*. This is the full name of the data space leader.
 
 **Lab**
 
 - *Name*. This is the short name for the lab that is authorized for deletion.
-- *Leader*. This is the full name of the lab leader. 
+- *Leader*. This is the full name of the lab leader.
 
 :::
 
@@ -535,21 +535,21 @@ The following form fields are included in the "HUNT Cloud Data Deletion Order" v
 **Data space**
 
 - *Name*. This is the short name for the data space where the lab is attached.
-- *Leader*. This is the full name of the data space leader. 
+- *Leader*. This is the full name of the data space leader.
 
 **Lab**
 
 - *Name*. This is the short name for the lab that is authorized for deletion.
-- *Leader*. This is the full name of the lab leader. 
+- *Leader*. This is the full name of the lab leader.
 
 **Data to be deleted**
 
 * Specify the machine name where the folders and/or volumes are located, for example `demolab-home`.
-* Specify the absolute paths to data folders and/or data volumes that your request for deletion, for example `/mnt/<foldername>/`. 
+* Specify the absolute paths to data folders and/or data volumes that your request for deletion, for example `/mnt/<foldername>/`.
 
 **Confirmation of deletion by HUNT Cloud**
 
-Leave these fields blank. We will return the order with signatures when the data is deleted. 
+Leave these fields blank. We will return the order with signatures when the data is deleted.
 
 :::
 

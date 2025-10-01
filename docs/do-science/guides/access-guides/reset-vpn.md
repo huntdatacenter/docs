@@ -2,7 +2,7 @@
 title: VPN certificate reset
 category: Guides
 permalink: /do-science/guides/vpn-certificate-reset
-sidebarDepth: 1
+outline: 1
 description: This guide describe how to reset your VPN certificate for HUNT Cloud.
 ---
 
@@ -24,7 +24,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 **Required software**. The following required software should already be installed during your initial onboarding: 
 
-1.3. Working VPN software (if not, head over to our Getting started guide to [install the VPN software](/do-science/lab-access/configure-vpn/#_2-1-install-the-vpn-software).
+1.3. Working VPN software (if not, head over to our Getting started guide to [install the VPN software](/do-science/lab/#_2-1-install-the-vpn-software).
 
 1.4. A working Google authenticator application on your phone that provide time-based VPN verification codes (if not, you can order a [Google authenticator key reset](/do-science/service-desk/#google-authenticator-key-reset) in our service desk).
 
@@ -286,7 +286,7 @@ We allow connection from known IP addresses only. This means that your VPN conne
 
 ::: tip Next step
 
-If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/lab-access/configure-ssh) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
+If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/lab/) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
 
@@ -322,7 +322,7 @@ Cannot load private key file
 If you are unable to click _Apply_ after your changes, try to re-enter your _Private Key Password_ using your **`VPN passphrase`** that you collected in Step 1.
 
 ::: tip
-If nothing works, please head over to our main [troubleshooting](/do-science/troubleshooting/connection/#vpn) section for more information on how to troubleshoot connections.
+If nothing works, please head over to our main [troubleshooting](/do-science/troubleshooting/connection#vpn) section for more information on how to troubleshoot connections.
 :::
 
 ### Tunnelblick does not respond

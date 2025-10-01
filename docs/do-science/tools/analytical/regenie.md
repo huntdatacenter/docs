@@ -2,7 +2,7 @@
 title: Regenie
 category: Analytical tools
 permalink: /do-science/tools/analytical/regenie
-sidebarDepth: 1
+outline: 1
 description: Installation guide for Regenie
 ---
 
@@ -26,7 +26,7 @@ The method has the following properties:
 
 ::: warning Requirements
 
-- Conda (miniconda), see our [Conda tutorial](/do-science/tools/analytical/conda/) for more details.
+- Conda (miniconda), see our [Conda tutorial](/do-science/tools/analytical/conda) for more details.
 - Conda channels: conda-forge, bioconda
 
 :::

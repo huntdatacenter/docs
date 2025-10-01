@@ -2,7 +2,7 @@
 title: NCDU
 category: Technical tools
 permalink: /do-science/tools/technical/ncdu
-sidebarDepth: 1
+outline: 1
 description: Usage guide for NCDU.
 ---
 

@@ -2,7 +2,7 @@
 title: ITK-SNAP
 category: Analytical tools
 permalink: /do-science/tools/analytical/itksnap
-sidebarDepth: 1
+outline: 1
 description: Installation guide for ITK-SNAP.
 tags:
   - itksnap

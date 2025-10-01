@@ -1,9 +1,8 @@
 ---
 title: Data controllers
 category: Service desk
-permalink: /govern-science/service-desk/data-controller-orders
 description: HUNT Cloud service desk orders for data controllers.
-sidebarDepth: 1
+outline: 1
 ---
 
 # Service desk orders for data controllers
@@ -65,7 +64,7 @@ Click the button below to order a new service center.
 * **Expected delivery:** PDF agreements for review/signatures.
 * **Expected delivery time:** One week.
 * **Next step:** [Scientific access](/administer-science/scientific-access/)
-* **Cost:** There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 
 
 ## Tingweek
@@ -84,7 +83,7 @@ Lagtun is the body that appoints time to govern the scientific developments of H
 
 ### Deregister to future Tingweek invitations
 
-All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here. 
+All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here.
 
 <SDButton form="deregister_tingweek_invitations" />
 

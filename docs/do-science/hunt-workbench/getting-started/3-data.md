@@ -1,8 +1,8 @@
 ---
 title: Data
 category: Getting started
-sidebarDepth: 0
-permalink: /do-science/hunt-workbench/getting-started/data
+outline: 0
+permalink: /do-science/hunt-workbench/getting-started/3-data
 description: How to use Data
 ---
 

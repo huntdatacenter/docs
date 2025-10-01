@@ -2,7 +2,7 @@
 title: Access
 category: FAQ
 permalink: /do-science/faq/access
-sidebarDepth: 1
+outline: 1
 description: This page lists frequently asked questions related to access for lab users.
 ---
 
@@ -22,11 +22,11 @@ Most likely. We allow connections both from organizations and private network. H
 
 ### Can I connect from more than one local computer?
 
-Yes. We allow you to configure several local computers to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/do-science/lab-access/configure-vpn/) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to request a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) in the service desk to get going.
+Yes. We allow you to configure several local computers to connect to your lab, for example both your laptop and desktop machine. Each machine needs to be configured with a VPN certificate and SSH. Start from step 2, [Configure your VPN](/do-science/lab/) in our Getting started guide to get going. You will need your VPN passphrase and your VPN certificate, thus, Windows users may need to request a [VPN certificate reset](/do-science/service-desk/#vpn-certificate-reset) in the service desk to get going.
 
 ### Can I have multiple connections at the same time?
 
-No. For security reasons we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local computer. Check our [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers/) guide for how to instantly get back to your work when your connect from multiple local computers.
+No. For security reasons we only accept one connection from one user at the time. This means that your initial connection will be deactivated if you try to log in from another local computer. Check our [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers) guide for how to instantly get back to your work when your connect from multiple local computers.
 
 ### Can I connect from my private machine?
 
@@ -83,7 +83,7 @@ groups
 
 ### I have moved to a new institution, now what? 
 
-Your lab leader or lab coordinator will need to send us a [new user agreement](/administer-science/service-desk/lab-orders/#add-a-new-lab-user) when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
+Your lab leader or lab coordinator will need to send us a [new user agreement](/administer-science/service-desk/lab-orders#add-a-new-lab-user) when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
 
 
 ### What is Lab Access link ? 
@@ -101,15 +101,15 @@ If you cannot find your lab access link or did not receive it, you can order one
 
 ### Can I get access to several labs?
 
-Yes. You can access more than one lab. We encourage data spaces to separate data in labs and bring top expertise into their lab to do analysis there. You will need to send us one user agreement for each lab your want to access. Lab leaders and lab coordinators may order your access in our [service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user).
+Yes. You can access more than one lab. We encourage data spaces to separate data in labs and bring top expertise into their lab to do analysis there. You will need to send us one user agreement for each lab your want to access. Lab leaders and lab coordinators may order your access in our [service desk](/administer-science/service-desk/lab-orders#add-a-new-lab-user).
 
 ### How do I get started with my second lab?
 
-We will ship SSH configuration and keys after your lab leader or lab coordinator have order your lab access in the [service desk](/administer-science/service-desk/lab-orders/#add-a-new-lab-user). When you get your keys, head to [Step 3. Configure your SSH](/do-science/lab-access/configure-ssh/) in our onboarding guide to get started.
+We will ship SSH configuration and keys after your lab leader or lab coordinator have order your lab access in the [service desk](/administer-science/service-desk/lab-orders#add-a-new-lab-user). When you get your keys, head to [Step 3. Configure your SSH](/do-science/lab/) in our onboarding guide to get started.
 
 ### Can I transfer and merge data between my labs?
 
-Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. When this is in place, order an [internal kista](/administer-science/service-desk/lab-orders/#internal-kista) for compliant transfers between your labs.
+Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. When this is in place, order an [internal kista](/administer-science/service-desk/lab-orders#internal-kista) for compliant transfers between your labs.
 
 
 
@@ -134,7 +134,7 @@ No, not as long as your lab is active. We will deactivate your account, although
 
 ### Can I reactivate my old account?
 
-Yes. Lab leaders and lab coordinators can order reactivations in our [service desk](/administer-science/service-desk/lab-orders/#reactivate-lab-user). Reactivation requires a new user agreement if it is more than two years since your first user agreement was signed. You will need to reconfigure VPN and SSH to get up and running.
+Yes. Lab leaders and lab coordinators can order reactivations in our [service desk](/administer-science/service-desk/lab-orders#reactivate-lab-user). Reactivation requires a new user agreement if it is more than two years since your first user agreement was signed. You will need to reconfigure VPN and SSH to get up and running.
 
 
 

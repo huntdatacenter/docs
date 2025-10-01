@@ -2,7 +2,7 @@
 title: X2Go
 category: Technical tools
 permalink: /do-science/tools/technical/x2go
-sidebarDepth: 1
+outline: 1
 description: Usage guide for X2go.
 ---
 
@@ -113,7 +113,7 @@ Hit **`OK`** in the lower right corner.
 
 You may use X2Go to access software with graphical interfaces. Such software needs to be installed in your lab machine before you can connect.
 
-For your home machine, [RStudio](/do-science/tools/analytical/r-studio/#install-r-studio) should be installed by default. To access this program, go back to your configuration and update **`Session type`** at the bottom of the **`Session tab`** from **`/usr/bin/xterm/`** to the location of Rstudio (**`/usr/bin/rstudio`**) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/do-science/tools/technical/x2go/#troubleshooting).
+For your home machine, [RStudio](/do-science/tools/analytical/r-studio#install-r-studio) should be installed by default. To access this program, go back to your configuration and update **`Session type`** at the bottom of the **`Session tab`** from **`/usr/bin/xterm/`** to the location of Rstudio (**`/usr/bin/rstudio`**) and reconnect. With a little bit of luck, you should now see Rstudio on the your screen. If so, time to celebrate with coffee! If not, time to visit the [troubleshooting section](/do-science/tools/technical/x2go#troubleshooting).
 
 
 ### 3. Configure the X2Go client for unmanaged machines
@@ -153,7 +153,7 @@ Click **`Create new session`**.
 
   - For Mac and Linux:
 
-    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/do-science/lab-access/configure-ssh/#_3-5-final-steps)' section in the installation guide.
+    Leave blank if your login is "passwordless" (key-based). If not, confer the '[establish a password less login](/do-science/lab/#_3-5-final-steps)' section in the installation guide.
 
   - For Windows:
 
@@ -354,7 +354,7 @@ X2Go rely either password or certificate to authenticate your connection. If the
 ::: details Read more
 
 Key-buffer not receiving a key release action after a keypress is a known bug of X2GO. There does not seem to be any clear solution to this. It is possible to disable key repeating, which will cause intended key repeating to stop working (e.g. holding arrows). We recommend to check connection settings and to make sure that the best network connection available is used.
-If this is causing too many problems, alternatives to X2GO like [MobaXterm](/do-science/tools/technical/mobaxterm/) can be considered.
+If this is causing too many problems, alternatives to X2GO like [MobaXterm](/do-science/tools/technical/mobaxterm) can be considered.
 
 :::
 

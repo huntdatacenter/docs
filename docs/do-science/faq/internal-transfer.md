@@ -2,7 +2,7 @@
 title: Internal transfer
 category: FAQ
 permalink: /do-science/faq/internal-transfer
-sidebarDepth: 1
+outline: 1
 description: This page lists frequently asked questions related to internal transfers and network openings in labs.
 ---
 
@@ -26,7 +26,7 @@ Internal kista is our service for simple and secure data transfers between two l
 
 ### How do I order an internal kista?
 
-Lab leader or lab coordinator can order internal kistas in our [service desk](/administer-science/service-desk/lab-orders/#internal-kista).
+Lab leader or lab coordinator can order internal kistas in our [service desk](/administer-science/service-desk/lab-orders#internal-kista).
 
 ### How long does it take to get access to an internal kista?
 
@@ -42,7 +42,7 @@ Yes. You may specify up to three uploaders and/or downloaders per kista in your 
 
 ### How do I access my internal kista?
 
-See our [internal kista transfer guide](/do-science/data-transfers/internal-kista/) for instruction on how to access and upload or download data in internal kista.
+See our [internal kista transfer guide](/do-science/data-transfers/internal-kista) for instruction on how to access and upload or download data in internal kista.
 
 ### What is the size and utilization of my internal kista?
 

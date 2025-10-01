@@ -3,7 +3,7 @@ title: Lab orders
 category: Service desk
 permalink: /administer-science/service-desk/lab-orders
 description: HUNT Cloud service desk orders for labs.
-sidebarDepth: 1
+outline: 2
 ---
 
 # Service desk orders for labs
@@ -25,7 +25,7 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 ::: warning Active lab users
 
-Orders for active lab users, such as workbench access and password resets, are listed in our [user orders page](/do-science/service-desk).
+Orders for active lab users, such as workbench access and password resets, are listed in our [user orders page](/do-science/service-desk/).
 
 :::
 
@@ -36,7 +36,7 @@ Click the button below to order access for a new user to your lab.
 <SDButton form="request_access_new_user" />
 
 * **Who can order:** Lab leaders and lab coordinators.
-* **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads/#user-agreement).
+* **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads#user-agreement).
 * **Expected response time:** Days.
 * **Expected delivery:** Lab keys and VPN certificate.
 * **Next step:** [Prepare your key transfer](/do-science/lab-access/).
@@ -62,7 +62,7 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 <SDButton form="reactivate_lab_user" />
 
 * **Who can order:** Lab leaders and lab coordinators.
-* **Required attachment**: [A new user agreement](/administer-science/agreements/downloads/#user-agreement).
+* **Required attachment**: [A new user agreement](/administer-science/agreements/downloads#user-agreement).
 * **Expected response time:** Days.
 * **Expected delivery:** Lab keys and VPN certificate.
 * **Next step:** [Prepare your key transfer](/do-science/lab-access/).
@@ -70,7 +70,7 @@ Lab users are deactivated on request or after 180 inactive days. Lab leaders and
 
 ### Update lab coordinator role
 
-Click the button below to update the [lab coordinator](/administer-science/roles/#lab-coordinator) role for a lab attached to your data space.
+Click the button below to update the [lab coordinator](/administer-science/roles#lab-coordinator) role for a lab attached to your data space.
 
 <SDButton form="request_coordinator_update" />
 
@@ -87,7 +87,7 @@ Lab user agreements needs to be renewed approximately every two years for accoun
 <SDButton form="request_renew_user_agreement" />
 
 * **Who can order:** Lab leaders and lab coordinators.
-* **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads/#user-agreement).
+* **Required attachment**: [A signed user agreement](/administer-science/agreements/downloads#user-agreement).
 * **Expected response time:** Days.
 * **Expected delivery:** Email acknowledgment.
 * **Cost:** Included in your lab subscription.
@@ -97,7 +97,7 @@ Lab user agreements needs to be renewed approximately every two years for accoun
 
 ### Update CPU machine size
 
-Increase or decrease the computational power of one of your existing lab machines to a new [machine type](/administer-science/services/machine-types/).
+Increase or decrease the computational power of one of your existing lab machines to a new [machine type](/administer-science/services/machine-types).
 
 <SDButton form="request_machine_size_update" />
 
@@ -105,7 +105,7 @@ Increase or decrease the computational power of one of your existing lab machine
 * **Expected response time:** Days.
 * **Expected delivery:** Lab machine with updated size.
 * **Requirement:** The procedure require a machine restart that needs to be scheduled with your lab users.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 
 
 ::: warning GPU machines
@@ -117,26 +117,26 @@ Machine types deployed with GPU (GPU machines) can not be updated after deployme
 
 ### New CPU machine
 
-Add a [new machine](/administer-science/services/machine-types/) to your lab. A CPU machine is the default lab machine with CPU and memory aimed at data analysis.
+Add a [new machine](/administer-science/services/machine-types) to your lab. A CPU machine is the default lab machine with CPU and memory aimed at data analysis.
 
 <SDButton form="request_new_cpu" />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days.
 * **Expected delivery:** New lab machine accessible from your home machine.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 
 
 ### New GPU machine
 
-Add a new [GPU machine](/administer-science/services/machine-types/#gpu-accelerator-machine-types) to your lab.
+Add a new [GPU machine](/administer-science/services/machine-types#gpu-accelerator-machine-types) to your lab.
 
 <SDButton form="request_new_gpu" />
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days (subject to availability).
 * **Expected delivery:** New lab machine with GPU accelerator accessible from your home machine.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 
 
 <!--
@@ -150,7 +150,7 @@ Add a fleet of blue machines to distribute analysis for large scale analysis, fo
 * **Who can order:** Lab leaders and lab coordinators.
 * **Expected response time:** Days (subject to availability).
 * **Expected delivery:** Multiple blue machines accessible from your home machine.
-* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications/) and [Price list](/administer-science/prices/pricelist/).
+* **Cost:** As specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 -->
 
 ### Shelve machine order
@@ -162,7 +162,7 @@ Instance shelving allows you to stop an instance without having it consume compu
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required information**: lab name and machine name.
 * **Expected response time:** Days.
-* **Cost:** During unshelving a machine will be started with same [machine type](/administer-science/services/machine-types/#compute-optimized-machine-types) as before shelving
+* **Cost:** During unshelving a machine will be started with same [machine type](/administer-science/services/machine-types#compute-optimized-machine-types) as before shelving
 
 ### Unshelve machine order
 
@@ -192,7 +192,7 @@ Once data on your machine is deleted, it can not be recreated. You must ensure t
 
 ### Expand existing volume
 
-You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand. Read more in our [data FAQ](/administer-science/data/faq/#volumes).
+You may expand the existing storage volumes inside your lab up to a maximum of 20TB. We will need separate orders for each individual volume you plan to expand. Read more in our [data FAQ](/administer-science/data/faq#volumes).
 
 <SDButton form="request_expand_existing_volume" />
 
@@ -264,7 +264,7 @@ The above example shows for example that `/mnt/archive` has a current `Size` of 
 
 ### New volume
 
-You may add new volumes to your lab machines. We will need separate orders for each individual volume you plan to add.  Read more in our [coordinator FAQ](/administer-science/data/faq/#volumes).
+You may add new volumes to your lab machines. We will need separate orders for each individual volume you plan to add.  Read more in our [coordinator FAQ](/administer-science/data/faq#volumes).
 
 <SDButton form="request_new_storage_volume" />
 
@@ -356,7 +356,7 @@ Click button below to order a long term archiving of your data
 * **Who can order:** Lab leader and coordinator.
 * **Required information:** size of dataset and retention period.
 * **Expected response time:** Weeks.
-* **Cost:** Can be found in our [price list](/administer-science/prices/pricelist/#current)
+* **Cost:** Can be found in our [price list](/administer-science/prices/pricelist#current)
 
 
 ## Data transfers
@@ -369,28 +369,14 @@ Head over to the [data space orders](/administer-science/service-desk/data-space
 
 ### Internal kista
 
-[Internal kista](/do-science/data-transfers/internal-kista/) is the best way to transfer data between two labs in HUNT Cloud.
+[Internal kista](/do-science/data-transfers/internal-kista) is the best way to transfer data between two labs in HUNT Cloud.
 
-<div class="home" style="padding: 0px">
-    <div class="hero">
-        <p class="action">
-            <a href="/-/service-order/?open=internal_kista">
-                <input
-                    value="Prepare internal kista order"
-                    class="nav-link external action-button"
-                    color="deeppink"
-                    type="button"
-                    style="padding: 18px; cursor:pointer; background-color: rgb(0, 150, 136); border-color: rgb(0, 150, 136); border-bottom: 1px solid rgb(0, 50, 45);"
-                />
-            </a>
-        </p>
-    </div>
-</div>
+<!-- <SOButton title="Prepare internal kista order" order="internal_kista" /> -->
 
 <SDButton form="request_internal_kista" />
 
 * **Who can order:** Lab leaders or lab coordinators from the uploader lab.
-* **Required attachment**: [A signed internal kista order](/administer-science/agreements/downloads/#internal-kista-order).
+* **Required attachment**: [A signed internal kista order](/administer-science/agreements/downloads#internal-kista-order).
 * **Expected response time:** Days.
 * **Expected delivery:** Access information communicated in your Slack lab channel.
 * **Cost:** Included in your lab subscription.
@@ -414,7 +400,7 @@ Labs under a BLUE data space subscription levels may invite collaborators to the
 
 ### Deregister to future Tingweek invitations
 
-All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here. 
+All active HUNT Cloud users will be invited to individual Tings three times per year during our Tingweeks. Participation is voluntary and you can deregister to receive future invitations here.
 
 <SDButton form="deregister_tingweek_invitations" />
 
@@ -422,10 +408,10 @@ All active HUNT Cloud users will be invited to individual Tings three times per 
 * **Expected delivery time:** Days.
 * **Expected response time:** Confirmation of deregistration.
 * **Cost:** Included in your data space subscription.
-	
+
 ## General request
 
-Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request. 
+Don't find what you are looking for on the predefined orders above? Don't you worry. Send us a general service request.
 
 <SDButton form="general_lab_request" />
 
@@ -438,7 +424,7 @@ Note that a general request has slower response time than a predefined order. If
 
 :::
 
-::: tip Not an active user? 
+::: tip Not an active user?
 
 [Contact us](/contact) on email for general questions and information on our scientific services and activities.
 

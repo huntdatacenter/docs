@@ -1,7 +1,7 @@
 ---
 title: Engineering
 category: Backgrounds
-sidebarDepth: 2
+outline: 2
 permalink: /do-science/hunt-workbench/getting-started/backgrounds/engineering
 description: How to build things around Workbench
 ---

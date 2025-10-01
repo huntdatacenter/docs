@@ -2,7 +2,7 @@
 title: Freesurfer
 category: Analytical tools
 permalink: /do-science/tools/analytical/freesurfer
-sidebarDepth: 1
+outline: 1
 description: Installation guide for Freesurfer.
 ---
 

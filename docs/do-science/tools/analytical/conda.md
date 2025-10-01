@@ -2,7 +2,7 @@
 title: Conda (Lab)
 category: Analytical tools
 permalink: /do-science/tools/analytical/conda
-sidebarDepth: 1
+outline: 1
 description: Installation guide for Conda, including installation of R packages using Conda.
 tags:
   - conda
@@ -23,7 +23,7 @@ tags:
 
 This guide is for the installation of Conda on your lab machines when connecting over SSH.
 
-Head over to our [Getting started with Conda in Workbench](/do-science/hunt-workbench/getting-started/conda/) section to learn more about Conda in your Workbench environment.
+Head over to our [Getting started with Conda in Workbench](/do-science/hunt-workbench/getting-started/2-conda) section to learn more about Conda in your Workbench environment.
 
 :::
 
@@ -84,7 +84,7 @@ conda install plink2
 ```
 
 ::: tip
-We have a very easy guide on how to get [Saige](/do-science/tools/analytical/saige/) running in Conda.
+We have a very easy guide on how to get [Saige](/do-science/tools/analytical/saige) running in Conda.
 :::
 
 ## 4. Do cool science

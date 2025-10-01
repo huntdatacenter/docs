@@ -2,7 +2,7 @@
 title: SSH passphrase reset
 category: Guides
 permalink: /do-science/guides/configure-ssh
-sidebarDepth: 1
+outline: 1
 description: Guide on SSH passphrase reset.
 ---
 
@@ -21,7 +21,7 @@ Order a SSH passphrase reset in our do-science [service desk](/do-science/servic
 
 ## 1. Requirements
 
-A running VPN connection to HUNT Cloud as described in our [Configure your VPN](/do-science/lab-access/configure-vpn/) guide.
+A running VPN connection to HUNT Cloud as described in our [Configure your VPN](/do-science/lab/) guide.
 
 
 ## 2. Design a passphrase

@@ -1,7 +1,7 @@
 ---
 title: Annotations
 category: Backgrounds
-sidebarDepth: 2
+outline: 2
 permalink: /do-science/hunt-workbench/getting-started/backgrounds/annotations
 description: How can you use Workbench for annotations
 tags:

@@ -2,7 +2,7 @@
 title: Saige
 category: Analytical tools
 permalink: /do-science/tools/analytical/saige
-sidebarDepth: 1
+outline: 1
 description: Installation guide for Saige
 ---
 
@@ -13,14 +13,14 @@ description: Installation guide for Saige
 [[toc]]
 
 ::: tip
-If you are interested in using Saige, you should try to [Regenie](/do-science/tools/analytical/regenie/), a strong C++ tool for whole genome regression modelling of large GWAS.
+If you are interested in using Saige, you should try to [Regenie](/do-science/tools/analytical/regenie), a strong C++ tool for whole genome regression modelling of large GWAS.
 :::
 
 ## Install using conda
 
 ::: warning Requirements
 
-- Conda (miniconda), see our [Conda tutorial](/do-science/tools/analytical/conda/) for more details.
+- Conda (miniconda), see our [Conda tutorial](/do-science/tools/analytical/conda) for more details.
 - Conda channels: conda-forge, bioconda
 
 :::

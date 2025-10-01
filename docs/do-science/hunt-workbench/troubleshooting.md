@@ -2,7 +2,7 @@
 title: Troubleshooting
 category: HUNT Workbench
 permalink: /do-science/hunt-workbench/troubleshooting
-sidebarDepth: 1
+outline: 1
 description: HUNT Workbench troubleshooting.
 ---
 
@@ -14,7 +14,7 @@ description: HUNT Workbench troubleshooting.
 
 ::: tip
 
-See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq/) for general questions, and our [Immediate troubleshooting](/do-science/hunt-workbench/installation/#immediate-troubleshooting) for issues during your first installation.
+See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq) for general questions, and our [Immediate troubleshooting](/do-science/hunt-workbench/installation#immediate-troubleshooting) for issues during your first installation.
 
 :::
 
@@ -29,14 +29,14 @@ If you were previously able to access your applications (such as _RStudio_), and
 df -h /mnt/work
 ```
 
-If you have enough resources, try restarting your HUNT Workbench environment. Follow this guide to [restart your workbench](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment).
+If you have enough resources, try restarting your HUNT Workbench environment. Follow this guide to [restart your workbench](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment).
 
-If this does not help, you may have a look at our [FAQ](/do-science/hunt-workbench/faq/) or [Troubleshooting](/do-science/hunt-workbench/troubleshooting/) sections.  [Contact us](/contact) on email or reach out in your lab channel on Slack for further investigation if this does not help.
+If this does not help, you may have a look at our [FAQ](/do-science/hunt-workbench/faq) or [Troubleshooting](/do-science/hunt-workbench/troubleshooting) sections.  [Contact us](/contact) on email or reach out in your lab channel on Slack for further investigation if this does not help.
 
 
 ### 400: Bad request
 
-Try to restart your browser. If the error changes to 403 after restart head over to service desk and [request Workbench reissue](/do-science/service-desk#hunt-workbench-reissue).
+Try to restart your browser. If the error changes to 403 after restart head over to service desk and [request Workbench reissue](/do-science/service-desk/#hunt-workbench-reissue).
 
 ### 400: Bad request - Firefox
 
@@ -44,7 +44,7 @@ Try with Chrome or check troubleshooting guide for Firefox in your Lab access li
 
 ### 403: Forbidden - Expired client certificate
 
-Your HUNT Workbench certificate is time limited. You will meet the **`403 Forbidden`** message when your certificate expire (example image below). Head over our do science [service desk](/do-science/service-desk#hunt-workbench-reissue) to order a certificate reissue.
+Your HUNT Workbench certificate is time limited. You will meet the **`403 Forbidden`** message when your certificate expire (example image below). Head over our do science [service desk](/do-science/service-desk/#hunt-workbench-reissue) to order a certificate reissue.
 
 ![expired_certificate.png](./images/expired_certificate.png)
 
@@ -75,7 +75,7 @@ If you were previously able to access your HUNT Workbench and your browser sudde
 
 
 
-If your disk space is full, discuss with your lab leader/coordinator if you should cleanup your disk space, or order a volume extension in [Service Desk](/administer-science/service-desk/lab-orders/#expand-existing-volume)
+If your disk space is full, discuss with your lab leader/coordinator if you should cleanup your disk space, or order a volume extension in [Service Desk](/administer-science/service-desk/lab-orders#expand-existing-volume)
 
 ## RStudio
 
@@ -114,13 +114,13 @@ Try reloading the page (**`Ctrl + R`** / **`CMD + R`**) to reconnect with your _
 
 The **`504 error`** may be shown when you access **`/user/<username>/rstudio/`** but _RStudio_ fails to start. If you were previously able to access your _RStudio_ in HUNT Workbench it is possible that _RStudio_ saved more data in your environment files than it is able to load into memory.
 
-One potential approach is to (1) first utilize your [workbench terminal](/do-science/hunt-workbench/faq/#terminal) to manually resetting your _RStudio_ settings:
+One potential approach is to (1) first utilize your [workbench terminal](/do-science/hunt-workbench/faq#terminal) to manually resetting your _RStudio_ settings:
 
 ```bash
 mv "/mnt/work/workbench/${USER}/.local/share/rstudio" "/mnt/work/workbench/${USER}/.local/share/rstudio-$(date +%Y-%m-%d)"
 ```
 
-And then (2) [restart your HUNT Workbench environment](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment-and-start-from-scratch). If the error still persists, don't hesitate to reach out in your lab channel on Slack or [contact us](/contact) for further assistance.
+And then (2) [restart your HUNT Workbench environment](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment-and-start-from-scratch). If the error still persists, don't hesitate to reach out in your lab channel on Slack or [contact us](/contact) for further assistance.
 
 #### Solution 2
 
@@ -148,7 +148,7 @@ NTNU holds licenses for all employees and students, so contact us if you want MA
 
 ### Icons in user interface disappeared
 
-You will need to reset your user settings if the MATLAB icons disappeared and your application is stuck loading. Removing user settings can be done in your [workbench terminal](/do-science/hunt-workbench/faq/#terminal):
+You will need to reset your user settings if the MATLAB icons disappeared and your application is stuck loading. Removing user settings can be done in your [workbench terminal](/do-science/hunt-workbench/faq#terminal):
 
 
 <!-- [matlab icons missing](./images/matlab_icons_missing.png) -->
@@ -179,14 +179,14 @@ find ~/.local/config/libreoffice -type f -name ".lock" -print -delete
 
 ### Accidentally disabled mouse/touchbar
 
-1. Open your [workbench terminal](/do-science/hunt-workbench/faq/#terminal).
+1. Open your [workbench terminal](/do-science/hunt-workbench/faq#terminal).
 
 2. Copy paste this command to your terminal to reenable the mouse pointer device:
 ```bash
 DISPLAY=0 dbus-run-session xfconf-query -c pointers -p /TigerVNC_pointer/Properties/Device_Enabled -s 1
 ```
 
-3. Follow the guide to [Restart your Workbench environment](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment).
+3. Follow the guide to [Restart your Workbench environment](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment).
 
 ## Experience
 
@@ -195,12 +195,12 @@ DISPLAY=0 dbus-run-session xfconf-query -c pointers -p /TigerVNC_pointer/Propert
 An unresponsive or slow HUNT Workbench may be caused by several things. Here's a small checklist to narrow down potential causes:
 
 - Use Google Chrome as your browser. Other browsers don't support all features and might cause potential silent failures.
-- Restart your HUNT Workbench environment to start fresh in the case something got hung up. [Click here](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment) to see how.
-- Check the resource consumption on your **`home`**-machine to ensure that you have available free CPU and memory resources, for example in [HTOP](/do-science/tools/technical/htop/) (see below).
+- Restart your HUNT Workbench environment to start fresh in the case something got hung up. [Click here](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment) to see how.
+- Check the resource consumption on your **`home`**-machine to ensure that you have available free CPU and memory resources, for example in [HTOP](/do-science/tools/technical/htop) (see below).
 
 ::: expander Check your resources
 
-One way to check your resource consumption is to log into your lab **`home`**-machine and run [HTOP](/do-science/tools/technical/htop/). Consider to upgrade the machine size in the administer science [Service desk](/administer-science/service-desk/lab-orders/#update-cpu-machine-size) if you are low on free resources.
+One way to check your resource consumption is to log into your lab **`home`**-machine and run [HTOP](/do-science/tools/technical/htop). Consider to upgrade the machine size in the administer science [Service desk](/administer-science/service-desk/lab-orders#update-cpu-machine-size) if you are low on free resources.
 
 :::
 
@@ -208,7 +208,7 @@ One way to check your resource consumption is to log into your lab **`home`**-ma
 
 ### Workbench is missing features or does not respond after restart
 
-If your Workbench doesn't want to start up even after [restart](/do-science/hunt-workbench/faq/#how-can-i-restart-my-workbench-environment) or is missing features that worked before, you can run following command to clear your environment:
+If your Workbench doesn't want to start up even after [restart](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment) or is missing features that worked before, you can run following command to clear your environment:
 
 ```bash
 rm -vf /mnt/work/workbench/${USER}/.jupyter/lab/workspaces/*.jupyterlab-workspace

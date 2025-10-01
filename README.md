@@ -4,32 +4,41 @@ This repository holds HUNT Cloud Documentation source.
 
 ## Development
 
-### VuePress
+### VitePRess
 
 #### Prerequisites
 
-- [Node.js v14.x:](https://nodejs.org)
+- [Node.js v24.x:](https://nodejs.org)
 - [Yarn](https://yarnpkg.com)
 
+
 ```bash
-mamba create -n node14 -c conda-forge -y "python==3.8.*" "nodejs==14.*" "node-gyp" "yarn==1.22.*" "compilers"
+mamba create -n node24 -c conda-forge -y "python==3.13.*" "nodejs==24.*" "yarn"
+
+mamba activate node24
+
+yarn dlx @yarnpkg/sdks vscode
 ```
 
-#### How to run VuePress
+#### How to run VitePress
+
+```bash
+mamba activate node24
+```
 
 Install the dependencies of project with:
 
 ```bash
-yarn install --frozen-lockfile
+yarn install
 ```
 
-Start a local VuePress development server with:
+Start a local Vitepress development server with:
 
 ```bash
 yarn dev
 ```
 
-For more details, please read VuePress's [documentation](https://v1.vuepress.vuejs.org/).
+For more details, please read Vitepress's [documentation](https://vitepress.dev/guide/getting-started).
 
 ### Linting and pre-commit hooks
 
@@ -50,12 +59,8 @@ See [tox#install](https://tox.readthedocs.io/en/latest/install.html) for how to 
 tox
 ```
 
-## VuePress permalinks
+## Icons
 
-I have chosen to specify permalinks in Markdown `.md` documents to avoid `.html` routes which seems to be the default as of VuePress `1.0.2` as shown [here](https://github.com/vuejs/vuepress/blob/667d9f47c46a1000122f19ec067ecd65702fab92/packages/docs/docs/guide/directory-structure.md#default-page-routing)
+You can search up and use MDI icons inside components:
 
-I found these issues related to "clean" URLs so it might be fixed in the future:
-
-- [https://github.com/vuejs/vuepress/issues/78](https://github.com/vuejs/vuepress/issues/78)
-- [https://github.com/vuejs/vuepress/issues/270](https://github.com/vuejs/vuepress/issues/270)
-- [https://github.com/vuejs/vuepress/issues/608](https://github.com/vuejs/vuepress/issues/608)
+- https://pictogrammers.com/library/mdi/

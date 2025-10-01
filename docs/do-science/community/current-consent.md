@@ -2,7 +2,7 @@
 title: Current consent
 category: Community
 permalink: /do-science/community/current-consent
-sidebarDepth: 0
+outline: 0
 tags: 
   - slack
 description: This page holds a version of the current consent for our HUNT Cloud community.
@@ -28,7 +28,7 @@ This page holds a copy of our current HUNT Cloud community consent. The intentio
 
 The actual consent will be sent to you on email as a web link together with your onboarding information. Use this link to update your consent at any time. 
 
-[Read more about our consent process here.](/do-science/community/consent-information/)
+[Read more about our consent process here.](/do-science/community/consent-information)
 :::
 
 
@@ -133,7 +133,7 @@ We will deactivate your account and delete your profile information in Slack whe
 
 ### Read more in our privacy statement
 
-Read more about our efforts to preserve your privacy as a user of HUNT Cloud, and rights that you might be entitled to under GDPR in our [privacy statement](/do-science/privacy-statement/). 
+Read more about our efforts to preserve your privacy as a user of HUNT Cloud, and rights that you might be entitled to under GDPR in our [privacy statement](/do-science/privacy-statement). 
 
 ### Contact us for more information
 

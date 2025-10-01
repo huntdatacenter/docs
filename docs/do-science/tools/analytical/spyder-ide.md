@@ -2,7 +2,7 @@
 title: Spyder IDE
 category: Analytical tools
 permalink: /do-science/tools/analytical/spyder-ide
-sidebarDepth: 0
+outline: 0
 description: Installation guide for Spyder-IDE.
 ---
 
@@ -28,7 +28,7 @@ Activate environment:
 mamba activate spyder
 ```
 
-Create desktop icon by running this command in your [Workbench Terminal](/do-science/hunt-workbench/faq/#can-i-use-a-terminal-from-my-workbench) to be able to see it in [Remote desktop](/do-science/hunt-workbench/getting-started/remote-desktop/):
+Create desktop icon by running this command in your [Workbench Terminal](/do-science/hunt-workbench/faq#can-i-use-a-terminal-from-my-workbench) to be able to see it in [Remote desktop](/do-science/hunt-workbench/getting-started/10-remote-desktop):
 ```bash
 cat <<EOF | tee ~/Desktop/Spyder.desktop
 [Desktop Entry]

@@ -2,7 +2,7 @@
 title: Dates
 category: Tingweek
 permalink: /govern-science/tingweek/dates/
-sidebarDepth: 1
+outline: 1
 description: This page lists information and questions about our Tingweeks.
 ---
 

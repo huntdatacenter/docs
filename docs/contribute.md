@@ -1,7 +1,7 @@
 ---
 title: Contribute
 category: HUNT Cloud
-sidebarDepth: 0
+outline: 0
 description: We are proud of the content on these pages. They have come together as a collaborative contribution from lab users in our cloud community. We are grateful if you would like to help new lab users on their way by sharing your hard earned tips and tricks.
 ---
 

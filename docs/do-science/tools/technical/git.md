@@ -1,7 +1,7 @@
 ---
 title: Git
 category: Technical tools
-sidebarDepth: 1
+outline: 1
 permalink: /do-science/tools/technical/git
 description: Usage guide for Git in HUNT Cloud.
 ---

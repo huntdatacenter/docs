@@ -2,7 +2,7 @@
 title: Htop
 category: Technical tools
 permalink: /do-science/tools/technical/htop
-sidebarDepth: 1
+outline: 1
 description: Usage guide for Htop.
 ---
 

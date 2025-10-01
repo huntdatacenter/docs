@@ -1,0 +1,21 @@
+name: test-service-desk
+on:
+  push:
+    branches: master
+  pull_request:
+    branches: master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+          cache: "pip" # caching pip dependencies
+          cache-dependency-path: "**/tox.ini"
+      - name: Install dependencies
+        run: python3 -m pip install tox
+      - name: Test Service desk config
+        run: tox -e test

@@ -2,7 +2,7 @@
 title: Azcopy
 category: Transfer tools
 permalink: /do-science/tools/transfer/azcopy
-sidebarDepth: 1
+outline: 1
 description: Installation and usage guide for azcopy.
 ---
 
@@ -17,7 +17,7 @@ This guide is meant to help you setup correct parameters for your transfer and i
 
 ## Installation
 
-If this is your first time using conda, follow our [guide](/do-science/tools/analytical/conda/) for proper installation in your lab.
+If this is your first time using conda, follow our [guide](/do-science/tools/analytical/conda) for proper installation in your lab.
 Afterwards, you can run following command in conda environment to install azcopy.
 
 ```bash

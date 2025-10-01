@@ -2,7 +2,7 @@
 title: Lagtun
 category: HUNT Cloud
 permalink: /govern-science/tingweek/lagtun
-sidebarDepth: 1
+outline: 1
 description: Lagtun is the body that appoints time for the scientific governance of HUNT Cloud.
 ---
 
@@ -37,7 +37,7 @@ The following Lagtun membership tickets are issued to contracting parties from p
 
 :::
 
-The membership criteria was clarified in [R6/LT4/T4/21](/govern-science/tingweek/resolutions/#clarification-of-lagtun-membership). Lagtun is chaired by the Head of HUNT Cloud. HUNT Cloud employees participate as observers.
+The membership criteria was clarified in [R6/LT4/T4/21](/govern-science/tingweek/resolutions#clarification-of-lagtun-membership). Lagtun is chaired by the Head of HUNT Cloud. HUNT Cloud employees participate as observers.
 
 ### Invitations
 
@@ -47,7 +47,7 @@ Invitations are forwarded on email to leaders and administrators for data proces
 Invitation recipients may [contact us](/contact) for direct calendar bookings for themselves or their chosen representative for future Lagtuns.
 :::
 
-The invitation criteria was clarified in [R2/LT5/T5/22](/govern-science/tingweek/resolutions/#clarification-of-ting-week-invitations).
+The invitation criteria was clarified in [R2/LT5/T5/22](/govern-science/tingweek/resolutions#clarification-of-ting-week-invitations).
 
 ## Resolutions
 
@@ -64,7 +64,7 @@ Resolutions from previous Lagtuns are available in our [resolutions](/govern-sci
 
 ### New resolutions
 
-All HUNT Cloud coordinators and users are welcome to propose resolutions for the next meeting through their representatives. You can find the representative list in the [resolution documents](/govern-science/tingweek/resolutions), or you can [contact us](/contact) if you need help identifying your Lagtun representative. See the [agenda](/govern-science/tingweek/lagtun/#agenda) section for more details.
+All HUNT Cloud coordinators and users are welcome to propose resolutions for the next meeting through their representatives. You can find the representative list in the [resolution documents](/govern-science/tingweek/resolutions), or you can [contact us](/contact) if you need help identifying your Lagtun representative. See the [agenda](/govern-science/tingweek/lagtun#agenda) section for more details.
 
 ### Consideration
 
@@ -121,7 +121,7 @@ Lagtun meets digitally utilizing NTNU's Zoom subscription.
 
 After each Tingweek, we start to identify and allocate new topics for consideration on the next Lagtun. Items are typically identified through dialogues among community members and our cloud team.
 
-All users are welcome to propose agenda items for the next meeting through their representatives. You can find the representative list in the [resolution document](/govern-science/tingweek/resolutions), or you may [contact us](/contact/) if you need help identifying your Lagtun representative. 
+All users are welcome to propose agenda items for the next meeting through their representatives. You can find the representative list in the [resolution document](/govern-science/tingweek/resolutions), or you may [contact us](/contact) if you need help identifying your Lagtun representative. 
 
 Items will be floated to members of Lagtun, and one or more resolutions will be added on the topic based on discussions and negotiations. A draft resolution will be tabled in the agenda. 
 
