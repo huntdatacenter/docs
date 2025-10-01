@@ -39,5 +39,5 @@ You will find Conda very helpful when it comes to Python and R packages. Conda i
 All your Jupyter Notebooks and code will be stored on work volume, where it can be shared with your lab
 colleagues. Work volume is ideal place if you want your things to be backed up. You can use this setup to your advantage, but you will also be able to override this at your own risk.
 
-You will get a set of default Conda environments for Python (**`py310`**) and R (**`r-base`**) that you can use in your Jupyter notebooks. From there, it's easy to expand on them or create your own using the Terminal tool.
+You will get a set of default Conda environments for Python and R that you can use in your Jupyter notebooks. From there, it's easy to expand on them or create your own using the Terminal tool.
 
