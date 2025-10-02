@@ -3,7 +3,7 @@ title: Govern science in HUNT Cloud
 category: HUNT Cloud
 permalink: /govern-science/
 outline: 0
-aside: false
+# aside: false
 description: These pages contains user documentation aimed at representatives that govern science in HUNT Cloud.
 buttons:
   - title: "Organizational access"

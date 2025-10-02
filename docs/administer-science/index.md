@@ -3,7 +3,7 @@ title: Administer science in HUNT Cloud
 category: Administer science
 permalink: /administer-science/
 outline: 0
-aside: false
+# aside: false
 description: These pages contains user documentation aimed at individuals that administer science in HUNT Cloud.
 buttons:
     - title: 'Service desk'
