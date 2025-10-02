@@ -1,4 +1,4 @@
-name: lint
+name: Linter
 on:
   push:
     branches: master

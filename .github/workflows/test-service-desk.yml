@@ -1,4 +1,4 @@
-name: test-service-desk
+name: Test service desk
 on:
   push:
     branches: master
