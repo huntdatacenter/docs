@@ -2,6 +2,7 @@
 title: Do science in HUNT Cloud
 category: Do science
 outline: 0
+aside: false
 readingTime: null
 permalink: /do-science/
 description: These pages contains user documentation aimed at scientists that conduct scientific experiments in HUNT Cloud.
