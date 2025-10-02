@@ -8,7 +8,7 @@ description: Usage guide for Git in HUNT Cloud.
 
 # Git
 
-**[Git](https://git-scm.com/) is a version control system for tracking changes in files and coordinate work across your lab.** 
+**[Git](https://git-scm.com/) is a version control system for tracking changes in files and coordinate work across your lab.**
 
 Depending on your lab's Data Safety Level (DSL), your data controller may allow access to hosted git repository managers such as [GitLab](https://gitlab.com/), [GitHub](https://github.com/) and [Bitbucket](https://bitbucket.org/).
 
@@ -24,6 +24,7 @@ If the SSH configuration file `~/.ssh/config` does not exist, you have to create
 
 ### How to access GitHub
 
+Copy paste github configuration into SSH config on your lab machine:
 
 ```ini
 Host github.com
@@ -32,6 +33,8 @@ Host github.com
   Port 443
   IdentityFile ~/.ssh/git
 ```
+
+Then you should be able to clone using the `git@github.com` format.
 
 See [GitHub's documentation](https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port) for more details.
 
