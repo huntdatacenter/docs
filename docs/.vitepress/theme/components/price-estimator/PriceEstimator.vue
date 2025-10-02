@@ -24,15 +24,15 @@ export default defineComponent({
     return {
       labCards: [] as LabCard[],
       nextLabId: 1,
-      isInitializingComputePrices: false,
+      isLoadingComputePrices: false,
       computePrices: [] as PriceListItem[],
-      isInitializingStoragePrices: false,
+      isLoadingStoragePrices: false,
       storagePrices: [] as PriceListItem[],
-      isInitializingGpuPrices: false,
+      isLoadingGpuPrices: false,
       gpuPrices: [] as PriceListItem[],
-      isInitializingMachines: false,
+      isLoadingMachines: false,
       machines: [] as MachineFlavor[],
-      isInitializingAvailableGpus: false,
+      isLoadingAvailableGpus: false,
       availableGpus: [] as GpuModel[],
       labPrices: [] as PriceListItem[],
       totalCompute: { price: 0.0 },
@@ -96,11 +96,11 @@ export default defineComponent({
     },
 
     initializeAll() {
-      this.isInitializingComputePrices = true
-      this.isInitializingStoragePrices = true
-      this.isInitializingGpuPrices = true
-      this.isInitializingMachines = true
-      this.isInitializingAvailableGpus = true
+      this.isLoadingComputePrices = true
+      this.isLoadingStoragePrices = true
+      this.isLoadingGpuPrices = true
+      this.isLoadingMachines = true
+      this.isLoadingAvailableGpus = true
 
       const priceListPromise = pricesApi.getPriceList().then((json: PriceListItem[]) => {
         this.computePrices = json.filter((item: PriceListItem) => item["service.group"] === "cpu").map(this.preparePricesToYearly)
@@ -118,11 +118,11 @@ export default defineComponent({
       })
 
       return Promise.all([priceListPromise, gpusPromise, machinesPromise]).then(() => {
-        this.isInitializingComputePrices = false
-        this.isInitializingStoragePrices = false
-        this.isInitializingGpuPrices = false
-        this.isInitializingMachines = false
-        this.isInitializingAvailableGpus = false
+        this.isLoadingComputePrices = false
+        this.isLoadingStoragePrices = false
+        this.isLoadingGpuPrices = false
+        this.isLoadingMachines = false
+        this.isLoadingAvailableGpus = false
       })
     },
 
@@ -141,7 +141,6 @@ export default defineComponent({
         storage: 0,
         priceStorage: 0,
         priceComputeYearly: 0,
-        priceComputeYearlyYearly: 0,
         numCompute: 0,
         initialCompute: [],
         initialStorage: [],
@@ -263,7 +262,6 @@ export default defineComponent({
               storage: 0,
               priceStorage: 0,
               priceComputeYearly: 0,
-              priceComputeYearlyYearly: 0,
               numCompute: 0,
               initialCompute: lab.compute || [],
               initialStorage: lab.storage || [],

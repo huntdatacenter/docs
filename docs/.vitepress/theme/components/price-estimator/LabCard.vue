@@ -30,7 +30,7 @@ export default {
       isComputeModalOpen: false,
       editingComputeItem: null as ComputeUnit | null,
       datasetCompute: [] as ComputeUnit[],
-      isInitializingComputePrices: false,
+      isLoadingComputePrices: false,
       computeHeaders: [
         { title: "Name", align: "start", sortable: true, key: "name" },
         { title: "Machine type", align: "start", sortable: true, key: "flavor" },
@@ -48,7 +48,7 @@ export default {
       editingStorageItem: null as StorageUnit | null,
       datasetStorage: [] as StorageUnit[],
       selectedStorage: [] as number[],
-      isInitializingStoragePrices: false,
+      isLoadingStoragePrices: false,
       storageHeaders: [
         { title: "Name", align: "start", sortable: true, key: "name" },
         { title: "Usage", align: "start", sortable: true, key: "usage" },
@@ -71,7 +71,7 @@ export default {
   },
   computed: {
     displayStorageSumPrice() {
-      return this.storageLabSum.price.toFixed(0) + " kr"
+      return this.storageLabSum.price.toFixed(2) + " kr"
     },
     displayDatasetStorage() {
       return this.datasetStorage.map(item => {
@@ -81,7 +81,7 @@ export default {
           usage: item.usage,
           type: item.type,
           size: item.size + " TB",
-          price: item.price.toFixed(0) + " kr",
+          price: item.price.toFixed(2) + " kr",
         }
       })
     },
@@ -109,7 +109,7 @@ export default {
           const flavorParts = item.flavor.split(" + ")
           const mainFlavor = flavorParts[0]
           const gpuFlavor = item.gpu
-          const prices = this.getComputePrice(mainFlavor, item.type, gpuFlavor)
+          const prices = this.getComputePriceForLab(mainFlavor, item.type, gpuFlavor)
           return { ...item, ...prices }
         })
         this.computeId = this.initialCompute.length
@@ -274,8 +274,8 @@ export default {
         gpu: null,
         ram: ram,
         type: "COMMITMENT_1Y",
-        monthlyPrice: Number(defaultUnit["price.nok.ex.vat"] / 12).toFixed(2),
-        yearlyPrice: Number(defaultUnit["price.nok.ex.vat"]).toFixed(2),
+        monthlyPrice: defaultUnit["price.nok.ex.vat"] / 12,
+        yearlyPrice: defaultUnit["price.nok.ex.vat"],
       })
       this.computeId += 1
     },
@@ -341,7 +341,7 @@ export default {
       return price
     },
 
-    getComputePrice(flavor: string, type: string, gpuFlavor: string | null = null) {
+    getComputePriceForLab(flavor: string, type: string, gpuFlavor: string | null = null) {
       let totalYearlyPrice = 0
       let totalMonthlyPrice = 0
       let mainFlavorPrice: number | undefined
@@ -377,7 +377,7 @@ export default {
         totalYearlyPrice += mainFlavorPrice
       }
 
-      totalMonthlyPrice = Number((totalYearlyPrice / 12).toFixed(2))
+      totalMonthlyPrice = Number((totalYearlyPrice / 12))
 
       if (gpuFlavor) {
         const gpuPrice = this.gpuPrices.find(
@@ -386,13 +386,12 @@ export default {
         if (gpuPrice) {
           gpuYearly = gpuPrice["price.nok.ex.vat"]
           totalYearlyPrice += gpuYearly
-          totalMonthlyPrice = totalMonthlyPrice + Number((gpuYearly / 12).toFixed(2))
+          totalMonthlyPrice = totalMonthlyPrice + Number((gpuYearly / 12))
         }
       }
-
       return {
-        monthlyPrice: Number(totalMonthlyPrice).toFixed(2),
-        yearlyPrice: Number(totalYearlyPrice).toFixed(2),
+        monthlyPrice: totalMonthlyPrice,
+        yearlyPrice: totalYearlyPrice,
       }
     },
   },
@@ -421,11 +420,19 @@ export default {
           <v-data-table-virtual
             :items="datasetCompute"
             :headers="computeHeaders"
-            :loading="isInitializingComputePrices"
+            :loading="isLoadingComputePrices"
             hide-default-footer
             hover
             item-value="id"
           >
+            <template v-slot:item.monthlyPrice="{ item }">
+              {{ Number(item.monthlyPrice).toFixed(2) }}
+            </template>
+
+            <template v-slot:item.yearlyPrice="{ item }">
+              {{ Number(item.yearlyPrice).toFixed(2) }}
+            </template>
+
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
                 <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editCompute(item)"></v-icon>
@@ -482,7 +489,7 @@ export default {
             v-model="selectedStorage"
             :items="displayDatasetStorage"
             :headers="storageHeaders"
-            :loading="isInitializingStoragePrices"
+            :loading="isLoadingStoragePrices"
             hover
             hide-default-footer
             item-value="id"

@@ -77,7 +77,7 @@ export default {
       return yearly ? Number(yearly / 12).toFixed(2) : 0
     },
 
-    getGpuPrice(): string | number {
+    getGpuPriceYear(): string | number {
       if (!this.formData.gpu) {
         return 0
       }
@@ -86,8 +86,8 @@ export default {
       )
       return price ? Number(price["price.nok.ex.vat"]).toFixed(2) : 0
     },
-    getGpuMonthPrice(): string | number {
-      const yearlyGpu = Number(this.getGpuPrice)
+    getGpuPriceMonth(): string | number {
+      const yearlyGpu = Number(this.getGpuPriceYear)
       return yearlyGpu ? Number(yearlyGpu / 12).toFixed(2) : 0
     },
     getFlavors(): MachineFlavor[] {
@@ -127,8 +127,8 @@ export default {
   },
 
   methods: {
-    getSummedPrice(num1: string | number, num2: string | number): string {
-      return (Number(num1) + Number(num2)).toFixed(2)
+    getSummedPrice(num1: string | number, num2: string | number): number {
+      return (Number(num1) + Number(num2))
     },
     close() {
       this.$emit("close")
@@ -140,8 +140,8 @@ export default {
       }
 
       const name = this.formData.gpu ? `${this.formData.name} (incl. GPU)` : this.formData.name
-      const monthlyPrice = this.getSummedPrice(this.getComputePriceMonth, this.getGpuMonthPrice)
-      const yearlyPrice = this.getSummedPrice(this.getComputePriceYear, this.getGpuPrice)
+      const monthlyPrice = this.getSummedPrice(this.getComputePriceMonth, this.getGpuPriceMonth)
+      const yearlyPrice = this.getSummedPrice(this.getComputePriceYear, this.getGpuPriceYear)
       const machinetitle = this.machines
         .filter(item => item["value"] === this.formData.flavor)[0]
         ["title"].split(" - ")[1]
@@ -235,7 +235,7 @@ export default {
           </v-col>
           <v-col v-show="formData.gpu" cols="12" sm="6">
             <v-text-field
-              v-model="getGpuMonthPrice"
+              v-model="getGpuPriceMonth"
               label="GPU Price / Month"
               suffix="NOK ex. VAT"
               readonly
@@ -244,7 +244,7 @@ export default {
           </v-col>
           <v-col v-show="formData.gpu" cols="12" sm="6">
             <v-text-field
-              v-model="getGpuPrice"
+              v-model="getGpuPriceYear"
               label="GPU Price / Year"
               suffix="NOK ex. VAT / Year"
               readonly

@@ -64,7 +64,6 @@ export interface LabCard {
   storage: number
   priceStorage: number
   priceComputeYearly: number
-  priceComputeYearlyYearly: number
   numCompute: number
   initialCompute?: ComputeUnit[]
   initialStorage?: StorageUnit[]
