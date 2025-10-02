@@ -1,26 +1,35 @@
-<script>
+<script lang="ts">
+import type { StorageFormData, StorageUnit } from "./types"
+
 export default {
   name: "Storage",
   emits: ["close"],
   props: {
     storageId: { type: Number, default: () => 0 },
+    initialData: { type: Object as () => StorageUnit | null, default: null },
   },
   data: () => ({
-    /* This is the form data that will be used to create the storage */
-    /* Perhaps its possible to add different speeds to the storage */
     formData: {
       id: null,
       name: null,
       usage: "Archive",
       type: "HDD",
       size: 1,
-    },
+    } as StorageFormData,
     overlay: true,
   }),
 
   created() {
-    this.formData.id = this.storageId
-    this.formData.name = `volume-${this.storageId}`
+    if (this.initialData) {
+      this.formData.id = this.initialData.id
+      this.formData.name = this.initialData.name
+      this.formData.usage = this.initialData.usage
+      this.formData.type = this.initialData.type
+      this.formData.size = this.initialData.size
+    } else {
+      this.formData.id = this.storageId
+      this.formData.name = `volume-${this.storageId}`
+    }
   },
   methods: {
     close() {
@@ -30,7 +39,7 @@ export default {
       this.$emit("close", {
         id: this.formData.id,
         name: this.formData.name,
-        size: parseInt(this.formData.size),
+        size: Number(this.formData.size),
         usage: this.formData.usage,
         type: this.formData.type,
       })
@@ -40,7 +49,6 @@ export default {
 </script>
 
 <template>
-  <!-- <v-overlay v-model="overlay" class="d-flex justify-center align-center"> -->
   <v-card class="d-flex justify-center align-center">
     <v-card-title>
       <span class="headline">Storage</span>
@@ -95,5 +103,4 @@ export default {
       <v-btn color="green darken-2" text @click="save()"> Save </v-btn>
     </v-card-actions>
   </v-card>
-  <!-- </v-overlay> -->
 </template>

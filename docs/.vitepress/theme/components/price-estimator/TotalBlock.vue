@@ -28,7 +28,7 @@ export default {
       }
       return this.totalItems.map(item => ({
         ...item,
-        price: parseFloat(item.price).toFixed(2),
+        price: Number(item.price).toFixed(2),
       }))
     },
   },
@@ -36,19 +36,14 @@ export default {
 
   methods: {
     exportItems() {
-      // Create deep copies to avoid modifying the original data
       const computeItemsClean = JSON.parse(JSON.stringify(this.itemsComputeExport))
       const storageItemsClean = JSON.parse(JSON.stringify(this.itemsStorageExport))
 
-      const labs = [] // Initialize as an array
+      const labs = [] 
       const maxId = Math.max(computeItemsClean.length, storageItemsClean.length)
-
-      // Iterate through possible lab IDs (assuming they start from 1)
       for (let id = 1; id < maxId; id++) {
         const compute = computeItemsClean[id]
         const storage = storageItemsClean[id]
-
-        // Only add the lab to the export if it has compute or storage items
         if (compute || storage) {
           const labObject = {
             id: id,
@@ -56,7 +51,6 @@ export default {
           }
 
           if (compute) {
-            // Remove price properties from compute items
             labObject.compute = compute.map(item => {
               delete item.monthlyPrice
               delete item.yearlyPrice
@@ -65,7 +59,6 @@ export default {
           }
 
           if (storage) {
-            // Remove price properties from storage items
             labObject.storage = storage.map(item => {
               delete item.price
               return item
@@ -120,7 +113,7 @@ export default {
             <v-list-item>
               <v-list-item-title> <strong> Estimated total price: </strong></v-list-item-title>
               <v-list-item-subtitle class="align-end">
-                {{ parseFloat(this.sumInTotal).toFixed(2) }} NOK ex. VAT / Year
+                {{ Number(this.sumInTotal).toFixed(2) }} NOK ex. VAT / Year
               </v-list-item-subtitle>
             </v-list-item>
           </v-list>
