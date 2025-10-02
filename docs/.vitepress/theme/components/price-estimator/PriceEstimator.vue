@@ -25,20 +25,23 @@ export default defineComponent({
       labCards: [] as LabCard[],
       nextLabId: 1,
       isLoadingComputePrices: false,
+      // You can wrap these price related variables into 1 object. e.g. price or catalogue Object
       computePrices: [] as PriceListItem[],
       isLoadingStoragePrices: false,
       storagePrices: [] as PriceListItem[],
       isLoadingGpuPrices: false,
       gpuPrices: [] as PriceListItem[],
       isLoadingMachines: false,
-      machines: [] as MachineFlavor[],
+      machines: [] as MachineFlavor[],       // availableMachine would be better
       isLoadingAvailableGpus: false,
       availableGpus: [] as GpuModel[],
       labPrices: [] as PriceListItem[],
       totalCompute: { price: 0.0 },
-      totalStorage: 0.0,
+
+      totalStorage: 0.0, //  totalCompute is dict obj and this is just Number?
       totalStorageCost: 0.0,
-      totalPriceItems: [] as TotalPriceItem[],
+
+      totalPriceItems: [] as TotalPriceItem[], // If its total lab cost then it'd be better to name: totalLabCost
       sumInTotal: 0.0,
       itemsComputeExport: [] as ComputeUnit[][],
       itemsStorageExport: [] as StorageUnit[][],
