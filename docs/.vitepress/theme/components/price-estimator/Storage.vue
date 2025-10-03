@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { StorageFormData, StorageUnit } from "./types"
+import type { StorageFormData, StorageUnit, PriceListItem } from "./types"
 
 export default {
   name: "Storage",

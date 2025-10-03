@@ -11,9 +11,15 @@ export default {
   name: "Machine",
   props: {
     computeId: { type: Number, default: () => 0 },
-    flavors: { type: Array as () => PriceListItem[], default: () => [] },
-    gpus: { type: Array as () => PriceListItem[], default: () => [] },
-    machines: { type: Array as () => MachineFlavor[], default: () => [] },
+    priceCatalogue: {
+      type: Object as () => {
+        computePrices: PriceListItem[]
+        storagePrices: PriceListItem[]
+        gpuPrices: PriceListItem[]
+      },
+      required: true,
+    },
+    machineCatalogoue: { type: Array as () => MachineFlavor[], default: () => [] },
     availableGpus: { type: Array as () => GpuModel[], default: () => [] },
     selectedRadio: { type: String, default: "1Y" },
     initialData: { type: Object as () => ComputeUnit | null, default: null },
@@ -48,7 +54,7 @@ export default {
       let price: number | undefined
       if (this.formData.subscription.includes("COMMITMENT")) {
         if (this.formData.subscription === "COMMITMENT_3Y") {
-          const item = this.flavors.find(
+          const item = this.priceCatalogue.computePrices.find(
             item =>
               item["service.unit"] === this.formData.flavor &&
               item["service.level"] === "COMMITMENT" &&
@@ -56,7 +62,7 @@ export default {
           )
           price = item ? item["price.nok.ex.vat"] / 3 : undefined
         } else {
-          const item = this.flavors.find(
+          const item = this.priceCatalogue.computePrices.find(
             item =>
               item["service.unit"] === this.formData.flavor &&
               item["service.level"] === "COMMITMENT" &&
@@ -65,7 +71,7 @@ export default {
           price = item ? item["price.nok.ex.vat"] : undefined
         }
       } else {
-        const item = this.flavors.find(
+        const item = this.priceCatalogue.computePrices.find(
           item => item["service.unit"] === this.formData.flavor && item["service.level"] === this.formData.subscription,
         )
         price = item ? item["price.nok.ex.vat"] : undefined
@@ -81,7 +87,7 @@ export default {
       if (!this.formData.gpu) {
         return 0
       }
-      const price = this.gpus.find(
+      const price = this.priceCatalogue.gpuPrices.find(
         item => item["service.unit"] === this.formData.gpu && item["service.level"] === "ONDEMAND"
       )
       return price ? Number(price["price.nok.ex.vat"]).toFixed(2) : 0
@@ -94,7 +100,7 @@ export default {
       if (!this.formData.subscription) {
         return []
       }
-      return this.machines.filter(item => item)
+      return this.machineCatalogoue.filter(item => item)
     },
     getGpus() {
       return this.availableGpus.map(item => {
@@ -142,7 +148,7 @@ export default {
       const name = this.formData.gpu ? `${this.formData.name} (incl. GPU)` : this.formData.name
       const monthlyPrice = this.getSummedPrice(this.getComputePriceMonth, this.getGpuPriceMonth)
       const yearlyPrice = this.getSummedPrice(this.getComputePriceYear, this.getGpuPriceYear)
-      const machinetitle = this.machines
+      const machinetitle = this.machineCatalogoue
         .filter(item => item["value"] === this.formData.flavor)[0]
         ["title"].split(" - ")[1]
         .split(" / ")

@@ -25,20 +25,22 @@ export default defineComponent({
       labCards: [] as LabCard[],
       nextLabId: 1,
       isLoadingComputePrices: false,
-      computePrices: [] as PriceListItem[],
       isLoadingStoragePrices: false,
-      storagePrices: [] as PriceListItem[],
       isLoadingGpuPrices: false,
-      gpuPrices: [] as PriceListItem[],
+      priceCatalogue: {
+        computePrices: [] as PriceListItem[],
+        storagePrices: [] as PriceListItem[],
+        gpuPrices: [] as PriceListItem[],
+      },
       isLoadingMachines: false,
-      machines: [] as MachineFlavor[],
+      machineCatalogoue: [] as MachineFlavor[],
       isLoadingAvailableGpus: false,
       availableGpus: [] as GpuModel[],
       labPrices: [] as PriceListItem[],
       totalCompute: { price: 0.0 },
       totalStorage: 0.0,
       totalStorageCost: 0.0,
-      totalPriceItems: [] as TotalPriceItem[],
+      totalPriceLabs: [] as TotalPriceItem[],
       sumInTotal: 0.0,
       itemsComputeExport: [] as ComputeUnit[][],
       itemsStorageExport: [] as StorageUnit[][],
@@ -103,10 +105,11 @@ export default defineComponent({
       this.isLoadingAvailableGpus = true
 
       const priceListPromise = pricesApi.getPriceList().then((json: PriceListItem[]) => {
-        this.computePrices = json.filter((item: PriceListItem) => item["service.group"] === "cpu").map(this.preparePricesToYearly)
-        this.storagePrices = json.filter((item: PriceListItem) => item["service.family"] === "store")
-        this.gpuPrices = json.filter((item: PriceListItem) => item["service.group"] === "gpu").map(this.preparePricesToYearly)
+        this.priceCatalogue.computePrices = json.filter((item: PriceListItem) => item["service.group"] === "cpu").map(this.preparePricesToYearly)
+        this.priceCatalogue.storagePrices = json.filter((item: PriceListItem) => item["service.family"] === "store")
+        this.priceCatalogue.gpuPrices = json.filter((item: PriceListItem) => item["service.group"] === "gpu").map(this.preparePricesToYearly)
         this.labPrices = json.filter((item: PriceListItem) => item["service.group"] === "lab")
+        console.log("Price list loaded", this.priceCatalogue, this.labPrices)
       })
 
       const gpusPromise = pricesApi.getAvailableGPUS().then((gpus: GpuModel[]) => {
@@ -114,7 +117,7 @@ export default defineComponent({
       })
 
       const machinesPromise = pricesApi.getMachineFlavors().then((machine: MachineFlavor[]) => {
-        this.machines = machine
+        this.machineCatalogoue = machine
       })
 
       return Promise.all([priceListPromise, gpusPromise, machinesPromise]).then(() => {
@@ -224,7 +227,7 @@ export default defineComponent({
         units: `${this.totalStorage} TB`,
         price: this.totalStorageCost,
       })
-      this.totalPriceItems = priceItems
+      this.totalPriceLabs = priceItems
       this.sumInTotal = priceItems.reduce((total, item) => total + item.price, 0)
     },
     triggerFileUpload() {
@@ -328,11 +331,9 @@ export default defineComponent({
           <LabCard
             :key="lab.id"
             :title="lab.title"
-            :compute-prices="computePrices"
-            :gpu-prices="gpuPrices"
-            :machines="machines"
+            :price-catalogue="priceCatalogue"
+            :machineCatalogoue="machineCatalogoue"
             :available-gpus="availableGpus"
-            :storage-prices="storagePrices"
             :initial-compute="lab.initialCompute"
             :initial-storage="lab.initialStorage"
             @updateStorage="updateLabCardStorage(lab.id, $event)"
@@ -343,7 +344,7 @@ export default defineComponent({
       </v-row>
       <v-row v-if="labCards.length !== 0">
         <TotalBlock
-          :total-items="totalPriceItems"
+          :total-items="totalPriceLabs"
           :sum-in-total="sumInTotal"
           :itemsComputeExport="itemsComputeExport"
           :itemsStorageExport="itemsStorageExport"

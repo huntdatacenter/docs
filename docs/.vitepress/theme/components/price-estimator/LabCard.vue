@@ -16,11 +16,16 @@ export default {
   emits: ["updateStorage", "updateCompute", "removeLab"],
   props: {
     title: { type: String, required: true, default: "Lab " },
-    computePrices: { type: Array as () => PriceListItem[], default: () => [] },
-    gpuPrices: { type: Array as () => PriceListItem[], default: () => [] },
-    machines: { type: Array as () => MachineFlavor[], default: () => [] },
+    priceCatalogue: {
+      type: Object as () => {
+        computePrices: PriceListItem[]
+        storagePrices: PriceListItem[]
+        gpuPrices: PriceListItem[]
+      },
+      required: true,
+    },
+    machineCatalogoue: { type: Array as () => MachineFlavor[], default: () => [] },
     availableGpus: { type: Array as () => GpuModel[], default: () => [] },
-    storagePrices: { type: Array as () => PriceListItem[], default: () => [] },
     initialCompute: { type: Array as () => ComputeUnit[], default: null },
     initialStorage: { type: Array as () => StorageUnit[], default: null },
   },
@@ -41,7 +46,6 @@ export default {
         { title: "Price / year", align: "start", sortable: true, key: "yearlyPrice" },
         { title: "Actions", key: "actions", align: "end", sortable: false },
       ],
-      totalPriceItems: 0.0,
       computeLabSum: { monthlyPrice: 0.0, yearlyPrice: 0.0, ram: 0, cpu_count: 0 } as ComputeLabSum,
       storageId: 0,
       isStorageModalOpen: false,
@@ -252,7 +256,7 @@ export default {
       this.updateLabSumStorage()
     },
     pushDefaultComputeUnit() {
-      const defaultUnit = this.computePrices.find(
+      const defaultUnit = this.priceCatalogue.computePrices.find(
         item =>
           item["service.unit"] === "default.c1" &&
           item["service.level"] === "COMMITMENT" &&
@@ -260,7 +264,7 @@ export default {
       )
       if (!defaultUnit) return
       
-      const machineInfo = this.machines.find(item => item["value"] === defaultUnit["service.unit"])
+      const machineInfo = this.machineCatalogoue.find(item => item["value"] === defaultUnit["service.unit"])
       if (!machineInfo) return
       
       const machinetitle = machineInfo["title"].split(" - ")[1].split(" / ")
@@ -313,17 +317,17 @@ export default {
     storageCost(totalSize: number) {
       totalSize = Number(totalSize)
 
-      const level1Item = this.storagePrices.find(
+      const level1Item = this.priceCatalogue.storagePrices.find(
         item => item["service.commitment"] === "1Y" && item["service.unit"] === "First 10 TB"
       )
       const level1 = level1Item?.["price.nok.ex.vat"] || 0
 
-      const level2Item = this.storagePrices.find(
+      const level2Item = this.priceCatalogue.storagePrices.find(
         item => item["service.commitment"] === "1Y" && item["service.unit"] === "Next 90 TB"
       )
       const level2 = level2Item?.["price.nok.ex.vat"] || 0
 
-      const level3Item = this.storagePrices.find(
+      const level3Item = this.priceCatalogue.storagePrices.find(
         item => item["service.commitment"] === "1Y" && item["service.unit"] === "Over 100 TB"
       )
       const level3 = level3Item?.["price.nok.ex.vat"] || 0
@@ -349,7 +353,7 @@ export default {
 
       if (type.includes("COMMITMENT")) {
         if (type === "COMMITMENT_3Y") {
-          const found3Y = this.computePrices.find(
+          const found3Y = this.priceCatalogue.computePrices.find(
             p =>
               p["service.unit"] === flavor &&
               p["service.level"] === "COMMITMENT" &&
@@ -359,7 +363,7 @@ export default {
             mainFlavorPrice = found3Y["price.nok.ex.vat"] / 3
           }
         } else {
-          mainFlavorPrice = this.computePrices.find(
+          mainFlavorPrice = this.priceCatalogue.computePrices.find(
             p =>
               p["service.unit"] === flavor &&
               p["service.level"] === "COMMITMENT" &&
@@ -367,7 +371,7 @@ export default {
           )?.["price.nok.ex.vat"]
         }
       } else {
-        const foundPrice = this.computePrices.find(
+        const foundPrice = this.priceCatalogue.computePrices.find(
           p => p["service.unit"] === flavor && p["service.level"] === type
         )
         mainFlavorPrice = foundPrice?.["price.nok.ex.vat"]
@@ -380,7 +384,7 @@ export default {
       totalMonthlyPrice = Number((totalYearlyPrice / 12))
 
       if (gpuFlavor) {
-        const gpuPrice = this.gpuPrices.find(
+        const gpuPrice = this.priceCatalogue.gpuPrices.find(
           p => p["service.unit"] === gpuFlavor && p["service.level"] === "ONDEMAND"
         )
         if (gpuPrice) {
@@ -541,9 +545,8 @@ export default {
     <v-dialog v-model="isComputeModalOpen" max-width="600px" min-width="600px">
       <Machine
         :compute-id="computeId"
-        :flavors="computePrices"
-        :gpus="gpuPrices"
-        :machines="machines"
+        :price-catalogue="priceCatalogue"
+        :machineCatalogoue="machineCatalogoue"
         :available-gpus="availableGpus"
         :initial-data="editingComputeItem"
         @close="closeComputeModal"
