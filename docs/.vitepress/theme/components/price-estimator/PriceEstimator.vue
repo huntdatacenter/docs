@@ -38,9 +38,10 @@ export default defineComponent({
       availableGpus: [] as GpuModel[],
       labPrices: [] as PriceListItem[],
       totalCompute: { price: 0.0 },
-      totalStorage: 0.0,
+
+      totalStorage: 0.0, //  totalCompute is dict obj and this is just Number?
       totalStorageCost: 0.0,
-      totalPriceLabs: [] as TotalPriceItem[],
+      totalLabCost: [] as TotalPriceItem[],
       sumInTotal: 0.0,
       itemsComputeExport: [] as ComputeUnit[][],
       itemsStorageExport: [] as StorageUnit[][],
@@ -227,7 +228,7 @@ export default defineComponent({
         units: `${this.totalStorage} TB`,
         price: this.totalStorageCost,
       })
-      this.totalPriceLabs = priceItems
+      this.totalLabCost = priceItems
       this.sumInTotal = priceItems.reduce((total, item) => total + item.price, 0)
     },
     triggerFileUpload() {
@@ -344,7 +345,7 @@ export default defineComponent({
       </v-row>
       <v-row v-if="labCards.length !== 0">
         <TotalBlock
-          :total-items="totalPriceLabs"
+          :total-items="totalLabCost"
           :sum-in-total="sumInTotal"
           :itemsComputeExport="itemsComputeExport"
           :itemsStorageExport="itemsStorageExport"

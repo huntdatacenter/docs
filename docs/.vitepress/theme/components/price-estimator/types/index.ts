@@ -65,12 +65,11 @@ export interface LabCard {
   priceStorage: number
   priceComputeYearly: number
   numCompute: number
-  initialCompute?: ComputeUnit[]
-  initialStorage?: StorageUnit[]
-  computeDataset?: ComputeUnit[]
-  storageDataset?: StorageUnit[]
+  initialCompute?: ComputeUnit[] // initSelectedCompute would be better?
+  initialStorage?: StorageUnit[] // same here
+  computeDataset?: ComputeUnit[] // selectedCompute ?
+  storageDataset?: StorageUnit[] // selectedStorage
 }
-
 
 export interface TotalPriceItem {
   name: string
@@ -98,11 +97,11 @@ export interface UpdateComputePayload {
   monthlyPrice: number
   yearlyPrice: number
   numCompute: number
-  datasetCompute: ComputeUnit[]
+  datasetCompute: ComputeUnit[] // selectedCompute
 }
 
 export interface UpdateStoragePayload {
   size: number
   price: number
-  datasetStorage: StorageUnit[]
+  datasetStorage: StorageUnit[] // same here
 }
