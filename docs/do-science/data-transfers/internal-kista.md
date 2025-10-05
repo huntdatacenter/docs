@@ -69,7 +69,7 @@ This section is aimed at the lab user that will **upload** data to a kista. See 
 
 SFTP method allows you to connect to a remote kista through your home machine and safely transfer your data.
 
-::: expander "SFTP" id="upload-sftp"
+::: expander SFTP {#upload-sftp}
 
 **Connect**
 
@@ -87,7 +87,7 @@ sftp demouser-upload@10.42.132.118
 
 When successfully connected, you should see the following message in your terminal:
 
-```
+```text
 Connected to 10.42.132.<number>.
 sftp>
 ```
@@ -134,7 +134,7 @@ reput /mnt/cargo/example-file1.txt
 
 LFTP method works in similar fashion, except it offers you more reliable transfer in case you are transferring a lot of data over long period of time using **mirror** option, f.e it will allow you to continue upload even if connection is broken.
 
-::: expander "LFTP" id="upload-lftp"
+::: expander LFTP {#upload-lftp}
 
 **Connect and upload**
 
@@ -159,48 +159,49 @@ This section is aimed at the lab user that will **download** data from a kista. 
 
 :::
 
-::: expander "SFTP" id="download-sftp"
+::: expander SFTP {#download-sftp}
 
 1. From your home machine, connect to the kista over SFTP using the transfer information collected above.
 
-```bash
-# -- Principal example
-sftp <username>-<role>@10.42.132.<number>
+    ```bash
+    # -- Principal example
+    sftp <username>-<role>@10.42.132.<number>
 
-# -- Demo example downloader
-sftp demouser-download@10.42.132.118
-```
+    # -- Demo example downloader
+    sftp demouser-download@10.42.132.118
+    ```
 
-When successfully connected, you should see the following message in your terminal:
+    When successfully connected, you should see the following message in your terminal:
 
-```
-Connected to 10.42.132.<number>.
-sftp>
-```
+    ```text
+    Connected to 10.42.132.<number>.
+    sftp>
+    ```
+
 2. Once inside your kista, move to the **`upload`** folder.
 
-```bash
-cd upload
-```
+    ```bash
+    cd upload
+    ```
 
 3. List files in the current directory.
 
-```bash
-ls -lah
-```
+    ```bash
+    ls -lah
+    ```
 
 4. Download a file or folder by specifying the file or folder name and the local path that you want to download to.
 
-```bash
-# -- Principal example
-get <sftp-file> <home-machine-folder>
+    ```bash
+    # -- Principal example
+    get <sftp-file> <home-machine-folder>
 
-# -- Download individual file
-get example-filename1.txt /mnt/cargo/
+    # -- Download individual file
+    get example-filename1.txt /mnt/cargo/
 
-# -- Download folder
-get -r example-directory /mnt/cargo/
-```
+    # -- Download folder
+    get -r example-directory /mnt/cargo/
+    ```
 
 5. Disconnect from your the SFTP-server
 
@@ -215,9 +216,10 @@ You can resume a download with this command:
 ```bash
 reget /mnt/cargo/example-file1.txt
 ```
+
 :::
 
-::: expander "LFTP" id="download-lftp"
+::: expander LFTP {#download-lftp}
 
 For large downloads, [terminal multiplexers](/do-science/tools/technical/terminal-multiplexers#gnu-screen) can be a handy tool allowing for the transfer to continue even when you log off from your home machine.
 
@@ -228,8 +230,8 @@ lftp -e "mirror -c /upload <download_to_directory>; bye" sftp://<username>-<role
 # -- Demo example downloader
 lftp -e "mirror --parallel=10 -c /upload /home/demouser/download-hunt; bye" sftp://demouser-download:@10.42.132.118
 ```
-:::
 
+:::
 
 ## Troubleshooting
 
@@ -247,11 +249,10 @@ You might see this warning message when you log into a kista that has been rebui
 
 [Click here](/do-science/troubleshooting/connection.html#warning-remote-host-identification-has-changed) to see the full message and explanation in our main troubleshooting section. You may ignore this message if you connect to a kista inside your lab.
 
-
-
 You can remove the message and proceed with the login by running the command that is stated at the end of the screen message similar to:
 
 ```bash
 ssh-keygen -f "/home/<username>/.ssh/known_hosts" -R "10.42.<number>.<number>"
 ```
+
 :::
