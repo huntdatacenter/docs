@@ -337,20 +337,30 @@ onMounted(() => {
                         <v-card-text>
                           <ol>
                             <li>Start Tunnelblick and Connect.</li>
-                            <li>Enter your user name (same as the OpenVPN profile file name).</li>
                             <li>
-                              Enter the verification code from Google Authenticator as your password. <br />
+                              Enter your user name (same as the OpenVPN profile file name).
+
+                              <CopyTextField
+                                :model-value="username"
+                                label=""
+                                prefix=""
+                                placeholder="Your link is missing access token"
+                              />
+                            </li>
+                            <li>
+                              Enter the verification code from Google Authenticator (TOTP) as your password. <br />
+                              Make sure that the Save password checkbox is <b>unchecked</b>. <br />
                               <img alt="tunnelblick-login" src="/img/vpn/tunnelblick-login.png" /> <br />
-                              Make sure that the Save password checkbox is <b>unchecked</b>.
                             </li>
                             <li>
                               When prompted for a Private Key Password or Passphrase, insert the VPN passphrase from Signal message.
-                              <br /><br />
+                              <br />
+                              <img alt="tunnelblick-long-passphrase" src="/img/vpn/tunnelblick-long-passphrase.png" /> <br />
                               Your authentication will fail when you complete your passphrase above.<br />
                               This is expected since your verification code timed out while you typed your passphrase.
                               <br /><br />
                             </li>
-                            <li>Now try again to connect with a fresh verification code from Google Authenticator.</li>
+                            <li>Now try again to connect with a fresh verification code from Google Authenticator (TOTP).</li>
                           </ol>
                           <br /><br />
                           You should now be connected to the VPN.
