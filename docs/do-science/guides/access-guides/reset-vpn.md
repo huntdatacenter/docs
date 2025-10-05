@@ -14,7 +14,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 ## 1. Requirements
 
-::: warning Shipments from the VPN certificate reset order 
+::: warning Shipments from the VPN certificate reset order
 
 1.1 Your new VPN certificate and VPN profile in a compressed `7z`-file sent over filesender.no
 
@@ -22,7 +22,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 :::
 
-**Required software**. The following required software should already be installed during your initial onboarding: 
+**Required software**. The following required software should already be installed during your initial onboarding:
 
 1.3. Working VPN software (if not, head over to our Getting started guide to [install the VPN software](/do-science/lab/#_2-1-install-the-vpn-software).
 
@@ -32,7 +32,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 We will communicate your VPN certificate over your organizational email. You will receive a link to an encrypted file archive (7z-file).
 
-::: expander "Windows" id="2-windows"
+::: expander Windows {#2-windows}
 
 2.1 Click on the link in the email to download the file and save this on your local computer.
 
@@ -42,7 +42,7 @@ We will communicate your VPN certificate over your organizational email. You wil
 
 :::
 
-::: expander "MacOS" id="2-macos"
+::: expander MacOS {#2-macos}
 
 2.1 Click on the link in the email to download the file and save this on your local computer.
 
@@ -67,7 +67,7 @@ Note that the default archive utility on MacOS does not recognize the passphrase
 
 :::
 
-::: expander "Ubuntu linux" id="2-linux"
+::: expander Ubuntu linux {#2-linux}
 
 2.1 Click on the link in the email to download the file and save this on your local computer.
 
@@ -81,18 +81,18 @@ sudo apt update && sudo apt-get install p7zip-full
 
 2.3 Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the archive folder.
 
-::: 
+:::
 
 
 
 ## 3. Remove your old VPN certificate
 
-You will need to remove your old VPN certificate and passwords before you install a new one. 
+You will need to remove your old VPN certificate and passwords before you install a new one.
 
-::: expander "Windows" id="3-windows"
+::: expander Windows {#3-windows}
 
-1. Right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select **`Clear Saved Passwords`** 
-2. Open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here: 
+1. Right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select **`Clear Saved Passwords`**
+2. Open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here:
 
 ```
 C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>
@@ -100,7 +100,7 @@ C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remov
 
 :::
 
-::: expander "MacOS" id="3-macos"
+::: expander MacOS {#3-macos}
 
 To remove old VPN configuration on MacOS using Tunnelblick, follow our guide below
 
@@ -127,7 +127,7 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
 ## 4. Setup the new VPN profile
 
-::: expander "Windows" id="4-windows"
+::: expander Windows {#4-windows}
 
 1. Start the OpenVPN client (if it is not running already)
 
@@ -151,7 +151,7 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
 
 
-::: expander "MacOS" id="4-macos"
+::: expander MacOS {#4-macos}
 
 **4.1  If you 'do' get prompted with the `Welcome to Tunnelblick` message, follow these steps:**
   1. Select **`I have configuration files`**.
@@ -171,7 +171,7 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 :::
 
 
-::: expander "Ubuntu linux" id="4-linux"
+::: expander Ubuntu linux {#4-linux}
 
 1. Click on the _Network Manager_ icon in the task bar.
 2. Select _Edit Connections..._.
@@ -191,7 +191,7 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
 ## 5. Connect to the VPN
 
-::: expander "Windows" id="5-windows"
+::: expander Windows {#5-windows}
 
 1. Right-click on the OpenVPN notification icon on the taskbar.
 
@@ -205,7 +205,7 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
     ![OpenVPN-icon](./images/9.OpenVPN-guide.png)
 
-5. When prompted for a _Private Key Password_, insert the **`VPN passphrase`** that your collected in Step 1. 
+5. When prompted for a _Private Key Password_, insert the **`VPN passphrase`** that your collected in Step 1.
    Your authentication will fail when you complete your passphrase below. This is expected since your verification code timed out while you typed your passphrase.
 
     ![OpenVPN-icon](./images/8.OpenVPN-guide.png)
@@ -217,7 +217,7 @@ You should now be connected to the VPN.
 :::
 
 
-::: expander "macOS" id="5-macos"
+::: expander macOS {#5-macos}
 
 1. Start Tunnelblick and **`Connect`**.
 2. Enter your user name (same as the OpenVPN profile file name).
@@ -243,7 +243,7 @@ You should now be connected to the VPN.
 
 
 
-::: expander "Ubuntu Linux" id="5-linux"
+::: expander Ubuntu Linux {#5-linux}
 
 
 1. Click on the _Network Manager_ icon in the task bar.
@@ -256,7 +256,7 @@ You should now be connected to the VPN.
 ## 6. Verify your VPN connection
 
 
-::: expander "Windows" id="6-windows"
+::: expander Windows {#6-windows}
 
 The OpenVPN notification icon on the taskbar should be green.
 
@@ -265,14 +265,14 @@ The OpenVPN notification icon on the taskbar should be green.
 :::
 
 
-::: expander "MacOS" id="6-macos"
+::: expander MacOS {#6-macos}
 
 A small Tunnelblick window should state "Connected" in green letters with a timer that count the connection length.
 
 :::
 
 
-::: expander "Ubuntu Linux" id="6-linux"
+::: expander Ubuntu Linux {#6-linux}
 
 If you received the notification _VPN connection has been successfully established_, then you are good to go.
 
