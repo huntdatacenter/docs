@@ -18,7 +18,6 @@ See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq) for general questio
 
 :::
 
-
 ## Access
 
 ### Unable to access HUNT Workbench applications
@@ -32,7 +31,6 @@ df -h /mnt/work
 If you have enough resources, try restarting your HUNT Workbench environment. Follow this guide to [restart your workbench](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment).
 
 If this does not help, you may have a look at our [FAQ](/do-science/hunt-workbench/faq) or [Troubleshooting](/do-science/hunt-workbench/troubleshooting) sections.  [Contact us](/contact) on email or reach out in your lab channel on Slack for further investigation if this does not help.
-
 
 ### 400: Bad request
 
@@ -150,9 +148,7 @@ NTNU holds licenses for all employees and students, so contact us if you want MA
 
 You will need to reset your user settings if the MATLAB icons disappeared and your application is stuck loading. Removing user settings can be done in your [workbench terminal](/do-science/hunt-workbench/faq#terminal):
 
-
 <!-- [matlab icons missing](./images/matlab_icons_missing.png) -->
-
 
 ```bash
 ls /mnt/work/workbench/$USER/.matlab
@@ -162,7 +158,6 @@ rm -r /mnt/work/workbench/$USER/.matlab
 ### Missing toolboxes
 
 You will most likely not be able to install these yourself. [Contact us](/contact) on Slack or email if you need new toolboxes in your MATLAB installation.
-
 
 ## LibreOffice
 
@@ -182,9 +177,10 @@ find ~/.local/config/libreoffice -type f -name ".lock" -print -delete
 1. Open your [workbench terminal](/do-science/hunt-workbench/faq#terminal).
 
 2. Copy paste this command to your terminal to reenable the mouse pointer device:
-```bash
-DISPLAY=0 dbus-run-session xfconf-query -c pointers -p /TigerVNC_pointer/Properties/Device_Enabled -s 1
-```
+
+   ```bash
+   DISPLAY=0 dbus-run-session xfconf-query -c pointers -p /TigerVNC_pointer/Properties/Device_Enabled -s 1
+   ```
 
 3. Follow the guide to [Restart your Workbench environment](/do-science/hunt-workbench/faq#how-can-i-restart-my-workbench-environment).
 
