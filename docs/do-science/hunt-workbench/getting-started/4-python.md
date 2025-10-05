@@ -21,10 +21,10 @@ Below is an example on how you create a Conda environment with _Python_ and _IPy
 
 Principal example:
 ```text
-mamba create -n <name> 'python==3.12.*' 'ipykernel' 'pip' 'ipywidgets>=8.1.7,<9.0.0'
+mamba create -n <name> 'python==3.12.*' 'ipykernel' 'pip' 'ipywidgets>=8.1.7,<9.0.0' 'matplotlib' 'pandas'
 ```
 
 Demo example:
 ```bash
-mamba create -n py312 'python==3.12.*' 'ipykernel' 'pip' 'ipywidgets>=8.1.7,<9.0.0'
+mamba create -n py312 'python==3.12.*' 'ipykernel' 'pip' 'ipywidgets>=8.1.7,<9.0.0' 'matplotlib' 'pandas'
 ```
