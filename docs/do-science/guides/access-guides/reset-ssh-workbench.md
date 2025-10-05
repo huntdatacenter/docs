@@ -13,11 +13,11 @@ description: Guide on SSH passphrase reset in workbench.
 
 This guide is currently in pilot phase. Noticed an issue? Share feedback with us on Slack!
 
-::: 
+:::
 
 [[toc]]
 
-::: tip Need a passphrase reset? 
+::: tip Need a passphrase reset?
 
 Order a SSH passphrase reset in our do-science [service desk](/do-science/service-desk/#ssh-passphrase-reset).
 
@@ -32,7 +32,7 @@ Order a SSH passphrase reset in our do-science [service desk](/do-science/servic
 
 ## 2. Design a passphrase
 
-::: expander "Create your own passphrase" id="pass-1"
+::: expander Create your own passphrase {#pass-1}
 
 You will need to update your **`SSH temporary key`** in the steps below. We prefer that you design a **`passphrase`** instead of a password. A passphrase is a series of words that creates a phrase. It should be:
 
@@ -51,7 +51,7 @@ AnalysingPokemon4FunInTheMorning
 ```
 :::
 
-::: expander "Password management" id="pass-2"
+::: expander Password management {#pass-2}
 
 Safest way for you to create a passphrase is to generate and store it using some of the recommended tools below:
 
@@ -75,7 +75,7 @@ After you have successfully completed above steps, you can login to your Workben
 
 Request reissue [here](/do-science/service-desk/#request-lab-access-reissue)
 
-::: 
+:::
 
 Example:
 ```
@@ -84,7 +84,7 @@ Example:
 
 3.1 You should be welcomed by a following screen.
 
-3.2 Type in your username and your temporary SSH passphrase. 
+3.2 Type in your username and your temporary SSH passphrase.
 
 <img src="./images/workbench_passreset_1.png" width="300px">
 
@@ -98,7 +98,7 @@ Your password change will be confirmed by following screen.
 
 3.4 You can login to workbench now with your new passphrase.
 
-3.5 All finished ! You now have full access to your HUNT Workbench and its features. 
+3.5 All finished ! You now have full access to your HUNT Workbench and its features.
 
 
 ## Troubleshooting
