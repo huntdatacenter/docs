@@ -231,7 +231,7 @@ In session preferences change Session type to `XFCE`.
 
 The default setup will need some care to run smoothly:
 
-::: expander "TAB completion"
+::: expander TAB completion
 
 - Fixing TAB completion using shell: (1) Log into your lab machine and (2) run this code:
 
@@ -249,7 +249,7 @@ The default setup will need some care to run smoothly:
 
 :::
 
-::: expander "Copy-paste functionality"
+::: expander Copy-paste functionality
 
 Connect to your lab machine and run this code:
 

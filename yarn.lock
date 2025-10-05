@@ -3474,6 +3474,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-it-container@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "markdown-it-container@npm:4.0.0"
+  checksum: 10c0/768390a6e2c182996b4d0be8dd1a7279d266ca2f29936dd8265ef0954a97606bc3514802cc3576db59e119e241e61924a4a1e601a91480be1c12bef5e28797ae
+  languageName: node
+  linkType: hard
+
 "markdown-it@npm:^14.1.0":
   version: 14.1.0
   resolution: "markdown-it@npm:14.1.0"
@@ -4148,6 +4155,7 @@ __metadata:
     eslint: "npm:^9.35.0"
     happy-dom: "npm:^19.0.2"
     markdown-it: "npm:^14.1.0"
+    markdown-it-container: "npm:^4.0.0"
     pdf-lib: "npm:^1.17.1"
     prettier: "npm:^3.6.2"
     signature_pad: "npm:^5.1.1"

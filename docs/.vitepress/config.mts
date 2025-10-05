@@ -1,5 +1,7 @@
 import { defineConfig, type HeadConfig } from "vitepress"
 
+import container from "markdown-it-container"
+
 // https://vitepress.vuejs.org/config/app-configs#head
 const customHead: HeadConfig[] = [
   ["link", { rel: "shortcut icon", href: "https://www.ntnu.no/assets/images/favicon.ico", sizes: "any" }],
@@ -80,6 +82,33 @@ export default defineConfig({
     },
   },
 
+  markdown: {
+    config: md => {
+      md.use(container, "expander", {
+        render: (tokens: { [x: string]: any }, idx: string | number) => {
+          // console.log(idx)
+          const token = tokens[idx]
+          // console.log(token)
+          const info = token.info.trim().slice("expander".length).trim()
+
+          if (token.nesting > 0) {
+            // opening tag if token nesting increases
+            const title = md.renderInline(info || "Click to expand")
+            const expanderId = token.attrs && token.attrs.length > 0 ? getIdFromAttrs(token.attrs) : null
+
+            return `<div class="expander-wrapper">
+              <a href="#${expanderId}" class="header-anchor" aria-label="Permalink to &quot;${title}&quot;" onclick="document.querySelector('.expander${idx}-${expanderId}').setAttribute('open', '')">&nbsp;</a>
+              <details class="custom-block expander expander${idx}-${expanderId}" id="${expanderId}">
+                <summary>${title}</summary>\n`
+          } else {
+            // closing tag on decrease
+            return "</details></div>\n"
+          }
+        },
+      })
+    },
+  },
+
   vite: {
     resolve: {
       preserveSymlinks: true,
@@ -91,6 +120,11 @@ export default defineConfig({
     },
   },
 })
+
+function getIdFromAttrs(attrs: [string]) {
+  const idElem = attrs.filter(item => Array.isArray(item) && item.length === 2 && item[0] === "id")
+  return idElem.length > 0 ? idElem[0][1] : null
+}
 
 function navigationMenu() {
   return [

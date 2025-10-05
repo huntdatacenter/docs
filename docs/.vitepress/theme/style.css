@@ -294,46 +294,58 @@ code {
 }
 */
 
-/* .custom-block
-  &.expander
-  display
-  block
-  position
-  relative
-  border-radius
-  2px
-  margin
-  1.6em
-  0
-  padding
-  1.6em
-  background-color
-  #eee
-  h3
-  margin-top
-  0
-  h4
-  margin-top
-  0
-  figure,
-p
-  &:last-child
-  margin-bottom
-  0
-  padding-bottom
-  0
-  summary
-  font-weight
-  bold
-  outline
-  none
-  cursor
-  pointer
-  .custom-block.expander {
-  summary:hover .header-anchor {
-    opacity: 1;
-  }
-} */
+.expander-wrapper {
+  position: relative;
+  margin: 16px 0;
+}
+
+.expander-wrapper .header-anchor {
+  position: absolute;
+  left: -0.1em;
+  top: 0.7em;
+  opacity: 0;
+  text-decoration: none;
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+  font-size: 1.5em;
+  transition: opacity 0.2s;
+}
+
+.expander-wrapper:hover .header-anchor {
+  opacity: 1;
+}
+
+.custom-block.expander {
+  border: 0.5px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--vp-c-bg-soft);
+}
+
+.custom-block.expander summary {
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  list-style-position: inside;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.custom-block.expander summary:hover {
+  color: var(--vp-c-brand-1);
+}
+
+/* Ensure content has proper spacing */
+.custom-block.expander summary + * {
+  margin-top: 12px;
+}
+
+/* Style when details is open */
+.custom-block.expander[open] summary {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
 
 .glow {
   animation: highlight 3s;

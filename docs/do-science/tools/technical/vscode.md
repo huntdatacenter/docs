@@ -17,7 +17,6 @@ tags:
 
 [[toc]]
 
-
 ## Connecting to IaaS machine from your local machine
 
 This guide describes a setup where you use VSCode installed on your local computer to connect and analyze data that is located inside a lab machine in HUNT Cloud.
@@ -31,8 +30,6 @@ To complete this guide, you will need (1) [VS Code](https://code.visualstudio.co
 **Without these your will not be able to complete this guide.**
 
 :::
-
-
 
 ### 1. Local computer configuration
 
@@ -56,66 +53,63 @@ Alternatively, open the [VSCode Remote SSH](https://marketplace.visualstudio.com
 
 This step configures the .ssh configuration file on your local computer.
 
-::: expander "macOS" id="macos-1"
+::: expander macOS {#macos-1}
 
 1. Access VSCode `command palette` by shortuct ⇧⌘P (`CMD+shift+P`), or selecting `View --> Command Palette`.
 
-![mvscode1](./images/vscode1.png)
+   ![mvscode1](./images/vscode1.png)
 
 2. A command pallete should pop-up. Type in the following text and press enter:
 
-```
- Remote-SSH: Open SSH Configuration file
-```
+   ```text
+   Remote-SSH: Open SSH Configuration file
+   ```
 
-![mvscode2](./images/vscode2.png)
+   ![mvscode2](./images/vscode2.png)
 
 3. Select config file, f.e. `/Users/username/.ssh/config` from the list.
 
-![mvscode3](./images/vscode3.png)
+   ![mvscode3](./images/vscode3.png)
 
 4. With a little bit of luck, a window with your local ssh configuration file should open in VScode.
 
-![mvscode4](./images/vscode4.png)
+   ![mvscode4](./images/vscode4.png)
 
 5. In the new window, paste your IAAS [ssh-config.txt](/do-science/lab/#_3-1-identify-required-info) file which you have received from us. You can order a new SSH configuration file in the [service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#ssh-configuration).
 
-4. Save your changes before you continue to the next step.
+6. Save your changes before you continue to the next step.
 
 :::
 
-
-::: expander "Windows" id="windows-1"
+::: expander Windows {#windows-1}
 
 1. Access VSCode `command palette` by shortcut `CTRL+SHIFT+P`, or selecting `View --> Command Palette`.
 
 2. A command pallete should pop-up. Type in the following text and press enter:
 
-```
- Remote-SSH: Open SSH Configuration file
-```
+   ```text
+   Remote-SSH: Open SSH Configuration file
+   ```
 
-![mvscode2](./images/vscode2.png)
+   ![mvscode2](./images/vscode2.png)
 
 3. Select config file, f.e. `C:\Users\username\.ssh\config` from the list.
 
-![wvscode9](./images/vscode9.png)
+   ![wvscode9](./images/vscode9.png)
 
 4. With a little bit of luck, a window with your local ssh configuration file should open in VScode.
 
 5. In the new window, paste your IAAS [ssh-config.txt](/do-science/lab/#_3-1-identify-required-info) file which you have received from us. You can order a new SSH configuration file in the [service desk](https://docs.hdc.ntnu.no/do-science/service-desk/#ssh-configuration).
 
-![mvscode4](./images/vscode4.png)
+   ![mvscode4](./images/vscode4.png)
 
-4. Save your changes before you continue to the next step.
+6. Save your changes before you continue to the next step.
 
 :::
 
-
-::: expander "Linux" id="linux-1"
+::: expander Linux {#linux-1}
 See macOS guide.
 :::
-
 
 ### 2. Connect to your lab machine
 
@@ -148,7 +142,6 @@ You should see an option to Open Folder.
 If all is fine, you should now see your lab machine files and selected directory.
 
 **Happy coding!**
-
 
 ## Troubleshooting
 
