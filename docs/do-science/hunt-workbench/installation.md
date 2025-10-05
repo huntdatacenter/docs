@@ -12,13 +12,11 @@ description: Installation guide for HUNT Workbench.
 
 [[toc]]
 
-
 ::: tip Check your onboarding email for Lab access link
 
 We recommend that you follow the tailored guide in **Lab access link** for setting up **Workbench access** instead of this generic guide.
 
 :::
-
 
 ## 1. Before you start
 
@@ -46,7 +44,7 @@ in your lab using a URL name, for example **`demolab.lab.hdc.ntnu.no`**, in your
 
 Select steps for your operating system:
 
-::: expander "Windows" id="2-windows"
+::: expander Windows {#2-windows}
 
 1. Press the Windows key.
 
@@ -74,23 +72,21 @@ Select steps for your operating system:
 
 :::
 
-
-
-::: expander "OS X and macOS" id="2-osx-and-macos"
+::: expander OS X and macOS {#2-osx-and-macos}
 
 1. On your local computer, open your **`/etc/hosts`** file in your preferred text editor.
 
-Example with text editor:
+    Example with text editor:
 
-```
-EDITOR='open -Wne' sudo -e /etc/hosts
-```
+    ```bash
+    EDITOR='open -Wne' sudo -e /etc/hosts
+    ```
 
-Example with vim:
+    Example with vim:
 
-```
-sudo vim /etc/hosts
-```
+    ```bash
+    sudo vim /etc/hosts
+    ```
 
 2. Add (append) the **`hosts record`** line that you received from us on email (look for Lab access link, the line is under point 6.2).
 
@@ -98,40 +94,33 @@ sudo vim /etc/hosts
 
 :::
 
-
-
-::: expander "Ubuntu Linux" id="2-ubuntu-linux"
+::: expander Ubuntu Linux {#2-ubuntu-linux}
 
 1. On your local computer, open your **`/etc/hosts`** file in your preferred text editor.
 
-Example with gedit:
+    Example with gedit:
 
-```
-sudo gedit /etc/hosts
-```
+    ```bash
+    sudo gedit /etc/hosts
+    ```
 
-Example with vim:
+    Example with vim:
 
-```
-sudo vim /etc/hosts
-```
+    ```bash
+    sudo vim /etc/hosts
+    ```
 
 2. Add (append) the **`hosts record`** line that you received from us on email (look for Lab access link, the line is under point 6.2).
 
 3. Close your text editor.
 
 :::
-
-
-
-
-
 
 ## 3. Install your certificates
 
 Let's install the certificates that is required to allow traffic with your HUNT Workbench that is located in your lab.
 
-::: expander "Windows" id="3-windows"
+::: expander Windows {#3-windows}
 
 <!-- Tested version: Windows 10 -->
 
@@ -161,7 +150,7 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
    Before clicking **`YES`**, confirm that you see our thumbprint (fingerprint):
 
-   ```
+   ```text
    ADD9DFEC C998BE44 AC2F254E 75E5EB98 D91879A6
    ```
 
@@ -177,8 +166,7 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 :::
 
-
-::: expander "macOS Ventura 13+" id="3-macos"
+::: expander macOS Ventura 13+ {#3-macos}
 
 1. Open your system profile config file that you got from FileSender (**`<your_user_name>.mobileconfig`**).
 
@@ -190,7 +178,6 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
    ![macventura2](./images/macventura2.png)
 
-
 4. Click **`Install`**  when prompted. Then enter the **`TLS passphrase`** that you received on Signal and confirm.
 
    ![macventura3](./images/macventura3.png)
@@ -201,10 +188,9 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
    ![macos_chrome.png](./images/macos_chrome.png)
 
-
 :::
 
-::: expander "macOS Monterey and older" id="3-macos-monterey-and-older"
+::: expander macOS Monterey and older {#3-macos-monterey-and-older}
 
 <!-- Tested version: MacOS Monterey -->
 
@@ -232,7 +218,7 @@ Let's install the certificates that is required to allow traffic with your HUNT 
 
 :::
 
-::: expander "Ubuntu Linux" id="3-ubuntu-linux"
+::: expander Ubuntu Linux {#3-ubuntu-linux}
 
 <!-- Tested version: Ubuntu 22.04 -->
 
@@ -244,7 +230,7 @@ We recommend that you use the [Google Chrome browser](https://www.google.com/chr
 
 3. In Google Chrome, open the URL **`chrome://settings/certificates`** and navigate to section **`Authorities`** then click the **`Import`** button on the right side of the screen to import `hctsca1.crt` certificate file. Select first option `Trust this certificate for identifying websites`.
 
-![import-ca-trust-websites.png](./images/import-ca-trust-websites.png)
+   ![import-ca-trust-websites.png](./images/import-ca-trust-websites.png)
 
 4. Within **`chrome://settings/certificates`** navigate to section **`Your certificates`** and click the **`Import`** button on the right side of the screen.
 
@@ -253,13 +239,6 @@ We recommend that you use the [Google Chrome browser](https://www.google.com/chr
 6. Restart Chrome.
 
 :::
-
-
-
-
-
-
-
 
 ## 4. Open your HUNT Workbench
 
@@ -318,13 +297,14 @@ If you are getting `DNS_PROBE_FINISHED_NXDOMAIN` error you need to repeat the [S
 
 On MacOS or Linux you can also assure hosts return IP address using the command below:
 
-```
+```text
 # -- Principal example
 getent hosts <labname>.lab.hdc.ntnu.no
 
 # -- Demo example
 getent hosts demolab.lab.hdc.ntnu.no
 ```
+
 :::
 
 #### I don't remember my passphrase
@@ -385,5 +365,3 @@ If you are getting `ERR_CERT_AUTHORITY_INVALID` error:
 A **`502 Bad gateway`** error is an indication that something is wrong with the configuration on the server side. [Contact us](/contact) in your lab channel on Slack or email for further investigations.
 
 :::
-
-
