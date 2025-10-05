@@ -7,8 +7,6 @@ import "./style.css"
 
 // import { VStepperVertical } from "vuetify/labs/VStepperVertical"
 
-import CopyInput from "./components/generic/CopyInput.vue"
-import CopyInputField from "./components/generic/CopyInputField.vue"
 import CopyTextArea from "./components/generic/CopyTextArea.vue"
 import CopyTextField from "./components/generic/CopyTextField.vue"
 
@@ -224,8 +222,6 @@ export default {
     // Search for FREE icons: https://fontawesome.com/search?o=r&m=free
     app.component("font-awesome-icon", FontAwesomeIcon)
 
-    app.component("CopyInput", CopyInput)
-    app.component("CopyInputField", CopyInputField)
     app.component("CopyTextArea", CopyTextArea)
     app.component("CopyTextField", CopyTextField)
     app.component("VuetifyButton", VuetifyButton)
