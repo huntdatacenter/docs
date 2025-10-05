@@ -161,7 +161,8 @@ const redirectPrefixes: Array<[string, string]> = [
     "/do-science/hunt-workbench/getting-started/remote-desktop",
     "/do-science/hunt-workbench/getting-started/10-remote-desktop",
   ] as const,
-  // ["", ""] as const,
+  ["/do-science/guides/openvpn-admin-group/", "/do-science/guides/access-guides/openvpn-admin-group"] as const,
+  ["/do-science/guides/openvpn-admin-group", "/do-science/guides/access-guides/openvpn-admin-group"] as const,
   // ["", ""] as const,
   // ["", ""] as const,
 ].filter(

@@ -20,18 +20,14 @@ description: How to setup OpenVPN group
 
 2. Create an OpenVPN Administrators group on my computer:
 
-<CopyInput
-    :value='`net localgroup /add "OpenVPN Administrators"`'
-    label=""
-    prefix=""
-/>
+    ```powershell
+    net localgroup /add "OpenVPN Administrators"
+    ```
 
 3. Add my user to OpenVPN Administrators group on my computer:
 
-<CopyInput
-    :value='`net localgroup "OpenVPN Administrators" /add "myDomain\\myUsername"`'
-    label=""
-    prefix=""
-/>
+    ```powershell
+    net localgroup "OpenVPN Administrators" /add "myDomain\\myUsername"
+    ```
 
-Replace <code>myDomain</code> and <code>myUsername</code> with user information.
+    Replace <code>myDomain</code> and <code>myUsername</code> with user information.
