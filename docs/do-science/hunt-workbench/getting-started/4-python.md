@@ -8,7 +8,7 @@ description: How to use Python
 
 # Python
 
-<!-- 
+<!--
 
 - How to recreate py310 environment
 - Which packages are preinstalled in py310 environment
@@ -17,12 +17,14 @@ description: How to use Python
 
 ## Create Python environment
 
-Below is an example on how you create a Conda environment with _Python_ and _IPython_ kernel from your [workbench terminal](/do-science/hunt-workbench/faq#terminal)::
+Below is an example on how you create a Conda environment with _Python_ and _IPython_ kernel from your [workbench terminal](/do-science/hunt-workbench/faq#terminal):
 
+Principal example:
+```text
+mamba create -n <name> 'python==3.12.*' 'ipykernel' 'pip' 'ipywidgets>=8.1.7,<9.0.0'
+```
+
+Demo example:
 ```bash
-# -- Principal example 
-mamba create -n <name> 'python==3.12.*' 'ipykernel' 'pip' 'ipywidgets>=8.0.2,<9.0.0'
-
-# -- Demo example
-mamba create -n py312env 'python~=3.12.*' 'ipykernel' 'pip' 'ipywidgets>=8.0.2,<9.0.0'
+mamba create -n py312 'python==3.12.*' 'ipykernel' 'pip' 'ipywidgets>=8.1.7,<9.0.0'
 ```
