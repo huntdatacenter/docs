@@ -12,12 +12,12 @@ description: Guide on how to install a new certificate for your HUNT Workbench.
 
 ::: tip When to use
 
-This guide apply when you have requested a reissue of your expired HUNT Workbench certificate in our do science [service desk](/do-science/service-desk/#hunt-workbench-reissue). 
+This guide apply when you have requested a reissue of your expired HUNT Workbench certificate in our do science [service desk](/do-science/service-desk/#hunt-workbench-reissue).
 
 :::
 
 
-::: expander "Windows" id="windows"
+::: expander Windows {#windows}
 
 1. Open the p12 certificate. Make sure the store location is set to Current User and click next:
 
@@ -50,7 +50,7 @@ This guide apply when you have requested a reissue of your expired HUNT Workbenc
 :::
 
 
-::: expander "macOS Ventura 13+" id="macos"
+::: expander macOS Ventura 13+ {#macos}
 
 1. Open your system profile config file that you got from FileSender (**`<your_user_name>.mobileconfig`**).
 
@@ -75,7 +75,7 @@ This guide apply when you have requested a reissue of your expired HUNT Workbenc
 
 :::
 
-::: expander "macOS Monterey and older" id="macos-monterey-and-older"
+::: expander macOS Monterey and older {#macos-monterey-and-older}
 
 1. Open the system profile config (.mobileconfig) attached in archive.
 
@@ -97,7 +97,7 @@ This guide apply when you have requested a reissue of your expired HUNT Workbenc
 
 :::
 
-::: expander "Ubuntu Linux"
+::: expander Ubuntu Linux
 
 We recommend that you use the [Google Chrome browser](https://www.google.com/chrome/) for predictability.
 
@@ -113,5 +113,5 @@ After the restart of Google Chrome the certificate is ready for network or secur
 
 :::
 
-With a little bit of luck, you should now be able to continue your work as before. Enjoy! [Click here](/do-science/hunt-workbench/) to get back to the HUNT Workbench section. 
+With a little bit of luck, you should now be able to continue your work as before. Enjoy! [Click here](/do-science/hunt-workbench/) to get back to the HUNT Workbench section.
 
