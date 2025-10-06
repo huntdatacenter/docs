@@ -942,7 +942,7 @@ onMounted(() => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="workbenchStepper" hide-actions>
+                  <v-stepper-vertical v-model="workbenchStepper">
                     <v-stepper-vertical-item
                       :complete="workbenchStepper > 1"
                       value="1"
@@ -952,22 +952,26 @@ onMounted(() => {
                         <v-card-text>
                           <v-alert
                             border="start"
-                            border-color="warning"
-                            elevation="2"
+                          border-color="warning"
+                          elevation="2"
+                          class="mb-4"
                           >
                             Make sure you have received your Workbench certificate (<code>.mobileconfig</code>).
                           </v-alert>
                           <v-alert
                             border="start"
-                            border-color="warning"
-                            elevation="2"
+                          border-color="warning"
+                          elevation="2"
                           >
                             Assure working VPN connection.
                           </v-alert>
                         </v-card-text>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 2">Continue</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 4">Skip to Troubleshooting</v-btn>
+
+                      <template v-slot:actions>
+                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 2">Continue</v-btn>
+                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 4">Skip to Troubleshooting</v-btn>
+                      </template>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -981,6 +985,7 @@ onMounted(() => {
                             border="start"
                             border-color="warning"
                             elevation="2"
+                            class="mb-4"
                           >
                             <strong>Permissions to add system profiles required.</strong>
                             <hr class="mt-1 mb-2" />
@@ -1034,8 +1039,10 @@ onMounted(() => {
                           </ol>
                         </v-card-text>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 3">Continue</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 1">Back</v-btn>
+                      <template v-slot:actions>
+                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 3">Continue</v-btn>
+                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 1">Back</v-btn>
+                      </template>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -1049,6 +1056,7 @@ onMounted(() => {
                             border="start"
                             border-color="warning"
                             elevation="2"
+                            class="mb-4"
                           >
                             <strong>Make sure you are connected to the VPN before you access your HUNT Workbench.</strong>
                           </v-alert>
@@ -1056,6 +1064,7 @@ onMounted(() => {
                             border="start"
                             border-color="info"
                             elevation="2"
+                            class="mb-4"
                           >
                             We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
                           </v-alert>
@@ -1117,10 +1126,12 @@ onMounted(() => {
                           </v-alert>
                         </v-card-text>
                       </v-card>
-                      <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper = 4">Troubleshooting</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 2">Back</v-btn>
+                      <template v-slot:actions>
+                        <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
+                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
+                        <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper = 4">Troubleshooting</v-btn>
+                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 2">Back</v-btn>
+                      </template>
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
@@ -1219,9 +1230,12 @@ onMounted(() => {
                           </details>
                         </v-card-text>
                       </v-card>
-                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 3">Back</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Close</v-btn>
+
+                      <template v-slot:actions>
+                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
+                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 3">Back</v-btn>
+                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Close</v-btn>
+                      </template>
                     </v-stepper-vertical-item>
                   </v-stepper-vertical>
                 </v-card-text>
