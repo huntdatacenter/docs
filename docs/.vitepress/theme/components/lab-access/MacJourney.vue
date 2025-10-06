@@ -942,300 +942,288 @@ onMounted(() => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper v-model="workbenchStepper" orientation="vertical">
-                    <v-stepper-header>
-                      <v-stepper-item
-                        :complete="workbenchStepper > 1"
-                        step="1"
-                        title="Checks"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        :complete="workbenchStepper > 2"
-                        step="2"
-                        title="Install your certificates"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        :complete="workbenchStepper > 3"
-                        step="3"
-                        title="Login to Workbench"
-                      />
-                      <v-divider />
-                      <v-stepper-item
-                        step="?"
-                        title="Troubleshooting"
-                      />
-                    </v-stepper-header>
+                  <v-stepper-vertical v-model="workbenchStepper" hide-actions>
+                    <v-stepper-vertical-item
+                      :complete="workbenchStepper > 1"
+                      value="1"
+                      title="Checks"
+                    >
+                      <v-card class="mb-12 pr-4" elevation="0">
+                        <v-card-text>
+                          <v-alert
+                            border="start"
+                            border-color="warning"
+                            elevation="2"
+                          >
+                            Make sure you have received your Workbench certificate (<code>.mobileconfig</code>).
+                          </v-alert>
+                          <v-alert
+                            border="start"
+                            border-color="warning"
+                            elevation="2"
+                          >
+                            Assure working VPN connection.
+                          </v-alert>
+                        </v-card-text>
+                      </v-card>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 2">Continue</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 4">Skip to Troubleshooting</v-btn>
+                    </v-stepper-vertical-item>
 
-                    <v-stepper-window>
-                      <v-stepper-window-item value="1">
-                        <v-card class="mb-12 pr-4" elevation="0">
-                          <v-card-text>
-                            <v-alert
-                              border="start"
-                              border-color="warning"
-                              elevation="2"
-                            >
-                              Make sure you have received your Workbench certificate (<code>.mobileconfig</code>).
-                            </v-alert>
-                            <v-alert
-                              border="start"
-                              border-color="warning"
-                              elevation="2"
-                            >
-                              Assure working VPN connection.
-                            </v-alert>
-                          </v-card-text>
-                        </v-card>
-                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
-                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 4">Skip to Troubleshooting</v-btn>
-                      </v-stepper-window-item>
+                    <v-stepper-vertical-item
+                      :complete="workbenchStepper > 2"
+                      value="2"
+                      title="Install your certificates"
+                    >
+                      <v-card class="mb-8 pr-4" elevation="0">
+                        <v-card-text>
+                          <v-alert
+                            border="start"
+                            border-color="warning"
+                            elevation="2"
+                          >
+                            <strong>Permissions to add system profiles required.</strong>
+                            <hr class="mt-1 mb-2" />
+                            If you do not see Profiles section in your System settings make sure to ask
+                            IT department in your organization for assistance.
+                          </v-alert>
 
-                      <v-stepper-window-item value="2">
-                        <v-card class="mb-8 pr-4" elevation="0">
-                          <v-card-text>
-                            <v-alert
-                              border="start"
-                              border-color="warning"
-                              elevation="2"
-                            >
-                              <strong>Permissions to add system profiles required.</strong>
-                              <hr class="mt-1 mb-2" />
-                              If you do not see Profiles section in your System settings make sure to ask
-                              IT department in your organization for assistance.
-                            </v-alert>
+                          Let's install the certificates that are required to allow traffic with HUNT Workbench that is located in your lab.
+                          <br /><br />
+                          <ol>
+                            <li>
+                              Open your system profile config file that you got from FileSender (<code>{{ labName }}-{{ username }}.mobileconfig</code>).
+                            </li>
+                            <li>
+                              Open <code style="font-weight: bold;">System settings</code>
+                            </li>
+                            <li>
+                              Open section <code style="font-weight: bold;">General</code>, scroll to the bottom of the section and select subsection <code style="font-weight: bold;">Device management</code>.
+                              <br />
+                              <img class="pa-2" alt="device-management" src="/img/workbench/macos-device-management.png" style="max-width: 500px;" />
+                              <br />
+                              (On MacOS Sonoma or older open section <code style="font-weight: bold;">Privacy & Security</code>, scroll to the bottom of the section and select <code style="font-weight: bold;">Profiles</code>)
+                              <br />
+                              <img class="pa-2" alt="system-profiles" src="/img/workbench/macventura1.png" style="max-width: 500px;" />
+                              <br />
+                            </li>
+                            <li>
+                              Select certificate required for installation ({{  labName }}-{{ username }}-client).
+                              <br />
+                              <img class="pa-2" alt="macventura2" src="/img/workbench/macventura2.png" style="max-width: 300px;" />
+                              <br />
+                            </li>
+                            <li>
+                              Click Install when prompted. Then enter the TLS passphrase that you received on Signal and confirm.
+                              <br />
+                              <img class="pa-2" alt="macventura3" src="/img/workbench/macventura3.png" style="max-width: 400px;" />
+                              <br />
+                            </li>
+                            <li>
+                              Now quit your internet browser <code style="font-weight: bold;">CMD + Q</code> (we recommend <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a>).<br />
+                              and restart it for the certificate to get recognized.
+                            </li>
+                            <li>
+                              When you open your HUNT Workbench for the first time you will be asked for your local macOS password.
+                              This allows the browser to access your client certificate stored in your local Keychain. <br />
+                              After filling in the password, confirm by clicking <code style="font-weight: bold;">Always allow</code> / <code style="font-weight: bold;">Tillat alltid</code>.
+                              <br />
+                              <img class="pa-2" alt="macos_chrome" src="/img/workbench/macos_chrome.png" style="max-width: 400px;" />
+                              <br />
+                            </li>
+                          </ol>
+                        </v-card-text>
+                      </v-card>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 3">Continue</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 1">Back</v-btn>
+                    </v-stepper-vertical-item>
 
-                            Let's install the certificates that are required to allow traffic with HUNT Workbench that is located in your lab.
-                            <br /><br />
-                            <ol>
-                              <li>
-                                Open your system profile config file that you got from FileSender (<code>{{ labName }}-{{ username }}.mobileconfig</code>).
-                              </li>
-                              <li>
-                                Open <code style="font-weight: bold;">System settings</code>
-                              </li>
-                              <li>
-                                Open section <code style="font-weight: bold;">General</code>, scroll to the bottom of the section and select subsection <code style="font-weight: bold;">Device management</code>.
-                                <br />
-                                <img class="pa-2" alt="device-management" src="/img/workbench/macos-device-management.png" style="max-width: 500px;" />
-                                <br />
-                                (On MacOS Sonoma or older open section <code style="font-weight: bold;">Privacy & Security</code>, scroll to the bottom of the section and select <code style="font-weight: bold;">Profiles</code>)
-                                <br />
-                                <img class="pa-2" alt="system-profiles" src="/img/workbench/macventura1.png" style="max-width: 500px;" />
-                                <br />
-                              </li>
-                              <li>
-                                Select certificate required for installation ({{  labName }}-{{ username }}-client).
-                                <br />
-                                <img class="pa-2" alt="macventura2" src="/img/workbench/macventura2.png" style="max-width: 300px;" />
-                                <br />
-                              </li>
-                              <li>
-                                Click Install when prompted. Then enter the TLS passphrase that you received on Signal and confirm.
-                                <br />
-                                <img class="pa-2" alt="macventura3" src="/img/workbench/macventura3.png" style="max-width: 400px;" />
-                                <br />
-                              </li>
-                              <li>
-                                Now quit your internet browser <code style="font-weight: bold;">CMD + Q</code> (we recommend <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a>).<br />
-                                and restart it for the certificate to get recognized.
-                              </li>
-                              <li>
-                                When you open your HUNT Workbench for the first time you will be asked for your local macOS password.
-                                This allows the browser to access your client certificate stored in your local Keychain. <br />
-                                After filling in the password, confirm by clicking <code style="font-weight: bold;">Always allow</code> / <code style="font-weight: bold;">Tillat alltid</code>.
-                                <br />
-                                <img class="pa-2" alt="macos_chrome" src="/img/workbench/macos_chrome.png" style="max-width: 400px;" />
-                                <br />
-                              </li>
-                            </ol>
-                          </v-card-text>
-                        </v-card>
-                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper++">Continue</v-btn>
-                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
-                      </v-stepper-window-item>
+                    <v-stepper-vertical-item
+                      :complete="workbenchStepper > 3"
+                      value="3"
+                      title="Login to Workbench"
+                    >
+                      <v-card class="mb-8 pr-16" elevation="0">
+                        <v-card-text>
+                          <v-alert
+                            border="start"
+                            border-color="warning"
+                            elevation="2"
+                          >
+                            <strong>Make sure you are connected to the VPN before you access your HUNT Workbench.</strong>
+                          </v-alert>
+                          <v-alert
+                            border="start"
+                            border-color="info"
+                            elevation="2"
+                          >
+                            We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
+                          </v-alert>
 
-                      <v-stepper-window-item value="3">
-                        <v-card class="mb-8 pr-16" elevation="0">
-                          <v-card-text>
-                            <v-alert
-                              border="start"
-                              border-color="warning"
-                              elevation="2"
-                            >
-                              <strong>Make sure you are connected to the VPN before you access your HUNT Workbench.</strong>
-                            </v-alert>
-                            <v-alert
-                              border="start"
-                              border-color="info"
-                              elevation="2"
-                            >
-                              We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
-                            </v-alert>
+                          <ol>
+                            <li>Open your web browser.</li>
+                            <li>
+                              Open the URL address below to access your lab in your web browser:
+                              <br />
+                              <strong><a :href="`https://${fqdn}`" target="_blank">https://{{ fqdn }}</a></strong>
+                              <br /><br />
+                              You may get a User Identification Request for your new certificate.<br />
+                              Verify that the certificates are issued by HUNT Cloud:
+                              <br />
+                              <div class="language- extra-class"><pre class="language-text">
+                                <code v-html='`Issuer: "${tlsClientIssuer}"\nOrganization: "HUNT Cloud"\nIssued Under: "HUNT Cloud Trust Services"`'></code>
+                              </pre></div>
+                              <br />
+                              Ensure that the <code>Remember this decision</code> box is checked, and click <code>OK</code>.
+                              <br />
+                              <img class="pa-2" alt="chrome_select_certificate_confirm" src="/img/workbench/chrome_select_certificate_confirm.png" style="max-width: 300px;" />
+                              <br />
+                            </li>
+                            <li class="mb-2">
+                              Sign in with your HUNT Cloud <strong>username</strong> and <strong>lab passphrase</strong>.<br />
+                              Lab passphrase is the same passphrase that you created yourself on your first SSH login.<br />
+                              <CopyTextField
+                                :model-value="username"
+                                class="my-2"
+                                label="Username"
+                                prefix=""
+                                placeholder="Your link is missing access token"
+                              />
+                              If you did not create a lab passphrase yet use a temporary SSH passphrase that you received
+                              from us on Signal message to login and then follow passphrase change flow.
+                              <br />
+                              <img class="pa-2" alt="workbench-login-form" src="/img/workbench/workbench-login-form.png" style="max-width: 250px;" />
+                              <br />
+                            </li>
+                            <li>
+                              With a little bit of luck you should now see your new HUNT Workbench.
+                              Feel free to read our <a href="/do-science/hunt-workbench/getting-started/" target="_blank">getting started guide</a>.
+                              <br />
+                              <strong>Click around and explore your new world!</strong>
+                            </li>
+                          </ol>
+                          <br />
 
-                            <ol>
-                              <li>Open your web browser.</li>
-                              <li>
-                                Open the URL address below to access your lab in your web browser:
-                                <br />
-                                <strong><a :href="`https://${fqdn}`" target="_blank">https://{{ fqdn }}</a></strong>
-                                <br /><br />
-                                You may get a User Identification Request for your new certificate.<br />
-                                Verify that the certificates are issued by HUNT Cloud:
-                                <br />
-                                <div class="language- extra-class"><pre class="language-text">
-                                  <code v-html='`Issuer: "${tlsClientIssuer}"\nOrganization: "HUNT Cloud"\nIssued Under: "HUNT Cloud Trust Services"`'></code>
-                                </pre></div>
-                                <br />
-                                Ensure that the <code>Remember this decision</code> box is checked, and click <code>OK</code>.
-                                <br />
-                                <img class="pa-2" alt="chrome_select_certificate_confirm" src="/img/workbench/chrome_select_certificate_confirm.png" style="max-width: 300px;" />
-                                <br />
-                              </li>
-                              <li class="mb-2">
-                                Sign in with your HUNT Cloud <strong>username</strong> and <strong>lab passphrase</strong>.<br />
-                                Lab passphrase is the same passphrase that you created yourself on your first SSH login.<br />
-                                <CopyTextField
-                                  :model-value="username"
-                                  class="my-2"
-                                  label="Username"
-                                  prefix=""
-                                  placeholder="Your link is missing access token"
-                                />
-                                If you did not create a lab passphrase yet use a temporary SSH passphrase that you received
-                                from us on Signal message to login and then follow passphrase change flow.
-                                <br />
-                                <img class="pa-2" alt="workbench-login-form" src="/img/workbench/workbench-login-form.png" style="max-width: 250px;" />
-                                <br />
-                              </li>
-                              <li>
-                                With a little bit of luck you should now see your new HUNT Workbench.
-                                Feel free to read our <a href="/do-science/hunt-workbench/getting-started/" target="_blank">getting started guide</a>.
-                                <br />
-                                <strong>Click around and explore your new world!</strong>
-                              </li>
-                            </ol>
-                            <br />
+                          <img class="pa-2" alt="JupyterLab" src="/img/workbench/JupyterLab.png" />
 
-                            <img class="pa-2" alt="JupyterLab" src="/img/workbench/JupyterLab.png" />
+                          <v-alert
+                            border="start"
+                            border-color="info"
+                            elevation="2"
+                          >
+                            <b>Remember to bookmark your Lab address</b>
+                            <hr class="mt-1 mb-2" />
+                            <code>https://{{fqdn}}</code>
+                          </v-alert>
+                        </v-card-text>
+                      </v-card>
+                      <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
+                      <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper = 4">Troubleshooting</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 2">Back</v-btn>
+                    </v-stepper-vertical-item>
 
-                            <v-alert
-                              border="start"
-                              border-color="info"
-                              elevation="2"
-                            >
-                              <b>Remember to bookmark your Lab address</b>
-                              <hr class="mt-1 mb-2" />
-                              <code>https://{{fqdn}}</code>
-                            </v-alert>
-                          </v-card-text>
-                        </v-card>
-                        <v-btn color="success" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Finish</v-btn>
-                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                        <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper++">Troubleshooting</v-btn>
-                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
-                      </v-stepper-window-item>
+                    <v-stepper-vertical-item
+                      value="4"
+                      title="Troubleshooting"
+                    >
+                      <v-card class="mb-8 pr-4 ml-0 pl-0" elevation="0">
+                        <v-card-text>
+                          This section includes issues that you might encounter during your first setup.
+                          See our <a href="/do-science/hunt-workbench/faq/" target="_blank">HUNT Workbench FAQ</a> and <a href="/do-science/hunt-workbench/troubleshooting/" target="_blank">HUNT Workbench Troubleshooting</a> if you do not find your answers below.
 
-                      <v-stepper-window-item value="4">
-                        <v-card class="mb-8 pr-4 ml-0 pl-0" elevation="0">
-                          <v-card-text>
-                            This section includes issues that you might encounter during your first setup.
-                            See our <a href="/do-science/hunt-workbench/faq/" target="_blank">HUNT Workbench FAQ</a> and <a href="/do-science/hunt-workbench/troubleshooting/" target="_blank">HUNT Workbench Troubleshooting</a> if you do not find your answers below.
+                          <details class="my-2"><summary style="cursor: pointer;"><strong>This site can't be reached</strong></summary>
+                            <div class="pl-4 pr-16 py-2">
+                              1. If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <code style="font-size: 90% !important;">{{ hostsFileId }}. Workbench - hosts file</code> guide.
+                              <br/>
+                              2. If you are getting <code>ERR_CONNECTION_TIMED_OUT</code> error you need to make sure that you are connected to VPN. If you are able to ssh into lab your VPN is fine, and you need to repeat the <code>6. Workbench - hosts file</code> guide.
+                            </div>
+                          </details>
 
-                            <details class="my-2"><summary style="cursor: pointer;"><strong>This site can't be reached</strong></summary>
-                              <div class="pl-4 pr-16 py-2">
-                                1. If you are getting <code>DNS_PROBE_FINISHED_NXDOMAIN</code> error you need to repeat the <code style="font-size: 90% !important;">{{ hostsFileId }}. Workbench - hosts file</code> guide.
-                                <br/>
-                                2. If you are getting <code>ERR_CONNECTION_TIMED_OUT</code> error you need to make sure that you are connected to VPN. If you are able to ssh into lab your VPN is fine, and you need to repeat the <code>6. Workbench - hosts file</code> guide.
-                              </div>
-                            </details>
+                          <details class="my-2"><summary style="cursor: pointer;"><strong>I don't remember my passphrase</strong></summary>
+                            <div class="pl-4 pr-16 py-2">
+                              Don't worry. Request a <a href="/do-science/service-desk/#ssh-passphrase-reset" target="_blank">reset of SSH passphrase</a> in our "do-science" Service desk.
+                            </div>
+                          </details>
 
-                            <details class="my-2"><summary style="cursor: pointer;"><strong>I don't remember my passphrase</strong></summary>
-                              <div class="pl-4 pr-16 py-2">
-                                Don't worry. Request a <a href="/do-science/service-desk/#ssh-passphrase-reset" target="_blank">reset of SSH passphrase</a> in our "do-science" Service desk.
-                              </div>
-                            </details>
+                          <details class="my-2"><summary style="cursor: pointer;"><strong>Nginx error - 403 Forbidden</strong></summary>
+                            <div class="pl-4 pr-16 py-2">
+                              This error means that you are attempting to connect without client certificate.
+                              <br /><br/>
+                              There are 3 different causes each requires a different approach
+                              <ol>
+                                <li>
+                                  If you have just installed a fresh client certificate, <strong>restart your computer</strong> to make sure certificates are applied.
+                                </li>
+                                <br />
+                                <li>
+                                  If you have not yet installed a fresh client certificate on this computer, review the section <strong>Install your certificates</strong> above. Start by click on blue button <code>Start again</code>.
+                                </li>
+                                <br />
+                                <li>
+                                  If you have used Workbench in {{ labName }} lab before, this error means that your certificate expired and you can follow this link to <a href="/do-science/service-desk/#hunt-workbench-reissue" target="_blank">request Workbench reissue</a>. Once your request is processed we will send you a fresh certificate.
+                                </li>
+                              </ol>
+                            </div>
+                          </details>
 
-                            <details class="my-2"><summary style="cursor: pointer;"><strong>Nginx error - 403 Forbidden</strong></summary>
-                              <div class="pl-4 pr-16 py-2">
-                                This error means that you are attempting to connect without client certificate.
-                                <br /><br/>
-                                There are 3 different causes each requires a different approach
-                                <ol>
-                                  <li>
-                                    If you have just installed a fresh client certificate, <strong>restart your computer</strong> to make sure certificates are applied.
-                                  </li>
+                          <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Did Not Connect</strong></summary>
+                            <div class="pl-4 pr-16 py-2">
+                              <v-alert
+                                border="start"
+                                border-color="info"
+                                elevation="2"
+                              >
+                                We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
+                              </v-alert>
+
+                              Firefox may require that you manually import the HUNT Cloud Certificate Authority to consider it trusted.
+
+                              If you see Error code: <code>SEC_ERROR_UNKNOWN_ISSUER</code> when accessing Workbench follow these steps:
+
+                              <ol>
+                                <li>
+                                  Download our public CA certificate from <a href="https://pki.hdc.ntnu.no/hctsca1.crt" target="_blank">https://pki.hdc.ntnu.no/hctsca1.crt</a>
+                                </li>
+                                <li>
+                                  Open the following Firefox URL: <code>about:preferences#privacy</code>.
+                                </li>
+                                <li>
+                                  Scroll down to section <code>Certificates</code> and click on <code>View Certificates</code>.
                                   <br />
-                                  <li>
-                                    If you have not yet installed a fresh client certificate on this computer, review the section <strong>Install your certificates</strong> above. Start by click on blue button <code>Start again</code>.
-                                  </li>
+                                  <img class="pa-2" alt="mac-firefox-certificates" src="/img/workbench/mac-firefox-certificates.png" />
                                   <br />
-                                  <li>
-                                    If you have used Workbench in {{ labName }} lab before, this error means that your certificate expired and you can follow this link to <a href="/do-science/service-desk/#hunt-workbench-reissue" target="_blank">request Workbench reissue</a>. Once your request is processed we will send you a fresh certificate.
-                                  </li>
-                                </ol>
-                              </div>
-                            </details>
+                                </li>
+                                <li>
+                                  Switch to tab <code>Authorities</code> and click on <code>Import</code>.
+                                  <br />
+                                  <img class="pa-2" alt="mac-firefox-import-cert" src="/img/workbench/mac-firefox-import-cert.png" />
+                                  <br />
+                                </li>
+                                <li>
+                                  Select <code>hctsca1.crt</code> and check option <code>Trust this CA to identify websites</code>.
+                                  <br />
+                                  <img class="pa-2" alt="mac-firefox-trust-ca" src="/img/workbench/mac-firefox-trust-ca.png" />
+                                  <br />
+                                </li>
+                              </ol>
+                            </div>
+                          </details>
 
-                            <details class="my-2"><summary style="cursor: pointer;"><strong>Firefox - Did Not Connect</strong></summary>
-                              <div class="pl-4 pr-16 py-2">
-                                <v-alert
-                                  border="start"
-                                  border-color="info"
-                                  elevation="2"
-                                >
-                                  We recommend to use <a href="https://www.google.com/chrome/" target="_blank">Google Chrome browser</a> for all HUNT Workbench applications to work correctly.
-                                </v-alert>
-
-                                Firefox may require that you manually import the HUNT Cloud Certificate Authority to consider it trusted.
-
-                                If you see Error code: <code>SEC_ERROR_UNKNOWN_ISSUER</code> when accessing Workbench follow these steps:
-
-                                <ol>
-                                  <li>
-                                    Download our public CA certificate from <a href="https://pki.hdc.ntnu.no/hctsca1.crt" target="_blank">https://pki.hdc.ntnu.no/hctsca1.crt</a>
-                                  </li>
-                                  <li>
-                                    Open the following Firefox URL: <code>about:preferences#privacy</code>.
-                                  </li>
-                                  <li>
-                                    Scroll down to section <code>Certificates</code> and click on <code>View Certificates</code>.
-                                    <br />
-                                    <img class="pa-2" alt="mac-firefox-certificates" src="/img/workbench/mac-firefox-certificates.png" />
-                                    <br />
-                                  </li>
-                                  <li>
-                                    Switch to tab <code>Authorities</code> and click on <code>Import</code>.
-                                    <br />
-                                    <img class="pa-2" alt="mac-firefox-import-cert" src="/img/workbench/mac-firefox-import-cert.png" />
-                                    <br />
-                                  </li>
-                                  <li>
-                                    Select <code>hctsca1.crt</code> and check option <code>Trust this CA to identify websites</code>.
-                                    <br />
-                                    <img class="pa-2" alt="mac-firefox-trust-ca" src="/img/workbench/mac-firefox-trust-ca.png" />
-                                    <br />
-                                  </li>
-                                </ol>
-                              </div>
-                            </details>
-
-                            <details class="my-2"><summary style="cursor: pointer;"><strong>502 Bad gateway</strong></summary>
-                              <div class="pl-4 pr-16 py-2">
-                                A 502 Bad gateway error when accessing <a :href="`https://${fqdn}/hub/home`" target="_blank">https://{{ fqdn }}/hub/home</a>
-                                is an indication that something is wrong with the configuration on the server side.<br />
-                                Contact us in your lab channel on Slack (#lab-{{ labName }}) or <a href="/do-science/service-desk/#general-service-request" target="_blank">Service desk email</a> further investigations.
-                              </div>
-                            </details>
-                          </v-card-text>
-                        </v-card>
-                        <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
-                        <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Close</v-btn>
-                      </v-stepper-window-item>
-                    </v-stepper-window>
-                  </v-stepper>
+                          <details class="my-2"><summary style="cursor: pointer;"><strong>502 Bad gateway</strong></summary>
+                            <div class="pl-4 pr-16 py-2">
+                              A 502 Bad gateway error when accessing <a :href="`https://${fqdn}/hub/home`" target="_blank">https://{{ fqdn }}/hub/home</a>
+                              is an indication that something is wrong with the configuration on the server side.<br />
+                              Contact us in your lab channel on Slack (#lab-{{ labName }}) or <a href="/do-science/service-desk/#general-service-request" target="_blank">Service desk email</a> further investigations.
+                            </div>
+                          </details>
+                        </v-card-text>
+                      </v-card>
+                      <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 3">Back</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchDialog = false; workbenchStepper = 1;">Close</v-btn>
+                    </v-stepper-vertical-item>
+                  </v-stepper-vertical>
                 </v-card-text>
               </v-card>
             </v-dialog>
