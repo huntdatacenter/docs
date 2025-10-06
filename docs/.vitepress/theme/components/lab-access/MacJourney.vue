@@ -560,23 +560,12 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} Reconnect to entry using your new passphrase.
-              <v-text-field
+              <CopyTextField
                 :model-value="`ssh ${username}@${ipAddress}`"
-                ref="macStep7"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="~"
-                variant="outlined"
-                density="compact"
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyText(`ssh ${username}@${ipAddress}`)">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               Expected result:
@@ -586,23 +575,12 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} When logged into your <code>entry</code> machine, connect to your <code>home</code> machine.
-              <v-text-field
+              <CopyTextField
                 :model-value="`ssh -o StrictHostKeyChecking=accept-new home`"
-                ref="macStep8"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 :prefix="`${username}@${labName}-entry:~$`"
-                variant="outlined"
-                density="compact"
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyText(`ssh -o StrictHostKeyChecking=accept-new home`)">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ getNextItem(passChangeId) }} You will be prompted to type your <code>SSH temporary key</code> from Signal message.
@@ -617,24 +595,12 @@ onMounted(() => {
               </pre></div>
             </v-col>
             <v-col cols="12">
-              {{ getNextItem(passChangeId) }} Verify a successful passphrase update by logging into your home machine.
-              <v-text-field
+              {{ getNextItem(passChangeId) }} Verify a successful passphrase update by logging into your home machine.<CopyTextField
                 :model-value="`ssh home`"
-                ref="macStep11"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 :prefix="`${username}@${labName}-entry:~$`"
-                variant="outlined"
-                density="compact"
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyText(`ssh home`)">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               Expected result:
@@ -754,46 +720,33 @@ onMounted(() => {
 
             <v-col cols="12">
               {{ getNextItem(sshConfId, true) }} Open new Terminal window and assure SSH Config file exists. No output is expected.
-              <v-text-field
+              <CopyTextField
                 :model-value="`touch ~/.ssh/config`"
-                ref="macSshConfig1"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="~"
-                variant="outlined"
-                density="compact"
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyText(`touch ~/.ssh/config`)">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ getNextItem(sshConfId) }} Open SSH Config file.
-              <v-text-field
+              <CopyTextField
                 :model-value="`open -Wne ~/.ssh/config`"
-                ref="macSshConfig2"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="~"
-                variant="outlined"
-                density="compact"
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyText(`open -Wne ~/.ssh/config`)">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
               {{ getNextItem(sshConfId) }} Replace old lab configuration in SSH Config opened in Text Editor and then save changes.
+              <CopyTextArea
+                :model-value="configText"
+                class="my-2"
+                label="SSH Config file"
+                placeholder="Your link is missing access token"
+                rows="11"
+              />
               <v-textarea
                 :model-value="configText"
                 ref="ssh-config-mac"
@@ -814,23 +767,12 @@ onMounted(() => {
             </v-col>
             <v-col v-else cols="12">
               {{ getNextItem(sshConfId) }} Add lab configuration into SSH Config opened in Text Editor and then save changes.
-              <v-textarea
+              <CopyTextArea
                 :model-value="configText"
-                ref="ssh-config-mac"
                 label="SSH Config file"
                 placeholder="Your link is missing access token"
-                persistent-placeholder
-                class="py-2 mt-2"
-                variant="outlined"
-                readonly
                 rows="11"
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyTextArea(configText)">&#xe14d;</a>
-                </template>
-              </v-textarea>
+              />
             </v-col>
             <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
               {{ getNextItem(sshConfId) }} Remove old fingerprint.
@@ -843,23 +785,13 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               {{ getNextItem(sshConfId) }} Test by connecting straight into home machine.
-              <v-text-field
+              <CopyTextField
                 :model-value="`ssh -o StrictHostKeyChecking=accept-new ${labName}`"
-                ref="ssh-config-lab-mac"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="~"
-                variant="outlined"
-                density="compact"
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyText(`ssh -o StrictHostKeyChecking=accept-new ${labName}`)">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ getNextItem(sshConfId) }} Close Terminal window to make sure you are disconnected from your lab.

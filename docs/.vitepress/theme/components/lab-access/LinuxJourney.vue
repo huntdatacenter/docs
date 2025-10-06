@@ -716,83 +716,43 @@ onMounted(() => {
             <!-- Place in <code>~/.ssh/config</code>. -->
             <v-col cols="12">
               {{ getNextItem(sshConfId, true) }} Open new Terminal window (<code>CTRL + ALT + T</code>) and assure SSH Config file exists. No output is expected.
-              <v-text-field
+              <CopyTextField
                 :model-value="`touch ~/.ssh/config`"
-                ref="linuxSshConfig1"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="$"
-                variant="outlined"
-                density="compact"
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyText('linuxSshConfig1')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ getNextItem(sshConfId) }} Open SSH Config file.
-              <v-text-field
+              <CopyTextField
                 :model-value="`gedit ~/.ssh/config`"
-                ref="linuxSshConfig2"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="$"
-                variant="outlined"
-                density="compact"
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyText('linuxSshConfig2')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
               {{ getNextItem(sshConfId) }} Replace old lab configuration in SSH Config opened in Text Editor and then save changes.
-              <v-textarea
-                v-model.trim="configText"
-                ref="ssh-config-linux"
+              <CopyTextArea
+                :model-value="configText"
+                class="my-2"
                 label="SSH Config file"
                 placeholder="Your link is missing access token"
-                persistent-placeholder
-                class="py-2 mt-2"
-                variant="outlined"
-                readonly
                 rows="11"
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyTextArea('ssh-config-linux')">&#xe14d;</a>
-                </template>
-              </v-textarea>
+              />
             </v-col>
             <v-col v-else cols="12">
               {{ getNextItem(sshConfId) }} Add lab configuration into SSH Config opened in Text Editor and then save changes.
-              <v-textarea
-                v-model.trim="configText"
-                ref="ssh-config-linux"
+              <CopyTextArea
+                :model-value="configText"
+                class="my-2"
                 label="SSH Config file"
                 placeholder="Your link is missing access token"
-                persistent-placeholder
-                class="py-2 mt-2"
-                variant="outlined"
-                readonly
                 rows="11"
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyTextArea('ssh-config-linux')">&#xe14d;</a>
-                </template>
-              </v-textarea>
+              />
             </v-col>
             <!-- Only show for lab migration scenarios -->
             <v-col v-if="['lab_migration'].includes(filterGuidesByType)" cols="12">
@@ -806,23 +766,13 @@ onMounted(() => {
             </v-col>
             <v-col cols="12">
               {{ getNextItem(sshConfId) }} Test by connecting straight into home machine.
-              <v-text-field
+              <CopyTextField
                 :model-value="`ssh -o StrictHostKeyChecking=accept-new ${labName}`"
-                ref="ssh-config-lab-linux"
+                class="my-2"
                 label=""
-                placeholder="Your link is missing access token"
-                persistent-placeholder
                 prefix="$"
-                variant="outlined"
-                density="compact"
-                readonly
-                hide-details
-                @focus="$event.target.select()"
-              >
-                <template v-slot:append-inner>
-                  <a class="material-icons content_copy" @click="copyText('ssh-config-lab-linux')">&#xe14d;</a>
-                </template>
-              </v-text-field>
+                placeholder="Your link is missing access token"
+              />
             </v-col>
             <v-col cols="12">
               {{ getNextItem(sshConfId) }} Close Terminal window to make sure you are disconnected from your lab.
