@@ -303,6 +303,12 @@ onMounted(() => {
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
+                          :item-title="
+                            item => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)
+                          "
+                          :item-value="
+                            item => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)
+                          "
                           placeholder=""
                           persistent-placeholder
                           chips
@@ -316,6 +322,12 @@ onMounted(() => {
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
+                          :item-title="
+                            item => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)
+                          "
+                          :item-value="
+                            item => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)
+                          "
                           placeholder=""
                           persistent-placeholder
                           chips
@@ -328,8 +340,11 @@ onMounted(() => {
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
+                          :item-title="
+                            item => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)
+                          "
                           :item-value="
-                            item => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : value)
+                            item => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)
                           "
                           placeholder=""
                           persistent-placeholder
