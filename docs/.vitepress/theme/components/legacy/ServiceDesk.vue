@@ -341,7 +341,7 @@ onMounted(() => {
                           v-model="formData[item.key]"
                           :label="item.label"
                           :item-title="
-                            item => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)
+                            item => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item.header)
                           "
                           :item-value="
                             item => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)

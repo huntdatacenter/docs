@@ -1607,13 +1607,17 @@ request_workbench_access:
       key: "tools",
       field: "selector",
       options: [
-        "Rstudio",
-        "Jupyter",
-        "Python",
+        {text: "Rstudio", value: "Rstudio"},
+        {text: "Jupyter", value: "Jupyter"},
+        {text: "Python", value: "Python"},
         {text: "MATLAB (need license)", value: "MATLAB"},
         {text: "Stata (need license)", value: "Stata"}
       ],
-      default: ["Rstudio", "Jupyter", "Python"],
+      default: [
+        {text: "Rstudio", value: "Rstudio"},
+        {text: "Jupyter", value: "Jupyter"},
+        {text: "Python", value: "Python"},
+      ],
     },
   ]
   requirements: [
