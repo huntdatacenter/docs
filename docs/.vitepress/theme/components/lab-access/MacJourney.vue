@@ -254,7 +254,7 @@ onMounted(() => {
               persistent
               scrollable
               max-width="960px"
-              @keydown.esc="vpnDialog = false"
+              @keydown.esc="vpnDialog = false; vpnStepper = 1"
             >
               <v-card>
                 <v-card-title class="pa-0">
@@ -813,7 +813,7 @@ onMounted(() => {
             <VideoGuide
               v-model="mainExpansionPanel"
               title="Workbench - Hosts file"
-              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-workbench-certificate-v1.mp4/f7c17ea5-9c0f-2f3b-9905-bd3618bab685?t=1716815389835"
+              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-workbench-hosts-v1.mp4/91354bdb-7e24-6300-5fab-38a3b58a003e?t=1716815396032"
               poster="/img/video-covers/lab-access-macOS-workbench-hosts-v1.jpg"
             />
 
@@ -895,19 +895,22 @@ onMounted(() => {
           </v-expansion-panel-title>
           <v-expansion-panel-text id="workbench" class="mt-2">
 
-            <VideoGuide
-              v-model="mainExpansionPanel"
-              title="Workbench - Client certificate"
-              video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-workbench-hosts-v1.mp4/91354bdb-7e24-6300-5fab-38a3b58a003e?t=1716815396032"
-              poster="/img/video-covers/lab-access-macOS-workbench-certificate-v1.jpg"
-            />
+            <v-row class="my-0 pa-0 mx-1">
+              <v-col cols="12 ma-0 py-0">
+                <VideoGuide
+                  v-model="mainExpansionPanel"
+                  title="Workbench - Client certificate"
+                  video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-workbench-certificate-v1.mp4/f7c17ea5-9c0f-2f3b-9905-bd3618bab685?t=1716815389835"
+                  poster="/img/video-covers/lab-access-macOS-workbench-certificate-v1.jpg"
+                />
+              </v-col>
+            </v-row>
 
-            <v-col cols="12">
-              <a href="/do-science/hunt-workbench/" target="_blank">HUNT Workbench</a> provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
-            </v-col>
-            <v-col cols="12">
-              <strong>Follow Workbench Access guide to configure your access:</strong>
-            </v-col>
+            <v-row class="my-1 mx-1">
+              <v-col cols="12">
+                <strong>Follow installation of Workbench certificate to configure your access:</strong>
+              </v-col>
+            </v-row>
 
             <v-row class="my-1 mx-1">
               <v-col cols="12">
@@ -918,8 +921,11 @@ onMounted(() => {
                   elevation="2"
                   prepend-icon="mdi-cog"
                 >
-                  Workbench Access
+                  Install Workbench certificate
                 </v-btn>
+              </v-col>
+              <v-col cols="12">
+                <a href="/do-science/hunt-workbench/" target="_blank">HUNT Workbench</a> provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
               </v-col>
             </v-row>
 
@@ -928,7 +934,7 @@ onMounted(() => {
               persistent
               scrollable
               max-width="960px"
-              @keydown.esc="workbenchDialog = false"
+              @keydown.esc="workbenchDialog = false; workbenchStepper = 1"
             >
               <v-card elevation="0">
                 <v-card-title class="pa-0">

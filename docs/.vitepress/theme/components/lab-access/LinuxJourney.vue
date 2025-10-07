@@ -283,7 +283,7 @@ onMounted(() => {
               persistent
               scrollable
               max-width="960px"
-              @keydown.esc="vpnDialog = false"
+              @keydown.esc="vpnDialog = false; vpnStepper = 1"
             >
               <v-card>
                 <v-toolbar color="#00509e" theme="dark">
@@ -858,12 +858,12 @@ onMounted(() => {
             <h3><a href="#workbench" class="header-anchor">#</a> {{ workbenchId }}. Workbench - certificate</h3>
           </v-expansion-panel-title>
           <v-expansion-panel-text id="workbench" class="mt-2">
-            <v-col cols="12">
-              <a href="/do-science/hunt-workbench/" target="_blank">HUNT Workbench</a> provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
-            </v-col>
-            <v-col cols="12">
-              <strong>Follow Workbench Access guide to configure your access:</strong>
-            </v-col>
+
+            <v-row class="my-1 mx-1">
+              <v-col cols="12">
+                <strong>Follow installation of Workbench certificate to configure your access:</strong>
+              </v-col>
+            </v-row>
 
             <v-row class="my-1 mx-1">
               <v-col cols="12">
@@ -874,8 +874,11 @@ onMounted(() => {
                   elevation="2"
                   prepend-icon="mdi-cog"
                 >
-                  Workbench Access
+                  Install Workbench certificate
                 </v-btn>
+              </v-col>
+              <v-col cols="12">
+                <a href="/do-science/hunt-workbench/" target="_blank">HUNT Workbench</a> provides you with web-based access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R and MATLAB.
               </v-col>
             </v-row>
 
@@ -884,7 +887,7 @@ onMounted(() => {
               persistent
               scrollable
               max-width="960px"
-              @keydown.esc="workbenchDialog = false"
+              @keydown.esc="workbenchDialog = false; workbenchStepper = 1"
             >
               <v-card elevation="0">
                 <v-card-title class="pa-0">
