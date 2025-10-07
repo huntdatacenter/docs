@@ -68,9 +68,6 @@ export default {
         this.loadSelectedFromUri()
       }
     },
-    // selected(val) {
-    //   console.log(val)
-    // },
   },
   mounted() {},
   created() {
