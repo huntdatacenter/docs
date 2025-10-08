@@ -3,7 +3,14 @@ export default {
   name: "TotalBlock",
   props: {
     totalItems: { type: Array, default: () => [] },
-    sumInTotal: { type: Number, default: 0.0 },
+    totals: {
+      type: Object,
+      default: () => ({
+        computePrice: 0.0,
+        storageSize: 0.0,
+        storageCost: 0.0,
+      }),
+    },
     itemsComputeExport: { type: Array, default: () => [] },
     itemsStorageExport: { type: Array, default: () => [] },
   },
@@ -21,6 +28,9 @@ export default {
       onDemandPrice: 0.0,
     }
   },
+  created() {
+    
+  },
   computed: {
     formattedTotalItems() {
       if (!this.totalItems) {
@@ -30,6 +40,13 @@ export default {
         ...item,
         price: Number(item.price).toFixed(2),
       }))
+    },
+    sumInTotal() {
+      // Calculate total from all items (labs + compute + storage)
+      const labsTotal = this.totalItems
+        .filter(item => item.name.startsWith('Lab'))
+        .reduce((sum, item) => sum + item.price, 0)
+      return labsTotal + this.totals.computePrice + this.totals.storageCost
     },
   },
   watch: {},
