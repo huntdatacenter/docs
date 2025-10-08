@@ -34,10 +34,12 @@ export default defineComponent({
       } as Catalogue,
 
       labPrices: [] as PriceListItem[],
-      totalCompute: { price: 0.0 },
-      totalStorage: { size: 0.0, cost: 0.0 },
+      totals: {
+        computePrice: 0.0,
+        storageSize: 0.0,
+        storageCost: 0.0,
+      },
       totalLabCost: [] as TotalPriceItem[],
-      sumInTotal: 0.0,
       itemsComputeExport: [] as ComputeUnit[][],
       itemsStorageExport: [] as StorageUnit[][],
       isLoadingCatalogues : false,
@@ -54,13 +56,18 @@ export default defineComponent({
       },
       deep: true,
     },
+    totals: {
+      handler() {
+        if (!this.isLoadingState) {
+          this.setTotalItems()
+        }
+      },
+      deep: true,
+    },
   },
 
   created() {
     this.initializeAll().then(() => {
-
-
-      console.log("Catalogue : ", this.catalogue)
       this.loadState()
     })
   },
@@ -107,13 +114,12 @@ export default defineComponent({
           }))
           this.nextLabId = state.nextLabId || 1
 
-          // Recalculate totals from loaded lab cards
-          this.totalCompute.price = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
-          this.totalStorage.size = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
-          this.totalStorage.cost = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceStorage, 0)
+          this.totals.computePrice = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
+          this.totals.storageSize = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
+          this.totals.storageCost = this.calculateStorageCost()
+          this.setTotalItems()
 
           this.$nextTick(() => {
-            this.setPriceItems()
             this.isLoadingState = false
           })
         }
@@ -133,7 +139,6 @@ export default defineComponent({
         this.catalogue.storagePrices = json.filter((item: PriceListItem) => item["service.family"] === "store")
         this.catalogue.gpuPrices = json.filter((item: PriceListItem) => item["service.group"] === "gpu").map(this.preparePricesToYearly)
         this.labPrices = json.filter((item: PriceListItem) => item["service.group"] === "lab")
-        console.log("Price list loaded", this.catalogue, this.labPrices)
       })
 
       const gpusPromise = pricesApi.getAvailableGPUS().then((gpus: GpuModel[]) => {
@@ -143,6 +148,7 @@ export default defineComponent({
       const machinesPromise = pricesApi.getMachineFlavors().then((machine: MachineFlavor[]) => {
         this.catalogue.machineCatalogue = machine
       })
+      this.setTotalItems()
 
       return Promise.all([priceListPromise, gpusPromise, machinesPromise]).then(() => {
         this.isLoadingCatalogues = false
@@ -170,8 +176,52 @@ export default defineComponent({
       }
       this.labCards.push(newLabCard)
       this.nextLabId++
-      this.setPriceItems()
     },
+
+    calculateStorageCost() {
+      /**
+       * We are going to go through all the lab cards. For each type of storage there is (HHD and NVME) sum up it seperately. Then we calculate the price such that: The first 10TB is a price collected from api, the next 90TB is another price and anything above that is another price.
+       */
+      console.log(this.catalogue)
+      let totalStorageByType: { [key: string]: number } = {}
+      this.labCards.forEach((lab: LabCard) => {
+          lab.selectedStorage?.forEach((storage: StorageUnit) => {
+            if (totalStorageByType[storage.type]) {
+              totalStorageByType[storage.type] += storage.size
+            } else {
+              totalStorageByType[storage.type] = storage.size
+            }
+          })
+        })
+      console.log("Total storage by type: ", totalStorageByType)
+      let totalCost = 0.0
+      for (const [type, size] of Object.entries(totalStorageByType)) {
+        /**
+         * Convert from NVME to block.nvme.rep and HDD to block.hdd.rep
+         */
+        const blockType = type === "NVME" ? "block.nvme.rep" : "block.hdd.rep"
+        let remainingSize = size
+        const priceEntries = this.catalogue.storagePrices.filter((item: PriceListItem) => item["service.group"] === blockType && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "1Y")
+        console.log("Price entries for type ", type, priceEntries)
+        for (const entry of priceEntries) {
+          let applicableSize = 0
+          if (entry["service.unit"] === "First 10 TB") {
+            applicableSize = Math.min(remainingSize, 10)
+          } else if (entry["service.unit"] === "Next 90 TB") {
+            applicableSize = Math.min(remainingSize, 90)
+          } else {
+            applicableSize = remainingSize
+            entry["price.nok.ex.vat"] = entry["price.nok.ex.vat"] * (applicableSize / 100)
+          }
+          remainingSize -= applicableSize
+          totalCost += entry["price.nok.ex.vat"] * applicableSize
+          console.log("For entry ", entry["service.unit"], " applicable size: ", applicableSize, " remaining size: ", remainingSize, " cost: ", entry["price.nok.ex.vat"] * applicableSize)
+        }
+      }
+      return totalCost
+
+    },
+
 
     updateLabCardStorage(id: number, payload: UpdateStoragePayload) {
       const labCard = this.labCards.find((lab: LabCard) => lab.id === id)
@@ -180,10 +230,9 @@ export default defineComponent({
         labCard.priceStorage = payload.price
         labCard.selectedStorage = payload.selectedStorage
       }
-      this.totalStorage.size = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
-      this.totalStorage.cost = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceStorage, 0)
+      this.totals.storageSize = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
+      this.totals.storageCost = this.calculateStorageCost()
       this.itemsStorageExport[id] = payload.selectedStorage
-      this.setPriceItems()
     },
 
     updateLabCardCompute(id: number, prices: UpdateComputePayload) {
@@ -193,31 +242,34 @@ export default defineComponent({
         labCard.numCompute = Number(prices.numCompute)
         labCard.selectedCompute = prices.selectedCompute
       }
-      this.totalCompute.price = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
+      this.totals.computePrice = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
       this.itemsComputeExport[id] = prices.selectedCompute
-      this.setPriceItems()
     },
     removeLabCard(id: number) {
       this.labCards = this.labCards.filter(lab => lab.id !== id)
       delete this.itemsComputeExport[id]
       delete this.itemsStorageExport[id]
-      this.setPriceItems()
+      this.totals.computePrice = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
+      this.totals.storageSize = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
+      this.totals.storageCost = this.calculateStorageCost()
     },
 
     removeAllLabs() {
       this.labCards = []
       this.itemsComputeExport = []
       this.itemsStorageExport = []
-      this.totalCompute = { price: 0.0 }
-      this.totalStorage = { size: 0.0, cost: 0.0 }
+      this.totals = {
+        computePrice: 0.0,
+        storageSize: 0.0,
+        storageCost: 0.0,
+      }
       this.nextLabId = 1
-      this.setPriceItems()
       if (!ISSERVER) {
         localStorage.removeItem("priceEstimatorState")
       }
     },
 
-    setPriceItems() {
+    setTotalItems() {
       let priceItems: { name: string; subscription: string | null; units: number | string; price: number }[] = []
       if (this.labCards) {
         this.labCards.forEach(item => {
@@ -234,16 +286,15 @@ export default defineComponent({
         name: "Compute",
         subscription: null,
         units: numOfCompute || 0,
-        price: this.totalCompute.price,
+        price: this.totals.computePrice,
       })
       priceItems.push({
         name: "Storage",
         subscription: "Commitment",
-        units: `${this.totalStorage.size} TB`,
-        price: this.totalStorage.cost,
+        units: `${this.totals.storageSize} TB`,
+        price: this.totals.storageCost,
       })
       this.totalLabCost = priceItems
-      this.sumInTotal = priceItems.reduce((total, item) => total + item.price, 0)
     },
     triggerFileUpload() {
       (this.$refs.fileInput as HTMLInputElement).click()
@@ -269,8 +320,11 @@ export default defineComponent({
           this.labCards = []
           this.itemsComputeExport = []
           this.itemsStorageExport = []
-          this.totalCompute = { price: 0.0 }
-          this.totalStorage = { size: 0.0, cost: 0.0 }
+          this.totals = {
+            computePrice: 0.0,
+            storageSize: 0.0,
+            storageCost: 0.0,
+          }
           this.nextLabId = 1
 
           data.labs.forEach((lab: any) => {
@@ -291,7 +345,6 @@ export default defineComponent({
           })
 
           await nextTick()
-          this.setPriceItems()
           this.isLoadingState = false
           target.value = ""
         } catch (error) {
@@ -358,7 +411,7 @@ export default defineComponent({
       <v-row v-if="labCards.length !== 0">
         <TotalBlock
           :total-items="totalLabCost"
-          :sum-in-total="sumInTotal"
+          :totals="totals"
           :itemsComputeExport="itemsComputeExport"
           :itemsStorageExport="itemsStorageExport"
         />

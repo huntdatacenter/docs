@@ -50,7 +50,7 @@ export default {
         { title: "Usage", align: "start", sortable: true, key: "usage" },
         { title: "Type", align: "start", sortable: true, key: "type" },
         { title: "Size [TB]", align: "start", sortable: true, key: "size" },
-        { title: "Price", align: "start", sortable: true, key: "price" },
+        /*{ title: "Price", align: "start", sortable: true, key: "price" }, **/ 
         { title: "Actions", key: "actions", align: "end", sortable: false },
       ],
       storageLabSum: {
@@ -77,7 +77,7 @@ export default {
           usage: item.usage,
           type: item.type,
           size: item.size + " TB",
-          price: item.price.toFixed(2) + " kr",
+          /*price: item.price.toFixed(2) + " kr",**/
         }
       })
     },
@@ -108,8 +108,8 @@ export default {
         this.storageId = 0
         this.pushDefaultStorage()
       }
-      this.updateLabSumCompute(false)
-      this.updateLabSumStorage(false)
+      this.updateLabSumCompute(true)
+      this.updateLabSumStorage(true)
     },
     updateLabSumCompute(emit=true) {
       this.computeLabSum.monthlyPrice = this.selectedCompute.reduce(
@@ -228,10 +228,6 @@ export default {
     },
 
     removeStorageById(id: number) {
-      if (id === 0) {
-        this.openSnackbar("Cannot remove the default storage volume")
-        return
-      }
       this.selectedStorage = this.selectedStorage.filter(item => item.id !== id)
       this.updateLabSumStorage()
     },
@@ -469,6 +465,7 @@ export default {
           <v-card-title> Storage</v-card-title>
           <v-card-subtitle> Add storage to {{ title }} </v-card-subtitle>
           <v-card-subtitle> Each compute unit needs a volume of storage of atleast 1 TB</v-card-subtitle>
+            
           <v-data-table-virtual
             v-model="selectedStorage"
             :items="displayselectedStorage"
@@ -476,6 +473,7 @@ export default {
             hover
             hide-default-footer
             item-value="id"
+            aria-placeholder="No storage added yet"
           >
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
@@ -488,6 +486,7 @@ export default {
                 ></v-icon>
               </div>
             </template>
+
 
             <template v-slot:body.append="{}">
               <tr>
@@ -507,13 +506,13 @@ export default {
                 </th>
                 <th></th>
                 <th></th>
-                <th></th>
                 <th>
                   <strong>{{ (storageLabSum?.size || 0) + " TB" }}</strong>
                 </th>
-                <th>
+              
+                <!-- <th>
                   <strong> {{ displayStorageSumPrice }}</strong>
-                </th>
+                </th> -->
               </tr>
             </template>
           </v-data-table-virtual>
