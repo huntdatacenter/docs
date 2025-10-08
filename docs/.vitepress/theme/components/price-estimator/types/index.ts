@@ -73,10 +73,10 @@ export interface LabCard {
   priceStorage: number
   priceComputeYearly: number
   numCompute: number
-  initSelectedCompute?: ComputeUnit[] // initSelectedCompute would be better?
-  initSelectedStorage?: StorageUnit[] // same here
-  selectedCompute?: ComputeUnit[] // selectedCompute ?
-  selectedStorage?: StorageUnit[] // selectedStorage
+  initSelectedCompute?: ComputeUnit[]
+  initSelectedStorage?: StorageUnit[]
+  selectedCompute?: ComputeUnit[]
+  selectedStorage?: StorageUnit[]
 }
 
 export interface TotalPriceItem {
@@ -105,11 +105,11 @@ export interface UpdateComputePayload {
   monthlyPrice: number
   yearlyPrice: number
   numCompute: number
-  selectedCompute: ComputeUnit[] // selectedCompute
+  selectedCompute: ComputeUnit[]
 }
 
 export interface UpdateStoragePayload {
   size: number
   price: number
-  selectedStorage: StorageUnit[] // same here
+  selectedStorage: StorageUnit[]
 }
