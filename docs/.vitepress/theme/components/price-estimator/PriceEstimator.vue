@@ -11,6 +11,7 @@ import type {
   TotalPriceItem,
   UpdateComputePayload,
   UpdateStoragePayload,
+  Catalogue,
 } from "./types"
 
 const ISSERVER = typeof window === "undefined"
@@ -24,13 +25,14 @@ export default defineComponent({
     return {
       labCards: [] as LabCard[],
       nextLabId: 1,
-      priceCatalogue: {
+      catalogue: {
         computePrices: [] as PriceListItem[],
         storagePrices: [] as PriceListItem[],
         gpuPrices: [] as PriceListItem[],
-      },
-      machineCatalogoue: [] as MachineFlavor[],
-      availableGpus: [] as GpuModel[],
+        machineCatalogue: [] as MachineFlavor[],
+        availableGpus: [] as GpuModel[],
+      } as Catalogue,
+
       labPrices: [] as PriceListItem[],
       totalCompute: { price: 0.0 },
       totalStorage: { size: 0.0, cost: 0.0 },
@@ -39,11 +41,26 @@ export default defineComponent({
       itemsComputeExport: [] as ComputeUnit[][],
       itemsStorageExport: [] as StorageUnit[][],
       isLoadingCatalogues : false,
+      isLoadingState: false,
     }
+  },
+
+  watch: {
+    labCards: {
+      handler() {
+        if (!this.isLoadingState) {
+          this.saveState()
+        }
+      },
+      deep: true,
+    },
   },
 
   created() {
     this.initializeAll().then(() => {
+
+
+      console.log("Catalogue : ", this.catalogue)
       this.loadState()
     })
   },
@@ -63,7 +80,6 @@ export default defineComponent({
         })),
         nextLabId: this.nextLabId,
       }
-      console.log("Saving state:", stateToSave)
 
       if (!ISSERVER) {
         localStorage.setItem("priceEstimatorState", JSON.stringify(stateToSave))
@@ -77,6 +93,7 @@ export default defineComponent({
           savedState = localStorage.getItem("priceEstimatorState")
         }
         if (savedState) {
+          this.isLoadingState = true
           const state = JSON.parse(savedState)
           this.labCards = (state.labCards || []).map((lab: any) => ({
             id: lab.id,
@@ -89,7 +106,6 @@ export default defineComponent({
             selectedStorage: lab.initSelectedStorage || [],
           }))
           this.nextLabId = state.nextLabId || 1
-          console.log("Loaded labCards:", this.labCards)
 
           // Recalculate totals from loaded lab cards
           this.totalCompute.price = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
@@ -98,12 +114,14 @@ export default defineComponent({
 
           this.$nextTick(() => {
             this.setPriceItems()
+            this.isLoadingState = false
           })
         }
       } catch (error) {
         console.error("Failed to load state:", error)
         this.labCards = []
         this.nextLabId = 1
+        this.isLoadingState = false
       }
     },
 
@@ -111,19 +129,19 @@ export default defineComponent({
         this.isLoadingCatalogues = true
 
       const priceListPromise = pricesApi.getPriceList().then((json: PriceListItem[]) => {
-        this.priceCatalogue.computePrices = json.filter((item: PriceListItem) => item["service.group"] === "cpu").map(this.preparePricesToYearly)
-        this.priceCatalogue.storagePrices = json.filter((item: PriceListItem) => item["service.family"] === "store")
-        this.priceCatalogue.gpuPrices = json.filter((item: PriceListItem) => item["service.group"] === "gpu").map(this.preparePricesToYearly)
+        this.catalogue.computePrices = json.filter((item: PriceListItem) => item["service.group"] === "cpu").map(this.preparePricesToYearly)
+        this.catalogue.storagePrices = json.filter((item: PriceListItem) => item["service.family"] === "store")
+        this.catalogue.gpuPrices = json.filter((item: PriceListItem) => item["service.group"] === "gpu").map(this.preparePricesToYearly)
         this.labPrices = json.filter((item: PriceListItem) => item["service.group"] === "lab")
-        console.log("Price list loaded", this.priceCatalogue, this.labPrices)
+        console.log("Price list loaded", this.catalogue, this.labPrices)
       })
 
       const gpusPromise = pricesApi.getAvailableGPUS().then((gpus: GpuModel[]) => {
-        this.availableGpus = gpus
+        this.catalogue.availableGpus = gpus
       })
 
       const machinesPromise = pricesApi.getMachineFlavors().then((machine: MachineFlavor[]) => {
-        this.machineCatalogoue = machine
+        this.catalogue.machineCatalogue = machine
       })
 
       return Promise.all([priceListPromise, gpusPromise, machinesPromise]).then(() => {
@@ -153,7 +171,6 @@ export default defineComponent({
       this.labCards.push(newLabCard)
       this.nextLabId++
       this.setPriceItems()
-      this.saveState()
     },
 
     updateLabCardStorage(id: number, payload: UpdateStoragePayload) {
@@ -167,7 +184,6 @@ export default defineComponent({
       this.totalStorage.cost = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceStorage, 0)
       this.itemsStorageExport[id] = payload.selectedStorage
       this.setPriceItems()
-      this.saveState()
     },
 
     updateLabCardCompute(id: number, prices: UpdateComputePayload) {
@@ -180,14 +196,12 @@ export default defineComponent({
       this.totalCompute.price = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
       this.itemsComputeExport[id] = prices.selectedCompute
       this.setPriceItems()
-      this.saveState()
     },
     removeLabCard(id: number) {
       this.labCards = this.labCards.filter(lab => lab.id !== id)
       delete this.itemsComputeExport[id]
       delete this.itemsStorageExport[id]
       this.setPriceItems()
-      this.saveState()
     },
 
     removeAllLabs() {
@@ -251,6 +265,7 @@ export default defineComponent({
             throw new Error("Invalid JSON format: 'version' or 'labs' property is missing.")
           }
 
+          this.isLoadingState = true
           this.labCards = []
           this.itemsComputeExport = []
           this.itemsStorageExport = []
@@ -277,7 +292,7 @@ export default defineComponent({
 
           await nextTick()
           this.setPriceItems()
-          this.saveState()
+          this.isLoadingState = false
           target.value = ""
         } catch (error) {
           console.error("Failed to parse or process JSON file:", error)
@@ -331,9 +346,7 @@ export default defineComponent({
           <LabCard
             :key="lab.id"
             :title="lab.title"
-            :price-catalogue="priceCatalogue"
-            :machineCatalogoue="machineCatalogoue"
-            :available-gpus="availableGpus"
+            :catalogue="catalogue"
             :init-selected-compute="lab.selectedCompute || []"
             :init-selected-storage="lab.selectedStorage || []"
             @updateStorage="updateLabCardStorage(lab.id, $event)"

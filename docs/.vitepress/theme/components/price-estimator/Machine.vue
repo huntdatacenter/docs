@@ -5,22 +5,17 @@ import type {
   GpuModel,
   MachineFlavor,
   MachineFormData,
+  Catalogue,
 } from "./types"
 
 export default {
   name: "Machine",
   props: {
     computeId: { type: Number, default: () => 0 },
-    priceCatalogue: {
-      type: Object as () => {
-        computePrices: PriceListItem[]
-        storagePrices: PriceListItem[]
-        gpuPrices: PriceListItem[]
-      },
+    catalogue: {
+      type: Object as () => Catalogue,
       required: true,
     },
-    machineCatalogoue: { type: Array as () => MachineFlavor[], default: () => [] },
-    availableGpus: { type: Array as () => GpuModel[], default: () => [] },
     selectedRadio: { type: String, default: "1Y" },
     initialData: { type: Object as () => ComputeUnit | null, default: null },
   },
@@ -54,16 +49,16 @@ export default {
       let price: number | undefined
       if (this.formData.subscription.includes("COMMITMENT")) {
         if (this.formData.subscription === "COMMITMENT_3Y") {
-          const item = this.priceCatalogue.computePrices.find(
-            item =>
+          const item = this.catalogue.computePrices.find(
+            (item: PriceListItem) =>
               item["service.unit"] === this.formData.flavor &&
               item["service.level"] === "COMMITMENT" &&
               item["service.commitment"] === "3Y",
           )
           price = item ? item["price.nok.ex.vat"] / 3 : undefined
         } else {
-          const item = this.priceCatalogue.computePrices.find(
-            item =>
+          const item = this.catalogue.computePrices.find(
+            (item: PriceListItem) =>
               item["service.unit"] === this.formData.flavor &&
               item["service.level"] === "COMMITMENT" &&
               item["service.commitment"] === "1Y",
@@ -71,8 +66,8 @@ export default {
           price = item ? item["price.nok.ex.vat"] : undefined
         }
       } else {
-        const item = this.priceCatalogue.computePrices.find(
-          item => item["service.unit"] === this.formData.flavor && item["service.level"] === this.formData.subscription,
+        const item = this.catalogue.computePrices.find(
+          (item: PriceListItem) => item["service.unit"] === this.formData.flavor && item["service.level"] === this.formData.subscription,
         )
         price = item ? item["price.nok.ex.vat"] : undefined
       }
@@ -87,8 +82,8 @@ export default {
       if (!this.formData.gpu) {
         return 0
       }
-      const price = this.priceCatalogue.gpuPrices.find(
-        item => item["service.unit"] === this.formData.gpu && item["service.level"] === "ONDEMAND"
+      const price = this.catalogue.gpuPrices.find(
+        (item: PriceListItem) => item["service.unit"] === this.formData.gpu && item["service.level"] === "ONDEMAND"
       )
       return price ? Number(price["price.nok.ex.vat"]).toFixed(2) : 0
     },
@@ -100,11 +95,11 @@ export default {
       if (!this.formData.subscription) {
         return []
       }
-      return this.machineCatalogoue.filter(item => item)
+      return this.catalogue.machineCatalogue.filter((item: MachineFlavor) => item)
     },
     getGpus() {
-      console.log(this.availableGpus)
-      return this.availableGpus.map(item => {
+      console.log(this.catalogue.availableGpus)
+      return this.catalogue.availableGpus.map((item: GpuModel) => {
         return {
           title: item["type"] + " - " + item["vram"] + " GB VRAM",
           value: item["type"],
@@ -149,8 +144,8 @@ export default {
       const name = this.formData.gpu ? `${this.formData.name} (incl. GPU)` : this.formData.name
       const monthlyPrice = this.getSummedPrice(this.getComputePriceMonth, this.getGpuPriceMonth)
       const yearlyPrice = this.getSummedPrice(this.getComputePriceYear, this.getGpuPriceYear)
-      const machinetitle = this.machineCatalogoue
-        .filter(item => item["value"] === this.formData.flavor)[0]
+      const machinetitle = this.catalogue.machineCatalogue
+        .filter((item: MachineFlavor) => item["value"] === this.formData.flavor)[0]
         ["title"].split(" - ")[1]
         .split(" / ")
       const core_count = parseInt(machinetitle[0].split(" ")[0])

@@ -37,6 +37,14 @@ export interface StorageLabSum {
   price: number
 }
 
+export interface Catalogue {
+  computePrices: PriceListItem[]
+  storagePrices: PriceListItem[]
+  gpuPrices: PriceListItem[]
+  machineCatalogue: MachineFlavor[]
+  availableGpus: GpuModel[]
+}
+
 export interface PriceListItem {
   "service.group": string
   "service.family": string

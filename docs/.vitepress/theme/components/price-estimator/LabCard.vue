@@ -3,12 +3,12 @@ import type {
   ComputeUnit,
   StorageUnit,
   PriceListItem,
-  GpuModel,
   MachineFlavor,
   ComputeLabSum,
   StorageLabSum,
   StorageUsageType,
   StorageType,
+  Catalogue,
 } from "./types"
 
 export default {
@@ -16,16 +16,10 @@ export default {
   emits: ["updateStorage", "updateCompute", "removeLab"],
   props: {
     title: { type: String, required: true, default: "Lab " },
-    priceCatalogue: {
-      type: Object as () => {
-        computePrices: PriceListItem[]
-        storagePrices: PriceListItem[]
-        gpuPrices: PriceListItem[]
-      },
+    catalogue: {
+      type: Object as () => Catalogue,
       required: true,
     },
-    machineCatalogoue: { type: Array as () => MachineFlavor[], default: () => [] },
-    availableGpus: { type: Array as () => GpuModel[], default: () => [] },
     initSelectedCompute: { type: Array as () => ComputeUnit[], default: null },
     initSelectedStorage: { type: Array as () => StorageUnit[], default: null },
   },
@@ -115,6 +109,7 @@ export default {
         this.pushDefaultStorage()
       }
       this.updateLabSumCompute(false)
+      this.updateLabSumStorage(false)
     },
     updateLabSumCompute(emit=true) {
       this.computeLabSum.monthlyPrice = this.selectedCompute.reduce(
@@ -136,16 +131,18 @@ export default {
       })
       }
     },
-    updateLabSumStorage() {
+    updateLabSumStorage(emit = true) {
       this.storageLabSum.size = this.selectedStorage.reduce((acc, item) => acc + item.size, 0)
 
       this.updateAddedStorage()
       this.storageLabSum.price = this.selectedStorage.reduce((acc, item) => acc + item.price, 0)
-      this.$emit("updateStorage", {
+      if (emit) {
+        this.$emit("updateStorage", {
         size: this.storageLabSum.size,
         price: this.storageLabSum.price,
         selectedStorage: this.selectedStorage,
       })
+      }
     },
 
     addMachine() {
@@ -239,15 +236,15 @@ export default {
       this.updateLabSumStorage()
     },
     pushDefaultComputeUnit() {
-      const defaultUnit = this.priceCatalogue.computePrices.find(
-        item =>
+      const defaultUnit = this.catalogue.computePrices.find(
+        (item: PriceListItem) =>
           item["service.unit"] === "default.c1" &&
           item["service.level"] === "COMMITMENT" &&
           item["service.commitment"] === "1Y",
       )
       if (!defaultUnit) return
       
-      const machineInfo = this.machineCatalogoue.find(item => item["value"] === defaultUnit["service.unit"])
+      const machineInfo = this.catalogue.machineCatalogue.find((item: MachineFlavor) => item["value"] === defaultUnit["service.unit"])
       if (!machineInfo) return
       
       const machinetitle = machineInfo["title"].split(" - ")[1].split(" / ")
@@ -300,18 +297,18 @@ export default {
     storageCost(totalSize: number) {
       totalSize = Number(totalSize)
 
-      const level1Item = this.priceCatalogue.storagePrices.find(
-        item => item["service.commitment"] === "1Y" && item["service.unit"] === "First 10 TB"
+      const level1Item = this.catalogue.storagePrices.find(
+        (item: PriceListItem) => item["service.commitment"] === "1Y" && item["service.unit"] === "First 10 TB"
       )
       const level1 = level1Item?.["price.nok.ex.vat"] || 0
 
-      const level2Item = this.priceCatalogue.storagePrices.find(
-        item => item["service.commitment"] === "1Y" && item["service.unit"] === "Next 90 TB"
+      const level2Item = this.catalogue.storagePrices.find(
+        (item: PriceListItem) => item["service.commitment"] === "1Y" && item["service.unit"] === "Next 90 TB"
       )
       const level2 = level2Item?.["price.nok.ex.vat"] || 0
 
-      const level3Item = this.priceCatalogue.storagePrices.find(
-        item => item["service.commitment"] === "1Y" && item["service.unit"] === "Over 100 TB"
+      const level3Item = this.catalogue.storagePrices.find(
+        (item: PriceListItem) => item["service.commitment"] === "1Y" && item["service.unit"] === "Over 100 TB"
       )
       const level3 = level3Item?.["price.nok.ex.vat"] || 0
 
@@ -336,8 +333,8 @@ export default {
 
       if (type.includes("COMMITMENT")) {
         if (type === "COMMITMENT_3Y") {
-          const found3Y = this.priceCatalogue.computePrices.find(
-            p =>
+          const found3Y = this.catalogue.computePrices.find(
+            (p: PriceListItem) =>
               p["service.unit"] === flavor &&
               p["service.level"] === "COMMITMENT" &&
               p["service.commitment"] === "3Y"
@@ -346,16 +343,16 @@ export default {
             mainFlavorPrice = found3Y["price.nok.ex.vat"] / 3
           }
         } else {
-          mainFlavorPrice = this.priceCatalogue.computePrices.find(
-            p =>
+          mainFlavorPrice = this.catalogue.computePrices.find(
+            (p: PriceListItem) =>
               p["service.unit"] === flavor &&
               p["service.level"] === "COMMITMENT" &&
               p["service.commitment"] === "1Y"
           )?.["price.nok.ex.vat"]
         }
       } else {
-        const foundPrice = this.priceCatalogue.computePrices.find(
-          p => p["service.unit"] === flavor && p["service.level"] === type
+        const foundPrice = this.catalogue.computePrices.find(
+          (p: PriceListItem) => p["service.unit"] === flavor && p["service.level"] === type
         )
         mainFlavorPrice = foundPrice?.["price.nok.ex.vat"]
       }
@@ -367,8 +364,8 @@ export default {
       totalMonthlyPrice = Number((totalYearlyPrice / 12))
 
       if (gpuFlavor) {
-        const gpuPrice = this.priceCatalogue.gpuPrices.find(
-          p => p["service.unit"] === gpuFlavor && p["service.level"] === "ONDEMAND"
+        const gpuPrice = this.catalogue.gpuPrices.find(
+          (p: PriceListItem) => p["service.unit"] === gpuFlavor && p["service.level"] === "ONDEMAND"
         )
         if (gpuPrice) {
           gpuYearly = gpuPrice["price.nok.ex.vat"]
@@ -527,9 +524,7 @@ export default {
     <v-dialog v-model="isComputeModalOpen" max-width="600px" min-width="600px">
       <Machine
         :compute-id="computeId"
-        :price-catalogue="priceCatalogue"
-        :machineCatalogoue="machineCatalogoue"
-        :available-gpus="availableGpus"
+        :catalogue="catalogue"
         :initial-data="editingComputeItem"
         @close="closeComputeModal"
         @open-snackbar="openSnackbar"
