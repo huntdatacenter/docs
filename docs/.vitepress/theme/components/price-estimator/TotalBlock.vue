@@ -20,7 +20,7 @@ export default {
       totalHeaders: [
         { title: "Name", align: "start", sortable: true, key: "name" },
         { title: "Total units", align: "start", sortable: true, key: "units" },
-        { title: "Price", align: "start", sortable: true, key: "price" },
+        { title: "Price / year", align: "start", sortable: true, key: "price" },
       ],
       selectedStorage: [],
       totalPrice: 0.0,
