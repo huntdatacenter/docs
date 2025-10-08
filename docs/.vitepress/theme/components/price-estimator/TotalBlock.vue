@@ -15,7 +15,7 @@ export default {
         { title: "Total units", align: "start", sortable: true, key: "units" },
         { title: "Price", align: "start", sortable: true, key: "price" },
       ],
-      datasetStorage: [],
+      selectedStorage: [],
       totalPrice: 0.0,
       commitmentPrice: 0.0,
       onDemandPrice: 0.0,
@@ -93,7 +93,7 @@ export default {
     <v-card class="ma-0 pa-4">
       <v-card-title> Total</v-card-title>
       <v-data-table-virtual
-        v-model="datasetStorage"
+        v-model="selectedStorage"
         :items="formattedTotalItems"
         :headers="totalHeaders"
         hover

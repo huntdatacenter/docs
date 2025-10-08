@@ -103,6 +103,7 @@ export default {
       return this.machineCatalogoue.filter(item => item)
     },
     getGpus() {
+      console.log(this.availableGpus)
       return this.availableGpus.map(item => {
         return {
           title: item["type"] + " - " + item["vram"] + " GB VRAM",

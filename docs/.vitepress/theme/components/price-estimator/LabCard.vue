@@ -26,15 +26,15 @@ export default {
     },
     machineCatalogoue: { type: Array as () => MachineFlavor[], default: () => [] },
     availableGpus: { type: Array as () => GpuModel[], default: () => [] },
-    initialCompute: { type: Array as () => ComputeUnit[], default: null },
-    initialStorage: { type: Array as () => StorageUnit[], default: null },
+    initSelectedCompute: { type: Array as () => ComputeUnit[], default: null },
+    initSelectedStorage: { type: Array as () => StorageUnit[], default: null },
   },
   data() {
     return {
       computeId: 0,
       isComputeModalOpen: false,
       editingComputeItem: null as ComputeUnit | null,
-      datasetCompute: [] as ComputeUnit[],
+      selectedCompute: [] as ComputeUnit[],
       isLoadingComputePrices: false,
       computeHeaders: [
         { title: "Name", align: "start", sortable: true, key: "name" },
@@ -50,9 +50,7 @@ export default {
       storageId: 0,
       isStorageModalOpen: false,
       editingStorageItem: null as StorageUnit | null,
-      datasetStorage: [] as StorageUnit[],
-      selectedStorage: [] as number[],
-      isLoadingStoragePrices: false,
+      selectedStorage: [] as StorageUnit[],
       storageHeaders: [
         { title: "Name", align: "start", sortable: true, key: "name" },
         { title: "Usage", align: "start", sortable: true, key: "usage" },
@@ -77,8 +75,8 @@ export default {
     displayStorageSumPrice() {
       return this.storageLabSum.price.toFixed(2) + " kr"
     },
-    displayDatasetStorage() {
-      return this.datasetStorage.map(item => {
+    displayselectedStorage() {
+      return this.selectedStorage.map(item => {
         return {
           id: item.id,
           name: item.name,
@@ -91,77 +89,62 @@ export default {
     },
   },
 
-  watch: {
-    initialCompute: {
-      handler() {
-        this.initializeState()
-      },
-      deep: true,
-    },
-    initialStorage: {
-      handler() {
-        this.initializeState()
-      },
-      deep: true,
-    },
-  },
-
   methods: {
     initializeState() {
-      if (this.initialCompute && this.initialCompute.length > 0) {
-        this.datasetCompute = this.initialCompute.map(item => {
+      if (this.initSelectedCompute && this.initSelectedCompute.length > 0) {
+        this.selectedCompute = this.initSelectedCompute.map(item => {
           const flavorParts = item.flavor.split(" + ")
           const mainFlavor = flavorParts[0]
           const gpuFlavor = item.gpu
           const prices = this.getComputePriceForLab(mainFlavor, item.type, gpuFlavor)
           return { ...item, ...prices }
         })
-        this.computeId = this.initialCompute.length
+        this.computeId = this.initSelectedCompute.length
       } else {
-        this.datasetCompute = []
+        this.selectedCompute = []
         this.computeId = 0
         this.pushDefaultComputeUnit()
       }
 
-      if (this.initialStorage && this.initialStorage.length > 0) {
-        this.datasetStorage = this.initialStorage.map(item => ({ ...item, price: 0 }))
-        this.storageId = this.initialStorage.length
+      if (this.initSelectedStorage && this.initSelectedStorage.length > 0) {
+        this.selectedStorage = this.initSelectedStorage.map(item => ({ ...item, price: 0 }))
+        this.storageId = this.initSelectedStorage.length
       } else {
-        this.datasetStorage = []
+        this.selectedStorage = []
         this.storageId = 0
         this.pushDefaultStorage()
       }
-
-      this.updateLabSumCompute()
-      this.updateLabSumStorage()
+      this.updateLabSumCompute(false)
     },
-    updateLabSumCompute() {
-      this.computeLabSum.monthlyPrice = this.datasetCompute.reduce(
+    updateLabSumCompute(emit=true) {
+      this.computeLabSum.monthlyPrice = this.selectedCompute.reduce(
         (acc, item) => Number(acc) + Number(item.monthlyPrice),
         0,
       )
-      this.computeLabSum.yearlyPrice = this.datasetCompute.reduce(
+      this.computeLabSum.yearlyPrice = this.selectedCompute.reduce(
         (acc, item) => Number(acc) + Number(item.yearlyPrice),
         0,
       )
-      this.computeLabSum.ram = this.datasetCompute.reduce((acc, item) => acc + item.ram, 0)
-      this.computeLabSum.cpu_count = this.datasetCompute.reduce((acc, item) => acc + item.core_count, 0)
+      this.computeLabSum.ram = this.selectedCompute.reduce((acc, item) => acc + item.ram, 0)
+      this.computeLabSum.cpu_count = this.selectedCompute.reduce((acc, item) => acc + item.core_count, 0)
+      if (emit) {
       this.$emit("updateCompute", {
         monthlyPrice: this.computeLabSum.monthlyPrice,
         yearlyPrice: this.computeLabSum.yearlyPrice,
-        numCompute: this.datasetCompute.length || 0,
-        datasetCompute: this.datasetCompute,
+        numCompute: this.selectedCompute.length || 0,
+        selectedCompute: this.selectedCompute,
       })
+      }
     },
     updateLabSumStorage() {
-      this.storageLabSum.size = this.datasetStorage.reduce((acc, item) => acc + item.size, 0)
+      this.storageLabSum.size = this.selectedStorage.reduce((acc, item) => acc + item.size, 0)
 
       this.updateAddedStorage()
-      this.storageLabSum.price = this.datasetStorage.reduce((acc, item) => acc + item.price, 0)
+      this.storageLabSum.price = this.selectedStorage.reduce((acc, item) => acc + item.price, 0)
       this.$emit("updateStorage", {
         size: this.storageLabSum.size,
         price: this.storageLabSum.price,
-        datasetStorage: this.datasetStorage,
+        selectedStorage: this.selectedStorage,
       })
     },
 
@@ -185,14 +168,14 @@ export default {
     closeComputeModal(payload: any) {
       if (payload) {
         if (this.editingComputeItem) {
-          const index = this.datasetCompute.findIndex(item => item.id === this.editingComputeItem!.id)
+          const index = this.selectedCompute.findIndex(item => item.id === this.editingComputeItem!.id)
           if (index !== -1) {
-            this.datasetCompute.splice(index, 1, { ...payload, id: this.editingComputeItem!.id })
+            this.selectedCompute.splice(index, 1, { ...payload, id: this.editingComputeItem!.id })
           }
         } else {
-          this.datasetCompute.push({ ...payload, id: this.computeId })
+          this.selectedCompute.push({ ...payload, id: this.computeId })
           this.computeId = this.computeId + 1
-          if (this.datasetCompute.length > this.datasetStorage.length) {
+          if (this.selectedCompute.length > this.selectedStorage.length) {
             this.pushDefaultStorage()
           }
         }
@@ -205,9 +188,9 @@ export default {
       if (payload) {
         const price = this.calculateStoragePriceForVolume(payload.size)
         if (this.editingStorageItem) {
-          const index = this.datasetStorage.findIndex(item => item.id === this.editingStorageItem!.id)
+          const index = this.selectedStorage.findIndex(item => item.id === this.editingStorageItem!.id)
           if (index !== -1) {
-            this.datasetStorage.splice(index, 1, {
+            this.selectedStorage.splice(index, 1, {
               id: this.editingStorageItem!.id,
               name: payload.name,
               usage: payload.usage,
@@ -218,7 +201,7 @@ export default {
           }
         } else {
           this.storageId = this.storageId + 1
-          this.datasetStorage.push({
+          this.selectedStorage.push({
             id: this.storageId,
             name: payload.name,
             usage: payload.usage,
@@ -243,7 +226,7 @@ export default {
         this.openSnackbar("Cannot remove the default machine")
         return
       }
-      this.datasetCompute = this.datasetCompute.filter(item => item.id !== id)
+      this.selectedCompute = this.selectedCompute.filter(item => item.id !== id)
       this.updateLabSumCompute()
     },
 
@@ -252,7 +235,7 @@ export default {
         this.openSnackbar("Cannot remove the default storage volume")
         return
       }
-      this.datasetStorage = this.datasetStorage.filter(item => item.id !== id)
+      this.selectedStorage = this.selectedStorage.filter(item => item.id !== id)
       this.updateLabSumStorage()
     },
     pushDefaultComputeUnit() {
@@ -270,7 +253,7 @@ export default {
       const machinetitle = machineInfo["title"].split(" - ")[1].split(" / ")
       const core_count = parseInt(machinetitle[0].split(" ")[0])
       const ram = parseInt(machinetitle[1].split(" ")[0])
-      this.datasetCompute.push({
+      this.selectedCompute.push({
         id: this.computeId,
         name: "machine-0",
         flavor: defaultUnit["service.unit"],
@@ -292,12 +275,12 @@ export default {
         size: 1,
         price: 0,
       }
-      this.datasetStorage.push(defaultStorage)
+      this.selectedStorage.push(defaultStorage)
       this.storageId += 1
       this.updateLabSumStorage()
     },
     updateAddedStorage() {
-      this.datasetStorage.forEach(item => {
+      this.selectedStorage.forEach(item => {
         item.price = this.calculateStoragePriceForVolume(item.size)
       })
     },
@@ -422,7 +405,7 @@ export default {
           <v-card-subtitle> {{ "Add a machine to " + title }}</v-card-subtitle>
 
           <v-data-table-virtual
-            :items="datasetCompute"
+            :items="selectedCompute"
             :headers="computeHeaders"
             :loading="isLoadingComputePrices"
             hide-default-footer
@@ -491,16 +474,15 @@ export default {
           <v-card-subtitle> Each compute unit needs a volume of storage of atleast 1 TB</v-card-subtitle>
           <v-data-table-virtual
             v-model="selectedStorage"
-            :items="displayDatasetStorage"
+            :items="displayselectedStorage"
             :headers="storageHeaders"
-            :loading="isLoadingStoragePrices"
             hover
             hide-default-footer
             item-value="id"
           >
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
-                <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editStorage(datasetStorage.find(s => s.id === item.id)!)"></v-icon>
+                <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editStorage(selectedStorage.find(s => s.id === item.id)!)"></v-icon>
                 <v-icon
                   color="medium-emphasis"
                   icon="mdi-delete"
@@ -510,7 +492,7 @@ export default {
               </div>
             </template>
 
-            <template v-slot:body.append="{}" v-if="storageLabSum?.size !== 0">
+            <template v-slot:body.append="{}">
               <tr>
                 <th :colspan="storageHeaders.length + 1" class="text-center">
                   <v-tooltip bottom>
