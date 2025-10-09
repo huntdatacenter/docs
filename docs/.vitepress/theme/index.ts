@@ -147,6 +147,7 @@ const redirectPrefixes: Array<[string, string]> = [
   ["/do-science/lab-access/configure-access/", "/do-science/lab/"] as const,
   ["/do-science/lab-access/2-configure-access", "/do-science/lab/"] as const,
   ["/do-science/guides/configure-ssh", "/do-science/guides/access-guides/reset-ssh"] as const,
+  ["/do-science/guides/vpn-configuration/", "/do-science/guides/access-guides/vpn-configuration"] as const,
   ["/do-science/guides/vpn-configuration", "/do-science/guides/access-guides/vpn-configuration"] as const,
   [
     "/do-science/guides/hunt-workbench-reissue-certificate",
