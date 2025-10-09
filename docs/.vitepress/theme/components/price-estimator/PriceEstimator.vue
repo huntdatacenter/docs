@@ -1,37 +1,20 @@
 <script lang="ts">
 import { defineComponent, nextTick } from "vue"
 import pricesApi from "./api/pricesApi.js"
+import type {
+  LabCard,
+  ComputeUnit,
+  StorageUnit,
+  PriceListItem,
+  GpuModel,
+  MachineFlavor,
+  TotalPriceItem,
+  UpdateComputePayload,
+  UpdateStoragePayload,
+  Catalogue,
+} from "./types"
 
 const ISSERVER = typeof window === "undefined"
-
-// Define the labCard interface for type safety
-interface labCard {
-  id: number
-  title: string
-  storage: number
-  priceStorage: number
-  priceComputeYearly: number
-  priceComputeYearlyYearly: number
-  numCompute: number
-  // Add properties to hold initial data for imported labs
-  initialCompute?: any[]
-  initialStorage?: any[]
-  // Add properties to hold the current dataset for saving state
-  computeDataset?: any[]
-  storageDataset?: any[]
-}
-
-interface datasetCompute {
-  id: number
-  name: string
-  flavor: string
-  core_count: number
-  ram: number
-  type: string
-  monthlyPrice: number
-  yearlyPrice: number
-}
-interface datasetStorage {}
 
 export default defineComponent({
   props: {
@@ -40,154 +23,139 @@ export default defineComponent({
 
   data() {
     return {
-      labCards: [] as labCard[], // Initialize an empty array for lab cards
-      nextLabId: 1, // New property to track the next available lab ID
-      selectedDataSpaceSub: null,
-      dataspaceSubscriptions: [
-        // Predefined data space subscriptions
-        { name: "Data space", subscription: "White (1 year)", label: "White (1 year)", units: 1, price: 0.0 },
-        { name: "Data space", subscription: "White (3 years)", label: "White (3 years)", units: 1, price: 0.0 },
-        { name: "Data space", subscription: "Orange (1 year)", label: "Orange (1 year)", units: 1, price: 8495.0 },
-        { name: "Data space", subscription: "Orange (3 years)", label: "Orange (3 years)", units: 1, price: 29734.0 },
-        { name: "Data space", subscription: "Blue (1 year)", label: "Blue (1 year)", units: 1, price: 35397.0 },
-      ] as { name: string; subscription: string | null; label: string; units: number; price: number }[],
-      // Initialization states and data storage for various price and machine data
-      isInitializingComputePrices: false,
-      computePrices: [],
-      isInitializingStoragePrices: false,
-      storagePrices: [],
-      isInitializingGpuPrices: false,
-      gpuPrices: [],
-      isInitializingMachines: false,
-      machines: [],
-      isInitializingAvailableGpus: false,
-      availableGpus: [],
-      labPrices: [],
-      // Total price data
-      totalCompute: { price: 0.0 },
-      totalStorage: 0.0,
-      totalStorageCost: 0.0,
-      totalPriceItems: [],
-      sumInTotal: 0.0,
-      itemsComputeExport: [] as datasetCompute[],
-      itemsStorageExport: [] as datasetStorage[],
+      labCards: [] as LabCard[],
+      nextLabId: 1,
+      catalogue: {
+        computePrices: [] as PriceListItem[],
+        storagePrices: [] as PriceListItem[],
+        gpuPrices: [] as PriceListItem[],
+        machineCatalogue: [] as MachineFlavor[],
+        availableGpus: [] as GpuModel[],
+      } as Catalogue,
+
+      labPrices: [] as PriceListItem[],
+      totals: {
+        computePrice: 0.0,
+        storageSize: 0.0,
+        storageCost: 0.0,
+      },
+      totalLabCost: [] as TotalPriceItem[],
+      itemsComputeExport: [] as ComputeUnit[][],
+      itemsStorageExport: [] as StorageUnit[][],
+      isLoadingCatalogues : false,
+      isLoadingState: false,
     }
   },
 
+  watch: {
+    labCards: {
+      handler() {
+        if (!this.isLoadingState) {
+          this.saveState()
+        }
+      },
+      deep: true,
+    },
+    totals: {
+      handler() {
+        if (!this.isLoadingState) {
+          this.setTotalItems()
+        }
+      },
+      deep: true,
+    },
+  },
+
   created() {
-    // Initialize all data when the component is created, then load the saved state
     this.initializeAll().then(() => {
       this.loadState()
     })
   },
 
   methods: {
-    // Method to save the current state to localStorage
     saveState() {
-      // Create a deep clone of the state to avoid mutating the reactive state that the child is watching.
-      const stateToSave = JSON.parse(
-        JSON.stringify({
-          labCards: this.labCards,
-          nextLabId: this.nextLabId,
-        }),
-      )
-
-      // Update the 'initial' properties on the cloned object before saving.
-      stateToSave.labCards.forEach(lab => {
-        lab.initialCompute = lab.computeDataset
-        lab.initialStorage = lab.storageDataset
-        // Clean up the temporary properties so they aren't saved in localStorage
-        delete lab.computeDataset
-        delete lab.storageDataset
-      })
+      const stateToSave = {
+        labCards: this.labCards.map((lab: LabCard) => ({
+          id: lab.id,
+          title: lab.title,
+          storage: lab.storage,
+          priceStorage: lab.priceStorage,
+          priceComputeYearly: lab.priceComputeYearly,
+          numCompute: lab.numCompute,
+          initSelectedCompute: lab.selectedCompute || [],
+          initSelectedStorage: lab.selectedStorage || [],
+        })),
+        nextLabId: this.nextLabId,
+      }
 
       if (!ISSERVER) {
         localStorage.setItem("priceEstimatorState", JSON.stringify(stateToSave))
       }
     },
 
-    // Method to load the state from localStorage
     loadState() {
-      //Add some try catch here, if it fails just give them an empty state
       try {
         let savedState
         if (!ISSERVER) {
           savedState = localStorage.getItem("priceEstimatorState")
         }
         if (savedState) {
+          this.isLoadingState = true
           const state = JSON.parse(savedState)
-          this.labCards = state.labCards || []
+          this.labCards = (state.labCards || []).map((lab: any) => ({
+            id: lab.id,
+            title: lab.title,
+            storage: lab.storage || 0,
+            priceStorage: lab.priceStorage || 0,
+            priceComputeYearly: lab.priceComputeYearly || 0,
+            numCompute: lab.numCompute || 0,
+            selectedCompute: lab.initSelectedCompute || [],
+            selectedStorage: lab.initSelectedStorage || [],
+          }))
           this.nextLabId = state.nextLabId || 1
 
-          // After loading state, we need to re-populate the export arrays and recalculate totals
+          this.totals.computePrice = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
+          this.totals.storageSize = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
+          this.totals.storageCost = this.calculateStorageCost()
+          this.setTotalItems()
+
           this.$nextTick(() => {
-            this.labCards.forEach(lab => {
-              // This assumes that the child LabCard component will emit its state on creation
-              // which will then be captured by updateLabCardCompute/Storage.
-            })
-            this.setPriceItems()
+            this.isLoadingState = false
           })
         }
       } catch (error) {
         console.error("Failed to load state:", error)
-        // If loading fails, just start with an empty state
         this.labCards = []
         this.nextLabId = 1
+        this.isLoadingState = false
       }
     },
 
-    // Method to initialize all data
     initializeAll() {
-      this.isInitializingComputePrices = true
-      this.isInitializingStoragePrices = true
-      this.isInitializingGpuPrices = true
-      this.isInitializingMachines = true
-      this.isInitializingAvailableGpus = true
+        this.isLoadingCatalogues = true
 
-      const priceListPromise = pricesApi.getPriceList().then(json => {
-        this.computePrices = json.filter(item => item["service.group"] === "cpu").map(this.preparePricesToYearly)
-        this.storagePrices = json.filter(item => item["service.family"] === "store")
-        this.gpuPrices = json.filter(item => item["service.group"] === "gpu").map(this.preparePricesToYearly)
-        this.labPrices = json.filter(item => item["service.group"] === "lab")
+      const priceListPromise = pricesApi.getPriceList().then((json: PriceListItem[]) => {
+        this.catalogue.computePrices = json.filter((item: PriceListItem) => item["service.group"] === "cpu").map(this.preparePricesToYearly)
+        this.catalogue.storagePrices = json.filter((item: PriceListItem) => item["service.family"] === "store")
+        this.catalogue.gpuPrices = json.filter((item: PriceListItem) => item["service.group"] === "gpu").map(this.preparePricesToYearly)
+        this.labPrices = json.filter((item: PriceListItem) => item["service.group"] === "lab")
       })
 
-      const gpusPromise = pricesApi.getAvailableGPUS().then(gpus => {
-        this.availableGpus = gpus
+      const gpusPromise = pricesApi.getAvailableGPUS().then((gpus: GpuModel[]) => {
+        this.catalogue.availableGpus = gpus
       })
 
-      const machinesPromise = pricesApi.getMachineFlavors().then(machine => {
-        this.machines = machine
+      const machinesPromise = pricesApi.getMachineFlavors().then((machine: MachineFlavor[]) => {
+        this.catalogue.machineCatalogue = machine
       })
+      this.setTotalItems()
 
-      // Return a promise that resolves when all data fetching is complete
       return Promise.all([priceListPromise, gpusPromise, machinesPromise]).then(() => {
-        this.isInitializingComputePrices = false
-        this.isInitializingStoragePrices = false
-        this.isInitializingGpuPrices = false
-        this.isInitializingMachines = false
-        this.isInitializingAvailableGpus = false
+        this.isLoadingCatalogues = false
       })
     },
-    // Initialize available GPUs
-    initializeAvailableGpus() {
-      this.isInitializingAvailableGpus = true
-      const uponGpus = pricesApi.getAvailableGPUS()
-      uponGpus.then(gpus => {
-        this.availableGpus = gpus
-        this.isInitializingAvailableGpus = false
-      })
-    },
-    // Initialize available machines
-    initializeMachines() {
-      this.isInitializingMachines = true
-      const machines = pricesApi.getMachineFlavors()
-      machines.then(machine => {
-        this.machines = machine
-        this.isInitializingMachines = false
-      })
-    },
-    // Convert daily prices to yearly prices
-    preparePricesToYearly(item: any) {
+
+    preparePricesToYearly(item: PriceListItem): PriceListItem {
       if (item["service.commitment"] === "1D") {
         item["service.commitment"] = "1Y"
         item["price.nok.ex.vat"] = item["price.nok.ex.vat"] * 365
@@ -195,86 +163,113 @@ export default defineComponent({
       return item
     },
 
-    // Add a new lab card
     addLabCard() {
       const newLabCard = {
-        id: this.nextLabId, // Use the counter for the new ID
+        id: this.nextLabId,
         title: `Lab ${this.nextLabId}`,
-        // Initialize with default empty values to prevent errors
         storage: 0,
         priceStorage: 0,
         priceComputeYearly: 0,
-        priceComputeYearlyYearly: 0,
         numCompute: 0,
-        initialCompute: [],
-        initialStorage: [],
+        initSelectedCompute: [],
+        initSelectedStorage: [],
       }
       this.labCards.push(newLabCard)
-      this.nextLabId++ // Increment the counter for the next lab
-      this.setPriceItems()
-      this.saveState() // Save state after adding a lab
+      this.nextLabId++
     },
 
-    // Update the storage property of a lab card
-    updateLabCardStorage(id, payload) {
-      const labCard = this.labCards.find(lab => lab.id === id)
-      if (labCard) {
-        labCard.storage = payload
-        labCard.priceStorage = payload.price
-        // Store the current dataset to be used when saving state
-        labCard.storageDataset = payload.datasetStorage
-      }
-      this.totalStorage = this.labCards.reduce((total, lab) => total + lab.storage.size, 0)
-      this.totalStorageCost = this.labCards.reduce((total, lab) => total + lab.priceStorage, 0)
-      this.itemsStorageExport[id] = payload.datasetStorage
-      this.setPriceItems()
-      this.saveState() // Save state after updating storage
-    },
-
-    // Update the compute property of a lab card
-    updateLabCardCompute(id, prices) {
-      const labCard = this.labCards.find(lab => lab.id === id)
-      if (labCard) {
-        labCard.priceComputeYearly = parseFloat(prices.yearlyPrice)
-        labCard.numCompute = parseFloat(prices.numCompute)
-        // Store the current dataset to be used when saving state
-        labCard.computeDataset = prices.datasetCompute
-      }
-      this.totalCompute.price = this.labCards.reduce((total, lab) => total + lab.priceComputeYearly, 0)
+    calculateStorageCost() {
       /**
-       * We need to handle that we can have multiple labs for the export. So make it an array of arrays.
+       * We are going to go through all the lab cards. For each type of storage there is (HHD and NVME) sum up it seperately. Then we calculate the price such that: The first 10TB is a price collected from api, the next 90TB is another price and anything above that is another price.
        */
-      this.itemsComputeExport[id] = prices.datasetCompute
-      this.setPriceItems()
-      this.saveState() // Save state after updating compute
+      console.log(this.catalogue)
+      let totalStorageByType: { [key: string]: number } = {}
+      this.labCards.forEach((lab: LabCard) => {
+          lab.selectedStorage?.forEach((storage: StorageUnit) => {
+            if (totalStorageByType[storage.type]) {
+              totalStorageByType[storage.type] += storage.size
+            } else {
+              totalStorageByType[storage.type] = storage.size
+            }
+          })
+        })
+      console.log("Total storage by type: ", totalStorageByType)
+      let totalCost = 0.0
+      for (const [type, size] of Object.entries(totalStorageByType)) {
+        /**
+         * Convert from NVME to block.nvme.rep and HDD to block.hdd.rep
+         */
+        const blockType = type === "NVME" ? "block.nvme.rep" : "block.hdd.rep"
+        let remainingSize = size
+        const priceEntries = this.catalogue.storagePrices.filter((item: PriceListItem) => item["service.group"] === blockType && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "1Y")
+        console.log("Price entries for type ", type, priceEntries)
+        for (const entry of priceEntries) {
+          let applicableSize = 0
+          if (entry["service.unit"] === "First 10 TB") {
+            applicableSize = Math.min(remainingSize, 10)
+          } else if (entry["service.unit"] === "Next 90 TB") {
+            applicableSize = Math.min(remainingSize, 90)
+          } else {
+            applicableSize = remainingSize
+            entry["price.nok.ex.vat"] = entry["price.nok.ex.vat"] * (applicableSize / 100)
+          }
+          remainingSize -= applicableSize
+          totalCost += entry["price.nok.ex.vat"] * applicableSize
+          console.log("For entry ", entry["service.unit"], " applicable size: ", applicableSize, " remaining size: ", remainingSize, " cost: ", entry["price.nok.ex.vat"] * applicableSize)
+        }
+      }
+      return totalCost
+
     },
-    // Remove a lab card by its ID
-    removeLabCard(id) {
+
+
+    updateLabCardStorage(id: number, payload: UpdateStoragePayload) {
+      const labCard = this.labCards.find((lab: LabCard) => lab.id === id)
+      if (labCard) {
+        labCard.storage = payload.size
+        labCard.priceStorage = payload.price
+        labCard.selectedStorage = payload.selectedStorage
+      }
+      this.totals.storageSize = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
+      this.totals.storageCost = this.calculateStorageCost()
+      this.itemsStorageExport[id] = payload.selectedStorage
+    },
+
+    updateLabCardCompute(id: number, prices: UpdateComputePayload) {
+      const labCard = this.labCards.find((lab: LabCard) => lab.id === id)
+      if (labCard) {
+        labCard.priceComputeYearly = Number(prices.yearlyPrice)
+        labCard.numCompute = Number(prices.numCompute)
+        labCard.selectedCompute = prices.selectedCompute
+      }
+      this.totals.computePrice = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
+      this.itemsComputeExport[id] = prices.selectedCompute
+    },
+    removeLabCard(id: number) {
       this.labCards = this.labCards.filter(lab => lab.id !== id)
-      // Use delete to create a sparse array, preserving other indices
       delete this.itemsComputeExport[id]
       delete this.itemsStorageExport[id]
-      // Recalculate totals after removing a lab card
-      this.setPriceItems()
-      this.saveState() // Save state after removing a lab
+      this.totals.computePrice = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
+      this.totals.storageSize = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
+      this.totals.storageCost = this.calculateStorageCost()
     },
+
     removeAllLabs() {
       this.labCards = []
       this.itemsComputeExport = []
       this.itemsStorageExport = []
-      this.totalCompute = { price: 0.0 }
-      this.totalStorage = 0.0
-      this.totalStorageCost = 0.0
+      this.totals = {
+        computePrice: 0.0,
+        storageSize: 0.0,
+        storageCost: 0.0,
+      }
       this.nextLabId = 1
-      this.setPriceItems()
-      // Remove the saved state from local storage
       if (!ISSERVER) {
         localStorage.removeItem("priceEstimatorState")
       }
     },
 
-    // Set the price items and calculate the total sum
-    setPriceItems() {
+    setTotalItems() {
       let priceItems: { name: string; subscription: string | null; units: number | string; price: number }[] = []
       if (this.labCards) {
         this.labCards.forEach(item => {
@@ -291,80 +286,67 @@ export default defineComponent({
         name: "Compute",
         subscription: null,
         units: numOfCompute || 0,
-        price: this.totalCompute.price,
+        price: this.totals.computePrice,
       })
       priceItems.push({
         name: "Storage",
         subscription: "Commitment",
-        units: `${this.totalStorage} TB`,
-        price: this.totalStorageCost,
+        units: `${this.totals.storageSize} TB`,
+        price: this.totals.storageCost,
       })
-      this.totalPriceItems = priceItems
-      this.sumInTotal = priceItems.reduce((total, item) => total + item.price, 0)
+      this.totalLabCost = priceItems
     },
     triggerFileUpload() {
-      this.$refs.fileInput.click()
+      (this.$refs.fileInput as HTMLInputElement).click()
     },
 
-    async handleFileUpload(event) {
-      const file = event.target.files[0]
-      if (!file) {
-        return
-      }
+    async handleFileUpload(event: Event) {
+      const target = event.target as HTMLInputElement
+      const file = target.files?.[0]
+      if (!file) return
 
       const reader = new FileReader()
       reader.onload = async e => {
         try {
-          // Ensure all price data is loaded before processing the file
           await this.initializeAll()
 
-          const data = JSON.parse(e.target.result as string)
+          const data = JSON.parse(e.target?.result as string)
 
-          // Basic validation of the JSON structure
           if (!data.version || !Array.isArray(data.labs)) {
             throw new Error("Invalid JSON format: 'version' or 'labs' property is missing.")
           }
 
-          // Reset current state
+          this.isLoadingState = true
           this.labCards = []
           this.itemsComputeExport = []
           this.itemsStorageExport = []
-          this.totalCompute = { price: 0.0 }
-          this.totalStorage = 0.0
-          this.totalStorageCost = 0.0
-          this.nextLabId = 1 // Reset the lab ID counter
+          this.totals = {
+            computePrice: 0.0,
+            storageSize: 0.0,
+            storageCost: 0.0,
+          }
+          this.nextLabId = 1
 
-          // Re-create labs from the imported file
-          data.labs.forEach(lab => {
-            const newLabCard: labCard = {
+          data.labs.forEach((lab: any) => {
+            const newLabCard: LabCard = {
               id: lab.id,
               title: lab.name,
-              // Initialize all properties to a default state
               storage: 0,
               priceStorage: 0,
               priceComputeYearly: 0,
-              priceComputeYearlyYearly: 0,
               numCompute: 0,
-              initialCompute: lab.compute || [],
-              initialStorage: lab.storage || [],
+              initSelectedCompute: lab.compute || [],
+              initSelectedStorage: lab.storage || [],
             }
             this.labCards.push(newLabCard)
-            // Update the nextLabId to be one greater than the highest ID found
             if (lab.id >= this.nextLabId) {
               this.nextLabId = lab.id + 1
             }
           })
 
-          // Wait for the DOM to update with the new lab cards
           await nextTick()
-
-          // Now that lab cards are created and have emitted their initial state,
-          // recalculate the total summary.
-          this.setPriceItems()
-          this.saveState() // Save the newly imported state
-
-          // Reset the file input so the same file can be uploaded again
-          event.target.value = ""
+          this.isLoadingState = false
+          target.value = ""
         } catch (error) {
           console.error("Failed to parse or process JSON file:", error)
           alert("Error: Could not import file. Please ensure it is a valid JSON file with the correct format.")
@@ -381,29 +363,13 @@ export default defineComponent({
 </script>
 
 <template>
-  <v-container>
+  <v-container v-if="!isLoadingCatalogues" >
     <v-sheet class="group-slider-wrapper ma-auto pt-0" elevation="0" max-width="1120">
       <v-card-title>Price estimator for HUNT Cloud</v-card-title>
       <v-card-subtitle> This calculator gives a rough estimate of how much our services cost</v-card-subtitle>
-
-      <!-- Subscription selection component (commented out) -->
-      <!-- <v-select
-      v-model="selectedDataSpaceSub"
-      :items="dataspaceSubscriptions"
-      item-title="label"
-      label="Choose a subscription"
-      clearable
-      @update:model-value="setPriceItems"
-    >
-      <template v-slot:item="{ props, item }">
-        <v-list-item v-bind="props" :subtitle="item.raw.price"></v-list-item>
-      </template>
-</v-select> -->
-
       <v-container>
         <v-row lex-direction="row-reverse" justify="space-between">
           <v-col cols="auto">
-            <!-- Add a new lab card on button click -->
             <v-btn density="default" size="large" dark @click="addLabCard">Add lab</v-btn>
           </v-col>
           <v-col cols="auto">
@@ -428,30 +394,24 @@ export default defineComponent({
           </v-col>
         </v-row>
       </v-container>
-      <!-- Loop through labCards array and render LabCard component -->
       <v-row>
         <v-col v-for="(lab, index) in labCards" :key="index" cols="12">
           <LabCard
             :key="lab.id"
             :title="lab.title"
-            :compute-prices="computePrices"
-            :gpu-prices="gpuPrices"
-            :machines="machines"
-            :available-gpus="availableGpus"
-            :storage-prices="storagePrices"
-            :initial-compute="lab.initialCompute"
-            :initial-storage="lab.initialStorage"
+            :catalogue="catalogue"
+            :init-selected-compute="lab.selectedCompute || []"
+            :init-selected-storage="lab.selectedStorage || []"
             @updateStorage="updateLabCardStorage(lab.id, $event)"
             @updateCompute="updateLabCardCompute(lab.id, $event)"
             @removeLab="removeLabCard(lab.id)"
           />
         </v-col>
       </v-row>
-      <!-- Display total prices if there are lab cards -->
       <v-row v-if="labCards.length !== 0">
         <TotalBlock
-          :total-items="totalPriceItems"
-          :sum-in-total="sumInTotal"
+          :total-items="totalLabCost"
+          :totals="totals"
           :itemsComputeExport="itemsComputeExport"
           :itemsStorageExport="itemsStorageExport"
         />
@@ -461,7 +421,4 @@ export default defineComponent({
 </template>
 
 <style scoped>
-/* Add scoped styles if needed */
-
-/* TODO: Make sure that the price is calculated correctly when importing a file and loading from local storage */
 </style>

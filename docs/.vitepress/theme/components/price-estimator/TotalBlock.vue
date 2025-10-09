@@ -3,7 +3,14 @@ export default {
   name: "TotalBlock",
   props: {
     totalItems: { type: Array, default: () => [] },
-    sumInTotal: { type: Number, default: 0.0 },
+    totals: {
+      type: Object,
+      default: () => ({
+        computePrice: 0.0,
+        storageSize: 0.0,
+        storageCost: 0.0,
+      }),
+    },
     itemsComputeExport: { type: Array, default: () => [] },
     itemsStorageExport: { type: Array, default: () => [] },
   },
@@ -13,13 +20,16 @@ export default {
       totalHeaders: [
         { title: "Name", align: "start", sortable: true, key: "name" },
         { title: "Total units", align: "start", sortable: true, key: "units" },
-        { title: "Price", align: "start", sortable: true, key: "price" },
+        { title: "Price / year", align: "start", sortable: true, key: "price" },
       ],
-      datasetStorage: [],
+      selectedStorage: [],
       totalPrice: 0.0,
       commitmentPrice: 0.0,
       onDemandPrice: 0.0,
     }
+  },
+  created() {
+    
   },
   computed: {
     formattedTotalItems() {
@@ -28,27 +38,29 @@ export default {
       }
       return this.totalItems.map(item => ({
         ...item,
-        price: parseFloat(item.price).toFixed(2),
+        price: Number(item.price).toFixed(2),
       }))
+    },
+    sumInTotal() {
+      // Calculate total from all items (labs + compute + storage)
+      const labsTotal = this.totalItems
+        .filter(item => item.name.startsWith('Lab'))
+        .reduce((sum, item) => sum + item.price, 0)
+      return labsTotal + this.totals.computePrice + this.totals.storageCost
     },
   },
   watch: {},
 
   methods: {
     exportItems() {
-      // Create deep copies to avoid modifying the original data
       const computeItemsClean = JSON.parse(JSON.stringify(this.itemsComputeExport))
       const storageItemsClean = JSON.parse(JSON.stringify(this.itemsStorageExport))
 
-      const labs = [] // Initialize as an array
+      const labs = [] 
       const maxId = Math.max(computeItemsClean.length, storageItemsClean.length)
-
-      // Iterate through possible lab IDs (assuming they start from 1)
       for (let id = 1; id < maxId; id++) {
         const compute = computeItemsClean[id]
         const storage = storageItemsClean[id]
-
-        // Only add the lab to the export if it has compute or storage items
         if (compute || storage) {
           const labObject = {
             id: id,
@@ -56,7 +68,6 @@ export default {
           }
 
           if (compute) {
-            // Remove price properties from compute items
             labObject.compute = compute.map(item => {
               delete item.monthlyPrice
               delete item.yearlyPrice
@@ -65,7 +76,6 @@ export default {
           }
 
           if (storage) {
-            // Remove price properties from storage items
             labObject.storage = storage.map(item => {
               delete item.price
               return item
@@ -100,7 +110,7 @@ export default {
     <v-card class="ma-0 pa-4">
       <v-card-title> Total</v-card-title>
       <v-data-table-virtual
-        v-model="datasetStorage"
+        v-model="selectedStorage"
         :items="formattedTotalItems"
         :headers="totalHeaders"
         hover
@@ -120,7 +130,7 @@ export default {
             <v-list-item>
               <v-list-item-title> <strong> Estimated total price: </strong></v-list-item-title>
               <v-list-item-subtitle class="align-end">
-                {{ parseFloat(this.sumInTotal).toFixed(2) }} NOK ex. VAT / Year
+                {{ Number(this.sumInTotal).toFixed(2) }} NOK ex. VAT / Year
               </v-list-item-subtitle>
             </v-list-item>
           </v-list>
