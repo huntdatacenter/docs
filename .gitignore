@@ -8,9 +8,9 @@ npm-debug.log
 coverage/
 run
 dist
-public
+/public
 build/
-!docs/.vuepress/public
+!docs/public
 docs/.vuepress/.cache
 docs/.vuepress/.temp
 docs/.vitepress/cache
