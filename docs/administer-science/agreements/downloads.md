@@ -276,7 +276,7 @@ The following form fields are included in the "HUNT Cloud External Kista Import 
 
 *Data space*
 
-- **Data space name:** This is the short name of you data space that request the transfer.
+- **Data space name:** This is the short name of your data space that request the transfer.
 
 - **Data space leader:** This is the name of the data space leader.
 
@@ -349,7 +349,7 @@ The following form fields are included in the "HUNT Cloud External Kista Export 
 
 *Data space*
 
-- **Data space name:** This is the short name of you data space that request the transfer.
+- **Data space name:** This is the short name of your data space that request the transfer.
 
 - **Data space leader:** This is the name of the data space leader.
 

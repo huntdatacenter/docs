@@ -36,7 +36,7 @@ Let's start with our default lab for sensitive data discoveries for teams of 2-3
 | Store | 1 terabyte | 1 year | 2376 | 1 | 2376 |
 | **PER YEAR** |  | | |  | **11752** |
 
-The above example establishes your own lab in HUNT Cloud with access to commonly used tools in HUNT Workbench. You lab holds sufficient resources for analysis for a small team. Both compute and store can easily be upgraded as your experiments grow.
+The above example establishes your own lab in HUNT Cloud with access to commonly used tools in HUNT Workbench. Your lab holds sufficient resources for analysis for a small team. Both compute and store can easily be upgraded as your experiments grow.
 
 
 ### Genomics

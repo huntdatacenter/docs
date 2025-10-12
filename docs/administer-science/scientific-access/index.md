@@ -2,7 +2,7 @@
 title: Scientific access
 category: HUNT Cloud
 permalink: /administer-science/scientific-access/
-description: This page provides a guide for scientific centers and groups that wants to enable HUNT Cloud resources fro their scientists and data explorers. 
+description: This page provides a guide for scientific centers and groups that wants to enable HUNT Cloud resources fro their scientists and data explorers.
 ---
 
 # Scientific access
@@ -25,7 +25,7 @@ We have five agreement layers in HUNT Cloud (illustration below). This guide cov
 
 ::: warning Organizational access
 
-You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access/) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/administer-science/contact) if you need to start an organizational onboarding. 
+You scientific access agreements are attached to your organizations access agreements. Thus, your department or organization need to activate [organizational access](/govern-science/organizational-access/) to HUNT Cloud before you can start your scientific onboarding. [Contact us](/administer-science/contact) if you need to start an organizational onboarding.
 
 :::
 
@@ -36,16 +36,16 @@ Data space orders and Lab orders are formally attached to your organization's [S
 
 ### Data space order
 
-**A Data space in HUNT Cloud is the administrative unit that coordinate scientific activities across one or many labs. The aim is to simplify your management.** 
+**A Data space in HUNT Cloud is the administrative unit that coordinate scientific activities across one or many labs. The aim is to simplify your management.**
 
 Your Data space is the management account where your labs and their attached services are managed, controlled and billed. A Data space subscription is therefore required before individual labs and services can be ordered.
 
-Your Data space does also identify your management team that we interact with to ensure smooth activities across your labs, and your Data space subscription level defines the service level that is available to the labs under your control. 
+Your Data space does also identify your management team that we interact with to ensure smooth activities across your labs, and your Data space subscription level defines the service level that is available to the labs under your control.
 
 ::: details Data space order resources
 
-* [HUNT Cloud Services specification](/administer-science/services/specifications) specifies the Data spaces services details. 
-* [HUNT Cloud Price list](/administer-science/prices/pricelist) specifies the Data space subscription cost. 
+* [HUNT Cloud Services specification](/administer-science/services/specifications) specifies the Data spaces services details.
+* [HUNT Cloud Price list](/administer-science/prices/pricelist) specifies the Data space subscription cost.
 * [HUNT Cloud Data space order](/administer-science/agreements/downloads#data-space-order)
 * [HUNT Cloud Invoice profile](/administer-science/agreements/downloads#invoice-profile)
 :::
@@ -54,16 +54,16 @@ Your Data space does also identify your management team that we interact with to
 
 **A Lab in HUNT Cloud is a digital environment (laboratory) where your scientists access their scientific tools and resources for storage, computation and transport. You may attach one to many labs under your Data space.**
 
-By default, a lab consists of a security framework that we control and a home machine where your scientists can store data and run analysis. 
+By default, a lab consists of a security framework that we control and a home machine where your scientists can store data and run analysis.
 
-Your lab leader or lab coordinator chooses the initial size of the home machine and the initial storage you want to start with. From there they can adjust the machine size, add additional machines, and expand the storage resources throughout the project period. 
+Your lab leader or lab coordinator chooses the initial size of the home machine and the initial storage you want to start with. From there they can adjust the machine size, add additional machines, and expand the storage resources throughout the project period.
 
 ::: details Lab order resources
 
-* [HUNT Cloud Services Specification](/administer-science/services/specifications) specifies the Lab services and individual resource services details. 
-* [HUNT Cloud Price calculator](/administer-science/prices/calculator) exemplifies the Lab subscription cost and the cost for individual services. 
-* [HUNT Cloud Price list](/administer-science/prices/pricelist) specifies individual prices for the Lab subscription and individual services. 
-* [HUNT Cloud Machine types](/administer-science/services/machine-types) lists available machine types that can be deployed either as home machines or additional machines to the lab. 
+* [HUNT Cloud Services Specification](/administer-science/services/specifications) specifies the Lab services and individual resource services details.
+* [HUNT Cloud Price calculator](/administer-science/prices/calculator) exemplifies the Lab subscription cost and the cost for individual services.
+* [HUNT Cloud Price list](/administer-science/prices/pricelist) specifies individual prices for the Lab subscription and individual services.
+* [HUNT Cloud Machine types](/administer-science/services/machine-types) lists available machine types that can be deployed either as home machines or additional machines to the lab.
 * [HUNT Cloud Lab order](/administer-science/agreements/downloads#lab-order)
 :::
 
@@ -71,14 +71,14 @@ Your lab leader or lab coordinator chooses the initial size of the home machine 
 
 ## Decision support
 
-**There are a set of small decisions that needs to be made to get your first lab up and running. We are more than happy to help and guide in this process.** 
+**There are a set of small decisions that needs to be made to get your first lab up and running. We are more than happy to help and guide in this process.**
 
 Skip this step if you already have an active Data space in place and order your new lab directly in our [administer science service desk](/administer-science/service-desk/data-space-orders#new-lab).
 
 
 ::: details Data space order decision support
 
-**Service center** 
+**Service center**
 
 *Define your Service center short name*
 
@@ -90,11 +90,11 @@ We aim to use an individual that is responsible for the scientific activities un
 
 **Data space name**
 
-We recommend that you invest some time to identify a short and powerful name for your data space. Name recognition may help strengthen your scientific brand when you communicate with colleagues, collaborators and other interested parties. 
+We recommend that you invest some time to identify a short and powerful name for your data space. Name recognition may help strengthen your scientific brand when you communicate with colleagues, collaborators and other interested parties.
 
 *Data space short name*
 
-We will use your Data space short name in communication with your team and when we communicate with your department and faculty. Abbreviation of centers, groups and labs are often used. 
+We will use your Data space short name in communication with your team and when we communicate with your department and faculty. Abbreviation of centers, groups and labs are often used.
 
 *Data space full name*
 
@@ -107,7 +107,7 @@ This is the individual that is authorized to make decisions for all labs in the 
 **Administrator roles**
 
 You have the option to list specific individuals as our point-of-contact for dialogues on agreements, data, technologies, training of new users and financial aspects. Leave this field BLANK if you would like the Data space leader to hold this role.
- 
+
 For larger center and groups, we see these roles as senior positions that administer and ensures a common practice for e.g. your data handling across your many labs and collaborations. [Click here](/administer-science/roles) to read more about the different roles.
 
 **Subscription level**
@@ -132,7 +132,7 @@ You need to get a signature from the Service center leader, typically by saving 
 
 ::: details Invoice profile decision support
 
-The Invoice profile specify where accrued costs for you Data space and attached labs should be invoiced. You need at least one Invoice profile to get going.
+The Invoice profile specify where accrued costs for your Data space and attached labs should be invoiced. You need at least one Invoice profile to get going.
 
 **Data space**
 
@@ -161,11 +161,11 @@ Specify "K.STED" and "PROJECT NUMBER" for your data space. These fields are mand
 
 **Pilot period**
 
-Leave this blank. 
+Leave this blank.
 
 **Free quota**
 
-Leave this blank. 
+Leave this blank.
 
 **Advance payment**
 
@@ -182,7 +182,7 @@ You may add a monetary spending limit to your account.
 
 **Signatures**
 
-Invoice profiles are signed by Account signatory. This is the individual that is authorized to operate the account information specified in the invoice profile on behalf of their organization, typically the Data space leader. 
+Invoice profiles are signed by Account signatory. This is the individual that is authorized to operate the account information specified in the invoice profile on behalf of their organization, typically the Data space leader.
 
 Co-signature from HUNT Cloud is required to effectuate i Pilot period and/or Free quota.
 
@@ -200,14 +200,14 @@ Repeat the Data space short name and the Data space leader that you just stated 
 
 **Lab name**
 
-Invest some time to identify a cool, catchy or powerful name for your lab. This may help you strengthening your scientific brand. This will be visible for all your scientific collaborators. We use the name when we communicate with your lab colleagues. 
+Invest some time to identify a cool, catchy or powerful name for your lab. This may help you strengthening your scientific brand. This will be visible for all your scientific collaborators. We use the name when we communicate with your lab colleagues.
 
 - *Short name*. This is the short name or abbreviation for your lab, similar to the Data space short name. We will use this name in day to day communication.
-- *Full name*. This is the full name of your new lab. 
+- *Full name*. This is the full name of your new lab.
 
 **Lab leader ad lab coordinator**
 
-You need to identify one lab leader and one lab coordinator that will manage day-to-day activities in your lab, including adding new lab users and adjusting lab resources. 
+You need to identify one lab leader and one lab coordinator that will manage day-to-day activities in your lab, including adding new lab users and adjusting lab resources.
 
 The lab leader and lab coordinator are our point of contact in the lab for dialogue and help, as well as the point of contact for your Data space administrator team.
 
@@ -215,12 +215,12 @@ The Data space leader may also be listed as a Lab leader. It is common to list a
 
 **Lawful processing**
 
-We use the Lab order to document activities in the lab on behalf of your host organization. 
+We use the Lab order to document activities in the lab on behalf of your host organization.
 
-- *Ethical approval*. If applicable, specify one to many ethical approvals that governs your processing. 
-- *Privacy justification*. If applicable, specify the legal ground for the processing under GDPR, such as Article 6 or 9. 
-- *Purpose of the processing*. If applicable, specify the purpose of the processing such as research, health service, innovation etc 
-- *Categories of data subjects*. If applicable, specify the broad categories of data subjects such as research participants, patients etc. 
+- *Ethical approval*. If applicable, specify one to many ethical approvals that governs your processing.
+- *Privacy justification*. If applicable, specify the legal ground for the processing under GDPR, such as Article 6 or 9.
+- *Purpose of the processing*. If applicable, specify the purpose of the processing such as research, health service, innovation etc
+- *Categories of data subjects*. If applicable, specify the broad categories of data subjects such as research participants, patients etc.
 - *Personal data content*. If applicable, specify the personal data content included in the processing such as "self reported health information, genomics information, medical images, information from medical records" etc.
 
 **Signatures**

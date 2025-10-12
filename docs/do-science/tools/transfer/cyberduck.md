@@ -8,7 +8,7 @@ description: Installation and usage guide for cyberduck transfer tool.
 
 # Cyberduck
 
-Is a free software for convenient file transfers between your macOS laptop and lab. 
+Is a free software for convenient file transfers between your macOS laptop and lab.
 
 [[toc]]
 
@@ -23,7 +23,7 @@ You can download free version of Cyberduck through their main [webpage](https://
 
 <img src="./images/cyberduck1.png" width="600px">
 
-3. New window should pop-up. Fill in details as described in below image. 
+3. New window should pop-up. Fill in details as described in below image.
 
 <img src="./images/cyberduck_2.png" width="600px">
 
@@ -31,11 +31,11 @@ You can download free version of Cyberduck through their main [webpage](https://
 
 ## How to transfer your files
 
-You can confirm correct setup by checking if your `archive` and `work` directory are avialable in Cyberduck. 
+You can confirm correct setup by checking if your `archive` and `work` directory are avialable in Cyberduck.
 Then, you are able to download/upload file by simple drag-n-drop or right clicking on your files and selecting *Download to*.
 
 ## Recommended settings
-### Setting for limiting bandwith 
+### Setting for limiting bandwith
 
 1. Click settings under Cyberduck in the toolbar on top of the screen
 
@@ -47,9 +47,9 @@ Then, you are able to download/upload file by simple drag-n-drop or right clicki
 
 ### Settings during transfer
 
-Setting for limiting transfer connections to fairly share bandwith with others. 
+Setting for limiting transfer connections to fairly share bandwith with others.
 
-1. Click the connection icon in the top right corner 
+1. Click the connection icon in the top right corner
 
 <img src="./images/cyberduck-limit-transfer-connections-1.png" width="600px">
 
@@ -60,5 +60,5 @@ Setting for limiting transfer connections to fairly share bandwith with others.
 ## Immediate troubleshooting
 
 ### What is my lab IP address ?
-You can find you lab IP address in config.txt file sent over to your email or via access link which you were provided during initial onboarding. Cannot find lab access link ? Request your lab access link [here](https://docs.hdc.ntnu.no/do-science/service-desk/#request-lab-access-link-reissue)
+You can find your lab IP address in config.txt file sent over to your email or via access link which you were provided during initial onboarding. Cannot find lab access link ? Request your lab access link [here](https://docs.hdc.ntnu.no/do-science/service-desk/#request-lab-access-link-reissue)
 
