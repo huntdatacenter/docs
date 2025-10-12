@@ -129,14 +129,14 @@ With a little bit of luck, you should now be able to connect directly from your 
   TMPDIR="${USERPROFILE}" ssh-copy-id -i "${USERPROFILE}/.ssh/id_rsa.pub" <username>@<entry-IP>
   ```
 
-**Note.** You need to replace `<username>` with you username (without the brackets), and `<entry-IP>` with your entry IP from the SSH config file.
+**Note.** You need to replace `<username>` with your username (without the brackets), and `<entry-IP>` with your entry IP from the SSH config file.
 
 - If permissions error still appears try this alternative approach
   ```
   cat "${USERPROFILE}/.ssh/id_rsa.pub" | ssh <username>@<entry-IP> "cat >> ~/.ssh/authorized_keys"
   ```
 
-**Note.** You need to replace `<username>` with you username (without the brackets), and `<entry-IP>` with your entry IP from the SSH config file.
+**Note.** You need to replace `<username>` with your username (without the brackets), and `<entry-IP>` with your entry IP from the SSH config file.
 
 :::
 
