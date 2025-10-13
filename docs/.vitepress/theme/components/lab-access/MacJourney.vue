@@ -431,7 +431,7 @@ onMounted(() => {
                           <p>
                             If you received an error "wrong credentials" after using your TOTP authenticator:
                             <ul>
-                              <li>Make sure your phone is connected to internet for time synchronization.</li>
+                              <li>Make sure your phone is connected to internet for time synchronization. Time zone between phone and your machine should match.</li>
                             </ul>
                           </p>
 

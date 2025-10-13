@@ -200,7 +200,7 @@ const totpStepper = ref("1")
                 <br /><br />
 
                 <v-alert border="start" border-color="info" elevation="2">
-                  Phone might need to be connected to internet to assure precise synchronization of time.
+                  Phone might need to be connected to internet to assure precise synchronization of time. Time zone between phone and your machine should match.
                 </v-alert>
               </v-card>
               <v-btn color="primary" class="mx-2 mb-1" @click="totpStepper = 1">Start again</v-btn>
