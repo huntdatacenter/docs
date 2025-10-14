@@ -219,6 +219,18 @@ Click the button below to update an existing invoice profile to your data space.
 * **Expected delivery time:** Days.
 * **Cost:** Included in your data space subscription.
 
+### VAT exemption
+
+As default, all invoices to Data spaces and Labs outside NTNU will include value added tax (VAT). Documented collaborations with partners from NTNU may be exempted from VAT. If relevant, you can send us your collaboration agreement for evaluation.
+
+<SDButton form="request_vat_exemption" />
+
+* **Who can order:** Lab leaders and lab coordiantors.
+* **Required attachment**: TODO.
+* **Expected response time:** Weeks.
+* **Cost:** Included in the lab subscription.
+
+
 ## Tingweek
 
 ### Deregister to future Tingweek invitations
