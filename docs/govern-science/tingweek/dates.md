@@ -23,9 +23,9 @@ description: This page lists information and questions about our Tingweeks.
 
 ### Tingweek #16 (2025-10)
 
-- **Labting**: Tuesday 14 October 2025 - 2 to 3 p.m. CET
-- **Admin ting**: Wednesday 15 October 2025 - 9 to 10 a.m. CET
-- **Data controller ting**: Wednesday 15 October 2025 - 1 to 2 p.m. CET
+- **Labting**: Tuesday 14 October 2025 - 2 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-labting-agenda.pdf))
+- **Admin ting**: Wednesday 15 October 2025 - 9 to 10 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-dataspaceting-agenda.pdf))
+- **Data controller ting**: Wednesday 15 October 2025 - 1 to 2 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-datacontrollerting-agenda.pdf))
 - **Financial ting**: Thursday 16 October 2025 - 9 to 10 a.m. CET
 
 ### Tingweek #15 (2025-06)
