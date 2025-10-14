@@ -36,6 +36,20 @@ Once you have configured your password you can also login from [Workbench Termin
 psql --host=/var/run/postgresql
 ```
 
+## Connecting through pgAdmin in Workbench
+
+Session settings:
+
+- Host: `/var/run/postgresql`
+- Port: `5432`
+- Username: use your username
+
+![pgadmin-add-database-settings](./images/pgadmin-add-db.png)
+
+Connect to database:
+
+- When asked for password use same password as configured in the beggining of the guide
+
 ## Connecting through pgweb in Workbench
 
 - Host: `/var/run/postgresql`
@@ -46,7 +60,7 @@ psql --host=/var/run/postgresql
 
 Easiest way is to connect with Scheme URL:
 
-```
+```text
 postgresql:///?host=/var/run/postgresql
 ```
 
@@ -59,6 +73,7 @@ mamba install -c conda-forge -n default -y postgresql
 ```
 
 Then connect:
+
 ```bash
 psql --host=/var/run/postgresql
 ```
@@ -73,6 +88,7 @@ conda install -c conda-forge -n py310 psycopg2
 ```
 
 Example of connecting to database named with username:
+
 ```python
 import os
 import psycopg2
