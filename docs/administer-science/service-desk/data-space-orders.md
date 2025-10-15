@@ -226,7 +226,7 @@ As default, all invoices to Data spaces and Labs outside NTNU will include value
 <SDButton form="request_vat_exemption" />
 
 * **Who can order:** Lab leaders and lab coordiantors.
-* **Required attachment**: TODO.
+* **Required attachment** (one or more of the following): collaboration agreement, consortium agreement, grant applications and/or publications listing authors from both institutions.
 * **Expected response time:** Weeks.
 * **Cost:** Included in the lab subscription.
 
