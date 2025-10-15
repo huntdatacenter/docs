@@ -490,6 +490,36 @@ request_update_of_existing_invoice:
   ]
   attachments: []
 
+
+request_vat_exemption:
+  title: "VAT exemption"
+  template:
+    subject: "VAT exemption - {labname} in {dataspace}"
+    body: |
+      Hi HUNT Cloud team,
+
+      I would like to request an evaluation of VAT exemption.
+
+      I have attached documents to this email that show our scientific collaboration.
+
+      I understand that you will do an evaluation and archive the documentation for future reviews by the Norwegian Tax Administration.
+
+
+      Best regards,
+
+  fields: [
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+  ]
+  requirements: [
+    "<b>Who can order:</b> Lab leaders and lab coordiantors.",
+    "<b>Required attachment</b>: (one or more of the following): collaboration agreement, consortium agreement, grant applications and/or publications listing authors from both institutions.",
+    "<b>Expected delivery time:</b> Weeks.",
+    "<b>Cost:</b> Included in the lab subscription.",
+    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
+  ]
+  attachments: []
+
 request_lab_transfer:
   title: "Request lab transfer between data spaces"
   template:
