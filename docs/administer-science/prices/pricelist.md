@@ -45,7 +45,7 @@ The price list will be updated from time to time.
 
 | **Version** | **Type** | **Announced** | **Effective** |
 | - | - | - | - |
-| [HUNT Cloud Price List v5.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-0.pdf) (PDF) | Minor | 2025-07-01 | 2025-10-01 |
+| [HUNT Cloud Price List v5.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-0.pdf) (PDF) | MAJOR | 2025-07-01 | 2025-10-01 |
 | [HUNT Cloud Price List v4.5](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-5.pdf) (PDF) | Minor | 2025-05-08 | 2025-05-08 |
 | [HUNT Cloud Price List v4.4](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-4.pdf) (PDF) | Minor | 2025-02-15 | 2025-02-15 |
 | [HUNT Cloud Price List v4.3](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-3.pdf) (PDF) | Minor | 2025-02-11 | 2025-02-11 |
