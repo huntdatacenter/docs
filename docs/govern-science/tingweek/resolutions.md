@@ -15,6 +15,11 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun) and the use of [resolu
 
 :::
 
+#### [Enable editorial data access](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek13-resolutions.pdf#page=3)
+
+- TOPIC: Data
+- ID: R8/LT13/T13/24
+
 #### [Improve resource and compliance reporting](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek11-resolutions.pdf#page=3)
 
 - TOPIC: Communication
