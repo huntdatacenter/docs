@@ -494,7 +494,7 @@ request_update_of_existing_invoice:
 request_vat_exemption:
   title: "VAT exemption"
   template:
-    subject: "VAT exemption - {dataspace}"
+    subject: "VAT exemption - {labname} in {dataspace}"
     body: |
       Hi HUNT Cloud team,
 
@@ -508,6 +508,7 @@ request_vat_exemption:
       Best regards,
 
   fields: [
+    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
     { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
   ]
   requirements: [
