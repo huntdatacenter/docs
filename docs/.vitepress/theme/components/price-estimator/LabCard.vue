@@ -366,6 +366,20 @@ export default {
   created() {
     this.initializeState()
   },
+  watch: {
+    storageCostByType: {
+      handler(newVal) {
+        if (newVal && Object.keys(newVal).length > 0 && this.selectedStorage.length > 0) {
+          const needsUpdate = this.selectedStorage.some(item => item.price === 0)
+          if (needsUpdate) {
+            this.updateAddedStorage()
+            this.updateLabSumStorage(false)
+          }
+        }
+      },
+      deep: true,
+    },
+  },
 }
 </script>
 

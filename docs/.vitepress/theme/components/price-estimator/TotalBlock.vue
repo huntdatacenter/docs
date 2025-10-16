@@ -7,8 +7,7 @@ export default {
       type: Object,
       default: () => ({
         computePrice: 0.0,
-        storageSize: 0.0,
-        storageCost: 0.0,
+        storageCost: {},
       }),
     },
     itemsComputeExport: { type: Array, default: () => [] },

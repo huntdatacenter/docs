@@ -36,7 +36,6 @@ export default defineComponent({
       labPrices: [] as PriceListItem[],
       totals: {
         computePrice: 0.0,
-        storageSize: 0.0,
         storageCost: {} as { [key: string]: { size: number; cost: number } }
       },
       totalLabCost: [] as TotalPriceItem[],
@@ -115,7 +114,6 @@ export default defineComponent({
           this.nextLabId = state.nextLabId || 1
 
           this.totals.computePrice = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
-          this.totals.storageSize = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
           this.totals.storageCost = this.calculateStorageCost()
           this.setTotalItems()
 
@@ -222,7 +220,6 @@ export default defineComponent({
         labCard.priceStorage = payload.price
         labCard.selectedStorage = payload.selectedStorage
       }
-      this.totals.storageSize = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
       this.totals.storageCost = this.calculateStorageCost()
       this.itemsStorageExport[id] = payload.selectedStorage
     },
@@ -242,7 +239,6 @@ export default defineComponent({
       delete this.itemsComputeExport[id]
       delete this.itemsStorageExport[id]
       this.totals.computePrice = this.labCards.reduce((total: number, lab: LabCard) => total + lab.priceComputeYearly, 0)
-      this.totals.storageSize = this.labCards.reduce((total: number, lab: LabCard) => total + lab.storage, 0)
       this.totals.storageCost = this.calculateStorageCost()
     },
 
@@ -252,7 +248,6 @@ export default defineComponent({
       this.itemsStorageExport = []
       this.totals = {
         computePrice: 0.0,
-        storageSize: 0.0,
         storageCost: {} as { [key: string]: { size: number; cost: number } }
       }
       this.nextLabId = 1
@@ -281,10 +276,11 @@ export default defineComponent({
         price: this.totals.computePrice,
       })
       const summedStorageCost = Object.values(this.totals.storageCost).reduce((a, b) => a + b.cost, 0)
+      const summedStorageSize = Object.values(this.totals.storageCost).reduce((a, b) => a + b.size, 0)
       priceItems.push({
         name: "Storage",
         subscription: "Commitment",
-        units: `${this.totals.storageSize} TB`,
+        units: `${summedStorageSize} TB`,
         price: summedStorageCost,
       })
       this.totalLabCost = priceItems
@@ -315,7 +311,6 @@ export default defineComponent({
           this.itemsStorageExport = []
           this.totals = {
             computePrice: 0.0,
-            storageSize: 0.0,
             storageCost: {} as { [key: string]: { size: number; cost: number } }
           }
           this.nextLabId = 1
