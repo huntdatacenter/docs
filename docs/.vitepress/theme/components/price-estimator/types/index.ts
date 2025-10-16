@@ -6,8 +6,8 @@ export interface ComputeUnit {
   ram: number
   gpu: string | null
   type: SubscriptionType
-  monthlyPrice: number | string
-  yearlyPrice: number | string
+  monthlyPrice: number
+  yearlyPrice: number
 }
 export interface ComputeLabSum {
   monthlyPrice: number

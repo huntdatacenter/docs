@@ -31,7 +31,6 @@ export default {
         gpu: null,
         subscription: null,
       } as MachineFormData,
-      overlay: true,
       subscriptions: [
         { text: "Commitment - 1 Year", value: "COMMITMENT_1Y" },
         { text: "Commitment - 3 Years", value: "COMMITMENT_3Y" },
@@ -98,7 +97,6 @@ export default {
       return this.catalogue.machineCatalogue.filter((item: MachineFlavor) => item)
     },
     getGpus() {
-      console.log(this.catalogue.availableGpus)
       return this.catalogue.availableGpus.map((item: GpuModel) => {
         return {
           title: item["type"] + " - " + item["vram"] + " GB VRAM",
