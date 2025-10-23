@@ -20,6 +20,10 @@ export default {
       type: Object as () => Catalogue,
       required: true,
     },
+    storageCostByType: {
+      type: Object as () => { [key: string]: { size: number; cost: number } },
+      default: () => ({}),
+    },
     initSelectedCompute: { type: Array as () => ComputeUnit[], default: null },
     initSelectedStorage: { type: Array as () => StorageUnit[], default: null },
   },
@@ -50,7 +54,7 @@ export default {
         { title: "Usage", align: "start", sortable: true, key: "usage" },
         { title: "Type", align: "start", sortable: true, key: "type" },
         { title: "Size [TB]", align: "start", sortable: true, key: "size" },
-        /*{ title: "Price", align: "start", sortable: true, key: "price" }, **/ 
+        { title: "Price / year", align: "start", sortable: true, key: "price" }, 
         { title: "Actions", key: "actions", align: "end", sortable: false },
       ],
       storageLabSum: {
@@ -62,10 +66,24 @@ export default {
         show: false,
         message: "",
       },
-      totalStoragePrice: 0,
     }
   },
   computed: {
+    displaySelectedCompute() {
+      return this.selectedCompute.map(item => {
+        return {
+          id: item.id,
+          name: item.name,
+          flavor: item.flavor,
+          core_count: item.core_count,
+          ram: item.ram,
+          type: item.type,
+          monthlyPrice: item.monthlyPrice.toFixed(2) + " kr",
+          yearlyPrice: item.yearlyPrice.toFixed(2) + " kr",
+        }
+      })
+    },
+
     displayStorageSumPrice() {
       return this.storageLabSum.price.toFixed(2) + " kr"
     },
@@ -77,7 +95,7 @@ export default {
           usage: item.usage,
           type: item.type,
           size: item.size + " TB",
-          /*price: item.price.toFixed(2) + " kr",**/
+          price: item.price.toFixed(2) + " kr",
         }
       })
     },
@@ -183,7 +201,7 @@ export default {
     },
     closeStorageModal(payload: any) {
       if (payload) {
-        const price = this.calculateStoragePriceForVolume(payload.size)
+        const price = this.calculateStoragePriceForVolume(payload.size, payload.type)
         if (this.editingStorageItem) {
           const index = this.selectedStorage.findIndex(item => item.id === this.editingStorageItem!.id)
           if (index !== -1) {
@@ -274,52 +292,21 @@ export default {
     },
     updateAddedStorage() {
       this.selectedStorage.forEach(item => {
-        item.price = this.calculateStoragePriceForVolume(item.size)
+        item.price = this.calculateStoragePriceForVolume(item.size, item.type)
       })
     },
 
-    calculateStoragePriceForVolume(volumeSize: number) {
-      const fraction = volumeSize / this.storageLabSum.size
-      const totalStoragePrice = this.storageCost(this.storageLabSum.size) || 0
-      return fraction * totalStoragePrice
-    },
-
-    calculateTotalStoragePrice() {
-      const totalStorageSize = this.storageLabSum.size
-      this.totalStoragePrice = this.storageCost(totalStorageSize) || 0
-    },
-
-
-    storageCost(totalSize: number) {
-      totalSize = Number(totalSize)
-
-      const level1Item = this.catalogue.storagePrices.find(
-        (item: PriceListItem) => item["service.commitment"] === "1Y" && item["service.unit"] === "First 10 TB"
-      )
-      const level1 = level1Item?.["price.nok.ex.vat"] || 0
-
-      const level2Item = this.catalogue.storagePrices.find(
-        (item: PriceListItem) => item["service.commitment"] === "1Y" && item["service.unit"] === "Next 90 TB"
-      )
-      const level2 = level2Item?.["price.nok.ex.vat"] || 0
-
-      const level3Item = this.catalogue.storagePrices.find(
-        (item: PriceListItem) => item["service.commitment"] === "1Y" && item["service.unit"] === "Over 100 TB"
-      )
-      const level3 = level3Item?.["price.nok.ex.vat"] || 0
-
-      let price: number | undefined
-
-      if (totalSize <= 10) {
-        price = Number(level1) * totalSize
-      } else if (totalSize > 10 && totalSize <= 100) {
-        price = Number(level1) * 10 + Number(level2) * (totalSize - 10)
-      } else if (totalSize > 100) {
-        price = Number(level1) * 10 + Number(level2) * 90 + Number(level3) * (totalSize - 100)
+    calculateStoragePriceForVolume(volumeSize: number, storageType: StorageType) {
+      const typeCostData = this.storageCostByType[storageType]
+      
+      if (!typeCostData || typeCostData.size === 0) {
+        return 0
       }
-
-      return price
+      
+      const unitPrice = typeCostData.cost / typeCostData.size
+      return volumeSize * unitPrice
     },
+
 
     getComputePriceForLab(flavor: string, type: string, gpuFlavor: string | null = null) {
       let totalYearlyPrice = 0
@@ -379,6 +366,20 @@ export default {
   created() {
     this.initializeState()
   },
+  watch: {
+    storageCostByType: {
+      handler(newVal) {
+        if (newVal && Object.keys(newVal).length > 0 && this.selectedStorage.length > 0) {
+          const needsUpdate = this.selectedStorage.some(item => item.price === 0)
+          if (needsUpdate) {
+            this.updateAddedStorage()
+            this.updateLabSumStorage(false)
+          }
+        }
+      },
+      deep: true,
+    },
+  },
 }
 </script>
 
@@ -398,20 +399,13 @@ export default {
           <v-card-subtitle> {{ "Add a machine to " + title }}</v-card-subtitle>
 
           <v-data-table-virtual
-            :items="selectedCompute"
+            :items="displaySelectedCompute"
             :headers="computeHeaders"
             :loading="isLoadingComputePrices"
             hide-default-footer
             hover
             item-value="id"
           >
-            <template v-slot:item.monthlyPrice="{ item }">
-              {{ Number(item.monthlyPrice).toFixed(2) }}
-            </template>
-
-            <template v-slot:item.yearlyPrice="{ item }">
-              {{ Number(item.yearlyPrice).toFixed(2) }}
-            </template>
 
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
@@ -509,10 +503,6 @@ export default {
                 <th>
                   <strong>{{ (storageLabSum?.size || 0) + " TB" }}</strong>
                 </th>
-              
-                <!-- <th>
-                  <strong> {{ displayStorageSumPrice }}</strong>
-                </th> -->
               </tr>
             </template>
           </v-data-table-virtual>
