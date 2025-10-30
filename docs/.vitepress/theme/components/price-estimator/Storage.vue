@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { StorageFormData, StorageUnit, PriceListItem } from "./types"
+import type { StorageFormData, StorageUnit } from "./types"
 
 export default {
   name: "Storage",
@@ -16,7 +16,6 @@ export default {
       type: "HDD",
       size: 1,
     } as StorageFormData,
-    overlay: true,
   }),
 
   created() {

@@ -7,8 +7,7 @@ export default {
       type: Object,
       default: () => ({
         computePrice: 0.0,
-        storageSize: 0.0,
-        storageCost: 0.0,
+        storageCost: {},
       }),
     },
     itemsComputeExport: { type: Array, default: () => [] },
@@ -22,14 +21,7 @@ export default {
         { title: "Total units", align: "start", sortable: true, key: "units" },
         { title: "Price / year", align: "start", sortable: true, key: "price" },
       ],
-      selectedStorage: [],
-      totalPrice: 0.0,
-      commitmentPrice: 0.0,
-      onDemandPrice: 0.0,
     }
-  },
-  created() {
-    
   },
   computed: {
     formattedTotalItems() {
@@ -38,19 +30,18 @@ export default {
       }
       return this.totalItems.map(item => ({
         ...item,
-        price: Number(item.price).toFixed(2),
+        price: Number(item.price).toFixed(2) + " kr",
       }))
     },
     sumInTotal() {
-      // Calculate total from all items (labs + compute + storage)
+
+      const summedStorageCost = Object.values(this.totals.storageCost).reduce((a, b) => a + b.cost, 0)
       const labsTotal = this.totalItems
         .filter(item => item.name.startsWith('Lab'))
         .reduce((sum, item) => sum + item.price, 0)
-      return labsTotal + this.totals.computePrice + this.totals.storageCost
+      return labsTotal + this.totals.computePrice + summedStorageCost
     },
   },
-  watch: {},
-
   methods: {
     exportItems() {
       const computeItemsClean = JSON.parse(JSON.stringify(this.itemsComputeExport))
@@ -110,7 +101,6 @@ export default {
     <v-card class="ma-0 pa-4">
       <v-card-title> Total</v-card-title>
       <v-data-table-virtual
-        v-model="selectedStorage"
         :items="formattedTotalItems"
         :headers="totalHeaders"
         hover
@@ -141,7 +131,6 @@ export default {
 </template>
 
 <style scoped>
-/* Your component styles go here */
 .lab-card {
   width: 94%;
   margin: auto;
