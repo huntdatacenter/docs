@@ -100,44 +100,6 @@ describe("PriceEstimator", () => {
   })
 
   describe("Storage Cost Calculation", () => {
-    it("calculates NVME storage cost correctly for first 10 TB", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
-      })
-
-      const vm = wrapper.vm as any
-      const storagePrices = await mockPricesApi.getPriceList()
-      vm.catalogue.storagePrices = storagePrices.filter((item: PriceListItem) => item["service.family"] === "store")
-
-      vm.labCards = [
-        {
-          id: 1,
-          title: "Lab 1",
-          storage: 5,
-          selectedStorage: [
-            {
-              id: 1,
-              name: "volume-1",
-              type: "NVME",
-              size: 5,
-              usage: "Work",
-              price: 0,
-            } as StorageUnit,
-          ],
-        },
-      ]
-
-      const result = vm.calculateStorageCost()
-      const actual = 5 * 1000
-      expect(result.NVME.cost).toBeCloseTo(actual, 0)
-      expect(result.NVME.size).toBe(5)
-    })
-
     it("calculates NVME storage cost correctly for 15 TB (crosses first tier)", async () => {
       const wrapper = mount(PriceEstimator, {
         props: {
@@ -291,10 +253,13 @@ describe("PriceEstimator", () => {
           ],
         },
       ]
+      const actualNvmeCost = 5 * 1000
+      const actualHddCost = 8 * 500
 
       const result = vm.calculateStorageCost()
-      expect(result.NVME.cost).toBeCloseTo(5000, 0)
-      expect(result.HDD.cost).toBeCloseTo(4000, 0)
+      expect(result.NVME.cost).toBeCloseTo(actualNvmeCost, 0)
+      expect(result.HDD.cost).toBeCloseTo(actualHddCost, 0)
+      
     })
 
     it("calculates storage across multiple labs correctly", async () => {
@@ -513,8 +478,8 @@ describe("PriceEstimator", () => {
       
       vm.addLabCard()
       vm.updateLabCardCompute(1, {
-        yearlyPrice: 50000,
-        monthlyPrice: 4166.67,
+        yearlyPrice: 60000,
+        monthlyPrice: 5000,
         numCompute: 1,
         selectedCompute: [],
       })
@@ -537,8 +502,8 @@ describe("PriceEstimator", () => {
 
       vm.addLabCard()
       vm.updateLabCardCompute(2, {
-        yearlyPrice: 100000,
-        monthlyPrice: 8333.33,
+        yearlyPrice: 120000,
+        monthlyPrice: 10000,
         numCompute: 2,
         selectedCompute: [],
       })
@@ -558,7 +523,7 @@ describe("PriceEstimator", () => {
       })
       
       await flushPromises()
-      expect(vm.totals.computePrice).toBe(150000)
+      expect(vm.totals.computePrice).toBe(180000)
       expect(vm.totals.storageCost.NVME).toBeDefined()
       expect(vm.totals.storageCost.NVME.size).toBe(30)
       const actualNvmeCost = 10 * 1000 + 20 * 800
