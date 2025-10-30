@@ -15,6 +15,18 @@ Read more about [Lagtun](/govern-science/tingweek/lagtun) and the use of [resolu
 
 :::
 
+
+#### [Renew three year commitment resources with one year extensions](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-resolutions.pdf#page=4)
+
+- TOPIC: Finance
+- ID: R9/LT16/T16/25
+
+#### [Clarification of service transitoins from old to new price list](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-resolutions.pdf#page=3)
+
+- TOPIC: Finance
+- ID: R8/LT16/T16/25
+
+
 #### [Enable editorial data access](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek13-resolutions.pdf#page=3)
 
 - TOPIC: Data
