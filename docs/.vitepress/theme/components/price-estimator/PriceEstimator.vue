@@ -201,7 +201,6 @@ export default defineComponent({
             applicableSize = Math.min(remainingSize, 90)
           } else {
             applicableSize = remainingSize
-            entry["price.nok.ex.vat"] = entry["price.nok.ex.vat"] * (applicableSize / 100)
           }
           remainingSize -= applicableSize
 
@@ -258,7 +257,7 @@ export default defineComponent({
 
     setTotalItems() {
       let priceItems: { name: string; subscription: string | null; units: number | string; price: number }[] = []
-      if (this.labCards) {
+      if (this.labCards && this.labCards.length > 0 && this.labPrices.length > 0) {
         this.labCards.forEach(item => {
           priceItems.push({
             name: item.title,
