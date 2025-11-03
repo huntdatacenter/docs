@@ -15,35 +15,25 @@ description: What to order when you get a new computer.
 
 We are happy to hear that! If you have a new local computer you will need to request new certificates.
 
-### Required
+## Required
 
 You will need new VPN certificate and new workbench certificate.
 
 <SDButton form="request_vpn_reset" />
 
-
 <SDButton form="request_workbench_reissue" />
 
-### For consideration
+## For consideration
 
 If you don't remember your passphrase, you may request a reset
 
-::: tip 
-If you order SSH passphrase reset, MobaXterm and SSH configuration files will be included.
+::: tip
+If you order SSH passphrase reset, MobaXterm and SSH configuration steps will be included.
 
 :::
 
-
 <SDButton form="request_ssh_pass_reset" />
 
-If you do not remember your lab IPs You may consider to request a new SSH configuration file
+If you remember your password, but do not remember your lab IP or Mobaxterm configuration, you may consider to request a lab access link again.
 
-
-<SDButton form="request_ssh_config" />
-
-
-If you are a windows user, you might need a new MobaXterm configuration
-
-<SDButton form="request_mobaxterm_file" />
-
-
+<SDButton form="request_lab_access_link" />
