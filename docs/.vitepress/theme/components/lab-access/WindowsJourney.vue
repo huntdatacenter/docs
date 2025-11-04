@@ -874,7 +874,7 @@ onMounted(() => {
         </v-expansion-panel>
 
         <!-- 5. SSH Config file -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration'].includes(filterGuidesByType) ? false : true">
+        <v-expansion-panel :disabled="!filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'lab_migration', 'reissue_all'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-title>
               <h3><a href="#ssh-config" class="header-anchor">#</a> {{ sshConfId }}. SSH Config file</h3>
           </v-expansion-panel-title>
