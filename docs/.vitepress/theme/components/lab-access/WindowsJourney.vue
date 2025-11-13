@@ -603,7 +603,7 @@ onMounted(() => {
                         </p>
 
                         <br />
-                        <h3 id="remove-private-key"><a href="#remove-private-key" class="header-anchor">#</a> Remove VPN config</h3>
+                        <h3 id="remove-vpn-config"><a href="#remove-vpn-config" class="header-anchor">#</a> Remove VPN config</h3>
                         <p>
                           If you need to remove your VPN config because SSH reissue or reactivation.
                         </p>
