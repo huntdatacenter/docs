@@ -145,7 +145,7 @@ source ~/.profile
 2.7 Mount your storage:
 
   ```bash
-  <labname>-storage
+  <labname>-mount
   ```
 
 That's it.
