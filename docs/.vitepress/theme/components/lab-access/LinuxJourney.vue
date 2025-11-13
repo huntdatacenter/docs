@@ -411,7 +411,7 @@ onMounted(() => {
                     </v-stepper-vertical-item>
 
                     <v-stepper-vertical-item
-                      title="Troubleshooting"
+                      title="Troubleshooting VPN"
                       subtitle="Optional tips to try in case of issues"
                       value="5"
                     >

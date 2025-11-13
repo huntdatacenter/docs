@@ -596,16 +596,16 @@ onMounted(() => {
                         <br />
                         <h3 id="remove-passphrase"><a href="#remove-passphrase" class="header-anchor">#</a> Remove saved passphrase</h3>
                         <p>
-                          If you need to remove your private key because of typo or SSH reissue.
+                          If you need to remove your VPN passphrase because of typo or SSH reissue.
                         </p>
                         <p>
                           Right click on the OpenVPN icon <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" style="display: inline-block; height: 2em; margin-bottom: -10px;" /> in the task bar in the lower right corner of your screen and select <strong><code>Clear Saved Passwords</code></strong>.
                         </p>
 
                         <br />
-                        <h3 id="remove-private-key"><a href="#remove-private-key" class="header-anchor">#</a> Remove private key</h3>
+                        <h3 id="remove-private-key"><a href="#remove-private-key" class="header-anchor">#</a> Remove VPN config</h3>
                         <p>
-                          If you need to remove your private key because SSH reissue or reactivation.
+                          If you need to remove your VPN config because SSH reissue or reactivation.
                         </p>
                         <p>
                           Open your file explorer and manually remove the folder with the old OpenVPN configurations.

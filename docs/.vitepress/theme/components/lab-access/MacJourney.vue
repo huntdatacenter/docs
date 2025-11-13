@@ -407,7 +407,7 @@ onMounted(() => {
 
                     <v-stepper-vertical-item
                       value="5"
-                      title="Troubleshooting"
+                      title="Troubleshooting VPN"
                       subtitle="Optional tips to try in case of issues"
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
@@ -443,10 +443,8 @@ onMounted(() => {
                             <div class="language- extra-class"><pre class="language-text">
                               <code v-text="`ERROR: could not read Auth username/password/ok/string from management interface`"></code>
                             </pre></div>
-
                           </p>
 
-                          <br />
                           <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
                           <p>
                             The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
@@ -459,10 +457,43 @@ onMounted(() => {
                             </pre></div>
                           </p>
 
+                          <br />
+                          <h3 id="remove-passphrase"><a href="#remove-passphrase" class="header-anchor">#</a> Remove saved passphrase</h3>
+                          <p>
+                            If you need to remove your passphrase because of typo or SSH reissue.
+                          </p>
+                          <p>
+                            1. Click on running Tunnelblick icon in upper menu bar and select VPN details...
+                            <img alt="VPN passphrase removal - step 1" src="/img/vpn/VPNremovalstep1.png" style="height: 150px;" />
+                          </p>
+                          <p>
+                            2. Select your VPN profile on the left side of the window. Then, in the bottom left corner, select expansion window marked with 3 dots in a circle.
+                            <img alt="VPN passphrase removal - step 2" src="/img/vpn/VPNremovalstep2.png" style="height: 150px;" />
+                          </p>
+                          <p>
+                            3. At the very bottom of the newly opened widow, select <code>Delete configuration's credentials in keychain</code>
+                            <img alt="VPN passphrase removal - step 3" src="/img/vpn/VPNremovalstep3.png" style="height: 250px;" />
+                          </p>
+
+                          <br />
+                          <h3 id="remove-vpn-config"><a href="#remove-vpn-config" class="header-anchor">#</a> Remove VPN config</h3>
+                          <p>
+                            If you need to remove your VPN config because SSH reissue or reactivation.
+                          </p>
+                          <p>
+                            1. Click on running Tunnelblick icon in upper menu bar and select VPN details...
+                            <img alt="VPN config removal - step 1" src="/img/vpn/VPNremovalstep1.png" style="height: 150px;" />
+                          </p>
+                          <p>
+                            2. Afterwards, select your VPN profile and delete it from Tunnelblick app.
+                            <img alt="VPN config removal - step 2" src="/img/vpn/VPNconfigremove1.png" style="height: 250px;"/>
+                          </p>
+
                           <v-alert
                             border="start"
                             border-color="info"
                             elevation="2"
+                            class="mt-6"
                           >
                             <b>TIP</b>
                             <hr class="mt-1 mb-2" />
