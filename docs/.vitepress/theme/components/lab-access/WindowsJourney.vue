@@ -319,10 +319,10 @@ onMounted(() => {
                       >
                         We use the open-source application <b>OpenVPN GUI</b> to ensure encrypted communication between your local computer and us.<br /><br />
 
-                        If you are not an NTNU user <a href="https://openvpn.net/community-downloads/" target="_blank">download and install <b>OpenVPN</b> using the latest stable Windows Installer (Avoid beta versions)</a>
+                        If you are not an NTNU user <a href="https://openvpn.net/community-downloads/" target="_blank">download and install <b>OpenVPN</b> using the latest stable Windows Installer (Avoid beta/rc versions)</a>
                         <br /><br />
 
-                        Click on the link above, scroll down to the file named <code style="font-weight: bold;">{{ openvpnInstallerName }}</code>,
+                        Click on the link above, and look for blue download button named <code style="font-weight: bold;">Download {{ openvpnInstallerName }}</code>,
                         download the file and follow the on-screen installation instructions until finished.
                         <br /><br />
 
