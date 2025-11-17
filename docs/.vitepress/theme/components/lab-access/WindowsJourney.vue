@@ -12,8 +12,8 @@ const props = defineProps({
 })
 
 // Reactive data
-const mainExpansionPanel = ref(1)
-const extrasExpansionPanel = ref(1)
+const mainExpansionPanel = ref(null)
+const extrasExpansionPanel = ref(null)
 const vpnDialog = ref(false)
 const vpnStepper = ref(1)
 const workbenchDialog = ref(false)
