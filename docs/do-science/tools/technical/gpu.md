@@ -26,7 +26,7 @@ See our [GPU accelerator machine types](/administer-science/services/machine-typ
 
 ## Software
 
-We pre-install the machines with with the following software to get you started:
+We pre-install the machines with the following software to get you started:
 
 - Ubuntu 24.04 LTS
 - Docker
