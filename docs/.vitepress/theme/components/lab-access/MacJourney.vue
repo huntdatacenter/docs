@@ -1044,10 +1044,10 @@ onMounted(() => {
                               <br />
                               <img class="pa-2" alt="device-management" src="/img/workbench/macos-device-management.png" style="max-width: 500px;" />
                               <br />
-                              (On MacOS Sonoma or older open section <code style="font-weight: bold;">Privacy & Security</code>, scroll to the bottom of the section and select <code style="font-weight: bold;">Profiles</code>)
+                              <!-- (On MacOS Sonoma or older open section <code style="font-weight: bold;">Privacy & Security</code>, scroll to the bottom of the section and select <code style="font-weight: bold;">Profiles</code>)
                               <br />
                               <img class="pa-2" alt="system-profiles" src="/img/workbench/macventura1.png" style="max-width: 500px;" />
-                              <br />
+                              <br /> -->
                             </li>
                             <li>
                               Select certificate required for installation ({{  labName }}-{{ username }}-client).
