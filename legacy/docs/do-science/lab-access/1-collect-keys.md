@@ -165,6 +165,9 @@ If you successfully completed this step, celebrate with fresh coffee and head ov
 
 
 ### Signal
+#### I am not able to receive Signal messages.
+
+Make sure to update the Signal app to the latest version.
 
 #### I am unable to install or run Signal on my phone.
 
