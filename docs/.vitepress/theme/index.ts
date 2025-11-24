@@ -74,6 +74,14 @@ import {
   faUserGear,
   faPalette,
   faPeopleGroup,
+  faBoxesStacked,
+  faCodeFork,
+  faMicrochip,
+  faCogs,
+  faTachometerAlt,
+  faLaptopCode,
+  faHdd,
+  faDatabase
 } from "@fortawesome/free-solid-svg-icons"
 
 library.add(faClipboardCheck)
@@ -103,6 +111,14 @@ library.add(faUserShield)
 library.add(faUserGear)
 library.add(faPalette)
 library.add(faPeopleGroup)
+library.add(faBoxesStacked)
+library.add(faCodeFork)
+library.add(faMicrochip)
+library.add(faCogs)
+library.add(faTachometerAlt)
+library.add(faLaptopCode)
+library.add(faHdd)
+library.add(faDatabase)
 
 const ISSERVER = typeof window === "undefined"
 
