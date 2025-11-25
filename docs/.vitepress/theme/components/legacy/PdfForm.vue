@@ -223,9 +223,7 @@ const closeDialog = key => {
 
 const saveDialog = key => {
   dialogs.value = Object.assign({}, dialogs.value, { [key]: false })
-
   signatures.value[key]["signed"] = signatures.value[key]["signature"].isEmpty() ? false : true
-  console.log(`Signature signed [${key}]: ${signatures.value[key]["signed"]}`)
   signatures.value[key]["pngurl"] = signatures.value[key]["signature"].toDataURL()
 }
 
@@ -403,12 +401,9 @@ onMounted(() => {
   }
 
   const fieldsCache = fetchAgreementFormCache(props.agreementTag)
-  if (fieldsCache) {
+  if (Object.keys(fieldsCache).length !== 0) {
     renderedFields.value = fieldsCache
-    console.log("loaded fields from cache")
-    console.log(fieldsCache)
     if (form.value) {
-      console.log("submit from cache")
       form.value.submit()
     }
   }
@@ -460,8 +455,9 @@ onMounted(() => {
                 :persistent-hint="item.hint && formData[item.key] ? true : false"
                 :placeholder="item.placeholder ? item.placeholder : null"
                 persistent-placeholder
-                outlined
-                dense
+                variant="outlined"
+                density="compact"
+
                 :hide-details="formData[item.key] ? false : 'auto'"
                 @focus="$event.target.select()"
               >
@@ -470,13 +466,12 @@ onMounted(() => {
                   }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
                 </template>
                 <template v-if="item.tooltip ? true : false" v-slot:append>
-                  <v-tooltip top>
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-btn icon x-small v-bind="attrs" v-on="on">
-                        <v-icon class="material-icons">info</v-icon>
+                  <v-tooltip location="top" :text="item.tooltip">
+                    <template v-slot:activator="{ props: activatorProps }">
+                      <v-btn icon x-small v-bind="activatorProps">
+                        <v-icon>mdi-information</v-icon>
                       </v-btn>
                     </template>
-                    <span>{{ item.tooltip }}</span>
                   </v-tooltip>
                 </template>
               </v-text-field>
@@ -493,7 +488,7 @@ onMounted(() => {
                 clear-icon=""
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
-                outlined
+                variant="outlined"
                 dense
                 hide-details
                 @focus="$event.target.select()"
@@ -534,8 +529,8 @@ onMounted(() => {
                     class="mb-3"
                     :placeholder="item.placeholder ? item.placeholder : ''"
                     persistent-placeholder
-                    outlined
-                    dense
+                    variant="outlined"
+                    density="compact"
                     hide-details
                     readonly
                     v-bind="attrs"
@@ -565,8 +560,8 @@ onMounted(() => {
                 :required="isFieldRequired(item.required)"
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
-                outlined
-                dense
+                variant="outlined"
+                density="compact"
                 hide-details
                 @focus="$event.target.select()"
               >
@@ -591,8 +586,8 @@ onMounted(() => {
                 :persistent-hint="item.hint && formData[item.key] ? true : false"
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
-                outlined
-                dense
+                variant="outlined"
+                density="compact"
                 :rows="1"
                 :hide-details="formData[item.key] ? false : 'auto'"
                 @focus="$event.target.select()"
@@ -604,13 +599,13 @@ onMounted(() => {
               </v-textarea>
             </v-list-item>
             <v-list-item v-if="item.field === 'signature'" cols="12" dense>
-              <v-card class="px-0 mb-3" style="width: 100%" elevation="0" outlined>
+              <v-card class="px-0 mb-3" style="width: 100%" elevation="0" variant="outlined">
                 <v-card-text>
                   <v-row justify="space-between" class="mr-xs-12 pr-sm-8" no-gutters>
                     <v-col cols="8">
                       <div class="font-weight-bold">{{ item.label }}</div>
                     </v-col>
-                    <v-col cols="4">
+                    <v-col cols="10">
                       <v-btn color="primary" block @click="openDialog(item.key)"> Add signature </v-btn>
                     </v-col>
                   </v-row>
@@ -796,7 +791,7 @@ onMounted(() => {
 }
 
 /*
-.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner {
+.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--variant="outlined" .v-input__append-inner {
   margin-top: 2px !important;
 }
 */

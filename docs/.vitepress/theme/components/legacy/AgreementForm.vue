@@ -86,9 +86,7 @@ onMounted(() => {
   fetch("/cfg/agreements.yml")
     .then(response => response.text())
     .then(data => {
-      // console.log(data);
       const cfg = YAML.parse(data)
-      console.log(cfg)
       agreements.value = cfg.agreements
       forms.value = cfg.forms
       if (routeQuery.open) {
@@ -105,9 +103,8 @@ onMounted(() => {
         <v-app-bar-nav-icon @click="expandForm = !expandForm"></v-app-bar-nav-icon>
         <v-toolbar-title v-if="selected && selected.text ? true : false">{{ selected.text }}</v-toolbar-title>
       </v-app-bar> -->
-      <v-layout v-if="showForm" class="d-flex flex-nowrap h-100 w-100 pt-0 align-center justify-center">
+      <v-layout v-if="showForm" class="d-flex flex-nowrap h-100 w-100 pt-0 align-center justify-center" >
         <PdfForm
-          v-if="showForm"
           :agreement-tag="selected.value"
           :title="selected.text"
           :url="selected.url"
@@ -136,7 +133,7 @@ onMounted(() => {
                     variant="outlined"
                     hide-details
                     @focus="$event.target.select()"
-                    @change="updateUrl($event)"
+                    @update:model-value="updateUrl"
                   ></v-autocomplete>
                 </v-col>
               </v-row>
