@@ -5,38 +5,61 @@ description: Collection of technical tool guides.
 
 buttons:
   - title: "Docker"
-    subtitle: "Install and run Docker containers on On-demand machine"
+    subtitle: "Install and run Docker containers on on-demand machine"
     href: "/do-science/tools/technical/docker"
-    icon: ["fas", "boxes-stacked"]
+    icon: "mdi-docker"
+  - title: "Apptainer"
+    subtitle: "Run secure, reproducible containers in your lab environment."
+    href: "/do-science/tools/technical/apptainer"
+    icon: "mdi-package-variant"
   - title: "Git"
     subtitle: "Set up and manage Git repositories across various platforms"
     href: "/do-science/tools/technical/git"
-    icon: ["fas", "code-fork"]
+    icon: "mdi-git"
   - title: "GPU"
     subtitle: "Add GPU cards to your on-demand machine for your AI/ML workloads"
     href: "/do-science/tools/technical/gpu"
-    icon: ["fas", "microchip"]
+    icon: "mdi-chip"
   - title: "CUDA"
     subtitle: "Install and manage multiple CUDA versions on your GPU machine."
     href: "/do-science/tools/technical/cuda/"
-    icon: ["fas", "cogs"]
+    icon: "mdi-cogs"
   - title: "Htop"
     subtitle: "Monitor system resources and know when to clean up or upgrade."
     href: "/do-science/tools/technical/htop"
-    icon: ["fas", "tachometer-alt"]
+    icon: "mdi-monitor-dashboard"
   - title: "MobaXterm"
     subtitle: "Easily connect to your lab with MobaXterm for SSH access."
     href: "/do-science/tools/technical/mobaxterm"
-    icon: ["fas", "laptop-code"]
+    icon: "mdi-console"
   - title: "NCDU"
     subtitle: "Analyze disk usage and find space hogs in your lab environment."
     href: "/do-science/tools/technical/ncdu"
-    icon: ["fas", "hdd"]
+    icon: "mdi-harddisk"
   - title: "PostgreSQL"
     subtitle: "Set up and connect to PostgreSQL on your lab environment."
     href: "/do-science/tools/technical/ncdu"
-    icon: ["fas", "database"]
-
+    icon: "mdi-database"
+  - title: "Screen & Tmux"
+    subtitle: "Work in persistent terminal sessions with Screen, tmux, or Byobu."
+    href: "/do-science/tools/technical/terminal-multiplexers"
+    icon: "mdi-window-restore"
+  - title: "VNC"
+    subtitle: "Remote GUI access for your lab machine."
+    href: "/do-science/tools/technical/vnc"
+    icon: "mdi-monitor"
+  - title: "RDP"
+    subtitle: "Remote desktop access to your lab environment."
+    href: "/do-science/tools/technical/rdp"
+    icon: "mdi-laptop"
+  - title: "X2Go"
+    subtitle: "Fast remote access to lab graphical tools."
+    href: "/do-science/tools/technical/x2go"
+    icon: "mdi-desktop-classic"
+  - title: "VS Code"
+    subtitle: "Edit, debug, and run code remotely in your lab environment."
+    href: "/do-science/tools/technical/vscode"
+    icon: "mdi-code-tags"
 
 ---
 
