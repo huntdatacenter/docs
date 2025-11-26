@@ -110,8 +110,6 @@ onMounted(() => {
         ref="pdf"
         :source="src"
         :page="page"
-        :scale="scale"
-        :width="pageWidth"
       />
     </div>
 
