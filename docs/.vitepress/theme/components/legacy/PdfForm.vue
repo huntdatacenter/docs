@@ -116,7 +116,6 @@ const loadPdf = url => {
             })
             let pdfForm = doc.getForm()
             pdfFields.value = pdfForm.getFields().map(field => field.getName())
-            console.log(pdfFields.value)
           })
         } catch (error) {
           console.log("Failed to read fields")
@@ -242,6 +241,7 @@ const updateAgreementFormCache = (key, fields) => {
   if (!localStorage.agreementFields) {
     localStorage.agreementFields = {}
   }
+  console.log('is this updated', key, fields);
   if (key && fields) {
     localStorage.setItem(key, JSON.stringify(fields))
   }
@@ -249,8 +249,11 @@ const updateAgreementFormCache = (key, fields) => {
 
 const submit = () => {
   try {
+    if (!formFilled.value) {
+      console.log('Form is not completely filled');
+      return;
+    }
     const read_buf = pdfBuffer.value
-    console.log(read_buf);
     PDFDocument.load(read_buf).then(pdfDoc => {
       const pdfForm = pdfDoc.getForm()
 
@@ -269,7 +272,6 @@ const submit = () => {
           renderedFields.value[item.key] = fieldValue
         }
       })
-
       updateAgreementFormCache(props.agreementTag, renderedFields.value)
 
       pdfForm.flatten()
@@ -556,12 +558,12 @@ onMounted(() => {
                 :items="getCountries"
                 :item-title="item => `${item.name} ${item.flag}`"
                 :item-value="item => item.name"
-                :required="isFieldRequired(item.required)"
+                :rules="[v => (v && v.length) || (!isFieldRequired(item.required)) || 'This field is required']"
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
                 variant="filled"
                 density="comfortable"
-                hide-details
+                hide-details="auto"
                 @focus="$event.target.select()"
               >
                 <template v-slot:label>

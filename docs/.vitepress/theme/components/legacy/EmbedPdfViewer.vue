@@ -48,7 +48,6 @@ const render = doc => {
 
 const previousPage = () => {
   page.value = page.value && page.value > 1 ? page.value - 1 : 1
-  console.log(page.value)
 }
 
 const nextPage = () => {
@@ -110,6 +109,7 @@ onMounted(() => {
         ref="pdf"
         :source="src"
         :page="page"
+        :width="pageWidth ? pageWidth: setPdfInitWidth()"
       />
     </div>
 
