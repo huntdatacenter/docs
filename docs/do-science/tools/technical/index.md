@@ -68,4 +68,3 @@ buttons:
 <NavitationCards :buttons="$frontmatter.buttons" />
 
 <br/>
-
