@@ -107,7 +107,9 @@ library.add(faPeopleGroup)
 const ISSERVER = typeof window === "undefined"
 
 const redirects: Record<string, string> = {
+  "/do-science/lab-access/collect-your-keys/": "/do-science/lab-access/1-collect-keys",
   "/do-science/lab-access/collect-your-keys": "/do-science/lab-access/1-collect-keys",
+  "/do-science/troubleshooting/connection/": "/do-science/troubleshooting/connection",
   "/administer-science/agreements/": "/administer-science/agreements/overview",
   "/administer-science/prices/calculator": "/administer-science/prices/estimator",
   // "/legacy/path": "/current/path",
