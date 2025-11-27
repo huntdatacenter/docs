@@ -9,31 +9,31 @@ buttons:
   - title: "Organizational access"
     subtitle: "Required agreements for organizations that wants to enable HUNT Cloud resources."
     href: "/govern-science/organizational-access/"
-    icon: ["fas", "file-pen"]
+    icon: "mdi-file-document-edit"
   - title: "Tingweek"
     subtitle: "We meet three times per year to advance our services."
     href: "/govern-science/tingweek/"
-    icon: ["fas", "comment"]
+    icon: "mdi-comment"
   - title: "Policies"
     subtitle: "Quality, security and privacy policies governs activities in HUNT Cloud."
     href: "/govern-science/policies"
-    icon: ["fas", "list-check"]
+    icon: "mdi-format-list-checks"
   - title: "Compliance"
     subtitle: "Our compliance program aims to ensure a trustworthy frame."
     href: "/govern-science/compliance/"
-    icon: ["fas", "user-shield"]
+    icon: "mdi-shield-account"
   - title: "Risk management"
     subtitle: "This page list risk management resources for HUNT Cloud."
     href: "/govern-science/risk-management/"
-    icon: ["fas", "user-gear"]
+    icon: "mdi-account-cog"
   - title: "Service desk"
     subtitle: "Predefined service orders that data controllers and service centers can order."
     href: "/govern-science/service-desk/"
-    icon: ["fas", "envelope"]
+    icon: "mdi-email"
   - title: "FAQ"
     subtitle: "Frequently asked questions."
     href: "/govern-science/faq/"
-    icon: ["fas", "circle-question"]
+    icon: "mdi-help-circle"
 ---
 
 # Govern science in HUNT Cloud
