@@ -65,10 +65,10 @@ buttons:
     href: "/do-science/tools/analytical/itksnap"
     icon: "mdi-image-search"
 
-
 ---
 
 # Analytical tool guides
+
 <NavitationCards :buttons="$frontmatter.buttons" />
 
 <br/>
