@@ -8,10 +8,10 @@ description: Configuration guide for BOTO S3 client.
 
 # Transferring data using BOTO S3 client
 
-Guide below is meant for users who want to transfer data using BOTO S3 Client to HUNT Cloud lab.
+Guide below is meant for users who want to transfer data using [BOTO S3 Client](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html) to HUNT Cloud lab.
 
 ::: tip
-This guide is meant to help you setup correct parameters for your transfer and is not indented as a full guide to BOTO S3 client. For proper guidance, follow official BOTO documentation.
+This guide is meant to help you setup correct parameters for your transfer and is not indented as a full guide to BOTO S3 client. For proper guidance, follow official [BOTO documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html).
 
 :::
 

@@ -541,7 +541,7 @@ function sidebarDoScience() {
               link: "/do-science/tools/transfer/cyberduck",
             },
             {
-              text: "AWS S3",
+              text: "AWS CLI S3",
               link: "/do-science/tools/transfer/aws-s3-client",
             },
             {

@@ -1,17 +1,17 @@
 ---
-title: AWS S3 Client
+title: AWS CLI S3 Client
 category: Transfer tools
-permalink: /do-science/tools/transfer/aws-s3-client
+permalink: /do-science/tools/transfer/aws-cli-s3-client
 outline: 1
 description: Configuration guide for AWS S3 client.
 ---
 
 # Transferring data from AWS S3 storage
 
-Guide below is meant for users who want to transfer data from AWS S3 storage to HUNT Cloud lab.
+Guide below is meant for users who want to transfer data using [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) to HUNT Cloud lab.
 
 ::: tip
-This guide is meant to help you setup correct parameters for your transfer and is not indented as a full guide to AWS S3 client. For proper guidance, follow official AWS documentation.
+This guide is meant to help you setup correct parameters for your transfer and is not indented as a full guide to AWS S3 client. For proper guidance, follow official [AWS documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
 
 :::
 
