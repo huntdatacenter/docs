@@ -541,6 +541,14 @@ function sidebarDoScience() {
               link: "/do-science/tools/transfer/cyberduck",
             },
             {
+              text: "AWS S3",
+              link: "/do-science/tools/transfer/aws-s3-client",
+            },
+            {
+              text: "BOTO",
+              link: "/do-science/tools/transfer/boto-s3-client",
+            },
+            {
               text: "Azcopy",
               link: "/do-science/tools/transfer/azcopy",
             },
