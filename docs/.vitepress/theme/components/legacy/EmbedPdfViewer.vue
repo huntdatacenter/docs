@@ -1,6 +1,5 @@
 <script setup>
 import { ref, watch, onMounted, nextTick } from "vue"
-import VuePdfEmbed from "vue-pdf-embed"
 
 defineOptions({
   name: "EmbedPdfViewer",
@@ -11,6 +10,7 @@ const props = defineProps({
   pages: { type: Number, default: 1 },
 })
 
+const PdfEmbed = ref(null)
 const src = ref("")
 const showPdf = ref(false)
 const page = ref(null)
@@ -48,7 +48,6 @@ const render = doc => {
 
 const previousPage = () => {
   page.value = page.value && page.value > 1 ? page.value - 1 : 1
-  console.log(page.value)
 }
 
 const nextPage = () => {
@@ -94,7 +93,11 @@ const zoomOut = () => {
 }
 
 // Lifecycle
-onMounted(() => {
+onMounted(async () => {
+  const module = await import('vue-pdf-embed') /* @vite-ignore */
+  PdfEmbed.value = module.default
+  showPdf.value = true
+
   if (!src.value || src.value.length === 0) {
     render(props.source)
   }
@@ -104,14 +107,14 @@ onMounted(() => {
 <template>
   <div id="pdf-viewer">
     <div id="viewerContainer">
-      <vue-pdf-embed
-        v-if="showPdf"
+      <component
+        v-if="showPdf && PdfEmbed"
+        :is="PdfEmbed"
         id="viewer"
         ref="pdf"
         :source="src"
         :page="page"
-        :scale="scale"
-        :width="pageWidth"
+        :width="pageWidth ? pageWidth : setPdfInitWidth()"
       />
     </div>
 

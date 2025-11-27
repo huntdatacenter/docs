@@ -1,9 +1,9 @@
 ---
+layout: page
 title: HUNT Cloud | Service order
 category: HUNT Cloud
 permalink: /-/service-order/
 outline: 0
-pageClass: custom-page-class
 sidebar: false
 next: false
 prev: false
