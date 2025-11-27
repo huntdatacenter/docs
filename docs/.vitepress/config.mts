@@ -542,7 +542,7 @@ function sidebarDoScience() {
             },
             {
               text: "AWS CLI S3",
-              link: "/do-science/tools/transfer/aws-s3-client",
+              link: "/do-science/tools/transfer/aws-cli-s3-client",
             },
             {
               text: "BOTO",
