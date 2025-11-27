@@ -165,7 +165,11 @@ If you successfully completed this step, celebrate with fresh coffee and head ov
 
 ### Signal
 
-#### I am unable to install or run Signal on my phone.
+#### I am not able to receive Signal messages
+
+Make sure to update the Signal app to the latest version.
+
+#### I am unable to install or run Signal on my phone
 
 Steps to resolve issues with Signal may vary by phone model and OS. Signal has a handy guide for [Troubleshooting Installs or Updates](https://support.signal.org/hc/en-us/articles/360007211952-Troubleshooting-Installs-or-Updates) as a starting point. [Contact us](/about/contact) if this do not resolve your issue.
 
