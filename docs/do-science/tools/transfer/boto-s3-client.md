@@ -38,4 +38,3 @@ parallel_process_count = 1
 parallel_thread_count = 2
 
 ```
-
