@@ -4,10 +4,6 @@ category: Working in your lab
 description: Collection of analytical tool guides.
 
 buttons:
-  - title: "BlueBox"
-    subtitle: "Distribute and manage analyses across multiple cloud machines in your lab."
-    href: "/do-science/tools/analytical/bluebox"
-    icon: "mdi-cloud-sync"
   - title: "Conda"
     subtitle: "Manage packages and environments reliably with Conda."
     href: "/do-science/tools/analytical/conda"
