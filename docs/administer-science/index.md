@@ -9,7 +9,7 @@ buttons:
     - title: 'Service desk'
       subtitle: 'Service orders that you can order for labs and data spaces in HUNT Cloud.'
       href: '/administer-science/service-desk/'
-      icon: "mdi-email-outline"
+      icon: "mdi-email"
     - title: 'Scientific access'
       subtitle: 'Required agreements for scientific centers and groups.'
       href: '/administer-science/scientific-access/'
