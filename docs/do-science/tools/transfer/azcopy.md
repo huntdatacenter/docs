@@ -13,7 +13,7 @@ Guide below is meant for users who want to transfer data from Azure Storage to H
 ::: warning
 This guide is meant to help you setup correct parameters for your transfer and is not indented as a full guide to azcopy. For proper guidance, follow official Microsoft documentation.
 
-::: 
+:::
 
 ## Installation
 
@@ -23,7 +23,6 @@ Afterwards, you can run following command in conda environment to install azcopy
 ```bash
 conda install -c conda-forge azcopy
 ```
-
 
 ## Setup parameters
 

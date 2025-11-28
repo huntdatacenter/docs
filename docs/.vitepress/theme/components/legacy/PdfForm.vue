@@ -116,7 +116,6 @@ const loadPdf = url => {
             })
             let pdfForm = doc.getForm()
             pdfFields.value = pdfForm.getFields().map(field => field.getName())
-            console.log(pdfFields.value)
           })
         } catch (error) {
           console.log("Failed to read fields")
@@ -223,9 +222,7 @@ const closeDialog = key => {
 
 const saveDialog = key => {
   dialogs.value = Object.assign({}, dialogs.value, { [key]: false })
-
   signatures.value[key]["signed"] = signatures.value[key]["signature"].isEmpty() ? false : true
-  console.log(`Signature signed [${key}]: ${signatures.value[key]["signed"]}`)
   signatures.value[key]["pngurl"] = signatures.value[key]["signature"].toDataURL()
 }
 
@@ -244,6 +241,7 @@ const updateAgreementFormCache = (key, fields) => {
   if (!localStorage.agreementFields) {
     localStorage.agreementFields = {}
   }
+  console.log('is this updated', key, fields);
   if (key && fields) {
     localStorage.setItem(key, JSON.stringify(fields))
   }
@@ -251,6 +249,10 @@ const updateAgreementFormCache = (key, fields) => {
 
 const submit = () => {
   try {
+    if (!formFilled.value) {
+      console.log('Form is not completely filled');
+      return;
+    }
     const read_buf = pdfBuffer.value
     PDFDocument.load(read_buf).then(pdfDoc => {
       const pdfForm = pdfDoc.getForm()
@@ -270,7 +272,6 @@ const submit = () => {
           renderedFields.value[item.key] = fieldValue
         }
       })
-
       updateAgreementFormCache(props.agreementTag, renderedFields.value)
 
       pdfForm.flatten()
@@ -403,12 +404,9 @@ onMounted(() => {
   }
 
   const fieldsCache = fetchAgreementFormCache(props.agreementTag)
-  if (fieldsCache) {
+  if (Object.keys(fieldsCache).length !== 0) {
     renderedFields.value = fieldsCache
-    console.log("loaded fields from cache")
-    console.log(fieldsCache)
     if (form.value) {
-      console.log("submit from cache")
       form.value.submit()
     }
   }
@@ -417,12 +415,12 @@ onMounted(() => {
 
 <template>
   <v-sheet
-    class="d-flex flex-xs-wrap flex-sm-wrap flex-md-nowrap flex-lg-nowrap flex-xl-nowrap h-100 w-100 align-self-center"
+    class="d-flex flex-wrap flex-md-nowrap h-100 w-100 align-self-center"
     style="max-width: 1680px"
   >
     <v-sheet
       class="flex-grow-1 flex-shrink-0 mx-2 px-2 h-100 h-xs-auto h-sm-auto overflow-y-auto col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
-      style="min-width: 300px; max-width: 100%"
+      style="min-width: 300px; max-width: 50%"
     >
       <form ref="form" @submit.prevent="submit">
         <v-list>
@@ -438,7 +436,7 @@ onMounted(() => {
           <template v-for="item in fields" :key="item.key">
             <v-divider v-if="item.field === 'divider'"></v-divider>
             <v-list-item v-if="item.field === 'section'" cols="12" dense>
-              <p class="text-darken-1 py-0 mt-1 mb-4">{{ item.label }}</p>
+              <p class="text-darken-1 py-0 mt-2" >{{ item.label }}</p>
             </v-list-item>
             <v-list-item v-if="item.field === 'textfield'" cols="12" dense>
               <v-text-field
@@ -460,21 +458,19 @@ onMounted(() => {
                 :persistent-hint="item.hint && formData[item.key] ? true : false"
                 :placeholder="item.placeholder ? item.placeholder : null"
                 persistent-placeholder
-                outlined
-                dense
-                :hide-details="formData[item.key] ? false : 'auto'"
+                variant="filled"
+                density="comfortable"
+                :hide-details="formData[item.key] && item.hint ? false : 'auto'"
                 @focus="$event.target.select()"
               >
                 <template v-slot:label>
-                  {{ item.label
-                  }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
+                  {{ item.label }}
+                  <span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
                 </template>
-                <template v-if="item.tooltip ? true : false" v-slot:append>
-                  <v-tooltip top>
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-btn icon x-small v-bind="attrs" v-on="on">
-                        <v-icon class="material-icons">info</v-icon>
-                      </v-btn>
+                <template v-if="item.tooltip" v-slot:append-inner>
+                  <v-tooltip location="top">
+                    <template v-slot:activator="{ props: activatorProps }">
+                      <v-icon v-bind="activatorProps">mdi-information</v-icon>
                     </template>
                     <span>{{ item.tooltip }}</span>
                   </v-tooltip>
@@ -493,7 +489,7 @@ onMounted(() => {
                 clear-icon=""
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
-                outlined
+                variant="filled"
                 dense
                 hide-details
                 @focus="$event.target.select()"
@@ -534,8 +530,8 @@ onMounted(() => {
                     class="mb-3"
                     :placeholder="item.placeholder ? item.placeholder : ''"
                     persistent-placeholder
-                    outlined
-                    dense
+                    variant="filled"
+                    density="compact"
                     hide-details
                     readonly
                     v-bind="attrs"
@@ -556,23 +552,23 @@ onMounted(() => {
             <v-list-item v-if="item.field === 'countries'" cols="12" dense>
               <v-autocomplete
                 v-model="formData[item.key]"
-                class="mb-3"
+                class="mb-0"
                 :ref="item.key"
                 autocomplete="ignore-field"
                 :items="getCountries"
-                :item-text="item => `${item.name} ${item.flag}`"
+                :item-title="item => `${item.name} ${item.flag}`"
                 :item-value="item => item.name"
-                :required="isFieldRequired(item.required)"
+                :rules="[v => (v && v.length) || (!isFieldRequired(item.required)) || 'This field is required']"
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
-                outlined
-                dense
-                hide-details
+                variant="filled"
+                density="comfortable"
+                hide-details="auto"
                 @focus="$event.target.select()"
               >
                 <template v-slot:label>
-                  {{ item.label
-                  }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
+                  {{ item.label }}
+                  <span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
                 </template>
               </v-autocomplete>
             </v-list-item>
@@ -591,8 +587,8 @@ onMounted(() => {
                 :persistent-hint="item.hint && formData[item.key] ? true : false"
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
-                outlined
-                dense
+                variant="filled"
+                density="compact"
                 :rows="1"
                 :hide-details="formData[item.key] ? false : 'auto'"
                 @focus="$event.target.select()"
@@ -604,18 +600,20 @@ onMounted(() => {
               </v-textarea>
             </v-list-item>
             <v-list-item v-if="item.field === 'signature'" cols="12" dense>
-              <v-card class="px-0 mb-3" style="width: 100%" elevation="0" outlined>
+              <v-card class="mb-1" style="width: 100%" elevation="0" variant="outlined">
                 <v-card-text>
-                  <v-row justify="space-between" class="mr-xs-12 pr-sm-8" no-gutters>
-                    <v-col cols="8">
+                  <v-row justify="space-around" class="mr-xs-12 pr-sm-8" no-gutters>
+                    <v-col cols="12">
                       <div class="font-weight-bold">{{ item.label }}</div>
                     </v-col>
-                    <v-col cols="4">
+                  </v-row>
+                  <v-row class="pa-2" align="center" justify="space-around">
+                    <v-col cols="12">
                       <v-btn color="primary" block @click="openDialog(item.key)"> Add signature </v-btn>
                     </v-col>
                   </v-row>
-                  <v-row align="center" justify="space-between" class="mr-xs-12 pr-sm-8" no-gutters>
-                    <v-col cols="12" style="height: 40px">
+                  <v-row align="center" justify="space-between" class="" no-gutters>
+                    <v-col cols="12">
                       <div v-if="signatures && signatures[item.key] && signatures[item.key]['signed']">
                         <img :src="signatures[item.key]['pngurl']" style="max-height: 40px" />
                       </div>
@@ -652,7 +650,7 @@ onMounted(() => {
           <v-list-item>
             <v-row class="px-2" align="center" justify="space-around">
               <v-col cols="12">
-                <v-btn class="mr-8 px-0" type="submit" block :color="formFilled ? 'teal' : 'link'">
+                <v-btn class="mr-8 px-0" type="submit" block :color="formFilled ? 'teal' : 'teal-lighten-2'">
                   Preview agreement
                 </v-btn>
               </v-col>
@@ -704,7 +702,7 @@ onMounted(() => {
     </v-sheet>
     <v-sheet
       class="flex-grow-1 flex-shrink-1 mx-2 px-2 h-100 col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
-      style="min-width: 300px; max-width: 100%"
+      style="min-width: 300px; max-width: 50%"
     >
       <EmbedPdfViewer v-if="showPdf ? true : false" :source="pdfData" :pages="pdfPages" height="500" />
     </v-sheet>
@@ -796,7 +794,7 @@ onMounted(() => {
 }
 
 /*
-.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner {
+.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--variant="filled" .v-input__append-inner {
   margin-top: 2px !important;
 }
 */

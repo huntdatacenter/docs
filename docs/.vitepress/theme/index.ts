@@ -15,8 +15,8 @@ import MyIPAddress from "./components/legacy/MyIPAddress.vue"
 import NavitationCards from "./components/legacy/NavitationCards.vue"
 import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
 import ConsentForm from "./components/legacy/ConsentForm.vue"
-// import EmbedPdfViewer from "./components/legacy/EmbedPdfViewer.vue"
-// import PdfForm from "./components/legacy/PdfForm.vue"
+import EmbedPdfViewer from "./components/legacy/EmbedPdfViewer.vue"
+import PdfForm from "./components/legacy/PdfForm.vue"
 // import SOButton from "./components/legacy/SOButton.vue"
 import SDButton from "./components/legacy/SDButton.vue"
 import ServiceDesk from "./components/legacy/ServiceDesk.vue"
@@ -47,7 +47,9 @@ import { vuetify } from "./plugins/vuetify"
 const ISSERVER = typeof window === "undefined"
 
 const redirects: Record<string, string> = {
+  "/do-science/lab-access/collect-your-keys/": "/do-science/lab-access/1-collect-keys",
   "/do-science/lab-access/collect-your-keys": "/do-science/lab-access/1-collect-keys",
+  "/do-science/troubleshooting/connection/": "/do-science/troubleshooting/connection",
   "/administer-science/agreements/": "/administer-science/agreements/overview",
   "/administer-science/prices/calculator": "/administer-science/prices/estimator",
   // "/legacy/path": "/current/path",
@@ -169,8 +171,8 @@ export default {
     app.component("NavitationCards", NavitationCards)
     app.component("HideLastUpdated", HideLastUpdated)
     app.component("ConsentForm", ConsentForm)
-    // app.component("EmbedPdfViewer", EmbedPdfViewer)
-    // app.component("PdfForm", PdfForm)
+    app.component("EmbedPdfViewer", EmbedPdfViewer)
+    app.component("PdfForm", PdfForm)
     // app.component("SOButton", SOButton)
     app.component("SDButton", SDButton)
     app.component("ServiceDesk", ServiceDesk)

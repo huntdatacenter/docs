@@ -86,9 +86,7 @@ onMounted(() => {
   fetch("/cfg/agreements.yml")
     .then(response => response.text())
     .then(data => {
-      // console.log(data);
       const cfg = YAML.parse(data)
-      console.log(cfg)
       agreements.value = cfg.agreements
       forms.value = cfg.forms
       if (routeQuery.open) {
@@ -99,83 +97,79 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="vuewidget vuewrapper" data-vuetify>
+  <div class="vuewidget vuewrapper agreement-form" data-vuetify>
     <v-app :id="id">
-      <!-- <v-app-bar elevation="2" dense>
-        <v-app-bar-nav-icon @click="expandForm = !expandForm"></v-app-bar-nav-icon>
-        <v-toolbar-title v-if="selected && selected.text ? true : false">{{ selected.text }}</v-toolbar-title>
-      </v-app-bar> -->
-      <v-layout v-if="showForm" class="d-flex flex-nowrap h-100 w-100 pt-0 align-center justify-center">
+      <v-layout v-if="showForm" class="d-flex flex-nowrap h-100 w-100 pt-0 align-center justify-center" >
         <PdfForm
-          v-if="showForm"
           :agreement-tag="selected.value"
           :title="selected.text"
           :url="selected.url"
           :servicedesk="selected.servicedesk"
           :fields="getFields"
         />
-        <!-- :expand-form="expandForm" -->
       </v-layout>
-      <v-row v-else align="center" justify="center" style="margin-top: 24px">
-        <v-col class="mx-2" style="max-width: 900px">
+      <v-row v-else class="agreement-form-autocomplete" justify="center" style="margin-top: 24px">
+        <v-col class="mx-2">
           <v-card class="mb-4">
             <v-card-title>Select Agreement Form</v-card-title>
             <v-card-text>
-              <v-row class="ml-3 mb-2" style="padding-left: 24px; padding-right: 24px">
-                <v-col cols="12">
-                  <v-autocomplete
-                    v-model="selected"
-                    ref="agreement_field"
-                    autocomplete="ignore-field"
-                    label="Agreement type"
-                    placeholder=""
-                    :items="agreements"
-                    :item-title="item => item.text"
-                    :item-value="item => item"
-                    persistent-placeholder
-                    variant="outlined"
-                    hide-details
-                    @focus="$event.target.select()"
-                    @change="updateUrl($event)"
-                  ></v-autocomplete>
-                </v-col>
-              </v-row>
+              <v-autocomplete
+                v-model="selected"
+                ref="agreement_field"
+                autocomplete="ignore-field"
+                label="Agreement type"
+                placeholder=""
+                :items="agreements"
+                :item-title="item => item.text"
+                :item-value="item => item"
+                persistent-placeholder
+                variant="outlined"
+                hide-details
+                @focus="$event.target.select()"
+                @update:model-value="updateUrl"
+              ></v-autocomplete>
             </v-card-text>
           </v-card>
         </v-col>
       </v-row>
+
     </v-app>
   </div>
 </template>
 
 <style>
-.vuewidget.vuewrapper {
+.vuewidget.vuewrapper{
   /* reset full view - no scroll bars, no full view */
   overflow: inherit;
   height: 100%;
 }
 
-.vuewidget.vuewrapper .v-application {
+.vuewidget.vuewrapper.agreement-form{
+  max-width: 1680px !important;
+}
+
+.vuewidget.vuewrapper .agreement-form-autocomplete {
+  max-width: 900px !important;
+  width: 100%;
   height: 100%;
 }
 
-.vuewidget.vuewrapper .v-application .v-application--wrap {
-  display: block;
-  flex: inherit;
+.vuewidget.vuewrapper .v-application {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.vuewidget.vuewrapper.agreement-form .v-application .v-application__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: initial;
   min-width: inherit;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-}
-
-.page-edit {
-  display: none;
-}
-
-.language-text {
-  display: flex;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
+  overflow-y: hidden;
 }
 </style>
