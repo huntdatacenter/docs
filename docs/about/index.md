@@ -7,11 +7,11 @@ buttons:
     - title: 'Team'
       subtitle: 'Our team at HUNT Cloud'
       href: '/about/team/'
-      icon: ['fas', 'people-group']
+      icon: "mdi-account-group"
     - title: 'Illustrations'
       subtitle: 'Presentation of illustrations'
       href: '/about/illustrations/'
-      icon: ['fas', 'palette']
+      icon: "mdi-palette"
 ---
 
 # About HUNT Cloud

@@ -9,35 +9,35 @@ buttons:
     - title: 'Service desk'
       subtitle: 'Service orders that you can order for labs and data spaces in HUNT Cloud.'
       href: '/administer-science/service-desk/'
-      icon: ['fas', 'envelope']
+      icon: "mdi-email-outline"
     - title: 'Scientific access'
       subtitle: 'Required agreements for scientific centers and groups.'
       href: '/administer-science/scientific-access/'
-      icon: ['fas', 'file-pen']
+      icon: "mdi-file-edit"
     - title: 'Agreements'
       subtitle: 'Overview of the administrative agreements in HUNT Cloud.'
       href: '/administer-science/agreements/'
-      icon: ['fas', 'handshake']
+      icon: "mdi-handshake"
     - title: 'Services'
       subtitle: 'This page gives you an overview of our cloud services.'
       href: '/administer-science/services/'
-      icon: ['fas', 'cloud']
+      icon: "mdi-cloud"
     - title: 'Prices'
       subtitle: 'This page gives you an introduction to our prices.'
       href: '/administer-science/prices/'
-      icon: ['fas', 'tag']
+      icon: "mdi-tag"
     - title: 'Price calculator'
       subtitle: 'Calculate your labs cost.'
       href: '/administer-science/prices/calculator/'
-      icon: ['fas', 'calculator']
+      icon: "mdi-calculator"
     - title: 'Data'
       subtitle: 'Page for data administration in HUNT Cloud.'
       href: '/administer-science/data/'
-      icon: ['fas', 'file-lines']
+      icon: "mdi-file-document"
     - title: 'FAQ'
       subtitle: 'Frequently asked questions.'
       href: '/administer-science/faq/'
-      icon: ['fas', 'circle-question']
+      icon: "mdi-help-circle"
 ---
 
 # Administer science in HUNT Cloud
