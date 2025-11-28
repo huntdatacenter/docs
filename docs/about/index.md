@@ -22,7 +22,7 @@ This is a pilot page that where we will add information about the thinking and t
 
 !["Illustration of small centien robot made of metal with shiny lightbulb on top of its head."](../images/hunt-cloud_bot_250_3.png)
 
-<NavitationCards :buttons="$frontmatter.buttons" />
+<NavigationCards :buttons="$frontmatter.buttons" />
 
 
 

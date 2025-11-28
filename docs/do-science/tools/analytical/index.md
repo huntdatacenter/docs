@@ -69,6 +69,6 @@ buttons:
 
 # Analytical tool guides
 
-<NavitationCards :buttons="$frontmatter.buttons" />
+<NavigationCards :buttons="$frontmatter.buttons" />
 
 <br/>

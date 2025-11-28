@@ -44,6 +44,6 @@ buttons:
 
 These guides introduce tools for uploading and downloading data, data encryption in transfer, and data synchronization.
 
-<NavitationCards :buttons="$frontmatter.buttons" />
+<NavigationCards :buttons="$frontmatter.buttons" />
 
 <br/>

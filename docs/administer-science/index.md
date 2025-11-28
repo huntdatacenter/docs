@@ -50,4 +50,4 @@ See our [scientific access](/administer-science/scientific-access/) section for 
 
 !["Illustration of decorative hand-made golden key with purple gem stones."](../images/hunt-cloud_key_250.png)
 
-<NavitationCards :buttons="$frontmatter.buttons" />
+<NavigationCards :buttons="$frontmatter.buttons" />

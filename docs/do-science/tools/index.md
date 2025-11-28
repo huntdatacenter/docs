@@ -23,7 +23,7 @@ buttons:
 
 **This section holds information on how you get up and running with commonly used tools in your lab. We have ordered the documents in three sections.**
 
-<NavitationCards :buttons="$frontmatter.buttons" />
+<NavigationCards :buttons="$frontmatter.buttons" />
 
 <br/>
 

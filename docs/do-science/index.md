@@ -49,7 +49,7 @@ This section is for active lab users. It contains practical information on how t
 
 !["Illustration of laboratory glass bottle with yellow shimmery substance."](../images/hunt-cloud_bottle_250.png)
 
-<NavitationCards :buttons="$frontmatter.buttons" />
+<NavigationCards :buttons="$frontmatter.buttons" />
 
 <br/>
 

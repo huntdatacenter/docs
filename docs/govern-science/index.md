@@ -46,4 +46,4 @@ See our [organizational access](/govern-science/organizational-access/) section 
 
 !["Illustration of sundial compass in brass."](../images/hunt-cloud_compass_250.png)
 
-<NavitationCards :buttons="$frontmatter.buttons" />
+<NavigationCards :buttons="$frontmatter.buttons" />

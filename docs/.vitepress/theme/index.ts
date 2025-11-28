@@ -12,7 +12,7 @@ import CopyTextField from "./components/generic/CopyTextField.vue"
 
 import VuetifyButton from "./components/legacy/VuetifyButton.vue"
 import MyIPAddress from "./components/legacy/MyIPAddress.vue"
-import NavitationCards from "./components/legacy/NavitationCards.vue"
+import NavigationCards from "./components/legacy/NavigationCards.vue"
 import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
 import ConsentForm from "./components/legacy/ConsentForm.vue"
 import EmbedPdfViewer from "./components/legacy/EmbedPdfViewer.vue"
@@ -168,7 +168,7 @@ export default {
     app.component("CopyTextField", CopyTextField)
     app.component("VuetifyButton", VuetifyButton)
     app.component("MyIPAddress", MyIPAddress)
-    app.component("NavitationCards", NavitationCards)
+    app.component("NavigationCards", NavigationCards)
     app.component("HideLastUpdated", HideLastUpdated)
     app.component("ConsentForm", ConsentForm)
     app.component("EmbedPdfViewer", EmbedPdfViewer)
