@@ -38,7 +38,7 @@ buttons:
     icon: "mdi-harddisk"
   - title: "PostgreSQL"
     subtitle: "Set up and connect to PostgreSQL on your lab environment."
-    href: "/do-science/tools/technical/ncdu"
+    href: "/do-science/tools/technical/postgresql"
     icon: "mdi-database"
   - title: "Screen & Tmux"
     subtitle: "Work in persistent terminal sessions with Screen, tmux, or Byobu."
