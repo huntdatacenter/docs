@@ -17,7 +17,7 @@ import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
 import ConsentForm from "./components/legacy/ConsentForm.vue"
 import EmbedPdfViewer from "./components/legacy/EmbedPdfViewer.vue"
 import PdfForm from "./components/legacy/PdfForm.vue"
-// import SOButton from "./components/legacy/SOButton.vue"
+import SOButton from "./components/legacy/SOButton.vue"
 import SDButton from "./components/legacy/SDButton.vue"
 import ServiceDesk from "./components/legacy/ServiceDesk.vue"
 import AgreementForm from "./components/legacy/AgreementForm.vue"
@@ -173,7 +173,7 @@ export default {
     app.component("ConsentForm", ConsentForm)
     app.component("EmbedPdfViewer", EmbedPdfViewer)
     app.component("PdfForm", PdfForm)
-    // app.component("SOButton", SOButton)
+    app.component("SOButton", SOButton)
     app.component("SDButton", SDButton)
     app.component("ServiceDesk", ServiceDesk)
     app.component("AgreementForm", AgreementForm)
