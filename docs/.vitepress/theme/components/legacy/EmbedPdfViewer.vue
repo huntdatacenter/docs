@@ -94,7 +94,8 @@ const zoomOut = () => {
 
 // Lifecycle
 onMounted(async () => {
-  const module = await import('vue-pdf-embed') /* @vite-ignore */
+  /* @vite-ignore */
+  const module = await import('vue-pdf-embed')
   PdfEmbed.value = module.default
   showPdf.value = true
 
