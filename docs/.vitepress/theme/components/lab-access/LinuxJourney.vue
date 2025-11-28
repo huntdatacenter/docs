@@ -422,13 +422,13 @@ onMounted(() => {
 
                         <br />
                         <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
-                        <p>
+                        <div>
                           If you received the notification VPN Connection Failed after 60 seconds, please check the following:
                           <ul>
                             <li>Verify that you have an active internet connection.</li>
                             <li>Verify that the Private Key Password is correct.</li>
                           </ul>
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="unable-to-apply-changes"><a href="#unable-to-apply-changes" class="header-anchor">#</a> Unable to apply changes</h3>
@@ -438,27 +438,27 @@ onMounted(() => {
 
                         <br />
                         <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
-                        <p>
+                        <div>
                           If you received an error "wrong credentials" after using your TOTP authenticator:
                           <ul>
                             <li>Make sure your phone is connected to internet for time synchronization. Time zone between phone and your machine should match.</li>
                           </ul>
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="could-not-read-auth-error"><a href="#could-not-read-auth-error" class="header-anchor">#</a> Could not read Auth error</h3>
-                        <p>
+                        <div>
                           The error messages below indicates that TOTP (Google Auth) code is not accepted.
                           You should try to setup your TOTP one more time or request a TOTP reset in Service desk.
                           <div class="language- extra-class"><pre class="language-text">
                             <code v-text="`ERROR: could not read Auth username/password/ok/string from management interface`"></code>
                           </pre></div>
 
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
-                        <p>
+                        <div>
                           The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
                           <div class="language- extra-class"><pre class="language-text">
                             <code v-text="`ERROR: could not read Private Key username/password/ok/string from management interface`"></code>
@@ -467,7 +467,7 @@ onMounted(() => {
                           <div class="language- extra-class"><pre class="language-text">
                             <code v-text="`Cannot load private key file`"></code>
                           </pre></div>
-                        </p>
+                        </div>
 
                         <v-alert
                           border-color="info"

@@ -549,38 +549,38 @@ onMounted(() => {
 
                         <br />
                         <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
-                        <p>
+                        <div>
                           If you received the notification VPN Connection Failed after 60 seconds, please check the following:
                           <ul>
                             <li>Verify that you have an active internet connection.</li>
                             <li>Verify that the Private Key Password is correct.</li>
                           </ul>
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
-                        <p>
-                          If you received an error "wrong credentials" after using your TOTP authenticator:
+                        <div>
+                          If you received an error "wrong credentials" after using your TOTdiv authenticator:
                           <ul>
                             <li>Make sure your phone is connected to internet for time synchronization. Time zone between phone and your machine should match.</li>
                           </ul>
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="could-not-read-auth-error"><a href="#could-not-read-auth-error" class="header-anchor">#</a> Could not read Auth error</h3>
-                        <p>
+                        <div>
                           The error messages below indicates that TOTP (Google Auth) code is not accepted.
                           You should try to setup your TOTP one more time or request a TOTP reset in Service desk.
                           <div class="language- extra-class"><pre class="language-text">
                             <code v-text="`ERROR: could not read Auth username/password/ok/string from management interface`"></code>
                           </pre></div>
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
-                        <p>
+                        <div>
                           The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
-                        </p>
+                        </div>
                         <div class="language- extra-class mb-2" style="user-select: none">
                           <pre class="language-text">
                             <code>ERROR: could not read Private Key username/password/ok/string from management interface</code>
@@ -620,7 +620,7 @@ onMounted(() => {
 
                         <br />
                         <h3 id="route-addition-failed"><a href="#route-addition-failed" class="header-anchor">#</a> Route addition failed </h3>
-                        <p>
+                        <div>
                           You should reinstall your OpenVPN with administrative rights if you already installed OpenVPN and are getting errors below:
                           <div class="language- extra-class mb-2"><pre class="language-text">
                             <code v-text="`ERROR: route addition failed using CreateIpForwardEntry: Ingen tilgang.`"></code>
@@ -633,11 +633,11 @@ onMounted(() => {
                           <div class="language- extra-class mb-2"><pre class="language-text">
                             <code v-text="`ERROR: Some routes were not successfully added. The connection may not function correctly`"></code>
                           </pre></div>
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="tls-key-negotiation-timeout"><a href="#tls-key-negotiation-timeout" class="header-anchor">#</a> TLS handshake failed</h3>
-                        <p>
+                        <div>
                           If you see the error below the problem might be with your current network (e.g. institution is blocking VPN connections).
                           <div class="language- extra-class mb-2"><pre class="language-text">
                             <code v-text="`TLS Error: TLS key negotiation failed to occur within 60 seconds (check your network connectivity)`"></code>
@@ -653,7 +653,7 @@ onMounted(() => {
                               <a href="https://docs.hdc.ntnu.no/do-science/troubleshooting/connection/#cannot-connect-due-to-local-firewalls">Cannot connect due to local firewalls</a>.
                             </li>
                           </ul>
-                        </p>
+                        </div>
 
                         <v-alert
                           border="start"
