@@ -33,15 +33,16 @@ const iconcolor = ref("rgb(72 84 104)")
           >
             <v-list-item lines="three">
               <template v-slot:prepend>
-                <v-avatar v-if="item.icon" size="80" rounded :color="avatarcolor" class="icon-avatar">
-                  <font-awesome-icon
-                    :icon="item.icon"
-                    :style="{
-                      color: iconcolor,
-                      width: '50px',
-                      height: '50px',
-                    }"
-                  />
+                <v-avatar
+                  v-if="item.icon"
+                  size="80"
+                  rounded
+                  :color="avatarcolor"
+                  class="icon-avatar"
+                >
+                  <v-icon :color="iconcolor" size="60">
+                    {{ item.icon }}
+                  </v-icon>
                 </v-avatar>
               </template>
 

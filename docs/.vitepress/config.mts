@@ -458,7 +458,7 @@ function sidebarDoScience() {
               link: "/do-science/tools/analytical/conda",
             },
             {
-              text: "EPCATS",
+              text: "EPACTS",
               link: "/do-science/tools/analytical/epacts",
             },
             {

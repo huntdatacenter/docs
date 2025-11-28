@@ -10,35 +10,35 @@ buttons:
   - title: "Service desk"
     subtitle: "Service orders that you can request as an active lab user in HUNT Cloud."
     href: "/do-science/service-desk/"
-    icon: ["fas", "envelope"]
+    icon: "mdi-email"
   - title: "Workbench"
     subtitle: "Getting started with Workbench"
     href: "/do-science/hunt-workbench/getting-started/"
-    icon: ["fas", "code"]
+    icon: "mdi-code-tags"
   - title: "Technical tools"
     subtitle: "Technical guides for Git, Docker, GPUs, Cuda, and other tools."
     href: "/do-science/tools/technical/"
-    icon: ["fas", "toolbox"]
+    icon: "mdi-toolbox"
   - title: "Analytical tools"
     subtitle: "Guides for analytical tools like RStudio, MATLAB, or Stata."
     href: "/do-science/tools/analytical/"
-    icon: ["fas", "vials"]
+    icon: "mdi-test-tube"
   - title: "AI / ML"
     subtitle: "GPUs for sensitive AI / ML models."
     href: "/do-science/tools/technical/gpu/"
-    icon: ["fas", "brain"]
+    icon: "mdi-brain"
   - title: "Data transfers"
     subtitle: "How to transfer data between labs, import and export data."
     href: "/do-science/data-transfers/"
-    icon: ["fas", "arrow-down-up-across-line"]
+    icon: "mdi-swap-vertical"
   - title: "FAQ"
     subtitle: "Frequently asked questions"
     href: "/do-science/faq/"
-    icon: ["fas", "circle-question"]
+    icon: "mdi-help-circle"
   - title: "Troubleshooting"
     subtitle: "Solutions to some of the common issues that you might encounter."
     href: "/do-science/troubleshooting/"
-    icon: ["fas", "bug"]
+    icon: "mdi-bug"
 ---
 
 # Do science in HUNT Cloud
