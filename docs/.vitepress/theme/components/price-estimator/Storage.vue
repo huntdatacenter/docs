@@ -1,49 +1,55 @@
-<script lang="ts">
+<script setup lang="ts">
+import { reactive, onMounted } from "vue"
 import type { StorageFormData, StorageUnit } from "./types"
 
-export default {
-  name: "Storage",
-  emits: ["close"],
-  props: {
-    storageId: { type: Number, default: () => 0 },
-    initialData: { type: Object as () => StorageUnit | null, default: null },
-  },
-  data: () => ({
-    formData: {
-      id: null,
-      name: null,
-      usage: "Archive",
-      type: "HDD",
-      size: 1,
-    } as StorageFormData,
-  }),
+interface Props {
+  storageId?: number
+  initialData?: StorageUnit | null
+}
 
-  created() {
-    if (this.initialData) {
-      this.formData.id = this.initialData.id
-      this.formData.name = this.initialData.name
-      this.formData.usage = this.initialData.usage
-      this.formData.type = this.initialData.type
-      this.formData.size = this.initialData.size
-    } else {
-      this.formData.id = this.storageId
-      this.formData.name = `volume-${this.storageId}`
-    }
-  },
-  methods: {
-    close() {
-      this.$emit("close")
-    },
-    save() {
-      this.$emit("close", {
-        id: this.formData.id,
-        name: this.formData.name,
-        size: Number(this.formData.size),
-        usage: this.formData.usage,
-        type: this.formData.type,
-      })
-    },
-  },
+const props = withDefaults(defineProps<Props>(), {
+  storageId: 0,
+
+  initialData: null,
+})
+
+const emit = defineEmits<{
+  close: [data?: StorageUnit]
+}>()
+
+const formData = reactive<StorageFormData>({
+  id: null,
+  name: null,
+  usage: "Archive",
+  type: "HDD",
+  size: 1,
+})
+
+onMounted(() => {
+  if (props.initialData) {
+    formData.id = props.initialData.id
+    formData.name = props.initialData.name
+    formData.usage = props.initialData.usage
+    formData.type = props.initialData.type
+    formData.size = props.initialData.size
+  } else {
+    formData.id = props.storageId
+    formData.name = `volume-${props.storageId}`
+  }
+})
+
+const close = () => {
+  emit("close")
+}
+
+const save = () => {
+  emit("close", {
+    id: formData.id!,
+    name: formData.name!,
+    size: Number(formData.size),
+    usage: formData.usage,
+    type: formData.type,
+  } as StorageUnit)
 }
 </script>
 

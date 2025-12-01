@@ -1,168 +1,166 @@
-<script lang="ts">
-import type {
-  ComputeUnit,
-  PriceListItem,
-  GpuModel,
-  MachineFlavor,
-  MachineFormData,
-  Catalogue,
-} from "./types"
+<script setup lang="ts">
+import { ref, computed, onMounted } from "vue"
+import type { ComputeUnit, PriceListItem, GpuModel, MachineFlavor, MachineFormData, Catalogue } from "./types"
 
-export default {
-  name: "Machine",
-  props: {
-    computeId: { type: Number, default: () => 0 },
-    catalogue: {
-      type: Object as () => Catalogue,
-      required: true,
-    },
-    selectedRadio: { type: String, default: "1Y" },
-    initialData: { type: Object as () => ComputeUnit | null, default: null },
-  },
-
-  emits: ["close", "open-snackbar"],
-
-  data() {
-    return {
-      formData: {
-        id: null,
-        name: null,
-        flavor: null,
-        gpu: null,
-        subscription: null,
-      } as MachineFormData,
-      subscriptions: [
-        { text: "Commitment - 1 Year", value: "COMMITMENT_1Y" },
-        { text: "Commitment - 3 Years", value: "COMMITMENT_3Y" },
-        { text: "On demand", value: "ONDEMAND" },
-        { text: "Spot", value: "SPOT" },
-      ],
-    }
-  },
-
-  computed: {
-    getComputePriceYear(): string | number {
-      if (!this.formData.flavor || !this.formData.subscription) {
-        return 0
-      }
-      let price: number | undefined
-      if (this.formData.subscription.includes("COMMITMENT")) {
-        if (this.formData.subscription === "COMMITMENT_3Y") {
-          const item = this.catalogue.computePrices.find(
-            (item: PriceListItem) =>
-              item["service.unit"] === this.formData.flavor &&
-              item["service.level"] === "COMMITMENT" &&
-              item["service.commitment"] === "3Y",
-          )
-          price = item ? item["price.nok.ex.vat"] / 3 : undefined
-        } else {
-          const item = this.catalogue.computePrices.find(
-            (item: PriceListItem) =>
-              item["service.unit"] === this.formData.flavor &&
-              item["service.level"] === "COMMITMENT" &&
-              item["service.commitment"] === "1Y",
-          )
-          price = item ? item["price.nok.ex.vat"] : undefined
-        }
-      } else {
-        const item = this.catalogue.computePrices.find(
-          (item: PriceListItem) => item["service.unit"] === this.formData.flavor && item["service.level"] === this.formData.subscription,
-        )
-        price = item ? item["price.nok.ex.vat"] : undefined
-      }
-      return price ? Number(price).toFixed(2) : 0
-    },
-    getComputePriceMonth(): string | number {
-      const yearly = Number(this.getComputePriceYear)
-      return yearly ? Number(yearly / 12).toFixed(2) : 0
-    },
-
-    getGpuPriceYear(): string | number {
-      if (!this.formData.gpu) {
-        return 0
-      }
-      const price = this.catalogue.gpuPrices.find(
-        (item: PriceListItem) => item["service.unit"] === this.formData.gpu && item["service.level"] === "ONDEMAND"
-      )
-      return price ? Number(price["price.nok.ex.vat"]).toFixed(2) : 0
-    },
-    getGpuPriceMonth(): string | number {
-      const yearlyGpu = Number(this.getGpuPriceYear)
-      return yearlyGpu ? Number(yearlyGpu / 12).toFixed(2) : 0
-    },
-    getFlavors(): MachineFlavor[] {
-      if (!this.formData.subscription) {
-        return []
-      }
-      return this.catalogue.machineCatalogue.filter((item: MachineFlavor) => item)
-    },
-    getGpus() {
-      return this.catalogue.availableGpus.map((item: GpuModel) => {
-        return {
-          title: item["type"] + " - " + item["vram"] + " GB VRAM",
-          value: item["type"],
-        }
-      })
-    },
-  },
-
-  created() {
-    if (this.initialData) {
-      this.formData.id = this.initialData.id
-      this.formData.name = this.initialData.name.replace(" (incl. GPU)", "")
-      this.formData.subscription = this.initialData.type
-
-      if (this.initialData.flavor.includes(" + ")) {
-        const parts = this.initialData.flavor.split(" + ")
-        this.formData.flavor = parts[0]
-        this.formData.gpu = parts[1]
-      } else {
-        this.formData.flavor = this.initialData.flavor
-        this.formData.gpu = this.initialData.gpu || null
-      }
-    } else {
-      this.formData.id = this.computeId
-      this.formData.name = `machine-${this.computeId}`
-    }
-  },
-
-  methods: {
-    getSummedPrice(num1: string | number, num2: string | number): number {
-      return (Number(num1) + Number(num2))
-    },
-    close() {
-      this.$emit("close")
-    },
-    save() {
-      if (!this.formData.flavor) {
-        this.$emit("open-snackbar", "No machine type selected")
-        return
-      }
-
-      const name = this.formData.gpu ? `${this.formData.name} (incl. GPU)` : this.formData.name
-      const monthlyPrice = this.getSummedPrice(this.getComputePriceMonth, this.getGpuPriceMonth)
-      const yearlyPrice = this.getSummedPrice(this.getComputePriceYear, this.getGpuPriceYear)
-      const machinetitle = this.catalogue.machineCatalogue
-        .filter((item: MachineFlavor) => item["value"] === this.formData.flavor)[0]
-        ["title"].split(" - ")[1]
-        .split(" / ")
-      const core_count = parseInt(machinetitle[0].split(" ")[0])
-      const ram = parseInt(machinetitle[1].split(" ")[0])
-      const flavorWithGpu = this.formData.gpu ? this.formData.flavor + " + " + this.formData.gpu : this.formData.flavor
-      this.$emit("close", {
-        id: this.formData.id,
-        name: name,
-        flavor: this.formData.flavor ? flavorWithGpu : null,
-        gpu: this.formData.gpu ? this.formData.gpu : null,
-        core_count: core_count,
-        ram: ram,
-        monthlyPrice: monthlyPrice,
-        yearlyPrice: yearlyPrice,
-        type: this.formData.subscription,
-      })
-    },
-  },
+interface Props {
+  computeId?: number
+  catalogue: Catalogue
+  selectedRadio?: string
+  initialData?: ComputeUnit | null
 }
+
+const props = withDefaults(defineProps<Props>(), {
+  computeId: 0,
+  selectedRadio: "1Y",
+  initialData: null,
+})
+
+const emit = defineEmits<{
+  close: [data?: any]
+  "open-snackbar": [message: string]
+}>()
+
+const formData = ref<MachineFormData>({
+  id: null,
+  name: null,
+  flavor: null,
+  gpu: null,
+  subscription: null,
+})
+
+const subscriptions = [
+  { text: "Commitment - 1 Year", value: "COMMITMENT_1Y" },
+  { text: "Commitment - 3 Years", value: "COMMITMENT_3Y" },
+  { text: "On demand", value: "ONDEMAND" },
+  { text: "Spot", value: "SPOT" },
+]
+
+const getComputePriceYear = computed((): string | number => {
+  if (!formData.value.flavor || !formData.value.subscription) {
+    return 0
+  }
+  let price: number | undefined
+  if (formData.value.subscription.includes("COMMITMENT")) {
+    if (formData.value.subscription === "COMMITMENT_3Y") {
+      const item = props.catalogue.computePrices.find(
+        (item: PriceListItem) =>
+          item["service.unit"] === formData.value.flavor &&
+          item["service.level"] === "COMMITMENT" &&
+          item["service.commitment"] === "3Y",
+      )
+      price = item ? item["price.nok.ex.vat"] / 3 : undefined
+    } else {
+      const item = props.catalogue.computePrices.find(
+        (item: PriceListItem) =>
+          item["service.unit"] === formData.value.flavor &&
+          item["service.level"] === "COMMITMENT" &&
+          item["service.commitment"] === "1Y",
+      )
+      price = item ? item["price.nok.ex.vat"] : undefined
+    }
+  } else {
+    const item = props.catalogue.computePrices.find(
+      (item: PriceListItem) =>
+        item["service.unit"] === formData.value.flavor && item["service.level"] === formData.value.subscription,
+    )
+    price = item ? item["price.nok.ex.vat"] : undefined
+  }
+  return price ? Number(price).toFixed(2) : 0
+})
+
+const getComputePriceMonth = computed((): string | number => {
+  const yearly = Number(getComputePriceYear.value)
+  return yearly ? Number(yearly / 12).toFixed(2) : 0
+})
+
+const getGpuPriceYear = computed((): string | number => {
+  if (!formData.value.gpu) {
+    return 0
+  }
+  const price = props.catalogue.gpuPrices.find(
+    (item: PriceListItem) => item["service.unit"] === formData.value.gpu && item["service.level"] === "ONDEMAND",
+  )
+  return price ? Number(price["price.nok.ex.vat"]).toFixed(2) : 0
+})
+
+const getGpuPriceMonth = computed((): string | number => {
+  const yearlyGpu = Number(getGpuPriceYear.value)
+  return yearlyGpu ? Number(yearlyGpu / 12).toFixed(2) : 0
+})
+
+const getFlavors = computed((): MachineFlavor[] => {
+  if (!formData.value.subscription) {
+    return []
+  }
+  return props.catalogue.machineCatalogue.filter((item: MachineFlavor) => item)
+})
+
+const getGpus = computed(() => {
+  return props.catalogue.availableGpus.map((item: GpuModel) => {
+    return {
+      title: item["type"] + " - " + item["vram"] + " GB VRAM",
+      value: item["type"],
+    }
+  })
+})
+
+const getSummedPrice = (num1: string | number, num2: string | number): number => {
+  return Number(num1) + Number(num2)
+}
+
+const close = () => {
+  emit("close")
+}
+
+const save = () => {
+  if (!formData.value.flavor) {
+    emit("open-snackbar", "No machine type selected")
+    return
+  }
+
+  const name = formData.value.gpu ? `${formData.value.name} (incl. GPU)` : formData.value.name
+  const monthlyPrice = getSummedPrice(getComputePriceMonth.value, getGpuPriceMonth.value)
+  const yearlyPrice = getSummedPrice(getComputePriceYear.value, getGpuPriceYear.value)
+  const machinetitle = props.catalogue.machineCatalogue
+    .filter((item: MachineFlavor) => item["value"] === formData.value.flavor)[0]
+    ["title"].split(" - ")[1]
+    .split(" / ")
+  const core_count = parseInt(machinetitle[0].split(" ")[0])
+  const ram = parseInt(machinetitle[1].split(" ")[0])
+  const flavorWithGpu = formData.value.gpu ? formData.value.flavor + " + " + formData.value.gpu : formData.value.flavor
+  emit("close", {
+    id: formData.value.id,
+    name: name,
+    flavor: formData.value.flavor ? flavorWithGpu : null,
+    gpu: formData.value.gpu ? formData.value.gpu : null,
+    core_count: core_count,
+    ram: ram,
+    monthlyPrice: monthlyPrice,
+    yearlyPrice: yearlyPrice,
+    type: formData.value.subscription,
+  })
+}
+
+// Initialize form data on mount (equivalent to created hook)
+onMounted(() => {
+  if (props.initialData) {
+    formData.value.id = props.initialData.id
+    formData.value.name = props.initialData.name.replace(" (incl. GPU)", "")
+    formData.value.subscription = props.initialData.type
+
+    if (props.initialData.flavor.includes(" + ")) {
+      const parts = props.initialData.flavor.split(" + ")
+      formData.value.flavor = parts[0]
+      formData.value.gpu = parts[1]
+    } else {
+      formData.value.flavor = props.initialData.flavor
+      formData.value.gpu = props.initialData.gpu || null
+    }
+  } else {
+    formData.value.id = props.computeId
+    formData.value.name = `machine-${props.computeId}`
+  }
+})
 </script>
 
 <template>

@@ -43,6 +43,7 @@ export interface Catalogue {
   gpuPrices: PriceListItem[]
   machineCatalogue: MachineFlavor[]
   availableGpus: GpuModel[]
+  labPrices: PriceListItem[]
 }
 
 export interface PriceListItem {
