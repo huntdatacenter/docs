@@ -12,11 +12,7 @@ import type {
   UpdateStoragePayload,
   Catalogue,
   SubscriptionType,
-<<<<<<< HEAD:docs/.vitepress/theme/components/price-estimator/stores/prirceEstimatorStore.ts
 } from "../types/index.js"
-=======
-} from "../types"
->>>>>>> 8df68ab05f4921dae109d7df951dab2dfc692858:docs/.vitepress/theme/components/price-estimator/stores/pricingEstimatorStore.ts
 import pricesApi from "../api/pricesApi.js"
 
 const ISSERVER = typeof window === "undefined"
