@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted } from "vue"
 import { DataTableHeader } from "vuetify"
-import { priceEstimatorStore } from "./stores/prirceEstimatorStore"
+import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 import type { ComputeUnit, StorageUnit, ComputeLabSum, StorageLabSum, LabCard } from "./types"
 import MachineModal from "./MachineModal.vue"
 import StorageModal from "./StorageModal.vue"
