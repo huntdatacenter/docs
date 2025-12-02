@@ -9,6 +9,7 @@ export interface ComputeUnit {
   monthlyPrice: number
   yearlyPrice: number
 }
+
 export interface ComputeLabSum {
   monthlyPrice: number
   yearlyPrice: number
@@ -41,8 +42,8 @@ export interface Catalogue {
   computePrices: PriceListItem[]
   storagePrices: PriceListItem[]
   gpuPrices: PriceListItem[]
-  machineCatalogue: MachineFlavor[]
   availableGpus: GpuModel[]
+  machinePrices: MachineFlavor[]
   labPrices: PriceListItem[]
 }
 
@@ -74,10 +75,8 @@ export interface LabCard {
   priceStorage: number
   priceComputeYearly: number
   numCompute: number
-  initSelectedCompute?: ComputeUnit[]
-  initSelectedStorage?: StorageUnit[]
-  selectedCompute?: ComputeUnit[]
-  selectedStorage?: StorageUnit[]
+  selectedCompute: ComputeUnit[]
+  selectedStorage: StorageUnit[]
 }
 
 export interface TotalPriceItem {

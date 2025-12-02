@@ -1,46 +1,20 @@
 <script lang="ts" setup>
 import { onMounted, ref, watch, nextTick, computed } from "vue"
-import pricesApi from "./api/pricesApi.js"
-import { pricingEstimatorStore } from "./stores/pricingEstimatorStore"
+import { priceEstimatorStore } from "./stores/pricingEstimatorStore"
+import LabCard from "./LabCard.vue"
+import TotalBlock from "./TotalBlock.vue"
 
-import type {
-  LabCard,
-  PriceListItem,
-  GpuModel,
-  MachineFlavor,
-  UpdateComputePayload,
-  UpdateStoragePayload,
-} from "./types"
-
-const ISSERVER = typeof window === "undefined"
-
-/* ------------------------------------------------------------------
-   COMPUTED MAPPINGS TO STORE
------------------------------------------------------------------- */
-const labCards = computed(() => pricingEstimatorStore.labs)
-const catalogue = computed(() => pricingEstimatorStore.catalogue)
 const totals = computed(() => ({
-  computePrice: pricingEstimatorStore.totals.computeCost,
-  storageCost: pricingEstimatorStore.totals.storageCostByType,
+  computePrice: priceEstimatorStore.totals.computeCost,
+  storageCost: priceEstimatorStore.totals.storageCostByType,
 }))
-const totalLabCost = computed(() => pricingEstimatorStore.totalLabCost)
-const itemsComputeExport = computed(() => pricingEstimatorStore.itemsComputeExport)
-const itemsStorageExport = computed(() => pricingEstimatorStore.itemsStorageExport)
-
-const isLoadingCatalogues = computed(() => pricingEstimatorStore.isLoadingCatalogues)
-const isLoadingState = computed(() => pricingEstimatorStore.isLoadingPriseEstimator)
 
 const fileInput = ref<HTMLInputElement | null>(null)
 
-/* ------------------------------------------------------------------
-   WATCHERS – equivalent to Options API "watch"
------------------------------------------------------------------- */
 watch(
-  () => labCards.value,
+  () => priceEstimatorStore.labs,
   () => {
-    if (!pricingEstimatorStore.isLoadingPriseEstimator) {
-      pricingEstimatorStore.saveState()
-    }
+    if (!priceEstimatorStore.isInitializingPriseEstimator) priceEstimatorStore.saveStateToLocal()
   },
   { deep: true },
 )
@@ -48,74 +22,20 @@ watch(
 watch(
   () => totals.value,
   () => {
-    if (!pricingEstimatorStore.isLoadingPriseEstimator) {
-      pricingEstimatorStore.updateTotalBreakdown()
+    if (!priceEstimatorStore.isInitializingPriseEstimator) {
+      priceEstimatorStore.updateCostSummary()
     }
   },
   { deep: true },
 )
 
-/* ------------------------------------------------------------------
-   INITIALIZATION
------------------------------------------------------------------- */
-async function initializeAll() {
-  pricingEstimatorStore.isLoadingCatalogues = true
-
-  const priceListPromise = pricesApi.getPriceList().then((json: PriceListItem[]) => {
-    pricingEstimatorStore.catalogue.computePrices = json
-      .filter(item => item["service.group"] === "cpu")
-      .map(pricingEstimatorStore.preparePricesToYearly)
-
-    pricingEstimatorStore.catalogue.storagePrices = json.filter(item => item["service.family"] === "store")
-
-    pricingEstimatorStore.catalogue.gpuPrices = json
-      .filter(item => item["service.group"] === "gpu")
-      .map(pricingEstimatorStore.preparePricesToYearly)
-
-    pricingEstimatorStore.catalogue.labPrices = json.filter(item => item["service.group"] === "lab")
-  })
-
-  const gpusPromise = pricesApi.getAvailableGPUS().then((gpus: GpuModel[]) => {
-    pricingEstimatorStore.catalogue.availableGpus = gpus
-  })
-
-  const machinesPromise = pricesApi.getMachineFlavors().then((machine: MachineFlavor[]) => {
-    pricingEstimatorStore.catalogue.machineCatalogue = machine
-  })
-
-  pricingEstimatorStore.updateTotalBreakdown()
-
-  await Promise.all([priceListPromise, gpusPromise, machinesPromise])
-  pricingEstimatorStore.isLoadingCatalogues = false
-}
-
 onMounted(async () => {
-  await initializeAll()
-  pricingEstimatorStore.loadState()
+  await priceEstimatorStore.initializePriceEstimatorStore()
 })
 
-/* ------------------------------------------------------------------
-   ACTIONS (formerly "methods")
------------------------------------------------------------------- */
 function addLabCard() {
-  const title = `Lab ${pricingEstimatorStore.labs.length + 1}`
-  pricingEstimatorStore.addLab({ title })
-}
-
-function updateLabCardStorage(id: number, payload: UpdateStoragePayload) {
-  pricingEstimatorStore.updateLabStorage(id, payload)
-}
-
-function updateLabCardCompute(id: number, payload: UpdateComputePayload) {
-  pricingEstimatorStore.updateLabCompute(id, payload)
-}
-
-function removeLabCard(id: number) {
-  pricingEstimatorStore.removeLab(id)
-}
-
-function removeAllLabs() {
-  pricingEstimatorStore.clearAllLabs()
+  const title = `Lab ${priceEstimatorStore.labs.length + 1}`
+  priceEstimatorStore.addLab({ title })
 }
 
 function triggerFileUpload() {
@@ -131,18 +51,18 @@ async function handleFileUpload(event: Event) {
 
   reader.onload = async e => {
     try {
-      await initializeAll()
+      priceEstimatorStore.updateCostSummary()
 
       const data = JSON.parse(e.target?.result as string)
       if (!data.version || !Array.isArray(data.labs)) {
         throw new Error("Invalid JSON format")
       }
 
-      pricingEstimatorStore.isLoadingPriseEstimator = true
-      pricingEstimatorStore.clearAllLabs()
+      priceEstimatorStore.isInitializingPriseEstimator = true
+      priceEstimatorStore.clearAllLabs()
 
       data.labs.forEach((lab: any) => {
-        pricingEstimatorStore.labs.push({
+        priceEstimatorStore.labs.push({
           id: lab.id,
           title: lab.name,
           storage: 0,
@@ -155,7 +75,7 @@ async function handleFileUpload(event: Event) {
       })
 
       await nextTick()
-      pricingEstimatorStore.isLoadingPriseEstimator = false
+      priceEstimatorStore.isInitializingPriseEstimator = false
       target.value = ""
     } catch (err) {
       console.error(err)
@@ -168,7 +88,7 @@ async function handleFileUpload(event: Event) {
 </script>
 
 <template>
-  <v-container v-if="!isLoadingCatalogues && !isLoadingState">
+  <v-container v-if="!priceEstimatorStore.isInitializingPriseEstimator">
     <v-sheet class="group-slider-wrapper ma-auto pt-0" elevation="0" max-width="1120">
       <v-card-title>Price estimator for HUNT Cloud</v-card-title>
       <v-card-subtitle> This calculator gives a rough estimate of how much our services cost </v-card-subtitle>
@@ -181,8 +101,10 @@ async function handleFileUpload(event: Event) {
 
           <v-col cols="auto">
             <v-row>
-              <v-col cols="auto" v-if="labCards.length">
-                <v-btn density="default" size="large" dark @click="removeAllLabs"> Remove all </v-btn>
+              <v-col cols="auto" v-if="priceEstimatorStore.labs.length">
+                <v-btn density="default" size="large" dark @click="priceEstimatorStore.clearAllLabs()">
+                  Remove all
+                </v-btn>
               </v-col>
 
               <v-col cols="auto">
@@ -204,26 +126,17 @@ async function handleFileUpload(event: Event) {
       </v-container>
 
       <v-row>
-        <v-col v-for="lab in labCards" :key="lab.id" cols="12">
-          <LabCard
-            :title="lab.title"
-            :catalogue="catalogue"
-            :storage-cost-by-type="totals.storageCost"
-            :init-selected-compute="lab.selectedCompute || []"
-            :init-selected-storage="lab.selectedStorage || []"
-            @updateStorage="updateLabCardStorage(lab.id, $event)"
-            @updateCompute="updateLabCardCompute(lab.id, $event)"
-            @removeLab="removeLabCard(lab.id)"
-          />
+        <v-col cols="12">
+          <LabCard v-for="lab of priceEstimatorStore.labs" :key="lab.id" :lab="lab" />
         </v-col>
       </v-row>
 
-      <v-row v-if="labCards.length">
+      <v-row v-if="priceEstimatorStore.labs.length">
         <TotalBlock
-          :total-items="totalLabCost"
+          :total-items="priceEstimatorStore.totalLabCost"
           :totals="totals"
-          :itemsComputeExport="itemsComputeExport"
-          :itemsStorageExport="itemsStorageExport"
+          :itemsComputeExport="priceEstimatorStore.itemsComputeExport"
+          :itemsStorageExport="priceEstimatorStore.itemsStorageExport"
         />
       </v-row>
     </v-sheet>

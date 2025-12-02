@@ -1,16 +1,12 @@
 <script setup lang="ts">
 import { reactive, onMounted } from "vue"
 import type { StorageFormData, StorageUnit } from "./types"
+import { priceEstimatorStore } from "./stores/pricingEstimatorStore"
 
-interface Props {
-  storageId?: number
-  initialData?: StorageUnit | null
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  storageId: 0,
-
-  initialData: null,
+const props = defineProps({
+  labId: { type: Number, required: true },
+  storageId: { type: Number, required: true },
+  editData: { type: Object as () => StorageUnit | null },
 })
 
 const emit = defineEmits<{
@@ -26,15 +22,15 @@ const formData = reactive<StorageFormData>({
 })
 
 onMounted(() => {
-  if (props.initialData) {
-    formData.id = props.initialData.id
-    formData.name = props.initialData.name
-    formData.usage = props.initialData.usage
-    formData.type = props.initialData.type
-    formData.size = props.initialData.size
+  if (props.editData) {
+    formData.id = props.editData.id
+    formData.name = props.editData.name
+    formData.usage = props.editData.usage
+    formData.type = props.editData.type
+    formData.size = props.editData.size
   } else {
     formData.id = props.storageId
-    formData.name = `volume-${props.storageId}`
+    formData.name = `volume-${props.storageId + 1}`
   }
 })
 
@@ -43,13 +39,25 @@ const close = () => {
 }
 
 const save = () => {
-  emit("close", {
-    id: formData.id!,
-    name: formData.name!,
-    size: Number(formData.size),
-    usage: formData.usage,
-    type: formData.type,
-  } as StorageUnit)
+  if (props.editData) {
+    // Edit
+    priceEstimatorStore.editStorageInLab(props.labId, props.editData.id, {
+      name: formData.name!,
+      usage: formData.usage,
+      type: formData.type,
+      size: formData.size,
+    })
+  } else {
+    // Add new
+    priceEstimatorStore.addStorageToLab(props.labId, {
+      name: formData.name!,
+      usage: formData.usage,
+      type: formData.type,
+      size: formData.size,
+    })
+  }
+
+  emit("close")
 }
 </script>
 

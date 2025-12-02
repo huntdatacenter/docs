@@ -1,42 +1,28 @@
 <script setup lang="ts">
-import { ref, computed, watch } from "vue"
+import { ref, computed, watch, onMounted } from "vue"
 import { DataTableHeader } from "vuetify"
-import { pricingEstimatorStore } from "./stores/pricingEstimatorStore"
-import type {
-  ComputeUnit,
-  StorageUnit,
-  PriceListItem,
-  MachineFlavor,
-  ComputeLabSum,
-  StorageLabSum,
-  StorageUsageType,
-  StorageType,
-  Catalogue,
-} from "./types"
+import { priceEstimatorStore } from "./stores/pricingEstimatorStore"
+import type { ComputeUnit, StorageUnit, ComputeLabSum, StorageLabSum, LabCard } from "./types"
+import MachineModal from "./MachineModal.vue"
+import StorageModal from "./StorageModal.vue"
 
 // Props
-const props = withDefaults(
-  defineProps<{
-    labId: number
-    title: string
-    catalogue: Catalogue
-    storageCostByType?: { [key: string]: { size: number; cost: number } }
-  }>(),
-  {
-    title: "Lab ",
-    storageCostByType: () => ({}),
-  },
-)
+const props = defineProps({
+  lab: { type: Object as () => LabCard, required: true },
+})
 
-// Emits - only keep removeLab for now, could also be replaced with direct store call
-const emit = defineEmits<{
-  removeLab: []
-}>()
+onMounted(() => {
+  if (!selectedCompute.value.length) {
+    priceEstimatorStore.pushDefaultComputeUnitForLab(props.lab.id)
+  }
+  if (!props.lab.selectedStorage.length) {
+    priceEstimatorStore.addDefaultStorageToLab(props.lab.id)
+  }
+})
 
 // State
 const isComputeModalOpen = ref(false)
-const editingComputeItem = ref<ComputeUnit | null>(null)
-const isLoadingComputePrices = ref(false)
+let editingComputeItem: ComputeUnit | null = null
 
 const computeHeaders = ref<DataTableHeader[]>([
   { title: "Name", align: "start", sortable: true, key: "name" },
@@ -50,7 +36,7 @@ const computeHeaders = ref<DataTableHeader[]>([
 ])
 
 const isStorageModalOpen = ref(false)
-const editingStorageItem = ref<StorageUnit | null>(null)
+let editingStorageItem: StorageUnit | null = null
 
 const storageHeaders = ref([
   { title: "Name", align: "start", sortable: true, key: "name" },
@@ -66,23 +52,15 @@ const snackbar = ref({
   message: "",
 })
 
-// Computed - read directly from store
-const currentLab = computed(() => pricingEstimatorStore.labs.find(l => l.id === props.labId))
-
-const selectedCompute = computed(() => currentLab.value?.selectedCompute || [])
-const selectedStorage = computed(() => currentLab.value?.selectedStorage || [])
+const selectedCompute = computed(() => props.lab.selectedCompute || [])
+const selectedStorage = computed(() => props.lab.selectedStorage || [])
 
 const computeLabSum = computed<ComputeLabSum>(() => {
-  return pricingEstimatorStore.getLabComputeSum(props.labId)
+  return priceEstimatorStore.getLabComputeSum(props.lab.id)
 })
 
 const storageLabSum = computed<StorageLabSum>(() => {
-  const sum = pricingEstimatorStore.getLabStorageSum(props.labId)
-  return {
-    size: sum.size,
-    type: null,
-    price: sum.price,
-  }
+  return priceEstimatorStore.getLabStorageSum(props.lab.id)
 })
 
 const displaySelectedCompute = computed(() => {
@@ -103,7 +81,7 @@ const displayStorageSumPrice = computed(() => {
 })
 
 const displayselectedStorage = computed(() => {
-  return selectedStorage.value.map(item => ({
+  return props.lab.selectedStorage.map(item => ({
     id: item.id,
     name: item.name,
     usage: item.usage,
@@ -115,80 +93,33 @@ const displayselectedStorage = computed(() => {
 
 // Methods
 const addMachine = () => {
-  editingComputeItem.value = null
+  editingComputeItem = null
   isComputeModalOpen.value = true
 }
 
 const addStorage = () => {
-  editingStorageItem.value = null
+  editingStorageItem = null
   isStorageModalOpen.value = true
 }
 
 const editStorage = (item: StorageUnit) => {
-  editingStorageItem.value = item
+  editingStorageItem = item
   isStorageModalOpen.value = true
 }
 
 const editCompute = (item: ComputeUnit) => {
-  editingComputeItem.value = item
+  editingComputeItem = item
   isComputeModalOpen.value = true
 }
 
-const closeComputeModal = (payload: any) => {
-  if (payload) {
-    if (editingComputeItem.value) {
-      // Edit existing compute
-      pricingEstimatorStore.editComputeInLab(props.labId, editingComputeItem.value.id, {
-        name: payload.name,
-        flavor: payload.flavor,
-        core_count: payload.core_count,
-        ram: payload.ram,
-        type: payload.type,
-        gpu: payload.gpu || null,
-      })
-    } else {
-      // Add new compute
-      pricingEstimatorStore.addComputeToLab(props.labId, {
-        name: payload.name,
-        flavor: payload.flavor,
-        core_count: payload.core_count,
-        ram: payload.ram,
-        type: payload.type,
-        gpu: payload.gpu || null,
-      })
-
-      // Add default storage if needed
-      if (selectedCompute.value.length > selectedStorage.value.length) {
-        pricingEstimatorStore.pushDefaultStorageForLab(props.labId)
-      }
-    }
-  }
+const closeComputeModal = () => {
   isComputeModalOpen.value = false
-  editingComputeItem.value = null
+  editingComputeItem = null
 }
 
-const closeStorageModal = (payload: any) => {
-  if (payload) {
-    if (editingStorageItem.value) {
-      // Edit existing storage
-      pricingEstimatorStore.editStorageInLab(props.labId, editingStorageItem.value.id, {
-        name: payload.name,
-        usage: payload.usage,
-        type: payload.type,
-        size: payload.size,
-      })
-    } else {
-      // Add new storage
-      pricingEstimatorStore.addStorageToLab(props.labId, {
-        name: payload.name,
-        usage: payload.usage,
-        type: payload.type,
-        size: payload.size,
-      })
-    }
-  }
+const closeStorageModal = () => {
   isStorageModalOpen.value = false
-  editingStorageItem.value = null
+  editingStorageItem = null
 }
 
 const openSnackbar = (message: string) => {
@@ -196,30 +127,17 @@ const openSnackbar = (message: string) => {
   snackbar.value.show = true
 }
 
-const removeComputeById = (id: number) => {
-  if (id === selectedCompute.value[0]?.id) {
+const removeComputeById = (computeId: number) => {
+  if (computeId === selectedCompute.value[0]?.id) {
     openSnackbar("Cannot remove the default machine")
     return
   }
-  pricingEstimatorStore.removeComputeFromLab(props.labId, id)
+  priceEstimatorStore.removeComputeFromLab(props.lab.id, computeId)
 }
 
-const removeStorageById = (id: number) => {
-  pricingEstimatorStore.removeStorageFromLab(props.labId, id)
+const removeStorageById = (storageId: number) => {
+  priceEstimatorStore.removeStorageFromLab(props.lab.id, storageId)
 }
-
-// Initialize default compute and storage if lab is empty
-const initializeIfEmpty = () => {
-  if (!selectedCompute.value.length) {
-    pricingEstimatorStore.pushDefaultComputeUnitForLab(props.labId)
-  }
-  if (!selectedStorage.value.length) {
-    pricingEstimatorStore.pushDefaultStorageForLab(props.labId)
-  }
-}
-
-// Initialize on mount
-initializeIfEmpty()
 </script>
 
 <template>
@@ -227,19 +145,18 @@ initializeIfEmpty()
     <v-sheet class="lab-card ma-0">
       <v-card class="ma-0">
         <v-row class="ma-2" align="center" justify="space-between">
-          <v-card-title>{{ title }}</v-card-title>
-          <v-btn icon @click="emit('removeLab')">
+          <v-card-title>{{ props.lab.title }}</v-card-title>
+          <v-btn icon @click="priceEstimatorStore.removeLab(props.lab.id)">
             <v-icon>mdi-delete</v-icon>
           </v-btn>
         </v-row>
 
         <v-card flat>
-          <v-card-title> Compute</v-card-title>
+          <v-card-title>Compute</v-card-title>
 
           <v-data-table-virtual
             :items="displaySelectedCompute"
             :headers="computeHeaders"
-            :loading="isLoadingComputePrices"
             hide-default-footer
             hover
             item-value="id"
@@ -298,12 +215,12 @@ initializeIfEmpty()
         </v-card>
 
         <v-card flat>
-          <v-card-title> Storage</v-card-title>
-          <v-card-subtitle> Add storage to {{ title }} </v-card-subtitle>
+          <v-card-title>Storage</v-card-title>
+          <v-card-subtitle> Add storage to {{ props.lab.title }} </v-card-subtitle>
           <v-card-subtitle> Each compute unit needs a volume of storage of atleast 1 TB</v-card-subtitle>
 
           <v-data-table-virtual
-            v-model="selectedStorage"
+            v-model="props.lab.selectedStorage"
             :items="displayselectedStorage"
             :headers="storageHeaders"
             hover
@@ -357,20 +274,25 @@ initializeIfEmpty()
     </v-sheet>
 
     <v-dialog v-model="isComputeModalOpen" max-width="600px" min-width="600px">
-      <Machine
-        :compute-id="0"
-        :catalogue="catalogue"
-        :initial-data="editingComputeItem"
+      <MachineModal
+        :lab-id="lab.id"
+        :compute-id="lab.selectedCompute.length"
+        :edit-data="editingComputeItem"
         @close="closeComputeModal"
         @open-snackbar="openSnackbar"
       />
     </v-dialog>
 
     <v-dialog v-model="isStorageModalOpen" max-width="600px" min-width="600px">
-      <Storage :storage-id="0" :initial-data="editingStorageItem" @close="closeStorageModal" />
+      <StorageModal
+        :lab-id="lab.id"
+        :storage-id="lab.selectedStorage.length"
+        :edit-data="editingStorageItem"
+        @close="closeStorageModal"
+      />
     </v-dialog>
 
-    <v-snackbar v-model="snackbar.show"> {{ snackbar.value.message }}</v-snackbar>
+    <v-snackbar v-model="snackbar.show">{{ snackbar.message }}</v-snackbar>
   </v-container>
 </template>
 
