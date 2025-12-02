@@ -14,6 +14,67 @@ footerHtml: false
 
 <script setup>
 
+import { ref } from 'vue';
+
+const cards = [
+  {
+    id: 'btn1',
+    title: 'do science',
+    href: '/do-science/',
+    image: '/img/hunt-cloud_bottle_250.png',
+    imageAlt: 'Illustration of laboratory glass bottle with yellow shimmery substance.',
+    description: 'Scientists are explorers. This section is aimed at those who use data to discover knowledge for a better world in HUNT Cloud.'
+  },
+  {
+    id: 'btn2',
+    title: 'Administer science',
+    href: '/administer-science/',
+    image: '/img/hunt-cloud_key_250.png',
+    imageAlt: 'Illustration of decorative hand-made golden key with purple gem stones.',
+    description: 'Scientific administrators are keymakers. This section is aimed at administrators that enables scientific explorations.'
+  },
+  {
+    id: 'btn3',
+    title: 'Govern science',
+    href: '/govern-science/',
+    image: '/img/hunt-cloud_compass_250.png',
+    imageAlt: 'Illustration of sundial compass in brass.',
+    description: 'Trust enables science. This section is aimed at data controllers and scientific centers that guides the development of HUNT Cloud.'
+  }
+];
+
+const bottomCards = ref([
+  {
+    id: 'btn4',
+    title: 'About HUNT Cloud',
+    href: '/about/',
+    description: 'HUNT Cloud is shaped by a small team of scientific instrument makers. Read more about the thinking and team behind HUNT Cloud.',
+    buttonColor: 'black--text'
+  },
+  {
+    id: 'mascot',
+    image: '/img/hunt-cloud_bot_250_2.png',
+    imageAlt: 'Illustration of small centien robot made of metal with shiny lightbulb on top of its head.',
+    href: '/about/',
+    isMascot: true
+  },
+  {
+    id: 'btn5',
+    title: 'Scientific products',
+    href: 'https://www.ntnu.edu/mh/huntcloud',
+    description: 'Explore and evolve. See the main HUNT Cloud page for information on HUNT Cloud\'s scientific products and services.',
+    buttonColor: 'black--text'
+  }
+]);
+
+const cardStyle = {
+  padding: '25px',
+  background: '#f5f5f5',
+  borderRadius: '20px',
+};
+
+const imageHeight = '120px';
+
 </script>
 
 <div class="hc-container mb-8">
@@ -25,49 +86,63 @@ footerHtml: false
       <h1>Welcome to the HUNT Cloud documentation</h1>
     </div>
     <div class="hc-row">
-      <div class="hc-column-4">
-        <a href="/do-science/"><img alt="Illustration of laboratory glass bottle with yellow shimmery substance." height="150" src="/img/hunt-cloud_bottle_250.png" /></a>
-        <VuetifyButton id="btn1" class="hc-btn" color="black--text" label="Do science" href="/do-science/" block />
-        <p>
-          Scientists are explorers. This section is aimed at those who use data to discover knowledge for a better world in HUNT Cloud.
-        </p>
-      </div>
-      <div class="hc-column-4">
-        <a href="/administer-science/"><img alt="Illustration of decorative hand-made golden key with purple gem stones." height="150" src="/img/hunt-cloud_key_250.png" /></a>
-        <VuetifyButton id="btn2" class="hc-btn" color="black--text" label="Administer science" href="/administer-science/" block />
-        <p>
-          Scientific administrators are keymakers. This section is aimed at administrators that enables scientific explorations.
-        </p>
-      </div>
-      <div class="hc-column-4">
-        <a href="/govern-science/"><img alt="Illustration of sundial compass in brass." height="150" src="/img/hunt-cloud_compass_250.png" /></a>
-        <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="Govern science" href="/govern-science/" block />
-        <p>
-          Trust enables science. This section is aimed at data controllers and scientific centers that guides the development of HUNT Cloud.
-        </p>
-      </div>
+  <div
+    v-for="card in cards"
+    :key="card.id"
+    class="hc-column-4"
+    :style="cardStyle"
+  >
+    <a :href="card.href">
+      <img
+        :alt="card.imageAlt"
+        :style="{ height: imageHeight, width: 'auto' }"
+        :src="card.image"
+      />
+    </a>
+    <VuetifyButton
+      :id="card.id"
+      class="hc-btn"
+      color="primary"
+      :label="card.title"
+      :href="card.href"
+      block
+    />
+    <p>{{ card.description }}</p>
+  </div>
+</div>
+    <div class="hc-row">
+      <div
+        v-for="card in bottomCards"
+        :key="card.id"
+        class="hc-column-4"
+        :class="{ 'mascot-container': card.isMascot }"
+      >
+      <template v-if="card.isMascot">
+          <a :href="card.href">
+            <img
+              :alt="card.imageAlt"
+              height="200"
+              :src="card.image"
+            />
+          </a>
+        </template>
+        <template v-else>
+          <VuetifyButton
+            :id="card.id"
+            class="hc-btn"
+            :color="card.buttonColor"
+            :label="card.title"
+            :href="card.href"
+            block
+          />
+          <p>{{ card.description }}</p>
+        </template>
+        </div>
     </div>
     <div class="hc-row">
-      <div class="hc-column-4">
-         <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="About HUNT Cloud" href="/about/" block />
-        <p>
-          HUNT Cloud is shaped by a small team of scientific instrument makers. Read more about the thinking and team behind HUNT Cloud.
-        </p>
-      </div>
-      <div class="hc-column-4">
-         <a href="/about/"><img alt="Illustration of small centien robot made of metal with shiny lightbulb on top of its head." height="200" src="/img/hunt-cloud_bot_250_2.png" /></a>
-      </div>
-      <div class="hc-column-4">
-        <VuetifyButton id="btn3" class="hc-btn" color="black--text" label="Scientific products" href="https://www.ntnu.edu/mh/huntcloud" block />
-        <p>
-          Explore and evolve. See the main HUNT Cloud page for information on HUNT Cloud's scientific products and services.
-        </p>
-      </div>
-    </div>
-    <div class="hc-row">
-        <center>
-            <i>These pages contain the official user documentation for HUNT Cloud. <br>HUNT Cloud is a scientific infrastructure for data explorations at <a href="https://www.ntnu.edu/">NTNU</a>, Norway.<br><a href="/govern-science/privacy-statement">Privacy statement</a>.</i><br>
-        </center>
+      <center>
+        <i>These pages contain the official user documentation for HUNT Cloud. <br>HUNT Cloud is a scientific infrastructure for data explorations at <a href="https://www.ntnu.edu/">NTNU</a>, Norway.<br><a href="/govern-science/privacy-statement">Privacy statement</a>.</i><br>
+      </center>
     </div>
   </div>
 </div>
@@ -125,10 +200,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 20px;
+  /* margin-left: 20px;
   margin-right: 20px;
   margin-top: 16px;
-  /* width: 90%; */
+  width: 90%; */
 }
 
 .hc-title {
@@ -152,8 +227,9 @@ h1 {
 
 .hc-row {
   justify-content: center;
-  align-items: start;
-  vertical-align: top;
+  display: flex;
+  gap: 15px;
+
 }
 
 .hc-column-4 {
@@ -182,16 +258,11 @@ h1 {
   padding-right: 32px;
 }
 
-.hc-column-4:has(div.mascot) {
+.mascot-container {
   display: flex;
   margin-left: 0;
   margin-right: 0;
   min-height: 100px;
-}
-
-div .mascot {
-  flex: 100%;
-  min-height: 250px;
 }
 
 .hc-column-8 {
