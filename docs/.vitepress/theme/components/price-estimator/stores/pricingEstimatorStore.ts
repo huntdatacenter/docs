@@ -11,18 +11,22 @@ import type {
   UpdateComputePayload,
   UpdateStoragePayload,
   Catalogue,
+  SubscriptionType,
 } from "../types"
+import pricesApi from "../api/pricesApi.js"
 
 const ISSERVER = typeof window === "undefined"
 
-export const pricingEstimatorStore = reactive({
-  // state
+export const priceEstimatorStore = reactive({
+  /* State */
+
+  isInitializingPriseEstimator: false,
   labs: [] as LabCard[],
   catalogue: {
     computePrices: [] as PriceListItem[],
     storagePrices: [] as PriceListItem[],
     gpuPrices: [] as PriceListItem[],
-    machineCatalogue: [] as MachineFlavor[],
+    machinePrices: [] as MachineFlavor[],
     availableGpus: [] as GpuModel[],
     labPrices: [] as PriceListItem[],
   } as Catalogue,
@@ -31,22 +35,90 @@ export const pricingEstimatorStore = reactive({
     storageCostByType: {} as Record<string, { size: number; cost: number }>,
   },
   totalLabCost: [] as TotalPriceItem[],
-  // TODO: What is this
+
+  // TODO: This is variables for exporting. Fix this later.
   itemsComputeExport: [] as ComputeUnit[][],
   itemsStorageExport: [] as StorageUnit[][],
-  isLoadingCatalogues: false,
-  isLoadingPriseEstimator: false,
 
-  // helpers
-  generateLabId() {
-    return Date.now() + Math.floor(Math.random() * 10000)
+  /* Generic Helper */
+
+  async initializePriceEstimatorStore() {
+    console.log("initializing")
+    this.isInitializingPriseEstimator = true
+
+    // Load saved data from localstorage
+    let saved
+
+    // TODO: Fix this later
+    // if (!ISSERVER) {
+    //   try {
+    //     saved = localStorage.getItem("pricingEstimatorState")
+    //     if (saved) {
+    //       const state = JSON.parse(saved)
+    //       this.labs = (state.labs || []).map((lab: any) => ({
+    //         id: lab.id ?? this.generateLabId(),
+    //         title: lab.title,
+    //         storage: lab.storage || 0,
+    //         priceStorage: lab.priceStorage || 0,
+    //         priceComputeYearly: lab.priceComputeYearly || 0,
+    //         numCompute: lab.numCompute || 0,
+    //         selectedCompute: lab.selectedCompute || [],
+    //         selectedStorage: lab.selectedStorage || [],
+    //       }))
+    //     }
+    //   } catch (err) {
+    //     console.error("Failed to load state:", err)
+    //   }
+    // }
+
+    if (!saved) {
+      // Create first sample lab
+      this.labs = [
+        {
+          id: 0,
+          title: "Lab 1",
+          storage: 0,
+          priceStorage: 0,
+          priceComputeYearly: 0,
+          numCompute: 0,
+          selectedCompute: [],
+          selectedStorage: [],
+        },
+      ]
+    }
+
+    await this.getCatalogueAPI()
+
+    this.totals.computeCost = this.labs.reduce((sum, lab) => sum + (lab.priceComputeYearly || 0), 0)
+    this.totals.storageCostByType = this.calculateTotalStorageCost()
+    this.updateCostSummary()
+
+    this.isInitializingPriseEstimator = false
   },
 
-  generateItemId() {
-    return Date.now() + Math.floor(Math.random() * 10000)
+  async getCatalogueAPI() {
+    // Get price list from the API
+    const priceListPromise = pricesApi.getPriceList().then((json: PriceListItem[]) => {
+      this.catalogue.computePrices = json
+        .filter(item => item["service.group"] === "cpu")
+        .map(this.convertPricesToYearly)
+      this.catalogue.storagePrices = json.filter(item => item["service.family"] === "store")
+      this.catalogue.gpuPrices = json.filter(item => item["service.group"] === "gpu").map(this.convertPricesToYearly)
+      this.catalogue.labPrices = json.filter(item => item["service.group"] === "lab")
+    })
+
+    const gpusPromise = pricesApi.getAvailableGPUS().then((gpus: GpuModel[]) => {
+      this.catalogue.availableGpus = gpus
+    })
+
+    const machinesPromise = pricesApi.getMachineFlavors().then((machine: MachineFlavor[]) => {
+      this.catalogue.machinePrices = machine
+    })
+
+    await Promise.all([priceListPromise, gpusPromise, machinesPromise])
   },
 
-  preparePricesToYearly(item: PriceListItem) {
+  convertPricesToYearly(item: PriceListItem) {
     if (item["service.commitment"] === "1D") {
       item["service.commitment"] = "1Y"
       item["price.nok.ex.vat"] *= 365
@@ -54,41 +126,166 @@ export const pricingEstimatorStore = reactive({
     return item
   },
 
-  /* ------------------------- Storage helpers ------------------------- */
-  calculateTotalStorageCost() {
-    const totalByType: Record<string, number> = {}
-    this.labs.forEach(lab => {
-      lab.selectedStorage?.forEach(storage => {
-        totalByType[storage.type] = (totalByType[storage.type] || 0) + storage.size
+  saveStateToLocal() {
+    try {
+      const stateToSave = {
+        labs: this.labs.map(lab => ({
+          id: lab.id,
+          title: lab.title,
+          storage: lab.storage,
+          priceStorage: lab.priceStorage,
+          priceComputeYearly: lab.priceComputeYearly,
+          numCompute: lab.numCompute,
+          selectedCompute: lab.selectedCompute || [],
+          selectedStorage: lab.selectedStorage || [],
+        })),
+      }
+      localStorage.setItem("pricingEstimatorState", JSON.stringify(stateToSave))
+    } catch (err) {
+      console.error("Failed to save state:", err)
+    }
+  },
+
+  /* Lab helpers */
+  getLabComputeSum(labId: number) {
+    const lab = this.labs.find(l => l.id === labId)
+    if (!lab) return { monthlyPrice: 0, yearlyPrice: 0, ram: 0, cpu_count: 0 }
+    const monthlyPrice = lab.selectedCompute?.reduce((a, b) => a + (b.monthlyPrice || 0), 0) || 0
+    const yearlyPrice = lab.selectedCompute?.reduce((a, b) => a + (b.yearlyPrice || 0), 0) || 0
+    const ram = lab.selectedCompute?.reduce((a, b) => a + (b.ram || 0), 0) || 0
+    const cpu_count = lab.selectedCompute?.reduce((a, b) => a + (b.core_count || 0), 0) || 0
+    return { monthlyPrice, yearlyPrice, ram, cpu_count }
+  },
+
+  getLabStorageSum(labId: number) {
+    const lab = this.labs.find(l => l.id === labId)
+    if (!lab) return { size: 0, price: 0, type: null }
+    const size = lab.selectedStorage?.reduce((a, b) => a + (b.size || 0), 0) || 0
+    const price = lab.selectedStorage?.reduce((a, b) => a + (b.price || 0), 0) || 0
+    return { size, price, type: null }
+  },
+
+  clearAllLabs() {
+    this.labs = []
+    this.itemsComputeExport = []
+    this.itemsStorageExport = []
+    this.totals.computeCost = 0
+    this.totals.storageCostByType = {}
+    this.totalLabCost = []
+    if (!ISSERVER) localStorage.removeItem("pricingEstimatorState")
+  },
+
+  addLab(lab?: Partial<LabCard>) {
+    const newLab: LabCard = {
+      id: this.labs.length,
+      title: lab?.title || "Lab",
+      storage: lab?.storage || 0,
+      priceStorage: lab?.priceStorage || 0,
+      priceComputeYearly: lab?.priceComputeYearly || 0,
+      numCompute: lab?.numCompute || 0,
+      selectedCompute: lab?.selectedCompute || [],
+      selectedStorage: lab?.selectedStorage || [],
+    }
+    this.labs.push(newLab)
+    this.updateCostSummary()
+    this.saveStateToLocal()
+  },
+
+  removeLab(id: number) {
+    this.labs = this.labs.filter(l => l.id !== id).map((l, index) => ({ ...l, id: index }))
+    delete this.itemsComputeExport[id]
+    delete this.itemsStorageExport[id]
+    this.totals.computeCost = this.labs.reduce((sum, l) => sum + (l.priceComputeYearly || 0), 0)
+    this.totals.storageCostByType = this.calculateTotalStorageCost()
+    this.updateCostSummary()
+    this.saveStateToLocal()
+  },
+
+  updateCostSummary() {
+    const priceItems: TotalPriceItem[] = []
+
+    if (this.labs.length > 0 && this.catalogue.labPrices.length > 0) {
+      this.labs.forEach(lab => {
+        priceItems.push({
+          name: lab.title,
+          units: 1,
+          price: this.catalogue.labPrices[0]["price.nok.ex.vat"],
+        })
       })
+    }
+
+    const totalComputeUnits = this.labs.reduce((sum, lab) => sum + (lab.numCompute || 0), 0)
+    priceItems.push({
+      name: "Compute",
+      units: totalComputeUnits,
+      price: this.totals.computeCost,
     })
 
-    const result: Record<string, { size: number; cost: number }> = {}
-    for (const [type, size] of Object.entries(totalByType)) {
-      result[type] = { size, cost: 0 }
+    const summedStorageCost = Object.values(this.totals.storageCostByType).reduce((acc, val) => acc + val.cost, 0)
+    const summedStorageSize = Object.values(this.totals.storageCostByType).reduce((acc, val) => acc + val.size, 0)
+    priceItems.push({
+      name: "Storage",
+      units: `${summedStorageSize} TB`,
+      price: summedStorageCost,
+    })
+
+    this.totalLabCost = priceItems
+  },
+
+  /* Storage helpers */
+
+  calculateTotalStorageCost() {
+    console.log("calculateTotalStorageCost")
+    let totalStorageByType: { [key: string]: number } = {}
+    this.labs.forEach((lab: LabCard) => {
+      console.log("lab", lab.selectedStorage)
+
+      // Check if selectedStorage exists and has items
+      // Check if selectedStorage exists and is an array
+      if (!lab.selectedStorage || !Array.isArray(lab.selectedStorage)) {
+        console.log("No selectedStorage or not an array for lab:", lab.id)
+        return
+      }
+
+      // Single forEach loop
+      lab.selectedStorage.forEach((storage: StorageUnit) => {
+        console.log("item", storage) // Now this will show
+
+        if (totalStorageByType[storage.type]) {
+          totalStorageByType[storage.type] += storage.size
+        } else {
+          totalStorageByType[storage.type] = storage.size
+        }
+      })
+    })
+    let totalCost = {} as { [key: string]: { size: number; cost: number } }
+    console.log("totalStorageByType", totalStorageByType)
+    for (const [type, size] of Object.entries(totalStorageByType)) {
+      totalCost[type] = { size: size, cost: 0 }
       const blockType = type === "NVME" ? "block.nvme.rep" : "block.hdd.rep"
-      let remaining = size
+      let remainingSize = size
       const priceEntries = this.catalogue.storagePrices.filter(
-        item =>
+        (item: PriceListItem) =>
           item["service.group"] === blockType &&
           item["service.level"] === "COMMITMENT" &&
           item["service.commitment"] === "1Y",
       )
-
+      console.log(priceEntries, "priceEntries")
       for (const entry of priceEntries) {
         let applicableSize = 0
         if (entry["service.unit"] === "First 10 TB") {
-          applicableSize = Math.min(remaining, 10)
+          applicableSize = Math.min(remainingSize, 10)
         } else if (entry["service.unit"] === "Next 90 TB") {
-          applicableSize = Math.min(remaining, 90)
+          applicableSize = Math.min(remainingSize, 90)
         } else {
-          applicableSize = remaining
+          applicableSize = remainingSize
         }
-        remaining -= applicableSize
-        result[type].cost += entry["price.nok.ex.vat"] * applicableSize
+        remainingSize -= applicableSize
+
+        totalCost[type].cost += entry["price.nok.ex.vat"] * applicableSize
       }
     }
-    return result
+    return totalCost
   },
 
   calculateStoragePriceForVolume(volumeSize: number, storageType: string) {
@@ -110,14 +307,14 @@ export const pricingEstimatorStore = reactive({
     })
   },
 
-  pushDefaultStorageForLab(labId: number) {
+  addDefaultStorageToLab(labId: number) {
     const lab = this.labs.find(l => l.id === labId)
     if (!lab) return
 
-    const storageId = this.generateItemId()
+    const storageId = lab.selectedStorage?.length || 0
     const defaultStorage = {
       id: storageId,
-      name: `volume-${storageId}`,
+      name: `volume-${storageId + 1}`,
       usage: "Archive",
       type: "HDD",
       size: 1,
@@ -127,29 +324,30 @@ export const pricingEstimatorStore = reactive({
     lab.selectedStorage = lab.selectedStorage || []
     lab.selectedStorage.push(defaultStorage)
     this.updateAddedStorageForLab(labId)
-    this.updateTotalBreakdown()
-    this.saveState()
+    this.updateCostSummary()
+    this.saveStateToLocal()
   },
 
   addStorageToLab(labId: number, payload: { name: string; usage: string; type: string; size: number }) {
     const lab = this.labs.find(l => l.id === labId)
     if (!lab) return
-    const id = this.generateItemId()
+
+    const storageId = lab.selectedStorage?.length || 0
     const price = this.calculateStoragePriceForVolume(payload.size, payload.type)
     const newStorage: StorageUnit = {
-      id,
+      id: storageId,
       name: payload.name,
       usage: payload.usage as any,
       type: payload.type as any,
       size: payload.size,
-      price,
+      price: price,
     }
     lab.selectedStorage = lab.selectedStorage || []
     lab.selectedStorage.push(newStorage)
     this.itemsStorageExport[labId] = lab.selectedStorage
     this.totals.storageCostByType = this.calculateTotalStorageCost()
-    this.updateTotalBreakdown()
-    this.saveState()
+    this.updateCostSummary()
+    this.saveStateToLocal()
   },
 
   editStorageInLab(
@@ -170,10 +368,10 @@ export const pricingEstimatorStore = reactive({
       size: payload.size,
       price,
     }
-    this.itemsStorageExport[labId] = lab.selectedStorage
+    this.itemsStorageExport[labId] = lab.selectedStorage ?? []
     this.totals.storageCostByType = this.calculateTotalStorageCost()
-    this.updateTotalBreakdown()
-    this.saveState()
+    this.updateCostSummary()
+    this.saveStateToLocal()
   },
 
   removeStorageFromLab(labId: number, storageId: number) {
@@ -182,11 +380,12 @@ export const pricingEstimatorStore = reactive({
     lab.selectedStorage = lab.selectedStorage?.filter(s => s.id !== storageId) || []
     this.itemsStorageExport[labId] = lab.selectedStorage
     this.totals.storageCostByType = this.calculateTotalStorageCost()
-    this.updateTotalBreakdown()
-    this.saveState()
+    this.updateCostSummary()
+    this.saveStateToLocal()
   },
 
-  /* ------------------------- Compute helpers ------------------------- */
+  /*  Compute helpers  */
+
   getComputePriceForLab(flavor: string, type: string, gpuFlavor: string | null = null) {
     let totalYearlyPrice = 0
     let totalMonthlyPrice = 0
@@ -247,7 +446,7 @@ export const pricingEstimatorStore = reactive({
     )
     if (!defaultUnit) return
 
-    const machineInfo = this.catalogue.machineCatalogue.find(
+    const machineInfo = this.catalogue.machinePrices.find(
       (item: MachineFlavor) => item["value"] === defaultUnit["service.unit"],
     )
     if (!machineInfo) return
@@ -256,10 +455,10 @@ export const pricingEstimatorStore = reactive({
     const core_count = parseInt(machinetitle[0].split(" ")[0])
     const ram = parseInt(machinetitle[1].split(" ")[0])
 
-    const id = this.generateItemId()
+    const compId = lab.selectedCompute?.length || 0
     const unit: ComputeUnit = {
-      id,
-      name: "machine-0",
+      id: compId,
+      name: "machine-1",
       flavor: defaultUnit["service.unit"],
       core_count,
       gpu: null,
@@ -273,8 +472,8 @@ export const pricingEstimatorStore = reactive({
     lab.selectedCompute.push(unit)
     this.totals.computeCost = this.labs.reduce((sum, l) => sum + (l.priceComputeYearly || 0), 0)
     this.itemsComputeExport[labId] = lab.selectedCompute
-    this.updateTotalBreakdown()
-    this.saveState()
+    this.updateCostSummary()
+    this.saveStateToLocal()
   },
 
   addComputeToLab(
@@ -283,16 +482,17 @@ export const pricingEstimatorStore = reactive({
   ) {
     const lab = this.labs.find(l => l.id === labId)
     if (!lab) return
-    const id = this.generateItemId()
+
+    const compId = lab.selectedCompute?.length || 0
     const prices = this.getComputePriceForLab(payload.flavor, payload.type, payload.gpu ?? null)
     const newCompute: ComputeUnit = {
-      id,
+      id: compId,
       name: payload.name,
       flavor: payload.flavor,
       core_count: payload.core_count,
       gpu: payload.gpu ?? null,
       ram: payload.ram,
-      type: payload.type,
+      type: payload.type as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
       yearlyPrice: prices.yearlyPrice,
     }
@@ -302,8 +502,8 @@ export const pricingEstimatorStore = reactive({
     lab.numCompute = lab.selectedCompute.length
     this.itemsComputeExport[labId] = lab.selectedCompute
     this.totals.computeCost = this.labs.reduce((sum, l) => sum + (l.priceComputeYearly || 0), 0)
-    this.updateTotalBreakdown()
-    this.saveState()
+    this.updateCostSummary()
+    this.saveStateToLocal()
   },
 
   editComputeInLab(
@@ -323,7 +523,7 @@ export const pricingEstimatorStore = reactive({
       core_count: payload.core_count,
       gpu: payload.gpu ?? null,
       ram: payload.ram,
-      type: payload.type,
+      type: payload.type as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
       yearlyPrice: prices.yearlyPrice,
     }
@@ -331,8 +531,8 @@ export const pricingEstimatorStore = reactive({
     lab.numCompute = lab.selectedCompute.length
     this.itemsComputeExport[labId] = lab.selectedCompute
     this.totals.computeCost = this.labs.reduce((sum, l) => sum + (l.priceComputeYearly || 0), 0)
-    this.updateTotalBreakdown()
-    this.saveState()
+    this.updateCostSummary()
+    this.saveStateToLocal()
   },
 
   removeComputeFromLab(labId: number, computeId: number) {
@@ -343,166 +543,7 @@ export const pricingEstimatorStore = reactive({
     lab.numCompute = lab.selectedCompute.length
     this.itemsComputeExport[labId] = lab.selectedCompute
     this.totals.computeCost = this.labs.reduce((sum, l) => sum + (l.priceComputeYearly || 0), 0)
-    this.updateTotalBreakdown()
-    this.saveState()
-  },
-
-  /* ------------------------- Lab sums / helpers ------------------------- */
-  getLabComputeSum(labId: number) {
-    const lab = this.labs.find(l => l.id === labId)
-    if (!lab) return { monthlyPrice: 0, yearlyPrice: 0, ram: 0, cpu_count: 0 }
-    const monthlyPrice = lab.selectedCompute?.reduce((a, b) => a + (b.monthlyPrice || 0), 0) || 0
-    const yearlyPrice = lab.selectedCompute?.reduce((a, b) => a + (b.yearlyPrice || 0), 0) || 0
-    const ram = lab.selectedCompute?.reduce((a, b) => a + (b.ram || 0), 0) || 0
-    const cpu_count = lab.selectedCompute?.reduce((a, b) => a + (b.core_count || 0), 0) || 0
-    return { monthlyPrice, yearlyPrice, ram, cpu_count }
-  },
-
-  getLabStorageSum(labId: number) {
-    const lab = this.labs.find(l => l.id === labId)
-    if (!lab) return { size: 0, price: 0 }
-    const size = lab.selectedStorage?.reduce((a, b) => a + (b.size || 0), 0) || 0
-    const price = lab.selectedStorage?.reduce((a, b) => a + (b.price || 0), 0) || 0
-    return { size, price }
-  },
-
-  /* ------------------------- persisted state helpers ------------------------- */
-  saveState() {
-    if (ISSERVER) return
-    try {
-      const stateToSave = {
-        labs: this.labs.map(lab => ({
-          id: lab.id,
-          title: lab.title,
-          storage: lab.storage,
-          priceStorage: lab.priceStorage,
-          priceComputeYearly: lab.priceComputeYearly,
-          numCompute: lab.numCompute,
-          selectedCompute: lab.selectedCompute || [],
-          selectedStorage: lab.selectedStorage || [],
-        })),
-      }
-      localStorage.setItem("pricingEstimatorState", JSON.stringify(stateToSave))
-    } catch (err) {
-      console.error("Failed to save state:", err)
-    }
-  },
-
-  loadState() {
-    if (ISSERVER) return
-    try {
-      const saved = localStorage.getItem("pricingEstimatorState")
-      if (!saved) return
-      this.isLoadingPriseEstimator = true
-      const state = JSON.parse(saved)
-      this.labs = (state.labs || []).map((lab: any) => ({
-        id: lab.id ?? this.generateLabId(),
-        title: lab.title,
-        storage: lab.storage || 0,
-        priceStorage: lab.priceStorage || 0,
-        priceComputeYearly: lab.priceComputeYearly || 0,
-        numCompute: lab.numCompute || 0,
-        selectedCompute: lab.selectedCompute || [],
-        selectedStorage: lab.selectedStorage || [],
-      }))
-      this.totals.computeCost = this.labs.reduce((sum, lab) => sum + (lab.priceComputeYearly || 0), 0)
-      this.totals.storageCostByType = this.calculateTotalStorageCost()
-      this.updateTotalBreakdown()
-      this.isLoadingPriseEstimator = false
-    } catch (err) {
-      console.error("Failed to load state:", err)
-      this.isLoadingPriseEstimator = false
-    }
-  },
-
-  clearAllLabs() {
-    this.labs = []
-    this.itemsComputeExport = []
-    this.itemsStorageExport = []
-    this.totals.computeCost = 0
-    this.totals.storageCostByType = {}
-    this.totalLabCost = []
-    if (!ISSERVER) localStorage.removeItem("pricingEstimatorState")
-  },
-
-  addLab(lab?: Partial<LabCard>) {
-    const newLab: LabCard = {
-      id: this.generateLabId(),
-      title: lab?.title || "Lab",
-      storage: lab?.storage || 0,
-      priceStorage: lab?.priceStorage || 0,
-      priceComputeYearly: lab?.priceComputeYearly || 0,
-      numCompute: lab?.numCompute || 0,
-      selectedCompute: lab?.selectedCompute || [],
-      selectedStorage: lab?.selectedStorage || [],
-    }
-    this.labs.push(newLab)
-    this.updateTotalBreakdown()
-    this.saveState()
-  },
-
-  updateLabCompute(id: number, payload: UpdateComputePayload) {
-    const lab = this.labs.find(l => l.id === id)
-    if (!lab) return
-    lab.priceComputeYearly = Number(payload.yearlyPrice)
-    lab.numCompute = Number(payload.numCompute)
-    lab.selectedCompute = payload.selectedCompute
-    this.totals.computeCost = this.labs.reduce((sum, l) => sum + (l.priceComputeYearly || 0), 0)
-    this.itemsComputeExport[id] = payload.selectedCompute
-    this.updateTotalBreakdown()
-    this.saveState()
-  },
-
-  updateLabStorage(id: number, payload: UpdateStoragePayload) {
-    const lab = this.labs.find(l => l.id === id)
-    if (!lab) return
-    lab.storage = payload.size
-    lab.priceStorage = payload.price
-    lab.selectedStorage = payload.selectedStorage
-    this.totals.storageCostByType = this.calculateTotalStorageCost()
-    this.itemsStorageExport[id] = payload.selectedStorage
-    this.updateTotalBreakdown()
-    this.saveState()
-  },
-
-  removeLab(id: number) {
-    this.labs = this.labs.filter(l => l.id !== id)
-    delete this.itemsComputeExport[id]
-    delete this.itemsStorageExport[id]
-    this.totals.computeCost = this.labs.reduce((sum, l) => sum + (l.priceComputeYearly || 0), 0)
-    this.totals.storageCostByType = this.calculateTotalStorageCost()
-    this.updateTotalBreakdown()
-    this.saveState()
-  },
-
-  updateTotalBreakdown() {
-    const priceItems: TotalPriceItem[] = []
-
-    if (this.labs.length > 0 && this.catalogue.labPrices.length > 0) {
-      this.labs.forEach(lab => {
-        priceItems.push({
-          name: lab.title,
-          units: 1,
-          price: this.catalogue.labPrices[0]["price.nok.ex.vat"],
-        })
-      })
-    }
-
-    const totalComputeUnits = this.labs.reduce((sum, lab) => sum + (lab.numCompute || 0), 0)
-    priceItems.push({
-      name: "Compute",
-      units: totalComputeUnits,
-      price: this.totals.computeCost,
-    })
-
-    const summedStorageCost = Object.values(this.totals.storageCostByType).reduce((acc, val) => acc + val.cost, 0)
-    const summedStorageSize = Object.values(this.totals.storageCostByType).reduce((acc, val) => acc + val.size, 0)
-    priceItems.push({
-      name: "Storage",
-      units: `${summedStorageSize} TB`,
-      price: summedStorageCost,
-    })
-
-    this.totalLabCost = priceItems
+    this.updateCostSummary()
+    this.saveStateToLocal()
   },
 })

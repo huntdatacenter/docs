@@ -1,18 +1,13 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue"
 import type { ComputeUnit, PriceListItem, GpuModel, MachineFlavor, MachineFormData, Catalogue } from "./types"
+import { priceEstimatorStore } from "./stores/pricingEstimatorStore"
 
-interface Props {
-  computeId?: number
-  catalogue: Catalogue
-  selectedRadio?: string
-  initialData?: ComputeUnit | null
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  computeId: 0,
-  selectedRadio: "1Y",
-  initialData: null,
+const props = defineProps({
+  labId: { type: Number, required: true },
+  computeId: { type: Number, required: true },
+  editData: { type: Object as () => ComputeUnit | null },
+  selectedRadio: { type: String, default: "1Y" },
 })
 
 const emit = defineEmits<{
@@ -42,7 +37,7 @@ const getComputePriceYear = computed((): string | number => {
   let price: number | undefined
   if (formData.value.subscription.includes("COMMITMENT")) {
     if (formData.value.subscription === "COMMITMENT_3Y") {
-      const item = props.catalogue.computePrices.find(
+      const item = priceEstimatorStore.catalogue.computePrices.find(
         (item: PriceListItem) =>
           item["service.unit"] === formData.value.flavor &&
           item["service.level"] === "COMMITMENT" &&
@@ -50,7 +45,7 @@ const getComputePriceYear = computed((): string | number => {
       )
       price = item ? item["price.nok.ex.vat"] / 3 : undefined
     } else {
-      const item = props.catalogue.computePrices.find(
+      const item = priceEstimatorStore.catalogue.computePrices.find(
         (item: PriceListItem) =>
           item["service.unit"] === formData.value.flavor &&
           item["service.level"] === "COMMITMENT" &&
@@ -59,7 +54,7 @@ const getComputePriceYear = computed((): string | number => {
       price = item ? item["price.nok.ex.vat"] : undefined
     }
   } else {
-    const item = props.catalogue.computePrices.find(
+    const item = priceEstimatorStore.catalogue.computePrices.find(
       (item: PriceListItem) =>
         item["service.unit"] === formData.value.flavor && item["service.level"] === formData.value.subscription,
     )
@@ -77,7 +72,7 @@ const getGpuPriceYear = computed((): string | number => {
   if (!formData.value.gpu) {
     return 0
   }
-  const price = props.catalogue.gpuPrices.find(
+  const price = priceEstimatorStore.catalogue.gpuPrices.find(
     (item: PriceListItem) => item["service.unit"] === formData.value.gpu && item["service.level"] === "ONDEMAND",
   )
   return price ? Number(price["price.nok.ex.vat"]).toFixed(2) : 0
@@ -92,21 +87,17 @@ const getFlavors = computed((): MachineFlavor[] => {
   if (!formData.value.subscription) {
     return []
   }
-  return props.catalogue.machineCatalogue.filter((item: MachineFlavor) => item)
+  return priceEstimatorStore.catalogue.machinePrices.filter((item: MachineFlavor) => item)
 })
 
 const getGpus = computed(() => {
-  return props.catalogue.availableGpus.map((item: GpuModel) => {
+  return priceEstimatorStore.catalogue.availableGpus.map((item: GpuModel) => {
     return {
       title: item["type"] + " - " + item["vram"] + " GB VRAM",
       value: item["type"],
     }
   })
 })
-
-const getSummedPrice = (num1: string | number, num2: string | number): number => {
-  return Number(num1) + Number(num2)
-}
 
 const close = () => {
   emit("close")
@@ -118,47 +109,60 @@ const save = () => {
     return
   }
 
-  const name = formData.value.gpu ? `${formData.value.name} (incl. GPU)` : formData.value.name
-  const monthlyPrice = getSummedPrice(getComputePriceMonth.value, getGpuPriceMonth.value)
-  const yearlyPrice = getSummedPrice(getComputePriceYear.value, getGpuPriceYear.value)
-  const machinetitle = props.catalogue.machineCatalogue
+  const name = formData.value.name
+  const machinetitle = priceEstimatorStore.catalogue.machinePrices
     .filter((item: MachineFlavor) => item["value"] === formData.value.flavor)[0]
     ["title"].split(" - ")[1]
     .split(" / ")
   const core_count = parseInt(machinetitle[0].split(" ")[0])
   const ram = parseInt(machinetitle[1].split(" ")[0])
   const flavorWithGpu = formData.value.gpu ? formData.value.flavor + " + " + formData.value.gpu : formData.value.flavor
-  emit("close", {
-    id: formData.value.id,
-    name: name,
-    flavor: formData.value.flavor ? flavorWithGpu : null,
-    gpu: formData.value.gpu ? formData.value.gpu : null,
-    core_count: core_count,
-    ram: ram,
-    monthlyPrice: monthlyPrice,
-    yearlyPrice: yearlyPrice,
-    type: formData.value.subscription,
-  })
+  const subscription = formData.value.subscription
+  const gpu = formData.value.gpu
+
+  if (props.editData) {
+    priceEstimatorStore.editComputeInLab(props.labId, props.editData.id, {
+      name: name!,
+      flavor: flavorWithGpu,
+      core_count: core_count,
+      ram: ram,
+      type: subscription!,
+      gpu: gpu,
+    })
+  } else {
+    // Add new compute
+    priceEstimatorStore.addComputeToLab(props.labId, {
+      name: name!,
+      flavor: flavorWithGpu!,
+      core_count: core_count,
+      ram: ram,
+      type: subscription!,
+      gpu: gpu,
+    })
+    // Add default storage
+    priceEstimatorStore.addDefaultStorageToLab(props.labId)
+  }
+
+  emit("close")
 }
 
-// Initialize form data on mount (equivalent to created hook)
 onMounted(() => {
-  if (props.initialData) {
-    formData.value.id = props.initialData.id
-    formData.value.name = props.initialData.name.replace(" (incl. GPU)", "")
-    formData.value.subscription = props.initialData.type
+  if (props.editData) {
+    formData.value.id = props.editData.id
+    formData.value.name = props.editData.name
+    formData.value.subscription = props.editData.type
 
-    if (props.initialData.flavor.includes(" + ")) {
-      const parts = props.initialData.flavor.split(" + ")
+    if (props.editData.flavor.includes(" + ")) {
+      const parts = props.editData.flavor.split(" + ")
       formData.value.flavor = parts[0]
       formData.value.gpu = parts[1]
     } else {
-      formData.value.flavor = props.initialData.flavor
-      formData.value.gpu = props.initialData.gpu || null
+      formData.value.flavor = props.editData.flavor
+      formData.value.gpu = props.editData.gpu || null
     }
   } else {
     formData.value.id = props.computeId
-    formData.value.name = `machine-${props.computeId}`
+    formData.value.name = `machine-${props.computeId + 1}`
   }
 })
 </script>
