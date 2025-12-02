@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactive, onMounted } from "vue"
 import type { StorageFormData, StorageUnit } from "./types"
-import { priceEstimatorStore } from "./stores/pricingEstimatorStore"
+import { priceEstimatorStore } from "./stores/prirceEstimatorStore"
 
 const props = defineProps({
   labId: { type: Number, required: true },

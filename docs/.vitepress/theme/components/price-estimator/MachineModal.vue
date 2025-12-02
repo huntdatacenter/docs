@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue"
 import type { ComputeUnit, PriceListItem, GpuModel, MachineFlavor, MachineFormData, Catalogue } from "./types"
-import { priceEstimatorStore } from "./stores/pricingEstimatorStore"
+import { priceEstimatorStore } from "./stores/prirceEstimatorStore"
 
 const props = defineProps({
   labId: { type: Number, required: true },

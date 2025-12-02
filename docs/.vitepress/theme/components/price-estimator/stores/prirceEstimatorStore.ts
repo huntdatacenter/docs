@@ -12,7 +12,7 @@ import type {
   UpdateStoragePayload,
   Catalogue,
   SubscriptionType,
-} from "../types"
+} from "../types/index.js"
 import pricesApi from "../api/pricesApi.js"
 
 const ISSERVER = typeof window === "undefined"

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { onMounted, ref, watch, nextTick, computed } from "vue"
-import { priceEstimatorStore } from "./stores/pricingEstimatorStore"
+import { priceEstimatorStore } from "./stores/prirceEstimatorStore"
 import LabCard from "./LabCard.vue"
 import TotalBlock from "./TotalBlock.vue"
 
