@@ -54,33 +54,18 @@ const storageLabSum = computed<StorageLabSum>(() => {
   return priceEstimatorStore.getLabStorageSum(props.lab.id)
 })
 
-const displaySelectedCompute = computed(() => {
-  return selectedCompute.value.map(item => ({
-    id: item.id,
-    name: item.name,
-    flavor: item.flavor,
-    core_count: item.core_count,
-    ram: item.ram,
-    type: item.type,
-    monthlyPrice: item.monthlyPrice.toFixed(2) + " kr",
-    yearlyPrice: item.yearlyPrice.toFixed(2) + " kr",
-  }))
-})
+const localTitle = ref(props.lab.title)
 
-const displayStorageSumPrice = computed(() => {
-  return storageLabSum.value.price.toFixed(2) + " kr"
-})
+watch(
+  () => props.lab.title,
+  val => {
+    localTitle.value = val
+  },
+)
 
-const displayselectedStorage = computed(() => {
-  return props.lab.selectedStorage.map(item => ({
-    id: item.id,
-    name: item.name,
-    usage: item.usage,
-    type: item.type,
-    size: item.size + " TB",
-    price: item.price.toFixed(2) + " kr",
-  }))
-})
+const updateTitle = (val: string) => {
+  priceEstimatorStore.updateLabTitle(props.lab.id, val)
+}
 
 // Methods
 const addMachine = () => {
@@ -144,8 +129,16 @@ onMounted(() => {
   <v-container>
     <v-sheet class="lab-card ma-0">
       <v-card class="ma-0">
-        <v-row class="ma-2" align="center" justify="space-between">
-          <v-card-title>{{ props.lab.title }}</v-card-title>
+        <v-row class="ma-2 d-flex" align="center" justify="space-between">
+          <v-btn icon style="visibility: hidden"> </v-btn>
+          <v-text-field
+            v-model="localTitle"
+            variant="underlined"
+            hide-details
+            density="compact"
+            class="lab-title-input flex-grow-0"
+            @update:model-value="updateTitle"
+          ></v-text-field>
           <v-btn icon @click="priceEstimatorStore.removeLab(props.lab.id)">
             <v-icon>mdi-delete</v-icon>
           </v-btn>
@@ -155,12 +148,18 @@ onMounted(() => {
           <v-card-title>Compute</v-card-title>
 
           <v-data-table-virtual
-            :items="displaySelectedCompute"
+            :items="selectedCompute"
             :headers="computeHeaders"
             hide-default-footer
             hover
             item-value="id"
           >
+            <template v-slot:item.monthlyPrice="{ item }">
+              {{ item.monthlyPrice.toFixed(2) + " kr" }}
+            </template>
+            <template v-slot:item.yearlyPrice="{ item }">
+              {{ item.yearlyPrice.toFixed(2) + " kr" }}
+            </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
                 <v-icon
@@ -181,12 +180,7 @@ onMounted(() => {
             <template v-slot:body.append="{}">
               <tr>
                 <th :colspan="computeHeaders.length + 1" class="text-center">
-                  <v-tooltip bottom>
-                    <template #activator="{ props }">
-                      <v-btn v-bind="props" icon="mdi-plus" size="small" @click="addMachine"></v-btn>
-                    </template>
-                    <span>Add a new machine</span>
-                  </v-tooltip>
+                  <v-btn size="small" @click="addMachine" append-icon="mdi-plus"> Add machine </v-btn>
                 </th>
               </tr>
 
@@ -216,18 +210,23 @@ onMounted(() => {
 
         <v-card flat>
           <v-card-title>Storage</v-card-title>
-          <v-card-subtitle> Add storage to {{ props.lab.title }} </v-card-subtitle>
           <v-card-subtitle> Each compute unit needs a volume of storage of atleast 1 TB</v-card-subtitle>
 
           <v-data-table-virtual
             v-model="props.lab.selectedStorage"
-            :items="displayselectedStorage"
+            :items="selectedStorage"
             :headers="storageHeaders"
             hover
             hide-default-footer
             item-value="id"
             aria-placeholder="No storage added yet"
           >
+            <template v-slot:item.size="{ item }">
+              {{ item.size.toFixed(2) + " TB" }}
+            </template>
+            <template v-slot:item.price="{ item }">
+              {{ item.price.toFixed(2) + " kr" }}
+            </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
                 <v-icon
@@ -248,13 +247,7 @@ onMounted(() => {
             <template v-slot:body.append="{}">
               <tr>
                 <th :colspan="storageHeaders.length + 1" class="text-center">
-                  <v-tooltip bottom>
-                    <template #activator="{ props }">
-                      <v-btn v-bind="props" icon="mdi-plus" size="small" @click="addStorage"></v-btn>
-                    </template>
-
-                    <span>Add storage</span>
-                  </v-tooltip>
+                  <v-btn size="small" @click="addStorage" append-icon="mdi-plus"> Add storage </v-btn>
                 </th>
               </tr>
               <tr>
@@ -264,8 +257,12 @@ onMounted(() => {
                 <th></th>
                 <th></th>
                 <th>
-                  <strong>{{ (storageLabSum?.size || 0) + " TB" }}</strong>
+                  <strong>{{ (storageLabSum?.size || 0).toFixed(2) + " TB" }}</strong>
                 </th>
+                <th>
+                  <strong>{{ (storageLabSum?.price || 0).toFixed(2) + " kr" }}</strong>
+                </th>
+                <th></th>
               </tr>
             </template>
           </v-data-table-virtual>
@@ -299,5 +296,15 @@ onMounted(() => {
 <style scoped>
 .lab-card {
   padding: 3px;
+}
+
+.lab-title-input {
+  min-width: 200px;
+}
+
+.lab-title-input :deep(.v-field__input) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 </style>

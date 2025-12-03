@@ -12,6 +12,7 @@ export default {
     },
     itemsComputeExport: { type: Array, default: () => [] },
     itemsStorageExport: { type: Array, default: () => [] },
+    labs: { type: Array, default: () => [] },
   },
 
   data() {
@@ -24,61 +25,50 @@ export default {
     }
   },
   computed: {
-    formattedTotalItems() {
-      if (!this.totalItems) {
-        return []
-      }
-      return this.totalItems.map(item => ({
-        ...item,
-        price: Number(item.price).toFixed(2) + " kr",
-      }))
-    },
     sumInTotal() {
-
       const summedStorageCost = Object.values(this.totals.storageCost).reduce((a, b) => a + b.cost, 0)
       const labsTotal = this.totalItems
-        .filter(item => item.name.startsWith('Lab'))
+        .filter(item => item.name.startsWith("Lab"))
         .reduce((sum, item) => sum + item.price, 0)
       return labsTotal + this.totals.computePrice + summedStorageCost
     },
   },
   methods: {
     exportItems() {
-      const computeItemsClean = JSON.parse(JSON.stringify(this.itemsComputeExport))
-      const storageItemsClean = JSON.parse(JSON.stringify(this.itemsStorageExport))
+      const labsExport = []
 
-      const labs = [] 
-      const maxId = Math.max(computeItemsClean.length, storageItemsClean.length)
-      for (let id = 1; id < maxId; id++) {
-        const compute = computeItemsClean[id]
-        const storage = storageItemsClean[id]
-        if (compute || storage) {
+      this.labs.forEach(lab => {
+        const compute = lab.selectedCompute
+        const storage = lab.selectedStorage
+
+        if ((compute && compute.length > 0) || (storage && storage.length > 0)) {
           const labObject = {
-            id: id,
-            name: "lab " + id,
+            id: lab.id,
+            name: lab.title,
           }
 
-          if (compute) {
+          if (compute && compute.length > 0) {
             labObject.compute = compute.map(item => {
-              delete item.monthlyPrice
-              delete item.yearlyPrice
-              return item
+              // Create a clean copy without price fields
+              const { monthlyPrice, yearlyPrice, ...rest } = item
+              return rest
             })
           }
 
-          if (storage) {
+          if (storage && storage.length > 0) {
             labObject.storage = storage.map(item => {
-              delete item.price
-              return item
+              // Create a clean copy without price fields
+              const { price, ...rest } = item
+              return rest
             })
           }
-          labs.push(labObject)
+          labsExport.push(labObject)
         }
-      }
+      })
 
       const exportData = {
         version: "1.0",
-        labs: labs,
+        labs: labsExport,
       }
 
       const jsonString = JSON.stringify(exportData, null, 2)
@@ -100,13 +90,13 @@ export default {
   <v-sheet class="lab-card">
     <v-card class="ma-0 pa-4">
       <v-card-title> Total</v-card-title>
-      <v-data-table-virtual
-        :items="formattedTotalItems"
-        :headers="totalHeaders"
-        hover
-        hide-default-footer
-        item-value="id"
-      >
+      <v-data-table-virtual :items="totalItems" :headers="totalHeaders" hide-default-footer item-value="id">
+        <template v-slot:item.price="{ item }">
+          {{ Number(item.price).toFixed(2) + " kr" }}
+        </template>
+        <template v-slot:item.storage="{ item }">
+          {{ Number(item.price).toFixed(2) + " TB" }}
+        </template>
       </v-data-table-virtual>
       <v-row dense>
         <v-col cols="5">

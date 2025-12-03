@@ -137,6 +137,7 @@ async function handleFileUpload(event: Event) {
           :totals="totals"
           :itemsComputeExport="priceEstimatorStore.itemsComputeExport"
           :itemsStorageExport="priceEstimatorStore.itemsStorageExport"
+          :labs="priceEstimatorStore.labs"
         />
       </v-row>
     </v-sheet>

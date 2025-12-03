@@ -202,16 +202,22 @@ export const priceEstimatorStore = reactive({
     this.saveStateToLocal()
   },
 
+  updateLabTitle(id: number, title: string) {
+    const lab = this.labs.find(l => l.id === id)
+    if (lab) {
+      lab.title = title
+      this.saveStateToLocal()
+    }
+  },
+
   updateCostSummary() {
     const priceItems: TotalPriceItem[] = []
 
     if (this.labs.length > 0 && this.catalogue.labPrices.length > 0) {
-      this.labs.forEach(lab => {
-        priceItems.push({
-          name: lab.title,
-          units: 1,
-          price: this.catalogue.labPrices[0]["price.nok.ex.vat"],
-        })
+      priceItems.push({
+        name: "Lab subscriptions",
+        units: this.labs.length,
+        price: this.catalogue.labPrices[0]["price.nok.ex.vat"] * this.labs.length,
       })
     }
 
@@ -236,15 +242,8 @@ export const priceEstimatorStore = reactive({
   /* Storage helpers */
 
   calculateTotalStorageCost() {
-    console.log("calculateTotalStorageCost")
     let totalStorageByType: { [key: string]: number } = {}
-    console.log("labs", this.labs)
     this.labs.forEach((lab: LabCard) => {
-      console.log("lab", lab.selectedStorage)
-      // console.log("Storage pop", lab.selectedStorage.pop())
-
-      // Check if selectedStorage exists and has items
-      // Check if selectedStorage exists and is an array
       if (!lab.selectedStorage || !Array.isArray(lab.selectedStorage)) {
         console.log("No selectedStorage or not an array for lab:", lab.id)
         return
@@ -477,8 +476,11 @@ export const priceEstimatorStore = reactive({
 
     lab.selectedCompute = lab.selectedCompute || []
     lab.selectedCompute.push(unit)
+    lab.priceComputeYearly = lab.selectedCompute.reduce((acc, c) => acc + (c.yearlyPrice || 0), 0)
+    lab.numCompute = lab.selectedCompute.length
     this.totals.computeCost = this.labs.reduce((sum, l) => sum + (l.priceComputeYearly || 0), 0)
     this.itemsComputeExport[labId] = lab.selectedCompute
+
     this.updateCostSummary()
     this.saveStateToLocal()
   },
