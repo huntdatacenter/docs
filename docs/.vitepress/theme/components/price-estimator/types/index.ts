@@ -1,3 +1,7 @@
+export type SubscriptionType = "COMMITMENT_1Y" | "COMMITMENT_3Y" | "ONDEMAND" | "SPOT"
+export type StorageUsageType = "Archive" | "Work" | "Scratch" | "Home"
+export type StorageType = "HDD" | "NVME"
+
 export interface ComputeUnit {
   id: number
   name: string
@@ -10,15 +14,6 @@ export interface ComputeUnit {
   yearlyPrice: number
 }
 
-export interface ComputeLabSum {
-  monthlyPrice: number
-  yearlyPrice: number
-  ram: number
-  cpu_count: number
-}
-
-export type SubscriptionType = "COMMITMENT_1Y" | "COMMITMENT_3Y" | "ONDEMAND" | "SPOT"
-
 export interface StorageUnit {
   id: number
   name: string
@@ -28,23 +23,17 @@ export interface StorageUnit {
   price: number
 }
 
-export type StorageUsageType = "Archive" | "Work" | "Scratch" | "Home"
-
-export type StorageType = "HDD" | "NVME"
+export interface ComputeLabSum {
+  monthlyPrice: number
+  yearlyPrice: number
+  ram: number
+  cpu_count: number
+}
 
 export interface StorageLabSum {
   size: number
   type: string | null
   price: number
-}
-
-export interface Catalogue {
-  computePrices: PriceListItem[]
-  storagePrices: PriceListItem[]
-  gpuPrices: PriceListItem[]
-  availableGpus: GpuModel[]
-  machinePrices: MachineFlavor[]
-  labPrices: PriceListItem[]
 }
 
 export interface PriceListItem {
@@ -68,6 +57,15 @@ export interface MachineFlavor {
   divider?: boolean
 }
 
+export interface Catalogue {
+  computePrices: PriceListItem[]
+  storagePrices: PriceListItem[]
+  gpuPrices: PriceListItem[]
+  availableGpus: GpuModel[]
+  machinePrices: MachineFlavor[]
+  labPrices: PriceListItem[]
+}
+
 export interface LabCard {
   id: number
   title: string
@@ -77,12 +75,6 @@ export interface LabCard {
   numCompute: number
   selectedCompute: ComputeUnit[]
   selectedStorage: StorageUnit[]
-}
-
-export interface TotalPriceItem {
-  name: string
-  units: number | string
-  price: number
 }
 
 export interface MachineFormData {
@@ -99,6 +91,12 @@ export interface StorageFormData {
   usage: StorageUsageType
   type: StorageType
   size: number
+}
+
+export interface TotalPriceItem {
+  name: string
+  units: number | string
+  price: number
 }
 
 export interface UpdateComputePayload {
