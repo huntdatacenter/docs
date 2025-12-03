@@ -21,19 +21,6 @@ const formData = reactive<StorageFormData>({
   size: 1,
 })
 
-onMounted(() => {
-  if (props.editData) {
-    formData.id = props.editData.id
-    formData.name = props.editData.name
-    formData.usage = props.editData.usage
-    formData.type = props.editData.type
-    formData.size = props.editData.size
-  } else {
-    formData.id = props.storageId
-    formData.name = `volume-${props.storageId + 1}`
-  }
-})
-
 const close = () => {
   emit("close")
 }
@@ -59,6 +46,19 @@ const save = () => {
 
   emit("close")
 }
+
+onMounted(() => {
+  if (props.editData) {
+    formData.id = props.editData.id
+    formData.name = props.editData.name
+    formData.usage = props.editData.usage
+    formData.type = props.editData.type
+    formData.size = props.editData.size
+  } else {
+    formData.id = props.storageId
+    formData.name = `volume-${props.storageId + 1}`
+  }
+})
 </script>
 
 <template>

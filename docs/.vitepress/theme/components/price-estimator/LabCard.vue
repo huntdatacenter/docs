@@ -11,15 +11,6 @@ const props = defineProps({
   lab: { type: Object as () => LabCard, required: true },
 })
 
-onMounted(() => {
-  if (!selectedCompute.value.length) {
-    priceEstimatorStore.pushDefaultComputeUnitForLab(props.lab.id)
-  }
-  if (!props.lab.selectedStorage.length) {
-    priceEstimatorStore.addDefaultStorageToLab(props.lab.id)
-  }
-})
-
 // State
 const isComputeModalOpen = ref(false)
 let editingComputeItem: ComputeUnit | null = null
@@ -138,6 +129,15 @@ const removeComputeById = (computeId: number) => {
 const removeStorageById = (storageId: number) => {
   priceEstimatorStore.removeStorageFromLab(props.lab.id, storageId)
 }
+
+onMounted(() => {
+  if (!selectedCompute.value.length) {
+    priceEstimatorStore.pushDefaultComputeUnitForLab(props.lab.id)
+  }
+  if (!selectedStorage.value.length) {
+    priceEstimatorStore.addDefaultStorageToLab(props.lab.id)
+  }
+})
 </script>
 
 <template>
