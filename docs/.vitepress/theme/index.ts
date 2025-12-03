@@ -33,8 +33,8 @@ import DesignNewPassphrase from "./components/lab-access/DesignNewPassphrase.vue
 
 import PriceEstimator from "./components/price-estimator/PriceEstimator.vue"
 import LabCard from "./components/price-estimator/LabCard.vue"
-import Machine from "./components/price-estimator/Machine.vue"
-import Storage from "./components/price-estimator/Storage.vue"
+import MachineModal from "./components/price-estimator/MachineModal.vue"
+import StorageModal from "./components/price-estimator/StorageModal.vue"
 import TotalBlock from "./components/price-estimator/TotalBlock.vue"
 
 import "@mdi/font/css/materialdesignicons.css"
@@ -208,8 +208,8 @@ export default {
     // Price estimator
     app.component("PriceEstimator", PriceEstimator)
     app.component("LabCard", LabCard)
-    app.component("Machine", Machine)
-    app.component("Storage", Storage)
+    app.component("Machine", MachineModal)
+    app.component("Storage", StorageModal)
     app.component("TotalBlock", TotalBlock)
   },
 } satisfies Theme
