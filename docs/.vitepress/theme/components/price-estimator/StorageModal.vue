@@ -32,7 +32,7 @@ const save = () => {
       name: formData.name!,
       usage: formData.usage,
       type: formData.type,
-      size: formData.size,
+      size: Number(formData.size),
     })
   } else {
     // Add new
@@ -40,7 +40,7 @@ const save = () => {
       name: formData.name!,
       usage: formData.usage,
       type: formData.type,
-      size: formData.size,
+      size: Number(formData.size),
     })
   }
 

@@ -90,7 +90,7 @@ export const priceEstimatorStore = reactive({
     await this.getCatalogueAPI()
 
     this.totals.computeCost = this.labs.reduce((sum, lab) => sum + (lab.priceComputeYearly || 0), 0)
-    this.totals.storageCostByType = this.calculateTotalStorageCost()
+    this.updateAddedStorage()
     this.updateCostSummary()
 
     this.isInitializingPriseEstimator = false
@@ -187,6 +187,7 @@ export const priceEstimatorStore = reactive({
       selectedStorage: lab?.selectedStorage || [],
     }
     this.labs.push(newLab)
+    this.updateAddedStorage()
     this.updateCostSummary()
     this.saveStateToLocal()
   },
@@ -196,7 +197,7 @@ export const priceEstimatorStore = reactive({
     delete this.itemsComputeExport[id]
     delete this.itemsStorageExport[id]
     this.totals.computeCost = this.labs.reduce((sum, l) => sum + (l.priceComputeYearly || 0), 0)
-    this.totals.storageCostByType = this.calculateTotalStorageCost()
+    this.updateAddedStorage()
     this.updateCostSummary()
     this.saveStateToLocal()
   },
@@ -237,8 +238,10 @@ export const priceEstimatorStore = reactive({
   calculateTotalStorageCost() {
     console.log("calculateTotalStorageCost")
     let totalStorageByType: { [key: string]: number } = {}
+    console.log("labs", this.labs)
     this.labs.forEach((lab: LabCard) => {
       console.log("lab", lab.selectedStorage)
+      // console.log("Storage pop", lab.selectedStorage.pop())
 
       // Check if selectedStorage exists and has items
       // Check if selectedStorage exists and is an array
@@ -247,16 +250,18 @@ export const priceEstimatorStore = reactive({
         return
       }
 
+      console.log(`Lab ${lab.id} storage count:`, lab.selectedStorage.length)
+
       // Single forEach loop
-      lab.selectedStorage.forEach((storage: StorageUnit) => {
-        console.log("item", storage) // Now this will show
+      for (const storage of lab.selectedStorage) {
+        console.log("item", storage)
 
         if (totalStorageByType[storage.type]) {
           totalStorageByType[storage.type] += storage.size
         } else {
           totalStorageByType[storage.type] = storage.size
         }
-      })
+      }
     })
     let totalCost = {} as { [key: string]: { size: number; cost: number } }
     console.log("totalStorageByType", totalStorageByType)
@@ -283,6 +288,8 @@ export const priceEstimatorStore = reactive({
         remainingSize -= applicableSize
 
         totalCost[type].cost += entry["price.nok.ex.vat"] * applicableSize
+
+        console.log("totalCost", totalCost)
       }
     }
     return totalCost
@@ -299,11 +306,12 @@ export const priceEstimatorStore = reactive({
     return volumeSize * unitPrice
   },
 
-  updateAddedStorageForLab(labId: number) {
-    const lab = this.labs.find(l => l.id === labId)
-    if (!lab) return
-    lab.selectedStorage?.forEach(item => {
-      item.price = this.calculateStoragePriceForVolume(item.size, item.type)
+  updateAddedStorage() {
+    this.totals.storageCostByType = this.calculateTotalStorageCost()
+    this.labs.forEach(lab => {
+      lab.selectedStorage?.forEach(item => {
+        item.price = this.calculateStoragePriceForVolume(item.size, item.type)
+      })
     })
   },
 
@@ -323,7 +331,7 @@ export const priceEstimatorStore = reactive({
 
     lab.selectedStorage = lab.selectedStorage || []
     lab.selectedStorage.push(defaultStorage)
-    this.updateAddedStorageForLab(labId)
+    this.updateAddedStorage()
     this.updateCostSummary()
     this.saveStateToLocal()
   },
@@ -333,19 +341,18 @@ export const priceEstimatorStore = reactive({
     if (!lab) return
 
     const storageId = lab.selectedStorage?.length || 0
-    const price = this.calculateStoragePriceForVolume(payload.size, payload.type)
     const newStorage: StorageUnit = {
       id: storageId,
       name: payload.name,
       usage: payload.usage as any,
       type: payload.type as any,
-      size: payload.size,
-      price: price,
+      size: payload.size as number,
+      price: 0,
     }
     lab.selectedStorage = lab.selectedStorage || []
     lab.selectedStorage.push(newStorage)
     this.itemsStorageExport[labId] = lab.selectedStorage
-    this.totals.storageCostByType = this.calculateTotalStorageCost()
+    this.updateAddedStorage()
     this.updateCostSummary()
     this.saveStateToLocal()
   },
@@ -369,7 +376,7 @@ export const priceEstimatorStore = reactive({
       price,
     }
     this.itemsStorageExport[labId] = lab.selectedStorage ?? []
-    this.totals.storageCostByType = this.calculateTotalStorageCost()
+    this.updateAddedStorage()
     this.updateCostSummary()
     this.saveStateToLocal()
   },
@@ -379,7 +386,7 @@ export const priceEstimatorStore = reactive({
     if (!lab) return
     lab.selectedStorage = lab.selectedStorage?.filter(s => s.id !== storageId) || []
     this.itemsStorageExport[labId] = lab.selectedStorage
-    this.totals.storageCostByType = this.calculateTotalStorageCost()
+    this.updateAddedStorage()
     this.updateCostSummary()
     this.saveStateToLocal()
   },

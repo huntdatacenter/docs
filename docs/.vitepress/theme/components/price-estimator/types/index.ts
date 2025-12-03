@@ -17,10 +17,10 @@ export interface ComputeUnit {
 export interface StorageUnit {
   id: number
   name: string
-  usage: StorageUsageType
-  type: StorageType
-  size: number
   price: number
+  size: number
+  type: StorageType
+  usage: StorageUsageType
 }
 
 export interface ComputeLabSum {
