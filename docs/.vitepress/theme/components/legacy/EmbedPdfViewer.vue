@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, onMounted, nextTick } from "vue"
+import { ref, watch, onMounted, nextTick, shallowRef } from "vue"
 
 defineOptions({
   name: "EmbedPdfViewer",
@@ -10,7 +10,7 @@ const props = defineProps({
   pages: { type: Number, default: 1 },
 })
 
-const PdfEmbed = ref(null)
+const PdfEmbed = shallowRef(null)
 const src = ref("")
 const showPdf = ref(false)
 const page = ref(null)

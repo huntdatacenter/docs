@@ -6,8 +6,6 @@ import { PDFDocument } from "pdf-lib"
 import { countries } from "country-list-json"
 import SignaturePad from "signature_pad"
 
-// Dynamic / Async component import (Vue 3 style)
-// const CustomComponent = defineAsyncComponent(() => import("./CustomComponent.vue"))
 
 defineOptions({
   name: "PdfForm",
@@ -241,7 +239,6 @@ const updateAgreementFormCache = (key, fields) => {
   if (!localStorage.agreementFields) {
     localStorage.agreementFields = {}
   }
-  console.log('is this updated', key, fields);
   if (key && fields) {
     localStorage.setItem(key, JSON.stringify(fields))
   }
@@ -292,11 +289,18 @@ const submit = () => {
             console.log(
               `Page ${pageNum} (${page.getWidth()} x ${page.getHeight()}) - insert image ${key}.png (${pngDims.width} x ${pngDims.height}) at position ${xpos} x ${ypos}`,
             )
+
+            const targetWidth = 300;
+            const targetHeight = 30;
+            const scaleX = targetWidth / pngImage.width;
+            const scaleY = targetHeight / pngImage.height;
+            const scale = Math.min(scaleX, scaleY);
+
             page.drawImage(pngImage, {
               x: xpos,
               y: ypos,
-              width: pngDims.width,
-              height: pngDims.height,
+              width: pngImage.width * scale,
+              height: pngImage.height * scale,
             })
           })
         })
@@ -484,6 +488,8 @@ onMounted(() => {
                 :ref="item.key"
                 autocomplete="ignore-field"
                 :items="item.options"
+                item-title="text"
+                item-value="value"
                 :required="isFieldRequired(item.required)"
                 :clearable="isBoolTrue(item.clearable)"
                 clear-icon=""
@@ -524,22 +530,21 @@ onMounted(() => {
                 persistent
                 width="290px"
               >
-                <template v-slot:activator="{ on, attrs }">
+                <template #activator="{ props }">
                   <v-text-field
                     v-model="formData[item.key]"
                     class="mt-1 mb-2"
-                    :placeholder="item.placeholder ? item.placeholder : ''"
+                    :placeholder="item.placeholder || ''"
                     persistent-placeholder
                     variant="outlined"
                     density="compact"
                     hide-details
                     readonly
-                    v-bind="attrs"
-                    v-on="on"
+                    v-bind="props"
                   >
-                    <template v-slot:label>
-                      {{ item.label
-                      }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
+                    <template #label>
+                      {{ item.label }}
+                      <span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
                     </template>
                   </v-text-field>
                 </template>
