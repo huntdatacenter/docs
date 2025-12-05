@@ -235,13 +235,6 @@ h1 {
   padding-right: 32px;
 }
 
-.mascot-container {
-  display: flex;
-  margin-left: 0;
-  margin-right: 0;
-  min-height: 100px;
-}
-
 .card-link {
   text-decoration: none;
   color: inherit;
