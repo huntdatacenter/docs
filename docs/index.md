@@ -19,7 +19,7 @@ import { ref } from 'vue';
 const cards = [
   {
     id: 'btn1',
-    title: 'do science',
+    title: 'Do science',
     href: '/do-science/',
     image: '/img/hunt-cloud_bottle_250.png',
     imageAlt: 'Illustration of laboratory glass bottle with yellow shimmery substance.',
@@ -49,11 +49,10 @@ const bottomCards = ref([
     title: 'About HUNT Cloud',
     href: '/about/',
     description: 'HUNT Cloud is shaped by a small team of scientific instrument makers. Read more about the thinking and team behind HUNT Cloud.',
-    buttonColor: 'black--text'
   },
   {
     id: 'mascot',
-    image: '/img/hunt-cloud_bot_250_2.png',
+    image: '/img/Robot_Happy.png',
     imageAlt: 'Illustration of small centien robot made of metal with shiny lightbulb on top of its head.',
     href: '/about/',
     isMascot: true
@@ -63,7 +62,6 @@ const bottomCards = ref([
     title: 'Scientific products',
     href: 'https://www.ntnu.edu/mh/huntcloud',
     description: 'Explore and evolve. See the main HUNT Cloud page for information on HUNT Cloud\'s scientific products and services.',
-    buttonColor: 'black--text'
   }
 ]);
 
@@ -73,7 +71,7 @@ const cardStyle = {
   borderRadius: '20px',
 };
 
-const imageHeight = '120px';
+const imageHeight = '180px';
 
 </script>
 
@@ -89,35 +87,29 @@ const imageHeight = '120px';
   <div
     v-for="card in cards"
     :key="card.id"
-    class="hc-column-4"
+    class="hc-column-4 clickable-card"
     :style="cardStyle"
   >
-    <a :href="card.href">
+    <a :href="card.href" class="card-link">
       <img
         :alt="card.imageAlt"
         :style="{ height: imageHeight, width: 'auto' }"
         :src="card.image"
       />
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
     </a>
-    <VuetifyButton
-      :id="card.id"
-      class="hc-btn"
-      color="primary"
-      :label="card.title"
-      :href="card.href"
-      block
-    />
-    <p>{{ card.description }}</p>
   </div>
 </div>
-    <div class="hc-row">
+   <div class="hc-row bottom-row">
       <div
         v-for="card in bottomCards"
         :key="card.id"
         class="hc-column-4"
+        :style="cardStyle"
         :class="{ 'mascot-container': card.isMascot }"
       >
-      <template v-if="card.isMascot">
+        <template v-if="card.isMascot">
           <a :href="card.href">
             <img
               :alt="card.imageAlt"
@@ -126,16 +118,13 @@ const imageHeight = '120px';
             />
           </a>
         </template>
-        <template v-else>
-          <VuetifyButton
-            :id="card.id"
-            class="hc-btn"
-            :color="card.buttonColor"
-            :label="card.title"
-            :href="card.href"
-            block
-          />
-          <p>{{ card.description }}</p>
+       <template v-else>
+          <a :href="card.href" class="card-link bottom-card-link">
+            <div class="button-text-group">
+              <h3>{{ card.title }}</h3>
+              <p>{{ card.description }}</p>
+            </div>
+          </a>
         </template>
         </div>
     </div>
@@ -152,7 +141,6 @@ const imageHeight = '120px';
 
 h1 {
     display: block;
-    font-size: 2em;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
@@ -196,15 +184,6 @@ h1 {
   box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.hc-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 16px;
-  width: 90%; */
-}
 
 .hc-title {
   display: flex;
@@ -232,6 +211,10 @@ h1 {
 
 }
 
+.bottom-row {
+  margin-top: 30px;
+}
+
 .hc-column-4 {
   justify-self: start;
   display: grid;
@@ -241,15 +224,9 @@ h1 {
   padding-bottom: 12px;
   margin-left: 0px;
   margin-right: 0px;
-  text-align: justify;
-  text-align: left; /* left or justify */
+  text-align: left;
   justify-content: center;
   align-items: center;
-}
-
-.hc-column-4 a {
-  justify-self: center;
-  padding-bottom: 24px;
 }
 
 .hc-column-4 p {
@@ -265,39 +242,62 @@ h1 {
   min-height: 100px;
 }
 
-.hc-column-8 {
-  justify-self: start;
+.card-link {
+  text-decoration: none;
+  color: inherit;
   display: grid;
-  float: left;
-  /* width: 100%; */
-  min-height: 12px;
-  padding-bottom: 12px;
-  margin-left: 0px;
-  margin-right: 0px;
-  text-align: left; /* left or justify */
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
 }
 
-.hc-column-8 p {
+.card-link img {
   justify-self: center;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 
-.hc-column-8:has(p) {
-  padding-left: 16px;
-  padding-right: 16px;
+.clickable-card {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.clickable-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bottom-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-row .hc-column-4:not(.mascot-container) {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bottom-row .hc-column-4:not(.mascot-container):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-link h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #004c7b;
+  justify-self: center;
 }
 
 @media (min-width: 720px) {
   .hc-header-img {
     background-image: url("https://assets.hdc.ntnu.no/assets/static/banner_960.jpg");
     height: 300px;
-  }
-
-  .hc-column-8 {
-    width: 60%;
-    margin-left: 0;
-    margin-right: 0;
   }
 
   .hc-column-4 {
@@ -327,6 +327,5 @@ h1 {
     height: 700px;
   }
 }
-
 
 </style>
