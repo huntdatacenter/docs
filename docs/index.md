@@ -14,8 +14,6 @@ footerHtml: false
 
 <script setup>
 
-import { ref } from 'vue';
-
 const cards = [
   {
     id: 'btn1',
@@ -43,7 +41,7 @@ const cards = [
   }
 ];
 
-const bottomCards = ref([
+const bottomCards = [
   {
     id: 'btn4',
     title: 'About HUNT Cloud',
@@ -63,7 +61,7 @@ const bottomCards = ref([
     href: 'https://www.ntnu.edu/mh/huntcloud',
     description: 'Explore and evolve. See the main HUNT Cloud page for information on HUNT Cloud\'s scientific products and services.',
   }
-]);
+];
 
 const cardStyle = {
   padding: '25px',
@@ -106,7 +104,7 @@ const imageHeight = '180px';
         v-for="card in bottomCards"
         :key="card.id"
         class="hc-column-4"
-        :style="cardStyle"
+        :style="card.isMascot ? {} : cardStyle"
         :class="{ 'mascot-container': card.isMascot }"
       >
         <template v-if="card.isMascot">
@@ -128,7 +126,7 @@ const imageHeight = '180px';
         </template>
         </div>
     </div>
-    <div class="hc-row">
+    <div class="hc-row footer">
       <center>
         <i>These pages contain the official user documentation for HUNT Cloud. <br>HUNT Cloud is a scientific infrastructure for data explorations at <a href="https://www.ntnu.edu/">NTNU</a>, Norway.<br><a href="/govern-science/privacy-statement">Privacy statement</a>.</i><br>
       </center>
@@ -207,12 +205,16 @@ h1 {
 .hc-row {
   justify-content: center;
   display: flex;
+  flex-direction: column;
   gap: 15px;
+}
 
+.footer {
+  margin-top: 30px;
 }
 
 .bottom-row {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .hc-column-4 {
@@ -288,6 +290,10 @@ h1 {
 }
 
 @media (min-width: 720px) {
+  .hc-row {
+    flex-direction: row;
+  }
+
   .hc-header-img {
     background-image: url("https://assets.hdc.ntnu.no/assets/static/banner_960.jpg");
     height: 300px;
