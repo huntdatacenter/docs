@@ -20,6 +20,14 @@ const getMyIpaddress = computed(() => {
   return ipAddress.value ? ipAddress.value : null
 })
 
+const isNtnuVpn = computed(() => {
+  return ipAddress.value && ipAddress.value.startsWith("10.24.")
+})
+
+const isEduroam = computed(() => {
+  return ipAddress.value && ipAddress.value.startsWith("10.20.")
+})
+
 const show = computed(() => {
   return ipAddress.value && ipAddress.value.length > 3 ? true : false
 })
@@ -55,6 +63,27 @@ onMounted(() => {
   <div class="vuewidget vuewrapper" data-vuetify>
     <v-app :id="id">
       <CopyTextField :model-value="getMyIpaddress" :prefix="hidePrefix ? `` : `Your IP address:`" :loading="loading" />
+      <v-alert
+        v-if="isNtnuVpn"
+        border="start"
+        border-color="warning"
+        class="mt-1"
+        elevation="2"
+      >
+        It seems like you are connected to NTNU VPN.
+        You should be able to connect to HUNT Cloud VPN.
+        If you still experience issues send us a request to add you to NTNU VPN group.
+      </v-alert>
+      <v-alert
+        v-if="isEduroam"
+        border="start"
+        border-color="warning"
+        class="mt-1"
+        elevation="2"
+      >
+        It seems like you are connected to NTNU / Eduroam network.
+        You should be able to connect to HUNT Cloud VPN.
+      </v-alert>
     </v-app>
   </div>
 </template>
