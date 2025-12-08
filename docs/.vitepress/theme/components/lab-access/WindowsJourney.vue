@@ -545,7 +545,9 @@ onMounted(() => {
 
                         <br />
                         <h3 id="authenticate-vpn"><a href="#authenticate-vpn" class="header-anchor">#</a> Authenticate VPN</h3>
-                        <p>If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.</p>
+                        <div>
+                          If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.
+                        </div>
 
                         <br />
                         <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
@@ -595,22 +597,22 @@ onMounted(() => {
 
                         <br />
                         <h3 id="remove-passphrase"><a href="#remove-passphrase" class="header-anchor">#</a> Remove saved passphrase</h3>
-                        <p>
+                        <div>
                           If you need to remove your VPN passphrase because of typo or SSH reissue.
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                           Right click on the OpenVPN icon <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" style="display: inline-block; height: 2em; margin-bottom: -10px;" /> in the task bar in the lower right corner of your screen and select <strong><code>Clear Saved Passwords</code></strong>.
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="remove-vpn-config"><a href="#remove-vpn-config" class="header-anchor">#</a> Remove VPN config</h3>
-                        <p>
+                        <div>
                           If you need to remove your VPN config because SSH reissue or reactivation.
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                           Open your file explorer and manually remove the folder with the old OpenVPN configurations.
                           It's usually located in this directory and you should remove the directory <code>{{ username }}</code> including the contents:
-                        </p>
+                        </div>
                         <CopyTextField
                           :model-value="`%USERPROFILE%\\OpenVPN\\config\\${username}`"
                           label=""
@@ -657,9 +659,9 @@ onMounted(() => {
 
                         <br />
                         <h3 id="test-firewall"><a href="#test-firewall" class="header-anchor">#</a> Detect firewall blocks</h3>
-                        <p>
+                        <div>
                           If you want to check whether your VPN connection is blocked by the firewall, download and install [NMAP](https://nmap.org/download.html), and then run:
-                        </p>
+                        </div>
                         <CopyTextField
                           :model-value="`nmap -sU -Pn --traceroute -p U:1194 129.241.176.121`"
                           label=""

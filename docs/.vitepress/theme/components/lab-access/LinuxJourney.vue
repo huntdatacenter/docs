@@ -418,7 +418,9 @@ onMounted(() => {
                       <v-card class="mb-8 pr-4" elevation="0">
                         <br />
                         <h3 id="authenticate-vpn"><a href="#authenticate-vpn" class="header-anchor">#</a> Authenticate VPN</h3>
-                        <p>If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.</p>
+                        <div>
+                          If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.
+                        </div>
 
                         <br />
                         <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
@@ -432,9 +434,9 @@ onMounted(() => {
 
                         <br />
                         <h3 id="unable-to-apply-changes"><a href="#unable-to-apply-changes" class="header-anchor">#</a> Unable to apply changes</h3>
-                        <p>
+                        <div>
                           If you are unable to click <i>Apply</i> after your changes, try to re-enter your <code>Private Key Password</code> using your VPN passphrase that you received in Signal message.
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
@@ -471,9 +473,9 @@ onMounted(() => {
 
                         <br />
                         <h3 id="test-firewall"><a href="#test-firewall" class="header-anchor">#</a> Detect firewall blocks</h3>
-                        <p>
+                        <div>
                           If you want to check whether your VPN connection is blocked by the firewall, install nmap using: <code>sudo apt install nmap</code> and then run:
-                        </p>
+                        </div>
                         <CopyTextField
                           :model-value="`sudo nmap -sU -Pn --traceroute -p U:1194 129.241.176.121`"
                           label=""
