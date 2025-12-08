@@ -34,7 +34,7 @@ Some organizations and companies have local firewalls which prohibit your comput
 
 **Network requirements for HUNT Cloud**
 
-```
+```txt
 IP: 129.241.176.121
 Port: 1194
 Protocol: UDP
@@ -51,7 +51,7 @@ Windows users needs administrator rights on their local computer to successfully
 
 You should reinstall your OpenVPN with administrative rights if you already installed OpenVPN and are getting errors below:
 
-```
+```txt
 ERROR: route addition failed using CreateIpForwardEntry: Ingen tilgang.
 ERROR: Windows route add command failed [adaptive]: returned error code 1
 ERROR: Some routes were not successfully added. The connection may not function correctly

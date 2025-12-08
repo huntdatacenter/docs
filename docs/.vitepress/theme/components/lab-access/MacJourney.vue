@@ -489,14 +489,28 @@ onMounted(() => {
                             <img alt="VPN config removal - step 2" src="/img/vpn/VPNconfigremove1.png" style="height: 250px;"/>
                           </p>
 
+                          <br />
+                          <h3 id="test-firewall"><a href="#test-firewall" class="header-anchor">#</a> Detect firewall blocks</h3>
+                          <p>
+                            If you want to check whether your VPN connection is blocked by the firewall, install nmap using: <code>brew install nmap</code> and then run:
+                          </p>
+                          <CopyTextField
+                            :model-value="`sudo nmap -sU -Pn --traceroute -p U:1194 129.241.176.121`"
+                            label=""
+                            prefix=""
+                            placeholder=""
+                          />
+                          <div class="mt-2">
+                            If traceroute ends with <code>129.241.176.121</code> no blocking was detected. Although if tracing seems stuck send us a screenshot in service desk.
+                          </div>
+
                           <v-alert
                             border="start"
                             border-color="info"
                             elevation="2"
                             class="mt-6"
                           >
-                            <b>TIP</b>
-                            <hr class="mt-1 mb-2" />
+                            <template v-slot:title><b>TIP</b></template>
                             If nothing works, please head over to our main <a href="/do-science/troubleshooting/connection/#vpn" target="_blank">troubleshooting section</a> for more information on how to troubleshoot connections.
                           </v-alert>
                         </v-card-text>

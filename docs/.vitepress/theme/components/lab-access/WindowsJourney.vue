@@ -655,10 +655,25 @@ onMounted(() => {
                           </ul>
                         </div>
 
+                        <br />
+                        <h3 id="test-firewall"><a href="#test-firewall" class="header-anchor">#</a> Detect firewall blocks</h3>
+                        <p>
+                          If you want to check whether your VPN connection is blocked by the firewall, download and install [NMAP](https://nmap.org/download.html), and then run:
+                        </p>
+                        <CopyTextField
+                          :model-value="`nmap -sU -Pn --traceroute -p U:1194 129.241.176.121`"
+                          label=""
+                          prefix=""
+                          placeholder=""
+                        />
+                        <div class="mt-2">
+                          If traceroute ends with <code>129.241.176.121</code> no blocking was detected. If tracing seems stuck send us a screenshot in service desk.
+                        </div>
+
                         <v-alert
                           border="start"
                           border-color="info"
-                          class="mt-4"
+                          class="mt-6"
                           elevation="2"
                         >
                           <template v-slot:title><b>TIP</b></template>
