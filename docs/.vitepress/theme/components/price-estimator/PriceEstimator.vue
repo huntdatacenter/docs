@@ -4,11 +4,6 @@ import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 import LabCard from "./LabCard.vue"
 import TotalBlock from "./TotalBlock.vue"
 
-const totals = computed(() => ({
-  computePrice: priceEstimatorStore.totals.computeCost,
-  storageCost: priceEstimatorStore.totals.storageCostByType,
-}))
-
 const fileInput = ref<HTMLInputElement | null>(null)
 
 watch(
@@ -19,71 +14,55 @@ watch(
   { deep: true },
 )
 
-watch(
-  () => totals.value,
-  () => {
-    if (!priceEstimatorStore.isInitializingPriseEstimator) {
-      priceEstimatorStore.updateCostSummary()
-    }
-  },
-  { deep: true },
-)
-
 onMounted(async () => {
   await priceEstimatorStore.initializePriceEstimatorStore()
 })
-
-function addLabCard() {
-  const title = `Lab ${priceEstimatorStore.labs.length + 1}`
-  priceEstimatorStore.addLab({ title })
-}
 
 function triggerFileUpload() {
   fileInput.value?.click()
 }
 
+// TODO: Fix this later
 async function handleFileUpload(event: Event) {
-  const target = event.target as HTMLInputElement
-  const file = target.files?.[0]
-  if (!file) return
+  console.log("This does not work for now")
+  // const target = event.target as HTMLInputElement
+  // const file = target.files?.[0]
+  // if (!file) return
 
-  const reader = new FileReader()
+  // const reader = new FileReader()
 
-  reader.onload = async e => {
-    try {
-      priceEstimatorStore.updateCostSummary()
+  // reader.onload = async e => {
+  //   try {
+  //     priceEstimatorStore.updateTotalSummary()
 
-      const data = JSON.parse(e.target?.result as string)
-      if (!data.version || !Array.isArray(data.labs)) {
-        throw new Error("Invalid JSON format")
-      }
+  //     const data = JSON.parse(e.target?.result as string)
+  //     if (!data.version || !Array.isArray(data.labs)) {
+  //       throw new Error("Invalid JSON format")
+  //     }
 
-      priceEstimatorStore.isInitializingPriseEstimator = true
-      priceEstimatorStore.clearAllLabs()
+  //     priceEstimatorStore.isInitializingPriseEstimator = true
+  //     priceEstimatorStore.clearAllLabs()
 
-      data.labs.forEach((lab: any) => {
-        priceEstimatorStore.labs.push({
-          id: lab.id,
-          title: lab.name,
-          storage: 0,
-          priceStorage: 0,
-          priceComputeYearly: 0,
-          numCompute: 0,
-          selectedCompute: lab.compute || [],
-          selectedStorage: lab.storage || [],
-        })
-      })
+  //     data.labs.forEach((lab: any) => {
+  //       priceEstimatorStore.labs.push({
+  //         id: lab.id,
+  //         title: lab.name,
+  //         priceComputeYearly: 0,
+  //         selectedCompute: lab.compute || [],
+  //         selectedStorage: lab.storage || [],
+  //       })
+  //     })
 
-      await nextTick()
-      priceEstimatorStore.isInitializingPriseEstimator = false
-      target.value = ""
-    } catch (err) {
-      console.error(err)
-      alert("Error importing file.")
-    }
-  }
+  //     await nextTick()
+  //     priceEstimatorStore.isInitializingPriseEstimator = false
+  //     target.value = ""
+  //   } catch (err) {
+  //     console.error(err)
+  //     alert("Error importing file.")
+  //   }
+  // }
 
-  reader.readAsText(file)
+  // reader.readAsText(file)
 }
 </script>
 
@@ -96,7 +75,13 @@ async function handleFileUpload(event: Event) {
       <v-container>
         <v-row justify="space-between">
           <v-col cols="auto">
-            <v-btn density="default" size="large" dark @click="addLabCard">Add lab</v-btn>
+            <v-btn
+              density="default"
+              size="large"
+              dark
+              @click="priceEstimatorStore.addLab(`Lab ${priceEstimatorStore.labs.length + 1}`)"
+              >Add lab</v-btn
+            >
           </v-col>
 
           <v-col cols="auto">
@@ -132,13 +117,7 @@ async function handleFileUpload(event: Event) {
       </v-row>
 
       <v-row v-if="priceEstimatorStore.labs.length">
-        <TotalBlock
-          :total-items="priceEstimatorStore.totalLabCost"
-          :totals="totals"
-          :itemsComputeExport="priceEstimatorStore.itemsComputeExport"
-          :itemsStorageExport="priceEstimatorStore.itemsStorageExport"
-          :labs="priceEstimatorStore.labs"
-        />
+        <!-- <TotalBlock /> -->
       </v-row>
     </v-sheet>
   </v-container>

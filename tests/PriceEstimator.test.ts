@@ -289,18 +289,18 @@ describe("PriceEstimator", () => {
     it("adds a new lab card", async () => {
       expect(priceEstimatorStore.labs.length).toBe(0)
 
-      priceEstimatorStore.addLab()
+      priceEstimatorStore.addLab("Lab 1")
       expect(priceEstimatorStore.labs.length).toBe(1)
       expect(priceEstimatorStore.labs[0].title).toBe("Lab")
 
-      priceEstimatorStore.addLab({ title: "Lab 2" })
+      priceEstimatorStore.addLab("Lab 2")
       expect(priceEstimatorStore.labs.length).toBe(2)
       expect(priceEstimatorStore.labs[1].title).toBe("Lab 2")
     })
 
     it("removes a lab card", async () => {
-      priceEstimatorStore.addLab()
-      priceEstimatorStore.addLab()
+      priceEstimatorStore.addLab("Lab 1")
+      priceEstimatorStore.addLab("Lab 1")
       expect(priceEstimatorStore.labs.length).toBe(2)
 
       priceEstimatorStore.removeLab(0)
@@ -308,9 +308,9 @@ describe("PriceEstimator", () => {
     })
 
     it("removes all labs", async () => {
-      priceEstimatorStore.addLab()
-      priceEstimatorStore.addLab()
-      priceEstimatorStore.addLab()
+      priceEstimatorStore.addLab("Lab 1")
+      priceEstimatorStore.addLab("Lab 1")
+      priceEstimatorStore.addLab("Lab 1")
       expect(priceEstimatorStore.labs.length).toBe(3)
 
       priceEstimatorStore.clearAllLabs()
@@ -322,7 +322,7 @@ describe("PriceEstimator", () => {
 
   describe("Total Calculations", () => {
     it("updates compute price total when lab card compute changes", async () => {
-      priceEstimatorStore.addLab()
+      priceEstimatorStore.addLab("Lab 1")
 
       // Simulate adding compute
       priceEstimatorStore.labs[0].priceComputeYearly = 50000
@@ -339,7 +339,7 @@ describe("PriceEstimator", () => {
     })
 
     it("updates storage total when lab card storage changes", async () => {
-      priceEstimatorStore.addLab()
+      priceEstimatorStore.addLab("Lab 1")
 
       priceEstimatorStore.labs[0].selectedStorage = [
         {
@@ -360,7 +360,7 @@ describe("PriceEstimator", () => {
     })
 
     it("Updates totals when multiple labs are added with compute and storage", async () => {
-      priceEstimatorStore.addLab()
+      priceEstimatorStore.addLab("Lab 1")
       priceEstimatorStore.labs[0].priceComputeYearly = 60000
       priceEstimatorStore.labs[0].selectedStorage = [
         {
@@ -373,7 +373,7 @@ describe("PriceEstimator", () => {
         } as StorageUnit,
       ]
 
-      priceEstimatorStore.addLab()
+      priceEstimatorStore.addLab("Lab 1")
       priceEstimatorStore.labs[1].priceComputeYearly = 120000
       priceEstimatorStore.labs[1].selectedStorage = [
         {

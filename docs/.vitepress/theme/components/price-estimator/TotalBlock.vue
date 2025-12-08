@@ -1,96 +1,84 @@
-<script>
-export default {
-  name: "TotalBlock",
-  props: {
-    totalItems: { type: Array, default: () => [] },
-    totals: {
-      type: Object,
-      default: () => ({
-        computePrice: 0.0,
-        storageCost: {},
-      }),
-    },
-    itemsComputeExport: { type: Array, default: () => [] },
-    itemsStorageExport: { type: Array, default: () => [] },
-    labs: { type: Array, default: () => [] },
-  },
+<script setup>
+import { computed } from "vue"
+import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 
-  data() {
-    return {
-      totalHeaders: [
-        { title: "Name", align: "start", sortable: true, key: "name" },
-        { title: "Total units", align: "start", sortable: true, key: "units" },
-        { title: "Price / year", align: "start", sortable: true, key: "price" },
-      ],
-    }
-  },
-  computed: {
-    sumInTotal() {
-      const summedStorageCost = Object.values(this.totals.storageCost).reduce((a, b) => a + b.cost, 0)
-      const labsTotal = this.totalItems
-        .filter(item => item.name.startsWith("Lab"))
-        .reduce((sum, item) => sum + item.price, 0)
-      return labsTotal + this.totals.computePrice + summedStorageCost
-    },
-  },
-  methods: {
-    exportItems() {
-      const labsExport = []
+const totalHeaders = [
+  { title: "Name", align: "start", sortable: true, key: "name" },
+  { title: "Total units", align: "start", sortable: true, key: "units" },
+  { title: "Price / year", align: "start", sortable: true, key: "price" },
+]
 
-      this.labs.forEach(lab => {
-        const compute = lab.selectedCompute
-        const storage = lab.selectedStorage
+const sumInTotal = computed(() => {
+  const storageObj = props.totals?.storageCost || {}
+  const summedStorageCost = Object.values(storageObj).reduce((acc, cur) => acc + (cur?.cost || 0), 0)
 
-        if ((compute && compute.length > 0) || (storage && storage.length > 0)) {
-          const labObject = {
-            id: lab.id,
-            name: lab.title,
-          }
+  const labsTotal = (priceEstimatorStore.totalCost || [])
+    .filter(item => item && item.name && item.name.startsWith("Lab"))
+    .reduce((sum, item) => sum + (item.price || 0), 0)
 
-          if (compute && compute.length > 0) {
-            labObject.compute = compute.map(item => {
-              // Create a clean copy without price fields
-              const { monthlyPrice, yearlyPrice, ...rest } = item
-              return rest
-            })
-          }
+  return labsTotal + (props.totals?.computePrice || 0) + summedStorageCost
+})
 
-          if (storage && storage.length > 0) {
-            labObject.storage = storage.map(item => {
-              // Create a clean copy without price fields
-              const { price, ...rest } = item
-              return rest
-            })
-          }
-          labsExport.push(labObject)
-        }
-      })
+// TODO: Fix this later
+function exportItems() {
+  const labsExport = [](priceEstimatorStore.labs || []).forEach(lab => {
+    const compute = lab.selectedCompute
+    const storage = lab.selectedStorage
 
-      const exportData = {
-        version: "1.0",
-        labs: labsExport,
+    if ((compute && compute.length > 0) || (storage && storage.length > 0)) {
+      const labObject = {
+        id: lab.id,
+        name: lab.title,
       }
 
-      const jsonString = JSON.stringify(exportData, null, 2)
-      const blob = new Blob([jsonString], { type: "application/json" })
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement("a")
-      a.href = url
-      a.download = "lab-export.json"
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      URL.revokeObjectURL(url)
-    },
-  },
+      if (compute && compute.length > 0) {
+        labObject.compute = compute.map(item => {
+          // Create a clean copy without price fields
+          const { monthlyPrice, yearlyPrice, ...rest } = item
+          return rest
+        })
+      }
+
+      if (storage && storage.length > 0) {
+        labObject.storage = storage.map(item => {
+          // Create a clean copy without price fields
+          const { price, ...rest } = item
+          return rest
+        })
+      }
+
+      labsExport.push(labObject)
+    }
+  })
+
+  const exportData = {
+    version: "1.0",
+    labs: labsExport,
+  }
+
+  const jsonString = JSON.stringify(exportData, null, 2)
+  const blob = new Blob([jsonString], { type: "application/json" })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement("a")
+  a.href = url
+  a.download = "lab-export.json"
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+  URL.revokeObjectURL(url)
 }
 </script>
 
 <template>
   <v-sheet class="lab-card">
     <v-card class="ma-0 pa-4">
-      <v-card-title> Total</v-card-title>
-      <v-data-table-virtual :items="totalItems" :headers="totalHeaders" hide-default-footer item-value="id">
+      <v-card-title>Total Summary</v-card-title>
+      <v-data-table-virtual
+        :items="priceEstimatorStore.totalCost"
+        :headers="totalHeaders"
+        hide-default-footer
+        item-value="id"
+      >
         <template v-slot:item.price="{ item }">
           {{ Number(item.price).toFixed(2) + " kr" }}
         </template>
@@ -110,7 +98,7 @@ export default {
             <v-list-item>
               <v-list-item-title> <strong> Estimated total price: </strong></v-list-item-title>
               <v-list-item-subtitle class="align-end">
-                {{ Number(this.sumInTotal).toFixed(2) }} NOK ex. VAT / Year
+                {{ Number(sumInTotal).toFixed(2) }} NOK ex. VAT / Year
               </v-list-item-subtitle>
             </v-list-item>
           </v-list>

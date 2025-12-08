@@ -1,6 +1,25 @@
+/*
+
+Definition
+
+Price: Defined price from the catalogue API
+Cost: Calculated amount of prices. Used for Summary.
+
+*/
+
 export type SubscriptionType = "COMMITMENT_1Y" | "COMMITMENT_3Y" | "ONDEMAND" | "SPOT"
-export type StorageUsageType = "Archive" | "Work" | "Scratch" | "Home"
-export type StorageType = "HDD" | "NVME"
+export type StorageUsageType = "Archive" | "Work" | "Scratch" | "Backup"
+export const storageTypes = ["HDD", "NVME"] as const
+export type StorageType = (typeof storageTypes)[number]
+
+export interface PriceListItem {
+  "service.group": string
+  "service.family": string
+  "service.unit": string
+  "service.level": string
+  "service.commitment"?: string
+  "price.nok.ex.vat": number
+}
 
 export interface ComputeUnit {
   id: number
@@ -8,7 +27,7 @@ export interface ComputeUnit {
   flavor: string
   core_count: number
   ram: number
-  gpu: string | null
+  gpu?: string
   type: SubscriptionType
   monthlyPrice: number
   yearlyPrice: number
@@ -21,28 +40,6 @@ export interface StorageUnit {
   size: number
   type: StorageType
   usage: StorageUsageType
-}
-
-export interface ComputeLabSum {
-  monthlyPrice: number
-  yearlyPrice: number
-  ram: number
-  cpu_count: number
-}
-
-export interface StorageLabSum {
-  size: number
-  type: string | null
-  price: number
-}
-
-export interface PriceListItem {
-  "service.group": string
-  "service.family": string
-  "service.unit": string
-  "service.level": string
-  "service.commitment"?: string
-  "price.nok.ex.vat": number
 }
 
 export interface GpuModel {
@@ -69,34 +66,43 @@ export interface Catalogue {
 export interface LabCard {
   id: number
   title: string
-  storage: number
-  priceStorage: number
-  priceComputeYearly: number
-  numCompute: number
   selectedCompute: ComputeUnit[]
   selectedStorage: StorageUnit[]
+  // Storage price changes based on the whole labs storages
+}
+
+interface StoragePrice {
+  size: number
+  cost: number
+}
+
+export type StorageCostByType = {
+  [key in StorageType]: StoragePrice
+}
+
+interface CostSummaryEntry {
+  units: number
+  price: number
+}
+
+export interface CostSummary {
+  [key: string]: CostSummaryEntry
 }
 
 export interface MachineFormData {
-  id: number | null
-  name: string | null
-  flavor: string | null
-  gpu: string | null
-  subscription: SubscriptionType | null
+  id?: number
+  name?: string
+  flavor?: string
+  gpu?: string
+  subscription?: SubscriptionType
 }
 
 export interface StorageFormData {
-  id: number | null
-  name: string | null
-  usage: StorageUsageType
-  type: StorageType
-  size: number
-}
-
-export interface TotalPriceItem {
-  name: string
-  units: number | string
-  price: number
+  id?: number
+  name?: string
+  usage?: StorageUsageType
+  type?: StorageType
+  size?: number
 }
 
 export interface UpdateComputePayload {

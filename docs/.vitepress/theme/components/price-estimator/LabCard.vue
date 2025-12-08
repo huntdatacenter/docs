@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from "vue"
+import { ref, computed, watch } from "vue"
 import { DataTableHeader } from "vuetify"
 import { priceEstimatorStore } from "./stores/priceEstimatorStore"
-import type { ComputeUnit, StorageUnit, ComputeLabSum, StorageLabSum, LabCard } from "./types"
+import type { ComputeUnit, StorageUnit, LabCard } from "./types"
 import MachineModal from "./MachineModal.vue"
 import StorageModal from "./StorageModal.vue"
 
@@ -18,8 +18,9 @@ let editingComputeItem: ComputeUnit | null = null
 const computeHeaders = ref<DataTableHeader[]>([
   { title: "Name", align: "start", sortable: true, key: "name" },
   { title: "Machine type", align: "start", sortable: true, key: "flavor" },
-  { title: "cpu cores", align: "start", sortable: true, key: "core_count" },
-  { title: "Memory [TB]", align: "start", sortable: true, key: "ram" },
+  { title: "CPU cores", align: "start", sortable: true, key: "core_count" },
+  { title: "Memory [GB]", align: "start", sortable: true, key: "ram" },
+  { title: "GPU", align: "start", sortable: true, key: "gpu" },
   { title: "Type", align: "start", sortable: true, key: "type" },
   { title: "Price / month", align: "start", sortable: true, key: "monthlyPrice" },
   { title: "Price / year", align: "start", sortable: true, key: "yearlyPrice" },
@@ -46,12 +47,16 @@ const snackbar = ref({
 const selectedCompute = computed(() => props.lab.selectedCompute || [])
 const selectedStorage = computed(() => props.lab.selectedStorage || [])
 
-const computeLabSum = computed<ComputeLabSum>(() => {
-  return priceEstimatorStore.getLabComputeSum(props.lab.id)
+const computeLabSum = computed(() => {
+  return priceEstimatorStore.getLabComputePriceSum(props.lab.id)
 })
 
-const storageLabSum = computed<StorageLabSum>(() => {
-  return priceEstimatorStore.getLabStorageSum(props.lab.id)
+const storageLabSum = computed(() => {
+  return priceEstimatorStore.getLabStoragePriceSum(props.lab.id)
+})
+
+const LabSum = computed(() => {
+  return computeLabSum.value.yearlyPriceTotal + storageLabSum.value.HDD.cost + storageLabSum.value.NVME.cost
 })
 
 const localTitle = ref(props.lab.title)
@@ -114,15 +119,6 @@ const removeComputeById = (computeId: number) => {
 const removeStorageById = (storageId: number) => {
   priceEstimatorStore.removeStorageFromLab(props.lab.id, storageId)
 }
-
-onMounted(() => {
-  if (!selectedCompute.value.length) {
-    priceEstimatorStore.pushDefaultComputeUnitForLab(props.lab.id)
-  }
-  if (!selectedStorage.value.length) {
-    priceEstimatorStore.addDefaultStorageToLab(props.lab.id)
-  }
-})
 </script>
 
 <template>
@@ -185,22 +181,19 @@ onMounted(() => {
               </tr>
 
               <tr>
-                <th role="columnheader" class="pt-4 pb-2">
-                  <span><strong>Total</strong> </span>
+                <th role="columnheader">
+                  <span><strong>Total compute</strong> </span>
                 </th>
                 <th></th>
-                <th>
-                  <strong>{{ computeLabSum?.cpu_count || 0 }}</strong>
-                </th>
-                <th>
-                  <strong> {{ computeLabSum?.ram || 0 }}</strong>
-                </th>
+                <th></th>
+                <th></th>
+                <th></th>
                 <th></th>
                 <th>
-                  <strong>{{ Number(computeLabSum?.monthlyPrice || 0).toFixed(2) + " kr" }} </strong>
+                  <strong>{{ Number(computeLabSum?.monthlyPriceTotal || 0).toFixed(2) + " kr" }} </strong>
                 </th>
                 <th>
-                  <strong>{{ Number(computeLabSum?.yearlyPrice || 0).toFixed(2) + " kr" }} </strong>
+                  <strong>{{ Number(computeLabSum?.yearlyPriceTotal || 0).toFixed(2) + " kr" }} </strong>
                 </th>
                 <th></th>
               </tr>
@@ -210,7 +203,6 @@ onMounted(() => {
 
         <v-card flat>
           <v-card-title>Storage</v-card-title>
-          <v-card-subtitle> Each compute unit needs a volume of storage of atleast 1 TB</v-card-subtitle>
 
           <v-data-table-virtual
             v-model="props.lab.selectedStorage"
@@ -250,17 +242,33 @@ onMounted(() => {
                   <v-btn size="small" @click="addStorage" append-icon="mdi-plus"> Add storage </v-btn>
                 </th>
               </tr>
-              <tr>
-                <th role="columnheader" class="pt-4 pb-2">
-                  <span><strong>Total</strong> </span>
+              <tr v-for="(item, storageType, index) in storageLabSum" :key="storageType">
+                <th>
+                  <strong v-if="index === 0">Total storage</strong>
+                </th>
+                <th></th>
+                <th>
+                  <span>
+                    <strong>{{ storageType }}</strong>
+                  </span>
+                </th>
+                <th>
+                  <strong>{{ item.size.toFixed(2) }} TB</strong>
+                </th>
+                <th>
+                  <strong>{{ item.cost.toFixed(2) }} kr</strong>
+                </th>
+                <th></th>
+              </tr>
+              <tr style="background-color: #f5f5f5">
+                <th>
+                  <strong>Total lab resource</strong>
                 </th>
                 <th></th>
                 <th></th>
+                <th></th>
                 <th>
-                  <strong>{{ (storageLabSum?.size || 0).toFixed(2) + " TB" }}</strong>
-                </th>
-                <th>
-                  <strong>{{ (storageLabSum?.price || 0).toFixed(2) + " kr" }}</strong>
+                  <strong>{{ LabSum.toFixed(2) }} kr</strong>
                 </th>
                 <th></th>
               </tr>

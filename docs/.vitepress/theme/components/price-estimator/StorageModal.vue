@@ -14,8 +14,8 @@ const emit = defineEmits<{
 }>()
 
 const formData = reactive<StorageFormData>({
-  id: null,
-  name: null,
+  id: undefined,
+  name: undefined,
   usage: "Archive",
   type: "HDD",
   size: 1,
@@ -30,16 +30,16 @@ const save = () => {
     // Edit
     priceEstimatorStore.editStorageInLab(props.labId, props.editData.id, {
       name: formData.name!,
-      usage: formData.usage,
-      type: formData.type,
+      usage: formData.usage!,
+      type: formData.type!,
       size: Number(formData.size),
     })
   } else {
     // Add new
     priceEstimatorStore.addStorageToLab(props.labId, {
       name: formData.name!,
-      usage: formData.usage,
-      type: formData.type,
+      usage: formData.usage!,
+      type: formData.type!,
       size: Number(formData.size),
     })
   }

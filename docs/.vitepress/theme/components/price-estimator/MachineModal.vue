@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue"
-import type { ComputeUnit, PriceListItem, GpuModel, MachineFlavor, MachineFormData, Catalogue } from "./types"
+import type { ComputeUnit, PriceListItem, GpuModel, MachineFlavor, MachineFormData } from "./types"
 import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 
 const props = defineProps({
@@ -16,11 +16,11 @@ const emit = defineEmits<{
 }>()
 
 const formData = ref<MachineFormData>({
-  id: null,
-  name: null,
-  flavor: null,
-  gpu: null,
-  subscription: null,
+  id: undefined,
+  name: undefined,
+  flavor: undefined,
+  gpu: undefined,
+  subscription: undefined,
 })
 
 const subscriptions = [
@@ -116,7 +116,7 @@ const save = () => {
     .split(" / ")
   const core_count = parseInt(machinetitle[0].split(" ")[0])
   const ram = parseInt(machinetitle[1].split(" ")[0])
-  const flavorWithGpu = formData.value.gpu ? formData.value.flavor + " + " + formData.value.gpu : formData.value.flavor
+  const flavorWithGpu = formData.value.flavor
   const subscription = formData.value.subscription
   const gpu = formData.value.gpu
 
@@ -139,8 +139,6 @@ const save = () => {
       type: subscription!,
       gpu: gpu,
     })
-    // Add default storage
-    priceEstimatorStore.addDefaultStorageToLab(props.labId)
   }
 
   emit("close")
@@ -158,7 +156,7 @@ onMounted(() => {
       formData.value.gpu = parts[1]
     } else {
       formData.value.flavor = props.editData.flavor
-      formData.value.gpu = props.editData.gpu || null
+      formData.value.gpu = props.editData.gpu
     }
   } else {
     formData.value.id = props.computeId
