@@ -16,7 +16,7 @@ footerHtml: false
 
 const cards = [
   {
-    id: 'btn1',
+    id: 'card1',
     title: 'Do science',
     href: '/do-science/',
     image: '/img/hunt-cloud_bottle_250.png',
@@ -24,7 +24,7 @@ const cards = [
     description: 'Scientists are explorers. This section is aimed at those who use data to discover knowledge for a better world in HUNT Cloud.'
   },
   {
-    id: 'btn2',
+    id: 'card2',
     title: 'Administer science',
     href: '/administer-science/',
     image: '/img/hunt-cloud_key_250.png',
@@ -32,7 +32,7 @@ const cards = [
     description: 'Scientific administrators are keymakers. This section is aimed at administrators that enables scientific explorations.'
   },
   {
-    id: 'btn3',
+    id: 'card3',
     title: 'Govern science',
     href: '/govern-science/',
     image: '/img/hunt-cloud_compass_250.png',
@@ -43,7 +43,7 @@ const cards = [
 
 const bottomCards = [
   {
-    id: 'btn4',
+    id: 'card4',
     title: 'About HUNT Cloud',
     href: '/about/',
     description: 'HUNT Cloud is shaped by a small team of scientific instrument makers. Read more about the thinking and team behind HUNT Cloud.',
@@ -56,18 +56,13 @@ const bottomCards = [
     isMascot: true
   },
   {
-    id: 'btn5',
+    id: 'card5',
     title: 'Scientific products',
     href: 'https://www.ntnu.edu/mh/huntcloud',
     description: 'Explore and evolve. See the main HUNT Cloud page for information on HUNT Cloud\'s scientific products and services.',
   }
 ];
 
-const cardStyle = {
-  padding: '25px',
-  background: '#f5f5f5',
-  borderRadius: '20px',
-};
 
 const imageHeight = '180px';
 
@@ -85,8 +80,7 @@ const imageHeight = '180px';
   <div
     v-for="card in cards"
     :key="card.id"
-    class="hc-column-4 clickable-card"
-    :style="cardStyle"
+    class="hc-column-4 clickable-card card-styled card-hover-effect"
   >
     <a :href="card.href" class="card-link">
       <img
@@ -103,9 +97,7 @@ const imageHeight = '180px';
       <div
         v-for="card in bottomCards"
         :key="card.id"
-        class="hc-column-4"
-        :style="card.isMascot ? {} : cardStyle"
-        :class="{ 'mascot-container': card.isMascot }"
+        :class="['hc-column-4', { 'mascot-container': card.isMascot, 'card-styled': !card.isMascot }]"
       >
         <template v-if="card.isMascot">
           <a :href="card.href">
@@ -117,7 +109,7 @@ const imageHeight = '180px';
           </a>
         </template>
        <template v-else>
-          <a :href="card.href" class="card-link bottom-card-link">
+          <a :href="card.href" class="card-link">
             <div class="button-text-group">
               <h3>{{ card.title }}</h3>
               <p>{{ card.description }}</p>
@@ -145,17 +137,13 @@ h1 {
     margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
+    font-size: 2.2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.25;
 }
-
-h1 {
-  font-size: 2.2rem;
-}
-
 
 .theme-default-content {
   max-width: none !important;
@@ -181,7 +169,6 @@ h1 {
   margin: 0 auto !important;
   box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 .hc-title {
   display: flex;
@@ -238,9 +225,8 @@ h1 {
 }
 
 .card-link {
-  text-decoration: none;
   color: inherit;
-  display: grid;
+  /* display: block; */
   width: 100%;
   height: 100%;
   justify-items: center;
@@ -253,43 +239,34 @@ h1 {
   padding-top: 24px;
 }
 
-.clickable-card {
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+.card-link h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #000000;
+  justify-self: center;
 }
 
-.clickable-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.card-styled {
+  padding: 25px;
+  background: #f1eef0ff;
+  border-radius: 20px;
 }
 
-.bottom-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
+.clickable-card,
 .bottom-row .hc-column-4:not(.mascot-container) {
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.clickable-card:hover,
 .bottom-row .hc-column-4:not(.mascot-container):hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.card-link h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 10px 0;
-  color: #004c7b;
-  justify-self: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 720px) {
+
   .hc-row {
     flex-direction: row;
   }
