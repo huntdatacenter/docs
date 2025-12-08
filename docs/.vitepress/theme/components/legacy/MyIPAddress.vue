@@ -65,10 +65,12 @@ onMounted(() => {
       <CopyTextField :model-value="getMyIpaddress" :prefix="hidePrefix ? `` : `Your IP address:`" :loading="loading" />
       <v-alert
         v-if="isNtnuVpn"
-        border="start"
-        border-color="warning"
+        type="warning"
+        color="orange-darken-4"
         class="mt-1"
-        elevation="2"
+        elevation="0"
+        variant="tonal"
+        rounded="lg"
       >
         It seems like you are connected to NTNU VPN.
         You should be able to connect to HUNT Cloud VPN.
@@ -76,10 +78,12 @@ onMounted(() => {
       </v-alert>
       <v-alert
         v-if="isEduroam"
-        border="start"
-        border-color="warning"
+        type="warning"
+        color="orange-darken-4"
         class="mt-1"
-        elevation="2"
+        elevation="0"
+        variant="tonal"
+        rounded="lg"
       >
         It seems like you are connected to NTNU / Eduroam network.
         You should be able to connect to HUNT Cloud VPN.
