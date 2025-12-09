@@ -36,7 +36,8 @@ export interface ComputeUnit {
 export interface StorageUnit {
   id: number
   name: string
-  price: number
+  yearlyPrice: number
+  monthlyPrice: number
   size: number
   type: StorageType
   usage: StorageUsageType
@@ -73,7 +74,8 @@ export interface LabCard {
 
 interface StoragePrice {
   size: number
-  cost: number
+  monthlyCostTotal: number
+  yearlyCostTotal: number
 }
 
 export type StorageCostByType = {

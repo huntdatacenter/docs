@@ -35,7 +35,8 @@ const storageHeaders = ref([
   { title: "Usage", align: "start", sortable: true, key: "usage" },
   { title: "Type", align: "start", sortable: true, key: "type" },
   { title: "Size [TB]", align: "start", sortable: true, key: "size" },
-  { title: "Price / year", align: "start", sortable: true, key: "price" },
+  { title: "Price / month", align: "start", sortable: true, key: "monthlyPrice" },
+  { title: "Price / year", align: "start", sortable: true, key: "yearlyPrice" },
   { title: "Actions", key: "actions", align: "end", sortable: false },
 ] as const)
 
@@ -56,7 +57,11 @@ const storageLabSum = computed(() => {
 })
 
 const LabSum = computed(() => {
-  return computeLabSum.value.yearlyPriceTotal + storageLabSum.value.HDD.cost + storageLabSum.value.NVME.cost
+  return (
+    computeLabSum.value.yearlyCostTotal +
+    storageLabSum.value.HDD.yearlyCostTotal +
+    storageLabSum.value.NVME.yearlyCostTotal
+  )
 })
 
 const localTitle = ref(props.lab.title)
@@ -190,10 +195,10 @@ const removeStorageById = (storageId: number) => {
                 <th></th>
                 <th></th>
                 <th>
-                  <strong>{{ Number(computeLabSum?.monthlyPriceTotal || 0).toFixed(2) + " kr" }} </strong>
+                  <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) + " kr" }} </strong>
                 </th>
                 <th>
-                  <strong>{{ Number(computeLabSum?.yearlyPriceTotal || 0).toFixed(2) + " kr" }} </strong>
+                  <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) + " kr" }} </strong>
                 </th>
                 <th></th>
               </tr>
@@ -216,8 +221,11 @@ const removeStorageById = (storageId: number) => {
             <template v-slot:item.size="{ item }">
               {{ item.size.toFixed(2) + " TB" }}
             </template>
-            <template v-slot:item.price="{ item }">
-              {{ item.price.toFixed(2) + " kr" }}
+            <template v-slot:item.monthlyPrice="{ item }">
+              {{ item.monthlyPrice.toFixed(2) + " kr" }}
+            </template>
+            <template v-slot:item.yearlyPrice="{ item }">
+              {{ item.yearlyPrice.toFixed(2) + " kr" }}
             </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
@@ -256,14 +264,17 @@ const removeStorageById = (storageId: number) => {
                   <strong>{{ item.size.toFixed(2) }} TB</strong>
                 </th>
                 <th>
-                  <strong>{{ item.cost.toFixed(2) }} kr</strong>
+                  <strong>{{ item.monthlyCostTotal.toFixed(2) }} kr</strong>
                 </th>
-                <th></th>
+                <th>
+                  <strong>{{ item.yearlyCostTotal.toFixed(2) }} kr</strong>
+                </th>
               </tr>
               <tr style="background-color: #f5f5f5">
                 <th>
-                  <strong>Total lab resource</strong>
+                  <strong>Total lab resources</strong>
                 </th>
+                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
