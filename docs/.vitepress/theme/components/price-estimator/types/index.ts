@@ -82,15 +82,6 @@ export type StorageCostByType = {
   [key in StorageType]: StoragePrice
 }
 
-interface CostSummaryEntry {
-  units: number
-  price: number
-}
-
-export interface CostSummary {
-  [key: string]: CostSummaryEntry
-}
-
 export interface MachineFormData {
   id?: number
   name?: string
