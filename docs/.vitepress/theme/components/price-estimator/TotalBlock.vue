@@ -2,118 +2,131 @@
 import { computed } from "vue"
 import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 
-const totalHeaders = [
-  { title: "Name", align: "start", sortable: true, key: "name" },
-  { title: "Total units", align: "start", sortable: true, key: "units" },
-  { title: "Price / year", align: "start", sortable: true, key: "price" },
-]
-
-const sumInTotal = computed(() => {
-  const storageObj = props.totals?.storageCost || {}
-  const summedStorageCost = Object.values(storageObj).reduce((acc, cur) => acc + (cur?.cost || 0), 0)
-
-  const labsTotal = (priceEstimatorStore.totalCost || [])
-    .filter(item => item && item.name && item.name.startsWith("Lab"))
-    .reduce((sum, item) => sum + (item.price || 0), 0)
-
-  return labsTotal + (props.totals?.computePrice || 0) + summedStorageCost
+const currencyFormatter = new Intl.NumberFormat("nb-NO", {
+  style: "currency",
+  currency: "NOK",
+  maximumFractionDigits: 0,
 })
 
-// TODO: Fix this later
-function exportItems() {
-  const labsExport = [](priceEstimatorStore.labs || []).forEach(lab => {
-    const compute = lab.selectedCompute
-    const storage = lab.selectedStorage
+const headers = [
+  { title: "Name", key: "name", sortable: false },
+  { title: "Units", key: "units", sortable: false },
+  { title: "Price / year", key: "cost", sortable: false },
+]
 
-    if ((compute && compute.length > 0) || (storage && storage.length > 0)) {
-      const labObject = {
-        id: lab.id,
-        name: lab.title,
-      }
+const rawSummary = computed(() => priceEstimatorStore.updateTotalSummary())
 
-      if (compute && compute.length > 0) {
-        labObject.compute = compute.map(item => {
-          // Create a clean copy without price fields
-          const { monthlyPrice, yearlyPrice, ...rest } = item
-          return rest
-        })
-      }
+const tableItems = computed(() => {
+  const s = rawSummary.value || {}
+  const items = []
 
-      if (storage && storage.length > 0) {
-        labObject.storage = storage.map(item => {
-          // Create a clean copy without price fields
-          const { price, ...rest } = item
-          return rest
-        })
-      }
+  let totalFlat = 0
+  let totalDiscount = 0
 
-      labsExport.push(labObject)
-    }
-  })
+  // Lab subscriptions
+  if (s.labSubscriptions) {
+    const flat = Number(s.labSubscriptions.price ?? 0)
+    totalFlat += flat
 
-  const exportData = {
-    version: "1.0",
-    labs: labsExport,
+    items.push({
+      id: "labSubscriptions",
+      name: "Lab Subscriptions",
+      units: s.labSubscriptions.units ?? 0,
+      cost: flat,
+    })
   }
 
-  const jsonString = JSON.stringify(exportData, null, 2)
-  const blob = new Blob([jsonString], { type: "application/json" })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement("a")
-  a.href = url
-  a.download = "lab-export.json"
-  document.body.appendChild(a)
-  a.click()
-  document.body.removeChild(a)
-  URL.revokeObjectURL(url)
-}
+  // Compute
+  if (s.allCompute) {
+    const flat = Number(s.allCompute.price ?? 0)
+    totalFlat += flat
+
+    items.push({
+      id: "compute",
+      name: "Compute",
+      units: s.allCompute.units ?? 0,
+      cost: flat,
+    })
+  }
+
+  // Storage
+  if (s.allStorage) {
+    Object.entries(s.allStorage).forEach(([type, obj]) => {
+      const flat = Number(obj.costFlat ?? 0)
+      const tiered = Number(obj.costTiered ?? flat)
+      const discount = Math.max(0, flat - tiered)
+
+      totalFlat += flat
+      totalDiscount += discount
+
+      items.push({
+        id: `storage-${type}`,
+        name: `Storage: ${type}`,
+        units: obj.size ?? 0,
+        cost: flat,
+      })
+    })
+  }
+
+  // Discount row
+  items.push({
+    id: "discount-row",
+    name: "Storage Discount",
+    units: "",
+    cost: totalDiscount > 0 ? -totalDiscount : 0,
+    isDiscountRow: true,
+  })
+
+  // Total row
+  items.push({
+    id: "total-row",
+    name: "Total",
+    units: "",
+    cost: totalFlat - totalDiscount,
+    isTotalRow: true,
+  })
+
+  return items
+})
 </script>
 
 <template>
-  <v-sheet class="lab-card">
-    <v-card class="ma-0 pa-4">
-      <v-card-title>Total Summary</v-card-title>
-      <v-data-table-virtual
-        :items="priceEstimatorStore.totalCost"
-        :headers="totalHeaders"
-        hide-default-footer
-        item-value="id"
-      >
-        <template v-slot:item.price="{ item }">
-          {{ Number(item.price).toFixed(2) + " kr" }}
-        </template>
-        <template v-slot:item.storage="{ item }">
-          {{ Number(item.price).toFixed(2) + " TB" }}
-        </template>
-      </v-data-table-virtual>
-      <v-row dense>
-        <v-col cols="5">
-          <v-btn class="mt-5" @click="exportItems">
-            <v-icon left>mdi-export</v-icon>
-            Export
-          </v-btn>
-        </v-col>
-        <v-col cols="7">
-          <v-list dense>
-            <v-list-item>
-              <v-list-item-title> <strong> Estimated total price: </strong></v-list-item-title>
-              <v-list-item-subtitle class="align-end">
-                {{ Number(sumInTotal).toFixed(2) }} NOK ex. VAT / Year
-              </v-list-item-subtitle>
-            </v-list-item>
-          </v-list>
-        </v-col>
-      </v-row>
-    </v-card>
-  </v-sheet>
+  <v-card class="ma-4 pa-4">
+    <v-card-title>Total Summary</v-card-title>
+
+    <v-data-table :headers="headers" :items="tableItems" hide-default-footer item-value="id" class="mt-2">
+      <template #item.name="{ item }">
+        <strong v-if="item.isTotalRow">{{ item.name }}</strong>
+        <span v-else>{{ item.name }}</span>
+      </template>
+
+      <template #item.cost="{ item }">
+        <span v-if="item.isDiscountRow" class="text-green-darken-3" style="font-weight: 600">
+          - {{ currencyFormatter.format(Math.abs(item.cost)) }}
+        </span>
+
+        <span v-else-if="item.isTotalRow" style="font-weight: 700">
+          {{ currencyFormatter.format(item.cost) }}
+        </span>
+
+        <span v-else>
+          {{ currencyFormatter.format(item.cost) }}
+        </span>
+      </template>
+
+      <template #item.units="{ item }">
+        <strong v-if="item.isTotalRow">{{ item.units }}</strong>
+        <span v-else>{{ item.units }}</span>
+      </template>
+
+      <template #no-data>
+        <v-sheet class="pa-4">No summary data available</v-sheet>
+      </template>
+    </v-data-table>
+  </v-card>
 </template>
 
 <style scoped>
-.lab-card {
-  width: 94%;
-  margin: auto;
-}
-
 .v-card {
   background-color: #f5f5f5;
 }

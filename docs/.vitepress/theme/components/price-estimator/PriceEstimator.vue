@@ -111,13 +111,15 @@ async function handleFileUpload(event: Event) {
       </v-container>
 
       <v-row>
-        <v-col cols="12">
+        <v-col>
           <LabCard v-for="lab of priceEstimatorStore.labs" :key="lab.id" :lab="lab" />
         </v-col>
       </v-row>
 
       <v-row v-if="priceEstimatorStore.labs.length">
-        <!-- <TotalBlock /> -->
+        <v-col>
+          <TotalBlock />
+        </v-col>
       </v-row>
     </v-sheet>
   </v-container>
