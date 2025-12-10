@@ -41,35 +41,63 @@ export const priceEstimatorStore = reactive({
     await this.getCatalogueAPI()
 
     // Load saved data from localstorage
-    let saved
+    let saved = false
 
-    // TODO: Fix this later
-    // if (!ISSERVER) {
-    //   try {
-    //     saved = localStorage.getItem("pricingEstimatorState")
-    //     if (saved) {
-    //       const state = JSON.parse(saved)
-    //       this.labs = (state.labs || []).map((lab: any) => ({
-    //         id: lab.id ?? this.generateLabId(),
-    //         title: lab.title,
-    //         storage: lab.storage || 0,
-    //         priceStorage: lab.priceStorage || 0,
-    //         priceComputeYearly: lab.priceComputeYearly || 0,
-    //         numCompute: lab.numCompute || 0,
-    //         selectedCompute: lab.selectedCompute || [],
-    //         selectedStorage: lab.selectedStorage || [],
-    //       }))
-    //     }
-    //   } catch (err) {
-    //     console.error("Failed to load state:", err)
-    //   }
-    // }
+    if (!ISSERVER) {
+      try {
+        const savedJson = localStorage.getItem("hunt-cloud-estimator-state")
+        if (savedJson) {
+          const state = JSON.parse(savedJson)
+          if (state.labs && Array.isArray(state.labs)) {
+            this.labs = []
+
+            for (const lab of state.labs) {
+              const newLabId = this.labs.length
+              this.labs.push({
+                id: newLabId,
+                title: lab.title,
+                selectedCompute: [],
+                selectedStorage: [],
+              })
+
+              if (lab.selectedCompute) {
+                for (const comp of lab.selectedCompute) {
+                  this.addComputeToLab(newLabId, {
+                    name: comp.name,
+                    flavor: comp.flavor,
+                    core_count: comp.core_count,
+                    ram: comp.ram,
+                    type: comp.type,
+                    gpu: comp.gpu,
+                  })
+                }
+              }
+
+              if (lab.selectedStorage) {
+                for (const store of lab.selectedStorage) {
+                  this.addStorageToLab(newLabId, {
+                    name: store.name,
+                    usage: store.usage,
+                    type: store.type,
+                    size: store.size,
+                  })
+                }
+              }
+            }
+            saved = true
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load state:", err)
+      }
+    }
 
     if (!saved) {
       // Create first sample lab
       this.addLab("Lab 1")
     }
 
+    this.updateTotalSummary()
     this.isInitializingPriseEstimator = false
   },
 
@@ -104,23 +132,16 @@ export const priceEstimatorStore = reactive({
   },
 
   saveStateToLocal() {
-    console.log("Not working for now")
-    // try {
-    //   const stateToSave = {
-    //     labs: this.labs.map(lab => ({
-    //       id: lab.id,
-    //       title: lab.title,
-    //       storage: lab.storage,
-    //       priceStorage: lab.priceStorageYearly,
-    //       priceComputeYearly: lab.priceComputeYearly,
-    //       selectedCompute: lab.selectedCompute || [],
-    //       selectedStorage: lab.selectedStorage || [],
-    //     })),
-    //   }
-    //   localStorage.setItem("pricingEstimatorState", JSON.stringify(stateToSave))
-    // } catch (err) {
-    //   console.error("Failed to save state:", err)
-    // }
+    if (this.isInitializingPriseEstimator || ISSERVER) return
+
+    try {
+      const stateToSave = {
+        labs: this.labs,
+      }
+      localStorage.setItem("hunt-cloud-estimator-state", JSON.stringify(stateToSave))
+    } catch (err) {
+      console.error("Failed to save state:", err)
+    }
   },
 
   /* Lab helpers */
@@ -230,7 +251,7 @@ export const priceEstimatorStore = reactive({
   clearAllLabs() {
     this.labs = []
 
-    if (!ISSERVER) localStorage.removeItem("pricingEstimatorState")
+    if (!ISSERVER) localStorage.removeItem("hunt-cloud-estimator-state")
   },
 
   updateLabTitle(id: number, title: string) {
