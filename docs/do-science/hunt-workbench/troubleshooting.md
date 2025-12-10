@@ -79,12 +79,30 @@ If your disk space is full, discuss with your lab leader/coordinator if you shou
 
 ### Cannot connect to R session
 
-This warning popup usually appears after the change of R version.
+This warning specific to transmission usually appears when work volume is full:
 
-```
+```txt
 Could not connect to the R session on RStudio Server.
 
-Unable to connect service (1)
+Error occurred during transmission (6)
+
+[Retry]
+```
+
+If you were previously able to access your applications (such as _RStudio_), and then the application suddenly stopped working, one quick approach is to check your available diskspace with following command:
+
+```bash
+df -h /mnt/work
+```
+
+### Unable to connect to service
+
+This warning popup usually appears after the change of R version.
+
+```txt
+Could not connect to the R session on RStudio Server.
+
+Unable to connect to service (1)
 
 [Retry]
 ```
