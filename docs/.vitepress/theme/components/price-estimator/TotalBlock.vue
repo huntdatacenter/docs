@@ -126,10 +126,14 @@ const tableItems = computed(() => {
         <v-card-title>Total Summary</v-card-title>
       </v-col>
       <v-col cols="auto">
-        <v-btn density="default" size="large" dark @click="priceEstimatorStore.exportItems()">
-          <v-icon left>mdi-export</v-icon>
-          Export
-        </v-btn>
+        <v-tooltip text="Save this configuration to a JSON file">
+          <template v-slot:activator="{ props }">
+            <v-btn density="default" size="large" v-bind="props" dark @click="priceEstimatorStore.exportItems()">
+              <v-icon left>mdi-export</v-icon>
+              Save config
+            </v-btn>
+          </template>
+        </v-tooltip>
       </v-col>
     </v-row>
 
