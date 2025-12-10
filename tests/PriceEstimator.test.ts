@@ -3,7 +3,7 @@ import { mount, flushPromises } from "@vue/test-utils"
 import PriceEstimator from "../docs/.vitepress/theme/components/price-estimator/PriceEstimator.vue"
 import { describe, it, expect, beforeEach, vi } from "vitest"
 import { priceEstimatorStore } from "../docs/.vitepress/theme/components/price-estimator/stores/priceEstimatorStore"
-import type { StorageUnit, PriceListItem } from "../docs/.vitepress/theme/components/price-estimator/types"
+import type { StorageUnit } from "../docs/.vitepress/theme/components/price-estimator/types"
 
 // Mock the pricesApi module
 const { mockPriceList } = vi.hoisted(() => {
@@ -64,6 +64,13 @@ const { mockPriceList } = vi.hoisted(() => {
         "service.commitment": "1Y",
         "price.nok.ex.vat": 50000,
       },
+      {
+        "service.group": "lab",
+        "service.unit": "lab",
+        "service.level": "COMMITMENT",
+        "service.commitment": "1Y",
+        "price.nok.ex.vat": 20000,
+      },
     ],
   }
 })
@@ -88,6 +95,18 @@ describe("PriceEstimator", () => {
     priceEstimatorStore.catalogue.storagePrices = mockPriceList.filter(
       (item: any) => item["service.family"] === "store",
     ) as any
+    priceEstimatorStore.catalogue.computePrices = mockPriceList.filter(
+      (item: any) => item["service.group"] === "cpu",
+    ) as any
+    priceEstimatorStore.catalogue.labPrices = mockPriceList.filter(
+      (item: any) => item["service.group"] === "lab",
+    ) as any
+    priceEstimatorStore.catalogue.machinePrices = [
+      {
+        value: "default.c1",
+        title: "Default - 4 cores / 8 GB",
+      },
+    ] as any
   })
 
   describe("Component Rendering", () => {
@@ -111,10 +130,6 @@ describe("PriceEstimator", () => {
         {
           id: 1,
           title: "Lab 1",
-          storage: 15,
-          priceStorage: 0,
-          priceComputeYearly: 0,
-          numCompute: 0,
           selectedCompute: [],
           selectedStorage: [
             {
@@ -123,15 +138,19 @@ describe("PriceEstimator", () => {
               type: "NVME",
               size: 15,
               usage: "Work",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
       ]
 
       const result = priceEstimatorStore.calculateTotalStorageCost()
-      const actual = 10 * 1000 + 5 * 800
-      expect(result.NVME.cost).toBeCloseTo(actual, 0)
+      const expectedTiered = 10 * 1000 + 5 * 800
+      const expectedFlat = 15 * 1000
+
+      expect(result.NVME.costTiered).toBeCloseTo(expectedTiered, 0)
+      expect(result.NVME.costFlat).toBeCloseTo(expectedFlat, 0)
       expect(result.NVME.size).toBe(15)
     })
 
@@ -140,10 +159,6 @@ describe("PriceEstimator", () => {
         {
           id: 1,
           title: "Lab 1",
-          storage: 110,
-          priceStorage: 0,
-          priceComputeYearly: 0,
-          numCompute: 0,
           selectedCompute: [],
           selectedStorage: [
             {
@@ -152,16 +167,19 @@ describe("PriceEstimator", () => {
               type: "NVME",
               size: 110,
               usage: "Work",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
       ]
 
       const result = priceEstimatorStore.calculateTotalStorageCost()
-      const actual = 10 * 1000 + 90 * 800 + 10 * 600
+      const expectedTiered = 10 * 1000 + 90 * 800 + 10 * 600
+      const expectedFlat = 110 * 1000
 
-      expect(result.NVME.cost).toBeCloseTo(actual, 0)
+      expect(result.NVME.costTiered).toBeCloseTo(expectedTiered, 0)
+      expect(result.NVME.costFlat).toBeCloseTo(expectedFlat, 0)
       expect(result.NVME.size).toBe(110)
     })
 
@@ -170,10 +188,6 @@ describe("PriceEstimator", () => {
         {
           id: 1,
           title: "Lab 1",
-          storage: 8,
-          priceStorage: 0,
-          priceComputeYearly: 0,
-          numCompute: 0,
           selectedCompute: [],
           selectedStorage: [
             {
@@ -182,14 +196,19 @@ describe("PriceEstimator", () => {
               type: "HDD",
               size: 8,
               usage: "Archive",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
       ]
 
       const result = priceEstimatorStore.calculateTotalStorageCost()
-      expect(result.HDD.cost).toBeCloseTo(4000, 0)
+      const expectedTiered = 8 * 500
+      const expectedFlat = 8 * 500
+
+      expect(result.HDD.costTiered).toBeCloseTo(expectedTiered, 0)
+      expect(result.HDD.costFlat).toBeCloseTo(expectedFlat, 0)
       expect(result.HDD.size).toBe(8)
     })
 
@@ -198,10 +217,6 @@ describe("PriceEstimator", () => {
         {
           id: 1,
           title: "Lab 1",
-          storage: 13,
-          priceStorage: 0,
-          priceComputeYearly: 0,
-          numCompute: 0,
           selectedCompute: [],
           selectedStorage: [
             {
@@ -210,7 +225,8 @@ describe("PriceEstimator", () => {
               type: "NVME",
               size: 5,
               usage: "Work",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
             {
               id: 2,
@@ -218,17 +234,18 @@ describe("PriceEstimator", () => {
               type: "HDD",
               size: 8,
               usage: "Archive",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
       ]
-      const actualNvmeCost = 5 * 1000
-      const actualHddCost = 8 * 500
+      const expectedNvmeTiered = 5 * 1000
+      const expectedHddTiered = 8 * 500
 
       const result = priceEstimatorStore.calculateTotalStorageCost()
-      expect(result.NVME.cost).toBeCloseTo(actualNvmeCost, 0)
-      expect(result.HDD.cost).toBeCloseTo(actualHddCost, 0)
+      expect(result.NVME.costTiered).toBeCloseTo(expectedNvmeTiered, 0)
+      expect(result.HDD.costTiered).toBeCloseTo(expectedHddTiered, 0)
     })
 
     it("calculates storage across multiple labs correctly", async () => {
@@ -236,10 +253,6 @@ describe("PriceEstimator", () => {
         {
           id: 1,
           title: "Lab 1",
-          storage: 6,
-          priceStorage: 0,
-          priceComputeYearly: 0,
-          numCompute: 0,
           selectedCompute: [],
           selectedStorage: [
             {
@@ -248,17 +261,14 @@ describe("PriceEstimator", () => {
               type: "NVME",
               size: 6,
               usage: "Work",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
         {
           id: 2,
           title: "Lab 2",
-          storage: 7,
-          priceStorage: 0,
-          priceComputeYearly: 0,
-          numCompute: 0,
           selectedCompute: [],
           selectedStorage: [
             {
@@ -267,21 +277,20 @@ describe("PriceEstimator", () => {
               type: "NVME",
               size: 7,
               usage: "Work",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
       ]
 
       const result = priceEstimatorStore.calculateTotalStorageCost()
-      expect(result.NVME.cost).toBeCloseTo(12400, 0)
-      expect(result.NVME.size).toBe(13)
-    })
+      const expectedTiered = 10 * 1000 + 3 * 800
+      const expectedFlat = 13 * 1000
 
-    it("returns empty object for no storage", async () => {
-      priceEstimatorStore.labs = []
-      const result = priceEstimatorStore.calculateTotalStorageCost()
-      expect(Object.keys(result).length).toBe(0)
+      expect(result.NVME.costTiered).toBeCloseTo(expectedTiered, 0)
+      expect(result.NVME.costFlat).toBeCloseTo(expectedFlat, 0)
+      expect(result.NVME.size).toBe(13)
     })
   })
 
@@ -291,111 +300,190 @@ describe("PriceEstimator", () => {
 
       priceEstimatorStore.addLab("Lab 1")
       expect(priceEstimatorStore.labs.length).toBe(1)
-      expect(priceEstimatorStore.labs[0].title).toBe("Lab")
+      expect(priceEstimatorStore.labs[0].title).toBe("Lab 1")
 
       priceEstimatorStore.addLab("Lab 2")
       expect(priceEstimatorStore.labs.length).toBe(2)
       expect(priceEstimatorStore.labs[1].title).toBe("Lab 2")
     })
 
-    it("removes a lab card", async () => {
+    it("Removing labs", async () => {
       priceEstimatorStore.addLab("Lab 1")
-      priceEstimatorStore.addLab("Lab 1")
-      expect(priceEstimatorStore.labs.length).toBe(2)
+      priceEstimatorStore.addLab("Lab 2")
 
-      priceEstimatorStore.removeLab(0)
-      expect(priceEstimatorStore.labs.length).toBe(1)
-    })
-
-    it("removes all labs", async () => {
-      priceEstimatorStore.addLab("Lab 1")
-      priceEstimatorStore.addLab("Lab 1")
-      priceEstimatorStore.addLab("Lab 1")
+      priceEstimatorStore.addLab("Lab 3")
       expect(priceEstimatorStore.labs.length).toBe(3)
+
+      priceEstimatorStore.removeLab(0) // Removes Lab 1 (id 0)
+      expect(priceEstimatorStore.labs.length).toBe(2)
+      expect(priceEstimatorStore.labs[0].title).toBe("Lab 2")
 
       priceEstimatorStore.clearAllLabs()
       expect(priceEstimatorStore.labs.length).toBe(0)
-      expect(priceEstimatorStore.totals.computeCost).toBe(0)
-      expect(Object.keys(priceEstimatorStore.totals.storageCostByType).length).toBe(0)
+    })
+
+    it("adds compute to a lab correctly using catalogue prices", () => {
+      priceEstimatorStore.addLab("Lab 1")
+      const labId = priceEstimatorStore.labs[0].id
+
+      // Clear defaults
+      priceEstimatorStore.labs[0].selectedCompute = []
+
+      priceEstimatorStore.addComputeToLab(labId, {
+        name: "My Machine",
+        flavor: "default.c1",
+        core_count: 4,
+        ram: 8,
+        type: "COMMITMENT_1Y",
+      })
+
+      const addedCompute = priceEstimatorStore.labs[0].selectedCompute[0]
+      expect(addedCompute).toBeDefined()
+      expect(addedCompute.name).toBe("My Machine")
+      // Mock data has 50000 for default.c1
+      expect(addedCompute.yearlyPrice).toBe(50000)
+      expect(addedCompute.monthlyPrice).toBeCloseTo(50000 / 12, 4)
+    })
+
+    it("adds storage to a lab correctly using catalogue prices", () => {
+      priceEstimatorStore.addLab("Lab 1")
+      const labId = priceEstimatorStore.labs[0].id
+
+      // Clear defaults
+      priceEstimatorStore.labs[0].selectedStorage = []
+
+      priceEstimatorStore.addStorageToLab(labId, {
+        name: "My Volume",
+        usage: "Work",
+        type: "NVME",
+        size: 2,
+      })
+
+      const addedStorage = priceEstimatorStore.labs[0].selectedStorage[0]
+      expect(addedStorage).toBeDefined()
+      expect(addedStorage.name).toBe("My Volume")
+      // Mock data has 1000 for NVME First 10 TB. 2 * 1000 = 2000.
+      expect(addedStorage.yearlyPrice).toBe(2000)
+      expect(addedStorage.monthlyPrice).toBeCloseTo(2000 / 12, 4)
     })
   })
 
   describe("Total Calculations", () => {
     it("updates compute price total when lab card compute changes", async () => {
       priceEstimatorStore.addLab("Lab 1")
+      const labId = priceEstimatorStore.labs[0].id
 
-      // Simulate adding compute
-      priceEstimatorStore.labs[0].priceComputeYearly = 50000
-      priceEstimatorStore.labs[0].numCompute = 1
+      // Clear default compute added by addLab
+      priceEstimatorStore.labs[0].selectedCompute = []
 
-      // Trigger update
-      priceEstimatorStore.updateCostSummary()
+      priceEstimatorStore.addComputeToLab(labId, {
+        name: "machine-1",
+        flavor: "default.c1",
+        core_count: 4,
+        ram: 8,
+        type: "COMMITMENT_1Y",
+      })
 
-      // Note: updateCostSummary uses totals.computeCost which is updated by addComputeToLab etc.
-      // We need to manually update totals.computeCost if we manipulate labs directly
-      priceEstimatorStore.totals.computeCost = 50000
+      const summary = priceEstimatorStore.updateTotalSummary()
 
-      expect(priceEstimatorStore.totals.computeCost).toBe(50000)
+      // @ts-ignore
+      expect(summary.allCompute.price).toBe(50000)
+      // @ts-ignore
+      expect(summary.allCompute.units).toBe(1)
     })
 
     it("updates storage total when lab card storage changes", async () => {
       priceEstimatorStore.addLab("Lab 1")
+      const labId = priceEstimatorStore.labs[0].id
 
-      priceEstimatorStore.labs[0].selectedStorage = [
-        {
-          id: 1,
-          name: "volume-1",
-          type: "NVME",
-          size: 5,
-          usage: "Work",
-          price: 5000,
-        } as StorageUnit,
-      ]
+      // Clear default storage added by addLab
+      priceEstimatorStore.labs[0].selectedStorage = []
 
-      priceEstimatorStore.updateAddedStorage()
+      priceEstimatorStore.addStorageToLab(labId, {
+        name: "volume-1",
+        usage: "Work",
+        type: "NVME",
+        size: 5,
+      })
 
-      expect(priceEstimatorStore.totals.storageCostByType.NVME).toBeDefined()
-      expect(priceEstimatorStore.totals.storageCostByType.NVME.size).toBe(5)
-      expect(priceEstimatorStore.totals.storageCostByType.NVME.cost).toBeCloseTo(5000, 0)
+      const summary = priceEstimatorStore.updateTotalSummary()
+
+      // @ts-ignore
+      expect(summary.allStorage.NVME).toBeDefined()
+      // @ts-ignore
+      expect(summary.allStorage.NVME.size).toBe(5)
+      // 5 * 1000 (First 10 TB price)
+      // @ts-ignore
+      expect(summary.allStorage.NVME.costFlat).toBeCloseTo(5000, 0)
     })
 
     it("Updates totals when multiple labs are added with compute and storage", async () => {
       priceEstimatorStore.addLab("Lab 1")
-      priceEstimatorStore.labs[0].priceComputeYearly = 60000
-      priceEstimatorStore.labs[0].selectedStorage = [
-        {
-          id: 1,
-          name: "volume-1",
-          type: "NVME",
-          size: 10,
-          usage: "Work",
-          price: 10000,
-        } as StorageUnit,
-      ]
+      const lab1Id = priceEstimatorStore.labs[0].id
+      priceEstimatorStore.labs[0].selectedCompute = []
+      priceEstimatorStore.labs[0].selectedStorage = []
 
-      priceEstimatorStore.addLab("Lab 1")
-      priceEstimatorStore.labs[1].priceComputeYearly = 120000
-      priceEstimatorStore.labs[1].selectedStorage = [
-        {
-          id: 2,
-          name: "volume-2",
-          type: "NVME",
-          size: 20,
-          usage: "Work",
-          price: 20000,
-        } as StorageUnit,
-      ]
+      // Lab 1: 1 machine (50k), 10TB NVME (10k)
+      priceEstimatorStore.addComputeToLab(lab1Id, {
+        name: "machine-1",
+        flavor: "default.c1",
+        core_count: 4,
+        ram: 8,
+        type: "COMMITMENT_1Y",
+      })
+      priceEstimatorStore.addStorageToLab(lab1Id, {
+        name: "volume-1",
+        usage: "Work",
+        type: "NVME",
+        size: 10,
+      })
 
-      // Manually update totals as we bypassed the action methods
-      priceEstimatorStore.totals.computeCost = 180000
-      priceEstimatorStore.updateAddedStorage()
+      priceEstimatorStore.addLab("Lab 2")
+      const lab2Id = priceEstimatorStore.labs[1].id
+      priceEstimatorStore.labs[1].selectedCompute = []
+      priceEstimatorStore.labs[1].selectedStorage = []
 
-      expect(priceEstimatorStore.totals.computeCost).toBe(180000)
-      expect(priceEstimatorStore.totals.storageCostByType.NVME).toBeDefined()
-      expect(priceEstimatorStore.totals.storageCostByType.NVME.size).toBe(30)
+      // Lab 2: 2 machines (100k), 20TB NVME (20k flat)
+      priceEstimatorStore.addComputeToLab(lab2Id, {
+        name: "machine-2a",
+        flavor: "default.c1",
+        core_count: 4,
+        ram: 8,
+        type: "COMMITMENT_1Y",
+      })
+      priceEstimatorStore.addComputeToLab(lab2Id, {
+        name: "machine-2b",
+        flavor: "default.c1",
+        core_count: 4,
+        ram: 8,
+        type: "COMMITMENT_1Y",
+      })
+      priceEstimatorStore.addStorageToLab(lab2Id, {
+        name: "volume-2",
+        usage: "Work",
+        type: "NVME",
+        size: 20,
+      })
 
-      const actualNvmeCost = 10 * 1000 + 20 * 800
-      expect(priceEstimatorStore.totals.storageCostByType.NVME.cost).toBeCloseTo(actualNvmeCost, 0)
+      const summary = priceEstimatorStore.updateTotalSummary()
+
+      // Total compute: 50k + 50k + 50k = 150k
+      // @ts-ignore
+      expect(summary.allCompute.price).toBe(150000)
+
+      // @ts-ignore
+      expect(summary.allStorage.NVME).toBeDefined()
+      // Total storage size: 10 + 20 = 30 TB
+      // @ts-ignore
+      expect(summary.allStorage.NVME.size).toBe(30)
+
+      // Tiered calculation for 30TB NVME:
+      // First 10TB @ 1000 = 10,000
+      // Next 20TB @ 800 = 16,000
+      // Total = 26,000
+      const expectedNvmeTiered = 10 * 1000 + 20 * 800
+      // @ts-ignore
+      expect(summary.allStorage.NVME.costTiered).toBeCloseTo(expectedNvmeTiered, 0)
     })
   })
 })

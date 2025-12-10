@@ -92,7 +92,17 @@ const tableItems = computed(() => {
 
 <template>
   <v-card class="ma-4 pa-4">
-    <v-card-title>Total Summary</v-card-title>
+    <v-row align="center" justify="space-between">
+      <v-col>
+        <v-card-title>Total Summary</v-card-title>
+      </v-col>
+      <v-col cols="auto">
+        <v-btn density="default" size="large" dark @click="priceEstimatorStore.exportItems()">
+          <v-icon left>mdi-export</v-icon>
+          Export
+        </v-btn>
+      </v-col>
+    </v-row>
 
     <v-data-table :headers="headers" :items="tableItems" hide-default-footer item-value="id" class="mt-2">
       <template #item.name="{ item }">

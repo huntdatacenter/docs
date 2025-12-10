@@ -537,6 +537,148 @@ export const priceEstimatorStore = reactive({
     const storageSum = this.calculateTotalStorageCost()
     console.log("SUMMARY", storageSum)
     summary.allStorage = storageSum
+    console.log("FINAL SUMMARY", summary)
     return summary
+  },
+
+  exportItems() {
+    const labsToExport = this.labs.map(lab => ({
+      id: lab.id,
+      name: lab.title,
+      compute: lab.selectedCompute.map(c => ({
+        id: c.id,
+        name: c.name,
+        flavor: c.flavor,
+        core_count: c.core_count,
+        ram: c.ram,
+        gpu: c.gpu,
+        type: c.type,
+      })),
+      storage: lab.selectedStorage.map(s => ({
+        id: s.id,
+        name: s.name,
+        usage: s.usage,
+        type: s.type,
+        size: s.size,
+      })),
+    }))
+
+    const exportData = {
+      version: "1.0",
+      labs: labsToExport,
+    }
+
+    const jsonString = JSON.stringify(exportData, null, 2)
+    const blob = new Blob([jsonString], { type: "application/json" })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement("a")
+    a.href = url
+    a.download = "hunt-cloud-estimate.json"
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+    URL.revokeObjectURL(url)
+  },
+
+  async importLabs(file: File) {
+    return new Promise<void>((resolve, reject) => {
+      const reader = new FileReader()
+
+      reader.onload = e => {
+        try {
+          const data = JSON.parse(e.target?.result as string)
+
+          // Validation
+          if (!data.version) throw new Error("Invalid JSON format: Missing version")
+          if (!Array.isArray(data.labs)) throw new Error("Invalid JSON format: 'labs' must be an array")
+
+          data.labs.forEach((lab: any, labIndex: number) => {
+            if (!lab.name) throw new Error(`Invalid lab at index ${labIndex}: Missing 'name'`)
+
+            if (lab.compute) {
+              if (!Array.isArray(lab.compute)) throw new Error(`Invalid lab '${lab.name}': 'compute' must be an array`)
+              lab.compute.forEach((comp: any, compIndex: number) => {
+                const required = ["name", "flavor", "core_count", "ram", "type"]
+                const missing = required.filter(
+                  field => comp[field] === undefined || comp[field] === null || comp[field] === "",
+                )
+                if (missing.length > 0) {
+                  throw new Error(
+                    `Invalid compute item at index ${compIndex} in lab '${lab.name}': Missing fields: ${missing.join(", ")}`,
+                  )
+                }
+              })
+            }
+
+            if (lab.storage) {
+              if (!Array.isArray(lab.storage)) throw new Error(`Invalid lab '${lab.name}': 'storage' must be an array`)
+              lab.storage.forEach((store: any, storeIndex: number) => {
+                const required = ["name", "usage", "type", "size"]
+                const missing = required.filter(
+                  field => store[field] === undefined || store[field] === null || store[field] === "",
+                )
+                if (missing.length > 0) {
+                  throw new Error(
+                    `Invalid storage item at index ${storeIndex} in lab '${lab.name}': Missing fields: ${missing.join(", ")}`,
+                  )
+                }
+              })
+            }
+          })
+
+          this.isInitializingPriseEstimator = true
+          this.clearAllLabs()
+
+          for (const labData of data.labs) {
+            const newLabId = this.labs.length
+
+            this.labs.push({
+              id: newLabId,
+              title: labData.name,
+              selectedCompute: [],
+              selectedStorage: [],
+            })
+
+            if (labData.compute) {
+              for (const comp of labData.compute) {
+                this.addComputeToLab(newLabId, {
+                  name: comp.name,
+                  flavor: comp.flavor,
+                  core_count: comp.core_count,
+                  ram: comp.ram,
+                  type: comp.type,
+                  gpu: comp.gpu,
+                })
+              }
+            }
+
+            if (labData.storage) {
+              for (const store of labData.storage) {
+                this.addStorageToLab(newLabId, {
+                  name: store.name,
+                  usage: store.usage,
+                  type: store.type,
+                  size: store.size,
+                })
+              }
+            }
+          }
+
+          this.updateTotalSummary()
+          this.isInitializingPriseEstimator = false
+          resolve()
+        } catch (err) {
+          this.isInitializingPriseEstimator = false
+          reject(err)
+        }
+      }
+
+      reader.onerror = () => {
+        this.isInitializingPriseEstimator = false
+        reject(new Error("Failed to read file"))
+      }
+
+      reader.readAsText(file)
+    })
   },
 })

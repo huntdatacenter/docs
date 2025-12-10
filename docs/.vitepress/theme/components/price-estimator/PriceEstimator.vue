@@ -22,47 +22,18 @@ function triggerFileUpload() {
   fileInput.value?.click()
 }
 
-// TODO: Fix this later
 async function handleFileUpload(event: Event) {
-  console.log("This does not work for now")
-  // const target = event.target as HTMLInputElement
-  // const file = target.files?.[0]
-  // if (!file) return
+  const target = event.target as HTMLInputElement
+  const file = target.files?.[0]
+  if (!file) return
 
-  // const reader = new FileReader()
-
-  // reader.onload = async e => {
-  //   try {
-  //     priceEstimatorStore.updateTotalSummary()
-
-  //     const data = JSON.parse(e.target?.result as string)
-  //     if (!data.version || !Array.isArray(data.labs)) {
-  //       throw new Error("Invalid JSON format")
-  //     }
-
-  //     priceEstimatorStore.isInitializingPriseEstimator = true
-  //     priceEstimatorStore.clearAllLabs()
-
-  //     data.labs.forEach((lab: any) => {
-  //       priceEstimatorStore.labs.push({
-  //         id: lab.id,
-  //         title: lab.name,
-  //         priceComputeYearly: 0,
-  //         selectedCompute: lab.compute || [],
-  //         selectedStorage: lab.storage || [],
-  //       })
-  //     })
-
-  //     await nextTick()
-  //     priceEstimatorStore.isInitializingPriseEstimator = false
-  //     target.value = ""
-  //   } catch (err) {
-  //     console.error(err)
-  //     alert("Error importing file.")
-  //   }
-  // }
-
-  // reader.readAsText(file)
+  try {
+    await priceEstimatorStore.importLabs(file)
+    target.value = ""
+  } catch (err) {
+    console.error(err)
+    alert(err)
+  }
 }
 </script>
 
