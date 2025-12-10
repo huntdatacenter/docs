@@ -58,6 +58,8 @@ export const priceEstimatorStore = reactive({
                 title: lab.title,
                 selectedCompute: [],
                 selectedStorage: [],
+                // @ts-ignore
+                subscriptionType: lab.subscriptionType,
               })
 
               if (lab.selectedCompute) {
@@ -90,11 +92,6 @@ export const priceEstimatorStore = reactive({
       } catch (err) {
         console.error("Failed to load state:", err)
       }
-    }
-
-    if (!saved) {
-      // Create first sample lab
-      this.addLab("Lab 1")
     }
 
     this.updateTotalSummary()
@@ -145,68 +142,82 @@ export const priceEstimatorStore = reactive({
   },
 
   /* Lab helpers */
-  addLab(labTitle: string) {
+  addLab(payload: {
+    name: string
+    subscriptionType: string
+    machineFlavor: string
+    machineSubscription: string
+    hddSize: number
+    nvmeSize: number
+  }) {
     const newLab: LabCard = {
       id: this.labs.length,
-      title: labTitle,
+      title: payload.name,
       selectedCompute: [],
       selectedStorage: [],
+      // @ts-ignore
+      subscriptionType: payload.subscriptionType,
     }
 
     // Add compute
-    const defaultComputeUnit = this.catalogue.computePrices.find(
-      (item: PriceListItem) =>
-        item["service.unit"] === "default.c1" &&
-        item["service.level"] === "COMMITMENT" &&
-        item["service.commitment"] === "1Y",
-    )
-    if (!defaultComputeUnit) return
-
     const machineInfo = this.catalogue.machinePrices.find(
-      (item: MachineFlavor) => item["value"] === defaultComputeUnit["service.unit"],
+      (item: MachineFlavor) => item["value"] === payload.machineFlavor,
     )
-    if (!machineInfo) return
 
-    const machineTitle = machineInfo["title"].split(" - ")[1].split(" / ")
-    const coreCount = parseInt(machineTitle[0].split(" ")[0])
-    const ram = parseInt(machineTitle[1].split(" ")[0])
-    const unit: ComputeUnit = {
-      id: 0,
-      name: "machine-1",
-      flavor: defaultComputeUnit["service.unit"],
-      core_count: coreCount,
-      ram,
-      type: "COMMITMENT_1Y",
-      monthlyPrice: Number(defaultComputeUnit["price.nok.ex.vat"] / 12),
-      yearlyPrice: defaultComputeUnit["price.nok.ex.vat"],
+    if (machineInfo) {
+      const prices = this.getComputePriceFromCatalogue(payload.machineFlavor, payload.machineSubscription)
+
+      const machineTitle = machineInfo["title"].split(" - ")[1].split(" / ")
+      const coreCount = parseInt(machineTitle[0].split(" ")[0])
+      const ram = parseInt(machineTitle[1].split(" ")[0])
+      const unit: ComputeUnit = {
+        id: 0,
+        name: "machine-1",
+        flavor: payload.machineFlavor,
+        core_count: coreCount,
+        ram,
+        type: payload.machineSubscription as SubscriptionType,
+        monthlyPrice: prices.monthlyPrice,
+        yearlyPrice: prices.yearlyPrice,
+      }
+      newLab.selectedCompute.push(unit)
     }
 
-    newLab.selectedCompute.push(unit)
+    // Add HDD storage
+    if (payload.hddSize > 0) {
+      const hddPrices = this.getStoragePriceFromCatalogue("HDD", payload.hddSize)
+      if (hddPrices) {
+        newLab.selectedStorage.push({
+          id: 0,
+          name: "volume-hdd",
+          usage: "Archive",
+          type: "HDD",
+          size: payload.hddSize,
+          monthlyPrice: hddPrices.monthlyPrice,
+          yearlyPrice: hddPrices.yearlyPrice,
+        })
+      }
+    }
 
-    // Add storage
-    const defaultStorageUnit = this.catalogue.storagePrices.find(
-      (item: PriceListItem) =>
-        item["service.group"] === "block.hdd.rep" &&
-        item["service.unit"] === "First 10 TB" &&
-        item["service.level"] === "COMMITMENT" &&
-        item["service.commitment"] === "1Y",
-    )
-    if (!defaultStorageUnit) return
-
-    const defaultStorage = {
-      id: 0,
-      name: "volume-1",
-      usage: "Archive",
-      type: "HDD",
-      size: 1,
-      monthlyPrice: Number(defaultStorageUnit["price.nok.ex.vat"] / 12),
-      yearlyPrice: defaultStorageUnit["price.nok.ex.vat"],
-    } as StorageUnit
-
-    newLab.selectedStorage.push(defaultStorage)
+    // Add NVME storage
+    if (payload.nvmeSize > 0) {
+      const nvmePrices = this.getStoragePriceFromCatalogue("NVME", payload.nvmeSize)
+      if (nvmePrices) {
+        newLab.selectedStorage.push({
+          id: newLab.selectedStorage.length,
+          name: "volume-nvme",
+          usage: "Work",
+          type: "NVME",
+          size: payload.nvmeSize,
+          monthlyPrice: nvmePrices.monthlyPrice,
+          yearlyPrice: nvmePrices.yearlyPrice,
+        })
+      }
+    }
 
     // Update
     this.labs.push(newLab)
+    this.saveStateToLocal()
   },
 
   removeLab(labId: number) {
@@ -531,14 +542,28 @@ export const priceEstimatorStore = reactive({
   /* Total Helpers */
   updateTotalSummary() {
     // Get lab subscriptions
-    const summary = { labSubscriptions: {}, allCompute: {}, allStorage: {} }
+    const summary = {
+      labSubscriptions: {
+        "1Y": { units: 0, price: 0 },
+        "3Y": { units: 0, price: 0 },
+      },
+      allCompute: { units: 0, price: 0 },
+      allStorage: {},
+    }
 
     if (this.labs.length > 0 && this.catalogue.labPrices.length > 0) {
-      const labSubscriptions = {
-        units: this.labs.length,
-        price: this.catalogue.labPrices[0]["price.nok.ex.vat"] * this.labs.length,
-      }
-      summary.labSubscriptions = labSubscriptions
+      this.labs.forEach(lab => {
+        // @ts-ignore
+        const type = lab.subscriptionType as "1Y" | "3Y"
+        const priceItem = this.catalogue.labPrices.find(p => p["service.commitment"] === type)
+        console.log(summary.labSubscriptions[type])
+        summary.labSubscriptions[type].units += 1
+        if (priceItem) {
+          summary.labSubscriptions[type].price += priceItem["price.nok.ex.vat"]
+        } else {
+          summary.labSubscriptions[type].price += this.catalogue.labPrices[0]["price.nok.ex.vat"]
+        }
+      })
     }
 
     // Get total compute from labs
@@ -566,6 +591,8 @@ export const priceEstimatorStore = reactive({
     const labsToExport = this.labs.map(lab => ({
       id: lab.id,
       name: lab.title,
+      // @ts-ignore
+      subscriptionType: lab.subscriptionType,
       compute: lab.selectedCompute.map(c => ({
         id: c.id,
         name: c.name,
@@ -658,6 +685,8 @@ export const priceEstimatorStore = reactive({
               title: labData.name,
               selectedCompute: [],
               selectedStorage: [],
+              // @ts-ignore
+              subscriptionType: labData.subscriptionType,
             })
 
             if (labData.compute) {

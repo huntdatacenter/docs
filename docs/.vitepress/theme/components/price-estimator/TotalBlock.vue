@@ -22,16 +22,32 @@ const tableItems = computed(() => {
 
   let totalFlat = 0
   let totalDiscount = 0
+  let totalSubsequent = 0
 
-  // Lab subscriptions
-  if (s.labSubscriptions) {
-    const flat = Number(s.labSubscriptions.price ?? 0)
+  // Lab subscriptions 1Y
+  if (s.labSubscriptions?.["1Y"]?.units > 0) {
+    const flat = Number(s.labSubscriptions["1Y"].price ?? 0)
     totalFlat += flat
+    totalSubsequent += flat
 
     items.push({
-      id: "labSubscriptions",
-      name: "Lab Subscriptions",
-      units: s.labSubscriptions.units ?? 0,
+      id: "labSubscriptions1Y",
+      name: "Lab Subscriptions (1 year)",
+      units: s.labSubscriptions["1Y"].units,
+      cost: flat,
+    })
+  }
+
+  // Lab subscriptions 3Y
+  if (s.labSubscriptions?.["3Y"]?.units > 0) {
+    const flat = Number(s.labSubscriptions["3Y"].price ?? 0)
+    totalFlat += flat
+    // 3Y subscription is paid upfront (or in first year context), not added to subsequent years
+
+    items.push({
+      id: "labSubscriptions3Y",
+      name: "Lab Subscriptions (3 years)",
+      units: s.labSubscriptions["3Y"].units,
       cost: flat,
     })
   }
@@ -40,6 +56,7 @@ const tableItems = computed(() => {
   if (s.allCompute) {
     const flat = Number(s.allCompute.price ?? 0)
     totalFlat += flat
+    totalSubsequent += flat
 
     items.push({
       id: "compute",
@@ -57,6 +74,7 @@ const tableItems = computed(() => {
       const discount = Math.max(0, flat - tiered)
 
       totalFlat += flat
+      totalSubsequent += flat
       totalDiscount += discount
 
       items.push({
@@ -80,11 +98,22 @@ const tableItems = computed(() => {
   // Total row
   items.push({
     id: "total-row",
-    name: "Total",
+    name: "Total first year",
     units: "",
     cost: totalFlat - totalDiscount,
     isTotalRow: true,
   })
+
+  // Only show subsequent years if we have 3Y subscriptions (which are paid upfront/differently)
+  if (s.labSubscriptions?.["3Y"]?.units > 0) {
+    items.push({
+      id: "total-row-2",
+      name: "Total subsequent years",
+      units: "",
+      cost: totalSubsequent - totalDiscount,
+      isTotalRow: true,
+    })
+  }
 
   return items
 })

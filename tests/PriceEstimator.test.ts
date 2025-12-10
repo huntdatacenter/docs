@@ -121,6 +121,7 @@ describe("PriceEstimator", () => {
       expect(wrapper.exists()).toBe(true)
       // We can check if the store was initialized
       expect(priceEstimatorStore.catalogue.storagePrices.length).toBeGreaterThan(0)
+      wrapper.unmount()
     })
   })
 
@@ -298,20 +299,55 @@ describe("PriceEstimator", () => {
     it("adds a new lab card", async () => {
       expect(priceEstimatorStore.labs.length).toBe(0)
 
-      priceEstimatorStore.addLab("Lab 1")
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
       expect(priceEstimatorStore.labs.length).toBe(1)
       expect(priceEstimatorStore.labs[0].title).toBe("Lab 1")
 
-      priceEstimatorStore.addLab("Lab 2")
+      priceEstimatorStore.addLab({
+        name: "Lab 2",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
       expect(priceEstimatorStore.labs.length).toBe(2)
       expect(priceEstimatorStore.labs[1].title).toBe("Lab 2")
     })
 
     it("Removing labs", async () => {
-      priceEstimatorStore.addLab("Lab 1")
-      priceEstimatorStore.addLab("Lab 2")
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
+      priceEstimatorStore.addLab({
+        name: "Lab 2",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
 
-      priceEstimatorStore.addLab("Lab 3")
+      priceEstimatorStore.addLab({
+        name: "Lab 3",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
       expect(priceEstimatorStore.labs.length).toBe(3)
 
       priceEstimatorStore.removeLab(0) // Removes Lab 1 (id 0)
@@ -323,7 +359,14 @@ describe("PriceEstimator", () => {
     })
 
     it("adds compute to a lab correctly using catalogue prices", () => {
-      priceEstimatorStore.addLab("Lab 1")
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
       const labId = priceEstimatorStore.labs[0].id
 
       // Clear defaults
@@ -346,7 +389,14 @@ describe("PriceEstimator", () => {
     })
 
     it("adds storage to a lab correctly using catalogue prices", () => {
-      priceEstimatorStore.addLab("Lab 1")
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
       const labId = priceEstimatorStore.labs[0].id
 
       // Clear defaults
@@ -370,7 +420,14 @@ describe("PriceEstimator", () => {
 
   describe("Total Calculations", () => {
     it("updates compute price total when lab card compute changes", async () => {
-      priceEstimatorStore.addLab("Lab 1")
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
       const labId = priceEstimatorStore.labs[0].id
 
       // Clear default compute added by addLab
@@ -393,7 +450,14 @@ describe("PriceEstimator", () => {
     })
 
     it("updates storage total when lab card storage changes", async () => {
-      priceEstimatorStore.addLab("Lab 1")
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
       const labId = priceEstimatorStore.labs[0].id
 
       // Clear default storage added by addLab
@@ -418,7 +482,14 @@ describe("PriceEstimator", () => {
     })
 
     it("Updates totals when multiple labs are added with compute and storage", async () => {
-      priceEstimatorStore.addLab("Lab 1")
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
       const lab1Id = priceEstimatorStore.labs[0].id
       priceEstimatorStore.labs[0].selectedCompute = []
       priceEstimatorStore.labs[0].selectedStorage = []
@@ -438,7 +509,14 @@ describe("PriceEstimator", () => {
         size: 10,
       })
 
-      priceEstimatorStore.addLab("Lab 2")
+      priceEstimatorStore.addLab({
+        name: "Lab 2",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
       const lab2Id = priceEstimatorStore.labs[1].id
       priceEstimatorStore.labs[1].selectedCompute = []
       priceEstimatorStore.labs[1].selectedStorage = []

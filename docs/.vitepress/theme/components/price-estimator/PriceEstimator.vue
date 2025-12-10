@@ -3,8 +3,10 @@ import { onMounted, ref, watch, nextTick, computed } from "vue"
 import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 import LabCard from "./LabCard.vue"
 import TotalBlock from "./TotalBlock.vue"
+import LabModal from "./LabModal.vue"
 
 const fileInput = ref<HTMLInputElement | null>(null)
+const isLabModalOpen = ref(false)
 
 watch(
   () => priceEstimatorStore.labs,
@@ -46,13 +48,7 @@ async function handleFileUpload(event: Event) {
       <v-container>
         <v-row justify="space-between">
           <v-col cols="auto">
-            <v-btn
-              density="default"
-              size="large"
-              dark
-              @click="priceEstimatorStore.addLab(`Lab ${priceEstimatorStore.labs.length + 1}`)"
-              >Add lab</v-btn
-            >
+            <v-btn density="default" size="large" dark @click="isLabModalOpen = true">Add lab</v-btn>
           </v-col>
 
           <v-col cols="auto">
@@ -93,5 +89,9 @@ async function handleFileUpload(event: Event) {
         </v-col>
       </v-row>
     </v-sheet>
+
+    <v-dialog v-model="isLabModalOpen" max-width="600px">
+      <LabModal @close="isLabModalOpen = false" />
+    </v-dialog>
   </v-container>
 </template>
