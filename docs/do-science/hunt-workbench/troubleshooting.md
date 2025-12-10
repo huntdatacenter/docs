@@ -89,7 +89,7 @@ Error occurred during transmission (6)
 [Retry]
 ```
 
-If you were previously able to access your applications (such as _RStudio_), and then the application suddenly stopped working, one quick approach is to check your available diskspace with following command:
+One quick approach is to check your available diskspace with following command:
 
 ```bash
 df -h /mnt/work
