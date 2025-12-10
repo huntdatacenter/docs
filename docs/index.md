@@ -237,6 +237,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-self: center;
   padding-bottom: 24px;
   padding-top: 24px;
+  margin: 0 auto;
 }
 
 .card-link h3 {
@@ -245,6 +246,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   color: #000000;
   justify-self: center;
+  text-align: center;
 }
 
 .card-styled {
@@ -269,7 +271,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .hc-row {
     flex-direction: row;
-    /* align-items: center; */
   }
 
   .hc-header-img {
