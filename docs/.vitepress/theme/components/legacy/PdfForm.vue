@@ -441,7 +441,7 @@ onMounted(() => {
             <v-list-item v-if="item.field === 'textfield'" cols="12" dense>
               <v-text-field
                 v-model="formData[item.key]"
-                class="mb-3"
+                class="mt-1 mb-2"
                 :ref="item.key"
                 autocomplete="ignore-field"
                 :pattern="item.pattern ? item.pattern : null"
@@ -458,8 +458,8 @@ onMounted(() => {
                 :persistent-hint="item.hint && formData[item.key] ? true : false"
                 :placeholder="item.placeholder ? item.placeholder : null"
                 persistent-placeholder
-                variant="filled"
-                density="comfortable"
+                variant="outlined"
+                density="compact"
                 :hide-details="formData[item.key] && item.hint ? false : 'auto'"
                 @focus="$event.target.select()"
               >
@@ -480,7 +480,7 @@ onMounted(() => {
             <v-list-item v-if="item.field === 'autocompleteone'" cols="12" dense>
               <v-autocomplete
                 v-model="formData[item.key]"
-                class="mb-3"
+                class="mt-1 mb-2"
                 :ref="item.key"
                 autocomplete="ignore-field"
                 :items="item.options"
@@ -489,8 +489,8 @@ onMounted(() => {
                 clear-icon=""
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
-                variant="filled"
-                dense
+                variant="outlined"
+                density="compact"
                 hide-details
                 @focus="$event.target.select()"
               >
@@ -527,10 +527,10 @@ onMounted(() => {
                 <template v-slot:activator="{ on, attrs }">
                   <v-text-field
                     v-model="formData[item.key]"
-                    class="mb-3"
+                    class="mt-1 mb-2"
                     :placeholder="item.placeholder ? item.placeholder : ''"
                     persistent-placeholder
-                    variant="filled"
+                    variant="outlined"
                     density="compact"
                     hide-details
                     readonly
@@ -561,8 +561,8 @@ onMounted(() => {
                 :rules="[v => (v && v.length) || (!isFieldRequired(item.required)) || 'This field is required']"
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
-                variant="filled"
-                density="comfortable"
+                variant="outlined"
+                density="compact"
                 hide-details="auto"
                 @focus="$event.target.select()"
               >
@@ -575,7 +575,7 @@ onMounted(() => {
             <v-list-item v-if="item.field === 'textarea'" cols="12" dense>
               <v-textarea
                 v-model="formData[item.key]"
-                class="mb-3"
+                class="mt-1 mb-2"
                 :ref="item.key"
                 autocomplete="ignore-field"
                 :pattern="item.pattern ? item.pattern : null"
@@ -587,7 +587,7 @@ onMounted(() => {
                 :persistent-hint="item.hint && formData[item.key] ? true : false"
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
-                variant="filled"
+                variant="outlined"
                 density="compact"
                 :rows="1"
                 :hide-details="formData[item.key] ? false : 'auto'"

@@ -17,7 +17,7 @@ import HideLastUpdated from "./components/legacy/HideLastUpdated.vue"
 import ConsentForm from "./components/legacy/ConsentForm.vue"
 import EmbedPdfViewer from "./components/legacy/EmbedPdfViewer.vue"
 import PdfForm from "./components/legacy/PdfForm.vue"
-// import SOButton from "./components/legacy/SOButton.vue"
+import SOButton from "./components/legacy/SOButton.vue"
 import SDButton from "./components/legacy/SDButton.vue"
 import ServiceDesk from "./components/legacy/ServiceDesk.vue"
 import AgreementForm from "./components/legacy/AgreementForm.vue"
@@ -60,12 +60,33 @@ const redirectPrefixes: Array<[string, string]> = [
   ["/getting-started/", "/do-science/lab-access/"] as const,
   ["/lab-access/", "/do-science/lab-access/"] as const,
   ["/service-desk/user-orders/", "/do-science/service-desk/"] as const,
-  ["/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders/"] as const,
-  ["/service-desk/data-space-orders/", "/administer-science/service-desk/data-space-orders/"] as const,
-  ["/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders/"] as const,
-  ["/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders/"] as const,
-  ["/service-desk/service-centers/", "/govern-science/service-desk/service-center-orders/"] as const,
-  ["/service-desk/data-controllers/", "/govern-science/service-desk/data-controller-orders/"] as const,
+  ["/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders"] as const,
+  ["/service-desk/data-space-orders/", "/administer-science/service-desk/data-space-orders"] as const,
+  ["/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders"] as const,
+  ["/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders"] as const,
+  ["/service-desk/service-centers/", "/govern-science/service-desk/service-center-orders"] as const,
+  ["/service-desk/data-controllers/", "/govern-science/service-desk/data-controller-orders"] as const,
+  ["/administer-science/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders"] as const,
+  [
+    "/administer-science/service-desk/data-space-orders/",
+    "/administer-science/service-desk/data-space-orders",
+  ] as const,
+  [
+    "/govern-science/service-desk/service-center-orders/",
+    "/govern-science/service-desk/service-center-orders",
+  ] as const,
+  [
+    "/govern-science/service-desk/data-controller-orders/",
+    "/govern-science/service-desk/data-controller-orders",
+  ] as const,
+  [
+    "/govern-science/service-desk/service-center-orders/",
+    "/govern-science/service-desk/service-center-orders",
+  ] as const,
+  [
+    "/govern-science/service-desk/data-controller-orders/",
+    "/govern-science/service-desk/data-controller-orders",
+  ] as const,
   ["/working-in-your-lab/technical-tools/", "/do-science/tools/technical/"] as const,
   ["/working-in-your-lab/analytical-tools/", "/do-science/tools/analytical/"] as const,
   ["/working-in-your-lab/transfer-tools/", "/do-science/tools/transfer/"] as const,
@@ -171,7 +192,7 @@ export default {
     app.component("ConsentForm", ConsentForm)
     app.component("EmbedPdfViewer", EmbedPdfViewer)
     app.component("PdfForm", PdfForm)
-    // app.component("SOButton", SOButton)
+    app.component("SOButton", SOButton)
     app.component("SDButton", SDButton)
     app.component("ServiceDesk", ServiceDesk)
     app.component("AgreementForm", AgreementForm)
