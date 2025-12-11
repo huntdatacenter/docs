@@ -189,7 +189,7 @@ export const priceEstimatorStore = reactive({
       if (hddPrices) {
         newLab.selectedStorage.push({
           id: 0,
-          name: "volume-hdd",
+          name: "volume-1",
           usage: "Archive",
           type: "HDD",
           size: payload.hddSize,
