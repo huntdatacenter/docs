@@ -24,7 +24,6 @@
     "**/.pnp.*": true
   },
   "eslint.nodePath": ".yarn/sdks",
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "markdownlint.config": {
     "MD025": false,
     "MD033": false

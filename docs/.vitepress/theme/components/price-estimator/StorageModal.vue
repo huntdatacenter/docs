@@ -1,50 +1,64 @@
-<script lang="ts">
+<script setup lang="ts">
+import { reactive, onMounted } from "vue"
 import type { StorageFormData, StorageUnit } from "./types"
+import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 
-export default {
-  name: "Storage",
-  emits: ["close"],
-  props: {
-    storageId: { type: Number, default: () => 0 },
-    initialData: { type: Object as () => StorageUnit | null, default: null },
-  },
-  data: () => ({
-    formData: {
-      id: null,
-      name: null,
-      usage: "Archive",
-      type: "HDD",
-      size: 1,
-    } as StorageFormData,
-  }),
+const props = defineProps({
+  labId: { type: Number, required: true },
+  storageId: { type: Number, required: true },
+  editData: { type: Object as () => StorageUnit | null },
+})
 
-  created() {
-    if (this.initialData) {
-      this.formData.id = this.initialData.id
-      this.formData.name = this.initialData.name
-      this.formData.usage = this.initialData.usage
-      this.formData.type = this.initialData.type
-      this.formData.size = this.initialData.size
-    } else {
-      this.formData.id = this.storageId
-      this.formData.name = `volume-${this.storageId}`
-    }
-  },
-  methods: {
-    close() {
-      this.$emit("close")
-    },
-    save() {
-      this.$emit("close", {
-        id: this.formData.id,
-        name: this.formData.name,
-        size: Number(this.formData.size),
-        usage: this.formData.usage,
-        type: this.formData.type,
-      })
-    },
-  },
+const emit = defineEmits<{
+  close: [data?: StorageUnit]
+}>()
+
+const formData = reactive<StorageFormData>({
+  id: undefined,
+  name: undefined,
+  usage: "Archive",
+  type: "HDD",
+  size: 1,
+})
+
+const close = () => {
+  emit("close")
 }
+
+const save = () => {
+  if (props.editData) {
+    // Edit
+    priceEstimatorStore.editStorageInLab(props.labId, props.editData.id, {
+      name: formData.name!,
+      usage: formData.usage!,
+      type: formData.type!,
+      size: Number(formData.size),
+    })
+  } else {
+    // Add new
+    priceEstimatorStore.addStorageToLab(props.labId, {
+      name: formData.name!,
+      usage: formData.usage!,
+      type: formData.type!,
+      size: Number(formData.size),
+    })
+  }
+
+  emit("close")
+}
+
+onMounted(() => {
+  if (props.editData) {
+    formData.id = props.editData.id
+    formData.name = props.editData.name
+    formData.usage = props.editData.usage
+    formData.type = props.editData.type
+    formData.size = props.editData.size
+  } else {
+    formData.id = props.storageId
+    formData.name = `volume-${props.storageId + 1}`
+  }
+})
 </script>
 
 <template>
