@@ -21,11 +21,11 @@ const getMyIpaddress = computed(() => {
 })
 
 const isNtnuVpn = computed(() => {
-  return ipAddress.value && ipAddress.value.startsWith("10.24.")
+  return ipAddress.value && ipAddress.value.startsWith("10.50.")
 })
 
 const isEduroam = computed(() => {
-  return ipAddress.value && ipAddress.value.startsWith("10.20.")
+  return ipAddress.value && (ipAddress.value.startsWith("10.24.") || ipAddress.value.startsWith("10.20."))
 })
 
 const show = computed(() => {
@@ -72,9 +72,8 @@ onMounted(() => {
         variant="tonal"
         rounded="lg"
       >
-        It seems like you are connected to NTNU VPN.
-        You should be able to connect to HUNT Cloud VPN.
-        If you still experience issues send us a request to add you to NTNU VPN group.
+        It seems like you are connected to NTNU VPN. You should be able to connect to HUNT Cloud VPN. If you still
+        experience issues send us a request to add you to NTNU VPN group.
       </v-alert>
       <v-alert
         v-if="isEduroam"
@@ -85,8 +84,7 @@ onMounted(() => {
         variant="tonal"
         rounded="lg"
       >
-        It seems like you are connected to NTNU / Eduroam network.
-        You should be able to connect to HUNT Cloud VPN.
+        It seems like you are connected to NTNU / Eduroam network. You should be able to connect to HUNT Cloud VPN.
       </v-alert>
     </v-app>
   </div>
