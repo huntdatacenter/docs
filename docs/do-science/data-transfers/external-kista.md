@@ -226,7 +226,7 @@ Follow the examples from our [internal kista guide](/do-science/data-transfers/i
 
 ::: details Nmap
 
-This is a faster way to get results out of traceroute.
+Follow these steps to help us identify potential firewall blocks.
 
 1. Download and install nmap from official website [https://nmap.org/download.html](https://nmap.org/download.html).
 
