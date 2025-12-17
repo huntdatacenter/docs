@@ -18,7 +18,7 @@ This page describes the practical aspects of external kista transfers. Head over
 
 ## For external users
 
-This section aims to give a technical description on how external users outside HUNT Cloud can connect and transfer data to our hosted SFTP service called external kista. 
+This section aims to give a technical description on how external users outside HUNT Cloud can connect and transfer data to our hosted SFTP service called external kista.
 
 In short, external kistas are short-lived and hardened [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) servers dedicated to transferring data. Please [contact us](/contact) if you require more information or run into trouble.
 
@@ -70,7 +70,7 @@ ssh-keygen -q -t rsa -b 4096 -f "%USERPROFILE%\.ssh\id_rsa" -N ""
 type %USERPROFILE%\.ssh\id_rsa.pub > %USERPROFILE%\Desktop\ekista_pubkey.txt
 ```
 
-4. Share the `ekista_pubkey.txt` to your HUNT Cloud contact. 
+4. Share the `ekista_pubkey.txt` to your HUNT Cloud contact.
 
 :::
 
@@ -80,7 +80,7 @@ type %USERPROFILE%\.ssh\id_rsa.pub > %USERPROFILE%\Desktop\ekista_pubkey.txt
 
 2. Generate a new dedicated RSA key pair.
 
-```bash 
+```bash
 ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
 ```
 
@@ -90,7 +90,7 @@ ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
 cat ~/.ssh/ekista.pub > ~/Downloads/ekista_pubkey.txt
 ```
 
-4. Share the `ekista_pubkey.txt` to your HUNT Cloud contact. 
+4. Share the `ekista_pubkey.txt` to your HUNT Cloud contact.
 
 :::
 
@@ -109,7 +109,7 @@ After generating the SSH key pair, please share the **public key** (not the priv
 
 ### SFTP client
 
-You will need a SFTP client to connect and transfer data to the external kista. For Windows, we recommend the WinSCP client. OS X, macOS and Ubuntu can use built in command line tools. 
+You will need a SFTP client to connect and transfer data to the external kista. For Windows, we recommend the WinSCP client. OS X, macOS and Ubuntu can use built in command line tools.
 
 In addition to the SFTP software, you will need the external kista transfer information shipped by HUNT Cloud on the time of deployment to be able to connect.
 
@@ -214,42 +214,43 @@ Follow the examples from our [internal kista guide](/do-science/data-transfers/i
 
 #### Cannot connect to external kista
 
-1. Confirm that you are using correct key to authenticate (based on guide above). 
+1. Confirm that you are using correct key to authenticate (based on guide above).
 
-2. If correct key is used, there are few things that could be an issue. 
+2. If correct key is used, there are few things that could be an issue.
 
-- connection is blocked by firewalls (organisational or on your local computer/virtual machine)
+    - connection is blocked by firewalls (organisational or on your local computer/virtual machine)
 
-- misconfiguration on HUNT Cloud side
+    - misconfiguration on HUNT Cloud side
 
 3. To get the correct idea on what could be an issue, you can share `nmap` or `traceroute` logs with HUNT Cloud in communication email
 
 ::: details Nmap
 
-This is a faster way to get results out of traceroute. 
+This is a faster way to get results out of traceroute.
 
-1. Download and install nmap from official website.
-
-[https://nmap.org/download.html](https://nmap.org/download.html)
+1. Download and install nmap from official website [https://nmap.org/download.html](https://nmap.org/download.html).
 
 2. Run below code in command prompt or terminal (change port to match the one for your ekista transfer).
 
-```
-nmap -Pn --traceroute -p <port number>  ekista.hdc.ntnu.no
-```
+    ```bash
+    nmap -Pn --traceroute -p <port_number> ekista.hdc.ntnu.no
+    ```
+
+    *Note*: on linux or macOS machines, you might need sudo permission.
 
 3. Share output in communication email with HUNT Cloud.
 
-::: 
+:::
 
 ::: details Traceroute
 
+This works only on Linux and MacOS, or WSL.
+
 1. Run below code in command prompt or terminal (this might take a while)
 
-```
-traceroute -P TCP -p <port number> ekista.hdc.ntnu.no
-```
-*Note*: on linux or macOS machines, you might need sudo permission.
+    ```bash
+    sudo traceroute -P TCP -p <port_number> ekista.hdc.ntnu.no
+    ```
 
 2. Share output in communication email with HUNT Cloud.
 
