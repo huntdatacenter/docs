@@ -58,7 +58,7 @@ const bottomCards = [
   {
     id: 'card5',
     title: 'Scientific products',
-    href: 'https://www.ntnu.edu/mh/huntcloud',
+    href: 'https://about.hdc.ntnu.no/',
     description: 'Explore and evolve. See the main HUNT Cloud page for information on HUNT Cloud\'s scientific products and services.',
   }
 ];
