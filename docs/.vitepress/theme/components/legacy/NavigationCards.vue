@@ -12,9 +12,9 @@ const props = defineProps({
 })
 
 // Reactive data
-const cardcolor = ref("#cfdaf1")
-const avatarcolor = ref("#9db7e1")
-const iconcolor = ref("rgb(72 84 104)")
+const cardcolor = ref("#f1eef0ff")
+const avatarcolor = ref("#e0dce0")
+const iconcolor = ref("#004c7b")
 </script>
 
 <template>
@@ -94,16 +94,13 @@ a.v-card {
 }
 
 .navigation-card {
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+  border-radius: 20px !important;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .navigation-card:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 4px 8px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.08) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
 }
 
 .icon-avatar {
