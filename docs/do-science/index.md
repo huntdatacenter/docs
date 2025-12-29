@@ -41,24 +41,80 @@ buttons:
     icon: "mdi-bug"
 ---
 
-# Do science in HUNT Cloud
+<div class="page-container">
+  <div class="page-header">
+    <h1>Do science in HUNT Cloud</h1>
+    <p class="lead-text">Welcome to our official user documentation for scientists in HUNT Cloud.</p>
+  </div>
 
-**Welcome to our official user documentation for scientists in HUNT Cloud.**
+  <div class="page-icon">
+      <img src="../images/hunt-cloud_bottle_250.png" alt="Illustration of laboratory glass bottle with yellow shimmery substance." />
+    </div>
 
-This section is for active lab users. It contains practical information on how to do science in HUNT Cloud.
+  <div class="page-content">
+    <p>This section is for active lab users. It contains practical information on how to do science in HUNT Cloud.</p>
+  </div>
 
-!["Illustration of laboratory glass bottle with yellow shimmery substance."](../images/hunt-cloud_bottle_250.png)
+  <div class="page-content">
+    <p>See our <a href="/">main documentation page</a> for other sections.</p>
+  </div>
 
 <NavigationCards :buttons="$frontmatter.buttons" />
-
-<br/>
-
-<!-- !["Illustration of laboratory glass bottle with yellow shimmery substance."](../images/hunt-cloud_bottle_250.png) -->
-
-See our [main documentation page](/) for other sections.
+</div>
 
 <!-- ::: tip Next Tingweek #13 (2024-10)
 
 - **Labting**: Tuesday 15 October 2024 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek13-labting-agenda.pdf))
 
 ::: -->
+
+<style scoped>
+.page-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-content {
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.page-content p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.page-icon {
+  text-align: center;
+  margin: 40px 0;
+  justify-self: center;
+}
+
+.page-icon img {
+  max-width: 150px;
+  height: auto;
+  justify-self: center;
+}
+</style>
+

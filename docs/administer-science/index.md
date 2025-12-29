@@ -39,15 +39,75 @@ buttons:
       href: '/administer-science/faq/'
       icon: "mdi-help-circle"
 ---
+<div class="page-container">
+  <div class="page-header">
+    <h1>Administer science in HUNT Cloud</h1>
+    <p class="lead-text">Welcome to our documentation for individuals that administer science in HUNT Cloud.</p>
+  </div>
 
-# Administer science in HUNT Cloud
+  <div class="page-icon">
+      <img src="../images/hunt-cloud_key_250.png" alt="Illustration of decorative hand-made golden key with purple gem stones." />
+    </div>
 
-**Welcome to our documentation for individuals that administer science in HUNT Cloud.**
+  <div class="page-content">
+      <p>This section is aimed at those that administer science in HUNT Cloud. See our <a href="/">main documentation page</a> for other sections.</p>
+    </div>
 
-This section is aimed at those that administer science in HUNT Cloud. See our [main documentation](/) page for other sections.
+  <div class="page-content">
+      <p>See our <a href="/administer-science/scientific-access/">scientific access</a> section for guidance on how new scientific centers and research groups can enable HUNT Cloud resources for their scientists..</p>
+    </div>
 
-See our [scientific access](/administer-science/scientific-access/) section for guidance on how new scientific centers and research groups can enable HUNT Cloud resources for their scientists.
+  <NavigationCards :buttons="$frontmatter.buttons" />
+</div>
 
-!["Illustration of decorative hand-made golden key with purple gem stones."](../images/hunt-cloud_key_250.png)
+<style scoped>
+.page-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-<NavigationCards :buttons="$frontmatter.buttons" />
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-content {
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.page-content p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.page-icon {
+  text-align: center;
+  margin: 40px 0;
+  justify-self: center;
+}
+
+.page-icon img {
+  max-width: 150px;
+  height: auto;
+  justify-self: center;
+}
+</style>
+
+
