@@ -48,8 +48,8 @@ buttons:
   </div>
 
   <div class="page-icon">
-      <img src="../images/hunt-cloud_bottle_250.png" alt="Illustration of laboratory glass bottle with yellow shimmery substance." />
-    </div>
+    <img src="../images/hunt-cloud_bottle_250.png" alt="Illustration of laboratory glass bottle with yellow shimmery substance." />
+  </div>
 
   <div class="page-content">
     <p>This section is for active lab users. It contains practical information on how to do science in HUNT Cloud.</p>
@@ -67,54 +67,3 @@ buttons:
 - **Labting**: Tuesday 15 October 2024 - 2 to 4 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek13-labting-agenda.pdf))
 
 ::: -->
-
-<style scoped>
-.page-container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.page-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.page-header h1 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #000;
-}
-
-.lead-text {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #333;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.page-content {
-  margin-bottom: 40px;
-  line-height: 1.8;
-}
-
-.page-content p {
-  margin-bottom: 20px;
-  font-size: 1rem;
-}
-
-.page-icon {
-  text-align: center;
-  margin: 40px 0;
-  justify-self: center;
-}
-
-.page-icon img {
-  max-width: 150px;
-  height: auto;
-  justify-self: center;
-}
-</style>
-
