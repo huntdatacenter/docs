@@ -36,14 +36,24 @@ buttons:
     icon: "mdi-help-circle"
 ---
 
-# Govern science in HUNT Cloud
+<div class="page-container">
+  <div class="page-header">
+    <h1>Govern science in HUNT Cloud</h1>
+    <p class="lead-text">Welcome to our documentation for representatives that govern science in HUNT Cloud.</p>
+  </div>
 
-**Welcome to our documentation for representatives that govern science in HUNT Cloud.**
+  <div class="page-icon">
+    <img src="../images/hunt-cloud_compass_250.png" alt="Illustration of sundial compass in brass." />
+  </div>
 
-This section is aimed at representatives for data controllers and service centers. See our [main documentation page](/) for other sections.
+  <div class="page-content">
+    <p>This section is aimed at representatives for data controllers and service centers. See our <a href="/">main documentation page</a> for other sections.</p>
+  </div>
 
-See our [organizational access](/govern-science/organizational-access/) section for guidance on how new organizations can enable HUNT Cloud resources for their scientific centers and research groups.
+  <div class="page-content">
+    <p>See our <a href="/govern-science/organizational-access/">organizational access</a> section for guidance on how new organizations can enable HUNT Cloud resources for their scientific centers and research groups.</p>
+  </div>
 
-!["Illustration of sundial compass in brass."](../images/hunt-cloud_compass_250.png)
+  <NavigationCards :buttons="$frontmatter.buttons" />
+</div>
 
-<NavigationCards :buttons="$frontmatter.buttons" />

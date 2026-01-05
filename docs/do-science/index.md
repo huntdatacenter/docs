@@ -41,21 +41,26 @@ buttons:
     icon: "mdi-bug"
 ---
 
-# Do science in HUNT Cloud
+<div class="page-container">
+  <div class="page-header">
+    <h1>Do science in HUNT Cloud</h1>
+    <p class="lead-text">Welcome to our official user documentation for scientists in HUNT Cloud.</p>
+  </div>
 
-**Welcome to our official user documentation for scientists in HUNT Cloud.**
+  <div class="page-icon">
+    <img src="../images/hunt-cloud_bottle_250.png" alt="Illustration of laboratory glass bottle with yellow shimmery substance." />
+  </div>
 
-This section is for active lab users. It contains practical information on how to do science in HUNT Cloud.
+  <div class="page-content">
+    <p>This section is for active lab users. It contains practical information on how to do science in HUNT Cloud.</p>
+  </div>
 
-!["Illustration of laboratory glass bottle with yellow shimmery substance."](../images/hunt-cloud_bottle_250.png)
+  <div class="page-content">
+    <p>See our <a href="/">main documentation page</a> for other sections.</p>
+  </div>
 
 <NavigationCards :buttons="$frontmatter.buttons" />
-
-<br/>
-
-<!-- !["Illustration of laboratory glass bottle with yellow shimmery substance."](../images/hunt-cloud_bottle_250.png) -->
-
-See our [main documentation page](/) for other sections.
+</div>
 
 <!-- ::: tip Next Tingweek #13 (2024-10)
 
