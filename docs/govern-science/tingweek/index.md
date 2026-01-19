@@ -12,6 +12,16 @@ description: This section list information and questions for the HUNT Cloud Ting
 
 We arrange a layered set of Tings for distinct groups in our community. The meetings are spread out over one week in the winter, spring and autumn. We call these weeks "Tingweeks".
 
+::: tip Next Tingweek
+
+Tingweek #17 (2026-02)
+
+- **Labting**: Tuesday 3 February 2026 - 2 to 3 p.m. CET
+- **Admin ting**: Wednesday 4 February 2026 - 9 to 10 a.m. CET
+- **Data controller ting**: Wednesday 4 February 2026 - 1 to 2 p.m. CET
+- **Financial ting**: Thursday 5 February 2026 - 9 to 10 a.m. CET
+
+:::
 
 
 [[toc]]

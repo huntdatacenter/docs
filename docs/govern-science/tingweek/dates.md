@@ -21,6 +21,14 @@ description: This page lists information and questions about our Tingweeks.
 
 :::
 
+### Tingweek #17 (2026-02)
+
+- **Labting**: Tuesday 3 February 2026 - 2 to 3 p.m. CET
+- **Admin ting**: Wednesday 4 February 2026 - 9 to 10 a.m. CET
+- **Data controller ting**: Wednesday 4 February 2026 - 1 to 2 p.m. CET
+- **Financial ting**: Thursday 5 February 2026 - 9 to 10 a.m. CET
+
+
 ### Tingweek #16 (2025-10)
 
 - **Labting**: Tuesday 14 October 2025 - 2 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-labting-agenda.pdf))
