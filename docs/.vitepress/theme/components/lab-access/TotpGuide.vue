@@ -33,7 +33,7 @@ const totpStepper = ref("1")
         </v-card-title>
 
         <v-card-text class="pa-0">
-          <v-stepper-vertical v-model="totpStepper" class="mt-16" hide-actions>
+          <v-stepper-vertical v-model="totpStepper" class="mt-16" hide-actions :editable="false">
             <v-stepper-vertical-item :complete="totpStepper > 1" value="1">
               <template v-slot:title> Install TOTP application on your phone </template>
 

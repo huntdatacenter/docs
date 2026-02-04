@@ -268,7 +268,7 @@ onMounted(() => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="vpnStepper" hide-actions>
+                  <v-stepper-vertical v-model="vpnStepper" hide-actions :editable="false">
                     <v-stepper-vertical-item
                       :complete="vpnStepper > 1"
                       value="1"

@@ -304,7 +304,7 @@ onMounted(() => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="vpnStepper" class="mt-16" hide-actions>
+                  <v-stepper-vertical v-model="vpnStepper" class="mt-16" hide-actions :editable="false">
                     <v-stepper-vertical-item
                       :complete="vpnStepper > 1"
                       value="1"
@@ -1182,7 +1182,7 @@ onMounted(() => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="workbenchStepper" class="mt-16" hide-actions>
+                  <v-stepper-vertical v-model="workbenchStepper" class="mt-16" hide-actions :editable="false">
                     <v-stepper-vertical-item
                       :complete="workbenchStepper > 1"
                       value="1"
