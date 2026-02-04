@@ -138,12 +138,12 @@ const tableItems = computed(() => {
     </v-row>
 
     <v-data-table :headers="headers" :items="tableItems" hide-default-footer item-value="id" class="mt-2">
-      <template #item.name="{ item }">
+      <template v-slot:item.name="{ item }">
         <strong v-if="item.isTotalRow">{{ item.name }}</strong>
         <span v-else>{{ item.name }}</span>
       </template>
 
-      <template #item.cost="{ item }">
+      <template v-slot:item.cost="{ item }">
         <span v-if="item.isDiscountRow" class="text-green-darken-3" style="font-weight: 600">
           - {{ currencyFormatter.format(Math.abs(item.cost)) }}
         </span>
@@ -157,12 +157,12 @@ const tableItems = computed(() => {
         </span>
       </template>
 
-      <template #item.units="{ item }">
+      <template v-slot:item.units="{ item }">
         <strong v-if="item.isTotalRow">{{ item.units }}</strong>
         <span v-else>{{ item.units }}</span>
       </template>
 
-      <template #no-data>
+      <template v-slot:no-data>
         <v-sheet class="pa-4">No summary data available</v-sheet>
       </template>
     </v-data-table>
