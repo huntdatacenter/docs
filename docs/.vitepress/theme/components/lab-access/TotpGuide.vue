@@ -34,7 +34,7 @@ const totpStepper = ref("1")
 
         <v-card-text class="pa-0">
           <v-stepper-vertical v-model="totpStepper" class="mt-16" hide-actions>
-            <v-stepper-vertical-item :complete="totpStepper > 1" value="1" editable edit-icon>
+            <v-stepper-vertical-item :complete="totpStepper > 1" value="1">
               <template v-slot:title> Install TOTP application on your phone </template>
 
               <v-card class="mb-12" elevation="0">
@@ -61,7 +61,7 @@ const totpStepper = ref("1")
               <v-btn color="primary" class="mx-2 mb-1" @click="totpStepper = 2">Continue</v-btn>
             </v-stepper-vertical-item>
 
-            <v-stepper-vertical-item :complete="totpStepper > 2" value="2" editable edit-icon>
+            <v-stepper-vertical-item :complete="totpStepper > 2" value="2">
               <template v-slot:title> Add new TOTP account </template>
 
               <v-card class="mb-12" elevation="0">
@@ -190,7 +190,7 @@ const totpStepper = ref("1")
               <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="totpStepper = 1">Back</v-btn>
             </v-stepper-vertical-item>
 
-            <v-stepper-vertical-item value="3" editable edit-icon>
+            <v-stepper-vertical-item value="3">
               <template v-slot:title> Check your TOTP codes </template>
 
               <v-card class="mb-12" elevation="0">
@@ -200,8 +200,7 @@ const totpStepper = ref("1")
                 <br /><br />
 
                 <v-alert border="start" border-color="info" elevation="2">
-                  Phone might need to be connected to internet to assure precise synchronization of time. Time zone
-                  between phone and your machine should match.
+                  Phone might need to be connected to internet to assure precise synchronization of time. Time zone between phone and your machine should match.
                 </v-alert>
               </v-card>
               <v-btn color="primary" class="mx-2 mb-1" @click="totpStepper = 1">Start again</v-btn>
