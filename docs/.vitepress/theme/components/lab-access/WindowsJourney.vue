@@ -330,7 +330,7 @@ onMounted(() => {
 
                 <v-card-text class="pa-0">
                   <v-stepper-vertical v-model="vpnStepper" class="mt-16" hide-actions>
-                    <v-stepper-vertical-item :complete="vpnStepper > 1" value="1" editable>
+                    <v-stepper-vertical-item :complete="vpnStepper > 1" value="1" editable edit-icon>
                       <template v-slot:title> Install OpenVPN </template>
 
                       <v-card class="mb-12 pr-4" elevation="0">
@@ -428,7 +428,7 @@ onMounted(() => {
                       </template>
                     </v-stepper-vertical-item>
 
-                    <v-stepper-vertical-item :complete="vpnStepper > 2" value="2" editable>
+                    <v-stepper-vertical-item :complete="vpnStepper > 2" value="2" editable edit-icon>
                       <template v-slot:title> Setup the VPN profile </template>
 
                       <v-card class="mb-8 pr-4" elevation="0">
@@ -505,7 +505,7 @@ onMounted(() => {
                       </template>
                     </v-stepper-vertical-item>
 
-                    <v-stepper-vertical-item :complete="vpnStepper > 3" value="3" editable>
+                    <v-stepper-vertical-item :complete="vpnStepper > 3" value="3" editable edit-icon>
                       <template v-slot:title> Connect to HUNT Cloud VPN </template>
 
                       <v-card class="mb-8 pr-4" elevation="0">
@@ -566,7 +566,7 @@ onMounted(() => {
                       <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 2">Back</v-btn>
                     </v-stepper-vertical-item>
 
-                    <v-stepper-vertical-item :complete="vpnStepper > 4" value="4" editable>
+                    <v-stepper-vertical-item :complete="vpnStepper > 4" value="4" editable edit-icon>
                       <template v-slot:title> Verify your VPN connection </template>
 
                       <v-card class="mb-8 pr-16" elevation="0">
@@ -595,7 +595,7 @@ onMounted(() => {
                       <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
                     </v-stepper-vertical-item>
 
-                    <v-stepper-vertical-item :complete="vpnStepper > 5" value="5" editable>
+                    <v-stepper-vertical-item :complete="vpnStepper > 5" value="5" editable edit-icon>
                       <template v-slot:title> Troubleshooting VPN </template>
                       <template v-slot:subtitle> Optional tips to try in case of issues </template>
 
