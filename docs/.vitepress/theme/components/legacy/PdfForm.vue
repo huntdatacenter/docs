@@ -6,7 +6,6 @@ import { PDFDocument } from "pdf-lib"
 import { countries } from "country-list-json"
 import SignaturePad from "signature_pad"
 
-
 defineOptions({
   name: "PdfForm",
 })
@@ -58,9 +57,7 @@ const getCountries = computed(() => {
 })
 
 const formFilled = computed(() => {
-  return props.fields
-    .filter(item => item.key)
-    .every(item => (formData.value[item.key] || !isFieldRequired(item.required) ? true : false))
+  return props.fields.filter((item) => item.key).every((item) => (formData.value[item.key] || !isFieldRequired(item.required) ? true : false))
 })
 
 const pdfData = computed(() => {
@@ -95,25 +92,25 @@ const getRecipient = computed(() => {
 })
 
 // Methods
-const loadPdf = url => {
+const loadPdf = (url) => {
   try {
     fetch(url)
-      .then(response => {
+      .then((response) => {
         if (!response.ok) throw new Error(`unexpected response ${response.statusText}`)
         return response.arrayBuffer()
       })
-      .then(buffer => {
+      .then((buffer) => {
         pdfBuffer.value = buffer
         try {
           const read_buf = pdfBuffer.value
-          PDFDocument.load(read_buf).then(doc => {
+          PDFDocument.load(read_buf).then((doc) => {
             pdfDoc.value = doc
-            pdfDoc.value.saveAsBase64({ dataUri: true }).then(base64Data => {
+            pdfDoc.value.saveAsBase64({ dataUri: true }).then((base64Data) => {
               const pages = doc.getPages().length
               browsePdf(base64Data, pages, true)
             })
             let pdfForm = doc.getForm()
-            pdfFields.value = pdfForm.getFields().map(field => field.getName())
+            pdfFields.value = pdfForm.getFields().map((field) => field.getName())
           })
         } catch (error) {
           console.log("Failed to read fields")
@@ -130,15 +127,15 @@ const getTimestamp = () => {
   return event.toISOString()
 }
 
-const isFieldRequired = check => {
+const isFieldRequired = (check) => {
   return check && check !== "false" ? true : false
 }
 
-const isBoolTrue = check => {
+const isBoolTrue = (check) => {
   return check && check !== "false" ? true : false
 }
 
-const addSignature = key => {
+const addSignature = (key) => {
   var wrapper = document.getElementById(`signature-pad--${key}`)
   if (wrapper) {
     const canvas = wrapper.querySelector("canvas")
@@ -172,18 +169,13 @@ const addSignature = key => {
 const resizeCanvas = (event, itemKey = null) => {
   const keys = itemKey ? [itemKey] : Object.keys(signatures.value)
 
-  keys.forEach(key => {
+  keys.forEach((key) => {
     var wrapper = document.getElementById(`signature-pad--${key}`)
     if (wrapper) {
       var canvas = wrapper.querySelector("canvas")
       var ratio = Math.max(window.devicePixelRatio || 1, 1)
 
-      if (
-        canvasOffsets.value &&
-        canvasOffsets.value[key] &&
-        canvasOffsets.value[key]["width"] &&
-        canvasOffsets.value[key]["height"]
-      ) {
+      if (canvasOffsets.value && canvasOffsets.value[key] && canvasOffsets.value[key]["width"] && canvasOffsets.value[key]["height"]) {
         var offsetWidth = canvasOffsets.value[key]["width"]
         var offsetHeight = canvasOffsets.value[key]["height"]
       } else {
@@ -206,7 +198,7 @@ const resizeCanvas = (event, itemKey = null) => {
   })
 }
 
-const openDialog = key => {
+const openDialog = (key) => {
   dialogs.value = Object.assign({}, dialogs.value, { [key]: true })
 
   nextTick(() => {
@@ -214,17 +206,17 @@ const openDialog = key => {
   })
 }
 
-const closeDialog = key => {
+const closeDialog = (key) => {
   dialogs.value = Object.assign({}, dialogs.value, { [key]: false })
 }
 
-const saveDialog = key => {
+const saveDialog = (key) => {
   dialogs.value = Object.assign({}, dialogs.value, { [key]: false })
   signatures.value[key]["signed"] = signatures.value[key]["signature"].isEmpty() ? false : true
   signatures.value[key]["pngurl"] = signatures.value[key]["signature"].toDataURL()
 }
 
-const fetchAgreementFormCache = key => {
+const fetchAgreementFormCache = (key) => {
   let fields = {}
   const jsonData = key ? localStorage.getItem(key) : null
   try {
@@ -247,16 +239,16 @@ const updateAgreementFormCache = (key, fields) => {
 const submit = () => {
   try {
     if (!formFilled.value) {
-      console.log('Form is not completely filled');
-      return;
+      console.log("Form is not completely filled")
+      return
     }
     const read_buf = pdfBuffer.value
-    PDFDocument.load(read_buf).then(pdfDoc => {
+    PDFDocument.load(read_buf).then((pdfDoc) => {
       const pdfForm = pdfDoc.getForm()
 
       renderedFields.value = {}
 
-      props.fields.forEach(item => {
+      props.fields.forEach((item) => {
         if (item.key && !["section", "signature", "date"].includes(item.field) && formData.value[item.key]) {
           let field = pdfForm.getTextField(item.key)
           var fieldValue = null
@@ -273,12 +265,12 @@ const submit = () => {
 
       pdfForm.flatten()
 
-      const signedOnly = Object.keys(signatures.value).filter(key => signatures.value[key]["signed"])
+      const signedOnly = Object.keys(signatures.value).filter((key) => signatures.value[key]["signed"])
 
       if (signedOnly.length > 0) {
-        const embeddedImages = signedOnly.map(key => {
+        const embeddedImages = signedOnly.map((key) => {
           const pngurl = signatures.value[key]["pngurl"]
-          return pdfDoc.embedPng(pngurl).then(img => {
+          return pdfDoc.embedPng(pngurl).then((img) => {
             const pngImage = img
             const pages = pdfDoc.getPages()
             const pageNum = pdfSignatures.value[key]["page"]
@@ -286,15 +278,13 @@ const submit = () => {
             const pngDims = pngImage.scale(pdfSignatures.value[key]["scale"])
             const xpos = page.getWidth() * pdfSignatures.value[key]["xpos"]
             const ypos = page.getHeight() * pdfSignatures.value[key]["ypos"]
-            console.log(
-              `Page ${pageNum} (${page.getWidth()} x ${page.getHeight()}) - insert image ${key}.png (${pngDims.width} x ${pngDims.height}) at position ${xpos} x ${ypos}`,
-            )
+            console.log(`Page ${pageNum} (${page.getWidth()} x ${page.getHeight()}) - insert image ${key}.png (${pngDims.width} x ${pngDims.height}) at position ${xpos} x ${ypos}`)
 
-            const targetWidth = 300;
-            const targetHeight = 30;
-            const scaleX = targetWidth / pngImage.width;
-            const scaleY = targetHeight / pngImage.height;
-            const scale = Math.min(scaleX, scaleY);
+            const targetWidth = 300
+            const targetHeight = 30
+            const scaleX = targetWidth / pngImage.width
+            const scaleY = targetHeight / pngImage.height
+            const scale = Math.min(scaleX, scaleY)
 
             page.drawImage(pngImage, {
               x: xpos,
@@ -306,14 +296,14 @@ const submit = () => {
         })
         Promise.all(embeddedImages).then(() => {
           console.log("Render PDF with signatures")
-          pdfDoc.saveAsBase64({ dataUri: true }).then(pdfData => {
+          pdfDoc.saveAsBase64({ dataUri: true }).then((pdfData) => {
             const pages = pdfDoc.getPages().length
             browsePdf(pdfData, pages, true, true)
           })
         })
       } else {
         console.log("PDF without signatures")
-        pdfDoc.saveAsBase64({ dataUri: true }).then(pdfData => {
+        pdfDoc.saveAsBase64({ dataUri: true }).then((pdfData) => {
           const pages = pdfDoc.getPages().length
           browsePdf(pdfData, pages, true, true)
         })
@@ -336,7 +326,7 @@ const browsePdf = (data = null, pages = 1, show = false, download = false) => {
   })
 }
 
-const showTooltip = text => {
+const showTooltip = (text) => {
   console.log(text)
 }
 
@@ -346,8 +336,8 @@ const saveDate = (key, value) => {
 
 const loadFormData = () => {
   fetch("/cfg/service_desk.yml")
-    .then(response => response.text())
-    .then(responseData => {
+    .then((response) => response.text())
+    .then((responseData) => {
       const cfg = YAML.parse(responseData)
       data.value = cfg
       serviceDeskDialog.value = true
@@ -362,14 +352,14 @@ const resetFormData = () => {
   pdfDownloadClicked.value = false
   formData.value = {}
   props.fields
-    .filter(item => item.key && item.default && !["signature", "date"].includes(item.field))
-    .forEach(item => {
+    .filter((item) => item.key && item.default && !["signature", "date"].includes(item.field))
+    .forEach((item) => {
       const defValue = item.default
       formData.value[item.key] = defValue
     })
   props.fields
-    .filter(item => item.field === "date")
-    .forEach(item => {
+    .filter((item) => item.field === "date")
+    .forEach((item) => {
       var dateToday = new Date()
       formData.value[item.key] = dateToday.toISOString().substring(0, 10)
     })
@@ -377,7 +367,7 @@ const resetFormData = () => {
 }
 
 // Watchers
-watch(expandForm, val => {
+watch(expandForm, (val) => {
   if (val) {
     const newLayout = { formCols: 12, pdfCols: 12, hidePdf: true }
     layout.value = newLayout
@@ -390,8 +380,8 @@ watch(expandForm, val => {
 // Lifecycle hooks
 onMounted(() => {
   props.fields
-    .filter(item => item.field === "signature")
-    .forEach(item => {
+    .filter((item) => item.field === "signature")
+    .forEach((item) => {
       dialogs.value = Object.assign({}, dialogs.value, { [item.key]: null })
       pdfSignatures.value[item.key] = {
         page: item.page && item.page > 0 ? item.page : 0,
@@ -418,10 +408,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-sheet
-    class="d-flex flex-wrap flex-md-nowrap h-100 w-100 align-self-center"
-    style="max-width: 1680px"
-  >
+  <v-sheet class="d-flex flex-wrap flex-md-nowrap h-100 w-100 align-self-center" style="max-width: 1680px">
     <v-sheet
       class="flex-grow-1 flex-shrink-0 mx-2 px-2 h-100 h-xs-auto h-sm-auto overflow-y-auto col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
       style="min-width: 300px; max-width: 50%"
@@ -440,7 +427,7 @@ onMounted(() => {
           <template v-for="item in fields" :key="item.key">
             <v-divider v-if="item.field === 'divider'"></v-divider>
             <v-list-item v-if="item.field === 'section'" cols="12" dense>
-              <p class="text-darken-1 py-0 mt-2" >{{ item.label }}</p>
+              <p class="text-darken-1 py-0 mt-2">{{ item.label }}</p>
             </v-list-item>
             <v-list-item v-if="item.field === 'textfield'" cols="12" dense>
               <v-text-field
@@ -500,15 +487,9 @@ onMounted(() => {
                 hide-details
                 @focus="$event.target.select()"
               >
-                <template v-slot:label>
-                  {{ item.label
-                  }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
-                </template>
+                <template v-slot:label> {{ item.label }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span> </template>
                 <template v-slot:append>
-                  <div
-                    v-if="isBoolTrue(item.clearable) && formData[item.key] ? true : false"
-                    class="v-input__icon v-input__icon--clear"
-                  >
+                  <div v-if="isBoolTrue(item.clearable) && formData[item.key] ? true : false" class="v-input__icon v-input__icon--clear">
                     <i
                       @click.stop="formData[item.key] = null"
                       type="button"
@@ -523,14 +504,8 @@ onMounted(() => {
               </v-autocomplete>
             </v-list-item>
             <v-list-item v-if="item.field === 'date'" cols="12" dense>
-              <v-dialog
-                :ref="item.key"
-                v-model="datemodal[item.key]"
-                :return-value.sync="formData[item.key]"
-                persistent
-                width="290px"
-              >
-                <template #activator="{ props }">
+              <v-dialog :ref="item.key" v-model="datemodal[item.key]" v-model:return-value="formData[item.key]" persistent width="290px">
+                <template v-slot:activator="{ props }">
                   <v-text-field
                     v-model="formData[item.key]"
                     class="mt-1 mb-2"
@@ -542,7 +517,7 @@ onMounted(() => {
                     readonly
                     v-bind="props"
                   >
-                    <template #label>
+                    <template v-slot:label>
                       {{ item.label }}
                       <span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
                     </template>
@@ -561,9 +536,9 @@ onMounted(() => {
                 :ref="item.key"
                 autocomplete="ignore-field"
                 :items="getCountries"
-                :item-title="item => `${item.name} ${item.flag}`"
-                :item-value="item => item.name"
-                :rules="[v => (v && v.length) || (!isFieldRequired(item.required)) || 'This field is required']"
+                :item-title="(item) => `${item.name} ${item.flag}`"
+                :item-value="(item) => item.name"
+                :rules="[(v) => (v && v.length) || !isFieldRequired(item.required) || 'This field is required']"
                 :placeholder="item.placeholder ? item.placeholder : ''"
                 persistent-placeholder
                 variant="outlined"
@@ -598,10 +573,7 @@ onMounted(() => {
                 :hide-details="formData[item.key] ? false : 'auto'"
                 @focus="$event.target.select()"
               >
-                <template v-slot:label>
-                  {{ item.label
-                  }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span>
-                </template>
+                <template v-slot:label> {{ item.label }}<span v-if="isFieldRequired(item.required)" class="red--text text--darken-2"> * </span> </template>
               </v-textarea>
             </v-list-item>
             <v-list-item v-if="item.field === 'signature'" cols="12" dense>
@@ -655,17 +627,13 @@ onMounted(() => {
           <v-list-item>
             <v-row class="px-2" align="center" justify="space-around">
               <v-col cols="12">
-                <v-btn class="mr-8 px-0" type="submit" block :color="formFilled ? 'teal' : 'teal-lighten-2'">
-                  Preview agreement
-                </v-btn>
+                <v-btn class="mr-8 px-0" type="submit" block :color="formFilled ? 'teal' : 'teal-lighten-2'"> Preview agreement </v-btn>
               </v-col>
             </v-row>
           </v-list-item>
           <v-list-item>
             <v-row class="px-2" align="center" justify="space-around">
-              <v-col v-if="pdfFile && downloadPdf ? true : false" class="px-4 mt-4" cols="12">
-                Double check the preview and then save the agreement file.
-              </v-col>
+              <v-col v-if="pdfFile && downloadPdf ? true : false" class="px-4 mt-4" cols="12"> Double check the preview and then save the agreement file. </v-col>
               <v-col cols="12">
                 <v-btn
                   class="mr-8 px-0"
@@ -685,30 +653,17 @@ onMounted(() => {
           <v-list-item v-if="servicedesk">
             <v-row class="px-2" align="center" justify="space-around">
               <v-col v-if="pdfDownloadClicked" class="px-4 mt-6" cols="12">
-                <v-icon>attach_file</v-icon> Make sure to attach <b>signed agreement file (.pdf)</b> to your email
-                request.
+                <v-icon>attach_file</v-icon> Make sure to attach <b>signed agreement file (.pdf)</b> to your email request.
               </v-col>
               <v-col cols="12">
-                <v-btn
-                  class="mr-8 px-0"
-                  block
-                  color="success"
-                  target="_blank"
-                  :disabled="!pdfDownloadClicked"
-                  @click="serviceDeskRedirect"
-                >
-                  Prepare Service desk email
-                </v-btn>
+                <v-btn class="mr-8 px-0" block color="success" target="_blank" :disabled="!pdfDownloadClicked" @click="serviceDeskRedirect"> Prepare Service desk email </v-btn>
               </v-col>
             </v-row>
           </v-list-item>
         </v-list>
       </form>
     </v-sheet>
-    <v-sheet
-      class="flex-grow-1 flex-shrink-1 mx-2 px-2 h-100 col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
-      style="min-width: 300px; max-width: 50%"
-    >
+    <v-sheet class="flex-grow-1 flex-shrink-1 mx-2 px-2 h-100 col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="min-width: 300px; max-width: 50%">
       <EmbedPdfViewer v-if="showPdf ? true : false" :source="pdfData" :pages="pdfPages" height="500" />
     </v-sheet>
     <v-sheet v-if="showServiceDesk">
