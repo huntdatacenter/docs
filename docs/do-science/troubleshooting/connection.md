@@ -89,9 +89,18 @@ You cannot access your HUNT Cloud lab while using the default Cisco AnyConnect V
 
 If you use OpenVPN on Linux and cannot access the rest of the internet while connected to the HUNT Cloud VPN, then please double check that you selected the **`Use this connection only for resources on its network`** in the final steps of [Setup the VPN profile](/do-science/lab/#_2-2-setup-the-vpn-profile) in the Getting Started section.
 
-### Wrong password
+### VPN - Wrong credentials
 
-If your VPN login suddenly stops working, and you are pretty sure your user name and mobile code are both correct, try to sync Google Authenticator's time settings: Start Google authenticator on your phone, tap the tree dots in the corner (menu button) and go to **`Settings`** > **`Time correction for codes`** and hit **`Sync now`**. Now, try to log in again. If this do not work, [contact us](/contact) for further investigation.
+<!-- this is the exact phrase used in OpenVPN: wrong credentials -->
+
+If your VPN login suddenly stops working, and you are pretty sure your username and mobile code are both correct:
+
+- Make sure your phone is connected to internet for time synchronization.
+- Time zone between phone and your machine should match.
+
+<!-- try to sync Google Authenticator's time settings: Start Google authenticator on your phone, tap the tree dots in the corner (menu button) and go to **`Settings`** > **`Time correction for codes`** and hit **`Sync now`**. -->
+
+Now, try to log in again. If this do not work, [contact us](/contact) for further investigation.
 
 ### Deactivated account
 
@@ -100,7 +109,6 @@ Inactive accounts will be deactivated after about 180 days. This will cause your
 ### New local computer
 
 We are happy to hear that! If you have a new local computer you will need to install a new VPN certificate on all machines that you will connect from. You can find all required steps in our [FAQ section](/do-science/service-desk/#i-have-a-new-machine-what-should-i-request).
-
 
 ### New VPN certificate
 
