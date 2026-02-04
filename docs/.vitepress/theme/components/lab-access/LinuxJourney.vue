@@ -338,7 +338,6 @@ onMounted(() => {
                       value="1"
                       :complete="vpnStepper > 1"
                       editable
-                      edit-icon
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         We use OpenVPN to ensure encrypted communication between your local computer and HUNT Cloud.<br /><br />
@@ -389,7 +388,6 @@ onMounted(() => {
                       value="2"
                       :complete="vpnStepper > 2"
                       editable
-                      edit-icon
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         <ol>
@@ -428,7 +426,6 @@ onMounted(() => {
                       value="3"
                       :complete="vpnStepper > 3"
                       editable
-                      edit-icon
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         <ol>
@@ -455,7 +452,6 @@ onMounted(() => {
                       value="4"
                       :complete="vpnStepper > 4"
                       editable
-                      edit-icon
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         <v-alert border="start" border-color="success" elevation="2">
@@ -493,7 +489,6 @@ onMounted(() => {
                       subtitle="Optional tips to try in case of issues"
                       value="5"
                       editable
-                      edit-icon
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         <br />

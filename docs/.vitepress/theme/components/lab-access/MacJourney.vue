@@ -314,7 +314,6 @@ onMounted(() => {
                       value="1"
                       title="Install Tunnelblick"
                       editable
-                      edit-icon
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         <v-card-text>
@@ -346,7 +345,6 @@ onMounted(() => {
                       value="2"
                       title="Setup the VPN profile"
                       editable
-                      edit-icon
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         <v-card-text>
@@ -403,7 +401,6 @@ onMounted(() => {
                       value="3"
                       title="Connect to the VPN"
                       editable
-                      edit-icon
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         <v-card-text>
@@ -454,7 +451,6 @@ onMounted(() => {
                       value="4"
                       title="Verify your VPN connection"
                       editable
-                      edit-icon
                     >
                       <v-card class="mb-8 pr-16" elevation="0">
                         <v-card-text>
@@ -495,7 +491,6 @@ onMounted(() => {
                       title="Troubleshooting VPN"
                       subtitle="Optional tips to try in case of issues"
                       editable
-                      edit-icon
                     >
                       <v-card class="mb-8 pr-4" elevation="0">
                         <v-card-text>
