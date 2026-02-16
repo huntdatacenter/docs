@@ -310,7 +310,8 @@ request_lab_deletion:
       I would like to request the following lab under our data space to be deleted:
 
       ---
-      lab = {labname}  
+      lab = {labname} 
+      tape_archive="tape_archive"  
       ---
 
       I have attached a signed lab deletion order to this email confirming the request.
