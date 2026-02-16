@@ -342,6 +342,13 @@ request_lab_deletion:
         autocapitalize: "off",
         field: "textfield",
       },
+      {
+        label: "Store lab data on tape archive",
+        key: "tape_archive",
+        autocapitalize: "off",
+        field: autocompleteone,
+        options: [{ text: "Yes", value: "Yes" }, { text: "No", value: "No" }],
+      },
     ]
   requirements:
     [
@@ -350,6 +357,7 @@ request_lab_deletion:
       "<b>Expected response time:</b> Weeks.",
       "<b>Expected delivery:</b> Countersignature from HUNT Cloud on your lab deletion order confirming that lab data, including online and offline duplicate copies, are deleted.",
       "<b>Cost:</b> Included in your lab subscription.",
+      "<b>Cost:</b> If lab is to be stored in tape archive, it comes with one time fee for archiving. Price cab ve seen <a href='/administer-science/prices/pricelist/' target='_blank'> in our price list</a>",
       "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
     ]
   attachments: []
