@@ -261,7 +261,7 @@ onMounted(() => {
                         <v-text-field
                           v-if="item.field === 'textfield'"
                           v-model="formData[item.key]"
-                          autocomplete="ignore-field"
+                          autocomplete="off"
                           :label="item.label"
                           :pattern="item.pattern ? item.pattern : null"
                           :title="item.hint ? item.hint : null"
@@ -281,7 +281,7 @@ onMounted(() => {
                         <v-textarea
                           v-else-if="item.field === 'textarea'"
                           v-model="formData[item.key]"
-                          autocomplete="ignore-field"
+                          autocomplete="off"
                           :label="item.label"
                           :title="item.hint ? item.hint : null"
                           :hint="item.hint ? item.hint : null"
@@ -315,7 +315,7 @@ onMounted(() => {
 
                         <v-select
                           v-else-if="item.field === 'selectone'"
-                          autocomplete="ignore-field"
+                          autocomplete="off"
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
@@ -330,7 +330,7 @@ onMounted(() => {
 
                         <v-autocomplete
                           v-else-if="item.field === 'autocompleteone'"
-                          autocomplete="ignore-field"
+                          autocomplete="off"
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
@@ -348,7 +348,7 @@ onMounted(() => {
                         <v-text-field
                           v-else-if="item.field === 'number'"
                           v-model="formData[item.key]"
-                          autocomplete="ignore-field"
+                          autocomplete="off"
                           type="number"
                           :label="item.label"
                           :title="item.hint ? item.hint : null"
