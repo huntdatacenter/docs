@@ -14,12 +14,16 @@ general_contact_request:
 
       Best regards,
 
-  fields: [
-    { label: "Request topic", key: "topic", field: "textfield" },
-    { label: "Lab (Optional)", key: "lab_name", field: "textfield", optional: true },
-    { label: "Data Space (Optional)", key: "data_space", field: "textfield", optional: true },
+  fields:
+    [
+      { label: "Request topic", key: "topic", field: "textfield" },
+      { label: "Lab (Optional)", key: "lab_name", field: "textfield", optional: true },
+      { label: "Data Space (Optional)", key: "data_space", field: "textfield", optional: true },
     ]
-  requirements: ["<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."]
+  requirements:
+    [
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
 
 general_lab_user_request:
@@ -33,15 +37,31 @@ general_lab_user_request:
 
       Best regards,
 
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab users.",
-    "<b>Expected response time:</b> Days.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab users.",
+      "<b>Expected response time:</b> Days.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
 
 general_lab_request:
@@ -55,14 +75,23 @@ general_lab_request:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders, coordinators, and users.",
-    "<b>Expected response time:</b> Days.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders, coordinators, and users.",
+      "<b>Expected response time:</b> Days.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
 
 general_dataspace_request:
@@ -76,14 +105,23 @@ general_dataspace_request:
 
       Best regards,
 
-  fields: [
-    { label: "Dataspace name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders and data space coordinators.",
-    "<b>Expected response time:</b> Days.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Dataspace name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders and data space coordinators.",
+      "<b>Expected response time:</b> Days.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
 
 cost_query:
@@ -95,17 +133,33 @@ cost_query:
 
       <your-text>
 
-      Best regards, 
+      Best regards,
 
-  fields: [
-    { label: "Data space name", key: "data_space_name", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders, Data space financial administrators, Lab leaders and Lab coordinators.",
-    "<b>Expected delivery time:</b> One week.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Data space name",
+        key: "data_space_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders, Data space financial administrators, Lab leaders and Lab coordinators.",
+      "<b>Expected delivery time:</b> One week.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
 
 ### Data Space orders
@@ -145,68 +199,106 @@ request_new_lab:
       Best regards,
 
   fields: [
-    { label: "New lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Data space name", key: "data_space", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
-    # { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    {
-      label: "Machine type",
-      key: "machine_type",
-      default: "default.c1",
-      field: "autocompleteone",
-      options: [
-        { header: "B - Series machine types: 2 GB of RAM per CPU core" },
-        { text: "default.b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
-        { text: "default.b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
-        { text: "default.b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
-        { text: "default.b4 - 16 CPUs / 32 GB RAM", value: "default.b4" },
-        { text: "default.b5 - 32 CPUs / 64 GB RAM", value: "default.b5" },
-        { text: "default.b6 - 48 CPUs / 96 GB RAM", value: "default.b6" },
-        { text: "default.b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
-        { text: "default.b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
-        { divider: true },
-        { header: "C - Series machine types: 4 GB of RAM per CPU core" },
-        { text: "default.c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
-        { text: "default.c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
-        { text: "default.c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
-        { text: "default.c4 - 16 CPUs / 64 GB RAM", value: "default.c4" },
-        { text: "default.c5 - 32 CPUs / 128 GB RAM", value: "default.c5" },
-        { text: "default.c6 - 48 CPUs / 192 GB RAM", value: "default.c6" },
-        { text: "default.c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
-        { text: "default.c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
-        { divider: true },
-        { header: "D - Series machine types: 8 GB of RAM per CPU core" },
-        { text: "default.d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
-        { text: "default.d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
-        { text: "default.d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
-        { text: "default.d4 - 16 CPUs / 128 GB RAM", value: "default.d4" },
-        { text: "default.d5 - 32 CPUs / 192 GB RAM", value: "default.d5" },
-        { text: "default.d6 - 48 CPUs / 384 GB RAM", value: "default.d6" },
-        { text: "default.d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
-        { text: "default.d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
-        { divider: true },
-        { header: "E - Series machine types: 16 GB of RAM per CPU core" },
-        { text: "default.e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
-        { text: "default.e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
-        { text: "default.e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
-        { text: "default.e4 - 16 CPUs / 256 GB RAM", value: "default.e4" },
-        { text: "default.e5 - 24 CPUs / 384 GB RAM", value: "default.e5" },
-        { text: "default.e6 - 32 CPUs / 512 GB RAM", value: "default.e6" },
-        { text: "default.e7 - 48 CPUs / 768 GB RAM", value: "default.e7" },
-      ]
-    },
-    { label: "Archive storage size (in gigabytes)", key: "archive_volume", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 400 },
-    { label: "Work storage size (in gigabytes)", key: "work_volume", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 300 },
-    { label: "Scratch storage size (in gigabytes)", key: "scratch_volume", hint: "Field should include only numbers", suffix: "GB", min: 100, max: 25000, step: 100, field: "number", default: 300 },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders and data space compliance coordinators in active <a href='/administer-science/scientific-access/#data-space-order' target='_blank'>data spaces</a>.",
-    "<b>Required attachment:</b> <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>Invoice profile for new lab</a> and <a href='/administer-science/agreements/downloads/#lab-order' target='_blank'>a signed lab order</a>. Information on storage volume sizes and machine type for the home machine can be found below button on main page.",
-    "<b>Expected delivery time:</b> One week.",
-    "<b>Cost:</b> One lab subscription as specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+      {
+        label: "New lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "Data space name", key: "data_space", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
+      # { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+      {
+        label: "Machine type",
+        key: "machine_type",
+        default: "default.c1",
+        field: "autocompleteone",
+        options:
+          [
+            { header: "B - Series machine types: 2 GB of RAM per CPU core" },
+            { text: "default.b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
+            { text: "default.b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
+            { text: "default.b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
+            { text: "default.b4 - 16 CPUs / 32 GB RAM", value: "default.b4" },
+            { text: "default.b5 - 32 CPUs / 64 GB RAM", value: "default.b5" },
+            { text: "default.b6 - 48 CPUs / 96 GB RAM", value: "default.b6" },
+            { text: "default.b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
+            { text: "default.b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
+            { divider: true },
+            { header: "C - Series machine types: 4 GB of RAM per CPU core" },
+            { text: "default.c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
+            { text: "default.c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
+            { text: "default.c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
+            { text: "default.c4 - 16 CPUs / 64 GB RAM", value: "default.c4" },
+            { text: "default.c5 - 32 CPUs / 128 GB RAM", value: "default.c5" },
+            { text: "default.c6 - 48 CPUs / 192 GB RAM", value: "default.c6" },
+            { text: "default.c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
+            { text: "default.c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
+            { divider: true },
+            { header: "D - Series machine types: 8 GB of RAM per CPU core" },
+            { text: "default.d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
+            { text: "default.d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
+            { text: "default.d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
+            { text: "default.d4 - 16 CPUs / 128 GB RAM", value: "default.d4" },
+            { text: "default.d5 - 32 CPUs / 192 GB RAM", value: "default.d5" },
+            { text: "default.d6 - 48 CPUs / 384 GB RAM", value: "default.d6" },
+            { text: "default.d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
+            { text: "default.d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
+            { divider: true },
+            { header: "E - Series machine types: 16 GB of RAM per CPU core" },
+            { text: "default.e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
+            { text: "default.e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
+            { text: "default.e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
+            { text: "default.e4 - 16 CPUs / 256 GB RAM", value: "default.e4" },
+            { text: "default.e5 - 24 CPUs / 384 GB RAM", value: "default.e5" },
+            { text: "default.e6 - 32 CPUs / 512 GB RAM", value: "default.e6" },
+            { text: "default.e7 - 48 CPUs / 768 GB RAM", value: "default.e7" },
+          ],
+      },
+      {
+        label: "Archive storage size (in gigabytes)",
+        key: "archive_volume",
+        hint: "Field should include only numbers",
+        suffix: "GB",
+        min: 100,
+        max: 25000,
+        step: 100,
+        field: "number",
+        default: 400,
+      },
+      {
+        label: "Work storage size (in gigabytes)",
+        key: "work_volume",
+        hint: "Field should include only numbers",
+        suffix: "GB",
+        min: 100,
+        max: 25000,
+        step: 100,
+        field: "number",
+        default: 300,
+      },
+      {
+        label: "Scratch storage size (in gigabytes)",
+        key: "scratch_volume",
+        hint: "Field should include only numbers",
+        suffix: "GB",
+        min: 100,
+        max: 25000,
+        step: 100,
+        field: "number",
+        default: 300,
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders and data space compliance coordinators in active <a href='/administer-science/scientific-access/#data-space-order' target='_blank'>data spaces</a>.",
+      "<b>Required attachment:</b> <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>Invoice profile for new lab</a> and <a href='/administer-science/agreements/downloads/#lab-order' target='_blank'>a signed lab order</a>. Information on storage volume sizes and machine type for the home machine can be found below button on main page.",
+      "<b>Expected delivery time:</b> One week.",
+      "<b>Cost:</b> One lab subscription as specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_lab_deletion:
   title: "Request a lab deletion"
@@ -218,7 +310,8 @@ request_lab_deletion:
       I would like to request the following lab under our data space to be deleted:
 
       ---
-      lab = {labname}  
+      lab = {labname} 
+      tape_archive="tape_archive"  
       ---
 
       I have attached a signed lab deletion order to this email confirming the request.
@@ -232,20 +325,43 @@ request_lab_deletion:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Data space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders and Lab leaders in collaboration.",
-    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#lab-deletion-order' target='_blank'>A signed lab deletion order</a>.",
-    "<b>Expected response time:</b> Weeks.",
-    "<b>Expected delivery:</b> Countersignature from HUNT Cloud on your lab deletion order confirming that lab data, including online and offline duplicate copies, are deleted.",
-    "<b>Cost:</b> Included in your lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Data space name",
+        key: "dataspace",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only letters a-z, 0-9, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Store lab data on tape archive",
+        key: "tape_archive",
+        autocapitalize: "off",
+        field: autocompleteone,
+        options: [{ text: "Yes", value: "Yes" }, { text: "No", value: "No" }],
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders and Lab leaders in collaboration.",
+      "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#lab-deletion-order' target='_blank'>A signed lab deletion order</a>.",
+      "<b>Expected response time:</b> Weeks.",
+      "<b>Expected delivery:</b> Countersignature from HUNT Cloud on your lab deletion order confirming that lab data, including online and offline duplicate copies, are deleted.",
+      "<b>Cost:</b> Included in your lab subscription.",
+      "<b>Cost:</b> If lab is to be stored in tape archive, it comes with one time fee for archiving. Price cab ve seen <a href='/administer-science/prices/pricelist/' target='_blank'> in our price list</a>",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_external_import_kista:
   title: "Request an external import kista"
@@ -267,21 +383,36 @@ request_external_import_kista:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "External organization", key: "external_organization", field: "textfield" },
-    { label: "Public IPv4 address of external organization (only if outside of NTNU)", key: "ipaddress", pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization. Public IP address should not start with prefixes 10., 127., 192.168., or 169.254. Try to lookup your public IP with https://docs.hdc.ntnu.no/ipv4/.", optional: true, field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
-    "<b>Required attachments</b>: (1) <a href='/administer-science/agreements/downloads/#external-kista-import-order' target='_blank'>A signed external kista import order</a>, and (2) one <a href='/data-transfers/external-kista/#ssh-key-pair' target='_blank'>SSH public key</a> from the external uploader.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Kista access information sent to the lab user that will import the data.",
-    "<b>Cost:</b> Included in your data space subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "External organization", key: "external_organization", field: "textfield" },
+      {
+        label: "Public IPv4 address of external organization (only if outside of NTNU)",
+        key: "ipaddress",
+        pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$',
+        hint: "Enter valid public IP address of external organization. Public IP address should not start with prefixes 10., 127., 192.168., or 169.254. Try to lookup your public IP with https://docs.hdc.ntnu.no/ipv4/.",
+        optional: true,
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
+      "<b>Required attachments</b>: (1) <a href='/administer-science/agreements/downloads/#external-kista-import-order' target='_blank'>A signed external kista import order</a>, and (2) one <a href='/data-transfers/external-kista/#ssh-key-pair' target='_blank'>SSH public key</a> from the external uploader.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Kista access information sent to the lab user that will import the data.",
+      "<b>Cost:</b> Included in your data space subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_external_export_kista:
   title: "Request an external export kista"
@@ -303,21 +434,36 @@ request_external_export_kista:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "External organization", key: "external_organization", field: "textfield" },
-    { label: "Public IPv4 address of external organization (only if outside of NTNU)", key: "ipaddress", pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Enter valid public IP address of external organization. Public IP address should not start with prefixes 10., 127., 192.168., or 169.254. Try to lookup your public IP with https://docs.hdc.ntnu.no/ipv4/.", optional: true, field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
-    "<b>Required attachments</b>: (1) <a href='/administer-science/agreements/downloads/#external-kista-export-order' target='_blank'>A signed external kista export order </a> and (2) <a href='/data-transfers/external-kista/#ssh-key-pair' target='_blank'>SSH public key </a> from the external downloader.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Access information sent to the lab user that will make data available for export.",
-    "<b>Cost:</b> Included in your data space subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "External organization", key: "external_organization", field: "textfield" },
+      {
+        label: "Public IPv4 address of external organization (only if outside of NTNU)",
+        key: "ipaddress",
+        pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$',
+        hint: "Enter valid public IP address of external organization. Public IP address should not start with prefixes 10., 127., 192.168., or 169.254. Try to lookup your public IP with https://docs.hdc.ntnu.no/ipv4/.",
+        optional: true,
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
+      "<b>Required attachments</b>: (1) <a href='/administer-science/agreements/downloads/#external-kista-export-order' target='_blank'>A signed external kista export order </a> and (2) <a href='/data-transfers/external-kista/#ssh-key-pair' target='_blank'>SSH public key </a> from the external downloader.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Access information sent to the lab user that will make data available for export.",
+      "<b>Cost:</b> Included in your data space subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_network_opening:
   title: "Request a network opening"
@@ -335,21 +481,28 @@ request_network_opening:
 
       Best regards,
 
-
-  fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
-    "<b>Required information</b>: IPv4 address and port number for the external party.",
-    "<b>Required attachments</b>: <a href='/administer-science/agreements/downloads/#network-opening-order' target='_blank'>A signed network opening order </a>.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Network opening communicated in your Slack lab channel.",
-    "<b>Cost:</b> Included in your data space subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders or Data space compliance coordinators.",
+      "<b>Required information</b>: IPv4 address and port number for the external party.",
+      "<b>Required attachments</b>: <a href='/administer-science/agreements/downloads/#network-opening-order' target='_blank'>A signed network opening order </a>.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Network opening communicated in your Slack lab channel.",
+      "<b>Cost:</b> Included in your data space subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 update_data_space_administrator_role:
   title: "Request update of data space administrator role"
@@ -375,35 +528,33 @@ update_data_space_administrator_role:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    {
-      label: "Role",
-      key: "role",
-      field: "selectone",
-      options: [
-        "Compliance",
-        "Data",
-        "Technical",
-        "Knowledge",
-        "Financial",
-      ]},
-    { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Department", key: "department", field: "textfield" },
-    { label: "Faculty", key: "faculty", field: "textfield" },
-    { label: "Institution", key: "institution", field: "textfield" },
-    { label: "Email", key: "email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
-    { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders or Data space compliance administrators in active data spaces.",
-    "<b>Required attachment</b>: None.",
-    "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b>  Included in your data space subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "Role", key: "role", field: "selectone", options: ["Compliance", "Data", "Technical", "Knowledge", "Financial"] },
+      { label: "Name and Surname", key: "name", field: "textfield" },
+      { label: "Department", key: "department", field: "textfield" },
+      { label: "Faculty", key: "faculty", field: "textfield" },
+      { label: "Institution", key: "institution", field: "textfield" },
+      { label: "Email", key: "email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
+      { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders or Data space compliance administrators in active data spaces.",
+      "<b>Required attachment</b>: None.",
+      "<b>Expected delivery time:</b> Days.",
+      "<b>Cost:</b>  Included in your data space subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_lab_leader_role:
   title: "Request update of lab leader role"
@@ -419,19 +570,34 @@ request_lab_leader_role:
       I am looking forward to receive an email acknowledging that you have updated the role.
 
       Best regards,
-  fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders and data space compliance officers.",
-    "<b>Required attachment</b>: A new <a href'/administer-science/agreements/downloads/#lab-order' target='_blank'>signed lab order</a>.",
-    "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b> Included in your data space subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Dataspace name",
+        key: "dataspace",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders and data space compliance officers.",
+      "<b>Required attachment</b>: A new <a href'/administer-science/agreements/downloads/#lab-order' target='_blank'>signed lab order</a>.",
+      "<b>Expected delivery time:</b> Days.",
+      "<b>Cost:</b> Included in your data space subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_new_invoice_profile:
   title: "Request a new invoice profile"
@@ -449,18 +615,26 @@ request_new_invoice_profile:
 
       Best regards,
 
-  fields: [
-    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders and data space financial officers.",
-    "<b>Required attachment</b>: A new <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice profile</a>.",
-    "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b> Included in your data space subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Dataspace name",
+        key: "dataspace",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders and data space financial officers.",
+      "<b>Required attachment</b>: A new <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice profile</a>.",
+      "<b>Expected delivery time:</b> Days.",
+      "<b>Cost:</b> Included in your data space subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_update_of_existing_invoice:
   title: "Request update of existing invoice profile"
@@ -478,18 +652,26 @@ request_update_of_existing_invoice:
 
       Best regards,
 
-  fields: [
-    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders and data space financial officers.",
-    "<b>Required attachment</b>: A new <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice agreemnent</a>.",
-    "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b> Included in your data space subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Dataspace name",
+        key: "dataspace",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders and data space financial officers.",
+      "<b>Required attachment</b>: A new <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>signed invoice agreemnent</a>.",
+      "<b>Expected delivery time:</b> Days.",
+      "<b>Cost:</b> Included in your data space subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_vat_exemption:
   title: "VAT exemption"
@@ -507,17 +689,33 @@ request_vat_exemption:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Dataspace name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordiantors.",
-    "<b>Required attachment</b>: (one or more of the following): collaboration agreement, consortium agreement, grant applications and/or publications listing authors from both institutions.",
-    "<b>Expected delivery time:</b> Weeks.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Dataspace name",
+        key: "dataspace",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordiantors.",
+      "<b>Required attachment</b>: (one or more of the following): collaboration agreement, consortium agreement, grant applications and/or publications listing authors from both institutions.",
+      "<b>Expected delivery time:</b> Weeks.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
 
 request_lab_transfer:
@@ -541,26 +739,45 @@ request_lab_transfer:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Current data space", key: "current_dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Destination data space", key: "destination_dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Current data space",
+        key: "current_dataspace",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Destination data space",
+        key: "destination_dataspace",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
     ]
-  requirements: [
-    "<b>Who can order:</b> Data space leaders and compliance adminsitrators",
-    "<b>Required attachment</b>: A <a href='/administer-science/agreements/downloads/#lab-transfer-order' target='blank'> signed lab transfer order</a>.",
-    "<b>Optional attachment</b>: A <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'> signed invoice profile</a> ",
-    "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b> Included in your data space subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: [
-    "Required: Signed lab transfer order (.pdf)",
-    "Optional: Signed invoice profile (.pdf)",
-  ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data space leaders and compliance adminsitrators",
+      "<b>Required attachment</b>: A <a href='/administer-science/agreements/downloads/#lab-transfer-order' target='blank'> signed lab transfer order</a>.",
+      "<b>Optional attachment</b>: A <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'> signed invoice profile</a> ",
+      "<b>Expected delivery time:</b> Days.",
+      "<b>Cost:</b> Included in your data space subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: ["Required: Signed lab transfer order (.pdf)", "Optional: Signed invoice profile (.pdf)"]
 
 ### Data Controller Orders
-
 
 request_new_dp_agreement:
   title: "Request a new data processor agreement template"
@@ -577,22 +794,18 @@ request_new_dp_agreement:
 
 
       Best regards,
-  fields: [
-    { label: "Organization", key: "organization", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going as a data controller</a>.",
-    "<b>Who can request:</b> Data controllers for data inteded to be processed in HUNT Cloud.",
-    "<b>Required attachment</b>: <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a>.",
-    "<b>Expected delivery:</b> PDF agreements for review/signatures.",
-    "<b>Expected delivery time:</b> One week.",
-    "<b>Cost:</b> There is no direct cost for data controllers establishing data processor agreements. Resource consumptions are billed to attached data spaces and labs.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: [
-     HUNT Cloud organizational agreement information form. (.pdf)
-  ]
-
+  fields: [{ label: "Organization", key: "organization", field: "textfield" }]
+  requirements:
+    [
+      "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going as a data controller</a>.",
+      "<b>Who can request:</b> Data controllers for data inteded to be processed in HUNT Cloud.",
+      "<b>Required attachment</b>: <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a>.",
+      "<b>Expected delivery:</b> PDF agreements for review/signatures.",
+      "<b>Expected delivery time:</b> One week.",
+      "<b>Cost:</b> There is no direct cost for data controllers establishing data processor agreements. Resource consumptions are billed to attached data spaces and labs.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: [HUNT Cloud organizational agreement information form. (.pdf)]
 
 request_new_service_center:
   title: "Request a new service center"
@@ -610,22 +823,18 @@ request_new_service_center:
 
       Best regards,
 
-  fields: [
-    { label: "Data controller", key: "datacontroller", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going with your service center </a>",
-    "<b>Who can order:</b> Data space leaders and data space administrators under active data controller agreements.",
-    "<b>Required attachment</b>: <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a>.",
-    "<b>Expected delivery:</b> PDF agreements for review/signatures.",
-    "<b>Expected delivery time:</b> One week.",
-    "<b>Cost:</b> There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: [
-     HUNT Cloud organizational agreement information form. (.pdf)
-  ]
-
+  fields: [{ label: "Data controller", key: "datacontroller", autocapitalize: "off", field: "textfield" }]
+  requirements:
+    [
+      "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going with your service center </a>",
+      "<b>Who can order:</b> Data space leaders and data space administrators under active data controller agreements.",
+      "<b>Required attachment</b>: <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a>.",
+      "<b>Expected delivery:</b> PDF agreements for review/signatures.",
+      "<b>Expected delivery time:</b> One week.",
+      "<b>Cost:</b> There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: [HUNT Cloud organizational agreement information form. (.pdf)]
 
 request_dp_agreement_version_upgrade:
   title: "Request data processor agreement version upgrade"
@@ -641,22 +850,18 @@ request_dp_agreement_version_upgrade:
 
       Best regards,
 
-  fields: [
-    { label: "Organization", key: "organization", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going as a data controller</a>",
-    "<b>Who can request:</b> Data controller administrators.",
-    "<b>Required attachment</b>: None, although you may add a new <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a> if you plan to update your contact information.",
-    "<b>Expected delivery:</b> PDF agreements for review/signatures.",
-    "<b>Expected delivery time:</b> One week.",
-    "<b>Cost:</b> There is no direct cost upgrading data processor agreements.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: [
-    "Optional: attach a new HUNT Cloud organizational agreement information (.pdf)"
-  ]
-
+  fields: [{ label: "Organization", key: "organization", field: "textfield" }]
+  requirements:
+    [
+      "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going as a data controller</a>",
+      "<b>Who can request:</b> Data controller administrators.",
+      "<b>Required attachment</b>: None, although you may add a new <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a> if you plan to update your contact information.",
+      "<b>Expected delivery:</b> PDF agreements for review/signatures.",
+      "<b>Expected delivery time:</b> One week.",
+      "<b>Cost:</b> There is no direct cost upgrading data processor agreements.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: ["Optional: attach a new HUNT Cloud organizational agreement information (.pdf)"]
 
 ### Lab orders
 
@@ -676,22 +881,28 @@ request_access_new_user:
 
       Best regards,
 
-  fields: [
-    { label: "Name of user", key: "username", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#user-agreement' target='_blank'>A signed user agreement</a>.",
-    "<b>Expected response time:</b> One week.",
-    "<b>Expected delivery:</b> Lab keys and VPN certificate.",
-    "<b>Cost:</b> Included in your lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: [
-    A signed user agreement. (.pdf)
-  ]
-
+  fields:
+    [
+      { label: "Name of user", key: "username", autocapitalize: "off", field: "textfield" },
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#user-agreement' target='_blank'>A signed user agreement</a>.",
+      "<b>Expected response time:</b> One week.",
+      "<b>Expected delivery:</b> Lab keys and VPN certificate.",
+      "<b>Cost:</b> Included in your lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: [A signed user agreement. (.pdf)]
 
 request_lab_user_deactivation:
   title: "Request lab user deactivation"
@@ -712,19 +923,34 @@ request_lab_user_deactivation:
 
       Best regards,
 
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators can deactivate access for all lab users. Lab users can deactivate their own lab access.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Confirmation on email that lab access is deactivated.",
-    "<b>Cost:</b> Included in your lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators can deactivate access for all lab users. Lab users can deactivate their own lab access.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Confirmation on email that lab access is deactivated.",
+      "<b>Cost:</b> Included in your lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 reactivate_lab_user:
   title: "Request lab user reactivation"
@@ -742,22 +968,28 @@ reactivate_lab_user:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Name of user", key: "username", autocapitalize: "off", field: "textfield" }
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#user-agreement' target='_blank'>A new user agreement</a>.",
-    "<b>Expected response time:</b> One week.",
-    "<b>Expected delivery:</b> Lab keys and VPN certificate.",
-    "<b>Cost:</b> Included in your lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: [
-    A new user agreement. (.pdf)
-  ]
-
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "Name of user", key: "username", autocapitalize: "off", field: "textfield" },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#user-agreement' target='_blank'>A new user agreement</a>.",
+      "<b>Expected response time:</b> One week.",
+      "<b>Expected delivery:</b> Lab keys and VPN certificate.",
+      "<b>Cost:</b> Included in your lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: [A new user agreement. (.pdf)]
 
 request_renew_user_agreement:
   title: "Renew user agreement"
@@ -775,22 +1007,35 @@ request_renew_user_agreement:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "User name", key: "username", pattern: "[-a-z0-9]{3,}", hint: "Lab user should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" }
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#user-agreement' target='_blank'>A signed user agreement</a>.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Email acknowledgment.",
-    "<b>Cost:</b> Included in your lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: [
-    A signed user agreement (.pdf).
-  ]
-
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "User name",
+        key: "username",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab user should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#user-agreement' target='_blank'>A signed user agreement</a>.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Email acknowledgment.",
+      "<b>Cost:</b> Included in your lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: [A signed user agreement (.pdf).]
 
 request_machine_size_update:
   title: "Request a machine size update"
@@ -816,119 +1061,135 @@ request_machine_size_update:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    # { label: "Current machine type", key: "source_machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
-    # { label: "New machine type", key: "target_machine_type", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
-    {
-      label: "Current machine type",
-      key: "source_machine_type",
-      # default: "default.b2",
-      # pattern: "(default).[a-z][0-9]",
-      # hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.",
-      # field: "textfield",
-      field: "autocompleteone",
-      options: [
-        { header: "B - Series machine types: 2 GB of RAM per CPU core" },
-        { text: "default.b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
-        { text: "default.b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
-        { text: "default.b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
-        { text: "default.b4 - 16 CPUs / 32 GB RAM", value: "default.b4" },
-        { text: "default.b5 - 32 CPUs / 64 GB RAM", value: "default.b5" },
-        { text: "default.b6 - 48 CPUs / 96 GB RAM", value: "default.b6" },
-        { text: "default.b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
-        { text: "default.b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
-        { divider: true },
-        { header: "C - Series machine types: 4 GB of RAM per CPU core" },
-        { text: "default.c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
-        { text: "default.c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
-        { text: "default.c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
-        { text: "default.c4 - 16 CPUs / 64 GB RAM", value: "default.c4" },
-        { text: "default.c5 - 32 CPUs / 128 GB RAM", value: "default.c5" },
-        { text: "default.c6 - 48 CPUs / 192 GB RAM", value: "default.c6" },
-        { text: "default.c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
-        { text: "default.c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
-        { divider: true },
-        { header: "D - Series machine types: 8 GB of RAM per CPU core" },
-        { text: "default.d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
-        { text: "default.d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
-        { text: "default.d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
-        { text: "default.d4 - 16 CPUs / 128 GB RAM", value: "default.d4" },
-        { text: "default.d5 - 32 CPUs / 192 GB RAM", value: "default.d5" },
-        { text: "default.d6 - 48 CPUs / 384 GB RAM", value: "default.d6" },
-        { text: "default.d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
-        { text: "default.d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
-        { divider: true },
-        { header: "E - Series machine types: 16 GB of RAM per CPU core" },
-        { text: "default.e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
-        { text: "default.e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
-        { text: "default.e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
-        { text: "default.e4 - 16 CPUs / 256 GB RAM", value: "default.e4" },
-        { text: "default.e5 - 24 CPUs / 384 GB RAM", value: "default.e5" },
-        { text: "default.e6 - 32 CPUs / 512 GB RAM", value: "default.e6" },
-        { text: "default.e7 - 48 CPUs / 768 GB RAM", value: "default.e7" },
-      ]
-    },
-    {
-      label: "New machine type",
-      key: "target_machine_type",
-      # default: "default.b2",
-      # pattern: "(default).[a-z][0-9]",
-      # hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.",
-      # field: "textfield",
-      field: "autocompleteone",
-      options: [
-        { header: "B - Series machine types: 2 GB of RAM per CPU core" },
-        { text: "default.b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
-        { text: "default.b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
-        { text: "default.b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
-        { text: "default.b4 - 16 CPUs / 32 GB RAM", value: "default.b4" },
-        { text: "default.b5 - 32 CPUs / 64 GB RAM", value: "default.b5" },
-        { text: "default.b6 - 48 CPUs / 96 GB RAM", value: "default.b6" },
-        { text: "default.b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
-        { text: "default.b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
-        { divider: true },
-        { header: "C - Series machine types: 4 GB of RAM per CPU core" },
-        { text: "default.c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
-        { text: "default.c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
-        { text: "default.c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
-        { text: "default.c4 - 16 CPUs / 64 GB RAM", value: "default.c4" },
-        { text: "default.c5 - 32 CPUs / 128 GB RAM", value: "default.c5" },
-        { text: "default.c6 - 48 CPUs / 192 GB RAM", value: "default.c6" },
-        { text: "default.c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
-        { text: "default.c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
-        { divider: true },
-        { header: "D - Series machine types: 8 GB of RAM per CPU core" },
-        { text: "default.d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
-        { text: "default.d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
-        { text: "default.d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
-        { text: "default.d4 - 16 CPUs / 128 GB RAM", value: "default.d4" },
-        { text: "default.d5 - 32 CPUs / 192 GB RAM", value: "default.d5" },
-        { text: "default.d6 - 48 CPUs / 384 GB RAM", value: "default.d6" },
-        { text: "default.d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
-        { text: "default.d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
-        { divider: true },
-        { header: "E - Series machine types: 16 GB of RAM per CPU core" },
-        { text: "default.e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
-        { text: "default.e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
-        { text: "default.e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
-        { text: "default.e4 - 16 CPUs / 256 GB RAM", value: "default.e4" },
-        { text: "default.e5 - 24 CPUs / 384 GB RAM", value: "default.e5" },
-        { text: "default.e6 - 32 CPUs / 512 GB RAM", value: "default.e6" },
-        { text: "default.e7 - 48 CPUs / 768 GB RAM", value: "default.e7" },
-      ]
-    },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Lab machine with updated size.",
-    "<b>Requirement:</b> The procedure require a machine restart that needs to be scheduled with your lab users.",
-    "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Machine name",
+        key: "vm_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      # { label: "Current machine type", key: "source_machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+      # { label: "New machine type", key: "target_machine_type", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
+      {
+        label: "Current machine type",
+        key: "source_machine_type",
+        # default: "default.b2",
+        # pattern: "(default).[a-z][0-9]",
+        # hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.",
+        # field: "textfield",
+        field: "autocompleteone",
+        options:
+          [
+            { header: "B - Series machine types: 2 GB of RAM per CPU core" },
+            { text: "default.b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
+            { text: "default.b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
+            { text: "default.b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
+            { text: "default.b4 - 16 CPUs / 32 GB RAM", value: "default.b4" },
+            { text: "default.b5 - 32 CPUs / 64 GB RAM", value: "default.b5" },
+            { text: "default.b6 - 48 CPUs / 96 GB RAM", value: "default.b6" },
+            { text: "default.b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
+            { text: "default.b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
+            { divider: true },
+            { header: "C - Series machine types: 4 GB of RAM per CPU core" },
+            { text: "default.c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
+            { text: "default.c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
+            { text: "default.c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
+            { text: "default.c4 - 16 CPUs / 64 GB RAM", value: "default.c4" },
+            { text: "default.c5 - 32 CPUs / 128 GB RAM", value: "default.c5" },
+            { text: "default.c6 - 48 CPUs / 192 GB RAM", value: "default.c6" },
+            { text: "default.c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
+            { text: "default.c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
+            { divider: true },
+            { header: "D - Series machine types: 8 GB of RAM per CPU core" },
+            { text: "default.d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
+            { text: "default.d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
+            { text: "default.d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
+            { text: "default.d4 - 16 CPUs / 128 GB RAM", value: "default.d4" },
+            { text: "default.d5 - 32 CPUs / 192 GB RAM", value: "default.d5" },
+            { text: "default.d6 - 48 CPUs / 384 GB RAM", value: "default.d6" },
+            { text: "default.d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
+            { text: "default.d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
+            { divider: true },
+            { header: "E - Series machine types: 16 GB of RAM per CPU core" },
+            { text: "default.e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
+            { text: "default.e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
+            { text: "default.e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
+            { text: "default.e4 - 16 CPUs / 256 GB RAM", value: "default.e4" },
+            { text: "default.e5 - 24 CPUs / 384 GB RAM", value: "default.e5" },
+            { text: "default.e6 - 32 CPUs / 512 GB RAM", value: "default.e6" },
+            { text: "default.e7 - 48 CPUs / 768 GB RAM", value: "default.e7" },
+          ],
+      },
+      {
+        label: "New machine type",
+        key: "target_machine_type",
+        # default: "default.b2",
+        # pattern: "(default).[a-z][0-9]",
+        # hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.",
+        # field: "textfield",
+        field: "autocompleteone",
+        options:
+          [
+            { header: "B - Series machine types: 2 GB of RAM per CPU core" },
+            { text: "default.b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
+            { text: "default.b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
+            { text: "default.b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
+            { text: "default.b4 - 16 CPUs / 32 GB RAM", value: "default.b4" },
+            { text: "default.b5 - 32 CPUs / 64 GB RAM", value: "default.b5" },
+            { text: "default.b6 - 48 CPUs / 96 GB RAM", value: "default.b6" },
+            { text: "default.b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
+            { text: "default.b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
+            { divider: true },
+            { header: "C - Series machine types: 4 GB of RAM per CPU core" },
+            { text: "default.c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
+            { text: "default.c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
+            { text: "default.c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
+            { text: "default.c4 - 16 CPUs / 64 GB RAM", value: "default.c4" },
+            { text: "default.c5 - 32 CPUs / 128 GB RAM", value: "default.c5" },
+            { text: "default.c6 - 48 CPUs / 192 GB RAM", value: "default.c6" },
+            { text: "default.c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
+            { text: "default.c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
+            { divider: true },
+            { header: "D - Series machine types: 8 GB of RAM per CPU core" },
+            { text: "default.d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
+            { text: "default.d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
+            { text: "default.d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
+            { text: "default.d4 - 16 CPUs / 128 GB RAM", value: "default.d4" },
+            { text: "default.d5 - 32 CPUs / 192 GB RAM", value: "default.d5" },
+            { text: "default.d6 - 48 CPUs / 384 GB RAM", value: "default.d6" },
+            { text: "default.d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
+            { text: "default.d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
+            { divider: true },
+            { header: "E - Series machine types: 16 GB of RAM per CPU core" },
+            { text: "default.e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
+            { text: "default.e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
+            { text: "default.e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
+            { text: "default.e4 - 16 CPUs / 256 GB RAM", value: "default.e4" },
+            { text: "default.e5 - 24 CPUs / 384 GB RAM", value: "default.e5" },
+            { text: "default.e6 - 32 CPUs / 512 GB RAM", value: "default.e6" },
+            { text: "default.e7 - 48 CPUs / 768 GB RAM", value: "default.e7" },
+          ],
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Lab machine with updated size.",
+      "<b>Requirement:</b> The procedure require a machine restart that needs to be scheduled with your lab users.",
+      "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_new_cpu:
   title: "Request a new lab machine"
@@ -953,85 +1214,92 @@ request_new_cpu:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    {
-      label: "Machine type",
-      key: "machine_type",
-      # default: "default.b2",
-      # pattern: "(default).[a-z][0-9]",
-      # hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.",
-      # field: "textfield",
-      field: "autocompleteone",
-      options: [
-        { header: "B - Series machine types: 2 GB of RAM per CPU core" },
-        { text: "default.b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
-        { text: "default.b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
-        { text: "default.b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
-        { text: "default.b4 - 16 CPUs / 32 GB RAM", value: "default.b4" },
-        { text: "default.b5 - 32 CPUs / 64 GB RAM", value: "default.b5" },
-        { text: "default.b6 - 48 CPUs / 96 GB RAM", value: "default.b6" },
-        { text: "default.b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
-        { text: "default.b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
-        { divider: true },
-        { header: "C - Series machine types: 4 GB of RAM per CPU core" },
-        { text: "default.c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
-        { text: "default.c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
-        { text: "default.c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
-        { text: "default.c4 - 16 CPUs / 64 GB RAM", value: "default.c4" },
-        { text: "default.c5 - 32 CPUs / 128 GB RAM", value: "default.c5" },
-        { text: "default.c6 - 48 CPUs / 192 GB RAM", value: "default.c6" },
-        { text: "default.c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
-        { text: "default.c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
-        { divider: true },
-        { header: "D - Series machine types: 8 GB of RAM per CPU core" },
-        { text: "default.d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
-        { text: "default.d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
-        { text: "default.d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
-        { text: "default.d4 - 16 CPUs / 128 GB RAM", value: "default.d4" },
-        { text: "default.d5 - 32 CPUs / 192 GB RAM", value: "default.d5" },
-        { text: "default.d6 - 48 CPUs / 384 GB RAM", value: "default.d6" },
-        { text: "default.d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
-        { text: "default.d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
-        { divider: true },
-        { header: "E - Series machine types: 16 GB of RAM per CPU core" },
-        { text: "default.e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
-        { text: "default.e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
-        { text: "default.e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
-        { text: "default.e4 - 16 CPUs / 256 GB RAM", value: "default.e4" },
-        { text: "default.e5 - 24 CPUs / 384 GB RAM", value: "default.e5" },
-        { text: "default.e6 - 32 CPUs / 512 GB RAM", value: "default.e6" },
-        { text: "default.e7 - 48 CPUs / 768 GB RAM", value: "default.e7" },
-      ]
-    },
-    { label: "Storage size (in terabytes)", key: "storage_size", hint: "Field should include only numbers", suffix: "TB", min: 0.1, max: 25, step: 0.1, field: "number", default: 1 },
-    {
-      label: "Storage type",
-      key: "storage_type",
-      field: "autocompleteone",
-      options: [
-        { text: "Regular storage (HDD)", value: "regular" },
-        { text: "Fast storage (NVME)", value: "nvme" },
-      ]
-    },
-    {
-      label: "Subscription",
-      key: "subscription",
-      field: "autocompleteone",
-      options: [
-        { text: "On-demand", value: "ondemand" },
-        { text: "Spot", value: "spot" },
-      ]
-    },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> New lab machine accessible from your home machine.",
-    "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Machine type",
+        key: "machine_type",
+        # default: "default.b2",
+        # pattern: "(default).[a-z][0-9]",
+        # hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.",
+        # field: "textfield",
+        field: "autocompleteone",
+        options:
+          [
+            { header: "B - Series machine types: 2 GB of RAM per CPU core" },
+            { text: "default.b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
+            { text: "default.b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
+            { text: "default.b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
+            { text: "default.b4 - 16 CPUs / 32 GB RAM", value: "default.b4" },
+            { text: "default.b5 - 32 CPUs / 64 GB RAM", value: "default.b5" },
+            { text: "default.b6 - 48 CPUs / 96 GB RAM", value: "default.b6" },
+            { text: "default.b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
+            { text: "default.b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
+            { divider: true },
+            { header: "C - Series machine types: 4 GB of RAM per CPU core" },
+            { text: "default.c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
+            { text: "default.c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
+            { text: "default.c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
+            { text: "default.c4 - 16 CPUs / 64 GB RAM", value: "default.c4" },
+            { text: "default.c5 - 32 CPUs / 128 GB RAM", value: "default.c5" },
+            { text: "default.c6 - 48 CPUs / 192 GB RAM", value: "default.c6" },
+            { text: "default.c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
+            { text: "default.c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
+            { divider: true },
+            { header: "D - Series machine types: 8 GB of RAM per CPU core" },
+            { text: "default.d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
+            { text: "default.d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
+            { text: "default.d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
+            { text: "default.d4 - 16 CPUs / 128 GB RAM", value: "default.d4" },
+            { text: "default.d5 - 32 CPUs / 192 GB RAM", value: "default.d5" },
+            { text: "default.d6 - 48 CPUs / 384 GB RAM", value: "default.d6" },
+            { text: "default.d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
+            { text: "default.d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
+            { divider: true },
+            { header: "E - Series machine types: 16 GB of RAM per CPU core" },
+            { text: "default.e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
+            { text: "default.e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
+            { text: "default.e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
+            { text: "default.e4 - 16 CPUs / 256 GB RAM", value: "default.e4" },
+            { text: "default.e5 - 24 CPUs / 384 GB RAM", value: "default.e5" },
+            { text: "default.e6 - 32 CPUs / 512 GB RAM", value: "default.e6" },
+            { text: "default.e7 - 48 CPUs / 768 GB RAM", value: "default.e7" },
+          ],
+      },
+      {
+        label: "Storage size (in terabytes)",
+        key: "storage_size",
+        hint: "Field should include only numbers",
+        suffix: "TB",
+        min: 0.1,
+        max: 25,
+        step: 0.1,
+        field: "number",
+        default: 1,
+      },
+      {
+        label: "Storage type",
+        key: "storage_type",
+        field: "autocompleteone",
+        options: [{ text: "Regular storage (HDD)", value: "regular" }, { text: "Fast storage (NVME)", value: "nvme" }],
+      },
+      { label: "Subscription", key: "subscription", field: "autocompleteone", options: [{ text: "On-demand", value: "ondemand" }, { text: "Spot", value: "spot" }] },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> New lab machine accessible from your home machine.",
+      "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_new_gpu:
   title: "Request a new GPU machine"
@@ -1045,6 +1313,7 @@ request_new_gpu:
       ---
       lab_name="{lab_name}"  
       gpu_alias="{gpu_type}"  
+      how_many_gpus="{gpu_amount}"
       machine_type="{machine_type}"  
       storage_size="{terabytes} TB"  
       storage_type="{storage_type}"  
@@ -1057,100 +1326,109 @@ request_new_gpu:
       Best regards,
 
   fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    # { label: "GPU type", key: "gpu_type", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
-    {
-      label: "GPU type",
-      key: "gpu_type",
-      field: "autocompleteone",
-      options: [
-        { text: "NVIDIA a16 16G", value: "a16.16g" },
-        { text: "NVIDIA v100s 32G", value: "v100s.32g" },
-        { text: "NVIDIA a30 24G", value: "a30.24g" },
-        { text: "NVIDIA a40 48G", value: "a40.48g" },
-        { text: "NVIDIA l40s 48G", value: "l40s.48g" },
-        { text: "NVIDIA a100 40G", value: "a100.40g" },
-        { text: "NVIDIA a100 80G", value: "a100.80g" },
-      ]
-    },
-    {
-      label: "Machine type",
-      key: "machine_type",
-      # default: "default.b2",
-      # pattern: "(default).[a-z][0-9]",
-      # hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.",
-      # field: "textfield",
-      field: "autocompleteone",
-      options: [
-        { header: "B - Series machine types: 2 GB of RAM per CPU core" },
-        { text: "default.b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
-        { text: "default.b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
-        { text: "default.b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
-        { text: "default.b4 - 16 CPUs / 32 GB RAM", value: "default.b4" },
-        { text: "default.b5 - 32 CPUs / 64 GB RAM", value: "default.b5" },
-        { text: "default.b6 - 48 CPUs / 96 GB RAM", value: "default.b6" },
-        { text: "default.b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
-        { text: "default.b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
-        { divider: true },
-        { header: "C - Series machine types: 4 GB of RAM per CPU core" },
-        { text: "default.c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
-        { text: "default.c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
-        { text: "default.c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
-        { text: "default.c4 - 16 CPUs / 64 GB RAM", value: "default.c4" },
-        { text: "default.c5 - 32 CPUs / 128 GB RAM", value: "default.c5" },
-        { text: "default.c6 - 48 CPUs / 192 GB RAM", value: "default.c6" },
-        { text: "default.c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
-        { text: "default.c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
-        { divider: true },
-        { header: "D - Series machine types: 8 GB of RAM per CPU core" },
-        { text: "default.d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
-        { text: "default.d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
-        { text: "default.d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
-        { text: "default.d4 - 16 CPUs / 128 GB RAM", value: "default.d4" },
-        { text: "default.d5 - 32 CPUs / 192 GB RAM", value: "default.d5" },
-        { text: "default.d6 - 48 CPUs / 384 GB RAM", value: "default.d6" },
-        { text: "default.d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
-        { text: "default.d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
-        { divider: true },
-        { header: "E - Series machine types: 16 GB of RAM per CPU core" },
-        { text: "default.e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
-        { text: "default.e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
-        { text: "default.e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
-        { text: "default.e4 - 16 CPUs / 256 GB RAM", value: "default.e4" },
-        { text: "default.e5 - 24 CPUs / 384 GB RAM", value: "default.e5" },
-        { text: "default.e6 - 32 CPUs / 512 GB RAM", value: "default.e6" },
-        { text: "default.e7 - 48 CPUs / 768 GB RAM", value: "default.e7" },
-      ]
-    },
-    { label: "Storage size (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 0.1, max: 25, step: 0.1, field: "number", default: 1 },
-    {
-      label: "Storage type",
-      key: "storage_type",
-      field: "autocompleteone",
-      options: [
-        { text: "Fast storage (NVME)", value: "nvme" },
-        { text: "Regular storage (HDD)", value: "regular" },
-      ]
-    },
-    {
-      label: "Subscription",
-      key: "subscription",
-      field: "autocompleteone",
-      options: [
-        { text: "On-demand", value: "ondemand" },
-        { text: "Spot", value: "spot" },
-      ]
-    },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Expected response time:</b> Days (subject to availability).",
-    "<b>Expected delivery:</b> New lab machine with GPU accelerator accessible from your home machine.",
-    "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      # { label: "GPU type", key: "gpu_type", pattern: "(nvidia).[a-z0-9]+", hint: "GPU type should include only letters a-z, 0-9, or dot.", field: "textfield" },
+      {
+        label: "GPU type",
+        key: "gpu_type",
+        field: "autocompleteone",
+        options:
+          [
+            { text: "NVIDIA a16 16G", value: "a16.16g" },
+            { text: "NVIDIA v100s 32G", value: "v100s.32g" },
+            { text: "NVIDIA a30 24G", value: "a30.24g" },
+            { text: "NVIDIA a40 48G", value: "a40.48g" },
+            { text: "NVIDIA l40s 48G", value: "l40s.48g" },
+            { text: "NVIDIA a100 40G", value: "a100.40g" },
+            { text: "NVIDIA a100 80G", value: "a100.80g" },
+          ],
+      },
+      { label: "How many GPUs?", key: "gpu_amount", field: "autocompleteone", options: [{ text: "1", value: "1" }, { text: "2", value: "2" }] },
+      {
+        label: "Machine type",
+        key: "machine_type",
+        # default: "default.b2",
+        # pattern: "(default).[a-z][0-9]",
+        # hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.",
+        # field: "textfield",
+        field: "autocompleteone",
+        options:
+          [
+            { header: "B - Series machine types: 2 GB of RAM per CPU core" },
+            { text: "default.b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
+            { text: "default.b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
+            { text: "default.b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
+            { text: "default.b4 - 16 CPUs / 32 GB RAM", value: "default.b4" },
+            { text: "default.b5 - 32 CPUs / 64 GB RAM", value: "default.b5" },
+            { text: "default.b6 - 48 CPUs / 96 GB RAM", value: "default.b6" },
+            { text: "default.b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
+            { text: "default.b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
+            { divider: true },
+            { header: "C - Series machine types: 4 GB of RAM per CPU core" },
+            { text: "default.c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
+            { text: "default.c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
+            { text: "default.c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
+            { text: "default.c4 - 16 CPUs / 64 GB RAM", value: "default.c4" },
+            { text: "default.c5 - 32 CPUs / 128 GB RAM", value: "default.c5" },
+            { text: "default.c6 - 48 CPUs / 192 GB RAM", value: "default.c6" },
+            { text: "default.c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
+            { text: "default.c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
+            { divider: true },
+            { header: "D - Series machine types: 8 GB of RAM per CPU core" },
+            { text: "default.d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
+            { text: "default.d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
+            { text: "default.d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
+            { text: "default.d4 - 16 CPUs / 128 GB RAM", value: "default.d4" },
+            { text: "default.d5 - 32 CPUs / 192 GB RAM", value: "default.d5" },
+            { text: "default.d6 - 48 CPUs / 384 GB RAM", value: "default.d6" },
+            { text: "default.d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
+            { text: "default.d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
+            { divider: true },
+            { header: "E - Series machine types: 16 GB of RAM per CPU core" },
+            { text: "default.e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
+            { text: "default.e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
+            { text: "default.e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
+            { text: "default.e4 - 16 CPUs / 256 GB RAM", value: "default.e4" },
+            { text: "default.e5 - 24 CPUs / 384 GB RAM", value: "default.e5" },
+            { text: "default.e6 - 32 CPUs / 512 GB RAM", value: "default.e6" },
+            { text: "default.e7 - 48 CPUs / 768 GB RAM", value: "default.e7" },
+          ],
+      },
+      {
+        label: "Storage size (in terabytes)",
+        key: "terabytes",
+        hint: "Field should include only numbers",
+        suffix: "TB",
+        min: 0.1,
+        max: 25,
+        step: 0.1,
+        field: "number",
+        default: 1,
+      },
+      {
+        label: "Storage type",
+        key: "storage_type",
+        field: "autocompleteone",
+        options: [{ text: "Fast storage (NVME)", value: "nvme" }, { text: "Regular storage (HDD)", value: "regular" }],
+      },
+      { label: "Subscription", key: "subscription", field: "autocompleteone", options: [{ text: "On-demand", value: "ondemand" }, { text: "Spot", value: "spot" }] },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Expected response time:</b> Days (subject to availability).",
+      "<b>Expected delivery:</b> New lab machine with GPU accelerator accessible from your home machine.",
+      "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_blue_fleet:
   title: "Request a fleet of Blue machines"
@@ -1173,21 +1451,46 @@ request_blue_fleet:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 2, max: 100, step: 1, field: "number", default: 2 },
-    { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9.", field: "textfield" },
-    { label: "Storage size per machine (in terabytes)", key: "terabytes", hint: "Field should include only numbers", suffix: "TB", min: 1, max: 25, step: 1, field: "number", default: 1 },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Expected response time:</b> Days (subject to availability).",
-    "<b>Expected delivery:</b> Multiple blue machines accessible from your home machine.",
-    "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 2, max: 100, step: 1, field: "number", default: 2 },
+      {
+        label: "Machine type",
+        key: "machine_type",
+        default: "default.b2",
+        pattern: "(default).[a-z][0-9]",
+        hint: "Machine type should include only lowercase letters a-z, 0-9.",
+        field: "textfield",
+      },
+      {
+        label: "Storage size per machine (in terabytes)",
+        key: "terabytes",
+        hint: "Field should include only numbers",
+        suffix: "TB",
+        min: 1,
+        max: 25,
+        step: 1,
+        field: "number",
+        default: 1,
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Expected response time:</b> Days (subject to availability).",
+      "<b>Expected delivery:</b> Multiple blue machines accessible from your home machine.",
+      "<b>Cost:</b> As specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_machine_shelving:
   title: "Request a shelving of a machine"
@@ -1206,18 +1509,33 @@ request_machine_shelving:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*', hint: "Machine name only allows blue, gpu and iaas machines, you can get machine name by running hostname command on the machine", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Required information</b>: lab name and machine name.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Cost:</b> No compute cost during shelved time.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Machine name",
+        key: "vm_name",
+        pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*',
+        hint: "Machine name only allows blue, gpu and iaas machines, you can get machine name by running hostname command on the machine",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Required information</b>: lab name and machine name.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Cost:</b> No compute cost during shelved time.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_machine_unshelving:
   title: "Request an unshelving of a machine"
@@ -1236,19 +1554,34 @@ request_machine_unshelving:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*', hint: "Machine name only allows blue, gpu and iaas machines", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required information</b>: lab name and machine name.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Cost:</b> During unshelving a machine will be started with same <a href='/services/machine-types/#compute-optimized-machine-types' target='_blank'>machine type</a> as before shelving",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Machine name",
+        key: "vm_name",
+        pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*',
+        hint: "Machine name only allows blue, gpu and iaas machines",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Required information</b>: lab name and machine name.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Cost:</b> During unshelving a machine will be started with same <a href='/services/machine-types/#compute-optimized-machine-types' target='_blank'>machine type</a> as before shelving",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_machine_deletion:
   title: "Request a deletion of a machine"
@@ -1269,19 +1602,34 @@ request_machine_deletion:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*', hint: "Machine name only allows blue, iaas, and gpu machines, run hostname command on the machine to get the machine name", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required information</b>: lab name and machine name.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Cost:</b> No additional costs.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Machine name",
+        key: "vm_name",
+        pattern: '[a-z0-9\-]+(iaas|blue|gpu)[a-z0-9\-]*',
+        hint: "Machine name only allows blue, iaas, and gpu machines, run hostname command on the machine to get the machine name",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Required information</b>: lab name and machine name.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Cost:</b> No additional costs.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_expand_existing_volume:
   title: "Request storage volume expansion"
@@ -1307,53 +1655,72 @@ request_expand_existing_volume:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash., You can get machine name by running hostname command on the machine", autocapitalize: "off", field: "textfield" },
-    {
-      label: "Volume name",
-      key: "volume_name",
-      field: "autocompleteone",
-      options: [
-        { text: "Archive", value: "archive" },
-        { text: "Work", value: "work" },
-        { text: "Scratch", value: "scratch" },
-        { text: "Backup", value: "backup" },
-      ]
-    },
-    {
-      label: "Volume number (optional)",
-      key: "volume_number",
-      field: "autocompleteone",
-      hint: "If no number in volume name use 1.",
-      default: '',
-      options: [
-        { text: "No number", value: "" },
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-      ],
-      optional: true
-    },
-    { label: "Current size (in terabytes)", key: "current_size", hint: "Field should include only numbers", suffix: "TB", min: 0.1, max: 25, step: 0.1, field: "number", default: 1 },
-    { label: "New size (in terabytes)", key: "target_size", hint: "Field should include only numbers. Maximum size per volume is 20 TB", suffix: "TB", min: 0.1, max: 25, step: 0.1, field: "number", default: 1 },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required information</b>: lab name, machine name, volume name and intended size.",
-    "<b>Expected response time:</b> One week. The volume expansion requires a machine restart that needs to be scheduled 9-11am on a workday.",
-    "<b>Expected delivery:</b> Increased storage capacity.",
-    "<b>Cost:</b> New storage is included in your total storage plan.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Machine name",
+        key: "vm_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Machine name should include only lowercase letters a-z, 0-9, or dash., You can get machine name by running hostname command on the machine",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Volume name",
+        key: "volume_name",
+        field: "autocompleteone",
+        options: [{ text: "Archive", value: "archive" }, { text: "Work", value: "work" }, { text: "Scratch", value: "scratch" }, { text: "Backup", value: "backup" }],
+      },
+      {
+        label: "Volume number (optional)",
+        key: "volume_number",
+        field: "autocompleteone",
+        hint: "If no number in volume name use 1.",
+        default: "",
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+        optional: true,
+      },
+      {
+        label: "Current size (in terabytes)",
+        key: "current_size",
+        hint: "Field should include only numbers",
+        suffix: "TB",
+        min: 0.1,
+        max: 25,
+        step: 0.1,
+        field: "number",
+        default: 1,
+      },
+      {
+        label: "New size (in terabytes)",
+        key: "target_size",
+        hint: "Field should include only numbers. Maximum size per volume is 20 TB",
+        suffix: "TB",
+        min: 0.1,
+        max: 25,
+        step: 0.1,
+        field: "number",
+        default: 1,
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Required information</b>: lab name, machine name, volume name and intended size.",
+      "<b>Expected response time:</b> One week. The volume expansion requires a machine restart that needs to be scheduled 9-11am on a workday.",
+      "<b>Expected delivery:</b> Increased storage capacity.",
+      "<b>Cost:</b> New storage is included in your total storage plan.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_new_storage_volume:
   title: "Request a new storage volume"
@@ -1375,62 +1742,69 @@ request_new_storage_volume:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    {
-      label: "Volume name",
-      key: "volume_name",
-      field: "autocompleteone",
-      options: [
-        { text: "Archive", value: "archive" },
-        { text: "Work", value: "work" },
-        { text: "Scratch (regular storage - HDD)", value: "scratch" },
-        { text: "Scratch (fast storage - NVME)", value: "scratch (nvme)" },
-        { text: "Backup", value: "backup" },
-      ]
-    },
-    {
-      label: "Volume number (optional)",
-      key: "volume_number",
-      field: "autocompleteone",
-      hint: "If no number in volume name use 1.",
-      default: '',
-      options: [
-        { text: "No number", value: "" },
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-      ],
-      optional: true
-    },
-    { label: "Size (in terabytes)", key: "storage_size_tb", hint: "Field should include only numbers. Maximum size per volume is 20 TB", suffix: "TB", min: 0.1, max: 25, step: 0.1, field: "number", default: 1 },
-    {
-      label: "Enable restore service (optional)",
-      key: "restore",
-      field: "autocompleteone",
-      options: [
-        { text: "Yes", value: "yes" },
-        { text: "No", value: "no" },
-      ],
-    },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required information</b>: lab name, machine name, volume name and total size in terabytes.",
-    "<b>Expected response time:</b> One week.",
-    "<b>Expected delivery:</b> New storage volume attached (mounted) to your lab machine.",
-    "<b>Cost:</b> New storage is included in your total storage plan.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Machine name",
+        key: "vm_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Volume name",
+        key: "volume_name",
+        field: "autocompleteone",
+        options:
+          [
+            { text: "Archive", value: "archive" },
+            { text: "Work", value: "work" },
+            { text: "Scratch (regular storage - HDD)", value: "scratch" },
+            { text: "Scratch (fast storage - NVME)", value: "scratch (nvme)" },
+            { text: "Backup", value: "backup" },
+          ],
+      },
+      {
+        label: "Volume number (optional)",
+        key: "volume_number",
+        field: "autocompleteone",
+        hint: "If no number in volume name use 1.",
+        default: "",
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+        optional: true,
+      },
+      {
+        label: "Size (in terabytes)",
+        key: "storage_size_tb",
+        hint: "Field should include only numbers. Maximum size per volume is 20 TB",
+        suffix: "TB",
+        min: 0.1,
+        max: 25,
+        step: 0.1,
+        field: "number",
+        default: 1,
+      },
+      { label: "Enable restore service (optional)", key: "restore", field: "autocompleteone", options: [{ text: "Yes", value: "yes" }, { text: "No", value: "no" }] },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Required information</b>: lab name, machine name, volume name and total size in terabytes.",
+      "<b>Expected response time:</b> One week.",
+      "<b>Expected delivery:</b> New storage volume attached (mounted) to your lab machine.",
+      "<b>Cost:</b> New storage is included in your total storage plan.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_volume_deletion:
   title: "Request a volume deletion"
@@ -1452,51 +1826,44 @@ request_volume_deletion:
 
       Best regards,
 
-
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Machine name", key: "vm_name", pattern: "[-a-z0-9]{3,}", hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    {
-      label: "Volume name",
-      key: "volume_name",
-      field: "autocompleteone",
-      options: [
-        "archive",
-        "work",
-        "scratch",
-        "backup",
-      ]
-    },
-    {
-      label: "Volume number (optional)",
-      key: "volume_number",
-      field: "autocompleteone",
-      hint: "If no number in volume name use 1.",
-      default: '',
-      options: [
-        { text: "No number", value: "" },
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-      ],
-      optional: true
-    },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators.",
-    "<b>Required information</b>: lab name, machine name, volume name.",
-    "<b>Expected response time:</b> Days",
-    "<b>Cost:</b> No additional costs.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Machine name",
+        key: "vm_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Machine name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "Volume name", key: "volume_name", field: "autocompleteone", options: ["archive", "work", "scratch", "backup"] },
+      {
+        label: "Volume number (optional)",
+        key: "volume_number",
+        field: "autocompleteone",
+        hint: "If no number in volume name use 1.",
+        default: "",
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+        optional: true,
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Required information</b>: lab name, machine name, volume name.",
+      "<b>Expected response time:</b> Days",
+      "<b>Cost:</b> No additional costs.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_internal_kista:
   title: "Request an internal kista"
@@ -1515,23 +1882,36 @@ request_internal_kista:
       Best regards,  
       {uploaderlabresponsiblefullname}
 
-  fields: [
-    { label: "Name and Surname", key: "uploaderlabresponsiblefullname", hint: "Full name of sender or signatory", field: "textfield" },
-    { label: "Uploader Lab", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Downloader Lab", key: "downloaderlabname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders or lab coordinators from the uploader lab.",
-    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#internal-kista-order' target='_blank'>A signed internal kista order</a>.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Access information communicated in your Slack lab channel.",
-    "<b>Cost:</b> Included in your lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: [
-    "Signed internal kista order file (.pdf)",
-  ]
-
+  fields:
+    [
+      { label: "Name and Surname", key: "uploaderlabresponsiblefullname", hint: "Full name of sender or signatory", field: "textfield" },
+      {
+        label: "Uploader Lab",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Downloader Lab",
+        key: "downloaderlabname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders or lab coordinators from the uploader lab.",
+      "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#internal-kista-order' target='_blank'>A signed internal kista order</a>.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Access information communicated in your Slack lab channel.",
+      "<b>Cost:</b> Included in your lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: ["Signed internal kista order file (.pdf)"]
 
 request_coordinator_update:
   title: "Request update of lab coordinator role"
@@ -1560,24 +1940,32 @@ request_coordinator_update:
 
       Best regards,
 
-  fields: [
-    { label: "Lab name", key: "lab_name", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Department", key: "department", field: "textfield" },
-    { label: "Faculty", key: "faculty", field: "textfield" },
-    { label: "Institution", key: "institution", field: "textfield" },
-    { label: "Email address", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
-    { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders.",
-    "<b>Required attachment</b>: None.",
-    "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b> Included in your lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "Name and Surname", key: "name", field: "textfield" },
+      { label: "Department", key: "department", field: "textfield" },
+      { label: "Faculty", key: "faculty", field: "textfield" },
+      { label: "Institution", key: "institution", field: "textfield" },
+      { label: "Email address", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
+      { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders.",
+      "<b>Required attachment</b>: None.",
+      "<b>Expected delivery time:</b> Days.",
+      "<b>Cost:</b> Included in your lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 ### Service center
 
@@ -1595,21 +1983,17 @@ new_data_space:
       I am looking forward to an email verification on the data space registration so we can start to order our labs.
 
       Best,
-  fields: [
-    { label: "Service center name", key: "service_center", pattern: "(.){3,}", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Guide:</b> <a href='/administer-science/scientific-access/' target='_blank'>Scientific access</a>",
-    "<b>Who can order:</b> Service center leaders and administrative contacts for service centers.",
-    "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#data-space-order' target='_blank'>A signed data space order</a> and <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>invoice profile for the data space</a>.",
-    "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: [
-    A signed data space order. (pdf)
-  ]
-
+  fields: [{ label: "Service center name", key: "service_center", pattern: "(.){3,}", field: "textfield" }]
+  requirements:
+    [
+      "<b>Guide:</b> <a href='/administer-science/scientific-access/' target='_blank'>Scientific access</a>",
+      "<b>Who can order:</b> Service center leaders and administrative contacts for service centers.",
+      "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads/#data-space-order' target='_blank'>A signed data space order</a> and <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>invoice profile for the data space</a>.",
+      "<b>Expected delivery time:</b> Days.",
+      "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: [A signed data space order. (pdf)]
 
 ### User orders
 
@@ -1629,37 +2013,49 @@ request_workbench_access:
       —
       Kind regards,
 
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    {
-      label: "Tools",
-      key: "tools",
-      field: "selector",
-      options: [
-        {text: "Rstudio", value: "Rstudio"},
-        {text: "Jupyter", value: "Jupyter"},
-        {text: "Python", value: "Python"},
-        {text: "MATLAB (need license)", value: "MATLAB"},
-        {text: "Stata (need license)", value: "Stata"}
-      ],
-      default: [
-        {text: "Rstudio", value: "Rstudio"},
-        {text: "Jupyter", value: "Jupyter"},
-        {text: "Python", value: "Python"},
-      ],
-    },
-  ]
-  requirements: [
-    "<b>Who can order:</b> All active lab users.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Workbench access key and certificate.",
-    "<b>Requirement:</b> (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Tools",
+        key: "tools",
+        field: "selector",
+        options:
+          [
+            { text: "Rstudio", value: "Rstudio" },
+            { text: "Jupyter", value: "Jupyter" },
+            { text: "Python", value: "Python" },
+            { text: "MATLAB (need license)", value: "MATLAB" },
+            { text: "Stata (need license)", value: "Stata" },
+          ],
+        default: [{ text: "Rstudio", value: "Rstudio" }, { text: "Jupyter", value: "Jupyter" }, { text: "Python", value: "Python" }],
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> All active lab users.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Workbench access key and certificate.",
+      "<b>Requirement:</b> (1) Active Signal app on phone. (2) Active license from your host organization for MATLAB and Stata for these to be installed.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_workbench_reissue:
   title: "Request Workbench reissue"
@@ -1675,20 +2071,35 @@ request_workbench_reissue:
 
       Kind regards,
 
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> All active lab users.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Workbench certificate.",
-    "<b>Requirement:</b> Active Signal app on phone.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> All active lab users.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Workbench certificate.",
+      "<b>Requirement:</b> Active Signal app on phone.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_workbench_troubleshooting:
   title: "Request Workbench troubleshooting"
@@ -1712,27 +2123,40 @@ request_workbench_troubleshooting:
 
 
       Kind regards,  
-      {full_name}  
+      {full_name}
 
-  fields: [
-    { label: "Your full name", key: "full_name", field: "textfield" },
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Operating system", key: "operating_system", field: "textfield", hint: "Windows, MacOS, or Linux (e.g. Ubuntu)" },
-    { label: "Web browser", key: "web_browser", field: "textfield", hint: "Google Chrome or Mozilla Firefox?" },
-    { label: "Problem description", key: "problem_description", field: "textarea", autocapitalize: "off" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> All active lab users.",
-    "<b>Expected response time:</b> Days/Weeks.",
-    "<b>Recommendations:</b> Attach screenshots to your email request or any error logs that might be useful for investigation of the issue.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: [
-    "Screenshots or any error logs that might be useful for investigation of the issue."
-  ]
-
+  fields:
+    [
+      { label: "Your full name", key: "full_name", field: "textfield" },
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "Operating system", key: "operating_system", field: "textfield", hint: "Windows, MacOS, or Linux (e.g. Ubuntu)" },
+      { label: "Web browser", key: "web_browser", field: "textfield", hint: "Google Chrome or Mozilla Firefox?" },
+      { label: "Problem description", key: "problem_description", field: "textarea", autocapitalize: "off" },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> All active lab users.",
+      "<b>Expected response time:</b> Days/Weeks.",
+      "<b>Recommendations:</b> Attach screenshots to your email request or any error logs that might be useful for investigation of the issue.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: ["Screenshots or any error logs that might be useful for investigation of the issue."]
 
 request_ssh_pass_reset:
   title: "Request SSH passphrase reset"
@@ -1748,20 +2172,35 @@ request_ssh_pass_reset:
 
       Kind regards,
 
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> All active lab users.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Temporary passphrase on Signal.",
-    "<b>Requirement:</b> Active Signal app on your phone.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> All active lab users.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Temporary passphrase on Signal.",
+      "<b>Requirement:</b> Active Signal app on your phone.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_ssh_config:
   title: "Request SSH configuration"
@@ -1775,18 +2214,34 @@ request_ssh_config:
 
       Kind regards,
 
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> All active lab users.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> Temporary passphrase on Signal.",
-    "<b>Requirement:</b> Active Signal app on your phone.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> All active lab users.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Temporary passphrase on Signal.",
+      "<b>Requirement:</b> Active Signal app on your phone.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
 
 request_vpn_link:
@@ -1809,31 +2264,36 @@ request_vpn_link:
 
       Kind regards,
 
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Public IP4 address", key: "ipaddress", pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$', hint: "Get your IP address here: https://docs.hdc.ntnu.no/ipv4/", field: "textfield" },
-    {
-      label: "Access duration",
-      key: "access_duration",
-      field: "selectone",
-      options: [
-        "Temporary",
-        "Permanent",
-      ],
-      default: ["Temporary"],
-    },
-    { label: "Access Country", key: "country", pattern: '^[\-A-z0-9\._]*$', field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> All active lab users.",
-    "<b>Required information</b>: <a href='https://docs.hdc.ntnu.no/ipv4/' target='_blank'>Your IP4 address</a>, location and purpose (see below).",
-    "<b>Expected response time:</b> One day.",
-    "<b>Expected delivery:</b> Opening communicated on email.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Public IP4 address",
+        key: "ipaddress",
+        pattern: '^\s*((?!(10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.|192\.168\.|169\.254\.|127\.|0\.|255\.255\.255\.255))(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.)((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){2}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\s*$',
+        hint: "Get your IP address here: https://docs.hdc.ntnu.no/ipv4/",
+        field: "textfield",
+      },
+      { label: "Access duration", key: "access_duration", field: "selectone", options: ["Temporary", "Permanent"], default: ["Temporary"] },
+      { label: "Access Country", key: "country", pattern: '^[\-A-z0-9\._]*$', field: "textfield" },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> All active lab users.",
+      "<b>Required information</b>: <a href='https://docs.hdc.ntnu.no/ipv4/' target='_blank'>Your IP4 address</a>, location and purpose (see below).",
+      "<b>Expected response time:</b> One day.",
+      "<b>Expected delivery:</b> Opening communicated on email.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_vpn_reset:
   title: "Request VPN certificate reset"
@@ -1852,19 +2312,27 @@ request_vpn_reset:
 
       Kind regards,
 
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> All active lab users.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> VPN passphrase on Signal, link to VPN certificate on email.",
-    "<b>Requirement:</b> Active Signal app on your phone.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> All active lab users.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> VPN passphrase on Signal, link to VPN certificate on email.",
+      "<b>Requirement:</b> Active Signal app on your phone.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_google_auth:
   title: "Request Google authenticator request"
@@ -1885,20 +2353,36 @@ request_google_auth:
 
       Kind regards,
 
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Phone number (optional)", key: "phone_number", pattern: "(not_changed|[+0-9]{3,})", hint: "Phone number should include only + and 0-9 numbers", field: "textfield", optional: true, default: "not_changed" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> All active lab users.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> New key on Signal.",
-    "<b>Requirement:</b> Active Signal app on your phone.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Phone number (optional)",
+        key: "phone_number",
+        pattern: "(not_changed|[+0-9]{3,})",
+        hint: "Phone number should include only + and 0-9 numbers",
+        field: "textfield",
+        optional: true,
+        default: "not_changed",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> All active lab users.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> New key on Signal.",
+      "<b>Requirement:</b> Active Signal app on your phone.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_mobaxterm_file:
   title: "Request MobaXterm configuration file"
@@ -1916,20 +2400,35 @@ request_mobaxterm_file:
 
       Kind regards,
 
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> All active lab users.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Expected delivery:</b> File as email attachment.",
-    "<b>Requirement:</b> Active SSH connection.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> All active lab users.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> File as email attachment.",
+      "<b>Requirement:</b> Active SSH connection.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_update_lagtun_rep:
   title: "Update Lagtun representative"
@@ -1945,21 +2444,29 @@ request_update_lagtun_rep:
       Email: {email}
 
       Kind regards,
-  
-  fields: [
-    { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Data Space name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data controller administrators, Service center administrators, Data space leaders and compliance administrators on the BLUE subscription level.",
-    "<b>Required attachment:</b> None.",
-    "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b> None.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: []
 
+  fields:
+    [
+      { label: "Name and Surname", key: "name", field: "textfield" },
+      {
+        label: "Data Space name",
+        key: "dataspace",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data controller administrators, Service center administrators, Data space leaders and compliance administrators on the BLUE subscription level.",
+      "<b>Required attachment:</b> None.",
+      "<b>Expected delivery time:</b> Days.",
+      "<b>Cost:</b> None.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: []
 
 request_update_data_rep:
   title: "Update Data controller representative"
@@ -1975,19 +2482,28 @@ request_update_data_rep:
       Email: {email}
 
       Kind regards,
-  
-  fields: [
-    { label: "Name and Surname", key: "name", field: "textfield" },
-    { label: "Data Controller name", key: "dataspace", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Data controller administrators.",
-    "<b>Required attachment:</b> None.",
-    "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b> None.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+
+  fields:
+    [
+      { label: "Name and Surname", key: "name", field: "textfield" },
+      {
+        label: "Data Controller name",
+        key: "dataspace",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Data space name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Data controller administrators.",
+      "<b>Required attachment:</b> None.",
+      "<b>Expected delivery time:</b> Days.",
+      "<b>Cost:</b> None.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
 
 request_tape_archive:
@@ -1998,7 +2514,7 @@ request_tape_archive:
       Hi HUNT Cloud team,  
 
       I would like to order a tape archive for my dataset.  
-      
+
       ---
       Labname: {labname}  
       Type of tape write: {tapewrite_type}
@@ -2010,32 +2526,73 @@ request_tape_archive:
       Let us touch base on Slack to discuss the details.
 
       Kind regards,
-  fields: [
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-    {
-      label: "Type of tape write",
-      key: "tapewrite_type",
-      field: "autocompleteone",
-      options: [
-        { text: "Full volume backup", value: "Full volume" },
-        { text: "Selected dataset backup", value: "Selected Dataset" },
-      ]
-    },
-    { label: "Size of dataset (in terabytes)", key: "data_size", hint: "Field should include only numbers", suffix: "TB", min: 0.1, max: 25, step: 0.1, field: "number", default: 1 },
-    { label: "Data set description (optional)", key: "data_desc", pattern: "^$|[-a-z0-9]{3,}", default: " ", hint: "You can describe type of data and how it is currently stored.", autocapitalize: "off", field: "textfield" },
-    { label: "Retention period", key: "retention", pattern: "[-a-z0-9]{3,}", hint: "How long should we store the data on tape (max 10 years for single tape write)", suffix: "Years", min: 1, max: 10, step: 1, field: "number", default: 5 },
-  ]
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Type of tape write",
+        key: "tapewrite_type",
+        field: "autocompleteone",
+        options: [{ text: "Full volume backup", value: "Full volume" }, { text: "Selected dataset backup", value: "Selected Dataset" }],
+      },
+      {
+        label: "Size of dataset (in terabytes)",
+        key: "data_size",
+        hint: "Field should include only numbers",
+        suffix: "TB",
+        min: 0.1,
+        max: 25,
+        step: 0.1,
+        field: "number",
+        default: 1,
+      },
+      {
+        label: "Data set description (optional)",
+        key: "data_desc",
+        pattern: "^$|[-a-z0-9]{3,}",
+        default: " ",
+        hint: "You can describe type of data and how it is currently stored.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Retention period",
+        key: "retention",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "How long should we store the data on tape (max 10 years for single tape write)",
+        suffix: "Years",
+        min: 1,
+        max: 10,
+        step: 1,
+        field: "number",
+        default: 5,
+      },
+    ]
 
-  requirements: [
-    "<b>Who can order:</b> Lab leader or coordiator.",
-    "<b>Required information:</b> Size of dataset and retention period.",
-    "<b>Expected response time:</b> Weeks.",
-    "<b>Cost:</b> As per our <a href='https://docs.hdc.ntnu.no/administer-science/prices/pricelist/#current' target='_blank'>price list</a>.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leader or coordiator.",
+      "<b>Required information:</b> Size of dataset and retention period.",
+      "<b>Expected response time:</b> Weeks.",
+      "<b>Cost:</b> As per our <a href='https://docs.hdc.ntnu.no/administer-science/prices/pricelist/#current' target='_blank'>price list</a>.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_lab_access_link:
   title: "Request Lab access link reissue"
@@ -2045,7 +2602,7 @@ request_lab_access_link:
       Hi HUNT Cloud team,
 
       I would like to request a copy of my Lab access link for the following lab:
-      
+
       ```
       username={username}
       labname={labname}
@@ -2053,20 +2610,35 @@ request_lab_access_link:
 
       Kind regards,  
       {full_name}
-  fields: [
-    { label: "Your full name", key: "full_name", field: "textfield" },
-    { label: "Username", key: "username", pattern: '^[\-a-z0-9\._]{3,}$', hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.", autocapitalize: "off", field: "textfield" },
-    { label: "Lab name", key: "labname", pattern: "[-a-z0-9]{3,}", hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Active lab users.",
-    "<b>Required information:</b> Your username and lab name.",
-    "<b>Expected response time:</b> Days.",
-    "<b>Cost:</b> Included in the lab subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
+  fields:
+    [
+      { label: "Your full name", key: "full_name", field: "textfield" },
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Lab name",
+        key: "labname",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Active lab users.",
+      "<b>Required information:</b> Your username and lab name.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
 
 request_community_membership:
   title: "Request community membership"
@@ -2086,24 +2658,25 @@ request_community_membership:
       ---
 
       I am looking forward to receive an email acknowledging that you have sent an invitation to our collaborator.
-      
-      Kind regards,
-  fields: [
-    { label: "Name and Surname", key: "full_name", field: "textfield" },
-    { label: "Department", key: "department", field: "textfield" },
-    { label: "Faculty", key: "faculty", field: "textfield" },
-    { label: "Institution", key: "institution", field: "textfield" },
-    { label: "Email", key: "email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
-  ]
-  requirements: [
-    "<b>Who can order:</b> Lab leaders and lab coordinators on the BLUE Data space subscription level.",
-    "<b>Required attachment</b>: None.",
-    "<b>Expected delivery time:</b> Days.",
-    "<b>Cost:</b>  Included in your data space subscription.",
-    "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."
-  ]
-  attachments: []
 
+      Kind regards,
+  fields:
+    [
+      { label: "Name and Surname", key: "full_name", field: "textfield" },
+      { label: "Department", key: "department", field: "textfield" },
+      { label: "Faculty", key: "faculty", field: "textfield" },
+      { label: "Institution", key: "institution", field: "textfield" },
+      { label: "Email", key: "email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators on the BLUE Data space subscription level.",
+      "<b>Required attachment</b>: None.",
+      "<b>Expected delivery time:</b> Days.",
+      "<b>Cost:</b>  Included in your data space subscription.",
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: []
 
 request_consent_link:
   title: "Request consent link"
@@ -2120,13 +2693,12 @@ request_consent_link:
 
       Kind regards,
       {full_name}
-  fields: [
-    { label: "Full name", key: "full_name", field: "textfield" },
-  ]
-  requirements: ["<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."]
+  fields: [{ label: "Full name", key: "full_name", field: "textfield" }]
+  requirements:
+    [
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
-
-
 
 deregister_tingweek_invitations:
   title: "Deregister for future Tingweek invitations"
@@ -2145,9 +2717,10 @@ deregister_tingweek_invitations:
 
       Kind regards,
       {full_name}
-      
-  fields: [
-    { label: "Full name", key: "full_name", field: "textfield" },
-  ]
-  requirements: ["<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request."]
+
+  fields: [{ label: "Full name", key: "full_name", field: "textfield" }]
+  requirements:
+    [
+      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
+    ]
   attachments: []
