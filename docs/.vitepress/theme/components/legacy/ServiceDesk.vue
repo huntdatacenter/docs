@@ -50,7 +50,7 @@ const messageBody = computed(() => {
 })
 
 const formFilled = computed(() => {
-  return props.fields.every(item => (formData.value[item.key] || item.optional ? true : false))
+  return props.fields.every((item) => (formData.value[item.key] || item.optional ? true : false))
 })
 
 const encodedSubject = computed(() => {
@@ -133,7 +133,7 @@ const actionSendOutlookPopup = () => {
   window.open(deeplinkUrl.value, "_blank")
 }
 
-const wrap = template => {
+const wrap = (template) => {
   let text = template
   for (const [key, value] of Object.entries(formData.value)) {
     if (value || value === "") {
@@ -148,7 +148,7 @@ const wrap = template => {
   return text
 }
 
-const encode = template => {
+const encode = (template) => {
   return template ? encodeURIComponent(wrap(template)) : null
 }
 
@@ -159,7 +159,7 @@ const setValue = (value, key) => {
   formData.value = Object.assign({}, formData.value, updates)
 }
 
-const fetchAgreementFormCache = key => {
+const fetchAgreementFormCache = (key) => {
   let fields = {}
   let jsonData = null
   if (!ISSERVER) {
@@ -303,12 +303,8 @@ onMounted(() => {
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
-                          :item-title="
-                            item => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)
-                          "
-                          :item-value="
-                            item => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)
-                          "
+                          :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)"
+                          :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
                           placeholder=""
                           persistent-placeholder
                           chips
@@ -322,12 +318,8 @@ onMounted(() => {
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
-                          :item-title="
-                            item => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)
-                          "
-                          :item-value="
-                            item => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)
-                          "
+                          :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)"
+                          :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
                           placeholder=""
                           persistent-placeholder
                           chips
@@ -340,12 +332,8 @@ onMounted(() => {
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
-                          :item-title="
-                            item => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item.header)
-                          "
-                          :item-value="
-                            item => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)
-                          "
+                          :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item.header)"
+                          :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
                           placeholder=""
                           persistent-placeholder
                           chips
@@ -397,12 +385,7 @@ onMounted(() => {
                 <v-expansion-panel-text>
                   <v-row justify="center">
                     <v-col cols="10">
-                      <CopyTextField
-                        :model-value="recipient"
-                        label="Email recipient (TO)"
-                        class="py-2"
-                        prepend-inner-icon="mdi-email"
-                      />
+                      <CopyTextField :model-value="recipient" label="Email recipient (TO)" class="py-2" prepend-inner-icon="mdi-email" />
                       <CopyTextField :model-value="messageSubject" label="Email subject" class="py-2" />
                       <CopyTextArea :model-value="messageBody" label="Body" class="py-2" rows="8" />
                     </v-col>
@@ -431,29 +414,14 @@ onMounted(() => {
                     <v-col cols="4">
                       <v-tooltip text="Default email client" location="bottom">
                         <template v-slot:activator="{ props }">
-                          <v-btn
-                            v-bind="props"
-                            color="success"
-                            block
-                            :loading="loadingEmailButtons"
-                            :disabled="loadingEmailButtons"
-                            @click="actionSend"
-                          >
+                          <v-btn v-bind="props" color="success" block :loading="loadingEmailButtons" :disabled="loadingEmailButtons" @click="actionSend">
                             Open in Email Client
                           </v-btn>
                         </template>
                       </v-tooltip>
                     </v-col>
                     <v-col cols="4">
-                      <v-btn
-                        color="primary"
-                        block
-                        :loading="loadingEmailButtons"
-                        :disabled="loadingEmailButtons"
-                        @click="actionSendOutlookPopup"
-                      >
-                        Open in Outlook Web
-                      </v-btn>
+                      <v-btn color="primary" block :loading="loadingEmailButtons" :disabled="loadingEmailButtons" @click="actionSendOutlookPopup"> Open in Outlook Web </v-btn>
                     </v-col>
                   </v-row>
                 </v-expansion-panel-text>
@@ -472,14 +440,12 @@ onMounted(() => {
                   </v-row>
                   <v-row class="mb-6" justify="center">
                     <v-col cols="10">
-                      <p class="text-center body-1">
-                        Now your Email client should open and you can follow up sending Service desk request there.
-                      </p>
+                      <p class="text-center body-1">Now your Email client should open and you can follow up sending Service desk request there.</p>
                     </v-col>
                     <v-col cols="10">
                       <p class="text-center body-1">
-                        In case your <b>Email client did not open</b> and you want to send email manually feel free to
-                        hit Review button and copy the message contents and use our service desk email address.
+                        In case your <b>Email client did not open</b> and you want to send email manually feel free to hit Review button and copy the message contents and use our
+                        service desk email address.
                       </p>
                     </v-col>
                   </v-row>
