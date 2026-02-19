@@ -315,6 +315,7 @@ onMounted(() => {
 
                         <v-select
                           v-else-if="item.field === 'selectone'"
+                          autocomplete="ignore-field"
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
@@ -329,6 +330,7 @@ onMounted(() => {
 
                         <v-autocomplete
                           v-else-if="item.field === 'autocompleteone'"
+                          autocomplete="ignore-field"
                           :items="item.options"
                           v-model="formData[item.key]"
                           :label="item.label"
