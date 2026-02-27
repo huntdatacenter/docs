@@ -85,16 +85,17 @@ These machines are optimized for computation with 2 GB, 4 GB, 8 GB or 16 GB of m
 
 All the above machine types may be deployed with one or two GPU accelerators:
 
-| **Type**     | **Model**    | **Architecture** | **Memory** | **Interface** |
-| ------------ | ------------ | ---------------- | ---------- | ------------- |
-| nvidia.a16   | NVIDIA A16   | Ampere           | 16GB HMB2  | PCIe Gen3     |
-| nvidia.a30   | NVIDIA A30   | Ampere           | 24GB HBM2  | PCIe Gen3     |
-| nvidia.a40   | NVIDIA A40   | Ampere           | 48GB HBM2  | PCIe Gen3     |
-| nvidia.l40s  | NVIDIA L40S  | Lovelace         | 48GB HBM2  | PCIe Gen4     |
-| nvidia.a100  | NVIDIA A100  | Ampere           | 40GB HBM2  | PCIe Gen3     |
-| nvidia.a100  | NVIDIA A100  | Ampere           | 80GB HBM2  | PCIe Gen3     |
-| nvidia.v100  | NVIDIA V100  | Volta            | 32GB HBM2  | PCIe Gen3     |
-| nvidia.v100s | NVIDIA V100S | Volta            | 32GB HBM2  | PCIe Gen3     |
+| **Type**            | **Model**    | **Architecture** | **Memory** | **Interface** |
+| ------------------- | ------------ | ---------------- | ---------- | ------------- |
+| nvidia.rtx-pro-6000 | RTX PRO 6000 | Blackwell        | 96GB GDDR7 | PCIe Gen5     |
+| nvidia.a16          | NVIDIA A16   | Ampere           | 16GB HMB2  | PCIe Gen3     |
+| nvidia.a30          | NVIDIA A30   | Ampere           | 24GB HBM2  | PCIe Gen4     |
+| nvidia.a40          | NVIDIA A40   | Ampere           | 48GB HBM2  | PCIe Gen4     |
+| nvidia.l40s         | NVIDIA L40S  | Lovelace         | 48GB HBM2  | PCIe Gen4     |
+| nvidia.a100         | NVIDIA A100  | Ampere           | 40GB HBM2  | PCIe Gen3     |
+| nvidia.a100         | NVIDIA A100  | Ampere           | 80GB HBM2  | PCIe Gen3     |
+| nvidia.v100         | NVIDIA V100  | Volta            | 32GB HBM2  | PCIe Gen3     |
+| nvidia.v100s        | NVIDIA V100S | Volta            | 32GB HBM2  | PCIe Gen3     |
 
 Note that availability vary between locations. See the [GPU on HUNT Cloud](/do-science/tools/technical/gpu) documentation for more information.
 
