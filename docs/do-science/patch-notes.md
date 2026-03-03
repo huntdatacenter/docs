@@ -254,7 +254,7 @@ Based on the last Tingweek resolution ([R10/LT11/T11/24](/govern-science/tingwee
 
 **Community deletion policy enforced**
 
-Community messages in Slack is from 2024-01-01 stored for 1Y only. Older messages automatically deleted in accordance with our [community consent](/do-science/community/current-consent#you-messages-are-kept-for-one-year). Read more about the consent history [here](/do-science/community/consent-information).
+Community messages in Slack is from 2024-01-01 stored for 1Y only. Older messages automatically deleted in accordance with our [community consent](/do-science/community/current-community-consent#you-messages-are-kept-for-one-year). Read more about the consent history [here](/do-science/community/community-consent-information).
 
 **Security and privacy policies with new privacy controls**
 
@@ -376,7 +376,7 @@ We will forward a consent link on email to all active users. Users that do not c
 
 This is part of our wider effort to strengthen our protection of your personal data as a user of HUNT Cloud.
 
-* [Read a copy of the new community consent](/do-science/community/current-consent)
+* [Read a copy of the new community consent](/do-science/community/current-community-consent)
 * [Read about our HUNT Cloud community](/do-science/community/)
 
 **Workbench certificate expiration reminder**

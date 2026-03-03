@@ -1,7 +1,7 @@
 ---
-title: Current consent
+title: Current community consent
 category: Community
-permalink: /do-science/community/current-consent
+permalink: /do-science/community/current-community-consent
 outline: 0
 tags: 
   - slack
@@ -28,7 +28,7 @@ This page holds a copy of our current HUNT Cloud community consent. The intentio
 
 The actual consent will be sent to you on email as a web link together with your onboarding information. Use this link to update your consent at any time. 
 
-[Read more about our consent process here.](/do-science/community/consent-information)
+[Read more about our consent process here.](/do-science/community/community-consent-information)
 :::
 
 

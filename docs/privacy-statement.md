@@ -9,9 +9,9 @@ description: This page contain HUNT Cloud's privacy statement for web and servic
 
 **We care about your privacy.**
 
-It is important for us at HUNT Cloud to ensure the privacy for your personal data - both when you use our services as a scientist or scientific administrator, when you donate your data as a research participants and when you visit our web pages.
+It is important for us at HUNT Cloud to ensure the privacy for your personal data - both when you use our services as a scientist or scientific administrator, when you donate your data as a research participants, and when you visit our web pages.
 
-This page contains information on how we work to ensure your privacy in our services.
+This page specify how we work to ensure your privacy when you use our services.
 
 
 [[toc]]
@@ -20,7 +20,7 @@ This page contains information on how we work to ensure your privacy in our serv
 
 ## Privacy statement for services users
 
-Last update: 2026-02-16.
+Last updated: 2026-02-16.
 
 **This privacy statement describes how we process and store your personal data as a users of our cloud services, and the rights that you might be entitled to exercise on these data.**
 
@@ -69,11 +69,36 @@ HUNT Cloud will from time to time update this privacy statement.
 * First version published. Announced under Ting#10.
 * Written as an amendment to NTNU's main privacy policy prior to the ISO/IEC 27701 certification to clarify our processing personal data for cloud services users in HUNT Cloud.
 
+## Privacy statement for our cloud community
+
+Last updated: 2026-03-03
+
+**All lab users are invited to join our HUNT Cloud community chat channels.** 
+
+Participation is voluntary and consent based. The service follows the main  Privacy statement for services users (see above). 
+
+Read more: 
+
+* [Consent information](/do-science/community/community-consent-information)
+* [Current community consent](/do-science/community/current-community-consent)
+
+
+## Privacy statement for questionnaire respondents
+
+Last updated: 2026-03-03
+
+**HUNT Cloud uses questionnaires to collect information on user experience and needs from our cloud community.**
+
+Participation is voluntary and consent based. The service follows the main  Privacy statement for services users (see above). 
+
+Read more:
+
+* [Current questionnaire consent](/do-science/community/current-questionnaire-consent)
 
 
 ## Privacy statement for research participants
 
-Last update: 2023-10-08.
+Last updated: 2023-10-08.
 
 **HUNT Cloud helps organizations and scientists to ensure trustworthy explorations of research data by providing secure processing environments for their storage and scientific analysis.** 
 
@@ -97,11 +122,14 @@ Read more:
 
 ## Privacy statement for web visitors
 
-Last update: 2023-10-08.
+Last updated: 2023-10-08.
+
+**This is section describe how we work to ensure your privacy when you visit our web pages.**
 
 [NTNU's central privacy policy](https://www.ntnu.edu/privacy) apply for any processing of personal data on our web pages: 
 
 * [docs.hdc.ntnu.no](https://docs.hdc.ntnu.no)
+* [about.hdc.ntnu.no](https://about.hdc.ntnu.no)
 * [ntnu.edu/mh/huntcloud](https://ntnu.no/mh/huntcloud)
 * [ntnu.no/mh/huntcloud](https://ntnu.no/mh/huntcloud)
 
@@ -113,6 +141,7 @@ Last update: 2023-10-08.
 The following pages do not use cookies: 
 
 * [docs.hdc.ntnu.no](https://docs.hdc.ntnu.no)
+* [about.hdc.ntnu.no](https://about.hdc.ntnu.no)
 
 Our privacy statement for web visitors may change without notice. Changes will take effect once they have been posted on this page. It is your responsibility to monitor such updates. 
 

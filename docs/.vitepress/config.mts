@@ -662,12 +662,16 @@ function sidebarDoScience() {
           link: "/do-science/community/labting",
         },
         {
-          text: "Current consent",
-          link: "/do-science/community/current-consent",
+          text: "Community consent information",
+          link: "/do-science/community/community-consent-information",
         },
         {
-          text: "Consent information",
-          link: "/do-science/community/consent-information",
+          text: "Current community consent",
+          link: "/do-science/community/current-community-consent",
+        },
+        {
+          text: "Current questionnaire consent",
+          link: "/do-science/community/current-questionnaire-consent",
         },
       ],
     },
