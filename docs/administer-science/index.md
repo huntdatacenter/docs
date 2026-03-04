@@ -25,7 +25,7 @@ buttons:
     - title: 'Machines'
       subtitle: 'See available machine types for CPU and GPU computation.'
       href: '/administer-science/services/machine-types/'
-      icon: "mdi-file-document"
+      icon: "mdi-cog"
     - title: 'Data'
       subtitle: 'Page for data administration in HUNT Cloud.'
       href: '/administer-science/data/'
