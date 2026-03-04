@@ -10,7 +10,7 @@ buttons:
       subtitle: 'Service orders for labs and data spaces in HUNT Cloud.'
       href: '/administer-science/service-desk/'
       icon: "mdi-email"
-    - title: 'Scientific access'
+    - title: 'Access'
       subtitle: 'Read about scientific access for scientific centers and groups.'
       href: '/administer-science/scientific-access/'
       icon: "mdi-file-edit"
@@ -22,8 +22,8 @@ buttons:
       subtitle: 'Overview, price list, price estimator and price examples.'
       href: '/administer-science/prices/'
       icon: "mdi-tag"
-    - title: 'Machine types'
-      subtitle: 'See the different machines types for CPU and GPU computation.'
+    - title: 'Machines'
+      subtitle: 'See the different machine types for CPU and GPU computation.'
       href: '/administer-science/services/machine-types/'
       icon: "mdi-file-document"
     - title: 'Data'
@@ -31,7 +31,7 @@ buttons:
       href: '/administer-science/data/'
       icon: "mdi-file-document"
     - title: 'Agreements'
-      subtitle: 'Overview of administrative agreements in HUNT Cloud.'
+      subtitle: 'Overview of administrative agreements.'
       href: '/administer-science/agreements/'
       icon: "mdi-handshake"
     - title: 'FAQ'
