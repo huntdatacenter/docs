@@ -83,7 +83,7 @@ export default defineConfig({
   },
 
   markdown: {
-    config: md => {
+    config: (md) => {
       md.use(container, "expander", {
         render: (tokens: { [x: string]: any }, idx: string | number) => {
           // console.log(idx)
@@ -122,7 +122,7 @@ export default defineConfig({
 })
 
 function getIdFromAttrs(attrs: [string]) {
-  const idElem = attrs.filter(item => Array.isArray(item) && item.length === 2 && item[0] === "id")
+  const idElem = attrs.filter((item) => Array.isArray(item) && item.length === 2 && item[0] === "id")
   return idElem.length > 0 ? idElem[0][1] : null
 }
 
