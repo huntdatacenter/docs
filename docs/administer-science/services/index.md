@@ -12,7 +12,7 @@ buttons:
     - title: 'Specifications'
       subtitle: 'Detailed specification of your lab services.'
       href: '/administer-science/services/specifications/'
-      icon: "mdi-clipboard-search-outline"
+      icon: "mdi-file-document"
     - title: 'Machines'
       subtitle: 'See available machine types for CPU and GPU analysis.'
       href: '/administer-science/services/machine-types/'
