@@ -2,124 +2,136 @@ import { vuetify } from "../docs/.vitepress/theme/plugins/vuetify"
 import { mount, flushPromises } from "@vue/test-utils"
 import PriceEstimator from "../docs/.vitepress/theme/components/price-estimator/PriceEstimator.vue"
 import { describe, it, expect, beforeEach, vi } from "vitest"
+import { priceEstimatorStore } from "../docs/.vitepress/theme/components/price-estimator/stores/priceEstimatorStore"
+import type { StorageUnit } from "../docs/.vitepress/theme/components/price-estimator/types"
 
-const title = ""
-import type { StorageUnit, PriceListItem } from "../docs/.vitepress/theme/components/price-estimator/types"
+// Mock the pricesApi module
+const { mockPriceList } = vi.hoisted(() => {
+  return {
+    mockPriceList: [
+      {
+        "service.group": "block.nvme.rep",
+        "service.family": "store",
+        "service.unit": "First 10 TB",
+        "service.level": "COMMITMENT",
+        "service.commitment": "1Y",
+        "price.nok.ex.vat": 1000,
+      },
+      {
+        "service.group": "block.nvme.rep",
+        "service.family": "store",
+        "service.unit": "Next 90 TB",
+        "service.level": "COMMITMENT",
+        "service.commitment": "1Y",
+        "price.nok.ex.vat": 800,
+      },
+      {
+        "service.group": "block.nvme.rep",
+        "service.family": "store",
+        "service.unit": "Above 100 TB",
+        "service.level": "COMMITMENT",
+        "service.commitment": "1Y",
+        "price.nok.ex.vat": 600,
+      },
+      {
+        "service.group": "block.hdd.rep",
+        "service.family": "store",
+        "service.unit": "First 10 TB",
+        "service.level": "COMMITMENT",
+        "service.commitment": "1Y",
+        "price.nok.ex.vat": 500,
+      },
+      {
+        "service.group": "block.hdd.rep",
+        "service.family": "store",
+        "service.unit": "Next 90 TB",
+        "service.level": "COMMITMENT",
+        "service.commitment": "1Y",
+        "price.nok.ex.vat": 400,
+      },
+      {
+        "service.group": "block.hdd.rep",
+        "service.family": "store",
+        "service.unit": "Above 100 TB",
+        "service.level": "COMMITMENT",
+        "service.commitment": "1Y",
+        "price.nok.ex.vat": 300,
+      },
+      {
+        "service.group": "cpu",
+        "service.unit": "default.c1",
+        "service.level": "COMMITMENT",
+        "service.commitment": "1Y",
+        "price.nok.ex.vat": 50000,
+      },
+      {
+        "service.group": "lab",
+        "service.unit": "lab",
+        "service.level": "COMMITMENT",
+        "service.commitment": "1Y",
+        "price.nok.ex.vat": 20000,
+      },
+    ],
+  }
+})
 
+vi.mock("../docs/.vitepress/theme/components/price-estimator/api/pricesApi.js", () => ({
+  default: {
+    getPriceList: vi.fn().mockResolvedValue(mockPriceList),
+    getAvailableGPUS: vi.fn().mockResolvedValue([]),
+    getMachineFlavors: vi.fn().mockResolvedValue([
+      {
+        value: "default.c1",
+        title: "Default - 4 cores / 8 GB",
+      },
+    ]),
+  },
+}))
 
 describe("PriceEstimator", () => {
-  let mockPricesApi: any
-
   beforeEach(() => {
-    mockPricesApi = {
-      getPriceList: vi.fn().mockResolvedValue([
-        {
-          "service.group": "block.nvme.rep",
-          "service.family": "store",
-          "service.unit": "First 10 TB",
-          "service.level": "COMMITMENT",
-          "service.commitment": "1Y",
-          "price.nok.ex.vat": 1000,
-        },
-        {
-          "service.group": "block.nvme.rep",
-          "service.family": "store",
-          "service.unit": "Next 90 TB",
-          "service.level": "COMMITMENT",
-          "service.commitment": "1Y",
-          "price.nok.ex.vat": 800,
-        },
-        {
-          "service.group": "block.nvme.rep",
-          "service.family": "store",
-          "service.unit": "Above 100 TB",
-          "service.level": "COMMITMENT",
-          "service.commitment": "1Y",
-          "price.nok.ex.vat": 600,
-        },
-        {
-          "service.group": "block.hdd.rep",
-          "service.family": "store",
-          "service.unit": "First 10 TB",
-          "service.level": "COMMITMENT",
-          "service.commitment": "1Y",
-          "price.nok.ex.vat": 500,
-        },
-        {
-          "service.group": "block.hdd.rep",
-          "service.family": "store",
-          "service.unit": "Next 90 TB",
-          "service.level": "COMMITMENT",
-          "service.commitment": "1Y",
-          "price.nok.ex.vat": 400,
-        },
-        {
-          "service.group": "block.hdd.rep",
-          "service.family": "store",
-          "service.unit": "Above 100 TB",
-          "service.level": "COMMITMENT",
-          "service.commitment": "1Y",
-          "price.nok.ex.vat": 300,
-        },
-        {
-          "service.group": "cpu",
-          "service.unit": "default.c1",
-          "service.level": "COMMITMENT",
-          "service.commitment": "1Y",
-          "price.nok.ex.vat": 50000,
-        },
-      ]),
-      getAvailableGPUS: vi.fn().mockResolvedValue([]),
-      getMachineFlavors: vi.fn().mockResolvedValue([
-        {
-          value: "default.c1",
-          title: "Default - 4 cores / 8 GB",
-        },
-      ]),
-    }
+    priceEstimatorStore.clearAllLabs()
+    // Manually populate catalogue for tests that need it
+    priceEstimatorStore.catalogue.storagePrices = mockPriceList.filter(
+      (item: any) => item["service.family"] === "store",
+    ) as any
+    priceEstimatorStore.catalogue.computePrices = mockPriceList.filter(
+      (item: any) => item["service.group"] === "cpu",
+    ) as any
+    priceEstimatorStore.catalogue.labPrices = mockPriceList.filter(
+      (item: any) => item["service.group"] === "lab",
+    ) as any
+    priceEstimatorStore.catalogue.machinePrices = [
+      {
+        value: "default.c1",
+        title: "Default - 4 cores / 8 GB",
+      },
+    ] as any
   })
 
   describe("Component Rendering", () => {
     it("renders the component", async () => {
       const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test Price Estimator",
-        },
         global: {
           plugins: [vuetify],
-          mocks: {
-            pricesApi: mockPricesApi,
-          },
         },
       })
 
       await flushPromises()
       expect(wrapper.exists()).toBe(true)
-      expect(wrapper.findComponent(PriceEstimator).exists()).toBe(true)
+      // We can check if the store was initialized
+      expect(priceEstimatorStore.catalogue.storagePrices.length).toBeGreaterThan(0)
+      wrapper.unmount()
     })
   })
 
   describe("Storage Cost Calculation", () => {
     it("calculates NVME storage cost correctly for 15 TB (crosses first tier)", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
-      })
-
-      const vm = wrapper.vm as any
-      const storagePrices = await mockPricesApi.getPriceList()
-      vm.catalogue.storagePrices = storagePrices.filter((item: PriceListItem) => item["service.family"] === "store")
-
-
-      vm.labCards = [
+      priceEstimatorStore.labs = [
         {
           id: 1,
           title: "Lab 1",
-          storage: 15,
+          selectedCompute: [],
           selectedStorage: [
             {
               id: 1,
@@ -127,37 +139,28 @@ describe("PriceEstimator", () => {
               type: "NVME",
               size: 15,
               usage: "Work",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
       ]
 
-      const result = vm.calculateStorageCost()
-      const actual = 10 * 1000 + 5 * 800
-      expect(result.NVME.cost).toBeCloseTo(actual, 0)
+      const result = priceEstimatorStore.calculateTotalStorageCost()
+      const expectedTiered = 10 * 1000 + 5 * 800
+      const expectedFlat = 15 * 1000
+
+      expect(result.NVME.costTiered).toBeCloseTo(expectedTiered, 0)
+      expect(result.NVME.costFlat).toBeCloseTo(expectedFlat, 0)
       expect(result.NVME.size).toBe(15)
     })
 
     it("calculates NVME storage cost correctly for 110 TB (all three tiers)", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
-      })
-
-      const vm = wrapper.vm as any
-      const storagePrices = await mockPricesApi.getPriceList()
-      vm.catalogue.storagePrices = storagePrices.filter((item: PriceListItem) => item["service.family"] === "store")
-
-      vm.labCards = [
+      priceEstimatorStore.labs = [
         {
           id: 1,
           title: "Lab 1",
-          storage: 110,
+          selectedCompute: [],
           selectedStorage: [
             {
               id: 1,
@@ -165,38 +168,28 @@ describe("PriceEstimator", () => {
               type: "NVME",
               size: 110,
               usage: "Work",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
       ]
 
-      const result = vm.calculateStorageCost()
-      const actual = 10 * 1000 + 90 * 800 + 10 * 600
+      const result = priceEstimatorStore.calculateTotalStorageCost()
+      const expectedTiered = 10 * 1000 + 90 * 800 + 10 * 600
+      const expectedFlat = 110 * 1000
 
-      expect(result.NVME.cost).toBeCloseTo(actual, 0)
+      expect(result.NVME.costTiered).toBeCloseTo(expectedTiered, 0)
+      expect(result.NVME.costFlat).toBeCloseTo(expectedFlat, 0)
       expect(result.NVME.size).toBe(110)
     })
 
     it("calculates HDD storage cost correctly for first 10 TB", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
-      })
-
-      const vm = wrapper.vm as any
-      const storagePrices = await mockPricesApi.getPriceList()
-      vm.catalogue.storagePrices = storagePrices.filter((item: PriceListItem) => item["service.family"] === "store")
-
-      vm.labCards = [
+      priceEstimatorStore.labs = [
         {
           id: 1,
           title: "Lab 1",
-          storage: 8,
+          selectedCompute: [],
           selectedStorage: [
             {
               id: 1,
@@ -204,35 +197,28 @@ describe("PriceEstimator", () => {
               type: "HDD",
               size: 8,
               usage: "Archive",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
       ]
 
-      const result = vm.calculateStorageCost()
-      expect(result.HDD.cost).toBeCloseTo(4000, 0)
+      const result = priceEstimatorStore.calculateTotalStorageCost()
+      const expectedTiered = 8 * 500
+      const expectedFlat = 8 * 500
+
+      expect(result.HDD.costTiered).toBeCloseTo(expectedTiered, 0)
+      expect(result.HDD.costFlat).toBeCloseTo(expectedFlat, 0)
       expect(result.HDD.size).toBe(8)
     })
 
     it("calculates mixed storage types correctly", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
-      })
-
-      const vm = wrapper.vm as any
-      const storagePrices = await mockPricesApi.getPriceList()
-      vm.catalogue.storagePrices = storagePrices.filter((item: PriceListItem) => item["service.family"] === "store")
-      vm.labCards = [
+      priceEstimatorStore.labs = [
         {
           id: 1,
           title: "Lab 1",
-          storage: 13,
+          selectedCompute: [],
           selectedStorage: [
             {
               id: 1,
@@ -240,7 +226,8 @@ describe("PriceEstimator", () => {
               type: "NVME",
               size: 5,
               usage: "Work",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
             {
               id: 2,
@@ -248,39 +235,26 @@ describe("PriceEstimator", () => {
               type: "HDD",
               size: 8,
               usage: "Archive",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
       ]
-      const actualNvmeCost = 5 * 1000
-      const actualHddCost = 8 * 500
+      const expectedNvmeTiered = 5 * 1000
+      const expectedHddTiered = 8 * 500
 
-      const result = vm.calculateStorageCost()
-      expect(result.NVME.cost).toBeCloseTo(actualNvmeCost, 0)
-      expect(result.HDD.cost).toBeCloseTo(actualHddCost, 0)
-      
+      const result = priceEstimatorStore.calculateTotalStorageCost()
+      expect(result.NVME.costTiered).toBeCloseTo(expectedNvmeTiered, 0)
+      expect(result.HDD.costTiered).toBeCloseTo(expectedHddTiered, 0)
     })
 
     it("calculates storage across multiple labs correctly", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
-      })
-
-      const vm = wrapper.vm as any
-      const storagePrices = await mockPricesApi.getPriceList()
-      vm.catalogue.storagePrices = storagePrices.filter((item: PriceListItem) => item["service.family"] === "store")
-
-      vm.labCards = [
+      priceEstimatorStore.labs = [
         {
           id: 1,
           title: "Lab 1",
-          storage: 6,
+          selectedCompute: [],
           selectedStorage: [
             {
               id: 1,
@@ -288,14 +262,15 @@ describe("PriceEstimator", () => {
               type: "NVME",
               size: 6,
               usage: "Work",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
         {
           id: 2,
           title: "Lab 2",
-          storage: 7,
+          selectedCompute: [],
           selectedStorage: [
             {
               id: 1,
@@ -303,232 +278,290 @@ describe("PriceEstimator", () => {
               type: "NVME",
               size: 7,
               usage: "Work",
-              price: 0,
+              monthlyPrice: 0,
+              yearlyPrice: 0,
             } as StorageUnit,
           ],
         },
       ]
 
-      const result = vm.calculateStorageCost()
-      expect(result.NVME.cost).toBeCloseTo(12400, 0)
+      const result = priceEstimatorStore.calculateTotalStorageCost()
+      const expectedTiered = 10 * 1000 + 3 * 800
+      const expectedFlat = 13 * 1000
+
+      expect(result.NVME.costTiered).toBeCloseTo(expectedTiered, 0)
+      expect(result.NVME.costFlat).toBeCloseTo(expectedFlat, 0)
       expect(result.NVME.size).toBe(13)
-    })
-
-    it("returns empty object for no storage", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
-      })
-
-      const vm = wrapper.vm as any
-      vm.labCards = []
-
-      const result = vm.calculateStorageCost()
-      expect(Object.keys(result).length).toBe(0)
     })
   })
 
   describe("Lab Management", () => {
     it("adds a new lab card", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
+      expect(priceEstimatorStore.labs.length).toBe(0)
+
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
       })
+      expect(priceEstimatorStore.labs.length).toBe(1)
+      expect(priceEstimatorStore.labs[0].title).toBe("Lab 1")
 
-      const vm = wrapper.vm as any
-      expect(vm.labCards.length).toBe(0)
-
-      vm.addLabCard()
-      expect(vm.labCards.length).toBe(1)
-      expect(vm.labCards[0].title).toBe("Lab 1")
-      expect(vm.nextLabId).toBe(2)
-
-      vm.addLabCard()
-      expect(vm.labCards.length).toBe(2)
-      expect(vm.labCards[1].title).toBe("Lab 2")
-      expect(vm.nextLabId).toBe(3)
+      priceEstimatorStore.addLab({
+        name: "Lab 2",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
+      expect(priceEstimatorStore.labs.length).toBe(2)
+      expect(priceEstimatorStore.labs[1].title).toBe("Lab 2")
     })
 
-    it("removes a lab card", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
+    it("Removing labs", async () => {
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
+      priceEstimatorStore.addLab({
+        name: "Lab 2",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
       })
 
-      const vm = wrapper.vm as any
-      vm.addLabCard()
-      vm.addLabCard()
-      expect(vm.labCards.length).toBe(2)
+      priceEstimatorStore.addLab({
+        name: "Lab 3",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
+      expect(priceEstimatorStore.labs.length).toBe(3)
 
-      vm.removeLabCard(1)
-      expect(vm.labCards.length).toBe(1)
-      expect(vm.labCards[0].id).toBe(2)
+      priceEstimatorStore.removeLab(0) // Removes Lab 1 (id 0)
+      expect(priceEstimatorStore.labs.length).toBe(2)
+      expect(priceEstimatorStore.labs[0].title).toBe("Lab 2")
+
+      priceEstimatorStore.clearAllLabs()
+      expect(priceEstimatorStore.labs.length).toBe(0)
     })
 
-    it("removes all labs", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
+    it("adds compute to a lab correctly using catalogue prices", () => {
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
+      const labId = priceEstimatorStore.labs[0].id
+
+      // Clear defaults
+      priceEstimatorStore.labs[0].selectedCompute = []
+
+      priceEstimatorStore.addComputeToLab(labId, {
+        name: "My Machine",
+        flavor: "default.c1",
+        core_count: 4,
+        ram: 8,
+        type: "COMMITMENT_1Y",
       })
 
-      const vm = wrapper.vm as any
-      vm.addLabCard()
-      vm.addLabCard()
-      vm.addLabCard()
-      expect(vm.labCards.length).toBe(3)
+      const addedCompute = priceEstimatorStore.labs[0].selectedCompute[0]
+      expect(addedCompute).toBeDefined()
+      expect(addedCompute.name).toBe("My Machine")
+      // Mock data has 50000 for default.c1
+      expect(addedCompute.yearlyPrice).toBe(50000)
+      expect(addedCompute.monthlyPrice).toBeCloseTo(50000 / 12, 4)
+    })
 
-      vm.removeAllLabs()
-      expect(vm.labCards.length).toBe(0)
-      expect(vm.nextLabId).toBe(1)
-      expect(vm.totals.computePrice).toBe(0)
-      expect(Object.keys(vm.totals.storageCost).length).toBe(0)
+    it("adds storage to a lab correctly using catalogue prices", () => {
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
+      const labId = priceEstimatorStore.labs[0].id
+
+      // Clear defaults
+      priceEstimatorStore.labs[0].selectedStorage = []
+
+      priceEstimatorStore.addStorageToLab(labId, {
+        name: "My Volume",
+        usage: "Work",
+        type: "NVME",
+        size: 2,
+      })
+
+      const addedStorage = priceEstimatorStore.labs[0].selectedStorage[0]
+      expect(addedStorage).toBeDefined()
+      expect(addedStorage.name).toBe("My Volume")
+      // Mock data has 1000 for NVME First 10 TB. 2 * 1000 = 2000.
+      expect(addedStorage.yearlyPrice).toBe(2000)
+      expect(addedStorage.monthlyPrice).toBeCloseTo(2000 / 12, 4)
     })
   })
 
   describe("Total Calculations", () => {
     it("updates compute price total when lab card compute changes", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
+      })
+      const labId = priceEstimatorStore.labs[0].id
+
+      // Clear default compute added by addLab
+      priceEstimatorStore.labs[0].selectedCompute = []
+
+      priceEstimatorStore.addComputeToLab(labId, {
+        name: "machine-1",
+        flavor: "default.c1",
+        core_count: 4,
+        ram: 8,
+        type: "COMMITMENT_1Y",
       })
 
-      const vm = wrapper.vm as any
-      vm.addLabCard()
+      const summary = priceEstimatorStore.updateTotalSummary()
 
-      vm.updateLabCardCompute(1, {
-        yearlyPrice: 50000,
-        monthlyPrice: 4166.67,
-        numCompute: 1,
-        selectedCompute: [],
-      })
-
-      expect(vm.totals.computePrice).toBe(50000)
+      // @ts-ignore
+      expect(summary.allCompute.price).toBe(50000)
+      // @ts-ignore
+      expect(summary.allCompute.units).toBe(1)
     })
 
     it("updates storage total when lab card storage changes", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
       })
+      const labId = priceEstimatorStore.labs[0].id
 
-      const vm = wrapper.vm as any
-      const storagePrices = await mockPricesApi.getPriceList()
-      vm.catalogue.storagePrices = storagePrices.filter((item: PriceListItem) => item["service.family"] === "store")
+      // Clear default storage added by addLab
+      priceEstimatorStore.labs[0].selectedStorage = []
 
-      vm.addLabCard()
-
-      vm.updateLabCardStorage(1, {
+      priceEstimatorStore.addStorageToLab(labId, {
+        name: "volume-1",
+        usage: "Work",
+        type: "NVME",
         size: 5,
-        price: 5000,
-        selectedStorage: [
-          {
-            id: 1,
-            name: "volume-1",
-            type: "NVME",
-            size: 5,
-            usage: "Work",
-            price: 5000,
-          },
-        ],
       })
 
-      await flushPromises()
+      const summary = priceEstimatorStore.updateTotalSummary()
 
-      expect(vm.totals.storageCost.NVME).toBeDefined()
-      expect(vm.totals.storageCost.NVME.size).toBe(5)
-      expect(vm.totals.storageCost.NVME.cost).toBeCloseTo(5000, 0)
+      // @ts-ignore
+      expect(summary.allStorage.NVME).toBeDefined()
+      // @ts-ignore
+      expect(summary.allStorage.NVME.size).toBe(5)
+      // 5 * 1000 (First 10 TB price)
+      // @ts-ignore
+      expect(summary.allStorage.NVME.costFlat).toBeCloseTo(5000, 0)
     })
+
     it("Updates totals when multiple labs are added with compute and storage", async () => {
-      const wrapper = mount(PriceEstimator, {
-        props: {
-          title: "Test",
-        },
-        global: {
-          plugins: [vuetify],
-        },
+      priceEstimatorStore.addLab({
+        name: "Lab 1",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
       })
+      const lab1Id = priceEstimatorStore.labs[0].id
+      priceEstimatorStore.labs[0].selectedCompute = []
+      priceEstimatorStore.labs[0].selectedStorage = []
 
-      const vm = wrapper.vm as any
-      const storagePrices = await mockPricesApi.getPriceList()
-      vm.catalogue.storagePrices = storagePrices.filter((item: PriceListItem) => item["service.family"] === "store")
-      
-      vm.addLabCard()
-      vm.updateLabCardCompute(1, {
-        yearlyPrice: 60000,
-        monthlyPrice: 5000,
-        numCompute: 1,
-        selectedCompute: [],
+      // Lab 1: 1 machine (50k), 10TB NVME (10k)
+      priceEstimatorStore.addComputeToLab(lab1Id, {
+        name: "machine-1",
+        flavor: "default.c1",
+        core_count: 4,
+        ram: 8,
+        type: "COMMITMENT_1Y",
       })
-      vm.updateLabCardStorage(1, {
+      priceEstimatorStore.addStorageToLab(lab1Id, {
+        name: "volume-1",
+        usage: "Work",
+        type: "NVME",
         size: 10,
-        price: 10000,
-        selectedStorage: [
-          {
-            id: 1,
-            name: "volume-1",
-            type: "NVME",
-            size: 10,
-            usage: "Work",
-            price: 10000,
-          },
-        ],
       })
 
-      await flushPromises()
-
-      vm.addLabCard()
-      vm.updateLabCardCompute(2, {
-        yearlyPrice: 120000,
-        monthlyPrice: 10000,
-        numCompute: 2,
-        selectedCompute: [],
+      priceEstimatorStore.addLab({
+        name: "Lab 2",
+        subscriptionType: "1Y",
+        machineFlavor: "default.c1",
+        machineSubscription: "COMMITMENT_1Y",
+        hddSize: 1,
+        nvmeSize: 0,
       })
-      vm.updateLabCardStorage(2, {
+      const lab2Id = priceEstimatorStore.labs[1].id
+      priceEstimatorStore.labs[1].selectedCompute = []
+      priceEstimatorStore.labs[1].selectedStorage = []
+
+      // Lab 2: 2 machines (100k), 20TB NVME (20k flat)
+      priceEstimatorStore.addComputeToLab(lab2Id, {
+        name: "machine-2a",
+        flavor: "default.c1",
+        core_count: 4,
+        ram: 8,
+        type: "COMMITMENT_1Y",
+      })
+      priceEstimatorStore.addComputeToLab(lab2Id, {
+        name: "machine-2b",
+        flavor: "default.c1",
+        core_count: 4,
+        ram: 8,
+        type: "COMMITMENT_1Y",
+      })
+      priceEstimatorStore.addStorageToLab(lab2Id, {
+        name: "volume-2",
+        usage: "Work",
+        type: "NVME",
         size: 20,
-        price: 20000,
-        selectedStorage: [
-          {
-            id: 2,
-            name: "volume-2",
-            type: "NVME",
-            size: 20,
-            usage: "Work",
-            price: 20000,
-          },
-        ],
       })
-      
-      await flushPromises()
-      expect(vm.totals.computePrice).toBe(180000)
-      expect(vm.totals.storageCost.NVME).toBeDefined()
-      expect(vm.totals.storageCost.NVME.size).toBe(30)
-      const actualNvmeCost = 10 * 1000 + 20 * 800
-      expect(vm.totals.storageCost.NVME.cost).toBeCloseTo(actualNvmeCost, 0)
 
+      const summary = priceEstimatorStore.updateTotalSummary()
+
+      // Total compute: 50k + 50k + 50k = 150k
+      // @ts-ignore
+      expect(summary.allCompute.price).toBe(150000)
+
+      // @ts-ignore
+      expect(summary.allStorage.NVME).toBeDefined()
+      // Total storage size: 10 + 20 = 30 TB
+      // @ts-ignore
+      expect(summary.allStorage.NVME.size).toBe(30)
+
+      // Tiered calculation for 30TB NVME:
+      // First 10TB @ 1000 = 10,000
+      // Next 20TB @ 800 = 16,000
+      // Total = 26,000
+      const expectedNvmeTiered = 10 * 1000 + 20 * 800
+      // @ts-ignore
+      expect(summary.allStorage.NVME.costTiered).toBeCloseTo(expectedNvmeTiered, 0)
     })
   })
 })

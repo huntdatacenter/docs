@@ -303,7 +303,7 @@ const openSurvey = () => {
                 </v-toolbar>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="vpnStepper" class="mt-16" hide-actions>
+                  <v-stepper-vertical v-model="vpnStepper" class="mt-16" hide-actions :editable="false">
                     <v-stepper-vertical-item
                       title="Install OpenVPN"
                       value="1"
@@ -426,47 +426,49 @@ const openSurvey = () => {
                       <v-card class="mb-8 pr-4" elevation="0">
                         <br />
                         <h3 id="authenticate-vpn"><a href="#authenticate-vpn" class="header-anchor">#</a> Authenticate VPN</h3>
-                        <p>If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.</p>
+                        <div>
+                          If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.
+                        </div>
 
                         <br />
                         <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
-                        <p>
+                        <div>
                           If you received the notification VPN Connection Failed after 60 seconds, please check the following:
                           <ul>
                             <li>Verify that you have an active internet connection.</li>
                             <li>Verify that the Private Key Password is correct.</li>
                           </ul>
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="unable-to-apply-changes"><a href="#unable-to-apply-changes" class="header-anchor">#</a> Unable to apply changes</h3>
-                        <p>
+                        <div>
                           If you are unable to click <i>Apply</i> after your changes, try to re-enter your <code>Private Key Password</code> using your VPN passphrase that you received in Signal message.
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
-                        <p>
+                        <div>
                           If you received an error "wrong credentials" after using your TOTP authenticator:
                           <ul>
                             <li>Make sure your phone is connected to internet for time synchronization. Time zone between phone and your machine should match.</li>
                           </ul>
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="could-not-read-auth-error"><a href="#could-not-read-auth-error" class="header-anchor">#</a> Could not read Auth error</h3>
-                        <p>
+                        <div>
                           The error messages below indicates that TOTP (Google Auth) code is not accepted.
                           You should try to setup your TOTP one more time or request a TOTP reset in Service desk.
                           <div class="language- extra-class"><pre class="language-text">
                             <code v-text="`ERROR: could not read Auth username/password/ok/string from management interface`"></code>
                           </pre></div>
 
-                        </p>
+                        </div>
 
                         <br />
                         <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
-                        <p>
+                        <div>
                           The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
                           <div class="language- extra-class"><pre class="language-text">
                             <code v-text="`ERROR: could not read Private Key username/password/ok/string from management interface`"></code>
@@ -475,15 +477,30 @@ const openSurvey = () => {
                           <div class="language- extra-class"><pre class="language-text">
                             <code v-text="`Cannot load private key file`"></code>
                           </pre></div>
-                        </p>
+                        </div>
+
+                        <br />
+                        <h3 id="test-firewall"><a href="#test-firewall" class="header-anchor">#</a> Detect firewall blocks</h3>
+                        <div>
+                          If you want to check whether your VPN connection is blocked by the firewall, install nmap using: <code>sudo apt install nmap</code> and then run:
+                        </div>
+                        <CopyTextField
+                          :model-value="`sudo nmap -sU -Pn --traceroute -p U:1194 129.241.176.121`"
+                          label=""
+                          prefix=""
+                          placeholder=""
+                        />
+                        <div class="mt-2">
+                          If traceroute ends with <code>129.241.176.121</code> no blocking was detected. Although if tracing seems stuck send us a screenshot in service desk.
+                        </div>
 
                         <v-alert
-                          border-color="info"
                           border="start"
+                          border-color="info"
+                          class="mt-6"
                           elevation="2"
                         >
-                          <b>TIP</b>
-                          <hr class="mt-1 mb-2" />
+                          <template v-slot:title><b>TIP</b></template>
                           If nothing works, please head over to our main <a href="/do-science/troubleshooting/connection/#vpn" target="_blank">troubleshooting section</a> for more information on how to troubleshoot connections.
                         </v-alert>
                       </v-card>

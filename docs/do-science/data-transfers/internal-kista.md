@@ -140,14 +140,14 @@ LFTP method works in similar fashion, except it offers you more reliable transfe
 
 1. From your home machine, using command below you will be able to connect to remote kista and specify **directories** for transfer. Ideally you should run your command in [terminal multiplexer](/do-science/tools/technical/terminal-multiplexers).
 
-
 ```bash
 # -- Principal example
-lftp -e "mirror -cR <upload_directory> /upload; bye" sftp://<username>-upload:@<ip-address>
+lftp -e "mirror --no-perms -cR <upload_directory> /upload; bye" sftp://<username>-upload:@<ip-address>
 
 # -- Demo example
-lftp -e "mirror --parallel=10 -cR /mnt/archive/example_archive/ /upload; bye" sftp://demouser-upload:@10.42.132.118
+lftp -e "mirror --parallel=10 --no-perms -cR /mnt/archive/example_archive/ /upload; bye" sftp://demouser-upload:@10.42.132.118
 ```
+
 You can read more about LFTP [here](/do-science/tools/transfer/lftp)
 
 :::

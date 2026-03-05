@@ -1,49 +1,16 @@
-export interface ComputeUnit {
-  id: number
-  name: string
-  flavor: string
-  core_count: number
-  ram: number
-  gpu: string | null
-  type: SubscriptionType
-  monthlyPrice: number
-  yearlyPrice: number
-}
-export interface ComputeLabSum {
-  monthlyPrice: number
-  yearlyPrice: number
-  ram: number
-  cpu_count: number
-}
+/*
+
+Definition
+
+Price: Defined price from the catalogue API
+Cost: Calculated amount of prices. Used for Summary.
+
+*/
 
 export type SubscriptionType = "COMMITMENT_1Y" | "COMMITMENT_3Y" | "ONDEMAND" | "SPOT"
-
-export interface StorageUnit {
-  id: number
-  name: string
-  usage: StorageUsageType
-  type: StorageType
-  size: number
-  price: number
-}
-
-export type StorageUsageType = "Archive" | "Work" | "Scratch" | "Home"
-
-export type StorageType = "HDD" | "NVME"
-
-export interface StorageLabSum {
-  size: number
-  type: string | null
-  price: number
-}
-
-export interface Catalogue {
-  computePrices: PriceListItem[]
-  storagePrices: PriceListItem[]
-  gpuPrices: PriceListItem[]
-  machineCatalogue: MachineFlavor[]
-  availableGpus: GpuModel[]
-}
+export type StorageUsageType = "Archive" | "Work" | "Scratch" | "Backup"
+export const storageTypes = ["HDD", "NVME"] as const
+export type StorageType = (typeof storageTypes)[number]
 
 export interface PriceListItem {
   "service.group": string
@@ -52,6 +19,28 @@ export interface PriceListItem {
   "service.level": string
   "service.commitment"?: string
   "price.nok.ex.vat": number
+}
+
+export interface ComputeUnit {
+  id: number
+  name: string
+  flavor: string
+  core_count: number
+  ram: number
+  gpu?: string
+  type: SubscriptionType
+  monthlyPrice: number
+  yearlyPrice: number
+}
+
+export interface StorageUnit {
+  id: number
+  name: string
+  yearlyPrice: number
+  monthlyPrice: number
+  size: number
+  type: StorageType
+  usage: StorageUsageType
 }
 
 export interface GpuModel {
@@ -66,39 +55,47 @@ export interface MachineFlavor {
   divider?: boolean
 }
 
+export interface Catalogue {
+  computePrices: PriceListItem[]
+  storagePrices: PriceListItem[]
+  gpuPrices: PriceListItem[]
+  availableGpus: GpuModel[]
+  machinePrices: MachineFlavor[]
+  labPrices: PriceListItem[]
+}
+
 export interface LabCard {
   id: number
   title: string
-  storage: number
-  priceStorage: number
-  priceComputeYearly: number
-  numCompute: number
-  initSelectedCompute?: ComputeUnit[]
-  initSelectedStorage?: StorageUnit[]
-  selectedCompute?: ComputeUnit[]
-  selectedStorage?: StorageUnit[]
+  selectedCompute: ComputeUnit[]
+  selectedStorage: StorageUnit[]
+  // Storage price changes based on the whole labs storages
 }
 
-export interface TotalPriceItem {
-  name: string
-  units: number | string
-  price: number
+interface StoragePrice {
+  size: number
+  monthlyCostTotal: number
+  yearlyCostTotal: number
+}
+
+export type StorageCostByType = {
+  [key in StorageType]: StoragePrice
 }
 
 export interface MachineFormData {
-  id: number | null
-  name: string | null
-  flavor: string | null
-  gpu: string | null
-  subscription: SubscriptionType | null
+  id?: number
+  name?: string
+  flavor?: string
+  gpu?: string
+  subscription?: SubscriptionType
 }
 
 export interface StorageFormData {
-  id: number | null
-  name: string | null
-  usage: StorageUsageType
-  type: StorageType
-  size: number
+  id?: number
+  name?: string
+  usage?: StorageUsageType
+  type?: StorageType
+  size?: number
 }
 
 export interface UpdateComputePayload {

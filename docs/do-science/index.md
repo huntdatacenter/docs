@@ -39,6 +39,10 @@ buttons:
     subtitle: "Solutions to some of the common issues that you might encounter."
     href: "/do-science/troubleshooting/"
     icon: "mdi-bug"
+  - title: "Community"
+    subtitle: "Lab ting, chat, and consents"
+    href: "/do-science/community/"
+    icon: "mdi-account-multiple"
 ---
 
 <div class="page-container">
@@ -52,11 +56,7 @@ buttons:
   </div>
 
   <div class="page-content">
-    <p>This section is for active lab users. It contains practical information on how to do science in HUNT Cloud.</p>
-  </div>
-
-  <div class="page-content">
-    <p>See our <a href="/">main documentation page</a> for other sections.</p>
+    <p>This section is for active lab users. It contains practical information on how to do science in HUNT Cloud. See our <a href="/">main documentation page</a> for other sections.</p>
   </div>
 
 <NavigationCards :buttons="$frontmatter.buttons" />

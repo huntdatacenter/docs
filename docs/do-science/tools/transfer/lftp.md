@@ -20,7 +20,7 @@ description: Installation and usage guide for lftp.
 
 ### Install Lftp in your lab
 
-Log into your lab machine and run one of the following codes to install `Lftp`: 
+Log into your lab machine and run one of the following codes to install `Lftp`:
 
 #### Conda
 
@@ -34,15 +34,14 @@ conda install -r conda-forge lftp
 sudo apt install lftp
 ```
 
-
 ### Install Lftp in your local computer
-
 
 ::: details OS X / MacOS
 
 ```bash
 brew install lftp
 ```
+
 Note that the code above requires [Homebrew package manager](https://brew.sh/).
 
 :::
@@ -64,9 +63,12 @@ We recommend that you read the [Lftp manuals](https://linux.die.net/man/1/lftp) 
 To connect to your kista over Lftp you will need to prepend the alias with `sftp://`, example:
 
 ```bash
-lftp sftp://kista
+lftp sftp://<username>-<role>:@<kista_hostname_or_ip>
 ```
 
-We recommend to use `mirror` command which works similar to rsyncfor larger transfers.
+We recommend to use `mirror` command which works similar to rsync for larger transfers.
+Use parameter `-c` to be able to resume, `-R` means upload (equivalent to `put`), `--no-perms` assures that kista is able to set correct permissions for downloaders instead.
 
-
+```bash
+lftp -e "mirror --no-perms -cR <upload_directory> /upload; bye" sftp://<username>-upload:@<kista_hostname_or_ip>
+```

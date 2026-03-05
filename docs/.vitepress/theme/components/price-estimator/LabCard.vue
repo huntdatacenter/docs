@@ -1,385 +1,128 @@
-<script lang="ts">
-import type {
-  ComputeUnit,
-  StorageUnit,
-  PriceListItem,
-  MachineFlavor,
-  ComputeLabSum,
-  StorageLabSum,
-  StorageUsageType,
-  StorageType,
-  Catalogue,
-} from "./types"
+<script setup lang="ts">
+import { ref, computed, watch } from "vue"
+import { DataTableHeader } from "vuetify"
+import { priceEstimatorStore } from "./stores/priceEstimatorStore"
+import type { ComputeUnit, StorageUnit, LabCard } from "./types"
+import MachineModal from "./MachineModal.vue"
+import StorageModal from "./StorageModal.vue"
 
-export default {
-  name: "LabCard",
-  emits: ["updateStorage", "updateCompute", "removeLab"],
-  props: {
-    title: { type: String, required: true, default: "Lab " },
-    catalogue: {
-      type: Object as () => Catalogue,
-      required: true,
-    },
-    storageCostByType: {
-      type: Object as () => { [key: string]: { size: number; cost: number } },
-      default: () => ({}),
-    },
-    initSelectedCompute: { type: Array as () => ComputeUnit[], default: null },
-    initSelectedStorage: { type: Array as () => StorageUnit[], default: null },
+// Props
+const props = defineProps({
+  lab: { type: Object as () => LabCard, required: true },
+})
+
+// State
+const isComputeModalOpen = ref(false)
+let editingComputeItem: ComputeUnit | null = null
+
+const computeHeaders = ref<DataTableHeader[]>([
+  { title: "Name", align: "start", sortable: true, key: "name" },
+  { title: "Machine type", align: "start", sortable: true, key: "flavor" },
+  { title: "CPU cores", align: "start", sortable: true, key: "core_count" },
+  { title: "Memory [GB]", align: "start", sortable: true, key: "ram" },
+  { title: "GPU", align: "start", sortable: true, key: "gpu" },
+  { title: "Type", align: "start", sortable: true, key: "type" },
+  { title: "Price / month", align: "start", sortable: true, key: "monthlyPrice" },
+  { title: "Price / year", align: "start", sortable: true, key: "yearlyPrice" },
+  { title: "Actions", key: "actions", align: "end", sortable: false },
+])
+
+const isStorageModalOpen = ref(false)
+let editingStorageItem: StorageUnit | null = null
+
+const storageHeaders = ref([
+  { title: "Name", align: "start", sortable: true, key: "name" },
+  { title: "Usage", align: "start", sortable: true, key: "usage" },
+  { title: "Type", align: "start", sortable: true, key: "type" },
+  { title: "Size [TB]", align: "start", sortable: true, key: "size" },
+  { title: "Price / month", align: "start", sortable: true, key: "monthlyPrice" },
+  { title: "Price / year", align: "start", sortable: true, key: "yearlyPrice" },
+  { title: "Actions", key: "actions", align: "end", sortable: false },
+] as const)
+
+const snackbar = ref({
+  show: false,
+  message: "",
+})
+
+const selectedCompute = computed(() => props.lab.selectedCompute || [])
+const selectedStorage = computed(() => props.lab.selectedStorage || [])
+
+const computeLabSum = computed(() => {
+  return priceEstimatorStore.getLabComputePriceSum(props.lab.id)
+})
+
+const storageLabSum = computed(() => {
+  return priceEstimatorStore.getLabStoragePriceSum(props.lab.id)
+})
+
+const LabSum = computed(() => {
+  return (
+    computeLabSum.value.yearlyCostTotal +
+    storageLabSum.value.HDD.yearlyCostTotal +
+    storageLabSum.value.NVME.yearlyCostTotal
+  )
+})
+
+const localTitle = ref(props.lab.title)
+
+watch(
+  () => props.lab.title,
+  val => {
+    localTitle.value = val
   },
-  data() {
-    return {
-      computeId: 0,
-      isComputeModalOpen: false,
-      editingComputeItem: null as ComputeUnit | null,
-      selectedCompute: [] as ComputeUnit[],
-      isLoadingComputePrices: false,
-      computeHeaders: [
-        { title: "Name", align: "start", sortable: true, key: "name" },
-        { title: "Machine type", align: "start", sortable: true, key: "flavor" },
-        { title: "cpu cores", align: "start", sortable: true, key: "core_count" },
-        { title: "Memory [TB]", align: "start", sortable: true, key: "ram" },
-        { title: "Type", align: "start", sortable: true, key: "type" },
-        { title: "Price / month", align: "start", sortable: true, key: "monthlyPrice" },
-        { title: "Price / year", align: "start", sortable: true, key: "yearlyPrice" },
-        { title: "Actions", key: "actions", align: "end", sortable: false },
-      ],
-      computeLabSum: { monthlyPrice: 0.0, yearlyPrice: 0.0, ram: 0, cpu_count: 0 } as ComputeLabSum,
-      storageId: 0,
-      isStorageModalOpen: false,
-      editingStorageItem: null as StorageUnit | null,
-      selectedStorage: [] as StorageUnit[],
-      storageHeaders: [
-        { title: "Name", align: "start", sortable: true, key: "name" },
-        { title: "Usage", align: "start", sortable: true, key: "usage" },
-        { title: "Type", align: "start", sortable: true, key: "type" },
-        { title: "Size [TB]", align: "start", sortable: true, key: "size" },
-        { title: "Price / year", align: "start", sortable: true, key: "price" }, 
-        { title: "Actions", key: "actions", align: "end", sortable: false },
-      ],
-      storageLabSum: {
-        size: 0.0,
-        type: null,
-        price: 0.0,
-      } as StorageLabSum,
-      snackbar: {
-        show: false,
-        message: "",
-      },
-    }
-  },
-  computed: {
-    displaySelectedCompute() {
-      return this.selectedCompute.map(item => {
-        return {
-          id: item.id,
-          name: item.name,
-          flavor: item.flavor,
-          core_count: item.core_count,
-          ram: item.ram,
-          type: item.type,
-          monthlyPrice: item.monthlyPrice.toFixed(2) + " kr",
-          yearlyPrice: item.yearlyPrice.toFixed(2) + " kr",
-        }
-      })
-    },
+)
 
-    displayStorageSumPrice() {
-      return this.storageLabSum.price.toFixed(2) + " kr"
-    },
-    displayselectedStorage() {
-      return this.selectedStorage.map(item => {
-        return {
-          id: item.id,
-          name: item.name,
-          usage: item.usage,
-          type: item.type,
-          size: item.size + " TB",
-          price: item.price.toFixed(2) + " kr",
-        }
-      })
-    },
-  },
+const updateTitle = (val: string) => {
+  priceEstimatorStore.updateLabTitle(props.lab.id, val)
+}
 
-  methods: {
-    initializeState() {
-      if (this.initSelectedCompute && this.initSelectedCompute.length > 0) {
-        this.selectedCompute = this.initSelectedCompute.map(item => {
-          const flavorParts = item.flavor.split(" + ")
-          const mainFlavor = flavorParts[0]
-          const gpuFlavor = item.gpu
-          const prices = this.getComputePriceForLab(mainFlavor, item.type, gpuFlavor)
-          return { ...item, ...prices }
-        })
-        this.computeId = this.initSelectedCompute.length
-      } else {
-        this.selectedCompute = []
-        this.computeId = 0
-        this.pushDefaultComputeUnit()
-      }
+// Methods
+const addMachine = () => {
+  editingComputeItem = null
+  isComputeModalOpen.value = true
+}
 
-      if (this.initSelectedStorage && this.initSelectedStorage.length > 0) {
-        this.selectedStorage = this.initSelectedStorage.map(item => ({ ...item, price: 0 }))
-        this.storageId = this.initSelectedStorage.length
-      } else {
-        this.selectedStorage = []
-        this.storageId = 0
-        this.pushDefaultStorage()
-      }
-      this.updateLabSumCompute(true)
-      this.updateLabSumStorage(true)
-    },
-    updateLabSumCompute(emit=true) {
-      this.computeLabSum.monthlyPrice = this.selectedCompute.reduce(
-        (acc, item) => Number(acc) + Number(item.monthlyPrice),
-        0,
-      )
-      this.computeLabSum.yearlyPrice = this.selectedCompute.reduce(
-        (acc, item) => Number(acc) + Number(item.yearlyPrice),
-        0,
-      )
-      this.computeLabSum.ram = this.selectedCompute.reduce((acc, item) => acc + item.ram, 0)
-      this.computeLabSum.cpu_count = this.selectedCompute.reduce((acc, item) => acc + item.core_count, 0)
-      if (emit) {
-      this.$emit("updateCompute", {
-        monthlyPrice: this.computeLabSum.monthlyPrice,
-        yearlyPrice: this.computeLabSum.yearlyPrice,
-        numCompute: this.selectedCompute.length || 0,
-        selectedCompute: this.selectedCompute,
-      })
-      }
-    },
-    updateLabSumStorage(emit = true) {
-      this.storageLabSum.size = this.selectedStorage.reduce((acc, item) => acc + item.size, 0)
+const addStorage = () => {
+  editingStorageItem = null
+  isStorageModalOpen.value = true
+}
 
-      this.updateAddedStorage()
-      this.storageLabSum.price = this.selectedStorage.reduce((acc, item) => acc + item.price, 0)
-      if (emit) {
-        this.$emit("updateStorage", {
-        size: this.storageLabSum.size,
-        price: this.storageLabSum.price,
-        selectedStorage: this.selectedStorage,
-      })
-      }
-    },
+const editStorage = (item: StorageUnit) => {
+  editingStorageItem = item
+  isStorageModalOpen.value = true
+}
 
-    addMachine() {
-      this.editingComputeItem = null
-      this.isComputeModalOpen = true
-    },
+const editCompute = (item: ComputeUnit) => {
+  editingComputeItem = item
+  isComputeModalOpen.value = true
+}
 
-    addStorage() {
-      this.editingStorageItem = null
-      this.isStorageModalOpen = true
-    },
-    editStorage(item: StorageUnit) {
-      this.editingStorageItem = item
-      this.isStorageModalOpen = true
-    },
-    editCompute(item: ComputeUnit) {
-      this.editingComputeItem = item
-      this.isComputeModalOpen = true
-    },
-    closeComputeModal(payload: any) {
-      if (payload) {
-        if (this.editingComputeItem) {
-          const index = this.selectedCompute.findIndex(item => item.id === this.editingComputeItem!.id)
-          if (index !== -1) {
-            this.selectedCompute.splice(index, 1, { ...payload, id: this.editingComputeItem!.id })
-          }
-        } else {
-          this.selectedCompute.push({ ...payload, id: this.computeId })
-          this.computeId = this.computeId + 1
-          if (this.selectedCompute.length > this.selectedStorage.length) {
-            this.pushDefaultStorage()
-          }
-        }
-        this.updateLabSumCompute()
-      }
-      this.isComputeModalOpen = false
-      this.editingComputeItem = null
-    },
-    closeStorageModal(payload: any) {
-      if (payload) {
-        const price = this.calculateStoragePriceForVolume(payload.size, payload.type)
-        if (this.editingStorageItem) {
-          const index = this.selectedStorage.findIndex(item => item.id === this.editingStorageItem!.id)
-          if (index !== -1) {
-            this.selectedStorage.splice(index, 1, {
-              id: this.editingStorageItem!.id,
-              name: payload.name,
-              usage: payload.usage,
-              type: payload.type,
-              size: payload.size,
-              price: price,
-            })
-          }
-        } else {
-          this.storageId = this.storageId + 1
-          this.selectedStorage.push({
-            id: this.storageId,
-            name: payload.name,
-            usage: payload.usage,
-            type: payload.type,
-            size: payload.size,
-            price: price,
-          })
-        }
-        this.updateAddedStorage()
-        this.updateLabSumStorage()
-      }
-      this.isStorageModalOpen = false
-      this.editingStorageItem = null
-    },
-    openSnackbar(message: string) {
-      this.snackbar.message = message
-      this.snackbar.show = true
-    },
+const closeComputeModal = () => {
+  isComputeModalOpen.value = false
+  editingComputeItem = null
+}
 
-    removeComputeById(id: number) {
-      if (id === 0) {
-        this.openSnackbar("Cannot remove the default machine")
-        return
-      }
-      this.selectedCompute = this.selectedCompute.filter(item => item.id !== id)
-      this.updateLabSumCompute()
-    },
+const closeStorageModal = () => {
+  isStorageModalOpen.value = false
+  editingStorageItem = null
+}
 
-    removeStorageById(id: number) {
-      this.selectedStorage = this.selectedStorage.filter(item => item.id !== id)
-      this.updateLabSumStorage()
-    },
-    pushDefaultComputeUnit() {
-      const defaultUnit = this.catalogue.computePrices.find(
-        (item: PriceListItem) =>
-          item["service.unit"] === "default.c1" &&
-          item["service.level"] === "COMMITMENT" &&
-          item["service.commitment"] === "1Y",
-      )
-      if (!defaultUnit) return
-      
-      const machineInfo = this.catalogue.machineCatalogue.find((item: MachineFlavor) => item["value"] === defaultUnit["service.unit"])
-      if (!machineInfo) return
-      
-      const machinetitle = machineInfo["title"].split(" - ")[1].split(" / ")
-      const core_count = parseInt(machinetitle[0].split(" ")[0])
-      const ram = parseInt(machinetitle[1].split(" ")[0])
-      this.selectedCompute.push({
-        id: this.computeId,
-        name: "machine-0",
-        flavor: defaultUnit["service.unit"],
-        core_count: core_count,
-        gpu: null,
-        ram: ram,
-        type: "COMMITMENT_1Y",
-        monthlyPrice: defaultUnit["price.nok.ex.vat"] / 12,
-        yearlyPrice: defaultUnit["price.nok.ex.vat"],
-      })
-      this.computeId += 1
-    },
-    pushDefaultStorage() {
-      const defaultStorage: StorageUnit = {
-        id: this.storageId,
-        name: "volume-" + this.storageId,
-        usage: "Archive" as StorageUsageType,
-        type: "HDD" as StorageType,
-        size: 1,
-        price: 0,
-      }
-      this.selectedStorage.push(defaultStorage)
-      this.storageId += 1
-      this.updateLabSumStorage()
-    },
-    updateAddedStorage() {
-      this.selectedStorage.forEach(item => {
-        item.price = this.calculateStoragePriceForVolume(item.size, item.type)
-      })
-    },
+const openSnackbar = (message: string) => {
+  snackbar.value.message = message
+  snackbar.value.show = true
+}
 
-    calculateStoragePriceForVolume(volumeSize: number, storageType: StorageType) {
-      const typeCostData = this.storageCostByType[storageType]
-      
-      if (!typeCostData || typeCostData.size === 0) {
-        return 0
-      }
-      
-      const unitPrice = typeCostData.cost / typeCostData.size
-      return volumeSize * unitPrice
-    },
+const removeComputeById = (computeId: number) => {
+  if (computeId === selectedCompute.value[0]?.id) {
+    openSnackbar("Cannot remove the default machine")
+    return
+  }
+  priceEstimatorStore.removeComputeFromLab(props.lab.id, computeId)
+}
 
-
-    getComputePriceForLab(flavor: string, type: string, gpuFlavor: string | null = null) {
-      let totalYearlyPrice = 0
-      let totalMonthlyPrice = 0
-      let mainFlavorPrice: number | undefined
-      let gpuYearly: number | undefined
-
-      if (type.includes("COMMITMENT")) {
-        if (type === "COMMITMENT_3Y") {
-          const found3Y = this.catalogue.computePrices.find(
-            (p: PriceListItem) =>
-              p["service.unit"] === flavor &&
-              p["service.level"] === "COMMITMENT" &&
-              p["service.commitment"] === "3Y"
-          )
-          if (found3Y) {
-            mainFlavorPrice = found3Y["price.nok.ex.vat"] / 3
-          }
-        } else {
-          mainFlavorPrice = this.catalogue.computePrices.find(
-            (p: PriceListItem) =>
-              p["service.unit"] === flavor &&
-              p["service.level"] === "COMMITMENT" &&
-              p["service.commitment"] === "1Y"
-          )?.["price.nok.ex.vat"]
-        }
-      } else {
-        const foundPrice = this.catalogue.computePrices.find(
-          (p: PriceListItem) => p["service.unit"] === flavor && p["service.level"] === type
-        )
-        mainFlavorPrice = foundPrice?.["price.nok.ex.vat"]
-      }
-
-      if (mainFlavorPrice) {
-        totalYearlyPrice += mainFlavorPrice
-      }
-
-      totalMonthlyPrice = Number((totalYearlyPrice / 12))
-
-      if (gpuFlavor) {
-        const gpuPrice = this.catalogue.gpuPrices.find(
-          (p: PriceListItem) => p["service.unit"] === gpuFlavor && p["service.level"] === "ONDEMAND"
-        )
-        if (gpuPrice) {
-          gpuYearly = gpuPrice["price.nok.ex.vat"]
-          totalYearlyPrice += gpuYearly
-          totalMonthlyPrice = totalMonthlyPrice + Number((gpuYearly / 12))
-        }
-      }
-      return {
-        monthlyPrice: totalMonthlyPrice,
-        yearlyPrice: totalYearlyPrice,
-      }
-    },
-  },
-
-  created() {
-    this.initializeState()
-  },
-  watch: {
-    storageCostByType: {
-      handler(newVal) {
-        if (newVal && Object.keys(newVal).length > 0 && this.selectedStorage.length > 0) {
-          const needsUpdate = this.selectedStorage.some(item => item.price === 0)
-          if (needsUpdate) {
-            this.updateAddedStorage()
-            this.updateLabSumStorage(false)
-          }
-        }
-      },
-      deep: true,
-    },
-  },
+const removeStorageById = (storageId: number) => {
+  priceEstimatorStore.removeStorageFromLab(props.lab.id, storageId)
 }
 </script>
 
@@ -387,29 +130,45 @@ export default {
   <v-container>
     <v-sheet class="lab-card ma-0">
       <v-card class="ma-0">
-        <v-row class="ma-2" align="center" justify="space-between">
-          <v-card-title>{{ title }}</v-card-title>
-          <v-btn icon @click="$emit('removeLab')">
+        <v-row class="ma-2 d-flex" align="center" justify="space-between">
+          <v-btn icon style="visibility: hidden"> </v-btn>
+          <v-text-field
+            v-model="localTitle"
+            variant="underlined"
+            hide-details
+            density="compact"
+            class="lab-title-input flex-grow-0"
+            @update:model-value="updateTitle"
+          ></v-text-field>
+          <v-btn icon @click="priceEstimatorStore.removeLab(props.lab.id)">
             <v-icon>mdi-delete</v-icon>
           </v-btn>
         </v-row>
 
         <v-card flat>
-          <v-card-title> Compute</v-card-title>
-          <v-card-subtitle> {{ "Add a machine to " + title }}</v-card-subtitle>
+          <v-card-title>Compute</v-card-title>
 
           <v-data-table-virtual
-            :items="displaySelectedCompute"
+            :items="selectedCompute"
             :headers="computeHeaders"
-            :loading="isLoadingComputePrices"
             hide-default-footer
             hover
             item-value="id"
           >
-
+            <template v-slot:item.monthlyPrice="{ item }">
+              {{ item.monthlyPrice.toFixed(2) + " kr" }}
+            </template>
+            <template v-slot:item.yearlyPrice="{ item }">
+              {{ item.yearlyPrice.toFixed(2) + " kr" }}
+            </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
-                <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editCompute(item)"></v-icon>
+                <v-icon
+                  color="medium-emphasis"
+                  icon="mdi-pencil"
+                  size="small"
+                  @click="editCompute(selectedCompute.find(c => c.id === item.id)!)"
+                ></v-icon>
                 <v-icon
                   color="medium-emphasis"
                   icon="mdi-delete"
@@ -422,32 +181,24 @@ export default {
             <template v-slot:body.append="{}">
               <tr>
                 <th :colspan="computeHeaders.length + 1" class="text-center">
-                  <v-tooltip bottom>
-                    <template #activator="{ props }">
-                      <v-btn v-bind="props" icon="mdi-plus" size="small" @click="addMachine"></v-btn>
-                    </template>
-                    <span>Add a new machine</span>
-                  </v-tooltip>
+                  <v-btn size="small" @click="addMachine" append-icon="mdi-plus"> Add machine </v-btn>
                 </th>
               </tr>
 
               <tr>
-                <th role="columnheader" class="pt-4 pb-2">
-                  <span><strong>Total</strong> </span>
+                <th role="columnheader">
+                  <span><strong>Total compute</strong> </span>
                 </th>
                 <th></th>
-                <th>
-                  <strong>{{ computeLabSum?.cpu_count || 0 }}</strong>
-                </th>
-                <th>
-                  <strong> {{ computeLabSum?.ram || 0 }}</strong>
-                </th>
+                <th></th>
+                <th></th>
+                <th></th>
                 <th></th>
                 <th>
-                  <strong>{{ Number(computeLabSum?.monthlyPrice || 0).toFixed(2) + " kr" }} </strong>
+                  <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) + " kr" }} </strong>
                 </th>
                 <th>
-                  <strong>{{ Number(computeLabSum?.yearlyPrice || 0).toFixed(2) + " kr" }} </strong>
+                  <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) + " kr" }} </strong>
                 </th>
                 <th></th>
               </tr>
@@ -456,22 +207,34 @@ export default {
         </v-card>
 
         <v-card flat>
-          <v-card-title> Storage</v-card-title>
-          <v-card-subtitle> Add storage to {{ title }} </v-card-subtitle>
-          <v-card-subtitle> Each compute unit needs a volume of storage of atleast 1 TB</v-card-subtitle>
-            
+          <v-card-title>Storage</v-card-title>
+
           <v-data-table-virtual
-            v-model="selectedStorage"
-            :items="displayselectedStorage"
+            v-model="props.lab.selectedStorage"
+            :items="selectedStorage"
             :headers="storageHeaders"
             hover
             hide-default-footer
             item-value="id"
             aria-placeholder="No storage added yet"
           >
+            <template v-slot:item.size="{ item }">
+              {{ item.size.toFixed(2) + " TB" }}
+            </template>
+            <template v-slot:item.monthlyPrice="{ item }">
+              {{ item.monthlyPrice.toFixed(2) + " kr" }}
+            </template>
+            <template v-slot:item.yearlyPrice="{ item }">
+              {{ item.yearlyPrice.toFixed(2) + " kr" }}
+            </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
-                <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editStorage(selectedStorage.find(s => s.id === item.id)!)"></v-icon>
+                <v-icon
+                  color="medium-emphasis"
+                  icon="mdi-pencil"
+                  size="small"
+                  @click="editStorage(selectedStorage.find(s => s.id === item.id)!)"
+                ></v-icon>
                 <v-icon
                   color="medium-emphasis"
                   icon="mdi-delete"
@@ -481,28 +244,44 @@ export default {
               </div>
             </template>
 
-
             <template v-slot:body.append="{}">
               <tr>
                 <th :colspan="storageHeaders.length + 1" class="text-center">
-                  <v-tooltip bottom>
-                    <template #activator="{ props }">
-                      <v-btn v-bind="props" icon="mdi-plus" size="small" @click="addStorage"></v-btn>
-                    </template>
-
-                    <span>Add storage</span>
-                  </v-tooltip>
+                  <v-btn size="small" @click="addStorage" append-icon="mdi-plus"> Add storage </v-btn>
                 </th>
               </tr>
-              <tr>
-                <th role="columnheader" class="pt-4 pb-2">
-                  <span><strong>Total</strong> </span>
+              <tr v-for="(item, storageType, index) in storageLabSum" :key="storageType">
+                <th>
+                  <strong v-if="index === 0">Total storage</strong>
                 </th>
+                <th></th>
+                <th>
+                  <span>
+                    <strong>{{ storageType }}</strong>
+                  </span>
+                </th>
+                <th>
+                  <strong>{{ item.size.toFixed(2) }} TB</strong>
+                </th>
+                <th>
+                  <strong>{{ item.monthlyCostTotal.toFixed(2) }} kr</strong>
+                </th>
+                <th>
+                  <strong>{{ item.yearlyCostTotal.toFixed(2) }} kr</strong>
+                </th>
+              </tr>
+              <tr style="background-color: #f5f5f5">
+                <th>
+                  <strong>Total lab resources</strong>
+                </th>
+                <th></th>
+                <th></th>
                 <th></th>
                 <th></th>
                 <th>
-                  <strong>{{ (storageLabSum?.size || 0) + " TB" }}</strong>
+                  <strong>{{ LabSum.toFixed(2) }} kr</strong>
                 </th>
+                <th></th>
               </tr>
             </template>
           </v-data-table-virtual>
@@ -511,25 +290,40 @@ export default {
     </v-sheet>
 
     <v-dialog v-model="isComputeModalOpen" max-width="600px" min-width="600px">
-      <Machine
-        :compute-id="computeId"
-        :catalogue="catalogue"
-        :initial-data="editingComputeItem"
+      <MachineModal
+        :lab-id="lab.id"
+        :compute-id="lab.selectedCompute.length"
+        :edit-data="editingComputeItem"
         @close="closeComputeModal"
         @open-snackbar="openSnackbar"
       />
     </v-dialog>
 
     <v-dialog v-model="isStorageModalOpen" max-width="600px" min-width="600px">
-      <Storage :storage-id="storageId" :initial-data="editingStorageItem" @close="closeStorageModal" />
+      <StorageModal
+        :lab-id="lab.id"
+        :storage-id="lab.selectedStorage.length"
+        :edit-data="editingStorageItem"
+        @close="closeStorageModal"
+      />
     </v-dialog>
 
-    <v-snackbar v-model="snackbar.show"> {{ snackbar.message }}</v-snackbar>
+    <v-snackbar v-model="snackbar.show">{{ snackbar.message }}</v-snackbar>
   </v-container>
 </template>
 
 <style scoped>
 .lab-card {
   padding: 3px;
+}
+
+.lab-title-input {
+  min-width: 200px;
+}
+
+.lab-title-input :deep(.v-field__input) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 </style>

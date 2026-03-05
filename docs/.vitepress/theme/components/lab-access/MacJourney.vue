@@ -276,7 +276,7 @@ const openSurvey = () => {
                 </v-card-title>
 
                 <v-card-text class="pa-0">
-                  <v-stepper-vertical v-model="vpnStepper" hide-actions>
+                  <v-stepper-vertical v-model="vpnStepper" hide-actions :editable="false">
                     <v-stepper-vertical-item
                       :complete="vpnStepper > 1"
                       value="1"
@@ -422,39 +422,41 @@ const openSurvey = () => {
                         <v-card-text>
                           <br />
                           <h3 id="authenticate-vpn"><a href="#authenticate-vpn" class="header-anchor">#</a> Authenticate VPN</h3>
-                          <p>If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.</p>
+                          <div>
+                            If the <em>Authenticate VPN</em> prompt pops up again, then try to log in again with a new <strong><code>verification code</code></strong>.
+                          </div>
 
                           <br />
                           <h3 id="vpn-connection-failed"><a href="#vpn-connection-failed" class="header-anchor">#</a> VPN connection failed</h3>
-                          <p>
+                          <div>
                             If you received the notification VPN Connection Failed after 60 seconds, please check the following:
                             <ul>
                               <li>Verify that you have an active internet connection.</li>
                               <li>Verify that the Private Key Password is correct.</li>
                             </ul>
-                          </p>
+                          </div>
 
                           <br />
                           <h3 id="totp-wrong-credentials"><a href="#totp-wrong-credentials" class="header-anchor">#</a> TOTP wrong credentials</h3>
-                          <p>
+                          <div>
                             If you received an error "wrong credentials" after using your TOTP authenticator:
                             <ul>
                               <li>Make sure your phone is connected to internet for time synchronization. Time zone between phone and your machine should match.</li>
                             </ul>
-                          </p>
+                          </div>
 
                           <br />
                           <h3 id="could-not-read-auth-error"><a href="#could-not-read-auth-error" class="header-anchor">#</a> Could not read Auth error</h3>
-                          <p>
+                          <div>
                             The error messages below indicates that TOTP (Google Auth) code is not accepted.
                             You should try to setup your TOTP one more time or request a TOTP reset in Service desk.
                             <div class="language- extra-class"><pre class="language-text">
                               <code v-text="`ERROR: could not read Auth username/password/ok/string from management interface`"></code>
                             </pre></div>
-                          </p>
+                          </div>
 
                           <h3 id="could-not-read-private-key-error"><a href="#could-not-read-private-key-error" class="header-anchor">#</a> Could not read Private Key error</h3>
-                          <p>
+                          <div>
                             The error messages below indicates that there is a typo in the Private Key Password (step 2.3.5) and you need to type it in again.
                             <div class="language- extra-class"><pre class="language-text">
                               <code v-text="`ERROR: could not read Private Key username/password/ok/string from management interface`"></code>
@@ -463,7 +465,7 @@ const openSurvey = () => {
                             <div class="language- extra-class"><pre class="language-text">
                               <code v-text="`Cannot load private key file`"></code>
                             </pre></div>
-                          </p>
+                          </div>
 
                           <br />
                           <h3 id="remove-passphrase"><a href="#remove-passphrase" class="header-anchor">#</a> Remove saved passphrase</h3>
@@ -497,14 +499,28 @@ const openSurvey = () => {
                             <img alt="VPN config removal - step 2" src="/img/vpn/VPNconfigremove1.png" style="height: 250px;"/>
                           </p>
 
+                          <br />
+                          <h3 id="test-firewall"><a href="#test-firewall" class="header-anchor">#</a> Detect firewall blocks</h3>
+                          <p>
+                            If you want to check whether your VPN connection is blocked by the firewall, install nmap using: <code>brew install nmap</code> and then run:
+                          </p>
+                          <CopyTextField
+                            :model-value="`sudo nmap -sU -Pn --traceroute -p U:1194 129.241.176.121`"
+                            label=""
+                            prefix=""
+                            placeholder=""
+                          />
+                          <div class="mt-2">
+                            If traceroute ends with <code>129.241.176.121</code> no blocking was detected. Although if tracing seems stuck send us a screenshot in service desk.
+                          </div>
+
                           <v-alert
                             border="start"
                             border-color="info"
                             elevation="2"
                             class="mt-6"
                           >
-                            <b>TIP</b>
-                            <hr class="mt-1 mb-2" />
+                            <template v-slot:title><b>TIP</b></template>
                             If nothing works, please head over to our main <a href="/do-science/troubleshooting/connection/#vpn" target="_blank">troubleshooting section</a> for more information on how to troubleshoot connections.
                           </v-alert>
                         </v-card-text>
