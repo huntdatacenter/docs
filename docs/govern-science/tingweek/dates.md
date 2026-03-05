@@ -17,7 +17,7 @@ description: This page lists information and questions about our Tingweeks.
 
 ::: tip 
 
-[Click here](/govern-science/tingweek/overview/#schedule) to read about the Ting schedule.
+[Click here](/govern-science/tingweek/overview#schedule) to read about the Ting schedule.
 
 :::
 
