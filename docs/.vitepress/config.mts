@@ -31,6 +31,19 @@ const customHead: HeadConfig[] = [
   ["link", { rel: "icon", type: "image/svg+xml", href: "/img/hunt-cloud-logo.svg", sizes: "any" }],
   ["link", { rel: "mask-icon", type: "image/svg+xml", href: "/img/hunt-cloud-logo.svg", color: "#00509e" }],
   // ["script", { src: "https://plausible.io/js/script.file-downloads.hash.outbound-links.tagged-events.js", 'data-domain': "hdc.ntnu.no", defer: "" }],
+  [
+    "script",
+    {
+      type: "text/javascript",
+      src: "https://cdn.survio.com/static/widgets/web-widget.js",
+      "data-backgroundColor": "#00509e",
+      "data-color": "#FFFFFF",
+      "data-text": "Tell us what you think",
+      "data-url": "https://www.survio.com/survey/o/A2T1Q9P7A2C4B4W6I",
+      async: "",
+      defer: "",
+    },
+  ],
 ]
 
 // https://vitepress.dev/reference/site-config
