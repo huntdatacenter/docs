@@ -12,7 +12,7 @@ buttons:
  - title: 'Dates'
    subtitle: 'Dates for future and past Tingweeks, including agendas.'
    href: '/govern-science/tingweek/dates/'
-   icon: "mdi-clipboard-search-outline"
+   icon: "mdi-calendar-month"
  - title: 'FAQ'
    subtitle: "Frequently asked questions."
    href: '/govern-science/tingweek/faq/'
@@ -20,7 +20,7 @@ buttons:
  - title: 'Resolutions'
    subtitle: 'Tingweek resolutions directs the running development of HUNT Cloud.'
    href: '/govern-science/tingweek/resolutions/'
-   icon: "mdi-clipboard-search-outline"
+   icon: "mdi-check-circle"
 ---
 
 # HUNT Cloud Tingweek
