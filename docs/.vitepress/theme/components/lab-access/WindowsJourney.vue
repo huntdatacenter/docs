@@ -217,7 +217,7 @@ const openSurvey = () => {
   window.open(
     'https://www.survio.com/survey/d/onboarding-survey',
     '_blank'
-  )?.focus()
+  ).focus()
 }
 
 </script>
