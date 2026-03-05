@@ -8,8 +8,9 @@ description: This page list policies for HUNT Cloud.
 
 # Policies
 
-**Our policies are established to ensure services that comply with international standards for quality, privacy and security, as well as laws, regulations and legal requirements set forth in data agreements.**
+**Services in HUNT Cloud are governed by policies that are established to ensure trustworthy services that comply with international standards, laws and regulations, and legal requirements set forth in data agreements.**
 
+[[toc]]
 
 ## Quality policy
 
