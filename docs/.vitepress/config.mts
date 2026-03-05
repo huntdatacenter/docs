@@ -965,14 +965,6 @@ function sidebarGovernScience() {
           link: "/govern-science/",
         },
         {
-          text: "Introduction",
-          link: "/govern-science/introduction",
-        },
-        {
-          text: "Accountability",
-          link: "/govern-science/accountability",
-        },
-        {
           text: "System status",
           link: "/govern-science/system-status",
         },

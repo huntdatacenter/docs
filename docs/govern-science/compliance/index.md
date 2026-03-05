@@ -40,6 +40,10 @@ buttons:
     subtitle: "Frequently asked questions."
     href: "/govern-science/compliance/faq/"
     icon: "mdi-help-circle"
+  - title: "Accountability"
+    subtitle: "Accountable compliance individuals and roles."
+    href: "/govern-science/compliance/accountability/"
+    icon: "mdi-account-multiple"
 ---
 
 # Compliance program
