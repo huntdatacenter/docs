@@ -565,7 +565,7 @@ Our new [Security and privacy policies](https://docs.hdc.ntnu.no/govern-science/
 
 <h3>Upcoming features</h3>
 
-* Planning of [Ting #10](/govern-science/tingweek/#tings) agenda and resolutions. [Contact us](/contact) if you have topics that you would like us to include.
+* Planning of [Ting #10](/govern-science/tingweek/) agenda and resolutions. [Contact us](/contact) if you have topics that you would like us to include.
 * Including justifications, comments and implementation status for new and merged privacy controls in SoA after on internal audits.
 * General updates to our privacy practices related to the ISO/IEC 27701:2019 implementation.
 

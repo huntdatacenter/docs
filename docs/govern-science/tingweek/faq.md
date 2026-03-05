@@ -26,11 +26,7 @@ No. Our tings are not the same as a general assembly (generalforsamling) with bi
 
 ### Short on time, which Ting should I prioritize? 
 
-All where you are invited ;-) That said, we know science never sleeps, so if you are short on time and hold several roles and such receive several invitations: Here's a quick reminder of the scope of the different meetings to help you prioritize. 
-
-!["Tingweek schedule"](./images/tingweek-schedule-times.png)
-
-You can read more about the different Tings in our [main Tingweek page](/govern-science/tingweek/#tings).
+All where you are invited ;-) That said, we know science never sleeps, so if you are short on time and hold several roles and such receive several invitations: Here's a quick reminder of the scope of the different meetings to help you prioritize. You can read more about the different Tings in our [main Tingweek page](/govern-science/tingweek/).
 
 ### How do I get my invitation?
 
