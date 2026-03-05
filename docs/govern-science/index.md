@@ -6,28 +6,28 @@ outline: 0
 # aside: false
 description: These pages contains user documentation aimed at representatives that govern science in HUNT Cloud.
 buttons:
-  - title: "Organizational access"
-    subtitle: "Required agreements for organizations that wants to enable HUNT Cloud resources."
-    href: "/govern-science/organizational-access/"
-    icon: "mdi-file-document-edit"
-  - title: "Tingweek"
-    subtitle: "We meet three times per year to advance our services."
-    href: "/govern-science/tingweek/"
-    icon: "mdi-comment"
   - title: "Policies"
-    subtitle: "Quality, security and privacy policies governs activities in HUNT Cloud."
+    subtitle: "Quality, security and privacy policies in HUNT Cloud."
     href: "/govern-science/policies"
     icon: "mdi-format-list-checks"
   - title: "Compliance"
-    subtitle: "Our compliance program aims to ensure a trustworthy frame."
+    subtitle: "ISO certificates and  compliance programs that ensure trust."
     href: "/govern-science/compliance/"
     icon: "mdi-shield-account"
-  - title: "Risk management"
-    subtitle: "This page list risk management resources for HUNT Cloud."
+  - title: "Access"
+    subtitle: "Read about access for organizations to our cloud resources."
+    href: "/govern-science/organizational-access/"
+    icon: "mdi-file-document-edit"
+  - title: "Tingweek"
+    subtitle: "User forum for privacy, security and finance 3x per year."
+    href: "/govern-science/tingweek/"
+    icon: "mdi-comment"
+  - title: "Risk"
+    subtitle: "Risk management resources to guide data controllers."
     href: "/govern-science/risk-management/"
     icon: "mdi-account-cog"
   - title: "Service desk"
-    subtitle: "Predefined service orders that data controllers and service centers can order."
+    subtitle: "Predefined orders for data controllers and service centers."
     href: "/govern-science/service-desk/"
     icon: "mdi-email"
   - title: "FAQ"
@@ -49,11 +49,7 @@ buttons:
   <div class="page-content">
     <p>This section is aimed at representatives for data controllers and service centers. See our <a href="/">main documentation page</a> for other sections.</p>
   </div>
-
-  <div class="page-content">
-    <p>See our <a href="/govern-science/organizational-access/">organizational access</a> section for guidance on how new organizations can enable HUNT Cloud resources for their scientific centers and research groups.</p>
-  </div>
-
   <NavigationCards :buttons="$frontmatter.buttons" />
+
 </div>
 

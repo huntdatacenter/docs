@@ -33,7 +33,7 @@ const totpStepper = ref("1")
         </v-card-title>
 
         <v-card-text class="pa-0">
-          <v-stepper-vertical v-model="totpStepper" class="mt-16" hide-actions>
+          <v-stepper-vertical v-model="totpStepper" class="mt-16" hide-actions :editable="false">
             <v-stepper-vertical-item :complete="totpStepper > 1" value="1">
               <template v-slot:title> Install TOTP application on your phone </template>
 
@@ -200,7 +200,8 @@ const totpStepper = ref("1")
                 <br /><br />
 
                 <v-alert border="start" border-color="info" elevation="2">
-                  Phone might need to be connected to internet to assure precise synchronization of time. Time zone between phone and your machine should match.
+                  Phone might need to be connected to internet to assure precise synchronization of time. Time zone
+                  between phone and your machine should match.
                 </v-alert>
               </v-card>
               <v-btn color="primary" class="mx-2 mb-1" @click="totpStepper = 1">Start again</v-btn>

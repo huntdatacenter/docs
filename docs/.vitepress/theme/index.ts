@@ -33,8 +33,8 @@ import DesignNewPassphrase from "./components/lab-access/DesignNewPassphrase.vue
 
 import PriceEstimator from "./components/price-estimator/PriceEstimator.vue"
 import LabCard from "./components/price-estimator/LabCard.vue"
-import Machine from "./components/price-estimator/Machine.vue"
-import Storage from "./components/price-estimator/Storage.vue"
+import MachineModal from "./components/price-estimator/MachineModal.vue"
+import StorageModal from "./components/price-estimator/StorageModal.vue"
 import TotalBlock from "./components/price-estimator/TotalBlock.vue"
 
 import "@mdi/font/css/materialdesignicons.css"
@@ -42,7 +42,6 @@ import "@mdi/font/css/materialdesignicons.css"
 import "vuetify/styles"
 
 import { vuetify } from "./plugins/vuetify"
-
 
 const ISSERVER = typeof window === "undefined"
 
@@ -61,12 +60,33 @@ const redirectPrefixes: Array<[string, string]> = [
   ["/getting-started/", "/do-science/lab-access/"] as const,
   ["/lab-access/", "/do-science/lab-access/"] as const,
   ["/service-desk/user-orders/", "/do-science/service-desk/"] as const,
-  ["/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders/"] as const,
-  ["/service-desk/data-space-orders/", "/administer-science/service-desk/data-space-orders/"] as const,
-  ["/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders/"] as const,
-  ["/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders/"] as const,
-  ["/service-desk/service-centers/", "/govern-science/service-desk/service-center-orders/"] as const,
-  ["/service-desk/data-controllers/", "/govern-science/service-desk/data-controller-orders/"] as const,
+  ["/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders"] as const,
+  ["/service-desk/data-space-orders/", "/administer-science/service-desk/data-space-orders"] as const,
+  ["/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders"] as const,
+  ["/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders"] as const,
+  ["/service-desk/service-centers/", "/govern-science/service-desk/service-center-orders"] as const,
+  ["/service-desk/data-controllers/", "/govern-science/service-desk/data-controller-orders"] as const,
+  ["/administer-science/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders"] as const,
+  [
+    "/administer-science/service-desk/data-space-orders/",
+    "/administer-science/service-desk/data-space-orders",
+  ] as const,
+  [
+    "/govern-science/service-desk/service-center-orders/",
+    "/govern-science/service-desk/service-center-orders",
+  ] as const,
+  [
+    "/govern-science/service-desk/data-controller-orders/",
+    "/govern-science/service-desk/data-controller-orders",
+  ] as const,
+  [
+    "/govern-science/service-desk/service-center-orders/",
+    "/govern-science/service-desk/service-center-orders",
+  ] as const,
+  [
+    "/govern-science/service-desk/data-controller-orders/",
+    "/govern-science/service-desk/data-controller-orders",
+  ] as const,
   ["/working-in-your-lab/technical-tools/", "/do-science/tools/technical/"] as const,
   ["/working-in-your-lab/analytical-tools/", "/do-science/tools/analytical/"] as const,
   ["/working-in-your-lab/transfer-tools/", "/do-science/tools/transfer/"] as const,
@@ -163,7 +183,6 @@ export default {
 
     app.use(vuetify)
 
-
     app.component("CopyTextArea", CopyTextArea)
     app.component("CopyTextField", CopyTextField)
     app.component("VuetifyButton", VuetifyButton)
@@ -189,8 +208,8 @@ export default {
     // Price estimator
     app.component("PriceEstimator", PriceEstimator)
     app.component("LabCard", LabCard)
-    app.component("Machine", Machine)
-    app.component("Storage", Storage)
+    app.component("Machine", MachineModal)
+    app.component("Storage", StorageModal)
     app.component("TotalBlock", TotalBlock)
   },
 } satisfies Theme

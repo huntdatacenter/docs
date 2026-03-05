@@ -3,8 +3,6 @@ import { ref, computed, watch, onMounted, nextTick, getCurrentInstance } from "v
 
 import YAML from "yaml"
 
-// Dynamic import for PdfForm component
-// const PdfForm = defineAsyncComponent(() => import("./PdfForm.vue"))
 
 const ISSERVER = typeof window === "undefined"
 
