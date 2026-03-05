@@ -23,7 +23,7 @@ buttons:
       href: '/administer-science/prices/'
       icon: "mdi-tag"
     - title: 'Machines'
-      subtitle: 'See available machine types for CPU and GPU computation.'
+      subtitle: 'See available machine types for CPU and GPU analysis.'
       href: '/administer-science/services/machine-types/'
       icon: "mdi-cog"
     - title: 'Data'
