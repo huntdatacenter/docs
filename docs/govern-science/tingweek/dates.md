@@ -13,20 +13,16 @@ description: This page lists information and questions about our Tingweeks.
 
 
 
-[[toc]]
-
-::: tip 
-
-[Click here](/govern-science/tingweek/overview#schedule) to read about the Ting schedule.
-
-:::
-
 ### Tingweek #18 (2026-06)
+
+::: tip Next Tingweek
 
 - **Labting**: Tuesday 2 June 2026 - 2 to 3 p.m. CET
 - **Admin ting**: Wednesday 3 June 2026 - 9 to 10 a.m. CET
 - **Data controller ting**: Wednesday 3 June 2026 - 1 to 2 p.m. CET
 - **Financial ting**: Thursday 4 June 2026 - 9 to 10 a.m. CET
+
+:::
 
 ### Tingweek #17 (2026-02)
 
