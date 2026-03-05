@@ -1067,6 +1067,10 @@ function sidebarGovernScience() {
           link: "/govern-science/compliance/subcontractors",
         },
         {
+          text: "Accountability",
+          link: "/govern-science/compliance/accountability",
+        },
+        {
           text: "FAQ",
           link: "/govern-science/compliance/faq",
         },
