@@ -39,4 +39,4 @@ Lab agreements require that your host organization holds a data processing and s
 
 ### Read more
 
-* [Agreement page](/administer-science/agreements)
+* [Agreement page](/administer-science/agreements/)
