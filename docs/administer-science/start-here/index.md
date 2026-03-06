@@ -25,7 +25,7 @@ buttons:
 
 # Start here
 
-**Welcome to your new digital lab! These pages will give you a quick introduction to digital lab in HUNT Cloud.**
+**Welcome to your new digital lab! These pages will give you a quick introduction to digital labs in HUNT Cloud.**
 
 <NavigationCards :buttons="$frontmatter.buttons" />
 
