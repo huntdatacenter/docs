@@ -10,9 +10,9 @@ buttons:
       subtitle: 'Service orders for labs and data spaces in HUNT Cloud.'
       href: '/administer-science/service-desk/'
       icon: "mdi-email"
-    - title: 'Access'
-      subtitle: 'Read about scientific access for scientific centers and groups.'
-      href: '/administer-science/scientific-access/'
+    - title: 'Start here'
+      subtitle: 'Overview of scientific administration in HUNT Cloud.'
+      href: '/administer-science/start-here/'
       icon: "mdi-file-edit"
     - title: 'Services'
       subtitle: 'This page gives you an overview of our cloud services.'
@@ -28,12 +28,16 @@ buttons:
       icon: "mdi-cog"
     - title: 'Data'
       subtitle: 'Page for data administration in HUNT Cloud.'
-      href: '/administer-science/data/'
+      href: '/administer-science/data'
       icon: "mdi-file-document"
     - title: 'Agreements'
       subtitle: 'Overview of administrative agreements.'
-      href: '/administer-science/agreements/'
+      href: '/administer-science/agreements'
       icon: "mdi-handshake"
+    - title: 'Access'
+      subtitle: 'Read about scientific access for scientific centers and groups.'
+      href: '/administer-science/scientific-access'
+      icon: "mdi-file-edit"
     - title: 'FAQ'
       subtitle: 'Frequently asked questions.'
       href: '/administer-science/faq/'

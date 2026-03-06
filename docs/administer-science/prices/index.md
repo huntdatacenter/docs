@@ -14,13 +14,21 @@ buttons:
       href: '/administer-science/prices/calculator/'
       icon: "mdi-calculator"
     - title: 'Price examples'
-      subtitle: 'See examples from epidemiologi, genomics, image anlaysis etc..'
+      subtitle: 'See examples from epidemiologi, genomics, image anlaysis etc.'
       href: '/administer-science/prices/examples/'
       icon: "mdi-cash-multiple"
+    - title: 'Budgeting'
+      subtitle: 'Get advice on how to budget activities in your lab.'
+      href: '/administer-science/prices/budgeting'
+      icon: "mdi-chart-line"
     - title: 'FAQ'
       subtitle: 'Frequently asked on questions prices.'
       href: '/administer-science/prices/faq'
       icon: "mdi-help-circle"
+    - title: 'Cost saving'
+      subtitle: 'Considerations if you plan to save cost.'
+      href: '/administer-science/prices/cost-saving'
+      icon: "mdi-piggy-bank"
 ---
 
 # Pricing

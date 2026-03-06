@@ -793,40 +793,29 @@ function sidebarAdministerScience() {
       ],
     },
     {
-      text: "Scientific access",
+      text: "Start here",
       collapsed: true,
-      link: "/administer-science/scientific-access/",
+      link: "/administer-science/start-here/",
       items: [
         {
           text: "Introduction",
-          link: "/administer-science/scientific-access/",
+          link: "/administer-science/start-here/",
         },
         {
-          text: "FAQ",
-          link: "/administer-science/scientific-access/faq",
-        },
-      ],
-    },
-    {
-      text: "Agreements",
-      collapsed: true,
-      link: "/administer-science/agreements/overview",
-      items: [
-        // {
-        //   text: "Introduction",
-        //   link: "/administer-science/agreements/"
-        // },
-        {
-          text: "Overview",
-          link: "/administer-science/agreements/overview",
+          text: "Labs",
+          link: "/administer-science/start-here/labs",
         },
         {
-          text: "Downloads",
-          link: "/administer-science/agreements/downloads",
+          text: "Users",
+          link: "/administer-science/start-here/users",
         },
         {
-          text: "FAQ",
-          link: "/administer-science/agreements/faq",
+          text: "Agreements",
+          link: "/administer-science/start-here/agreements",
+        },
+        {
+          text: "Finance",
+          link: "/administer-science/start-here/finance",
         },
       ],
     },
@@ -891,6 +880,14 @@ function sidebarAdministerScience() {
           link: "/administer-science/prices/examples",
         },
         {
+          text: "Budgeting",
+          link: "/administer-science/prices/budgeting",
+        },
+        {
+          text: "Cost saving",
+          link: "/administer-science/prices/cost-saving",
+        },
+        {
           text: "FAQ",
           link: "/administer-science/prices/faq",
         },
@@ -913,6 +910,44 @@ function sidebarAdministerScience() {
         {
           text: "FAQ",
           link: "/administer-science/data/faq",
+        },
+      ],
+    },
+    {
+      text: "Agreements",
+      collapsed: true,
+      link: "/administer-science/agreements",
+      items: [
+        {
+           text: "Introduction",
+           link: "/administer-science/agreements"
+        },
+        {
+          text: "Overview",
+          link: "/administer-science/agreements/overview",
+        },
+        {
+          text: "Downloads",
+          link: "/administer-science/agreements/downloads",
+        },
+        {
+          text: "FAQ",
+          link: "/administer-science/agreements/faq",
+        },
+      ],
+    },
+    {
+      text: "Scientific access",
+      collapsed: true,
+      link: "/administer-science/scientific-access/",
+      items: [
+        {
+          text: "Introduction",
+          link: "/administer-science/scientific-access/",
+        },
+        {
+          text: "FAQ",
+          link: "/administer-science/scientific-access/faq",
         },
       ],
     },

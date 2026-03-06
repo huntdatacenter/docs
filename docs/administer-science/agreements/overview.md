@@ -2,7 +2,7 @@
 title: Overview
 category: HUNT Cloud
 outline: 2
-permalink: /administer-science/agreements/
+permalink: /administer-science/agreements/overview/
 description: This page gives an overview of administrative agreements in HUNT Cloud.
 tags:
   - hunt cloud user agreement
@@ -12,7 +12,7 @@ tags:
   - hunt cloud service center agreement
 ---
 
-# Administrative agreements
+# Overview of administrative agreements
 
 **We believe a solid framework of documented responsibilities is a key success factor to enable your scientists with the freedom to explore. This page holds an overview of the administrative agreements in HUNT Cloud.**
 
