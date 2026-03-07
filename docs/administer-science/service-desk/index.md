@@ -10,7 +10,7 @@ buttons:
     href: '/administer-science/service-desk/lab-orders'
     icon: "mdi-email"
   - title: 'Data space orders'
-    subtitle: Lab management, external transfers etc.'
+    subtitle: 'Add/remove labs, approve external transfers etc.'
     href: '/administer-science/service-desk/data-space-orders'
     icon: "mdi-email"
 
