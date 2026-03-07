@@ -381,6 +381,43 @@ Head over to the [data space orders](/administer-science/service-desk/data-space
 * **Expected delivery:** Access information communicated in your Slack lab channel.
 * **Cost:** Included in your lab subscription.
 
+## Finance
+
+### Ask about cost
+
+Use this button to query about costs related to your active data space and/or labs for new or ongoing services, for example related to resource changes, grant application and future projects.
+
+<SDButton form="cost_query" />
+
+* **Who can order:** Data space leaders, Data space financial administrators, Lab leaders and lab coordinators.
+* **Required attachment**: None.
+* **Expected response time:** Days.
+* **Expected delivery:** One week.
+* **Cost:** Included in your lab subscription.
+
+
+### Update invoice profile
+
+Click the button below to update an existing invoice profile in your lab. Use this is you want to update your account information, update your financial contact etc.
+
+<SDButton form="request_update_of_existing_invoice" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required attachment**: A new [signed invoice profile](/administer-science/agreements/downloads#invoice-profile).
+* **Expected delivery time:** Days.
+* **Cost:** Included in your lab subscription.
+
+### VAT exemption
+
+As default, all invoices to labs outside NTNU will include value added tax (VAT). Documented collaborations with partners from NTNU may be exempted from VAT. If relevant, you can send us your collaboration agreement for evaluation.
+
+<SDButton form="request_vat_exemption" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required attachment** (one or more of the following): collaboration agreement, consortium agreement, grant applications and/or publications listing authors from both institutions.
+* **Expected response time:** Weeks.
+* **Cost:** Included in the lab subscription.
+
 ## Community membership
 
 ### Add a new community member

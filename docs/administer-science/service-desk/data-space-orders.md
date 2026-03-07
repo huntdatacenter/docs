@@ -99,7 +99,7 @@ Once your lab data is deleted it can not be recreated. You must ensure that you 
 
 :::
 
-### Transfer lab between data spaces
+### Transfer labs between data spaces
 
 You can transfer a lab between two data spaces by filling form below.
 
@@ -113,7 +113,7 @@ You can transfer a lab between two data spaces by filling form below.
 * **Cost:** Included in your lab subscription.
 
 
-## Transfers
+## Data transfers
 
 Data transfers in and out of HUNT Cloud needs authorization from Data space leaders or Data space compliance administrators.
 
@@ -170,7 +170,7 @@ Note that time to successful transfer depends on access to SFTP software and pot
 * **Cost:** Included in your data space subscription.
 
 
-## Data space management
+## Roles
 
 ### Update data space administrator roles
 
@@ -195,6 +195,8 @@ Click the button below to update lab leader roles for labs attached to your data
 * **Expected delivery time:** Days.
 * **Cost:** Included in your data space subscription.
 
+## Finance
+
 
 ### New invoice profile
 
@@ -208,7 +210,7 @@ Click the button below to add a new invoice profile to your data space. Use this
 * **Cost:** Included in your data space subscription.
 
 
-### Update existing invoice profile
+### Update invoice profile
 
 Click the button below to update an existing invoice profile to your data space. Use this is you want to update your account information, update your financial contact etc.
 

@@ -748,8 +748,8 @@ function sidebarAdministerScience() {
         //   link: "/administer-science/",
         // },
         {
-          text: "Roles",
-          link: "/administer-science/roles",
+          text: "Start here",
+          link: "/administer-science/start-here",
         },
         {
           text: "System status",
@@ -770,6 +770,10 @@ function sidebarAdministerScience() {
         {
           text: "Contribute",
           link: "/administer-science/contribute",
+        },
+        {
+          text: "Roles",
+          link: "/administer-science/roles",
         },
       ],
     },
