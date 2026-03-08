@@ -8,7 +8,7 @@ description: This page gives on overview of user support in HUNT Cloud.
 
 # About support
 
-**We are here to help your science florish.**
+**We are here to help your science flow.**
 
 [[toc]]
 
