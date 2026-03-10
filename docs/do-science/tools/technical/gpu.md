@@ -21,7 +21,7 @@ tags:
 
 ## GPU Models
 
-See our [GPU accelerator machine types](/administer-science/services/machine-types#gpu-types-accelerator) for more details on the specific GPU models we offer.
+See our [GPU accelerator machine types](/administer-science/services/machine-types#gpu-accelerator-types) for more details on the specific GPU models we offer.
 
 
 ## Software
