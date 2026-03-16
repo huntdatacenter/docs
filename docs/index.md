@@ -45,7 +45,7 @@ const bottomCards = [
   {
     id: 'card4',
     title: 'About HUNT Cloud',
-    href: '/about/',
+    href: 'https://about.hdc.ntnu.no/',
     description: 'HUNT Cloud is shaped by a small team of scientific instrument makers. Read more about the thinking and team behind HUNT Cloud.',
   },
   {

@@ -132,7 +132,7 @@ function navigationMenu() {
     { text: "Do science", link: "/do-science/" },
     { text: "Administer science", link: "/administer-science/" },
     { text: "Govern science", link: "/govern-science/" },
-    { text: "About", link: "/about/" },
+    { text: "About", link: "https://about.hdc.ntnu.no/" },
   ]
 }
 
@@ -1179,26 +1179,22 @@ function sidebarAbout() {
           link: "/about/",
         },
         {
-          text: "Affiliation",
-          link: "/about/affiliation",
-        },
-        {
           text: "Contact",
           link: "/about/contact",
         },
       ],
     },
-    {
-      text: "Team",
-      collapsed: true,
-      link: "/about/team/",
-      items: [
-        {
-          text: "Introduction",
-          link: "/about/team/",
-        },
-      ],
-    },
+    //{
+    //  text: "Team",
+    //  collapsed: true,
+    //  link: "/about/team/",
+    //  items: [
+    //    {
+    //      text: "Introduction",
+    //      link: "/about/team/",
+    //    },
+    //  ],
+    //},
     // {
     //   text: "Values",
     //   collapsed: true,
