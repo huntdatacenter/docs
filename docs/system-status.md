@@ -6,8 +6,8 @@ description: Updates will be posted here if there is any service or performance 
 
 # System status
 
-::: danger Lab access
-**2026-03-18 16:22** - VPN is down. All labs are unavailable.
+::: tip All systems
+Operational
 :::
 
 We monitor HUNT Cloud. Updates will be posted here if there is any service or performance interruption.

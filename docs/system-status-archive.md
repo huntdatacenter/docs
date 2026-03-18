@@ -18,6 +18,12 @@ See our [System status](/govern-science/system-status) page for current status. 
 
 [..]
 
+**2026-03-18 16:27** - Access restored.
+
+**2026-03-18 16:22** - VPN is down. All labs are unavailable.
+
+[..]
+
 **2025-02-25 16:34** - Connectivity is restored. Expected cause is a data transfer that escaped our traffic shaping. 
 
 **2025-02-25 16:14** - A drop in system connectivity is registered. We are investigating.
