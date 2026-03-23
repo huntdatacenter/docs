@@ -400,6 +400,10 @@ function sidebarDoScience() {
                   text: "CUDA 13.0",
                   link: "/do-science/tools/technical/cuda/cuda-13.0",
                 },
+                {
+                  text: "CUDA 13.2",
+                  link: "/do-science/tools/technical/cuda/cuda-13.2",
+                },
               ],
             },
             {
