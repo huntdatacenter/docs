@@ -401,6 +401,10 @@ function sidebarDoScience() {
                   link: "/do-science/tools/technical/cuda/cuda-13.0",
                 },
                 {
+                  text: "CUDA 13.1",
+                  link: "/do-science/tools/technical/cuda/cuda-13.1",
+                },
+                {
                   text: "CUDA 13.2",
                   link: "/do-science/tools/technical/cuda/cuda-13.2",
                 },
@@ -927,8 +931,8 @@ function sidebarAdministerScience() {
       link: "/administer-science/agreements",
       items: [
         {
-           text: "Introduction",
-           link: "/administer-science/agreements"
+          text: "Introduction",
+          link: "/administer-science/agreements",
         },
         {
           text: "Overview",
