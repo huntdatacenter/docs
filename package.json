@@ -6,7 +6,7 @@
     "eslint": "^9.35.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
-    "happy-dom": "^19.0.2",
+    "happy-dom": "^20.8.8",
     "markdown-it-container": "^4.0.0",
     "prettier": "^3.6.2",
     "vite-plugin-vuetify": "^2.1.2",
