@@ -29,7 +29,7 @@
     "@mdi/font": "^7.4.47",
     "axios": "^1.12.2",
     "country-list-json": "^1.1.0",
-    "markdown-it": "^14.1.0",
+    "markdown-it": "^14.1.1",
     "pdf-lib": "^1.17.1",
     "signature_pad": "^5.1.1",
     "vue-pdf-embed": "^2.1.3",
