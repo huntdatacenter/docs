@@ -506,7 +506,7 @@ Your data space leader can request irrevocable destruction (deletion) of labs un
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud Lab Deletion Order" version 1.4.
+The following form fields are included in the "HUNT Cloud Lab Deletion Order" version 1.6.
 
 **Data space**
 
@@ -517,6 +517,17 @@ The following form fields are included in the "HUNT Cloud Lab Deletion Order" ve
 
 - *Name*. This is the short name for the lab that is authorized for deletion.
 - *Leader*. This is the full name of the lab leader.
+
+**Data preservation**
+
+- *Preservation method*. Write 'TAPE' or 'NO'.
+
+TAPE PRESERVATION: The 'TAPE' preservation option store data in encrypted tape media in accordance with specifications in the Services Agreement. Data in the lab volumes 'archive' and 'work' on the lab's home machine will be written to tape before the lab data is deleted. Tape preservation costs will be invoiced in accordance with the current price list.
+
+NO PRESERVATION: If you select 'NO' preservation, all data in the lab will be permanently destroyed and can not be recreated after deletion. WARNING: Before submitting this order, ensure that your have exported any data that you wish to keep.
+
+
+
 
 :::
 
@@ -553,9 +564,5 @@ Leave these fields blank. We will return the order with signatures when the data
 
 :::
 
-
-## Organizational agreement order
-
-[HUNT Cloud Organizational agreement Order](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-organizational-agreement-information.pdf) (pdf)
 
 
