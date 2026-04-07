@@ -69,7 +69,7 @@ export const priceEstimatorStore = reactive({
                     machine_type: comp.machine_type,
                     core_count: comp.core_count,
                     ram: comp.ram,
-                    subscription: comp.machine_type,
+                    subscription: comp.subscription,
                     gpu: comp.gpu,
                   })
                 }
