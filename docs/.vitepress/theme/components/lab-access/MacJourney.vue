@@ -418,6 +418,8 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
                               </pre>
                             </div>
 
+                            <img class="pa-2" alt="macos-permissions-step0" src="/img/macos/permissions/step0-error.png" style="max-width: 500px" />
+
                             <ul>
                               <!-- docs/public/img/macos/permissions/step1-get-info.png -->
                               <li>
@@ -1079,6 +1081,8 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
                                   <code v-text="`Du har ikke tillatelse til å åpne dokumentet &#xAB;${labName}-${username}.mobileconfig&#xBB;.\nBe maskinens eller nettverkets administrator om hjelp.`"></code>
                                 </pre>
                               </div>
+
+                              <img class="pa-2" alt="macos-permissions-step0" src="/img/macos/permissions/step0-error.png" style="max-width: 500px" />
 
                               <ul>
                                 <!-- docs/public/img/macos/permissions/step1-get-info.png -->
