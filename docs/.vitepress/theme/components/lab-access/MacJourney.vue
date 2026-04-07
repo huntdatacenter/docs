@@ -181,17 +181,13 @@ const openSurvey = () => {
 }
 
 const closeVPNDialog = (vpnStepperValue = null) => {
-  vpnDialog = false
-  if (vpnStepperValue) {
-    vpnStepper = vpnStepperValue
-  }
+  vpnDialog.value = false
+  vpnStepper.value = vpnStepperValue ? vpnStepperValue : vpnStepper.value
 }
 
 const closeWorkbenchDialog = (workbenchStepperValue = null) => {
-  workbenchDialog = false
-  if (workbenchStepperValue) {
-    workbenchStepper = workbenchStepperValue
-  }
+  workbenchDialog.value = false
+  workbenchStepper.value = workbenchStepperValue ? workbenchStepperValue : workbenchStepper.value
 }
 </script>
 
@@ -266,14 +262,15 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
               </v-col>
             </v-row>
 
-            <v-dialog v-model="vpnDialog" persistent scrollable max-width="960px" @keydown.esc="closeVPNDialog(1)">
+            <!-- use either persistent or @keydown.esc, not both at the same time -->
+            <v-dialog v-model="vpnDialog" scrollable max-width="960px" @keydown.esc="closeVPNDialog()">
               <v-card>
                 <v-card-title class="pa-0">
                   <v-toolbar color="#00509e" theme="dark">
                     <v-toolbar-title>Tunnelblick Configuration</v-toolbar-title>
                     <v-spacer />
                     <template v-slot:append>
-                      <v-btn icon="mdi-close" @click="vpnDialog = false" />
+                      <v-btn icon="mdi-close" @click="closeVPNDialog()" />
                     </template>
                   </v-toolbar>
                 </v-card-title>
@@ -897,7 +894,8 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
               </v-col>
             </v-row>
 
-            <v-dialog v-model="workbenchDialog" persistent scrollable max-width="960px" @keydown.esc="closeWorkbenchDialog(1)">
+            <!-- use either persistent or @keydown.esc, not both at the same time -->
+            <v-dialog v-model="workbenchDialog" scrollable max-width="960px" @keydown.esc="closeWorkbenchDialog()">
               <v-card elevation="0">
                 <v-card-title class="pa-0">
                   <v-toolbar color="#00509e" theme="dark" flat>
