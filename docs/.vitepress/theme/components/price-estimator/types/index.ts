@@ -24,11 +24,11 @@ export interface PriceListItem {
 export interface ComputeUnit {
   id: number
   name: string
-  flavor: string
+  machine_type: string
   core_count: number
   ram: number
   gpu?: string
-  type: SubscriptionType
+  subscription: SubscriptionType
   monthlyPrice: number
   yearlyPrice: number
 }
@@ -69,7 +69,7 @@ export interface LabCard {
   title: string
   selectedCompute: ComputeUnit[]
   selectedStorage: StorageUnit[]
-  // Storage price changes based on the whole labs storages
+  subscription: SubscriptionType
 }
 
 interface StoragePrice {
