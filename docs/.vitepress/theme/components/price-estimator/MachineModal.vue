@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue"
-import type { ComputeUnit, PriceListItem, GpuModel, MachineFlavor, MachineFormData } from "./types"
+import type { ComputeUnit, PriceListItem, GpuModel, MachineType, MachineFormData } from "./types"
 import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 
 const props = defineProps({
@@ -74,11 +74,11 @@ const getGpuPriceMonth = computed((): string | number => {
   return yearlyGpu ? Number(yearlyGpu / 12).toFixed(2) : 0
 })
 
-const getFlavors = computed((): MachineFlavor[] => {
+const getFlavors = computed((): MachineType[] => {
   if (!formData.value.subscription) {
     return []
   }
-  return priceEstimatorStore.catalogue.machinePrices.filter((item: MachineFlavor) => item)
+  return priceEstimatorStore.catalogue.machinePrices.filter((item: MachineType) => item)
 })
 
 const getGpus = computed(() => {
@@ -102,7 +102,7 @@ const save = () => {
 
   const name = formData.value.name
   const machinetitle = priceEstimatorStore.catalogue.machinePrices
-    .filter((item: MachineFlavor) => item["value"] === formData.value.flavor)[0]
+    .filter((item: MachineType) => item["value"] === formData.value.flavor)[0]
     ["title"].split(" - ")[1]
     .split(" / ")
   const core_count = parseInt(machinetitle[0].split(" ")[0])

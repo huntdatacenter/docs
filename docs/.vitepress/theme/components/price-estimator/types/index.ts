@@ -48,7 +48,7 @@ export interface GpuModel {
   vram: number
 }
 
-export interface MachineFlavor {
+export interface MachineType {
   title: string
   value: string
   header?: string
@@ -60,7 +60,7 @@ export interface Catalogue {
   storagePrices: PriceListItem[]
   gpuPrices: PriceListItem[]
   availableGpus: GpuModel[]
-  machinePrices: MachineFlavor[]
+  machinePrices: MachineType[]
   labPrices: PriceListItem[]
 }
 

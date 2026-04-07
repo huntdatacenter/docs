@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue"
 import { priceEstimatorStore } from "./stores/priceEstimatorStore"
-import type { MachineFlavor } from "./types"
+import type { MachineType } from "./types"
 
 const emit = defineEmits<{
   close: []
@@ -40,7 +40,7 @@ const save = () => {
   priceEstimatorStore.addLab({
     name: formData.value.name,
     subscription: formData.value.subscription,
-    machineFlavor: formData.value.machineFlavor,
+    machineType: formData.value.machineFlavor,
     machineSubscription: formData.value.machineSubscription,
     hddSize: Number(formData.value.hddSize),
     nvmeSize: Number(formData.value.nvmeSize),

@@ -5,7 +5,7 @@ const price_list_url = "https://assets.hdc.ntnu.no/assets/prices/v5/hunt-cloud-p
 
 const gpu_models_url = "https://assets.hdc.ntnu.no/assets/js/gpus.json"
 
-const machine_flavors_url = "https://assets.hdc.ntnu.no/assets/js/flavors.json"
+const machine_types_url = "https://assets.hdc.ntnu.no/assets/js/flavors.json"
 
 export default {
   async getPriceList() {
@@ -27,12 +27,12 @@ export default {
       return []
     }
   },
-  async getMachineFlavors() {
+  async getMachineTypes() {
     try {
-      const response = await axios.get(machine_flavors_url)
+      const response = await axios.get(machine_types_url)
       return response.data
     } catch (error) {
-      console.error("Error fetching machine flavors:", error)
+      console.error("Error fetching machine types:", error)
       return []
     }
   },

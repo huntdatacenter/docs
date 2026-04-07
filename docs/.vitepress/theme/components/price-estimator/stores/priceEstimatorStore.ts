@@ -7,7 +7,7 @@ import {
   type StorageType,
   type PriceListItem,
   type GpuModel,
-  type MachineFlavor,
+  type MachineType,
   type Catalogue,
   type SubscriptionType,
   storageTypes,
@@ -27,7 +27,7 @@ export const priceEstimatorStore = reactive({
     computePrices: [] as PriceListItem[],
     storagePrices: [] as PriceListItem[],
     gpuPrices: [] as PriceListItem[],
-    machinePrices: [] as MachineFlavor[],
+    machinePrices: [] as MachineType[],
     availableGpus: [] as GpuModel[],
     labPrices: [] as PriceListItem[],
   } as Catalogue,
@@ -111,7 +111,7 @@ export const priceEstimatorStore = reactive({
       this.catalogue.availableGpus = gpus
     })
 
-    const machinesPromise = pricesApi.getMachineFlavors().then((machine: MachineFlavor[]) => {
+    const machinesPromise = pricesApi.getMachineTypes().then((machine: MachineType[]) => {
       this.catalogue.machinePrices = machine
     })
 
@@ -140,7 +140,7 @@ export const priceEstimatorStore = reactive({
   },
 
   /* Lab helpers */
-  addLab(payload: { name: string; subscription: string; machineFlavor: string; machineSubscription: string; hddSize: number; nvmeSize: number }) {
+  addLab(payload: { name: string; subscription: string; machineType: string; machineSubscription: string; hddSize: number; nvmeSize: number }) {
     const newLab: LabCard = {
       id: this.labs.length,
       title: payload.name,
@@ -150,10 +150,10 @@ export const priceEstimatorStore = reactive({
     }
 
     // Add compute
-    const machineInfo = this.catalogue.machinePrices.find((item: MachineFlavor) => item["value"] === payload.machineFlavor)
+    const machineInfo = this.catalogue.machinePrices.find((item: MachineType) => item["value"] === payload.machineType)
 
     if (machineInfo) {
-      const prices = this.getComputePriceFromCatalogue(payload.machineFlavor, payload.machineSubscription)
+      const prices = this.getComputePriceFromCatalogue(payload.machineType, payload.machineSubscription)
 
       const machineTitle = machineInfo["title"].split(" - ")[1].split(" / ")
       const coreCount = parseInt(machineTitle[0].split(" ")[0])
@@ -161,7 +161,7 @@ export const priceEstimatorStore = reactive({
       const unit: ComputeUnit = {
         id: 0,
         name: "machine-1",
-        machine_type: payload.machineFlavor,
+        machine_type: payload.machineType,
         core_count: coreCount,
         ram,
         subscription: payload.machineSubscription as SubscriptionType,
@@ -644,10 +644,10 @@ export const priceEstimatorStore = reactive({
               for (const comp of labData.compute) {
                 this.addComputeToLab(newLabId, {
                   name: comp.name,
-                  machine_type: comp.flavor,
+                  machine_type: comp.machine_type,
                   core_count: comp.core_count,
                   ram: comp.ram,
-                  subscription: comp.type,
+                  subscription: comp.subscription,
                   gpu: comp.gpu,
                 })
               }
