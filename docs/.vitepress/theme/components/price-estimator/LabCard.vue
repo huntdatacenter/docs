@@ -17,11 +17,11 @@ let editingComputeItem: ComputeUnit | null = null
 
 const computeHeaders = ref<DataTableHeader[]>([
   { title: "Name", align: "start", sortable: true, key: "name" },
-  { title: "Machine type", align: "start", sortable: true, key: "flavor" },
+  { title: "Machine type", align: "start", sortable: true, key: "machine_type" },
   { title: "CPU cores", align: "start", sortable: true, key: "core_count" },
   { title: "Memory [GB]", align: "start", sortable: true, key: "ram" },
   { title: "GPU", align: "start", sortable: true, key: "gpu" },
-  { title: "Type", align: "start", sortable: true, key: "type" },
+  { title: "Subscription", align: "start", sortable: true, key: "subscription" },
   { title: "Price / month", align: "start", sortable: true, key: "monthlyPrice" },
   { title: "Price / year", align: "start", sortable: true, key: "yearlyPrice" },
   { title: "Actions", key: "actions", align: "end", sortable: false },
@@ -57,18 +57,14 @@ const storageLabSum = computed(() => {
 })
 
 const LabSum = computed(() => {
-  return (
-    computeLabSum.value.yearlyCostTotal +
-    storageLabSum.value.HDD.yearlyCostTotal +
-    storageLabSum.value.NVME.yearlyCostTotal
-  )
+  return computeLabSum.value.yearlyCostTotal + storageLabSum.value.HDD.yearlyCostTotal + storageLabSum.value.NVME.yearlyCostTotal
 })
 
 const localTitle = ref(props.lab.title)
 
 watch(
   () => props.lab.title,
-  val => {
+  (val) => {
     localTitle.value = val
   },
 )
@@ -148,13 +144,7 @@ const removeStorageById = (storageId: number) => {
         <v-card flat>
           <v-card-title>Compute</v-card-title>
 
-          <v-data-table-virtual
-            :items="selectedCompute"
-            :headers="computeHeaders"
-            hide-default-footer
-            hover
-            item-value="id"
-          >
+          <v-data-table-virtual :items="selectedCompute" :headers="computeHeaders" hide-default-footer hover item-value="id">
             <template v-slot:item.monthlyPrice="{ item }">
               {{ item.monthlyPrice.toFixed(2) + " kr" }}
             </template>
@@ -163,18 +153,8 @@ const removeStorageById = (storageId: number) => {
             </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
-                <v-icon
-                  color="medium-emphasis"
-                  icon="mdi-pencil"
-                  size="small"
-                  @click="editCompute(selectedCompute.find(c => c.id === item.id)!)"
-                ></v-icon>
-                <v-icon
-                  color="medium-emphasis"
-                  icon="mdi-delete"
-                  size="small"
-                  @click="removeComputeById(item.id)"
-                ></v-icon>
+                <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editCompute(selectedCompute.find((c) => c.id === item.id)!)"></v-icon>
+                <v-icon color="medium-emphasis" icon="mdi-delete" size="small" @click="removeComputeById(item.id)"></v-icon>
               </div>
             </template>
 
@@ -229,18 +209,8 @@ const removeStorageById = (storageId: number) => {
             </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
-                <v-icon
-                  color="medium-emphasis"
-                  icon="mdi-pencil"
-                  size="small"
-                  @click="editStorage(selectedStorage.find(s => s.id === item.id)!)"
-                ></v-icon>
-                <v-icon
-                  color="medium-emphasis"
-                  icon="mdi-delete"
-                  size="small"
-                  @click="removeStorageById(item.id)"
-                ></v-icon>
+                <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editStorage(selectedStorage.find((s) => s.id === item.id)!)"></v-icon>
+                <v-icon color="medium-emphasis" icon="mdi-delete" size="small" @click="removeStorageById(item.id)"></v-icon>
               </div>
             </template>
 
@@ -290,22 +260,11 @@ const removeStorageById = (storageId: number) => {
     </v-sheet>
 
     <v-dialog v-model="isComputeModalOpen" max-width="600px" min-width="600px">
-      <MachineModal
-        :lab-id="lab.id"
-        :compute-id="lab.selectedCompute.length"
-        :edit-data="editingComputeItem"
-        @close="closeComputeModal"
-        @open-snackbar="openSnackbar"
-      />
+      <MachineModal :lab-id="lab.id" :compute-id="lab.selectedCompute.length" :edit-data="editingComputeItem" @close="closeComputeModal" @open-snackbar="openSnackbar" />
     </v-dialog>
 
     <v-dialog v-model="isStorageModalOpen" max-width="600px" min-width="600px">
-      <StorageModal
-        :lab-id="lab.id"
-        :storage-id="lab.selectedStorage.length"
-        :edit-data="editingStorageItem"
-        @close="closeStorageModal"
-      />
+      <StorageModal :lab-id="lab.id" :storage-id="lab.selectedStorage.length" :edit-data="editingStorageItem" @close="closeStorageModal" />
     </v-dialog>
 
     <v-snackbar v-model="snackbar.show">{{ snackbar.message }}</v-snackbar>

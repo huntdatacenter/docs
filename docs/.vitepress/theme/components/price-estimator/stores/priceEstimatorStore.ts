@@ -406,36 +406,36 @@ export const priceEstimatorStore = reactive({
 
   /*  Compute helpers  */
 
-  getComputePriceFromCatalogue(flavor: string, type: string, gpuFlavor?: string) {
+  getComputePriceFromCatalogue(machineType: string, type: string, machineWithGpu?: string) {
     let totalYearlyPrice = 0
     let totalMonthlyPrice = 0
-    let mainFlavorPrice: number | undefined
+    let mainMachineTypePrice: number | undefined
     let gpuYearly: number | undefined
 
     if (type.includes("COMMITMENT")) {
       if (type === "COMMITMENT_3Y") {
-        const found3Y = this.catalogue.computePrices.find((p) => p["service.unit"] === flavor && p["service.level"] === "COMMITMENT" && p["service.commitment"] === "3Y")
+        const found3Y = this.catalogue.computePrices.find((p) => p["service.unit"] === machineType && p["service.level"] === "COMMITMENT" && p["service.commitment"] === "3Y")
         if (found3Y) {
-          mainFlavorPrice = found3Y["price.nok.ex.vat"] / 3
+          mainMachineTypePrice = found3Y["price.nok.ex.vat"] / 3
         }
       } else {
-        mainFlavorPrice = this.catalogue.computePrices.find((p) => p["service.unit"] === flavor && p["service.level"] === "COMMITMENT" && p["service.commitment"] === "1Y")?.[
-          "price.nok.ex.vat"
-        ]
+        mainMachineTypePrice = this.catalogue.computePrices.find(
+          (p) => p["service.unit"] === machineType && p["service.level"] === "COMMITMENT" && p["service.commitment"] === "1Y",
+        )?.["price.nok.ex.vat"]
       }
     } else {
-      const foundPrice = this.catalogue.computePrices.find((p) => p["service.unit"] === flavor && p["service.level"] === type)
-      mainFlavorPrice = foundPrice?.["price.nok.ex.vat"]
+      const foundPrice = this.catalogue.computePrices.find((p) => p["service.unit"] === machineType && p["service.level"] === type)
+      mainMachineTypePrice = foundPrice?.["price.nok.ex.vat"]
     }
 
-    if (mainFlavorPrice) {
-      totalYearlyPrice += mainFlavorPrice
+    if (mainMachineTypePrice) {
+      totalYearlyPrice += mainMachineTypePrice
     }
 
     totalMonthlyPrice = Number(totalYearlyPrice / 12)
 
-    if (gpuFlavor) {
-      const gpuPrice = this.catalogue.gpuPrices.find((p) => p["service.unit"] === gpuFlavor && p["service.level"] === "ONDEMAND")
+    if (machineWithGpu) {
+      const gpuPrice = this.catalogue.gpuPrices.find((p) => p["service.unit"] === machineWithGpu && p["service.level"] === "ONDEMAND")
       if (gpuPrice) {
         gpuYearly = gpuPrice["price.nok.ex.vat"]
         totalYearlyPrice += gpuYearly

@@ -10,7 +10,7 @@ const emit = defineEmits<{
 const formData = ref({
   name: "",
   subscription: "1Y",
-  machineFlavor: "default.c1",
+  machineType: "default.c1",
   machineSubscription: "COMMITMENT_1Y",
   hddSize: 1,
   nvmeSize: 0,
@@ -32,7 +32,7 @@ const machineSubscriptions = [
   { title: "Commitment - 3 Years", value: "COMMITMENT_3Y" },
 ]
 
-const machineFlavors = computed(() => {
+const machineType = computed(() => {
   return priceEstimatorStore.catalogue.machinePrices
 })
 
@@ -40,7 +40,7 @@ const save = () => {
   priceEstimatorStore.addLab({
     name: formData.value.name,
     subscription: formData.value.subscription,
-    machineType: formData.value.machineFlavor,
+    machineType: formData.value.machineType,
     machineSubscription: formData.value.machineSubscription,
     hddSize: Number(formData.value.hddSize),
     nvmeSize: Number(formData.value.nvmeSize),
@@ -68,7 +68,7 @@ onMounted(() => {
           </v-col>
 
           <v-col cols="12">
-            <v-autocomplete v-model="formData.machineFlavor" :items="machineFlavors" label="Default Home Machine" variant="outlined" item-title="title" item-value="value">
+            <v-autocomplete v-model="formData.machineType" :items="machineType" label="Default Home Machine" variant="outlined" item-title="title" item-value="value">
               <template #item="{ item, props }">
                 <VDivider v-if="'divider' in item.raw" />
                 <VListSubheader v-else-if="'header' in item.raw" :title="item.raw.header" />

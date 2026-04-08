@@ -79,7 +79,7 @@ vi.mock("../docs/.vitepress/theme/components/price-estimator/api/pricesApi.js", 
   default: {
     getPriceList: vi.fn().mockResolvedValue(mockPriceList),
     getAvailableGPUS: vi.fn().mockResolvedValue([]),
-    getMachineFlavors: vi.fn().mockResolvedValue([
+    getMachineTypes: vi.fn().mockResolvedValue([
       {
         value: "default.c1",
         title: "Default - 4 cores / 8 GB",
@@ -302,7 +302,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -313,7 +313,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 2",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -326,7 +326,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -334,7 +334,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 2",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -343,7 +343,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 3",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -362,7 +362,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -392,7 +392,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -423,7 +423,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -453,7 +453,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -485,7 +485,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -512,7 +512,7 @@ describe("PriceEstimator", () => {
       priceEstimatorStore.addLab({
         name: "Lab 2",
         subscription: "1Y",
-        machineFlavor: "default.c1",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,

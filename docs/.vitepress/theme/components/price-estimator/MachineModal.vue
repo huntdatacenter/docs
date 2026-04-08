@@ -74,7 +74,7 @@ const getGpuPriceMonth = computed((): string | number => {
   return yearlyGpu ? Number(yearlyGpu / 12).toFixed(2) : 0
 })
 
-const getFlavors = computed((): MachineType[] => {
+const getMachineType = computed((): MachineType[] => {
   if (!formData.value.subscription) {
     return []
   }
@@ -107,14 +107,14 @@ const save = () => {
     .split(" / ")
   const core_count = parseInt(machinetitle[0].split(" ")[0])
   const ram = parseInt(machinetitle[1].split(" ")[0])
-  const flavorWithGpu = formData.value.machine_type
+  const machineWithGpu = formData.value.machine_type
   const subscription = formData.value.subscription
   const gpu = formData.value.gpu
 
   if (props.editData) {
     priceEstimatorStore.editComputeInLab(props.labId, props.editData.id, {
       name: name!,
-      machine_type: flavorWithGpu,
+      machine_type: machineWithGpu,
       core_count: core_count,
       ram: ram,
       subscription: subscription!,
@@ -124,7 +124,7 @@ const save = () => {
     // Add new compute
     priceEstimatorStore.addComputeToLab(props.labId, {
       name: name!,
-      machine_type: flavorWithGpu!,
+      machine_type: machineWithGpu!,
       core_count: core_count,
       ram: ram,
       subscription: subscription!,
@@ -172,7 +172,15 @@ onMounted(() => {
             </v-autocomplete>
           </v-col>
           <v-col cols="12">
-            <v-autocomplete v-model="formData.machine_type" :items="getFlavors" label="Machine type" variant="outlined" required :disabled="!formData.subscription" width="100%">
+            <v-autocomplete
+              v-model="formData.machine_type"
+              :items="getMachineType"
+              label="Machine type"
+              variant="outlined"
+              required
+              :disabled="!formData.subscription"
+              width="100%"
+            >
               <template #item="{ item, props }">
                 <VDivider v-if="'divider' in item.raw" />
                 <VListSubheader v-else-if="'header' in item.raw" :title="item.raw.header" />
