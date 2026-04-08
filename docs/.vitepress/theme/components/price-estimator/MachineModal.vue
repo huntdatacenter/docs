@@ -18,7 +18,7 @@ const emit = defineEmits<{
 const formData = ref<MachineFormData>({
   id: undefined,
   name: undefined,
-  flavor: undefined,
+  machine_type: undefined,
   gpu: undefined,
   subscription: undefined,
 })
@@ -31,25 +31,25 @@ const subscriptions = [
 ]
 
 const getComputePriceYear = computed((): string | number => {
-  if (!formData.value.flavor || !formData.value.subscription) {
+  if (!formData.value.machine_type || !formData.value.subscription) {
     return 0
   }
   let price: number | undefined
   if (formData.value.subscription.includes("COMMITMENT")) {
     if (formData.value.subscription === "COMMITMENT_3Y") {
       const item = priceEstimatorStore.catalogue.computePrices.find(
-        (item: PriceListItem) => item["service.unit"] === formData.value.flavor && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "3Y",
+        (item: PriceListItem) => item["service.unit"] === formData.value.machine_type && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "3Y",
       )
       price = item ? item["price.nok.ex.vat"] / 3 : undefined
     } else {
       const item = priceEstimatorStore.catalogue.computePrices.find(
-        (item: PriceListItem) => item["service.unit"] === formData.value.flavor && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "1Y",
+        (item: PriceListItem) => item["service.unit"] === formData.value.machine_type && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "1Y",
       )
       price = item ? item["price.nok.ex.vat"] : undefined
     }
   } else {
     const item = priceEstimatorStore.catalogue.computePrices.find(
-      (item: PriceListItem) => item["service.unit"] === formData.value.flavor && item["service.level"] === formData.value.subscription,
+      (item: PriceListItem) => item["service.unit"] === formData.value.machine_type && item["service.level"] === formData.value.subscription,
     )
     price = item ? item["price.nok.ex.vat"] : undefined
   }
@@ -95,19 +95,19 @@ const close = () => {
 }
 
 const save = () => {
-  if (!formData.value.flavor) {
+  if (!formData.value.machine_type) {
     emit("open-snackbar", "No machine type selected")
     return
   }
 
   const name = formData.value.name
   const machinetitle = priceEstimatorStore.catalogue.machinePrices
-    .filter((item: MachineType) => item["value"] === formData.value.flavor)[0]
+    .filter((item: MachineType) => item["value"] === formData.value.machine_type)[0]
     ["title"].split(" - ")[1]
     .split(" / ")
   const core_count = parseInt(machinetitle[0].split(" ")[0])
   const ram = parseInt(machinetitle[1].split(" ")[0])
-  const flavorWithGpu = formData.value.flavor
+  const flavorWithGpu = formData.value.machine_type
   const subscription = formData.value.subscription
   const gpu = formData.value.gpu
 
@@ -139,14 +139,14 @@ onMounted(() => {
   if (props.editData) {
     formData.value.id = props.editData.id
     formData.value.name = props.editData.name
-    formData.value.subscription = props.editData.type
+    formData.value.subscription = props.editData.subscription
 
-    if (props.editData.flavor.includes(" + ")) {
-      const parts = props.editData.flavor.split(" + ")
-      formData.value.flavor = parts[0]
+    if (props.editData.machine_type.includes(" + ")) {
+      const parts = props.editData.machine_type.split(" + ")
+      formData.value.machine_type = parts[0]
       formData.value.gpu = parts[1]
     } else {
-      formData.value.flavor = props.editData.flavor
+      formData.value.machine_type = props.editData.machine_type
       formData.value.gpu = props.editData.gpu
     }
   } else {
@@ -172,7 +172,7 @@ onMounted(() => {
             </v-autocomplete>
           </v-col>
           <v-col cols="12">
-            <v-autocomplete v-model="formData.flavor" :items="getFlavors" label="Machine type" variant="outlined" required :disabled="!formData.subscription" width="100%">
+            <v-autocomplete v-model="formData.machine_type" :items="getFlavors" label="Machine type" variant="outlined" required :disabled="!formData.subscription" width="100%">
               <template #item="{ item, props }">
                 <VDivider v-if="'divider' in item.raw" />
                 <VListSubheader v-else-if="'header' in item.raw" :title="item.raw.header" />
@@ -180,10 +180,10 @@ onMounted(() => {
               </template>
             </v-autocomplete>
           </v-col>
-          <v-col v-show="formData.flavor" cols="12" sm="6">
+          <v-col v-show="formData.machine_type" cols="12" sm="6">
             <v-text-field v-model="getComputePriceMonth" label="Compute Price / Month" suffix="NOK ex. VAT" readonly variant="outlined"></v-text-field>
           </v-col>
-          <v-col v-show="formData.flavor" cols="12" sm="6">
+          <v-col v-show="formData.machine_type" cols="12" sm="6">
             <v-text-field v-model="getComputePriceYear" label="Compute Price / Year" suffix="NOK ex. VAT / Year" readonly variant="outlined"></v-text-field>
           </v-col>
           <v-col cols="12">

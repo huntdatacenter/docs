@@ -606,7 +606,7 @@ export const priceEstimatorStore = reactive({
             if (lab.compute) {
               if (!Array.isArray(lab.compute)) throw new Error(`Invalid lab '${lab.name}': 'compute' must be an array`)
               lab.compute.forEach((comp: any, compIndex: number) => {
-                const required = ["name", "flavor", "core_count", "ram", "type"]
+                const required = ["name", "machine_type", "core_count", "ram", "subscription"]
                 const missing = required.filter((field) => comp[field] === undefined || comp[field] === null || comp[field] === "")
                 if (missing.length > 0) {
                   throw new Error(`Invalid compute item at index ${compIndex} in lab '${lab.name}': Missing fields: ${missing.join(", ")}`)

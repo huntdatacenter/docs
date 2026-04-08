@@ -85,7 +85,7 @@ export type StorageCostByType = {
 export interface MachineFormData {
   id?: number
   name?: string
-  flavor?: string
+  machine_type?: string
   gpu?: string
   subscription?: SubscriptionType
 }
