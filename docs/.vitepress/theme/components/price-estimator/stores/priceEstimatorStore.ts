@@ -112,6 +112,7 @@ export const priceEstimatorStore = reactive({
     })
 
     const machinesPromise = pricesApi.getMachineTypes().then((machine: MachineType[]) => {
+      console.log("machine", machine)
       this.catalogue.machinePrices = machine
     })
 
