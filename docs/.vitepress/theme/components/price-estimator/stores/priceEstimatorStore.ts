@@ -7,7 +7,7 @@ import {
   type StorageType,
   type PriceListItem,
   type GpuModel,
-  type MachineFlavor,
+  type MachineType,
   type Catalogue,
   type SubscriptionType,
   storageTypes,
@@ -27,7 +27,7 @@ export const priceEstimatorStore = reactive({
     computePrices: [] as PriceListItem[],
     storagePrices: [] as PriceListItem[],
     gpuPrices: [] as PriceListItem[],
-    machinePrices: [] as MachineFlavor[],
+    machinePrices: [] as MachineType[],
     availableGpus: [] as GpuModel[],
     labPrices: [] as PriceListItem[],
   } as Catalogue,
@@ -48,28 +48,28 @@ export const priceEstimatorStore = reactive({
         const savedJson = localStorage.getItem("hunt-cloud-estimator-state")
         if (savedJson) {
           const state = JSON.parse(savedJson)
+          console.log("state", state)
           if (state.labs && Array.isArray(state.labs)) {
             this.labs = []
 
-            for (const lab of state.labs) {
+            for (const lab of state.labs as LabCard[]) {
               const newLabId = this.labs.length
               this.labs.push({
                 id: newLabId,
                 title: lab.title,
                 selectedCompute: [],
                 selectedStorage: [],
-                // @ts-ignore
-                subscriptionType: lab.subscriptionType,
+                subscription: lab.subscription,
               })
 
               if (lab.selectedCompute) {
                 for (const comp of lab.selectedCompute) {
                   this.addComputeToLab(newLabId, {
                     name: comp.name,
-                    flavor: comp.flavor,
+                    machine_type: comp.machine_type,
                     core_count: comp.core_count,
                     ram: comp.ram,
-                    type: comp.type,
+                    subscription: comp.subscription,
                     gpu: comp.gpu,
                   })
                 }
@@ -101,19 +101,18 @@ export const priceEstimatorStore = reactive({
   async getCatalogueAPI() {
     // Get price list from the API
     const priceListPromise = pricesApi.getPriceList().then((json: PriceListItem[]) => {
-      this.catalogue.computePrices = json
-        .filter(item => item["service.group"] === "cpu")
-        .map(this.convertPricesToYearly)
-      this.catalogue.storagePrices = json.filter(item => item["service.family"] === "store")
-      this.catalogue.gpuPrices = json.filter(item => item["service.group"] === "gpu").map(this.convertPricesToYearly)
-      this.catalogue.labPrices = json.filter(item => item["service.group"] === "lab")
+      this.catalogue.computePrices = json.filter((item) => item["service.group"] === "cpu").map(this.convertPricesToYearly)
+      this.catalogue.storagePrices = json.filter((item) => item["service.family"] === "store")
+      this.catalogue.gpuPrices = json.filter((item) => item["service.group"] === "gpu").map(this.convertPricesToYearly)
+      this.catalogue.labPrices = json.filter((item) => item["service.group"] === "lab")
     })
 
     const gpusPromise = pricesApi.getAvailableGPUS().then((gpus: GpuModel[]) => {
       this.catalogue.availableGpus = gpus
     })
 
-    const machinesPromise = pricesApi.getMachineFlavors().then((machine: MachineFlavor[]) => {
+    const machinesPromise = pricesApi.getMachineTypes().then((machine: MachineType[]) => {
+      console.log("machine", machine)
       this.catalogue.machinePrices = machine
     })
 
@@ -142,30 +141,20 @@ export const priceEstimatorStore = reactive({
   },
 
   /* Lab helpers */
-  addLab(payload: {
-    name: string
-    subscriptionType: string
-    machineFlavor: string
-    machineSubscription: string
-    hddSize: number
-    nvmeSize: number
-  }) {
+  addLab(payload: { name: string; subscription: string; machineType: string; machineSubscription: string; hddSize: number; nvmeSize: number }) {
     const newLab: LabCard = {
       id: this.labs.length,
       title: payload.name,
       selectedCompute: [],
       selectedStorage: [],
-      // @ts-ignore
-      subscriptionType: payload.subscriptionType,
+      subscription: payload.subscription as SubscriptionType,
     }
 
     // Add compute
-    const machineInfo = this.catalogue.machinePrices.find(
-      (item: MachineFlavor) => item["value"] === payload.machineFlavor,
-    )
+    const machineInfo = this.catalogue.machinePrices.find((item: MachineType) => item["value"] === payload.machineType)
 
     if (machineInfo) {
-      const prices = this.getComputePriceFromCatalogue(payload.machineFlavor, payload.machineSubscription)
+      const prices = this.getComputePriceFromCatalogue(payload.machineType, payload.machineSubscription)
 
       const machineTitle = machineInfo["title"].split(" - ")[1].split(" / ")
       const coreCount = parseInt(machineTitle[0].split(" ")[0])
@@ -173,10 +162,10 @@ export const priceEstimatorStore = reactive({
       const unit: ComputeUnit = {
         id: 0,
         name: "machine-1",
-        flavor: payload.machineFlavor,
+        machine_type: payload.machineType,
         core_count: coreCount,
         ram,
-        type: payload.machineSubscription as SubscriptionType,
+        subscription: payload.machineSubscription as SubscriptionType,
         monthlyPrice: prices.monthlyPrice,
         yearlyPrice: prices.yearlyPrice,
       }
@@ -221,11 +210,11 @@ export const priceEstimatorStore = reactive({
   },
 
   removeLab(labId: number) {
-    this.labs = this.labs.filter(lab => lab.id !== labId)
+    this.labs = this.labs.filter((lab) => lab.id !== labId)
   },
 
   getLabComputePriceSum(labId: number) {
-    const lab = this.labs.find(l => l.id === labId)
+    const lab = this.labs.find((l) => l.id === labId)
     if (!lab) {
       console.log("Lab not found")
       return { monthlyCostTotal: 0, yearlyCostTotal: 0 }
@@ -243,13 +232,13 @@ export const priceEstimatorStore = reactive({
       NVME: { size: 0, yearlyCostTotal: 0, monthlyCostTotal: 0 },
     }
 
-    const lab = this.labs.find(l => l.id === labId)
+    const lab = this.labs.find((l) => l.id === labId)
     if (!lab) {
       return results
     }
 
     for (const storageType of storageTypes) {
-      const storages = lab.selectedStorage.filter(str => str.type === storageType)
+      const storages = lab.selectedStorage.filter((str) => str.type === storageType)
       const size = storages.reduce((sum, s) => sum + s.size, 0)
       const yearlyCostTotal = storages.reduce((sum, s) => sum + s.yearlyPrice, 0)
       const monthlyCostTotal = storages.reduce((sum, s) => sum + s.monthlyPrice, 0)
@@ -266,7 +255,7 @@ export const priceEstimatorStore = reactive({
   },
 
   updateLabTitle(id: number, title: string) {
-    const lab = this.labs.find(l => l.id === id)
+    const lab = this.labs.find((l) => l.id === id)
     if (lab) {
       lab.title = title
       this.saveStateToLocal()
@@ -298,10 +287,7 @@ export const priceEstimatorStore = reactive({
       const blockType = type === "NVME" ? "block.nvme.rep" : "block.hdd.rep"
 
       const priceEntries = this.catalogue.storagePrices.filter(
-        (item: PriceListItem) =>
-          item["service.group"] === blockType &&
-          item["service.level"] === "COMMITMENT" &&
-          item["service.commitment"] === "1Y",
+        (item: PriceListItem) => item["service.group"] === blockType && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "1Y",
       )
 
       // Tiered calculation
@@ -331,7 +317,7 @@ export const priceEstimatorStore = reactive({
   },
 
   addStorageToLab(labId: number, payload: { name: string; usage: StorageUsageType; type: StorageType; size: number }) {
-    const lab = this.labs.find(l => l.id === labId)
+    const lab = this.labs.find((l) => l.id === labId)
     if (!lab) return
 
     const prices = this.getStoragePriceFromCatalogue(payload.type, payload.size)
@@ -350,15 +336,11 @@ export const priceEstimatorStore = reactive({
     this.saveStateToLocal()
   },
 
-  editStorageInLab(
-    labId: number,
-    storageId: number,
-    payload: { name: string; usage: StorageUsageType; type: StorageType; size: number },
-  ) {
-    const lab = this.labs.find(l => l.id === labId)
+  editStorageInLab(labId: number, storageId: number, payload: { name: string; usage: StorageUsageType; type: StorageType; size: number }) {
+    const lab = this.labs.find((l) => l.id === labId)
     if (!lab) return
 
-    const idx = lab.selectedStorage?.findIndex(s => s.id === storageId) ?? -1
+    const idx = lab.selectedStorage?.findIndex((s) => s.id === storageId) ?? -1
     if (idx === -1) return
     const price = this.getStoragePriceFromCatalogue(payload.type, payload.size)
     lab.selectedStorage![idx] = {
@@ -375,10 +357,10 @@ export const priceEstimatorStore = reactive({
   },
 
   removeStorageFromLab(labId: number, storageId: number) {
-    const lab = this.labs.find(l => l.id === labId)
+    const lab = this.labs.find((l) => l.id === labId)
     if (!lab) return
 
-    lab.selectedStorage = lab.selectedStorage?.filter(s => s.id !== storageId)
+    lab.selectedStorage = lab.selectedStorage?.filter((s) => s.id !== storageId)
 
     this.saveStateToLocal()
   },
@@ -392,10 +374,7 @@ export const priceEstimatorStore = reactive({
     if (type === "HDD") {
       const defaultHDDUnit = this.catalogue.storagePrices.find(
         (item: PriceListItem) =>
-          item["service.group"] === "block.hdd.rep" &&
-          item["service.unit"] === "First 10 TB" &&
-          item["service.level"] === "COMMITMENT" &&
-          item["service.commitment"] === "1Y",
+          item["service.group"] === "block.hdd.rep" && item["service.unit"] === "First 10 TB" && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "1Y",
       )
       if (!defaultHDDUnit) return
 
@@ -411,10 +390,7 @@ export const priceEstimatorStore = reactive({
     if (type === "NVME") {
       const defaultNVMEUnit = this.catalogue.storagePrices.find(
         (item: PriceListItem) =>
-          item["service.group"] === "block.nvme.rep" &&
-          item["service.unit"] === "First 10 TB" &&
-          item["service.level"] === "COMMITMENT" &&
-          item["service.commitment"] === "1Y",
+          item["service.group"] === "block.nvme.rep" && item["service.unit"] === "First 10 TB" && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "1Y",
       )
 
       if (!defaultNVMEUnit) return
@@ -431,42 +407,36 @@ export const priceEstimatorStore = reactive({
 
   /*  Compute helpers  */
 
-  getComputePriceFromCatalogue(flavor: string, type: string, gpuFlavor?: string) {
+  getComputePriceFromCatalogue(machineType: string, type: string, machineWithGpu?: string) {
     let totalYearlyPrice = 0
     let totalMonthlyPrice = 0
-    let mainFlavorPrice: number | undefined
+    let mainMachineTypePrice: number | undefined
     let gpuYearly: number | undefined
 
     if (type.includes("COMMITMENT")) {
       if (type === "COMMITMENT_3Y") {
-        const found3Y = this.catalogue.computePrices.find(
-          p => p["service.unit"] === flavor && p["service.level"] === "COMMITMENT" && p["service.commitment"] === "3Y",
-        )
+        const found3Y = this.catalogue.computePrices.find((p) => p["service.unit"] === machineType && p["service.level"] === "COMMITMENT" && p["service.commitment"] === "3Y")
         if (found3Y) {
-          mainFlavorPrice = found3Y["price.nok.ex.vat"] / 3
+          mainMachineTypePrice = found3Y["price.nok.ex.vat"] / 3
         }
       } else {
-        mainFlavorPrice = this.catalogue.computePrices.find(
-          p => p["service.unit"] === flavor && p["service.level"] === "COMMITMENT" && p["service.commitment"] === "1Y",
+        mainMachineTypePrice = this.catalogue.computePrices.find(
+          (p) => p["service.unit"] === machineType && p["service.level"] === "COMMITMENT" && p["service.commitment"] === "1Y",
         )?.["price.nok.ex.vat"]
       }
     } else {
-      const foundPrice = this.catalogue.computePrices.find(
-        p => p["service.unit"] === flavor && p["service.level"] === type,
-      )
-      mainFlavorPrice = foundPrice?.["price.nok.ex.vat"]
+      const foundPrice = this.catalogue.computePrices.find((p) => p["service.unit"] === machineType && p["service.level"] === type)
+      mainMachineTypePrice = foundPrice?.["price.nok.ex.vat"]
     }
 
-    if (mainFlavorPrice) {
-      totalYearlyPrice += mainFlavorPrice
+    if (mainMachineTypePrice) {
+      totalYearlyPrice += mainMachineTypePrice
     }
 
     totalMonthlyPrice = Number(totalYearlyPrice / 12)
 
-    if (gpuFlavor) {
-      const gpuPrice = this.catalogue.gpuPrices.find(
-        p => p["service.unit"] === gpuFlavor && p["service.level"] === "ONDEMAND",
-      )
+    if (machineWithGpu) {
+      const gpuPrice = this.catalogue.gpuPrices.find((p) => p["service.unit"] === machineWithGpu && p["service.level"] === "ONDEMAND")
       if (gpuPrice) {
         gpuYearly = gpuPrice["price.nok.ex.vat"]
         totalYearlyPrice += gpuYearly
@@ -479,23 +449,20 @@ export const priceEstimatorStore = reactive({
     }
   },
 
-  addComputeToLab(
-    labId: number,
-    payload: { name: string; flavor: string; core_count: number; ram: number; type: string; gpu?: string },
-  ) {
-    const lab = this.labs.find(l => l.id === labId)
+  addComputeToLab(labId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string }) {
+    const lab = this.labs.find((l) => l.id === labId)
     if (!lab) return
 
     const compId = lab.selectedCompute?.length || 0
-    const prices = this.getComputePriceFromCatalogue(payload.flavor, payload.type, payload.gpu)
+    const prices = this.getComputePriceFromCatalogue(payload.machine_type, payload.subscription, payload.gpu)
     const newCompute: ComputeUnit = {
       id: compId,
       name: payload.name,
-      flavor: payload.flavor,
+      machine_type: payload.machine_type,
       core_count: payload.core_count,
       gpu: payload.gpu,
       ram: payload.ram,
-      type: payload.type as SubscriptionType,
+      subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
       yearlyPrice: prices.yearlyPrice,
     }
@@ -505,26 +472,22 @@ export const priceEstimatorStore = reactive({
     this.saveStateToLocal()
   },
 
-  editComputeInLab(
-    labId: number,
-    computeId: number,
-    payload: { name: string; flavor: string; core_count: number; ram: number; type: string; gpu?: string },
-  ) {
-    const lab = this.labs.find(l => l.id === labId)
+  editComputeInLab(labId: number, computeId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string }) {
+    const lab = this.labs.find((l) => l.id === labId)
     if (!lab || !lab.selectedCompute) return
 
-    const idx = lab.selectedCompute.findIndex(c => c.id === computeId)
+    const idx = lab.selectedCompute.findIndex((c) => c.id === computeId)
     if (idx === -1) return
 
-    const prices = this.getComputePriceFromCatalogue(payload.flavor, payload.type, payload.gpu)
+    const prices = this.getComputePriceFromCatalogue(payload.machine_type, payload.subscription, payload.gpu)
     lab.selectedCompute[idx] = {
       id: computeId,
       name: payload.name,
-      flavor: payload.flavor,
+      machine_type: payload.machine_type,
       core_count: payload.core_count,
       gpu: payload.gpu,
       ram: payload.ram,
-      type: payload.type as SubscriptionType,
+      subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
       yearlyPrice: prices.yearlyPrice,
     }
@@ -533,9 +496,9 @@ export const priceEstimatorStore = reactive({
   },
 
   removeComputeFromLab(labId: number, computeId: number) {
-    const lab = this.labs.find(l => l.id === labId)
+    const lab = this.labs.find((l) => l.id === labId)
     if (!lab) return
-    lab.selectedCompute = lab.selectedCompute?.filter(c => c.id !== computeId)
+    lab.selectedCompute = lab.selectedCompute?.filter((c) => c.id !== computeId)
     this.saveStateToLocal()
   },
 
@@ -552,10 +515,9 @@ export const priceEstimatorStore = reactive({
     }
 
     if (this.labs.length > 0 && this.catalogue.labPrices.length > 0) {
-      this.labs.forEach(lab => {
-        // @ts-ignore
-        const type = lab.subscriptionType as "1Y" | "3Y"
-        const priceItem = this.catalogue.labPrices.find(p => p["service.commitment"] === type)
+      this.labs.forEach((lab) => {
+        const type = lab.subscription as "1Y" | "3Y"
+        const priceItem = this.catalogue.labPrices.find((p) => p["service.commitment"] === type)
         console.log(summary.labSubscriptions[type])
         summary.labSubscriptions[type].units += 1
         if (priceItem) {
@@ -588,21 +550,20 @@ export const priceEstimatorStore = reactive({
   },
 
   exportItems() {
-    const labsToExport = this.labs.map(lab => ({
+    const labsToExport = this.labs.map((lab) => ({
       id: lab.id,
       name: lab.title,
-      // @ts-ignore
-      subscriptionType: lab.subscriptionType,
-      compute: lab.selectedCompute.map(c => ({
+      subscription: lab.subscription,
+      compute: lab.selectedCompute.map((c) => ({
         id: c.id,
         name: c.name,
-        flavor: c.flavor,
+        machine_type: c.machine_type,
         core_count: c.core_count,
         ram: c.ram,
         gpu: c.gpu,
-        type: c.type,
+        subscription: c.subscription,
       })),
-      storage: lab.selectedStorage.map(s => ({
+      storage: lab.selectedStorage.map((s) => ({
         id: s.id,
         name: s.name,
         usage: s.usage,
@@ -632,7 +593,7 @@ export const priceEstimatorStore = reactive({
     return new Promise<void>((resolve, reject) => {
       const reader = new FileReader()
 
-      reader.onload = e => {
+      reader.onload = (e) => {
         try {
           const data = JSON.parse(e.target?.result as string)
 
@@ -646,14 +607,10 @@ export const priceEstimatorStore = reactive({
             if (lab.compute) {
               if (!Array.isArray(lab.compute)) throw new Error(`Invalid lab '${lab.name}': 'compute' must be an array`)
               lab.compute.forEach((comp: any, compIndex: number) => {
-                const required = ["name", "flavor", "core_count", "ram", "type"]
-                const missing = required.filter(
-                  field => comp[field] === undefined || comp[field] === null || comp[field] === "",
-                )
+                const required = ["name", "machine_type", "core_count", "ram", "subscription"]
+                const missing = required.filter((field) => comp[field] === undefined || comp[field] === null || comp[field] === "")
                 if (missing.length > 0) {
-                  throw new Error(
-                    `Invalid compute item at index ${compIndex} in lab '${lab.name}': Missing fields: ${missing.join(", ")}`,
-                  )
+                  throw new Error(`Invalid compute item at index ${compIndex} in lab '${lab.name}': Missing fields: ${missing.join(", ")}`)
                 }
               })
             }
@@ -662,13 +619,9 @@ export const priceEstimatorStore = reactive({
               if (!Array.isArray(lab.storage)) throw new Error(`Invalid lab '${lab.name}': 'storage' must be an array`)
               lab.storage.forEach((store: any, storeIndex: number) => {
                 const required = ["name", "usage", "type", "size"]
-                const missing = required.filter(
-                  field => store[field] === undefined || store[field] === null || store[field] === "",
-                )
+                const missing = required.filter((field) => store[field] === undefined || store[field] === null || store[field] === "")
                 if (missing.length > 0) {
-                  throw new Error(
-                    `Invalid storage item at index ${storeIndex} in lab '${lab.name}': Missing fields: ${missing.join(", ")}`,
-                  )
+                  throw new Error(`Invalid storage item at index ${storeIndex} in lab '${lab.name}': Missing fields: ${missing.join(", ")}`)
                 }
               })
             }
@@ -685,18 +638,17 @@ export const priceEstimatorStore = reactive({
               title: labData.name,
               selectedCompute: [],
               selectedStorage: [],
-              // @ts-ignore
-              subscriptionType: labData.subscriptionType,
+              subscription: labData.subscription,
             })
 
             if (labData.compute) {
               for (const comp of labData.compute) {
                 this.addComputeToLab(newLabId, {
                   name: comp.name,
-                  flavor: comp.flavor,
+                  machine_type: comp.machine_type,
                   core_count: comp.core_count,
                   ram: comp.ram,
-                  type: comp.type,
+                  subscription: comp.subscription,
                   gpu: comp.gpu,
                 })
               }

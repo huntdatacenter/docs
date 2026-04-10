@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue"
-import type { ComputeUnit, PriceListItem, GpuModel, MachineFlavor, MachineFormData } from "./types"
+import type { ComputeUnit, PriceListItem, GpuModel, MachineType, MachineFormData } from "./types"
 import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 
 const props = defineProps({
@@ -18,7 +18,7 @@ const emit = defineEmits<{
 const formData = ref<MachineFormData>({
   id: undefined,
   name: undefined,
-  flavor: undefined,
+  machine_type: undefined,
   gpu: undefined,
   subscription: undefined,
 })
@@ -31,32 +31,25 @@ const subscriptions = [
 ]
 
 const getComputePriceYear = computed((): string | number => {
-  if (!formData.value.flavor || !formData.value.subscription) {
+  if (!formData.value.machine_type || !formData.value.subscription) {
     return 0
   }
   let price: number | undefined
   if (formData.value.subscription.includes("COMMITMENT")) {
     if (formData.value.subscription === "COMMITMENT_3Y") {
       const item = priceEstimatorStore.catalogue.computePrices.find(
-        (item: PriceListItem) =>
-          item["service.unit"] === formData.value.flavor &&
-          item["service.level"] === "COMMITMENT" &&
-          item["service.commitment"] === "3Y",
+        (item: PriceListItem) => item["service.unit"] === formData.value.machine_type && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "3Y",
       )
       price = item ? item["price.nok.ex.vat"] / 3 : undefined
     } else {
       const item = priceEstimatorStore.catalogue.computePrices.find(
-        (item: PriceListItem) =>
-          item["service.unit"] === formData.value.flavor &&
-          item["service.level"] === "COMMITMENT" &&
-          item["service.commitment"] === "1Y",
+        (item: PriceListItem) => item["service.unit"] === formData.value.machine_type && item["service.level"] === "COMMITMENT" && item["service.commitment"] === "1Y",
       )
       price = item ? item["price.nok.ex.vat"] : undefined
     }
   } else {
     const item = priceEstimatorStore.catalogue.computePrices.find(
-      (item: PriceListItem) =>
-        item["service.unit"] === formData.value.flavor && item["service.level"] === formData.value.subscription,
+      (item: PriceListItem) => item["service.unit"] === formData.value.machine_type && item["service.level"] === formData.value.subscription,
     )
     price = item ? item["price.nok.ex.vat"] : undefined
   }
@@ -72,9 +65,7 @@ const getGpuPriceYear = computed((): string | number => {
   if (!formData.value.gpu) {
     return 0
   }
-  const price = priceEstimatorStore.catalogue.gpuPrices.find(
-    (item: PriceListItem) => item["service.unit"] === formData.value.gpu && item["service.level"] === "ONDEMAND",
-  )
+  const price = priceEstimatorStore.catalogue.gpuPrices.find((item: PriceListItem) => item["service.unit"] === formData.value.gpu && item["service.level"] === "ONDEMAND")
   return price ? Number(price["price.nok.ex.vat"]).toFixed(2) : 0
 })
 
@@ -83,11 +74,11 @@ const getGpuPriceMonth = computed((): string | number => {
   return yearlyGpu ? Number(yearlyGpu / 12).toFixed(2) : 0
 })
 
-const getFlavors = computed((): MachineFlavor[] => {
+const getMachineType = computed((): MachineType[] => {
   if (!formData.value.subscription) {
     return []
   }
-  return priceEstimatorStore.catalogue.machinePrices.filter((item: MachineFlavor) => item)
+  return priceEstimatorStore.catalogue.machinePrices.filter((item: MachineType) => item)
 })
 
 const getGpus = computed(() => {
@@ -104,39 +95,39 @@ const close = () => {
 }
 
 const save = () => {
-  if (!formData.value.flavor) {
+  if (!formData.value.machine_type) {
     emit("open-snackbar", "No machine type selected")
     return
   }
 
   const name = formData.value.name
   const machinetitle = priceEstimatorStore.catalogue.machinePrices
-    .filter((item: MachineFlavor) => item["value"] === formData.value.flavor)[0]
+    .filter((item: MachineType) => item["value"] === formData.value.machine_type)[0]
     ["title"].split(" - ")[1]
     .split(" / ")
   const core_count = parseInt(machinetitle[0].split(" ")[0])
   const ram = parseInt(machinetitle[1].split(" ")[0])
-  const flavorWithGpu = formData.value.flavor
+  const machineWithGpu = formData.value.machine_type
   const subscription = formData.value.subscription
   const gpu = formData.value.gpu
 
   if (props.editData) {
     priceEstimatorStore.editComputeInLab(props.labId, props.editData.id, {
       name: name!,
-      flavor: flavorWithGpu,
+      machine_type: machineWithGpu,
       core_count: core_count,
       ram: ram,
-      type: subscription!,
+      subscription: subscription!,
       gpu: gpu,
     })
   } else {
     // Add new compute
     priceEstimatorStore.addComputeToLab(props.labId, {
       name: name!,
-      flavor: flavorWithGpu!,
+      machine_type: machineWithGpu!,
       core_count: core_count,
       ram: ram,
-      type: subscription!,
+      subscription: subscription!,
       gpu: gpu,
     })
   }
@@ -148,14 +139,14 @@ onMounted(() => {
   if (props.editData) {
     formData.value.id = props.editData.id
     formData.value.name = props.editData.name
-    formData.value.subscription = props.editData.type
+    formData.value.subscription = props.editData.subscription
 
-    if (props.editData.flavor.includes(" + ")) {
-      const parts = props.editData.flavor.split(" + ")
-      formData.value.flavor = parts[0]
+    if (props.editData.machine_type.includes(" + ")) {
+      const parts = props.editData.machine_type.split(" + ")
+      formData.value.machine_type = parts[0]
       formData.value.gpu = parts[1]
     } else {
-      formData.value.flavor = props.editData.flavor
+      formData.value.machine_type = props.editData.machine_type
       formData.value.gpu = props.editData.gpu
     }
   } else {
@@ -177,21 +168,13 @@ onMounted(() => {
             <v-text-field v-model="formData.name" label="Name" required variant="outlined"></v-text-field>
           </v-col>
           <v-col cols="12">
-            <v-autocomplete
-              v-model="formData.subscription"
-              :items="subscriptions"
-              item-title="text"
-              item-value="value"
-              label="Subscription type"
-              required
-              variant="outlined"
-            >
+            <v-autocomplete v-model="formData.subscription" :items="subscriptions" item-title="text" item-value="value" label="Subscription type" required variant="outlined">
             </v-autocomplete>
           </v-col>
           <v-col cols="12">
             <v-autocomplete
-              v-model="formData.flavor"
-              :items="getFlavors"
+              v-model="formData.machine_type"
+              :items="getMachineType"
               label="Machine type"
               variant="outlined"
               required
@@ -205,51 +188,20 @@ onMounted(() => {
               </template>
             </v-autocomplete>
           </v-col>
-          <v-col v-show="formData.flavor" cols="12" sm="6">
-            <v-text-field
-              v-model="getComputePriceMonth"
-              label="Compute Price / Month"
-              suffix="NOK ex. VAT"
-              readonly
-              variant="outlined"
-            ></v-text-field>
+          <v-col v-show="formData.machine_type" cols="12" sm="6">
+            <v-text-field v-model="getComputePriceMonth" label="Compute Price / Month" suffix="NOK ex. VAT" readonly variant="outlined"></v-text-field>
           </v-col>
-          <v-col v-show="formData.flavor" cols="12" sm="6">
-            <v-text-field
-              v-model="getComputePriceYear"
-              label="Compute Price / Year"
-              suffix="NOK ex. VAT / Year"
-              readonly
-              variant="outlined"
-            ></v-text-field>
+          <v-col v-show="formData.machine_type" cols="12" sm="6">
+            <v-text-field v-model="getComputePriceYear" label="Compute Price / Year" suffix="NOK ex. VAT / Year" readonly variant="outlined"></v-text-field>
           </v-col>
           <v-col cols="12">
-            <v-select
-              v-model="formData.gpu"
-              :items="getGpus"
-              label="GPU type (optional)"
-              variant="outlined"
-              clearable
-              :disabled="!formData.subscription"
-            ></v-select>
+            <v-select v-model="formData.gpu" :items="getGpus" label="GPU type (optional)" variant="outlined" clearable :disabled="!formData.subscription"></v-select>
           </v-col>
           <v-col v-show="formData.gpu" cols="12" sm="6">
-            <v-text-field
-              v-model="getGpuPriceMonth"
-              label="GPU Price / Month"
-              suffix="NOK ex. VAT"
-              readonly
-              variant="outlined"
-            ></v-text-field>
+            <v-text-field v-model="getGpuPriceMonth" label="GPU Price / Month" suffix="NOK ex. VAT" readonly variant="outlined"></v-text-field>
           </v-col>
           <v-col v-show="formData.gpu" cols="12" sm="6">
-            <v-text-field
-              v-model="getGpuPriceYear"
-              label="GPU Price / Year"
-              suffix="NOK ex. VAT / Year"
-              readonly
-              variant="outlined"
-            ></v-text-field>
+            <v-text-field v-model="getGpuPriceYear" label="GPU Price / Year" suffix="NOK ex. VAT / Year" readonly variant="outlined"></v-text-field>
           </v-col>
         </v-row>
       </v-container>

@@ -79,7 +79,7 @@ vi.mock("../docs/.vitepress/theme/components/price-estimator/api/pricesApi.js", 
   default: {
     getPriceList: vi.fn().mockResolvedValue(mockPriceList),
     getAvailableGPUS: vi.fn().mockResolvedValue([]),
-    getMachineFlavors: vi.fn().mockResolvedValue([
+    getMachineTypes: vi.fn().mockResolvedValue([
       {
         value: "default.c1",
         title: "Default - 4 cores / 8 GB",
@@ -92,15 +92,9 @@ describe("PriceEstimator", () => {
   beforeEach(() => {
     priceEstimatorStore.clearAllLabs()
     // Manually populate catalogue for tests that need it
-    priceEstimatorStore.catalogue.storagePrices = mockPriceList.filter(
-      (item: any) => item["service.family"] === "store",
-    ) as any
-    priceEstimatorStore.catalogue.computePrices = mockPriceList.filter(
-      (item: any) => item["service.group"] === "cpu",
-    ) as any
-    priceEstimatorStore.catalogue.labPrices = mockPriceList.filter(
-      (item: any) => item["service.group"] === "lab",
-    ) as any
+    priceEstimatorStore.catalogue.storagePrices = mockPriceList.filter((item: any) => item["service.family"] === "store") as any
+    priceEstimatorStore.catalogue.computePrices = mockPriceList.filter((item: any) => item["service.group"] === "cpu") as any
+    priceEstimatorStore.catalogue.labPrices = mockPriceList.filter((item: any) => item["service.group"] === "lab") as any
     priceEstimatorStore.catalogue.machinePrices = [
       {
         value: "default.c1",
@@ -131,6 +125,7 @@ describe("PriceEstimator", () => {
         {
           id: 1,
           title: "Lab 1",
+          subscription: "COMMITMENT_1Y",
           selectedCompute: [],
           selectedStorage: [
             {
@@ -160,6 +155,7 @@ describe("PriceEstimator", () => {
         {
           id: 1,
           title: "Lab 1",
+          subscription: "COMMITMENT_1Y",
           selectedCompute: [],
           selectedStorage: [
             {
@@ -189,6 +185,7 @@ describe("PriceEstimator", () => {
         {
           id: 1,
           title: "Lab 1",
+          subscription: "COMMITMENT_1Y",
           selectedCompute: [],
           selectedStorage: [
             {
@@ -218,6 +215,7 @@ describe("PriceEstimator", () => {
         {
           id: 1,
           title: "Lab 1",
+          subscription: "COMMITMENT_1Y",
           selectedCompute: [],
           selectedStorage: [
             {
@@ -254,6 +252,7 @@ describe("PriceEstimator", () => {
         {
           id: 1,
           title: "Lab 1",
+          subscription: "COMMITMENT_1Y",
           selectedCompute: [],
           selectedStorage: [
             {
@@ -270,6 +269,7 @@ describe("PriceEstimator", () => {
         {
           id: 2,
           title: "Lab 2",
+          subscription: "COMMITMENT_1Y",
           selectedCompute: [],
           selectedStorage: [
             {
@@ -301,8 +301,8 @@ describe("PriceEstimator", () => {
 
       priceEstimatorStore.addLab({
         name: "Lab 1",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -312,8 +312,8 @@ describe("PriceEstimator", () => {
 
       priceEstimatorStore.addLab({
         name: "Lab 2",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -325,16 +325,16 @@ describe("PriceEstimator", () => {
     it("Removing labs", async () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
       })
       priceEstimatorStore.addLab({
         name: "Lab 2",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -342,8 +342,8 @@ describe("PriceEstimator", () => {
 
       priceEstimatorStore.addLab({
         name: "Lab 3",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -361,8 +361,8 @@ describe("PriceEstimator", () => {
     it("adds compute to a lab correctly using catalogue prices", () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -374,10 +374,10 @@ describe("PriceEstimator", () => {
 
       priceEstimatorStore.addComputeToLab(labId, {
         name: "My Machine",
-        flavor: "default.c1",
+        machine_type: "default.c1",
         core_count: 4,
         ram: 8,
-        type: "COMMITMENT_1Y",
+        subscription: "COMMITMENT_1Y",
       })
 
       const addedCompute = priceEstimatorStore.labs[0].selectedCompute[0]
@@ -391,8 +391,8 @@ describe("PriceEstimator", () => {
     it("adds storage to a lab correctly using catalogue prices", () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -422,8 +422,8 @@ describe("PriceEstimator", () => {
     it("updates compute price total when lab card compute changes", async () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -435,10 +435,10 @@ describe("PriceEstimator", () => {
 
       priceEstimatorStore.addComputeToLab(labId, {
         name: "machine-1",
-        flavor: "default.c1",
+        machine_type: "default.c1",
         core_count: 4,
         ram: 8,
-        type: "COMMITMENT_1Y",
+        subscription: "COMMITMENT_1Y",
       })
 
       const summary = priceEstimatorStore.updateTotalSummary()
@@ -452,8 +452,8 @@ describe("PriceEstimator", () => {
     it("updates storage total when lab card storage changes", async () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -484,8 +484,8 @@ describe("PriceEstimator", () => {
     it("Updates totals when multiple labs are added with compute and storage", async () => {
       priceEstimatorStore.addLab({
         name: "Lab 1",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -497,10 +497,10 @@ describe("PriceEstimator", () => {
       // Lab 1: 1 machine (50k), 10TB NVME (10k)
       priceEstimatorStore.addComputeToLab(lab1Id, {
         name: "machine-1",
-        flavor: "default.c1",
+        machine_type: "default.c1",
         core_count: 4,
         ram: 8,
-        type: "COMMITMENT_1Y",
+        subscription: "COMMITMENT_1Y",
       })
       priceEstimatorStore.addStorageToLab(lab1Id, {
         name: "volume-1",
@@ -511,8 +511,8 @@ describe("PriceEstimator", () => {
 
       priceEstimatorStore.addLab({
         name: "Lab 2",
-        subscriptionType: "1Y",
-        machineFlavor: "default.c1",
+        subscription: "1Y",
+        machineType: "default.c1",
         machineSubscription: "COMMITMENT_1Y",
         hddSize: 1,
         nvmeSize: 0,
@@ -524,17 +524,17 @@ describe("PriceEstimator", () => {
       // Lab 2: 2 machines (100k), 20TB NVME (20k flat)
       priceEstimatorStore.addComputeToLab(lab2Id, {
         name: "machine-2a",
-        flavor: "default.c1",
+        machine_type: "default.c1",
         core_count: 4,
         ram: 8,
-        type: "COMMITMENT_1Y",
+        subscription: "COMMITMENT_1Y",
       })
       priceEstimatorStore.addComputeToLab(lab2Id, {
         name: "machine-2b",
-        flavor: "default.c1",
+        machine_type: "default.c1",
         core_count: 4,
         ram: 8,
-        type: "COMMITMENT_1Y",
+        subscription: "COMMITMENT_1Y",
       })
       priceEstimatorStore.addStorageToLab(lab2Id, {
         name: "volume-2",
