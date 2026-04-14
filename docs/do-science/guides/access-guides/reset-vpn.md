@@ -71,15 +71,19 @@ Note that the default archive utility on MacOS does not recognize the passphrase
 
 2.1 Click on the link in the email to download the file and save this on your local computer.
 
-2.2 Unpack (extract) the file with compatible archive software
-
-install p7zip
+2.2 Install the p7zip application. 
 
 ```bash
 sudo apt update && sudo apt-get install p7zip-full
 ```
 
-2.3 Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the archive folder.
+2.3 Unpack (extract) the archive folder file. 
+
+```bash
+7z e <filename>.7z
+```
+
+2.4 Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the archive folder file.
 
 :::
 
