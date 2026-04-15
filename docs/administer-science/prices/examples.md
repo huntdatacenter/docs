@@ -16,87 +16,79 @@ For the record, all prices in the examples are listed as VAT exclusive in NOK fr
 
 ::: tip Estimate your specific cost
 
-Head over to our [pricing calculator](/administer-science/prices/estimator) to estimate the cost for your specific scientific environment, and do not hesitate to [contact us](/contact) for assistance.
+Head over to our [pricing estimator](/administer-science/prices/estimator) to calculate the cost for your specific scientific environment, and do not hesitate to [contact us](/contact) for assistance.
 
 :::
 
+## Epidemiology
 
-## Individual labs
-
-Let's start with a few examples of prices for individual labs configured for common experiments. Depending on your data space subscription and cost optimization configuration, the listed prices may be reduced.
-
-### Epidemiology
-
-This is the smallest lab size tailored for data analysis of structured data such as health registries and survey data that you collect.
+This is a typical lab tailored for data analysis of structured data, such as health registries and survey data.
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
-| ---- | ---- | ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- | ----: | ----: | ----: |
 | Lab | subscription | 1 year | 9354 | 1 | 9354 |
-| Compute | default.c1 | 1 year | 5360 | 1 | 5360 |
-| Store | 1 terabyte | 1 year | 2844 | 1 | 2844 |
+| Compute | [default.c1](/administer-science/services/machine-types#c-series) | 1 year | 5360 | 1 | 5360 |
+| Store | 1 TB regular storage | 1 year | 2844 | 1 | 2844 |
 | **PER YEAR** |  | | |  | **17558** |
 
-The above example establishes your own lab in HUNT Cloud with access to commonly used tools in HUNT Workbench. Your lab holds sufficient resources for analysis for a small team. Both compute and store can easily be upgraded as your experiments grow.
+The above example establishes your own lab in HUNT Cloud with access to commonly used tools in HUNT Workbench. Your lab holds sufficient resources for analysis for a small team: 2 vCPUs and 8 GB of memory, and the minimum allocation of 1 TB storage. Resources can easily be upgraded as your experiments grow.
 
 
 
-### Genomics
+## Genomics
 
-Next up is a typical lab for genomics analysis. Let's assume you need a lab to store and analyze genomics data from several sources with a varied set of tools.
+This is an example of a lab for larger genomics analysis, for example when you need a lab to store and analyze genomics data from several sources using a varied set of tools.
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| Lab | | 1 year | 9354 | 1 | 9354 |
-| Compute | default.b5 | 1 year | 41462 | 1 | 41462 |
-| Store | 10 terabytes | 1 year | 2844 | 10 | 28440 |
+| ---- | ---- | ---- | ----: | ----: | ----: |
+| Lab | subscription | 1 year | 9354 | 1 | 9354 |
+| Compute | [default.b5](/administer-science/services/machine-types#b-series) | 1 year | 41462 | 1 | 41462 |
+| Store | 10 TB regular storage | 1 year | 2844 | 10 | 28440 |
 | **PER YEAR** |  | | |  | **79256** |
 
-The above example establishes one lab, a reasonable powerful machine fit for many analysis, and storage capacity to both experiment and archive larger data sets. The cost can be reduced by for example reducing the compute size in day-to-day activities and then upgrade to larger on-demand machines in analysis intensive periods.
+The above example establishes your own lab in HUNT Cloud, a  powerful machine fit for larger analysis (32 vCPU and 64 GB memory), and storage capacity to run both experiments and archive larger data sets (10 TB). 
+
+The cost can be reduced by running a smaller machine size for day-to-day activities and then upgrading to larger on-demand machines in analysis intensive periods.
 
 
-<!-- 
 
-### Machine learning
+## Machine learning
 
-Let's increase the complexity slightly. This example is for a machine learning lab with mixed activities that require data storage, computational power and graphical accelerators. The example list one home machine, one machine with GPU and a total of 15TB storage.
+This is an example of a machine learning lab with mixed activities that require data storage, computational power and graphical accelerators. 
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| Data space | WHITE | 1 year | 0 | 1 | 0 |
-| Lab | | 1 year | 5785 | 1 | 5785 |
-| Compute | default.b2 | 1 year | 4646 | 1 | 4646 |
-| Compute | default.d3 | 1 year | 21239 | 1 | 21239 |
-| Compute | NVIDIA V100 | 1 year | 28592 | 1 | 28592 |
-| Store | First 10 TB | 1 year | 2331 | 10 | 23310 |
-| Store | Next 5 TB | 1 year | 1665 | 5 | 8325 |
-| **PER YEAR** |  | | |  | **91897** |
+| ---- | ---- | ---- | ----: | ----: | ----: |
+| Lab | subscription | 1 year | 9354 | 1 | 9354 |
+| Compute | [default.c1](/administer-science/services/machine-types#c-series) | 1 year | 5360 | 1 | 5360 |
+| Compute | [default.d3](/administer-science/services/machine-types#d-series) | 1 year | 28748 | 1 | 28748 |
+| Compute | [nvidia.l40s](/administer-science/services/machine-types#gpu-accelerator-types) | 1 year | 23425 | 1 | 23425 |
+| Store | 10 TB regular storage | 1 year | 2844 | 10 | 28440 |
+| Store | 5 TB speed-optimized storage | 1 year | 5524 | 10 | 27625 |
+| **PER YEAR** |  | | |  | **122478** |
 
-As the others examples, this includes a free data space and one lab. The compute resources are split in two machines: a smaller home machine (default.b2) for data handling and day-to-day activities, and a larger machine (default.d3) that has attached one enterprise GPU card. You need to extra machine to obtain administrator privileges. The 15 TB total storage in the lab is priced in the first two storage tiers with a reduced priced for the TB's above 10 TB. The mean storage price in the example is 2109.
-
+The above example establishes your own lab in HUNT Cloud. The compute resources are split in two machines: a smaller home machine (default.c1 with 2 vCPU and 8 GB memory) for data handling and day-to-day activities, and a larger machine (default.d3 with 8 vCPU and 64 GB memory) that has attached one enterprise GPU card (NVIDIA L40S with 48 GB memory). The lab holds 10 TB regular storage for archive and 5 TB of speed-optimized storage (NVMe) for the GPU machine. The cost may be reduced by using on-demand compute resources when GPU.
 
 
+## Data archives
 
-
-
-### Data archives
-
-This configuration exemplifies a large data archive, such as a biobank or image archive that manages data for reuse. The activity inside the lab would typically be data import, intensive quality control at the time of data arrivals, compression and other preservation activities and data exports. The configuration exemplifies a data archive holding a total of 150 TB with intensified quality control a total of 90 days of the year.
+This is an example of a large data archive, such as a biobank or image archive that manages data for reuse. The configuration exemplifies a data archive holding 200 TB of data with 90 days of intensive data quality control per year.
 
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| Data space | WHITE | 1 year | 0 | 1 | 0 |
-| Lab | | 1 year | 5785 | 1 | 5785 |
-| Compute | default.b2 | 1 year | 4646 | 1 | 4646 |
-| Compute | default.b5 | Days | 112.02 | 90 | 10082 |
-| Store | First 10 TB | 1 year | 2331 | 10 | 23310 |
-| Store | Next 90 TB | 1 year | 1665 | 90 | 149850 |
-| Store | Over 100 TB | 1 year | 1266 | 50 | 63300 |
-| **PER YEAR** |  | | |  | **256973** |
+| ---- | ---- | ---- | ----: | ----: | ----: |
+| Lab | subscription | 1 year | 9354 | 1 | 9354 |
+| Compute | [default.c1](/administer-science/services/machine-types#c-series) | 1 year | 5360 | 1 | 5360 |
+| Compute | [default.b4](/administer-science/services/machine-types#b-series) | 1 day | 52.25 | 90 | 4702 |
+| Store | First 10 TB regular storage | 1 year | 2844 | 10 | 28440 |
+| Store | Next 90 TB regular storage | 1 year | 2188 | 90 | 196920 |
+| Store | Next 100 TB regular storage | 1 year | 1641 | 100 | 164100 |
+| **PER YEAR** |  | | |  | **408876** |
 
-The above examples gives you one free data space and one lab with a home machine intended for data archiving and transfers. On-demand compute resources is consumed for a total of 90 days. The storage price is calculated across all storage tiers in the the price list ending at a mean price of 1576 per TB. The total cost may be reduced by for example tailored preservation strategies utilizing tapes for duplicate copies.
+The above examples gives you a lab with a home machine intended for basic data activities. On-demand compute resources is allocated for 90 days for intensive quality control activities. 
 
--->
+Storage above 10 TB obtains a volume discounts ending at a mean TB price of NOK 1947. The total cost may be significantly reduced by initiating a layered preservation strategies that utilizes tapes for duplicate copies.
+
+
 
 <!-- 
 
