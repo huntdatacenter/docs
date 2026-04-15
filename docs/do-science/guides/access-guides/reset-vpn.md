@@ -177,6 +177,16 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
 ::: expander Ubuntu linux {#4-linux}
 
+
+<!-- 
+
+1. Open "Settings", for example by clicking the "settings icon" in the top right corner of your screen.
+2. Click on the "Network" menu.
+3. Click on the "+" sign on the right of "VPN" (Add VPN).
+4. Click "Import from file..." in the menu.
+
+-->
+
 1. Click on the _Network Manager_ icon in the task bar.
 2. Select _Edit Connections..._.
 3. Click _Add_.

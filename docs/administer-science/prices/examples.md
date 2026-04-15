@@ -16,7 +16,7 @@ For the record, all prices in the examples are listed as VAT exclusive in NOK fr
 
 ::: tip Estimate your specific cost
 
-Head over to our [pricing calculator](/administer-science/prices/calculator) to estimate the cost for your specific scientific environment, and do not hesitate to [contact us](/contact) for assistance.
+Head over to our [pricing calculator](/administer-science/prices/estimator) to estimate the cost for your specific scientific environment, and do not hesitate to [contact us](/contact) for assistance.
 
 :::
 
@@ -25,18 +25,19 @@ Head over to our [pricing calculator](/administer-science/prices/calculator) to 
 
 Let's start with a few examples of prices for individual labs configured for common experiments. Depending on your data space subscription and cost optimization configuration, the listed prices may be reduced.
 
-### Explore basic
+### Epidemiology
 
-Let's start with our default lab for sensitive data discoveries for teams of 2-3 scientists. The lab size is tailored for data analysis of structured data such as health registries and survey data that you collect.
+This is the smallest lab size tailored for data analysis of structured data such as health registries and survey data that you collect.
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- |
-| Lab | subscription | 1 year | 5823 | 1 | 5823 |
-| Compute | default.c1 | 1 year | 3553 | 1 | 3553 |
-| Store | 1 terabyte | 1 year | 2376 | 1 | 2376 |
-| **PER YEAR** |  | | |  | **11752** |
+| Lab | subscription | 1 year | 9354 | 1 | 9354 |
+| Compute | default.c1 | 1 year | 5360 | 1 | 5360 |
+| Store | 1 terabyte | 1 year | 2844 | 1 | 2844 |
+| **PER YEAR** |  | | |  | **17558** |
 
 The above example establishes your own lab in HUNT Cloud with access to commonly used tools in HUNT Workbench. Your lab holds sufficient resources for analysis for a small team. Both compute and store can easily be upgraded as your experiments grow.
+
 
 
 ### Genomics
@@ -45,13 +46,15 @@ Next up is a typical lab for genomics analysis. Let's assume you need a lab to s
 
 | Service | Description | Type | Cost/unit | Units | Total cost |
 | ---- | ---- | ---- | ---- | ---- | ---- |
-| Data space | WHITE | 1 year | 0 | 1 | 0 |
-| Lab | | 1 year | 5823 | 1 | 5823 |
-| Compute | default.b5 | 1 year | 29829 | 1 | 29829 |
-| Store | 10 terabytes | 1 year | 2376 | 10 | 23760 |
-| **PER YEAR** |  | | |  | **59412** |
+| Lab | | 1 year | 9354 | 1 | 9354 |
+| Compute | default.b5 | 1 year | 41462 | 1 | 41462 |
+| Store | 10 terabytes | 1 year | 2844 | 10 | 28440 |
+| **PER YEAR** |  | | |  | **79256** |
 
-The above example gives you a free data space and one lab, a powerful machine fit for many analysis, and storage capacity to both experiment and archive larger data sets. The cost can be reduced by for example reducing the compute size in day-to-day activities and then upgrade to larger on-demand machines in analysis intensive periods.
+The above example establishes one lab, a reasonable powerful machine fit for many analysis, and storage capacity to both experiment and archive larger data sets. The cost can be reduced by for example reducing the compute size in day-to-day activities and then upgrade to larger on-demand machines in analysis intensive periods.
+
+
+<!-- 
 
 ### Machine learning
 
@@ -93,9 +96,9 @@ This configuration exemplifies a large data archive, such as a biobank or image 
 
 The above examples gives you one free data space and one lab with a home machine intended for data archiving and transfers. On-demand compute resources is consumed for a total of 90 days. The storage price is calculated across all storage tiers in the the price list ending at a mean price of 1576 per TB. The total cost may be reduced by for example tailored preservation strategies utilizing tapes for duplicate copies.
 
+-->
 
-
-
+<!-- 
 
 
 ## Lab portfolios
@@ -168,4 +171,4 @@ The last example is for a portfolio of five labs tailored for machine learning: 
 
 This data space is on the ORANGE subscription with five labs. The home machines is a combination of smaller machine types: default.b1 (storage) and default.b2 (others). The labs rely on additional machines for its GPU activity. The day-to-day lab include one additional permanent machine (default.d3) with one GPU card, while the labs aimed for external collaborations deploy on-demand machines with GPUs for various periods of the year. The 30 TB storage is split on the two first storage tiers with a mean cost of  1887 per TB.
 
-
+-->
