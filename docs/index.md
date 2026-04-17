@@ -43,10 +43,10 @@ const cards = [
 
 const bottomCards = [
   {
-    id: 'card4',
-    title: 'About HUNT Cloud',
-    href: 'https://about.hdc.ntnu.no/',
-    description: 'HUNT Cloud is shaped by a small team of scientific instrument makers. Read more about the thinking and team behind HUNT Cloud.',
+    id: 'card5',
+    title: 'Order a new lab',
+    href: 'https://docs.hdc.ntnu.no/administer-science/service-desk/data-space-orders#new-lab',
+    description: 'Click here to order a new lab in HUNT Cloud.',
   },
   {
     id: 'mascot',
@@ -56,10 +56,10 @@ const bottomCards = [
     isMascot: true
   },
   {
-    id: 'card5',
-    title: 'Scientific products',
+    id: 'card4',
+    title: 'About',
     href: 'https://about.hdc.ntnu.no/',
-    description: 'Explore and evolve. See the main HUNT Cloud page for information on HUNT Cloud\'s scientific products and services.',
+    description: 'Read more about HUNT Cloud and our services.',
   }
 ];
 
