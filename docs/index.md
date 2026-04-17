@@ -57,7 +57,7 @@ const bottomCards = [
   },
   {
     id: 'card4',
-    title: 'About',
+    title: 'About HUNT Cloud',
     href: 'https://about.hdc.ntnu.no/',
     description: 'Read more about HUNT Cloud and our services.',
   }
