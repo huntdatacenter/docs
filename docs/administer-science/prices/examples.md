@@ -66,7 +66,7 @@ This is an example of a machine learning lab with mixed activities that require 
 | Store | 2 TB speed-optimized storage | 1 year | 5524 | 2 | 11048 |
 | **PER YEAR** |  | | |  | **110613** |
 
-The above example establishes your own lab in HUNT Cloud. The compute resources are split in two machines: a smaller home machine (default.c1 with 2 vCPU and 8 GB memory) for data handling and day-to-day activities, and a larger machine (default.d3 with 8 vCPU and 64 GB memory) that has attached one enterprise GPU card (NVIDIA L40S with 48 GB memory). The lab holds 10 TB regular storage for archive and 5 TB of speed-optimized storage (NVMe) for the GPU machine. The cost may be reduced by using on-demand compute resources when GPU.
+The above example establishes your own lab in HUNT Cloud. The compute resources are split in two machines: a smaller home machine (default.c1 with 2 vCPU and 8 GB memory) for data handling and day-to-day activities, one of the most typical machines used for machine learning (default.c4 with 16 vCPU and 64 GB memory) that has attached one commonly used enterprise GPU card (NVIDIA L40S with 48 GB memory). The lab holds 10 TB regular storage for archive and 2 TB of speed-optimized storage (NVMe) for the GPU machine. The cost may be reduced by using on-demand compute resources when you need the GPU resources.
 
 
 ## Data archives
