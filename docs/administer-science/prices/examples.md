@@ -60,11 +60,11 @@ This is an example of a machine learning lab with mixed activities that require 
 | ---- | ---- | ---- | ----: | ----: | ----: |
 | Lab | subscription | 1 year | 9354 | 1 | 9354 |
 | Compute | [default.c1](/administer-science/services/machine-types#c-series) | 1 year | 5360 | 1 | 5360 |
-| Compute | [default.d3](/administer-science/services/machine-types#d-series) | 1 year | 28748 | 1 | 28748 |
+| Compute | [default.c4](/administer-science/services/machine-types#c-series) | 1 year | 32986 | 1 | 32986 |
 | Compute | [nvidia.l40s](/administer-science/services/machine-types#gpu-accelerator-types) | 1 year | 23425 | 1 | 23425 |
 | Store | 10 TB regular storage | 1 year | 2844 | 10 | 28440 |
-| Store | 5 TB speed-optimized storage | 1 year | 5524 | 10 | 27625 |
-| **PER YEAR** |  | | |  | **122478** |
+| Store | 2 TB speed-optimized storage | 1 year | 5524 | 2 | 11048 |
+| **PER YEAR** |  | | |  | **110613** |
 
 The above example establishes your own lab in HUNT Cloud. The compute resources are split in two machines: a smaller home machine (default.c1 with 2 vCPU and 8 GB memory) for data handling and day-to-day activities, and a larger machine (default.d3 with 8 vCPU and 64 GB memory) that has attached one enterprise GPU card (NVIDIA L40S with 48 GB memory). The lab holds 10 TB regular storage for archive and 5 TB of speed-optimized storage (NVMe) for the GPU machine. The cost may be reduced by using on-demand compute resources when GPU.
 
