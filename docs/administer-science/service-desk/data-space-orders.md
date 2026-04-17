@@ -26,15 +26,15 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 ### New lab
 
-Click the button below to order a new lab under your existing data space.
+Click the button below to order a new lab.
 
 <SDButton form="request_new_lab" />
 
-* **Who can order:** Data space leaders and data space compliance administrators in active data spaces, and lab leader for new labs.
-* **Required attachment**: [A signed lab order](/administer-science/agreements/downloads#lab-order), information on storage volume sizes and machine type for the home machine (see below) and [an invoice profile](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-invoice-profile.pdf).
+* **Who can order:** Lab leaders.
+* **Required attachment**: [A signed lab order](/administer-science/agreements/downloads#lab-order) that includes invoice information, information on storage volume sizes and machine type for the home machine (see below).
 * **Expected delivery time:** One week.
 * **Next step**: [Add your first lab users](/administer-science/service-desk/lab-orders.html#add-a-new-lab-user).
-* **Cost:** One lab subscription as specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
+* **Cost:** One lab subscription with attached compute and storage costs as specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
 
 ::: warning Next: Add your first lab user(s)
 

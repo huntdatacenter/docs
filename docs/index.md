@@ -45,7 +45,7 @@ const bottomCards = [
   {
     id: 'card5',
     title: 'Order a new lab',
-    href: 'https://docs.hdc.ntnu.no/administer-science/service-desk/data-space-orders#new-lab',
+    href: '/administer-science/service-desk/data-space-orders#new-lab',
     description: 'Click here to order a new lab in HUNT Cloud.',
   },
   {
