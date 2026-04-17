@@ -146,6 +146,14 @@ Other potential issue might be full disk space in your `work` directory. You can
 df -h /mnt/work
 ```
 
+#### Solution 3
+
+Confirm that you have a working R environment:
+
+```bash
+ls -la "/mnt/work/workbench/${USER}/.conda/envs/r-base/bin/R"
+```
+
 ## MATLAB
 
 ### Error - 'matlab' executable not found in PATH
