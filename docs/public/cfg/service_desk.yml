@@ -788,7 +788,7 @@ request_lab_transfer:
 request_organizational_access:
   title: "Request organizational access to HUNT Cloud"
   template:
-    subject: "New organizational access - {organization}"
+    subject: "Organizational access request - {organization}"
     body: |
       Hi HUNT Cloud team,
 
