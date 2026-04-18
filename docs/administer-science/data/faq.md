@@ -216,7 +216,7 @@ Celebrate the success if you are able to successfully export a file, or [contact
 
 ### Lab deletions
 
-When you end your lab subscription, all machine and data stored in your lab will be deleted. This includes backups that we hold on our systems. You will receive a written confirmation when all your data is gone from our systems. [Order a lab deletion](/administer-science/service-desk/data-space-orders#delete-lab
+When you end your lab subscription, all machine and data stored in your lab will be deleted. This includes backups that we hold on our systems. You will receive a written confirmation when all your data is gone from our systems. [Order a lab deletion](/administer-science/service-desk/lab-orders#delete-lab
 ) under "Data space order" in the administer data service desk.
 
 ### Machine deletions

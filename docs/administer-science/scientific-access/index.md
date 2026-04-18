@@ -73,7 +73,7 @@ Your lab leader or lab coordinator chooses the initial size of the home machine 
 
 **There are a set of small decisions that needs to be made to get your first lab up and running. We are more than happy to help and guide in this process.**
 
-Skip this step if you already have an active Data space in place and order your new lab directly in our [administer science service desk](/administer-science/service-desk/data-space-orders#new-lab).
+Skip this step if you already have an active Data space in place and order your new lab directly in our [administer science service desk](/administer-science/service-desk/lab-orders#new-lab).
 
 
 ::: details Data space order decision support

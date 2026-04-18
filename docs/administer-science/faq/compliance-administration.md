@@ -21,13 +21,13 @@ See our [Administer science FAQ](/administer-science/faq/) for supplemental admi
 
 ### How can we add a new lab to our existing data space?
 
-In short, the compliance administrator sends us a signed lab order and coordinate signed user agreements between your lab leader and your individual lab users. Head over to our [administrative service desk](/administer-science/service-desk/data-space-orders#new-lab)-pages for more information on the process.
+In short, the compliance administrator sends us a signed lab order and coordinate signed user agreements between your lab leader and your individual lab users. Head over to our [administrative service desk](/administer-science/service-desk/lab-orders#new-lab)-pages for more information on the process.
 
 ### How can we split one lab into two labs?
 
 As science grows inside your individual labs you may see the need to move part of this activity over to a new lab for example due to compliance issues separating data and lab users. Technically we don't split labs but add new ones. To add a new lab to your data space:
 
-- send us a [new lab order](/administer-science/service-desk/data-space-orders.html#new-lab) and coordinate new lab user agreements between your lab leader and individual lab users in the new lab;
+- send us a [new lab order](/administer-science/service-desk/lab-orders#new-lab) and coordinate new lab user agreements between your lab leader and individual lab users in the new lab;
 - evaluate if you need to deactivate some users in your original lab after the move, and [request user deactivation](/administer-science/service-desk/lab-orders.html#deactivate-lab-user) in your original lab if relevant.
 - consider how you will transfer data into your new lab, for example by ordering an [internal kista](/administer-science/agreements/downloads#external-kista-import-order) from your original to your new lab.
 

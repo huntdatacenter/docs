@@ -74,11 +74,11 @@ We have a clear intention to ship quarterly invoices with shipments approximatel
 
 ### Can we have several invoice profiles under our data space?
 
-Yes, you can add separate invoice profiles for individual labs under your data space in the data space management section of our administrative [service desk](/administer-science/service-desk/data-space-orders#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile.
+Yes, you can add separate invoice profiles for individual labs under your data space in the data space management section of our administrative [service desk](/administer-science/service-desk/lab-orders#new-invoice-profile). All accrued costs for the specified labs (one or more) will then be invoiced to the new profile.
 
 ### How can we update the account information on the invoice profile?
 
-You may update existing invoice profiles in the data space management section of our [service desk](/administer-science/service-desk/data-space-orders#update-existing-invoice-profile).
+You may update existing invoice profiles in the data space management section of our [service desk](/administer-science/service-desk/lab-orders#update-existing-invoice-profile).
 
 ### We are invoiced too much, now what?
 

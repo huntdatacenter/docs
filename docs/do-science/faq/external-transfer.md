@@ -17,7 +17,7 @@ This page lists frequently asked questions related to external transfers in labs
 
 ### Can parties outside HUNT Cloud upload data to my lab?
 
-Yes. Parties outside HUNT Cloud can upload data to your lab utilizing our [external kista import service](/administer-science/service-desk/data-space-orders#external-import-kista). You can also make data available for parties outside HUNT Cloud via the [external kista export service](/administer-science/service-desk/data-space-orders#external-export-kista).
+Yes. Parties outside HUNT Cloud can upload data to your lab utilizing our [external kista import service](/administer-science/service-desk/lab-orders#external-import-kista). You can also make data available for parties outside HUNT Cloud via the [external kista export service](/administer-science/service-desk/lab-orders#external-export-kista).
 
 ### What is an external kista?
 
@@ -25,7 +25,7 @@ External kista is our service for controlled data transfers between your lab and
 
 ### How do I order an external kista?
 
-Data space leaders and Data space compliance administrators can order [external import kistas](/administer-science/service-desk/data-space-orders#external-import-kista) and [external export kistas](/administer-science/service-desk/data-space-orders#external-export-kista) in our service desk.
+Data space leaders and Data space compliance administrators can order [external import kistas](/administer-science/service-desk/lab-orders#external-import-kista) and [external export kistas](/administer-science/service-desk/lab-orders#external-export-kista) in our service desk.
 
 ### Is there any technical requirements for the external party?
 
@@ -93,7 +93,7 @@ Yes. We do allow two-way data transactions between your lab and machines outside
 
 ### How do I request a network opening?
 
-Data space leaders and data space compliance administrators can order network openings in our [service desk](/administer-science/service-desk/data-space-orders#network-opening). We use this order to document outbound traffic from your lab.
+Data space leaders and data space compliance administrators can order network openings in our [service desk](/administer-science/service-desk/lab-orders#network-opening). We use this order to document outbound traffic from your lab.
 
 ### Why do I need authorization from my data space leader?
 
