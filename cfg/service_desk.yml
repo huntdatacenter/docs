@@ -170,7 +170,7 @@ request_new_lab:
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request a new lab under our data space.
+      I would like to request a new lab.
 
       I have attached a signed lab agreement to this email.
 
@@ -207,10 +207,14 @@ request_new_lab:
         autocapitalize: "off",
         field: "textfield",
       },
-      { label: "Data space name", key: "data_space", pattern: "[-a-z0-9]{3,}", hint: "Data space name should include only letters a-z, 0-9, or dot.", field: "textfield" },
-      # { label: "Machine type", key: "machine_type", default: "default.b2", pattern: "(default).[a-z][0-9]", hint: "Machine type should include only lowercase letters a-z, 0-9, or dash.", autocapitalize: "off", field: "textfield" },
+      { label: "Data space name", 
+        key: "data_space", 
+        pattern: "[-a-z0-9]{3,}", 
+        hint: "Data space name should include only letters a-z, 0-9, or dot.", 
+        field: "textfield" 
+      },
       {
-        label: "Machine type",
+        label: "Machine type (c1 is default)",
         key: "machine_type",
         default: "default.c1",
         field: "autocompleteone",
@@ -259,7 +263,7 @@ request_new_lab:
       {
         label: "Archive storage size (in gigabytes)",
         key: "archive_volume",
-        hint: "Field should include only numbers",
+        hint: "Field should include only numbers.",
         suffix: "GB",
         min: 100,
         max: 25000,
@@ -292,8 +296,8 @@ request_new_lab:
     ]
   requirements:
     [
-      "<b>Who can order:</b> Data space leaders and data space compliance coordinators in active <a href='/administer-science/scientific-access/#data-space-order' target='_blank'>data spaces</a>.",
-      "<b>Required attachment:</b> <a href='/administer-science/agreements/downloads/#invoice-profile' target='_blank'>Invoice profile for new lab</a> and <a href='/administer-science/agreements/downloads/#lab-order' target='_blank'>a signed lab order</a>. Information on storage volume sizes and machine type for the home machine can be found below button on main page.",
+      "<b>Who can order:</b> Anyone affiliated with an organization that holds active organizational agreements with HUNT Cloud.",
+      "<b>Required attachment:</b><a href='/administer-science/agreements/downloads/#lab-order' target='_blank'>A signed lab order with an invoice profile attached</a>. Information on storage volume sizes and machine type for the home machine.",
       "<b>Expected delivery time:</b> One week.",
       "<b>Cost:</b> One lab subscription as specified in the <a href='/administer-science/services/specifications/' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/' target='_blank'>Price list</a>.",
       "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
