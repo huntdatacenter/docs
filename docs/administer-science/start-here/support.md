@@ -36,5 +36,4 @@ We encourage all users to join and voice their opinions in the four Tings: "Lab 
 
 - [Do science service desk](/do-science/service-desk/) for lab users.
 - [Administer science service desk](/administer-science/service-desk/) for lab administrators.
-- [Govern science service desk](/govern-science/service-desk/) for organizations.
 - [HUNT Cloud Tingweeks](/govern-science/tingweek/)

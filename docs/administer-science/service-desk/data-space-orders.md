@@ -20,6 +20,35 @@ It saves you time to send us the request from your **organizational email**. We 
 
 Send us a regular [email](/contact) with your request if you can't find what you are looking for on the this page.
 
+## Data space management
+
+
+### New data space
+
+Click the button below to order a new data space under your existing service center.
+
+<SDButton form="new_data_space" />
+
+* **Guide:** [Scientific access](/administer-science/scientific-access/)
+* **Who can order:** Service center leaders and administrative contacts for service centers.
+* **Required attachment**: [A signed Scientific Access Order](/administer-science/scientific-access/#order-scientific-access).
+* **Expected delivery time:** Days.
+* **Next step:** [Add a new lab user](/administer-science/service-desk/lab-orders#add-a-new-lab-user) by Lab leaders.
+* **Cost:** There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
+
+### Transfer labs between data spaces
+
+You can transfer a lab between two data spaces by filling form below.
+
+<SDButton form="request_lab_transfer" />
+
+* **Who can order:** Data space leaders and compliance administrators
+* **Required attachment**: A [signed lab transfer agreement](/administer-science/agreements/downloads#lab-transfer-order).
+* **Optional attachment**: A [signed invoice agreemnent](/administer-science/agreements/downloads#invoice-profile)
+* **Expected response time:** Days.
+* **Expected delivery:** A lab transferred to a new data space with updated inovice profile.
+* **Cost:** Included in your lab subscription.
+
 
 
 ## Lab management
@@ -98,19 +127,6 @@ Click the button below to order a lab deletion of an active lab under your data 
 Once your lab data is deleted it can not be recreated. You must ensure that you have exported all data that you intend to preserve from the lab -before- you order the lab deletion. [Contact us](/contact) if you need guidance with this work.
 
 :::
-
-### Transfer labs between data spaces
-
-You can transfer a lab between two data spaces by filling form below.
-
-<SDButton form="request_lab_transfer" />
-
-* **Who can order:** Data space leaders and compliance administrators
-* **Required attachment**: A [signed lab transfer agreement](/administer-science/agreements/downloads#lab-transfer-order).
-* **Optional attachment**: A [signed invoice agreemnent](/administer-science/agreements/downloads#invoice-profile)
-* **Expected response time:** Days.
-* **Expected delivery:** A lab transferred to a new data space with updated inovice profile.
-* **Cost:** Included in your lab subscription.
 
 
 ## Data transfers
@@ -257,7 +273,7 @@ Don't find what you are looking for on the predefined orders above? Don't you wo
 
 ::: warning General responses are slower
 
-Note that a general request has slower response time than a predefined order. If you don't find what you are looking for here, it might be good to invest some time investigating options in our [do science](/do-science/service-desk/) and [govern science](/govern-science/service-desk/) service desk.
+Note that a general request has slower response time than a predefined order. If you don't find what you are looking for here, it might be good to invest some time investigating options in our [do science](/do-science/service-desk/) service desk.
 
 :::
 

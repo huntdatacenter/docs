@@ -25,14 +25,14 @@ This is the expected time from you send us a request and until we replay that we
 
 * **Data disruption events**. Immediate responses are to be expected for data disruption events.
 * **Service disruption events**. Rapid responses within the same working days are to be expected for disruption of available services.
-* **Service desk orders**. Automated response within the same working day are to be expected for predefined orders placed in our [do science service desk](/do-science/service-desk/), [administer science service desk](/administer-science/service-desk/) and [govern science service desk](/govern-science/service-desk/).
+* **Service desk orders**. Automated response within the same working day are to be expected for predefined orders placed in our [do science service desk](/do-science/service-desk/) and [administer science service desk](/administer-science/service-desk/).
 * **Email requests**. Expected response times for regular [email requests](/contact) in three to five working days.
 
 ## Delivery times
 
 This is the expected time from we register your request and until we deliver your order.
 
-* **Service desk orders**. Delivery times for predefined service orders are defined in our [do science service desk](/do-science/service-desk/), [administer science service desk](/administer-science/service-desk/) and [govern science service desk](/govern-science/service-desk/). Delivery times varies from days to one week.
+* **Service desk orders**. Delivery times for predefined service orders are defined in our [do science service desk](/do-science/service-desk/) and [administer science service desk](/administer-science/service-desk/). Delivery times varies from days to one week.
 * **Email requests**. Delivery varies with your request. Contact us for estimates.
 
 

@@ -802,6 +802,10 @@ function sidebarAdministerScience() {
           text: "Data space orders",
           link: "/administer-science/service-desk/data-space-orders",
         },
+        {
+          text: "Organizational orders",
+          link: "/administer-science/service-desk/organizational-orders",
+        },
       ],
     },
     {
@@ -1139,25 +1143,6 @@ function sidebarGovernScience() {
         {
           text: "FAQ",
           link: "/govern-science/risk-management/faq",
-        },
-      ],
-    },
-    {
-      text: "Service desk",
-      collapsed: true,
-      link: "/govern-science/service-desk/",
-      items: [
-        {
-          text: "Introduction",
-          link: "/govern-science/service-desk/",
-        },
-        {
-          text: "Service center orders",
-          link: "/govern-science/service-desk/service-center-orders",
-        },
-        {
-          text: "Data controller orders",
-          link: "/govern-science/service-desk/data-controller-orders",
         },
       ],
     },

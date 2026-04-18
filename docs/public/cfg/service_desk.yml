@@ -779,89 +779,35 @@ request_lab_transfer:
 
 ### Data Controller Orders
 
-request_new_dp_agreement:
-  title: "Request a new data processor agreement template"
+
+
+request_organizational_access:
+  title: "Request organizational access to HUNT Cloud"
   template:
-    subject: "Data processor agreement request - {organization}"
+    subject: "New organizational access - {organization}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request a data processor agreement template for review.
+      I would like to request organizational access for {organization}.
 
-      I have attached the data processor agreement for to this email.
+      I have attached a completed organizational access request form to this email.
 
-      I am looking forward to get the data processor agreement template on email, and to continue our dialogue on screen.
-
-
-      Best regards,
-  fields: [{ label: "Organization", key: "organization", field: "textfield" }]
-  requirements:
-    [
-      "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going as a data controller</a>.",
-      "<b>Who can request:</b> Data controllers for data inteded to be processed in HUNT Cloud.",
-      "<b>Required attachment</b>: <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a>.",
-      "<b>Expected delivery:</b> PDF agreements for review/signatures.",
-      "<b>Expected delivery time:</b> One week.",
-      "<b>Cost:</b> There is no direct cost for data controllers establishing data processor agreements. Resource consumptions are billed to attached data spaces and labs.",
-      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
-    ]
-  attachments: [HUNT Cloud organizational agreement information form. (.pdf)]
-
-request_new_service_center:
-  title: "Request a new service center"
-  template:
-    subject: "New service center order - {datacontroller}"
-    body: |
-      Hi HUNT Cloud team,
-
-      I would like to request a new service center under our data controller agreement.
-
-      I have attached a signed service center agreement form to this email.
-
-      I am looking forward to get the service center agreement on email, and to continue our dialogue on screen.
-
+      I am looking forward to receive the Data processor agreement and Services agreement for signature.
 
       Best regards,
 
-  fields: [{ label: "Data controller", key: "datacontroller", autocapitalize: "off", field: "textfield" }]
+  fields: [{ label: "Organization", key: "organization", autocapitalize: "off", field: "textfield" }]
   requirements:
     [
-      "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going with your service center </a>",
-      "<b>Who can order:</b> Data space leaders and data space administrators under active data controller agreements.",
-      "<b>Required attachment</b>: <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a>.",
+      "<b>Who can order:</b> Representatives for the organizational unit that request access.",
+      "<b>Required attachment</b>: <a href='/administer-science/agreements/downloads#organizational-access-request-form' target='_blank'>HUNT Cloud organizational access request form</a>.",    
       "<b>Expected delivery:</b> PDF agreements for review/signatures.",
       "<b>Expected delivery time:</b> One week.",
-      "<b>Cost:</b> There is no direct cost for a service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
+      "<b>Cost:</b> None.",
       "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments: [HUNT Cloud organizational agreement information form. (.pdf)]
+  attachments: [HUNT Cloud organizational access request form (.pdf)]
 
-request_dp_agreement_version_upgrade:
-  title: "Request data processor agreement version upgrade"
-  template:
-    subject: "Data processor agreement upgrade - {organization}"
-    body: |
-      Hi HUNT Cloud team,
-
-      I would like to request to an upgraded data processor agreement for our organization.
-
-      I am looking forward to get the data processor agreement on email, and to continue our dialogue on screen.
-
-
-      Best regards,
-
-  fields: [{ label: "Organization", key: "organization", field: "textfield" }]
-  requirements:
-    [
-      "<b>Guide:</b> <a href='/govern-science/organizational-access/' target='_blank'>Get going as a data controller</a>",
-      "<b>Who can request:</b> Data controller administrators.",
-      "<b>Required attachment</b>: None, although you may add a new <a href='/govern-science/organizational-access/#request-organizational-agreements' target='_blank'>HUNT Cloud organizational agreement information form</a> if you plan to update your contact information.",
-      "<b>Expected delivery:</b> PDF agreements for review/signatures.",
-      "<b>Expected delivery time:</b> One week.",
-      "<b>Cost:</b> There is no direct cost upgrading data processor agreements.",
-      "<b>We care about your privacy.</b> Read our <a href='https://docs.hdc.ntnu.no/govern-science/privacy-statement/#privacy-statement-for-services-users' target='_blank'>privacy statement</a> to learn how we process your personal data when you send us a request.",
-    ]
-  attachments: ["Optional: attach a new HUNT Cloud organizational agreement information (.pdf)"]
 
 ### Lab orders
 
@@ -1346,8 +1292,10 @@ request_new_gpu:
             { text: "NVIDIA a30 24G", value: "a30.24g" },
             { text: "NVIDIA a40 48G", value: "a40.48g" },
             { text: "NVIDIA l40s 48G", value: "l40s.48g" },
+            { text: "NVIDIA l40s 48G", value: "l40s.48g" },
             { text: "NVIDIA a100 40G", value: "a100.40g" },
             { text: "NVIDIA a100 80G", value: "a100.80g" },
+            { text: "NVIDIA RTX PRO 6000 96G", value: "rtx.pro.6000.96g" },
           ],
       },
       { label: "How many GPUs?", key: "gpu_amount", field: "autocompleteone", options: [{ text: "1", value: "1" }, { text: "2", value: "2" }] },

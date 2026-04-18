@@ -457,7 +457,7 @@ Don't find what you are looking for on the predefined orders above? Don't you wo
 
 ::: warning General responses are slower
 
-Note that a general request has slower response time than a predefined order. If you don't find what you are looking for here, it might be good to invest some time investigating options in our [do science](/do-science/service-desk/) and [govern science](/govern-science/service-desk/) service desk.
+Note that a general request has slower response time than a predefined order. If you don't find what you are looking for here, it might be good to invest some time investigating options in our [do science](/do-science/service-desk/) service desk.
 
 :::
 

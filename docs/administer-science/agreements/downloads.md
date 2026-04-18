@@ -142,10 +142,9 @@ This agreements are to be signed by the Service center leader or Service center 
 
 **Request a data space**
 
-Send us your signed agreement utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders#new-data-space).
+Send us your signed agreement utilizing the blue button in the service center section of our [service desk](/administer-science/service-desk/data-space-orders#new-data-space).
 
 :::
-
 
 
 ## Invoice profile
@@ -210,7 +209,7 @@ Invoice profiles are signed by Account signatory. This is the individual that is
 
 **Activation**
 
-Send us your signed invoice profile together with your data space order utilizing the blue button in the service center section of our [service desk](/govern-science/service-desk/service-center-orders#new-data-space).
+Send us your signed invoice profile together with your data space order utilizing the blue button in the service center section of our [service desk](/administer-science/service-desk/data-space-orders#new-invoice-profile).
 
 :::
 
@@ -561,6 +560,24 @@ The following form fields are included in the "HUNT Cloud Data Deletion Order" v
 **Confirmation of deletion by HUNT Cloud**
 
 Leave these fields blank. We will return the order with signatures when the data is deleted.
+
+:::
+
+
+
+
+
+## Organizational access request form
+
+[HUNT Cloud organizational access request form](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-organizational-access-request-form.pdf) (pdf)
+
+This form contain information that we will use to generate the Data processor agreement and Services agreement between your organization and HUNT Cloud.
+
+::: details Clarification of the form fields
+
+The following form fields are included in the "HUNT Cloud organizational access request form" version 1.0.
+
+Field descriptions are included in the PDF.
 
 :::
 
