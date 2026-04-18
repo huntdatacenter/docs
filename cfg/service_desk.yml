@@ -557,7 +557,7 @@ update_data_space_administrator_role:
   attachments: []
 
 request_lab_leader_role:
-  title: "Request update of lab leader role"
+  title: "Request update of lab leader"
   template:
     subject: "Update lab leader role - {labname} in {dataspace}"
     body: |
