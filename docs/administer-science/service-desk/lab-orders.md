@@ -32,12 +32,13 @@ Send us a regular [email](/contact) with your request if you can't find what you
 
 ### New lab
 
-Click the button below to order a new lab.
+We are happy to see your science fly! 🚀 Click the button below to order a new lab in HUNT Cloud.
 
 <SDButton form="request_new_lab" />
 
-* **Who can order:** Lab leaders.
-* **Required attachment**: [A signed lab order](/administer-science/agreements/downloads#lab-order) that includes invoice information, information on storage volume sizes and machine type for the home machine (see below).
+* **Who can order:** Anyone affiliated with an organization that holds active organizational agreements with HUNT Cloud. [Contact us](/contact) to ask if your organization is active or [request organizational access](/administer-science/service-desk/organizational-orders#request-organizational-access-to-hunt-cloud).
+* **Required attachment**: [A signed lab order](/administer-science/agreements/downloads#lab-order) that includes invoice information. Information on storage volume sizes and the machine type for your home machine in the order text (see below).
+* **Expected response time:** Days.
 * **Expected delivery time:** One week.
 * **Next step**: [Add your first lab users](/administer-science/service-desk/lab-orders.html#add-a-new-lab-user).
 * **Cost:** One lab subscription with attached compute and storage costs as specified in the [Services specifications](/administer-science/services/specifications) and [Price list](/administer-science/prices/pricelist).
