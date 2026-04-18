@@ -102,6 +102,16 @@ Once your lab data is deleted it can not be recreated. You must ensure that you 
 :::
 
 
+### Update lab leader
+
+Click the button below to update lab leader roles for labs attached to your data space.
+
+<SDButton form="request_lab_leader_role" />
+
+* **Who can order:** Data space leaders and data space compliance officers.
+* **Required attachment**: A new [signed lab order](/administer-science/agreements/downloads#lab-order).
+* **Expected delivery time:** Days.
+* **Cost:** Included in your data space subscription.
 
 
 
