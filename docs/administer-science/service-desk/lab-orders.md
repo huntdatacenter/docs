@@ -57,7 +57,7 @@ Your lab comes with one (1) machine with computational resources and attached st
 
 **Machine type**
 
-For cost savings, we recommend that you start with the **`default.b2`** machine type. And if needed, upgrade to larger machine types when your scientists are well onboard in your new lab and ready to explore. You may specify [alternative machines types](/administer-science/services/machine-types) in the order if you know you need other sizes right away.
+For cost savings, we recommend that you start with the **`default.c1`** machine type. And if needed, upgrade to larger machine types when your lab users are well onboard in your new lab and ready to explore. You may specify [alternative machines types](/administer-science/services/machine-types) in the order if you know you need other sizes right away.
 
 **Storage volumes**
 
