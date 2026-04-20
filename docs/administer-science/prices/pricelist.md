@@ -19,7 +19,7 @@ Head over to our [price calculator](/administer-science/prices/calculator) to ta
 
 ::: tip CURRENT PRICE LIST
 
-[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-0.pdf) (v5.0 PDF)
+[HUNT Cloud Price List](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-1.pdf) (v5.1 PDF)
 
 :::
 
@@ -27,8 +27,8 @@ Head over to our [price calculator](/administer-science/prices/calculator) to ta
 
 | **Content** | **Type** | **File** |
 | ---- | ---- | ---- |
-| HUNT Cloud Price List (v5.0) | PDF | [hunt-cloud-price-list-5-0.pdf](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-0.pdf) |
-| HUNT Cloud Price List (v5.0) | CSV* | [hunt-cloud-price-list-5-0.csv](https://assets.hdc.ntnu.no/assets/prices/v5/hunt-cloud-price-list-5-0.csv) |
+| HUNT Cloud Price List (v5.1) | PDF | [hunt-cloud-price-list-5-1.pdf](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-1.pdf) |
+| HUNT Cloud Price List (v5.1) | CSV* | [hunt-cloud-price-list-5-1.csv](https://assets.hdc.ntnu.no/assets/prices/v5/hunt-cloud-price-list-5-1.csv) |
 
 *) The current CSV version do not contain prices for transport services, hourly based services and tape services.
 
@@ -45,6 +45,7 @@ The price list will be updated from time to time.
 
 | **Version** | **Type** | **Announced** | **Effective** |
 | - | - | - | - |
+| [HUNT Cloud Price List v5.1](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-1.pdf) (PDF) | Minor | 2025-04-20 | 2025-04-20 |
 | [HUNT Cloud Price List v5.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-5-0.pdf) (PDF) | MAJOR | 2025-07-01 | 2025-10-01 |
 | [HUNT Cloud Price List v4.5](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-5.pdf) (PDF) | Minor | 2025-05-08 | 2025-05-08 |
 | [HUNT Cloud Price List v4.4](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-4-4.pdf) (PDF) | Minor | 2025-02-15 | 2025-02-15 |
@@ -57,6 +58,12 @@ The price list will be updated from time to time.
 | [HUNT Cloud Price List v3.0](https://assets.hdc.ntnu.no/assets/prices/hunt-cloud-price-list-3-0.pdf) (PDF) | MAJOR | 2021-07-01 | 2021-10-01 |
 
 ## Changes
+
+#### HUNT Cloud Price list v5.1 (minor)
+
+*Compute updates*
+
+* A new GPU accelerator (NVIDIA RTX PRO 6000) is included.
 
 #### HUNT Cloud Price list v5.0 (MAJOR)
 
