@@ -9,14 +9,14 @@ description: This page provides a guide for scientific centers and groups that w
 
 **This page describes required agreements for scientific centers and groups that want to enable HUNT Cloud resources for their scientists and data explorers.**
 
-::: tip Cut to the chase
-
-[Contact us](/contact) to order your scientific access to HUNT Cloud. We will guide you through the necessary agreements.
-
-:::
 
 [[toc]]
 
+::: tip Cut to the chase
+
+[Request organizational access to HUNT Cloud](/administer-science/service-desk/organizational-orders#request-organizational-access-to-hunt-cloud) in our administer science service desk, or [contact us](/contact) for information about the process.
+
+:::
 ## Background
 
 We have five agreement layers in HUNT Cloud (illustration below). This guide covers Data space orders and Lab orders that need to be in place before you can onboard your scientists and data explorers.
