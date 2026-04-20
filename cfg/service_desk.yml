@@ -166,7 +166,7 @@ cost_query:
 request_new_lab:
   title: "Request a new lab"
   template:
-    subject: "New lab order - {lab_name} @ {data_space}"
+    subject: "New lab order - {lab_name}"
     body: |
       Hi HUNT Cloud team,
 
@@ -207,12 +207,12 @@ request_new_lab:
         autocapitalize: "off",
         field: "textfield",
       },
-      { label: "Data space name", 
-        key: "data_space", 
-        pattern: "[-a-z0-9]{3,}", 
-        hint: "Data space name should include only letters a-z, 0-9, or dot.", 
-        field: "textfield" 
-      },
+#      { label: "Data space name", 
+#        key: "data_space", 
+#        pattern: "[-a-z0-9]{3,}", 
+#        hint: "Data space name should include only letters a-z, 0-9, or dot.", 
+#        field: "textfield" 
+#      },
       {
         label: "Machine type (c1 is default)",
         key: "machine_type",
