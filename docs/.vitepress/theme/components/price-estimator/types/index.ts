@@ -110,3 +110,8 @@ export interface UpdateStoragePayload {
   price: number
   selectedStorage: StorageUnit[]
 }
+
+export interface LoadingStatusPayload {
+  isLoaded: boolean
+  message: string
+}
