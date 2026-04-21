@@ -33,6 +33,7 @@ export default defineConfig({
     extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
   },
   test: {
+    setupFiles: ["./tests/setup.ts"],
     environment: "happy-dom",
     exclude: [...configDefaults.exclude],
     globals: true,
