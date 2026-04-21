@@ -18,6 +18,8 @@ import { StorageUsageType } from "../types/index"
 
 const ISSERVER = typeof window === "undefined"
 
+const VERSION = "1.0"
+
 export const priceEstimatorStore = reactive({
   /* State */
 
@@ -35,7 +37,6 @@ export const priceEstimatorStore = reactive({
   /* Generic Helper */
 
   async initializePriceEstimatorStore() {
-    console.log("initializing")
     this.isInitializingPriseEstimator = true
 
     await this.getCatalogueAPI()
@@ -48,8 +49,7 @@ export const priceEstimatorStore = reactive({
         const savedJson = localStorage.getItem("hunt-cloud-estimator-state")
         if (savedJson) {
           const state = JSON.parse(savedJson)
-          console.log("state", state)
-          if (state.labs && Array.isArray(state.labs)) {
+          if (state.labs && Array.isArray(state.labs) && state.version == VERSION) {
             this.labs = []
 
             for (const lab of state.labs as LabCard[]) {
@@ -87,10 +87,13 @@ export const priceEstimatorStore = reactive({
               }
             }
             saved = true
+          } else {
+            alert("Failed to load the state of price estimator: Missing information")
           }
         }
       } catch (err) {
         console.error("Failed to load state:", err)
+        alert("Failed to load the state of price estimator")
       }
     }
 
@@ -112,7 +115,6 @@ export const priceEstimatorStore = reactive({
     })
 
     const machinesPromise = pricesApi.getMachineTypes().then((machine: MachineType[]) => {
-      console.log("machine", machine)
       this.catalogue.machinePrices = machine
     })
 
@@ -133,6 +135,7 @@ export const priceEstimatorStore = reactive({
     try {
       const stateToSave = {
         labs: this.labs,
+        version: VERSION,
       }
       localStorage.setItem("hunt-cloud-estimator-state", JSON.stringify(stateToSave))
     } catch (err) {
@@ -216,7 +219,6 @@ export const priceEstimatorStore = reactive({
   getLabComputePriceSum(labId: number) {
     const lab = this.labs.find((l) => l.id === labId)
     if (!lab) {
-      console.log("Lab not found")
       return { monthlyCostTotal: 0, yearlyCostTotal: 0 }
     }
 
@@ -518,7 +520,6 @@ export const priceEstimatorStore = reactive({
       this.labs.forEach((lab) => {
         const type = lab.subscription as "1Y" | "3Y"
         const priceItem = this.catalogue.labPrices.find((p) => p["service.commitment"] === type)
-        console.log(summary.labSubscriptions[type])
         summary.labSubscriptions[type].units += 1
         if (priceItem) {
           summary.labSubscriptions[type].price += priceItem["price.nok.ex.vat"]
@@ -543,9 +544,7 @@ export const priceEstimatorStore = reactive({
     // Get total storages from labs
 
     const storageSum = this.calculateTotalStorageCost()
-    console.log("SUMMARY", storageSum)
     summary.allStorage = storageSum
-    console.log("FINAL SUMMARY", summary)
     return summary
   },
 
@@ -573,7 +572,7 @@ export const priceEstimatorStore = reactive({
     }))
 
     const exportData = {
-      version: "1.0",
+      version: VERSION,
       labs: labsToExport,
     }
 
