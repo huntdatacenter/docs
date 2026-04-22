@@ -172,24 +172,22 @@ request_new_lab:
 
       I would like to request a new lab.
 
-      I have attached a signed lab agreement to this email.
-
-      We would like to start with the following machine type for our home machine:
+      I have attached a signed lab agreement to this email for the following lab:
 
       ---
       lab_name="{lab_name}"  
+      ---
+      
+We would like to start with the following machine type and storage resources for our home machine:
+
+      ---
       machine_type="{machine_type}"  
-      ---
-
-      We would like to attach the following storage volume sizes to our home machine (numbers are in Gigabytes):
-
-      ---
       archive_gb={archive_volume}  
       work_gb={work_volume}  
       scratch_gb={scratch_volume}  
       ---
 
-      Our lab leader and lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
+      Our lab leader or lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
 
       https://docs.hdc.ntnu.no/administer-science/service-desk/lab-orders/#add-a-new-lab-user
 
