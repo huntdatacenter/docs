@@ -178,7 +178,7 @@ request_new_lab:
       lab_name="{lab_name}"  
       ---
       
-We would like to start with the following machine type and storage resources for our home machine:
+      We would like to start with the following machine type and storage resources for our home machine:
 
       ---
       machine_type="{machine_type}"  
