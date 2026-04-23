@@ -74,7 +74,8 @@ We use Tunnelblick to ensure encrypted communication between your local computer
 
 <!-- https://tunnelblick.net/downloads.html -->
 
-:::
+::8. In _User key password_, enter the **`VPN passphrase`** sent to you from HUNT Cloud over Signal.
+:
 
 
 
@@ -152,18 +153,18 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 
 ::: details Ubuntu Linux
 
-1. Click on the _Network Manager_ icon in the task bar.
-2. Select _Edit Connections..._.
-3. Click _Add_.
-4. Choose _Import a saved VPN configuration_ and click _Create_.
+1. Open _Settings_.
+2. Select _Network_.
+3. Click the _+_ sign to the right of the _VPN_ section.
+4. Choose _Import from file..._
 5. Select the OpenVPN profile named **`<username>.ovpn`** that you collected in Step 1.
-6. Enter your user name (same as the OpenVPN profile file name).
+6. In _User name_, enter your user name (same as the OpenVPN profile file name).
 7. Click on the person icon in the _Password_ field and select **`Ask for this password every time`**.
-8. Enter the _Private Key Password_ with the **`VPN passphrase`** sent to you from HUNT over Signal.
 9. Click on the _IPv4 Settings_ tab.
-10. Click _Routes..._.
-11. Select the _Use this connection only for resources on its network_ and click _OK_.
-12. Click _Apply_.
+10. Under _Routes..._, select the _Use this connection only for resources on its network_.
+11. Click _Add_.
+
+OpenVPN will now try to connect to HUNT Cloud. Skip to the next part "Connect to the VPN" for details.
 
 :::
 
@@ -227,11 +228,13 @@ You should now be connected to the VPN.
 
 ::: details Ubuntu Linux
 
+1. Click on the _VPN_ icon in the task bar in the upper right corner. 
+2. You will see two open fields when OpenVPN try to connect for the first time:
+  - In the first field, enter the **`verification code`** from Google Authenticator in the _Password_ field. 
+  - In the second field, enter the **`VPN passphrase`** sent to you from HUNT Cloud over Signal. You should only be asked about this on your first login.
+3. Click _Connect_ to connect.
 
-1. Click on the _Network Manager_ icon in the task bar.
-2. Select _VPN Connections >_ and the name of your profile.
-3. In the _Authenticate VPN_ window, enter the **`verification code`** from Google Authenticator in the _Password_ field.
-4. Click _OK_ to connect.
+NOTE. You may be disconnected the first time you log in as the verification code will time out when you write the VPN passphrase. Try to connect once more, this time only adding the verification code from Google Authenticator.
 
 :::
 
