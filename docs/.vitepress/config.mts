@@ -594,6 +594,10 @@ function sidebarDoScience() {
               link: "/do-science/guides/access-guides/new-computer",
             },
             {
+              text: "VPN configuration",
+              link: "/do-science/guides/access-guides/vpn-configuration",
+            },
+            {
               text: "VPN certificate reset",
               link: "/do-science/guides/access-guides/reset-vpn",
             },
@@ -602,8 +606,16 @@ function sidebarDoScience() {
               link: "/do-science/guides/access-guides/reset-gauth",
             },
             {
+              text: "SSH configuration",
+              link: "/do-science/guides/access-guides/ssh-configuration",
+            },
+            {
               text: "SSH passphrase reset",
               link: "/do-science/guides/access-guides/reset-ssh",
+            },
+            {
+              text: "SSH passphrase reset in Workbench",
+              link: "/do-science/guides/access-guides/reset-ssh-workbench",
             },
             {
               text: "HUNT Workbench certificate request",
@@ -612,18 +624,6 @@ function sidebarDoScience() {
             {
               text: "HUNT Workbench reissue certificate",
               link: "/do-science/guides/access-guides/workbench-reissue",
-            },
-            {
-              text: "SSH passphrase reset in Workbench",
-              link: "/do-science/guides/access-guides/reset-ssh-workbench",
-            },
-            {
-              text: "VPN configuration",
-              link: "/do-science/guides/access-guides/vpn-configuration",
-            },
-            {
-              text: "SSH configuration",
-              link: "/do-science/guides/access-guides/ssh-configuration",
             },
             {
               text: "Keka",
