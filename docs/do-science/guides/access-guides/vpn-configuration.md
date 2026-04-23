@@ -158,13 +158,12 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 3. Click the _+_ sign to the right of the _VPN_ section.
 4. Choose _Import from file..._
 5. Select the OpenVPN profile named **`<username>.ovpn`** that you collected in Step 1.
-6. In _User name_, enter your user name (same as the OpenVPN profile file name).
-7. Click on the person icon in the _Password_ field and select **`Ask for this password every time`**.
+6. Click on the _Identity_ tab.
+7. In _User name_, enter your user name (same as the OpenVPN profile file name).
+8. Click on the person icon in the _Password_ field and select **`Ask for this password every time`**.
 9. Click on the _IPv4 Settings_ tab.
-10. Under _Routes..._, select the _Use this connection only for resources on its network_.
-11. Click _Add_.
-
-OpenVPN will now try to connect to HUNT Cloud. Skip to the next part "Connect to the VPN" for details.
+11. Under _Routes..._, select the _Use this connection only for resources on its network_.
+12. Click _Add_.
 
 :::
 
