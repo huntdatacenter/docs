@@ -4,9 +4,12 @@ import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 import LabCard from "./LabCard.vue"
 import TotalBlock from "./TotalBlock.vue"
 import LabModal from "./LabModal.vue"
+import AlertCart from "../generic/AlertCard.vue"
+import { LoadingStatusPayload } from "./types"
 
 const fileInput = ref<HTMLInputElement | null>(null)
 const isLabModalOpen = ref(false)
+const isLoaded = ref<LoadingStatusPayload>({ isLoaded: true, message: "" })
 
 watch(
   () => priceEstimatorStore.labs,
@@ -17,7 +20,7 @@ watch(
 )
 
 onMounted(async () => {
-  await priceEstimatorStore.initializePriceEstimatorStore()
+  isLoaded.value = await priceEstimatorStore.initializePriceEstimatorStore()
 })
 
 function triggerFileUpload() {
@@ -54,19 +57,11 @@ async function handleFileUpload(event: Event) {
           <v-col cols="auto">
             <v-row>
               <v-col cols="auto" v-if="priceEstimatorStore.labs.length">
-                <v-btn density="default" size="large" dark @click="priceEstimatorStore.clearAllLabs()">
-                  Remove all
-                </v-btn>
+                <v-btn density="default" size="large" dark @click="priceEstimatorStore.clearAllLabs()"> Remove all </v-btn>
               </v-col>
 
               <v-col cols="auto">
-                <input
-                  ref="fileInput"
-                  type="file"
-                  style="display: none"
-                  accept="application/json"
-                  @change="handleFileUpload"
-                />
+                <input ref="fileInput" type="file" style="display: none" accept="application/json" @change="handleFileUpload" />
                 <v-btn density="default" size="large" dark @click="triggerFileUpload">
                   <v-icon left>mdi-import</v-icon>
                   Import
@@ -93,5 +88,7 @@ async function handleFileUpload(event: Event) {
     <v-dialog v-model="isLabModalOpen" max-width="600px">
       <LabModal @close="isLabModalOpen = false" />
     </v-dialog>
+
+    <AlertCart v-if="!isLoaded.isLoaded" title="Error" :message="isLoaded.message"></AlertCart>
   </v-container>
 </template>

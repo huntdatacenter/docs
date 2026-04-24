@@ -42,6 +42,7 @@ import "@mdi/font/css/materialdesignicons.css"
 import "vuetify/styles"
 
 import { vuetify } from "./plugins/vuetify"
+import AlertCart from "./components/generic/AlertCard.vue"
 
 const ISSERVER = typeof window === "undefined"
 
@@ -67,26 +68,11 @@ const redirectPrefixes: Array<[string, string]> = [
   ["/service-desk/service-centers/", "/govern-science/service-desk/service-center-orders"] as const,
   ["/service-desk/data-controllers/", "/govern-science/service-desk/data-controller-orders"] as const,
   ["/administer-science/service-desk/lab-orders/", "/administer-science/service-desk/lab-orders"] as const,
-  [
-    "/administer-science/service-desk/data-space-orders/",
-    "/administer-science/service-desk/data-space-orders",
-  ] as const,
-  [
-    "/govern-science/service-desk/service-center-orders/",
-    "/govern-science/service-desk/service-center-orders",
-  ] as const,
-  [
-    "/govern-science/service-desk/data-controller-orders/",
-    "/govern-science/service-desk/data-controller-orders",
-  ] as const,
-  [
-    "/govern-science/service-desk/service-center-orders/",
-    "/govern-science/service-desk/service-center-orders",
-  ] as const,
-  [
-    "/govern-science/service-desk/data-controller-orders/",
-    "/govern-science/service-desk/data-controller-orders",
-  ] as const,
+  ["/administer-science/service-desk/data-space-orders/", "/administer-science/service-desk/data-space-orders"] as const,
+  ["/govern-science/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders"] as const,
+  ["/govern-science/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders"] as const,
+  ["/govern-science/service-desk/service-center-orders/", "/govern-science/service-desk/service-center-orders"] as const,
+  ["/govern-science/service-desk/data-controller-orders/", "/govern-science/service-desk/data-controller-orders"] as const,
   ["/working-in-your-lab/technical-tools/", "/do-science/tools/technical/"] as const,
   ["/working-in-your-lab/analytical-tools/", "/do-science/tools/analytical/"] as const,
   ["/working-in-your-lab/transfer-tools/", "/do-science/tools/transfer/"] as const,
@@ -111,26 +97,17 @@ const redirectPrefixes: Array<[string, string]> = [
   ["/do-science/guides/configure-ssh", "/do-science/guides/access-guides/reset-ssh"] as const,
   ["/do-science/guides/vpn-configuration/", "/do-science/guides/access-guides/vpn-configuration"] as const,
   ["/do-science/guides/vpn-configuration", "/do-science/guides/access-guides/vpn-configuration"] as const,
-  [
-    "/do-science/guides/hunt-workbench-reissue-certificate",
-    "/do-science/guides/access-guides/workbench-reissue",
-  ] as const,
+  ["/do-science/guides/hunt-workbench-reissue-certificate", "/do-science/guides/access-guides/workbench-reissue"] as const,
   ["/do-science/guides/hunt-workbench-request", "/do-science/guides/access-guides/workbench-request"] as const,
   ["/do-science/guides/vpn-certificate-reset", "/do-science/guides/access-guides/reset-vpn"] as const,
   ["/do-science/guides/google-authenticator-reset", "/do-science/guides/access-guides/reset-gauth"] as const,
   ["/do-science/hunt-workbench/getting-started/conda", "/do-science/hunt-workbench/getting-started/2-conda"] as const,
-  [
-    "/do-science/hunt-workbench/getting-started/remote-desktop",
-    "/do-science/hunt-workbench/getting-started/10-remote-desktop",
-  ] as const,
+  ["/do-science/hunt-workbench/getting-started/remote-desktop", "/do-science/hunt-workbench/getting-started/10-remote-desktop"] as const,
   ["/do-science/guides/openvpn-admin-group/", "/do-science/guides/access-guides/openvpn-admin-group"] as const,
   ["/do-science/guides/openvpn-admin-group", "/do-science/guides/access-guides/openvpn-admin-group"] as const,
   // ["", ""] as const,
   // ["", ""] as const,
-].filter(
-  item =>
-    item && Array.isArray(item) && item[0] && item[1] && typeof item[0] === "string" && typeof item[1] === "string",
-) // Filter assures there is 2 strings in each item in the array
+].filter((item) => item && Array.isArray(item) && item[0] && item[1] && typeof item[0] === "string" && typeof item[1] === "string") // Filter assures there is 2 strings in each item in the array
 
 export default {
   extends: DefaultTheme,
@@ -140,7 +117,7 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    router.onBeforeRouteChange = to => {
+    router.onBeforeRouteChange = (to) => {
       // NOTE - Redirect PDFs into assets to assure uploads of PDFs into assets repository
       if (!ISSERVER) {
         if (to && to.startsWith("/assets/") && to.endsWith(".pdf")) {
@@ -151,7 +128,7 @@ export default {
       }
 
       // Redirect everytevery URIs that start with key (first item in the pair)
-      redirectPrefixes.every(pair => {
+      redirectPrefixes.every((pair) => {
         if (to && to.startsWith(pair[0])) {
           // Rewrite the link to correct path
           console.log(`Redirect: ${pair[0]} -> ${pair[1]}`)
@@ -205,6 +182,7 @@ export default {
     app.component("AccessIntro", AccessIntro)
     app.component("IaasAccess", IaasAccess)
     app.component("DesignNewPassphrase", DesignNewPassphrase)
+    app.component("AlertCard", AlertCart)
     // Price estimator
     app.component("PriceEstimator", PriceEstimator)
     app.component("LabCard", LabCard)
