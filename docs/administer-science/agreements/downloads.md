@@ -151,65 +151,11 @@ Send us your signed agreement utilizing the blue button in the service center se
 
 [HUNT Cloud Invoice Profile](https://assets.hdc.ntnu.no/assets/agreements/hunt-cloud-invoice-profile.pdf) (PDF)
 
-This form defined the invoice profile for your cloud services fees. One invoice profile needs to be attached to your data space agreement.
+This form defined the invoice profile for your cloud services fees. One invoice profile needs to be attached to your lab order before activation.
 
 ::: details Clarification of the form fields
 
-The following form fields are including in the "HUNT Cloud Invoice Profile" version 2.5.
-
-**Data space**
-
-- *NAME*: Specify the data space where you would like to attach the invoice profile.
-- *LEADER*: Specify the full name of the data space leader that is responsible for the payment.
-
-**Invoice unit**
-
-*DATA SPACE* is default. This means that the Invoice profile will cover accrued costs for all labs attached to your data space.
-
-You may register additional invoice profiles if you want to separate lab costs in individual bills. To do so, register one new invoice profile per lab and add your LAB NAME as the invoice unit. Note that you are required to already have registered one invoice profile with DATA SPACE as invoice unit before you can add individual invoice profiles for your labs.
-
-
-**Invoice contact**
-
-This individual is our point of contact for practical aspects related to the billing, typical an employee at your organizational level.
-
-**Invoice address (outside NTNU)**
-
-For organizations outside NTNU, specify the address where invoices are to be sent.
-
-**Account information (inside NTNU)**
-
-Specify "K.STED" and "PROJECT NUMBER" for your data space. These fields are mandatory for NTNU data spaces.
-
-**Billing information (outside NTNU)**
-
-- *PEPPOL BIS*: This is the international identification number for your organization. [Click the link](https://directory.peppol.eu/public/locale-en_US/menuitem-search) to find your id.
-- *REFERENCE NUMBER*: This is your order number with HUNT Cloud that ensures that the invoice is reaching you inside your organization. The format varies between organizations.
-
-**Value added tax (outside NTNU)**
-
-As default, all invoices to Data spaces and Labs outside NTNU will include value added tax (VAT). Documented collaborations with partners from NTNU may be exempted from VAT if they specify trusted research environments as part of the collaboration agreement. If relevant, send us the collaboration agreement for evaluation.
-
-**Advanced payment**
-
-You may make an advance payment to your invoice profile. The payment is applied to the accrued costs. If the payment is larger than the amount currently owed, it will reduce the next automatic charge. For clarification, a positive account balance due to advance payments will not be refunded at the end of services.
-
-- *AMOUNT*: This is the optional amount in NOK that will be payed at the initiation of the invoice profile.
-
-**Spending limit**
-
-A monetary spending limit per calendar year may be specified for the invoice profile.
-
-- *LIMIT*: If applicable, specify a maximum spending limit in NOK per calendar year that can be consumed.
-- *TYPE*: For the soft and hard limit type, notifications will be sent to the Invoice Contact and Data Space Leader at consumption of approximately 50%, 90% and 100%. For the hard limit type, services will be temporarily deactivated if consumption exceeds the limit.
-
-**Signatures**
-
-Invoice profiles are signed by Account signatory. This is the individual that is authorized to operate the account information specified in the invoice profile on behalf of their organization.
-
-**Activation**
-
-Send us your signed invoice profile together with your data space order utilizing the blue button in the service center section of our [service desk](/administer-science/service-desk/lab-orders#new-invoice-profile).
+The form fields are described in the PDF. [Contact us](/contact) for additional clarifications.
 
 :::
 
