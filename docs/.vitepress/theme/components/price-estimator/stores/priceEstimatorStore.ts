@@ -12,7 +12,7 @@ import {
   type SubscriptionType,
   storageTypes,
   StorageCostByType,
-  LoadingStatusPayload,
+  LocalStorageError,
 } from "../types/index.js"
 import pricesApi from "../api/pricesApi.js"
 import { StorageUsageType } from "../types/index"
@@ -43,7 +43,7 @@ export const priceEstimatorStore = reactive({
     await this.getCatalogueAPI()
 
     // Load saved data from localstorage
-    let loadingStatus: LoadingStatusPayload = { isLoaded: false, message: "" }
+    let loadingError: LocalStorageError = { status: false }
 
     if (!ISSERVER) {
       try {
@@ -87,20 +87,21 @@ export const priceEstimatorStore = reactive({
                 }
               }
             }
-            loadingStatus.isLoaded = true
           } else {
-            loadingStatus.message = "Failed to load the state of price estimator: config structure is wrong"
+            loadingError.status = true
+            loadingError.message = "Failed to load the state of price estimator: config structure is wrong"
           }
         }
       } catch (err) {
         console.error("Failed to load state:", err)
-        loadingStatus.message = "Failed to load the state of price estimator: Error"
+        loadingError.status = true
+        loadingError.message = "Failed to load the state of price estimator: Error"
       }
     }
 
     this.updateTotalSummary()
     this.isInitializingPriseEstimator = false
-    return loadingStatus
+    return loadingError
   },
 
   async getCatalogueAPI() {
