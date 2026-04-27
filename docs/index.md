@@ -52,7 +52,7 @@ const bottomCards = [
     id: 'mascot',
     image: '/img/Robot_Happy.png',
     imageAlt: 'Illustration of small centien robot made of metal with shiny lightbulb on top of its head.',
-    href: '/about/',
+    href: 'https://about.hdc.ntnu.no/',
     isMascot: true
   },
   {
