@@ -111,7 +111,7 @@ export interface UpdateStoragePayload {
   selectedStorage: StorageUnit[]
 }
 
-export interface LoadingStatusPayload {
-  isLoaded: boolean
-  message: string
+export interface LocalStorageError {
+  status: boolean
+  message?: string
 }

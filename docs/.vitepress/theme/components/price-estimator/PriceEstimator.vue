@@ -5,11 +5,11 @@ import LabCard from "./LabCard.vue"
 import TotalBlock from "./TotalBlock.vue"
 import LabModal from "./LabModal.vue"
 import AlertCart from "../generic/AlertCard.vue"
-import { LoadingStatusPayload } from "./types"
+import { LocalStorageError } from "./types"
 
 const fileInput = ref<HTMLInputElement | null>(null)
 const isLabModalOpen = ref(false)
-const isLoaded = ref<LoadingStatusPayload>({ isLoaded: true, message: "" })
+const localStorageError = ref<LocalStorageError>({ status: false })
 
 watch(
   () => priceEstimatorStore.labs,
@@ -20,7 +20,7 @@ watch(
 )
 
 onMounted(async () => {
-  isLoaded.value = await priceEstimatorStore.initializePriceEstimatorStore()
+  localStorageError.value = await priceEstimatorStore.initializePriceEstimatorStore()
 })
 
 function triggerFileUpload() {
@@ -89,6 +89,6 @@ async function handleFileUpload(event: Event) {
       <LabModal @close="isLabModalOpen = false" />
     </v-dialog>
 
-    <AlertCart v-if="!isLoaded.isLoaded" title="Error" :message="isLoaded.message"></AlertCart>
+    <AlertCart v-if="localStorageError.status" title="Error" :message="localStorageError.message"></AlertCart>
   </v-container>
 </template>
