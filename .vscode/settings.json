@@ -27,5 +27,15 @@
   "markdownlint.config": {
     "MD025": false,
     "MD033": false
+  },
+  "[service_desk.yml]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": null
+  },
+  "[docs/public/cfg/service_desk.yml]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": null
   }
 }
