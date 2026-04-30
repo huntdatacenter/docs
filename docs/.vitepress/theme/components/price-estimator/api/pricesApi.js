@@ -1,7 +1,7 @@
 //
 import axios from "axios"
 
-const price_list_url = "https://assets.hdc.ntnu.no/assets/prices/v5/hunt-cloud-pricelist-v5-0.json"
+const price_list_url = "https://assets.hdc.ntnu.no/assets/prices/v5/hunt-cloud-price-list-5-1.json"
 
 const gpu_models_url = "https://assets.hdc.ntnu.no/assets/js/gpus.json"
 
