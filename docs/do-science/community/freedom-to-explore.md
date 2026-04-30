@@ -52,6 +52,33 @@ This list is made by current and past community members. Can't find your languag
 
 
 
+### Afrikaans (afr)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Afrikaans."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-afr-banner.jpg)
+
+::: details Full Afrikaans version
+
+**Download**:  
+PDF - [Freedom to explore - Afrikaans](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-afr-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Afrikaans](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-afr-2160px.jpg) - 2160px
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Afrikaans."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-afr-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Afrikaans ([afr](https://iso639-3.sil.org/code/afr))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.1  
+**ArtworkID:** hcc-artwork26  
+
+**Want to improve the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
 ### Arabic (ara)
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Arabic."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ara-banner.jpg)
