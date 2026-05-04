@@ -80,7 +80,7 @@ onMounted(() => {
           <li>✅ Connect to the NTNU VPN using this address: <code>vpn.ntnu.no</code></li>
           <li>🔲 Connect to the HUNT Cloud VPN</li>
           <li>🔲 Connect to your lab</li>
-          <li>🔲 Do cool sciencee</li>
+          <li>🔲 Do cool science</li>
         </ol>
 
         If you still experience issues
