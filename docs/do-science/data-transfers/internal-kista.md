@@ -155,7 +155,7 @@ You can read more about LFTP [here](/do-science/tools/transfer/lftp)
 ## Download
 
 ::: tip
-This section is aimed at the lab user that will **download** data from a kista. See the [upload section](#upload) if you plan to download data to your lab.
+This section is aimed at the lab user that will **download** data from a kista. See the [upload section](#upload) if you plan to upload data to a kista.
 
 :::
 
