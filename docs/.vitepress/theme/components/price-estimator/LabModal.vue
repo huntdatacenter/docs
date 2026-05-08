@@ -21,7 +21,7 @@ const subscriptions = computed(() => {
     const price = p["price.nok.ex.vat"]
     const is3Y = p["service.commitment"] === "3Y"
     return {
-      title: `${is3Y ? "3 Years" : "1 Year"} - ${price.toFixed(0)} NOK`,
+      title: `${is3Y ? "Triennial" : "Yearly"} - ${price.toFixed(0)} NOK`,
       value: p["service.commitment"],
     }
   })
@@ -64,7 +64,7 @@ onMounted(() => {
           </v-col>
 
           <v-col cols="12">
-            <v-select v-model="formData.subscription" :items="subscriptions" label="Subscription Period" variant="outlined"></v-select>
+            <v-select v-model="formData.subscription" :items="subscriptions" label="Renewal Period" variant="outlined"></v-select>
           </v-col>
 
           <v-col cols="12">

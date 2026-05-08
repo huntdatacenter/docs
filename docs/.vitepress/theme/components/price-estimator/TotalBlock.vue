@@ -24,7 +24,7 @@ const tableItems = computed(() => {
   let totalDiscount = 0
   let totalSubsequent = 0
 
-  // Lab subscriptions 1Y
+  // Lab subscriptions 1Y -> Yearly
   if (s.labSubscriptions?.["1Y"]?.units > 0) {
     const flat = Number(s.labSubscriptions["1Y"].price ?? 0)
     totalFlat += flat
@@ -32,13 +32,13 @@ const tableItems = computed(() => {
 
     items.push({
       id: "labSubscriptions1Y",
-      name: "Lab Subscriptions (1 year)",
+      name: "Lab Subscriptions (Yearly)",
       units: s.labSubscriptions["1Y"].units,
       cost: flat,
     })
   }
 
-  // Lab subscriptions 3Y
+  // Lab subscriptions 3Y -> Triennial
   if (s.labSubscriptions?.["3Y"]?.units > 0) {
     const flat = Number(s.labSubscriptions["3Y"].price ?? 0)
     totalFlat += flat
@@ -46,7 +46,7 @@ const tableItems = computed(() => {
 
     items.push({
       id: "labSubscriptions3Y",
-      name: "Lab Subscriptions (3 years)",
+      name: "Lab Subscriptions (Triennial)",
       units: s.labSubscriptions["3Y"].units,
       cost: flat,
     })
@@ -144,9 +144,7 @@ const tableItems = computed(() => {
       </template>
 
       <template v-slot:item.cost="{ item }">
-        <span v-if="item.isDiscountRow" class="text-green-darken-3" style="font-weight: 600">
-          - {{ currencyFormatter.format(Math.abs(item.cost)) }}
-        </span>
+        <span v-if="item.isDiscountRow" class="text-green-darken-3" style="font-weight: 600"> - {{ currencyFormatter.format(Math.abs(item.cost)) }} </span>
 
         <span v-else-if="item.isTotalRow" style="font-weight: 700">
           {{ currencyFormatter.format(item.cost) }}
