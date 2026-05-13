@@ -103,9 +103,9 @@ We recommend that you use the [Google Chrome browser](https://www.google.com/chr
 
 1. Open Chrome on your local computer.
 
-2. Open URL **`chrome://settings/certificates`** and click the **`Import`** button on the right side of the screen.
+2. Open URL **`chrome://settings/certificates`** and click the **`Your certificates`** on the left side of the screen. 
 
-3. Browse and select your **`.p12`** file on your local computer and enter the **`TLS passphrase`** that you got on Signal.
+3. Click **`Import`** on the right side of the screen. Browse and select your **`.p12`** file on your local computer and enter the **`TLS passphrase`** that you got on Signal.
 
 4. Restart Chrome.
 
