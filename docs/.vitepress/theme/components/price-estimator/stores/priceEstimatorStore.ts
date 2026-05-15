@@ -72,7 +72,7 @@ export const priceEstimatorStore = reactive({
                     ram: comp.ram,
                     subscription: comp.subscription,
                     gpu: comp.gpu,
-                    gpuCount: comp.gpuCount,
+                    gpu_count: comp.gpu_count,
                   })
                 }
               }
@@ -110,11 +110,18 @@ export const priceEstimatorStore = reactive({
     const priceListPromise = pricesApi.getPriceList().then((json: PriceListItem[]) => {
       this.catalogue.computePrices = json.filter((item) => item["service.group"] === "cpu").map(this.convertPricesToYearly)
       this.catalogue.storagePrices = json.filter((item) => item["service.family"] === "store")
-      this.catalogue.gpuPrices = json.filter((item) => item["service.group"] === "gpu").map(this.convertPricesToYearly)
+      this.catalogue.gpuPrices = json
+        .filter((item) => item["service.group"] === "gpu")
+        .map((item) => ({ ...item, "service.unit": item["service.unit"]?.replace("nvidia.", "") }))
+        .map(this.convertPricesToYearly)
       this.catalogue.labPrices = json.filter((item) => item["service.group"] === "lab")
     })
 
     const gpusPromise = pricesApi.getAvailableGPUS().then((gpus: GpuModel[]) => {
+      gpus = gpus.map((item) => ({
+        ...item,
+        type: item.type.replace("nvidia.", ""),
+      }))
       this.catalogue.availableGpus = gpus
     })
 
@@ -455,19 +462,19 @@ export const priceEstimatorStore = reactive({
     }
   },
 
-  addComputeToLab(labId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpuCount?: number }) {
+  addComputeToLab(labId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpu_count?: number }) {
     const lab = this.labs.find((l) => l.id === labId)
     if (!lab) return
 
     const compId = lab.selectedCompute?.length || 0
-    const prices = this.getComputePriceFromCatalogue(payload.machine_type, payload.subscription, payload.gpu, payload.gpuCount)
+    const prices = this.getComputePriceFromCatalogue(payload.machine_type, payload.subscription, payload.gpu, payload.gpu_count)
     const newCompute: ComputeUnit = {
       id: compId,
       name: payload.name,
       machine_type: payload.machine_type,
       core_count: payload.core_count,
       gpu: payload.gpu,
-      gpuCount: payload.gpuCount,
+      gpu_count: payload.gpu_count,
       ram: payload.ram,
       subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
@@ -497,7 +504,7 @@ export const priceEstimatorStore = reactive({
       machine_type: payload.machine_type,
       core_count: payload.core_count,
       gpu: payload.gpu,
-      gpuCount: payload.gpuCount,
+      gpu_count: payload.gpuCount,
       ram: payload.ram,
       subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
@@ -652,12 +659,6 @@ export const priceEstimatorStore = reactive({
 
             if (labData.compute) {
               for (const comp of labData.compute) {
-                var gpuCount
-                if (comp.gpu) {
-                  gpuCount = Number(comp.gpu.split(".")[-1])
-                  console.log(gpuCount)
-                }
-
                 this.addComputeToLab(newLabId, {
                   name: comp.name,
                   machine_type: comp.machine_type,
@@ -665,7 +666,7 @@ export const priceEstimatorStore = reactive({
                   ram: comp.ram,
                   subscription: comp.subscription,
                   gpu: comp.gpu,
-                  gpuCount: gpuCount,
+                  gpu_count: comp.gpu_count,
                 })
               }
             }
