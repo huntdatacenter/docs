@@ -21,6 +21,7 @@ const computeHeaders = ref<DataTableHeader[]>([
   { title: "CPU cores", align: "start", sortable: true, key: "core_count" },
   { title: "Memory [GB]", align: "start", sortable: true, key: "ram" },
   { title: "GPU", align: "start", sortable: true, key: "gpu" },
+  { title: "GPU count", align: "start", sortable: true, key: "gpuCount" },
   { title: "Subscription", align: "start", sortable: true, key: "subscription" },
   { title: "Price / month", align: "start", sortable: true, key: "monthlyPrice" },
   { title: "Price / year", align: "start", sortable: true, key: "yearlyPrice" },

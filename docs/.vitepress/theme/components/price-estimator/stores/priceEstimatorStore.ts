@@ -72,6 +72,7 @@ export const priceEstimatorStore = reactive({
                     ram: comp.ram,
                     subscription: comp.subscription,
                     gpu: comp.gpu,
+                    gpuCount: comp.gpuCount,
                   })
                 }
               }
@@ -412,7 +413,7 @@ export const priceEstimatorStore = reactive({
 
   /*  Compute helpers  */
 
-  getComputePriceFromCatalogue(machineType: string, type: string, machineWithGpu?: string) {
+  getComputePriceFromCatalogue(machineType: string, type: string, machineWithGpu?: string, gpuCount: number = 1) {
     let totalYearlyPrice = 0
     let totalMonthlyPrice = 0
     let mainMachineTypePrice: number | undefined
@@ -443,7 +444,7 @@ export const priceEstimatorStore = reactive({
     if (machineWithGpu) {
       const gpuPrice = this.catalogue.gpuPrices.find((p) => p["service.unit"] === machineWithGpu && p["service.level"] === "ONDEMAND")
       if (gpuPrice) {
-        gpuYearly = gpuPrice["price.nok.ex.vat"]
+        gpuYearly = gpuPrice["price.nok.ex.vat"] * gpuCount
         totalYearlyPrice += gpuYearly
         totalMonthlyPrice = totalMonthlyPrice + Number(gpuYearly / 12)
       }
@@ -454,18 +455,19 @@ export const priceEstimatorStore = reactive({
     }
   },
 
-  addComputeToLab(labId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string }) {
+  addComputeToLab(labId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpuCount?: number }) {
     const lab = this.labs.find((l) => l.id === labId)
     if (!lab) return
 
     const compId = lab.selectedCompute?.length || 0
-    const prices = this.getComputePriceFromCatalogue(payload.machine_type, payload.subscription, payload.gpu)
+    const prices = this.getComputePriceFromCatalogue(payload.machine_type, payload.subscription, payload.gpu, payload.gpuCount)
     const newCompute: ComputeUnit = {
       id: compId,
       name: payload.name,
       machine_type: payload.machine_type,
       core_count: payload.core_count,
       gpu: payload.gpu,
+      gpuCount: payload.gpuCount,
       ram: payload.ram,
       subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
@@ -477,7 +479,11 @@ export const priceEstimatorStore = reactive({
     this.saveStateToLocal()
   },
 
-  editComputeInLab(labId: number, computeId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string }) {
+  editComputeInLab(
+    labId: number,
+    computeId: number,
+    payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpuCount?: number },
+  ) {
     const lab = this.labs.find((l) => l.id === labId)
     if (!lab || !lab.selectedCompute) return
 
@@ -491,6 +497,7 @@ export const priceEstimatorStore = reactive({
       machine_type: payload.machine_type,
       core_count: payload.core_count,
       gpu: payload.gpu,
+      gpuCount: payload.gpuCount,
       ram: payload.ram,
       subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
@@ -645,6 +652,12 @@ export const priceEstimatorStore = reactive({
 
             if (labData.compute) {
               for (const comp of labData.compute) {
+                var gpuCount
+                if (comp.gpu) {
+                  gpuCount = Number(comp.gpu.split(".")[-1])
+                  console.log(gpuCount)
+                }
+
                 this.addComputeToLab(newLabId, {
                   name: comp.name,
                   machine_type: comp.machine_type,
@@ -652,6 +665,7 @@ export const priceEstimatorStore = reactive({
                   ram: comp.ram,
                   subscription: comp.subscription,
                   gpu: comp.gpu,
+                  gpuCount: gpuCount,
                 })
               }
             }

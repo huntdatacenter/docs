@@ -28,6 +28,7 @@ export interface ComputeUnit {
   core_count: number
   ram: number
   gpu?: string
+  gpuCount?: number
   subscription: SubscriptionType
   monthlyPrice: number
   yearlyPrice: number
@@ -87,6 +88,7 @@ export interface MachineFormData {
   name?: string
   machine_type?: string
   gpu?: string
+  gpuCount?: number
   subscription?: SubscriptionType
 }
 
