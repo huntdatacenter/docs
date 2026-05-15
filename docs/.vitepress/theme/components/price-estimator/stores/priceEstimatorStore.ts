@@ -72,6 +72,7 @@ export const priceEstimatorStore = reactive({
                     ram: comp.ram,
                     subscription: comp.subscription,
                     gpu: comp.gpu,
+                    gpu_count: comp.gpu_count,
                   })
                 }
               }
@@ -109,11 +110,18 @@ export const priceEstimatorStore = reactive({
     const priceListPromise = pricesApi.getPriceList().then((json: PriceListItem[]) => {
       this.catalogue.computePrices = json.filter((item) => item["service.group"] === "cpu").map(this.convertPricesToYearly)
       this.catalogue.storagePrices = json.filter((item) => item["service.family"] === "store")
-      this.catalogue.gpuPrices = json.filter((item) => item["service.group"] === "gpu").map(this.convertPricesToYearly)
+      this.catalogue.gpuPrices = json
+        .filter((item) => item["service.group"] === "gpu")
+        .map((item) => ({ ...item, "service.unit": item["service.unit"]?.replace("nvidia.", "") }))
+        .map(this.convertPricesToYearly)
       this.catalogue.labPrices = json.filter((item) => item["service.group"] === "lab")
     })
 
     const gpusPromise = pricesApi.getAvailableGPUS().then((gpus: GpuModel[]) => {
+      gpus = gpus.map((item) => ({
+        ...item,
+        type: item.type.replace("nvidia.", ""),
+      }))
       this.catalogue.availableGpus = gpus
     })
 
@@ -412,7 +420,7 @@ export const priceEstimatorStore = reactive({
 
   /*  Compute helpers  */
 
-  getComputePriceFromCatalogue(machineType: string, type: string, machineWithGpu?: string) {
+  getComputePriceFromCatalogue(machineType: string, type: string, machineWithGpu?: string, gpuCount: number = 1) {
     let totalYearlyPrice = 0
     let totalMonthlyPrice = 0
     let mainMachineTypePrice: number | undefined
@@ -443,7 +451,7 @@ export const priceEstimatorStore = reactive({
     if (machineWithGpu) {
       const gpuPrice = this.catalogue.gpuPrices.find((p) => p["service.unit"] === machineWithGpu && p["service.level"] === "ONDEMAND")
       if (gpuPrice) {
-        gpuYearly = gpuPrice["price.nok.ex.vat"]
+        gpuYearly = gpuPrice["price.nok.ex.vat"] * gpuCount
         totalYearlyPrice += gpuYearly
         totalMonthlyPrice = totalMonthlyPrice + Number(gpuYearly / 12)
       }
@@ -454,18 +462,19 @@ export const priceEstimatorStore = reactive({
     }
   },
 
-  addComputeToLab(labId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string }) {
+  addComputeToLab(labId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpu_count?: number }) {
     const lab = this.labs.find((l) => l.id === labId)
     if (!lab) return
 
     const compId = lab.selectedCompute?.length || 0
-    const prices = this.getComputePriceFromCatalogue(payload.machine_type, payload.subscription, payload.gpu)
+    const prices = this.getComputePriceFromCatalogue(payload.machine_type, payload.subscription, payload.gpu, payload.gpu_count)
     const newCompute: ComputeUnit = {
       id: compId,
       name: payload.name,
       machine_type: payload.machine_type,
       core_count: payload.core_count,
       gpu: payload.gpu,
+      gpu_count: payload.gpu_count,
       ram: payload.ram,
       subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
@@ -477,7 +486,11 @@ export const priceEstimatorStore = reactive({
     this.saveStateToLocal()
   },
 
-  editComputeInLab(labId: number, computeId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string }) {
+  editComputeInLab(
+    labId: number,
+    computeId: number,
+    payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpuCount?: number },
+  ) {
     const lab = this.labs.find((l) => l.id === labId)
     if (!lab || !lab.selectedCompute) return
 
@@ -491,6 +504,7 @@ export const priceEstimatorStore = reactive({
       machine_type: payload.machine_type,
       core_count: payload.core_count,
       gpu: payload.gpu,
+      gpu_count: payload.gpuCount,
       ram: payload.ram,
       subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
@@ -652,6 +666,7 @@ export const priceEstimatorStore = reactive({
                   ram: comp.ram,
                   subscription: comp.subscription,
                   gpu: comp.gpu,
+                  gpu_count: comp.gpu_count,
                 })
               }
             }

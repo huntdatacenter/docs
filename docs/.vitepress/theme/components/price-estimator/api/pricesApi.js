@@ -11,7 +11,6 @@ export default {
   async getPriceList() {
     try {
       const res = await axios.get(price_list_url)
-      // console.log("Fetched price list:", res.data)
       return res.data
     } catch (error) {
       console.error("Error fetching price list:", error)

@@ -20,6 +20,7 @@ const formData = ref<MachineFormData>({
   name: undefined,
   machine_type: undefined,
   gpu: undefined,
+  gpu_count: 1,
   subscription: undefined,
 })
 
@@ -62,11 +63,15 @@ const getComputePriceMonth = computed((): string | number => {
 })
 
 const getGpuPriceYear = computed((): string | number => {
-  if (!formData.value.gpu) {
+  const gpu = formData.value.gpu
+  const gpuCount = formData.value.gpu_count
+
+  if (!gpu || !gpuCount) {
     return 0
   }
-  const price = priceEstimatorStore.catalogue.gpuPrices.find((item: PriceListItem) => item["service.unit"] === formData.value.gpu && item["service.level"] === "ONDEMAND")
-  return price ? Number(price["price.nok.ex.vat"]).toFixed(2) : 0
+  const price = priceEstimatorStore.catalogue.gpuPrices.find((item: PriceListItem) => item["service.unit"] === gpu && item["service.level"] === "ONDEMAND")
+
+  return price ? (Number(price["price.nok.ex.vat"]) * gpuCount).toFixed(2) : 0
 })
 
 const getGpuPriceMonth = computed((): string | number => {
@@ -90,6 +95,21 @@ const getGpus = computed(() => {
   })
 })
 
+const gpuCount = computed({
+  get: () => (formData.value.gpu ? formData.value.gpu_count : undefined),
+  set: (val) => {
+    if (formData.value.gpu) formData.value.gpu_count = val
+  },
+})
+
+const getMaxGpuCount = computed((): number => {
+  if (!formData.value.gpu) return 1
+
+  const selectedGpu = priceEstimatorStore.catalogue.availableGpus.find((item: GpuModel) => item["type"] === formData.value.gpu)
+
+  return selectedGpu?.max ?? 1
+})
+
 const close = () => {
   emit("close")
 }
@@ -110,6 +130,10 @@ const save = () => {
   const machineWithGpu = formData.value.machine_type
   const subscription = formData.value.subscription
   const gpu = formData.value.gpu
+  var gpuCount
+  if (gpu) {
+    gpuCount = formData.value.gpu_count
+  }
 
   if (props.editData) {
     priceEstimatorStore.editComputeInLab(props.labId, props.editData.id, {
@@ -119,6 +143,7 @@ const save = () => {
       ram: ram,
       subscription: subscription!,
       gpu: gpu,
+      gpuCount: gpuCount,
     })
   } else {
     // Add new compute
@@ -129,6 +154,7 @@ const save = () => {
       ram: ram,
       subscription: subscription!,
       gpu: gpu,
+      gpu_count: gpuCount,
     })
   }
 
@@ -148,6 +174,7 @@ onMounted(() => {
     } else {
       formData.value.machine_type = props.editData.machine_type
       formData.value.gpu = props.editData.gpu
+      formData.value.gpu_count = props.editData.gpu_count
     }
   } else {
     formData.value.id = props.computeId
@@ -196,6 +223,9 @@ onMounted(() => {
           </v-col>
           <v-col cols="12">
             <v-select v-model="formData.gpu" :items="getGpus" label="GPU type (optional)" variant="outlined" clearable :disabled="!formData.subscription"></v-select>
+          </v-col>
+          <v-col cols="12">
+            <v-number-input v-model="gpuCount" variant="outlined" label="GPU count" :min="1" :max="getMaxGpuCount" :disabled="!formData.gpu"></v-number-input>
           </v-col>
           <v-col v-show="formData.gpu" cols="12" sm="6">
             <v-text-field v-model="getGpuPriceMonth" label="GPU Price / Month" suffix="NOK ex. VAT" readonly variant="outlined"></v-text-field>
