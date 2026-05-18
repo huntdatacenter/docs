@@ -28,6 +28,7 @@ export interface ComputeUnit {
   core_count: number
   ram: number
   gpu?: string
+  gpu_count?: number
   subscription: SubscriptionType
   monthlyPrice: number
   yearlyPrice: number
@@ -46,6 +47,7 @@ export interface StorageUnit {
 export interface GpuModel {
   type: string
   vram: number
+  max: number
 }
 
 export interface MachineType {
@@ -87,6 +89,7 @@ export interface MachineFormData {
   name?: string
   machine_type?: string
   gpu?: string
+  gpu_count?: number
   subscription?: SubscriptionType
 }
 
