@@ -19,7 +19,7 @@ import { StorageUsageType } from "../types/index"
 
 const ISSERVER = typeof window === "undefined"
 
-const VERSION = "1.1"
+const VERSION = "1.2"
 
 export const priceEstimatorStore = reactive({
   /* State */
