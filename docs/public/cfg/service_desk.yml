@@ -2456,21 +2456,23 @@ request_update_data_rep:
     ]
   attachments: []
 
-request_tape_archive:
-  title: "Order tape archive"
+request_tape_backup:
+  title: "Order tape backup"
   template:
-    subject: "Tape write - {labname}"
+    subject: "Tape backup - {labname} - {tape_backup_type}"
     body: |
-      Hi HUNT Cloud team,  
+      Hi HUNT Cloud team,
 
-      I would like to order a tape archive for my dataset.  
+      I would like to order a tape backup for my lab.
 
       ---
-      Labname: {labname}  
-      Type of tape write: {tapewrite_type}
-      Size of dataset: {data_size} TB  
-      Description of dataset: {data_desc}  
-      Retention period: {retention}  
+      Username: {username}
+      Lab name: {labname}
+      Backup type: {tape_backup_type}
+      Scope: {tapewrite_type}
+      Size of dataset: {data_size} TB
+      Retention period: {retention}
+      Backup interval: {backup_interval}
       ---
 
       Let us touch base on Slack to discuss the details.
@@ -2495,15 +2497,48 @@ request_tape_archive:
         field: "textfield",
       },
       {
-        label: "Type of tape write",
+        label: "Backup type",
+        key: "tape_backup_type",
+        field: "autocompleteone",
+        options:
+          [
+            { text: "One-time tape archive", value: "Archive" },
+            { text: "Scheduled regular backup", value: "Scheduled" },
+          ],
+      },
+      {
+        label: "Scope of tape write",
         key: "tapewrite_type",
         field: "autocompleteone",
-        options: [{ text: "Full volume backup", value: "Full volume" }, { text: "Selected dataset backup", value: "Selected Dataset" }],
+        options:
+          [
+            { text: "Full volume backup", value: "Full volume" },
+            { text: "Selected dataset backup", value: "Selected dataset" },
+          ],
+      },
+      {
+        label: "Volume to back up",
+        key: "volume_target",
+        hint: "Select the volume. Leave as N/A for selected dataset backups.",
+        field: "autocompleteone",
+        options:
+          [
+            { text: "Not applicable (selected dataset)", value: "N/A" },
+            { text: "archive", value: "archive" },
+            { text: "archive2", value: "archive2" },
+            { text: "archive3", value: "archive3" },
+            { text: "work", value: "work" },
+            { text: "work2", value: "work2" },
+            { text: "work3", value: "work3" },
+            { text: "scratch", value: "scratch" },
+            { text: "scratch2", value: "scratch2" },
+            { text: "scratch3", value: "scratch3" },
+          ],
       },
       {
         label: "Size of dataset (in terabytes)",
         key: "data_size",
-        hint: "Field should include only numbers",
+        hint: "Estimated size of data to be written to tape.",
         suffix: "TB",
         min: 0.1,
         max: 25,
@@ -2512,25 +2547,34 @@ request_tape_archive:
         default: 1,
       },
       {
-        label: "Data set description (optional)",
-        key: "data_desc",
-        pattern: "^$|[-a-z0-9]{3,}",
-        default: " ",
-        hint: "You can describe type of data and how it is currently stored.",
-        autocapitalize: "off",
-        field: "textfield",
-      },
-      {
         label: "Retention period",
         key: "retention",
-        pattern: "[-a-z0-9]{3,}",
-        hint: "How long should we store the data on tape (max 10 years for single tape write)",
-        suffix: "Years",
-        min: 1,
-        max: 10,
-        step: 1,
-        field: "number",
-        default: 5,
+        hint: "How long data is kept on tape before recycling.",
+        field: "autocompleteone",
+        options:
+          [
+            { text: "30 days", value: "30 days" },
+            { text: "3 months", value: "3 months" },
+            { text: "6 months", value: "6 months" },
+            { text: "1 year", value: "1 year" },
+            { text: "5 years", value: "5 years" },
+            { text: "10 years", value: "10 years" },
+          ],
+      },
+      {
+        label: "Backup interval",
+        key: "backup_interval",
+        hint: "For scheduled backups only. Select 'Not applicable' for one-time archive.",
+        field: "autocompleteone",
+        options:
+          [
+            { text: "Not applicable (one-time archive)", value: "N/A" },
+            #{ text: "Daily", value: "Daily" },
+            #{ text: "Weekly", value: "Weekly" },
+            { text: "Monthly", value: "Monthly" },
+            { text: "Quarterly", value: "Quarterly" },
+            { text: "Yearly", value: "Yearly" },
+          ],
       },
     ]
 
