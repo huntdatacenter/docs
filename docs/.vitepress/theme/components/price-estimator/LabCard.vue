@@ -36,8 +36,8 @@ const storageHeaders = ref([
   { title: "Usage", align: "start", sortable: true, key: "usage" },
   { title: "Type", align: "start", sortable: true, key: "type" },
   { title: "Size [TB]", align: "end", sortable: true, key: "size" },
-  { title: "Price / month", align: "end", sortable: true, key: "monthlyPrice" },
-  { title: "Price / year", align: "end", sortable: true, key: "yearlyPrice" },
+  { title: "Price / month", align: "end", sortable: true, nowrap: true, key: "monthlyPrice" },
+  { title: "Price / year", align: "end", sortable: true, nowrap: true, key: "yearlyPrice" },
   { title: "Actions", key: "actions", align: "end", sortable: false },
 ] as const)
 
