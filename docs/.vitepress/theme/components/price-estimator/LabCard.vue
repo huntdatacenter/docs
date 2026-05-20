@@ -276,9 +276,9 @@ const removeStorageById = (storageId: number) => {
                 <!-- Type -->
                 <th></th>
                 <!-- Size [TB] -->
-                <th></th>
+                <th class="v-data-table-column--align-end"></th>
                 <!-- Price / month -->
-                <th></th>
+                <th class="v-data-table-column--align-end"></th>
                 <!-- Price / year -->
                 <th class="v-data-table-column--align-end">
                   <strong>{{ LabSum.toFixed(2) }} kr</strong>
