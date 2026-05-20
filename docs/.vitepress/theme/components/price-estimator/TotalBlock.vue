@@ -89,7 +89,7 @@ const tableItems = computed(() => {
   // Discount row
   items.push({
     id: "discount-row",
-    name: "Storage Discount",
+    name: "Storage Volume Discount",
     units: "",
     cost: totalDiscount > 0 ? -totalDiscount : 0,
     isDiscountRow: true,

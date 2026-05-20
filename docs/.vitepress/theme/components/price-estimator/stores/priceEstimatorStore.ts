@@ -13,6 +13,7 @@ import {
   storageTypes,
   StorageCostByType,
   LocalStorageError,
+  LabSubscriptionType,
 } from "../types/index.js"
 import pricesApi from "../api/pricesApi.js"
 import { StorageUsageType } from "../types/index"
@@ -161,7 +162,7 @@ export const priceEstimatorStore = reactive({
       title: payload.name,
       selectedCompute: [],
       selectedStorage: [],
-      subscription: payload.subscription as SubscriptionType,
+      subscription: payload.subscription as LabSubscriptionType,
     }
 
     // Add compute
@@ -227,6 +228,11 @@ export const priceEstimatorStore = reactive({
     this.labs = this.labs.filter((lab) => lab.id !== labId)
   },
 
+  getLabSubscription(period: string) {
+    const price = priceEstimatorStore.catalogue.labPrices.find((labPrice) => labPrice["service.commitment"] === period)
+    return price?.["price.nok.ex.vat"]
+  },
+
   getLabComputePriceSum(labId: number) {
     const lab = this.labs.find((l) => l.id === labId)
     if (!lab) {
@@ -239,7 +245,21 @@ export const priceEstimatorStore = reactive({
     return { monthlyCostTotal, yearlyCostTotal }
   },
 
-  getLabStoragePriceSum(labId: number): StorageCostByType {
+  getLabStoragePriceSum(labId: number) {
+    let results = { yearlyCostTotal: 0, monthlyCostTotal: 0 }
+    const lab = this.labs.find((l) => l.id === labId)
+    if (!lab) {
+      return results
+    }
+
+    const monthlyCostTotal = lab.selectedStorage.reduce((sum, s) => sum + s.monthlyPrice, 0)
+    const yearlyCostTotal = lab.selectedStorage.reduce((sum, s) => sum + s.yearlyPrice, 0)
+    results = { monthlyCostTotal: monthlyCostTotal, yearlyCostTotal: yearlyCostTotal }
+
+    return results
+  },
+
+  getLabStoragePriceSumByType(labId: number): StorageCostByType {
     const results: StorageCostByType = {
       HDD: { size: 0, yearlyCostTotal: 0, monthlyCostTotal: 0 },
       NVME: { size: 0, yearlyCostTotal: 0, monthlyCostTotal: 0 },
@@ -535,7 +555,7 @@ export const priceEstimatorStore = reactive({
 
     if (this.labs.length > 0 && this.catalogue.labPrices.length > 0) {
       this.labs.forEach((lab) => {
-        const type = lab.subscription as "1Y" | "3Y"
+        const type = lab.subscription
         const priceItem = this.catalogue.labPrices.find((p) => p["service.commitment"] === type)
         summary.labSubscriptions[type].units += 1
         if (priceItem) {

@@ -8,6 +8,7 @@ Cost: Calculated amount of prices. Used for Summary.
 */
 
 export type SubscriptionType = "COMMITMENT_1Y" | "COMMITMENT_3Y" | "ONDEMAND" | "SPOT"
+export type LabSubscriptionType = "1Y" | "3Y"
 export type StorageUsageType = "Archive" | "Work" | "Scratch" | "Backup"
 export const storageTypes = ["HDD", "NVME"] as const
 export type StorageType = (typeof storageTypes)[number]
@@ -71,7 +72,7 @@ export interface LabCard {
   title: string
   selectedCompute: ComputeUnit[]
   selectedStorage: StorageUnit[]
-  subscription: SubscriptionType
+  subscription: LabSubscriptionType
 }
 
 interface StoragePrice {

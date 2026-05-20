@@ -23,8 +23,8 @@ const computeHeaders = ref<DataTableHeader[]>([
   { title: "GPU", align: "start", sortable: true, key: "gpu" },
   { title: "GPU count", align: "start", sortable: true, key: "gpu_count" },
   { title: "Subscription", align: "start", sortable: true, key: "subscription" },
-  { title: "Price / month", align: "start", sortable: true, key: "monthlyPrice" },
-  { title: "Price / year", align: "start", sortable: true, key: "yearlyPrice" },
+  { title: "Price / month", align: "end", sortable: true, key: "monthlyPrice" },
+  { title: "Price / year", align: "end", sortable: true, key: "yearlyPrice" },
   { title: "Actions", key: "actions", align: "end", sortable: false },
 ])
 
@@ -36,8 +36,8 @@ const storageHeaders = ref([
   { title: "Usage", align: "start", sortable: true, key: "usage" },
   { title: "Type", align: "start", sortable: true, key: "type" },
   { title: "Size [TB]", align: "start", sortable: true, key: "size" },
-  { title: "Price / month", align: "start", sortable: true, key: "monthlyPrice" },
-  { title: "Price / year", align: "start", sortable: true, key: "yearlyPrice" },
+  { title: "Price / month", align: "end", sortable: true, key: "monthlyPrice" },
+  { title: "Price / year", align: "end", sortable: true, key: "yearlyPrice" },
   { title: "Actions", key: "actions", align: "end", sortable: false },
 ] as const)
 
@@ -45,6 +45,13 @@ const snackbar = ref({
   show: false,
   message: "",
 })
+
+const totalHeaders = ref<DataTableHeader[]>([
+  { title: "Lab Subcription" + props.lab.subscription, align: "start", sortable: true, key: "labSubscription" },
+  { title: "Total Compute", align: "start", sortable: true, key: "totalCompute" },
+  { title: "Total Storage", align: "start", sortable: true, key: "totalStorage" },
+  { title: "Total Cost", align: "start", sortable: true, key: "totalCost" },
+])
 
 const selectedCompute = computed(() => props.lab.selectedCompute || [])
 const selectedStorage = computed(() => props.lab.selectedStorage || [])
@@ -54,11 +61,24 @@ const computeLabSum = computed(() => {
 })
 
 const storageLabSum = computed(() => {
+  return priceEstimatorStore.getLabStoragePriceSumByType(props.lab.id)
+})
+
+const storageLabPriceSum = computed(() => {
   return priceEstimatorStore.getLabStoragePriceSum(props.lab.id)
 })
 
+const labSubscriptionPrice = computed(() => {
+  const price = priceEstimatorStore.getLabSubscription(props.lab.subscription) || 0
+  return { monthly: price! / 12, yearly: price }
+})
+
+const LabSumMonthly = computed(() => {
+  return labSubscriptionPrice.value.monthly + computeLabSum.value.monthlyCostTotal + storageLabSum.value.HDD.monthlyCostTotal + storageLabSum.value.NVME.monthlyCostTotal
+})
+
 const LabSum = computed(() => {
-  return computeLabSum.value.yearlyCostTotal + storageLabSum.value.HDD.yearlyCostTotal + storageLabSum.value.NVME.yearlyCostTotal
+  return labSubscriptionPrice.value.yearly + computeLabSum.value.yearlyCostTotal + storageLabSum.value.HDD.yearlyCostTotal + storageLabSum.value.NVME.yearlyCostTotal
 })
 
 const localTitle = ref(props.lab.title)
@@ -147,10 +167,20 @@ const removeStorageById = (storageId: number) => {
 
           <v-data-table-virtual :items="selectedCompute" :headers="computeHeaders" hide-default-footer hover item-value="id">
             <template v-slot:item.monthlyPrice="{ item }">
-              {{ item.monthlyPrice.toFixed(2) + " kr" }}
+              <div class="d-flex justify-end">
+                <span class="text-right" style="width: 90px">
+                  {{ item.monthlyPrice.toFixed(2) }}
+                </span>
+                <span class="ml-1">NOK</span>
+              </div>
             </template>
             <template v-slot:item.yearlyPrice="{ item }">
-              {{ item.yearlyPrice.toFixed(2) + " kr" }}
+              <div class="d-flex justify-end">
+                <span class="text-right" style="width: 90px">
+                  {{ item.yearlyPrice.toFixed(2) }}
+                </span>
+                <span class="ml-1">NOK</span>
+              </div>
             </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
@@ -175,11 +205,12 @@ const removeStorageById = (storageId: number) => {
                 <th></th>
                 <th></th>
                 <th></th>
-                <th>
-                  <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) + " kr" }} </strong>
+                <th></th>
+                <th class="v-data-table-column--align-end">
+                  <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }} NOK</strong>
                 </th>
-                <th>
-                  <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) + " kr" }} </strong>
+                <th class="v-data-table-column--align-end">
+                  <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }} NOK</strong>
                 </th>
                 <th></th>
               </tr>
@@ -199,15 +230,9 @@ const removeStorageById = (storageId: number) => {
             item-value="id"
             aria-placeholder="No storage added yet"
           >
-            <template v-slot:item.size="{ item }">
-              {{ item.size.toFixed(2) + " TB" }}
-            </template>
-            <template v-slot:item.monthlyPrice="{ item }">
-              {{ item.monthlyPrice.toFixed(2) + " kr" }}
-            </template>
-            <template v-slot:item.yearlyPrice="{ item }">
-              {{ item.yearlyPrice.toFixed(2) + " kr" }}
-            </template>
+            <template v-slot:item.size="{ item }"> {{ item.size.toFixed(2) }} TB </template>
+            <template v-slot:item.monthlyPrice="{ item }"> {{ item.monthlyPrice.toFixed(2) }} NOK </template>
+            <template v-slot:item.yearlyPrice="{ item }"> {{ item.yearlyPrice.toFixed(2) }} NOK </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
                 <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editStorage(selectedStorage.find((s) => s.id === item.id)!)"></v-icon>
@@ -234,28 +259,61 @@ const removeStorageById = (storageId: number) => {
                 <th>
                   <strong>{{ item.size.toFixed(2) }} TB</strong>
                 </th>
-                <th>
-                  <strong>{{ item.monthlyCostTotal.toFixed(2) }} kr</strong>
+                <th class="v-data-table-column--align-end">
+                  <strong>{{ item.monthlyCostTotal.toFixed(2) }} NOK</strong>
                 </th>
-                <th>
-                  <strong>{{ item.yearlyCostTotal.toFixed(2) }} kr</strong>
-                </th>
-              </tr>
-              <tr style="background-color: #f5f5f5">
-                <th>
-                  <strong>Total lab resources</strong>
-                </th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th>
-                  <strong>{{ LabSum.toFixed(2) }} kr</strong>
+                <th class="v-data-table-column--align-end">
+                  <strong>{{ item.yearlyCostTotal.toFixed(2) }} NOK</strong>
                 </th>
                 <th></th>
               </tr>
             </template>
           </v-data-table-virtual>
+        </v-card>
+        <v-card flat class="ma-2">
+          <v-card-title>Lab Summary</v-card-title>
+          <v-table>
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th class="text-right">Monthly</th>
+                <th class="text-right">Yearly</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Lab Subscription ({{ lab.subscription }})</strong>
+                </td>
+                <td></td>
+                <td class="text-right">{{ Number(labSubscriptionPrice.monthly).toFixed(2) }} NOK</td>
+                <td class="text-right">{{ Number(labSubscriptionPrice.yearly).toFixed(2) }} NOK</td>
+              </tr>
+              <tr>
+                <td><strong>Total compute</strong></td>
+                <td></td>
+                <td class="text-right">{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }} NOK</td>
+                <td class="text-right">{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }} NOK</td>
+              </tr>
+              <tr>
+                <td><strong>Total storage</strong></td>
+                <td></td>
+                <td class="text-right">{{ Number(storageLabPriceSum?.monthlyCostTotal || 0).toFixed(2) }} NOK</td>
+                <td class="text-right">{{ Number(storageLabPriceSum?.yearlyCostTotal || 0).toFixed(2) }} NOK</td>
+              </tr>
+              <tr class="bg-grey-lighten-3">
+                <td><strong>Total lab resource</strong></td>
+                <td></td>
+                <td class="text-right">
+                  <strong>{{ Number(LabSumMonthly.toFixed(2) || 0).toFixed(2) }} NOK</strong>
+                </td>
+                <td class="text-right">
+                  <strong>{{ Number(LabSum.toFixed(2) || 0).toFixed(2) }} NOK</strong>
+                </td>
+              </tr>
+            </tbody>
+          </v-table>
         </v-card>
       </v-card>
     </v-sheet>
