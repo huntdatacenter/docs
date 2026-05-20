@@ -126,19 +126,21 @@ const removeStorageById = (storageId: number) => {
 <template>
   <v-container>
     <v-sheet class="lab-card ma-0">
-      <v-card class="ma-0">
+      <v-card style="background-color: #f5f5f5" class="ma-0">
         <v-row class="ma-2 d-flex" align="center" justify="space-between">
-          <v-btn icon style="visibility: hidden"> </v-btn>
+          <v-btn size="small" icon style="visibility: hidden"> </v-btn>
           <v-text-field
             v-model="localTitle"
-            variant="underlined"
+            label=""
+            placeholder="Lab name"
+            variant="plain"
             hide-details
             density="compact"
             class="lab-title-input flex-grow-0"
             @update:model-value="updateTitle"
           ></v-text-field>
-          <v-btn icon @click="priceEstimatorStore.removeLab(props.lab.id)">
-            <v-icon>mdi-delete</v-icon>
+          <v-btn size="small" icon @click="priceEstimatorStore.removeLab(props.lab.id)">
+            <v-icon size="default">mdi-delete</v-icon>
           </v-btn>
         </v-row>
 
