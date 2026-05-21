@@ -9,9 +9,9 @@ const currencyFormatter = new Intl.NumberFormat("nb-NO", {
 })
 
 const headers = [
-  { title: "Name", key: "name", sortable: false },
-  { title: "Units", key: "units", sortable: false },
-  { title: "Price / year", key: "cost", sortable: false },
+  { title: "Name", align: "start", key: "name", sortable: false },
+  { title: "Units", align: "end", key: "units", sortable: false },
+  { title: "Price / year", align: "end", key: "cost", sortable: false },
 ]
 
 const rawSummary = computed(() => priceEstimatorStore.updateTotalSummary())
@@ -137,14 +137,16 @@ const tableItems = computed(() => {
       </v-col>
     </v-row>
 
-    <v-data-table :headers="headers" :items="tableItems" hide-default-footer item-value="id" class="mt-2">
+    <v-data-table-virtual :headers="headers" :items="tableItems" hide-default-footer item-value="id" class="mt-2">
       <template v-slot:item.name="{ item }">
-        <strong v-if="item.isTotalRow">{{ item.name }}</strong>
+        <span v-if="item.isTotalRow">
+          <strong>{{ item.name }}</strong>
+        </span>
         <span v-else>{{ item.name }}</span>
       </template>
 
       <template v-slot:item.cost="{ item }">
-        <span v-if="item.isDiscountRow" class="text-green-darken-3" style="font-weight: 600"> - {{ currencyFormatter.format(Math.abs(item.cost)) }} </span>
+        <span v-if="item.isDiscountRow" class="text-green-darken-3" style="font-weight: 600">- {{ currencyFormatter.format(Math.abs(item.cost)) }}</span>
 
         <span v-else-if="item.isTotalRow" style="font-weight: 700">
           {{ currencyFormatter.format(item.cost) }}
@@ -156,14 +158,16 @@ const tableItems = computed(() => {
       </template>
 
       <template v-slot:item.units="{ item }">
-        <strong v-if="item.isTotalRow">{{ item.units }}</strong>
+        <span v-if="item.isTotalRow">
+          <strong>{{ item.units }}</strong>
+        </span>
         <span v-else>{{ item.units }}</span>
       </template>
 
       <template v-slot:no-data>
         <v-sheet class="pa-4">No summary data available</v-sheet>
       </template>
-    </v-data-table>
+    </v-data-table-virtual>
   </v-card>
 </template>
 
