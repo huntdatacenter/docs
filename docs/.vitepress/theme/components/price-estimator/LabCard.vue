@@ -18,13 +18,13 @@ let editingComputeItem: ComputeUnit | null = null
 const computeHeaders = ref<DataTableHeader[]>([
   { title: "Name", align: "start", sortable: true, key: "name" },
   { title: "Machine type", align: "start", sortable: true, key: "machine_type" },
-  { title: "CPU cores", align: "start", sortable: true, key: "core_count" },
-  { title: "Memory [GB]", align: "start", sortable: true, key: "ram" },
-  { title: "GPU", align: "start", sortable: true, key: "gpu" },
-  { title: "GPU count", align: "start", sortable: true, key: "gpu_count" },
+  { title: "CPU cores", align: "end", sortable: true, key: "core_count" },
+  { title: "Memory [GB]", align: "end", sortable: true, key: "ram" },
+  { title: "GPU", align: "end", sortable: true, key: "gpu" },
+  { title: "GPU count", align: "end", sortable: true, key: "gpu_count" },
   { title: "Subscription", align: "start", sortable: true, key: "subscription" },
-  { title: "Price / month", align: "end", sortable: true, key: "monthlyPrice" },
-  { title: "Price / year", align: "end", sortable: true, key: "yearlyPrice" },
+  { title: "Price / month", align: "end", sortable: true, nowrap: true, key: "monthlyPrice" },
+  { title: "Price / year", align: "end", sortable: true, nowrap: true, key: "yearlyPrice" },
   { title: "Actions", key: "actions", align: "end", sortable: false },
 ])
 
@@ -35,9 +35,9 @@ const storageHeaders = ref([
   { title: "Name", align: "start", sortable: true, key: "name" },
   { title: "Usage", align: "start", sortable: true, key: "usage" },
   { title: "Type", align: "start", sortable: true, key: "type" },
-  { title: "Size [TB]", align: "start", sortable: true, key: "size" },
-  { title: "Price / month", align: "end", sortable: true, key: "monthlyPrice" },
-  { title: "Price / year", align: "end", sortable: true, key: "yearlyPrice" },
+  { title: "Size [TB]", align: "end", sortable: true, key: "size" },
+  { title: "Price / month", align: "end", sortable: true, nowrap: true, key: "monthlyPrice" },
+  { title: "Price / year", align: "end", sortable: true, nowrap: true, key: "yearlyPrice" },
   { title: "Actions", key: "actions", align: "end", sortable: false },
 ] as const)
 
@@ -146,19 +146,21 @@ const removeStorageById = (storageId: number) => {
 <template>
   <v-container>
     <v-sheet class="lab-card ma-0">
-      <v-card class="ma-0">
+      <v-card style="background-color: #f5f5f5" class="ma-0">
         <v-row class="ma-2 d-flex" align="center" justify="space-between">
-          <v-btn icon style="visibility: hidden"> </v-btn>
+          <v-btn size="small" icon style="visibility: hidden"> </v-btn>
           <v-text-field
             v-model="localTitle"
-            variant="underlined"
+            label=""
+            placeholder="Lab name"
+            variant="plain"
             hide-details
             density="compact"
             class="lab-title-input flex-grow-0"
             @update:model-value="updateTitle"
           ></v-text-field>
-          <v-btn icon @click="priceEstimatorStore.removeLab(props.lab.id)">
-            <v-icon>mdi-delete</v-icon>
+          <v-btn size="small" icon @click="priceEstimatorStore.removeLab(props.lab.id)">
+            <v-icon size="default">mdi-delete</v-icon>
           </v-btn>
         </v-row>
 
@@ -189,18 +191,35 @@ const removeStorageById = (storageId: number) => {
               </div>
             </template>
 
-            <template v-slot:body.append="{}">
+            <template v-slot:body.append="{ headers }">
               <tr>
                 <th :colspan="computeHeaders.length + 1" class="text-center">
                   <v-btn size="small" @click="addMachine" append-icon="mdi-plus"> Add machine </v-btn>
                 </th>
               </tr>
 
+              <!-- <tr>
+                <th v-for="header in headers[0]">
+                  {{ header }}
+                </th>
+              </tr> -->
+
               <tr>
+                <!-- Name -->
                 <th role="columnheader">
                   <span><strong>Total compute</strong> </span>
                 </th>
+                <!-- Machine type -->
                 <th></th>
+                <!-- CPU cores -->
+                <th class="v-data-table-column--align-end"></th>
+                <!-- Memory [GB] -->
+                <th class="v-data-table-column--align-end"></th>
+                <!-- GPU -->
+                <th class="v-data-table-column--align-end"></th>
+                <!-- GPU count -->
+                <th class="v-data-table-column--align-end"></th>
+                <!-- Subscription -->
                 <th></th>
                 <th></th>
                 <th></th>
@@ -212,7 +231,8 @@ const removeStorageById = (storageId: number) => {
                 <th class="v-data-table-column--align-end">
                   <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }} NOK</strong>
                 </th>
-                <th></th>
+                <!-- Actions -->
+                <th class="v-data-table-column--align-end"></th>
               </tr>
             </template>
           </v-data-table-virtual>
@@ -247,16 +267,20 @@ const removeStorageById = (storageId: number) => {
                 </th>
               </tr>
               <tr v-for="(item, storageType, index) in storageLabSum" :key="storageType">
+                <!-- Name -->
                 <th>
                   <strong v-if="index === 0">Total storage</strong>
                 </th>
+                <!-- Usage -->
                 <th></th>
+                <!-- Type -->
                 <th>
                   <span>
                     <strong>{{ storageType }}</strong>
                   </span>
                 </th>
-                <th>
+                <!-- Size [TB] -->
+                <th class="v-data-table-column--align-end">
                   <strong>{{ item.size.toFixed(2) }} TB</strong>
                 </th>
                 <th class="v-data-table-column--align-end">
@@ -265,6 +289,7 @@ const removeStorageById = (storageId: number) => {
                 <th class="v-data-table-column--align-end">
                   <strong>{{ item.yearlyCostTotal.toFixed(2) }} NOK</strong>
                 </th>
+                <!-- Actions -->
                 <th></th>
               </tr>
             </template>
