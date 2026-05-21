@@ -223,9 +223,11 @@ const removeStorageById = (storageId: number) => {
                 <th class="v-data-table-column--align-end"></th>
                 <!-- Subscription -->
                 <th></th>
+                <!-- Price / month -->
                 <th class="v-data-table-column--align-end">
                   <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }} NOK</strong>
                 </th>
+                <!-- Price / year -->
                 <th class="v-data-table-column--align-end">
                   <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }} NOK</strong>
                 </th>
@@ -281,9 +283,11 @@ const removeStorageById = (storageId: number) => {
                 <th class="v-data-table-column--align-end">
                   <strong>{{ item.size.toFixed(2) }} TB</strong>
                 </th>
+                <!-- Price / month -->
                 <th class="v-data-table-column--align-end">
                   <strong>{{ item.monthlyCostTotal.toFixed(2) }} NOK</strong>
                 </th>
+                <!-- Price / year -->
                 <th class="v-data-table-column--align-end">
                   <strong>{{ item.yearlyCostTotal.toFixed(2) }} NOK</strong>
                 </th>
