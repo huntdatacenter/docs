@@ -13,6 +13,8 @@ const props = defineProps({
 
 // State
 const isComputeModalOpen = ref(false)
+const showLocalComputeSummary = ref(false)
+const showLocalStorageSummary = ref(false)
 let editingComputeItem: ComputeUnit | null = null
 
 const computeHeaders = ref<DataTableHeader[]>([
@@ -204,7 +206,7 @@ const removeStorageById = (storageId: number) => {
                 </th>
               </tr>
 
-              <tr>
+              <tr v-if="showLocalComputeSummary">
                 <!-- Name -->
                 <th role="columnheader">
                   <span><strong>Total compute</strong> </span>
@@ -262,7 +264,7 @@ const removeStorageById = (storageId: number) => {
                   <v-btn size="small" @click="addStorage" append-icon="mdi-plus"> Add storage </v-btn>
                 </th>
               </tr>
-              <tr v-for="(item, storageType, index) in storageLabSum" :key="storageType">
+              <tr v-if="showLocalStorageSummary" v-for="(item, storageType, index) in storageLabSum" :key="storageType">
                 <!-- Name -->
                 <th>
                   <strong v-if="index === 0">Total storage</strong>
@@ -292,7 +294,7 @@ const removeStorageById = (storageId: number) => {
           </v-data-table-virtual>
         </v-card>
         <v-card flat class="ma-2">
-          <v-card-title>Lab Summary</v-card-title>
+          <v-card-title>Lab summary</v-card-title>
           <v-table>
             <thead>
               <tr>
@@ -312,19 +314,19 @@ const removeStorageById = (storageId: number) => {
                 <td class="text-right">{{ Number(labSubscriptionPrice.yearly).toFixed(2) }} NOK</td>
               </tr>
               <tr>
-                <td><strong>Total compute</strong></td>
+                <td><strong>Compute</strong></td>
                 <td></td>
                 <td class="text-right">{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }} NOK</td>
                 <td class="text-right">{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }} NOK</td>
               </tr>
               <tr>
-                <td><strong>Total storage</strong></td>
+                <td><strong>Storage</strong></td>
                 <td></td>
                 <td class="text-right">{{ Number(storageLabPriceSum?.monthlyCostTotal || 0).toFixed(2) }} NOK</td>
                 <td class="text-right">{{ Number(storageLabPriceSum?.yearlyCostTotal || 0).toFixed(2) }} NOK</td>
               </tr>
               <tr class="bg-grey-lighten-3">
-                <td><strong>Total lab resource</strong></td>
+                <td><strong>Total</strong></td>
                 <td></td>
                 <td class="text-right">
                   <strong>{{ Number(LabSumMonthly.toFixed(2) || 0).toFixed(2) }} NOK</strong>
