@@ -19,7 +19,7 @@ One of the standout features of LTO tapes is their exceptionally low error rate.
 
 ## Security features
 
-LTO tapes are an excellent choice for storing sensitive data. One key feature is the ability to encrypt data on-the-fly, providing a strong defence against unauthorised access. Additionally, LTO tapes can be configured in a WORM (Write Once, Read Many) format, which prevents data from being altered or deleted once written.
+LTO tapes are an excellent choice for storing sensitive data. One key feature is the ability to encrypt data on-the-fly, providing a strong defence against unauthorised access. Additionally, LTO tapes can be configured in a WORM (Write Once, Read Many) format, which prevents data from being altered or deleted once written. Another security aspect LTO tape offers is ability to store your data offline in a secure location. This way even if system and data is compromised, your data stays safe, unaccessible from the internet.  
 
 ## Tape archive vs tape backup
 
