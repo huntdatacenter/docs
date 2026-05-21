@@ -10,7 +10,7 @@ const emit = defineEmits<{
 const formData = ref({
   name: "",
   subscription: "1Y",
-  machineType: "default.c1",
+  machineType: "c1",
   machineSubscription: "COMMITMENT_1Y",
   hddSize: 1,
   nvmeSize: 0,
