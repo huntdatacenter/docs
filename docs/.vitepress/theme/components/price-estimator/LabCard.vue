@@ -20,8 +20,8 @@ let editingComputeItem: ComputeUnit | null = null
 const computeHeaders = ref<DataTableHeader[]>([
   { title: "Name", align: "start", sortable: true, key: "name" },
   { title: "Machine type", align: "start", sortable: true, key: "machine_type" },
-  { title: "CPU cores", align: "end", sortable: true, key: "core_count" },
-  { title: "Memory [GB]", align: "end", sortable: true, key: "ram" },
+  { title: "vCPUs", align: "end", sortable: true, key: "core_count" },
+  { title: "RAM [GB]", align: "end", sortable: true, key: "ram" },
   { title: "GPU", align: "end", sortable: true, key: "gpu" },
   { title: "GPU count", align: "end", sortable: true, key: "gpu_count" },
   { title: "Subscription", align: "start", sortable: true, key: "subscription" },
@@ -213,9 +213,9 @@ const removeStorageById = (storageId: number) => {
                 </th>
                 <!-- Machine type -->
                 <th></th>
-                <!-- CPU cores -->
+                <!-- vCPUs -->
                 <th class="v-data-table-column--align-end"></th>
-                <!-- Memory [GB] -->
+                <!-- RAM [GB] -->
                 <th class="v-data-table-column--align-end"></th>
                 <!-- GPU -->
                 <th class="v-data-table-column--align-end"></th>
