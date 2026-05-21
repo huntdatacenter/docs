@@ -304,8 +304,8 @@ const removeStorageById = (storageId: number) => {
               <tr>
                 <th></th>
                 <th></th>
-                <th class="text-right">Monthly</th>
-                <th class="text-right">Yearly</th>
+                <th class="text-right">Price / month</th>
+                <th class="text-right">Price / year</th>
               </tr>
             </thead>
             <tbody>
