@@ -7,7 +7,7 @@ description: This section list information and questions for the HUNT Cloud Ting
 buttons:
  - title: 'About'
    subtitle: 'Read about Tingweeks, our user forums, and how they have evolved.'
-   href: '/govern-science/tingweek/overview/'
+   href: '/govern-science/tingweek/about/'
    icon: "mdi-clipboard-search-outline"
  - title: 'Dates'
    subtitle: 'Dates for future and past Tingweeks, including agendas.'
