@@ -5,6 +5,7 @@ import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 const currencyFormatter = new Intl.NumberFormat("nb-NO", {
   style: "currency",
   currency: "NOK",
+  currencyDisplay: "code",
   maximumFractionDigits: 0,
 })
 
