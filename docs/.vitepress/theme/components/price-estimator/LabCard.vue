@@ -70,7 +70,13 @@ const storageLabPriceSum = computed(() => {
 
 const labSubscriptionPrice = computed(() => {
   const price = priceEstimatorStore.getLabSubscription(props.lab.subscription) || 0
-  return { monthly: price! / 12, yearly: price }
+
+  let div = 12
+  if (props.lab.subscription === "3Y") {
+    div = 36
+  }
+
+  return { monthly: price! / div, yearly: price }
 })
 
 const LabSumMonthly = computed(() => {
@@ -198,12 +204,6 @@ const removeStorageById = (storageId: number) => {
                 </th>
               </tr>
 
-              <!-- <tr>
-                <th v-for="header in headers[0]">
-                  {{ header }}
-                </th>
-              </tr> -->
-
               <tr>
                 <!-- Name -->
                 <th role="columnheader">
@@ -220,10 +220,6 @@ const removeStorageById = (storageId: number) => {
                 <!-- GPU count -->
                 <th class="v-data-table-column--align-end"></th>
                 <!-- Subscription -->
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
                 <th></th>
                 <th class="v-data-table-column--align-end">
                   <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }} NOK</strong>
