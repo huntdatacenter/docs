@@ -2,19 +2,18 @@
 title: Resolutions
 category: Tingweek
 permalink: /govern-science/tingweek/resolutions
-description: This page list Lagtun resolutions that govern the scientific development of HUNT Cloud.
+description: This page list Ting resolutions that guide the scientific development of HUNT Cloud.
 ---
 
-# Lagtun resolutions
+# Ting resolutions
 
-**This page list individual resolutions from Lagtun that governs the scientific development of HUNT Cloud.**
+**This page list individual Ting resolutions that guide the scientific development of HUNT Cloud.**
 
-::: tip
 
-Read more about [Lagtun](/govern-science/tingweek/lagtun) and the use of [resolutions](/govern-science/tingweek/lagtun#resolutions).
+#### [Temporary extension of BLUE machines](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-resolutions.pdf#page=3)
 
-:::
-
+- TOPIC: Finance
+- ID: R9/LT17/T17/26
 
 #### [Renew three year commitment resources with one year extensions](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-resolutions.pdf#page=4)
 

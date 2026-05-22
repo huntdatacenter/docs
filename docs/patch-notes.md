@@ -21,48 +21,42 @@ This page contains descriptions of updates (patches) to HUNT Cloud's services. A
 
 <h3>Major changes</h3>
 
+**GPU updates**
+
+We have introduced two new GPU series from NVIDIA in 2025-Q1.
+
+- NVIDIA A16 - cheapest card on offer. Providing 16GB of VRAM while giving strong performance. We can utilise up to 12x cards in a single lab gpu node, offering up to 192GB of VRAM.
+- NVIDIA L40S - New series from NVIDIA aiming for fast AI, image and ML processing. This is a new gen of A40 cards, offering 48GB of VRAM in a single card. Up to 2x cards available in a single gpu node.
+
 **Documentation updates**
 
-We are updating our [tools](/do-science/tools/) section in do science guides. These updates can range from simple text adjustments to updating code and removing those that are irrelevant.
-
-If you think we are missing an important guide or a guide is not working as expected, please give us feedback via this [contact form](/about/contact).
+We have been updating our [tools](/do-science/tools/) section in do science guides. The changes range from simple text adjustments to updating code. If you think we are missing an important guide or a guide is not working as expected, please give us feedback via this [contact form](/about/contact).
 
 <h3>Minor changes</h3>
 
-- Added automatic IPv4 checking [here](/ipv4/)
+- Added automatic IPv4 checking [here](/ipv4/).
 
 :::
 
 ::: details Administer science
 
-<h3>Major changes</h3>
-
-**New GPUs on offer**
-
-Introduced two new GPU series from NVIDIA in 2025-Q1.
-
-**NVIDIA A16** - cheapest card on offer. Providing 16GB of VRAM while giving strong performance. We can utilise up to 12x cards in a single lab gpu node, offering up to 192GB of VRAM.
-
-**NVIDIA L40S** - New series from NVIDIA aiming for fast AI, image and ML processing. This is a new gen of A40 cards, offering 48GB of VRAM in a single card. Up to 2x cards available in a single gpu node.
-
-You can review price on both GPU cards [here](/administer-science/prices/pricelist).
 
 <h3>Minor changes</h3>
 
-- Cleaned up inconsistencies in price lists
+- Two new GPUs added to the [price list](/administer-science/prices/pricelist).
+- Cleaned up inconsistencies in price lists.
 
 :::
 
 ::: details Govern science
 
-<h3>Major changes</h3>
-
-**Updated ISO certifcation**
-
-New certificate are uploaded under [certificates](/govern-science/compliance/certificates#iso-iec-27001-certificate)
-
-
 <h3>Minor changes</h3>
+
+**Updated ISO certification**
+
+New certificate are uploaded under [certificates](/govern-science/compliance/certificates#iso-iec-27001-certificate).
+
+
 
 
 :::
