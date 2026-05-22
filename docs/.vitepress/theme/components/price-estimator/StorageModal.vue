@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, onMounted, watch } from "vue"
+import { reactive, onMounted } from "vue"
 import type { StorageFormData, StorageUnit } from "./types"
 import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 
@@ -18,23 +18,8 @@ const formData = reactive<StorageFormData>({
   name: undefined,
   usage: "Archive",
   type: "HDD",
-  size: 0.4,
+  size: 1,
 })
-
-const defaultSizeByUsage: Record<string, number> = {
-  Archive: 0.4,
-  Work: 0.3,
-  Scratch: 0.3,
-}
-
-watch(
-  () => formData.usage,
-  (newUsage) => {
-    if (!props.editData && newUsage && newUsage in defaultSizeByUsage) {
-      formData.size = defaultSizeByUsage[newUsage]
-    }
-  },
-)
 
 const close = () => {
   emit("close")

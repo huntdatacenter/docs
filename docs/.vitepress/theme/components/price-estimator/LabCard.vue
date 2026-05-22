@@ -140,7 +140,7 @@ const openSnackbar = (message: string) => {
 
 const removeComputeById = (computeId: number) => {
   if (computeId === selectedCompute.value[0]?.id) {
-    openSnackbar("Cannot remove the default machine")
+    openSnackbar("Cannot remove the home machine. Home machine is an essential component of your lab.")
     return
   }
   priceEstimatorStore.removeComputeFromLab(props.lab.id, computeId)
@@ -192,7 +192,7 @@ const removeStorageById = (storageId: number) => {
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
                 <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editCompute(selectedCompute.find((c) => c.id === item.id)!)"></v-icon>
-                <v-icon v-show="!item.isDefault" color="medium-emphasis" icon="mdi-delete" size="small" @click="removeComputeById(item.id)"></v-icon>
+                <v-icon :readonly="!item.isDefault" color="medium-emphasis" icon="mdi-delete" size="small" @click="removeComputeById(item.id)"></v-icon>
               </div>
             </template>
 
@@ -350,7 +350,7 @@ const removeStorageById = (storageId: number) => {
       <StorageModal :lab-id="lab.id" :storage-id="lab.selectedStorage.length" :edit-data="editingStorageItem" @close="closeStorageModal" />
     </v-dialog>
 
-    <v-snackbar v-model="snackbar.show">{{ snackbar.message }}</v-snackbar>
+    <v-snackbar color="orange-darken-4" v-model="snackbar.show">{{ snackbar.message }}</v-snackbar>
   </v-container>
 </template>
 
