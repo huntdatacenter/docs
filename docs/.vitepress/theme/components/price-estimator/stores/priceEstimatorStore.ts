@@ -177,7 +177,7 @@ export const priceEstimatorStore = reactive({
       const ram = parseInt(machineTitle[1].split(" ")[0])
       const unit: ComputeUnit = {
         id: 0,
-        name: `${payload.name}-home`,
+        name: `${payload.name.toLowerCase().replace(" ", "-")}-home`,
         machine_type: payload.machineType,
         core_count: coreCount,
         ram,
