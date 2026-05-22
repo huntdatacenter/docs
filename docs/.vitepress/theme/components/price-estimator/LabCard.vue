@@ -22,7 +22,7 @@ const computeHeaders = ref<DataTableHeader[]>([
   { title: "Machine type", align: "start", sortable: true, key: "machine_type" },
   { title: "vCPUs", align: "end", sortable: true, key: "core_count" },
   { title: "RAM [GB]", align: "end", sortable: true, key: "ram" },
-  { title: "GPU count", align: "end", sortable: true, key: "gpu_count" },
+  // { title: "GPU count", align: "end", sortable: true, key: "gpu_count" },
   { title: "GPU", align: "end", sortable: true, key: "gpu" },
   { title: "Subscription", align: "start", sortable: true, key: "subscription" },
   { title: "Price / month", align: "end", sortable: true, key: "monthlyPrice" },
@@ -176,20 +176,17 @@ const removeStorageById = (storageId: number) => {
           <v-card-title>Compute</v-card-title>
 
           <v-data-table-virtual :items="selectedCompute" :headers="computeHeaders" hide-default-footer hover item-value="id">
+            <template v-slot:item.gpu="{ item }">
+              <div v-if="item.gpu" class="d-flex justify-end v-data-table-column--nowrap">{{ item.gpu_count }} x {{ item.gpu }}</div>
+            </template>
             <template v-slot:item.monthlyPrice="{ item }">
               <div class="d-flex justify-end v-data-table-column--nowrap">
-                <span class="text-right" style="width: 90px">
-                  {{ item.monthlyPrice.toFixed(2) }}
-                </span>
-                <span class="ml-1">NOK</span>
+                <span class="text-right"> {{ item.monthlyPrice.toFixed(2) }}&nbsp;NOK </span>
               </div>
             </template>
             <template v-slot:item.yearlyPrice="{ item }">
               <div class="d-flex justify-end v-data-table-column--nowrap">
-                <span class="text-right" style="width: 90px">
-                  {{ item.yearlyPrice.toFixed(2) }}
-                </span>
-                <span class="ml-1">NOK</span>
+                <span class="text-right"> {{ item.yearlyPrice.toFixed(2) }}&nbsp;NOK </span>
               </div>
             </template>
             <template v-slot:item.actions="{ item }">
@@ -218,7 +215,7 @@ const removeStorageById = (storageId: number) => {
                 <!-- RAM [GB] -->
                 <th class="v-data-table-column--align-end"></th>
                 <!-- GPU count -->
-                <th class="v-data-table-column--align-end"></th>
+                <!-- <th class="v-data-table-column--align-end"></th> -->
                 <!-- GPU -->
                 <th class="v-data-table-column--align-end"></th>
                 <!-- Subscription -->
