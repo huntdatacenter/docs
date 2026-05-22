@@ -44,6 +44,7 @@ const save = () => {
     machineSubscription: formData.value.machineSubscription,
     hddSize: Number(formData.value.hddSize),
     nvmeSize: Number(formData.value.nvmeSize),
+    isDefault: true,
   })
   emit("close")
 }

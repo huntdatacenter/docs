@@ -195,7 +195,7 @@ const removeStorageById = (storageId: number) => {
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
                 <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editCompute(selectedCompute.find((c) => c.id === item.id)!)"></v-icon>
-                <v-icon color="medium-emphasis" icon="mdi-delete" size="small" @click="removeComputeById(item.id)"></v-icon>
+                <v-icon v-show="!item.isDefault" color="medium-emphasis" icon="mdi-delete" size="small" @click="removeComputeById(item.id)"></v-icon>
               </div>
             </template>
 

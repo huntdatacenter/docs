@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, onMounted } from "vue"
+import { reactive, onMounted, watch } from "vue"
 import type { StorageFormData, StorageUnit } from "./types"
 import { priceEstimatorStore } from "./stores/priceEstimatorStore"
 
@@ -18,8 +18,23 @@ const formData = reactive<StorageFormData>({
   name: undefined,
   usage: "Archive",
   type: "HDD",
-  size: 1,
+  size: 0.4,
 })
+
+const defaultSizeByUsage: Record<string, number> = {
+  Archive: 0.4,
+  Work: 0.3,
+  Scratch: 0.3,
+}
+
+watch(
+  () => formData.usage,
+  (newUsage) => {
+    if (!props.editData && newUsage && newUsage in defaultSizeByUsage) {
+      formData.size = defaultSizeByUsage[newUsage]
+    }
+  },
+)
 
 const close = () => {
   emit("close")
@@ -74,22 +89,10 @@ onMounted(() => {
               <v-text-field v-model="formData.name" label="Name" required variant="outlined"></v-text-field>
             </v-col>
             <v-col cols="12">
-              <v-select
-                :items="['Archive', 'Work', 'Scratch', 'Home']"
-                v-model="formData.usage"
-                label="Usage"
-                required
-                variant="outlined"
-              ></v-select>
+              <v-select :items="['Archive', 'Work', 'Scratch', 'Home']" v-model="formData.usage" label="Usage" required variant="outlined"></v-select>
             </v-col>
             <v-col cols="12">
-              <v-select
-                :items="['HDD', 'NVME']"
-                v-model="formData.type"
-                label="Type"
-                required
-                variant="outlined"
-              ></v-select>
+              <v-select :items="['HDD', 'NVME']" v-model="formData.type" label="Type" required variant="outlined"></v-select>
             </v-col>
             <v-col cols="12">
               <v-text-field
