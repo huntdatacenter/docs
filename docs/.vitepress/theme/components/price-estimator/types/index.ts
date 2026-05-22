@@ -33,6 +33,7 @@ export interface ComputeUnit {
   subscription: SubscriptionType
   monthlyPrice: number
   yearlyPrice: number
+  isDefault: boolean
 }
 
 export interface StorageUnit {
@@ -92,6 +93,7 @@ export interface MachineFormData {
   gpu?: string
   gpu_count?: number
   subscription?: SubscriptionType
+  isDefault?: boolean
 }
 
 export interface StorageFormData {

@@ -22,14 +22,15 @@ const formData = ref<MachineFormData>({
   gpu: undefined,
   gpu_count: 1,
   subscription: undefined,
+  isDefault: false,
 })
 
-const subscriptions = [
+let subscriptions = ref([
   { text: "Commitment - 1 Year", value: "COMMITMENT_1Y" },
   { text: "Commitment - 3 Years", value: "COMMITMENT_3Y" },
   { text: "On demand", value: "ONDEMAND" },
   { text: "Spot", value: "SPOT" },
-]
+])
 
 const getComputePriceYear = computed((): string | number => {
   if (!formData.value.machine_type || !formData.value.subscription) {
@@ -144,6 +145,7 @@ const save = () => {
       subscription: subscription!,
       gpu: gpu,
       gpuCount: gpuCount,
+      isDefault: formData.value.isDefault!,
     })
   } else {
     // Add new compute
@@ -155,6 +157,7 @@ const save = () => {
       subscription: subscription!,
       gpu: gpu,
       gpu_count: gpuCount,
+      isDefault: formData.value.isDefault!,
     })
   }
 
@@ -166,6 +169,11 @@ onMounted(() => {
     formData.value.id = props.editData.id
     formData.value.name = props.editData.name
     formData.value.subscription = props.editData.subscription
+    formData.value.isDefault = props.editData.isDefault
+
+    if (formData.value.isDefault) {
+      subscriptions.value = subscriptions.value.slice(0, 2)
+    }
 
     if (props.editData.machine_type.includes(" + ")) {
       const parts = props.editData.machine_type.split(" + ")
@@ -178,7 +186,8 @@ onMounted(() => {
     }
   } else {
     formData.value.id = props.computeId
-    formData.value.name = `machine-${props.computeId + 1}`
+    const labName = priceEstimatorStore.labs[props.labId].title.toLowerCase().replace(" ", "-")
+    formData.value.name = `${labName}-iaas-${props.computeId}`
   }
 })
 </script>
@@ -221,10 +230,10 @@ onMounted(() => {
           <v-col v-show="formData.machine_type" cols="12" sm="6">
             <v-text-field v-model="getComputePriceYear" label="Compute Price / Year" suffix="NOK ex. VAT / Year" readonly variant="outlined"></v-text-field>
           </v-col>
-          <v-col cols="12">
+          <v-col cols="12" v-show="!formData.isDefault">
             <v-select v-model="formData.gpu" :items="getGpus" label="GPU type (optional)" variant="outlined" clearable :disabled="!formData.subscription"></v-select>
           </v-col>
-          <v-col cols="12">
+          <v-col cols="12" v-show="!formData.isDefault">
             <v-number-input v-model="gpuCount" variant="outlined" label="GPU count" :min="1" :max="getMaxGpuCount" :disabled="!formData.gpu"></v-number-input>
           </v-col>
           <v-col v-show="formData.gpu" cols="12" sm="6">
