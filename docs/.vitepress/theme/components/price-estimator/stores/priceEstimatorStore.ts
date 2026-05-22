@@ -687,7 +687,7 @@ export const priceEstimatorStore = reactive({
             if (labData.compute) {
               for (const comp of labData.compute) {
                 let isDefault = false
-                if (comp.name.endsWith("-home")) {
+                if (comp.name === `${labData.name.toLowerCase().replace(" ", "-")}-home`) {
                   isDefault = true
                 }
 

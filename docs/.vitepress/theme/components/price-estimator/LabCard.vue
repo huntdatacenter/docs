@@ -138,12 +138,13 @@ const openSnackbar = (message: string) => {
   snackbar.value.show = true
 }
 
-const removeComputeById = (computeId: number) => {
-  if (computeId === selectedCompute.value[0]?.id) {
+const removeMachine = (machine: ComputeUnit) => {
+  // if (machine.id === selectedCompute.value[0]?.id) {
+  if (machine.isDefault) {
     openSnackbar("Cannot remove the home machine. Home machine is an essential component of your lab.")
     return
   }
-  priceEstimatorStore.removeComputeFromLab(props.lab.id, computeId)
+  priceEstimatorStore.removeComputeFromLab(props.lab.id, machine.id)
 }
 
 const removeStorageById = (storageId: number) => {
@@ -191,8 +192,8 @@ const removeStorageById = (storageId: number) => {
             </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
-                <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editCompute(selectedCompute.find((c) => c.id === item.id)!)"></v-icon>
-                <v-icon :readonly="!item.isDefault" color="medium-emphasis" icon="mdi-delete" size="small" @click="removeComputeById(item.id)"></v-icon>
+                <v-icon icon="mdi-pencil" size="small" @click="editCompute(selectedCompute.find((c) => c.id === item.id)!)"></v-icon>
+                <v-icon :color="item.isDefault ? 'rgba(0, 0, 0, 0.3)' : ''" icon="mdi-delete" size="small" @click="removeMachine(item)"></v-icon>
               </div>
             </template>
 
