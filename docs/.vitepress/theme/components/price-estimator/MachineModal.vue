@@ -186,8 +186,8 @@ onMounted(() => {
     }
   } else {
     formData.value.id = props.computeId
-    const labName = priceEstimatorStore.labs[props.labId].title
-    formData.value.name = `${labName}-iaas-${props.computeId + 1}`
+    const labName = priceEstimatorStore.labs[props.labId].title.toLowerCase().replace(" ", "-")
+    formData.value.name = `${labName}-iaas-${props.computeId}`
   }
 })
 </script>
