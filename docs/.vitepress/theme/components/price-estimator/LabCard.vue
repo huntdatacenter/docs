@@ -217,19 +217,19 @@ const removeStorageById = (storageId: number) => {
                 <th class="v-data-table-column--align-end"></th>
                 <!-- RAM [GB] -->
                 <th class="v-data-table-column--align-end"></th>
-                <!-- GPU -->
-                <th class="v-data-table-column--align-end"></th>
                 <!-- GPU count -->
+                <th class="v-data-table-column--align-end"></th>
+                <!-- GPU -->
                 <th class="v-data-table-column--align-end"></th>
                 <!-- Subscription -->
                 <th></th>
                 <!-- Price / month -->
                 <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                  <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }} NOK</strong>
+                  <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
                 </th>
                 <!-- Price / year -->
                 <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                  <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }} NOK</strong>
+                  <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
                 </th>
                 <!-- Actions -->
                 <th class="v-data-table-column--align-end"></th>
