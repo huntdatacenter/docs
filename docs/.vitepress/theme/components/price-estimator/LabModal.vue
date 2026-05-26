@@ -12,8 +12,6 @@ const formData = ref({
   subscription: "1Y",
   machineType: "c1",
   machineSubscription: "COMMITMENT_1Y",
-  hddSize: 1,
-  nvmeSize: 0,
 })
 
 const subscriptions = computed(() => {
@@ -42,8 +40,6 @@ const save = () => {
     subscription: formData.value.subscription,
     machineType: formData.value.machineType,
     machineSubscription: formData.value.machineSubscription,
-    hddSize: Number(formData.value.hddSize),
-    nvmeSize: Number(formData.value.nvmeSize),
     isDefault: true,
   })
   emit("close")
@@ -80,14 +76,6 @@ onMounted(() => {
 
           <v-col cols="12">
             <v-select v-model="formData.machineSubscription" :items="machineSubscriptions" label="Home Machine Subscription" variant="outlined"></v-select>
-          </v-col>
-
-          <v-col cols="12" sm="6">
-            <v-text-field v-model="formData.hddSize" label="HDD Storage (TB)" type="number" variant="outlined" min="0"></v-text-field>
-          </v-col>
-
-          <v-col cols="12" sm="6">
-            <v-text-field v-model="formData.nvmeSize" label="NVMe Storage (TB)" type="number" variant="outlined" min="0"></v-text-field>
           </v-col>
         </v-row>
       </v-container>

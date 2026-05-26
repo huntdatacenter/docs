@@ -157,7 +157,7 @@ export const priceEstimatorStore = reactive({
   },
 
   /* Lab helpers */
-  addLab(payload: { name: string; subscription: string; machineType: string; machineSubscription: string; hddSize: number; nvmeSize: number; isDefault: boolean }) {
+  addLab(payload: { name: string; subscription: string; machineType: string; machineSubscription: string; isDefault: boolean }) {
     const newLab: LabCard = {
       id: this.labs.length,
       title: payload.name,
@@ -189,36 +189,46 @@ export const priceEstimatorStore = reactive({
       newLab.selectedCompute.push(unit)
     }
 
-    // Add HDD storage
-    if (payload.hddSize > 0) {
-      const hddPrices = this.getStoragePriceFromCatalogue("HDD", payload.hddSize)
-      if (hddPrices) {
-        newLab.selectedStorage.push({
-          id: 0,
-          name: "volume-1",
-          usage: "Archive",
-          type: "HDD",
-          size: payload.hddSize,
-          monthlyPrice: hddPrices.monthlyPrice,
-          yearlyPrice: hddPrices.yearlyPrice,
-        })
-      }
+    // Add Archieve storage
+    const archivePrice = this.getStoragePriceFromCatalogue("HDD", 0.4)
+    if (archivePrice) {
+      newLab.selectedStorage.push({
+        id: 0,
+        name: "volume-1",
+        usage: "Archive",
+        type: "HDD",
+        size: 0.4,
+        monthlyPrice: archivePrice.monthlyPrice,
+        yearlyPrice: archivePrice.yearlyPrice,
+      })
     }
 
-    // Add NVME storage
-    if (payload.nvmeSize > 0) {
-      const nvmePrices = this.getStoragePriceFromCatalogue("NVME", payload.nvmeSize)
-      if (nvmePrices) {
-        newLab.selectedStorage.push({
-          id: newLab.selectedStorage.length,
-          name: "volume-nvme",
-          usage: "Work",
-          type: "NVME",
-          size: payload.nvmeSize,
-          monthlyPrice: nvmePrices.monthlyPrice,
-          yearlyPrice: nvmePrices.yearlyPrice,
-        })
-      }
+    // Add Archieve storage
+    const workPrice = this.getStoragePriceFromCatalogue("HDD", 0.3)
+    if (workPrice) {
+      newLab.selectedStorage.push({
+        id: 1,
+        name: "volume-2",
+        usage: "Work",
+        type: "HDD",
+        size: 0.3,
+        monthlyPrice: workPrice.monthlyPrice,
+        yearlyPrice: workPrice.yearlyPrice,
+      })
+    }
+
+    // Add Scratch storage
+    const scratchPrice = this.getStoragePriceFromCatalogue("HDD", 0.4)
+    if (scratchPrice) {
+      newLab.selectedStorage.push({
+        id: 2,
+        name: "volume-3",
+        usage: "Scratch",
+        type: "HDD",
+        size: 0.3,
+        monthlyPrice: scratchPrice.monthlyPrice,
+        yearlyPrice: scratchPrice.yearlyPrice,
+      })
     }
 
     // Update
