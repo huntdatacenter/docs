@@ -157,7 +157,7 @@ export const priceEstimatorStore = reactive({
   },
 
   /* Lab helpers */
-  addLab(payload: { name: string; subscription: string; machineType: string; machineSubscription: string; isDefault: boolean }) {
+  addLab(payload: { name: string; subscription: string; machineType: string; machineSubscription: string; isDefault: boolean; archive: number; work: number; scratch: number }) {
     const newLab: LabCard = {
       id: this.labs.length,
       title: payload.name,
@@ -190,42 +190,42 @@ export const priceEstimatorStore = reactive({
     }
 
     // Add Archieve storage
-    const archivePrice = this.getStoragePriceFromCatalogue("HDD", 0.4)
+    const archivePrice = this.getStoragePriceFromCatalogue("HDD", payload.archive)
     if (archivePrice) {
       newLab.selectedStorage.push({
         id: 0,
         name: "volume-1",
         usage: "Archive",
         type: "HDD",
-        size: 0.4,
+        size: payload.archive,
         monthlyPrice: archivePrice.monthlyPrice,
         yearlyPrice: archivePrice.yearlyPrice,
       })
     }
 
-    // Add Archieve storage
-    const workPrice = this.getStoragePriceFromCatalogue("HDD", 0.3)
+    // Add Work storage
+    const workPrice = this.getStoragePriceFromCatalogue("HDD", payload.work)
     if (workPrice) {
       newLab.selectedStorage.push({
         id: 1,
         name: "volume-2",
         usage: "Work",
         type: "HDD",
-        size: 0.3,
+        size: payload.work,
         monthlyPrice: workPrice.monthlyPrice,
         yearlyPrice: workPrice.yearlyPrice,
       })
     }
 
     // Add Scratch storage
-    const scratchPrice = this.getStoragePriceFromCatalogue("HDD", 0.4)
+    const scratchPrice = this.getStoragePriceFromCatalogue("HDD", payload.scratch)
     if (scratchPrice) {
       newLab.selectedStorage.push({
         id: 2,
         name: "volume-3",
         usage: "Scratch",
         type: "HDD",
-        size: 0.3,
+        size: payload.scratch,
         monthlyPrice: scratchPrice.monthlyPrice,
         yearlyPrice: scratchPrice.yearlyPrice,
       })

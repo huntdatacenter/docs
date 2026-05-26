@@ -12,6 +12,9 @@ const formData = ref({
   subscription: "1Y",
   machineType: "c1",
   machineSubscription: "COMMITMENT_1Y",
+  archive: 0.4,
+  work: 0.3,
+  scratch: 0.3,
 })
 
 const subscriptions = computed(() => {
@@ -40,6 +43,9 @@ const save = () => {
     subscription: formData.value.subscription,
     machineType: formData.value.machineType,
     machineSubscription: formData.value.machineSubscription,
+    archive: Number(formData.value.archive),
+    work: Number(formData.value.work),
+    scratch: Number(formData.value.scratch),
     isDefault: true,
   })
   emit("close")
@@ -76,6 +82,18 @@ onMounted(() => {
 
           <v-col cols="12">
             <v-select v-model="formData.machineSubscription" :items="machineSubscriptions" label="Home Machine Subscription" variant="outlined"></v-select>
+          </v-col>
+
+          <v-col cols="12" sm="6">
+            <v-text-field v-model="formData.archive" label="Archive Storage (TB)" type="number" variant="outlined" min="0" placeholder="0.4"></v-text-field>
+          </v-col>
+
+          <v-col cols="12" sm="6">
+            <v-text-field v-model="formData.work" label="Work Storage (TB)" type="number" variant="outlined" min="0" placeholder="0.3"></v-text-field>
+          </v-col>
+
+          <v-col cols="12" sm="6">
+            <v-text-field v-model="formData.scratch" label="Scratch Storage (TB)" type="number" variant="outlined" min="0" placeholder="0.4"></v-text-field>
           </v-col>
         </v-row>
       </v-container>
