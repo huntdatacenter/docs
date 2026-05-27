@@ -38,7 +38,6 @@ const machineType = computed(() => {
 })
 
 const save = () => {
-  console.log(formData.value.scratch)
   priceEstimatorStore.addLab({
     name: formData.value.name,
     subscription: formData.value.subscription,
