@@ -2513,7 +2513,7 @@ request_tape_backup:
         options:
           [
             { text: "Full volume backup", value: "Full volume" },
-            { text: "Selected dataset backup", value: "Selected dataset" },
+            #{ text: "Selected dataset backup", value: "Selected dataset" },
           ],
       },
       {
@@ -2523,7 +2523,7 @@ request_tape_backup:
         field: "autocompleteone",
         options:
           [
-            { text: "Not applicable (selected dataset)", value: "N/A" },
+            #{ text: "Not applicable (selected dataset)", value: "N/A" },
             { text: "archive", value: "archive" },
             { text: "archive2", value: "archive2" },
             { text: "archive3", value: "archive3" },
@@ -2571,7 +2571,7 @@ request_tape_backup:
             { text: "Not applicable (one-time archive)", value: "N/A" },
             #{ text: "Daily", value: "Daily" },
             #{ text: "Weekly", value: "Weekly" },
-            { text: "Monthly", value: "Monthly" },
+            #{ text: "Monthly", value: "Monthly" },
             { text: "Quarterly", value: "Quarterly" },
             { text: "Yearly", value: "Yearly" },
           ],
