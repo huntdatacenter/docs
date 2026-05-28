@@ -439,15 +439,16 @@ Once data on volume is deleted, it can not be recreated. You must ensure that yo
 * **Expected response time:** Days
 * **Cost:** No additional costs.
 
-### Tape archive
+### Tape backup
 
-Click button below to order a long term archiving of your data
+Use below form if you wish to order a scheduled backup to tape or one-time archive of your data.
+If you want to learn more on what tape is and how it works, click [here]()
 
-<SDButton form="request_tape_archive" />
+<SDButton form="request_tape_backup" />
 
 * **Who can order:** Lab leader and coordinator.
-* **Required information:** size of dataset and retention period.
-* **Expected response time:** Weeks.
+* **Required information:** Size of dataset and retention period.
+* **Expected delivery time:** Up to 2 weeks.
 * **Cost:** Can be found in our [price list](/administer-science/prices/pricelist#current)
 
 
