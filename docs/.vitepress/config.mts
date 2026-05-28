@@ -1064,12 +1064,12 @@ function sidebarGovernScience() {
       collapsed: true,
       items: [
         {
-          text: "Introduction",
+          text: "Overview",
           link: "/govern-science/tingweek/",
         },
         {
-          text: "Lagtun",
-          link: "/govern-science/tingweek/lagtun",
+          text: "About",
+          link: "/govern-science/tingweek/about",
         },
         {
           text: "Resolutions",

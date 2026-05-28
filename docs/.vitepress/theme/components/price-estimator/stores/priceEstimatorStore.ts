@@ -13,13 +13,14 @@ import {
   storageTypes,
   StorageCostByType,
   LocalStorageError,
+  LabSubscriptionType,
 } from "../types/index.js"
 import pricesApi from "../api/pricesApi.js"
 import { StorageUsageType } from "../types/index"
 
 const ISSERVER = typeof window === "undefined"
 
-const VERSION = "1.1"
+const VERSION = "1.2"
 
 export const priceEstimatorStore = reactive({
   /* State */
@@ -73,6 +74,7 @@ export const priceEstimatorStore = reactive({
                     subscription: comp.subscription,
                     gpu: comp.gpu,
                     gpu_count: comp.gpu_count,
+                    isDefault: comp.isDefault,
                   })
                 }
               }
@@ -155,13 +157,13 @@ export const priceEstimatorStore = reactive({
   },
 
   /* Lab helpers */
-  addLab(payload: { name: string; subscription: string; machineType: string; machineSubscription: string; hddSize: number; nvmeSize: number }) {
+  addLab(payload: { name: string; subscription: string; machineType: string; machineSubscription: string; isDefault: boolean; archive: number; work: number; scratch: number }) {
     const newLab: LabCard = {
       id: this.labs.length,
       title: payload.name,
       selectedCompute: [],
       selectedStorage: [],
-      subscription: payload.subscription as SubscriptionType,
+      subscription: payload.subscription as LabSubscriptionType,
     }
 
     // Add compute
@@ -175,47 +177,58 @@ export const priceEstimatorStore = reactive({
       const ram = parseInt(machineTitle[1].split(" ")[0])
       const unit: ComputeUnit = {
         id: 0,
-        name: "machine-1",
+        name: `${payload.name.toLowerCase().replace(" ", "-")}-home`,
         machine_type: payload.machineType,
         core_count: coreCount,
         ram,
         subscription: payload.machineSubscription as SubscriptionType,
         monthlyPrice: prices.monthlyPrice,
         yearlyPrice: prices.yearlyPrice,
+        isDefault: payload.isDefault,
       }
       newLab.selectedCompute.push(unit)
     }
 
-    // Add HDD storage
-    if (payload.hddSize > 0) {
-      const hddPrices = this.getStoragePriceFromCatalogue("HDD", payload.hddSize)
-      if (hddPrices) {
-        newLab.selectedStorage.push({
-          id: 0,
-          name: "volume-1",
-          usage: "Archive",
-          type: "HDD",
-          size: payload.hddSize,
-          monthlyPrice: hddPrices.monthlyPrice,
-          yearlyPrice: hddPrices.yearlyPrice,
-        })
-      }
+    // Add Archieve storage
+    const archivePrice = this.getStoragePriceFromCatalogue("HDD", payload.archive)
+    if (archivePrice) {
+      newLab.selectedStorage.push({
+        id: 0,
+        name: "volume-1",
+        usage: "Archive",
+        type: "HDD",
+        size: payload.archive,
+        monthlyPrice: archivePrice.monthlyPrice,
+        yearlyPrice: archivePrice.yearlyPrice,
+      })
     }
 
-    // Add NVME storage
-    if (payload.nvmeSize > 0) {
-      const nvmePrices = this.getStoragePriceFromCatalogue("NVME", payload.nvmeSize)
-      if (nvmePrices) {
-        newLab.selectedStorage.push({
-          id: newLab.selectedStorage.length,
-          name: "volume-nvme",
-          usage: "Work",
-          type: "NVME",
-          size: payload.nvmeSize,
-          monthlyPrice: nvmePrices.monthlyPrice,
-          yearlyPrice: nvmePrices.yearlyPrice,
-        })
-      }
+    // Add Work storage
+    const workPrice = this.getStoragePriceFromCatalogue("HDD", payload.work)
+    if (workPrice) {
+      newLab.selectedStorage.push({
+        id: 1,
+        name: "volume-2",
+        usage: "Work",
+        type: "HDD",
+        size: payload.work,
+        monthlyPrice: workPrice.monthlyPrice,
+        yearlyPrice: workPrice.yearlyPrice,
+      })
+    }
+
+    // Add Scratch storage
+    const scratchPrice = this.getStoragePriceFromCatalogue("HDD", payload.scratch)
+    if (scratchPrice) {
+      newLab.selectedStorage.push({
+        id: 2,
+        name: "volume-3",
+        usage: "Scratch",
+        type: "HDD",
+        size: payload.scratch,
+        monthlyPrice: scratchPrice.monthlyPrice,
+        yearlyPrice: scratchPrice.yearlyPrice,
+      })
     }
 
     // Update
@@ -225,6 +238,11 @@ export const priceEstimatorStore = reactive({
 
   removeLab(labId: number) {
     this.labs = this.labs.filter((lab) => lab.id !== labId)
+  },
+
+  getLabSubscription(period: string) {
+    const price = priceEstimatorStore.catalogue.labPrices.find((labPrice) => labPrice["service.commitment"] === period)
+    return price?.["price.nok.ex.vat"]
   },
 
   getLabComputePriceSum(labId: number) {
@@ -239,7 +257,21 @@ export const priceEstimatorStore = reactive({
     return { monthlyCostTotal, yearlyCostTotal }
   },
 
-  getLabStoragePriceSum(labId: number): StorageCostByType {
+  getLabStoragePriceSum(labId: number) {
+    let results = { yearlyCostTotal: 0, monthlyCostTotal: 0 }
+    const lab = this.labs.find((l) => l.id === labId)
+    if (!lab) {
+      return results
+    }
+
+    const monthlyCostTotal = lab.selectedStorage.reduce((sum, s) => sum + s.monthlyPrice, 0)
+    const yearlyCostTotal = lab.selectedStorage.reduce((sum, s) => sum + s.yearlyPrice, 0)
+    results = { monthlyCostTotal: monthlyCostTotal, yearlyCostTotal: yearlyCostTotal }
+
+    return results
+  },
+
+  getLabStoragePriceSumByType(labId: number): StorageCostByType {
     const results: StorageCostByType = {
       HDD: { size: 0, yearlyCostTotal: 0, monthlyCostTotal: 0 },
       NVME: { size: 0, yearlyCostTotal: 0, monthlyCostTotal: 0 },
@@ -462,7 +494,10 @@ export const priceEstimatorStore = reactive({
     }
   },
 
-  addComputeToLab(labId: number, payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpu_count?: number }) {
+  addComputeToLab(
+    labId: number,
+    payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpu_count?: number; isDefault: boolean },
+  ) {
     const lab = this.labs.find((l) => l.id === labId)
     if (!lab) return
 
@@ -479,6 +514,7 @@ export const priceEstimatorStore = reactive({
       subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
       yearlyPrice: prices.yearlyPrice,
+      isDefault: payload.isDefault,
     }
     lab.selectedCompute = lab.selectedCompute || []
     lab.selectedCompute.push(newCompute)
@@ -489,7 +525,7 @@ export const priceEstimatorStore = reactive({
   editComputeInLab(
     labId: number,
     computeId: number,
-    payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpuCount?: number },
+    payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpuCount?: number; isDefault: boolean },
   ) {
     const lab = this.labs.find((l) => l.id === labId)
     if (!lab || !lab.selectedCompute) return
@@ -509,6 +545,7 @@ export const priceEstimatorStore = reactive({
       subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
       yearlyPrice: prices.yearlyPrice,
+      isDefault: payload.isDefault,
     }
 
     this.saveStateToLocal()
@@ -535,7 +572,7 @@ export const priceEstimatorStore = reactive({
 
     if (this.labs.length > 0 && this.catalogue.labPrices.length > 0) {
       this.labs.forEach((lab) => {
-        const type = lab.subscription as "1Y" | "3Y"
+        const type = lab.subscription
         const priceItem = this.catalogue.labPrices.find((p) => p["service.commitment"] === type)
         summary.labSubscriptions[type].units += 1
         if (priceItem) {
@@ -659,6 +696,11 @@ export const priceEstimatorStore = reactive({
 
             if (labData.compute) {
               for (const comp of labData.compute) {
+                let isDefault = false
+                if (comp.name === `${labData.name.toLowerCase().replace(" ", "-")}-home`) {
+                  isDefault = true
+                }
+
                 this.addComputeToLab(newLabId, {
                   name: comp.name,
                   machine_type: comp.machine_type,
@@ -667,6 +709,7 @@ export const priceEstimatorStore = reactive({
                   subscription: comp.subscription,
                   gpu: comp.gpu,
                   gpu_count: comp.gpu_count,
+                  isDefault: isDefault,
                 })
               }
             }

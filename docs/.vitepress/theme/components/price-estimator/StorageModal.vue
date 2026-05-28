@@ -74,22 +74,10 @@ onMounted(() => {
               <v-text-field v-model="formData.name" label="Name" required variant="outlined"></v-text-field>
             </v-col>
             <v-col cols="12">
-              <v-select
-                :items="['Archive', 'Work', 'Scratch', 'Home']"
-                v-model="formData.usage"
-                label="Usage"
-                required
-                variant="outlined"
-              ></v-select>
+              <v-select :items="['Archive', 'Work', 'Scratch', 'Home']" v-model="formData.usage" label="Usage" required variant="outlined"></v-select>
             </v-col>
             <v-col cols="12">
-              <v-select
-                :items="['HDD', 'NVME']"
-                v-model="formData.type"
-                label="Type"
-                required
-                variant="outlined"
-              ></v-select>
+              <v-select :items="['HDD', 'NVME']" v-model="formData.type" label="Type" required variant="outlined"></v-select>
             </v-col>
             <v-col cols="12">
               <v-text-field
