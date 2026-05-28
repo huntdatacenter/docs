@@ -2571,7 +2571,7 @@ request_tape_backup:
             { text: "Not applicable (one-time archive)", value: "N/A" },
             #{ text: "Daily", value: "Daily" },
             #{ text: "Weekly", value: "Weekly" },
-            { text: "Monthly", value: "Monthly" },
+            #{ text: "Monthly", value: "Monthly" },
             { text: "Quarterly", value: "Quarterly" },
             { text: "Yearly", value: "Yearly" },
           ],
