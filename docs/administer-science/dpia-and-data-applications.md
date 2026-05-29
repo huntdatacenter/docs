@@ -29,7 +29,8 @@ Always check the wording against your own project, your data controller's expect
 - **Owner and operator:** HUNT Cloud is fully owned by NTNU, Norway, and affiliated with the Department of Public Health and Nursing.
 - **Location:** Your virtual machines run on physical servers owned by NTNU and located in data centers in Trondheim, Norway — relevant when an application asks about data location and storage outside the EU/EEA.
 - **Isolation:** Your lab is one or more Linux virtual machines with attached storage inside a dedicated private network. Resources are dedicated to your lab; lab users cannot access data or resources belonging to other labs.
-- **Entry machine:** A dedicated "entry" machine acts as a security gateway (jump host) that every connection must pass, separating access control from your scientific analysis.
+- **Entry machine:** A dedicated "entry" machine acts as a security gateway (jump host) that every connection must pass, keeping access control separate from your scientific work.
+- **Home machine:** Your analysis runs on a "home" machine that holds your default storage volumes, your Workbench tools (Python, RStudio, MATLAB, remote desktop) and your analytical software. Data is uploaded to, stored in and analyzed on the home machine, and **does not leave the lab unless you explicitly transfer it**. You can scale the home machine's compute power and add storage or extra machines as your project grows.
 
 ## Security levels and data classification
 
@@ -41,6 +42,10 @@ Storage volumes in HUNT Cloud are classified by the sensitivity of the data they
 | **Internal** | Research data that can *not* identify research participants. | Summary statistics, figures, computer code, non-human data, encrypted sensitive data. |
 
 Volumes may be declassified from sensitive to internal in agreement with the relevant data controllers and lab owners.
+
+::: tip Mapping to legal terms
+HUNT Cloud's "Sensitive" and "Internal" labels are operational *storage* classifications, not legal categories. In GDPR and Norwegian terms, data that can indirectly identify participants (HUNT Cloud "Sensitive") is **pseudonymised personal data** — still personal data, and for health or genetic data a **special category** (see [legal framework](#norwegian-legal-framework-and-terminology) below). Data that can no longer identify anyone — a basis for "Internal" — corresponds to **anonymous data**, which falls outside data-protection law.
+:::
 
 ::: warning Direct identifiers
 Directly identifiable data — names, national identity numbers, phone numbers, addresses, etc. — may **not** be stored by default. It must be kept outside HUNT Cloud unless specifically approved in a dedicated amendment to the data processor agreement with your host organization. See the [security FAQ](/do-science/faq/security) for details.
@@ -71,9 +76,23 @@ Independent auditors verify HUNT Cloud against three international management-sy
 
 The **Statement of Applicability (SoA)** lists exactly which ISO controls we apply, with their implementation status — a useful reference when an assessor wants to check specific safeguards. See the full [certificates page](/govern-science/compliance/certificates) for downloadable PDFs, certificate IDs and the SoA, and the [compliance program](/govern-science/compliance/) for an overview.
 
+## Norwegian legal framework and terminology
+
+Applications and DPIAs are easier to write — and to get approved — when you use the terms your institution and the authorities expect:
+
+- **Data controller (*behandlingsansvarlig*)** — determines why and how personal data is processed; usually your host institution. **Data processor (*databehandler*)** — processes data on the controller's behalf; this is the role HUNT Cloud (NTNU) holds. The two are bound by a **data processor agreement (*databehandleravtale*)** — see our [data processor agreement](/govern-science/organizational-access/data-processor-agreement).
+- **Legal basis (*behandlingsgrunnlag*)** — you must identify a lawful basis under GDPR [Article 6](https://gdpr-info.eu/art-6-gdpr/). For health, genetic and other **special categories of personal data (*særlige kategorier*)** you additionally need a basis under [Article 9](https://gdpr-info.eu/art-9-gdpr/); research typically relies on Article 9(2)(j).
+- **Special categories** — *health data* and *genetic data* are special-category personal data. This is the precise legal term; HUNT Cloud's "Sensitive" label is the matching storage classification.
+- **Security measures (*tekniske og organisatoriske tiltak*)** — GDPR [Article 32](https://gdpr-info.eu/art-32-gdpr/) requires appropriate technical and organisational measures. The isolation, access controls, encryption and certifications described above are what you cite here.
+
+These rules reach Norwegian law through the **Personal Data Act (*personopplysningsloven*)**, which incorporates the GDPR. Medical and health research carries additional requirements:
+
+- **Health Research Act (*helseforskningsloven*)** — research on people, human biological material or personal health data needs prior approval from a **Regional Committee for Medical and Health Research Ethics (REK)** before it can start.
+- **Notification and advice** — projects processing personal data are normally notified to **[Sikt](https://sikt.no/en/data-protection-services)** (the data-protection service for most Norwegian institutions, formerly NSD), and your institution's **Data Protection Officer (*personvernombud*, DPO)** advises on and signs off DPIAs.
+
 ## Data Protection Impact Assessment (DPIA)
 
-The processing in your lab may require a DPIA before scientific activities begin (GDPR [Article 35](https://gdpr-info.eu/art-35-gdpr/)). A few points worth knowing:
+A DPIA may be required before processing begins where it is likely to result in a high risk to individuals' rights — for example large-scale processing of special-category (health or genetic) data. The duty comes from GDPR [Article 35](https://gdpr-info.eu/art-35-gdpr/), incorporated through the Personal Data Act (*personopplysningsloven*); the Norwegian term is *personvernkonsekvensvurdering*. A few points worth knowing:
 
 - **You write the assessment.** There is no standardized text to copy — you must assess the risks relevant to your specific scientific context. We are happy to share and discuss scenarios, threats and assessments, and to comment on your drafts.
 - **Residual risk.** No system removes all risk. Whatever remains after security and privacy controls are in place is the *residual risk*, and it must be formally accepted.
@@ -81,6 +100,23 @@ The processing in your lab may require a DPIA before scientific activities begin
 - **Risk assessment reports (RAR).** Your organization may also request a security/privacy risk assessment ("ROS-analyse"). We share our own internal RAR with data controllers on request.
 
 See the [risk management](/govern-science/risk-management/) section and its [FAQ](/govern-science/risk-management/faq) for more.
+
+## What institutions often ask for
+
+DPIA templates and data-application forms tend to ask the same questions. Here is where HUNT Cloud's answer comes from:
+
+| The form asks about… | Where to find it |
+| - | - |
+| Where data is processed/stored (and whether outside the EU/EEA) | [Where your data lives](#where-your-data-lives) — NTNU data centers in Norway. |
+| Data processor and processor agreement | [Legal framework](#norwegian-legal-framework-and-terminology); the [data processor agreement](/govern-science/organizational-access/data-processor-agreement). |
+| Technical and organisational security measures (Art. 32) | [Access security](#access-security-and-two-factor-login), the [services specifications](/administer-science/services/specifications) and the [SoA](/govern-science/compliance/certificates#statement-of-applicability-soa). |
+| Access control and authentication | [Access security and two-factor login](#access-security-and-two-factor-login). |
+| Certifications / independent assurance | [ISO certificates](#iso-certificates). |
+| Sub-processors / subcontractors | [Subcontractors](/govern-science/compliance/subcontractors). |
+| Encryption | Encrypted VPN in transit; [tape service](/administer-science/data/tape-backup/) for encrypted offsite copies. |
+| Backup, restore and deletion | [Data administrator FAQ](/administer-science/data/faq). |
+| Incident / data-breach handling | [Security FAQ](/do-science/faq/security). |
+| Logging and auditability | We log access and transfers; logs are available to data controllers on request — [contact us](/contact). |
 
 ## Documents you can cite
 
