@@ -791,6 +791,10 @@ function sidebarAdministerScience() {
           text: "Roles",
           link: "/administer-science/roles",
         },
+        {
+          text: "DPIAs and data applications",
+          link: "/administer-science/dpia-and-data-applications",
+        },
       ],
     },
     {
