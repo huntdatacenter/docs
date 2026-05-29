@@ -10,7 +10,84 @@ description: Patch notes list major and minor updates to HUNT Cloud's services.
 
 [[toc]]
 
-This page contains descriptions of updates (patches) to HUNT Cloud's services. All with the aim to provide the best possible conditions scientific explorations.
+This page contains descriptions of updates (patches) to HUNT Cloud's services. All with the aim to provide the best possible conditions for scientific explorations.
+
+## Patch note 3.0.5
+
+*2026-05-29*
+
+::: details Do science
+
+<h3>Major changes</h3>
+
+**GPU update**
+
+We have introduced new GPU series from NVIDIA in 2026-Q2.
+
+- NVIDIA RTX PRO 6000 - Our high end GPU option. Offers 96GB of VRAM per card and best performance for the cost.
+
+:::
+
+::: details Administer science
+
+<h3>Major changes</h3>
+
+**Tape backup**
+
+Service redefined. We have updated the service desk order template and added information on our web pages about tape backup and what it is. Update to service agreements will be introduced before summer.
+
+**Surveys**
+
+We have started collecting surveys for onboarding feedback. Aim is to improve user experience accors all roles. More feedback surveys will follow in near future.  
+
+**Volume resize**
+
+We are now able to decrease the size of your volume if requested. 
+
+
+**Improved price calculator**
+
+We have made many visual and practical changes. Cost prediction is now more accurate and gives clearer overview of individual costs. 
+
+<h3>Minor changes</h3>
+
+- New GPU added to the [price list](/administer-science/prices/pricelist).
+
+:::
+
+::: details Govern science
+
+<h3>Major changes</h3>
+
+**Updated Statement of Applicability**
+
+The Statement of Applicability (SoA) is the document in which we specify the ISO control objectives applied to our certification. We have updated the document to include ISO/IEC 27701:2025 controls (v.5.2).
+
+**Updated our Policies**
+
+Quality policy, Security and privacy management policy and Security and privacy policies.
+
+The affiliation has been updated from the Department of Public Health and Nursing to the Faculty of Medicine and Health Sciences.
+
+**Tingweek**
+
+The next Tingweek will be held from June 2 to 3. It will last two days, as we have merged the Admin meeting with the financial meeting.
+
+<h3>Minor changes</h3>
+
+**Updated ISO certification**
+
+New certificate are uploaded under [certificates](/govern-science/compliance/certificates#iso-iec-27001-certificate).
+
+**Agreements**
+
+Lab deletion order - We have added tape presevation to the order (v.1.6).
+
+**Organization access**
+
+We have updated the form field identifiers and additionally included the country(v1.4).
+
+:::
 
 
 ## Patch note 2.11.4
@@ -55,9 +132,6 @@ We have been updating our [tools](/do-science/tools/) section in do science guid
 **Updated ISO certification**
 
 New certificate are uploaded under [certificates](/govern-science/compliance/certificates#iso-iec-27001-certificate).
-
-
-
 
 :::
 
