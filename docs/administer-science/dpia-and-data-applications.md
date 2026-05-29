@@ -8,23 +8,25 @@ description: A consolidated reference for researchers who need to describe how d
 
 # DPIAs and data applications
 
-**This page gathers, in one place, the information scientists most often need when describing how data is stored and processed in HUNT Cloud. It is aimed at postdocs, principal investigators and PhD students who write Data Protection Impact Assessments (DPIAs) and applications for data access ("request for data") and need to document our security level, certifications and access controls.**
+**This page gathers, in one place, the information you most often need to describe how your data is stored and processed in HUNT Cloud. It is written for the scientists — postdocs, principal investigators and PhD students — who write Data Protection Impact Assessments (DPIAs) and applications for data access ("request for data"), and who need to document our security level, certificates and access controls for their data controllers.**
 
 [[toc]]
 
-::: tip We review your drafts
-The fastest way to get this right is to let us comment on your written text. We are happy to assist with information, clarifications and review of DPIAs and data applications. [Contact us](/contact) — and see the [risk management resources](/govern-science/risk-management/resources) for the source documents behind this page.
+::: tip Let us help
+The fastest path to a precise text is to let us comment on your draft. We are more than happy to assist with information, clarifications and a review of your DPIAs and data applications. [Contact us](/contact) — and see our [risk management resources](/govern-science/risk-management/resources) for the source documents behind this page.
 :::
 
 ## A short description you can adapt
 
-When an application asks you to describe where and how the data is processed, you can build on the following summary and tailor it to your project:
+When an application asks you to describe where and how your data is processed, you are welcome to build on the following summary and tailor it to your project:
 
 > The data is processed in HUNT Cloud, a secure scientific cloud service owned and operated by the Norwegian University of Science and Technology (NTNU). The processing takes place in a dedicated, isolated digital laboratory ("lab") running on physical servers owned by NTNU and located in data centers in Trondheim, Norway. Access requires an encrypted VPN connection with two-factor authentication, followed by an authenticated SSH login, and data never leaves the lab unless explicitly transferred. HUNT Cloud is certified to ISO/IEC 27001 (information security), ISO/IEC 27701 (privacy information management) and ISO 9001 (quality), with the cloud-specific controls ISO/IEC 27017 and ISO/IEC 27018 included in the 27001 certificate.
 
-Always check the wording against your own project, your data controller's expectations and the current [certificates](/govern-science/compliance/certificates).
+Always check the wording against your own project, your data controller's expectations and our current [certificates](/govern-science/compliance/certificates).
 
 ## Where your data lives
+
+Your data lives inside your own digital laboratory. In short:
 
 - **Owner and operator:** HUNT Cloud is fully owned by NTNU, Norway, and affiliated with the Department of Public Health and Nursing.
 - **Location:** Your virtual machines run on physical servers owned by NTNU and located in data centers in Trondheim, Norway — relevant when an application asks about data location and storage outside the EU/EEA.
@@ -44,7 +46,7 @@ Storage volumes in HUNT Cloud are classified by the sensitivity of the data they
 Volumes may be declassified from sensitive to internal in agreement with the relevant data controllers and lab owners.
 
 ::: tip Mapping to legal terms
-HUNT Cloud's "Sensitive" and "Internal" labels are operational *storage* classifications, not legal categories. In GDPR and Norwegian terms, data that can indirectly identify participants (HUNT Cloud "Sensitive") is **pseudonymised personal data** — still personal data, and for health or genetic data a **special category** (see [legal framework](#norwegian-legal-framework-and-terminology) below). Data that can no longer identify anyone — a basis for "Internal" — corresponds to **anonymous data**, which falls outside data-protection law.
+HUNT Cloud's "Sensitive" and "Internal" labels are operational *storage* classifications, not legal categories. In GDPR and Norwegian terms, data that can indirectly identify participants (HUNT Cloud "Sensitive") is **pseudonymized personal data** — still personal data, and for health or genetic data a **special category** (see [legal framework](#norwegian-legal-framework-and-terminology) below). Data that can no longer identify anyone — a basis for "Internal" — corresponds to **anonymous data**, which falls outside data-protection law.
 :::
 
 ::: warning Direct identifiers
@@ -53,7 +55,7 @@ Directly identifiable data — names, national identity numbers, phone numbers, 
 
 ## Access security and two-factor login
 
-Applications and DPIAs frequently ask how access is controlled. Access to a lab combines several independent controls:
+Applications and DPIAs frequently ask how we control access. Access to your lab combines several independent controls that work together:
 
 1. **Encrypted VPN.** All traffic between the user's computer and HUNT Cloud runs through an encrypted OpenVPN connection, protecting the confidentiality of the data in transit.
 2. **Two-factor authentication.** The VPN login requires a one-time verification code (TOTP) generated every 30 seconds in an authenticator app (Google or Microsoft Authenticator) on the user's personal phone, combined with a fixed personal passphrase. This is the "two-factor log-in".
@@ -83,7 +85,7 @@ Applications and DPIAs are easier to write — and to get approved — when you 
 - **Data controller (*behandlingsansvarlig*)** — determines why and how personal data is processed; usually your host institution. **Data processor (*databehandler*)** — processes data on the controller's behalf; this is the role HUNT Cloud (NTNU) holds. The two are bound by a **data processor agreement (*databehandleravtale*)** — see our [data processor agreement](/govern-science/organizational-access/data-processor-agreement).
 - **Legal basis (*behandlingsgrunnlag*)** — you must identify a lawful basis under GDPR [Article 6](https://gdpr-info.eu/art-6-gdpr/). For health, genetic and other **special categories of personal data (*særlige kategorier*)** you additionally need a basis under [Article 9](https://gdpr-info.eu/art-9-gdpr/); research typically relies on Article 9(2)(j).
 - **Special categories** — *health data* and *genetic data* are special-category personal data. This is the precise legal term; HUNT Cloud's "Sensitive" label is the matching storage classification.
-- **Security measures (*tekniske og organisatoriske tiltak*)** — GDPR [Article 32](https://gdpr-info.eu/art-32-gdpr/) requires appropriate technical and organisational measures. The isolation, access controls, encryption and certifications described above are what you cite here.
+- **Security measures (*tekniske og organisatoriske tiltak*)** — GDPR [Article 32](https://gdpr-info.eu/art-32-gdpr/) requires appropriate technical and organizational measures. The isolation, access controls, encryption and certificates described above are what you cite here.
 
 These rules reach Norwegian law through the **Personal Data Act (*personopplysningsloven*)**, which incorporates the GDPR. Medical and health research carries additional requirements:
 
@@ -103,15 +105,15 @@ See the [risk management](/govern-science/risk-management/) section and its [FAQ
 
 ## What institutions often ask for
 
-DPIA templates and data-application forms tend to ask the same questions. Here is where HUNT Cloud's answer comes from:
+DPIA templates and data-application forms tend to ask the same questions. To help you move quickly, here is where to find our answer to each of them:
 
 | The form asks about… | Where to find it |
 | - | - |
 | Where data is processed/stored (and whether outside the EU/EEA) | [Where your data lives](#where-your-data-lives) — NTNU data centers in Norway. |
 | Data processor and processor agreement | [Legal framework](#norwegian-legal-framework-and-terminology); the [data processor agreement](/govern-science/organizational-access/data-processor-agreement). |
-| Technical and organisational security measures (Art. 32) | [Access security](#access-security-and-two-factor-login), the [services specifications](/administer-science/services/specifications) and the [SoA](/govern-science/compliance/certificates#statement-of-applicability-soa). |
+| Technical and organizational security measures (Art. 32) | [Access security](#access-security-and-two-factor-login), the [services specifications](/administer-science/services/specifications) and the [SoA](/govern-science/compliance/certificates#statement-of-applicability-soa). |
 | Access control and authentication | [Access security and two-factor login](#access-security-and-two-factor-login). |
-| Certifications / independent assurance | [ISO certificates](#iso-certificates). |
+| Certificates / independent assurance | [ISO certificates](#iso-certificates). |
 | Sub-processors / subcontractors | [Subcontractors](/govern-science/compliance/subcontractors). |
 | Encryption | Encrypted VPN in transit; [tape service](/administer-science/data/tape-backup/) for encrypted offsite copies. |
 | Backup, restore and deletion | [Data administrator FAQ](/administer-science/data/faq). |
@@ -119,6 +121,8 @@ DPIA templates and data-application forms tend to ask the same questions. Here i
 | Logging and auditability | We log access and transfers; logs are available to data controllers on request — [contact us](/contact). |
 
 ## Documents you can cite
+
+These are the public documents that we are happy for you to reference directly in your assessments and applications:
 
 | Document | Use it to show… |
 | - | - |
