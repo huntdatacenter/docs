@@ -18,7 +18,7 @@ description: This page lists information and questions about our Tingweeks.
 ::: tip Next Tingweek
 
 - **Labting**: Tuesday 2 June 2026 - 2 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek18-labting-agenda.pdf))
-- **Admin ting**: Wednesday 3 June 2026 - 9 to 10 a.m. CET
+- **Admin ting**: Wednesday 3 June 2026 - 9 to 10 a.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek18-adminting-agenda.pdf))
 - **Data controller ting**: Wednesday 3 June 2026 - 1 to 2 p.m. CET
 
 :::
