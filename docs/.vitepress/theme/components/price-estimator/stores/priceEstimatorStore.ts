@@ -533,7 +533,7 @@ export const priceEstimatorStore = reactive({
     const idx = lab.selectedCompute.findIndex((c) => c.id === computeId)
     if (idx === -1) return
 
-    const prices = this.getComputePriceFromCatalogue(payload.machine_type, payload.subscription, payload.gpu)
+    const prices = this.getComputePriceFromCatalogue(payload.machine_type, payload.subscription, payload.gpu, payload.gpuCount)
     lab.selectedCompute[idx] = {
       id: computeId,
       name: payload.name,
@@ -614,6 +614,7 @@ export const priceEstimatorStore = reactive({
         core_count: c.core_count,
         ram: c.ram,
         gpu: c.gpu,
+        gpu_count: c.gpu_count,
         subscription: c.subscription,
       })),
       storage: lab.selectedStorage.map((s) => ({
