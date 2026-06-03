@@ -246,7 +246,7 @@ export const priceEstimatorStore = reactive({
   },
 
   getLabComputePriceSum(labId: number) {
-    const lab = this.labs.find((l) => l.id === labId)
+    const lab = this.getLab(labId)
     if (!lab) {
       return { monthlyCostTotal: 0, yearlyCostTotal: 0 }
     }
@@ -259,7 +259,7 @@ export const priceEstimatorStore = reactive({
 
   getLabStoragePriceSum(labId: number) {
     let results = { yearlyCostTotal: 0, monthlyCostTotal: 0 }
-    const lab = this.labs.find((l) => l.id === labId)
+    const lab = this.getLab(labId)
     if (!lab) {
       return results
     }
@@ -277,7 +277,7 @@ export const priceEstimatorStore = reactive({
       NVME: { size: 0, yearlyCostTotal: 0, monthlyCostTotal: 0 },
     }
 
-    const lab = this.labs.find((l) => l.id === labId)
+    const lab = this.getLab(labId)
     if (!lab) {
       return results
     }
@@ -362,7 +362,7 @@ export const priceEstimatorStore = reactive({
   },
 
   addStorageToLab(labId: number, payload: { name: string; usage: StorageUsageType; type: StorageType; size: number }) {
-    const lab = this.labs.find((l) => l.id === labId)
+    const lab = this.getLab(labId)
     if (!lab) return
 
     const prices = this.getStoragePriceFromCatalogue(payload.type, payload.size)
@@ -382,7 +382,7 @@ export const priceEstimatorStore = reactive({
   },
 
   editStorageInLab(labId: number, storageId: number, payload: { name: string; usage: StorageUsageType; type: StorageType; size: number }) {
-    const lab = this.labs.find((l) => l.id === labId)
+    const lab = this.getLab(labId)
     if (!lab) return
 
     const idx = lab.selectedStorage?.findIndex((s) => s.id === storageId) ?? -1
@@ -402,11 +402,12 @@ export const priceEstimatorStore = reactive({
   },
 
   removeStorageFromLab(labId: number, storageId: number) {
-    const lab = this.labs.find((l) => l.id === labId)
+    const lab = this.getLab(labId)
     if (!lab) return
 
     lab.selectedStorage = lab.selectedStorage?.filter((s) => s.id !== storageId)
 
+    this.sortIndex(labId)
     this.saveStateToLocal()
   },
 
@@ -498,7 +499,7 @@ export const priceEstimatorStore = reactive({
     labId: number,
     payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpu_count?: number; isDefault: boolean },
   ) {
-    const lab = this.labs.find((l) => l.id === labId)
+    const lab = this.getLab(labId)
     if (!lab) return
 
     const compId = lab.selectedCompute?.length || 0
@@ -527,7 +528,7 @@ export const priceEstimatorStore = reactive({
     computeId: number,
     payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpuCount?: number; isDefault: boolean },
   ) {
-    const lab = this.labs.find((l) => l.id === labId)
+    const lab = this.getLab(labId)
     if (!lab || !lab.selectedCompute) return
 
     const idx = lab.selectedCompute.findIndex((c) => c.id === computeId)
@@ -552,10 +553,23 @@ export const priceEstimatorStore = reactive({
   },
 
   removeComputeFromLab(labId: number, computeId: number) {
-    const lab = this.labs.find((l) => l.id === labId)
+    const lab = this.getLab(labId)
     if (!lab) return
     lab.selectedCompute = lab.selectedCompute?.filter((c) => c.id !== computeId)
+    this.sortIndex(labId)
     this.saveStateToLocal()
+  },
+
+  getLab(labId: number) {
+    const lab = this.labs.find((l) => l.id === labId)
+    return lab
+  },
+
+  sortIndex(labId: number) {
+    const lab = this.getLab(labId)
+    if (!lab) return
+    lab.selectedCompute = lab.selectedCompute.sort((a, b) => a.id - b.id).map((unit, index) => ({ ...unit, id: index }))
+    lab.selectedStorage = lab.selectedStorage.sort((a, b) => a.id - b.id).map((unit, index) => ({ ...unit, id: index }))
   },
 
   /* Total Helpers */
