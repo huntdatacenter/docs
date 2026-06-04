@@ -45,7 +45,7 @@ const save = () => {
     machineSubscription: formData.value.machineSubscription,
     archive: Number(formData.value.archive),
     work: Number(formData.value.work),
-    scratch: Number(formData.value.scratch),
+    scratch: formData.value.scratch,
     isDefault: true,
   })
   emit("close")
@@ -85,15 +85,15 @@ onMounted(() => {
           </v-col>
 
           <v-col cols="12" sm="6">
-            <v-text-field v-model="formData.archive" label="Archive Storage (TB)" type="number" variant="outlined" min="0" placeholder="0.4"></v-text-field>
+            <v-number-input v-model="formData.archive" label="Archive Storage (TB)" type="number" variant="outlined" :min="0" :step="0.1" :precision="1"></v-number-input>
           </v-col>
 
           <v-col cols="12" sm="6">
-            <v-text-field v-model="formData.work" label="Work Storage (TB)" type="number" variant="outlined" min="0" placeholder="0.3"></v-text-field>
+            <v-number-input v-model="formData.work" label="Work Storage (TB)" type="number" variant="outlined" :min="0" :step="0.1" :precision="1"></v-number-input>
           </v-col>
 
           <v-col cols="12" sm="6">
-            <v-text-field v-model="formData.scratch" label="Scratch Storage (TB)" type="number" variant="outlined" min="0" placeholder="0.4"></v-text-field>
+            <v-number-input v-model="formData.scratch" label="Scratch Storage (TB)" type="number" variant="outlined" :min="0" :step="0.1" :precision="1"></v-number-input>
           </v-col>
         </v-row>
       </v-container>

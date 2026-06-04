@@ -80,19 +80,7 @@ onMounted(() => {
               <v-select :items="['HDD', 'NVME']" v-model="formData.type" label="Type" required variant="outlined"></v-select>
             </v-col>
             <v-col cols="12">
-              <v-text-field
-                v-model="formData.size"
-                label="Size (TB)"
-                hint="Enter the size of the storage in Terrabytes"
-                persistent-hint
-                type="number"
-                :min="1"
-                :max="100"
-                :step="1"
-                required
-                suffix="TB"
-                variant="outlined"
-              ></v-text-field>
+              <v-number-input v-model="formData.size" label="Size (TB)" type="number" variant="outlined" :min="0" :step="0.1" :precision="1"></v-number-input>
             </v-col>
           </v-form>
         </v-row>
