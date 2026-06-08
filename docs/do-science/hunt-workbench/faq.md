@@ -345,3 +345,38 @@ Yes. You can find your **`Workbench Terminal`** in the main view of applications
 ### When do I need to use a terminal?
 
 **`Workbench Terminal`** can be handy when it comes to managing [Conda packages](/do-science/tools/analytical/conda), monitoring resources (**`htop`**), or handling other tasks.
+
+### MacOS with Norwegian keyboard in Terminal
+
+To be able to use special symbols (option key + number) when working in Workbench terminal on MacOS apply this workaround.
+
+<details><summary>Workaround for MacOS keyboard layouts</summary>
+
+1. Edit an `.inputrc` file:
+
+    ```bash
+    vim /mnt/work/workbench/$USER/.inputrc
+    ```
+
+2. Copy paste these key mappings:
+
+    ```text
+    # GNU Readline configuration for German keyboard on macOS
+    # Fixes Option key combinations in JupyterLab terminal
+    # See: https://github.com/jupyterlab/jupyterlab/issues/16489
+
+    # Option + numbers (special characters)
+    "\e1": "©"
+    "\e2": "™"
+    "\e3": "£"
+    "\e4": "¢"
+    "\e5": "{"
+    "\e6": "}"
+    "\e7": "|"
+    "\e8": "["
+    "\e9": "]"
+    "\e0": "~"
+
+    ```
+
+</details>
