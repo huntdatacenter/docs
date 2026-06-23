@@ -313,7 +313,7 @@ request_lab_deletion:
 
       ---
       lab = {labname} 
-      tape_archive="tape_archive"  
+      tape_archive={tape_archive} 
       ---
 
       I have attached a signed lab deletion order to this email confirming the request.
