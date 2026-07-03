@@ -739,6 +739,10 @@ function sidebarDoScience() {
         //   text: "Migration",
         //   link: "/do-science/faq/migration",
         // },
+        {
+          text: "OS Upgrade",
+          link: "/do-science/faq/os-upgrade",
+        },
       ],
     },
   ]
