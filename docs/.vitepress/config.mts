@@ -735,10 +735,10 @@ function sidebarDoScience() {
           text: "Security",
           link: "/do-science/faq/security",
         },
-        {
-          text: "Migration",
-          link: "/do-science/faq/migration",
-        },
+        // {
+        //   text: "Migration",
+        //   link: "/do-science/faq/migration",
+        // },
       ],
     },
   ]
