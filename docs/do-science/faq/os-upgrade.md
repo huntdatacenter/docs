@@ -1,7 +1,6 @@
 ---
 title: OS Upgrade
 category: FAQ
-# Permalink '/do-science/faq/os-upgrade/' is being used in Lab Access link
 permalink: /do-science/faq/os-upgrade/
 outline: 1
 description: This page lists frequently asked questions related to the 2026 OS upgrade of labs to new Ubuntu release.
