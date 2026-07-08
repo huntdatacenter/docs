@@ -486,7 +486,7 @@ Data space leaders can request deletion of individual storage volumes and data f
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud Data Deletion Order" version 1.5.
+The following form fields are included in the "HUNT Cloud Data Deletion Order" version 1.6.
 
 **Data space**
 
