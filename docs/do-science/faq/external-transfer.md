@@ -113,10 +113,10 @@ Your remote party will need to open for incoming traffic from your lab in HUNT C
 
 ### How do I transfer data to and from TSD at UiO?
 
-Services for sensitive data ([TSD](https://www.uio.no/english/services/it/research/sensitive-data/)) at the University of Oslo has developed a handy [API client](https://github.com/unioslo/tsd-api-client) that can be utilized for direct data transfers to and from your lab. The setup requires that you hold user accounts for both TSD and HUNT Cloud. Depending on your lab configuration, you may have to [contact us](/contact) for a network opening.
+Services for sensitive data ([TSD](https://www.uio.no/english/services/it/research/sensitive-data/)) at the University of Oslo has developed a handy [API client](https://www.uio.no/english/services/it/research/sensitive-data/help/export-and-import/tacl.html) that can be utilized for direct data transfers to and from your lab. The setup requires that you hold user accounts for both TSD and HUNT Cloud. Depending on your lab configuration, you may have to [contact us](/contact) for a network opening.
 
 ::: details More information
-For transfers from TSD to HUNT Cloud: On TSD, put your data in the **`file-export`** folder on **`durable`**. Then, log into your HUNT Cloud lab and download the data via the API as described in their [guide](https://github.com/unioslo/tsd-api-client).
+For transfers from TSD to HUNT Cloud: On TSD, put your data in the **`file-export`** folder on **`durable`**. Then, log into your HUNT Cloud lab and download the data via the API as described in their [guides](https://www.uio.no/english/services/it/research/sensitive-data/help/import-export.html).
 :::
 
 ### Do I need to encrypt data for external transfers?
