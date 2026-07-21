@@ -193,9 +193,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-card light class="d-flex justify-center align-center">
-    <v-card-title>
-      <span class="text-h5">Add Compute</span>
+  <v-theme-provider theme="huntCloud" with-background>
+  <v-card rounded="lg">
+    <v-card-title class="d-flex align-center px-5 pt-4">
+      <v-icon color="primary" class="mr-2">mdi-memory</v-icon>
+      <span class="text-h6">{{ editData ? "Edit compute" : "Add compute" }}</span>
     </v-card-title>
     <v-card-text style="width: 100%">
       <v-container>
@@ -245,10 +247,11 @@ onMounted(() => {
         </v-row>
       </v-container>
     </v-card-text>
-    <v-card-actions>
+    <v-card-actions class="px-5 pb-4">
       <v-spacer></v-spacer>
-      <v-btn color="red darken-2" text @click="close()"> Close </v-btn>
-      <v-btn color="green darken-2" text @click="save()"> Save </v-btn>
+      <v-btn variant="text" rounded="lg" class="text-none" @click="close()"> Cancel </v-btn>
+      <v-btn variant="flat" color="primary" rounded="lg" class="text-none" prepend-icon="mdi-content-save-outline" @click="save()"> Save </v-btn>
     </v-card-actions>
   </v-card>
+  </v-theme-provider>
 </template>

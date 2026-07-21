@@ -121,24 +121,28 @@ const tableItems = computed(() => {
 </script>
 
 <template>
-  <v-card class="ma-4 pa-4">
-    <v-row align="center" justify="space-between">
-      <v-col>
-        <v-card-title>Total Summary</v-card-title>
-      </v-col>
-      <v-col cols="auto">
-        <v-tooltip text="Save this configuration to a JSON file">
-          <template v-slot:activator="{ props }">
-            <v-btn density="default" size="large" v-bind="props" dark @click="priceEstimatorStore.exportItems()">
-              <v-icon left>mdi-export</v-icon>
-              Save config
-            </v-btn>
-          </template>
-        </v-tooltip>
-      </v-col>
-    </v-row>
+  <v-card class="total-block mt-6" rounded="xl" elevation="3">
+    <div class="total-header d-flex flex-wrap align-center px-5 py-4">
+      <v-icon color="primary" class="mr-3">mdi-cart-outline</v-icon>
+      <span class="total-title">Total summary</span>
+      <v-spacer />
+      <v-tooltip text="Save this configuration to a JSON file" location="top">
+        <template v-slot:activator="{ props }">
+          <v-btn variant="tonal" color="primary" size="large" rounded="lg" v-bind="props" prepend-icon="mdi-export" class="text-none" @click="priceEstimatorStore.exportItems()">
+            Save config
+          </v-btn>
+        </template>
+      </v-tooltip>
+    </div>
 
-    <v-data-table-virtual :headers="headers" :items="tableItems" hide-default-footer item-value="id" class="mt-2">
+    <v-data-table-virtual
+      :headers="headers"
+      :items="tableItems"
+      hide-default-footer
+      item-value="id"
+      class="total-table"
+      :row-props="(data) => ({ class: data.item.isTotalRow ? 'total-row' : data.item.isDiscountRow ? 'discount-row' : '' })"
+    >
       <template v-slot:item.name="{ item }">
         <span v-if="item.isTotalRow">
           <strong>{{ item.name }}</strong>
@@ -173,7 +177,41 @@ const tableItems = computed(() => {
 </template>
 
 <style scoped>
-.v-card {
-  background-color: #f5f5f5;
+.total-block {
+  border: 1px solid rgba(46, 117, 120, 0.18);
+  overflow: hidden;
+}
+
+.total-header {
+  background: linear-gradient(135deg, #eef3f3 0%, #e3eeee 100%);
+  border-bottom: 1px solid rgba(46, 117, 120, 0.15);
+}
+
+.total-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #1f2d2d;
+}
+
+.total-table :deep(thead th) {
+  font-weight: 600 !important;
+  color: #5a6b6b !important;
+  text-transform: uppercase;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.04em;
+}
+
+.total-table :deep(tr.total-row td) {
+  background: rgba(46, 117, 120, 0.08);
+  font-size: 1rem;
+}
+
+.total-table :deep(tr.total-row:last-child td) {
+  background: rgba(46, 117, 120, 0.14);
+}
+
+.total-table :deep(tr.discount-row td) {
+  background: rgba(46, 125, 50, 0.06);
 }
 </style>

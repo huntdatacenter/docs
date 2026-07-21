@@ -57,8 +57,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-card light class="d-flex justify-center align-center">
-    <v-card-title>Add New Lab</v-card-title>
+  <v-theme-provider theme="huntCloud" with-background>
+  <v-card rounded="lg">
+    <v-card-title class="d-flex align-center px-5 pt-4">
+      <v-icon color="primary" class="mr-2">mdi-flask-plus-outline</v-icon>
+      <span class="text-h6">Add new lab</span>
+    </v-card-title>
     <v-card-text>
       <v-container>
         <v-row dense>
@@ -98,10 +102,11 @@ onMounted(() => {
         </v-row>
       </v-container>
     </v-card-text>
-    <v-card-actions>
+    <v-card-actions class="px-5 pb-4">
       <v-spacer></v-spacer>
-      <v-btn color="red darken-1" text @click="$emit('close')">Cancel</v-btn>
-      <v-btn color="green darken-1" text @click="save">Add Lab</v-btn>
+      <v-btn variant="text" rounded="lg" class="text-none" @click="$emit('close')">Cancel</v-btn>
+      <v-btn variant="flat" color="primary" rounded="lg" class="text-none" prepend-icon="mdi-plus" @click="save">Add lab</v-btn>
     </v-card-actions>
   </v-card>
+  </v-theme-provider>
 </template>
