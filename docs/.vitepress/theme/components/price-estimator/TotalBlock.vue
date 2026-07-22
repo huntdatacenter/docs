@@ -178,40 +178,40 @@ const tableItems = computed(() => {
 
 <style scoped>
 .total-block {
-  border: 1px solid rgba(46, 117, 120, 0.18);
+  border: 1px solid rgba(var(--v-theme-info), 0.18);
   overflow: hidden;
 }
 
 .total-header {
-  background: linear-gradient(135deg, #f3f8f8 0%, #eef3f3 100%);
-  border-bottom: 1px solid rgba(46, 117, 120, 0.15);
+  background: linear-gradient(135deg, rgb(var(--v-theme-header-gradient-start)) 0%, rgb(var(--v-theme-header-gradient-end)) 100%);
+  border-bottom: 1px solid rgba(var(--v-theme-info), 0.15);
 }
 
 .total-title {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: #1f2d2d;
+  color: rgb(var(--v-theme-on-surface-strong));
 }
 
 .total-table :deep(thead th) {
   font-weight: 600 !important;
-  color: #5a6b6b !important;
+  color: rgb(var(--v-theme-on-surface-muted)) !important;
   text-transform: uppercase;
   font-size: 0.72rem !important;
   letter-spacing: 0.04em;
 }
 
 .total-table :deep(tr.total-row td) {
-  background: rgba(46, 117, 120, 0.08);
+  background: rgba(var(--v-theme-info), 0.08);
   font-size: 1rem;
 }
 
 .total-table :deep(tr.total-row:last-child td) {
-  background: rgba(46, 117, 120, 0.14);
+  background: rgba(var(--v-theme-info), 0.14);
 }
 
 .total-table :deep(tr.discount-row td) {
-  background: rgba(46, 125, 50, 0.06);
+  background: rgba(var(--v-theme-success), 0.06);
 }
 </style>

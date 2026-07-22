@@ -392,19 +392,19 @@ const removeStorageById = (storageId: number) => {
 <style scoped>
 .lab-card {
   overflow: hidden;
-  border: 1px solid rgba(46, 117, 120, 0.12);
+  border: 1px solid rgba(var(--v-theme-info), 0.12);
   transition: box-shadow 0.2s ease;
 }
 
 .lab-card:hover {
   box-shadow:
-    0 6px 20px rgba(216, 230, 231, 0.12),
-    0 2px 6px rgba(223, 196, 196, 0.06) !important;
+    0 6px 20px rgba(var(--v-theme-shadow-cool), 0.12),
+    0 2px 6px rgba(var(--v-theme-shadow-warm), 0.06) !important;
 }
 
 .lab-header {
-  background: linear-gradient(135deg, #f3f8f8 0%, #eef3f3 100%);
-  border-bottom: 1px solid rgba(46, 117, 120, 0.12);
+  background: linear-gradient(135deg, rgb(var(--v-theme-header-gradient-start)) 0%, rgb(var(--v-theme-header-gradient-end)) 100%);
+  border-bottom: 1px solid rgba(var(--v-theme-info), 0.12);
 }
 
 .lab-title-input {
@@ -415,7 +415,7 @@ const removeStorageById = (storageId: number) => {
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: #1f2d2d;
+  color: rgb(var(--v-theme-on-surface-strong));
   padding-top: 0;
 }
 
@@ -445,13 +445,13 @@ const removeStorageById = (storageId: number) => {
 
 .section-card {
   border: 1px solid rgba(0, 0, 0, 0.06);
-  background: #fcfdfd;
+  background: rgb(var(--v-theme-surface-bright));
 }
 
 .section-title {
   font-size: 1.05rem;
   font-weight: 600;
-  color: #1f2d2d;
+  color: rgb(var(--v-theme-on-surface-strong));
   padding-bottom: 4px;
 }
 
@@ -461,7 +461,7 @@ const removeStorageById = (storageId: number) => {
 
 .section-card :deep(thead th) {
   font-weight: 600 !important;
-  color: #5a6b6b !important;
+  color: rgb(var(--v-theme-on-surface-muted)) !important;
   text-transform: uppercase;
   font-size: 0.72rem !important;
   letter-spacing: 0.04em;
@@ -472,10 +472,10 @@ const removeStorageById = (storageId: number) => {
 }
 
 .summary-total-row td {
-  background: rgba(46, 117, 120, 0.08);
+  background: rgba(var(--v-theme-info), 0.08);
 }
 
 .summary-total-row td strong {
-  color: #21595c;
+  color: rgb(var(--v-theme-primary-darken-1));
 }
 </style>
