@@ -19,7 +19,6 @@ let editingComputeItem: ComputeUnit | null = null
 
 // Collapse state
 const isCollapsed = ref(props.lab.collapse === undefined ? true : props.lab.collapse)
-console.log(props.lab.id, "toggle", props.lab.collapse, isCollapsed.value)
 const toggleCollapse = () => {
   isCollapsed.value = !isCollapsed.value
   priceEstimatorStore.updateLabCollapse(props.lab.id, isCollapsed.value)
