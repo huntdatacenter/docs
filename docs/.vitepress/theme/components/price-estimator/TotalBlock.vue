@@ -183,7 +183,7 @@ const tableItems = computed(() => {
 }
 
 .total-header {
-  background: linear-gradient(135deg, #eef3f3 0%, #e3eeee 100%);
+  background: linear-gradient(135deg, #f3f8f8 0%, #eef3f3 100%);
   border-bottom: 1px solid rgba(46, 117, 120, 0.15);
 }
 

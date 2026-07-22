@@ -129,7 +129,6 @@ async function handleFileUpload(event: Event) {
 .pe-subtitle {
   margin-top: 2px;
   font-size: 0.95rem;
-  color: #5a6b6b;
 }
 
 .pe-empty {

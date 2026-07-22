@@ -17,6 +17,12 @@ const showLocalComputeSummary = ref(false)
 const showLocalStorageSummary = ref(false)
 let editingComputeItem: ComputeUnit | null = null
 
+// Collapse state
+const isCollapsed = ref(props.lab.collapse ? props.lab.collapse : true)
+const toggleCollapse = () => {
+  isCollapsed.value = !isCollapsed.value
+}
+
 const computeHeaders = ref<DataTableHeader[]>([
   { title: "Name", align: "start", sortable: true, key: "name" },
   { title: "Machine type", align: "start", sortable: true, key: "machine_type" },
@@ -155,7 +161,12 @@ const removeStorageById = (storageId: number) => {
 <template>
   <v-card class="lab-card mb-6" rounded="xl" elevation="2">
     <!-- Lab header -->
-    <div class="lab-header d-flex align-center px-5 py-3">
+    <div class="lab-header d-flex align-center px-5 py-3" @click="toggleCollapse" style="cursor: pointer">
+      <v-btn size="small" variant="text" icon class="mr-1 collapse-toggle" :class="{ 'collapse-toggle--collapsed': isCollapsed }" @click.stop="toggleCollapse">
+        <v-icon>mdi-chevron-down</v-icon>
+        <v-tooltip activator="parent" location="top">{{ isCollapsed ? "Expand lab" : "Collapse lab" }}</v-tooltip>
+      </v-btn>
+
       <v-icon class="mr-3" color="primary">mdi-flask-outline</v-icon>
       <v-text-field
         v-model="localTitle"
@@ -164,198 +175,205 @@ const removeStorageById = (storageId: number) => {
         hide-details
         density="compact"
         class="lab-title-input flex-grow-1"
+        @click.stop
         @update:model-value="updateTitle"
       ></v-text-field>
+
+      <transition name="fade">
+        <span v-if="isCollapsed" class="collapsed-summary mr-3 text-medium-emphasis"> {{ Number(LabSumMonthly || 0).toFixed(2) }}&nbsp;NOK / month </span>
+      </transition>
 
       <v-tooltip text="Renewal period" location="top">
         <template v-slot:activator="{ props }">
           <v-chip size="small" variant="tonal" color="primary" class="mr-2 font-weight-medium" v-bind="props">{{ lab.subscription }}</v-chip>
         </template>
       </v-tooltip>
-      <v-btn size="small" variant="text" icon color="error" @click="priceEstimatorStore.removeLab(props.lab.id)">
+      <v-btn size="small" variant="text" icon color="error" @click.stop="priceEstimatorStore.removeLab(props.lab.id)">
         <v-icon>mdi-delete-outline</v-icon>
         <v-tooltip activator="parent" location="top">Remove lab</v-tooltip>
       </v-btn>
     </div>
 
-    <div class="pa-4">
-      <v-card flat rounded="lg" class="section-card mb-4">
-        <div class="section-title d-flex align-center px-4 pt-3">
-          <v-icon size="small" color="primary" class="mr-2">mdi-memory</v-icon>
-          <span>Compute</span>
-        </div>
+    <v-expand-transition>
+      <div v-show="!isCollapsed" class="pa-4">
+        <v-card flat rounded="lg" class="section-card mb-4">
+          <div class="section-title d-flex align-center px-4 pt-3">
+            <v-icon size="small" color="primary" class="mr-2">mdi-memory</v-icon>
+            <span>Compute</span>
+          </div>
 
-        <v-data-table-virtual :items="selectedCompute" :headers="computeHeaders" hide-default-footer hover item-value="id">
-          <template v-slot:item.gpu="{ item }">
-            <div v-if="item.gpu" class="d-flex justify-end v-data-table-column--nowrap">{{ item.gpu_count }} x {{ item.gpu }}</div>
-          </template>
-          <template v-slot:item.monthlyPrice="{ item }">
-            <div class="d-flex justify-end v-data-table-column--nowrap">
-              <span class="text-right"> {{ item.monthlyPrice.toFixed(2) }}&nbsp;NOK </span>
-            </div>
-          </template>
-          <template v-slot:item.yearlyPrice="{ item }">
-            <div class="d-flex justify-end v-data-table-column--nowrap">
-              <span class="text-right"> {{ item.yearlyPrice.toFixed(2) }}&nbsp;NOK </span>
-            </div>
-          </template>
-          <template v-slot:item.actions="{ item }">
-            <div class="d-flex ga-2 justify-end">
-              <v-icon icon="mdi-pencil" size="small" @click="editCompute(selectedCompute.find((c) => c.id === item.id)!)"></v-icon>
-              <v-icon :color="item.isDefault ? 'rgba(0, 0, 0, 0.3)' : ''" icon="mdi-delete" size="small" @click="removeMachine(item)"></v-icon>
-            </div>
-          </template>
+          <v-data-table-virtual :items="selectedCompute" :headers="computeHeaders" hide-default-footer hover item-value="id">
+            <template v-slot:item.gpu="{ item }">
+              <div v-if="item.gpu" class="d-flex justify-end v-data-table-column--nowrap">{{ item.gpu_count }} x {{ item.gpu }}</div>
+            </template>
+            <template v-slot:item.monthlyPrice="{ item }">
+              <div class="d-flex justify-end v-data-table-column--nowrap">
+                <span class="text-right"> {{ item.monthlyPrice.toFixed(2) }}&nbsp;NOK </span>
+              </div>
+            </template>
+            <template v-slot:item.yearlyPrice="{ item }">
+              <div class="d-flex justify-end v-data-table-column--nowrap">
+                <span class="text-right"> {{ item.yearlyPrice.toFixed(2) }}&nbsp;NOK </span>
+              </div>
+            </template>
+            <template v-slot:item.actions="{ item }">
+              <div class="d-flex ga-2 justify-end">
+                <v-icon icon="mdi-pencil" size="small" @click="editCompute(selectedCompute.find((c) => c.id === item.id)!)"></v-icon>
+                <v-icon :color="item.isDefault ? 'rgba(0, 0, 0, 0.3)' : ''" icon="mdi-delete" size="small" @click="removeMachine(item)"></v-icon>
+              </div>
+            </template>
 
-          <template v-slot:body.append="{ headers }">
-            <tr>
-              <th :colspan="computeHeaders.length + 1" class="text-center py-2">
-                <v-btn size="small" variant="tonal" color="primary" rounded="lg" class="text-none" @click="addMachine" prepend-icon="mdi-plus"> Add machine </v-btn>
-              </th>
-            </tr>
+            <template v-slot:body.append="{ headers }">
+              <tr>
+                <th :colspan="computeHeaders.length + 1" class="text-center py-2">
+                  <v-btn size="small" variant="tonal" color="primary" rounded="lg" class="text-none" @click="addMachine" prepend-icon="mdi-plus"> Add machine </v-btn>
+                </th>
+              </tr>
 
-            <tr v-if="showLocalComputeSummary">
-              <!-- Name -->
-              <th role="columnheader">
-                <span><strong>Total compute</strong> </span>
-              </th>
-              <!-- Machine type -->
-              <th></th>
-              <!-- vCPUs -->
-              <th class="v-data-table-column--align-end"></th>
-              <!-- RAM [GB] -->
-              <th class="v-data-table-column--align-end"></th>
-              <!-- GPU count -->
-              <!-- <th class="v-data-table-column--align-end"></th> -->
-              <!-- GPU -->
-              <th class="v-data-table-column--align-end"></th>
-              <!-- Subscription -->
-              <th></th>
-              <!-- Price / month -->
-              <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
-              </th>
-              <!-- Price / year -->
-              <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
-              </th>
-              <!-- Actions -->
-              <th class="v-data-table-column--align-end"></th>
-            </tr>
-          </template>
-        </v-data-table-virtual>
-      </v-card>
+              <tr v-if="showLocalComputeSummary">
+                <!-- Name -->
+                <th role="columnheader">
+                  <span><strong>Total compute</strong> </span>
+                </th>
+                <!-- Machine type -->
+                <th></th>
+                <!-- vCPUs -->
+                <th class="v-data-table-column--align-end"></th>
+                <!-- RAM [GB] -->
+                <th class="v-data-table-column--align-end"></th>
+                <!-- GPU count -->
+                <!-- <th class="v-data-table-column--align-end"></th> -->
+                <!-- GPU -->
+                <th class="v-data-table-column--align-end"></th>
+                <!-- Subscription -->
+                <th></th>
+                <!-- Price / month -->
+                <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                  <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
+                </th>
+                <!-- Price / year -->
+                <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                  <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
+                </th>
+                <!-- Actions -->
+                <th class="v-data-table-column--align-end"></th>
+              </tr>
+            </template>
+          </v-data-table-virtual>
+        </v-card>
 
-      <v-card flat rounded="lg" class="section-card mb-4">
-        <div class="section-title d-flex align-center px-4 pt-3">
-          <v-icon size="small" color="primary" class="mr-2">mdi-database-outline</v-icon>
-          <span>Storage</span>
-        </div>
+        <v-card flat rounded="lg" class="section-card mb-4">
+          <div class="section-title d-flex align-center px-4 pt-3">
+            <v-icon size="small" color="primary" class="mr-2">mdi-database-outline</v-icon>
+            <span>Storage</span>
+          </div>
 
-        <v-data-table-virtual
-          v-model="props.lab.selectedStorage"
-          :items="selectedStorage"
-          :headers="storageHeaders"
-          hover
-          hide-default-footer
-          item-value="id"
-          aria-placeholder="No storage added yet"
-        >
-          <template v-slot:item.size="{ item }"> {{ item.size.toFixed(2) }}&nbsp;TB </template>
-          <template v-slot:item.monthlyPrice="{ item }"> {{ item.monthlyPrice.toFixed(2) }}&nbsp;NOK </template>
-          <template v-slot:item.yearlyPrice="{ item }"> {{ item.yearlyPrice.toFixed(2) }}&nbsp;NOK </template>
-          <template v-slot:item.actions="{ item }">
-            <div class="d-flex ga-2 justify-end">
-              <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editStorage(selectedStorage.find((s) => s.id === item.id)!)"></v-icon>
-              <v-icon color="medium-emphasis" icon="mdi-delete" size="small" @click="removeStorageById(item.id)"></v-icon>
-            </div>
-          </template>
+          <v-data-table-virtual
+            v-model="props.lab.selectedStorage"
+            :items="selectedStorage"
+            :headers="storageHeaders"
+            hover
+            hide-default-footer
+            item-value="id"
+            aria-placeholder="No storage added yet"
+          >
+            <template v-slot:item.size="{ item }"> {{ item.size.toFixed(2) }}&nbsp;TB </template>
+            <template v-slot:item.monthlyPrice="{ item }"> {{ item.monthlyPrice.toFixed(2) }}&nbsp;NOK </template>
+            <template v-slot:item.yearlyPrice="{ item }"> {{ item.yearlyPrice.toFixed(2) }}&nbsp;NOK </template>
+            <template v-slot:item.actions="{ item }">
+              <div class="d-flex ga-2 justify-end">
+                <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editStorage(selectedStorage.find((s) => s.id === item.id)!)"></v-icon>
+                <v-icon color="medium-emphasis" icon="mdi-delete" size="small" @click="removeStorageById(item.id)"></v-icon>
+              </div>
+            </template>
 
-          <template v-slot:body.append="{}">
-            <tr>
-              <th :colspan="storageHeaders.length + 1" class="text-center py-2">
-                <v-btn size="small" variant="tonal" color="primary" rounded="lg" class="text-none" @click="addStorage" prepend-icon="mdi-plus"> Add storage </v-btn>
-              </th>
-            </tr>
-            <tr v-if="showLocalStorageSummary" v-for="(item, storageType, index) in storageLabSum" :key="storageType">
-              <!-- Name -->
-              <th>
-                <strong v-if="index === 0">Total storage</strong>
-              </th>
-              <!-- Usage -->
-              <th></th>
-              <!-- Type -->
-              <th>
-                <span>
-                  <strong>{{ storageType }}</strong>
-                </span>
-              </th>
-              <!-- Size [TB] -->
-              <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                <strong>{{ item.size.toFixed(2) }}&nbsp;TB</strong>
-              </th>
-              <!-- Price / month -->
-              <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                <strong>{{ item.monthlyCostTotal.toFixed(2) }}&nbsp;NOK</strong>
-              </th>
-              <!-- Price / year -->
-              <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                <strong>{{ item.yearlyCostTotal.toFixed(2) }}&nbsp;NOK</strong>
-              </th>
-              <!-- Actions -->
-              <th></th>
-            </tr>
-          </template>
-        </v-data-table-virtual>
-      </v-card>
-      <v-card flat rounded="lg" class="section-card">
-        <div class="section-title d-flex align-center px-4 pt-3">
-          <v-icon size="small" color="primary" class="mr-2">mdi-receipt-text-outline</v-icon>
-          <span>Lab summary</span>
-        </div>
-        <v-table class="summary-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th class="text-right">Price / month</th>
-              <th class="text-right">Price / year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <strong>Lab Subscription ({{ lab.subscription }})</strong>
-              </td>
-              <td></td>
-              <td class="text-right v-data-table-column--nowrap">{{ Number(labSubscriptionPrice.monthly).toFixed(2) }}&nbsp;NOK</td>
-              <td class="text-right v-data-table-column--nowrap">{{ Number(labSubscriptionPrice.yearly).toFixed(2) }}&nbsp;NOK</td>
-            </tr>
-            <tr>
-              <td><strong>Compute</strong></td>
-              <td></td>
-              <td class="text-right v-data-table-column--nowrap">{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
-              <td class="text-right v-data-table-column--nowrap">{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
-            </tr>
-            <tr>
-              <td><strong>Storage</strong></td>
-              <td></td>
-              <td class="text-right v-data-table-column--nowrap">{{ Number(storageLabPriceSum?.monthlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
-              <td class="text-right v-data-table-column--nowrap">{{ Number(storageLabPriceSum?.yearlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
-            </tr>
-            <tr class="summary-total-row">
-              <td><strong>Total</strong></td>
-              <td></td>
-              <td class="text-right v-data-table-column--nowrap">
-                <strong>{{ Number(LabSumMonthly.toFixed(2) || 0).toFixed(2) }}&nbsp;NOK</strong>
-              </td>
-              <td class="text-right v-data-table-column--nowrap">
-                <strong>{{ Number(LabSum.toFixed(2) || 0).toFixed(2) }}&nbsp;NOK</strong>
-              </td>
-            </tr>
-          </tbody>
-        </v-table>
-      </v-card>
-    </div>
+            <template v-slot:body.append="{}">
+              <tr>
+                <th :colspan="storageHeaders.length + 1" class="text-center py-2">
+                  <v-btn size="small" variant="tonal" color="primary" rounded="lg" class="text-none" @click="addStorage" prepend-icon="mdi-plus"> Add storage </v-btn>
+                </th>
+              </tr>
+              <tr v-if="showLocalStorageSummary" v-for="(item, storageType, index) in storageLabSum" :key="storageType">
+                <!-- Name -->
+                <th>
+                  <strong v-if="index === 0">Total storage</strong>
+                </th>
+                <!-- Usage -->
+                <th></th>
+                <!-- Type -->
+                <th>
+                  <span>
+                    <strong>{{ storageType }}</strong>
+                  </span>
+                </th>
+                <!-- Size [TB] -->
+                <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                  <strong>{{ item.size.toFixed(2) }}&nbsp;TB</strong>
+                </th>
+                <!-- Price / month -->
+                <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                  <strong>{{ item.monthlyCostTotal.toFixed(2) }}&nbsp;NOK</strong>
+                </th>
+                <!-- Price / year -->
+                <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                  <strong>{{ item.yearlyCostTotal.toFixed(2) }}&nbsp;NOK</strong>
+                </th>
+                <!-- Actions -->
+                <th></th>
+              </tr>
+            </template>
+          </v-data-table-virtual>
+        </v-card>
+        <v-card flat rounded="lg" class="section-card">
+          <div class="section-title d-flex align-center px-4 pt-3">
+            <v-icon size="small" color="primary" class="mr-2">mdi-receipt-text-outline</v-icon>
+            <span>Lab summary</span>
+          </div>
+          <v-table class="summary-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th class="text-right">Price / month</th>
+                <th class="text-right">Price / year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Lab Subscription ({{ lab.subscription }})</strong>
+                </td>
+                <td></td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(labSubscriptionPrice.monthly).toFixed(2) }}&nbsp;NOK</td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(labSubscriptionPrice.yearly).toFixed(2) }}&nbsp;NOK</td>
+              </tr>
+              <tr>
+                <td><strong>Compute</strong></td>
+                <td></td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
+              </tr>
+              <tr>
+                <td><strong>Storage</strong></td>
+                <td></td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(storageLabPriceSum?.monthlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(storageLabPriceSum?.yearlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
+              </tr>
+              <tr class="summary-total-row">
+                <td><strong>Total</strong></td>
+                <td></td>
+                <td class="text-right v-data-table-column--nowrap">
+                  <strong>{{ Number(LabSumMonthly.toFixed(2) || 0).toFixed(2) }}&nbsp;NOK</strong>
+                </td>
+                <td class="text-right v-data-table-column--nowrap">
+                  <strong>{{ Number(LabSum.toFixed(2) || 0).toFixed(2) }}&nbsp;NOK</strong>
+                </td>
+              </tr>
+            </tbody>
+          </v-table>
+        </v-card>
+      </div>
+    </v-expand-transition>
 
     <v-dialog v-model="isComputeModalOpen" max-width="600px" min-width="600px">
       <MachineModal :lab-id="lab.id" :compute-id="lab.selectedCompute.length" :edit-data="editingComputeItem" @close="closeComputeModal" @open-snackbar="openSnackbar" />
@@ -378,8 +396,8 @@ const removeStorageById = (storageId: number) => {
 
 .lab-card:hover {
   box-shadow:
-    0 6px 20px rgba(46, 117, 120, 0.12),
-    0 2px 6px rgba(0, 0, 0, 0.06) !important;
+    0 6px 20px rgba(216, 230, 231, 0.12),
+    0 2px 6px rgba(223, 196, 196, 0.06) !important;
 }
 
 .lab-header {
@@ -397,6 +415,30 @@ const removeStorageById = (storageId: number) => {
   letter-spacing: -0.01em;
   color: #1f2d2d;
   padding-top: 0;
+}
+
+.collapse-toggle .v-icon {
+  transition: transform 0.2s ease;
+}
+
+.collapse-toggle--collapsed .v-icon {
+  transform: rotate(-90deg);
+}
+
+.collapsed-summary {
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 .section-card {

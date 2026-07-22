@@ -74,6 +74,7 @@ export interface LabCard {
   selectedCompute: ComputeUnit[]
   selectedStorage: StorageUnit[]
   subscription: LabSubscriptionType
+  collapse: boolean
 }
 
 interface StoragePrice {
