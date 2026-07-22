@@ -18,9 +18,11 @@ const showLocalStorageSummary = ref(false)
 let editingComputeItem: ComputeUnit | null = null
 
 // Collapse state
-const isCollapsed = ref(props.lab.collapse ? props.lab.collapse : true)
+const isCollapsed = ref(props.lab.collapse === undefined ? true : props.lab.collapse)
+console.log(props.lab.id, "toggle", props.lab.collapse, isCollapsed.value)
 const toggleCollapse = () => {
   isCollapsed.value = !isCollapsed.value
+  priceEstimatorStore.updateLabCollapse(props.lab.id, isCollapsed.value)
 }
 
 const computeHeaders = ref<DataTableHeader[]>([
@@ -180,7 +182,7 @@ const removeStorageById = (storageId: number) => {
       ></v-text-field>
 
       <transition name="fade">
-        <span v-if="isCollapsed" class="collapsed-summary mr-3 text-medium-emphasis"> {{ Number(LabSumMonthly || 0).toFixed(2) }}&nbsp;NOK / month </span>
+        <span class="collapsed-summary mr-3 text-medium-emphasis"> {{ Number(LabSumMonthly || 0).toFixed(2) }}&nbsp;NOK / month </span>
       </transition>
 
       <v-tooltip text="Renewal period" location="top">
