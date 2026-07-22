@@ -17,6 +17,24 @@ const showLocalComputeSummary = ref(false)
 const showLocalStorageSummary = ref(false)
 let editingComputeItem: ComputeUnit | null = null
 
+// Collapse state
+const isCollapsed = ref(props.lab.collapse === undefined ? true : props.lab.collapse)
+const toggleCollapse = () => {
+  isCollapsed.value = !isCollapsed.value
+  priceEstimatorStore.updateLabCollapse(props.lab.id, isCollapsed.value)
+}
+
+const changeSubscription = () => {
+  let subscription = props.lab.subscription
+  if (subscription == "1Y") {
+    subscription = "3Y"
+  } else {
+    subscription = "1Y"
+  }
+
+  priceEstimatorStore.updateLabSubscription(props.lab.id, subscription)
+}
+
 const computeHeaders = ref<DataTableHeader[]>([
   { title: "Name", align: "start", sortable: true, key: "name" },
   { title: "Machine type", align: "start", sortable: true, key: "machine_type" },
@@ -153,28 +171,48 @@ const removeStorageById = (storageId: number) => {
 </script>
 
 <template>
-  <v-container>
-    <v-sheet class="lab-card ma-0">
-      <v-card style="background-color: #f5f5f5" class="ma-0">
-        <v-row class="ma-2 d-flex" align="center" justify="space-between">
-          <v-btn size="small" icon style="visibility: hidden"> </v-btn>
-          <v-text-field
-            v-model="localTitle"
-            label=""
-            placeholder="Lab name"
-            variant="plain"
-            hide-details
-            density="compact"
-            class="lab-title-input flex-grow-0"
-            @update:model-value="updateTitle"
-          ></v-text-field>
-          <v-btn size="small" icon @click="priceEstimatorStore.removeLab(props.lab.id)">
-            <v-icon size="default">mdi-delete</v-icon>
-          </v-btn>
-        </v-row>
+  <v-card class="lab-card mb-6" rounded="xl" elevation="2">
+    <!-- Lab header -->
+    <div class="lab-header d-flex align-center px-5 py-3" style="cursor: pointer">
+      <v-btn size="small" variant="text" icon class="mr-1 collapse-toggle" :class="{ 'collapse-toggle--collapsed': isCollapsed }" @click.stop="toggleCollapse">
+        <v-icon>mdi-chevron-down</v-icon>
+        <v-tooltip activator="parent" location="top">{{ isCollapsed ? "Expand lab" : "Collapse lab" }}</v-tooltip>
+      </v-btn>
 
-        <v-card flat>
-          <v-card-title>Compute</v-card-title>
+      <v-icon class="mr-3" color="primary">mdi-flask-outline</v-icon>
+      <v-text-field
+        v-model="localTitle"
+        placeholder="Lab name"
+        variant="plain"
+        hide-details
+        density="compact"
+        class="lab-title-input flex-grow-1"
+        @click.stop
+        @update:model-value="updateTitle"
+      ></v-text-field>
+
+      <transition name="fade">
+        <span class="collapsed-summary mr-3 text-medium-emphasis"> {{ Number(LabSumMonthly || 0).toFixed(2) }}&nbsp;NOK / month </span>
+      </transition>
+
+      <v-tooltip text="Renewal period" location="top">
+        <template v-slot:activator="{ props }">
+          <v-chip size="small" variant="tonal" color="primary" class="mr-2 font-weight-medium" v-bind="props" @click="changeSubscription">{{ lab.subscription }}</v-chip>
+        </template>
+      </v-tooltip>
+      <v-btn size="small" variant="text" icon color="error" @click.stop="priceEstimatorStore.removeLab(props.lab.id)">
+        <v-icon>mdi-delete-outline</v-icon>
+        <v-tooltip activator="parent" location="top">Remove lab</v-tooltip>
+      </v-btn>
+    </div>
+
+    <v-expand-transition>
+      <div v-show="!isCollapsed" class="pa-4">
+        <v-card flat rounded="lg" class="section-card mb-4">
+          <div class="section-title d-flex align-center px-4 pt-3">
+            <v-icon size="small" color="primary" class="mr-2">mdi-memory</v-icon>
+            <span>Compute</span>
+          </div>
 
           <v-data-table-virtual :items="selectedCompute" :headers="computeHeaders" hide-default-footer hover item-value="id">
             <template v-slot:item.gpu="{ item }">
@@ -199,8 +237,8 @@ const removeStorageById = (storageId: number) => {
 
             <template v-slot:body.append="{ headers }">
               <tr>
-                <th :colspan="computeHeaders.length + 1" class="text-center">
-                  <v-btn size="small" @click="addMachine" append-icon="mdi-plus"> Add machine </v-btn>
+                <th :colspan="computeHeaders.length + 1" class="text-center py-2">
+                  <v-btn size="small" variant="tonal" color="primary" rounded="lg" class="text-none" @click="addMachine" prepend-icon="mdi-plus"> Add machine </v-btn>
                 </th>
               </tr>
 
@@ -236,8 +274,11 @@ const removeStorageById = (storageId: number) => {
           </v-data-table-virtual>
         </v-card>
 
-        <v-card flat>
-          <v-card-title>Storage</v-card-title>
+        <v-card flat rounded="lg" class="section-card mb-4">
+          <div class="section-title d-flex align-center px-4 pt-3">
+            <v-icon size="small" color="primary" class="mr-2">mdi-database-outline</v-icon>
+            <span>Storage</span>
+          </div>
 
           <v-data-table-virtual
             v-model="props.lab.selectedStorage"
@@ -260,8 +301,8 @@ const removeStorageById = (storageId: number) => {
 
             <template v-slot:body.append="{}">
               <tr>
-                <th :colspan="storageHeaders.length + 1" class="text-center">
-                  <v-btn size="small" @click="addStorage" append-icon="mdi-plus"> Add storage </v-btn>
+                <th :colspan="storageHeaders.length + 1" class="text-center py-2">
+                  <v-btn size="small" variant="tonal" color="primary" rounded="lg" class="text-none" @click="addStorage" prepend-icon="mdi-plus"> Add storage </v-btn>
                 </th>
               </tr>
               <tr v-if="showLocalStorageSummary" v-for="(item, storageType, index) in storageLabSum" :key="storageType">
@@ -295,9 +336,12 @@ const removeStorageById = (storageId: number) => {
             </template>
           </v-data-table-virtual>
         </v-card>
-        <v-card flat class="ma-2">
-          <v-card-title>Lab summary</v-card-title>
-          <v-table>
+        <v-card flat rounded="lg" class="section-card">
+          <div class="section-title d-flex align-center px-4 pt-3">
+            <v-icon size="small" color="primary" class="mr-2">mdi-receipt-text-outline</v-icon>
+            <span>Lab summary</span>
+          </div>
+          <v-table class="summary-table">
             <thead>
               <tr>
                 <th></th>
@@ -327,7 +371,7 @@ const removeStorageById = (storageId: number) => {
                 <td class="text-right v-data-table-column--nowrap">{{ Number(storageLabPriceSum?.monthlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
                 <td class="text-right v-data-table-column--nowrap">{{ Number(storageLabPriceSum?.yearlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
               </tr>
-              <tr class="bg-grey-lighten-3">
+              <tr class="summary-total-row">
                 <td><strong>Total</strong></td>
                 <td></td>
                 <td class="text-right v-data-table-column--nowrap">
@@ -340,8 +384,8 @@ const removeStorageById = (storageId: number) => {
             </tbody>
           </v-table>
         </v-card>
-      </v-card>
-    </v-sheet>
+      </div>
+    </v-expand-transition>
 
     <v-dialog v-model="isComputeModalOpen" max-width="600px" min-width="600px">
       <MachineModal :lab-id="lab.id" :compute-id="lab.selectedCompute.length" :edit-data="editingComputeItem" @close="closeComputeModal" @open-snackbar="openSnackbar" />
@@ -352,12 +396,25 @@ const removeStorageById = (storageId: number) => {
     </v-dialog>
 
     <v-snackbar color="orange-darken-4" v-model="snackbar.show">{{ snackbar.message }}</v-snackbar>
-  </v-container>
+  </v-card>
 </template>
 
 <style scoped>
 .lab-card {
-  padding: 3px;
+  overflow: hidden;
+  border: 1px solid rgba(var(--v-theme-info), 0.12);
+  transition: box-shadow 0.2s ease;
+}
+
+.lab-card:hover {
+  box-shadow:
+    0 6px 20px rgba(var(--v-theme-shadow-cool), 0.12),
+    0 2px 6px rgba(var(--v-theme-shadow-warm), 0.06) !important;
+}
+
+.lab-header {
+  background: linear-gradient(135deg, rgb(var(--v-theme-header-gradient-start)) 0%, rgb(var(--v-theme-header-gradient-end)) 100%);
+  border-bottom: 1px solid rgba(var(--v-theme-info), 0.12);
 }
 
 .lab-title-input {
@@ -365,8 +422,70 @@ const removeStorageById = (storageId: number) => {
 }
 
 .lab-title-input :deep(.v-field__input) {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: rgb(var(--v-theme-on-surface-strong));
+  padding-top: 0;
+}
+
+.collapse-toggle .v-icon {
+  transition: transform 0.2s ease;
+}
+
+.collapse-toggle--collapsed .v-icon {
+  transform: rotate(-90deg);
+}
+
+.collapsed-summary {
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.section-card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgb(var(--v-theme-surface-bright));
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgb(var(--v-theme-on-surface-strong));
+  padding-bottom: 4px;
+}
+
+.section-card :deep(.v-data-table) {
+  background: transparent;
+}
+
+.section-card :deep(thead th) {
+  font-weight: 600 !important;
+  color: rgb(var(--v-theme-on-surface-muted)) !important;
+  text-transform: uppercase;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.04em;
+}
+
+.summary-table {
+  background: transparent;
+}
+
+.summary-total-row td {
+  background: rgba(var(--v-theme-info), 0.08);
+}
+
+.summary-total-row td strong {
+  color: rgb(var(--v-theme-primary-darken-1));
 }
 </style>

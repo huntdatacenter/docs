@@ -43,52 +43,113 @@ async function handleFileUpload(event: Event) {
 </script>
 
 <template>
-  <v-container v-if="!priceEstimatorStore.isInitializingPriseEstimator">
-    <v-sheet class="group-slider-wrapper ma-auto pt-0" elevation="0" max-width="1120">
-      <v-card-title>Price estimator for HUNT Cloud</v-card-title>
-      <v-card-subtitle> This calculator gives an estimate of how much our services cost </v-card-subtitle>
+  <v-theme-provider theme="huntCloud" with-background>
+    <v-container v-if="!priceEstimatorStore.isInitializingPriseEstimator" class="pe-root pa-0">
+      <v-sheet class="pe-wrapper ma-auto my-6" color="transparent" max-width="1120">
+        <!-- Hero header -->
+        <v-sheet class="pe-hero pa-6 mb-6" rounded="xl" elevation="0">
+          <div class="d-flex align-center mb-2">
+            <v-avatar color="primary" variant="tonal" rounded="lg" size="48" class="mr-4">
+              <v-icon size="28">mdi-calculator-variant-outline</v-icon>
+            </v-avatar>
+            <div>
+              <h2 class="pe-title">Price estimator for HUNT Cloud</h2>
+              <div class="pe-subtitle">Build your labs below to estimate the cost of our services.</div>
+            </div>
+          </div>
 
-      <v-container>
-        <v-row justify="space-between">
-          <v-col cols="auto">
-            <v-btn density="default" size="large" dark @click="isLabModalOpen = true">Add lab</v-btn>
-          </v-col>
+          <v-divider class="my-4" />
 
-          <v-col cols="auto">
-            <v-row>
-              <v-col cols="auto" v-if="priceEstimatorStore.labs.length">
-                <v-btn density="default" size="large" dark @click="priceEstimatorStore.clearAllLabs()"> Remove all </v-btn>
-              </v-col>
+          <div class="d-flex flex-wrap align-center ga-3">
+            <v-btn color="primary" size="large" rounded="lg" prepend-icon="mdi-flask-plus-outline" class="text-none" @click="isLabModalOpen = true"> Add lab </v-btn>
 
-              <v-col cols="auto">
-                <input ref="fileInput" type="file" style="display: none" accept="application/json" @change="handleFileUpload" />
-                <v-btn density="default" size="large" dark @click="triggerFileUpload">
-                  <v-icon left>mdi-import</v-icon>
-                  Import
-                </v-btn>
-              </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-container>
+            <v-spacer />
 
-      <v-row>
-        <v-col>
-          <LabCard v-for="lab of priceEstimatorStore.labs" :key="lab.id" :lab="lab" />
-        </v-col>
-      </v-row>
+            <input ref="fileInput" type="file" style="display: none" accept="application/json" @change="handleFileUpload" />
+            <v-btn variant="tonal" color="primary" size="large" rounded="lg" prepend-icon="mdi-import" class="text-none" @click="triggerFileUpload"> Import </v-btn>
+            <v-btn
+              v-if="priceEstimatorStore.labs.length"
+              variant="text"
+              color="error"
+              size="large"
+              rounded="lg"
+              prepend-icon="mdi-delete-sweep-outline"
+              class="text-none"
+              @click="priceEstimatorStore.clearAllLabs()"
+            >
+              Remove all
+            </v-btn>
+          </div>
+        </v-sheet>
 
-      <v-row v-if="priceEstimatorStore.labs.length">
-        <v-col>
-          <TotalBlock />
-        </v-col>
-      </v-row>
-    </v-sheet>
+        <!-- Empty state -->
+        <v-sheet v-if="!priceEstimatorStore.labs.length" class="pe-empty pa-10 text-center" rounded="xl" elevation="0">
+          <v-icon size="56" color="primary" class="mb-3 pe-empty-icon">mdi-flask-outline</v-icon>
+          <h3 class="pe-empty-title mb-1">No labs yet</h3>
+          <p class="pe-empty-text mb-5">Add your first lab to start estimating your monthly and yearly costs.</p>
+          <v-btn color="primary" size="large" rounded="lg" prepend-icon="mdi-plus" class="text-none" @click="isLabModalOpen = true"> Add your first lab </v-btn>
+        </v-sheet>
 
-    <v-dialog v-model="isLabModalOpen" max-width="600px">
-      <LabModal @close="isLabModalOpen = false" />
-    </v-dialog>
+        <!-- Labs -->
+        <LabCard v-for="lab of priceEstimatorStore.labs" :key="lab.id" :lab="lab" />
 
-    <AlertCart v-if="localStorageError.status" title="Error" :message="localStorageError.message"></AlertCart>
-  </v-container>
+        <TotalBlock v-if="priceEstimatorStore.labs.length" />
+      </v-sheet>
+
+      <v-dialog v-model="isLabModalOpen" max-width="600px">
+        <LabModal @close="isLabModalOpen = false" />
+      </v-dialog>
+
+      <AlertCart v-if="localStorageError.status" title="Error" :message="localStorageError.message"></AlertCart>
+    </v-container>
+  </v-theme-provider>
 </template>
+
+<style scoped>
+.pe-root {
+  font-family: var(--vp-font-family-base, inherit);
+}
+
+.pe-hero {
+  background: linear-gradient(135deg, #f3f8f8 0%, #eef3f3 100%);
+  border: 1px solid rgba(46, 117, 120, 0.12);
+}
+
+.pe-title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #1f2d2d;
+  border: none;
+  padding: 0;
+}
+
+.pe-subtitle {
+  margin-top: 2px;
+  font-size: 0.95rem;
+}
+
+.pe-empty {
+  border: 1px dashed rgba(46, 117, 120, 0.3);
+  background: #fafcfc;
+}
+
+.pe-empty-icon {
+  opacity: 0.85;
+}
+
+.pe-empty-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2d2d;
+  border: none;
+  padding: 0;
+}
+
+.pe-empty-text {
+  color: #5a6b6b;
+  font-size: 0.95rem;
+}
+</style>

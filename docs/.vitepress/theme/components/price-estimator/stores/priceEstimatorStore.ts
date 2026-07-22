@@ -62,6 +62,7 @@ export const priceEstimatorStore = reactive({
                 selectedCompute: [],
                 selectedStorage: [],
                 subscription: lab.subscription,
+                collapse: lab.collapse,
               })
 
               if (lab.selectedCompute) {
@@ -157,13 +158,24 @@ export const priceEstimatorStore = reactive({
   },
 
   /* Lab helpers */
-  addLab(payload: { name: string; subscription: string; machineType: string; machineSubscription: string; isDefault: boolean; archive: number; work: number; scratch: number }) {
+  addLab(payload: {
+    name: string
+    subscription: string
+    machineType: string
+    machineSubscription: string
+    isDefault: boolean
+    archive: number
+    work: number
+    scratch: number
+    collapse: boolean
+  }) {
     const newLab: LabCard = {
       id: this.labs.length,
       title: payload.name,
       selectedCompute: [],
       selectedStorage: [],
       subscription: payload.subscription as LabSubscriptionType,
+      collapse: payload.collapse,
     }
 
     // Add compute
@@ -303,6 +315,22 @@ export const priceEstimatorStore = reactive({
     const lab = this.labs.find((l) => l.id === id)
     if (lab) {
       lab.title = title
+      this.saveStateToLocal()
+    }
+  },
+
+  updateLabCollapse(id: number, collapse: boolean) {
+    const lab = this.labs.find((l) => l.id === id)
+    if (lab) {
+      lab.collapse = collapse
+      this.saveStateToLocal()
+    }
+  },
+
+  updateLabSubscription(id: number, subscription: string) {
+    const lab = this.labs.find((l) => l.id === id)
+    if (lab) {
+      lab.subscription = subscription as LabSubscriptionType
       this.saveStateToLocal()
     }
   },
@@ -638,6 +666,7 @@ export const priceEstimatorStore = reactive({
         type: s.type,
         size: s.size,
       })),
+      collapse: lab.collapse === undefined ? true : lab.collapse,
     }))
 
     const exportData = {
@@ -707,6 +736,7 @@ export const priceEstimatorStore = reactive({
               selectedCompute: [],
               selectedStorage: [],
               subscription: labData.subscription,
+              collapse: labData.collapse,
             })
 
             if (labData.compute) {
