@@ -24,6 +24,17 @@ const toggleCollapse = () => {
   priceEstimatorStore.updateLabCollapse(props.lab.id, isCollapsed.value)
 }
 
+const changeSubscription = () => {
+  let subscription = props.lab.subscription
+  if (subscription == "1Y") {
+    subscription = "3Y"
+  } else {
+    subscription = "1Y"
+  }
+
+  priceEstimatorStore.updateLabSubscription(props.lab.id, subscription)
+}
+
 const computeHeaders = ref<DataTableHeader[]>([
   { title: "Name", align: "start", sortable: true, key: "name" },
   { title: "Machine type", align: "start", sortable: true, key: "machine_type" },
@@ -162,7 +173,7 @@ const removeStorageById = (storageId: number) => {
 <template>
   <v-card class="lab-card mb-6" rounded="xl" elevation="2">
     <!-- Lab header -->
-    <div class="lab-header d-flex align-center px-5 py-3" @click="toggleCollapse" style="cursor: pointer">
+    <div class="lab-header d-flex align-center px-5 py-3" style="cursor: pointer">
       <v-btn size="small" variant="text" icon class="mr-1 collapse-toggle" :class="{ 'collapse-toggle--collapsed': isCollapsed }" @click.stop="toggleCollapse">
         <v-icon>mdi-chevron-down</v-icon>
         <v-tooltip activator="parent" location="top">{{ isCollapsed ? "Expand lab" : "Collapse lab" }}</v-tooltip>
@@ -186,7 +197,7 @@ const removeStorageById = (storageId: number) => {
 
       <v-tooltip text="Renewal period" location="top">
         <template v-slot:activator="{ props }">
-          <v-chip size="small" variant="tonal" color="primary" class="mr-2 font-weight-medium" v-bind="props">{{ lab.subscription }}</v-chip>
+          <v-chip size="small" variant="tonal" color="primary" class="mr-2 font-weight-medium" v-bind="props" @click="changeSubscription">{{ lab.subscription }}</v-chip>
         </template>
       </v-tooltip>
       <v-btn size="small" variant="text" icon color="error" @click.stop="priceEstimatorStore.removeLab(props.lab.id)">

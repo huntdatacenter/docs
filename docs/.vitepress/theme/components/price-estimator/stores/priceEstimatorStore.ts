@@ -327,6 +327,14 @@ export const priceEstimatorStore = reactive({
     }
   },
 
+  updateLabSubscription(id: number, subscription: string) {
+    const lab = this.labs.find((l) => l.id === id)
+    if (lab) {
+      lab.subscription = subscription as LabSubscriptionType
+      this.saveStateToLocal()
+    }
+  },
+
   /* Storage helpers */
 
   calculateTotalStorageCost() {
