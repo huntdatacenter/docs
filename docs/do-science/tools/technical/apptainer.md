@@ -17,37 +17,24 @@ tags:
 
 [[toc]]
 
-## Install with Conda
+## Installation
 
-::: warning Requirements
+Version variable:
 
-- Conda (miniconda), see our [Conda tutorial](/do-science/tools/analytical/conda) for more details.
-- Conda channels: conda-forge, bioconda
-
-:::
-
-**Add the conda-forge channel**
-
-You will need the conda-forge channel to install Apptainer. If you have not set channels yet make sure to add it:
-
-```bash
-conda config --add channels conda-forge
+```sh
+apptainer_version="1.5.3"
 ```
 
-**Install Apptainer (Singularity) in conda environment**
+Download APT package:
 
-Create environment and install Apptainer (Singularity):
-
-```bash
-conda create -n apptainer -c conda-forge "apptainer"
+```sh
+wget "https://github.com/apptainer/apptainer/releases/download/v${apptainer_version}/apptainer_${apptainer_version}_amd64.deb"
 ```
 
-Activate your apptainer environment and try running Apptainer:
+Install:
 
-```bash
-conda activate apptainer
-
-apptainer --help
+```sh
+sudo apt install "./apptainer_${apptainer_version}_amd64.deb"
 ```
 
 ## Common practices and commands
@@ -58,13 +45,11 @@ All information is collected from [the official Apptainer documentation](https:/
 
 You can use the [pull](https://apptainer.org/docs/user/latest/cli/apptainer_pull.html) and [build](https://apptainer.org/docs/user/latest/cli/apptainer_build.html) commands to download pre-built images from an external resource like the [Container Library](https://cloud.sylabs.io/library) or [Docker Hub](https://hub.docker.com/).
 
-```bash 
-#-- Example 
+```bash
 apptainer pull docker://godlovedc/lolcow
 ```
 
 ```bash
-#-- Example
 apptainer build  -B $TMPDIR lolcow.sif docker://godlovedc/lolcow
 ```
 
