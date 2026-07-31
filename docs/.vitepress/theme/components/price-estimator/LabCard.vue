@@ -388,11 +388,11 @@ const removeStorageById = (storageId: number) => {
       </div>
     </v-expand-transition>
 
-    <v-dialog v-model="isComputeModalOpen" max-width="600px" min-width="600px">
+    <v-dialog v-model="isComputeModalOpen" max-width="560px" :fullscreen="$vuetify.display.xs" scrollable>
       <MachineModal :lab-id="lab.id" :compute-id="lab.selectedCompute.length" :edit-data="editingComputeItem" @close="closeComputeModal" @open-snackbar="openSnackbar" />
     </v-dialog>
 
-    <v-dialog v-model="isStorageModalOpen" max-width="600px" min-width="600px">
+    <v-dialog v-model="isStorageModalOpen" max-width="560px" :fullscreen="$vuetify.display.xs" scrollable>
       <StorageModal :lab-id="lab.id" :storage-id="lab.selectedStorage.length" :edit-data="editingStorageItem" @close="closeStorageModal" />
     </v-dialog>
 

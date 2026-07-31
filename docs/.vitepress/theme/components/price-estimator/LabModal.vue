@@ -59,7 +59,7 @@ onMounted(() => {
 
 <template>
   <v-theme-provider theme="huntCloud" with-background>
-    <v-card rounded="lg">
+    <v-card rounded="lg" class="add-lab-card">
       <v-card-title class="d-flex align-center px-5 pt-4">
         <v-icon color="primary" class="mr-2">mdi-flask-plus-outline</v-icon>
         <span class="text-h6">Add new lab</span>
@@ -111,3 +111,10 @@ onMounted(() => {
     </v-card>
   </v-theme-provider>
 </template>
+
+<style scoped>
+.add-lab-card {
+  width: 100%;
+  max-width: 560px;
+}
+</style>

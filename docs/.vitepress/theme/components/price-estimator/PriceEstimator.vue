@@ -96,7 +96,7 @@ async function handleFileUpload(event: Event) {
         <TotalBlock v-if="priceEstimatorStore.labs.length" />
       </v-sheet>
 
-      <v-dialog v-model="isLabModalOpen" max-width="600px">
+      <v-dialog v-model="isLabModalOpen" max-width="560px" :fullscreen="$vuetify.display.xs" scrollable>
         <LabModal @close="isLabModalOpen = false" />
       </v-dialog>
 
