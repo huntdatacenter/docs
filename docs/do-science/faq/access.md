@@ -12,8 +12,6 @@ This page lists frequently asked questions related to lab user access in labs.
 
 [[toc]]
 
-
-
 ## System access
 
 ### Can I connect from home?
@@ -32,15 +30,20 @@ No. For security reasons we only accept one connection from one user at the time
 
 Maybe. We do allow such connections, however teleworking conditions from your own organization and/or conditions from your data controller may restrict connections from private machines. Contact your lab leader for more information on the specific conditions in your lab.
 
+### What are the minimum requirements for my phone and computer?
 
+- **Phones**:
+  - updated OS that is able to install and activate Signal (https://support.signal.org/hc/en-us/articles/360008216551-Installing-Signal)
 
-
-
-
+- **Computers**:
+  - **OS**: Windows 10+/Mac 14.0.0+/Ubuntu Linux 22.04+
+  - **CPU cores**: 4
+  - **Memory (RAM)**: 4 GB - chrome can take up a lot
+  - **Space available (HDD)**: 10GB
 
 ## Lab access
 
-### How can I reset my password? 
+### How can I reset my password?
 
 You may request a SSH passphrase reset in our do science [service desk](/do-science/service-desk/#ssh-passphrase-reset).
 
@@ -68,11 +71,11 @@ Log into the machine in question, for example `home`, and write `who` in the com
 who
 ```
 
-### How can I see which groups I belong to? 
+### How can I see which groups I belong to?
 
 Log into the machine in question, for example `home`, and write `groups` in the command line. This list your group affiliations on the machine. Expect to see your username and labname as groups on your `home` machine. You will also see `restore` as your group if your are responsible for your lab's restore activities.
 
-```bash 
+```bash
 # -- list your groups
 groups
 
@@ -80,22 +83,18 @@ groups
 <username> <labname>
 ```
 
-
-### I have moved to a new institution, now what? 
+### I have moved to a new institution, now what?
 
 Your lab leader or lab coordinator will need to send us a [new user agreement](/administer-science/service-desk/lab-orders#add-a-new-lab-user) when you move to a new institution. We will revoke your current VPN certificate and send you a new one the is registered on your new organization.
 
-
-### What is Lab Access link ? 
+### What is Lab Access link ?
 
 Lab access link is our new approach to how we onboard new users and how we instruct you to connect to HUNT Cloud services.
 It comes pre-filled with your username and labname information, allowing you to simply copy-paste customized commands into your terminal and at the same time, inform you about expected outcome.
 
-
 ### How can I order lab access link ?
 
 If you cannot find your lab access link or did not receive it, you can order one in our [do-science service desk](/do-science/service-desk/#request-lab-access-reissue)
-
 
 ## Access to more than one lab
 
@@ -111,32 +110,19 @@ We will ship SSH configuration and keys after your lab leader or lab coordinator
 
 Maybe, however not by default. You will need an explicit approval from your lab leader for such transfers and merges. When this is in place, order an [internal kista](/administer-science/service-desk/lab-orders#internal-kista) for compliant transfers between your labs.
 
-
-
-
-
-
-
-
-
-
-
-
 ## Deactivated users
 
 ### How long can I keep my account?
 
 You can keep your account as long as you are actively working in your lab. We deactivate accounts that have not been used for 180 days for security reasons.
 
-### Will I loose my data if I get deactivated? 
+### Will I loose my data if I get deactivated?
 
-No, not as long as your lab is active. We will deactivate your account, although we do not delete your data as long as the lab is active. Please note that your lab leader has the same ability to delete, change or share data the lab under their control regardless if you your account is active or deactivated. 
+No, not as long as your lab is active. We will deactivate your account, although we do not delete your data as long as the lab is active. Please note that your lab leader has the same ability to delete, change or share data the lab under their control regardless if you your account is active or deactivated.
 
 ### Can I reactivate my old account?
 
 Yes. Lab leaders and lab coordinators can order reactivations in our [service desk](/administer-science/service-desk/lab-orders#reactivate-lab-user). Reactivation requires a new user agreement if it is more than two years since your first user agreement was signed. You will need to reconfigure VPN and SSH to get up and running.
-
-
 
 ## Returning users
 
@@ -144,14 +130,11 @@ Yes. Lab leaders and lab coordinators can order reactivations in our [service de
 
 Sure. If you haven't logged in for a while, here's a quick recap of the steps: (1) Start the HUNT VPN (OpenVPN or Tunnelblick), and use the verification code from Google Authenticator on your phone as key. (2) Log in to your lab using SSH (OS X, macOS and Linux), MobaXterm (Windows), or X2Go (both) for graphical software. Head over to our [troubleshooting](/do-science/troubleshooting/connection) section for further investigations if this does not work.
 
-
-
-
 ## Lab roles
 
 Here is an explanation of some role names that we refer to in our documentation and agreements:
 
-###  Lab leader
+### Lab leader
 
 This is the individual that has signed the lab order for your lab. It is usually the principal investigator or other individuals holding approvals or that coordinate the scientific activity in your lab. The lab leader can adjust resources, manage users in the lab and order kistas.
 
@@ -162,5 +145,3 @@ This is the individual that is authorized by the lab leader to authorize new use
 ### Lab user
 
 We use the term lab user on all that hold user accounts in a lab. All lab users in a lab holds the same technical privileges.
-
-
