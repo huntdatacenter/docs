@@ -200,7 +200,8 @@ const removeStorageById = (storageId: number) => {
           <v-chip size="small" variant="tonal" color="primary" class="mr-2 font-weight-medium" v-bind="props" @click="changeSubscription">{{ lab.subscription }}</v-chip>
         </template>
       </v-tooltip>
-      <v-btn size="small" variant="text" icon color="error" @click.stop="priceEstimatorStore.removeLab(props.lab.id)">
+
+      <v-btn class="ce ml-auto" size="small" variant="text" icon color="error" @click.stop="priceEstimatorStore.removeLab(props.lab.id)">
         <v-icon>mdi-delete-outline</v-icon>
         <v-tooltip activator="parent" location="top">Remove lab</v-tooltip>
       </v-btn>
@@ -230,8 +231,8 @@ const removeStorageById = (storageId: number) => {
             </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
-                <v-icon icon="mdi-pencil" size="small" @click="editCompute(selectedCompute.find((c) => c.id === item.id)!)"></v-icon>
                 <v-icon :color="item.isDefault ? 'rgba(0, 0, 0, 0.3)' : ''" icon="mdi-delete" size="small" @click="removeMachine(item)"></v-icon>
+                <v-icon icon="mdi-pencil" size="small" @click="editCompute(selectedCompute.find((c) => c.id === item.id)!)"></v-icon>
               </div>
             </template>
 
@@ -294,8 +295,8 @@ const removeStorageById = (storageId: number) => {
             <template v-slot:item.yearlyPrice="{ item }"> {{ item.yearlyPrice.toFixed(2) }}&nbsp;NOK </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
-                <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editStorage(selectedStorage.find((s) => s.id === item.id)!)"></v-icon>
                 <v-icon color="medium-emphasis" icon="mdi-delete" size="small" @click="removeStorageById(item.id)"></v-icon>
+                <v-icon color="medium-emphasis" icon="mdi-pencil" size="small" @click="editStorage(selectedStorage.find((s) => s.id === item.id)!)"></v-icon>
               </div>
             </template>
 
@@ -387,11 +388,11 @@ const removeStorageById = (storageId: number) => {
       </div>
     </v-expand-transition>
 
-    <v-dialog v-model="isComputeModalOpen" max-width="600px" min-width="600px">
+    <v-dialog v-model="isComputeModalOpen" max-width="560px" :fullscreen="$vuetify.display.xs" scrollable>
       <MachineModal :lab-id="lab.id" :compute-id="lab.selectedCompute.length" :edit-data="editingComputeItem" @close="closeComputeModal" @open-snackbar="openSnackbar" />
     </v-dialog>
 
-    <v-dialog v-model="isStorageModalOpen" max-width="600px" min-width="600px">
+    <v-dialog v-model="isStorageModalOpen" max-width="560px" :fullscreen="$vuetify.display.xs" scrollable>
       <StorageModal :lab-id="lab.id" :storage-id="lab.selectedStorage.length" :edit-data="editingStorageItem" @close="closeStorageModal" />
     </v-dialog>
 
@@ -415,6 +416,8 @@ const removeStorageById = (storageId: number) => {
 .lab-header {
   background: linear-gradient(135deg, rgb(var(--v-theme-header-gradient-start)) 0%, rgb(var(--v-theme-header-gradient-end)) 100%);
   border-bottom: 1px solid rgba(var(--v-theme-info), 0.12);
+  flex-wrap: wrap;
+  row-gap: 4px;
 }
 
 .lab-title-input {
