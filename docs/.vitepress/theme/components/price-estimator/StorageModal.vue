@@ -63,48 +63,48 @@ onMounted(() => {
 
 <template>
   <v-theme-provider theme="huntCloud" with-background>
-  <v-card rounded="lg">
-    <v-card-title class="d-flex align-center px-5 pt-4">
-      <v-icon color="primary" class="mr-2">mdi-database-outline</v-icon>
-      <span class="text-h6">{{ editData ? "Edit storage" : "Add storage" }}</span>
-    </v-card-title>
-    <v-card-text style="width: 100%">
-      <v-container>
-        <v-row dense>
-          <v-form @submit.prevent="save" style="width: 100%">
-            <v-col cols="12">
-              <v-text-field v-model="formData.name" label="Name" required variant="outlined"></v-text-field>
-            </v-col>
-            <v-col cols="12">
-              <v-select :items="['Archive', 'Work', 'Scratch', 'Home']" v-model="formData.usage" label="Usage" required variant="outlined"></v-select>
-            </v-col>
-            <v-col cols="12">
-              <v-select :items="['HDD', 'NVME']" v-model="formData.type" label="Type" required variant="outlined"></v-select>
-            </v-col>
-            <v-col cols="12">
-              <v-text-field
-                v-model="formData.size"
-                label="Size (TB)"
-                hint="Enter the size of the storage in Terrabytes"
-                persistent-hint
-                type="number"
-                :min="1"
-                :max="100"
-                :step="1"
-                required
-                suffix="TB"
-                variant="outlined"
-              ></v-text-field>
-            </v-col>
-          </v-form>
-        </v-row>
-      </v-container>
-    </v-card-text>
-    <v-card-actions class="px-5 pb-4">
-      <v-spacer></v-spacer>
-      <v-btn variant="text" rounded="lg" class="text-none" @click="close()"> Cancel </v-btn>
-      <v-btn variant="flat" color="primary" rounded="lg" class="text-none" prepend-icon="mdi-content-save-outline" @click="save()"> Save </v-btn>
-    </v-card-actions>
-  </v-card>
+    <v-card rounded="lg" class="add-lab-card d-flex flex-column w-100" style="max-width: 560px; max-height: 90dvh">
+      <v-card-title class="d-flex align-center px-5 pt-4">
+        <v-icon color="primary" class="mr-2">mdi-database-outline</v-icon>
+        <span class="text-h6">{{ editData ? "Edit storage" : "Add storage" }}</span>
+      </v-card-title>
+      <v-card-text class="overflow-y-auto flex-grow-1">
+        <v-container>
+          <v-row dense>
+            <v-form @submit.prevent="save" style="width: 100%">
+              <v-col cols="12">
+                <v-text-field v-model="formData.name" label="Name" required variant="outlined"></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-select :items="['Archive', 'Work', 'Scratch', 'Home']" v-model="formData.usage" label="Usage" required variant="outlined"></v-select>
+              </v-col>
+              <v-col cols="12">
+                <v-select :items="['HDD', 'NVME']" v-model="formData.type" label="Type" required variant="outlined"></v-select>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field
+                  v-model="formData.size"
+                  label="Size (TB)"
+                  hint="Enter the size of the storage in Terrabytes"
+                  persistent-hint
+                  type="number"
+                  :min="1"
+                  :max="100"
+                  :step="1"
+                  required
+                  suffix="TB"
+                  variant="outlined"
+                ></v-text-field>
+              </v-col>
+            </v-form>
+          </v-row>
+        </v-container>
+      </v-card-text>
+      <v-card-actions class="px-5 pb-4">
+        <v-spacer></v-spacer>
+        <v-btn variant="text" rounded="lg" class="text-none" @click="close()"> Cancel </v-btn>
+        <v-btn variant="flat" color="primary" rounded="lg" class="text-none" prepend-icon="mdi-content-save-outline" @click="save()"> Save </v-btn>
+      </v-card-actions>
+    </v-card>
   </v-theme-provider>
 </template>

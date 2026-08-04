@@ -194,64 +194,64 @@ onMounted(() => {
 
 <template>
   <v-theme-provider theme="huntCloud" with-background>
-  <v-card rounded="lg">
-    <v-card-title class="d-flex align-center px-5 pt-4">
-      <v-icon color="primary" class="mr-2">mdi-memory</v-icon>
-      <span class="text-h6">{{ editData ? "Edit compute" : "Add compute" }}</span>
-    </v-card-title>
-    <v-card-text style="width: 100%">
-      <v-container>
-        <v-row dense>
-          <v-col cols="12">
-            <v-text-field v-model="formData.name" label="Name" required variant="outlined"></v-text-field>
-          </v-col>
-          <v-col cols="12">
-            <v-autocomplete v-model="formData.subscription" :items="subscriptions" item-title="text" item-value="value" label="Subscription type" required variant="outlined">
-            </v-autocomplete>
-          </v-col>
-          <v-col cols="12">
-            <v-autocomplete
-              v-model="formData.machine_type"
-              :items="getMachineType"
-              label="Machine type"
-              variant="outlined"
-              required
-              :disabled="!formData.subscription"
-              width="100%"
-            >
-              <template #item="{ item, props }">
-                <VDivider v-if="'divider' in item.raw" />
-                <VListSubheader v-else-if="'header' in item.raw" :title="item.raw.header" />
-                <VListItem v-else v-bind="props" :title="item.title" :value="item.value" />
-              </template>
-            </v-autocomplete>
-          </v-col>
-          <v-col v-show="formData.machine_type" cols="12" sm="6">
-            <v-text-field v-model="getComputePriceMonth" label="Compute Price / Month" suffix="NOK ex. VAT" readonly variant="outlined"></v-text-field>
-          </v-col>
-          <v-col v-show="formData.machine_type" cols="12" sm="6">
-            <v-text-field v-model="getComputePriceYear" label="Compute Price / Year" suffix="NOK ex. VAT / Year" readonly variant="outlined"></v-text-field>
-          </v-col>
-          <v-col cols="12" v-show="!formData.isDefault">
-            <v-select v-model="formData.gpu" :items="getGpus" label="GPU type (optional)" variant="outlined" clearable :disabled="!formData.subscription"></v-select>
-          </v-col>
-          <v-col cols="12" v-show="!formData.isDefault">
-            <v-number-input v-model="gpuCount" variant="outlined" label="GPU count" :min="1" :max="getMaxGpuCount" :disabled="!formData.gpu"></v-number-input>
-          </v-col>
-          <v-col v-show="formData.gpu" cols="12" sm="6">
-            <v-text-field v-model="getGpuPriceMonth" label="GPU Price / Month" suffix="NOK ex. VAT" readonly variant="outlined"></v-text-field>
-          </v-col>
-          <v-col v-show="formData.gpu" cols="12" sm="6">
-            <v-text-field v-model="getGpuPriceYear" label="GPU Price / Year" suffix="NOK ex. VAT / Year" readonly variant="outlined"></v-text-field>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-card-text>
-    <v-card-actions class="px-5 pb-4">
-      <v-spacer></v-spacer>
-      <v-btn variant="text" rounded="lg" class="text-none" @click="close()"> Cancel </v-btn>
-      <v-btn variant="flat" color="primary" rounded="lg" class="text-none" prepend-icon="mdi-content-save-outline" @click="save()"> Save </v-btn>
-    </v-card-actions>
-  </v-card>
+    <v-card rounded="lg" class="add-lab-card d-flex flex-column w-100" style="max-width: 560px; max-height: 90dvh">
+      <v-card-title class="d-flex align-center px-5 pt-4">
+        <v-icon color="primary" class="mr-2">mdi-memory</v-icon>
+        <span class="text-h6">{{ editData ? "Edit compute" : "Add compute" }}</span>
+      </v-card-title>
+      <v-card-text class="overflow-y-auto flex-grow-1">
+        <v-container>
+          <v-row dense>
+            <v-col cols="12">
+              <v-text-field v-model="formData.name" label="Name" required variant="outlined"></v-text-field>
+            </v-col>
+            <v-col cols="12">
+              <v-autocomplete v-model="formData.subscription" :items="subscriptions" item-title="text" item-value="value" label="Subscription type" required variant="outlined">
+              </v-autocomplete>
+            </v-col>
+            <v-col cols="12">
+              <v-autocomplete
+                v-model="formData.machine_type"
+                :items="getMachineType"
+                label="Machine type"
+                variant="outlined"
+                required
+                :disabled="!formData.subscription"
+                width="100%"
+              >
+                <template #item="{ item, props }">
+                  <VDivider v-if="'divider' in item.raw" />
+                  <VListSubheader v-else-if="'header' in item.raw" :title="item.raw.header" />
+                  <VListItem v-else v-bind="props" :title="item.title" :value="item.value" />
+                </template>
+              </v-autocomplete>
+            </v-col>
+            <v-col v-show="formData.machine_type" cols="12" sm="6">
+              <v-text-field v-model="getComputePriceMonth" label="Compute Price / Month" suffix="NOK ex. VAT" readonly variant="outlined"></v-text-field>
+            </v-col>
+            <v-col v-show="formData.machine_type" cols="12" sm="6">
+              <v-text-field v-model="getComputePriceYear" label="Compute Price / Year" suffix="NOK ex. VAT / Year" readonly variant="outlined"></v-text-field>
+            </v-col>
+            <v-col cols="12" v-show="!formData.isDefault">
+              <v-select v-model="formData.gpu" :items="getGpus" label="GPU type (optional)" variant="outlined" clearable :disabled="!formData.subscription"></v-select>
+            </v-col>
+            <v-col cols="12" v-show="!formData.isDefault">
+              <v-number-input v-model="gpuCount" variant="outlined" label="GPU count" :min="1" :max="getMaxGpuCount" :disabled="!formData.gpu"></v-number-input>
+            </v-col>
+            <v-col v-show="formData.gpu" cols="12" sm="6">
+              <v-text-field v-model="getGpuPriceMonth" label="GPU Price / Month" suffix="NOK ex. VAT" readonly variant="outlined"></v-text-field>
+            </v-col>
+            <v-col v-show="formData.gpu" cols="12" sm="6">
+              <v-text-field v-model="getGpuPriceYear" label="GPU Price / Year" suffix="NOK ex. VAT / Year" readonly variant="outlined"></v-text-field>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card-text>
+      <v-card-actions class="px-5 pb-4">
+        <v-spacer></v-spacer>
+        <v-btn variant="text" rounded="lg" class="text-none" @click="close()"> Cancel </v-btn>
+        <v-btn variant="flat" color="primary" rounded="lg" class="text-none" prepend-icon="mdi-content-save-outline" @click="save()"> Save </v-btn>
+      </v-card-actions>
+    </v-card>
   </v-theme-provider>
 </template>
