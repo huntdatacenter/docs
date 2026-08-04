@@ -59,12 +59,12 @@ onMounted(() => {
 
 <template>
   <v-theme-provider theme="huntCloud" with-background>
-    <v-card rounded="lg" class="lab-card-modal">
+    <v-card rounded="lg" class="add-lab-card d-flex flex-column w-100" style="max-width: 560px; max-height: 90dvh">
       <v-card-title class="d-flex align-center px-5 pt-4">
         <v-icon color="primary" class="mr-2">mdi-flask-plus-outline</v-icon>
         <span class="text-h6">Add new lab</span>
       </v-card-title>
-      <v-card-text class="lab-card-modal-content">
+      <v-card-text class="overflow-y-auto flex-grow-1">
         <v-container class="pa-3">
           <v-row dense>
             <v-col cols="12">
@@ -111,18 +111,3 @@ onMounted(() => {
     </v-card>
   </v-theme-provider>
 </template>
-
-<style scoped>
-.lab-card-modal {
-  width: 100%;
-  max-width: 560px;
-  max-height: 90dvh;
-  display: flex;
-  flex-direction: column;
-}
-
-.lab-card-modal-content {
-  flex: 1 1 auto;
-  overflow-y: auto;
-}
-</style>
