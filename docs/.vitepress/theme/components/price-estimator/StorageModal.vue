@@ -62,13 +62,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-theme-provider theme="huntCloud" with-background class="storage-card">
-    <v-card rounded="lg">
+  <v-theme-provider theme="huntCloud" with-background>
+    <v-card rounded="lg" class="storage-card-modal">
       <v-card-title class="d-flex align-center px-5 pt-4">
         <v-icon color="primary" class="mr-2">mdi-database-outline</v-icon>
         <span class="text-h6">{{ editData ? "Edit storage" : "Add storage" }}</span>
       </v-card-title>
-      <v-card-text style="width: 100%">
+      <v-card-text class="storage-card-modal-content">
         <v-container>
           <v-row dense>
             <v-form @submit.prevent="save" style="width: 100%">
@@ -110,10 +110,16 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.storage-card {
+.storage-card-modal {
   width: 100%;
-  height: 100%;
   max-width: 560px;
-  overflow-y: scroll;
+  max-height: 90dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.storage-card-modal-content {
+  flex: 1 1 auto;
+  overflow-y: auto;
 }
 </style>
