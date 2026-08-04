@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 .hc-header {
   width: 100vw;
   max-width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .hc-header-img {
@@ -187,6 +187,16 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   max-width: 960px;
   margin: 0 auto !important;
+  /*
+   * Grey backdrop around the cards (aligns with the about site's hc-block-gray).
+   * The box-shadow + clip-path paints a full-viewport-width #ededed band exactly
+   * as tall as this section — no HTML change and scrollbar-safe. The vertical
+   * padding keeps card hover-shadows clear of the clipped top/bottom edges.
+   */
+  padding: 32px 12px 48px;
+  background: #ededed;
+  box-shadow: 0 0 0 100vmax #ededed;
+  clip-path: inset(0 -100vmax);
 }
 
 .hc-row {
@@ -222,6 +232,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-self: center;
   padding-left: 32px;
   padding-right: 32px;
+  color: var(--vp-c-text-2);
+  font-weight: 300;
+  line-height: 1.65;
 }
 
 .card-link {
@@ -244,27 +257,34 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.3rem;
   font-weight: 600;
   margin: 10px 0;
-  color: #000000;
+  color: var(--vp-c-text-1);
   justify-self: center;
   text-align: center;
+  transition: color 0.2s ease;
 }
 
 .card-styled {
   padding: 25px;
-  background: #f1eef0ff;
-  border-radius: 20px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
 }
 
 .clickable-card,
 .bottom-row .hc-column-4:not(.mascot-container) {
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .clickable-card:hover,
 .bottom-row .hc-column-4:not(.mascot-container):hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-color: var(--ntnu-blue-border);
+  box-shadow: 0 8px 30px rgba(0, 80, 158, 0.08);
+}
+
+.clickable-card:hover .card-link h3,
+.bottom-row .hc-column-4:not(.mascot-container):hover .card-link h3 {
+  color: var(--ntnu-blue);
 }
 
 @media (min-width: 720px) {

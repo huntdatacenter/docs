@@ -49,6 +49,11 @@
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
+  /* NTNU brand palette */
+  --ntnu-blue: #00509e;
+  --ntnu-blue-soft: rgba(0, 80, 158, 0.08);
+  --ntnu-blue-border: rgba(0, 80, 158, 0.25);
+
   --vp-c-brand-1: var(--vp-c-indigo-1);
   --vp-c-brand-2: var(--vp-c-indigo-2);
   --vp-c-brand-3: var(--vp-c-indigo-3);
