@@ -68,7 +68,7 @@ const imageHeight = '180px';
 
 </script>
 
-<div class="hc-container mb-8">
+<div class="hc-container">
   <div class="hc-header">
     <div class="hc-header-img"></div>
   </div>
