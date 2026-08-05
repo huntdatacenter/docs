@@ -40,6 +40,8 @@ const sendClicked = ref(false)
 const finalizeClicked = ref(false)
 const panel = ref(0)
 
+const clientType = ref("")
+
 // Computed properties
 const messageSubject = computed(() => {
   return subjectTemplate.value ? wrap(subjectTemplate.value) : null
@@ -50,7 +52,7 @@ const messageBody = computed(() => {
 })
 
 const formFilled = computed(() => {
-  return props.fields.every((item) => (formData.value[item.key] || item.optional ? true : false))
+  return props.fields.filter((item) => item.type === undefined || item.type === clientType.value).every((item) => (formData.value[item.key] || item.optional ? true : false))
 })
 
 const encodedSubject = computed(() => {
@@ -106,7 +108,14 @@ const activateSendButtons = () => {
 }
 
 const submit = () => {
-  panel.value = 2
+  panel.value = 3
+  if (props.template) {
+    if (clientType.value === "ntnu-internal") {
+      bodyTemplate.value = props.template.body
+    } else {
+      bodyTemplate.value = props.template.body_external
+    }
+  }
   setTimeout(activateSendButtons, 1200)
 }
 
@@ -178,7 +187,6 @@ onMounted(() => {
   panel.value = 0
   loadingEmailButtons.value = true
   subjectTemplate.value = props.template ? props.template.subject : null
-  bodyTemplate.value = props.template ? props.template.body : null
 
   var formFields = []
   for (const item of props.fields) {
@@ -249,6 +257,41 @@ onMounted(() => {
 
               <v-expansion-panel>
                 <v-expansion-panel-title>
+                  NTNU or External
+                  <template v-if="clientType" v-slot:actions>
+                    <v-icon color="teal">mdi-check</v-icon>
+                  </template>
+                </v-expansion-panel-title>
+                <v-expansion-panel-text>
+                  <v-row justify="center">
+                    <v-col cols="8">
+                      <v-select
+                        :items="[
+                          { text: 'NTNU (internal)', value: 'ntnu-internal' },
+                          { text: 'External', value: 'external' },
+                        ]"
+                        v-model="clientType"
+                        label="Are you from NTNU or external?"
+                        item-title="text"
+                        item-value="value"
+                        placeholder=""
+                        persistent-placeholder
+                        variant="outlined"
+                        density="compact"
+                        hide-details
+                      />
+                    </v-col>
+                  </v-row>
+                  <v-row justify="center">
+                    <v-col cols="6">
+                      <v-btn color="success" block :disabled="!clientType" @click="panel = panel + 1"> Continue </v-btn>
+                    </v-col>
+                  </v-row>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+
+              <v-expansion-panel>
+                <v-expansion-panel-title>
                   Form
                   <template v-if="formFilled" v-slot:actions>
                     <v-icon color="teal">mdi-check</v-icon>
@@ -259,7 +302,7 @@ onMounted(() => {
                     <v-row justify="center">
                       <v-col v-for="item in fields" :key="item.key" cols="8">
                         <v-text-field
-                          v-if="item.field === 'textfield'"
+                          v-if="item.field === 'textfield' && item.type === undefined"
                           v-model="formData[item.key]"
                           autocomplete="off"
                           :label="item.label"
@@ -357,6 +400,26 @@ onMounted(() => {
                           :min="item.min ? item.min : null"
                           :max="item.max ? item.max : null"
                           :step="item.step ? item.step : null"
+                          :persistent-hint="item.hint && formData[item.key] ? true : false"
+                          placeholder=""
+                          persistent-placeholder
+                          variant="outlined"
+                          density="compact"
+                          :hide-details="formData[item.key] ? false : 'auto'"
+                          @focus="$event.target.select()"
+                          @update:model-value="setValue($event, item.key)"
+                        />
+
+                        <v-text-field
+                          v-if="item.field === 'textfield' && item.type != undefined && item.type === clientType"
+                          v-model="formData[item.key]"
+                          autocomplete="off"
+                          :label="item.label"
+                          :pattern="item.pattern ? item.pattern : null"
+                          :title="item.hint ? item.hint : null"
+                          :hint="item.hint ? item.hint : null"
+                          :suffix="item.suffix ? item.suffix : null"
+                          :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
                           :persistent-hint="item.hint && formData[item.key] ? true : false"
                           placeholder=""
                           persistent-placeholder
