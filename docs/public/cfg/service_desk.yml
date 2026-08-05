@@ -197,12 +197,6 @@ request_new_lab:
       scratch_gb={scratch_volume}  
       ---
 
-      Billing information:
-      ---
-      account_information_k_sted="{account_information_k_sted}"
-      account_information_p_number="{account_information_p_number}"
-      ---
-
       Our lab leader or lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
 
       https://docs.hdc.ntnu.no/administer-science/service-desk/lab-orders/#add-a-new-lab-user
