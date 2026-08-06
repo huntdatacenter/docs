@@ -319,28 +319,32 @@ request_new_lab:
         key: "account_information_k_sted",
         autocapitalize: "off",
         field: "textfield",
-        type: "ntnu-internal",
+        optional: "(formData) => formData.client_type === 'external'",
+        hide: "(formData) => formData.client_type === 'external'",
       },
       {
         label: "Account Informatin: P.NUMBER",
         key: "account_information_p_number",
         autocapitalize: "off",
         field: "textfield",
-        type: "ntnu-internal",
+        optional: "(formData) => formData.client_type === 'external'",
+        hide: "(formData) => formData.client_type === 'external'",
       },
       {
         label: "Billing Informatin: PEPPOL BIS",
         key: "billing_information_peppol_bis",
         autocapitalize: "off",
         field: "textfield",
-        type: "external",
+        optional: "(formData) => formData.client_type === 'ntnu-internal'",
+        hide: "(formData) => formData.client_type === 'ntnu-internal'",
       },
       {
         label: "Billing Informatin: REFERENCE NUMBER",
         key: "billing_information_reference_number",
         autocapitalize: "off",
         field: "textfield",
-        type: "external",
+        optional: "(formData) => formData.client_type === 'ntnu-internal'",
+        hide: "(formData) => formData.client_type === 'ntnu-internal'"
       },
     ]
   requirements:
