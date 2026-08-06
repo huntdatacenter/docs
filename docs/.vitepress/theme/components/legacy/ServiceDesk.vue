@@ -39,7 +39,6 @@ const sendClicked = ref(false)
 const finalizeClicked = ref(false)
 const panel = ref(0)
 
-
 const templateContext = computed(() => {
   return {
     ...formData.value,
@@ -54,12 +53,42 @@ const messageBody = computed(() => {
   return bodyTemplate.value ? wrap(bodyTemplate.value) : null
 })
 
+const evalDynamicField = (expr) => {
+  try {
+    const dynamicLambda = new Function(`return ${expr}`)()
+    return dynamicLambda(formData.value)
+  } catch (ex) {
+    console.log("Failed to evaluate dynamic field condition", ex)
+    return false
+  }
+}
+
+const isFieldHidden = (item) => {
+  if (!item) return false
+  if (typeof item.hide === "string") {
+    return evalDynamicField(item.hide, item)
+  }
+  return !!item.hide
+}
+
 const formFilled = computed(() => {
-  return (
-    props.fields
-      .filter((item) => item.type === undefined || item.type === formData.value['client_type'])
-      .every((item) => (formData.value[item.key] || item.optional ? true : false))
-  )
+  return props.fields.every((item) => {
+    if (item.hide) {
+      if (isFieldHidden(item)) {
+        return true
+      }
+    }
+
+    if (formData.value[item.key]) {
+      return true
+    }
+
+    if (typeof item.optional === "string") {
+      return evalDynamicField(item.optional)
+    }
+
+    return item.optional
+  })
 })
 
 const encodedSubject = computed(() => {
@@ -161,7 +190,6 @@ const encode = (template) => {
 }
 
 const setValue = (value, key) => {
-  // NOTE: enforce reactivity to data change - re-rendering the template
   const updates = {}
   updates[key] = value ? value.trim() : value
   formData.value = Object.assign({}, formData.value, updates)
@@ -197,6 +225,7 @@ onMounted(() => {
       }
     }
   }
+  console.log(formData.value, formFields)
 
   let cache = fetchAgreementFormCache(props.cacheKey)
   if (cache) {
@@ -264,117 +293,118 @@ onMounted(() => {
                 <v-expansion-panel-text>
                   <form @submit.prevent="submit">
                     <v-row justify="center">
-                      <v-col v-for="item in fields" :key="item.key" cols="8">
-                        <v-text-field
-                          v-if="item.field === 'textfield' && item.type === undefined"
-                          v-model="formData[item.key]"
-                          autocomplete="off"
-                          :label="item.label"
-                          :pattern="item.pattern ? item.pattern : null"
-                          :title="item.hint ? item.hint : null"
-                          :hint="item.hint ? item.hint : null"
-                          :suffix="item.suffix ? item.suffix : null"
-                          :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
-                          :persistent-hint="item.hint && formData[item.key] ? true : false"
-                          placeholder=""
-                          persistent-placeholder
-                          variant="outlined"
-                          density="compact"
-                          :hide-details="formData[item.key] ? false : 'auto'"
-                          @focus="$event.target.select()"
-                          @update:model-value="setValue($event, item.key)"
-                        />
+                      <template v-for="item in fields" :key="item.key">
+                        <v-col v-if="!isFieldHidden(item)" :key="item.key" cols="8">
+                          <v-text-field
+                            v-if="item.field === 'textfield' && item.type === undefined"
+                            v-model="formData[item.key]"
+                            autocomplete="off"
+                            :label="item.label"
+                            :pattern="item.pattern ? item.pattern : null"
+                            :title="item.hint ? item.hint : null"
+                            :hint="item.hint ? item.hint : null"
+                            :suffix="item.suffix ? item.suffix : null"
+                            :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
+                            :persistent-hint="item.hint && formData[item.key] ? true : false"
+                            placeholder=""
+                            persistent-placeholder
+                            variant="outlined"
+                            density="compact"
+                            :hide-details="formData[item.key] ? false : 'auto'"
+                            @focus="$event.target.select()"
+                            @update:model-value="setValue($event, item.key)"
+                          />
 
-                        <v-textarea
-                          v-else-if="item.field === 'textarea'"
-                          v-model="formData[item.key]"
-                          autocomplete="off"
-                          :label="item.label"
-                          :title="item.hint ? item.hint : null"
-                          :hint="item.hint ? item.hint : null"
-                          :suffix="item.suffix ? item.suffix : null"
-                          :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
-                          :rows="item.rows ? item.rows : 3"
-                          :persistent-hint="item.hint && formData[item.key] ? true : false"
-                          placeholder=""
-                          persistent-placeholder
-                          variant="outlined"
-                          density="compact"
-                          :hide-details="formData[item.key] ? false : 'auto'"
-                          @focus="$event.target.select()"
-                          @update:model-value="setValue($event, item.key)"
-                        />
+                          <v-textarea
+                            v-else-if="item.field === 'textarea'"
+                            v-model="formData[item.key]"
+                            autocomplete="off"
+                            :label="item.label"
+                            :title="item.hint ? item.hint : null"
+                            :hint="item.hint ? item.hint : null"
+                            :suffix="item.suffix ? item.suffix : null"
+                            :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
+                            :rows="item.rows ? item.rows : 3"
+                            :persistent-hint="item.hint && formData[item.key] ? true : false"
+                            placeholder=""
+                            persistent-placeholder
+                            variant="outlined"
+                            density="compact"
+                            :hide-details="formData[item.key] ? false : 'auto'"
+                            @focus="$event.target.select()"
+                            @update:model-value="setValue($event, item.key)"
+                          />
 
-                        <v-select
-                          v-else-if="item.field === 'selector'"
-                          :items="item.options"
-                          v-model="formData[item.key]"
-                          :label="item.label"
-                          :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)"
-                          :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
-                          placeholder=""
-                          persistent-placeholder
-                          chips
-                          multiple
-                          variant="outlined"
-                          hide-details
-                        />
+                          <v-select
+                            v-else-if="item.field === 'selector'"
+                            :items="item.options"
+                            v-model="formData[item.key]"
+                            :label="item.label"
+                            :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)"
+                            :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
+                            placeholder=""
+                            persistent-placeholder
+                            chips
+                            multiple
+                            variant="outlined"
+                            hide-details
+                          />
 
-                        <v-select
-                          v-else-if="item.field === 'selectone'"
-                          autocomplete="off"
-                          :items="item.options"
-                          v-model="formData[item.key]"
-                          :label="item.label"
-                          :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)"
-                          :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
-                          placeholder=""
-                          persistent-placeholder
-                          chips
-                          variant="outlined"
-                          hide-details
-                        />
+                          <v-select
+                            v-else-if="item.field === 'selectone'"
+                            autocomplete="off"
+                            :items="item.options"
+                            v-model="formData[item.key]"
+                            :label="item.label"
+                            :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)"
+                            :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
+                            placeholder=""
+                            persistent-placeholder
+                            chips
+                            variant="outlined"
+                            hide-details
+                          />
 
-                        <v-autocomplete
-                          v-else-if="item.field === 'autocompleteone'"
-                          autocomplete="off"
-                          :items="item.options"
-                          v-model="formData[item.key]"
-                          :label="item.label"
-                          :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item.header)"
-                          :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
-                          placeholder=""
-                          persistent-placeholder
-                          chips
-                          variant="outlined"
-                          density="compact"
-                          clearable
-                          hide-details
-                        />
+                          <v-autocomplete
+                            v-else-if="item.field === 'autocompleteone'"
+                            autocomplete="off"
+                            :items="item.options"
+                            v-model="formData[item.key]"
+                            :label="item.label"
+                            :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item.header)"
+                            :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
+                            placeholder=""
+                            persistent-placeholder
+                            chips
+                            variant="outlined"
+                            density="compact"
+                            clearable
+                            hide-details
+                          />
 
-                        <v-text-field
-                          v-else-if="item.field === 'number'"
-                          v-model="formData[item.key]"
-                          autocomplete="off"
-                          type="number"
-                          :label="item.label"
-                          :title="item.hint ? item.hint : null"
-                          :hint="item.hint ? item.hint : null"
-                          :suffix="item.suffix ? item.suffix : null"
-                          :min="item.min ? item.min : null"
-                          :max="item.max ? item.max : null"
-                          :step="item.step ? item.step : null"
-                          :persistent-hint="item.hint && formData[item.key] ? true : false"
-                          placeholder=""
-                          persistent-placeholder
-                          variant="outlined"
-                          density="compact"
-                          :hide-details="formData[item.key] ? false : 'auto'"
-                          @focus="$event.target.select()"
-                          @update:model-value="setValue($event, item.key)"
-                        />
+                          <v-text-field
+                            v-else-if="item.field === 'number'"
+                            v-model="formData[item.key]"
+                            autocomplete="off"
+                            type="number"
+                            :label="item.label"
+                            :title="item.hint ? item.hint : null"
+                            :hint="item.hint ? item.hint : null"
+                            :suffix="item.suffix ? item.suffix : null"
+                            :min="item.min ? item.min : null"
+                            :max="item.max ? item.max : null"
+                            :step="item.step ? item.step : null"
+                            :persistent-hint="item.hint && formData[item.key] ? true : false"
+                            placeholder=""
+                            persistent-placeholder
+                            variant="outlined"
+                            density="compact"
+                            :hide-details="formData[item.key] ? false : 'auto'"
+                            @focus="$event.target.select()"
+                            @update:model-value="setValue($event, item.key)"
+                          />
 
-                        <v-text-field
+                          <!-- <v-text-field
                           v-if="item.field === 'textfield' && item.type != undefined && item.type === formData['client_type']"
                           v-model="formData[item.key]"
                           autocomplete="off"
@@ -392,8 +422,9 @@ onMounted(() => {
                           :hide-details="formData[item.key] ? false : 'auto'"
                           @focus="$event.target.select()"
                           @update:model-value="setValue($event, item.key)"
-                        />
-                      </v-col>
+                        /> -->
+                        </v-col>
+                      </template>
                     </v-row>
                     <v-row justify="center">
                       <v-col cols="6">
