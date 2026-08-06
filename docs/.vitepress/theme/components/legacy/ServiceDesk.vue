@@ -225,7 +225,6 @@ onMounted(() => {
       }
     }
   }
-  console.log(formData.value, formFields)
 
   let cache = fetchAgreementFormCache(props.cacheKey)
   if (cache) {
@@ -403,26 +402,6 @@ onMounted(() => {
                             @focus="$event.target.select()"
                             @update:model-value="setValue($event, item.key)"
                           />
-
-                          <!-- <v-text-field
-                          v-if="item.field === 'textfield' && item.type != undefined && item.type === formData['client_type']"
-                          v-model="formData[item.key]"
-                          autocomplete="off"
-                          :label="item.label"
-                          :pattern="item.pattern ? item.pattern : null"
-                          :title="item.hint ? item.hint : null"
-                          :hint="item.hint ? item.hint : null"
-                          :suffix="item.suffix ? item.suffix : null"
-                          :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
-                          :persistent-hint="item.hint && formData[item.key] ? true : false"
-                          placeholder=""
-                          persistent-placeholder
-                          variant="outlined"
-                          density="compact"
-                          :hide-details="formData[item.key] ? false : 'auto'"
-                          @focus="$event.target.select()"
-                          @update:model-value="setValue($event, item.key)"
-                        /> -->
                         </v-col>
                       </template>
                     </v-row>
