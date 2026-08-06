@@ -187,6 +187,12 @@ request_new_lab:
       scratch_gb={scratch_volume}  
       ---
 
+      Billing information:
+      ---
+      account_information_k_sted="{account_information_k_sted}"
+      account_information_p_number="{account_information_p_number}"
+      ---
+
       Our lab leader or lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
 
       https://docs.hdc.ntnu.no/administer-science/service-desk/lab-orders/#add-a-new-lab-user
@@ -195,6 +201,41 @@ request_new_lab:
 
 
       Best regards,
+    body_external: |
+      Hi HUNT Cloud team,
+
+      I would like to request a new lab.
+
+      I have attached a signed lab agreement to this email for the following lab:
+
+      ---
+      lab_name="{lab_name}"  
+      ---
+
+      We would like to start with the following machine type and storage resources for our home machine:
+
+      ---
+      machine_type="{machine_type}"  
+      archive_gb={archive_volume}  
+      work_gb={work_volume}  
+      scratch_gb={scratch_volume}  
+      ---
+
+      Billing information:
+      ---
+      billing_information_peppol_bis="{billing_information_peppol_bis}"
+      billing_information_reference_number="{billing_information_reference_number}"
+      ---
+
+      Our lab leader or lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
+
+      https://docs.hdc.ntnu.no/administer-science/service-desk/lab-orders/#add-a-new-lab-user
+
+      I am looking forward to receive an email verification stating that the lab is up and running.
+
+
+      Best regards,
+    
 
   fields: [
       {
@@ -290,6 +331,34 @@ request_new_lab:
         step: 100,
         field: "number",
         default: 300,
+      },
+      {
+        label: "Account Informatin: K.STED",
+        key: "account_information_k_sted",
+        autocapitalize: "off",
+        field: "textfield",
+        type: "ntnu-internal",
+      },
+      {
+        label: "Account Informatin: P.NUMBER",
+        key: "account_information_p_number",
+        autocapitalize: "off",
+        field: "textfield",
+        type: "ntnu-internal",
+      },
+      {
+        label: "Billing Informatin: PEPPOL BIS",
+        key: "billing_information_peppol_bis",
+        autocapitalize: "off",
+        field: "textfield",
+        type: "external",
+      },
+      {
+        label: "Billing Informatin: REFERENCE NUMBER",
+        key: "billing_information_reference_number",
+        autocapitalize: "off",
+        field: "textfield",
+        type: "external",
       },
     ]
   requirements:
