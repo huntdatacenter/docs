@@ -187,14 +187,14 @@ request_new_lab:
       scratch_gb={scratch_volume}  
       ---
 
-      Billing information ({% if is_external %}External{% else %}NTNU internal{% endif %}):
+      Billing information ({% if client_type === "external" %}External{% else %}NTNU internal{% endif %}):
       ---
-      {% if is_external %}
-      billing_information_peppol_bis="{{ billing_information_peppol_bis }}"
-      billing_information_reference_number="{{ billing_information_reference_number }}"
+      {% if client_type === "external" %}
+      billing_information_peppol_bis="{ billing_information_peppol_bis }"
+      billing_information_reference_number="{ billing_information_reference_number }"
       {% else %}
-      account_information_k_sted="{{ account_information_k_sted }}"
-      account_information_p_number="{{ account_information_p_number }}"
+      account_information_k_sted="{ account_information_k_sted }"
+      account_information_p_number="{ account_information_p_number }"
       {% endif %}
       ---
 
@@ -209,6 +209,16 @@ request_new_lab:
     
 
   fields: [
+    {
+        label: "Are you from NTNU or external?",
+        key: "client_type",
+        field: "selectone",
+        options:
+          [
+            { value: "ntnu-internal", text: "NTNU (internal)" },
+            { value: "external", text: "External" },
+          ],
+      },
       {
         label: "New lab name",
         key: "lab_name",
@@ -217,6 +227,7 @@ request_new_lab:
         autocapitalize: "off",
         field: "textfield",
       },
+      
 #      { label: "Data space name", 
 #        key: "data_space", 
 #        pattern: "[-a-z0-9]{3,}", 

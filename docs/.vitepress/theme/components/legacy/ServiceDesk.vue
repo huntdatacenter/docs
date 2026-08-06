@@ -9,10 +9,8 @@ defineOptions({
 
 import nunjucksEnv from "../../plugins/nunjucks"
 
-// Emits definition
 const emit = defineEmits(["update:modelValue"])
 
-// Props definition
 const props = defineProps({
   id: { type: String, default: "applet" },
   modelValue: { type: Boolean, default: false }, // Changed from 'value' to 'modelValue'
@@ -29,7 +27,6 @@ const props = defineProps({
   fullscreen: { type: Boolean, default: false },
 })
 
-// Reactive data
 const subjectTemplate = ref(null)
 const bodyTemplate = ref(null)
 const formData = ref({})
@@ -42,18 +39,10 @@ const sendClicked = ref(false)
 const finalizeClicked = ref(false)
 const panel = ref(0)
 
-const clientType = ref("")
 
-// Computed properties
-
-// Context handed to nunjucks when rendering subject/body: the entered
-// form fields plus a derived is_external flag, so a single template can
-// branch on {% if is_external %} instead of needing a separate
-// body/body_external pair.
 const templateContext = computed(() => {
   return {
     ...formData.value,
-    is_external: clientType.value === "external",
   }
 })
 
@@ -66,7 +55,11 @@ const messageBody = computed(() => {
 })
 
 const formFilled = computed(() => {
-  return props.fields.filter((item) => item.type === undefined || item.type === clientType.value).every((item) => (formData.value[item.key] || item.optional ? true : false))
+  return (
+    props.fields
+      .filter((item) => item.type === undefined || item.type === formData.value['client_type'])
+      .every((item) => (formData.value[item.key] || item.optional ? true : false))
+  )
 })
 
 const encodedSubject = computed(() => {
@@ -122,11 +115,8 @@ const activateSendButtons = () => {
 }
 
 const submit = () => {
-  panel.value = 3
+  panel.value = 2
   if (props.template) {
-    // There's only one body template now — the internal/external
-    // difference is handled inside the template via {% if is_external %},
-    // driven by templateContext, not by picking a different string here.
     bodyTemplate.value = props.template.body
   }
   setTimeout(activateSendButtons, 1200)
@@ -134,24 +124,24 @@ const submit = () => {
 
 const review = () => {
   finalizeClicked.value = true
-  panel.value = 2
+  panel.value = 1
 }
 
 const actionSend = () => {
   sendClicked.value = true
-  panel.value = 3
+  panel.value = 2
   window.location.href = mailto.value
 }
 
 const actionSendOutlook = () => {
   sendClicked.value = true
-  panel.value = 3
+  panel.value = 2
   window.location.href = deeplinkUrl.value
 }
 
 const actionSendOutlookPopup = () => {
   sendClicked.value = true
-  panel.value = 3
+  panel.value = 2
   window.open(deeplinkUrl.value, "_blank")
 }
 
@@ -259,41 +249,6 @@ onMounted(() => {
                   <v-row justify="center">
                     <v-col cols="6">
                       <v-btn color="success" block @click="panel = panel + 1"> Continue </v-btn>
-                    </v-col>
-                  </v-row>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
-
-              <v-expansion-panel>
-                <v-expansion-panel-title>
-                  NTNU or External
-                  <template v-if="clientType" v-slot:actions>
-                    <v-icon color="teal">mdi-check</v-icon>
-                  </template>
-                </v-expansion-panel-title>
-                <v-expansion-panel-text>
-                  <v-row justify="center">
-                    <v-col cols="8">
-                      <v-select
-                        :items="[
-                          { text: 'NTNU (internal)', value: 'ntnu-internal' },
-                          { text: 'External', value: 'external' },
-                        ]"
-                        v-model="clientType"
-                        label="Are you from NTNU or external?"
-                        item-title="text"
-                        item-value="value"
-                        placeholder=""
-                        persistent-placeholder
-                        variant="outlined"
-                        density="compact"
-                        hide-details
-                      />
-                    </v-col>
-                  </v-row>
-                  <v-row justify="center">
-                    <v-col cols="6">
-                      <v-btn color="success" block :disabled="!clientType" @click="panel = panel + 1"> Continue </v-btn>
                     </v-col>
                   </v-row>
                 </v-expansion-panel-text>
@@ -420,7 +375,7 @@ onMounted(() => {
                         />
 
                         <v-text-field
-                          v-if="item.field === 'textfield' && item.type != undefined && item.type === clientType"
+                          v-if="item.field === 'textfield' && item.type != undefined && item.type === formData['client_type']"
                           v-model="formData[item.key]"
                           autocomplete="off"
                           :label="item.label"
@@ -568,7 +523,6 @@ onMounted(() => {
 
 <style>
 .vuewidget.vuewrapper {
-  /* reset full view - no scroll bars, no full view */
   overflow: inherit;
 }
 
