@@ -17,18 +17,8 @@ general_contact_request:
   fields:
     [
       { label: "Request topic", key: "topic", field: "textfield" },
-      {
-        label: "Lab (Optional)",
-        key: "lab_name",
-        field: "textfield",
-        optional: true,
-      },
-      {
-        label: "Data Space (Optional)",
-        key: "data_space",
-        field: "textfield",
-        optional: true,
-      },
+      { label: "Lab (Optional)", key: "lab_name", field: "textfield", optional: true },
+      { label: "Data Space (Optional)", key: "data_space", field: "textfield", optional: true },
     ]
   requirements:
     [
@@ -187,7 +177,7 @@ request_new_lab:
       ---
       lab_name="{lab_name}"  
       ---
-
+      
       We would like to start with the following machine type and storage resources for our home machine:
 
       ---
@@ -195,46 +185,6 @@ request_new_lab:
       archive_gb={archive_volume}  
       work_gb={work_volume}  
       scratch_gb={scratch_volume}  
-      ---
-
-      Billing information:
-      ---
-      account_information_k_sted="{account_information_k_sted}"
-      account_information_p_number="{account_information_p_number}"
-      ---
-
-      Our lab leader or lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
-
-      https://docs.hdc.ntnu.no/administer-science/service-desk/lab-orders/#add-a-new-lab-user
-
-      I am looking forward to receive an email verification stating that the lab is up and running.
-
-
-      Best regards,
-    body_external: |
-      Hi HUNT Cloud team,
-
-      I would like to request a new lab.
-
-      I have attached a signed lab agreement to this email for the following lab:
-
-      ---
-      lab_name="{lab_name}"  
-      ---
-
-      We would like to start with the following machine type and storage resources for our home machine:
-
-      ---
-      machine_type="{machine_type}"  
-      archive_gb={archive_volume}  
-      work_gb={work_volume}  
-      scratch_gb={scratch_volume}  
-      ---
-
-      Billing information:
-      ---
-      billing_information_peppol_bis="{billing_information_peppol_bis}"
-      billing_information_reference_number="{billing_information_reference_number}"
       ---
 
       Our lab leader or lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
@@ -255,12 +205,12 @@ request_new_lab:
         autocapitalize: "off",
         field: "textfield",
       },
-      #      { label: "Data space name",
-      #        key: "data_space",
-      #        pattern: "[-a-z0-9]{3,}",
-      #        hint: "Data space name should include only letters a-z, 0-9, or dot.",
-      #        field: "textfield"
-      #      },
+#      { label: "Data space name", 
+#        key: "data_space", 
+#        pattern: "[-a-z0-9]{3,}", 
+#        hint: "Data space name should include only letters a-z, 0-9, or dot.", 
+#        field: "textfield" 
+#      },
       {
         label: "Machine type (c1 is default)",
         key: "machine_type",
@@ -268,10 +218,7 @@ request_new_lab:
         field: "autocompleteone",
         options:
           [
-            {
-              type: "subheader",
-              text: "B - Series machine types: 2 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "B - Series machine types: 2 GB of RAM per CPU core" },
             { text: "b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
             { text: "b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
             { text: "b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
@@ -281,10 +228,7 @@ request_new_lab:
             { text: "b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
             { text: "b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "C - Series machine types: 4 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "C - Series machine types: 4 GB of RAM per CPU core" },
             { text: "c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
             { text: "c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
             { text: "c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
@@ -294,10 +238,7 @@ request_new_lab:
             { text: "c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
             { text: "c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "D - Series machine types: 8 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "D - Series machine types: 8 GB of RAM per CPU core" },
             { text: "d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
             { text: "d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
             { text: "d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
@@ -307,10 +248,7 @@ request_new_lab:
             { text: "d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
             { text: "d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "E - Series machine types: 16 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "E - Series machine types: 16 GB of RAM per CPU core" },
             { text: "e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
             { text: "e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
             { text: "e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
@@ -352,34 +290,6 @@ request_new_lab:
         step: 100,
         field: "number",
         default: 300,
-      },
-      {
-        label: "Account Informatin: K.STED",
-        key: "account_information_k_sted",
-        autocapitalize: "off",
-        field: "textfield",
-        type: "ntnu-internal",
-      },
-      {
-        label: "Account Informatin: P.NUMBER",
-        key: "account_information_p_number",
-        autocapitalize: "off",
-        field: "textfield",
-        type: "ntnu-internal",
-      },
-      {
-        label: "Billing Informatin: PEPPOL BIS",
-        key: "billing_information_peppol_bis",
-        autocapitalize: "off",
-        field: "textfield",
-        type: "external",
-      },
-      {
-        label: "Billing Informatin: REFERENCE NUMBER",
-        key: "billing_information_reference_number",
-        autocapitalize: "off",
-        field: "textfield",
-        type: "external",
       },
     ]
   requirements:
@@ -485,11 +395,7 @@ request_external_import_kista:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "External organization",
-        key: "external_organization",
-        field: "textfield",
-      },
+      { label: "External organization", key: "external_organization", field: "textfield" },
       {
         label: "Public IPv4 address of external organization (only if outside of NTNU)",
         key: "ipaddress",
@@ -540,11 +446,7 @@ request_external_export_kista:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "External organization",
-        key: "external_organization",
-        field: "textfield",
-      },
+      { label: "External organization", key: "external_organization", field: "textfield" },
       {
         label: "Public IPv4 address of external organization (only if outside of NTNU)",
         key: "ipaddress",
@@ -638,28 +540,13 @@ update_data_space_administrator_role:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Role",
-        key: "role",
-        field: "selectone",
-        options: ["Compliance", "Data", "Technical", "Knowledge", "Financial"],
-      },
+      { label: "Role", key: "role", field: "selectone", options: ["Compliance", "Data", "Technical", "Knowledge", "Financial"] },
       { label: "Name and Surname", key: "name", field: "textfield" },
       { label: "Department", key: "department", field: "textfield" },
       { label: "Faculty", key: "faculty", field: "textfield" },
       { label: "Institution", key: "institution", field: "textfield" },
-      {
-        label: "Email",
-        key: "email",
-        pattern: "[^@]+@[^@]+\\.[^@]+",
-        field: "textfield",
-      },
-      {
-        label: "Phone number",
-        key: "phone",
-        pattern: "[0-9+]{3,}",
-        field: "textfield",
-      },
+      { label: "Email", key: "email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
+      { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
     ]
   requirements:
     [
@@ -890,13 +777,11 @@ request_lab_transfer:
       "<b>Cost:</b> Included in your data space subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments:
-    [
-      "Required: Signed lab transfer order (.pdf)",
-      "Optional: Signed invoice profile (.pdf)",
-    ]
+  attachments: ["Required: Signed lab transfer order (.pdf)", "Optional: Signed invoice profile (.pdf)"]
 
 ### Data Controller Orders
+
+
 
 request_organizational_access:
   title: "Request organizational access to HUNT Cloud"
@@ -913,15 +798,7 @@ request_organizational_access:
 
       Best regards,
 
-  fields:
-    [
-      {
-        label: "Organization",
-        key: "organization",
-        autocapitalize: "off",
-        field: "textfield",
-      },
-    ]
+  fields: [{ label: "Organization", key: "organization", autocapitalize: "off", field: "textfield" }]
   requirements:
     [
       "<b>Who can order:</b> Representatives for the organizational unit that request access.",
@@ -932,6 +809,7 @@ request_organizational_access:
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
   attachments: [HUNT Cloud organizational access request form (.pdf)]
+
 
 ### Lab orders
 
@@ -953,12 +831,7 @@ request_access_new_user:
 
   fields:
     [
-      {
-        label: "Name of user",
-        key: "username",
-        autocapitalize: "off",
-        field: "textfield",
-      },
+      { label: "Name of user", key: "username", autocapitalize: "off", field: "textfield" },
       {
         label: "Lab name",
         key: "lab_name",
@@ -1053,12 +926,7 @@ reactivate_lab_user:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Name of user",
-        key: "username",
-        autocapitalize: "off",
-        field: "textfield",
-      },
+      { label: "Name of user", key: "username", autocapitalize: "off", field: "textfield" },
     ]
   requirements:
     [
@@ -1169,10 +1037,7 @@ request_machine_size_update:
         field: "autocompleteone",
         options:
           [
-            {
-              type: "subheader",
-              text: "B - Series machine types: 2 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "B - Series machine types: 2 GB of RAM per CPU core" },
             { text: "b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
             { text: "b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
             { text: "b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
@@ -1182,10 +1047,7 @@ request_machine_size_update:
             { text: "b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
             { text: "b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "C - Series machine types: 4 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "C - Series machine types: 4 GB of RAM per CPU core" },
             { text: "c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
             { text: "c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
             { text: "c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
@@ -1195,10 +1057,7 @@ request_machine_size_update:
             { text: "c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
             { text: "c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "D - Series machine types: 8 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "D - Series machine types: 8 GB of RAM per CPU core" },
             { text: "d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
             { text: "d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
             { text: "d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
@@ -1208,10 +1067,7 @@ request_machine_size_update:
             { text: "d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
             { text: "d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "E - Series machine types: 16 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "E - Series machine types: 16 GB of RAM per CPU core" },
             { text: "e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
             { text: "e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
             { text: "e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
@@ -1231,10 +1087,7 @@ request_machine_size_update:
         field: "autocompleteone",
         options:
           [
-            {
-              type: "subheader",
-              text: "B - Series machine types: 2 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "B - Series machine types: 2 GB of RAM per CPU core" },
             { text: "b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
             { text: "b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
             { text: "b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
@@ -1244,10 +1097,7 @@ request_machine_size_update:
             { text: "b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
             { text: "b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "C - Series machine types: 4 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "C - Series machine types: 4 GB of RAM per CPU core" },
             { text: "c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
             { text: "c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
             { text: "c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
@@ -1257,10 +1107,7 @@ request_machine_size_update:
             { text: "c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
             { text: "c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "D - Series machine types: 8 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "D - Series machine types: 8 GB of RAM per CPU core" },
             { text: "d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
             { text: "d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
             { text: "d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
@@ -1270,10 +1117,7 @@ request_machine_size_update:
             { text: "d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
             { text: "d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "E - Series machine types: 16 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "E - Series machine types: 16 GB of RAM per CPU core" },
             { text: "e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
             { text: "e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
             { text: "e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
@@ -1336,10 +1180,7 @@ request_new_cpu:
         field: "autocompleteone",
         options:
           [
-            {
-              type: "subheader",
-              text: "B - Series machine types: 2 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "B - Series machine types: 2 GB of RAM per CPU core" },
             { text: "b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
             { text: "b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
             { text: "b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
@@ -1349,10 +1190,7 @@ request_new_cpu:
             { text: "b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
             { text: "b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "C - Series machine types: 4 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "C - Series machine types: 4 GB of RAM per CPU core" },
             { text: "c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
             { text: "c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
             { text: "c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
@@ -1362,10 +1200,7 @@ request_new_cpu:
             { text: "c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
             { text: "c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "D - Series machine types: 8 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "D - Series machine types: 8 GB of RAM per CPU core" },
             { text: "d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
             { text: "d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
             { text: "d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
@@ -1375,10 +1210,7 @@ request_new_cpu:
             { text: "d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
             { text: "d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "E - Series machine types: 16 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "E - Series machine types: 16 GB of RAM per CPU core" },
             { text: "e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
             { text: "e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
             { text: "e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
@@ -1403,22 +1235,9 @@ request_new_cpu:
         label: "Storage type",
         key: "storage_type",
         field: "autocompleteone",
-        options:
-          [
-            { text: "Regular storage (HDD)", value: "regular" },
-            { text: "Fast storage (NVME)", value: "nvme" },
-          ],
+        options: [{ text: "Regular storage (HDD)", value: "regular" }, { text: "Fast storage (NVME)", value: "nvme" }],
       },
-      {
-        label: "Subscription",
-        key: "subscription",
-        field: "autocompleteone",
-        options:
-          [
-            { text: "On-demand", value: "ondemand" },
-            { text: "Spot", value: "spot" },
-          ],
-      },
+      { label: "Subscription", key: "subscription", field: "autocompleteone", options: [{ text: "On-demand", value: "ondemand" }, { text: "Spot", value: "spot" }] },
     ]
   requirements:
     [
@@ -1481,12 +1300,7 @@ request_new_gpu:
             { text: "NVIDIA RTX PRO 6000 96G", value: "rtx.pro.6000.96g" },
           ],
       },
-      {
-        label: "How many GPUs?",
-        key: "gpu_amount",
-        field: "autocompleteone",
-        options: [{ text: "1", value: "1" }, { text: "2", value: "2" }],
-      },
+      { label: "How many GPUs?", key: "gpu_amount", field: "autocompleteone", options: [{ text: "1", value: "1" }, { text: "2", value: "2" }] },
       {
         label: "Machine type",
         key: "machine_type",
@@ -1497,10 +1311,7 @@ request_new_gpu:
         field: "autocompleteone",
         options:
           [
-            {
-              type: "subheader",
-              text: "B - Series machine types: 2 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "B - Series machine types: 2 GB of RAM per CPU core" },
             { text: "b1 - 2 CPUs / 4 GB RAM", value: "default.b1" },
             { text: "b2 - 4 CPUs / 8 GB RAM", value: "default.b2" },
             { text: "b3 - 8 CPUs / 16 GB RAM", value: "default.b3" },
@@ -1510,10 +1321,7 @@ request_new_gpu:
             { text: "b7 - 64 CPUs / 128 GB RAM", value: "default.b7" },
             { text: "b8 - 80 CPUs / 160 GB RAM", value: "default.b8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "C - Series machine types: 4 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "C - Series machine types: 4 GB of RAM per CPU core" },
             { text: "c1 - 2 CPUs / 8 GB RAM", value: "default.c1" },
             { text: "c2 - 4 CPUs / 16 GB RAM", value: "default.c2" },
             { text: "c3 - 8 CPUs / 32 GB RAM", value: "default.c3" },
@@ -1523,10 +1331,7 @@ request_new_gpu:
             { text: "c7 - 64 CPUs / 256 GB RAM", value: "default.c7" },
             { text: "c8 - 80 CPUs / 320 GB RAM", value: "default.c8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "D - Series machine types: 8 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "D - Series machine types: 8 GB of RAM per CPU core" },
             { text: "d1 - 2 CPUs / 16 GB RAM", value: "default.d1" },
             { text: "d2 - 4 CPUs / 32 GB RAM", value: "default.d2" },
             { text: "d3 - 8 CPUs / 64 GB RAM", value: "default.d3" },
@@ -1536,10 +1341,7 @@ request_new_gpu:
             { text: "d7 - 64 CPUs / 512 GB RAM", value: "default.d7" },
             { text: "d8 - 80 CPUs / 640 GB RAM", value: "default.d8" },
             { type: "divider" },
-            {
-              type: "subheader",
-              text: "E - Series machine types: 16 GB of RAM per CPU core",
-            },
+            { type: "subheader", text: "E - Series machine types: 16 GB of RAM per CPU core" },
             { text: "e1 - 2 CPUs / 32 GB RAM", value: "default.e1" },
             { text: "e2 - 4 CPUs / 64 GB RAM", value: "default.e2" },
             { text: "e3 - 8 CPUs / 128 GB RAM", value: "default.e3" },
@@ -1564,22 +1366,9 @@ request_new_gpu:
         label: "Storage type",
         key: "storage_type",
         field: "autocompleteone",
-        options:
-          [
-            { text: "Fast storage (NVME)", value: "nvme" },
-            { text: "Regular storage (HDD)", value: "regular" },
-          ],
+        options: [{ text: "Fast storage (NVME)", value: "nvme" }, { text: "Regular storage (HDD)", value: "regular" }],
       },
-      {
-        label: "Subscription",
-        key: "subscription",
-        field: "autocompleteone",
-        options:
-          [
-            { text: "On-demand", value: "ondemand" },
-            { text: "Spot", value: "spot" },
-          ],
-      },
+      { label: "Subscription", key: "subscription", field: "autocompleteone", options: [{ text: "On-demand", value: "ondemand" }, { text: "Spot", value: "spot" }] },
     ]
   requirements:
     [
@@ -1622,16 +1411,7 @@ request_blue_fleet:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Number of machines",
-        hint: "Field should include only numbers",
-        key: "number",
-        min: 2,
-        max: 100,
-        step: 1,
-        field: "number",
-        default: 2,
-      },
+      { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 2, max: 100, step: 1, field: "number", default: 2 },
       {
         label: "Machine type",
         key: "machine_type",
@@ -1847,13 +1627,7 @@ request_expand_existing_volume:
         label: "Volume name",
         key: "volume_name",
         field: "autocompleteone",
-        options:
-          [
-            { text: "Archive", value: "archive" },
-            { text: "Work", value: "work" },
-            { text: "Scratch", value: "scratch" },
-            { text: "Backup", value: "backup" },
-          ],
+        options: [{ text: "Archive", value: "archive" }, { text: "Work", value: "work" }, { text: "Scratch", value: "scratch" }, { text: "Backup", value: "backup" }],
       },
       {
         label: "Volume number (optional)",
@@ -1861,19 +1635,7 @@ request_expand_existing_volume:
         field: "autocompleteone",
         hint: "If no number in volume name use 1.",
         default: "",
-        options:
-          [
-            { text: "No number", value: "" },
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-          ],
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
         optional: true,
       },
       {
@@ -1967,19 +1729,7 @@ request_new_storage_volume:
         field: "autocompleteone",
         hint: "If no number in volume name use 1.",
         default: "",
-        options:
-          [
-            { text: "No number", value: "" },
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-          ],
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
         optional: true,
       },
       {
@@ -1993,12 +1743,7 @@ request_new_storage_volume:
         field: "number",
         default: 1,
       },
-      {
-        label: "Enable restore service (optional)",
-        key: "restore",
-        field: "autocompleteone",
-        options: [{ text: "Yes", value: "yes" }, { text: "No", value: "no" }],
-      },
+      { label: "Enable restore service (optional)", key: "restore", field: "autocompleteone", options: [{ text: "Yes", value: "yes" }, { text: "No", value: "no" }] },
     ]
   requirements:
     [
@@ -2049,31 +1794,14 @@ request_volume_deletion:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Volume name",
-        key: "volume_name",
-        field: "autocompleteone",
-        options: ["archive", "work", "scratch", "backup"],
-      },
+      { label: "Volume name", key: "volume_name", field: "autocompleteone", options: ["archive", "work", "scratch", "backup"] },
       {
         label: "Volume number (optional)",
         key: "volume_number",
         field: "autocompleteone",
         hint: "If no number in volume name use 1.",
         default: "",
-        options:
-          [
-            { text: "No number", value: "" },
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-          ],
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
         optional: true,
       },
     ]
@@ -2106,12 +1834,7 @@ request_internal_kista:
 
   fields:
     [
-      {
-        label: "Name and Surname",
-        key: "uploaderlabresponsiblefullname",
-        hint: "Full name of sender or signatory",
-        field: "textfield",
-      },
+      { label: "Name and Surname", key: "uploaderlabresponsiblefullname", hint: "Full name of sender or signatory", field: "textfield" },
       {
         label: "Uploader Lab",
         key: "labname",
@@ -2181,18 +1904,8 @@ request_coordinator_update:
       { label: "Department", key: "department", field: "textfield" },
       { label: "Faculty", key: "faculty", field: "textfield" },
       { label: "Institution", key: "institution", field: "textfield" },
-      {
-        label: "Email address",
-        key: "email",
-        pattern: "[^@].*[@]+.*",
-        field: "textfield",
-      },
-      {
-        label: "Phone number",
-        key: "phone",
-        pattern: "[0-9+]{3,}",
-        field: "textfield",
-      },
+      { label: "Email address", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
+      { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
     ]
   requirements:
     [
@@ -2220,15 +1933,7 @@ new_data_space:
       I am looking forward to an email verification on the data space registration so we can start to order our labs.
 
       Best,
-  fields:
-    [
-      {
-        label: "Service center name",
-        key: "service_center",
-        pattern: "(.){3,}",
-        field: "textfield",
-      },
-    ]
+  fields: [{ label: "Service center name", key: "service_center", pattern: "(.){3,}", field: "textfield" }]
   requirements:
     [
       "<b>Guide:</b> <a href='/administer-science/scientific-access/' target='_blank'>Scientific access</a>",
@@ -2288,12 +1993,7 @@ request_workbench_access:
             { text: "MATLAB (need license)", value: "MATLAB" },
             { text: "Stata (need license)", value: "Stata" },
           ],
-        default:
-          [
-            { text: "Rstudio", value: "Rstudio" },
-            { text: "Jupyter", value: "Jupyter" },
-            { text: "Python", value: "Python" },
-          ],
+        default: [{ text: "Rstudio", value: "Rstudio" }, { text: "Jupyter", value: "Jupyter" }, { text: "Python", value: "Python" }],
       },
     ]
   requirements:
@@ -2394,24 +2094,9 @@ request_workbench_troubleshooting:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Operating system",
-        key: "operating_system",
-        field: "textfield",
-        hint: "Windows, MacOS, or Linux (e.g. Ubuntu)",
-      },
-      {
-        label: "Web browser",
-        key: "web_browser",
-        field: "textfield",
-        hint: "Google Chrome or Mozilla Firefox?",
-      },
-      {
-        label: "Problem description",
-        key: "problem_description",
-        field: "textarea",
-        autocapitalize: "off",
-      },
+      { label: "Operating system", key: "operating_system", field: "textfield", hint: "Windows, MacOS, or Linux (e.g. Ubuntu)" },
+      { label: "Web browser", key: "web_browser", field: "textfield", hint: "Google Chrome or Mozilla Firefox?" },
+      { label: "Problem description", key: "problem_description", field: "textarea", autocapitalize: "off" },
     ]
   requirements:
     [
@@ -2421,10 +2106,7 @@ request_workbench_troubleshooting:
       "<b>Cost:</b> Included in the lab subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments:
-    [
-      "Screenshots or any error logs that might be useful for investigation of the issue.",
-    ]
+  attachments: ["Screenshots or any error logs that might be useful for investigation of the issue."]
 
 request_ssh_pass_reset:
   title: "Request SSH passphrase reset"
@@ -2549,19 +2231,8 @@ request_vpn_link:
         hint: "Get your IP address here: https://docs.hdc.ntnu.no/ipv4/",
         field: "textfield",
       },
-      {
-        label: "Access duration",
-        key: "access_duration",
-        field: "selectone",
-        options: ["Temporary", "Permanent"],
-        default: ["Temporary"],
-      },
-      {
-        label: "Access Country",
-        key: "country",
-        pattern: '^[\-A-z0-9\._]*$',
-        field: "textfield",
-      },
+      { label: "Access duration", key: "access_duration", field: "selectone", options: ["Temporary", "Permanent"], default: ["Temporary"] },
+      { label: "Access Country", key: "country", pattern: '^[\-A-z0-9\._]*$', field: "textfield" },
     ]
   requirements:
     [
@@ -2735,12 +2406,7 @@ request_update_lagtun_rep:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Email",
-        key: "email",
-        pattern: "[^@].*[@]+.*",
-        field: "textfield",
-      },
+      { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
     ]
   requirements:
     [
@@ -2778,12 +2444,7 @@ request_update_data_rep:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Email",
-        key: "email",
-        pattern: "[^@].*[@]+.*",
-        field: "textfield",
-      },
+      { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
     ]
   requirements:
     [
@@ -2849,7 +2510,8 @@ request_tape_backup:
         label: "Scope of tape write",
         key: "tapewrite_type",
         field: "autocompleteone",
-        options: [
+        options:
+          [
             { text: "Full volume backup", value: "Full volume" },
             #{ text: "Selected dataset backup", value: "Selected dataset" },
           ],
@@ -2859,7 +2521,8 @@ request_tape_backup:
         key: "volume_target",
         hint: "Select the volume. Leave as N/A for selected dataset backups.",
         field: "autocompleteone",
-        options: [
+        options:
+          [
             #{ text: "Not applicable (selected dataset)", value: "N/A" },
             { text: "archive", value: "archive" },
             { text: "archive2", value: "archive2" },
@@ -2903,7 +2566,8 @@ request_tape_backup:
         key: "backup_interval",
         hint: "For scheduled backups only. Select 'Not applicable' for one-time archive.",
         field: "autocompleteone",
-        options: [
+        options:
+          [
             { text: "Not applicable (one-time archive)", value: "N/A" },
             #{ text: "Daily", value: "Daily" },
             #{ text: "Weekly", value: "Weekly" },
@@ -2996,12 +2660,7 @@ request_community_membership:
       { label: "Department", key: "department", field: "textfield" },
       { label: "Faculty", key: "faculty", field: "textfield" },
       { label: "Institution", key: "institution", field: "textfield" },
-      {
-        label: "Email",
-        key: "email",
-        pattern: "[^@]+@[^@]+\\.[^@]+",
-        field: "textfield",
-      },
+      { label: "Email", key: "email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
     ]
   requirements:
     [
