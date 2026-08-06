@@ -187,44 +187,15 @@ request_new_lab:
       scratch_gb={scratch_volume}  
       ---
 
-      Billing information:
+      Billing information ({% if is_external %}External{% else %}NTNU internal{% endif %}):
       ---
-      account_information_k_sted="{account_information_k_sted}"
-      account_information_p_number="{account_information_p_number}"
-      ---
-
-      Our lab leader or lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
-
-      https://docs.hdc.ntnu.no/administer-science/service-desk/lab-orders/#add-a-new-lab-user
-
-      I am looking forward to receive an email verification stating that the lab is up and running.
-
-
-      Best regards,
-    body_external: |
-      Hi HUNT Cloud team,
-
-      I would like to request a new lab.
-
-      I have attached a signed lab agreement to this email for the following lab:
-
-      ---
-      lab_name="{lab_name}"  
-      ---
-
-      We would like to start with the following machine type and storage resources for our home machine:
-
-      ---
-      machine_type="{machine_type}"  
-      archive_gb={archive_volume}  
-      work_gb={work_volume}  
-      scratch_gb={scratch_volume}  
-      ---
-
-      Billing information:
-      ---
-      billing_information_peppol_bis="{billing_information_peppol_bis}"
-      billing_information_reference_number="{billing_information_reference_number}"
+      {% if is_external %}
+      billing_information_peppol_bis="{{ billing_information_peppol_bis }}"
+      billing_information_reference_number="{{ billing_information_reference_number }}"
+      {% else %}
+      account_information_k_sted="{{ account_information_k_sted }}"
+      account_information_p_number="{{ account_information_p_number }}"
+      {% endif %}
       ---
 
       Our lab leader or lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:

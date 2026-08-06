@@ -7,6 +7,8 @@ defineOptions({
   name: "ServiceDesk",
 })
 
+import nunjucksEnv from "../../plugins/nunjucks"
+
 // Emits definition
 const emit = defineEmits(["update:modelValue"])
 
@@ -43,6 +45,18 @@ const panel = ref(0)
 const clientType = ref("")
 
 // Computed properties
+
+// Context handed to nunjucks when rendering subject/body: the entered
+// form fields plus a derived is_external flag, so a single template can
+// branch on {% if is_external %} instead of needing a separate
+// body/body_external pair.
+const templateContext = computed(() => {
+  return {
+    ...formData.value,
+    is_external: clientType.value === "external",
+  }
+})
+
 const messageSubject = computed(() => {
   return subjectTemplate.value ? wrap(subjectTemplate.value) : null
 })
@@ -110,11 +124,10 @@ const activateSendButtons = () => {
 const submit = () => {
   panel.value = 3
   if (props.template) {
-    if (clientType.value === "ntnu-internal") {
-      bodyTemplate.value = props.template.body
-    } else {
-      bodyTemplate.value = props.template.body_external
-    }
+    // There's only one body template now — the internal/external
+    // difference is handled inside the template via {% if is_external %},
+    // driven by templateContext, not by picking a different string here.
+    bodyTemplate.value = props.template.body
   }
   setTimeout(activateSendButtons, 1200)
 }
@@ -144,14 +157,10 @@ const actionSendOutlookPopup = () => {
 
 const wrap = (template) => {
   let text = template
-  for (const [key, value] of Object.entries(formData.value)) {
-    if (value || value === "") {
-      if (Array.isArray(value)) {
-        text = text.replaceAll(`{${key}}`, value.join(", "))
-      } else {
-        text = text.replaceAll(`{${key}}`, value)
-      }
-    }
+  try {
+    text = nunjucksEnv.renderString(template, templateContext.value)
+  } catch (ex) {
+    console.log("Failed to render template", ex)
   }
   text = text.replaceAll("\n---\n", "\n```\n")
   return text
