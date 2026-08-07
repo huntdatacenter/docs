@@ -315,7 +315,7 @@ request_new_lab:
         default: 300,
       },
       {
-        label: "Account Information: K.STED",
+        label: "Account Information: Kostnadssted",
         key: "account_information_k_sted",
         autocapitalize: "off",
         field: "textfield",
@@ -323,7 +323,7 @@ request_new_lab:
         hide: "(formData) => formData.client_type === 'external'",
       },
       {
-        label: "Account Information: P.NUMBER",
+        label: "Account Information: Project Number",
         key: "account_information_p_number",
         autocapitalize: "off",
         field: "textfield",
