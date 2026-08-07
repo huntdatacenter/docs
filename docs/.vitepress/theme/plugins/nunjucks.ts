@@ -6,10 +6,6 @@ const nunjucksEnv = new nunjucks.Environment(null, {
   autoescape: false,
   trimBlocks: true,
   lstripBlocks: true,
-  tags: {
-    variableStart: "{",
-    variableEnd: "}",
-  },
 })
 
 export default nunjucksEnv
