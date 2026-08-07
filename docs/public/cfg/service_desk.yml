@@ -212,7 +212,7 @@ request_new_lab:
     {
         label: "Are you from NTNU or external?",
         key: "client_type",
-        field: "selectone",
+        field: "autocompleteone",
         options:
           [
             { value: "ntnu-internal", text: "NTNU (internal)" },
