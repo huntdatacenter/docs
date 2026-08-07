@@ -315,7 +315,7 @@ request_new_lab:
         default: 300,
       },
       {
-        label: "Account Informatin: K.STED",
+        label: "Account Information: K.STED",
         key: "account_information_k_sted",
         autocapitalize: "off",
         field: "textfield",
@@ -323,7 +323,7 @@ request_new_lab:
         hide: "(formData) => formData.client_type === 'external'",
       },
       {
-        label: "Account Informatin: P.NUMBER",
+        label: "Account Information: P.NUMBER",
         key: "account_information_p_number",
         autocapitalize: "off",
         field: "textfield",
@@ -331,7 +331,7 @@ request_new_lab:
         hide: "(formData) => formData.client_type === 'external'",
       },
       {
-        label: "Billing Informatin: PEPPOL BIS",
+        label: "Billing Information: PEPPOL BIS",
         key: "billing_information_peppol_bis",
         autocapitalize: "off",
         field: "textfield",
@@ -339,7 +339,7 @@ request_new_lab:
         hide: "(formData) => formData.client_type === 'ntnu-internal'",
       },
       {
-        label: "Billing Informatin: REFERENCE NUMBER",
+        label: "Billing Information: REFERENCE NUMBER",
         key: "billing_information_reference_number",
         autocapitalize: "off",
         field: "textfield",
