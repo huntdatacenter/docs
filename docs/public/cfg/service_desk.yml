@@ -3,14 +3,14 @@ general_contact_request:
   recipient: "cloud@hunt.ntnu.no"
   title: "Contact HUNT Cloud"
   template:
-    subject: "General request - {topic}"
+    subject: "General request - {{topic}}"
     body: |
       Hi HUNT Cloud team,
 
       <your-text>
 
-      Lab: {lab_name}  
-      Data Space: {data_space}  
+      Lab: {{lab_name}}  
+      Data Space: {{data_space}}  
 
       Best regards,
 
@@ -29,7 +29,7 @@ general_contact_request:
 general_lab_user_request:
   title: "General lab user request"
   template:
-    subject: "User request - {username} @ {lab_name}"
+    subject: "User request - {{username}} @ {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -67,7 +67,7 @@ general_lab_user_request:
 general_lab_request:
   title: "General lab request"
   template:
-    subject: "Lab request - {lab_name}"
+    subject: "Lab request - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -97,7 +97,7 @@ general_lab_request:
 general_dataspace_request:
   title: "General data space request"
   template:
-    subject: "Data space request - {dataspace}"
+    subject: "Data space request - {{dataspace}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -127,7 +127,7 @@ general_dataspace_request:
 cost_query:
   title: "Ask about cost"
   template:
-    subject: "Cost - {lab_name}"
+    subject: "Cost - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -166,7 +166,7 @@ cost_query:
 request_new_lab:
   title: "Request a new lab"
   template:
-    subject: "New lab order - {lab_name}"
+    subject: "New lab order - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -175,16 +175,27 @@ request_new_lab:
       I have attached a signed lab agreement to this email for the following lab:
 
       ---
-      lab_name="{lab_name}"  
+      lab_name="{{lab_name}}"  
       ---
       
       We would like to start with the following machine type and storage resources for our home machine:
 
       ---
-      machine_type="{machine_type}"  
-      archive_gb={archive_volume}  
-      work_gb={work_volume}  
-      scratch_gb={scratch_volume}  
+      machine_type="{{machine_type}}"  
+      archive_gb={{archive_volume}}  
+      work_gb={{work_volume}}  
+      scratch_gb={{scratch_volume}}  
+      ---
+
+      Billing information ({% if client_type === "external" %}External{% else %}NTNU internal{% endif %}):
+      ---
+      {% if client_type === "external" %}
+      billing_information_peppol_bis="{{ billing_information_peppol_bis }}"
+      billing_information_reference_number="{{ billing_information_reference_number }}"
+      {% else %}
+      account_information_k_sted="{{ account_information_k_sted }}"
+      account_information_p_number="{{ account_information_p_number }}"
+      {% endif %}
       ---
 
       Our lab leader or lab coordinator will as quickly as possible forward individual user agreements for our initial users as separate requests using this link:
@@ -195,8 +206,19 @@ request_new_lab:
 
 
       Best regards,
+    
 
   fields: [
+    {
+        label: "Are you from NTNU or external?",
+        key: "client_type",
+        field: "autocompleteone",
+        options:
+          [
+            { value: "ntnu-internal", text: "NTNU (internal)" },
+            { value: "external", text: "External" },
+          ],
+      },
       {
         label: "New lab name",
         key: "lab_name",
@@ -205,6 +227,7 @@ request_new_lab:
         autocapitalize: "off",
         field: "textfield",
       },
+      
 #      { label: "Data space name", 
 #        key: "data_space", 
 #        pattern: "[-a-z0-9]{3,}", 
@@ -291,6 +314,38 @@ request_new_lab:
         field: "number",
         default: 300,
       },
+      {
+        label: "Account Information: Kostnadssted",
+        key: "account_information_k_sted",
+        autocapitalize: "off",
+        field: "textfield",
+        optional: "(formData) => formData.client_type === 'external'",
+        hide: "(formData) => formData.client_type === 'external'",
+      },
+      {
+        label: "Account Information: Project Number",
+        key: "account_information_p_number",
+        autocapitalize: "off",
+        field: "textfield",
+        optional: "(formData) => formData.client_type === 'external'",
+        hide: "(formData) => formData.client_type === 'external'",
+      },
+      {
+        label: "Billing Information: PEPPOL BIS",
+        key: "billing_information_peppol_bis",
+        autocapitalize: "off",
+        field: "textfield",
+        optional: "(formData) => formData.client_type === 'ntnu-internal'",
+        hide: "(formData) => formData.client_type === 'ntnu-internal'",
+      },
+      {
+        label: "Billing Information: REFERENCE NUMBER",
+        key: "billing_information_reference_number",
+        autocapitalize: "off",
+        field: "textfield",
+        optional: "(formData) => formData.client_type === 'ntnu-internal'",
+        hide: "(formData) => formData.client_type === 'ntnu-internal'"
+      },
     ]
   requirements:
     [
@@ -305,15 +360,15 @@ request_new_lab:
 request_lab_deletion:
   title: "Request a lab deletion"
   template:
-    subject: "Lab deletion order - {labname} @ {dataspace}"
+    subject: "Lab deletion order - {{labname}} @ {{dataspace}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request the following lab under our data space to be deleted:
 
       ---
-      lab = {labname} 
-      tape_archive={tape_archive} 
+      lab = {{labname}} 
+      tape_archive={{tape_archive}} 
       ---
 
       I have attached a signed lab deletion order to this email confirming the request.
@@ -368,14 +423,14 @@ request_lab_deletion:
 request_external_import_kista:
   title: "Request an external import kista"
   template:
-    subject: "External import kista order - {external_organization} to {labname}"
+    subject: "External import kista order - {{external_organization}} to {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request an external import kista from {external_organization} to {labname}.
+      I would like to request an external import kista from {{external_organization}} to {{labname}}.
 
       ---  
-      Public IPv4 address of external organization: {ipaddress}  
+      Public IPv4 address of external organization: {{ipaddress}}  
       ---  
 
       I have attached two files: (1) the signed external import kista order, and (2) the public SSH key from the external uploader.
@@ -419,14 +474,14 @@ request_external_import_kista:
 request_external_export_kista:
   title: "Request an external export kista"
   template:
-    subject: External export kista order - {labname} to {external_organization}
+    subject: External export kista order - {{labname}} to {{external_organization}}
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request an external export kista from {labname} to {external_organization}.
+      I would like to request an external export kista from {{labname}} to {{external_organization}}.
 
       ---  
-      Public IPv4 address of external organization: {ipaddress}  
+      Public IPv4 address of external organization: {{ipaddress}}  
       ---  
 
       I have attached two files: (1) the signed external export kista order, and (2) the public SSH key from the external uploader.
@@ -470,7 +525,7 @@ request_external_export_kista:
 request_network_opening:
   title: "Request a network opening"
   template:
-    subject: "Network opening - {labname}"
+    subject: "Network opening - {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -509,20 +564,20 @@ request_network_opening:
 update_data_space_administrator_role:
   title: "Request update of data space administrator role"
   template:
-    subject: "Update data space administrator role - {labname}"
+    subject: "Update data space administrator role - {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to update the following administrator role(s) in our data space:
 
       ---
-      Role: {role} administrator  
-      Name and Surname: {name}  
-      Department: {department}  
-      Faculty: {faculty}  
-      Institution: {institution}  
-      Email: {email}  
-      Phone: {phone}  
+      Role: {{role}} administrator  
+      Name and Surname: {{name}}  
+      Department: {{department}}  
+      Faculty: {{faculty}}  
+      Institution: {{institution}}  
+      Email: {{email}}  
+      Phone: {{phone}}  
       ---
 
       I am looking forward to receive an email acknowledging that you have updated our administrator roles.
@@ -561,7 +616,7 @@ update_data_space_administrator_role:
 request_lab_leader_role:
   title: "Request update of lab leader"
   template:
-    subject: "Update lab leader role - {labname} in {dataspace}"
+    subject: "Update lab leader role - {{labname}} in {{dataspace}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -604,7 +659,7 @@ request_lab_leader_role:
 request_new_invoice_profile:
   title: "Request a new invoice profile"
   template:
-    subject: "Update invoice profile - {dataspace}"
+    subject: "Update invoice profile - {{dataspace}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -641,7 +696,7 @@ request_new_invoice_profile:
 request_update_of_existing_invoice:
   title: "Request update of existing invoice profile"
   template:
-    subject: "Update invoice profile - {dataspace}"
+    subject: "Update invoice profile - {{dataspace}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -678,7 +733,7 @@ request_update_of_existing_invoice:
 request_vat_exemption:
   title: "VAT exemption"
   template:
-    subject: "VAT exemption - {labname} in {dataspace}"
+    subject: "VAT exemption - {{labname}} in {{dataspace}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -723,15 +778,15 @@ request_vat_exemption:
 request_lab_transfer:
   title: "Request lab transfer between data spaces"
   template:
-    subject: "Lab transfer between data spaces - {labname}"
+    subject: "Lab transfer between data spaces - {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to transfer my lab {labname}:  
+      I would like to transfer my lab {{labname}}:  
 
       ---
-      current data space: {current_dataspace}  
-      destination data space: {destination_dataspace}  
+      current data space: {{current_dataspace}}  
+      destination data space: {{destination_dataspace}}  
       ---
 
       I have attached a signed agreement for this transfer and a new invoice profile.  
@@ -786,11 +841,11 @@ request_lab_transfer:
 request_organizational_access:
   title: "Request organizational access to HUNT Cloud"
   template:
-    subject: "Organizational access request - {organization}"
+    subject: "Organizational access request - {{organization}}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request organizational access for {organization}.
+      I would like to request organizational access for {{organization}}.
 
       I have attached a completed organizational access request form to this email.
 
@@ -816,7 +871,7 @@ request_organizational_access:
 request_access_new_user:
   title: "Request lab access for a new user"
   template:
-    subject: "New labuser - {username} @ {lab_name}"
+    subject: "New labuser - {{username}} @ {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -855,15 +910,15 @@ request_access_new_user:
 request_lab_user_deactivation:
   title: "Request lab user deactivation"
   template:
-    subject: "Deactivate lab user - {username} @ {lab_name}"
+    subject: "Deactivate lab user - {{username}} @ {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to deactivate lab access for one of our lab users:
 
       ---
-      username = {username}  
-      lab name = {lab_name}  
+      username = {{username}}  
+      lab name = {{lab_name}}  
       ---
 
       I am looking forward to a confirmation of the deactivation on email.
@@ -903,7 +958,7 @@ request_lab_user_deactivation:
 reactivate_lab_user:
   title: "Request lab user reactivation"
   template:
-    subject: "Reactivate lab user - {username} @ {lab_name}"
+    subject: "Reactivate lab user - {{username}} @ {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -942,7 +997,7 @@ reactivate_lab_user:
 request_renew_user_agreement:
   title: "Renew user agreement"
   template:
-    subject: "Renew lab user agreement - {username} @ {lab_name}"
+    subject: "Renew lab user agreement - {{username}} @ {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -988,17 +1043,17 @@ request_renew_user_agreement:
 request_machine_size_update:
   title: "Request a machine size update"
   template:
-    subject: "Update machine size - {lab_name}"
+    subject: "Update machine size - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a machine update:
 
       ---
-      lab_name="{lab_name}"  
-      machine_name="{vm_name}"  
-      current_machine_type="{source_machine_type}"  
-      machine_type="{target_machine_type}"  
+      lab_name="{{lab_name}}"  
+      machine_name="{{vm_name}}"  
+      current_machine_type="{{source_machine_type}}"  
+      machine_type="{{target_machine_type}}"  
       ---
 
       I am aware that the update will require a machine restart.
@@ -1142,18 +1197,18 @@ request_machine_size_update:
 request_new_cpu:
   title: "Request a new lab machine"
   template:
-    subject: "New CPU machine - {lab_name}"
+    subject: "New CPU machine - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a new CPU machine in our lab:
 
       ---
-      lab_name="{lab_name}"  
-      machine_type="{machine_type}"  
-      storage_size="{storage_size} TB"  
-      storage_type="{storage_type}"  
-      subscription="{subscription}"  
+      lab_name="{{lab_name}}"  
+      machine_type="{{machine_type}}"  
+      storage_size="{{storage_size}} TB"  
+      storage_type="{{storage_type}}"  
+      subscription="{{subscription}}"  
       ---
 
       I am looking forward to receive access information on my email when the machine is up and running.
@@ -1252,20 +1307,20 @@ request_new_cpu:
 request_new_gpu:
   title: "Request a new GPU machine"
   template:
-    subject: "New GPU machine - {lab_name}"
+    subject: "New GPU machine - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a new GPU machine in our lab:
 
       ---
-      lab_name="{lab_name}"  
-      gpu_alias="{gpu_type}"  
-      how_many_gpus="{gpu_amount}"
-      machine_type="{machine_type}"  
-      storage_size="{terabytes} TB"  
-      storage_type="{storage_type}"  
-      subscription="{subscription}"  
+      lab_name="{{lab_name}}"  
+      gpu_alias="{{gpu_type}}"  
+      how_many_gpus="{{gpu_amount}}"
+      machine_type="{{machine_type}}"  
+      storage_size="{{terabytes}} TB"  
+      storage_type="{{storage_type}}"  
+      subscription="{{subscription}}"  
       ---
 
       I am looking forward to receive access information on my email when the machine is up and running.
@@ -1383,17 +1438,17 @@ request_new_gpu:
 request_blue_fleet:
   title: "Request a fleet of Blue machines"
   template:
-    subject: "Fleet of blue machines - {lab_name}"
+    subject: "Fleet of blue machines - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a fleet of the following blue machines:
 
       ---
-      lab name = {lab_name}  
-      number of machines = {number}  
-      machine type = {machine_type}  
-      storage size per machine = {terabytes} TB  
+      lab name = {{lab_name}}  
+      number of machines = {{number}}  
+      machine type = {{machine_type}}  
+      storage size per machine = {{terabytes}} TB  
       ---
 
       I am looking forward to receive access information in our Slack lab channel when the fleet is up and running.
@@ -1445,15 +1500,15 @@ request_blue_fleet:
 request_machine_shelving:
   title: "Request a shelving of a machine"
   template:
-    subject: "Shelve machine - {vm_name} @ {lab_name}"
+    subject: "Shelve machine - {{vm_name}} @ {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a shelving of a following machine:
 
       ---
-      vm_name="{vm_name}"  
-      lab_name="{lab_name}"  
+      vm_name="{{vm_name}}"  
+      lab_name="{{lab_name}}"  
       ---
 
 
@@ -1490,15 +1545,15 @@ request_machine_shelving:
 request_machine_unshelving:
   title: "Request an unshelving of a machine"
   template:
-    subject: "Unshelve machine - {vm_name} @ {lab_name}"
+    subject: "Unshelve machine - {{vm_name}} @ {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request an unshelving of a following machine:
 
       ---
-      vm_name="{vm_name}"  
-      lab_name="{lab_name}"  
+      vm_name="{{vm_name}}"  
+      lab_name="{{lab_name}}"  
       ---
 
 
@@ -1536,15 +1591,15 @@ request_machine_unshelving:
 request_machine_deletion:
   title: "Request a deletion of a machine"
   template:
-    subject: "Machine deletion - {vm_name} @ {lab_name}"
+    subject: "Machine deletion - {{vm_name}} @ {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a deletion of a following machine:
 
       ---
-      vm_name="{vm_name}"  
-      lab_name="{lab_name}"  
+      vm_name="{{vm_name}}"  
+      lab_name="{{lab_name}}"  
       ---
 
       I am aware that this process is irreversible and all data stored on this machine will be permanently deleted.
@@ -1584,18 +1639,18 @@ request_machine_deletion:
 request_expand_existing_volume:
   title: "Request storage volume expansion"
   template:
-    subject: "Storage volume expansion - {lab_name}"
+    subject: "Storage volume expansion - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a storage volume expansion:
 
       ---
-      lab_name="{lab_name}"  
-      machine_name="{vm_name}"  
-      volume_name="{volume_name}{volume_number}"  
-      current_size_tb="{current_size}"  
-      new_size_tb="{target_size}"  
+      lab_name="{{lab_name}}"  
+      machine_name="{{vm_name}}"  
+      volume_name="{{volume_name}}{{volume_number}}"  
+      current_size_tb="{{current_size}}"  
+      new_size_tb="{{target_size}}"  
       ---
 
       I am aware that the expansion will require a machine restart.
@@ -1675,18 +1730,18 @@ request_expand_existing_volume:
 request_new_storage_volume:
   title: "Request a new storage volume"
   template:
-    subject: "New storage volume - {lab_name}"
+    subject: "New storage volume - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a new storage volume:
 
       ---
-      lab_name="{lab_name}"  
-      machine_name="{vm_name}"  
-      volume_name="{volume_name}{volume_number}"  
-      storage_size_tb="{storage_size_tb}"  
-      enable_restore_option="{restore}"  
+      lab_name="{{lab_name}}"  
+      machine_name="{{vm_name}}"  
+      volume_name="{{volume_name}}{{volume_number}}"  
+      storage_size_tb="{{storage_size_tb}}"  
+      enable_restore_option="{{restore}}"  
       ---
 
 
@@ -1759,16 +1814,16 @@ request_new_storage_volume:
 request_volume_deletion:
   title: "Request a volume deletion"
   template:
-    subject: "Volume deletion - {lab_name}"
+    subject: "Volume deletion - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a deletion of a storage volume.
 
       ---
-      lab_name="{lab_name}"  
-      machine_name="{vm_name}"  
-      volume_name="{volume_name}{volume_number}"  
+      lab_name="{{lab_name}}"  
+      machine_name="{{vm_name}}"  
+      volume_name="{{volume_name}}{{volume_number}}"  
       ---
 
       I am aware that this process is irreversible and all data stored on this volume will be permanently deleted.
@@ -1818,11 +1873,11 @@ request_volume_deletion:
 request_internal_kista:
   title: "Request an internal kista"
   template:
-    subject: "Internal kista order - {labname}"
+    subject: "Internal kista order - {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request an internal kista from {labname} to {downloaderlabname}.
+      I would like to request an internal kista from {{labname}} to {{downloaderlabname}}.
 
       I have attached the signed internal kista order.
 
@@ -1830,7 +1885,7 @@ request_internal_kista:
 
 
       Best regards,  
-      {uploaderlabresponsiblefullname}
+      {{uploaderlabresponsiblefullname}}
 
   fields:
     [
@@ -1866,23 +1921,23 @@ request_internal_kista:
 request_coordinator_update:
   title: "Request update of lab coordinator role"
   template:
-    subject: "Update lab coordinator role - {lab_name}"
+    subject: "Update lab coordinator role - {{lab_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to update the coordinator role in our Lab:
 
-      Lab name: {lab_name}
+      Lab name: {{lab_name}}
 
       New lab coordinator:
 
       ---
-      Name and surname: {name}  
-      Department: {department}  
-      Faculty: {faculty}  
-      Institution: {institution}  
-      Email address: {email}  
-      Phone number: {phone}  
+      Name and surname: {{name}}  
+      Department: {{department}}  
+      Faculty: {{faculty}}  
+      Institution: {{institution}}  
+      Email address: {{email}}  
+      Phone number: {{phone}}  
       ---
 
       I am looking forward to receive an email acknowledging that you have updated the role.
@@ -1922,7 +1977,7 @@ request_coordinator_update:
 new_data_space:
   title: "Request a new data space"
   template:
-    subject: "New data space order - {service_center}"
+    subject: "New data space order - {{service_center}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -1950,15 +2005,15 @@ new_data_space:
 request_workbench_access:
   title: "Request Workbench access"
   template:
-    subject: "Workbench order - {username} @ {labname}"
+    subject: "Workbench order - {{username}} @ {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to try Workbench in {labname}.
+      I would like to try Workbench in {{labname}}.
 
       I have installed and activated the Signal app on my phone and are looking forward to receive my key and certificate.
 
-      These are the tools I plan to use: {tools}.
+      These are the tools I plan to use: {{tools}}.
 
       —
       Kind regards,
@@ -2010,11 +2065,11 @@ request_workbench_access:
 request_workbench_reissue:
   title: "Request Workbench reissue"
   template:
-    subject: "Workbench reissue - {username} @ {labname}"
+    subject: "Workbench reissue - {{username}} @ {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request reissue of Workbench certificate for lab: {labname}.
+      I would like to request reissue of Workbench certificate for lab: {{labname}}.
 
       I have installed and activated the Signal app on my phone and are looking forward to receive my certificate.
 
@@ -2054,26 +2109,26 @@ request_workbench_reissue:
 request_workbench_troubleshooting:
   title: "Request Workbench troubleshooting"
   template:
-    subject: "Workbench troubleshooting - {username} @ {labname}"
+    subject: "Workbench troubleshooting - {{username}} @ {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request help with Workbench in my lab: {labname}.
+      I would like to request help with Workbench in my lab: {{labname}}.
 
       ---
-      Operating system: {operating_system}  
-      Web browser: {web_browser}  
+      Operating system: {{operating_system}}  
+      Web browser: {{web_browser}}  
       ---
 
       Problem description:
 
       ---
-      {problem_description}  
+      {{problem_description}}  
       ---
 
 
       Kind regards,  
-      {full_name}
+      {{full_name}}
 
   fields:
     [
@@ -2111,11 +2166,11 @@ request_workbench_troubleshooting:
 request_ssh_pass_reset:
   title: "Request SSH passphrase reset"
   template:
-    subject: "SSH passphrase reset - {username} @ {labname}"
+    subject: "SSH passphrase reset - {{username}} @ {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request a passphrase reset for my user {username} @ {labname}.
+      I would like to request a passphrase reset for my user {{username}} @ {{labname}}.
 
       I have activated Signal on my phone and are looking forward to receive my temporary key here.
 
@@ -2155,11 +2210,11 @@ request_ssh_pass_reset:
 request_ssh_config:
   title: "Request SSH configuration"
   template:
-    subject: "SSH config request - {username} @ {labname}"
+    subject: "SSH config request - {{username}} @ {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
-      I would like to request a new ssh_config file for user {username} @ {labname}.
+      I would like to request a new ssh_config file for user {{username}} @ {{labname}}.
 
 
       Kind regards,
@@ -2197,16 +2252,16 @@ request_ssh_config:
 request_vpn_link:
   title: "Request VPN access list opening"
   template:
-    subject: "VPN access opening request - {username}"
+    subject: "VPN access opening request - {{username}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request an VPN access opening for the following IP address:
 
       ---
-      access_ip="{ipaddress}"  
-      access_duration="{access_duration}"  
-      access_country="{country}"  
+      access_ip="{{ipaddress}}"  
+      access_duration="{{access_duration}}"  
+      access_country="{{country}}"  
       ---
 
       I am looking forward to be notified on email when the opening is implemented.
@@ -2248,7 +2303,7 @@ request_vpn_link:
 request_vpn_reset:
   title: "Request VPN certificate reset"
   template:
-    subject: "VPN certificate reset - {username}"
+    subject: "VPN certificate reset - {{username}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -2287,7 +2342,7 @@ request_vpn_reset:
 request_google_auth:
   title: "Request Google authenticator request"
   template:
-    subject: "Google authenticator key request - {username}"
+    subject: "Google authenticator key request - {{username}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -2297,7 +2352,7 @@ request_google_auth:
       I have an active Signal account on my phone and I look forward to receiving new key on my phone.
 
       ---
-      phone_number = {phone_number}  
+      phone_number = {{phone_number}}  
       ---
 
 
@@ -2337,7 +2392,7 @@ request_google_auth:
 request_mobaxterm_file:
   title: "Request MobaXterm configuration file"
   template:
-    subject: "MobaXterm file - {username}@{labname}"
+    subject: "MobaXterm file - {{username}}@{{labname}}"
     body: |
       Hi HUNT Cloud team,
 
@@ -2383,15 +2438,15 @@ request_mobaxterm_file:
 request_update_lagtun_rep:
   title: "Update Lagtun representative"
   template:
-    subject: "Update Lagtun representatives {name} @ {dataspace}"
+    subject: "Update Lagtun representatives {{name}} @ {{dataspace}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to update our Lagtun representative.
 
-      Name and Surname: {name}
-      Data space: {dataspace}
-      Email: {email}
+      Name and Surname: {{name}}
+      Data space: {{dataspace}}
+      Email: {{email}}
 
       Kind regards,
 
@@ -2421,15 +2476,15 @@ request_update_lagtun_rep:
 request_update_data_rep:
   title: "Update Data controller representative"
   template:
-    subject: "Update Data controller ting representative {name} @ {dataspace}"
+    subject: "Update Data controller ting representative {{name}} @ {{dataspace}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to update our Data controller ting representative.
 
-      Name and Surname: {name}
-      Data Controller: {dataspace}
-      Email: {email}
+      Name and Surname: {{name}}
+      Data Controller: {{dataspace}}
+      Email: {{email}}
 
       Kind regards,
 
@@ -2459,20 +2514,20 @@ request_update_data_rep:
 request_tape_backup:
   title: "Order tape backup"
   template:
-    subject: "Tape backup - {labname} - {tape_backup_type}"
+    subject: "Tape backup - {{labname}} - {{tape_backup_type}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to order a tape backup for my lab.
 
       ---
-      Username: {username}
-      Lab name: {labname}
-      Backup type: {tape_backup_type}
-      Scope: {tapewrite_type}
-      Size of dataset: {data_size} TB
-      Retention period: {retention}
-      Backup interval: {backup_interval}
+      Username: {{username}}
+      Lab name: {{labname}}
+      Backup type: {{tape_backup_type}}
+      Scope: {{tapewrite_type}}
+      Size of dataset: {{data_size}} TB
+      Retention period: {{retention}}
+      Backup interval: {{backup_interval}}
       ---
 
       Let us touch base on Slack to discuss the details.
@@ -2591,19 +2646,19 @@ request_tape_backup:
 request_lab_access_link:
   title: "Request Lab access link reissue"
   template:
-    subject: "Lab access link reissue - {username} @ {labname}"
+    subject: "Lab access link reissue - {{username}} @ {{labname}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a copy of my Lab access link for the following lab:
 
       ```
-      username={username}
-      labname={labname}
+      username={{username}}
+      labname={{labname}}
       ```
 
       Kind regards,  
-      {full_name}
+      {{full_name}}
   fields:
     [
       { label: "Your full name", key: "full_name", field: "textfield" },
@@ -2637,18 +2692,18 @@ request_lab_access_link:
 request_community_membership:
   title: "Request community membership"
   template:
-    subject: "Request community membership - {full_name}"
+    subject: "Request community membership - {{full_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to request a HUNT Cloud community membership for our collaborator:  
 
       ---
-      Name and Surname: {full_name}  
-      Department: {department}  
-      Faculty: {faculty}  
-      Institution: {institution}  
-      Email: {email}  
+      Name and Surname: {{full_name}}  
+      Department: {{department}}  
+      Faculty: {{faculty}}  
+      Institution: {{institution}}  
+      Email: {{email}}  
       ---
 
       I am looking forward to receive an email acknowledging that you have sent an invitation to our collaborator.
@@ -2675,18 +2730,18 @@ request_community_membership:
 request_consent_link:
   title: "Request consent link"
   template:
-    subject: "Request consent link - {full_name}"
+    subject: "Request consent link - {{full_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to get my consent link so I can update my consent for the HUNT Cloud community. 
 
       ---
-      name="{full_name}"  
+      name="{{full_name}}"  
       ---
 
       Kind regards,
-      {full_name}
+      {{full_name}}
   fields: [{ label: "Full name", key: "full_name", field: "textfield" }]
   requirements:
     [
@@ -2697,20 +2752,20 @@ request_consent_link:
 deregister_tingweek_invitations:
   title: "Deregister for future Tingweek invitations"
   template:
-    subject: "Deregister for future Tingweek invitations - {full_name}"
+    subject: "Deregister for future Tingweek invitations - {{full_name}}"
     body: |
       Hi HUNT Cloud team,
 
       I would like to deregister for all future Tingweek invitations. 
 
       ---
-      name="{full_name}"  
+      name="{{full_name}}"  
       ---
 
       I am aware that I can send a general service desk request to register again if I want to receive future invitations. 
 
       Kind regards,
-      {full_name}
+      {{full_name}}
 
   fields: [{ label: "Full name", key: "full_name", field: "textfield" }]
   requirements:

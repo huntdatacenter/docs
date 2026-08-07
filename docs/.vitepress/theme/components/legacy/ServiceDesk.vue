@@ -7,10 +7,10 @@ defineOptions({
   name: "ServiceDesk",
 })
 
-// Emits definition
+import nunjucksEnv from "../../plugins/nunjucks"
+
 const emit = defineEmits(["update:modelValue"])
 
-// Props definition
 const props = defineProps({
   id: { type: String, default: "applet" },
   modelValue: { type: Boolean, default: false }, // Changed from 'value' to 'modelValue'
@@ -27,7 +27,6 @@ const props = defineProps({
   fullscreen: { type: Boolean, default: false },
 })
 
-// Reactive data
 const subjectTemplate = ref(null)
 const bodyTemplate = ref(null)
 const formData = ref({})
@@ -40,7 +39,12 @@ const sendClicked = ref(false)
 const finalizeClicked = ref(false)
 const panel = ref(0)
 
-// Computed properties
+const templateContext = computed(() => {
+  return {
+    ...formData.value,
+  }
+})
+
 const messageSubject = computed(() => {
   return subjectTemplate.value ? wrap(subjectTemplate.value) : null
 })
@@ -49,8 +53,42 @@ const messageBody = computed(() => {
   return bodyTemplate.value ? wrap(bodyTemplate.value) : null
 })
 
+const evalDynamicField = (expr) => {
+  try {
+    const dynamicLambda = new Function(`return ${expr}`)()
+    return dynamicLambda(formData.value)
+  } catch (ex) {
+    console.log("Failed to evaluate dynamic field condition", ex)
+    return false
+  }
+}
+
+const isFieldHidden = (item) => {
+  if (!item) return false
+  if (typeof item.hide === "string") {
+    return evalDynamicField(item.hide, item)
+  }
+  return !!item.hide
+}
+
 const formFilled = computed(() => {
-  return props.fields.every((item) => (formData.value[item.key] || item.optional ? true : false))
+  return props.fields.every((item) => {
+    if (item.hide) {
+      if (isFieldHidden(item)) {
+        return true
+      }
+    }
+
+    if (formData.value[item.key]) {
+      return true
+    }
+
+    if (typeof item.optional === "string") {
+      return evalDynamicField(item.optional)
+    }
+
+    return item.optional
+  })
 })
 
 const encodedSubject = computed(() => {
@@ -107,42 +145,41 @@ const activateSendButtons = () => {
 
 const submit = () => {
   panel.value = 2
+  if (props.template) {
+    bodyTemplate.value = props.template.body
+  }
   setTimeout(activateSendButtons, 1200)
 }
 
 const review = () => {
   finalizeClicked.value = true
-  panel.value = 2
+  panel.value = 1
 }
 
 const actionSend = () => {
   sendClicked.value = true
-  panel.value = 3
+  panel.value = 2
   window.location.href = mailto.value
 }
 
 const actionSendOutlook = () => {
   sendClicked.value = true
-  panel.value = 3
+  panel.value = 2
   window.location.href = deeplinkUrl.value
 }
 
 const actionSendOutlookPopup = () => {
   sendClicked.value = true
-  panel.value = 3
+  panel.value = 2
   window.open(deeplinkUrl.value, "_blank")
 }
 
 const wrap = (template) => {
   let text = template
-  for (const [key, value] of Object.entries(formData.value)) {
-    if (value || value === "") {
-      if (Array.isArray(value)) {
-        text = text.replaceAll(`{${key}}`, value.join(", "))
-      } else {
-        text = text.replaceAll(`{${key}}`, value)
-      }
-    }
+  try {
+    text = nunjucksEnv.renderString(template, templateContext.value)
+  } catch (ex) {
+    console.log("Failed to render template", ex)
   }
   text = text.replaceAll("\n---\n", "\n```\n")
   return text
@@ -153,7 +190,6 @@ const encode = (template) => {
 }
 
 const setValue = (value, key) => {
-  // NOTE: enforce reactivity to data change - re-rendering the template
   const updates = {}
   updates[key] = value ? value.trim() : value
   formData.value = Object.assign({}, formData.value, updates)
@@ -178,7 +214,6 @@ onMounted(() => {
   panel.value = 0
   loadingEmailButtons.value = true
   subjectTemplate.value = props.template ? props.template.subject : null
-  bodyTemplate.value = props.template ? props.template.body : null
 
   var formFields = []
   for (const item of props.fields) {
@@ -257,116 +292,118 @@ onMounted(() => {
                 <v-expansion-panel-text>
                   <form @submit.prevent="submit">
                     <v-row justify="center">
-                      <v-col v-for="item in fields" :key="item.key" cols="8">
-                        <v-text-field
-                          v-if="item.field === 'textfield'"
-                          v-model="formData[item.key]"
-                          autocomplete="off"
-                          :label="item.label"
-                          :pattern="item.pattern ? item.pattern : null"
-                          :title="item.hint ? item.hint : null"
-                          :hint="item.hint ? item.hint : null"
-                          :suffix="item.suffix ? item.suffix : null"
-                          :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
-                          :persistent-hint="item.hint && formData[item.key] ? true : false"
-                          placeholder=""
-                          persistent-placeholder
-                          variant="outlined"
-                          density="compact"
-                          :hide-details="formData[item.key] ? false : 'auto'"
-                          @focus="$event.target.select()"
-                          @update:model-value="setValue($event, item.key)"
-                        />
+                      <template v-for="item in fields" :key="item.key">
+                        <v-col v-if="!isFieldHidden(item)" :key="item.key" cols="8">
+                          <v-text-field
+                            v-if="item.field === 'textfield' && item.type === undefined"
+                            v-model="formData[item.key]"
+                            autocomplete="off"
+                            :label="item.label"
+                            :pattern="item.pattern ? item.pattern : null"
+                            :title="item.hint ? item.hint : null"
+                            :hint="item.hint ? item.hint : null"
+                            :suffix="item.suffix ? item.suffix : null"
+                            :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
+                            :persistent-hint="item.hint && formData[item.key] ? true : false"
+                            placeholder=""
+                            persistent-placeholder
+                            variant="outlined"
+                            density="compact"
+                            :hide-details="formData[item.key] ? false : 'auto'"
+                            @focus="$event.target.select()"
+                            @update:model-value="setValue($event, item.key)"
+                          />
 
-                        <v-textarea
-                          v-else-if="item.field === 'textarea'"
-                          v-model="formData[item.key]"
-                          autocomplete="off"
-                          :label="item.label"
-                          :title="item.hint ? item.hint : null"
-                          :hint="item.hint ? item.hint : null"
-                          :suffix="item.suffix ? item.suffix : null"
-                          :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
-                          :rows="item.rows ? item.rows : 3"
-                          :persistent-hint="item.hint && formData[item.key] ? true : false"
-                          placeholder=""
-                          persistent-placeholder
-                          variant="outlined"
-                          density="compact"
-                          :hide-details="formData[item.key] ? false : 'auto'"
-                          @focus="$event.target.select()"
-                          @update:model-value="setValue($event, item.key)"
-                        />
+                          <v-textarea
+                            v-else-if="item.field === 'textarea'"
+                            v-model="formData[item.key]"
+                            autocomplete="off"
+                            :label="item.label"
+                            :title="item.hint ? item.hint : null"
+                            :hint="item.hint ? item.hint : null"
+                            :suffix="item.suffix ? item.suffix : null"
+                            :autocapitalize="item.autocapitalize ? item.autocapitalize : null"
+                            :rows="item.rows ? item.rows : 3"
+                            :persistent-hint="item.hint && formData[item.key] ? true : false"
+                            placeholder=""
+                            persistent-placeholder
+                            variant="outlined"
+                            density="compact"
+                            :hide-details="formData[item.key] ? false : 'auto'"
+                            @focus="$event.target.select()"
+                            @update:model-value="setValue($event, item.key)"
+                          />
 
-                        <v-select
-                          v-else-if="item.field === 'selector'"
-                          :items="item.options"
-                          v-model="formData[item.key]"
-                          :label="item.label"
-                          :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)"
-                          :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
-                          placeholder=""
-                          persistent-placeholder
-                          chips
-                          multiple
-                          variant="outlined"
-                          hide-details
-                        />
+                          <v-select
+                            v-else-if="item.field === 'selector'"
+                            :items="item.options"
+                            v-model="formData[item.key]"
+                            :label="item.label"
+                            :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)"
+                            :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
+                            placeholder=""
+                            persistent-placeholder
+                            chips
+                            multiple
+                            variant="outlined"
+                            hide-details
+                          />
 
-                        <v-select
-                          v-else-if="item.field === 'selectone'"
-                          autocomplete="off"
-                          :items="item.options"
-                          v-model="formData[item.key]"
-                          :label="item.label"
-                          :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)"
-                          :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
-                          placeholder=""
-                          persistent-placeholder
-                          chips
-                          variant="outlined"
-                          hide-details
-                        />
+                          <v-select
+                            v-else-if="item.field === 'selectone'"
+                            autocomplete="off"
+                            :items="item.options"
+                            v-model="formData[item.key]"
+                            :label="item.label"
+                            :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item)"
+                            :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
+                            placeholder=""
+                            persistent-placeholder
+                            chips
+                            variant="outlined"
+                            hide-details
+                          />
 
-                        <v-autocomplete
-                          v-else-if="item.field === 'autocompleteone'"
-                          autocomplete="off"
-                          :items="item.options"
-                          v-model="formData[item.key]"
-                          :label="item.label"
-                          :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item.header)"
-                          :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
-                          placeholder=""
-                          persistent-placeholder
-                          chips
-                          variant="outlined"
-                          density="compact"
-                          clearable
-                          hide-details
-                        />
+                          <v-autocomplete
+                            v-else-if="item.field === 'autocompleteone'"
+                            autocomplete="off"
+                            :items="item.options"
+                            v-model="formData[item.key]"
+                            :label="item.label"
+                            :item-title="(item) => (Object.prototype.hasOwnProperty.call(item, 'text') ? item.text : item.header)"
+                            :item-value="(item) => (Object.prototype.hasOwnProperty.call(item, 'value') ? item.value : item)"
+                            placeholder=""
+                            persistent-placeholder
+                            chips
+                            variant="outlined"
+                            density="compact"
+                            clearable
+                            hide-details
+                          />
 
-                        <v-text-field
-                          v-else-if="item.field === 'number'"
-                          v-model="formData[item.key]"
-                          autocomplete="off"
-                          type="number"
-                          :label="item.label"
-                          :title="item.hint ? item.hint : null"
-                          :hint="item.hint ? item.hint : null"
-                          :suffix="item.suffix ? item.suffix : null"
-                          :min="item.min ? item.min : null"
-                          :max="item.max ? item.max : null"
-                          :step="item.step ? item.step : null"
-                          :persistent-hint="item.hint && formData[item.key] ? true : false"
-                          placeholder=""
-                          persistent-placeholder
-                          variant="outlined"
-                          density="compact"
-                          :hide-details="formData[item.key] ? false : 'auto'"
-                          @focus="$event.target.select()"
-                          @update:model-value="setValue($event, item.key)"
-                        />
-                      </v-col>
+                          <v-text-field
+                            v-else-if="item.field === 'number'"
+                            v-model="formData[item.key]"
+                            autocomplete="off"
+                            type="number"
+                            :label="item.label"
+                            :title="item.hint ? item.hint : null"
+                            :hint="item.hint ? item.hint : null"
+                            :suffix="item.suffix ? item.suffix : null"
+                            :min="item.min ? item.min : null"
+                            :max="item.max ? item.max : null"
+                            :step="item.step ? item.step : null"
+                            :persistent-hint="item.hint && formData[item.key] ? true : false"
+                            placeholder=""
+                            persistent-placeholder
+                            variant="outlined"
+                            density="compact"
+                            :hide-details="formData[item.key] ? false : 'auto'"
+                            @focus="$event.target.select()"
+                            @update:model-value="setValue($event, item.key)"
+                          />
+                        </v-col>
+                      </template>
                     </v-row>
                     <v-row justify="center">
                       <v-col cols="6">
@@ -496,7 +533,6 @@ onMounted(() => {
 
 <style>
 .vuewidget.vuewrapper {
-  /* reset full view - no scroll bars, no full view */
   overflow: inherit;
 }
 

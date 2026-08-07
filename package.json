@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@types/nunjucks": "^3.2.6",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vitejs/plugin-vue-jsx": "^5.1.1",
     "@vue/test-utils": "^2.4.6",
@@ -30,6 +31,7 @@
     "axios": "^1.12.2",
     "country-list-json": "^1.1.0",
     "markdown-it": "^14.1.0",
+    "nunjucks": "^3.2.4",
     "pdf-lib": "^1.17.1",
     "signature_pad": "^5.1.1",
     "vue-pdf-embed": "^2.1.3",
