@@ -9,8 +9,10 @@ defineOptions({
 
 import nunjucksEnv from "../../plugins/nunjucks"
 
+// Emits definition
 const emit = defineEmits(["update:modelValue"])
 
+// Props definition
 const props = defineProps({
   id: { type: String, default: "applet" },
   modelValue: { type: Boolean, default: false }, // Changed from 'value' to 'modelValue'
@@ -27,6 +29,7 @@ const props = defineProps({
   fullscreen: { type: Boolean, default: false },
 })
 
+// Reactive data
 const subjectTemplate = ref(null)
 const bodyTemplate = ref(null)
 const formData = ref({})
@@ -39,6 +42,7 @@ const sendClicked = ref(false)
 const finalizeClicked = ref(false)
 const panel = ref(0)
 
+// Computed properties
 const templateContext = computed(() => {
   return {
     ...formData.value,
