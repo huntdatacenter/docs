@@ -153,24 +153,24 @@ const submit = () => {
 
 const review = () => {
   finalizeClicked.value = true
-  panel.value = 1
+  panel.value = 2
 }
 
 const actionSend = () => {
   sendClicked.value = true
-  panel.value = 2
+  panel.value = 3
   window.location.href = mailto.value
 }
 
 const actionSendOutlook = () => {
   sendClicked.value = true
-  panel.value = 2
+  panel.value = 3
   window.location.href = deeplinkUrl.value
 }
 
 const actionSendOutlookPopup = () => {
   sendClicked.value = true
-  panel.value = 2
+  panel.value = 3
   window.open(deeplinkUrl.value, "_blank")
 }
 
@@ -190,6 +190,7 @@ const encode = (template) => {
 }
 
 const setValue = (value, key) => {
+  // NOTE: enforce reactivity to data change - re-rendering the template
   const updates = {}
   updates[key] = value ? value.trim() : value
   formData.value = Object.assign({}, formData.value, updates)
@@ -238,7 +239,7 @@ onMounted(() => {
         }
       }
     } catch (ex) {
-      console.log("Failed to load form fields from cache")
+      console.log("Failed to load form fields from cache", ex)
     }
   }
 })
