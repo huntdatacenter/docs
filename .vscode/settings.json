@@ -36,6 +36,7 @@
   "[docs/public/cfg/service_desk.yml]": {
     "files.trimTrailingWhitespace": false,
     "editor.tabSize": 2,
-    "editor.defaultFormatter": null
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": false
   }
 }
