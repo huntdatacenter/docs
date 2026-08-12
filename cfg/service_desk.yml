@@ -188,6 +188,7 @@ request_new_lab:
       ---
 
       Billing information ({% if client_type === "external" %}External{% else %}NTNU{% endif %}):
+
       ---
       {% if client_type === "external" %}
       billing_information_peppol_bis="{{ billing_information_peppol_bis }}"
