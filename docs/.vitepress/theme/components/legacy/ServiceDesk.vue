@@ -538,6 +538,7 @@ onMounted(() => {
 
 <style>
 .vuewidget.vuewrapper {
+  /* reset full view - no scroll bars, no full view */
   overflow: inherit;
 }
 
