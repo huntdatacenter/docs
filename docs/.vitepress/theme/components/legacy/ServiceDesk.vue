@@ -57,24 +57,6 @@ const messageBody = computed(() => {
   return bodyTemplate.value ? wrap(bodyTemplate.value) : null
 })
 
-const evalDynamicField = (expr) => {
-  try {
-    const dynamicLambda = new Function(`return ${expr}`)()
-    return dynamicLambda(formData.value)
-  } catch (ex) {
-    console.log("Failed to evaluate dynamic field condition", ex)
-    return false
-  }
-}
-
-const isFieldHidden = (item) => {
-  if (!item) return false
-  if (typeof item.hide === "string") {
-    return evalDynamicField(item.hide, item)
-  }
-  return !!item.hide
-}
-
 const formFilled = computed(() => {
   return props.fields.every((item) => {
     if (item.hide) {
@@ -131,6 +113,24 @@ const deeplinkUrl = computed(() => {
 })
 
 // Methods
+const evalDynamicField = (expr) => {
+  try {
+    const dynamicLambda = new Function(`return ${expr}`)()
+    return dynamicLambda(formData.value)
+  } catch (ex) {
+    console.log("Failed to evaluate dynamic field condition", ex)
+    return false
+  }
+}
+
+const isFieldHidden = (item) => {
+  if (!item) return false
+  if (typeof item.hide === "string") {
+    return evalDynamicField(item.hide, item)
+  }
+  return !!item.hide
+}
+
 const close = () => {
   finalizeClicked.value = true
   sendClicked.value = true
