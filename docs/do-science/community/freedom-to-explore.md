@@ -1321,6 +1321,33 @@ JPG - [Freedom to explore - Tamil](https://assets.hdc.ntnu.no/assets/artworks/fr
   
 
 
+### Telugu (tel)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Telugu."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-tel-banner.jpg)
+
+::: details Full Telugu version
+
+**Download**:  
+PDF - [Freedom to explore - Telugu](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-tel-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Telugu](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-tel-2160px.jpg) - 2160px
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Telugu."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-tel-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Telugu ([tel](https://iso639-3.sil.org/code/tel))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.1  
+**ArtworkID:** hcc-artwork26  
+
+**Want to improve the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
 ### Tagalog (tgl)
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Tagalog."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-tgl-banner.jpg)
