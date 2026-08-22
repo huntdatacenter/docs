@@ -943,6 +943,33 @@ JPG - [Freedom to explore - Kirike](https://assets.hdc.ntnu.no/assets/artworks/f
   
 
 
+### Odia (ory)
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Odia."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ory-banner.jpg)
+
+::: details Full Odia version
+
+**Download**:  
+PDF - [Freedom to explore - Odia](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ory-300dpi.pdf) - 300 DPI  
+JPG - [Freedom to explore - Odia](https://assets.hdc.ntnu.no/assets/artworks/freedom-to-explore/hunt-cloud-freedom-to-explore-ory-2160px.jpg) - 2160px
+
+!["Blue banner with the slogan Freedom to explore in white letters written in Odia."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-ory-400px.jpg)
+
+**Title:** Freedom to explore  
+**Language:** Odia ([ory](https://iso639-3.sil.org/code/ory))  
+**Creator:** Ingunn B. Ferstad, HUNT Cloud / NTNU  
+**License:** CC BY­-NC-­ND 4.0  
+**Year:** 2023  
+**Version:** 1.1  
+**ArtworkID:** hcc-artwork26  
+
+**Want to improve the translation?** [Click here](/do-science/community/freedom-to-explore#can-i-suggest-an-improved-translation) to suggest an upgrade.
+
+:::
+
+  
+
+
 ### Panjabi (pan)
 
 !["Blue banner with the slogan Freedom to explore in white letters written in Panjabi."](./images/freedom-to-explore/hunt-cloud-freedom-to-explore-pan-banner.jpg)
