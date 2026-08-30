@@ -38,18 +38,18 @@ This is the Ting where we initiate **cross-organizational dialogue on privacy, s
 
 ## Schedule
 
-### Dates
+#### Dates
 
 ::: tip Ting dates
 [Click here](/govern-science/tingweek/dates) to see past and future Ting dates.
 :::
 
 
-### Times
+#### Times
 
 Our Tingweeks are scheduled over one week in winter, spring and autumn. 
 
-The winter Ting is scheduled mid February the week before Norway's winter holidays (vinterferie). The spring Ting is scheduled in late May / early June. The autumn Ting in scheduled in the second half of October the week after Norway's autumn holiday (høstferie).
+We aim to schedule our winter Ting mid February in the week before Norway's winter holidays (vinterferie). The spring Ting is scheduled in late May / early June. The autumn Ting in scheduled in the second half of October, usually the week after Norway's autumn holiday (høstferie).
 
 Individual Tings are scheduled over the week on fixed time slots. The current schedule is as follows: Labting is held on Tuesdays 2-4 pm CET, Admin ting on Wednesdays 9-11 am CET and Data controller ting on Wednesdays 1-3 pm CET.
 
@@ -80,8 +80,8 @@ Resolutions consist of two parts: (i) the introductory sentence that states the 
 
 We aim to continuously evolve the Tingweeks a long with evolving scientific and administrative needs: 
 
-- The Financial ting and Admin ting was merged in Tingweek #18, and Lagtun resolutions was renamed Ting resolutions.
-- The Coordinator ting changed name to Admin ting, and Lagtun changed name to Financial ting in Tingweek #14.
-- The original Coordinator ting changed name to Data space ting in Tingweek #5 to reflect contractual roles in the new services model.
-- We published a Ting report for the first Tingweeks: [Ting report #6 (2022-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-report.pdf), [Ting report #4 (2021-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-report.pdf), [Ting report #3 (2021-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-report.pdf), [Ting report #2 (2021-02)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-report.pdf), [Ting report #1 (2020-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-report.pdf).
-- The Tingweek was introduced in 2020 at the time we introduced our price model.
+- Tingweek #18: The Financial ting and Admin ting was merged. Lagtun resolutions was renamed Ting resolutions and from now promoted directly by HUNT Cloud.
+- Tingweek #14: The Coordinator ting changed name to Admin ting to focus on administrative aspects. Lagtun changed name to Financial ting.
+- Tingweek #5: The original Coordinator ting changed name to Data space ting to reflect contractual roles in the new services model.
+- Tingweek #1-6: We published a Ting report for the first Tingweeks: [Ting report #6 (2022-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek6-report.pdf), [Ting report #4 (2021-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek4-report.pdf), [Ting report #3 (2021-05)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek3-report.pdf), [Ting report #2 (2021-02)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek2-report.pdf), [Ting report #1 (2020-10)](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek1-report.pdf).
+- Tingweek #1: The Tingweek was introduced in 2020 at the time we introduced our price model.

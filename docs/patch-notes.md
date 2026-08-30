@@ -12,7 +12,7 @@ description: Patch notes list major and minor updates to HUNT Cloud's services.
 
 This page contains descriptions of updates (patches) to HUNT Cloud's services. All with the aim to provide the best possible conditions for scientific explorations.
 
-## Patch note 3.0.5
+## Patch note 3.0.1
 
 *2026-05-29*
 
@@ -30,62 +30,61 @@ We have introduced new GPU series from NVIDIA in 2026-Q2.
 
 ::: details Administer science
 
-<h3>Major changes</h3>
+<h3>Major changes</h3><br>
 
-**Tape backup**
+**Storage reduction**
 
-Service redefined. We have updated the service desk order template and added information on our web pages about tape backup and what it is. Update to service agreements will be introduced before summer.
+- Lab coordinators can now request reduction in their storage volume sizes.
+
+**Tape backup updates**
+
+- We have updated the service desk order template and expanded information on our web pages about the tape backup service.
 
 **Surveys**
 
-We have started collecting surveys for onboarding feedback. Aim is to improve user experience accors all roles. More feedback surveys will follow in near future.  
+We have started collecting surveys for onboarding feedback. Aim is to improve user experience accors all roles. More feedback surveys will follow in near future.
 
-**Volume resize**
-
-We are now able to decrease the size of your volume if requested. 
 
 
 **Improved price calculator**
 
 We have made many visual and practical changes. Cost prediction is now more accurate and gives clearer overview of individual costs. 
 
-<h3>Minor changes</h3>
+<h3>Minor changes</h3><br>
 
-- New GPU added to the [price list](/administer-science/prices/pricelist).
+**Price list updates**
+
+- The new GPU type (nvidia.rtx.pro.600) is added to the [price list](/administer-science/prices/pricelist).
 
 :::
 
 ::: details Govern science
 
-<h3>Major changes</h3>
+<h3>Major changes</h3><br>
 
-**Updated Statement of Applicability**
+**Statement of Applicability (SoA) updates**
 
-The Statement of Applicability (SoA) is the document in which we specify the ISO control objectives applied to our certification. We have updated the document to include ISO/IEC 27701:2025 controls (v.5.2).
+- We have updated our [Statement of Applicability](/govern-science/compliance/certificates#statement-of-applicability-soa) to include ISO/IEC 27701:2025 controls (v.5.2).
 
-**Updated our Policies**
+**Policies updates**
 
-Quality policy, Security and privacy management policy and Security and privacy policies.
-
-The affiliation has been updated from the Department of Public Health and Nursing to the Faculty of Medicine and Health Sciences.
+- Our affiliation has been updated from the Department of Public Health and Nursing to the Faculty of Medicine and Health Sciences at NTNU. These changes are reflected in our [policy documents](/govern-science/policies/).
 
 **Tingweek**
 
-The next Tingweek will be held from June 2 to 3. It will last two days, as we have merged the Admin meeting with the financial meeting.
+- The Financial Ting will be merged with the Admin Ting from Tingweek #18. Resolutions will from now be announced in the Admin Ting. 
 
-<h3>Minor changes</h3>
+<h3>Minor changes</h3><br>
 
-**Updated ISO certification**
+**ISO updates**
 
-New certificate are uploaded under [certificates](/govern-science/compliance/certificates#iso-iec-27001-certificate).
+- This years certificates are uploaded under the [certificates](/govern-science/compliance/certificates) section.
 
-**Agreements**
+**Agreement updates**
 
-Lab deletion order - We have added tape presevation to the order (v.1.6).
+- Our [Lab deletion order](/administer-science/agreements/downloads#lab-deletion-order) is expanded with a "Tape preservation" section that allows labs to automatically order long-term preservation of their lab data when they end their subscription (v1.6).
 
-**Organization access**
-
-We have updated the form field identifiers and additionally included the country(v1.4).
+- We have tried to clarify the input fields in our [Organizational access request form][/administer-science/agreements/downloads#organizational-access-request-form) to simplify the Data processor and Services agreement process (v1.4).
 
 :::
 
@@ -643,7 +642,7 @@ Our new [Security and privacy policies](https://docs.hdc.ntnu.no/govern-science/
 <!-- ================== -->
 
 
-## Patch note 2.8.2
+## Patch note 2.8.1
 
 *2023-06-27*
 
@@ -760,54 +759,17 @@ Found an issue, or want to submit a feedback? Send us a general request form in 
 
 #### Schedule
 
-There are no fixed publication schedule for the next Patch note. The intention is to publish a new version whenever we think we have interesting updates to communicate. New notes gets communicated to our cloud community in Slack.
+We aim to publish patch notes in relation to our Tingweeks.
 
 
 #### Numbering
 
-We use a three digit numbering system on our Patch notes, for example version `2.8.3`.
+We use a three digit numbering system on our Patch notes, for example version `2.8.1`. Patch note 2.8.1 specify that this is the first patch note to the [Services specification](/administer-science/services/specifications) 2.8.
 
 | Number | Description |
 | ---- | ---- |
 | 2 | Major services specification update |
 | 8 | Minor services specification update |
-| 3 | Patch notes number |
+| 1 | Patch notes number (first patch note to service specification 2.8) |
 
-::: details Click here for details on the numbering
 
-.
-
-#### Major services agreement update
-
-The first number indicates which major [Services specification](/administer-science/services/specifications) version the Patch notes are attached to.
-
-The number references the first digit of the current Services specification version. For example, Services specification version `2.8` will be listed as `2`.
-
-A major services agreement update indicates that services are changes in a way that need major agreement updates. Such updates are forwarded to all contractual partners on email, and major changes on existing services take effect 90 days after the announcement.
-
-#### Minor services agreement update
-
-The second number indicates which minor [Services specification](/administer-science/services/specifications) version the Patch note are attached to.
-
-The number references the second digit of the current Services specification version. For example, Services specification version `2.8` will be listed as `8`.
-
-A minor services agreement update indicate a change in the agreement text, such as clarifications, syntax updates and similar. These changes takes effect when they are communicated on these docs pages, and are not forwarded to contractual partners on email.
-
-#### Patch notes number
-
-The third number indicates which patch version the current note is attached to. Thus, a patch note is always linked to a specific Service specification version.
-
-**Major updates**
-
-Major updates indicates what we think are a substantial update in your user experience of our services.
-Such improvements may not always need updates in legal documents.
-
-**Minor updates**
-
-Minor Patch notes indicates what we think are small (but often important) user experience updates of our services, for example updates of guides, agreements or other good-to-know-about things.
-
-**Upcoming features**
-
-These are features that we have planned to move forward by the time of the notes publication, although they are not always the features that we end up prioritizing over the next period.
-
-:::
