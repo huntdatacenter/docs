@@ -19,7 +19,6 @@ We offer two variants of the service: **tape archive** and **tape backup**. The 
 | **How jobs run**        | On request, in "Copy" mode                                                               | Automatically, on a predetermined schedule                          |
 | **Number of copies**    | Two separate tapes                                                                       | TODO: CONFIRM                                                       |
 | **Retention**           | Offline for up to 10 years                                                               | A predefined retention period                                       |
-| **Where tapes live**    | Removed from the tape library and stored offline in a secure location                    | TODO: CONFIRM                                                       |
 | **Recovery speed**      | Slower - tapes must be returned to the library manually, and larger datasets take longer | Usually much faster, though several factors can affect the timeline |
 | **File-level recovery** | Within one year of the archive job. After that, a full job recovery is required          | Individual files can normally be recovered quickly                  |
 
@@ -30,7 +29,7 @@ Both variants maintain the same high level of data integrity and security.
 In most cases, individual files can be recovered from a tape backup quickly. This is not always the case with a tape archive.
 
 ::: warning One-year limit on archive file recovery
-If you need to recover a file within one year of the archive job, file-level recovery is possible. After one year — the most common scenario for archived data — a full job recovery is required.
+If you need to recover a file within one year of the archive job, file-level recovery is possible. After one year - the most common scenario for archived data - a full job recovery is required.
 
 This is due to measures we take to manage the size of our backup catalog, which would otherwise grow indefinitely.
 :::
@@ -48,9 +47,9 @@ One of the standout features of LTO tapes is their exceptionally low error rate:
 
 LTO tapes are an excellent choice for storing sensitive data:
 
-- **On-the-fly encryption** — a strong defence against unauthorised access.
-- **WORM (Write Once, Read Many)** — prevents data from being altered or deleted once written.
-- **Offline storage** — tapes are kept in a secure location, inaccessible from the internet. Even if your system and data are compromised, the data on tape stays safe.
+- **On-the-fly encryption** - defence against unauthorised access.
+- **WORM (Write Once, Read Many)** - prevents data from being altered or deleted once written.
+- **Offline storage** - secure location, inaccessible from the internet. Even if your system and data are compromised, the data on tape stays safe.
 
 ## Tape service software
 
