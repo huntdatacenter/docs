@@ -352,7 +352,17 @@ The above example shows for example that `/mnt/archive` has a current `Size` of 
 
 :::
 
+### Downsize storage volume
 
+You may downsize the existing storage volumes inside your lab. We will need separate orders for each individual volume you plan to downsize.
+
+<SDButton form="request_downsize_existing_volume" />
+
+* **Who can order:** Lab leaders and lab coordinators.
+* **Required information**: lab name, machine name, volume name and intended size.
+* **Expected response time:** One week. The volume downsize requires a machine restart that needs to be scheduled 9-11am on a workday.
+* **Expected delivery:** Decrased storage capacity.
+* **Cost:** As per your total storage plan.
 
 ### New volume
 

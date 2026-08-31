@@ -9,8 +9,12 @@ description: This page list Ting resolutions that guide the scientific developme
 
 **This page list individual Ting resolutions that guide the scientific development of HUNT Cloud.**
 
+#### [Clarification of terms for the advanced payment service termination](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek18-resolutions.pdf#page=3)
 
-#### [Temporary extension of BLUE machines](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-resolutions.pdf#page=3)
+- TOPIC: Finance
+- ID: R9/LT18/T18/26
+
+#### [Temporary extension of BLUE machines](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek17-resolutions.pdf#page=3)
 
 - TOPIC: Finance
 - ID: R9/LT17/T17/26
@@ -20,7 +24,7 @@ description: This page list Ting resolutions that guide the scientific developme
 - TOPIC: Finance
 - ID: R9/LT16/T16/25
 
-#### [Clarification of service transitoins from old to new price list](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-resolutions.pdf#page=3)
+#### [Clarification of service transitions from old to new price list](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek16-resolutions.pdf#page=3)
 
 - TOPIC: Finance
 - ID: R8/LT16/T16/25

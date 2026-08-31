@@ -30,16 +30,16 @@ No. For security reasons we only accept one connection from one user at the time
 
 Maybe. We do allow such connections, however teleworking conditions from your own organization and/or conditions from your data controller may restrict connections from private machines. Contact your lab leader for more information on the specific conditions in your lab.
 
-### What are the minimum requirements for my phone and computer?
+### What are the minimum requirements for my phone and local computer?
 
-- **Phones**:
-  - updated OS that is able to install and activate Signal (https://support.signal.org/hc/en-us/articles/360008216551-Installing-Signal)
+Your phone need an updated OS that is able to install and activate the  [Signal](https://support.signal.org/hc/en-us/articles/360008216551-Installing-Signal) app. The minimum requirement for your computer is as of 2026-Q3:
 
-- **Computers**:
-  - **OS**: Windows 10+/Mac 14.0.0+/Ubuntu Linux 22.04+
-  - **CPU cores**: 4
-  - **Memory (RAM)**: 4 GB - chrome can take up a lot
-  - **Space available (HDD)**: 10GB
+```
+- Operating system: Windows 10+, Mac 14.0.0+, or Ubuntu Linux 22.04+.
+- Processing power: 4 CPU.
+- Available memory: 4 GB.
+- Available storage: 10 GB.
+```
 
 ## Lab access
 

@@ -1729,6 +1729,97 @@ request_expand_existing_volume:
     ]
   attachments: []
 
+request_downsize_existing_volume:
+  title: "Request storage volume downsize"
+  template:
+    subject: "Storage volume downsize - {{ lab_name }}"
+    body: |
+      Hi HUNT Cloud team,
+
+      I would like to request a storage volume downsize:
+
+      ---
+      lab_name="{{ lab_name }}"  
+      machine_name="{{ vm_name }}"  
+      volume_name="{{ volume_name }}{{ volume_number }}"  
+      current_size_tb="{{ current_size }}"  
+      new_size_tb="{{ target_size }}"  
+      ---
+
+      I am aware that the downsize will require a machine restart.
+
+      Let us touch base in our Slack lab channel to schedule a time for the restart that fits our scientific activities.
+
+
+      Best regards,
+
+  fields:
+    [
+      {
+        label: "Lab name",
+        key: "lab_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Lab name should include only lowercase letters a-z, 0-9, or dash.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Machine name",
+        key: "vm_name",
+        pattern: "[-a-z0-9]{3,}",
+        hint: "Machine name should include only lowercase letters a-z, 0-9, or dash., You can get machine name by running hostname command on the machine",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+      {
+        label: "Volume name",
+        key: "volume_name",
+        field: "autocompleteone",
+        options: [{ text: "Archive", value: "archive" }, { text: "Work", value: "work" }, { text: "Scratch", value: "scratch" }, { text: "Backup", value: "backup" }],
+      },
+      {
+        label: "Volume number (optional)",
+        key: "volume_number",
+        field: "autocompleteone",
+        hint: "If no number in volume name use 1.",
+        default: "",
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+        optional: true,
+      },
+      {
+        label: "Current size (in terabytes)",
+        key: "current_size",
+        hint: "Field should include only numbers",
+        suffix: "TB",
+        min: 0.1,
+        max: 25,
+        step: 0.1,
+        field: "number",
+        default: 1,
+      },
+      {
+        label: "New size (in terabytes)",
+        key: "target_size",
+        hint: "Field should include only numbers. Lowest size allowed is 0,1TB",
+        suffix: "TB",
+        min: 0.1,
+        max: 25,
+        step: 0.1,
+        field: "number",
+        default: 1,
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> Lab leaders and lab coordinators.",
+      "<b>Required information</b>: lab name, machine name, volume name and intended size.",
+      "<b>Expected response time:</b> One week. The volume downsize requires a machine restart that needs to be scheduled 9-11am on a workday.",
+      "<b>Expected delivery:</b> Decreased storage capacity.",
+      "<b>Cost:</b> As per your total storage plan.",
+      "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: []
+
 request_new_storage_volume:
   title: "Request a new storage volume"
   template:

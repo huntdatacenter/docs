@@ -521,8 +521,6 @@ This form contain information that we will use to generate the Data processor ag
 
 ::: details Clarification of the form fields
 
-The following form fields are included in the "HUNT Cloud organizational access request form" version 1.0.
-
 Field descriptions are included in the PDF.
 
 :::
