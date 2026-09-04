@@ -923,9 +923,9 @@ function sidebarAdministerScience() {
           link: "/administer-science/data/",
         },
         {
-          text: "Tape backup",
+          text: "Tape service",
           collapsed: true,
-          link: "/administer-science/data/tape-backup/",
+          link: "/administer-science/data/tape-service/",
         },
         {
           text: "FAQ",
