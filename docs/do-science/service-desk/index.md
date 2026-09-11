@@ -98,9 +98,9 @@ Lost the lab access link from your onboarding email? No worries, order a new one
 - **Expected response time:** Days.
 - **Cost:** Included in the lab subscription.
 
-### HUNT Workbench
+### HUNT Workbench access
 
-[HUNT Workbench](/do-science/hunt-workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB.
+[HUNT Workbench](/do-science/hunt-workbench/) provides smooth access to modern data science tools such as Jupyter Notebooks, Python, RStudio, R, Stata notebook or MATLAB. All new lab users get HUNT Workbench access as part of the initial onboarding. Older users without access can order here.
 
 <SDButton form="request_workbench_access" />
 
