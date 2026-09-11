@@ -47,14 +47,14 @@ We are happy to guide you and answer any questions during this processes, so don
 ## Tingweek
 
 
-### Update Lagtun representative
+### Update Tingweek representative
 
-Lagtun is the body that appoints time to govern the scientific developments of HUNT Cloud. Lagtun members may appoint representatives that receive invitations and meeting information on behalf of their organization.
+Tingweek is the body that appoints time to govern the scientific developments of HUNT Cloud. Organizations may appoint representatives that receive invitations and meeting information on behalf of their organization.
 
 <SDButton form="request_update_lagtun_rep" />
 
-* **Who can order:** Data controller administrators, Service center administrators, Data space leaders and compliance administrators on the BLUE subscription level.
-* **Required attachment:** None.
+* **Who can order:** Service center administrators.
+* **Required attachment:** Contact information of new representative.
 * **Expected delivery time:** Days.
 * **Cost:** None.
 

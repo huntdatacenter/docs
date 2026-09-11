@@ -50,8 +50,6 @@ You can transfer a lab between two data spaces by filling form below.
 * **Cost:** Included in your lab subscription.
 
 
-## Roles
-
 ### Update data space administrator roles
 
 Click the button below to update your [data space administrator](/administer-science/roles) under your existing data space.

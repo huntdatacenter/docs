@@ -360,8 +360,8 @@ You may downsize the existing storage volumes inside your lab. We will need sepa
 
 * **Who can order:** Lab leaders and lab coordinators.
 * **Required information**: lab name, machine name, volume name and intended size.
-* **Expected response time:** One week. The volume downsize requires a machine restart that needs to be scheduled 9-11am on a workday.
-* **Expected delivery:** Decrased storage capacity.
+* **Expected response time:** One week. The volume downsize requires a machine restart that needs to be scheduled 9-11 AM on a workday.
+* **Expected delivery:** Decreased storage capacity.
 * **Cost:** As per your total storage plan.
 
 ### New volume
@@ -432,7 +432,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 You may use this information to plan your new storage names and sizes. We typically recommend to go by type of storage and numbers as usage tends to change over time, such as `archive2`, `work2` etc.
 :::
 
-### Volume Deletion
+### Volume deletion
 
 This form serves for ordering of volume deletion.
 
