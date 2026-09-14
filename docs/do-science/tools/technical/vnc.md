@@ -14,21 +14,25 @@ description: Usage guide for VNC.
 
 ## 1. Install TurboVNC
 
-1.1. Log into your lab machine. 
+1.1. Log into your lab machine and set bash variable
+
+```sh
+# -- Example for version 3.0.2
+turbovnc_version="3.0.2"
+```
 
 1.2. Download the latest TurboVNC
 
-```
-# -- Example for version 3.0.2 
-wget https://netix.dl.sourceforge.net/project/turbovnc/3.0.2/turbovnc_3.0.2_amd64.deb
+```sh
+wget https://netix.dl.sourceforge.net/project/turbovnc/${turbovnc_version}/turbovnc_${turbovnc_version}_amd64.deb -O "/tmp/turbovnc_${turbovnc_version}_amd64.deb"
 ```
 
 [Click here](https://sourceforge.net/projects/turbovnc/files/) to see the latest version and update the text above with a new version number if needed.
 
-1.3. Install 
+1.3. Install
 
 ```bash
-sudo apt install ./turbovnc_3.0.2_amd64.deb
+sudo apt install "/tmp/turbovnc_${turbovnc_version}_amd64.deb"
 ```
 
 ## 2. Install a desktop environment
@@ -51,7 +55,7 @@ Start the session on your server with the command below and note the number of s
 
 ## 4. Configure your local computer
 
-You will need a SSH tunnel between your local computer and your lab to connect to your VNC session. 
+You will need a SSH tunnel between your local computer and your lab to connect to your VNC session.
 
 ::: tip Calculate your port
 
@@ -64,7 +68,7 @@ In this example we will use port 5901. In case of multiple users you will need t
 ssh -L59000:localhost:5901 -C -N lab
 ```
 
-4.2 Download and install tigervnc on your local computer. 
+4.2 Download and install tigervnc on your local computer.
 
 ::: details Windows
 
@@ -107,7 +111,7 @@ If you have one or more existing sessions running and you want to list them, you
 /opt/TurboVNC/bin/vncserver -list
 ```
 
-### Stop session 
+### Stop session
 
 You can stop your session by using `-kill` parameter and `:n` being a number of session (e.g. `:1`):
 

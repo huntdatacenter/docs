@@ -28,13 +28,13 @@ apptainer_version="1.5.3"
 Download APT package:
 
 ```sh
-wget "https://github.com/apptainer/apptainer/releases/download/v${apptainer_version}/apptainer_${apptainer_version}_amd64.deb"
+wget "https://github.com/apptainer/apptainer/releases/download/v${apptainer_version}/apptainer_${apptainer_version}_amd64.deb" -O "/tmp/apptainer_${apptainer_version}_amd64.deb"
 ```
 
 Install:
 
 ```sh
-sudo apt install "./apptainer_${apptainer_version}_amd64.deb"
+sudo apt install "/tmp/apptainer_${apptainer_version}_amd64.deb"
 ```
 
 ## Common practices and commands

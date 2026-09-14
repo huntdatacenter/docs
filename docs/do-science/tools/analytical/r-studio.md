@@ -227,7 +227,7 @@ The below text is an example code which you may cut and paste into your shell:
 
 ```bash
 # download the package
-wget https://download1.rstudio.org/rstudio-xenial-1.1.463-amd64.deb -O /tmp/rstudio.deb
+wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2026.09.0-174-amd64.deb -O /tmp/rstudio.deb
 
 # install essential dependencies
 sudo apt update && sudo apt install -y libnss3 libasound2
