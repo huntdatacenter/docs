@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue"
 import { priceEstimatorStore } from "./stores/priceEstimatorStore"
-import type { MachineType } from "./types"
 
 const emit = defineEmits<{
   close: []
@@ -90,15 +89,39 @@ onMounted(() => {
             </v-col>
 
             <v-col cols="12" sm="6">
-              <v-text-field v-model="formData.archive" label="Archive Storage (TB)" type="number" variant="outlined" min="0" placeholder="0.4"></v-text-field>
+              <v-text-field
+                v-model="formData.archive"
+                label="Archive Storage (TB)"
+                type="number"
+                variant="outlined"
+                min="0.1"
+                placeholder="0.4"
+                :rules="[(v) => v == null || v === '' || Number(v) >= 0.1 || 'Minimum is 0.1 TB']"
+              ></v-text-field>
             </v-col>
 
             <v-col cols="12" sm="6">
-              <v-text-field v-model="formData.work" label="Work Storage (TB)" type="number" variant="outlined" min="0" placeholder="0.3"></v-text-field>
+              <v-text-field
+                v-model="formData.work"
+                label="Work Storage (TB)"
+                type="number"
+                variant="outlined"
+                min="0.1"
+                placeholder="0.3"
+                :rules="[(v) => v == null || v === '' || Number(v) >= 0.1 || 'Minimum is 0.1 TB']"
+              ></v-text-field>
             </v-col>
 
             <v-col cols="12" sm="6">
-              <v-text-field v-model="formData.scratch" label="Scratch Storage (TB)" type="number" variant="outlined" min="0" placeholder="0.4"></v-text-field>
+              <v-text-field
+                v-model="formData.scratch"
+                label="Scratch Storage (TB)"
+                type="number"
+                variant="outlined"
+                min="0.1"
+                placeholder="0.4"
+                :rules="[(v) => v == null || v === '' || Number(v) >= 0.1 || 'Minimum is 0.1 TB']"
+              ></v-text-field>
             </v-col>
           </v-row>
         </v-container>
