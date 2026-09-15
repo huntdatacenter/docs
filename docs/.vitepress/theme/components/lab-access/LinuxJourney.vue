@@ -205,7 +205,7 @@ onMounted(() => {
 
   const query = getRouteQuery()
   const labAccessGuideFilter = query.filter ? query.filter : null
-  if (!filterGuidesByType.value && labAccessGuideFilter) {
+  if (labAccessGuideFilter) {
     updateFilter(labAccessGuideFilter, true)
   }
 })
