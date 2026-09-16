@@ -120,6 +120,12 @@ You will need an updated VPN configuration when you see the `Failed to negotiate
 
 > **Full message**: Failed to negotiate cipher with server.  Add the server's cipher ('AES-256-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM') if you want to connect to this server.
 
+### Unrecognized option or missing data-ciphers
+
+You will need to update your [OpenVPN community client](https://openvpn.net/community/). See your lab access link for details on VPN client installation.
+
+> **Full message**: `Options error: Unrecognized option or missing or extra parameter(s) in <username>.ovpn:117: data-ciphers (2.4.8)`
+
 ### Conflict with local network
 
 In rare cases if your local network is using 10.8.0.0/16 or overlapping with it you might be having issues connecting to VPN or further, [contact us](/contact) for further investigation.
