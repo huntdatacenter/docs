@@ -44,7 +44,7 @@ const cards = [
 const bottomCards = [
   {
     id: 'card5',
-    title: 'Order a lab',
+    title: 'Get a lab',
     href: '/administer-science/service-desk/lab-orders#new-lab',
     description: 'Click here to order a new lab in HUNT Cloud.',
   },
