@@ -1,7 +1,7 @@
 ---
 title: OS Upgrade
 category: FAQ
-permalink: /do-science/faq/os-upgrade/
+permalink: /do-science/faq/os-upgrade
 outline: 1
 description: This page lists frequently asked questions related to the 2026 OS upgrade of labs to new Ubuntu release.
 ---
