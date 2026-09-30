@@ -74,8 +74,10 @@ Note that the default archive utility on MacOS does not recognize the passphrase
 2.2 Install the p7zip application.
 
 ```bash
-sudo apt update && sudo apt-get install p7zip-full
+sudo apt update && sudo apt-get install 7zip
 ```
+
+> Ubuntu 22.04 or older is using package name: `p7zip-full`
 
 2.3 Unpack (extract) the archive folder file.
 
