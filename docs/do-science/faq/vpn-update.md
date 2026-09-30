@@ -24,7 +24,7 @@ That itself is an achievement, but it also means that we have to update our firs
 
 We plan to send you a new HUNT Cloud VPN configuration on 2026-10-07.
 
-### How should I send my Signal privacy settings?
+### How should I set my Signal privacy settings?
 
 To be able to ship credentials to you we need to see your phone number as registered in Signal.
 You can allow finding your account in Signal app settings:
