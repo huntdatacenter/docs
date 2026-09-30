@@ -112,21 +112,21 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
 1. Click on running Tunnelblick icon in upper menu bar and select `VPN details...`
 
-![VPNemovalstep1.png](./images/VPNemovalstep1.png)
+![tunnelblick-vpn-removal-step1](./images/tunnelblick-vpn-removal-step1.png)
 
 2. Select your VPN profile on the left side of the window. Then, in the bottom left corner, select expansion window marked with 3 dots in a circle
 
-![credentialsremoval1a](./images/tunnelblick-vpn-removal-step2a.png)
+![credentialsremoval1](./images/tunnelblick-vpn-removal-step2a.png)
 
-![credentialsremoval1b](./images/credentialsremovalpart1.png)
+![credentialsremoval2](./images/tunnelblick-vpn-removal-step2b.png)
 
 3. At the very bottom of the newly opened widow, select `Delete configuration's credentials in keychain`
 
-![credentialsremoval2](./images/configremovalpart2.png)
+![credentialsremoval3](./images/tunnelblick-vpn-removal-step3.png)
 
 4. Afterwards, select your VPN profile and delete it from Tunnelblick app as described on below picture
 
-![profileremoval](./images/tunnelblick-vpn-removal-step4.png)
+![tunnelblick-vpn-removal-step4](./images/tunnelblick-vpn-removal-step4.png)
 
 5. You can now continue with next step
 
@@ -227,7 +227,7 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
     ![OpenVPN-icon](./images/8.OpenVPN-guide.png)
 
-6. Now try again to connect with a fresh **`verfication code`** from Google Authenticator.
+6. Now try again to connect with a fresh **`verification code`** from Google Authenticator.
 
 You should now be connected to the VPN.
 
