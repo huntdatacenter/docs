@@ -16,7 +16,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 ::: warning Shipments from the VPN certificate reset order
 
-1.1 Your new VPN certificate and VPN profile in a compressed `7z`-file sent over filesender.no
+1.1 Your new VPN certificate and VPN profile in a compressed `7z`-file sent over filesender.sikt.no link on your organizational email
 
 1.2. Your new `VPN passphrase` and your `7-ZIP file key` sent over Signal.
 
