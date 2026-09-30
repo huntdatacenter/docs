@@ -20,6 +20,10 @@ Our current services have reached a new milestone: 10 years!
 
 That itself is an achievement, but it also means that we have to update our first VPN root certificates. That again means that we have to issue new VPN user certificates for all active lab users at the same time.
 
+### Will my VPN be inactive immediately after the reissue?
+
+Yes, there is no delay. The moment we start accepting new VPN configs all the old ones become inactive.
+
 ### When?
 
 We plan to send you a new HUNT Cloud VPN configuration on 2026-10-07.
