@@ -71,13 +71,13 @@ Note that the default archive utility on MacOS does not recognize the passphrase
 
 2.1 Click on the link in the email to download the file and save this on your local computer.
 
-2.2 Install the p7zip application. 
+2.2 Install the p7zip application.
 
 ```bash
 sudo apt update && sudo apt-get install p7zip-full
 ```
 
-2.3 Unpack (extract) the archive folder file. 
+2.3 Unpack (extract) the archive folder file.
 
 ```bash
 7z e <filename>.7z
@@ -122,7 +122,7 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
 4. Afterwards, select your VPN profile and delete it from Tunnelblick app as described on below picture
 
-![profileremoval](./images/Configurations.png)
+![profileremoval](./images/tunnelblick-vpn-removal-step4.png)
 
 5. You can now continue with next step
 
@@ -258,9 +258,9 @@ You should now be connected to the VPN.
 
 ::: expander Ubuntu Linux {#5-linux}
 
-1. Click on the _VPN_ icon in the task bar in the upper right corner. 
+1. Click on the _VPN_ icon in the task bar in the upper right corner.
 2. You will see two open fields when OpenVPN try to connect for the first time:
-  - In the first field, enter the **`verification code`** from Google Authenticator in the _Password_ field. 
+  - In the first field, enter the **`verification code`** from Google Authenticator in the _Password_ field.
   - In the second field, enter the **`VPN passphrase`** sent to you from HUNT Cloud over Signal. You should only be asked about this on your first login.
 3. Click _Connect_ to connect.
 
