@@ -116,7 +116,9 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
 2. Select your VPN profile on the left side of the window. Then, in the bottom left corner, select expansion window marked with 3 dots in a circle
 
-![credentialsremoval1](./images/credentialsremovalpart1.png)
+![credentialsremoval1a](./images/tunnelblick-vpn-removal-step2a.png)
+
+![credentialsremoval1b](./images/credentialsremovalpart1.png)
 
 3. At the very bottom of the newly opened widow, select `Delete configuration's credentials in keychain`
 
