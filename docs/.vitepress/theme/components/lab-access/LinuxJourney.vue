@@ -268,11 +268,19 @@ const openSurvey = () => {
             <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Access</h3>
           </v-expansion-panel-title>
           <v-expansion-panel-text id="vpn-config" class="mt-2">
-            If you have not setup <b>HUNT Cloud VPN</b> yet follow <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
+            <div v-if="!filterGuidesByType || ['new_user', 'new_computer', 'reissue_all'].includes(filterGuidesByType) ? true : false">
+              If you have not setup <b>HUNT Cloud VPN</b> yet follow <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
+            </div>
+            <div v-if="filterGuidesByType && ['vpn_reset'].includes(filterGuidesByType) ? true : false">
+              If you are resetting your VPN access follow the <i>OpenVPN configuration</i> guide:
+            </div>
+            <div v-if="filterGuidesByType && ['totp_reset'].includes(filterGuidesByType) ? true : false">
+              If you are resetting your TOTP (Google authenticator code) follow the <i>TOTP</i> configuration guide:
+            </div>
 
-            <TotpGuide />
+            <TotpGuide v-if="!filterGuidesByType || ['new_user', 'new_computer', 'totp_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" />
 
-            <v-row class="my-1">
+            <v-row v-if="!filterGuidesByType || ['new_user', 'new_computer', 'vpn_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" class="my-1">
               <v-col cols="12">
                 <v-btn
                   variant="text"
@@ -281,7 +289,7 @@ const openSurvey = () => {
                   elevation="2"
                   prepend-icon="mdi-vpn"
                 >
-                  2. OpenVPN Configuration
+                  {{ filterGuidesByType && ['vpn_reset'].includes(filterGuidesByType) ? `OpenVPN Configuration` : `2. OpenVPN Configuration` }}
                 </v-btn>
               </v-col>
             </v-row>
