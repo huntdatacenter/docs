@@ -287,9 +287,8 @@ const openSurvey = () => {
                   color="primary"
                   @click.stop="vpnDialog = true"
                   elevation="2"
-                  prepend-icon="mdi-vpn"
                 >
-                  {{ filterGuidesByType && ['vpn_reset'].includes(filterGuidesByType) ? `OpenVPN Configuration` : `2. OpenVPN Configuration` }}
+                  <v-icon>mdi-vpn</v-icon>&nbsp;&nbsp;{{ filterGuidesByType && ['vpn_reset'].includes(filterGuidesByType) ? `OpenVPN Configuration` : `2. OpenVPN Configuration` }}
                 </v-btn>
               </v-col>
             </v-row>

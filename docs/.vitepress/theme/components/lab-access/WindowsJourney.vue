@@ -277,11 +277,19 @@ const openSurvey = () => {
             <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Access</h3>
           </v-expansion-panel-title>
           <v-expansion-panel-text id="vpn-config" ref="#vpn-config" class="mt-2">
-            If you have not setup access to <strong>HUNT Cloud VPN</strong> yet, follow both <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
+            <div v-if="!filterGuidesByType || ['new_user', 'new_computer', 'reissue_all'].includes(filterGuidesByType) ? true : false">
+              If you have not setup access to <strong>HUNT Cloud VPN</strong> yet, follow both <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
+            </div>
+            <div v-if="filterGuidesByType && ['vpn_reset'].includes(filterGuidesByType) ? true : false">
+              If you are resetting your VPN access follow the <i>OpenVPN configuration</i> guide:
+            </div>
+            <div v-if="filterGuidesByType && ['totp_reset'].includes(filterGuidesByType) ? true : false">
+              If you are resetting your TOTP (Google authenticator code) follow the <i>TOTP</i> configuration guide:
+            </div>
 
-            <TotpGuide />
+            <TotpGuide v-if="!filterGuidesByType || ['new_user', 'new_computer', 'totp_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" />
 
-            <v-row class="my-1">
+            <v-row v-if="!filterGuidesByType || ['new_user', 'new_computer', 'vpn_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" class="my-1">
               <v-col cols="12">
                 <v-btn
                   variant="text"
@@ -289,7 +297,7 @@ const openSurvey = () => {
                   @click.stop="vpnDialog = true"
                   elevation="2"
                 >
-                  <v-icon>mdi-vpn</v-icon>&nbsp;&nbsp;2. OpenVPN Configuration
+                  <v-icon>mdi-vpn</v-icon>&nbsp;&nbsp;{{ filterGuidesByType && ['vpn_reset'].includes(filterGuidesByType) ? `OpenVPN Configuration` : `2. OpenVPN Configuration` }}
                 </v-btn>
               </v-col>
             </v-row>
@@ -701,6 +709,7 @@ const openSurvey = () => {
             </v-dialog>
 
             <VideoGuide
+              v-if="!filterGuidesByType || ['new_user', 'new_computer', 'reissue_all'].includes(filterGuidesByType) ? true : false"
               v-model="mainExpansionPanel"
               title="VPN access"
               video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-win-vpn-access-v1.mp4/3719140a-745a-fabf-0959-9ee83a4155b6?t=1728711018006"
