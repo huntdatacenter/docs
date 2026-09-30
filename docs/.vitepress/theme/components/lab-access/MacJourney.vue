@@ -252,13 +252,23 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
             <h3><a href="#vpn-config" class="header-anchor">#</a> {{ vpnConfId }}. VPN Access</h3>
           </v-expansion-panel-title>
           <v-expansion-panel-text id="vpn-config" class="mt-2">
-            If you have not setup <b>HUNT Cloud VPN</b> yet follow <i>TOTP</i> and <i>Tunnelblick</i> configuration guides:
+            <div v-if="!filterGuidesByType || ['new_user', 'new_computer', 'reissue_all'].includes(filterGuidesByType) ? true : false">
+              If you have not setup access to <strong>HUNT Cloud VPN</strong> yet, follow <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
+            </div>
+            <div v-if="filterGuidesByType && ['vpn_reset'].includes(filterGuidesByType) ? true : false">
+              If you are resetting your VPN access follow the <i>OpenVPN configuration</i> guide:
+            </div>
+            <div v-if="filterGuidesByType && ['totp_reset'].includes(filterGuidesByType) ? true : false">
+              If you are resetting your TOTP (Google authenticator code) follow the <i>TOTP</i> configuration guide:
+            </div>
 
-            <TotpGuide />
+            <TotpGuide v-if="!filterGuidesByType || ['new_user', 'new_computer', 'totp_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" />
 
-            <v-row class="my-1">
+            <v-row v-if="!filterGuidesByType || ['new_user', 'new_computer', 'vpn_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" class="my-1">
               <v-col cols="12">
-                <v-btn variant="text" color="primary" @click.stop="vpnDialog = true" elevation="2" prepend-icon="mdi-vpn"> 2. Tunnelblick Configuration </v-btn>
+                <v-btn variant="text" color="primary" @click.stop="vpnDialog = true" elevation="2">
+                  <v-icon>mdi-vpn</v-icon>&nbsp;&nbsp;{{ filterGuidesByType && ['vpn_reset'].includes(filterGuidesByType) ? `OpenVPN Configuration` : `2. OpenVPN Configuration` }}
+		</v-btn>
               </v-col>
             </v-row>
 
@@ -546,6 +556,7 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
             </v-dialog>
 
             <VideoGuide
+              v-if="!filterGuidesByType || ['new_user', 'new_computer', 'reissue_all'].includes(filterGuidesByType) ? true : false"
               v-model="mainExpansionPanel"
               title="VPN access"
               video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-macOS-vpn-access-v1.mp4/72993cbe-8e1f-3b3f-9f96-6b4d75016b17?t=1712930006465"

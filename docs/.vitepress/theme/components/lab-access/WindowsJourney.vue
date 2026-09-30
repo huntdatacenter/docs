@@ -278,7 +278,7 @@ const openSurvey = () => {
           </v-expansion-panel-title>
           <v-expansion-panel-text id="vpn-config" ref="#vpn-config" class="mt-2">
             <div v-if="!filterGuidesByType || ['new_user', 'new_computer', 'reissue_all'].includes(filterGuidesByType) ? true : false">
-              If you have not setup access to <strong>HUNT Cloud VPN</strong> yet, follow both <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
+              If you have not setup access to <strong>HUNT Cloud VPN</strong> yet, follow <i>TOTP</i> and <i>OpenVPN</i> configuration guides:
             </div>
             <div v-if="filterGuidesByType && ['vpn_reset'].includes(filterGuidesByType) ? true : false">
               If you are resetting your VPN access follow the <i>OpenVPN configuration</i> guide:
