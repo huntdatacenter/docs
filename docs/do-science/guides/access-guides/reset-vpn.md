@@ -53,7 +53,7 @@ We recommend downloading [Keka](https://www.keka.io/en/download) to successfully
 alternatively, you can install keka using brew command below
 
 ```bash
-brew install keka
+brew install --cask keka
 ```
 
 2.3 Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the archive folder.
