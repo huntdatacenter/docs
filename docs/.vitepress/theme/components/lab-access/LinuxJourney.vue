@@ -251,20 +251,15 @@ const openSurvey = () => {
             <ol class="mt-2">
               <li>Open <em>Settings</em>.</li>
               <li>Select <em>Network</em>.</li>
-              <li>Click the <em>+</em> sign to the right of the <em>VPN</em> section.</li>
-              <li>Choose <em>Import from file...</em></li>
               <li>
-                Select the OpenVPN profile named <strong><code>&lt;username&gt;.ovpn</code></strong> that you collected in Step 1.
+                Click the VPN Options icon (small wheel) to the right of your VPN profile.
+                <img alt="tunnelblick-vpn-removal-step1" src="/img/vpn/step1_Linux_24_04_vpn_remove.png" /><br />
               </li>
-              <li>Click on the <em>Identity</em> tab.</li>
-              <li>In <em>User name</em>, enter your user name (same as the OpenVPN profile file name).</li>
               <li>
-                Click on the person icon in the <em>Password</em> field and select <strong><code>Ask for this password every time</code></strong
-                >.
+                Click Remove VPN... at the bottom of the menu (red colored button).
+                <img alt="tunnelblick-vpn-removal-step1" src="/img/vpn/step2_Linux_24_04_vpn_remove.png" /><br />
               </li>
-              <li>Click on the <em>IPv4 Settings</em> tab.</li>
-              <li>Under <em>Routes...</em>, select <em>Use this connection only for resources on its network</em>.</li>
-              <li>Click <em>Add</em>.</li>
+              <li>Click Forget.</li>
             </ol>
 
             <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
