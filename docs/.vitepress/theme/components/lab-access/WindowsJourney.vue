@@ -18,6 +18,7 @@ const vpnDialog = ref(false)
 const vpnStepper = ref(1)
 const workbenchDialog = ref(false)
 const workbenchStepper = ref(1)
+const removeVpnId = ref(1)
 const fetchSecretsId = ref(2)
 const vpnConfId = ref(3)
 const passChangeId = ref(4)
@@ -229,10 +230,10 @@ const openSurvey = () => {
     </v-row>
     <v-card class="mt-6" elevation="1">
       <v-expansion-panels accordion v-model="mainExpansionPanel" elevation="0">
-        <!-- 1. Fetch secrets -->
+        <!-- 1. Remove old VPN cert -->
         <v-expansion-panel :disabled="!filterGuidesByType || ['vpn_reset'].includes(filterGuidesByType) ? false : true">
           <v-expansion-panel-title>
-            <h3><a href="#fetch-secrets" class="header-anchor">#</a> 1. Remove your old VPN certificate</h3>
+            <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ removeVpnId }}. Remove your old VPN certificate</h3>
           </v-expansion-panel-title>
           <v-expansion-panel-text id="fetch-secrets" ref="#fetch-secrets">
             You will need to remove your old VPN certificate and passwords before you install a new one.
@@ -249,7 +250,7 @@ const openSurvey = () => {
           </v-expansion-panel-text>
         </v-expansion-panel>
 
-        <!-- 1. Fetch secrets -->
+        <!-- 2. Fetch secrets -->
         <v-expansion-panel
           :disabled="
             !filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset', 'workbench_reissue', 'reissue_all'].includes(filterGuidesByType) ? false : true

@@ -44,14 +44,15 @@ const vpnDialog = ref(false)
 const vpnStepper = ref(1)
 const workbenchDialog = ref(false)
 const workbenchStepper = ref(1)
-const fetchSecretsId = ref(1)
-const vpnConfId = ref(2)
-const passChangeId = ref(3)
-const passLessId = ref(4)
-const sshConfId = ref(5)
-const hostsFileId = ref(6)
-const workbenchId = ref(7)
-const lastPanelId = ref(7)
+const removeVpnId = ref(1)
+const fetchSecretsId = ref(2)
+const vpnConfId = ref(3)
+const passChangeId = ref(4)
+const passLessId = ref(5)
+const sshConfId = ref(6)
+const hostsFileId = ref(7)
+const workbenchId = ref(8)
+const lastPanelId = ref(8)
 const hostsChangeSuccess = ref(null)
 const hostsChangeLoading = ref(false)
 
@@ -239,7 +240,38 @@ const openSurvey = () => {
 
     <v-card class="mt-6" elevation="1">
       <v-expansion-panels v-model="mainExpansionPanel" elevation="0">
-        <!-- 1. Fetch secrets -->
+        <!-- 1. Remove old VPN cert -->
+        <v-expansion-panel :disabled="!filterGuidesByType || ['vpn_reset'].includes(filterGuidesByType) ? false : true">
+          <v-expansion-panel-title>
+            <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ removeVpnId }}. Remove your old VPN certificate</h3>
+          </v-expansion-panel-title>
+          <v-expansion-panel-text id="fetch-secrets" ref="#fetch-secrets">
+            To remove old VPN configuration on MacOS using Tunnelblick, follow our guide below
+
+            <ol class="mt-2">
+              <li>Open <em>Settings</em>.</li>
+              <li>Select <em>Network</em>.</li>
+              <li>Click the <em>+</em> sign to the right of the <em>VPN</em> section.</li>
+              <li>Choose <em>Import from file...</em></li>
+              <li>
+                Select the OpenVPN profile named <strong><code>&lt;username&gt;.ovpn</code></strong> that you collected in Step 1.
+              </li>
+              <li>Click on the <em>Identity</em> tab.</li>
+              <li>In <em>User name</em>, enter your user name (same as the OpenVPN profile file name).</li>
+              <li>
+                Click on the person icon in the <em>Password</em> field and select <strong><code>Ask for this password every time</code></strong
+                >.
+              </li>
+              <li>Click on the <em>IPv4 Settings</em> tab.</li>
+              <li>Under <em>Routes...</em>, select <em>Use this connection only for resources on its network</em>.</li>
+              <li>Click <em>Add</em>.</li>
+            </ol>
+
+            <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+
+        <!-- 2. Fetch secrets -->
         <v-expansion-panel
           :disabled="
             !filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset', 'workbench_reissue', 'reissue_all'].includes(filterGuidesByType) ? false : true
