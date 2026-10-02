@@ -188,11 +188,6 @@ const getNextItem = (groupId, reset = false) => {
   return `${groupId}.${itemId}.`
 }
 
-function closeVpnDialog() {
-  vpnDialog.value = false
-  vpnStepper.value = 1
-}
-
 // Lifecycle
 onMounted(() => {
   if (!filterGuidesByType.value && localStorage.hasOwnProperty("labAccessGuideFilter") && localStorage.labAccessGuideFilter) {
@@ -290,7 +285,7 @@ const openSurvey = () => {
                 </v-btn>
               </v-col>
             </v-row>
-            <v-dialog v-model="vpnDialog" persistent scrollable max-width="960px" @keydown.esc="closeVpnDialog">
+            <v-dialog v-model="vpnDialog" persistent scrollable max-width="960px" @keydown.esc="((vpnDialog = false), (vpnStepper = 1))">
               <v-card elevation="0">
                 <v-card-title class="pa-0">
                   <v-app-bar dark color="#00509e" flat>
@@ -459,7 +454,7 @@ const openSurvey = () => {
                           <img alt="OpenVPN-icon" src="/img/vpn/2.OpenVPN-guide.png" />
                         </v-alert>
                       </v-card>
-                      <v-btn color="success" class="mx-2 mb-1" @click="closeVpnDialog">Finish</v-btn>
+                      <v-btn color="success" class="mx-2 mb-1" @click="((vpnDialog = false), (vpnStepper = 1))">Finish</v-btn>
                       <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
                       <v-btn color="warning" class="mx-2 mb-1" @click="vpnStepper = 5">Troubleshooting</v-btn>
                       <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
@@ -1010,7 +1005,7 @@ const openSurvey = () => {
                 Python, RStudio, R and MATLAB.
               </v-col>
             </v-row>
-            <v-dialog v-model="workbenchDialog" persistent scrollable max-width="960px" @keydown.esc="closeVpnDialog">
+            <v-dialog v-model="workbenchDialog" persistent scrollable max-width="960px" @keydown.esc="((vpnDialog = false), (vpnStepper = 1))">
               <v-card elevation="0">
                 <v-card-title class="pa-0">
                   <v-app-bar dark color="#00509e" flat>
@@ -1181,7 +1176,7 @@ const openSurvey = () => {
                           </div>
                         </v-alert>
                       </v-card>
-                      <v-btn color="success" class="mx-2 mb-1" @click="closeVpnDialog">Finish</v-btn>
+                      <v-btn color="success" class="mx-2 mb-1" @click="((vpnDialog = false), (vpnStepper = 1))">Finish</v-btn>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
                       <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper = 4">Troubleshooting</v-btn>
                       <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 2">Back</v-btn>
@@ -1328,7 +1323,7 @@ const openSurvey = () => {
                       </v-card>
                       <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
                       <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper = 3">Back</v-btn>
-                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="closeVpnDialog">Close</v-btn>
+                      <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="((vpnDialog = false), (vpnStepper = 1))">Close</v-btn>
                     </v-stepper-vertical-item>
                   </v-stepper-vertical>
                 </v-card-text>

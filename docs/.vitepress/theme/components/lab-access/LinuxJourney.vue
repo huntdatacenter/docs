@@ -197,11 +197,6 @@ const getNextItem = (groupId, reset = false) => {
   return `${groupId}.${itemId}.`
 }
 
-function closeVpnDialog() {
-  vpnDialog.value = false
-  vpnStepper.value = 1
-}
-
 // Lifecycle
 onMounted(() => {
   if (!filterGuidesByType.value && localStorage.hasOwnProperty("labAccessGuideFilter") && localStorage.labAccessGuideFilter) {
@@ -294,7 +289,7 @@ const openSurvey = () => {
               </v-col>
             </v-row>
 
-            <v-dialog v-model="vpnDialog" persistent scrollable max-width="960px" @keydown.esc="closeVpnDialog">
+            <v-dialog v-model="vpnDialog" persistent scrollable max-width="960px" @keydown.esc="((vpnDialog = false), (vpnStepper = 1))">
               <v-card>
                 <v-toolbar color="#00509e" theme="dark">
                   <v-toolbar-title>OpenVPN Configuration</v-toolbar-title>
@@ -397,7 +392,7 @@ const openSurvey = () => {
                       </v-card>
 
                       <template v-slot:actions>
-                        <v-btn color="success" class="mx-2 mb-1" @click="closeVpnDialog">Finish</v-btn>
+                        <v-btn color="success" class="mx-2 mb-1" @click="((vpnDialog = false), (vpnStepper = 1))">Finish</v-btn>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
                         <v-btn color="warning" class="mx-2 mb-1" @click="vpnStepper = 5">Troubleshooting</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 3">Back</v-btn>
@@ -485,7 +480,7 @@ const openSurvey = () => {
 
                       <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="vpnStepper = 1">Start again</v-btn>
-                        <v-btn color="success" class="mx-2 mb-1" @click="closeVpnDialog">Finish</v-btn>
+                        <v-btn color="success" class="mx-2 mb-1" @click="((vpnDialog = false), (vpnStepper = 1))">Finish</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="vpnStepper = 4">Back</v-btn>
                       </template>
                     </v-stepper-vertical-item>
@@ -777,7 +772,7 @@ const openSurvey = () => {
               </v-col>
             </v-row>
 
-            <v-dialog v-model="workbenchDialog" persistent scrollable max-width="960px" @keydown.esc="closeVpnDialog">
+            <v-dialog v-model="workbenchDialog" persistent scrollable max-width="960px" @keydown.esc="((workbenchDialog = false), (workbenchStepper = 1))">
               <v-card elevation="0">
                 <v-card-title class="pa-0">
                   <v-toolbar theme="dark" color="#00509e" flat>
@@ -906,7 +901,7 @@ const openSurvey = () => {
                       </v-card>
 
                       <template v-slot:actions>
-                        <v-btn color="success" class="mx-2 mb-1" @click="closeVpnDialog">Finish</v-btn>
+                        <v-btn color="success" class="mx-2 mb-1" @click="((workbenchDialog = false), (workbenchStepper = 1))">Finish</v-btn>
                         <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
                         <v-btn color="warning" class="mx-2 mb-1" @click="workbenchStepper++">Troubleshooting</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
@@ -1035,7 +1030,7 @@ const openSurvey = () => {
 
                       <template v-slot:actions>
                         <v-btn color="primary" class="mx-2 mb-1" @click="workbenchStepper = 1">Start again</v-btn>
-                        <v-btn color="success" class="mx-2 mb-1" @click="closeVpnDialog">Finish</v-btn>
+                        <v-btn color="success" class="mx-2 mb-1" @click="((workbenchDialog = false), (workbenchStepper = 1))">Finish</v-btn>
                         <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="workbenchStepper--">Back</v-btn>
                       </template>
                     </v-stepper-vertical-item>

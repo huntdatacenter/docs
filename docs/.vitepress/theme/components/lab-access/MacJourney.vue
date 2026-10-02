@@ -163,11 +163,6 @@ const getNextItem = (groupId, reset = false) => {
   return `${groupId}.${itemId}.`
 }
 
-function closeVpnDialog() {
-  vpnDialog.value = false
-  vpnStepper.value = 1
-}
-
 // Lifecycle
 onMounted(() => {
   if (!filterGuidesByType.value && localStorage.hasOwnProperty("labAccessGuideFilter") && localStorage.labAccessGuideFilter) {
