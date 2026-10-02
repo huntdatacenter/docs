@@ -267,8 +267,8 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
             <v-row v-if="!filterGuidesByType || ['new_user', 'new_computer', 'vpn_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" class="my-1">
               <v-col cols="12">
                 <v-btn variant="text" color="primary" @click.stop="vpnDialog = true" elevation="2">
-                  <v-icon>mdi-vpn</v-icon>&nbsp;&nbsp;{{ filterGuidesByType && ['vpn_reset'].includes(filterGuidesByType) ? `OpenVPN Configuration` : `2. OpenVPN Configuration` }}
-		</v-btn>
+                  <v-icon>mdi-vpn</v-icon>&nbsp;&nbsp;{{ filterGuidesByType && ["vpn_reset"].includes(filterGuidesByType) ? `OpenVPN Configuration` : `2. OpenVPN Configuration` }}
+                </v-btn>
               </v-col>
             </v-row>
 
