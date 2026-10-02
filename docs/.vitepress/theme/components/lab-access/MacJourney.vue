@@ -44,14 +44,13 @@ let vpnDialog = ref(false)
 let vpnStepper = ref(1)
 let workbenchDialog = ref(false)
 let workbenchStepper = ref(1)
-const removeVpnId = ref(1)
-const fetchSecretsId = ref(2)
-const vpnConfId = ref(3)
-const passChangeId = ref(4)
-const passLessId = ref(5)
-const sshConfId = ref(6)
-const hostsFileId = ref(7)
-const workbenchId = ref(8)
+const fetchSecretsId = ref(1)
+const vpnConfId = ref(2)
+const passChangeId = ref(3)
+const passLessId = ref(4)
+const sshConfId = ref(5)
+const hostsFileId = ref(6)
+const workbenchId = ref(7)
 const sshKeygenWin = ref(`ssh-keygen -q -t rsa -b 4096 -f %USERPROFILE%\\.ssh\\id_rsa -N ""`)
 const passExpired = ref(`WARNING: Your password has expired.
 You must change your password now and login again!
@@ -216,40 +215,7 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
 
     <v-card class="mt-6" elevation="1">
       <v-expansion-panels v-model="mainExpansionPanel" elevation="0">
-        <!-- 1. Remove old VPN cert -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['vpn_reset'].includes(filterGuidesByType) ? false : true">
-          <v-expansion-panel-title>
-            <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ removeVpnId }}. Remove your old VPN certificate</h3>
-          </v-expansion-panel-title>
-          <v-expansion-panel-text id="fetch-secrets" ref="#fetch-secrets">
-            To remove old VPN configuration on MacOS using Tunnelblick, follow our guide below
-
-            <ol class="mt-2">
-              <li>
-                Click on running Tunnelblick icon in upper menu bar and select VPN details...
-                <img alt="tunnelblick-vpn-removal-step1" src="/img/vpn/tunnelblick-vpn-removal-step1.png" /> <br />
-              </li>
-              <li>
-                Select your VPN profile on the left side of the window. Then, in the bottom left corner, select expansion window marked with 3 dots in a circle
-                <img alt="tunnelblick-vpn-removal-step2a" src="/img/vpn/tunnelblick-vpn-removal-step2a.png" /> <br />
-                <img alt="tunnelblick-vpn-removal-step2b" src="/img/vpn/tunnelblick-vpn-removal-step2b.png" /> <br />
-              </li>
-              <li>
-                At the very bottom of the newly opened widow, select Delete configuration's credentials in keychain
-                <img alt="tunnelblick-vpn-removal-step2a" src="/img/vpn/tunnelblick-vpn-removal-step3.png" /> <br />
-              </li>
-              <li>
-                Afterwards, select your VPN profile and delete it from Tunnelblick app as described on below picture
-                <img alt="tunnelblick-vpn-removal-step2a" src="/img/vpn/tunnelblick-vpn-removal-step4.png" /> <br />
-              </li>
-              <li>You can now continue with next step</li>
-            </ol>
-
-            <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
-          </v-expansion-panel-text>
-        </v-expansion-panel>
-
-        <!-- 2. Fetch secrets -->
+        <!-- 1. Fetch secrets -->
         <v-expansion-panel
           :disabled="
             !filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset', 'workbench_reissue', 'reissue_all'].includes(filterGuidesByType) ? false : true
@@ -295,6 +261,8 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
             <div v-if="filterGuidesByType && ['totp_reset'].includes(filterGuidesByType) ? true : false">
               If you are resetting your TOTP (Google authenticator code) follow the <i>TOTP</i> configuration guide:
             </div>
+
+            <RemoveVpnCertGuide os="mac" v-if="['vpn_reset'].includes(filterGuidesByType) ? true : false" />
 
             <TotpGuide v-if="!filterGuidesByType || ['new_user', 'new_computer', 'totp_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" />
 

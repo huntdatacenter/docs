@@ -18,14 +18,13 @@ const vpnDialog = ref(false)
 const vpnStepper = ref(1)
 const workbenchDialog = ref(false)
 const workbenchStepper = ref(1)
-const removeVpnId = ref(1)
-const fetchSecretsId = ref(2)
-const vpnConfId = ref(3)
-const passChangeId = ref(4)
-const passLessId = ref(5)
-const sshConfId = ref(6)
-const hostsFileId = ref(7)
-const workbenchId = ref(8)
+const fetchSecretsId = ref(1)
+const vpnConfId = ref(2)
+const passChangeId = ref(3)
+const passLessId = ref(4)
+const sshConfId = ref(5)
+const hostsFileId = ref(6)
+const workbenchId = ref(7)
 const cmdPrompt = ref(`<code>WIN + R</code> and type <strong><code>cmd.exe</code></strong> then hit <code>Enter</code>`)
 const openvpnInstallerName = ref(`OpenVPN-<version-number>-I001-amd64.msi`)
 const sshKeygenWin = ref(`ssh-keygen -q -t rsa -b 4096 -f "%USERPROFILE%\\.ssh\\id_rsa" -N ""`)
@@ -230,27 +229,7 @@ const openSurvey = () => {
     </v-row>
     <v-card class="mt-6" elevation="1">
       <v-expansion-panels accordion v-model="mainExpansionPanel" elevation="0">
-        <!-- 1. Remove old VPN cert -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['vpn_reset'].includes(filterGuidesByType) ? false : true">
-          <v-expansion-panel-title>
-            <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ removeVpnId }}. Remove your old VPN certificate</h3>
-          </v-expansion-panel-title>
-          <v-expansion-panel-text id="fetch-secrets" ref="#fetch-secrets">
-            You will need to remove your old VPN certificate and passwords before you install a new one.
-
-            <ol class="mt-2">
-              <li>Right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select Clear Saved Passwords</li>
-              <li>
-                Open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here:
-                <CopyTextField :model-value="`C:\\Users\\<MYUSERNAME>\\OpenVPN\\config\\<folder-with-username-that-you-should-remove>`" />
-              </li>
-            </ol>
-
-            <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
-          </v-expansion-panel-text>
-        </v-expansion-panel>
-
-        <!-- 2. Fetch secrets -->
+        <!-- 1. Fetch secrets -->
         <v-expansion-panel
           :disabled="
             !filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset', 'workbench_reissue', 'reissue_all'].includes(filterGuidesByType) ? false : true
@@ -296,6 +275,8 @@ const openSurvey = () => {
             <div v-if="filterGuidesByType && ['totp_reset'].includes(filterGuidesByType) ? true : false">
               If you are resetting your TOTP (Google authenticator code) follow the <i>TOTP</i> configuration guide:
             </div>
+
+            <RemoveVpnCertGuide os="windows" v-if="['vpn_reset'].includes(filterGuidesByType) ? true : false" />
 
             <TotpGuide v-if="!filterGuidesByType || ['new_user', 'new_computer', 'totp_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" />
 

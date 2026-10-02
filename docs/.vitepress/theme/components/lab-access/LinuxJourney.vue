@@ -44,15 +44,14 @@ const vpnDialog = ref(false)
 const vpnStepper = ref(1)
 const workbenchDialog = ref(false)
 const workbenchStepper = ref(1)
-const removeVpnId = ref(1)
-const fetchSecretsId = ref(2)
-const vpnConfId = ref(3)
-const passChangeId = ref(4)
-const passLessId = ref(5)
-const sshConfId = ref(6)
-const hostsFileId = ref(7)
-const workbenchId = ref(8)
-const lastPanelId = ref(8)
+const fetchSecretsId = ref(1)
+const vpnConfId = ref(2)
+const passChangeId = ref(3)
+const passLessId = ref(4)
+const sshConfId = ref(5)
+const hostsFileId = ref(6)
+const workbenchId = ref(7)
+const lastPanelId = ref(7)
 const hostsChangeSuccess = ref(null)
 const hostsChangeLoading = ref(false)
 
@@ -240,33 +239,7 @@ const openSurvey = () => {
 
     <v-card class="mt-6" elevation="1">
       <v-expansion-panels v-model="mainExpansionPanel" elevation="0">
-        <!-- 1. Remove old VPN cert -->
-        <v-expansion-panel :disabled="!filterGuidesByType || ['vpn_reset'].includes(filterGuidesByType) ? false : true">
-          <v-expansion-panel-title>
-            <h3><a href="#fetch-secrets" class="header-anchor">#</a> {{ removeVpnId }}. Remove your old VPN certificate</h3>
-          </v-expansion-panel-title>
-          <v-expansion-panel-text id="fetch-secrets" ref="#fetch-secrets">
-            To remove old VPN configuration on MacOS using Tunnelblick, follow our guide below
-
-            <ol class="mt-2">
-              <li>Open <em>Settings</em>.</li>
-              <li>Select <em>Network</em>.</li>
-              <li>
-                Click the VPN Options icon (small wheel) to the right of your VPN profile.
-                <img alt="tunnelblick-vpn-removal-step1" src="/img/vpn/step1_Linux_24_04_vpn_remove.png" /><br />
-              </li>
-              <li>
-                Click Remove VPN... at the bottom of the menu (red colored button).
-                <img alt="tunnelblick-vpn-removal-step1" src="/img/vpn/step2_Linux_24_04_vpn_remove.png" /><br />
-              </li>
-              <li>Click Forget.</li>
-            </ol>
-
-            <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
-          </v-expansion-panel-text>
-        </v-expansion-panel>
-
-        <!-- 2. Fetch secrets -->
+        <!-- 1. Fetch secrets -->
         <v-expansion-panel
           :disabled="
             !filterGuidesByType || ['new_user', 'new_computer', 'new_lab', 'ssh_reset', 'vpn_reset', 'workbench_reissue', 'reissue_all'].includes(filterGuidesByType) ? false : true
@@ -305,6 +278,8 @@ const openSurvey = () => {
             <div v-if="filterGuidesByType && ['totp_reset'].includes(filterGuidesByType) ? true : false">
               If you are resetting your TOTP (Google authenticator code) follow the <i>TOTP</i> configuration guide:
             </div>
+
+            <RemoveVpnCertGuide os="linux" v-if="['vpn_reset'].includes(filterGuidesByType) ? true : false" />
 
             <TotpGuide v-if="!filterGuidesByType || ['new_user', 'new_computer', 'totp_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" />
 
