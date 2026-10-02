@@ -137,7 +137,13 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 1. Open _Settings_.
 2. Select _Network_.
 3. Click the _VPN Options_ icon (small wheel) to the right of your VPN profile.
+
+![tunnelblick-vpn-removal-linux-step1](./images/step1_Linux_24_04_vpn_remove.png)
+
 4. Click _Remove VPN..._ at the bottom of the menu (red colored button).
+
+![tunnelblick-vpn-removal-linux-step2](./images/step2_Linux_24_04_vpn_remove.png)
+
 5. Click _Forget_.
 
 :::
