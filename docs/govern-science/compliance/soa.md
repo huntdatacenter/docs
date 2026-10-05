@@ -8,7 +8,7 @@ description: This page list the Statement of Applicability (SoA) for HUNT Cloud.
 
 # Statement of Applicability
 
-**Our Statement of Applicability, often referred to as "SoA", states which ISO control objectives we have applied in our ISO 27001 and ISO 27701 certificate.**
+**Our Statement of Applicability, often referred to as "SoA", states which ISO control objectives we have applied in our ISO 27001 and ISO 27701 certificates.**
 
 The SoA is a central document in our certification audits, and it guides Data controllers to quickly asses which controls they should expect to be in place to safeguard their data.
 
