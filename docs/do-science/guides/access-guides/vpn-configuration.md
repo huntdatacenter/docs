@@ -313,14 +313,18 @@ If nothing works, please head over to our main [troubleshooting](/do-science/tro
 
 ### Unable to connect after Ubuntu upgrade from version 24.X to 26.X
 
-The NetworkManager log would contain something like these:
+To check if there is something wrong with the VPN connection. Check the network logs by using the `terminal` application and type in:
 ```
-vm-24-04@vm-24-04-QEMU-Virtual-Machine:~$ journalctl -f -u NetworkManager
+journalctl -f -u NetworkManager
+```
+If the NetworkManager log contain something like these:
+```
 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-256-CBC') to --data-ciphers (currently 'DEFAULT'), e.g --data-ciphers DEFAULT:AES-256-CBC if you want to connect to this server.
 ERROR: Failed to apply push options
 Failed to open tun/tap interface
 ```
-The fix would be running the command below, make sure to replace `vpn name` with your VPN profile:
-- nmcli connection modify `vpn name` +vpn.data "data-ciphers=AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305:AES-256-CBC, data-ciphers-fallback=AES-256-CBC"
-
+The fix would be running the command below, make sure to replace `<<VPN_Name>>` with your VPN profile:
+```
+nmcli connection modify <<VPN_Name>> +vpn.data "data-ciphers=AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305:AES-256-CBC, data-ciphers-fallback=AES-256-CBC"
+```
 The command add the data-cipher setting used by HUNT profile.
