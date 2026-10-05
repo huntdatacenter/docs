@@ -1122,6 +1122,14 @@ function sidebarGovernScience() {
           link: "/govern-science/compliance/certificates",
         },
         {
+          text: "Scoping documents",
+          link: "/govern-science/compliance/scoping-documents",
+        },
+        {
+          text: "Statement of applicability",
+          link: "/govern-science/compliance/soa",
+        },
+        {
           text: "Subcontractors",
           link: "/govern-science/compliance/subcontractors",
         },
