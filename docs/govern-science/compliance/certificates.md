@@ -18,7 +18,11 @@ Our ISO 9001 and ISO/IEC 27001 certificates have been issued since 2017, while t
 
 ## ISO/IEC 9001 certificate
 
+::: tip Current version
+
 [NS-EN ISO 9001:2015 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso9001-2025.pdf) (PDF)
+
+:::
 
 Our compliance with the international standard in quality management «ISO 9001» is certified by DNV, Norway. The certificate was issues as part of HUNT Research Centre's main certificate from 2017 to 2025, and as a stand-along certificate for HUNT Cloud from 2025.
 
@@ -60,7 +64,11 @@ Our compliance with the international standard in quality management «ISO 9001�
 
 ## ISO/IEC 27001 certificate
 
+::: tip Current version
+
 [NS-EN ISO 27001:2022 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27001-2026.pdf) (PDF)
+
+:::
 
 Our compliance with the international standard in information security management «[ISO/IEC 27001](https://www.iso.org/isoiec-27001-information-security.html)» is certified in accordance with our Statement of Applicability (SoA) by DNV, Norway. The certificate includes controls from ISO/IEC 27017, security for cloud services, and ISO/IEC 27018, privacy for cloud services.
 
@@ -94,7 +102,11 @@ Our compliance with the international standard in information security managemen
 
 ## ISO/IEC 27701 certificate
 
+::: tip Current version
+
 [NS-EN ISO 27701:2019 Certificate](https://assets.hdc.ntnu.no/assets/certificates/hunt-cloud-certificate-iso27701-2026.pdf) (PDF)
+
+:::
 
 Our compliance with the international standard for privacy information management «[ISO/IEC 27701](https://www.iso.org/standard/27701)» is certified in accordance with our Statement of Applicability (SoA) by DNV, Norway.
 
