@@ -176,10 +176,6 @@ onMounted(() => {
   }
 })
 
-const openSurvey = () => {
-  window.open("https://www.survio.com/survey/d/onboarding-survey", "_blank").focus()
-}
-
 const closeVPNDialog = (vpnStepperValue = null) => {
   vpnDialog.value = false
   vpnStepper.value = vpnStepperValue ? vpnStepperValue : vpnStepper.value
@@ -1249,20 +1245,15 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
 
               <h2 class="text-h5 mb-6">You have configured your lab access</h2>
 
-              <p class="mb-4 text-medium-emphasis text-body-2">Got 1 minute? Tell us how it went!</p>
-              <v-row>
-                <v-col cols="12">
-                  <v-btn icon color="error" class="mx-1" @click="openSurvey">
-                    <v-icon>mdi-emoticon-sad-outline</v-icon>
-                  </v-btn>
-                  <v-btn icon color="warning" class="mx-1" @click="openSurvey">
-                    <v-icon>mdi-emoticon-neutral-outline</v-icon>
-                  </v-btn>
-                  <v-btn icon color="success" class="mx-1" @click="openSurvey">
-                    <v-icon>mdi-emoticon-happy-outline</v-icon>
-                  </v-btn>
-                </v-col>
-              </v-row>
+              <p class="text-center text-medium-emphasis text-body-2 mb-6"> Got 10 seconds? Let us know how it went! </p>
+              <div class="mx-auto mb-0" style="max-width: 380px; height: 380px; overflow: hidden;">
+                <iframe
+                  :src="`https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=macos&filter=${filterGuidesByType ? filterGuidesByType : 'default'}`"
+                  width="100%"
+                  height="450px"
+                  style="border: none; display: block; margin-top: -110px;"
+                ></iframe>
+              </div>
 
               <p class="mb-4 text-medium-emphasis text-body-2">
                 Feel free to continue reading our <a href="/do-science/hunt-workbench/getting-started/" target="_blank">getting started guides</a> and figure out which
