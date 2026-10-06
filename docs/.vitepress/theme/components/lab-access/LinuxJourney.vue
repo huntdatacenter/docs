@@ -339,20 +339,28 @@ const openSurvey = () => {
                     <v-stepper-vertical-item title="Setup the VPN profile" value="2" :complete="vpnStepper > 2">
                       <v-card class="mb-8 pr-4" elevation="0">
                         <ol>
-                          <li>Click on the <i>Network Manager icon</i> in the task bar.</li>
-                          <li>Select <i>Edit Connections...</i></li>
-                          <li>Click <i>Add</i>.</li>
-                          <li>Choose <i>Import a saved VPN configuration</i> and click <i>Create</i>.</li>
+                          <li>Open <em>Settings</em>.</li>
+                          <li>Select <em>Network</em>.</li>
+                          <li>Click the <em>+</em> sign to the right of the <em>VPN</em> section.</li>
+                          <li>Choose <em>Import from file...</em></li>
                           <li>
-                            Select the OpenVPN profile named <code>{{ username }}.ovpn</code> that you collected in Step 1.
+                            Select the OpenVPN profile named
+                            <strong
+                              ><code>{{ username }}.ovpn</code></strong
+                            >
+                            that you collected in Step 1.
                           </li>
-                          <li>Enter your user name (same as the OpenVPN profile file name).</li>
-                          <li>Click on the person icon in the Password field and select <code>Ask for this password every time</code>.</li>
-                          <li>Enter the <i>Private Key Password</i> with the <code>VPN passphrase</code> sent to you from HUNT over Signal.</li>
-                          <li>Click on the IPv4 Settings tab.</li>
-                          <li>Click <i>Routes...</i></li>
-                          <li>Select the <i>Use this connection only for resources on its network</i> and click OK.</li>
-                          <li>Click <i>Apply</i>.</li>
+                          <li>Click on the <em>Identity</em> tab.</li>
+                          <li>In <em>User name</em>, enter your username:</li>
+                          <CopyTextField :model-value="`${username}`" label="" placeholder="Your username is missing" />
+                          <li>
+                            Click on the person icon in the <em>Password</em> field and select <strong><code>Ask for this password every time</code></strong
+                            >.
+                            <img class="pa-2" alt="workbench-login-form" src="/img/vpn/linux-setup-tunnelblick-step8.png" style="max-width: 500px" />
+                          </li>
+                          <li>Click on the <em>IPv4 Settings</em> tab.</li>
+                          <li>Under <em>Routes...</em>, select the <em>Use this connection only for resources on its network</em>.</li>
+                          <li>Click <em>Add</em>.</li>
                         </ol>
                       </v-card>
 
