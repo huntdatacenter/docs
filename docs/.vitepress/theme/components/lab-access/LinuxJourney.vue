@@ -1077,7 +1077,7 @@ onMounted(() => {
               <p class="text-center text-medium-emphasis text-body-2 mb-6"> Got 10 seconds? Let us know how setup went. </p>
               <div class="mx-auto mb-6" style="max-width: 500px; height: 380px; overflow: hidden;">
                 <iframe
-                  src="https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=linux&filter=vpn-reset"
+                  :src="`https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=linux&filter=${filterGuidesByType ? filterGuidesByType : 'new_user'}`"
                   width="100%"
                   height="500px"
                   style="border: none; display: block; margin-top: -130px;"
