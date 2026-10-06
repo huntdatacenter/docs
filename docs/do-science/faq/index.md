@@ -16,6 +16,7 @@ This FAQ is intended for lab users that do science in labs:
 - [External transfers](/do-science/faq/external-transfer)
 - [Security](/do-science/faq/security)
 - [OS Upgrade](/do-science/faq/os-upgrade)
+- [2026 VPN update](/do-science/faq/vpn-update)
 
 ::: tip
 
