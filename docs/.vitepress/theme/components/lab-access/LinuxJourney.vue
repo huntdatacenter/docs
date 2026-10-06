@@ -351,7 +351,8 @@ const openSurvey = () => {
                             that you collected in Step 1.
                           </li>
                           <li>Click on the <em>Identity</em> tab.</li>
-                          <li>In {{ username }}, enter your user name (same as the OpenVPN profile file name).</li>
+                          <li>In <em>User name</em>, enter your username:</li>
+                          <CopyTextField :model-value="`${username}`" label="" placeholder="Your username is missing" />
                           <li>
                             Click on the person icon in the <em>Password</em> field and select <strong><code>Ask for this password every time</code></strong
                             >.
