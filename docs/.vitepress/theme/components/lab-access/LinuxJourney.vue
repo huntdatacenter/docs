@@ -159,7 +159,12 @@ const wrap = (template) => {
 // }
 
 const nextPanel = (inc = 1) => {
-  mainExpansionPanel.value = mainExpansionPanel.value ? mainExpansionPanel.value + inc : 1
+  // Temporaty solution for VPN reset
+  if (filterGuidesByType.value === "vpn_reset") {
+    mainExpansionPanel.value = 7
+  } else {
+    mainExpansionPanel.value = mainExpansionPanel.value ? mainExpansionPanel.value + inc : 1
+  }
 }
 
 const setHostsChangeSuccess = () => {
