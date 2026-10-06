@@ -288,6 +288,8 @@ The OpenVPN notification icon on the taskbar should be green.
 
 ![OpenVPN-icon](./images/2.OpenVPN-guide.png)
 
+<iframe src="https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=windows" width="100%" height="500px" style="border: none; overflow: hidden;"></iframe>
+
 :::
 
 
@@ -295,12 +297,17 @@ The OpenVPN notification icon on the taskbar should be green.
 
 A small Tunnelblick window should state "Connected" in green letters with a timer that count the connection length.
 
+<iframe src="https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=macos" width="100%" height="500px" style="border: none; overflow: hidden;"></iframe>
+
 :::
 
 
 ::: expander Ubuntu Linux {#6-linux}
 
 If you received the notification _VPN connection has been successfully established_, then you are good to go.
+
+
+<iframe src="https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=linux" width="100%" height="500px" style="border: none; overflow: hidden;"></iframe>
 
 :::
 
