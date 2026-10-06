@@ -276,9 +276,9 @@ const openSurvey = () => {
               If you are resetting your TOTP (Google authenticator code) follow the <i>TOTP</i> configuration guide:
             </div>
 
-            <RemoveVpnCertGuide os="windows" :username="username" v-if="['vpn_reset'].includes(filterGuidesByType) ? true : false" />
-
             <TotpGuide v-if="!filterGuidesByType || ['new_user', 'new_computer', 'totp_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" />
+
+            <RemoveVpnCertGuide os="windows" :username="username" v-if="['vpn_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" />
 
             <v-row v-if="!filterGuidesByType || ['new_user', 'new_computer', 'vpn_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" class="my-1">
               <v-col cols="12">
