@@ -151,12 +151,7 @@ const copyTextArea = async (text) => {
 }
 
 const nextPanel = (inc = 1) => {
-  // Temporaty solution for VPN reset
-  if (filterGuidesByType.value === "vpn_reset") {
-    mainExpansionPanel.value = 7
-  } else {
-    mainExpansionPanel.value = mainExpansionPanel.value ? mainExpansionPanel.value + inc : 1
-  }
+  mainExpansionPanel.value = mainExpansionPanel.value ? mainExpansionPanel.value + inc : 1
 }
 
 const getNextItem = (groupId, reset = false) => {
@@ -570,7 +565,8 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
               poster="/img/video-covers/user-onboarding-vpn-access-video-cover.jpeg"
             />
 
-            <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
+            <v-btn v-if="['vpn_reset'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" size="small" @click="nextPanel(6)">Next</v-btn>
+            <v-btn v-else color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-text>
         </v-expansion-panel>
 

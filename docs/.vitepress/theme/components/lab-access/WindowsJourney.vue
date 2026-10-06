@@ -149,12 +149,7 @@ const copyTextArea = (key) => {
 }
 
 const nextPanel = (inc = 1) => {
-  // Temporaty solution for VPN reset
-  if (filterGuidesByType.value === "vpn_reset") {
-    mainExpansionPanel.value = 7
-  } else {
-    mainExpansionPanel.value = mainExpansionPanel.value ? mainExpansionPanel.value + inc : 1
-  }
+  mainExpansionPanel.value = mainExpansionPanel.value ? mainExpansionPanel.value + inc : 1
 }
 
 const setHostsChangeSuccess = () => {
@@ -604,7 +599,8 @@ const openSurvey = () => {
               video="https://www.ntnu.edu/documents/1282184702/1349480876/lab-access-win-vpn-access-v1.mp4/3719140a-745a-fabf-0959-9ee83a4155b6?t=1728711018006"
               poster="/img/video-covers/user-onboarding-vpn-access-video-cover.jpeg"
             />
-            <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
+            <v-btn v-if="['vpn_reset'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" size="small" @click="nextPanel(6)">Next</v-btn>
+            <v-btn v-else color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-text>
         </v-expansion-panel>
 
