@@ -366,22 +366,6 @@ const openSurvey = () => {
                       <template v-slot:title> Setup the VPN profile </template>
 
                       <v-card class="mb-8 pr-4" elevation="0">
-                        <v-alert v-show="filterGuidesByType && ['vpn_reset', 'reissue_all'].includes(filterGuidesByType)" border="start" border-color="warning" elevation="2">
-                          <template v-slot:title><b>Remove old VPN Configuration</b></template>
-                          <ol>
-                            <li>
-                              Right click on the OpenVPN notification icon on the taskbar, in the lower right corner of your screen and select. Find
-                              <code style="font-weight: bold">Clear Saved Passwords</code> option and click on it to remove previously used passwords.
-                            </li>
-                            <li>
-                              Open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here:
-                              <CopyTextField :model-value="`%USERPROFILE%\\openvpn\\config\\${username}`" label="" placeholder="Your link is missing access token" />
-                              or
-                              <CopyTextField :model-value="`C:\\Users\\%USERNAME%\\openvpn\\config`" label="" placeholder="Your link is missing access token" />
-                            </li>
-                          </ol>
-                        </v-alert>
-
                         <ol>
                           <li>
                             Start the OpenVPN client (if it is not running already) <br />
