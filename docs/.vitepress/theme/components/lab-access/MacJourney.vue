@@ -264,6 +264,8 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
 
             <TotpGuide v-if="!filterGuidesByType || ['new_user', 'new_computer', 'totp_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" />
 
+            <RemoveVpnCertGuide os="mac" v-if="['vpn_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" />
+
             <v-row v-if="!filterGuidesByType || ['new_user', 'new_computer', 'vpn_reset', 'reissue_all'].includes(filterGuidesByType) ? true : false" class="my-1">
               <v-col cols="12">
                 <v-btn variant="text" color="primary" @click.stop="vpnDialog = true" elevation="2">
