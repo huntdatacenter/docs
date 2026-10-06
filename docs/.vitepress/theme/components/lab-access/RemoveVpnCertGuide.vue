@@ -101,7 +101,6 @@ watch(
                 <br />
                 You can now continue with the next step.
               </v-card>
-              <v-btn color="primary" class="mx-2 mb-1" @click="removeVpnStepper = 1">Start again</v-btn>
               <!-- prettier-ignore -->
               <v-btn
                 color="success"
@@ -109,6 +108,7 @@ watch(
                 @click="removeVpnDialog = false; removeVpnStepper = 1"
                 >Finish</v-btn
               >
+              <v-btn color="primary" class="mx-2 mb-1" @click="removeVpnStepper = 1">Start again</v-btn>
               <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="removeVpnStepper = 2">Back</v-btn>
             </v-stepper-vertical-item>
           </v-stepper-vertical>
@@ -198,7 +198,6 @@ watch(
                   </li>
                 </ol>
               </v-card>
-              <v-btn color="primary" class="mx-2 mb-1" @click="removeVpnStepper = 1">Start again</v-btn>
               <!-- prettier-ignore -->
               <v-btn
                 color="success"
@@ -206,6 +205,7 @@ watch(
                 @click="removeVpnDialog = false; removeVpnStepper = 1"
                 >Finish</v-btn
               >
+              <v-btn color="primary" class="mx-2 mb-1" @click="removeVpnStepper = 1">Start again</v-btn>
               <v-btn color="primary" variant="text" class="mx-2 mb-1" @click="removeVpnStepper = 1">Back</v-btn>
             </v-stepper-vertical-item>
           </v-stepper-vertical>
