@@ -375,8 +375,14 @@ const openSurvey = () => {
                         <ol>
                           <li>Click on the <i>Network Manager</i> icon in the task bar.</li>
                           <li>Choose <i>VPN Connections</i> and select the name of your profile.</li>
-                          <li>In the Authenticate VPN window, enter the <code>verification code</code> from TOTP (Google Authenticator) app into the Password field.</li>
-                          <li>Click <i>OK</i> to connect.</li>
+                          <li>
+                            You will see two open fields when OpenVPN try to connect for the first time:
+                            <ul>
+                              <li>In the first field, enter the <code>verification code</code> from Google Authenticator in the <i>Password</i> field.</li>
+                              <li>In the second field, enter the  <code>VPN passphrase</code> sent to you from HUNT Cloud over Signal. You should only be asked about this on your first login.</li>
+                            </ul>
+                          </li>
+                          <li>Click <i>Connect</i> to connect.</li>
                         </ol>
                         <br /><br />
                         You should now be connected to the VPN.
@@ -390,14 +396,9 @@ const openSurvey = () => {
 
                     <v-stepper-vertical-item title="Verify your VPN connection" value="4" :complete="vpnStepper > 4">
                       <v-card class="mb-8 pr-4" elevation="0">
-                        <v-alert border="start" border-color="success" elevation="2">
-                          <template v-slot:prepend>
-                            <v-icon>mdi-chevron-right</v-icon>
-                          </template>
-                          <b>Status notification.</b>
-                          <hr class="mt-1 mb-2" />
-                          If you received the notification that <code>VPN connection has been successfully established</code>,<br />
-                          then you are good to go.
+                        <v-alert border="start" border-color="success" elevation="2" icon="mdi-chevron-right">
+                          <template v-slot:title><div class="mb-2">A VPN icon will appear on your taskbar.</div></template>
+                          <img alt="OpenVPN-icon" src="/img/vpn/linux-vpn-success.png" />
                         </v-alert>
                       </v-card>
 
