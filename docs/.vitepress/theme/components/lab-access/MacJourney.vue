@@ -561,7 +561,8 @@ const closeWorkbenchDialog = (workbenchStepperValue = null) => {
               poster="/img/video-covers/user-onboarding-vpn-access-video-cover.jpeg"
             />
 
-            <v-btn color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
+            <v-btn v-if="['vpn_reset'].includes(filterGuidesByType)" color="primary" class="mx-2 my-2" size="small" @click="nextPanel(6)">Next</v-btn>
+            <v-btn v-else color="primary" class="mx-2 my-2" size="small" @click="nextPanel()">Next</v-btn>
           </v-expansion-panel-text>
         </v-expansion-panel>
 

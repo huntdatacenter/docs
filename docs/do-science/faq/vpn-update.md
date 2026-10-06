@@ -6,31 +6,61 @@ outline: 1
 description: This page lists frequently asked questions related to the 2026 VPN update.
 ---
 
-# FAQ on VPN update
+# FAQ on 2026 VPN update
 
-**This page lists frequently asked questions related to the VPN update in 2026. [Contact us](/contact) with questions to help us expand this FAQ.**
+**This page lists frequently asked questions related to the VPN update in October 2026.**
 
 [[toc]]
 
-## General
+::: tip Questions or need help? 
 
-### Why do we need to upgrade?
+[Contact us](/contact) with questions to help us expand this FAQ, or we we can help you with the upgrade.
+
+:::
+
+## General 
+
+### Why do I need to update my HUNT Cloud VPN?
 
 Our current services have reached a new milestone: 10 years!
 
-That itself is an achievement, but it also means that we have to update our first VPN root certificates. That again means that we have to issue new VPN user certificates for all active lab users at the same time.
+While this is an achievement, it also means that our original VPN root certificate is reaching the end of its 10-year life-time. We therefore need to replace it and issue new VPN user certificates for all lab users.
 
-### Will my VPN be inactive immediately after the reissue?
+Once the new root certificate is activated, all lab users will need to install their new user certificates in order to connect to the VPN and their lab.
 
-Yes, there is no delay. The moment we start accepting new VPN configs all the old ones become inactive.
+### When is the update planned?
 
-### When?
+We plan to send you a new HUNT Cloud VPN configuration on Wednesday 7th October 2026:
 
-We plan to send you a new HUNT Cloud VPN configuration on 2026-10-07.
+**9 AM CET 2026-10-07**
+
+We start to ship new VPN certificates and configuration information to all lab users. You will breifly lose your connection as we test the new root certificate.
+
+**9.30 - 10.00 AM CET**
+
+We will start the VPN service with the new root certificate once most users have received their new certificates. This is expected to take place between 9.30 and 10 AM. All lab users will lose access.
+
+After the restart, you will need to install the new VPN certificate your received to connect to your lab.
+
+
+
+### Will my current VPN be inactive immediately after the restart?
+
+Yes, there is no delay. The moment we start accepting new VPN configurations all the old ones become inactive.
+
+
+
+## Receiving the new VPN configuration
+
+### How will I get my configurations? 
+
+We will send your new VPN certificate over your organizational email, and the passwords for for the 7z file and the VPN password over the Signal mobile app. 
 
 ### How should I set my Signal privacy settings?
 
-To be able to ship credentials to you we need to see your phone number as registered in Signal.
-You can allow finding your account in Signal app settings:
+You will receive passwords over the Signal mobile app. You will need to find your phone number in Signal to be able to ship you credentials. You can allow us to find your number by adding the following changes to your Signal Settings:
 
 ![signal-phone-number](./images/signal-phone-number.png)
+
+
+
