@@ -220,6 +220,11 @@ code {
   background-color: rgba(0, 0, 0, 0.05) !important;
   padding: 0.2em 0.4em;
 }
+
+ol {
+  list-style-type: decimal;
+  padding-left: 24px;
+}
 ul {
   list-style-type: disc;
   padding-left: 24px;
