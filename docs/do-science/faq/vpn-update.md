@@ -45,7 +45,7 @@ After the restart, you will need to install the new VPN certificate your receive
 
 ### I am away on Wednesday. Can I do the update later?
 
-Yes, you don't need to do the update tomorrow. It's fine to wait until you need access, but you will not be able to access your lab until you have completed the update.
+Yes, you don't need to do the update tomorrow. You can wait until you need access, but you won’t be able to access your lab until you’ve completed the update. Please note that the credentials we send you are valid for 10 days, so if you wait longer to update, you’ll need to request a new set.
 
 
 ### Will my current VPN be inactive immediately after the restart?
