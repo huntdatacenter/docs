@@ -16,7 +16,7 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 ::: warning Shipments from the VPN certificate reset order
 
-1.1 Your new VPN certificate and VPN profile in a compressed `7z`-file sent over filesender.no
+1.1 Your new VPN certificate and VPN profile in a compressed `7z`-file sent over filesender.sikt.no link on your organizational email
 
 1.2. Your new `VPN passphrase` and your `7-ZIP file key` sent over Signal.
 
@@ -53,7 +53,7 @@ We recommend downloading [Keka](https://www.keka.io/en/download) to successfully
 alternatively, you can install keka using brew command below
 
 ```bash
-brew install keka
+brew install --cask keka
 ```
 
 2.3 Use the key named **`7-ZIP file key`** from your Signal transfer to decrypt the archive folder.
@@ -74,8 +74,10 @@ Note that the default archive utility on MacOS does not recognize the passphrase
 2.2 Install the p7zip application.
 
 ```bash
-sudo apt update && sudo apt-get install p7zip-full
+sudo apt update && sudo apt-get install 7zip
 ```
+
+> Ubuntu 22.04 or older is using package name: `p7zip-full`
 
 2.3 Unpack (extract) the archive folder file.
 
@@ -110,19 +112,21 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
 1. Click on running Tunnelblick icon in upper menu bar and select `VPN details...`
 
-![VPNemovalstep1.png](./images/VPNemovalstep1.png)
+![tunnelblick-vpn-removal-step1](./images/tunnelblick-vpn-removal-step1.png)
 
 2. Select your VPN profile on the left side of the window. Then, in the bottom left corner, select expansion window marked with 3 dots in a circle
 
-![credentialsremoval1](./images/credentialsremovalpart1.png)
+![credentialsremoval1](./images/tunnelblick-vpn-removal-step2a.png)
+
+![credentialsremoval2](./images/tunnelblick-vpn-removal-step2b.png)
 
 3. At the very bottom of the newly opened widow, select `Delete configuration's credentials in keychain`
 
-![credentialsremoval2](./images/configremovalpart2.png)
+![credentialsremoval3](./images/tunnelblick-vpn-removal-step3.png)
 
 4. Afterwards, select your VPN profile and delete it from Tunnelblick app as described on below picture
 
-![profileremoval](./images/Configurations.png)
+![tunnelblick-vpn-removal-step4](./images/tunnelblick-vpn-removal-step4.png)
 
 5. You can now continue with next step
 
@@ -133,7 +137,13 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 1. Open _Settings_.
 2. Select _Network_.
 3. Click the _VPN Options_ icon (small wheel) to the right of your VPN profile.
+
+![tunnelblick-vpn-removal-linux-step1](./images/step1_Linux_24_04_vpn_remove.png)
+
 4. Click _Remove VPN..._ at the bottom of the menu (red colored button).
+
+![tunnelblick-vpn-removal-linux-step2](./images/step2_Linux_24_04_vpn_remove.png)
+
 5. Click _Forget_.
 
 :::
@@ -195,6 +205,7 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 6. Click on the _Identity_ tab.
 7. In _User name_, enter your user name (same as the OpenVPN profile file name).
 8. Click on the person icon in the _Password_ field and select **`Ask for this password every time`**.
+![OpenVPN-icon](./images/linux-setup-tunnelblick-step8.png)
 9. Click on the _IPv4 Settings_ tab.
 11. Under _Routes..._, select the _Use this connection only for resources on its network_.
 12. Click _Add_.
@@ -223,7 +234,7 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 
     ![OpenVPN-icon](./images/8.OpenVPN-guide.png)
 
-6. Now try again to connect with a fresh **`verfication code`** from Google Authenticator.
+6. Now try again to connect with a fresh **`verification code`** from Google Authenticator.
 
 You should now be connected to the VPN.
 

@@ -26,6 +26,7 @@ import LinuxJourney from "./components/lab-access/LinuxJourney.vue"
 import WindowsJourney from "./components/lab-access/WindowsJourney.vue"
 import MacJourney from "./components/lab-access/MacJourney.vue"
 import TotpGuide from "./components/lab-access/TotpGuide.vue"
+import RemoveVpnCertGuide from "./components/lab-access/RemoveVpnCertGuide.vue"
 import VideoGuide from "./components/lab-access/VideoGuide.vue"
 import AccessIntro from "./components/lab-access/AccessIntro.vue"
 import IaasAccess from "./components/lab-access/IaasAccess.vue"
@@ -178,6 +179,7 @@ export default {
     app.component("WindowsJourney", WindowsJourney)
     app.component("MacJourney", MacJourney)
     app.component("TotpGuide", TotpGuide)
+    app.component("RemoveVpnCertGuide", RemoveVpnCertGuide)
     app.component("VideoGuide", VideoGuide)
     app.component("AccessIntro", AccessIntro)
     app.component("IaasAccess", IaasAccess)

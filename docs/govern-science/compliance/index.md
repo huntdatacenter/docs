@@ -6,11 +6,11 @@ description: This page contains information on the compliance program in HUNT Cl
 buttons:
   - title: "Scope"
     subtitle: "Quality, security and privacy scopes for our management systems."
-    href: "/govern-science/compliance/certificates#scoping-documents"
+    href: "/govern-science/compliance/scoping-documents"
     icon: "mdi-file-document-outline"
   - title: "SoA"
     subtitle: "Statement of applicability for ISO 27001-family controls."
-    href: "/govern-science/compliance/certificates#statement-of-applicability-soa"
+    href: "/govern-science/compliance/soa"
     icon: "mdi-file-document-outline"
   - title: "ISO/IEC 27001"
     subtitle: "ISO certificate for information security."

@@ -10,7 +10,7 @@ description: HUNT Cloud uses the following subcontractors.
 
 **HUNT Cloud delivers services that include the use of subcontractors. The subcontractors are subject to laws, regulations and terms no less protective than the terms HUNT Cloud is subject to under data processor agreements with our data controllers.**
 
-::: tip CURRENT SUBCONTRACTORS
+::: tip Current version
 
 [HUNT Cloud Subcontractors](https://assets.hdc.ntnu.no/assets/governance/hunt-cloud-subcontractors.pdf) (PDF)
 

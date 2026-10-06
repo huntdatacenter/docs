@@ -16,19 +16,29 @@ description: This page list policies for HUNT Cloud.
 
 This document state our overarching quality management policy. We build our quality framework to ensure predictable services from this policy.
 
+::: tip Current version
+
 [HUNT Cloud Quality Policy](https://assets.hdc.ntnu.no/assets/policies/hunt-cloud-quality-policy.pdf)(PDF)
 
+:::
 
 ## Security and privacy management policy
 
 This document state our overarching information security and privacy management policy. We build our security and privacy framework from this policy.
 
+::: tip Current version
+
 [HUNT Cloud Security And Privacy Management Policy](https://assets.hdc.ntnu.no/assets/policies/hunt-cloud-security-and-privacy-management-policy.pdf)(PDF)
+
+:::
 
 ## Security and privacy policies
 
 This document outlines our individual information security and privacy policies. Collectively, these policies provides the framework that we use to protect technologies and data in HUNT Cloud. 
 
+::: tip Current version
+
 [HUNT Cloud Security And Privacy Policies](https://assets.hdc.ntnu.no/assets/policies/hunt-cloud-security-and-privacy-policies.pdf)(PDF)
 
+:::
 

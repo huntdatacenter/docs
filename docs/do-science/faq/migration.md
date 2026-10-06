@@ -2,7 +2,7 @@
 title: Migration
 category: FAQ
 # Permalink '/do-science/faq/migration/' is being used in Lab Access link
-permalink: /do-science/faq/migration/
+permalink: /do-science/faq/migration
 outline: 1
 description: This page lists frequently asked questions related to the 2024 migration of labs to their new cloud location.
 ---

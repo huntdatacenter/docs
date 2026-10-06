@@ -22,7 +22,7 @@ If you are configuring access to your lab use Lab access link sent to you in onb
 
 1. Confirmed [collection of secret keys](/do-science/lab-access/1-collect-keys#step-1-collect-your-keys) in Step 1 of onboarding process.
 
-2. Successful setup of [Google authenticator](/do-science/lab-access/1-collect-keys#_1-3-one-time-verification-codes) app. 
+2. Successful setup of [Google authenticator](/do-science/lab-access/1-collect-keys#_1-3-one-time-verification-codes) app.
 
 
 ## 2.1 Install the VPN software
@@ -38,7 +38,7 @@ We use the open-source application **`OpenVPN`** to ensure encrypted communicati
 Click on the link above, scroll down to the file named **`OpenVPN-<version-number>-i601-amd64.msi`** (Windows 10 users), download the file and follow the on-screen installation instructions.
 
 **NTNU users**: Windows users from NTNU can install OpenVPN community edition using NTNU Software Center even without administrative rights.
-  
+
   ::: warning
   **You will need administrative rights on your local computer to successfully install OpenVPN.**
 
@@ -161,6 +161,7 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 6. Click on the _Identity_ tab.
 7. In _User name_, enter your user name (same as the OpenVPN profile file name).
 8. Click on the person icon in the _Password_ field and select **`Ask for this password every time`**.
+![OpenVPN-icon](./images/linux-setup-tunnelblick-step8.png)
 9. Click on the _IPv4 Settings_ tab.
 11. Under _Routes..._, select the _Use this connection only for resources on its network_.
 12. Click _Add_.
@@ -184,7 +185,7 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 
     ![OpenVPN-icon](./images/9.OpenVPN-guide.png)
 
-5. When prompted for a _Private Key Password_, insert the **`VPN passphrase`** that your collected in Step 1. 
+5. When prompted for a _Private Key Password_, insert the **`VPN passphrase`** that your collected in Step 1.
    Your authentication will fail when you complete your passphrase below. This is expected since your verification code timed out while you typed your passphrase.
 
     ![OpenVPN-icon](./images/8.OpenVPN-guide.png)
@@ -227,9 +228,9 @@ You should now be connected to the VPN.
 
 ::: details Ubuntu Linux
 
-1. Click on the _VPN_ icon in the task bar in the upper right corner. 
+1. Click on the _VPN_ icon in the task bar in the upper right corner.
 2. You will see two open fields when OpenVPN try to connect for the first time:
-  - In the first field, enter the **`verification code`** from Google Authenticator in the _Password_ field. 
+  - In the first field, enter the **`verification code`** from Google Authenticator in the _Password_ field.
   - In the second field, enter the **`VPN passphrase`** sent to you from HUNT Cloud over Signal. You should only be asked about this on your first login.
 3. Click _Connect_ to connect.
 
@@ -311,4 +312,20 @@ If you are unable to click _Apply_ after your changes, try to re-enter your _Pri
 If nothing works, please head over to our main [troubleshooting](/do-science/troubleshooting/connection#vpn) section for more information on how to troubleshoot connections.
 :::
 
+### Unable to connect after Ubuntu upgrade from version 24.X to 26.X
 
+To check if there is something wrong with the VPN connection. Check the network logs by using the `terminal` application and type in:
+```
+journalctl -f -u NetworkManager
+```
+If the NetworkManager log contain something like these:
+```
+OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-256-CBC') to --data-ciphers (currently 'DEFAULT'), e.g --data-ciphers DEFAULT:AES-256-CBC if you want to connect to this server.
+ERROR: Failed to apply push options
+Failed to open tun/tap interface
+```
+The fix would be running the command below, make sure to replace `<<VPN_Name>>` with your VPN profile:
+```
+nmcli connection modify <<VPN_Name>> +vpn.data "data-ciphers=AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305:AES-256-CBC, data-ciphers-fallback=AES-256-CBC"
+```
+The command add the data-cipher setting used by HUNT profile.

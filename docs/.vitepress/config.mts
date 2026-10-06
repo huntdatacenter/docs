@@ -739,9 +739,13 @@ function sidebarDoScience() {
         //   text: "Migration",
         //   link: "/do-science/faq/migration",
         // },
+        // {
+        //   text: "OS Upgrade",
+        //   link: "/do-science/faq/os-upgrade",
+        // },
         {
-          text: "OS Upgrade",
-          link: "/do-science/faq/os-upgrade",
+          text: "VPN update",
+          link: "/do-science/faq/vpn-update",
         },
       ],
     },
@@ -1116,6 +1120,14 @@ function sidebarGovernScience() {
         {
           text: "Certificates",
           link: "/govern-science/compliance/certificates",
+        },
+        {
+          text: "Scoping documents",
+          link: "/govern-science/compliance/scoping-documents",
+        },
+        {
+          text: "Statement of applicability",
+          link: "/govern-science/compliance/soa",
         },
         {
           text: "Subcontractors",
