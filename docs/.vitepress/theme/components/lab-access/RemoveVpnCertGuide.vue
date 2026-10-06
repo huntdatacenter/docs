@@ -6,14 +6,13 @@ defineOptions({
 })
 
 const props = defineProps({
+  username: { type: String, default: "your_username" },
   os: {
     type: String,
     default: "windows",
     validator: (value) => ["windows", "mac", "linux"].includes(value),
   },
 })
-
-const oldConfigPath = "C:\\Users\\<MYUSERNAME>\\OpenVPN\\config\\<folder-with-username-that-you-should-remove>"
 
 const removeVpnDialog = ref(false)
 const removeVpnStepper = ref("1")
@@ -190,7 +189,7 @@ watch(
                   <li>Open your <code>File Explorer</code>.</li>
                   <li>
                     Go to the folder with your old OpenVPN configurations. It's usually located here:
-                    <CopyTextField :model-value="oldConfigPath" />
+                    <CopyTextField :model-value="`%USERPROFILE%\\openvpn\\config\\${username}`" />
                   </li>
                   <li>
                     Manually remove the folder named after your username, i.e. the
