@@ -209,10 +209,6 @@ onMounted(() => {
     updateFilter(labAccessGuideFilter, true)
   }
 })
-
-const openSurvey = () => {
-  window.open("https://www.survio.com/survey/d/onboarding-survey", "_blank").focus()
-}
 </script>
 
 <template>

@@ -176,10 +176,6 @@ onMounted(() => {
   }
 })
 
-const openSurvey = () => {
-  window.open("https://www.survio.com/survey/d/onboarding-survey", "_blank").focus()
-}
-
 const closeVPNDialog = (vpnStepperValue = null) => {
   vpnDialog.value = false
   vpnStepper.value = vpnStepperValue ? vpnStepperValue : vpnStepper.value
