@@ -188,12 +188,8 @@ watch(
                 <ol>
                   <li>Open your <code>File Explorer</code>.</li>
                   <li>
-                    Go to the folder with your old OpenVPN configurations. It's usually located here:
+                    Open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here:
                     <CopyTextField :model-value="`%USERPROFILE%\\openvpn\\config\\${username}`" />
-                  </li>
-                  <li>
-                    Manually remove the folder named after your username, i.e. the
-                    <code>&lt;folder-with-username-that-you-should-remove&gt;</code> part of the path above.
                   </li>
                 </ol>
               </v-card>
