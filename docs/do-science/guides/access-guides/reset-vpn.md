@@ -71,13 +71,13 @@ Note that the default archive utility on MacOS does not recognize the passphrase
 
 2.1 Click on the link in the email to download the file and save this on your local computer.
 
-2.2 Install the p7zip application. 
+2.2 Install the p7zip application.
 
 ```bash
 sudo apt update && sudo apt-get install p7zip-full
 ```
 
-2.3 Unpack (extract) the archive folder file. 
+2.3 Unpack (extract) the archive folder file.
 
 ```bash
 7z e <filename>.7z
@@ -258,9 +258,9 @@ You should now be connected to the VPN.
 
 ::: expander Ubuntu Linux {#5-linux}
 
-1. Click on the _VPN_ icon in the task bar in the upper right corner. 
+1. Click on the _VPN_ icon in the task bar in the upper right corner.
 2. You will see two open fields when OpenVPN try to connect for the first time:
-  - In the first field, enter the **`verification code`** from Google Authenticator in the _Password_ field. 
+  - In the first field, enter the **`verification code`** from Google Authenticator in the _Password_ field.
   - In the second field, enter the **`VPN passphrase`** sent to you from HUNT Cloud over Signal. You should only be asked about this on your first login.
 3. Click _Connect_ to connect.
 
@@ -277,6 +277,8 @@ The OpenVPN notification icon on the taskbar should be green.
 
 ![OpenVPN-icon](./images/2.OpenVPN-guide.png)
 
+<iframe src="https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=windows" width="100%" height="500px" style="border: none; overflow: hidden;"></iframe>
+
 :::
 
 
@@ -284,12 +286,17 @@ The OpenVPN notification icon on the taskbar should be green.
 
 A small Tunnelblick window should state "Connected" in green letters with a timer that count the connection length.
 
+<iframe src="https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=macos" width="100%" height="500px" style="border: none; overflow: hidden;"></iframe>
+
 :::
 
 
 ::: expander Ubuntu Linux {#6-linux}
 
 If you received the notification _VPN connection has been successfully established_, then you are good to go.
+
+
+<iframe src="https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=linux" width="100%" height="500px" style="border: none; overflow: hidden;"></iframe>
 
 :::
 
