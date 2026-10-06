@@ -224,7 +224,7 @@ ol {
   padding-left: 24px;
 }
 ul {
-  list-style-type: decimal;
+  list-style-type: disc;
   padding-left: 24px;
 }
 
