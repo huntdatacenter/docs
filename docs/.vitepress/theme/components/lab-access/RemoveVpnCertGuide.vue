@@ -192,7 +192,8 @@ watch(
                   <li>Open your <code>File Explorer</code>.</li>
                   <li>
                     Open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here:
-                    <CopyTextField :model-value="`%USERPROFILE%\\openvpn\\config\\${username}`" />
+                    <CopyTextField :model-value="`%USERPROFILE%\\openvpn\\config\\${username}`" /> or
+                    <CopyTextField :model-value="`C:\\Users\\%USERNAME%\\openvpn\\config\\${username}`" label="" placeholder="Your link is missing access token" />
                   </li>
                 </ol>
               </v-card>
