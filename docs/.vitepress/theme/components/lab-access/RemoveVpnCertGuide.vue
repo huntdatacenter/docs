@@ -173,10 +173,12 @@ watch(
                   <li>
                     Find the <code>OpenVPN</code> icon in the task bar in the lower right corner <v-icon icon="mdi-arrow-bottom-right"></v-icon> of your screen.<br />
                     If you don't see it, click the <code><v-icon>mdi-chevron-up</v-icon></code> arrow to show hidden icons.
-                    <img class="guide-img" alt="windows-vpn-removal-step1" src="/img/vpn/step1_Windows_remove_passwords.png" />
                   </li>
                   <li>Right click on the <code>OpenVPN</code> icon.</li>
-                  <li>Select <code style="font-weight: bold">Clear Saved Passwords</code>.</li>
+                  <li>
+                    Select <code style="font-weight: bold">Clear Saved Passwords</code>.
+                    <img class="guide-img" alt="windows-vpn-removal-step1" src="/img/vpn/step1_Windows_remove_passwords.png" />
+                  </li>
                 </ol>
               </v-card>
               <v-btn color="primary" class="mx-2 mb-1" @click="removeVpnStepper = 2">Continue</v-btn>
