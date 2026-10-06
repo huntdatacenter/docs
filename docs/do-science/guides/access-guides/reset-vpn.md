@@ -205,6 +205,7 @@ To remove old VPN configuration on MacOS using Tunnelblick, follow our guide bel
 6. Click on the _Identity_ tab.
 7. In _User name_, enter your user name (same as the OpenVPN profile file name).
 8. Click on the person icon in the _Password_ field and select **`Ask for this password every time`**.
+![OpenVPN-icon](./images/linux-setup-tunnelblick-step8.png)
 9. Click on the _IPv4 Settings_ tab.
 11. Under _Routes..._, select the _Use this connection only for resources on its network_.
 12. Click _Add_.
@@ -287,6 +288,8 @@ The OpenVPN notification icon on the taskbar should be green.
 
 ![OpenVPN-icon](./images/2.OpenVPN-guide.png)
 
+<iframe src="https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=windows&filter=vpn-reset" width="100%" height="500px" style="border: none; overflow: hidden;"></iframe>
+
 :::
 
 
@@ -294,12 +297,17 @@ The OpenVPN notification icon on the taskbar should be green.
 
 A small Tunnelblick window should state "Connected" in green letters with a timer that count the connection length.
 
+<iframe src="https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=macos&filter=vpn-reset" width="100%" height="500px" style="border: none; overflow: hidden;"></iframe>
+
 :::
 
 
 ::: expander Ubuntu Linux {#6-linux}
 
 If you received the notification _VPN connection has been successfully established_, then you are good to go.
+
+
+<iframe src="https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=linux&filter=vpn-reset" width="100%" height="500px" style="border: none; overflow: hidden;"></iframe>
 
 :::
 

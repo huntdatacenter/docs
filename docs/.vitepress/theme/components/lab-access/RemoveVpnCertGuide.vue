@@ -118,7 +118,7 @@ watch(
               <template v-slot:title> Open VPN options </template>
 
               <v-card class="mb-12" elevation="0">
-                To remove your old VPN configuration on Linux (Ubuntu 24.04), follow the steps below.
+                To remove your old VPN configuration on Linux, follow the steps below.
                 <br /><br />
 
                 <ol>
