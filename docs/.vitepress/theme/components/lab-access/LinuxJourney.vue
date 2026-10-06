@@ -351,10 +351,11 @@ const openSurvey = () => {
                             that you collected in Step 1.
                           </li>
                           <li>Click on the <em>Identity</em> tab.</li>
-                          <li>In <em>User name</em>, enter your user name (same as the OpenVPN profile file name).</li>
+                          <li>In {{ username }}, enter your user name (same as the OpenVPN profile file name).</li>
                           <li>
                             Click on the person icon in the <em>Password</em> field and select <strong><code>Ask for this password every time</code></strong
                             >.
+                            <img class="pa-2" alt="workbench-login-form" src="/img/vpn/linux-setup-tunnelblick-step8.png" style="max-width: 500px" />
                           </li>
                           <li>Click on the <em>IPv4 Settings</em> tab.</li>
                           <li>Under <em>Routes...</em>, select the <em>Use this connection only for resources on its network</em>.</li>
