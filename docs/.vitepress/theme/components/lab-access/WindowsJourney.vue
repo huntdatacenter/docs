@@ -1342,7 +1342,7 @@ onMounted(() => {
 
               <h2 class="text-h5 mb-6">You have configured your lab access</h2>
 
-              <p class="text-center text-medium-emphasis text-body-2 mb-6"> Got 10 seconds? Let us know how setup went. </p>
+              <p class="text-center text-medium-emphasis text-body-2 mb-6"> Got 10 seconds? Let us know how it went! </p>
               <div class="mx-auto mb-6" style="max-width: 500px; height: 380px; overflow: hidden;">
                 <iframe
                   :src="`https://www.survio.com/survey/i/H5A1Q1V0M6J5Q1A7P?os=windows&filter=${filterGuidesByType ? filterGuidesByType : 'new_user'}`"
@@ -1356,7 +1356,6 @@ onMounted(() => {
                 Feel free to continue reading our <a href="/do-science/hunt-workbench/getting-started/" target="_blank">getting started guides</a> and figure out which
                 <a href="/do-science/tools/" target="_blank">tools</a> do you need for your work.
                 <br />
-
                 Otherwise, you're done!
               </p>
               <v-row>
