@@ -43,6 +43,10 @@ We will start the VPN service with the new root certificate once most users have
 After the restart, you will need to install the new VPN certificate your received to connect to your lab.
 
 
+### I am away on Wednesday. Can I do the update later?
+
+Yes, you don't need to do the update tomorrow. It's fine to wait until you need access, but you will not be able to access your lab until you have completed the update.
+
 
 ### Will my current VPN be inactive immediately after the restart?
 
