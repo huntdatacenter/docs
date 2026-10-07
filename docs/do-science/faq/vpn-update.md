@@ -89,6 +89,6 @@ You will receive passwords over the Signal mobile app. You will need to find you
 
 ### I connect from two machines. Do I need to upgrade on both? 
 
-Yes, you need to upgrade your VPN certificate on all the machines you use to connect to your lab following the same guide.
+Yes. Upgrade the VPN certificate on each machine you use to connect to your lab, following the same guide.
 
 
