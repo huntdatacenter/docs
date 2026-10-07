@@ -12,9 +12,16 @@ description: This page lists frequently asked questions related to the 2026 VPN 
 
 [[toc]]
 
-::: tip Questions or need help? 
+::: tip Need help or got questions? 
 
-[Contact us](/contact) with questions to help us expand this FAQ, or we we can help you with the upgrade.
+The fastest way to get help today (Wednesday) is to contact us in your Slack lab channel. We will also monitor our general [contact us](/contact) closely. 
+
+:::
+
+::: warning Link to the VPN update guide
+
+[Click here](/do-science/guides/access-guides/reset-vpn) to start with your VPN certificate reset.
+
 
 :::
 
@@ -65,6 +72,18 @@ We will send your new VPN certificate over your organizational email, and the pa
 You will receive passwords over the Signal mobile app. You will need to find your phone number in Signal to be able to ship you credentials. You can allow us to find your number by adding the following changes to your Signal Settings:
 
 ![signal-phone-number](./images/signal-phone-number.png)
+
+
+
+## Email notifications
+
+### The link in my email doesn't work. Now what?
+
+Worry not. The correct link is: 
+
+https://docs.hdc.ntnu.no/do-science/guides/access-guides/reset-vpn
+
+Some of you received an incorrect lab access link in the email with your New VPN certifificate sent Wednesday morning (the link said "Non&filter=vpn_reset"). We plan to send the correct link in a new email when we reset the root certificate. 
 
 
 
