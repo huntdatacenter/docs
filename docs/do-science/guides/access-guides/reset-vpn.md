@@ -10,7 +10,6 @@ description: This guide describe how to reset your VPN certificate for HUNT Clou
 
 **This guide describes how you update your VPN certificate after we have reset our VPN root certificate on Wednesday 7th October 2026.**
 
-
 <!--
 
 Original ingress (removed for the VPN update): 
@@ -27,7 +26,7 @@ You can find frequently asked questions (FAQ) about the 2026-10-07 VPN update in
 
 ::: tip Need help or got questions?
 
-The fastest way to get help today (Wednesday) is to contact us in your Slack lab channel. We will also monitor our general [email contact](contact) closely for those of you that don't use Slack.
+The fastest way to get help today (Wednesday) is to contact us in your Slack lab channel. We will also monitor our general [email contact](do-science/contact) closely for those of you that don't use Slack.
 
 :::
 
