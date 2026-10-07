@@ -60,6 +60,18 @@ Yes, there is no delay. The moment we start accepting new VPN configurations all
 
 
 
+## Email notifications
+
+### The link in my email doesn't work. Now what?
+
+Worry not. The correct link is:
+
+[https://docs.hdc.ntnu.no/do-science/guides/access-guides/reset-vpn](/do-science/guides/access-guides/reset-vpn
+)
+
+Some of you received an incorrect lab access link in the email with your New VPN certifificate sent Wednesday morning (the link said "None&filter=vpn_reset"). We plan to send the correct link in a new email when we reset the root certificate.
+
+
 ## Receiving the new VPN configuration
 
 ### How will I get my configurations?
@@ -73,14 +85,10 @@ You will receive passwords over the Signal mobile app. You will need to find you
 ![signal-phone-number](./images/signal-phone-number.png)
 
 
+## Installing the new VPN configruation
 
-## Email notifications
+### I connect from two machines. Do I need to upgrade on both? 
 
-### The link in my email doesn't work. Now what?
+Yes, you need to upgrade your VPN certificate on all the machines you use to connect to your lab following the same guide.
 
-Worry not. The correct link is:
 
-[https://docs.hdc.ntnu.no/do-science/guides/access-guides/reset-vpn](/do-science/guides/access-guides/reset-vpn
-)
-
-Some of you received an incorrect lab access link in the email with your New VPN certifificate sent Wednesday morning (the link said "None&filter=vpn_reset"). We plan to send the correct link in a new email when we reset the root certificate.
