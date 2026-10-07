@@ -83,7 +83,4 @@ Worry not. The correct link is:
 [https://docs.hdc.ntnu.no/do-science/guides/access-guides/reset-vpn](/do-science/guides/access-guides/reset-vpn
 )
 
-Some of you received an incorrect lab access link in the email with your New VPN certifificate sent Wednesday morning (the link said "Non&filter=vpn_reset"). We plan to send the correct link in a new email when we reset the root certificate.
-
-
-
+Some of you received an incorrect lab access link in the email with your New VPN certifificate sent Wednesday morning (the link said "None&filter=vpn_reset"). We plan to send the correct link in a new email when we reset the root certificate.
