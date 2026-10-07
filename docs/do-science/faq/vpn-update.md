@@ -6,7 +6,7 @@ outline: 1
 description: This page lists frequently asked questions related to the 2026 VPN update.
 ---
 
-# FAQ on 2026 VPN update
+# FAQ on the VPN update
 
 **This page lists frequently asked questions related to the VPN update in October 2026.**
 
