@@ -22,7 +22,6 @@ The fastest way to get help today (Wednesday) is to contact us in your Slack lab
 
 [Click here](/do-science/guides/access-guides/reset-vpn) to start with your VPN certificate reset.
 
-
 :::
 
 ## General 

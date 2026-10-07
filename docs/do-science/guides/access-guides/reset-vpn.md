@@ -326,15 +326,19 @@ If you received the notification _VPN connection has been successfully establish
 
 ::: danger Access list
 
-We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. [Click here](/do-science/service-desk/#vpn-access-list) to request an opening for your location in our Do science service desk.
+We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Scandinavia. [Click here](/do-science/service-desk/#vpn-access-list) to request an opening for your location in our Do science service desk.
 
 :::
+
+<!--
 
 ::: tip Next step
 
 If you successfully completed this step, head over to Step 3 to [Configure your SSH](/do-science/lab/) connection. If you did not succeed, start with a quick look in our Immediate troubleshooting section below.
 
 :::
+
+-->
 
 ## Troubleshooting
 
