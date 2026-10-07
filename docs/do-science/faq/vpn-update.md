@@ -12,9 +12,9 @@ description: This page lists frequently asked questions related to the 2026 VPN 
 
 [[toc]]
 
-::: tip Need help or got questions? 
+::: tip Need help or got questions?
 
-The fastest way to get help today (Wednesday) is to contact us in your Slack lab channel. We will also monitor our general [contact us](/contact) closely. 
+The fastest way to get help today (Wednesday) is to contact us in your Slack lab channel. We will also monitor our general [contact us](/contact) closely.
 
 :::
 
@@ -24,7 +24,7 @@ The fastest way to get help today (Wednesday) is to contact us in your Slack lab
 
 :::
 
-## General 
+## General
 
 ### Why do I need to update my HUNT Cloud VPN?
 
@@ -51,7 +51,7 @@ After the restart, you will need to install the new VPN certificate your receive
 
 ### I am away on Wednesday. Can I do the update later?
 
-Yes, you don't need to do the update tomorrow. You can wait until you need access, but you won’t be able to access your lab until you’ve completed the update. Please note that the credentials we send you are valid for 10 days, so if you wait longer to update, you’ll need to request a new set.
+Yes, you don't need to do the update when you are back. You can wait until you need access, but you won’t be able to access your lab until you’ve completed the update. Please note that the credentials we sent you are valid for 10 days, so if you wait longer to update, you’ll need to request a new set.
 
 
 ### Will my current VPN be inactive immediately after the restart?
@@ -62,9 +62,9 @@ Yes, there is no delay. The moment we start accepting new VPN configurations all
 
 ## Receiving the new VPN configuration
 
-### How will I get my configurations? 
+### How will I get my configurations?
 
-We will send your new VPN certificate over your organizational email, and the passwords for for the 7z file and the VPN password over the Signal mobile app. 
+We will send your new VPN certificate over your organizational email, and the passwords for for the 7z file and the VPN password over the Signal mobile app.
 
 ### How should I set my Signal privacy settings?
 
@@ -78,12 +78,12 @@ You will receive passwords over the Signal mobile app. You will need to find you
 
 ### The link in my email doesn't work. Now what?
 
-Worry not. The correct link is: 
+Worry not. The correct link is:
 
 [https://docs.hdc.ntnu.no/do-science/guides/access-guides/reset-vpn](/do-science/guides/access-guides/reset-vpn
 )
 
-Some of you received an incorrect lab access link in the email with your New VPN certifificate sent Wednesday morning (the link said "Non&filter=vpn_reset"). We plan to send the correct link in a new email when we reset the root certificate. 
+Some of you received an incorrect lab access link in the email with your New VPN certifificate sent Wednesday morning (the link said "Non&filter=vpn_reset"). We plan to send the correct link in a new email when we reset the root certificate.
 
 
 
