@@ -111,11 +111,19 @@ You will need to remove your old VPN certificate and passwords before you instal
 ::: expander Windows {#3-windows}
 
 1. Right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select **`Clear Saved Passwords`**
-2. Open your file explorer and manually remove the folder with the old OpenVPN configurations. It's usually located here:
+2. Open your file explorer and open this path (you can copy paste):
 
 ```
-C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>
+%USERPROFILE%\openvpn\config\
 ```
+
+3. You should see a folder with your username that you can remove
+
+> The full path looks similar to this:
+>
+> ```
+> C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>
+> ```
 
 :::
 
