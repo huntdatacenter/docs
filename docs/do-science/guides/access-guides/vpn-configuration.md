@@ -238,7 +238,6 @@ NOTE. You may be disconnected the first time you log in as the verification code
 
 :::
 
-
 ## 2.4 Verify your VPN connection
 
 ::: warning
@@ -246,7 +245,6 @@ NOTE. You may be disconnected the first time you log in as the verification code
 Please invest some time to verify a successful VPN connection as you will not be able to complete Step 3 before your VPN is working.
 
 :::
-
 
 ::: details Windows
 
@@ -256,13 +254,11 @@ The OpenVPN notification icon on the taskbar should be green.
 
 :::
 
-
 ::: details OS X and macOS
 
 A small Tunnelblick window should state "Connected" in green letters with a timer that count the connection length.
 
 :::
-
 
 ::: details Ubuntu Linux
 
@@ -275,7 +271,6 @@ If you received the notification _VPN connection has been successfully establish
 We allow connection from known IP addresses only. This means that your VPN connection may be blocked if you connect from a (for us) unknown network outside Norway. [Click here](/do-science/service-desk/#vpn-access-list) to request an opening for your location in our Do science service desk.
 
 :::
-
 
 ## Immediate troubleshooting
 
@@ -296,11 +291,11 @@ If you received the notification _VPN Connection Failed_ after 60 seconds, pleas
 
 The error messages below indicates that there is a typo in the _Private Key Password_ (step 2.3.5) and you need to type it in again.
 
-```
+```text
 ERROR: could not read Private Key username/password/ok/string from management interface
 ```
 
-```
+```text
 Cannot load private key file
 ```
 
@@ -314,18 +309,28 @@ If nothing works, please head over to our main [troubleshooting](/do-science/tro
 
 ### Unable to connect after Ubuntu upgrade from version 24.X to 26.X
 
-To check if there is something wrong with the VPN connection. Check the network logs by using the `terminal` application and type in:
-```
+To check what is causing the issues with the VPN connection review the network logs by using the `terminal` application and type in:
+
+```sh
 journalctl -f -u NetworkManager
 ```
-If the NetworkManager log contain something like these:
-```
+
+If the NetworkManager log contains these messages:
+
+```text
 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-256-CBC') to --data-ciphers (currently 'DEFAULT'), e.g --data-ciphers DEFAULT:AES-256-CBC if you want to connect to this server.
 ERROR: Failed to apply push options
 Failed to open tun/tap interface
 ```
+
+::: warning
+This issue might appear like TOTP (Google Authenticator) issue on both ends, but the logs confirm the actual cause.
+:::
+
 The fix would be running the command below, make sure to replace `<<VPN_Name>>` with your VPN profile:
-```
+
+```sh
 nmcli connection modify <<VPN_Name>> +vpn.data "data-ciphers=AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305:AES-256-CBC, data-ciphers-fallback=AES-256-CBC"
 ```
+
 The command add the data-cipher setting used by HUNT profile.

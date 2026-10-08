@@ -113,7 +113,7 @@ You will need to remove your old VPN certificate and passwords before you instal
 1. Right click on the OpenVPN icon in the task bar in the lower right corner of your screen and select **`Clear Saved Passwords`**
 2. Open your file explorer and open this path (you can copy paste):
 
-```
+```cmd
 %USERPROFILE%\openvpn\config\
 ```
 
@@ -121,7 +121,7 @@ You will need to remove your old VPN certificate and passwords before you instal
 
 > The full path looks similar to this:
 >
-> ```
+> ```cmd
 > C:\Users\<MYUSERNAME>\OpenVPN\config\<folder-with-username-that-you-should-remove>
 > ```
 
