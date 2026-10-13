@@ -153,7 +153,7 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 4. Choose _Import from file..._
 5. Select the OpenVPN profile named **`<username>.ovpn`** that you collected in Step 1.
 6. Click on the _Identity_ tab.
-7. In _User name_, enter your user name (same as the OpenVPN profile file name).
+7. In _User name_, enter your username (same as the OpenVPN profile file name).
 ![OpenVPN-icon](./images/linux-setup-tunnelblick-step7.png)
 8. Click on the person icon in the _Password_ field and select **`Ask for this password every time`**.
 ![OpenVPN-icon](./images/linux-setup-tunnelblick-step8.png)
@@ -174,7 +174,7 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 
 ![OpenVPN-icon](./images/7.OpenVPN-guide.png)
 
-3. Enter your user name (same as the OpenVPN profile file name).
+3. Enter your username (same as the OpenVPN profile file name).
 
 4. Enter a rotating **`verification code`** from Google Authenticator as your password.
 
@@ -198,7 +198,7 @@ You should now be connected to the VPN.
 ::: details OS X and macOS
 
 1. Start Tunnelblick and **`Connect`**.
-2. Enter your user name (same as the OpenVPN profile file name).
+2. Enter your username (same as the OpenVPN profile file name).
 3. Enter the **`verification code`** from Google Authenticator as your password.
 
     ![tunnelblick-login](./images/tunnelblick-login.png)
