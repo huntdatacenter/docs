@@ -62,10 +62,6 @@ You can check if you have administrative rights on your local computer by runnin
 
 
 
-
-
-
-
 ::: details OS X and macOS
 
 We use Tunnelblick to ensure encrypted communication between your local computer and HUNT Cloud.
@@ -74,9 +70,7 @@ We use Tunnelblick to ensure encrypted communication between your local computer
 
 <!-- https://tunnelblick.net/downloads.html -->
 
-::8. In _User key password_, enter the **`VPN passphrase`** sent to you from HUNT Cloud over Signal.
-:
-
+:::
 
 
 ::: details Ubuntu Linux
