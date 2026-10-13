@@ -154,6 +154,7 @@ After the installation, follow the "Ubuntu Linux" guides below on how to setup a
 5. Select the OpenVPN profile named **`<username>.ovpn`** that you collected in Step 1.
 6. Click on the _Identity_ tab.
 7. In _User name_, enter your user name (same as the OpenVPN profile file name).
+![OpenVPN-icon](./images/linux-setup-tunnelblick-step7.png)
 8. Click on the person icon in the _Password_ field and select **`Ask for this password every time`**.
 ![OpenVPN-icon](./images/linux-setup-tunnelblick-step8.png)
 9. Click on the _IPv4 Settings_ tab.

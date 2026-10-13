@@ -347,8 +347,11 @@ onMounted(() => {
                             that you collected in Step 1.
                           </li>
                           <li>Click on the <em>Identity</em> tab.</li>
-                          <li>In <em>User name</em>, enter your username:</li>
-                          <CopyTextField :model-value="`${username}`" label="" placeholder="Your username is missing" />
+                          <li>
+                            In <em>User name</em>, enter your user name (same as the OpenVPN profile file name):
+                            <CopyTextField :model-value="`${username}`" label="" placeholder="Your username is missing" />
+                            <img class="pa-2" alt="workbench-login-form" src="/img/vpn/linux-setup-tunnelblick-step7.png" style="max-width: 500px" />
+                          </li>
                           <li>
                             Click on the person icon in the <em>Password</em> field and select <strong><code>Ask for this password every time</code></strong
                             >.
