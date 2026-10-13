@@ -348,7 +348,7 @@ onMounted(() => {
                           </li>
                           <li>Click on the <em>Identity</em> tab.</li>
                           <li>
-                            In <em>User name</em>, enter your user name (same as the OpenVPN profile file name):
+                            In <em>User name</em>, enter your username (same as the OpenVPN profile file name):
                             <CopyTextField :model-value="`${username}`" label="" placeholder="Your username is missing" />
                             <img class="pa-2" alt="workbench-login-form" src="/img/vpn/linux-setup-tunnelblick-step7.png" style="max-width: 500px" />
                           </li>
