@@ -118,10 +118,31 @@ const getRouteQuery = () => {
 }
 
 // Methods
+const persistFilter = (value) => {
+  if (value) {
+    localStorage.labAccessGuideFilter = value
+  } else {
+    localStorage.removeItem("labAccessGuideFilter")
+  }
+}
+
 const updateFilter = (value, update = false) => {
   const val = guidingOptions.value.find((item) => item.value === value)
-  filterGuidesByType.value = update && val && val.value ? val.value : filterGuidesByType.value
-  localStorage.labAccessGuideFilter = val && val.value ? val.value : null
+  const resolved = val && val.value ? val.value : null
+
+  if (update) {
+    // Restoring from the cache or the URI. An unrecognised value must not
+    // clobber a filter already restored, so mirror whatever the ref ends up
+    // holding -- that also drops a cached value that no longer resolves.
+    if (resolved) {
+      filterGuidesByType.value = resolved
+    }
+    persistFilter(filterGuidesByType.value)
+  } else {
+    // An explicit change from the select: v-model has already set the ref,
+    // and a null value here means the user cleared it.
+    persistFilter(resolved)
+  }
 }
 
 const wrap = (template) => {
