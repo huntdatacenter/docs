@@ -130,7 +130,7 @@ sudo apt install <packagename>
 If you are installing a `.deb` file, it should be in the `/tmp/` directory. i.e:
 
 ```bash
-sudo apt install /tmp/<packagename>
+sudo apt install /tmp/<filename>.deb
 ```
 ::: warning WARNING
 
