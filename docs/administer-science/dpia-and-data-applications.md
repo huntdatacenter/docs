@@ -115,7 +115,7 @@ DPIA templates and data-application forms tend to ask the same questions. To hel
 | Access control and authentication | [Access security and two-factor login](#access-security-and-two-factor-login). |
 | Certificates / independent assurance | [ISO certificates](#iso-certificates). |
 | Sub-processors / subcontractors | [Subcontractors](/govern-science/compliance/subcontractors). |
-| Encryption | Encrypted VPN in transit; [tape service](/administer-science/data/tape-backup/) for encrypted offsite copies. |
+| Encryption | Encrypted VPN in transit; [tape service](/administer-science/data/tape-service/) for encrypted offsite copies. |
 | Backup, restore and deletion | [Data administrator FAQ](/administer-science/data/faq). |
 | Incident / data-breach handling | [Security FAQ](/do-science/faq/security). |
 | Logging and auditability | We log access and transfers; logs are available to data controllers on request — [contact us](/contact). |
