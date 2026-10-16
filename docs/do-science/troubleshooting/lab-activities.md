@@ -63,7 +63,7 @@ E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission d
 
 Rerun your command with sudo. [Contact us](/contact) if this doesn't solve your issue.
 
-### Permission denied when installing deb file
+### Permission denied when installing deb package
 
 If you are trying to install `.deb` package and you are getting this error you will need to move your package to /tmp/ and the use full path.
 
