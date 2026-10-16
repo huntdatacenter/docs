@@ -23,6 +23,10 @@ import vuetify, { transformAssetUrls } from "vite-plugin-vuetify"
 //   })
 // );
 export default defineConfig({
+  // VitePress builds with `docs` as its Vite root, so absolute asset URLs
+  // (/img/...) resolve against docs/public. Vitest's root is the repo root,
+  // so point publicDir at the same directory to match dev/build behaviour.
+  publicDir: fileURLToPath(new URL("./docs/public", import.meta.url)),
   // Resolver
   resolve: {
     // https://vitest.dev/config/#alias
