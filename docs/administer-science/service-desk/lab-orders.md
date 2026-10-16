@@ -452,7 +452,7 @@ Once data on volume is deleted, it can not be recreated. You must ensure that yo
 ### Tape backup
 
 Use below form if you wish to order a scheduled backup to tape or one-time archive of your data.
-If you want to learn more on what tape is and how it works, click [here]()
+If you want to learn more on what tape is and how it works, read our [tape service guide](/administer-science/data/tape-service/).
 
 <SDButton form="request_tape_backup" />
 
