@@ -127,6 +127,7 @@ A quick way to install open-source software packages is to use the built in [apt
 ```bash
 sudo apt install <packagename>
 ```
+
 If you are installing a `.deb` file, it should be in the `/tmp/` directory. i.e:
 
 ```bash
