@@ -127,7 +127,11 @@ A quick way to install open-source software packages is to use the built in [apt
 ```bash
 sudo apt install <packagename>
 ```
+If you are installing a `.deb` file, it should be in the `/tmp/` directory. i.e:
 
+```bash
+sudo apt install /tmp/<packagename>
+```
 ::: warning WARNING
 
 Be aware that installation of new packages with apt may affect the workflow of your lab colleagues. Therefore we recommend taking an extra step and configure [Conda](/do-science/tools/analytical/conda). Conda is a great package manager that provides a lot of packages in easy way without affecting other users.

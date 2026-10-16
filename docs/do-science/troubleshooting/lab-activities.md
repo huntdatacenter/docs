@@ -53,13 +53,18 @@ See our [Workbench troubleshooting section](/do-science/hunt-workbench/troublesh
 
 ### Permission denied during installation
 
-You will need to use the **`sudo`** command when you [install software](/do-science/faq/compute#software) with the **`sudo apt install <package>`** command. If forgotten, apt will return an error message like this:
+You will need to use the **`sudo`** command when you [install software](/do-science/faq/compute#software) with the **`sudo apt install /tmp/<package>`** command.
+> Make sure to keep the packages that you want installed in the /tmp/ directory.
+
+If forgotten, apt will return an error message like these:
 
 ```
 E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
 ```
-
-Rerun your command with sudo. [Contact us](/contact) if this doesn't solve your issue.
+```
+Sorry, user <username> is not allowed to execute
+```
+Rerun your command with sudo or move the package to /tmp/ directory. [Contact us](/contact) if this doesn't solve your issue.
 
 
 ### MATLAB
