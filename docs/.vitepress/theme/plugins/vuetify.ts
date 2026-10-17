@@ -1,7 +1,8 @@
 import { createVuetify } from "vuetify"
-import * as components from "vuetify/components"
 import * as directives from "vuetify/directives"
 
+// Components are tree-shaken: vite-plugin-vuetify (config.mts) auto-imports only those used in .vue files.
+// Labs components are not auto-imported, so they are registered here explicitly.
 import { VStepperVertical, VStepperVerticalItem, VStepperVerticalActions } from "vuetify/labs/VStepperVertical"
 
 // Scoped theme for the Price estimator. Applied via <v-theme-provider theme="huntCloud">
@@ -33,7 +34,6 @@ const huntCloud = {
 
 export const vuetify = createVuetify({
   components: {
-    ...components,
     VStepperVertical,
     VStepperVerticalItem,
     VStepperVerticalActions,

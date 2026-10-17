@@ -1,6 +1,7 @@
 import { defineConfig, type HeadConfig } from "vitepress"
 
 import container from "markdown-it-container"
+import vuetify from "vite-plugin-vuetify"
 
 // https://vitepress.vuejs.org/config/app-configs#head
 const customHead: HeadConfig[] = [
@@ -110,6 +111,7 @@ export default defineConfig({
   },
 
   vite: {
+    plugins: [vuetify({ autoImport: true })],
     resolve: {
       preserveSymlinks: true,
     },
