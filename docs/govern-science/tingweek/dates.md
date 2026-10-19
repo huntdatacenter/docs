@@ -13,7 +13,7 @@ description: This page lists information and questions about our Tingweeks.
 
 ::: tip Next: Tingweek #19
 
-- **Labting**: Tuesday 20 October 2026 - 2 to 3 p.m. CET
+- **Labting**: Tuesday 20 October 2026 - 2 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek19-labting-agenda.pdf))
 - **Admin ting**: Wednesday 21 October 2026 - 9 to 10 a.m. CET
 - **Data controller ting**: Wednesday 21 October 2026 - 1 to 2 p.m. CET
 
@@ -36,7 +36,7 @@ description: This page lists information and questions about our Tingweeks.
 
 ### Tingweek #19 (2026-10)
 
-- **Labting**: Tuesday 20 October 2026 - 2 to 3 p.m. CET
+- **Labting**: Tuesday 20 October 2026 - 2 to 3 p.m. CET ([agenda](https://assets.hdc.ntnu.no/assets/tingweek/hunt-cloud-tingweek19-labting-agenda.pdf))
 - **Admin ting**: Wednesday 21 October 2026 - 9 to 10 a.m. CET
 - **Data controller ting**: Wednesday 21 October 2026 - 1 to 2 p.m. CET
 
