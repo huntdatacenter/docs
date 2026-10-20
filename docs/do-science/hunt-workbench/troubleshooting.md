@@ -20,6 +20,11 @@ See our [HUNT Workbench FAQ](/do-science/hunt-workbench/faq) for general questio
 
 ## Access
 
+### PAM Authentication failed
+
+If you are getting this error message `PAM Authentication failed. Did you provide correct username and password?`
+You are most likely entering the wrong password. Head over to our do science [service desk](/do-science/service-desk/#hunt-workbench-reissue) to order a **`SSH passphrase reset`**.
+
 ### Unable to access HUNT Workbench applications
 
 If you were previously able to access your applications (such as _RStudio_), and then the application suddenly stopped working, one quick approach is to check your available diskspace with following command:
@@ -42,7 +47,7 @@ Try with Chrome or check troubleshooting guide for Firefox in your Lab access li
 
 ### 403: Forbidden - Expired client certificate
 
-Your HUNT Workbench certificate is time limited. You will meet the **`403 Forbidden`** message when your certificate expire (example image below). Head over our do science [service desk](/do-science/service-desk/#hunt-workbench-reissue) to order a certificate reissue.
+Your HUNT Workbench certificate is time limited. You will meet the **`403 Forbidden`** message when your certificate expire (example image below). Head over to our do science [service desk](/do-science/service-desk/#hunt-workbench-reissue) to order a certificate reissue.
 
 ![expired_certificate.png](./images/expired_certificate.png)
 
