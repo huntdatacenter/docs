@@ -120,7 +120,7 @@ We recommend that instead of using apt, you install your packages into your envi
 
 Example with [plink2](https://anaconda.org/bioconda/plink2) package:
 
-```
+```sh
 mamba install -n default -c bioconda -y plink2
 conda activate default
 plink2 --help
@@ -130,7 +130,7 @@ plink2 --help
 
 ## Management
 
-### How can I restart my workbench environment?
+### How can I restart my Workbench environment?
 
 Sometimes you might want to start over with a fresh environment:
 
@@ -143,6 +143,10 @@ Sometimes you might want to start over with a fresh environment:
 ![wb_cp_stopserver.png](./images/wb_cp_stopserver.png)
 
 You can either start the new instance by hitting the button or by logging in again.
+
+### Does my Workbench environment get shutdown when inactive?
+
+Yes, environments that are inactive for more that 10 days are automatically cleaned up.
 
 ### Can I install Jupyter extensions?
 
