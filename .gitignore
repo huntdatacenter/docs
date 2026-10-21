@@ -55,4 +55,3 @@ basement_dist
 *.msm
 *.msp
 yarn.lock
-.yarnrc.yml
