@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue"
 import type { ComputeUnit, PriceListItem, GpuModel, MachineType, MachineFormData } from "./types"
-import { priceEstimatorStore } from "./stores/priceEstimatorStore"
+import { priceEstimatorStore, DEFAULT_DAYS } from "./stores/priceEstimatorStore"
 
 const props = defineProps({
   labId: { type: Number, required: true },
@@ -22,6 +22,7 @@ const formData = ref<MachineFormData>({
   gpu: undefined,
   gpu_count: 1,
   subscription: undefined,
+  days: DEFAULT_DAYS,
   isDefault: false,
 })
 
@@ -145,6 +146,7 @@ const save = () => {
       subscription: subscription!,
       gpu: gpu,
       gpuCount: gpuCount,
+      days: formData.value.days,
       isDefault: formData.value.isDefault!,
     })
   } else {
@@ -157,6 +159,7 @@ const save = () => {
       subscription: subscription!,
       gpu: gpu,
       gpu_count: gpuCount,
+      days: formData.value.days,
       isDefault: formData.value.isDefault!,
     })
   }
@@ -170,6 +173,7 @@ onMounted(() => {
     formData.value.name = props.editData.name
     formData.value.subscription = props.editData.subscription
     formData.value.isDefault = props.editData.isDefault
+    formData.value.days = props.editData.days ?? DEFAULT_DAYS
 
     if (formData.value.isDefault) {
       subscriptions.value = subscriptions.value.slice(0, 2)
@@ -231,6 +235,9 @@ onMounted(() => {
             </v-col>
             <v-col v-show="formData.machine_type" cols="12" sm="6">
               <v-text-field v-model="getComputePriceYear" label="Compute Price / Year" suffix="NOK ex. VAT / Year" readonly variant="outlined"></v-text-field>
+            </v-col>
+            <v-col v-if="priceEstimatorStore.billingMode === 'daily'" cols="12">
+              <v-number-input v-model="formData.days" variant="outlined" label="Days" hint="Number of days the machine will be allocated" persistent-hint :min="1"></v-number-input>
             </v-col>
             <v-col cols="12" v-show="!formData.isDefault">
               <v-select v-model="formData.gpu" :items="getGpus" label="GPU type (optional)" variant="outlined" clearable :disabled="!formData.subscription"></v-select>

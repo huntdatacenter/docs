@@ -1,8 +1,10 @@
 import { vuetify } from "../docs/.vitepress/theme/plugins/vuetify"
 import { mount, flushPromises } from "@vue/test-utils"
 import PriceEstimator from "../docs/.vitepress/theme/components/price-estimator/PriceEstimator.vue"
+import LabCard from "../docs/.vitepress/theme/components/price-estimator/LabCard.vue"
+import StorageModal from "../docs/.vitepress/theme/components/price-estimator/StorageModal.vue"
 import { describe, it, expect, beforeEach, vi } from "vitest"
-import { priceEstimatorStore } from "../docs/.vitepress/theme/components/price-estimator/stores/priceEstimatorStore"
+import { priceEstimatorStore, DEFAULT_DAYS } from "../docs/.vitepress/theme/components/price-estimator/stores/priceEstimatorStore"
 import type { StorageUnit } from "../docs/.vitepress/theme/components/price-estimator/types"
 
 // Mock the pricesApi module
@@ -91,6 +93,7 @@ vi.mock("../docs/.vitepress/theme/components/price-estimator/api/pricesApi.js", 
 describe("PriceEstimator", () => {
   beforeEach(() => {
     priceEstimatorStore.clearAllLabs()
+    priceEstimatorStore.billingMode = "monthly"
     // Manually populate catalogue for tests that need it
     priceEstimatorStore.catalogue.storagePrices = mockPriceList.filter((item: any) => item["service.family"] === "store") as any
     priceEstimatorStore.catalogue.computePrices = mockPriceList.filter((item: any) => item["service.group"] === "cpu") as any
@@ -562,6 +565,128 @@ describe("PriceEstimator", () => {
       const expectedNvmeTiered = 10 * 1000 + 20 * 800
       // @ts-ignore
       expect(summary.allStorage.NVME.costTiered).toBeCloseTo(expectedNvmeTiered, 0)
+    })
+  })
+
+  describe("Daily billing mode", () => {
+    const addLabWithItems = () => {
+      priceEstimatorStore.labs = [{ id: 0, title: "Lab 1", subscription: "1Y", selectedCompute: [], selectedStorage: [], collapse: false }]
+      priceEstimatorStore.addComputeToLab(0, { name: "short-term", machine_type: "default.c1", core_count: 4, ram: 8, subscription: "COMMITMENT_1Y", days: 10, isDefault: false })
+      priceEstimatorStore.addStorageToLab(0, { name: "volume-1", usage: "Work", type: "NVME", size: 2, days: 5 })
+      return priceEstimatorStore.labs[0]
+    }
+
+    it("defaults items to DEFAULT_DAYS when no days are given", () => {
+      priceEstimatorStore.labs = [{ id: 0, title: "Lab 1", subscription: "1Y", selectedCompute: [], selectedStorage: [], collapse: false }]
+      priceEstimatorStore.addComputeToLab(0, { name: "m", machine_type: "default.c1", core_count: 4, ram: 8, subscription: "COMMITMENT_1Y", isDefault: false })
+      priceEstimatorStore.addStorageToLab(0, { name: "v", usage: "Work", type: "HDD", size: 1 })
+
+      expect(priceEstimatorStore.labs[0].selectedCompute[0].days).toBe(DEFAULT_DAYS)
+      expect(priceEstimatorStore.labs[0].selectedStorage[0].days).toBe(DEFAULT_DAYS)
+    })
+
+    it("computes per-lab daily price and price x days totals", () => {
+      addLabWithItems()
+
+      const compute = priceEstimatorStore.getLabComputePriceSum(0)
+      expect(compute.dailyCostTotal).toBeCloseTo(50000 / 365, 6)
+      expect(compute.periodCostTotal).toBeCloseTo((50000 / 365) * 10, 6)
+
+      // NVME: 1000 NOK / TB / year, 2 TB for 5 days
+      const storage = priceEstimatorStore.getLabStoragePriceSum(0)
+      expect(storage.dailyCostTotal).toBeCloseTo((2 * 1000) / 365, 6)
+      expect(storage.periodCostTotal).toBeCloseTo(((2 * 1000) / 365) * 5, 6)
+      expect(priceEstimatorStore.getLabStoragePriceSumByType(0).NVME.periodCostTotal).toBeCloseTo(((2 * 1000) / 365) * 5, 6)
+
+      // Monthly values are unaffected
+      expect(compute.monthlyCostTotal).toBeCloseTo(50000 / 12, 6)
+    })
+
+    it("updates days per item and ignores invalid values", () => {
+      addLabWithItems()
+
+      priceEstimatorStore.updateComputeDays(0, 0, 3)
+      priceEstimatorStore.updateStorageDays(0, 0, 7)
+      priceEstimatorStore.updateComputeDays(0, 0, 0)
+      priceEstimatorStore.updateStorageDays(0, 0, NaN)
+
+      expect(priceEstimatorStore.labs[0].selectedCompute[0].days).toBe(3)
+      expect(priceEstimatorStore.labs[0].selectedStorage[0].days).toBe(7)
+    })
+
+    it("keeps days when an item is edited", () => {
+      addLabWithItems()
+
+      priceEstimatorStore.editComputeInLab(0, 0, { name: "renamed", machine_type: "default.c1", core_count: 4, ram: 8, subscription: "COMMITMENT_1Y", isDefault: false })
+      priceEstimatorStore.editStorageInLab(0, 0, { name: "renamed", usage: "Work", type: "HDD", size: 3 })
+
+      expect(priceEstimatorStore.labs[0].selectedCompute[0].days).toBe(10)
+      expect(priceEstimatorStore.labs[0].selectedStorage[0].days).toBe(5)
+    })
+
+    it("includes period totals in the total summary", () => {
+      addLabWithItems()
+
+      const summary = priceEstimatorStore.updateTotalSummary()
+      expect(summary.allCompute.periodPrice).toBeCloseTo((50000 / 365) * 10, 6)
+      // @ts-ignore
+      expect(summary.allStorage.NVME.costPeriod).toBeCloseTo(((2 * 1000) / 365) * 5, 6)
+    })
+
+    it("persists the billing mode and days", () => {
+      addLabWithItems()
+      priceEstimatorStore.setBillingMode("daily")
+
+      const saved = JSON.parse(localStorage.getItem("hunt-cloud-estimator-state")!)
+      expect(saved.billingMode).toBe("daily")
+      expect(saved.labs[0].selectedCompute[0].days).toBe(10)
+      expect(saved.labs[0].selectedStorage[0].days).toBe(5)
+    })
+
+    it("falls back to defaults for invalid days from forms", () => {
+      const lab = addLabWithItems()
+      priceEstimatorStore.addStorageToLab(0, { name: "v", usage: "Work", type: "HDD", size: 1, days: null as any })
+      priceEstimatorStore.editComputeInLab(0, 0, { name: "m", machine_type: "default.c1", core_count: 4, ram: 8, subscription: "COMMITMENT_1Y", days: 0, isDefault: false })
+
+      expect(lab.selectedStorage[1].days).toBe(DEFAULT_DAYS)
+      expect(lab.selectedCompute[0].days).toBe(10)
+    })
+
+    it("shows a Days field in the storage form only in daily mode and saves it", async () => {
+      addLabWithItems()
+      const monthlyForm = mount(StorageModal, { props: { labId: 0, storageId: 1 }, global: { plugins: [vuetify] } })
+      expect(monthlyForm.text()).not.toContain("Days")
+      monthlyForm.unmount()
+
+      priceEstimatorStore.setBillingMode("daily")
+      const form = mount(StorageModal, { props: { labId: 0, storageId: 1 }, global: { plugins: [vuetify] } })
+      expect(form.text()).toContain("Days")
+
+      const daysInput = form.findAll("input").find((i) => i.attributes("type") !== "number" && (i.element as HTMLInputElement).value === String(DEFAULT_DAYS))!
+      await daysInput.setValue("14")
+      await form
+        .findAll("button")
+        .find((b) => b.text().includes("Save"))!
+        .trigger("click")
+
+      expect(priceEstimatorStore.labs[0].selectedStorage[1].days).toBe(14)
+      form.unmount()
+    })
+
+    it("switches the lab tables between monthly and daily columns", async () => {
+      const lab = addLabWithItems()
+      const wrapper = mount(LabCard, { props: { lab }, global: { plugins: [vuetify] } })
+
+      expect(wrapper.text()).toContain("Price / month")
+      expect(wrapper.text()).not.toContain("Price / day")
+
+      priceEstimatorStore.setBillingMode("daily")
+      await flushPromises()
+
+      expect(wrapper.text()).toContain("Price / day")
+      expect(wrapper.text()).toContain("Days")
+      expect(wrapper.text()).not.toContain("Price / month")
+      wrapper.unmount()
     })
   })
 })

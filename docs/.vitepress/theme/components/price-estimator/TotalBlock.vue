@@ -9,11 +9,13 @@ const currencyFormatter = new Intl.NumberFormat("nb-NO", {
   maximumFractionDigits: 0,
 })
 
-const headers = [
+const isDaily = computed(() => priceEstimatorStore.billingMode === "daily")
+
+const headers = computed(() => [
   { title: "Name", align: "start", key: "name", sortable: false },
   { title: "Units", align: "end", key: "units", sortable: false },
-  { title: "Price / year", align: "end", key: "cost", sortable: false },
-]
+  { title: isDaily.value ? "Total" : "Price / year", align: "end", key: "cost", sortable: false },
+])
 
 const rawSummary = computed(() => priceEstimatorStore.updateTotalSummary())
 
@@ -53,9 +55,9 @@ const tableItems = computed(() => {
     })
   }
 
-  // Compute
+  // Compute (daily mode: price per day x allocated days)
   if (s.allCompute) {
-    const flat = Number(s.allCompute.price ?? 0)
+    const flat = Number((isDaily.value ? s.allCompute.periodPrice : s.allCompute.price) ?? 0)
     totalFlat += flat
     totalSubsequent += flat
 
@@ -70,8 +72,9 @@ const tableItems = computed(() => {
   // Storage
   if (s.allStorage) {
     Object.entries(s.allStorage).forEach(([type, obj]) => {
-      const flat = Number(obj.costFlat ?? 0)
-      const tiered = Number(obj.costTiered ?? flat)
+      // Volume discount tiers are yearly commitments, so they do not apply to daily allocations
+      const flat = Number((isDaily.value ? obj.costPeriod : obj.costFlat) ?? 0)
+      const tiered = isDaily.value ? flat : Number(obj.costTiered ?? flat)
       const discount = Math.max(0, flat - tiered)
 
       totalFlat += flat
@@ -85,6 +88,17 @@ const tableItems = computed(() => {
         cost: flat,
       })
     })
+  }
+
+  if (isDaily.value) {
+    items.push({
+      id: "total-row",
+      name: "Total",
+      units: "",
+      cost: totalFlat,
+      isTotalRow: true,
+    })
+    return items
   }
 
   // Discount row

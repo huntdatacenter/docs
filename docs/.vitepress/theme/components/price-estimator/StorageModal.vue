@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactive, onMounted } from "vue"
 import type { StorageFormData, StorageUnit } from "./types"
-import { priceEstimatorStore } from "./stores/priceEstimatorStore"
+import { priceEstimatorStore, DEFAULT_DAYS } from "./stores/priceEstimatorStore"
 
 const props = defineProps({
   labId: { type: Number, required: true },
@@ -19,6 +19,7 @@ const formData = reactive<StorageFormData>({
   usage: "Archive",
   type: "HDD",
   size: 1,
+  days: DEFAULT_DAYS,
 })
 
 const close = () => {
@@ -33,6 +34,7 @@ const save = () => {
       usage: formData.usage!,
       type: formData.type!,
       size: Number(formData.size),
+      days: formData.days,
     })
   } else {
     // Add new
@@ -41,6 +43,7 @@ const save = () => {
       usage: formData.usage!,
       type: formData.type!,
       size: Number(formData.size),
+      days: formData.days,
     })
   }
 
@@ -54,6 +57,7 @@ onMounted(() => {
     formData.usage = props.editData.usage
     formData.type = props.editData.type
     formData.size = props.editData.size
+    formData.days = props.editData.days ?? DEFAULT_DAYS
   } else {
     formData.id = props.storageId
     formData.name = `volume-${props.storageId + 1}`
@@ -95,6 +99,16 @@ onMounted(() => {
                   suffix="TB"
                   variant="outlined"
                 ></v-text-field>
+              </v-col>
+              <v-col v-if="priceEstimatorStore.billingMode === 'daily'" cols="12">
+                <v-number-input
+                  v-model="formData.days"
+                  variant="outlined"
+                  label="Days"
+                  hint="Number of days the storage will be allocated"
+                  persistent-hint
+                  :min="1"
+                ></v-number-input>
               </v-col>
             </v-form>
           </v-row>

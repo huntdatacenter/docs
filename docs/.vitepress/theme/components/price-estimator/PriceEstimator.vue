@@ -63,6 +63,21 @@ async function handleFileUpload(event: Event) {
           <div class="d-flex flex-wrap align-center ga-3">
             <v-btn color="primary" size="large" rounded="lg" prepend-icon="mdi-flask-plus-outline" class="text-none" @click="isLabModalOpen = true"> Add lab </v-btn>
 
+            <v-btn-toggle
+              :model-value="priceEstimatorStore.billingMode"
+              mandatory
+              color="primary"
+              variant="outlined"
+              density="comfortable"
+              rounded="lg"
+              divided
+              class="billing-mode-toggle"
+              @update:model-value="priceEstimatorStore.setBillingMode($event)"
+            >
+              <v-btn value="monthly" class="text-none" prepend-icon="mdi-calendar-month-outline">Monthly</v-btn>
+              <v-btn value="daily" class="text-none" prepend-icon="mdi-calendar-today-outline">Daily</v-btn>
+            </v-btn-toggle>
+
             <v-spacer />
 
             <input ref="fileInput" type="file" style="display: none" accept="application/json" @change="handleFileUpload" />

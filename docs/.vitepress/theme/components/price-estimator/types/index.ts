@@ -9,6 +9,7 @@ Cost: Calculated amount of prices. Used for Summary.
 
 export type SubscriptionType = "COMMITMENT_1Y" | "COMMITMENT_3Y" | "ONDEMAND" | "SPOT"
 export type LabSubscriptionType = "1Y" | "3Y"
+export type BillingMode = "monthly" | "daily"
 export type StorageUsageType = "Archive" | "Work" | "Scratch" | "Backup"
 export const storageTypes = ["HDD", "NVME"] as const
 export type StorageType = (typeof storageTypes)[number]
@@ -33,6 +34,7 @@ export interface ComputeUnit {
   subscription: SubscriptionType
   monthlyPrice: number
   yearlyPrice: number
+  days: number
   isDefault: boolean
 }
 
@@ -44,6 +46,7 @@ export interface StorageUnit {
   size: number
   type: StorageType
   usage: StorageUsageType
+  days: number
 }
 
 export interface GpuModel {
@@ -81,6 +84,8 @@ interface StoragePrice {
   size: number
   monthlyCostTotal: number
   yearlyCostTotal: number
+  dailyCostTotal: number
+  periodCostTotal: number
 }
 
 export type StorageCostByType = {
@@ -94,6 +99,7 @@ export interface MachineFormData {
   gpu?: string
   gpu_count?: number
   subscription?: SubscriptionType
+  days?: number
   isDefault?: boolean
 }
 
@@ -103,6 +109,7 @@ export interface StorageFormData {
   usage?: StorageUsageType
   type?: StorageType
   size?: number
+  days?: number
 }
 
 export interface UpdateComputePayload {

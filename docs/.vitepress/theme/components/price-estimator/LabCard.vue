@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, watch } from "vue"
 import { DataTableHeader } from "vuetify"
-import { priceEstimatorStore } from "./stores/priceEstimatorStore"
+import { priceEstimatorStore, dailyPrice, periodPrice } from "./stores/priceEstimatorStore"
 import type { ComputeUnit, StorageUnit, LabCard } from "./types"
 import MachineModal from "./MachineModal.vue"
 import StorageModal from "./StorageModal.vue"
@@ -35,7 +35,23 @@ const changeSubscription = () => {
   priceEstimatorStore.updateLabSubscription(props.lab.id, subscription)
 }
 
-const computeHeaders = ref<DataTableHeader[]>([
+const isDaily = computed(() => priceEstimatorStore.billingMode === "daily")
+
+// Price columns differ per billing mode; all other columns stay the same
+const priceHeaders = computed<DataTableHeader[]>(() =>
+  isDaily.value
+    ? [
+        { title: "Price / day", align: "end", sortable: true, key: "dailyPrice", value: (item: ComputeUnit | StorageUnit) => dailyPrice(item) },
+        { title: "Days", align: "end", sortable: true, key: "days" },
+        { title: "Total", align: "end", sortable: true, key: "periodPrice", value: (item: ComputeUnit | StorageUnit) => periodPrice(item) },
+      ]
+    : [
+        { title: "Price / month", align: "end", sortable: true, key: "monthlyPrice" },
+        { title: "Price / year", align: "end", sortable: true, key: "yearlyPrice" },
+      ],
+)
+
+const computeHeaders = computed<DataTableHeader[]>(() => [
   { title: "Name", align: "start", sortable: true, key: "name" },
   { title: "Machine type", align: "start", sortable: true, key: "machine_type" },
   { title: "vCPUs", align: "end", sortable: true, key: "core_count" },
@@ -43,23 +59,21 @@ const computeHeaders = ref<DataTableHeader[]>([
   // { title: "GPU count", align: "end", sortable: true, key: "gpu_count" },
   { title: "GPU", align: "end", sortable: true, key: "gpu" },
   { title: "Subscription", align: "start", sortable: true, key: "subscription" },
-  { title: "Price / month", align: "end", sortable: true, key: "monthlyPrice" },
-  { title: "Price / year", align: "end", sortable: true, key: "yearlyPrice" },
+  ...priceHeaders.value,
   { title: "Actions", key: "actions", align: "end", sortable: false },
 ])
 
 const isStorageModalOpen = ref(false)
 let editingStorageItem: StorageUnit | null = null
 
-const storageHeaders = ref([
+const storageHeaders = computed<DataTableHeader[]>(() => [
   { title: "Name", align: "start", sortable: true, key: "name" },
   { title: "Usage", align: "start", sortable: true, key: "usage" },
   { title: "Type", align: "start", sortable: true, key: "type" },
   { title: "Size [TB]", align: "end", sortable: true, key: "size" },
-  { title: "Price / month", align: "end", sortable: true, key: "monthlyPrice" },
-  { title: "Price / year", align: "end", sortable: true, key: "yearlyPrice" },
+  ...priceHeaders.value,
   { title: "Actions", key: "actions", align: "end", sortable: false },
-] as const)
+])
 
 const snackbar = ref({
   show: false,
@@ -106,6 +120,11 @@ const LabSumMonthly = computed(() => {
 const LabSum = computed(() => {
   return labSubscriptionPrice.value.yearly + computeLabSum.value.yearlyCostTotal + storageLabSum.value.HDD.yearlyCostTotal + storageLabSum.value.NVME.yearlyCostTotal
 })
+
+// Daily mode: items are billed for their allocated days; the lab subscription is a yearly commitment and is added as-is
+const LabSumDaily = computed(() => computeLabSum.value.dailyCostTotal + storageLabPriceSum.value.dailyCostTotal)
+
+const LabSumPeriod = computed(() => labSubscriptionPrice.value.yearly + computeLabSum.value.periodCostTotal + storageLabPriceSum.value.periodCostTotal)
 
 const localTitle = ref(props.lab.title)
 
@@ -192,7 +211,8 @@ const removeStorageById = (storageId: number) => {
       ></v-text-field>
 
       <transition name="fade">
-        <span class="collapsed-summary mr-3 text-medium-emphasis"> {{ Number(LabSumMonthly || 0).toFixed(2) }}&nbsp;NOK / month </span>
+        <span v-if="isDaily" class="collapsed-summary mr-3 text-medium-emphasis"> {{ Number(LabSumPeriod || 0).toFixed(2) }}&nbsp;NOK total </span>
+        <span v-else class="collapsed-summary mr-3 text-medium-emphasis"> {{ Number(LabSumMonthly || 0).toFixed(2) }}&nbsp;NOK / month </span>
       </transition>
 
       <v-tooltip text="Renewal period" location="top">
@@ -229,6 +249,31 @@ const removeStorageById = (storageId: number) => {
                 <span class="text-right"> {{ item.yearlyPrice.toFixed(2) }}&nbsp;NOK </span>
               </div>
             </template>
+            <template v-slot:item.dailyPrice="{ item }">
+              <div class="d-flex justify-end v-data-table-column--nowrap">
+                <span class="text-right"> {{ dailyPrice(item).toFixed(2) }}&nbsp;NOK </span>
+              </div>
+            </template>
+            <template v-slot:item.days="{ item }">
+              <div class="d-flex justify-end">
+                <v-number-input
+                  :model-value="item.days"
+                  :min="1"
+                  density="compact"
+                  variant="outlined"
+                  control-variant="stacked"
+                  hide-details
+                  class="days-input"
+                  aria-label="Days"
+                  @update:model-value="(days) => priceEstimatorStore.updateComputeDays(lab.id, item.id, days)"
+                ></v-number-input>
+              </div>
+            </template>
+            <template v-slot:item.periodPrice="{ item }">
+              <div class="d-flex justify-end v-data-table-column--nowrap">
+                <span class="text-right"> {{ periodPrice(item).toFixed(2) }}&nbsp;NOK </span>
+              </div>
+            </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
                 <v-icon :color="item.isDefault ? 'rgba(0, 0, 0, 0.3)' : ''" icon="mdi-delete" size="small" @click="removeMachine(item)"></v-icon>
@@ -260,14 +305,28 @@ const removeStorageById = (storageId: number) => {
                 <th class="v-data-table-column--align-end"></th>
                 <!-- Subscription -->
                 <th></th>
-                <!-- Price / month -->
-                <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                  <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
-                </th>
-                <!-- Price / year -->
-                <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                  <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
-                </th>
+                <template v-if="isDaily">
+                  <!-- Price / day -->
+                  <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                    <strong>{{ Number(computeLabSum?.dailyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
+                  </th>
+                  <!-- Days -->
+                  <th></th>
+                  <!-- Total -->
+                  <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                    <strong>{{ Number(computeLabSum?.periodCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
+                  </th>
+                </template>
+                <template v-else>
+                  <!-- Price / month -->
+                  <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                    <strong>{{ Number(computeLabSum?.monthlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
+                  </th>
+                  <!-- Price / year -->
+                  <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                    <strong>{{ Number(computeLabSum?.yearlyCostTotal || 0).toFixed(2) }}&nbsp;NOK</strong>
+                  </th>
+                </template>
                 <!-- Actions -->
                 <th class="v-data-table-column--align-end"></th>
               </tr>
@@ -293,6 +352,23 @@ const removeStorageById = (storageId: number) => {
             <template v-slot:item.size="{ item }"> {{ item.size.toFixed(2) }}&nbsp;TB </template>
             <template v-slot:item.monthlyPrice="{ item }"> {{ item.monthlyPrice.toFixed(2) }}&nbsp;NOK </template>
             <template v-slot:item.yearlyPrice="{ item }"> {{ item.yearlyPrice.toFixed(2) }}&nbsp;NOK </template>
+            <template v-slot:item.dailyPrice="{ item }"> {{ dailyPrice(item).toFixed(2) }}&nbsp;NOK </template>
+            <template v-slot:item.days="{ item }">
+              <div class="d-flex justify-end">
+                <v-number-input
+                  :model-value="item.days"
+                  :min="1"
+                  density="compact"
+                  variant="outlined"
+                  control-variant="stacked"
+                  hide-details
+                  class="days-input"
+                  aria-label="Days"
+                  @update:model-value="(days) => priceEstimatorStore.updateStorageDays(lab.id, item.id, days)"
+                ></v-number-input>
+              </div>
+            </template>
+            <template v-slot:item.periodPrice="{ item }"> {{ periodPrice(item).toFixed(2) }}&nbsp;NOK </template>
             <template v-slot:item.actions="{ item }">
               <div class="d-flex ga-2 justify-end">
                 <v-icon color="medium-emphasis" icon="mdi-delete" size="small" @click="removeStorageById(item.id)"></v-icon>
@@ -323,14 +399,28 @@ const removeStorageById = (storageId: number) => {
                 <th class="v-data-table-column--align-end v-data-table-column--nowrap">
                   <strong>{{ item.size.toFixed(2) }}&nbsp;TB</strong>
                 </th>
-                <!-- Price / month -->
-                <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                  <strong>{{ item.monthlyCostTotal.toFixed(2) }}&nbsp;NOK</strong>
-                </th>
-                <!-- Price / year -->
-                <th class="v-data-table-column--align-end v-data-table-column--nowrap">
-                  <strong>{{ item.yearlyCostTotal.toFixed(2) }}&nbsp;NOK</strong>
-                </th>
+                <template v-if="isDaily">
+                  <!-- Price / day -->
+                  <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                    <strong>{{ item.dailyCostTotal.toFixed(2) }}&nbsp;NOK</strong>
+                  </th>
+                  <!-- Days -->
+                  <th></th>
+                  <!-- Total -->
+                  <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                    <strong>{{ item.periodCostTotal.toFixed(2) }}&nbsp;NOK</strong>
+                  </th>
+                </template>
+                <template v-else>
+                  <!-- Price / month -->
+                  <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                    <strong>{{ item.monthlyCostTotal.toFixed(2) }}&nbsp;NOK</strong>
+                  </th>
+                  <!-- Price / year -->
+                  <th class="v-data-table-column--align-end v-data-table-column--nowrap">
+                    <strong>{{ item.yearlyCostTotal.toFixed(2) }}&nbsp;NOK</strong>
+                  </th>
+                </template>
                 <!-- Actions -->
                 <th></th>
               </tr>
@@ -342,7 +432,49 @@ const removeStorageById = (storageId: number) => {
             <v-icon size="small" color="primary" class="mr-2">mdi-receipt-text-outline</v-icon>
             <span>Lab summary</span>
           </div>
-          <v-table class="summary-table">
+          <v-table v-if="isDaily" class="summary-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th class="text-right">Price / day</th>
+                <th class="text-right">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Lab Subscription ({{ lab.subscription }})</strong>
+                </td>
+                <td class="text-medium-emphasis">Yearly commitment</td>
+                <td class="text-right">&ndash;</td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(labSubscriptionPrice.yearly).toFixed(2) }}&nbsp;NOK</td>
+              </tr>
+              <tr>
+                <td><strong>Compute</strong></td>
+                <td></td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(computeLabSum?.dailyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(computeLabSum?.periodCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
+              </tr>
+              <tr>
+                <td><strong>Storage</strong></td>
+                <td></td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(storageLabPriceSum?.dailyCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
+                <td class="text-right v-data-table-column--nowrap">{{ Number(storageLabPriceSum?.periodCostTotal || 0).toFixed(2) }}&nbsp;NOK</td>
+              </tr>
+              <tr class="summary-total-row">
+                <td><strong>Total</strong></td>
+                <td></td>
+                <td class="text-right v-data-table-column--nowrap">
+                  <strong>{{ Number(LabSumDaily || 0).toFixed(2) }}&nbsp;NOK</strong>
+                </td>
+                <td class="text-right v-data-table-column--nowrap">
+                  <strong>{{ Number(LabSumPeriod || 0).toFixed(2) }}&nbsp;NOK</strong>
+                </td>
+              </tr>
+            </tbody>
+          </v-table>
+          <v-table v-else class="summary-table">
             <thead>
               <tr>
                 <th></th>
@@ -482,6 +614,11 @@ const removeStorageById = (storageId: number) => {
 
 .summary-table {
   background: transparent;
+}
+
+.days-input {
+  width: 110px;
+  flex: 0 0 auto;
 }
 
 .summary-total-row td {

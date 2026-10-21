@@ -14,6 +14,7 @@ import {
   StorageCostByType,
   LocalStorageError,
   LabSubscriptionType,
+  BillingMode,
 } from "../types/index.js"
 import pricesApi from "../api/pricesApi.js"
 import { StorageUsageType } from "../types/index"
@@ -22,10 +23,20 @@ const ISSERVER = typeof window === "undefined"
 
 const VERSION = "1.2"
 
+// Default allocation period for items priced in daily mode
+export const DEFAULT_DAYS = 30
+
+// Daily rates are derived from yearly prices (on-demand/spot daily prices are converted to yearly on load)
+export const dailyPrice = (item: { yearlyPrice: number }) => (item.yearlyPrice || 0) / 365
+export const itemDays = (item: { days?: number }) => item.days ?? DEFAULT_DAYS
+const validDays = (days?: number | null) => (days != null && Number.isFinite(days) && days >= 1 ? Math.round(days) : undefined)
+export const periodPrice = (item: { yearlyPrice: number; days?: number }) => dailyPrice(item) * itemDays(item)
+
 export const priceEstimatorStore = reactive({
   /* State */
 
   isInitializingPriseEstimator: false,
+  billingMode: "monthly" as BillingMode,
   labs: [] as LabCard[],
   catalogue: {
     computePrices: [] as PriceListItem[],
@@ -52,6 +63,7 @@ export const priceEstimatorStore = reactive({
         if (savedJson) {
           const state = JSON.parse(savedJson)
           if (state.labs && Array.isArray(state.labs) && state.version == VERSION) {
+            this.billingMode = state.billingMode === "daily" ? "daily" : "monthly"
             this.labs = []
 
             for (const lab of state.labs as LabCard[]) {
@@ -75,6 +87,7 @@ export const priceEstimatorStore = reactive({
                     subscription: comp.subscription,
                     gpu: comp.gpu,
                     gpu_count: comp.gpu_count,
+                    days: comp.days,
                     isDefault: comp.isDefault,
                   })
                 }
@@ -87,6 +100,7 @@ export const priceEstimatorStore = reactive({
                     usage: store.usage,
                     type: store.type,
                     size: store.size,
+                    days: store.days,
                   })
                 }
               }
@@ -149,12 +163,18 @@ export const priceEstimatorStore = reactive({
     try {
       const stateToSave = {
         labs: this.labs,
+        billingMode: this.billingMode,
         version: VERSION,
       }
       localStorage.setItem("hunt-cloud-estimator-state", JSON.stringify(stateToSave))
     } catch (err) {
       console.error("Failed to save state:", err)
     }
+  },
+
+  setBillingMode(mode: BillingMode) {
+    this.billingMode = mode
+    this.saveStateToLocal()
   },
 
   /* Lab helpers */
@@ -196,6 +216,7 @@ export const priceEstimatorStore = reactive({
         subscription: payload.machineSubscription as SubscriptionType,
         monthlyPrice: prices.monthlyPrice,
         yearlyPrice: prices.yearlyPrice,
+        days: DEFAULT_DAYS,
         isDefault: payload.isDefault,
       }
       newLab.selectedCompute.push(unit)
@@ -212,6 +233,7 @@ export const priceEstimatorStore = reactive({
         size: payload.archive,
         monthlyPrice: archivePrice.monthlyPrice,
         yearlyPrice: archivePrice.yearlyPrice,
+        days: DEFAULT_DAYS,
       })
     }
 
@@ -226,6 +248,7 @@ export const priceEstimatorStore = reactive({
         size: payload.work,
         monthlyPrice: workPrice.monthlyPrice,
         yearlyPrice: workPrice.yearlyPrice,
+        days: DEFAULT_DAYS,
       })
     }
 
@@ -240,6 +263,7 @@ export const priceEstimatorStore = reactive({
         size: payload.scratch,
         monthlyPrice: scratchPrice.monthlyPrice,
         yearlyPrice: scratchPrice.yearlyPrice,
+        days: DEFAULT_DAYS,
       })
     }
 
@@ -260,17 +284,19 @@ export const priceEstimatorStore = reactive({
   getLabComputePriceSum(labId: number) {
     const lab = this.getLab(labId)
     if (!lab) {
-      return { monthlyCostTotal: 0, yearlyCostTotal: 0 }
+      return { monthlyCostTotal: 0, yearlyCostTotal: 0, dailyCostTotal: 0, periodCostTotal: 0 }
     }
 
     const monthlyCostTotal = lab.selectedCompute.reduce((a, b) => a + b.monthlyPrice, 0)
     const yearlyCostTotal = lab.selectedCompute.reduce((a, b) => a + b.yearlyPrice, 0)
+    const dailyCostTotal = lab.selectedCompute.reduce((a, b) => a + dailyPrice(b), 0)
+    const periodCostTotal = lab.selectedCompute.reduce((a, b) => a + periodPrice(b), 0)
 
-    return { monthlyCostTotal, yearlyCostTotal }
+    return { monthlyCostTotal, yearlyCostTotal, dailyCostTotal, periodCostTotal }
   },
 
   getLabStoragePriceSum(labId: number) {
-    let results = { yearlyCostTotal: 0, monthlyCostTotal: 0 }
+    let results = { yearlyCostTotal: 0, monthlyCostTotal: 0, dailyCostTotal: 0, periodCostTotal: 0 }
     const lab = this.getLab(labId)
     if (!lab) {
       return results
@@ -278,15 +304,17 @@ export const priceEstimatorStore = reactive({
 
     const monthlyCostTotal = lab.selectedStorage.reduce((sum, s) => sum + s.monthlyPrice, 0)
     const yearlyCostTotal = lab.selectedStorage.reduce((sum, s) => sum + s.yearlyPrice, 0)
-    results = { monthlyCostTotal: monthlyCostTotal, yearlyCostTotal: yearlyCostTotal }
+    const dailyCostTotal = lab.selectedStorage.reduce((sum, s) => sum + dailyPrice(s), 0)
+    const periodCostTotal = lab.selectedStorage.reduce((sum, s) => sum + periodPrice(s), 0)
+    results = { monthlyCostTotal, yearlyCostTotal, dailyCostTotal, periodCostTotal }
 
     return results
   },
 
   getLabStoragePriceSumByType(labId: number): StorageCostByType {
     const results: StorageCostByType = {
-      HDD: { size: 0, yearlyCostTotal: 0, monthlyCostTotal: 0 },
-      NVME: { size: 0, yearlyCostTotal: 0, monthlyCostTotal: 0 },
+      HDD: { size: 0, yearlyCostTotal: 0, monthlyCostTotal: 0, dailyCostTotal: 0, periodCostTotal: 0 },
+      NVME: { size: 0, yearlyCostTotal: 0, monthlyCostTotal: 0, dailyCostTotal: 0, periodCostTotal: 0 },
     }
 
     const lab = this.getLab(labId)
@@ -299,7 +327,9 @@ export const priceEstimatorStore = reactive({
       const size = storages.reduce((sum, s) => sum + s.size, 0)
       const yearlyCostTotal = storages.reduce((sum, s) => sum + s.yearlyPrice, 0)
       const monthlyCostTotal = storages.reduce((sum, s) => sum + s.monthlyPrice, 0)
-      results[storageType] = { size, yearlyCostTotal, monthlyCostTotal }
+      const dailyCostTotal = storages.reduce((sum, s) => sum + dailyPrice(s), 0)
+      const periodCostTotal = storages.reduce((sum, s) => sum + periodPrice(s), 0)
+      results[storageType] = { size, yearlyCostTotal, monthlyCostTotal, dailyCostTotal, periodCostTotal }
     }
 
     return results
@@ -340,22 +370,20 @@ export const priceEstimatorStore = reactive({
   calculateTotalStorageCost() {
     // Calculate current total storage size by types
     const totalStorageByType: { [key: string]: number } = {}
+    const totalPeriodCostByType: { [key: string]: number } = {}
     this.labs.forEach((lab: LabCard) => {
       for (const storage of lab.selectedStorage) {
-        if (totalStorageByType[storage.type]) {
-          totalStorageByType[storage.type] += storage.size
-        } else {
-          totalStorageByType[storage.type] = storage.size
-        }
+        totalStorageByType[storage.type] = (totalStorageByType[storage.type] || 0) + storage.size
+        totalPeriodCostByType[storage.type] = (totalPeriodCostByType[storage.type] || 0) + periodPrice(storage)
       }
     })
 
     const totalCost = {} as {
-      [key: string]: { size: number; costTiered: number; costFlat: number }
+      [key: string]: { size: number; costTiered: number; costFlat: number; costPeriod: number }
     }
 
     for (const [type, size] of Object.entries(totalStorageByType)) {
-      totalCost[type] = { size: size, costTiered: 0, costFlat: 0 }
+      totalCost[type] = { size: size, costTiered: 0, costFlat: 0, costPeriod: totalPeriodCostByType[type] }
 
       const blockType = type === "NVME" ? "block.nvme.rep" : "block.hdd.rep"
 
@@ -389,7 +417,7 @@ export const priceEstimatorStore = reactive({
     return totalCost
   },
 
-  addStorageToLab(labId: number, payload: { name: string; usage: StorageUsageType; type: StorageType; size: number }) {
+  addStorageToLab(labId: number, payload: { name: string; usage: StorageUsageType; type: StorageType; size: number; days?: number }) {
     const lab = this.getLab(labId)
     if (!lab) return
 
@@ -403,13 +431,14 @@ export const priceEstimatorStore = reactive({
       size: payload.size,
       yearlyPrice: prices?.yearlyPrice!,
       monthlyPrice: prices?.monthlyPrice!,
+      days: validDays(payload.days) ?? DEFAULT_DAYS,
     }
     lab.selectedStorage.push(newStorage)
 
     this.saveStateToLocal()
   },
 
-  editStorageInLab(labId: number, storageId: number, payload: { name: string; usage: StorageUsageType; type: StorageType; size: number }) {
+  editStorageInLab(labId: number, storageId: number, payload: { name: string; usage: StorageUsageType; type: StorageType; size: number; days?: number }) {
     const lab = this.getLab(labId)
     if (!lab) return
 
@@ -424,8 +453,17 @@ export const priceEstimatorStore = reactive({
       size: payload.size,
       yearlyPrice: price?.yearlyPrice!,
       monthlyPrice: price?.monthlyPrice!,
+      days: validDays(payload.days) ?? itemDays(lab.selectedStorage![idx]),
     }
 
+    this.saveStateToLocal()
+  },
+
+  updateStorageDays(labId: number, storageId: number, days: number) {
+    const storage = this.getLab(labId)?.selectedStorage.find((s) => s.id === storageId)
+    if (!storage) return
+    if (!Number.isFinite(days) || days < 1) return
+    storage.days = Math.round(days)
     this.saveStateToLocal()
   },
 
@@ -525,7 +563,7 @@ export const priceEstimatorStore = reactive({
 
   addComputeToLab(
     labId: number,
-    payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpu_count?: number; isDefault: boolean },
+    payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpu_count?: number; days?: number; isDefault: boolean },
   ) {
     const lab = this.getLab(labId)
     if (!lab) return
@@ -543,6 +581,7 @@ export const priceEstimatorStore = reactive({
       subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
       yearlyPrice: prices.yearlyPrice,
+      days: validDays(payload.days) ?? DEFAULT_DAYS,
       isDefault: payload.isDefault,
     }
     lab.selectedCompute = lab.selectedCompute || []
@@ -554,7 +593,7 @@ export const priceEstimatorStore = reactive({
   editComputeInLab(
     labId: number,
     computeId: number,
-    payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpuCount?: number; isDefault: boolean },
+    payload: { name: string; machine_type: string; core_count: number; ram: number; subscription: string; gpu?: string; gpuCount?: number; days?: number; isDefault: boolean },
   ) {
     const lab = this.getLab(labId)
     if (!lab || !lab.selectedCompute) return
@@ -574,9 +613,18 @@ export const priceEstimatorStore = reactive({
       subscription: payload.subscription as SubscriptionType,
       monthlyPrice: prices.monthlyPrice,
       yearlyPrice: prices.yearlyPrice,
+      days: validDays(payload.days) ?? itemDays(lab.selectedCompute[idx]),
       isDefault: payload.isDefault,
     }
 
+    this.saveStateToLocal()
+  },
+
+  updateComputeDays(labId: number, computeId: number, days: number) {
+    const compute = this.getLab(labId)?.selectedCompute.find((c) => c.id === computeId)
+    if (!compute) return
+    if (!Number.isFinite(days) || days < 1) return
+    compute.days = Math.round(days)
     this.saveStateToLocal()
   },
 
@@ -608,7 +656,7 @@ export const priceEstimatorStore = reactive({
         "1Y": { units: 0, price: 0 },
         "3Y": { units: 0, price: 0 },
       },
-      allCompute: { units: 0, price: 0 },
+      allCompute: { units: 0, price: 0, periodPrice: 0 },
       allStorage: {},
     }
 
@@ -634,6 +682,7 @@ export const priceEstimatorStore = reactive({
     const allCompute = {
       units: totalComputeUnits,
       price: totalComputeForAllLabs,
+      periodPrice: this.labs.reduce((labSum, lab) => labSum + lab.selectedCompute.reduce((sum, comp) => sum + periodPrice(comp), 0), 0),
     }
     summary.allCompute = allCompute
 
@@ -658,6 +707,7 @@ export const priceEstimatorStore = reactive({
         gpu: c.gpu,
         gpu_count: c.gpu_count,
         subscription: c.subscription,
+        days: c.days,
       })),
       storage: lab.selectedStorage.map((s) => ({
         id: s.id,
@@ -665,12 +715,14 @@ export const priceEstimatorStore = reactive({
         usage: s.usage,
         type: s.type,
         size: s.size,
+        days: s.days,
       })),
       collapse: lab.collapse === undefined ? true : lab.collapse,
     }))
 
     const exportData = {
       version: VERSION,
+      billingMode: this.billingMode,
       labs: labsToExport,
     }
 
@@ -726,6 +778,7 @@ export const priceEstimatorStore = reactive({
 
           this.isInitializingPriseEstimator = true
           this.clearAllLabs()
+          if (data.billingMode) this.billingMode = data.billingMode === "daily" ? "daily" : "monthly"
 
           for (const labData of data.labs) {
             const newLabId = this.labs.length
@@ -754,6 +807,7 @@ export const priceEstimatorStore = reactive({
                   subscription: comp.subscription,
                   gpu: comp.gpu,
                   gpu_count: comp.gpu_count,
+                  days: comp.days,
                   isDefault: isDefault,
                 })
               }
@@ -766,6 +820,7 @@ export const priceEstimatorStore = reactive({
                   usage: store.usage,
                   type: store.type,
                   size: store.size,
+                  days: store.days,
                 })
               }
             }
