@@ -61,22 +61,25 @@ async function handleFileUpload(event: Event) {
           <v-divider class="my-4" />
 
           <div class="d-flex flex-wrap align-center ga-3">
-            <v-btn color="primary" size="large" rounded="lg" prepend-icon="mdi-flask-plus-outline" class="text-none" @click="isLabModalOpen = true"> Add lab </v-btn>
+            <!-- Keep "Add lab" and the billing mode toggle together on one row, also on phones -->
+            <div class="d-flex flex-nowrap align-center ga-3">
+              <v-btn color="primary" size="large" rounded="lg" prepend-icon="mdi-flask-plus-outline" class="text-none" @click="isLabModalOpen = true"> Add lab </v-btn>
 
-            <v-btn-toggle
-              :model-value="priceEstimatorStore.billingMode"
-              mandatory
-              color="primary"
-              variant="outlined"
-              density="comfortable"
-              rounded="lg"
-              divided
-              class="billing-mode-toggle"
-              @update:model-value="priceEstimatorStore.setBillingMode($event)"
-            >
-              <v-btn value="yearly" class="text-none" prepend-icon="mdi-calendar-outline">Yearly</v-btn>
-              <v-btn value="daily" class="text-none" prepend-icon="mdi-calendar-today-outline">Daily</v-btn>
-            </v-btn-toggle>
+              <v-btn-toggle
+                :model-value="priceEstimatorStore.billingMode"
+                mandatory
+                color="primary"
+                variant="outlined"
+                density="comfortable"
+                rounded="lg"
+                divided
+                class="billing-mode-toggle"
+                @update:model-value="priceEstimatorStore.setBillingMode($event)"
+              >
+                <v-btn value="yearly" class="text-none" prepend-icon="mdi-calendar-outline">Yearly</v-btn>
+                <v-btn value="daily" class="text-none" prepend-icon="mdi-calendar-today-outline">Daily</v-btn>
+              </v-btn-toggle>
+            </div>
 
             <v-spacer />
 
@@ -139,6 +142,13 @@ async function handleFileUpload(event: Event) {
   color: #1f2d2d;
   border: none;
   padding: 0;
+}
+
+/* Phones: drop toggle icons so it fits next to "Add lab" */
+@media (max-width: 599px) {
+  .billing-mode-toggle :deep(.v-btn__prepend) {
+    display: none;
+  }
 }
 
 .pe-subtitle {
