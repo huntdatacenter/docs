@@ -125,6 +125,11 @@ async function handleFileUpload(event: Event) {
 </template>
 
 <style scoped>
+/* Keep the outermost cards' side borders visible when they span the full width on phones */
+.pe-wrapper > * {
+  margin-inline: 1px;
+}
+
 .pe-root {
   font-family: var(--vp-font-family-base, inherit);
 }
