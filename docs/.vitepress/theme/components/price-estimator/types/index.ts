@@ -9,7 +9,7 @@ Cost: Calculated amount of prices. Used for Summary.
 
 export type SubscriptionType = "COMMITMENT_1Y" | "COMMITMENT_3Y" | "ONDEMAND" | "SPOT"
 export type LabSubscriptionType = "1Y" | "3Y"
-export type BillingMode = "monthly" | "daily"
+export type BillingMode = "yearly" | "daily"
 export type StorageUsageType = "Archive" | "Work" | "Scratch" | "Backup"
 export const storageTypes = ["HDD", "NVME"] as const
 export type StorageType = (typeof storageTypes)[number]

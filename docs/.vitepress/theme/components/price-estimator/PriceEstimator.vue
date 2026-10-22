@@ -53,7 +53,7 @@ async function handleFileUpload(event: Event) {
               <v-icon size="28">mdi-calculator-variant-outline</v-icon>
             </v-avatar>
             <div>
-              <h2 class="pe-title">Price estimator for HUNT Cloud</h2>
+              <h2 class="pe-title">Price estimator for HUNT&nbsp;Cloud</h2>
               <div class="pe-subtitle">Build your labs below to estimate the cost of our services.</div>
             </div>
           </div>
@@ -74,7 +74,7 @@ async function handleFileUpload(event: Event) {
               class="billing-mode-toggle"
               @update:model-value="priceEstimatorStore.setBillingMode($event)"
             >
-              <v-btn value="monthly" class="text-none" prepend-icon="mdi-calendar-month-outline">Monthly</v-btn>
+              <v-btn value="yearly" class="text-none" prepend-icon="mdi-calendar-outline">Yearly</v-btn>
               <v-btn value="daily" class="text-none" prepend-icon="mdi-calendar-today-outline">Daily</v-btn>
             </v-btn-toggle>
 

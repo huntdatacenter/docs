@@ -24,7 +24,7 @@ const ISSERVER = typeof window === "undefined"
 const VERSION = "1.2"
 
 // Default allocation period for items priced in daily mode
-export const DEFAULT_DAYS = 30
+export const DEFAULT_DAYS = 365
 
 // Daily rates are derived from yearly prices (on-demand/spot daily prices are converted to yearly on load)
 export const dailyPrice = (item: { yearlyPrice: number }) => (item.yearlyPrice || 0) / 365
@@ -36,7 +36,7 @@ export const priceEstimatorStore = reactive({
   /* State */
 
   isInitializingPriseEstimator: false,
-  billingMode: "monthly" as BillingMode,
+  billingMode: "yearly" as BillingMode,
   labs: [] as LabCard[],
   catalogue: {
     computePrices: [] as PriceListItem[],
@@ -63,7 +63,7 @@ export const priceEstimatorStore = reactive({
         if (savedJson) {
           const state = JSON.parse(savedJson)
           if (state.labs && Array.isArray(state.labs) && state.version == VERSION) {
-            this.billingMode = state.billingMode === "daily" ? "daily" : "monthly"
+            this.billingMode = state.billingMode === "daily" ? "daily" : "yearly"
             this.labs = []
 
             for (const lab of state.labs as LabCard[]) {
@@ -778,7 +778,7 @@ export const priceEstimatorStore = reactive({
 
           this.isInitializingPriseEstimator = true
           this.clearAllLabs()
-          if (data.billingMode) this.billingMode = data.billingMode === "daily" ? "daily" : "monthly"
+          if (data.billingMode) this.billingMode = data.billingMode === "daily" ? "daily" : "yearly"
 
           for (const labData of data.labs) {
             const newLabId = this.labs.length

@@ -93,7 +93,7 @@ vi.mock("../docs/.vitepress/theme/components/price-estimator/api/pricesApi.js", 
 describe("PriceEstimator", () => {
   beforeEach(() => {
     priceEstimatorStore.clearAllLabs()
-    priceEstimatorStore.billingMode = "monthly"
+    priceEstimatorStore.billingMode = "yearly"
     // Manually populate catalogue for tests that need it
     priceEstimatorStore.catalogue.storagePrices = mockPriceList.filter((item: any) => item["service.family"] === "store") as any
     priceEstimatorStore.catalogue.computePrices = mockPriceList.filter((item: any) => item["service.group"] === "cpu") as any
@@ -598,7 +598,7 @@ describe("PriceEstimator", () => {
       expect(storage.periodCostTotal).toBeCloseTo(((2 * 1000) / 365) * 5, 6)
       expect(priceEstimatorStore.getLabStoragePriceSumByType(0).NVME.periodCostTotal).toBeCloseTo(((2 * 1000) / 365) * 5, 6)
 
-      // Monthly values are unaffected
+      // Yearly-mode (month/year) values are unaffected
       expect(compute.monthlyCostTotal).toBeCloseTo(50000 / 12, 6)
     })
 
