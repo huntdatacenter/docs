@@ -62,7 +62,7 @@ async function handleFileUpload(event: Event) {
 
           <div class="d-flex flex-wrap align-center ga-3">
             <!-- Keep "Add lab" and the billing mode toggle together on one row, also on phones -->
-            <div class="d-flex flex-nowrap align-center ga-3">
+            <div class="d-flex flex-nowrap align-center ga-3 me-auto">
               <v-btn color="primary" size="large" rounded="lg" prepend-icon="mdi-flask-plus-outline" class="text-none" @click="isLabModalOpen = true"> Add lab </v-btn>
 
               <v-btn-toggle
@@ -81,22 +81,23 @@ async function handleFileUpload(event: Event) {
               </v-btn-toggle>
             </div>
 
-            <v-spacer />
-
-            <input ref="fileInput" type="file" style="display: none" accept="application/json" @change="handleFileUpload" />
-            <v-btn variant="tonal" color="primary" size="large" rounded="lg" prepend-icon="mdi-import" class="text-none" @click="triggerFileUpload"> Import </v-btn>
-            <v-btn
-              v-if="priceEstimatorStore.labs.length"
-              variant="text"
-              color="error"
-              size="large"
-              rounded="lg"
-              prepend-icon="mdi-delete-sweep-outline"
-              class="text-none"
-              @click="priceEstimatorStore.clearAllLabs()"
-            >
-              Remove all
-            </v-btn>
+            <!-- Keep "Import" and "Remove all" together so they wrap as one group -->
+            <div class="d-flex flex-nowrap align-center ga-3">
+              <input ref="fileInput" type="file" style="display: none" accept="application/json" @change="handleFileUpload" />
+              <v-btn variant="tonal" color="primary" size="large" rounded="lg" prepend-icon="mdi-import" class="text-none" @click="triggerFileUpload"> Import </v-btn>
+              <v-btn
+                v-if="priceEstimatorStore.labs.length"
+                variant="text"
+                color="error"
+                size="large"
+                rounded="lg"
+                prepend-icon="mdi-delete-sweep-outline"
+                class="text-none"
+                @click="priceEstimatorStore.clearAllLabs()"
+              >
+                Remove all
+              </v-btn>
+            </div>
           </div>
         </v-sheet>
 
