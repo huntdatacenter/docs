@@ -77,7 +77,10 @@ async function handleFileUpload(event: Event) {
                 @update:model-value="priceEstimatorStore.setBillingMode($event)"
               >
                 <v-btn value="yearly" class="text-none" prepend-icon="mdi-calendar-outline">Yearly</v-btn>
-                <v-btn value="daily" class="text-none" prepend-icon="mdi-calendar-today-outline">Daily</v-btn>
+                <v-btn value="daily" class="text-none" prepend-icon="mdi-calendar-today-outline">
+                  Daily
+                  <v-tooltip activator="parent" location="top">Storage discount is not estimated in daily mode.</v-tooltip>
+                </v-btn>
               </v-btn-toggle>
             </div>
 
