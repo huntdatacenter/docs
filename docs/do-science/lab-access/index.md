@@ -30,6 +30,6 @@ If you are connecting from a location outside Norway, [click here](/do-science/s
 
 ::: warning Time estimate
 
-After you have collected your lab keys in step 1, allow for **two hours** to complete the remaining onboarding steps.
+After you have collected your lab keys in step 1, the remaining onboarding steps should take less than an hour.
 
 :::
