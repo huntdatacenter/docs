@@ -18,7 +18,13 @@ HUNT Workbench enables interactive web-based computing built around Jupyter, wit
 
 ## Request access
 
-::: tip Service desk
+::: tip Reissue access
+
+If your Workbench TLS certificate expired and you need need one, head over to the service desk and click the blue button to [request reissue of HUNT Workbench access](/do-science/service-desk/#hunt-workbench-reissue).
+
+:::
+
+::: tip Never used Workbench?
 
 If you have not received your Workbench TLS certificate yet, head over to the service desk and click the blue button to [request your HUNT Workbench access](/do-science/service-desk/#hunt-workbench-access).
 
