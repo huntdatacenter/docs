@@ -187,3 +187,18 @@ async function handleFileUpload(event: Event) {
   font-size: 0.95rem;
 }
 </style>
+
+<!-- Tooltips are teleported to <body>, so they can't be styled from the scoped block above -->
+<style>
+/* Price estimator tooltips: dark and elevated so they stand out from the light card backgrounds */
+.v-tooltip.v-theme--huntCloud > .v-overlay__content {
+  background: rgb(var(--v-theme-on-surface-strong));
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+</style>
