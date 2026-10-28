@@ -1753,6 +1753,14 @@ request_expand_existing_volume:
         key: "volume_name",
         field: "autocompleteone",
         options: [{ text: "Archive", value: "archive" }, { text: "Work", value: "work" }, { text: "Scratch", value: "scratch" }, { text: "Backup", value: "backup" }],
+        hide: "(formData) => !formData.vm_name.endsWith('-home')",
+      },
+      {
+        label: "Volume name",
+        key: "volume_name",
+        field: "autocompleteone",
+        options: [{ text: "Home", value: "home" }, { text: "Archive", value: "archive" }, { text: "Work", value: "work" }, { text: "Scratch", value: "scratch" }, { text: "Backup", value: "backup" }],
+        hide: "(formData) => formData.vm_name.endsWith('-home')",
       },
       {
         label: "Volume number (optional)",
@@ -1762,6 +1770,7 @@ request_expand_existing_volume:
         default: "",
         options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
         optional: true,
+        hide: "(formData) => (formData.volume_name === 'home' || !formData.volume_name)",
       },
       {
         label: "Current size (in terabytes)",
