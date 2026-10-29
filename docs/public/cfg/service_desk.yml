@@ -1718,7 +1718,7 @@ request_expand_existing_volume:
       ---
       lab_name="{{ lab_name }}"  
       machine_name="{{ vm_name }}"  
-      volume_name="{{ volume_name }}{{ volume_number }}"  
+      volume_name="{% if vm_name.endsWith('-home') %}{{ volume_name_home }}{% else %}{{ volume_name }}{% endif %}{{ volume_number }}"  
       current_size_tb="{{ current_size }}"  
       new_size_tb="{{ target_size }}"  
       ---
@@ -1750,17 +1750,17 @@ request_expand_existing_volume:
       },
       {
         label: "Volume name",
-        key: "volume_name",
+        key: "volume_name_home",
         field: "autocompleteone",
         options: [{ text: "Archive", value: "archive" }, { text: "Work", value: "work" }, { text: "Scratch", value: "scratch" }, { text: "Backup", value: "backup" }],
-        hide: "(formData) => !formData.vm_name.endsWith('-home')",
+        hide: "(formData) => (!formData.vm_name ||!formData.vm_name.endsWith('-home'))",
       },
       {
         label: "Volume name",
         key: "volume_name",
         field: "autocompleteone",
         options: [{ text: "Home", value: "home" }, { text: "Archive", value: "archive" }, { text: "Work", value: "work" }, { text: "Scratch", value: "scratch" }, { text: "Backup", value: "backup" }],
-        hide: "(formData) => formData.vm_name.endsWith('-home')",
+        hide: "(formData) => (!formData.vm_name || formData.vm_name.endsWith('-home'))",
       },
       {
         label: "Volume number (optional)",
