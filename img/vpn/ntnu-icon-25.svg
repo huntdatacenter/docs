@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.566855,0,0,0.566855,0,-1.92918)">
+        <g id="Artboard1">
+            <g id="g">
+                <g id="logo-firkant" transform="matrix(1,0,0,-1,0,53.5704)">
+                    <path d="M33.081,17.082L11.024,17.082L11.024,39.144L33.081,39.144L33.081,17.082ZM33.081,50.167L11.024,50.167C4.935,50.167 0,45.23 0,39.144L0,17.082C0,10.998 4.935,6.062 11.024,6.062L33.081,6.062C39.169,6.062 44.103,10.998 44.103,17.082L44.103,39.144C44.103,45.23 39.169,50.167 33.081,50.167Z" style="fill:rgb(0,80,158);fill-rule:nonzero;"/>
+                </g>
+                <g id="logo-runding" transform="matrix(1,0,0,-1,21.9782,16.333)">
+                    <path d="M0,0C-4.997,0 -9.046,-4.054 -9.046,-9.049C-9.046,-14.047 -4.997,-18.095 0,-18.095C4.996,-18.095 9.046,-14.047 9.046,-9.049C9.046,-4.054 4.996,0 0,0Z" style="fill:rgb(0,80,158);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
