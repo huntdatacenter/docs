@@ -75,13 +75,19 @@ For this to work efficiently you will need to know how to check your resource us
 
 ### Monitoring resources
 
-You can now monitor your Workbench apps through the panel on the left side:
+You can now monitor your Workbench applications through the panel on the left side:
 
 ![monitoring-your-apps.png](./images/monitoring-your-apps.png)
 
-When you are done working with your Application you can stop it here to free up RAM for your collueagues:
+When you are done working with your application you can stop it here to free up RAM for your collueagues:
 
 ![free-up-memory.png](./images/free-up-memory.png)
+
+::: warning
+
+Make sure to save your work before stopping the applications.
+
+:::
 
 #### More advanced monitoring tools
 
