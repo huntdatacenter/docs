@@ -75,11 +75,14 @@ For this to work efficiently you will need to know how to check your resource us
 
 ### Monitoring resources
 
-You can now monitor your Workbench applications through the panel on the left side:
+You can now monitor your Workbench applications through the panel on the left side.
+
+1. Open the `Running Terminals and Kernels` panel in the left menu.
+2. Look for the `Applications` section.
 
 ![monitoring-your-apps.png](./images/monitoring-your-apps.png)
 
-When you are done working with your application you can stop it here to free up RAM for your collueagues:
+3. When you are done working with your application you can stop the application here by click on the cross symbol `⨉` next to the application name to free up memory (RAM) for you or your lab mates.
 
 ![free-up-memory.png](./images/free-up-memory.png)
 
