@@ -65,7 +65,7 @@ Do your part to reduce resource use and ease the burden on the environment by st
 ![wb_cp_stopserver.png](../images/wb_cp_stopserver.png)
 
 3.  Then click on the **`Logout`** button in the top right corner.
-    
+
     The next time you log in to your Workbench, click start my server from control panel
 
 ## Working with lab mates
@@ -75,7 +75,17 @@ For this to work efficiently you will need to know how to check your resource us
 
 ### Monitoring resources
 
-One way to monitor resources is using Glances. We have included [Glances proxy extension](https://github.com/huntdatacenter/jupyter-glances-proxy) in JupyterLab installation.
+You can now monitor your Workbench apps through the panel on the left side:
+
+![monitoring-your-apps.png](./images/monitoring-your-apps.png)
+
+When you are done working with your Application you can stop it here to free up RAM for your collueagues:
+
+![free-up-memory.png](./images/free-up-memory.png)
+
+#### More advanced monitoring tools
+
+Another way to monitor resources is using Glances. We have included [Glances proxy extension](https://github.com/huntdatacenter/jupyter-glances-proxy) in JupyterLab installation.
 
 You can also you Terminal app inside your Workbench and run standard commands like [HTOP](https://docs.hdc.ntnu.no/do-science/tools/technical/htop/) and [others](/do-science/faq/compute#can-i-monitor-my-resource-consumption)
 
@@ -91,12 +101,12 @@ If your Jupyter Notebook takes too long to execute (more than VPN session), you 
 
 Activate your Conda environment first:
 
-```
+```sh
 conda activate py310
 ```
 
 Then run your notebook:
 
-```
+```sh
 jupyter run your_notebook.ipynb
 ```
