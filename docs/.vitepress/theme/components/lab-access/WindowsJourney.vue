@@ -1296,25 +1296,6 @@ onMounted(() => {
                         </details>
 
                         <details class="my-2">
-                          <summary style="cursor: pointer"><strong>Chrome on Ubuntu</strong></summary>
-                          <div class="pl-4 pr-16 py-2">
-                            <ol>
-                              <li>
-                                In Google Chrome, open the URL <a href="chrome://settings/certificates" target="_blank">chrome://settings/certificates</a> and navigate to section
-                                <code>Authorities</code>.
-                              </li>
-                              <li>Search for HUNT Cloud certificates (<code>org-HUNT Cloud Trust Services</code>).</li>
-                              <li>
-                                Edit the HCTS CA 1 certificate and select first option <code>Trust this certificate for identifying websites</code>.
-                                <br />
-                                <img class="pa-2" alt="import-ca-trust-websites" src="/img/workbench/import-ca-trust-websites.png" />
-                                <br />
-                              </li>
-                            </ol>
-                          </div>
-                        </details>
-
-                        <details class="my-2">
                           <summary style="cursor: pointer"><strong>502 Bad gateway</strong></summary>
                           <div class="pl-4 pr-16 py-2">
                             A 502 Bad gateway error when accessing <a :href="`https://${fqdn}/hub/home`" target="_blank">https://{{ fqdn }}/hub/home</a> is an indication that
