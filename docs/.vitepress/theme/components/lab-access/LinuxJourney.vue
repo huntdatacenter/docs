@@ -842,23 +842,33 @@ onMounted(() => {
                           <li>Open <strong>Google Chrome</strong> on your local computer.</li>
                           <li>Download our public CA certificate from <a href="https://pki.hdc.ntnu.no/hctsca1.crt" target="_blank">https://pki.hdc.ntnu.no/hctsca1.crt</a></li>
                           <li>
-                            In Google Chrome, open the URL <a href="chrome://settings/certificates" target="_blank">chrome://settings/certificates</a> and navigate to section
-                            <code>Authorities</code>.
+                            In Google Chrome, open the URL <a href="chrome://settings/certificates" target="_blank">chrome://settings/certificates</a> which brings you to the <em>Local certificates</em> of Certificate Manager.
                           </li>
-                          <li>Click the <strong>Import</strong> button on the right side of the screen to import <code>hctsca1.crt</code> certificate file.</li>
                           <li>
-                            Select first option Trust this certificate for identifying websites.
+                            In your <code>Local certificates</code>, click on <strong>Installed by you</strong> button under <i>Custom</i> on the right side of the screen to import <code>hctsca1.crt</code> certificate file.
                             <br />
-                            <img class="pa-2" alt="import-ca-trust-websites" src="/img/workbench/import-ca-trust-websites.png" style="max-width: 500px" />
+                            <img class="pa-2" alt="import-ca-trust-websites-1" src="/img/workbench/linux-workbench-step3.png" style="max-width: 800px" />
+                            <br />
+                          </li>
+                          <li>
+                            On the side of <i>Trusted Certificates</i>, select <strong>Import</strong> and select the <code>hctsca1.crt</code> certificate file. The certificate should appear under <em>Trusted Certificates</em> once imported.
+                            <br />
+                            <img class="pa-2" alt="import-ca-trust-websites-2" src="/img/workbench/linux-workbench-step4.png" style="max-width: 500px" />
                             <br />
                           </li>
                           <li>
                             Within <a href="chrome://settings/certificates" target="_blank">chrome://settings/certificates</a> navigate to section
-                            <code>Your certificates</code> and click the <strong>Import</strong> button on the right side of the screen.
+                            <code>Your certificates</code> and click the <strong>View imported certificates from Linux</strong> button on the right side of the screen.
+                            <br />
+                            <img class="pa-2" alt="import-ca-trust-websites-3" src="/img/workbench/linux-workbench-step5.png" style="max-width: 800px" />
+                            <br />
                           </li>
                           <li>
-                            Browse and select your <code style="font-weight: bold">{{ labName }}-{{ username }}.p12</code> file that you downloaded to your local computer, and
+                            Inside <code>Client certificates from platform</code>, choose <strong>Import</strong> and select your <code style="font-weight: bold">{{ labName }}-{{ username }}.p12</code> file that you downloaded to your local computer, and
                             enter the <strong>TLS passphrase</strong> that we sent you on Signal.
+                            <br />
+                            <img class="pa-2" alt="import-ca-trust-websites-4" src="/img/workbench/linux-workbench-step6.png" style="max-width: 500px" />
+                            <br />
                           </li>
                           <li>Restart <strong>Google Chrome</strong>.</li>
                         </ol>
@@ -1029,13 +1039,16 @@ onMounted(() => {
                             <ol>
                               <li>
                                 In Google Chrome, open the URL <a href="chrome://settings/certificates" target="_blank">chrome://settings/certificates</a> and navigate to section
-                                <code>Authorities</code>.
-                              </li>
-                              <li>Search for HUNT Cloud certificates (<code>org-HUNT Cloud Trust Services</code>).</li>
-                              <li>
-                                Edit the HCTS CA 1 certificate and select first option <code>Trust this certificate for identifying websites</code>.
+                                <code>Local certificates</code>.
                                 <br />
-                                <img class="pa-2" alt="import-ca-trust-websites" src="/img/workbench/import-ca-trust-websites.png" />
+                                <img class="pa-2" alt="import-ca-trust-websites-1" src="/img/workbench/linux-workbench-step3.png" />
+                                <br />
+                              </li>
+                              <li>Inside <strong>Installed by you</strong>, search for HUNT Cloud certificates (<code>HCTS CA 1</code>).</li>
+                              <li>
+                                Edit the HCTS CA 1 certificate. Under the <strong>Modifications</strong> tab, select first option <i>Trust State</i> <code>Trusted</code>.
+                                <br />
+                                <img class="pa-2" alt="import-ca-trust-websites-5" src="/img/workbench/linux-workbench-step7.png" style="max-width: 400px" />
                                 <br />
                               </li>
                             </ol>
