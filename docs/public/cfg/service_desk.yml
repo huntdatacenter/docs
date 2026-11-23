@@ -476,7 +476,7 @@ request_external_import_kista:
 request_external_export_kista:
   title: "Request an external export kista"
   template:
-    subject: External export kista order - {{ labname }} to {{ external_organization }}
+    subject: "External export kista order - {{ labname }} to {{ external_organization }}"
     body: |
       Hi HUNT Cloud team,
 
@@ -865,7 +865,7 @@ request_organizational_access:
       "<b>Cost:</b> None.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments: [HUNT Cloud organizational access request form (.pdf)]
+  attachments: ["HUNT Cloud organizational access request form (.pdf)"]
 
 
 ### Lab orders
@@ -907,7 +907,7 @@ request_access_new_user:
       "<b>Cost:</b> Included in your lab subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments: [A signed user agreement. (.pdf)]
+  attachments: ["A signed user agreement. (.pdf)"]
 
 request_lab_user_deactivation:
   title: "Request lab user deactivation"
@@ -994,7 +994,7 @@ reactivate_lab_user:
       "<b>Cost:</b> Included in your lab subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments: [A new user agreement. (.pdf)]
+  attachments: ["A new user agreement. (.pdf)"]
 
 request_renew_user_agreement:
   title: "Renew user agreement"
@@ -1040,7 +1040,7 @@ request_renew_user_agreement:
       "<b>Cost:</b> Included in your lab subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments: [A signed user agreement (.pdf).]
+  attachments: ["A signed user agreement (.pdf)."]
 
 request_machine_size_update:
   title: "Request a machine size update"
@@ -2168,7 +2168,7 @@ new_data_space:
       "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments: [A signed data space order. (pdf)]
+  attachments: ["A signed data space order. (pdf)"]
 
 ### User orders
 
@@ -2502,6 +2502,43 @@ request_vpn_reset:
     [
       "<b>Who can order:</b> All active lab users.",
       "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> VPN passphrase on Signal, link to VPN certificate on email.",
+      "<b>Requirement:</b> Active Signal app on your phone.",
+      "<b>Cost:</b> Included in the lab subscription.",
+      "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
+    ]
+  attachments: []
+
+request_new_device_certificate:
+  title: "Request certificates for new device"
+  template:
+    subject: "New device reset - {{ username }}"
+    body: |
+      Hi HUNT Cloud team,
+      I would like to reset my VPN and all my active Workbench certificate.
+      I have installed and activated the Signal app on my phone and looking forward to receive the following:
+        - VPN passphrase (via signal message)
+        - VPN certificate (via organization email)
+        - workbench passphrase (via signal message)
+        - workbench certificate (via organization email)
+      I am aware that my lab access will be paused from the new certificate is issued and until I have installed the new certificates on my local machine.
+      Kind regards,
+  fields:
+    [
+      {
+        label: "Username",
+        key: "username",
+        pattern: '^[\-a-z0-9\._]{3,}$',
+        hint: "Username should include only lowercase letters a-z, 0-9, dash, underscore, or dot.",
+        autocapitalize: "off",
+        field: "textfield",
+      },
+    ]
+  requirements:
+    [
+      "<b>Who can order:</b> All active lab users.",
+      "<b>Expected response time:</b> Days.",
+      "<b>Expected delivery:</b> Workbench passphrase on Signal, link to all active Workbench certificate.",
       "<b>Expected delivery:</b> VPN passphrase on Signal, link to VPN certificate on email.",
       "<b>Requirement:</b> Active Signal app on your phone.",
       "<b>Cost:</b> Included in the lab subscription.",

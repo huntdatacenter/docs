@@ -19,9 +19,8 @@ We are happy to hear that! If you have a new local computer you will need to req
 
 You will need new VPN certificate and new workbench certificate.
 
-<SDButton form="request_vpn_reset" />
+<SDButton form="request_new_device_certificate" />
 
-<SDButton form="request_workbench_reissue" />
 
 ## For consideration
 
