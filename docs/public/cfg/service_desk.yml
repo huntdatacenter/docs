@@ -16,23 +16,9 @@ general_contact_request:
 
   fields:
     [
-      {
-        label: "Request topic",
-        key: "topic",
-        field: "textfield",
-      },
-      {
-        label: "Lab (Optional)",
-        key: "lab_name",
-        field: "textfield",
-        optional: true,
-      },
-      {
-        label: "Data Space (Optional)",
-        key: "data_space",
-        field: "textfield",
-        optional: true,
-      },
+      { label: "Request topic", key: "topic", field: "textfield" },
+      { label: "Lab (Optional)", key: "lab_name", field: "textfield", optional: true },
+      { label: "Data Space (Optional)", key: "data_space", field: "textfield", optional: true },
     ]
   requirements:
     [
@@ -177,7 +163,6 @@ cost_query:
   attachments: []
 
 ### Data Space orders
-
 request_new_lab:
   title: "Request a new lab"
   template:
@@ -192,7 +177,7 @@ request_new_lab:
       ---
       lab_name="{{ lab_name }}"  
       ---
-
+      
       We would like to start with the following machine type and storage resources for our home machine:
 
       ---
@@ -223,9 +208,9 @@ request_new_lab:
 
 
       Best regards,
+    
 
-  fields:
-    [
+  fields: [
       {
         label: "New lab name",
         key: "lab_name",
@@ -234,13 +219,13 @@ request_new_lab:
         autocapitalize: "off",
         field: "textfield",
       },
-      # {
-      #   label: "Data space name",
-      #   key: "data_space",
-      #   pattern: "[-a-z0-9]{3,}",
-      #   hint: "Data space name should include only letters a-z, 0-9, or dot.",
-      #   field: "textfield",
-      # },
+      
+#      { label: "Data space name", 
+#        key: "data_space", 
+#        pattern: "[-a-z0-9]{3,}", 
+#        hint: "Data space name should include only letters a-z, 0-9, or dot.", 
+#        field: "textfield" 
+#      },
       {
         label: "Machine type (c1 is default)",
         key: "machine_type",
@@ -361,7 +346,7 @@ request_new_lab:
         autocapitalize: "off",
         field: "textfield",
         optional: "(formData) => formData.client_type !== 'external'",
-        hide: "(formData) => formData.client_type !== 'external'",
+        hide: "(formData) => formData.client_type !== 'external'"
       },
     ]
   requirements:
@@ -421,12 +406,8 @@ request_lab_deletion:
         label: "Store lab data on tape archive",
         key: "tape_archive",
         autocapitalize: "off",
-        field: "autocompleteone",
-        options:
-          [
-            { text: "Yes", value: "Yes" },
-            { text: "No", value: "No" },
-          ],
+        field: autocompleteone,
+        options: [{ text: "Yes", value: "Yes" }, { text: "No", value: "No" }],
       },
     ]
   requirements:
@@ -471,11 +452,7 @@ request_external_import_kista:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "External organization",
-        key: "external_organization",
-        field: "textfield",
-      },
+      { label: "External organization", key: "external_organization", field: "textfield" },
       {
         label: "Public IPv4 address of external organization (only if outside of NTNU)",
         key: "ipaddress",
@@ -526,11 +503,7 @@ request_external_export_kista:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "External organization",
-        key: "external_organization",
-        field: "textfield",
-      },
+      { label: "External organization", key: "external_organization", field: "textfield" },
       {
         label: "Public IPv4 address of external organization (only if outside of NTNU)",
         key: "ipaddress",
@@ -624,44 +597,13 @@ update_data_space_administrator_role:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Role",
-        key: "role",
-        field: "selectone",
-        options: ["Compliance", "Data", "Technical", "Knowledge", "Financial"],
-      },
-      {
-        label: "Name and Surname",
-        key: "name",
-        field: "textfield",
-      },
-      {
-        label: "Department",
-        key: "department",
-        field: "textfield",
-      },
-      {
-        label: "Faculty",
-        key: "faculty",
-        field: "textfield",
-      },
-      {
-        label: "Institution",
-        key: "institution",
-        field: "textfield",
-      },
-      {
-        label: "Email",
-        key: "email",
-        pattern: '[^@]+@[^@]+\.[^@]+',
-        field: "textfield",
-      },
-      {
-        label: "Phone number",
-        key: "phone",
-        pattern: "[0-9+]{3,}",
-        field: "textfield",
-      },
+      { label: "Role", key: "role", field: "selectone", options: ["Compliance", "Data", "Technical", "Knowledge", "Financial"] },
+      { label: "Name and Surname", key: "name", field: "textfield" },
+      { label: "Department", key: "department", field: "textfield" },
+      { label: "Faculty", key: "faculty", field: "textfield" },
+      { label: "Institution", key: "institution", field: "textfield" },
+      { label: "Email", key: "email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
+      { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
     ]
   requirements:
     [
@@ -687,7 +629,6 @@ request_lab_leader_role:
       I am looking forward to receive an email acknowledging that you have updated the role.
 
       Best regards,
-
   fields:
     [
       {
@@ -893,13 +834,11 @@ request_lab_transfer:
       "<b>Cost:</b> Included in your data space subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments:
-    [
-      "Required: Signed lab transfer order (.pdf)",
-      "Optional: Signed invoice profile (.pdf)",
-    ]
+  attachments: ["Required: Signed lab transfer order (.pdf)", "Optional: Signed invoice profile (.pdf)"]
 
 ### Data Controller Orders
+
+
 
 request_organizational_access:
   title: "Request organizational access to HUNT Cloud"
@@ -916,15 +855,7 @@ request_organizational_access:
 
       Best regards,
 
-  fields:
-    [
-      {
-        label: "Organization",
-        key: "organization",
-        autocapitalize: "off",
-        field: "textfield",
-      },
-    ]
+  fields: [{ label: "Organization", key: "organization", autocapitalize: "off", field: "textfield" }]
   requirements:
     [
       "<b>Who can order:</b> Representatives for the organizational unit that request access.",
@@ -934,10 +865,8 @@ request_organizational_access:
       "<b>Cost:</b> None.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments:
-    [
-      "HUNT Cloud organizational access request form (.pdf)",
-    ]
+  attachments: ["HUNT Cloud organizational access request form (.pdf)"]
+
 
 ### Lab orders
 
@@ -959,12 +888,7 @@ request_access_new_user:
 
   fields:
     [
-      {
-        label: "Name of user",
-        key: "username",
-        autocapitalize: "off",
-        field: "textfield",
-      },
+      { label: "Name of user", key: "username", autocapitalize: "off", field: "textfield" },
       {
         label: "Lab name",
         key: "lab_name",
@@ -983,10 +907,7 @@ request_access_new_user:
       "<b>Cost:</b> Included in your lab subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments:
-    [
-      "A signed user agreement. (.pdf)",
-    ]
+  attachments: ["A signed user agreement. (.pdf)"]
 
 request_lab_user_deactivation:
   title: "Request lab user deactivation"
@@ -1062,12 +983,7 @@ reactivate_lab_user:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Name of user",
-        key: "username",
-        autocapitalize: "off",
-        field: "textfield",
-      },
+      { label: "Name of user", key: "username", autocapitalize: "off", field: "textfield" },
     ]
   requirements:
     [
@@ -1078,10 +994,7 @@ reactivate_lab_user:
       "<b>Cost:</b> Included in your lab subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments:
-    [
-      "A new user agreement. (.pdf)",
-    ]
+  attachments: ["A new user agreement. (.pdf)"]
 
 request_renew_user_agreement:
   title: "Renew user agreement"
@@ -1127,10 +1040,7 @@ request_renew_user_agreement:
       "<b>Cost:</b> Included in your lab subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments:
-    [
-      "A signed user agreement (.pdf).",
-    ]
+  attachments: ["A signed user agreement (.pdf)."]
 
 request_machine_size_update:
   title: "Request a machine size update"
@@ -1155,8 +1065,7 @@ request_machine_size_update:
 
       Best regards,
 
-  fields:
-    [
+  fields: [
       {
         label: "Lab name",
         key: "lab_name",
@@ -1309,8 +1218,7 @@ request_new_cpu:
 
       Best regards,
 
-  fields:
-    [
+  fields: [
       {
         label: "Lab name",
         key: "lab_name",
@@ -1384,22 +1292,9 @@ request_new_cpu:
         label: "Storage type",
         key: "storage_type",
         field: "autocompleteone",
-        options:
-          [
-            { text: "Regular storage (HDD)", value: "regular" },
-            { text: "Fast storage (NVME)", value: "nvme" },
-          ],
+        options: [{ text: "Regular storage (HDD)", value: "regular" }, { text: "Fast storage (NVME)", value: "nvme" }],
       },
-      {
-        label: "Subscription",
-        key: "subscription",
-        field: "autocompleteone",
-        options:
-          [
-            { text: "On-demand", value: "ondemand" },
-            { text: "Spot", value: "spot" },
-          ],
-      },
+      { label: "Subscription", key: "subscription", field: "autocompleteone", options: [{ text: "On-demand", value: "ondemand" }, { text: "Spot", value: "spot" }] },
     ]
   requirements:
     [
@@ -1435,8 +1330,7 @@ request_new_gpu:
 
       Best regards,
 
-  fields:
-    [
+  fields: [
       {
         label: "Lab name",
         key: "lab_name",
@@ -1463,16 +1357,7 @@ request_new_gpu:
             { text: "NVIDIA RTX PRO 6000 96G", value: "rtx.pro.6000.96g" },
           ],
       },
-      {
-        label: "How many GPUs?",
-        key: "gpu_amount",
-        field: "autocompleteone",
-        options:
-          [
-            { text: "1", value: "1" },
-            { text: "2", value: "2" },
-          ],
-      },
+      { label: "How many GPUs?", key: "gpu_amount", field: "autocompleteone", options: [{ text: "1", value: "1" }, { text: "2", value: "2" }] },
       {
         label: "Machine type",
         key: "machine_type",
@@ -1538,22 +1423,9 @@ request_new_gpu:
         label: "Storage type",
         key: "storage_type",
         field: "autocompleteone",
-        options:
-          [
-            { text: "Fast storage (NVME)", value: "nvme" },
-            { text: "Regular storage (HDD)", value: "regular" },
-          ],
+        options: [{ text: "Fast storage (NVME)", value: "nvme" }, { text: "Regular storage (HDD)", value: "regular" }],
       },
-      {
-        label: "Subscription",
-        key: "subscription",
-        field: "autocompleteone",
-        options:
-          [
-            { text: "On-demand", value: "ondemand" },
-            { text: "Spot", value: "spot" },
-          ],
-      },
+      { label: "Subscription", key: "subscription", field: "autocompleteone", options: [{ text: "On-demand", value: "ondemand" }, { text: "Spot", value: "spot" }] },
     ]
   requirements:
     [
@@ -1596,16 +1468,7 @@ request_blue_fleet:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Number of machines",
-        hint: "Field should include only numbers",
-        key: "number",
-        min: 2,
-        max: 100,
-        step: 1,
-        field: "number",
-        default: 2,
-      },
+      { label: "Number of machines", hint: "Field should include only numbers", key: "number", min: 2, max: 100, step: 1, field: "number", default: 2 },
       {
         label: "Machine type",
         key: "machine_type",
@@ -1783,16 +1646,7 @@ request_machine_unshelving:
             { text: "NVIDIA RTX PRO 6000 96G", value: "rtx.pro.6000.96g" },
           ],
       },
-      {
-        label: "How many GPUs?",
-        key: "gpu_amount",
-        field: "autocompleteone",
-        options:
-          [
-            { text: "1", value: "1" },
-            { text: "2", value: "2" },
-          ],
-      },
+      { label: "How many GPUs?", key: "gpu_amount", field: "autocompleteone", options: [{ text: "1", value: "1" }, { text: "2", value: "2" }] },
     ]
   requirements:
     [
@@ -1898,27 +1752,14 @@ request_expand_existing_volume:
         label: "Volume name",
         key: "volume_name_home",
         field: "autocompleteone",
-        options:
-          [
-            { text: "Archive", value: "archive" },
-            { text: "Work", value: "work" },
-            { text: "Scratch", value: "scratch" },
-            { text: "Backup", value: "backup" },
-          ],
+        options: [{ text: "Archive", value: "archive" }, { text: "Work", value: "work" }, { text: "Scratch", value: "scratch" }, { text: "Backup", value: "backup" }],
         hide: "(formData) => (!formData.vm_name ||!formData.vm_name.endsWith('-home'))",
       },
       {
         label: "Volume name",
         key: "volume_name",
         field: "autocompleteone",
-        options:
-          [
-            { text: "Home", value: "home" },
-            { text: "Archive", value: "archive" },
-            { text: "Work", value: "work" },
-            { text: "Scratch", value: "scratch" },
-            { text: "Backup", value: "backup" },
-          ],
+        options: [{ text: "Home", value: "home" }, { text: "Archive", value: "archive" }, { text: "Work", value: "work" }, { text: "Scratch", value: "scratch" }, { text: "Backup", value: "backup" }],
         hide: "(formData) => (!formData.vm_name || formData.vm_name.endsWith('-home'))",
       },
       {
@@ -1927,19 +1768,7 @@ request_expand_existing_volume:
         field: "autocompleteone",
         hint: "If no number in volume name use 1.",
         default: "",
-        options:
-          [
-            { text: "No number", value: "" },
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-          ],
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
         optional: true,
         hide: "(formData) => (formData.volume_name === 'home' || !formData.volume_name)",
       },
@@ -2023,13 +1852,7 @@ request_downsize_existing_volume:
         label: "Volume name",
         key: "volume_name",
         field: "autocompleteone",
-        options:
-          [
-            { text: "Archive", value: "archive" },
-            { text: "Work", value: "work" },
-            { text: "Scratch", value: "scratch" },
-            { text: "Backup", value: "backup" },
-          ],
+        options: [{ text: "Archive", value: "archive" }, { text: "Work", value: "work" }, { text: "Scratch", value: "scratch" }, { text: "Backup", value: "backup" }],
       },
       {
         label: "Volume number (optional)",
@@ -2037,19 +1860,7 @@ request_downsize_existing_volume:
         field: "autocompleteone",
         hint: "If no number in volume name use 1.",
         default: "",
-        options:
-          [
-            { text: "No number", value: "" },
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-          ],
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
         optional: true,
       },
       {
@@ -2143,19 +1954,7 @@ request_new_storage_volume:
         field: "autocompleteone",
         hint: "If no number in volume name use 1.",
         default: "",
-        options:
-          [
-            { text: "No number", value: "" },
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-          ],
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
         optional: true,
       },
       {
@@ -2169,16 +1968,7 @@ request_new_storage_volume:
         field: "number",
         default: 1,
       },
-      {
-        label: "Enable restore service (optional)",
-        key: "restore",
-        field: "autocompleteone",
-        options:
-          [
-            { text: "Yes", value: "yes" },
-            { text: "No", value: "no" },
-          ],
-      },
+      { label: "Enable restore service (optional)", key: "restore", field: "autocompleteone", options: [{ text: "Yes", value: "yes" }, { text: "No", value: "no" }] },
     ]
   requirements:
     [
@@ -2229,31 +2019,14 @@ request_volume_deletion:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Volume name",
-        key: "volume_name",
-        field: "autocompleteone",
-        options: ["archive", "work", "scratch", "backup"],
-      },
+      { label: "Volume name", key: "volume_name", field: "autocompleteone", options: ["archive", "work", "scratch", "backup"] },
       {
         label: "Volume number (optional)",
         key: "volume_number",
         field: "autocompleteone",
         hint: "If no number in volume name use 1.",
         default: "",
-        options:
-          [
-            { text: "No number", value: "" },
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-          ],
+        options: [{ text: "No number", value: "" }, "1", "2", "3", "4", "5", "6", "7", "8", "9"],
         optional: true,
       },
     ]
@@ -2286,12 +2059,7 @@ request_internal_kista:
 
   fields:
     [
-      {
-        label: "Name and Surname",
-        key: "uploaderlabresponsiblefullname",
-        hint: "Full name of sender or signatory",
-        field: "textfield",
-      },
+      { label: "Name and Surname", key: "uploaderlabresponsiblefullname", hint: "Full name of sender or signatory", field: "textfield" },
       {
         label: "Uploader Lab",
         key: "labname",
@@ -2318,10 +2086,7 @@ request_internal_kista:
       "<b>Cost:</b> Included in your lab subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments:
-    [
-      "Signed internal kista order file (.pdf)",
-    ]
+  attachments: ["Signed internal kista order file (.pdf)"]
 
 request_coordinator_update:
   title: "Request update of lab coordinator role"
@@ -2360,38 +2125,12 @@ request_coordinator_update:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Name and Surname",
-        key: "name",
-        field: "textfield",
-      },
-      {
-        label: "Department",
-        key: "department",
-        field: "textfield",
-      },
-      {
-        label: "Faculty",
-        key: "faculty",
-        field: "textfield",
-      },
-      {
-        label: "Institution",
-        key: "institution",
-        field: "textfield",
-      },
-      {
-        label: "Email address",
-        key: "email",
-        pattern: "[^@].*[@]+.*",
-        field: "textfield",
-      },
-      {
-        label: "Phone number",
-        key: "phone",
-        pattern: "[0-9+]{3,}",
-        field: "textfield",
-      },
+      { label: "Name and Surname", key: "name", field: "textfield" },
+      { label: "Department", key: "department", field: "textfield" },
+      { label: "Faculty", key: "faculty", field: "textfield" },
+      { label: "Institution", key: "institution", field: "textfield" },
+      { label: "Email address", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
+      { label: "Phone number", key: "phone", pattern: "[0-9+]{3,}", field: "textfield" },
     ]
   requirements:
     [
@@ -2419,16 +2158,7 @@ new_data_space:
       I am looking forward to an email verification on the data space registration so we can start to order our labs.
 
       Best,
-
-  fields:
-    [
-      {
-        label: "Service center name",
-        key: "service_center",
-        pattern: "(.){3,}",
-        field: "textfield",
-      },
-    ]
+  fields: [{ label: "Service center name", key: "service_center", pattern: "(.){3,}", field: "textfield" }]
   requirements:
     [
       "<b>Guide:</b> <a href='/administer-science/scientific-access/' target='_blank'>Scientific access</a>",
@@ -2438,10 +2168,7 @@ new_data_space:
       "<b>Cost:</b> There is no direct cost for the service center. Data space subscription cost and attached resources in labs are billed as specified in the attached invoice profile in accordance with the <a href='/administer-science/services/specifications/#current' target='_blank'>Services specifications</a> and <a href='/administer-science/prices/pricelist/#current' target='_blank'>Price list</a>.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments:
-    [
-      "A signed data space order. (pdf)",
-    ]
+  attachments: ["A signed data space order. (pdf)"]
 
 ### User orders
 
@@ -2491,12 +2218,7 @@ request_workbench_access:
             { text: "MATLAB (need license)", value: "MATLAB" },
             { text: "Stata (need license)", value: "Stata" },
           ],
-        default:
-          [
-            { text: "Rstudio", value: "Rstudio" },
-            { text: "Jupyter", value: "Jupyter" },
-            { text: "Python", value: "Python" },
-          ],
+        default: [{ text: "Rstudio", value: "Rstudio" }, { text: "Jupyter", value: "Jupyter" }, { text: "Python", value: "Python" }],
       },
     ]
   requirements:
@@ -2580,11 +2302,7 @@ request_workbench_troubleshooting:
 
   fields:
     [
-      {
-        label: "Your full name",
-        key: "full_name",
-        field: "textfield",
-      },
+      { label: "Your full name", key: "full_name", field: "textfield" },
       {
         label: "Username",
         key: "username",
@@ -2601,24 +2319,9 @@ request_workbench_troubleshooting:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Operating system",
-        key: "operating_system",
-        field: "textfield",
-        hint: "Windows, MacOS, or Linux (e.g. Ubuntu)",
-      },
-      {
-        label: "Web browser",
-        key: "web_browser",
-        field: "textfield",
-        hint: "Google Chrome or Mozilla Firefox?",
-      },
-      {
-        label: "Problem description",
-        key: "problem_description",
-        field: "textarea",
-        autocapitalize: "off",
-      },
+      { label: "Operating system", key: "operating_system", field: "textfield", hint: "Windows, MacOS, or Linux (e.g. Ubuntu)" },
+      { label: "Web browser", key: "web_browser", field: "textfield", hint: "Google Chrome or Mozilla Firefox?" },
+      { label: "Problem description", key: "problem_description", field: "textarea", autocapitalize: "off" },
     ]
   requirements:
     [
@@ -2628,10 +2331,7 @@ request_workbench_troubleshooting:
       "<b>Cost:</b> Included in the lab subscription.",
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
     ]
-  attachments:
-    [
-      "Screenshots or any error logs that might be useful for investigation of the issue.",
-    ]
+  attachments: ["Screenshots or any error logs that might be useful for investigation of the issue."]
 
 request_ssh_pass_reset:
   title: "Request SSH passphrase reset"
@@ -2756,19 +2456,8 @@ request_vpn_link:
         hint: "Get your IP address here: https://docs.hdc.ntnu.no/ipv4/",
         field: "textfield",
       },
-      {
-        label: "Access duration",
-        key: "access_duration",
-        field: "selectone",
-        options: ["Temporary", "Permanent"],
-        default: ["Temporary"],
-      },
-      {
-        label: "Access Country",
-        key: "country",
-        pattern: '^[\-A-z0-9\._]*$',
-        field: "textfield",
-      },
+      { label: "Access duration", key: "access_duration", field: "selectone", options: ["Temporary", "Permanent"], default: ["Temporary"] },
+      { label: "Access Country", key: "country", pattern: '^[\-A-z0-9\._]*$', field: "textfield" },
     ]
   requirements:
     [
@@ -2826,20 +2515,14 @@ request_new_device_certificate:
     subject: "New device reset - {{ username }}"
     body: |
       Hi HUNT Cloud team,
-
       I would like to reset my VPN and all my active Workbench certificate.
-
       I have installed and activated the Signal app on my phone and looking forward to receive the following:
         - VPN passphrase (via signal message)
         - VPN certificate (via organization email)
         - workbench passphrase (via signal message)
         - workbench certificate (via organization email)
-
       I am aware that my lab access will be paused from the new certificate is issued and until I have installed the new certificates on my local machine.
-
-
       Kind regards,
-
   fields:
     [
       {
@@ -2976,11 +2659,7 @@ request_update_lagtun_rep:
 
   fields:
     [
-      {
-        label: "Name and Surname",
-        key: "name",
-        field: "textfield",
-      },
+      { label: "Name and Surname", key: "name", field: "textfield" },
       {
         label: "Data Space name",
         key: "dataspace",
@@ -2989,12 +2668,7 @@ request_update_lagtun_rep:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Email",
-        key: "email",
-        pattern: "[^@].*[@]+.*",
-        field: "textfield",
-      },
+      { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
     ]
   requirements:
     [
@@ -3023,11 +2697,7 @@ request_update_data_rep:
 
   fields:
     [
-      {
-        label: "Name and Surname",
-        key: "name",
-        field: "textfield",
-      },
+      { label: "Name and Surname", key: "name", field: "textfield" },
       {
         label: "Data Controller name",
         key: "dataspace",
@@ -3036,12 +2706,7 @@ request_update_data_rep:
         autocapitalize: "off",
         field: "textfield",
       },
-      {
-        label: "Email",
-        key: "email",
-        pattern: "[^@].*[@]+.*",
-        field: "textfield",
-      },
+      { label: "Email", key: "email", pattern: "[^@].*[@]+.*", field: "textfield" },
     ]
   requirements:
     [
@@ -3075,7 +2740,6 @@ request_tape_backup:
       Let us touch base on Slack to discuss the details.
 
       Kind regards,
-
   fields:
     [
       {
@@ -3111,7 +2775,7 @@ request_tape_backup:
         options:
           [
             { text: "Full volume backup", value: "Full volume" },
-            # { text: "Selected dataset backup", value: "Selected dataset" },
+            #{ text: "Selected dataset backup", value: "Selected dataset" },
           ],
       },
       {
@@ -3121,7 +2785,7 @@ request_tape_backup:
         field: "autocompleteone",
         options:
           [
-            # { text: "Not applicable (selected dataset)", value: "N/A" },
+            #{ text: "Not applicable (selected dataset)", value: "N/A" },
             { text: "archive", value: "archive" },
             { text: "archive2", value: "archive2" },
             { text: "archive3", value: "archive3" },
@@ -3167,14 +2831,15 @@ request_tape_backup:
         options:
           [
             { text: "Not applicable (one-time archive)", value: "N/A" },
-            # { text: "Daily", value: "Daily" },
-            # { text: "Weekly", value: "Weekly" },
-            # { text: "Monthly", value: "Monthly" },
+            #{ text: "Daily", value: "Daily" },
+            #{ text: "Weekly", value: "Weekly" },
+            #{ text: "Monthly", value: "Monthly" },
             { text: "Quarterly", value: "Quarterly" },
             { text: "Yearly", value: "Yearly" },
           ],
       },
     ]
+
   requirements:
     [
       "<b>Who can order:</b> Lab leader or coordiator.",
@@ -3201,14 +2866,9 @@ request_lab_access_link:
 
       Kind regards,  
       {{ full_name }}
-
   fields:
     [
-      {
-        label: "Your full name",
-        key: "full_name",
-        field: "textfield",
-      },
+      { label: "Your full name", key: "full_name", field: "textfield" },
       {
         label: "Username",
         key: "username",
@@ -3256,35 +2916,13 @@ request_community_membership:
       I am looking forward to receive an email acknowledging that you have sent an invitation to our collaborator.
 
       Kind regards,
-
   fields:
     [
-      {
-        label: "Name and Surname",
-        key: "full_name",
-        field: "textfield",
-      },
-      {
-        label: "Department",
-        key: "department",
-        field: "textfield",
-      },
-      {
-        label: "Faculty",
-        key: "faculty",
-        field: "textfield",
-      },
-      {
-        label: "Institution",
-        key: "institution",
-        field: "textfield",
-      },
-      {
-        label: "Email",
-        key: "email",
-        pattern: '[^@]+@[^@]+\.[^@]+',
-        field: "textfield",
-      },
+      { label: "Name and Surname", key: "full_name", field: "textfield" },
+      { label: "Department", key: "department", field: "textfield" },
+      { label: "Faculty", key: "faculty", field: "textfield" },
+      { label: "Institution", key: "institution", field: "textfield" },
+      { label: "Email", key: "email", pattern: "[^@]+@[^@]+\\.[^@]+", field: "textfield" },
     ]
   requirements:
     [
@@ -3311,15 +2949,7 @@ request_consent_link:
 
       Kind regards,
       {{ full_name }}
-
-  fields:
-    [
-      {
-        label: "Full name",
-        key: "full_name",
-        field: "textfield",
-      },
-    ]
+  fields: [{ label: "Full name", key: "full_name", field: "textfield" }]
   requirements:
     [
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
@@ -3344,14 +2974,7 @@ deregister_tingweek_invitations:
       Kind regards,
       {{ full_name }}
 
-  fields:
-    [
-      {
-        label: "Full name",
-        key: "full_name",
-        field: "textfield",
-      },
-    ]
+  fields: [{ label: "Full name", key: "full_name", field: "textfield" }]
   requirements:
     [
       "<b>We care about your privacy.</b> Read our privacy statement <a href='/govern-science/privacy-statement' target='_blank'' >(link here)</a> to learn how we process your personal data when you send us a request.",
