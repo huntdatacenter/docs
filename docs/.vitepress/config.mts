@@ -61,6 +61,9 @@ export default defineConfig({
 
     sidebar: {
       "/": sidebarCommon(),
+      "/servicedesk/scientist": sidebarServiceDeskScientist(),
+      "/servicedesk/administrator": sidebarServiceDeskAdministrator(),
+      "/servicedesk/": sidebarServiceDeskRoles(),
       "/do-science/": sidebarDoScience(),
       "/administer-science/": sidebarAdministerScience(),
       "/govern-science/": sidebarGovernScience(),
@@ -134,6 +137,7 @@ function navigationMenu() {
     { text: "Do science", link: "/do-science/" },
     { text: "Administer science", link: "/administer-science/" },
     { text: "Govern science", link: "/govern-science/" },
+    { text: "Service desk", link: "/servicedesk/" },
     { text: "About", link: "https://about.hdc.ntnu.no/" },
   ]
 }
@@ -172,6 +176,226 @@ function sidebarCommon() {
         { text: "Administer science", link: "/administer-science/" },
         { text: "Govern science", link: "/govern-science/" },
         { text: "About", link: "/about/" },
+      ],
+    },
+  ]
+}
+
+function sidebarServiceDeskRoles() {
+  return [
+    {
+      text: "Service desk",
+      items: [
+        { text: "Scientist", link: "/servicedesk/scientist" },
+        { text: "Science Administrator", link: "/servicedesk/administrator" },
+      ],
+    },
+  ]
+}
+
+function sidebarServiceDeskScientist() {
+  return [
+    { text: "← Choose another role", link: "/servicedesk/" },
+    {
+      text: "Scientist orders",
+      items: [
+        {
+          text: "Lab access",
+          link: "/servicedesk/scientist#lab-access",
+          collapsed: true,
+          items: [
+            { text: "HUNT Workbench reissue", link: "/servicedesk/scientist#hunt-workbench-reissue" },
+            { text: "SSH passphrase reset", link: "/servicedesk/scientist#ssh-passphrase-reset" },
+            { text: "SSH configuration", link: "/servicedesk/scientist#ssh-configuration" },
+            { text: "Deactivate lab access", link: "/servicedesk/scientist#deactivate-lab-access" },
+            { text: "Request lab access link reissue", link: "/servicedesk/scientist#request-lab-access-link-reissue" },
+            { text: "HUNT Workbench access", link: "/servicedesk/scientist#hunt-workbench-access" },
+          ],
+        },
+        {
+          text: "System access",
+          link: "/servicedesk/scientist#system-access",
+          collapsed: true,
+          items: [
+            { text: "VPN access list", link: "/servicedesk/scientist#vpn-access-list" },
+            { text: "VPN certificate reset", link: "/servicedesk/scientist#vpn-certificate-reset" },
+            { text: "Google authenticator key reset", link: "/servicedesk/scientist#google-authenticator-key-reset" },
+          ],
+        },
+        {
+          text: "Community access",
+          link: "/servicedesk/scientist#community-access",
+          collapsed: true,
+          items: [
+            { text: "Request consent link", link: "/servicedesk/scientist#request-consent-link" },
+          ],
+        },
+        {
+          text: "Applications",
+          link: "/servicedesk/scientist#applications",
+          collapsed: true,
+          items: [
+            { text: "MobaXterm configuration file", link: "/servicedesk/scientist#mobaxterm-configuration-file" },
+          ],
+        },
+        {
+          text: "Tingweek",
+          link: "/servicedesk/scientist#tingweek",
+          collapsed: true,
+          items: [
+            { text: "Deregister to future Tingweek invitations", link: "/servicedesk/scientist#deregister-to-future-tingweek-invitations" },
+          ],
+        },
+        { text: "General service request", link: "/servicedesk/scientist#general-service-request" },
+      ],
+    },
+  ]
+}
+
+function sidebarServiceDeskAdministrator() {
+  return [
+    { text: "← Choose another role", link: "/servicedesk/" },
+    {
+      text: "Lab orders",
+      link: "/servicedesk/administrator#lab-orders",
+      collapsed: false,
+      items: [
+        {
+          text: "Lab management",
+          link: "/servicedesk/administrator#lab-management",
+          collapsed: true,
+          items: [
+            { text: "New lab", link: "/servicedesk/administrator#new-lab" },
+            { text: "Delete lab", link: "/servicedesk/administrator#delete-lab" },
+            { text: "Update lab leader", link: "/servicedesk/administrator#update-lab-leader" },
+          ],
+        },
+        {
+          text: "User management",
+          link: "/servicedesk/administrator#user-management",
+          collapsed: true,
+          items: [
+            { text: "New lab user", link: "/servicedesk/administrator#new-lab-user" },
+            { text: "Deactivate lab user", link: "/servicedesk/administrator#deactivate-lab-user" },
+            { text: "Reactivate lab user", link: "/servicedesk/administrator#reactivate-lab-user" },
+            { text: "Update lab coordinator role", link: "/servicedesk/administrator#update-lab-coordinator-role" },
+            { text: "Renew lab user agreement", link: "/servicedesk/administrator#renew-lab-user-agreement" },
+          ],
+        },
+        {
+          text: "Compute",
+          link: "/servicedesk/administrator#compute",
+          collapsed: true,
+          items: [
+            { text: "Update CPU machine size", link: "/servicedesk/administrator#update-cpu-machine-size" },
+            { text: "New CPU machine", link: "/servicedesk/administrator#new-cpu-machine" },
+            { text: "New GPU machine", link: "/servicedesk/administrator#new-gpu-machine" },
+            { text: "Shelve machine order", link: "/servicedesk/administrator#shelve-machine-order" },
+            { text: "Unshelve machine order", link: "/servicedesk/administrator#unshelve-machine-order" },
+            { text: "Delete a machine", link: "/servicedesk/administrator#delete-a-machine" },
+          ],
+        },
+        {
+          text: "Store",
+          link: "/servicedesk/administrator#store",
+          collapsed: true,
+          items: [
+            { text: "Expand existing volume", link: "/servicedesk/administrator#expand-existing-volume" },
+            { text: "Downsize storage volume", link: "/servicedesk/administrator#downsize-storage-volume" },
+            { text: "New volume", link: "/servicedesk/administrator#new-volume" },
+            { text: "Volume deletion", link: "/servicedesk/administrator#volume-deletion" },
+            { text: "Tape backup", link: "/servicedesk/administrator#tape-backup" },
+          ],
+        },
+        {
+          text: "Data transfers",
+          link: "/servicedesk/administrator#data-transfers",
+          collapsed: true,
+          items: [
+            { text: "Internal kista", link: "/servicedesk/administrator#internal-kista" },
+            { text: "External import kista", link: "/servicedesk/administrator#external-import-kista" },
+            { text: "External export kista", link: "/servicedesk/administrator#external-export-kista" },
+            { text: "Network opening", link: "/servicedesk/administrator#network-opening" },
+          ],
+        },
+        {
+          text: "Finance",
+          link: "/servicedesk/administrator#finance",
+          collapsed: true,
+          items: [
+            { text: "Ask about cost", link: "/servicedesk/administrator#ask-about-cost" },
+            { text: "New invoice profile", link: "/servicedesk/administrator#new-invoice-profile" },
+            { text: "Update invoice profile", link: "/servicedesk/administrator#update-invoice-profile" },
+            { text: "VAT exemption", link: "/servicedesk/administrator#vat-exemption" },
+          ],
+        },
+        {
+          text: "Community membership",
+          link: "/servicedesk/administrator#community-membership",
+          collapsed: true,
+          items: [
+            { text: "Add a new community member", link: "/servicedesk/administrator#add-a-new-community-member" },
+          ],
+        },
+        {
+          text: "Tingweek",
+          link: "/servicedesk/administrator#tingweek",
+          collapsed: true,
+          items: [
+            { text: "Deregister to future Tingweek invitations", link: "/servicedesk/administrator#deregister-to-future-tingweek-invitations" },
+          ],
+        },
+        { text: "General request", link: "/servicedesk/administrator#general-request" },
+      ],
+    },
+    {
+      text: "Data space orders",
+      link: "/servicedesk/administrator#data-space-orders",
+      collapsed: true,
+      items: [
+        {
+          text: "Data space management",
+          link: "/servicedesk/administrator#data-space-management",
+          collapsed: true,
+          items: [
+            { text: "New data space", link: "/servicedesk/administrator#new-data-space" },
+            { text: "Transfer labs between data spaces", link: "/servicedesk/administrator#transfer-labs-between-data-spaces" },
+            { text: "Update data space administrator roles", link: "/servicedesk/administrator#update-data-space-administrator-roles" },
+          ],
+        },
+        {
+          text: "Tingweek",
+          link: "/servicedesk/administrator#tingweek-1",
+          collapsed: true,
+          items: [
+            { text: "Deregister to future Tingweek invitations", link: "/servicedesk/administrator#deregister-to-future-tingweek-invitations-1" },
+          ],
+        },
+        { text: "General request", link: "/servicedesk/administrator#general-request-1" },
+      ],
+    },
+    {
+      text: "Organizational orders",
+      link: "/servicedesk/administrator#organizational-orders",
+      collapsed: true,
+      items: [
+        {
+          text: "Organizational access",
+          link: "/servicedesk/administrator#organizational-access",
+          collapsed: true,
+          items: [
+            { text: "Request organizational access to HUNT Cloud", link: "/servicedesk/administrator#request-organizational-access-to-hunt-cloud" },
+          ],
+        },
+        {
+          text: "Tingweek",
+          link: "/servicedesk/administrator#tingweek-2",
+          collapsed: true,
+          items: [
+            { text: "Update Tingweek representative", link: "/servicedesk/administrator#update-tingweek-representative" },
+            { text: "Deregister to future Tingweek invitations", link: "/servicedesk/administrator#deregister-to-future-tingweek-invitations-2" },
+          ],
+        },
       ],
     },
   ]
